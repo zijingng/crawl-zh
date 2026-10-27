@@ -1,0 +1,1291 @@
+{
+  "batch": "source-j-01",
+  "date": "2026-10-23",
+  "glossary_sha256": "52a49cacc2a408942ddf87655c491c1631c5ad7f7286553126fd959e04f66ee0",
+  "files": [
+    {
+      "file": "job-data.h",
+      "sha256": "113671198ea1f88baffcfd1163c43d1cf262e4d87d82785a50c60ea925968d37",
+      "glossary_hits": [
+        {
+          "term": "animate",
+          "translation": "活化/活的"
+        },
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "arrow",
+          "translation": "箭"
+        },
+        {
+          "term": "Artificer",
+          "translation": "修补匠"
+        },
+        {
+          "term": "barachi",
+          "translation": "蛙人"
+        },
+        {
+          "term": "blink",
+          "translation": "闪烁/闪现/眨眼"
+        },
+        {
+          "term": "buckler",
+          "translation": "小盾"
+        },
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "cloak",
+          "translation": "披风"
+        },
+        {
+          "term": "Conjurations",
+          "translation": "塑能系魔法/魔法"
+        },
+        {
+          "term": "dagger",
+          "translation": "匕首"
+        },
+        {
+          "term": "dart",
+          "translation": "飞镖"
+        },
+        {
+          "term": "demonspawn",
+          "translation": "魔人"
+        },
+        {
+          "term": "Dexterity",
+          "translation": "敏捷/灵巧"
+        },
+        {
+          "term": "Dodging",
+          "translation": "闪避"
+        },
+        {
+          "term": "draining",
+          "translation": "吸能/汲取/耗损"
+        },
+        {
+          "term": "Elementalist",
+          "translation": "元素使"
+        },
+        {
+          "term": "Evocations",
+          "translation": "唤发"
+        },
+        {
+          "term": "Fighter",
+          "translation": "战士"
+        },
+        {
+          "term": "Fighting",
+          "translation": "战斗/作战/格斗"
+        },
+        {
+          "term": "gargoyle",
+          "translation": "石像鬼"
+        },
+        {
+          "term": "Gnoll",
+          "translation": "豺狼人"
+        },
+        {
+          "term": "hat",
+          "translation": "帽子"
+        },
+        {
+          "term": "Hexes",
+          "translation": "妖术系魔法"
+        },
+        {
+          "term": "Hunter",
+          "translation": "猎手"
+        },
+        {
+          "term": "Intelligence",
+          "translation": "智力/智慧/心智"
+        },
+        {
+          "term": "kobold",
+          "translation": "狗头人"
+        },
+        {
+          "term": "mace",
+          "translation": "钉头锤"
+        },
+        {
+          "term": "mummy",
+          "translation": "木乃伊"
+        },
+        {
+          "term": "Necromancy",
+          "translation": "死灵系魔法"
+        },
+        {
+          "term": "potion",
+          "translation": "药水"
+        },
+        {
+          "term": "potion of ambrosia",
+          "translation": "琼浆药水"
+        },
+        {
+          "term": "potion of haste",
+          "translation": "疾速药水"
+        },
+        {
+          "term": "potion of invisibility",
+          "translation": "隐形药水"
+        },
+        {
+          "term": "potion of lignification",
+          "translation": "木质化药水"
+        },
+        {
+          "term": "potion of magic",
+          "translation": "魔力药水"
+        },
+        {
+          "term": "potion of might",
+          "translation": "力量药水"
+        },
+        {
+          "term": "revenant",
+          "translation": "还魂者"
+        },
+        {
+          "term": "robe",
+          "translation": "长袍"
+        },
+        {
+          "term": "scroll of blinking",
+          "translation": "闪烁卷轴"
+        },
+        {
+          "term": "Shields",
+          "translation": "盾牌/保护"
+        },
+        {
+          "term": "shortbow",
+          "translation": "短弓"
+        },
+        {
+          "term": "sling",
+          "translation": "投石索"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "Spellcasting",
+          "translation": "施法"
+        },
+        {
+          "term": "stealth",
+          "translation": "潜行"
+        },
+        {
+          "term": "Strength",
+          "translation": "力量/强度/威力"
+        },
+        {
+          "term": "Summonings",
+          "translation": "召唤系魔法"
+        },
+        {
+          "term": "tengu",
+          "translation": "天狗"
+        },
+        {
+          "term": "throwing net",
+          "translation": "投掷网"
+        },
+        {
+          "term": "Translocations",
+          "translation": "位移系魔法"
+        },
+        {
+          "term": "troll",
+          "translation": "巨魔"
+        },
+        {
+          "term": "wand",
+          "translation": "魔杖"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "Armataur",
+          "translation": "犰狳人"
+        },
+        {
+          "term": "Coglin",
+          "translation": "机甲哥布林"
+        },
+        {
+          "term": "Demigod",
+          "translation": "半神"
+        },
+        {
+          "term": "Djinni",
+          "translation": "灯灵"
+        },
+        {
+          "term": "Draconian",
+          "translation": "龙人"
+        },
+        {
+          "term": "Felid",
+          "translation": "猫族"
+        },
+        {
+          "term": "Formicid",
+          "translation": "蚁族"
+        },
+        {
+          "term": "Human",
+          "translation": "人类"
+        },
+        {
+          "term": "Merfolk",
+          "translation": "人鱼"
+        },
+        {
+          "term": "Minotaur",
+          "translation": "牛头人"
+        },
+        {
+          "term": "Naga",
+          "translation": "娜迦"
+        },
+        {
+          "term": "Octopode",
+          "translation": "章鱼人"
+        },
+        {
+          "term": "Oni",
+          "translation": "鬼人"
+        },
+        {
+          "term": "Poltergeist",
+          "translation": "骚灵"
+        },
+        {
+          "term": "Spriggan",
+          "translation": "斯普利根"
+        },
+        {
+          "term": "Air Elementalist",
+          "translation": "气元素使"
+        },
+        {
+          "term": "Alchemist",
+          "translation": "炼金术士"
+        },
+        {
+          "term": "Berserker",
+          "translation": "狂战士"
+        },
+        {
+          "term": "Brigand",
+          "translation": "强盗"
+        },
+        {
+          "term": "Chaos Knight",
+          "translation": "混沌骑士"
+        },
+        {
+          "term": "Cinder Acolyte",
+          "translation": "余烬侍僧"
+        },
+        {
+          "term": "Conjurer",
+          "translation": "塑能师"
+        },
+        {
+          "term": "Delver",
+          "translation": "探地者"
+        },
+        {
+          "term": "Earth Elementalist",
+          "translation": "土元素使"
+        },
+        {
+          "term": "Enchanter",
+          "translation": "妖术师"
+        },
+        {
+          "term": "Fire Elementalist",
+          "translation": "火元素使"
+        },
+        {
+          "term": "Forgewright",
+          "translation": "锻造师"
+        },
+        {
+          "term": "Gladiator",
+          "translation": "角斗士"
+        },
+        {
+          "term": "Hedge Wizard",
+          "translation": "野法师"
+        },
+        {
+          "term": "Hexslinger",
+          "translation": "妖术射手"
+        },
+        {
+          "term": "Ice Elementalist",
+          "translation": "冰元素使"
+        },
+        {
+          "term": "Monk",
+          "translation": "武僧"
+        },
+        {
+          "term": "Necromancer",
+          "translation": "死灵法师"
+        },
+        {
+          "term": "Reaver",
+          "translation": "掠夺者"
+        },
+        {
+          "term": "Shapeshifter",
+          "translation": "变形者"
+        },
+        {
+          "term": "Summoner",
+          "translation": "召唤师"
+        },
+        {
+          "term": "Wanderer",
+          "translation": "漫游者"
+        },
+        {
+          "term": "Warper",
+          "translation": "位移术士"
+        },
+        {
+          "term": "Throwing",
+          "translation": "投掷"
+        },
+        {
+          "term": "Forgecraft",
+          "translation": "锻造术"
+        },
+        {
+          "term": "Alchemy",
+          "translation": "炼金术"
+        },
+        {
+          "term": "Shapeshifting",
+          "translation": "变形术"
+        },
+        {
+          "term": "SH",
+          "translation": "格挡值"
+        },
+        {
+          "term": "talisman",
+          "translation": "变形护符"
+        },
+        {
+          "term": "poison",
+          "translation": "毒"
+        },
+        {
+          "term": "haste",
+          "translation": "疾速"
+        },
+        {
+          "term": "invisibility",
+          "translation": "隐形"
+        },
+        {
+          "term": "scroll of butterflies",
+          "translation": "蝴蝶卷轴"
+        },
+        {
+          "term": "scroll of fear",
+          "translation": "恐惧卷轴"
+        },
+        {
+          "term": "scroll of fog",
+          "translation": "迷雾卷轴"
+        },
+        {
+          "term": "scroll of poison",
+          "translation": "毒雾卷轴"
+        },
+        {
+          "term": "scroll of revelation",
+          "translation": "启示卷轴"
+        },
+        {
+          "term": "protean talisman",
+          "translation": "万变护符"
+        },
+        {
+          "term": "quill talisman",
+          "translation": "棘刺护符"
+        },
+        {
+          "term": "Petrify",
+          "translation": "石化术/石化"
+        },
+        {
+          "term": "Disjunction",
+          "translation": "离散术"
+        },
+        {
+          "term": "Freeze",
+          "translation": "冰冻术/冰冻/冻结/冻伤"
+        },
+        {
+          "term": "Shock",
+          "translation": "电击术/电击"
+        },
+        {
+          "term": "Swiftness",
+          "translation": "迅捷术"
+        },
+        {
+          "term": "Airstrike",
+          "translation": "空气打击"
+        },
+        {
+          "term": "Passwall",
+          "translation": "穿墙术"
+        },
+        {
+          "term": "Sandblast",
+          "translation": "沙爆术"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Gloom",
+          "translation": "幽暗/愁苦"
+        },
+        {
+          "term": "Iceblast",
+          "translation": "冰爆术/冰爆"
+        },
+        {
+          "term": "Foxfire",
+          "translation": "狐火术/狐火"
+        },
+        {
+          "term": "Hailstorm",
+          "translation": "冰雹风暴"
+        },
+        {
+          "term": "Agony",
+          "translation": "剧痛术"
+        },
+        {
+          "term": "Scorch",
+          "translation": "灼烧术"
+        },
+        {
+          "term": "Jinxbite",
+          "translation": "厄咒之啮"
+        },
+        {
+          "term": "flame",
+          "translation": "火焰"
+        },
+        {
+          "term": "boulder",
+          "translation": "巨石"
+        },
+        {
+          "term": "crocodile",
+          "translation": "鳄鱼"
+        },
+        {
+          "term": "death knight",
+          "translation": "死亡骑士"
+        },
+        {
+          "term": "dwarf",
+          "translation": "矮人"
+        },
+        {
+          "term": "elf",
+          "translation": "精灵"
+        },
+        {
+          "term": "golem",
+          "translation": "魔像"
+        },
+        {
+          "term": "knight",
+          "translation": "骑士"
+        },
+        {
+          "term": "seismosaurus",
+          "translation": "震龙"
+        }
+      ]
+    },
+    {
+      "file": "job-def.h",
+      "sha256": "068ff4a9ba038c4de4cb8b0a7d2660059ae5f249a6216591d61927e9b0e5b360",
+      "glossary_hits": [
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        }
+      ]
+    },
+    {
+      "file": "job-groups.h",
+      "sha256": "41094ad25d21f0c76dd1b7cc04fc250791201987867d723abbc09da0d89339f2",
+      "glossary_hits": [
+        {
+          "term": "Artificer",
+          "translation": "修补匠"
+        },
+        {
+          "term": "Elementalist",
+          "translation": "元素使"
+        },
+        {
+          "term": "Fighter",
+          "translation": "战士"
+        },
+        {
+          "term": "Hunter",
+          "translation": "猎手"
+        },
+        {
+          "term": "Warrior",
+          "translation": "勇士"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "Alchemist",
+          "translation": "炼金术士"
+        },
+        {
+          "term": "Berserker",
+          "translation": "狂战士"
+        },
+        {
+          "term": "Brigand",
+          "translation": "强盗"
+        },
+        {
+          "term": "Conjurer",
+          "translation": "塑能师"
+        },
+        {
+          "term": "Delver",
+          "translation": "探地者"
+        },
+        {
+          "term": "Enchanter",
+          "translation": "妖术师"
+        },
+        {
+          "term": "Forgewright",
+          "translation": "锻造师"
+        },
+        {
+          "term": "Gladiator",
+          "translation": "角斗士"
+        },
+        {
+          "term": "Hexslinger",
+          "translation": "妖术射手"
+        },
+        {
+          "term": "Monk",
+          "translation": "武僧"
+        },
+        {
+          "term": "Necromancer",
+          "translation": "死灵法师"
+        },
+        {
+          "term": "Reaver",
+          "translation": "掠夺者"
+        },
+        {
+          "term": "Shapeshifter",
+          "translation": "变形者"
+        },
+        {
+          "term": "Summoner",
+          "translation": "召唤师"
+        },
+        {
+          "term": "Wanderer",
+          "translation": "漫游者"
+        },
+        {
+          "term": "Warper",
+          "translation": "位移术士"
+        },
+        {
+          "term": "knight",
+          "translation": "骑士"
+        }
+      ]
+    },
+    {
+      "file": "job-type.h",
+      "sha256": "c04ca1fe7a6c8617a3769349d299ad4e108e48d34fb3cd6721ac031be587e80f",
+      "glossary_hits": [
+        {
+          "term": "Artificer",
+          "translation": "修补匠"
+        },
+        {
+          "term": "Elementalist",
+          "translation": "元素使"
+        },
+        {
+          "term": "Fighter",
+          "translation": "战士"
+        },
+        {
+          "term": "Hunter",
+          "translation": "猎手"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "Alchemist",
+          "translation": "炼金术士"
+        },
+        {
+          "term": "Berserker",
+          "translation": "狂战士"
+        },
+        {
+          "term": "Brigand",
+          "translation": "强盗"
+        },
+        {
+          "term": "Conjurer",
+          "translation": "塑能师"
+        },
+        {
+          "term": "Delver",
+          "translation": "探地者"
+        },
+        {
+          "term": "Enchanter",
+          "translation": "妖术师"
+        },
+        {
+          "term": "Forgewright",
+          "translation": "锻造师"
+        },
+        {
+          "term": "Gladiator",
+          "translation": "角斗士"
+        },
+        {
+          "term": "Hexslinger",
+          "translation": "妖术射手"
+        },
+        {
+          "term": "Monk",
+          "translation": "武僧"
+        },
+        {
+          "term": "Necromancer",
+          "translation": "死灵法师"
+        },
+        {
+          "term": "Reaver",
+          "translation": "掠夺者"
+        },
+        {
+          "term": "Shapeshifter",
+          "translation": "变形者"
+        },
+        {
+          "term": "Summoner",
+          "translation": "召唤师"
+        },
+        {
+          "term": "Wanderer",
+          "translation": "漫游者"
+        },
+        {
+          "term": "Warper",
+          "translation": "位移术士"
+        },
+        {
+          "term": "knight",
+          "translation": "骑士"
+        }
+      ]
+    },
+    {
+      "file": "jobs.cc",
+      "sha256": "1606c17b463e3aa8ee5d122d6439f987689a8e4412127659b971f738a6672c0d",
+      "glossary_hits": [
+        {
+          "term": "book",
+          "translation": "魔法书/书/手册"
+        },
+        {
+          "term": "Fighter",
+          "translation": "战士"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "stats",
+          "translation": "属性"
+        },
+        {
+          "term": "Wanderer",
+          "translation": "漫游者"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "jobs.h",
+      "sha256": "6c8de14a30742f0ef8828867437a9940e5be42de548543f0988238b57e3e9de5",
+      "glossary_hits": [
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        }
+      ]
+    },
+    {
+      "file": "json-wrapper.h",
+      "sha256": "1df53dae20d4bcb46f2c3c8aa09a287e9f2c900926e4067891f1e538ae0a0c30",
+      "glossary_hits": [
+        {
+          "term": "throw",
+          "translation": "投掷"
+        }
+      ]
+    },
+    {
+      "file": "json.cc",
+      "sha256": "4ce237b8a57900590f8f439299f5c34e157cd29a04c4064b7e9b17cb6c23123f",
+      "glossary_hits": [
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Joseph",
+          "translation": "约瑟夫"
+        }
+      ]
+    },
+    {
+      "file": "json.h",
+      "sha256": "b020fad46cf7171bbc511247348015a5742623e1e4b2fa08b4e4e2199df374aa",
+      "glossary_hits": [
+        {
+          "term": "Joseph",
+          "translation": "约瑟夫"
+        }
+      ]
+    }
+  ],
+  "reviewed_existing_messages": [
+    {
+      "context": "display.creation",
+      "english": "Air Elementalist",
+      "translation": "气元素使",
+      "glossary_hits": [
+        {
+          "Term": "Air Elementalist",
+          "Translation": "气元素使",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/air-elementalist.yaml。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation",
+      "english": "Alchemist",
+      "translation": "炼金术士",
+      "glossary_hits": [
+        {
+          "Term": "Alchemist",
+          "Translation": "炼金术士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/alchemist.yaml。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation",
+      "english": "Artificer",
+      "translation": "修补匠",
+      "glossary_hits": [
+        {
+          "Term": "Artificer",
+          "Translation": "修补匠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的背景名称清单对应。来源：dat/jobs/artificer.yaml。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation",
+      "english": "Berserker",
+      "translation": "狂战士",
+      "glossary_hits": [
+        {
+          "Term": "Berserker",
+          "Translation": "狂战士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/berserker.yaml。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation",
+      "english": "Brigand",
+      "translation": "强盗",
+      "glossary_hits": [
+        {
+          "Term": "Brigand",
+          "Translation": "强盗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/brigand.yaml。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation",
+      "english": "Chaos Knight",
+      "translation": "混沌骑士",
+      "glossary_hits": [
+        {
+          "Term": "Chaos Knight",
+          "Translation": "混沌骑士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/chaos-knight.yaml。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation",
+      "english": "Cinder Acolyte",
+      "translation": "余烬侍僧",
+      "glossary_hits": [
+        {
+          "Term": "Cinder Acolyte",
+          "Translation": "余烬侍僧",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/cinder-acolyte.yaml。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation",
+      "english": "Conjurer",
+      "translation": "塑能师",
+      "glossary_hits": [
+        {
+          "Term": "Conjurer",
+          "Translation": "塑能师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/conjurer.yaml。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation",
+      "english": "Delver",
+      "translation": "探地者",
+      "glossary_hits": [
+        {
+          "Term": "Delver",
+          "Translation": "探地者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/delver.yaml。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation",
+      "english": "Earth Elementalist",
+      "translation": "土元素使",
+      "glossary_hits": [
+        {
+          "Term": "Earth Elementalist",
+          "Translation": "土元素使",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/earth-elementalist.yaml。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation",
+      "english": "Enchanter",
+      "translation": "妖术师",
+      "glossary_hits": [
+        {
+          "Term": "Enchanter",
+          "Translation": "妖术师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/enchanter.yaml。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation",
+      "english": "Fighter",
+      "translation": "战士",
+      "glossary_hits": [
+        {
+          "Term": "Fighter",
+          "Translation": "战士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的背景名称清单对应。来源：dat/jobs/fighter.yaml。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation",
+      "english": "Fire Elementalist",
+      "translation": "火元素使",
+      "glossary_hits": [
+        {
+          "Term": "Fire Elementalist",
+          "Translation": "火元素使",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/fire-elementalist.yaml。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation",
+      "english": "Forgewright",
+      "translation": "锻造师",
+      "glossary_hits": [
+        {
+          "Term": "Forgewright",
+          "Translation": "锻造师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/forgewright.yaml。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation",
+      "english": "Gladiator",
+      "translation": "角斗士",
+      "glossary_hits": [
+        {
+          "Term": "Gladiator",
+          "Translation": "角斗士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/gladiator.yaml。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation",
+      "english": "Hedge Wizard",
+      "translation": "野法师",
+      "glossary_hits": [
+        {
+          "Term": "Hedge Wizard",
+          "Translation": "野法师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/hedge-wizard.yaml。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation",
+      "english": "Hexslinger",
+      "translation": "妖术射手",
+      "glossary_hits": [
+        {
+          "Term": "Hexslinger",
+          "Translation": "妖术射手",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/hexslinger.yaml。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation",
+      "english": "Hunter",
+      "translation": "猎手",
+      "glossary_hits": [
+        {
+          "Term": "Hunter",
+          "Translation": "猎手",
+          "Part of Speech": "noun",
+          "Variants": "Hu",
+          "Note": "【现行清单】已与 0.34.1 的背景名称清单对应。来源：dat/jobs/hunter.yaml。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation",
+      "english": "Ice Elementalist",
+      "translation": "冰元素使",
+      "glossary_hits": [
+        {
+          "Term": "Ice Elementalist",
+          "Translation": "冰元素使",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/ice-elementalist.yaml。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation",
+      "english": "Monk",
+      "translation": "武僧",
+      "glossary_hits": [
+        {
+          "Term": "Monk",
+          "Translation": "武僧",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/monk.yaml。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation",
+      "english": "Necromancer",
+      "translation": "死灵法师",
+      "glossary_hits": [
+        {
+          "Term": "Necromancer",
+          "Translation": "死灵法师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/necromancer.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation",
+      "english": "Reaver",
+      "translation": "掠夺者",
+      "glossary_hits": [
+        {
+          "Term": "Reaver",
+          "Translation": "掠夺者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/reaver.yaml。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation",
+      "english": "Shapeshifter",
+      "translation": "变形者",
+      "glossary_hits": [
+        {
+          "Term": "Shapeshifter",
+          "Translation": "变形者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/shapeshifter.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation",
+      "english": "Summoner",
+      "translation": "召唤师",
+      "glossary_hits": [
+        {
+          "Term": "Summoner",
+          "Translation": "召唤师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/summoner.yaml。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation",
+      "english": "Wanderer",
+      "translation": "漫游者",
+      "glossary_hits": [
+        {
+          "Term": "Wanderer",
+          "Translation": "漫游者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/wanderer.yaml。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation",
+      "english": "Warper",
+      "translation": "位移术士",
+      "glossary_hits": [
+        {
+          "Term": "Warper",
+          "Translation": "位移术士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/warper.yaml。"
+        }
+      ]
+    },
+    {
+      "context": "display.creation.group",
+      "english": "Warrior",
+      "translation": "战斗者",
+      "glossary_hits": [
+        {
+          "Term": "Warrior",
+          "Translation": "勇士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "context": "display.creation.group",
+      "english": "Adventurer",
+      "translation": "冒险者",
+      "glossary_hits": []
+    },
+    {
+      "context": "display.creation.group",
+      "english": "Zealot",
+      "translation": "信徒",
+      "glossary_hits": []
+    },
+    {
+      "context": "display.creation.group",
+      "english": "Warrior-mage",
+      "translation": "战法兼修",
+      "glossary_hits": []
+    },
+    {
+      "context": "display.creation.group",
+      "english": "Mage",
+      "translation": "法师",
+      "glossary_hits": []
+    }
+  ],
+  "active_backgrounds": 26,
+  "groups": 5,
+  "new_messages": 0,
+  "source_changes": 0,
+  "removed_background_names": [
+    "Abyssal Knight",
+    "Skald",
+    "Death Knight",
+    "Healer",
+    "Jester",
+    "Priest",
+    "Stalker"
+  ],
+  "scope": "Top-level game source; bundled contrib JPEG libraries excluded. JSON syntax, technical diagnostics, equipment specs, job IDs and abbreviations remain canonical English."
+}

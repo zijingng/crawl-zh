@@ -1,0 +1,19 @@
+{
+  "candidate_counts": {
+    "gizmo_adjective": 167,
+    "gizmo_noun": 170,
+    "gizmo_modifier": 202
+  },
+  "total_candidates": 539,
+  "reviewed_keys": 3,
+  "english_source_unchanged": true,
+  "canonical_names_remain_english": true,
+  "new_save_properties": false,
+  "python_tests": 32,
+  "targeted_native_tests": 6,
+  "targeted_assertions": 26072,
+  "expanded_prefix_cases": 7878,
+  "gizmo_test_seconds": 0.64,
+  "tiles_build_success": true,
+  "full_monster_matrix_rerun": false
+}

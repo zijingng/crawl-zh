@@ -1,0 +1,27 @@
+{
+  "batch": "phase3-static-04",
+  "ledger_entries_checked": 659,
+  "textdb_exported": 659,
+  "deterministic_export": true,
+  "glossary_unchanged": true,
+  "god_descriptions_reviewed": 82,
+  "wu_jian_diagram_max_cells": 63,
+  "cpp_test_cases": 9,
+  "cpp_assertions": 1410,
+  "catalogue_tests": 8,
+  "textdb_tests": 5,
+  "lua_branches": 11,
+  "gui_checks": [
+    "Chinese inventory: war axe, scale mail, buckler and equipped annotations",
+    "Chinese weapon HUD",
+    "Chinese war axe title and description",
+    "Chinese creation weapon choices and aptitude label",
+    "English inventory, articles, equipped annotations and HUD"
+  ],
+  "gui_scope_note": "Representative views only; not a full GUI acceptance of all new text. Last Tab weapon-label call-site fix compiled after observed creation screen.",
+  "ui_manifest_entries": 771,
+  "ui_reviewed_entries": 770,
+  "canonical_english_item_naming_unchanged": true,
+  "windows_tiles_build_passed": true,
+  "binary_sha256": "27df2a2ca89c308bea4f07875120b7b004f30a48f907f1275336f62e164707ae"
+}

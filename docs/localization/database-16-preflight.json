@@ -1,0 +1,1741 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "selected": [
+    {
+      "key": "_graffiti_author_any_",
+      "source": "w:50\n@ancestor name@\n\n@_graffiti_author_orc_@\n\nw:2\n@_graffiti_author_bland_@\n\nw:2\n@RANDGEN@\n\nw:1\n@_rare_graffiti_author_any_@\n",
+      "hits": [
+        {
+          "Term": "ancestor",
+          "Translation": "先祖",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_author_any_changeable_",
+      "source": "w:50\n@ancestor name@\n\nw:2\n@_graffiti_author_bland_@\n\nw:2\n@RANDGEN@\n",
+      "hits": [
+        {
+          "Term": "ancestor",
+          "Translation": "先祖",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_author_any_changeable_non-randgen_",
+      "source": "w:50\n@ancestor name@\n\nw:2\n@_graffiti_author_bland_@\n",
+      "hits": [
+        {
+          "Term": "ancestor",
+          "Translation": "先祖",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_author_any_non-orc_",
+      "source": "w:50\n@ancestor name@\n\nw:2\n@_graffiti_author_bland_@\n\nw:2\n@RANDGEN@\n\nw:1\n@_rare_graffiti_author_any_non-orc_@\n",
+      "hits": [
+        {
+          "Term": "ancestor",
+          "Translation": "先祖",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_author_bland_",
+      "source": "@bland name@\n\nw:2\n@bland name@ (not that one)\n\nw:2\n@bland name@ (the other one)\n\nw:2\n@bland name@ (yes, that one)\n",
+      "hits": []
+    },
+    {
+      "key": "_graffiti_author_orc_",
+      "source": "@any orc name@ the orc\n",
+      "hits": [
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_rare_graffiti_author_any_",
+      "source": "@_rare_graffiti_author_ordinary_@\n\nw:2\n@_rare_graffiti_author_orc_@\n\nw:2\n@_rare_graffiti_author_title_@\n\nw:1\n@_rare_graffiti_author_god_@\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_rare_graffiti_author_any_non-orc_",
+      "source": "@_rare_graffiti_author_ordinary_@\n\nw:2\n@_rare_graffiti_author_title_@\n\nw:1\n@_rare_graffiti_author_god_@\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_rare_graffiti_author_god_",
+      "source": "Woog the god\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "_rare_graffiti_author_orc_",
+      "source": "Spartorcus the orc\n",
+      "hits": [
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_rare_graffiti_author_ordinary_",
+      "source": "Durwent the kobold\n\nZlaz the goblin\n\nFneeb the oni\n\nVethion the elf\n\nFrobof the imp\n",
+      "hits": [
+        {
+          "Term": "kobold",
+          "Translation": "狗头人",
+          "Part of Speech": "noun",
+          "Variants": "kobolds",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/kobold.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Oni",
+          "Translation": "鬼人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/oni.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "elf",
+          "Translation": "精灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "goblin",
+          "Translation": "地精",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_rare_graffiti_author_title_",
+      "source": "Kilroy\n\nGarc the Great\n\nPlog the Peerless\n\nDead Wendell\n\nLady Dreamflight\n",
+      "hits": []
+    },
+    {
+      "key": "_graffiti_type_with_signature_maybe_",
+      "source": "@_graffiti_type_@\n\n@_graffiti_type_@ signed by @_graffiti_author_any_@\n",
+      "hits": []
+    },
+    {
+      "key": "_graffiti_type_with_signature_maybe_non-orc_",
+      "source": "@_graffiti_type_@\n\n@_graffiti_type_@ signed by @_graffiti_author_any_non-orc_@\n",
+      "hits": [
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_type_with_signature_maybe_orc_",
+      "source": "@_graffiti_type_@\n\n@_graffiti_type_@ signed by @_graffiti_author_orc_@\n",
+      "hits": [
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_advertisement_",
+      "source": "advertising a meeting @_graffiti_mass_meeting_ordinary_@\n\nadvertising a meeting @_graffiti_mass_meeting_religious_@\n\nadvertising a shop in the dungeon with [cheap|exclusive|expensive|quality|rare|useful] goods\n\nw:2\nadvertising @_graffiti_class_any_@\n\nw:1\nadvertising a meet-up with @_graffiti_author_any_@ to learn how to survive in the dungeon\n\nw:1\nadvertising a meet-up with @_graffiti_author_any_@ for a good time\n\nw:1\nadvertising the very paint used to make it\n",
+      "hits": [
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "shop",
+          "Translation": "商店",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "the Dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_changed_names_",
+      "source": "@_graffiti_author_any_changeable_@ has changed names and now goes by @_graffiti_author_any_changeable_@\n\nw:2\n@_graffiti_author_orc_@ has changed names and now goes by @_graffiti_author_orc_@\n\nw:2\n@_rare_graffiti_author_any_@ has passed on the name to someone else worthy of it\n\nw:1\n@_graffiti_author_any_changeable_non-randgen_@ has changed names due to Xom's influence and now goes by @RANDGEN@\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_changed_or_compared_religions_",
+      "source": "@_graffiti_author_any_@ has abandoned @random_god@\n\n@_graffiti_author_any_@ has converted away from @random_god@\n\n@_graffiti_author_any_@ has converted to @random_god@\n\n@_graffiti_author_any_@ is @_graffiti_religion_better_or_worse_@ than @_graffiti_author_any_@\n\n@_graffiti_author_any_@ is secretly an atheist\n\n@_graffiti_author_any_@ is secretly not an atheist\n\n@_graffiti_author_any_@ is secretly @random_god@\n\n@_graffiti_author_any_@ secretly worships Zin\n\n@_graffiti_author_any_@ secretly worships Zin instead of @random_god_chaotic@\n\n@_graffiti_author_any_@ secretly worships @random_god_chaotic@\n\n@_graffiti_author_any_@ secretly worships @random_god_chaotic@ instead of Zin\n\n@_graffiti_author_any_@ secretly worships @random_god_good@\n\n@_graffiti_author_any_@ secretly worships @random_god_good@ instead of @random_god_evil@\n\n@_graffiti_author_any_@ secretly worships @random_god_evil@\n\n@_graffiti_author_any_@ secretly worships @random_god_evil@ instead of @random_god_good@\n\nw:1\n@_graffiti_author_any_@ is secretly @_graffiti_hailed_god_@\n\nw:1\n@_graffiti_author_any_@ secretly worships @_graffiti_hailed_god_@\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Zin",
+          "Translation": "辛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "法则之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_class_any_",
+      "source": "@_graffiti_class_remedial_@\n\nw:2\n@_graffiti_class_master_@\n",
+      "hits": []
+    },
+    {
+      "key": "_graffiti_class_remedial_",
+      "source": "a Remedial @random_skill@ class taught by @_graffiti_professor_@\n\na Remedial @random_skill_magic@ class taught by the @_graffiti_professor_magic_type_@ @_graffiti_professor_@\n\na Remedial @random_skill_mundane@ class taught by the @_graffiti_professor_mundane_type_@ @_graffiti_professor_@\n\nw:2\na Remedial Evocations class taught by the @_graffiti_professor_evocations_type_@ @_graffiti_professor_@\n\nw:2\na Remedial Invocations class taught by the @_graffiti_professor_invocations_type_@ @_graffiti_professor_@\n\nw:2\na Remedial Shapeshifting class taught by the @_graffiti_professor_shapeshifting_type_@ @_graffiti_professor_@\n\n\nw:2\na Remedial Necromancy class taught by the @_graffiti_professor_necromancy_type_@ @_graffiti_professor_@\n\nw:2\na Remedial @random_skill_magic@ class taught by the @_graffiti_professor_necromancy_type_@ @_graffiti_professor_@\n",
+      "hits": [
+        {
+          "Term": "Evocations",
+          "Translation": "唤发",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】技能而非魔法物品；影响魔杖和其他可唤发物品的强度或成功率，当前说明不含提高 MP 上限。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "Invocations",
+          "Translation": "祈祷",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】保留译名；影响部分神赐能力和魔力储备，与施法的 MP 贡献取较高者，Djinni 另有种族规则。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "Necromancy",
+          "Translation": "死灵系魔法",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "skill",
+          "Translation": "技能",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Shapeshifting",
+          "Translation": "变形术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_duplicate_",
+      "source": "a duplicate\n\na duplicate indistinguishable from the original\n\nan impostor\n\nan impostor from another reality\n\na shapeshifter\n",
+      "hits": [
+        {
+          "Term": "Shapeshifter",
+          "Translation": "变形者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/shapeshifter.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_fight_",
+      "source": "of an argument between @_graffiti_author_any_@ and @_graffiti_author_any_@\n\nof a three-way argument between @_graffiti_author_any_@, @_graffiti_author_any_@, and @_graffiti_author_any_@\n\nw:2\nof a fight between [berserkers|Trog worshippers] and erythrospite sufferers over the true meaning of blood rage\n\nw:2\nof a fight between [\"artists\"|artists|Dithmenos worshippers] and [death knights|death mages|Yredelemnul worshippers|necromancers] over whether something was a shadow or a shadowghast\n",
+      "hits": [
+        {
+          "Term": "Dithmenos",
+          "Translation": "迪斯姆诺",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "隐没者，黑暗之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "shadow",
+          "Translation": "影",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Trog",
+          "Translation": "特洛戈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Yredelemnul",
+          "Translation": "伊莱德莱姆努尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "erythrospite",
+          "Translation": "猩红怨体",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "shadowghast",
+          "Translation": "阴影怨魂",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_hailed_god_",
+      "source": "Xom\n\nw:2\nan unknown god\n\nw:1\n@_rare_graffiti_author_god_@\n\nw:1\nthe power of cheese\n\nw:1\na wagon full of pancakes\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_happened_reason_",
+      "source": "an accident\n\na coincidence\n\na coincidence but @_graffiti_author_any_@ doesn't trust coincidences\n\na cover-up\n\na farce\n\na frame-up\n\na mistake\n\na travesty\n\na warning to others\n\nagainst the will of the gods\n\ncompletely random\n\ndeliberate\n\ndeserved\n\njust\n\nnecessary\n\nno accident\n\nno mistake\n\npart of a larger plot\n\nthe work of the \"Plog\" Conspiracy\n\nself-inflicted\n\nthe will of the gods\n\nuncalled for\n\nundeserved\n\nunjust\n\nunnecessary\n\nunthinkable\n",
+      "hits": [
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_mass_meeting_ordinary_",
+      "source": "of an athletic club playing [cards|darts|hammer throw|javelin throw|Whack-A-Rock-Fish]\n\nof an artificer club [testing|tinkering with] [devices|evokables|wands]\n\nof a support group for veterans of the surface wars\n\nof a group of [bakers|fruit vendors|meat vendors|shopkeepers] peddling their wares in the dungeon\n\nof a group of [apiarists|hive talisman users] discussing the [antics|emotional state|health] of their bees\n\nof a group of rich people discussing how to make more money\n\nof a group of [knights|veterans|warlords|warriors] practising barely-restrained combat\n\nof a group of [knights|veterans|warlords|warriors] practising solo combat\n\nof a group of [mages|sorcerers|spellcasters|wizards] practising [eclectic|esoteric] magic\n\nof a group of [mages|sorcerers|spellcasters|wizards] practising [cataclysmic|destructive] magic\n\nof a group of [death mages|necromancers] practising [necromancy|bringing things to unlife]\n\nof a group of philosophers discussing [perfection|the nature of time] for who knows how long\n\nof a group of [masochists|sadists] holding a pain endurance contest\n\nof a group of gardeners showing off their green thumbs\n\nof a group of [bards|historians|lorekeepers] sharing glorious tales of their ancestors\n\nof a group of revellers throwing a wild dance party\n\nof a group of [\"artists\" holding a \"shadow play\"|artists holding a shadow play]\n\nof a group of monks practising martial [attacks|movements]\n\nof a group of potion makers practising healing others\n\nof a group of ascetics despising their bodies and discussing sacrifices\n\nof a group of [crusaders|moralists] [discussing|opposing] evil in the world\n\nof a varied group of people discussing their experiences in the Abyss\n",
+      "hits": [
+        {
+          "Term": "Abyss",
+          "Translation": "深渊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Artificer",
+          "Translation": "修补匠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的背景名称清单对应。来源：dat/jobs/artificer.yaml。"
+        },
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Necromancy",
+          "Translation": "死灵系魔法",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "potion",
+          "Translation": "药水",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "shadow",
+          "Translation": "影",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "throw",
+          "Translation": "投掷",
+          "Part of Speech": "verb",
+          "Variants": "",
+          "Note": "【0.34.1 修订】本条是动作动词；独立补充 Throwing 技能，不把普通 throwing 自动视为技能名。 来源：skills.cc。\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Throwing",
+          "Translation": "投掷",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "talisman",
+          "Translation": "变形护符",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/物品类别】用于 Shapeshifting，不能与佩戴的 amulet（护身符）混用。 来源：dat/descript/items.txt。"
+        },
+        {
+          "Term": "hive talisman",
+          "Translation": "蜂巢护符",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+        },
+        {
+          "Term": "Pain",
+          "Translation": "痛苦术/痛苦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用痛苦术。卡牌、武器印记或普通感受用痛苦，完整物品专名优先。\n【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "the Dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "the Abyss",
+          "Translation": "深渊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Abyss（规范缩写 Abyss）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_mass_meeting_religious_",
+      "source": "of a [sharper club|group of Nemelex Xobeh worshippers] playing cards the way Nemelex Xobeh intended\n\nof a group of Zin worshippers supporting the Axioms of Law\n\nof a group of [chaos knights|Xom worshippers] contemplating the Divine Madness\n\nof a group of [death knights|Yredelemnul worshippers] embracing the Inexorable Grip\n\nof a group of Gozag worshippers discussing how to make more money\n\nof a group of [berserkers|Trog worshippers] practising barely-restrained combat\n\nof a group of Okawaru worshippers practising solo combat\n\nof a group of Sif Muna worshippers practising [eclectic|esoteric] magic\n\nof a group of Vehumet worshippers practising [cataclysmic|destructive] magic\n\nof a group of Kikubaaqudgha worshippers practising [necromancy|bringing things to unlife]\n\nof a group of Cheibriados worshippers discussing [perfection|the nature of time] for who knows how long\n\nof a group of Makhleb worshippers holding a pain endurance contest\n\nof a group of Fedhas worshippers showing off their green thumbs\n\nof a group of Hepliaklqana worshippers sharing glorious tales of their ancestors\n\nof a group of Uskayaw worshippers throwing a wild dance party\n\nof a group of Dithmenos worshippers holding a [\"shadow play\"|shadow play]\n\nof a group of worshippers of the Wu Jian Council practising martial [attacks|movements]\n\nof a group of Qazlal worshippers changing the weather indoors\n\nof a group of Elyvilon worshippers practising healing others\n\nof a group of Ashenzari worshippers practising scrying on things\n\nof a group of Ru worshippers despising their bodies and discussing sacrifices\n\nof a group of worshippers of the Shining One [discussing|opposing] evil in the world\n\nof a group of [Lugonu worshippers|mad acolytes of Lugonu] discussing their experiences in the Abyss\n\nof a group of orcs promoting Beogh's word\n",
+      "hits": [
+        {
+          "Term": "Abyss",
+          "Translation": "深渊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Ashenzari",
+          "Translation": "艾申扎利",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "axioms of law",
+          "Translation": "法则公理",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Cheibriados",
+          "Translation": "切布理亚多",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "审慎之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Dithmenos",
+          "Translation": "迪斯姆诺",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "隐没者，黑暗之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Elyvilon",
+          "Translation": "艾利维隆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Fedhas",
+          "Translation": "费德哈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Gozag",
+          "Translation": "哥萨戈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Hepliaklqana",
+          "Translation": "惠普利亚卡纳",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "遗忘者\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Kikubaaqudgha",
+          "Translation": "奇库巴库哈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Makhleb",
+          "Translation": "马科列布",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Necromancy",
+          "Translation": "死灵系魔法",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "Nemelex Xobeh",
+          "Translation": "尼姆雷斯・索布",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "骗术之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Okawaru",
+          "Translation": "奥格瓦如",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Qazlal",
+          "Translation": "卡兹拉尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "风暴之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Ru",
+          "Translation": "入",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "牺牲与内在力量之神\n【版本/语境】专名沿用原译“入”，不是单词“进入”；献祭祭坛组合用“入神”。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "shadow",
+          "Translation": "影",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Sif Muna",
+          "Translation": "席夫·穆纳",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "the Shining One",
+          "Translation": "光明神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Trog",
+          "Translation": "特洛戈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Uskayaw",
+          "Translation": "阿斯卡亚",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "狂欢者，舞神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Vehumet",
+          "Translation": "维胡梅特",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Wu Jian",
+          "Translation": "武剑会",
+          "Part of Speech": "noun",
+          "Variants": "Wu Jian Council",
+          "Note": "【0.34.1 译名建议】指共同升格为神的武僧集体；正文中的 the Council 和简称 The Council 均按语境称“武剑会”或“本会”，不译作政治机构“议会”；旧备注“无间道”不是英文原文依据，不据此扩写神话背景。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Yredelemnul",
+          "Translation": "伊莱德莱姆努尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Zin",
+          "Translation": "辛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "法则之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Throwing",
+          "Translation": "投掷",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "Lugonu",
+          "Translation": "卢戈努",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇】补齐现行神祇名称。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Pain",
+          "Translation": "痛苦术/痛苦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用痛苦术。卡牌、武器印记或普通感受用痛苦，完整物品专名优先。\n【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "the Abyss",
+          "Translation": "深渊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Abyss（规范缩写 Abyss）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "chaos",
+          "Translation": "混沌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_obscenities_",
+      "source": "of various obscenities\n\nw:1\nof some very imaginative obscenities you've never seen before\n",
+      "hits": []
+    },
+    {
+      "key": "_graffiti_professor_",
+      "source": "@_graffiti_author_any_changeable_@\n\nw:2\n@_graffiti_author_orc_@\n\nw:1\n@_rare_graffiti_author_any_@ (supposedly)\n",
+      "hits": [
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_professor_evocations_type_",
+      "source": "artificer\n\ntinkerer\n",
+      "hits": [
+        {
+          "Term": "Artificer",
+          "Translation": "修补匠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的背景名称清单对应。来源：dat/jobs/artificer.yaml。"
+        },
+        {
+          "Term": "Evocations",
+          "Translation": "唤发",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】技能而非魔法物品；影响魔杖和其他可唤发物品的强度或成功率，当前说明不含提高 MP 上限。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_professor_invocations_type_",
+      "source": "cleric\n\nhigh priest\n\npriest\n\ntheologian\n",
+      "hits": [
+        {
+          "Term": "Invocations",
+          "Translation": "祈祷",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】保留译名；影响部分神赐能力和魔力储备，与施法的 MP 贡献取较高者，Djinni 另有种族规则。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_professor_magic_type_",
+      "source": "mage\n\nsorcerer\n\nspellcaster\n\nwizard\n",
+      "hits": [
+        {
+          "Term": "wizard",
+          "Translation": "巫师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_professor_mundane_type_",
+      "source": "knight\n\nveteran\n\nwarlord\n\nwarrior\n",
+      "hits": [
+        {
+          "Term": "Warrior",
+          "Translation": "勇士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "knight",
+          "Translation": "骑士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_professor_necromancy_type_",
+      "source": "death mage\n\nnecromancer\n",
+      "hits": [
+        {
+          "Term": "Necromancy",
+          "Translation": "死灵系魔法",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "Necromancer",
+          "Translation": "死灵法师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/necromancer.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_professor_shapeshifting_type_",
+      "source": "shapeshifter\n\ntalismancer\n",
+      "hits": [
+        {
+          "Term": "Shapeshifter",
+          "Translation": "变形者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/shapeshifter.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Shapeshifting",
+          "Translation": "变形术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_relative_or_quality_",
+      "source": "all associates\n\nthe bloodline\n\nthe child\n\nthe children\n\nthe clan\n\nthe dexterity\n\nthe entire species\n\nthe family\n\nthe friend\n\nthe friends\n\nthe god\n\nthe intelligence\n\nthe lover\n\nthe lovers\n\nthe mate\n\nthe mates\n\nthe parent\n\nthe parents\n\nthe personality\n\nthe spouse\n\nthe spouses\n\nthe strength\n",
+      "hits": [
+        {
+          "Term": "Dexterity",
+          "Translation": "敏捷/灵巧",
+          "Part of Speech": "noun",
+          "Variants": "Dex",
+          "Note": "三大基础属性之一\n【语境补充 2026-10-21】Dex 属性用敏捷。普通身手描述可用灵巧。"
+        },
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Intelligence",
+          "Translation": "智力/智慧/心智",
+          "Part of Speech": "noun",
+          "Variants": "Int",
+          "Note": "三大基础属性之一\n【语境补充 2026-10-21】Int 属性用智力。生物认知、保有意识等叙述用智慧或心智。"
+        },
+        {
+          "Term": "species",
+          "Translation": "种族",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Strength",
+          "Translation": "力量/强度/威力",
+          "Part of Speech": "noun",
+          "Variants": "Str",
+          "Note": "三大基础属性之一\n【语境补充 2026-10-21】Str 属性用力量。法术、效果或攻击的 strength 按语境用强度或威力。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_religion_non-orc_",
+      "source": "lauding Zin and Zin's laws\n\nlauding Zin and talking about how following Zin's laws is essential\n\nlauding Zin and talking about how those who break Zin's laws deserve punishment\n\nlauding Zin but warning that putting graffiti on surfaces is often unlawful\n",
+      "hits": [
+        {
+          "Term": "Zin",
+          "Translation": "辛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "法则之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_religion_not_non-orc_or_orc_",
+      "source": "[glorifying|blaspheming] the gods\n\nglorifying @random_god@ and blaspheming @random_god@\n\n\nrevering Xom and the randomness of everything\n\ndelighting in Nemelex Xobeh and whatever the next card deck brings\n\nextolling Yredelemnul and all things unholy\n\ncommending Gozag and talking about how enough gold can buy anything\n\npraising Trog and talking about how blood rage can get rid of anything in your way\n\nadoring Okawaru and talking about how Okawaru is the only ally you need as a warrior\n\napplauding Sif Muna and talking about how all magic is accessible with enough effort\n\nvenerating Vehumet and talking about how weaponised magic is the key to victory\n\nfawning over Kikubaaqudgha and talking about how necromancy turns all flesh and blood into useful tools\n\ngiving kudos to Cheibriados and talking about how the slow and steady can conquer all\n\npaying tribute to Makhleb and talking about all the powers of hell that Makhleb grants\n\nexulting Fedhas and the enduring powers of nature\n\nhonouring Hepliaklqana and talking about how those who live on in others' memories never truly die\n\nshowing devotion to Uskayaw and talking about the complex dance that is life itself\n\ndoting on Dithmenos and talking about the many things [shadows|the night] can do\n\ngiving thanks to the Wu Jian Council and talking about how proper discipline is the key to greatness\n\nacclaiming Qazlal and talking about how the elements can work for you\n\npromoting Elyvilon and talking about how bringing peace to the world is essential\n\nadmiring Ashenzari and talking about how curses and bondage are blessings when they lead to knowledge\n\npaying homage to Ru and talking about how all of reality is not what you think it is\n\ngiving adulation to the Shining One and talking about how honourably removing evil from the world is essential\n\nflattering Lugonu and talking about how Lugonu and the forces of the Abyss will soon rule over all\n\nw:1\nglorifying an unknown god\n\nw:1\nnot just hailing but glorifying @_graffiti_hailed_god_@\n",
+      "hits": [
+        {
+          "Term": "Abyss",
+          "Translation": "深渊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Ashenzari",
+          "Translation": "艾申扎利",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Cheibriados",
+          "Translation": "切布理亚多",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "审慎之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "deck",
+          "Translation": "套牌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Dithmenos",
+          "Translation": "迪斯姆诺",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "隐没者，黑暗之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Elyvilon",
+          "Translation": "艾利维隆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Fedhas",
+          "Translation": "费德哈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Gozag",
+          "Translation": "哥萨戈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Hell",
+          "Translation": "地狱",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Hepliaklqana",
+          "Translation": "惠普利亚卡纳",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "遗忘者\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Kikubaaqudgha",
+          "Translation": "奇库巴库哈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Makhleb",
+          "Translation": "马科列布",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Necromancy",
+          "Translation": "死灵系魔法",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "Nemelex Xobeh",
+          "Translation": "尼姆雷斯・索布",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "骗术之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Okawaru",
+          "Translation": "奥格瓦如",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Qazlal",
+          "Translation": "卡兹拉尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "风暴之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Ru",
+          "Translation": "入",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "牺牲与内在力量之神\n【版本/语境】专名沿用原译“入”，不是单词“进入”；献祭祭坛组合用“入神”。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Sif Muna",
+          "Translation": "席夫·穆纳",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "the Shining One",
+          "Translation": "光明神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Trog",
+          "Translation": "特洛戈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Uskayaw",
+          "Translation": "阿斯卡亚",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "狂欢者，舞神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Vehumet",
+          "Translation": "维胡梅特",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Warrior",
+          "Translation": "勇士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Wu Jian",
+          "Translation": "武剑会",
+          "Part of Speech": "noun",
+          "Variants": "Wu Jian Council",
+          "Note": "【0.34.1 译名建议】指共同升格为神的武僧集体；正文中的 the Council 和简称 The Council 均按语境称“武剑会”或“本会”，不译作政治机构“议会”；旧备注“无间道”不是英文原文依据，不据此扩写神话背景。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Yredelemnul",
+          "Translation": "伊莱德莱姆努尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Lugonu",
+          "Translation": "卢戈努",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇】补齐现行神祇名称。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "Slow",
+          "Translation": "缓慢术/减速/缓慢/迟缓",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用缓慢术。施加状态用减速。普通动作或反应用缓慢、迟缓。"
+        },
+        {
+          "Term": "the Abyss",
+          "Translation": "深渊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Abyss（规范缩写 Abyss）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "the Elements",
+          "Translation": "元素",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Shadows",
+          "Translation": "阴影",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_religion_orc_",
+      "source": "proselytising for Beogh and proper orcishness\n\nproclaiming that Beogh's messiah will soon come\n\nthanking Beogh for granting salvation while the other gods just watched\n\ntalking about how Beogh will help you when the other gods turn away from you\n\ntalking about how Beogh is with them and not those other heretic orcs\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "turn",
+          "Translation": "回合/转向/变成/轮流",
+          "Part of Speech": "noun",
+          "Variants": "turns",
+          "Note": "【版本/语境】回合/动作叙述用语；不是固定时间单位 aut，动作耗时可不同。 来源：player-act.cc。\n【语境补充 2026-10-21】时间单位用回合。动词及 in turn、turn into 等短语按句意选择转向、变成、轮流等译法。"
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_rumour_",
+      "source": "speculating about the powers of the Orb of Zot\n\ntalking about how the Orb of Zot will [save|destroy] everyone and everything\n\ntalking about how everyone is mistaken and the Orb of Zot is really the [Cube|Egg|Pyramid] of Zot\n\ntelling of a secret passageway straight from here to the Orb of Zot\n\ncounting down the days until the world ends\n\nclaiming to know the meaning of [life|unlife]\n\nclaiming to have found the elusive [cave yeti|death quokka|dire dormouse]\n\nalluding to the \"Plog\" Conspiracy and why it hides that word everywhere\n",
+      "hits": [
+        {
+          "Term": "Orb of Zot",
+          "Translation": "佐特宝珠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "你玩这游戏的原因，MacGuffin"
+        },
+        {
+          "Term": "Zot",
+          "Translation": "佐特",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "quokka",
+          "Translation": "短尾矮袋鼠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "the Orb",
+          "Translation": "宝珠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_short_saying_",
+      "source": "@_graffiti_author_any_@ was here\n\n@_graffiti_author_any_@ @_graffiti_loves_or_hates_@ @_graffiti_author_any_@\n\n@_graffiti_author_any_@ @_graffiti_loves_or_hates_@ @_graffiti_relative_or_quality_@ of @_graffiti_author_any_@\n\n@_graffiti_author_any_@ @_graffiti_life_or_death_@\n\n@_graffiti_author_any_@ sells @_graffiti_wares_quality_@ wares\n\n@_graffiti_author_any_@ steals from @_graffiti_author_any_@\n\nwhat happened to @_graffiti_author_any_@ was @_graffiti_happened_reason_@\n\n@_graffiti_author_any_@ has been replaced by @_graffiti_duplicate_@\n\n@_graffiti_vengeance_@\n\n@_graffiti_changed_or_compared_religions_@\n\nall life begins with \"Plog\" and ends with \"Plog\"\n\nw:2\n@_graffiti_changed_names_@\n",
+      "hits": [
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_species_",
+      "source": "bemoaning how bizarre coglin engineering is to non-coglins\n\nrepeating the legend of the lost prototype exo-suit that let a coglin wield three weapons at once\n\nwondering what led the barachim to rebel against the gods\n\nwondering if boneless species can ever spawn revenants\n\nwondering if Trog stops dead berserkers from spawning revenants\n\nclaiming to know where goblins originally came from\n\nclaiming to know the true origin of kobolds\n\ndetailing the persecution of the cave orcs' ancestors\n\nclaiming that some of the gods secretly serve the oni instead of the other way around\n\n\nclaiming that some of the hill dwarves still live\n\nwondering what really happened to the last of the sludge elves\n\n\nclaiming that gnomes really exist and are just superb at hiding\n",
+      "hits": [
+        {
+          "Term": "species",
+          "Translation": "种族",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Trog",
+          "Translation": "特洛戈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Coglin",
+          "Translation": "机甲哥布林",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/coglin.yaml。"
+        },
+        {
+          "Term": "Oni",
+          "Translation": "鬼人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/oni.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_unique_comment_",
+      "source": "saying that Cassandra should stop being so negative\n\nsaying that Crazy Yiuf needs to stop making so [little|much] sense\n\nsaying that Donald should shut up and stop complaining\n\nsaying that Sigmund needs to put down the scythe\n\nsaying that Edmund needs to get over himself\n\nsaying that Sprozz has gone too far trying to replace real bees with mechanical ones\n\nwondering how Robin can possibly throw that hard\n\nwondering why Terence wants to spend his retirement in the dungeon\n\nwondering whether Dowan and Duvessa are secretly triplets and have a third sibling\n\nwondering what else Ijyb can make besides wands\n\nspeculating on the true nature of Jeremiah's master\n",
+      "hits": [
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "throw",
+          "Translation": "投掷",
+          "Part of Speech": "verb",
+          "Variants": "",
+          "Note": "【0.34.1 修订】本条是动作动词；独立补充 Throwing 技能，不把普通 throwing 自动视为技能名。 来源：skills.cc。\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "the Dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "Cassandra",
+          "Translation": "卡珊德拉",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Crazy Yiuf",
+          "Translation": "疯子尤夫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Dowan",
+          "Translation": "多万",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Duvessa",
+          "Translation": "杜维莎",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Edmund",
+          "Translation": "埃德蒙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Ijyb",
+          "Translation": "伊吉布",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Jeremiah",
+          "Translation": "耶利米",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Robin",
+          "Translation": "罗宾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Sigmund",
+          "Translation": "西格蒙德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Sprozz",
+          "Translation": "斯普罗兹",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Terence",
+          "Translation": "特伦斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_unreadable_",
+      "source": "graffiti of unreadable @_writing_type_@\n\ngraffiti of @_writing_type_@ that are unreadable except for a signature by @_graffiti_author_any_@\n\nw:1\ngraffiti of @_writing_type_@ that are unreadable except for bits hailing @_graffiti_hailed_god_@\n\nw:1\ngraffiti of @_writing_type_@ that are unreadable except for bits hailing @_graffiti_hailed_god_@ and a signature by @_graffiti_author_any_@\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_vengeance_",
+      "source": "@_graffiti_author_any_@ has avenged @_graffiti_author_any_@\n\n@_graffiti_author_any_@ has avenged @graffiti_author_any@ for @_graffiti_vengeance_reason_@\n\n@_graffiti_author_any_@ swears vengeance on @_graffiti_author_any_@\n\n@_graffiti_author_any_@ swears vengeance on @_graffiti_author_any_@ for @_graffiti_vengeance_reason_@\n\nthe ghost of @_graffiti_author_any_@ still haunts @_graffiti_author_any_@\n\nthe ghost of @_graffiti_author_any_@ still haunts @_graffiti_author_any_@ for @_graffiti_vengeance_reason_@\n\n\n@_graffiti_author_orc_@ has avenged @_graffiti_author_any_@\n\n@_graffiti_author_orc_@ has avenged @_graffiti_author_any_@ for @_graffiti_vengeance_reason_@\n\n@_graffiti_author_orc_@ swears vengeance on @_graffiti_author_any_@\n\n@_graffiti_author_orc_@ swears vengeance on @_graffiti_author_any_@ for @_graffiti_vengeance_reason_@\n\nthe ghost of @_graffiti_author_orc_@ still haunts @_graffiti_author_any_@\n\nthe ghost of @_graffiti_author_orc_@ still haunts @_graffiti_author_any_@ for @_graffiti_vengeance_reason_@\n",
+      "hits": [
+        {
+          "Term": "ghost",
+          "Translation": "鬼魂",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_vengeance_reason_",
+      "source": "abandoning @_graffiti_author_any_@\n\nabandoning them\n\nbetraying @_graffiti_author_any_@\n\nbetraying them\n\nkilling @_graffiti_author_any_@\n\nkilling them\n\nstealing from @_graffiti_author_any_@\n\nstealing from them\n\nwounding @_graffiti_author_any_@\n\nwounding them\n",
+      "hits": []
+    }
+  ],
+  "compound_queries": [
+    "coglin",
+    "barachi",
+    "goblin",
+    "kobold",
+    "oni",
+    "dwarf",
+    "gnome",
+    "Cassandra",
+    "Crazy Yiuf",
+    "Donald",
+    "Sigmund",
+    "Edmund",
+    "Sprozz",
+    "Robin",
+    "Terence",
+    "Dowan",
+    "Duvessa",
+    "Ijyb",
+    "Jeremiah",
+    "erythrospite",
+    "shadowghast",
+    "death knight",
+    "necromancer",
+    "hive talisman",
+    "Invocations",
+    "Evocations",
+    "Shapeshifting",
+    "Necromancy",
+    "Abyss",
+    "Orb of Zot",
+    "Axioms of Law",
+    "Divine Madness",
+    "Inexorable Grip"
+  ],
+  "compound_hits": [
+    {
+      "Term": "Abyss",
+      "Translation": "深渊",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "axioms of law",
+      "Translation": "法则公理",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "barachi",
+      "Translation": "蛙人",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/barachi.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Evocations",
+      "Translation": "唤发",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】技能而非魔法物品；影响魔杖和其他可唤发物品的强度或成功率，当前说明不含提高 MP 上限。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+    },
+    {
+      "Term": "Invocations",
+      "Translation": "祈祷",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】保留译名；影响部分神赐能力和魔力储备，与施法的 MP 贡献取较高者，Djinni 另有种族规则。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+    },
+    {
+      "Term": "kobold",
+      "Translation": "狗头人",
+      "Part of Speech": "noun",
+      "Variants": "kobolds",
+      "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/kobold.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Necromancy",
+      "Translation": "死灵系魔法",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+    },
+    {
+      "Term": "Orb of Zot",
+      "Translation": "佐特宝珠",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "你玩这游戏的原因，MacGuffin"
+    },
+    {
+      "Term": "Coglin",
+      "Translation": "机甲哥布林",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/coglin.yaml。"
+    },
+    {
+      "Term": "Oni",
+      "Translation": "鬼人",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/oni.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Necromancer",
+      "Translation": "死灵法师",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/necromancer.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Shapeshifting",
+      "Translation": "变形术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+    },
+    {
+      "Term": "hive talisman",
+      "Translation": "蜂巢护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "Cassandra",
+      "Translation": "卡珊德拉",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Crazy Yiuf",
+      "Translation": "疯子尤夫",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Donald",
+      "Translation": "唐纳德",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Dowan",
+      "Translation": "多万",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Duvessa",
+      "Translation": "杜维莎",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Edmund",
+      "Translation": "埃德蒙",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Ijyb",
+      "Translation": "伊吉布",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Jeremiah",
+      "Translation": "耶利米",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Robin",
+      "Translation": "罗宾",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Sigmund",
+      "Translation": "西格蒙德",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Sprozz",
+      "Translation": "斯普罗兹",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Terence",
+      "Translation": "特伦斯",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "death knight",
+      "Translation": "死亡骑士",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "dwarf",
+      "Translation": "矮人",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "erythrospite",
+      "Translation": "猩红怨体",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "goblin",
+      "Translation": "地精",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "shadowghast",
+      "Translation": "阴影怨魂",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    }
+  ]
+}

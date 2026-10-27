@@ -197,7 +197,7 @@ private:
     bool player_monattk_hit_effects();
     void attacker_sustain_passive_damage();
     int  staff_damage(stave_type staff) const;
-    string staff_message(stave_type staff, int damage) const;
+    string staff_message(stave_type staff, int damage, bool display = false) const;
     bool apply_staff_damage();
     void player_stab_check() override;
     bool player_good_stab() override;
@@ -240,7 +240,7 @@ private:
 };
 
 string aux_attack_desc(unarmed_attack_type unat, int force_damage = -1);
-string mut_aux_attack_desc(mutation_type mut);
+string mut_aux_attack_desc(mutation_type mut, bool display = false);
 vector<string> get_player_aux_names();
 
 bool coglin_spellmotor_attack();

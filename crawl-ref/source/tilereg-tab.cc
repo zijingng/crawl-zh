@@ -1,4 +1,5 @@
 #include "AppHdr.h"
+#include "t-display.h"
 
 #ifdef USE_TILE_LOCAL
 
@@ -281,7 +282,7 @@ void TabbedRegion::draw_tag()
 
     GridRegion *tab = m_tabs[m_mouse_tab].reg;
 
-    draw_desc(tab->name().c_str());
+    draw_desc(ui_translate("t.tiles", tab->name().c_str()));
 }
 
 int TabbedRegion::min_height_for_items() const

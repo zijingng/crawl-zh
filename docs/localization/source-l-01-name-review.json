@@ -1,0 +1,1544 @@
+[
+  {
+    "key": "no teleportation passive",
+    "translation": "禁止传送",
+    "glossary_hit": null,
+    "origin": "reviewed passive definition"
+  },
+  {
+    "key": "no spellcasting passive",
+    "translation": "禁止施法",
+    "glossary_hit": null,
+    "origin": "reviewed passive definition"
+  },
+  {
+    "key": "random rage passive",
+    "translation": "随机狂暴",
+    "glossary_hit": null,
+    "origin": "reviewed passive definition"
+  },
+  {
+    "key": "corrode self passive",
+    "translation": "自身腐蚀",
+    "glossary_hit": null,
+    "origin": "reviewed passive definition"
+  },
+  {
+    "key": "slow self passive",
+    "translation": "自身减速",
+    "glossary_hit": null,
+    "origin": "reviewed passive definition"
+  },
+  {
+    "key": "harm passive",
+    "translation": "伤害增幅",
+    "glossary_hit": null,
+    "origin": "reviewed passive definition"
+  },
+  {
+    "key": "mayhem passive",
+    "translation": "大混乱",
+    "glossary_hit": null,
+    "origin": "reviewed passive definition"
+  },
+  {
+    "key": "repel missiles passive",
+    "translation": "偏斥飞弹",
+    "glossary_hit": null,
+    "origin": "reviewed passive definition"
+  },
+  {
+    "key": "reflection passive",
+    "translation": "反射",
+    "glossary_hit": null,
+    "origin": "reviewed passive definition"
+  },
+  {
+    "key": "acrobat passive",
+    "translation": "杂技",
+    "glossary_hit": null,
+    "origin": "reviewed passive definition"
+  },
+  {
+    "key": "clarity passive",
+    "translation": "清明",
+    "glossary_hit": null,
+    "origin": "reviewed passive definition"
+  },
+  {
+    "key": "resist mutation passive",
+    "translation": "抵抗变异",
+    "glossary_hit": null,
+    "origin": "reviewed passive definition"
+  },
+  {
+    "key": "guardian spirit passive",
+    "translation": "守护之灵",
+    "glossary_hit": null,
+    "origin": "reviewed passive definition"
+  },
+  {
+    "key": "rampage passive",
+    "translation": "横冲直撞",
+    "glossary_hit": null,
+    "origin": "reviewed passive definition"
+  },
+  {
+    "key": "roll passive",
+    "translation": "翻滚",
+    "glossary_hit": "翻滚",
+    "origin": "reviewed passive definition"
+  },
+  {
+    "key": "faith passive",
+    "translation": "信仰",
+    "glossary_hit": null,
+    "origin": "reviewed passive definition"
+  },
+  {
+    "key": "wizardry passive",
+    "translation": "施法辅助",
+    "glossary_hit": null,
+    "origin": "reviewed passive definition"
+  },
+  {
+    "key": "archmagi passive",
+    "translation": "大法师",
+    "glossary_hit": null,
+    "origin": "reviewed passive definition"
+  },
+  {
+    "key": "channel magic passive",
+    "translation": "引导魔力",
+    "glossary_hit": "引导魔力",
+    "origin": "reviewed passive definition"
+  },
+  {
+    "key": "infuse magic passive",
+    "translation": "魔力灌注",
+    "glossary_hit": null,
+    "origin": "reviewed passive definition"
+  },
+  {
+    "key": "Fast status",
+    "translation": "疾速",
+    "glossary_hit": "疾速状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Invis status",
+    "translation": "隐形",
+    "glossary_hit": "隐形状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Tele status",
+    "translation": "即将传送",
+    "glossary_hit": "即将传送状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "!Tele! status",
+    "translation": "传送至敌群",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Fly status",
+    "translation": "飞行",
+    "glossary_hit": "飞行状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Agi status",
+    "translation": "敏捷",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Brill status",
+    "translation": "聪慧",
+    "glossary_hit": "聪慧状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Might status",
+    "translation": "强力术",
+    "glossary_hit": "强力状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Regen status",
+    "translation": "生命再生",
+    "glossary_hit": "生命再生状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "-Regen status",
+    "translation": "无法再生",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "MPRegen status",
+    "translation": "魔力再生",
+    "glossary_hit": "魔力再生状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Touch status",
+    "translation": "混乱之触",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Will++ status",
+    "translation": "意志增强++",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Regen Will++ status",
+    "translation": "再生时意志增强++",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Berserk status",
+    "translation": "狂暴",
+    "glossary_hit": "狂暴状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "-Berserk status",
+    "translation": "狂暴冷却",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Bearserk status",
+    "translation": "熊之狂暴",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Pois status",
+    "translation": "中毒",
+    "glossary_hit": "中毒状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Conf status",
+    "translation": "混乱",
+    "glossary_hit": "混乱状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Contam status",
+    "translation": "魔法污染",
+    "glossary_hit": "魔法污染状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Drain status",
+    "translation": "吸能",
+    "glossary_hit": "吸能状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "-Breath status",
+    "translation": "吐息冷却",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Breath status",
+    "translation": "龙息",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Breath+ status",
+    "translation": "龙息+",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Breath++ status",
+    "translation": "龙息++",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Exh status",
+    "translation": "疲惫",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Slow status",
+    "translation": "缓慢",
+    "glossary_hit": "缓慢状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Para status",
+    "translation": "麻痹",
+    "glossary_hit": "麻痹状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Sleep status",
+    "translation": "睡眠",
+    "glossary_hit": "睡眠状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Held status",
+    "translation": "受困",
+    "glossary_hit": "受困状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Constr status",
+    "translation": "缠绕",
+    "glossary_hit": "缠绕状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Mesm status",
+    "translation": "魅惑牵引",
+    "glossary_hit": "魅惑牵引状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Fear status",
+    "translation": "恐惧",
+    "glossary_hit": "恐惧状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "-Tele status",
+    "translation": "次元锚定",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "-Move status",
+    "translation": "无法移动",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Mark status",
+    "translation": "哨兵印记",
+    "glossary_hit": "标记状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Fire status",
+    "translation": "着火",
+    "glossary_hit": "着火状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Fire+ status",
+    "translation": "着火+",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Fire++ status",
+    "translation": "着火++",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Corona status",
+    "translation": "光晕术",
+    "glossary_hit": "光晕术",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Barbs status",
+    "translation": "倒刺",
+    "glossary_hit": "倒刺状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Sick status",
+    "translation": "疾病",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Vertigo status",
+    "translation": "眩晕",
+    "glossary_hit": "眩晕状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Corr status",
+    "translation": "腐蚀",
+    "glossary_hit": "腐蚀状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Flay status",
+    "translation": "剥皮",
+    "glossary_hit": "剥皮状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Weak status",
+    "translation": "虚弱",
+    "glossary_hit": "虚弱状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Frozen status",
+    "translation": "冻结",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Sap status",
+    "translation": "魔力枯竭",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "-Cast status",
+    "translation": "无法施法",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Crippled status",
+    "translation": "属性归零",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "DChan status",
+    "translation": "死亡通道",
+    "glossary_hit": "死亡通道状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Vit status",
+    "translation": "神赐活力",
+    "glossary_hit": "活力状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Will/2 status",
+    "translation": "意志减半",
+    "glossary_hit": "意志减半状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Stone status",
+    "translation": "石化",
+    "glossary_hit": "已石化状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Petr status",
+    "translation": "石化中",
+    "glossary_hit": "正在石化状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Resist status",
+    "translation": "抗性",
+    "glossary_hit": "抗性状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Slime status",
+    "translation": "黏液化",
+    "glossary_hit": "黏液状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Swift status",
+    "translation": "迅捷",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "-Swift status",
+    "translation": "迅捷后迟缓",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "DDoor status",
+    "translation": "死亡之门",
+    "glossary_hit": "死亡之门状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "-DDoor status",
+    "translation": "死亡之门冷却",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Quad status",
+    "translation": "四倍伤害",
+    "glossary_hit": "四倍状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Sil status",
+    "translation": "沉默",
+    "glossary_hit": "沉默状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Flooded status",
+    "translation": "肺部积水",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Stealth status",
+    "translation": "潜行",
+    "glossary_hit": "潜行状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Vortex status",
+    "translation": "极地涡流",
+    "glossary_hit": "涡流",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "-Vortex status",
+    "translation": "涡流冷却",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Liquid status",
+    "translation": "液化",
+    "glossary_hit": "地面液化状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Hero status",
+    "translation": "英雄气概",
+    "glossary_hit": "英雄气概状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Finesse status",
+    "translation": "精湛技艺",
+    "glossary_hit": "精妙技艺状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Duel status",
+    "translation": "决斗",
+    "glossary_hit": "决斗",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Disjoin status",
+    "translation": "空间分离",
+    "glossary_hit": "分离状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Fugue status",
+    "translation": "阵亡者赋格",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Debt status",
+    "translation": "生命欠债",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Toxic status",
+    "translation": "剧毒光环",
+    "glossary_hit": "毒性辐射状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Recite status",
+    "translation": "诵经",
+    "glossary_hit": "吟诵状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "-Recite status",
+    "translation": "诵经冷却",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "rF- status",
+    "translation": "火焰易伤",
+    "glossary_hit": "火抗-状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "rP- status",
+    "translation": "毒素易伤",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Bullseye status",
+    "translation": "空间靶心",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Forest status",
+    "translation": "召唤森林",
+    "glossary_hit": "森林状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Dragoncall status",
+    "translation": "召唤龙群",
+    "glossary_hit": "唤龙状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "-Dragoncall status",
+    "translation": "龙群冷却",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "-Potion status",
+    "translation": "禁饮药水",
+    "glossary_hit": "禁饮药水状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "rF+ status",
+    "translation": "火焰防护",
+    "glossary_hit": "火抗+状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "rC+ status",
+    "translation": "寒冷防护",
+    "glossary_hit": "冰抗+状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "rElec+ status",
+    "translation": "电击防护",
+    "glossary_hit": "电抗+状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Horr status",
+    "translation": "惊骇",
+    "glossary_hit": "恐惧状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "-Scroll status",
+    "translation": "禁读卷轴",
+    "glossary_hit": "禁读卷轴状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Cleave status",
+    "translation": "劈斩",
+    "glossary_hit": "顺劈状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Ambros status",
+    "translation": "神酒",
+    "glossary_hit": "琼浆状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Surge status",
+    "translation": "激涌",
+    "glossary_hit": "激涌状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Howl status",
+    "translation": "遗忘之嚎",
+    "glossary_hit": "嚎叫状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Blood status",
+    "translation": "鲜血护甲",
+    "glossary_hit": "凝血护甲状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Channel status",
+    "translation": "魔力引导",
+    "glossary_hit": "引导魔力状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Beast status",
+    "translation": "野兽形态",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Flux status",
+    "translation": "流变",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Serpent status",
+    "translation": "双头蛇",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Maw status",
+    "translation": "巨口",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Statue status",
+    "translation": "雕像",
+    "glossary_hit": "雕像状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Dragon status",
+    "translation": "龙",
+    "glossary_hit": "龙状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Storm status",
+    "translation": "风暴",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Death status",
+    "translation": "死亡",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Bat status",
+    "translation": "蝙蝠",
+    "glossary_hit": "蝙蝠状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Pig status",
+    "translation": "猪",
+    "glossary_hit": "猪状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "App status",
+    "translation": "附肢",
+    "glossary_hit": "附肢状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Tree status",
+    "translation": "树木",
+    "glossary_hit": "树状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Wisp status",
+    "translation": "幽火",
+    "glossary_hit": "气团形态状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Fungus status",
+    "translation": "真菌",
+    "glossary_hit": "真菌状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Shadow status",
+    "translation": "暗影",
+    "glossary_hit": "影状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Orb status",
+    "translation": "佐特宝珠",
+    "glossary_hit": "宝珠状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Orb? status",
+    "translation": "骗子宝球",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "-Hop status",
+    "translation": "跳跃冷却",
+    "glossary_hit": "跳跃冷却状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Ray status",
+    "translation": "灼热射线",
+    "glossary_hit": "射线状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Ray+ status",
+    "translation": "灼热射线+",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Ray++ status",
+    "translation": "灼热射线++",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Lash status",
+    "translation": "腾蛇鞭",
+    "glossary_hit": "腾蛇鞭状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Heavenly status",
+    "translation": "天界风暴",
+    "glossary_hit": "天界风暴状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "SlowM status",
+    "translation": "移动减缓",
+    "glossary_hit": "移动减缓状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Alive status",
+    "translation": "充血",
+    "glossary_hit": "充血状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Aug status",
+    "translation": "生命增幅",
+    "glossary_hit": "生命增幅状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Beogh status",
+    "translation": "比欧弗",
+    "glossary_hit": "比欧弗状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Bloodless status",
+    "translation": "无血",
+    "glossary_hit": "无血状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Bribe status",
+    "translation": "贿赂",
+    "glossary_hit": "贿赂状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Cloud status",
+    "translation": "云雾",
+    "glossary_hit": "云状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "-Clouds status",
+    "translation": "无法制造云雾",
+    "glossary_hit": "禁云状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Dig status",
+    "translation": "挖掘",
+    "glossary_hit": "挖掘状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Elixir status",
+    "translation": "灵药",
+    "glossary_hit": "灵药状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Fast+Slow status",
+    "translation": "疾速与缓慢",
+    "glossary_hit": "快速＋缓慢状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Lava status",
+    "translation": "岩浆",
+    "glossary_hit": "岩浆状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Recall status",
+    "translation": "召回",
+    "glossary_hit": "召回状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Water status",
+    "translation": "水域",
+    "glossary_hit": "水状态",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Attr status",
+    "translation": "吸引",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Zot status",
+    "translation": "佐特时钟",
+    "glossary_hit": "佐特",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Zot count status",
+    "translation": "佐特剩余时间",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Gem status",
+    "translation": "宝石",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Gem (*) status",
+    "translation": "宝石（本分支仍完整）",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "rF0 status",
+    "translation": "火抗归零",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "-Blink status",
+    "translation": "闪现冷却",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "-Bbolt status",
+    "translation": "闪现雷击冷却",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Charge- status",
+    "translation": "蓄电-",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Charge/ status",
+    "translation": "蓄电/",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Charge\\ status",
+    "translation": "蓄电\\",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Charge| status",
+    "translation": "蓄电|",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Wave status",
+    "translation": "火焰波",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Wave+ status",
+    "translation": "火焰波+",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Ramparts status",
+    "translation": "冰霜壁垒",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Bog status",
+    "translation": "毒沼",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Enlightened status",
+    "translation": "启明",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Will+ status",
+    "translation": "意志增强",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Reap status",
+    "translation": "活化死者",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Peek status",
+    "translation": "窥探楼层",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Fragile status",
+    "translation": "脆弱",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Ooze status",
+    "translation": "唤泥",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Dog status",
+    "translation": "犬类使魔",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "-Dog status",
+    "translation": "魔宠冷却",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "-Siphon status",
+    "translation": "虹吸冷却",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "-Word status",
+    "translation": "混沌真言冷却",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Jinx status",
+    "translation": "厄咒之啮",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Rise status",
+    "translation": "上升",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Challenge status",
+    "translation": "使徒挑战",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Vengeance status",
+    "translation": "复仇",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Pray status",
+    "translation": "以血还血",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Recruit status",
+    "translation": "可招募",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Torch status",
+    "translation": "黑炬",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Shackles status",
+    "translation": "无底镣铐",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Rev status",
+    "translation": "热身",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Rev+ status",
+    "translation": "热身+",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Rev* status",
+    "translation": "热身*",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "-Gavotte status",
+    "translation": "加沃特冷却",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Fusillade status",
+    "translation": "炼金弹幕",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Nightfall status",
+    "translation": "夜幕",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Blind status",
+    "translation": "致盲",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Ruin status",
+    "translation": "毁灭征兆",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "-GClaw status",
+    "translation": "坟墓之爪尚未充能",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Legion status",
+    "translation": "地狱军团",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "-Bloodrite status",
+    "translation": "血仪冷却",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Execution status",
+    "translation": "行刑",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Destr status",
+    "translation": "毁灭增长",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Destr+ status",
+    "translation": "毁灭庇护+",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Destr++ status",
+    "translation": "毁灭庇护++",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Destr+++ status",
+    "translation": "毁灭庇护+++",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Slaughter status",
+    "translation": "屠戮",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Pact status",
+    "translation": "契约",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Escape! status",
+    "translation": "逃脱！",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Shield status",
+    "translation": "神圣护盾",
+    "glossary_hit": "格挡值/盾牌/保护",
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Blast status",
+    "translation": "动能冲击蓄力",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Blast. status",
+    "translation": "动能冲击蓄力.",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Blast.. status",
+    "translation": "动能冲击蓄力..",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Blast... status",
+    "translation": "动能冲击蓄力...",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Winding status",
+    "translation": "上发条",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Winding. status",
+    "translation": "上发条.",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Winding.. status",
+    "translation": "上发条..",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Winding... status",
+    "translation": "上发条...",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Unstable status",
+    "translation": "不稳定闪现",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Vainglory status",
+    "translation": "虚荣",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Protected status",
+    "translation": "受到保护",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Vexed status",
+    "translation": "恼咒",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Drowsy status",
+    "translation": "困倦",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Vampire status",
+    "translation": "吸血鬼",
+    "glossary_hit": "吸血鬼",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Swarm status",
+    "translation": "蝙蝠群",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Memories status",
+    "translation": "法术记忆",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Enkindled status",
+    "translation": "燃忆",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Cacophony status",
+    "translation": "不谐狂响",
+    "glossary_hit": "不谐狂响",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Catalyst status",
+    "translation": "催化",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Shroud status",
+    "translation": "黏液帷幕修复中",
+    "glossary_hit": "护罩状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Yak status",
+    "translation": "牦牛",
+    "glossary_hit": "牦牛",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Spider status",
+    "translation": "蜘蛛",
+    "glossary_hit": "蜘蛛状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Quill status",
+    "translation": "棘刺",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Hive status",
+    "translation": "蜂巢",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "-Swarm status",
+    "translation": "虫群冷却",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Aqua status",
+    "translation": "水体",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Sphinx status",
+    "translation": "斯芬克斯",
+    "glossary_hit": "斯芬克斯",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Werewolf status",
+    "translation": "狼人",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Slay status",
+    "translation": "嗜血",
+    "glossary_hit": "杀戮状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Scroll status",
+    "translation": "卷轴",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Crab status",
+    "translation": "蟹",
+    "glossary_hit": "蟹",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Scarab status",
+    "translation": "圣甲虫",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Medusa status",
+    "translation": "水母",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "-Lithotox status",
+    "translation": "石毒冷却",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Doom status",
+    "translation": "厄运",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Ostracised status",
+    "translation": "放逐术影响",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Tesseract status",
+    "translation": "超立方体",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "-Star status",
+    "translation": "星尘冷却",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "-Mesm status",
+    "translation": "魅惑冷却",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Phobia status",
+    "translation": "恐惧症",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Dim status",
+    "translation": "法术削弱",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Sunder status",
+    "translation": "破敌一击",
+    "glossary_hit": null,
+    "origin": "reviewed status definition/glossary"
+  },
+  {
+    "key": "Devious status",
+    "translation": "诡诈",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Slimifying status",
+    "translation": "黏液化中",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Jelly status",
+    "translation": "胶怪",
+    "glossary_hit": "胶怪",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "OozeRegen status",
+    "translation": "再生黏液",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "-Hellfire status",
+    "translation": "地狱火迫击炮冷却",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Engorged status",
+    "translation": "饱食",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Eel status",
+    "translation": "电鳗",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Blade status",
+    "translation": "刀刃",
+    "glossary_hit": "刃手状态",
+    "origin": "existing reviewed duration/form display"
+  },
+  {
+    "key": "Spore status",
+    "translation": "孢子",
+    "glossary_hit": null,
+    "origin": "existing reviewed duration/form display"
+  }
+]

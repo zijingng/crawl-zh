@@ -1,0 +1,28 @@
+{
+  "batch": "portal-appearance-01",
+  "build": {
+    "windows_tiles": "passed",
+    "exe_bytes": 27813337,
+    "exe_sha256": "df3cb742450cef73064ff5870c79f85c32b4317449df5e386e8f744b103a2edf"
+  },
+  "native": {
+    "cases": 4,
+    "assertions": 172,
+    "passed": true,
+    "additional_lua_assertions": true
+  },
+  "python": {
+    "cases": 33,
+    "passed": true
+  },
+  "new_reviewed_messages": 44,
+  "timed_portal_types": 10,
+  "cosmetic_equipment_combinations": 24,
+  "invariants": [
+    "Original map timer tables, canonical item names and identification flags unchanged",
+    "Unknown template and entity retain whole English fallback",
+    "English language configuration retained",
+    "RNG unchanged"
+  ],
+  "limitation": "No live game window interaction; existing morgue text is not rewritten"
+}

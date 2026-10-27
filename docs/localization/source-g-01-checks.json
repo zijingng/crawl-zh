@@ -1,0 +1,37 @@
+{
+  "batch": "source-g-01",
+  "date": "2026-10-23",
+  "reviewed_messages": 790,
+  "catalogue_matches": 790,
+  "missing_messages": [],
+  "stale_dependencies": [],
+  "top_level_g_files": 33,
+  "recite_closure_weights": [
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    5,
+    3
+  ],
+  "challenge_weights": [
+    10,
+    10,
+    10
+  ],
+  "limitations": [
+    "Technical diagnostics, rc keys, proper generated names, save fields and original cause-of-death strings stay English.",
+    "Unknown custom item/body-part/shop suffix metadata falls back to whole English messages.",
+    "TextDB lines owned by other files keep their existing language resolution.",
+    "No in-game visual smoke test; only Windows Tiles built."
+  ],
+  "new_catalogue_entries": 766,
+  "windows_tiles_build": "passed",
+  "native_test_cases": 58,
+  "native_assertions": 174071,
+  "python_tests": 27,
+  "diff_check": "passed"
+}

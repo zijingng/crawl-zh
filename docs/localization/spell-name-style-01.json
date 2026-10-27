@@ -1,0 +1,187 @@
+{
+  "batch": "spell-name-style-01",
+  "glossary_preflight": [
+    {
+      "term": "Foxfire",
+      "before": {
+        "Term": "Foxfire",
+        "Translation": "狐火",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+      },
+      "chosen": "狐火术"
+    },
+    {
+      "term": "Shock",
+      "before": {
+        "Term": "Shock",
+        "Translation": "电击",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+      },
+      "chosen": "电击术"
+    },
+    {
+      "term": "Inner Flame",
+      "before": {
+        "Term": "inner flame",
+        "Translation": "心火",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+      },
+      "chosen": "心火术"
+    },
+    {
+      "term": "Poisonous Vapours",
+      "before": {
+        "Term": "Poisonous Vapours",
+        "Translation": "毒气",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+      },
+      "chosen": "毒气术"
+    },
+    {
+      "term": "Scorch",
+      "before": {
+        "Term": "Scorch",
+        "Translation": "焦灼",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+      },
+      "chosen": "灼烧术"
+    },
+    {
+      "term": "Freeze",
+      "before": {
+        "Term": "Freeze",
+        "Translation": "冰冻/冻结/冻伤",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】能力或法术名保留冰冻。结成冰用冻结。攻击动词造成寒冷伤害可用冻伤。"
+      },
+      "chosen": "冰冻术"
+    },
+    {
+      "term": "Sandblast",
+      "before": {
+        "Term": "Sandblast",
+        "Translation": "沙爆",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+      },
+      "chosen": "沙爆术"
+    },
+    {
+      "term": "red devil",
+      "before": {
+        "Term": "red devil",
+        "Translation": "红魔",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+      },
+      "chosen": "红魔鬼"
+    }
+  ],
+  "changes": [
+    {
+      "catalogue": "ui",
+      "context": "display.spell",
+      "english": "Foxfire",
+      "before": "狐火",
+      "after": "狐火术"
+    },
+    {
+      "catalogue": "ui",
+      "context": "display.spell",
+      "english": "Shock",
+      "before": "电击",
+      "after": "电击术"
+    },
+    {
+      "catalogue": "ui",
+      "context": "display.spell",
+      "english": "Inner Flame",
+      "before": "心火",
+      "after": "心火术"
+    },
+    {
+      "catalogue": "ui",
+      "context": "display.spell",
+      "english": "Poisonous Vapours",
+      "before": "毒气",
+      "after": "毒气术"
+    },
+    {
+      "catalogue": "ui",
+      "context": "display.spell",
+      "english": "Scorch",
+      "before": "焦灼",
+      "after": "灼烧术"
+    },
+    {
+      "catalogue": "ui",
+      "context": "display.spell",
+      "english": "Freeze",
+      "before": "冰冻",
+      "after": "冰冻术"
+    },
+    {
+      "catalogue": "ui",
+      "context": "display.spell",
+      "english": "Sandblast",
+      "before": "沙爆",
+      "after": "沙爆术"
+    },
+    {
+      "catalogue": "ui",
+      "context": "display.monster",
+      "english": "red devil",
+      "before": "红魔",
+      "after": "红魔鬼"
+    },
+    {
+      "catalogue": "textdb",
+      "context": "textdb:descript/backgrounds.txt:air elementalist",
+      "english": "Air Elementalists have learned the Shock spell. Their electrical magic can harm\ngroups of foes, while their air spells assist in fighting or fleeing enemies.\n",
+      "before": "气元素使已经学会电击。他们的电系魔法能伤害成群的敌人，气系法术则能帮助战斗或逃脱。\n",
+      "after": "气元素使已经学会电击术。他们的电系魔法能伤害成群的敌人，气系法术则能帮助战斗或逃脱。\n"
+    },
+    {
+      "catalogue": "textdb",
+      "context": "textdb:descript/backgrounds.txt:earth elementalist",
+      "english": "Earth Elementalists know the Sandblast spell, and can later learn more earthen\nspells suitable for subtle stabbing or brute-force blasting.\n",
+      "before": "土元素使掌握沙爆，以后还能学习更多土系法术，既可巧妙刺杀，也可强行轰击。\n",
+      "after": "土元素使掌握沙爆术，以后还能学习更多土系法术，既可巧妙刺杀，也可强行轰击。\n"
+    },
+    {
+      "catalogue": "textdb",
+      "context": "textdb:descript/backgrounds.txt:fire elementalist",
+      "english": "Fire Elementalists have learned the Foxfire spell. Their other starting spells\nare likewise focused on fiery and explosive destruction.\n",
+      "before": "火元素使已经学会狐火。他们起始的其他法术同样侧重火焰与爆炸造成的毁灭。\n",
+      "after": "火元素使已经学会狐火术。他们起始的其他法术同样侧重火焰与爆炸造成的毁灭。\n"
+    },
+    {
+      "catalogue": "textdb",
+      "context": "textdb:descript/backgrounds.txt:ice elementalist",
+      "english": "Ice Elementalists begin with the Freeze spell. Their later spells provide strong\noffence and defence, but may restrict their movement.\n",
+      "before": "冰元素使起始掌握冰冻。后续法术攻防兼备，但可能限制自身移动。\n",
+      "after": "冰元素使起始掌握冰冻术。后续法术攻防兼备，但可能限制自身移动。\n"
+    },
+    {
+      "catalogue": "textdb",
+      "context": "textdb:descript/backgrounds.txt:alchemist",
+      "english": "Alchemists start with the Poisonous Vapours spell, and their magic is very\neffective against foes susceptible to poison.\n",
+      "before": "炼金术士起始掌握毒气，其魔法对易受毒素影响的敌人十分有效。\n",
+      "after": "炼金术士起始掌握毒气术，其魔法对易受毒素影响的敌人十分有效。\n"
+    }
+  ],
+  "unchanged": "犬神；狐火实体；电击伤害；心火状态；毒气云；冰冻与冻结状态；Flash Freeze 等其他法术。规范英文和查询键不变。"
+}

@@ -1,0 +1,761 @@
+{
+  "glossary_sha256": "5b0e7563973cc4449b02977ed1d7b4cfb7f9aa33877063cff3f665c99ff50965",
+  "files": [
+    {
+      "file": "object-class-type.h",
+      "sha256": "f5f956ae6a8d71213b98930bfb06cf98d240c5f5daf4f64fff4da235fc14e477",
+      "hits": [
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        }
+      ]
+    },
+    {
+      "file": "object-selector-type.h",
+      "sha256": "a6b568100c2ca9d3cd459af47a26f08a491f7ccfeb8d72f27a3ec9f5b2dad9da",
+      "hits": [
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        }
+      ]
+    },
+    {
+      "file": "operation-types.h",
+      "sha256": "c32c0cf1a59ef15dceb5e1568d5da539229ec2338519f661745d22058a9e2d7a",
+      "hits": []
+    },
+    {
+      "file": "options.h",
+      "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b",
+      "hits": [
+        {
+          "term": "ability",
+          "translation": "能力"
+        },
+        {
+          "term": "Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "ancestor",
+          "translation": "先祖"
+        },
+        {
+          "term": "animate",
+          "translation": "活化/活的"
+        },
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "background",
+          "translation": "背景"
+        },
+        {
+          "term": "blink",
+          "translation": "闪烁/闪现/眨眼"
+        },
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "Cloud status",
+          "translation": "云雾/云状态"
+        },
+        {
+          "term": "exclusion",
+          "translation": "移动禁区"
+        },
+        {
+          "term": "explore mode",
+          "translation": "探索模式"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "hostile",
+          "translation": "敌对"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "potion",
+          "translation": "药水"
+        },
+        {
+          "term": "rC",
+          "translation": "冰抗"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "weird",
+          "translation": "奇怪的"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特"
+        },
+        {
+          "term": "Ranged Weapons",
+          "translation": "远程武器"
+        },
+        {
+          "term": "Throwing",
+          "translation": "投掷"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "noise",
+          "translation": "噪音/声音/巨响"
+        },
+        {
+          "term": "Fireball",
+          "translation": "火球术"
+        },
+        {
+          "term": "Shatter",
+          "translation": "粉碎术/打碎/震碎"
+        },
+        {
+          "term": "Irradiate",
+          "translation": "辐照术"
+        },
+        {
+          "term": "Melee",
+          "translation": "近战"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "slime creature",
+          "translation": "史莱姆生物"
+        },
+        {
+          "term": "the Orb",
+          "translation": "宝珠"
+        }
+      ]
+    },
+    {
+      "file": "orb-type.h",
+      "sha256": "58779b3c734d011124af456ee8a83ec3e5f0d8ad20246ab3294877fdcaf744aa",
+      "hits": []
+    },
+    {
+      "file": "orb.cc",
+      "sha256": "acd96c9bfdff873379cc155adfa715786599134fa77ac83ed3751269d2f048bd",
+      "hits": [
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Pandemonium",
+          "translation": "魔窟"
+        },
+        {
+          "term": "Translocations",
+          "translation": "位移系魔法"
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特"
+        },
+        {
+          "term": "noise",
+          "translation": "噪音/声音/巨响"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "the Orb",
+          "translation": "宝珠"
+        }
+      ]
+    },
+    {
+      "file": "orb.h",
+      "sha256": "c9aa6224d30ba49516ebf9c50fb7fa107a2d3c4bdaf832c322dc8ba95eed3bd5",
+      "hits": []
+    },
+    {
+      "file": "ouch.cc",
+      "sha256": "fb2489f63ef3aef675be7c36be414863ba09c99cfb5a64f76e40ec85b29e25d2",
+      "hits": [
+        {
+          "term": "ability",
+          "translation": "能力"
+        },
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "Beogh",
+          "translation": "比欧弗"
+        },
+        {
+          "term": "blink",
+          "translation": "闪烁/闪现/眨眼"
+        },
+        {
+          "term": "cloak",
+          "translation": "披风"
+        },
+        {
+          "term": "corpse",
+          "translation": "尸体"
+        },
+        {
+          "term": "drain",
+          "translation": "吸能/吸取/消耗"
+        },
+        {
+          "term": "draining",
+          "translation": "吸能/汲取/耗损"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "experience",
+          "translation": "经验值"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "hit points",
+          "translation": "生命值"
+        },
+        {
+          "term": "hydra",
+          "translation": "海德拉"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "Okawaru",
+          "translation": "奥格瓦如"
+        },
+        {
+          "term": "potion",
+          "translation": "药水"
+        },
+        {
+          "term": "Qazlal",
+          "translation": "卡兹拉尔"
+        },
+        {
+          "term": "rC",
+          "translation": "冰抗"
+        },
+        {
+          "term": "rF",
+          "translation": "火抗"
+        },
+        {
+          "term": "rot",
+          "translation": "腐烂"
+        },
+        {
+          "term": "Shield",
+          "translation": "格挡值/盾牌/保护"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "stats",
+          "translation": "属性"
+        },
+        {
+          "term": "Strength",
+          "translation": "力量/强度/威力"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "undead",
+          "translation": "亡灵"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        },
+        {
+          "term": "zombie",
+          "translation": "丧尸"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "rN",
+          "translation": "负能量抗性"
+        },
+        {
+          "term": "rElec",
+          "translation": "电抗"
+        },
+        {
+          "term": "penance",
+          "translation": "赎罪"
+        },
+        {
+          "term": "poison",
+          "translation": "毒"
+        },
+        {
+          "term": "haste",
+          "translation": "疾速"
+        },
+        {
+          "term": "silence",
+          "translation": "沉默"
+        },
+        {
+          "term": "petrifying",
+          "translation": "正在石化"
+        },
+        {
+          "term": "petrified",
+          "translation": "已石化"
+        },
+        {
+          "term": "Slow",
+          "translation": "缓慢术/减速/缓慢/迟缓"
+        },
+        {
+          "term": "Petrify",
+          "translation": "石化术/石化"
+        },
+        {
+          "term": "Death's Door",
+          "translation": "死亡之门"
+        },
+        {
+          "term": "Pain",
+          "translation": "痛苦术/痛苦"
+        },
+        {
+          "term": "Freeze",
+          "translation": "冰冻术/冰冻/冻结/冻伤"
+        },
+        {
+          "term": "Agony",
+          "translation": "剧痛术"
+        },
+        {
+          "term": "Concentrate Venom",
+          "translation": "浓缩毒液"
+        },
+        {
+          "term": "Vitrify",
+          "translation": "玻璃化"
+        },
+        {
+          "term": "Condensation Shield",
+          "translation": "凝结护盾"
+        },
+        {
+          "term": "Melee",
+          "translation": "近战"
+        },
+        {
+          "term": "Hydra Form",
+          "translation": "海德拉形态"
+        },
+        {
+          "term": "Duel",
+          "translation": "决斗"
+        },
+        {
+          "term": "dreamshard necklace",
+          "translation": "梦晶项链"
+        },
+        {
+          "term": "the Dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "steam",
+          "translation": "蒸汽"
+        },
+        {
+          "term": "Sigmund",
+          "translation": "西格蒙德"
+        },
+        {
+          "term": "butterfly",
+          "translation": "蝴蝶"
+        },
+        {
+          "term": "elemental",
+          "translation": "元素生物"
+        },
+        {
+          "term": "jelly",
+          "translation": "胶怪"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "rat",
+          "translation": "老鼠"
+        },
+        {
+          "term": "tentacle",
+          "translation": "触手"
+        },
+        {
+          "term": "speed",
+          "translation": "快速"
+        },
+        {
+          "term": "time-warped blood",
+          "translation": "时间扭曲之血"
+        },
+        {
+          "term": "cold-blooded",
+          "translation": "冷血"
+        }
+      ]
+    },
+    {
+      "file": "ouch.h",
+      "sha256": "c4c3891562f99c70de7132cb2bd70b55cb35bfd94a536b2f8099fd51b3f57996",
+      "hits": [
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "Strength",
+          "translation": "力量/强度/威力"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "Ozocubu's Armour",
+          "translation": "奥佐库布的护甲"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "outer-menu.cc",
+      "sha256": "032c23ab73158fc5ceae7ea3070a8f535a5b89088536af3393f07da874b61619",
+      "hits": [
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        }
+      ]
+    },
+    {
+      "file": "outer-menu.h",
+      "sha256": "6aec6e02c39b6cc14eff6a797f5fa0c9af04545dca87b46d55addb400c60df97",
+      "hits": []
+    },
+    {
+      "file": "output.cc",
+      "sha256": "a5e47694ee6a00cbedfb3c4751ff37e63a864e1b4f8aef4a683e8a24ad74a417",
+      "hits": [
+        {
+          "term": "ability",
+          "translation": "能力"
+        },
+        {
+          "term": "AC",
+          "translation": "护甲值"
+        },
+        {
+          "term": "Channel Magic",
+          "translation": "引导魔力"
+        },
+        {
+          "term": "Console",
+          "translation": "字符版/控制台/终端"
+        },
+        {
+          "term": "evasion",
+          "translation": "闪避值"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "mutations",
+          "translation": "变异"
+        },
+        {
+          "term": "Orb of Zot",
+          "translation": "佐特宝珠"
+        },
+        {
+          "term": "rPois",
+          "translation": "毒抗"
+        },
+        {
+          "term": "SInv",
+          "translation": "看破隐形"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "Spellcasting",
+          "translation": "施法"
+        },
+        {
+          "term": "stasis",
+          "translation": "稳态"
+        },
+        {
+          "term": "stats",
+          "translation": "属性"
+        },
+        {
+          "term": "Strength",
+          "translation": "力量/强度/威力"
+        },
+        {
+          "term": "throw",
+          "translation": "投掷"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        },
+        {
+          "term": "zombie",
+          "translation": "丧尸"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特"
+        },
+        {
+          "term": "Djinni",
+          "translation": "灯灵"
+        },
+        {
+          "term": "Minotaur",
+          "translation": "牛头人"
+        },
+        {
+          "term": "Lugonu",
+          "translation": "卢戈努"
+        },
+        {
+          "term": "SH",
+          "translation": "格挡值"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "rElec",
+          "translation": "电抗"
+        },
+        {
+          "term": "rCorr",
+          "translation": "腐蚀抗性"
+        },
+        {
+          "term": "piety",
+          "translation": "虔诚"
+        },
+        {
+          "term": "penance",
+          "translation": "赎罪"
+        },
+        {
+          "term": "noise",
+          "translation": "噪音/声音/巨响"
+        },
+        {
+          "term": "confusion",
+          "translation": "混乱"
+        },
+        {
+          "term": "poison",
+          "translation": "毒"
+        },
+        {
+          "term": "berserk",
+          "translation": "狂暴"
+        },
+        {
+          "term": "silence",
+          "translation": "沉默"
+        },
+        {
+          "term": "Slow",
+          "translation": "缓慢术/减速/缓慢/迟缓"
+        },
+        {
+          "term": "Sticky Flame",
+          "translation": "黏附火焰"
+        },
+        {
+          "term": "Roll",
+          "translation": "翻滚"
+        },
+        {
+          "term": "flame",
+          "translation": "火焰"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "rat",
+          "translation": "老鼠"
+        },
+        {
+          "term": "the Orb",
+          "translation": "宝珠"
+        },
+        {
+          "term": "clarity",
+          "translation": "清明"
+        },
+        {
+          "term": "faith",
+          "translation": "信仰"
+        }
+      ]
+    },
+    {
+      "file": "output.h",
+      "sha256": "8e39fd16d90df089337d317b8e7796de5cecab18e666ece26c7b2b82ab0dc39e",
+      "hits": [
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    }
+  ],
+  "shared_baselines": [
+    {
+      "file": "Makefile",
+      "sha256": "e5bfdf3c19d214e71efec5c06cddab285b0d9950739d3f3633b1ccb70e3793dd"
+    },
+    {
+      "file": "player.cc",
+      "sha256": "80625d4182414c2d1a8da50e800263a2f59e3c8f627ba0aff6c84a09c30cf631"
+    },
+    {
+      "file": "transform.cc",
+      "sha256": "ada47ab6eae46276053bde457da7f01049ac71dbe5755b860e5298d2520ac98d"
+    },
+    {
+      "file": "transform.h",
+      "sha256": "91f953a522ee700c38be68fdf228a4479e643848d95931114992a48ef16cbc97"
+    }
+  ]
+}

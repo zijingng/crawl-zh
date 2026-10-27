@@ -1,0 +1,344 @@
+[
+  {
+    "context": "m.ui",
+    "english": "This transporter is marked as excluded!",
+    "before": "这个传送装置已被标记为移动禁区！",
+    "after": "这个转移装置已被标记为移动禁区！"
+  },
+  {
+    "context": "m.ui",
+    "english": "Enter transporter anyway?",
+    "before": "仍要进入传送装置吗？",
+    "after": "仍要进入转移装置吗？"
+  },
+  {
+    "context": "m.ui",
+    "english": "The transporter is blocked on the other side!",
+    "before": "传送装置的另一端被堵住了！",
+    "after": "转移装置的另一端被堵住了！"
+  },
+  {
+    "context": "m.ui",
+    "english": "The transporter is blocked by a creature on the other side!",
+    "before": "传送装置的另一端被一个生物堵住了！",
+    "after": "转移装置的另一端被一个生物堵住了！"
+  },
+  {
+    "context": "m.ui",
+    "english": "You enter the transporter and appear at another place.",
+    "before": "你进入传送装置，出现在了另一处。",
+    "after": "你进入转移装置，出现在了另一处。"
+  },
+  {
+    "context": "m.ui",
+    "english": "Your stasis prevents you from teleporting.",
+    "before": "你的停滞状态阻止了传送。",
+    "after": "你的稳态状态阻止了传送。"
+  },
+  {
+    "context": "m.ui",
+    "english": "Your spectral weapon shares its damage with you!",
+    "before": "你的幽灵武器与你分担伤害！",
+    "after": "你的幽魂武器与你分担伤害！"
+  },
+  {
+    "context": "m.ui",
+    "english": "The frozen ramparts melt away as you move.",
+    "before": "你移动时，冰封壁垒融化了。",
+    "after": "你移动时，冰霜壁垒融化了。"
+  },
+  {
+    "context": "m.log.078",
+    "english": "Two slime creatures merge to form %s.",
+    "before": "两个黏液生物融合成了%s。",
+    "after": "两个史莱姆生物融合成了%s。"
+  },
+  {
+    "context": "m.log.081",
+    "english": "A slime creature is ejected from %s body as it begins to warp and change.",
+    "before": "一个黏液生物从%s体内被挤出，其身体开始扭曲变形。",
+    "after": "一个史莱姆生物从%s体内被挤出，其身体开始扭曲变形。"
+  },
+  {
+    "context": "m.log.082",
+    "english": "%s slime creatures are ejected from %s body as it begins to warp and change.",
+    "before": "%s个黏液生物从%s体内被挤出，其身体开始扭曲变形。",
+    "after": "%s个史莱姆生物从%s体内被挤出，其身体开始扭曲变形。"
+  },
+  {
+    "context": "m.log.132",
+    "english": "%s spells are empowered by the prayer of brilliance!",
+    "before": "%s的法术被聪慧祈祷强化了！",
+    "after": "%s的法术被辉煌祷言强化了！"
+  },
+  {
+    "context": "m.log.211",
+    "english": "%s stops winding %s clockwork bee.",
+    "before": "%s停止给发条蜂上发条%s。",
+    "after": "%s停止给发条蜜蜂上发条%s。"
+  },
+  {
+    "context": "m.log.212",
+    "english": "%s continues winding %s clockwork bee....",
+    "before": "%s继续给发条蜂上发条%s……",
+    "after": "%s继续给发条蜜蜂上发条%s……"
+  },
+  {
+    "context": "m.mutation",
+    "english": "You have supernaturally acute vision. (SInv)",
+    "before": "你的视觉超乎寻常地敏锐。(侦测隐形)",
+    "after": "你的视觉超乎寻常地敏锐。(看破隐形)"
+  },
+  {
+    "context": "m.mutation",
+    "english": "You can hurl damnation.",
+    "before": "你能够投掷炼狱火。",
+    "after": "你能够投掷地狱火。"
+  },
+  {
+    "context": "m.mutation",
+    "english": "You have a pair of large antennae on your head. (SInv)",
+    "before": "你的头上有一对大触角。(侦测隐形)",
+    "after": "你的头上有一对大触角。(看破隐形)"
+  },
+  {
+    "context": "m.mutation",
+    "english": "You can no longer roll toward enemies.",
+    "before": "你无法再滚向敌人了。",
+    "after": "你无法再向敌人翻滚了。"
+  },
+  {
+    "context": "m.mutation",
+    "english": "Your body is covered in eyes which may confuse attackers. (Acc +7, SInv)",
+    "before": "你的全身长满了眼睛，可能使攻击者混乱。(命中+7，侦测隐形)",
+    "after": "你的全身长满了眼睛，可能使攻击者混乱。(命中+7，看破隐形)"
+  },
+  {
+    "context": "m.mutation",
+    "english": "You are completely covered in yellow scales. (AC +4, rCorr)",
+    "before": "你的全身覆盖着黄色鳞片。(护甲值 +4, 抗腐蚀)",
+    "after": "你的全身覆盖着黄色鳞片。(护甲值 +4, 腐蚀抗性)"
+  },
+  {
+    "context": "m.mutation",
+    "english": "An unnatural silence shrouds you.",
+    "before": "一种不自然的寂静笼罩了你。",
+    "after": "一种不自然的沉默笼罩了你。"
+  },
+  {
+    "context": "m.mutation",
+    "english": "Your hexes are more powerful.",
+    "before": "你的妖术威力更强。",
+    "after": "你的妖术系魔法威力更强。"
+  },
+  {
+    "context": "m.mutation",
+    "english": "You can speak a Word of Chaos.",
+    "before": "你能够说出混沌之言。",
+    "after": "你能够说出混沌真言。"
+  },
+  {
+    "context": "m.mutation",
+    "english": "You can no longer study or cast Air magic.",
+    "before": "你无法再学习或施放空气魔法了。",
+    "after": "你无法再学习或施放气系魔法了。"
+  },
+  {
+    "context": "m.mutation",
+    "english": "You can once more study and cast Air magic.",
+    "before": "你又能学习和施放空气魔法了。",
+    "after": "你又能学习和施放气系魔法了。"
+  },
+  {
+    "context": "m.mutation",
+    "english": "You can no longer study or cast Earth magic.",
+    "before": "你无法再学习或施放大地魔法了。",
+    "after": "你无法再学习或施放土系魔法了。"
+  },
+  {
+    "context": "m.mutation",
+    "english": "You can once more study and cast Earth magic.",
+    "before": "你又能学习和施放大地魔法了。",
+    "after": "你又能学习和施放土系魔法了。"
+  },
+  {
+    "context": "m.mutation",
+    "english": "You can no longer study or cast Fire magic.",
+    "before": "你无法再学习或施放火焰魔法了。",
+    "after": "你无法再学习或施放火系魔法了。"
+  },
+  {
+    "context": "m.mutation",
+    "english": "You can once more study and cast Fire magic.",
+    "before": "你又能学习和施放火焰魔法了。",
+    "after": "你又能学习和施放火系魔法了。"
+  },
+  {
+    "context": "m.mutation",
+    "english": "You cannot study or cast Hexes magic.",
+    "before": "你无法学习或施放妖术系魔法",
+    "after": "你无法学习或施放妖术系魔法系魔法"
+  },
+  {
+    "context": "m.mutation",
+    "english": "You can no longer study or cast Hexes magic.",
+    "before": "你无法再学习或施放妖术了。",
+    "after": "你无法再学习或施放妖术系魔法了。"
+  },
+  {
+    "context": "m.mutation",
+    "english": "You can once more study and cast Hexes magic.",
+    "before": "你又能学习和施放妖术了。",
+    "after": "你又能学习和施放妖术系魔法了。"
+  },
+  {
+    "context": "m.mutation",
+    "english": "You can no longer study or cast Ice magic.",
+    "before": "你无法再学习或施放冰霜魔法了。",
+    "after": "你无法再学习或施放冰系魔法了。"
+  },
+  {
+    "context": "m.mutation",
+    "english": "You can once more study and cast Ice magic.",
+    "before": "你又能学习和施放冰霜魔法了。",
+    "after": "你又能学习和施放冰系魔法了。"
+  },
+  {
+    "context": "m.mutation",
+    "english": "You can no longer study or cast Necromancy magic.",
+    "before": "你无法再学习或施放死灵魔法了。",
+    "after": "你无法再学习或施放死灵系魔法了。"
+  },
+  {
+    "context": "m.mutation",
+    "english": "You can once more study and cast Necromancy magic.",
+    "before": "你又能学习和施放死灵魔法了。",
+    "after": "你又能学习和施放死灵系魔法了。"
+  },
+  {
+    "context": "m.mutation",
+    "english": "You can no longer study or cast Translocations magic.",
+    "before": "你无法再学习或施放位移魔法了。",
+    "after": "你无法再学习或施放位移系魔法了。"
+  },
+  {
+    "context": "m.mutation",
+    "english": "You can once more study and cast Translocations magic.",
+    "before": "你又能学习和施放位移魔法了。",
+    "after": "你又能学习和施放位移系魔法了。"
+  },
+  {
+    "context": "m.mutation",
+    "english": "You regain all your skill.",
+    "before": "你恢复了所有技巧。",
+    "after": "你恢复了所有技能。"
+  },
+  {
+    "context": "m.mutation",
+    "english": "You regain some skill.",
+    "before": "你恢复了部分技巧。",
+    "after": "你恢复了部分技能。"
+  },
+  {
+    "context": "m.mutation",
+    "english": "You are resistant to acid. (rCorr)",
+    "before": "你能抵抗酸液。(抗腐蚀)",
+    "after": "你能抵抗酸液。(腐蚀抗性)"
+  },
+  {
+    "context": "m.mutation",
+    "english": "Your experience applies equally to all skills.",
+    "before": "你的经验会平均用于所有技能。",
+    "after": "你的经验值会平均用于所有技能。"
+  },
+  {
+    "context": "m.mutation",
+    "english": "Your experience now applies equally to all skills.",
+    "before": "你的经验现在会平均用于所有技能。",
+    "after": "你的经验值现在会平均用于所有技能。"
+  },
+  {
+    "context": "m.mutation",
+    "english": "Your experience no longer applies equally to all skills.",
+    "before": "你的经验不再平均用于所有技能。",
+    "after": "你的经验值不再平均用于所有技能。"
+  },
+  {
+    "context": "a.mutation.name",
+    "english": "contamination susceptible",
+    "before": "易受污染",
+    "after": "易受魔法污染"
+  },
+  {
+    "context": "a.mutation.name",
+    "english": "no potion heal",
+    "before": "无法通过药剂治疗",
+    "after": "无法通过药水治疗"
+  },
+  {
+    "context": "a.mutation.name",
+    "english": "freezing cloud immunity",
+    "before": "冰冻云免疫",
+    "after": "冰冻云雾免疫"
+  },
+  {
+    "context": "m.clause",
+    "english": "wild magic",
+    "before": "狂乱魔法",
+    "after": "狂野魔法"
+  },
+  {
+    "context": "m.fakemut",
+    "english": "You can breathe blasts of noxious fumes.",
+    "before": "你能喷吐有毒烟气。",
+    "after": "你能喷吐恶臭烟雾。"
+  },
+  {
+    "context": "m.moncondition",
+    "english": "petrified",
+    "before": "石化",
+    "after": "已石化"
+  },
+  {
+    "context": "m.moncondition",
+    "english": "petrifying",
+    "before": "逐渐石化",
+    "after": "正在石化"
+  },
+  {
+    "context": "m.ui",
+    "english": "The starcursed mass shrieks in your mind.",
+    "before": "星诅团块在你的脑海中尖叫。",
+    "after": "星咒聚合体在你的脑海中尖叫。"
+  },
+  {
+    "context": "log.monster",
+    "english": "%s simulacrum begins to move.",
+    "before": "%s冰像开始移动。",
+    "after": "%s冰骸开始移动。"
+  },
+  {
+    "context": "log.monster",
+    "english": "%s's simulacrum begins to move.",
+    "before": "%s的冰像开始移动。",
+    "after": "%s的冰骸开始移动。"
+  },
+  {
+    "context": "log.monster",
+    "english": "%s returns to the shadows of the Dungeon.",
+    "before": "%s返回了地牢的阴影中。",
+    "after": "%s返回了地下城的阴影中。"
+  },
+  {
+    "context": "log.monster",
+    "english": "%s's returns to the shadows of the Dungeon.",
+    "before": "%s的返回了地牢的阴影中。",
+    "after": "%s的返回了地下城的阴影中。"
+  },
+  {
+    "context": "m.clause",
+    "english": "%s shakes off the sticky flame as it moves.",
+    "before": "%s在移动时甩掉了黏附的火焰。",
+    "after": "%s在移动时甩掉了黏附火焰。"
+  }
+]

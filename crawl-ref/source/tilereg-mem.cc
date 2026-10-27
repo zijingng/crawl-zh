@@ -1,4 +1,5 @@
 #include "AppHdr.h"
+#include "t-display.h"
 
 #ifdef USE_TILE_LOCAL
 
@@ -52,6 +53,9 @@ void MemoriseRegion::draw_tag()
                                spell_levels_required(spell),
                                player_spell_levels(),
                                spell_levels_required(spell) > 1 ? "s" : "");
+    desc = ui_render("t.tiles.row", "%s    (%s)    %s/%s spell slots", desc,
+        {ui_text_arg("display.spell", spell_title(spell)), ui_literal_arg(failure),
+         ui_literal_arg(to_string(spell_levels_required(spell))), ui_literal_arg(to_string(player_spell_levels()))});
     draw_desc(desc.c_str());
 }
 
@@ -91,8 +95,8 @@ bool MemoriseRegion::update_tab_tip_text(string &tip, bool active)
     const char *prefix2 = active ? "" : "          ";
 
     tip = make_stringf("%s%s\n%s%s",
-                       prefix1, "Display spells in carried books",
-                       prefix2, "Memorise spells");
+                       prefix1, ui_translate("t.tiles", "Display spells in carried books"),
+                       prefix2, ui_translate("t.tiles", "Memorise spells"));
 
     return true;
 }
@@ -109,14 +113,14 @@ bool MemoriseRegion::update_tip_text(string& tip)
     int flag = m_items[item_idx].flag;
     vector<command_type> cmd;
     if (flag & TILEI_FLAG_INVALID)
-        tip = "You cannot memorise this spell now.";
+        tip = ui_translate("t.tiles", "You cannot memorise this spell now.");
     else
     {
-        tip = "[L-Click] Memorise (%)";
+        tip = ui_translate("t.tiles", "[L-Click] Memorise (%)");
         cmd.push_back(CMD_MEMORISE_SPELL);
     }
 
-    tip += "\n[R-Click] Describe";
+    tip += ui_translate("t.tiles", "\n[R-Click] Describe");
 
     insert_commands(tip, cmd);
     return true;

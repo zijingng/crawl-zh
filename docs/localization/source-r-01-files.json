@@ -1,0 +1,110 @@
+[
+  {
+    "file": "crawl-ref/source/randbook.cc",
+    "scope": "Random book generation and saved proper titles remain canonical; technical creation errors/debug diagnostics retained.",
+    "sha256": "2b827a3cab37558aa7edee206034f98b8ed0b583cc8abb3e9e2ee3706de70916",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/randbook.h",
+    "scope": "Declarations, enum identifiers or algorithmic code; no independently displayed prose. Technical assertions retained.",
+    "sha256": "4c9de853e80cb67edb54369b451adea2b9cf5ac94ab40cd3fc076b8f127358df",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/random-pick.h",
+    "scope": "Declarations, enum identifiers or algorithmic code; no independently displayed prose. Technical assertions retained.",
+    "sha256": "f5223501ae5fe2ee3b0545e33563c2584cd4026b159f031bfd33fb9ef69e8dec",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/random-var.cc",
+    "scope": "Random variable algorithms; no player-facing text.",
+    "sha256": "40d7bc9e7a3522e99848ecc29832e6a943f9e8d82c9731920d1117f8fc9d4d44",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/random-var.h",
+    "scope": "Declarations, enum identifiers or algorithmic code; no independently displayed prose. Technical assertions retained.",
+    "sha256": "b530c9e3423f490537653c7a856a3c014aca3d0e54358d8cbdf064c82e24c13f",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/random.cc",
+    "scope": "Random engine and seed diagnostics retained.",
+    "sha256": "c17cd7bd08829b011367e2f7bbc8d2f77b21666e4e5947236afbadb6fb21289c",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/random.h",
+    "scope": "Declarations, enum identifiers or algorithmic code; no independently displayed prose. Technical assertions retained.",
+    "sha256": "573a523afa819a41f8f83fbb3b2d9f9e0844a8b2a7e26dcba80b6cf1f76dccf7",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/ranged-attack.cc",
+    "scope": "Typed reflection rows, jelly projectile consumption and spatial untethering. Existing hit/miss/brand adapters reused; canonical projectile names, kill causes and RNG unchanged.",
+    "sha256": "b144dc46fadda6c60e1f209960ebba611eb4b36aac8126c1cdbfc04e97f1b060",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/ranged-attack.h",
+    "scope": "Declarations, enum identifiers or algorithmic code; no independently displayed prose. Technical assertions retained.",
+    "sha256": "7cbafc0e4765302b2620998ef6f873d9e68dc9858011d88fea0787676b73b5e5",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/ray.cc",
+    "scope": "Ray tracing algorithms; no player-facing text.",
+    "sha256": "43f233e614d3c5e86ad5da714f92849368d88adb1beb475b569ed566cc751a60",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/ray.h",
+    "scope": "Declarations, enum identifiers or algorithmic code; no independently displayed prose. Technical assertions retained.",
+    "sha256": "a74afcd636ba178dfe509a52eb3413296b1ec1a53d2c6d6599a5d2574413755c",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/rc-line-type.h",
+    "scope": "Declarations, enum identifiers or algorithmic code; no independently displayed prose. Technical assertions retained.",
+    "sha256": "35a953a9d63dcb9d1662c71af33f52376b65fcc9b78f8bc387faeb3c8ea33469",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/recite-eligibility.h",
+    "scope": "Declarations, enum identifiers or algorithmic code; no independently displayed prose. Technical assertions retained.",
+    "sha256": "64e620eee0536f6ea8d404a2ea14198db6b9f153195e4606fb24d41e7f96ba1f",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/recite-type.h",
+    "scope": "Declarations, enum identifiers or algorithmic code; no independently displayed prose. Technical assertions retained.",
+    "sha256": "4d1261b22e9a32e78a8c191fbccdae988b54fcd8d6ec7132057d1f5dbcb9c2c6",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/religion-enum.h",
+    "scope": "Declarations, enum identifiers or algorithmic code; no independently displayed prose. Technical assertions retained.",
+    "sha256": "b24a23cddc09804186d09415fb259e26ecd080bcd82d0caee7f2f2b0fc4f8da7",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/religion.cc",
+    "scope": "God power gain/loss, piety/penance, gifts and spell lists, ancestor memories, joining/leaving gods, prayer actions, god prompt and faith logs. Canonical god/power/warning/save APIs retained.",
+    "sha256": "959ca94d69bd9e168abc67b751bb8f35fe8fda048d8274268fa0d37896701a74",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/religion.h",
+    "scope": "Presentation-only god_power::display_text method; canonical gain/loss/general and ability data unchanged.",
+    "sha256": "66008ff179cc5fbc57728ba08a2971438cad5d8ac06808ea628db61c71a5a1f8",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/rng-type.h",
+    "scope": "Declarations, enum identifiers or algorithmic code; no independently displayed prose. Technical assertions retained.",
+    "sha256": "60fb23709a258353e4799ad13ebf62f03fede0367da9e702df05b7d9b240e544",
+    "changed": false
+  }
+]

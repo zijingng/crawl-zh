@@ -1,0 +1,633 @@
+{
+  "glossary_hits": [
+    {
+      "Term": "detected shop or portal",
+      "Translation": "探知到的商店或传送门",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "elemental wellspring",
+      "Translation": "元素源泉",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "eveningstar",
+      "Translation": "昏星锤",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "flickering gateway to a bazaar",
+      "Translation": "通往市集的忽隐忽现的入口",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "fountain of blood",
+      "Translation": "血喷泉",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "fountain of clear blue water",
+      "Translation": "清水喷泉",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "fountain of sparkling water",
+      "Translation": "气泡水喷泉",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "hat of Pondering",
+      "Translation": "思想帽",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "potion of curing",
+      "Translation": "治疗药水",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "ring of attention",
+      "Translation": "焦点戒指",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
+    },
+    {
+      "Term": "ring of Phasing",
+      "Translation": "相位戒指",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
+    },
+    {
+      "Term": "ring of positive energy",
+      "Translation": "正能量戒指",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【使用约束】物品专名保留正能量；效果涉及负能量抗性，不是生命再生。"
+    },
+    {
+      "Term": "ring of resist corrosion",
+      "Translation": "抗腐蚀戒指",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "ring of see invisible",
+      "Translation": "看破隐形戒指",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】检测隐形生物，不是让隐形状态消失。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "ring of Shadows",
+      "Translation": "影之戒",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "ring of slaying",
+      "Translation": "杀戮戒指",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "ring of stealth",
+      "Translation": "潜行戒指",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "shimmering blue altar of Sif Muna",
+      "Translation": "闪光的蓝色的席夫·穆纳祭坛",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "shop",
+      "Translation": "商店",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "shopping list",
+      "Translation": "购物清单",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "corrosion",
+      "Translation": "腐蚀",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态】区别腐蚀抗性。 来源：duration-data.h。"
+    },
+    {
+      "Term": "scroll of identify",
+      "Translation": "鉴定卷轴",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "ring of dexterity",
+      "Translation": "敏捷戒指",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "ring of evasion",
+      "Translation": "闪避戒指",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "ring of flight",
+      "Translation": "飞行戒指",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "ring of intelligence",
+      "Translation": "智力戒指",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "ring of magical power",
+      "Translation": "魔力戒指",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "ring of poison resistance",
+      "Translation": "毒抗戒指",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "ring of protection",
+      "Translation": "防护戒指",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "ring of protection from cold",
+      "Translation": "冰抗戒指",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "ring of protection from fire",
+      "Translation": "火抗戒指",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "ring of willpower",
+      "Translation": "意志戒指",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "ring of strength",
+      "Translation": "力量戒指",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "ring of wizardry",
+      "Translation": "施法辅助戒指",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "wellspring talisman",
+      "Translation": "涌泉护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "Searing Breath",
+      "Translation": "灼热吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Trog's Hand",
+      "Translation": "特洛格之手",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Malign Offering",
+      "Translation": "恶意献祭",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Searing Ray",
+      "Translation": "灼热射线",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Corrosive Bolt",
+      "Translation": "腐蚀箭",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Eringya's Noxious Bog",
+      "Translation": "艾琳佳的毒沼",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Eringya's Surprising Crocodile",
+      "Translation": "艾琳佳的惊奇鳄鱼",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Nazja's Percussive Tempering",
+      "Translation": "娜兹娅的锤击淬炼",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Nazja's All-Purpose Tempering",
+      "Translation": "娜兹娅的万用淬炼",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Ring of Flames",
+      "Translation": "烈焰之环",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Ring of Thunder",
+      "Translation": "雷霆之环/一圈雷云",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】能力专名用雷霆之环。怪物周围雷云的外观叙述用一圈雷云。"
+    },
+    {
+      "Term": "Blade Hands",
+      "Translation": "利刃之手",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Sacrifice a Hand",
+      "Translation": "牺牲一只手",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+    },
+    {
+      "Term": "eveningstar \"Brilliance\"",
+      "Translation": "昏星锤「辉煌」",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+    },
+    {
+      "Term": "ring of the Hare",
+      "Translation": "野兔之戒",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+    },
+    {
+      "Term": "ring of the Tortoise",
+      "Translation": "陆龟之戒",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+    },
+    {
+      "Term": "ring of the Mage",
+      "Translation": "法师之戒",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+    },
+    {
+      "Term": "ring of the Octopus King",
+      "Translation": "章鱼王之戒",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+    },
+    {
+      "Term": "hand cannon \"Mule\"",
+      "Translation": "手炮「骡子」",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+    },
+    {
+      "Term": "smouldering embers",
+      "Translation": "阴燃余烬",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_EMBERS；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+    },
+    {
+      "Term": "aspiring flesh",
+      "Translation": "渴求血肉",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "rust devil",
+      "Translation": "锈蚀魔鬼",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "searing wretch",
+      "Translation": "灼烧苦难者",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "wandering mushroom",
+      "Translation": "游荡蘑菇",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "corrode self passive",
+      "Translation": "自身腐蚀",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 被动效果名称】来源：dat/descript/passives.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：自身腐蚀。"
+    },
+    {
+      "Term": "off-hand wielding",
+      "Translation": "副手持械",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：副手持械。"
+    },
+    {
+      "Term": "missing a hand",
+      "Translation": "缺失一只手",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：缺失一只手。"
+    },
+    {
+      "Term": "feed off suffering",
+      "Translation": "汲取苦难",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：汲取苦难。"
+    },
+    {
+      "Term": "no rings",
+      "Translation": "无法佩戴戒指",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法佩戴戒指。"
+    },
+    {
+      "Term": "devouring maw",
+      "Translation": "吞噬巨口",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：吞噬巨口。"
+    },
+    {
+      "Term": "*Corrode",
+      "Translation": "*腐蚀",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+    }
+  ],
+  "existing_translations": [
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"hand\"\nmsgstr \"手\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"eel hand\"\nmsgstr \"鳗鱼状的手\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"hands\"\nmsgstr \"手\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"eel hands\"\nmsgstr \"鳗鱼状的手\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"claws\"\nmsgstr \"爪\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"eel claws\"\nmsgstr \"鳗鱼状的爪\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"claw\"\nmsgstr \"爪\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"eel claw\"\nmsgstr \"鳗鱼状的爪\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"paws\"\nmsgstr \"爪掌\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"eel paws\"\nmsgstr \"鳗鱼状的爪掌\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"paw\"\nmsgstr \"爪掌\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"eel paw\"\nmsgstr \"鳗鱼状的爪掌\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"tentacles\"\nmsgstr \"触手\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"eel tentacles\"\nmsgstr \"鳗鱼状的触手\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"tentacle\"\nmsgstr \"触手\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"eel tentacle\"\nmsgstr \"鳗鱼状的触手\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"fist\"\nmsgstr \"拳头\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"eel fist\"\nmsgstr \"鳗鱼状的拳头\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"fists\"\nmsgstr \"拳头\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"eel fists\"\nmsgstr \"鳗鱼状的拳头\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"foreclaws\"\nmsgstr \"前爪\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"eel foreclaws\"\nmsgstr \"鳗鱼状的前爪\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"foreclaw\"\nmsgstr \"前爪\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"eel foreclaw\"\nmsgstr \"鳗鱼状的前爪\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"forepaws\"\nmsgstr \"前掌\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"eel forepaws\"\nmsgstr \"鳗鱼状的前掌\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"forepaw\"\nmsgstr \"前掌\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"eel forepaw\"\nmsgstr \"鳗鱼状的前掌\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"front pincers\"\nmsgstr \"前螯\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"eel front pincers\"\nmsgstr \"鳗鱼状的前螯\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"branch\"\nmsgstr \"树枝\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"eel branch\"\nmsgstr \"鳗鱼状的树枝\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"branches\"\nmsgstr \"树枝\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"eel branches\"\nmsgstr \"鳗鱼状的树枝\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"mandibles\"\nmsgstr \"颚部\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"eel mandibles\"\nmsgstr \"鳗鱼状的颚部\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"parchment\"\nmsgstr \"羊皮纸\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"eel parchment\"\nmsgstr \"鳗鱼状的羊皮纸\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"misty tendrils\"\nmsgstr \"雾状卷须\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"eel misty tendrils\"\nmsgstr \"鳗鱼状的雾状卷须\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"misty tendril\"\nmsgstr \"雾状卷须\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"eel misty tendril\"\nmsgstr \"鳗鱼状的雾状卷须\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"pincers\"\nmsgstr \"螯\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"eel pincers\"\nmsgstr \"鳗鱼状的螯\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"pincer\"\nmsgstr \"螯\"",
+    "#. Reviewed source-a-01; canonical English identifiers remain unchanged.\n#: crawl-ref/source/ability.cc\nmsgctxt \"a.bodypart\"\nmsgid \"eel pincer\"\nmsgstr \"鳗鱼状的螯\"",
+    "#, c-format\nmsgctxt \"d.item.origin\"\nmsgid \"Level %s of %s\"\nmsgstr \"第%s层（%s）\"",
+    "#, c-format\nmsgctxt \"d.item.origin\"\nmsgid \"You found it %s.\"\nmsgstr \"你在%s发现了它。\"",
+    "#, c-format\nmsgctxt \"d.item.origin\"\nmsgid \"You bought it in a shop %s.\"\nmsgstr \"你在%s的一家商店里买到了它。\"",
+    "#, c-format\nmsgctxt \"d.item.origin\"\nmsgid \"You acquired it %s.\"\nmsgstr \"你在%s获得了它。\"",
+    "#, c-format\nmsgctxt \"d.item.origin\"\nmsgid \"You invented it yourself %s.\"\nmsgstr \"你在%s亲手发明了它。\"",
+    "#, c-format\nmsgctxt \"d.item.origin\"\nmsgid \"You drew the Genie %s.\"\nmsgstr \"你在%s抽到了巨灵牌。\"",
+    "#, c-format\nmsgctxt \"d.item.origin\"\nmsgid \"%s gifted it to you %s.\"\nmsgstr \"%s在%s将它赐予了你。\"",
+    "#, c-format\nmsgctxt \"d.item.origin\"\nmsgid \"You subdued it %s.\"\nmsgstr \"你在%s制服了它。\"",
+    "#, c-format\nmsgctxt \"d.item.origin\"\nmsgid \"You took it off %s %s.\"\nmsgstr \"你从%s身上取得了它（%s）。\"",
+    "#, c-format\nmsgctxt \"d.item.origin\"\nmsgid \"It can be found on %s.\\n\\n\"\nmsgstr \"可以在%s找到它。\\n\\n\"",
+    "msgctxt \"i.ui\"\nmsgid \"You don't have any such object.\"\nmsgstr \"你没有这种物品。\"",
+    "msgctxt \"i.ui\"\nmsgid \"That's the wrong kind of item!\"\nmsgstr \"物品种类不对！\"",
+    "msgctxt \"i.ui\"\nmsgid \"Equip or unequip which item?\"\nmsgstr \"要装备或卸下哪件物品？\"",
+    "msgctxt \"i.ui\"\nmsgid \"Equip which item?\"\nmsgstr \"要装备哪件物品？\"",
+    "msgctxt \"i.ui\"\nmsgid \"Wield or unwield which item (- for none)?\"\nmsgstr \"要持用或放下哪件物品（- 表示空手）？\"",
+    "msgctxt \"i.ui\"\nmsgid \"Wield which item (- for none)?\"\nmsgstr \"要持用哪件物品（- 表示空手）？\"",
+    "msgctxt \"i.ui\"\nmsgid \"Wear or take off which item?\"\nmsgstr \"要穿上或脱下哪件物品？\"",
+    "msgctxt \"i.ui\"\nmsgid \"Wear which item?\"\nmsgstr \"要穿上哪件物品？\"",
+    "msgctxt \"i.ui\"\nmsgid \"Put on or remove which piece of jewellery?\"\nmsgstr \"要戴上或摘下哪件首饰？\"",
+    "msgctxt \"i.ui\"\nmsgid \"Put on which piece of jewellery?\"\nmsgstr \"要戴上哪件首饰？\"",
+    "msgctxt \"i.ui\"\nmsgid \"Drink which item?\"\nmsgstr \"要饮用哪件物品？\"",
+    "msgctxt \"i.ui\"\nmsgid \"Read which item?\"\nmsgstr \"要阅读哪件物品？\"",
+    "msgctxt \"i.ui\"\nmsgid \"Evoke which item?\"\nmsgstr \"要唤发哪件物品？\"",
+    "msgctxt \"i.ui\"\nmsgid \"Take off which piece of armour?\"\nmsgstr \"要脱下哪件防具？\"",
+    "msgctxt \"i.ui\"\nmsgid \"Remove which piece of jewellery?\"\nmsgstr \"要摘下哪件首饰？\"",
+    "msgctxt \"i.ui\"\nmsgid \"Unequip which item?\"\nmsgstr \"要卸下哪件物品？\"",
+    "msgctxt \"i.ui\"\nmsgid \" (cancels current teleport)\"\nmsgstr \"（取消当前传送）\"",
+    "msgctxt \"i.ui\"\nmsgid \"Unarmed\"\nmsgstr \"徒手\"",
+    "msgctxt \"i.ui\"\nmsgid \" (current attack)\"\nmsgstr \"（当前攻击）\"",
+    "msgctxt \"i.ui\"\nmsgid \"Inventory Items\"\nmsgstr \"物品栏中的物品\"",
+    "msgctxt \"i.ui\"\nmsgid \"Floor Items\"\nmsgstr \"地面上的物品\"",
+    "msgctxt \"i.ui\"\nmsgid \"[<w>?</w>] describe selected\"\nmsgstr \"[<w>?</w>] 查看所选物品\"",
+    "msgctxt \"i.ui\"\nmsgid \"<w>equip</w>|unequip  \"\nmsgstr \"<w>装备</w>|卸下  \"",
+    "msgctxt \"i.ui\"\nmsgid \"equip|<w>unequip</w>  \"\nmsgstr \"装备|<w>卸下</w>  \"",
+    "msgctxt \"i.ui\"\nmsgid \"You can't wear anything.\"\nmsgstr \"你无法穿戴任何东西。\"",
+    "msgctxt \"i.ui\"\nmsgid \"To do this, you must remove one of the following items:\"\nmsgstr \"为此，你必须卸下以下物品之一：\"",
+    "msgctxt \"i.ui\"\nmsgid \"(<w>?</w> for menu, <w>Esc</w> to cancel)\"\nmsgstr \"（<w>?</w> 打开菜单，<w>Esc</w> 取消）\"",
+    "msgctxt \"i.ui\"\nmsgid \"Your thirst for blood prevents you from unwielding your weapon!\"\nmsgstr \"你的嗜血欲望使你无法放下武器！\"",
+    "msgctxt \"i.ui\"\nmsgid \"It would be unfitting for someone so glorious to remove their crown in front of an audience.\"\nmsgstr \"如此荣耀的你，不宜在观众面前摘下王冠。\"",
+    "msgctxt \"i.ui\"\nmsgid \"Inscribe which item?\"\nmsgstr \"要为哪件物品题字？\"",
+    "msgctxt \"i.ui\"\nmsgid \"Really abort (and waste the scroll)?\"\nmsgstr \"确定中止（并浪费这张卷轴）吗？\"",
+    "msgctxt \"i.ui\"\nmsgid \"Brand which weapon?\"\nmsgstr \"要为哪件武器添加印记？\"",
+    "msgctxt \"i.ui\"\nmsgid \"Enchant which weapon?\"\nmsgstr \"要为哪件武器附魔？\"",
+    "msgctxt \"i.ui\"\nmsgid \"Identify which item? (\\\\ to view known items)\"\nmsgstr \"要鉴定哪件物品？（\\\\ 查看已知物品）\"",
+    "msgctxt \"i.ui\"\nmsgid \"Enchant which item?\"\nmsgstr \"要为哪件物品附魔？\"",
+    "msgctxt \"i.ui\"\nmsgid \"This item has been removed, sorry!\"\nmsgstr \"抱歉，这件物品已被移除！\"",
+    "msgctxt \"i.ui\"\nmsgid \"You can't see any enemy this would conceal you from. Use anyway?\"\nmsgstr \"你看不到任何能借此躲避的敌人。仍要使用吗？\"",
+    "msgctxt \"i.ui\"\nmsgid \"Still begin transforming?\"\nmsgstr \"仍要开始变形吗？\"",
+    "msgctxt \"i.ui\"\nmsgid \"Pick up how many? \"\nmsgstr \"拾取多少？ \"",
+    "msgctxt \"i.ui\"\nmsgid \"Drop how many? \"\nmsgstr \"丢弃多少？ \"",
+    "#, c-format\nmsgctxt \"i.ui\"\nmsgid \" %s items\"\nmsgstr \" %s 件物品\"",
+    "msgctxt \"i.ui\"\nmsgid \"(<w>?</w> for menu, <w>Esc</w> to quit)\"\nmsgstr \"（<w>?</w> 打开菜单，<w>Esc</w> 退出）\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"HP: %s/%s [%s]\"\nmsgstr \"生命值：%s/%s［%s］\"",
+    "msgctxt \"n.note\"\nmsgid \"Xom revived you\"\nmsgstr \"佐姆使你复生\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Magic: %s/%s\"\nmsgstr \"魔力值：%s/%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Reached %s max health\"\nmsgstr \"生命值上限达到%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Reached %s max magic points\"\nmsgstr \"魔力值上限达到%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Reached XP level %s. %s\"\nmsgstr \"经验等级达到%s。%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Entered %s, level %s\"\nmsgstr \"进入%s，第%s层\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Learned a level %s spell: %s\"\nmsgstr \"学会%s级法术：%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Became a worshipper of %s\"\nmsgstr \"开始信奉%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Fell from the grace of %s\"\nmsgstr \"失去%s的恩宠\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Was placed under penance by %s\"\nmsgstr \"被%s要求赎罪\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Was forgiven by %s\"\nmsgstr \"获得%s的宽恕\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Received a gift from %s%s\"\nmsgstr \"收到%s的赠礼%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Identified %s\"\nmsgstr \"鉴定出%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Identified %s (%s)\"\nmsgstr \"鉴定出%s（%s）\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Got %s\"\nmsgstr \"得到%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Got %s with %s turns to spare\"\nmsgstr \"得到%s，尚余%s回合\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Acquired %s\"\nmsgstr \"获取%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Bought %s for %s gold pieces\"\nmsgstr \"购买%s，花费%s金币\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Donated %s gold pieces to Zin\"\nmsgstr \"向辛捐献%s金币\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Reached skill level %s in %s\"\nmsgstr \"技能达到%s级：%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Reduced skill %s to level %s\"\nmsgstr \"技能%s降至%s级\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Encountered %s\"\nmsgstr \"遇见%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"%s (ally) was %s\"\nmsgstr \"盟友%s被%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"%s %s\"\nmsgstr \"%s%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"%s changed into %s\"\nmsgstr \"%s变成%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Reached %s piety under %s\"\nmsgstr \"虔诚达到%s：%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Gained mutation: %s%s\"\nmsgstr \"获得变异：%s%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Lost mutation: %s%s\"\nmsgstr \"失去变异：%s%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Mutation became permanent: %s%s\"\nmsgstr \"变异成为永久变异：%s%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Gained bane: %s%s\"\nmsgstr \"受到灾厄：%s%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Lost bane: %s\"\nmsgstr \"解除灾厄：%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Found %s\"\nmsgstr \"发现%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"%s was a mimic.\"\nmsgstr \"%s原来是拟态怪。\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"XOM: %s\"\nmsgstr \"佐姆：%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Paralysed by %s for %s turns\"\nmsgstr \"被%s麻痹，持续%s回合\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Vexed by %s for %s turns\"\nmsgstr \"受到%s的恼咒，持续%s回合\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Anointed %s the %s as your apostle\"\nmsgstr \"册立%s（%s）为使徒\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Your ally %s died\"\nmsgstr \"盟友%s死亡\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Offered knowledge of %s by Vehumet.\"\nmsgstr \"维胡梅特传授了%s的知识。\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Remembered your ancestor %s as %s\"\nmsgstr \"忆起先祖%s曾是%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Remembered your ancestor %s %s\"\nmsgstr \"忆起先祖%s%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Remembered your ancestor %s's %s death\"\nmsgstr \"忆起先祖%s%s的死亡\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Found the artefact %s\"\nmsgstr \"发现神器%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Touched by the power of Zot (MHP %s -> %s)\"\nmsgstr \"受到佐特之力触碰（生命值上限%s -> %s）\"",
+    "msgctxt \"n.note\"\nmsgid \"Saved by the dreamshard amulet\"\nmsgstr \"被梦晶项链救下\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Lost the %s gem through the power of Zot.\"\nmsgstr \"因佐特之力失去%s。\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Gained a life (%s lives remaining)\"\nmsgstr \"获得一条生命（剩余%s条）\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Lost a life (%s lives remaining)\"\nmsgstr \"失去一条生命（剩余%s条）\"",
+    "msgctxt \"n.note\"\nmsgid \"Fled from a divine trial\"\nmsgstr \"逃离神祇试炼\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Branded self with the %s\"\nmsgstr \"为自己烙下%s\"",
+    "msgctxt \"n.note\"\nmsgid \"Activated a boundless tesseract\"\nmsgstr \"激活无界超立方体\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"%s the pandemonium lord\"\nmsgstr \"魔窟领主%s\"",
+    "#, c-format\nmsgctxt \"n.note\"\nmsgid \"Received a gift from %s (%s)\"\nmsgstr \"收到%s的赠礼（%s）\"",
+    "#, c-format\nmsgctxt \"o.corrode\"\nmsgid \"%s corrodes you!\"\nmsgstr \"%s使你受到腐蚀！\"",
+    "msgctxt \"o.corrode.source\"\nmsgid \"Your corrosive artefact\"\nmsgstr \"你那具有腐蚀性的神器\"",
+    "#. Reviewed beam-corrosion-01; canonical state preserved.\nmsgctxt \"o.corrode.source\"\nmsgid \"the acid\"\nmsgstr \"酸液\"",
+    "#. Reviewed beam-corrosion-01; canonical state preserved.\nmsgctxt \"o.corrode.source\"\nmsgid \"the rust\"\nmsgstr \"锈蚀\"",
+    "#. Reviewed beam-corrosion-01; canonical state preserved.\nmsgctxt \"o.corrode.source\"\nmsgid \"the entropic weave\"\nmsgstr \"熵之编织\"",
+    "#. Reviewed beam-corrosion-01; canonical state preserved.\nmsgctxt \"o.corrode.source\"\nmsgid \"a flying bit\"\nmsgstr \"飞散的碎片\"",
+    "#. Reviewed beam-corrosion-01; canonical state preserved.\nmsgctxt \"o.corrode.source\"\nmsgid \"Your corrupting presence\"\nmsgstr \"你的腐化气息\"",
+    "#. Reviewed beam-corrosion-01; canonical state preserved.\nmsgctxt \"o.corrode.source\"\nmsgid \"wild magic\"\nmsgstr \"狂野魔法\"",
+    "#. Reviewed beam-corrosion-01; canonical state preserved.\nmsgctxt \"o.corrode.source\"\nmsgid \"The trap's stomach acid\"\nmsgstr \"陷阱的胃酸\"",
+    "#. Reviewed morgue-04 against typed note snapshots and glossary.\n#: crawl-ref/source/notes.cc\n#, c-format\nmsgctxt \"n.note\"\nmsgid \"%s the %s %s began the quest for the Orb.\"\nmsgstr \"%s，这位%s%s开始了寻找佐特宝珠的征程。\"",
+    "#. Reviewed morgue-04 against typed note snapshots and glossary.\n#: crawl-ref/source/notes.cc\n#, c-format\nmsgctxt \"n.note\"\nmsgid \"HP: %s/%s MP: %s/%s\"\nmsgstr \"生命值：%s/%s，魔力值：%s/%s\"",
+    "#. Reviewed morgue-04 against typed note snapshots and glossary.\n#: crawl-ref/source/notes.cc\n#, c-format\nmsgctxt \"n.note\"\nmsgid \"Upgraded the game from %s to %s\"\nmsgstr \"游戏版本从%s升级至%s\"",
+    "#. Reviewed morgue-05: elemental deaths and nonlethal damage snapshots.\n#: crawl-ref/source/notes.cc\n#, c-format\nmsgctxt \"n.note\"\nmsgid \"something (%s)\"\nmsgstr \"某种来源（%s 点伤害）\""
+  ]
+}

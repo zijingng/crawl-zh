@@ -34,9 +34,9 @@ function show_sorted_list(list, baseindent, sortfn)
                end
     table.sort(list, sortfn)
     for i, k in ipairs(list) do
-        kills.rawwrite(baseindent .. "  " .. kills.desc(k))
+        kills.rawwrite(baseindent .. "  " .. kills.display_desc(k))
     end
-    kills.rawwrite(baseindent .. kills.summary(list))
+    kills.rawwrite(baseindent .. kills.display_summary(list))
 end
 
 function group_kills(a, namemap, keys, selector)
@@ -52,7 +52,7 @@ function group_kills(a, namemap, keys, selector)
                 kills.rawwrite("")
             end
             count = count + 1
-            kills.rawwrite("    " .. namemap[key])
+            kills.rawwrite("    " .. kills.display_text(namemap[key]))
             show_sorted_list(selected)
         end
     end
@@ -72,7 +72,7 @@ function holiness_list(a)
     local holysort = { "strange", "unique",
                        "natural", "nonliving",
                        "undead", "demonic", "plant" }
-    kills.rawwrite("  Monster Nature")
+    kills.rawwrite(kills.display_text("  Monster Nature"))
     group_kills(a, holies, holysort,
         function (key, kill)
             return (kills.holiness(kill) == key and not kills.isunique(kill))
@@ -80,11 +80,11 @@ function holiness_list(a)
                    (key == "unique" and kills.isunique(kill))
         end
     )
-    kills.rawwrite("  " .. kills.summary(a))
+    kills.rawwrite("  " .. kills.display_summary(a))
 end
 
 function count_list(a, ascending)
-    kills.rawwrite("  Ascending Order")
+    kills.rawwrite(kills.display_text("  Ascending Order"))
     show_sorted_list(a,
         "  ",
         function (x, y)
@@ -113,7 +113,7 @@ function symbol_list(a)
     for sym, dud in pairs(allsyms) do table.insert(sortedsyms, sym) end
     table.sort(sortedsyms)
 
-    kills.rawwrite("  Monster Symbol")
+    kills.rawwrite(kills.display_text("  Monster Symbol"))
     for i, sym in ipairs(sortedsyms) do
         if i > 1 then
             kills.rawwrite("")
@@ -124,20 +124,20 @@ function symbol_list(a)
                     return kills.symbol(k) == sym
                 end
         )
-        kills.rawwrite("    All '" .. sym .. "'")
+        kills.rawwrite("    " .. kills.display_symbol(sym))
         show_sorted_list(symlist)
     end
 
-    kills.rawwrite("  " .. kills.summary(a))
+    kills.rawwrite("  " .. kills.display_summary(a))
 end
 
 function classic_list(title, a, suffix)
     if #a == 0 then return end
-    kills.rawwrite(title)
+    kills.rawwrite(kills.display_text(title))
     for i, k in ipairs(a) do
-        kills.rawwrite("    " .. kills.desc(k))
+        kills.rawwrite("    " .. kills.display_desc(k))
     end
-    kills.rawwrite("  " .. kills.summary(a))
+    kills.rawwrite("  " .. kills.display_summary(a))
     if suffix then
         kills.rawwrite(suffix)
     end
@@ -183,7 +183,7 @@ function c_kill_list(a, who, needsep)
         if not a and who and who ~= "" then
             -- This is the grand total
             separator()
-            kills.rawwrite(who)
+            kills.rawwrite(kills.display_total(who))
         end
         return true
     end
@@ -192,10 +192,7 @@ function c_kill_list(a, who, needsep)
         separator()
     end
 
-    local title = "Vanquished Creatures"
-    if who then
-        title = title .. " (" .. who .. ")"
-    end
+    local title = kills.display_title(who)
 
     kills.rawwrite(title)
 

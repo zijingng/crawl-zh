@@ -6,8 +6,11 @@
 **/
 
 #include "AppHdr.h"
+#include "m-display.h"
 
 #include "mon-info.h"
+#include "i18n.h"
+#include "item-name.h"
 
 #include <algorithm>
 #include <sstream>
@@ -421,6 +424,18 @@ static description_level_type _article_for(const actor* a)
     return m && m->friendly() ? DESC_YOUR : DESC_A;
 }
 
+// Name-only snapshots avoid recursively collecting constriction metadata
+// when the two monsters constrict each other.
+static ui_arg _m_snapshot_actor_name(const actor &who)
+{
+    if (!ui_translation_group().available()) return {"", false};
+    if (who.is_player() || !you.can_see(who))
+        return ui_text_arg("log.actor", who.is_player() ? "you" : "something");
+    string shown;
+    const bool available = monster_info(who.as_monster(), MILEV_NAME).try_display_name(shown);
+    return {shown, available};
+}
+
 monster_info::monster_info(const monster* m, int milev)
 {
     ASSERT(m); // TODO: change to const monster &mon
@@ -803,12 +818,15 @@ monster_info::monster_info(const monster* m, int milev)
     // init names of constrictor and constrictees
     constrictor_name = "";
     constricting_name.clear();
+    constrictor_display = {"", false};
+    constricting_display.clear();
 
     // Name of what this monster is directly constricted by, if any
     if (m->constricted_type == CONSTRICT_MELEE || m->constricted_type == CONSTRICT_ENTANGLE)
     {
         const actor * const constrictor = actor_by_mid(m->constricted_by);
         ASSERT(constrictor);
+        constrictor_display = m_sentence_arg("constricted by %s", {_m_snapshot_actor_name(*constrictor)});
         constrictor_name = "constricted by "
                            + constrictor->name(_article_for(constrictor),
                                                true);
@@ -823,6 +841,7 @@ monster_info::monster_info(const monster* m, int milev)
 
             if (constrictee && constrictee->constricted_type == CONSTRICT_MELEE)
             {
+                constricting_display.push_back(m_sentence_arg("constricting %s", {_m_snapshot_actor_name(*constrictee)}));
                 constricting_name.push_back("constricting "
                                             + constrictee->name(
                                                   _article_for(constrictee),
@@ -1258,6 +1277,16 @@ bool monster_info::has_proper_name() const
             && !is(MB_NAME_REPLACE) && !is(MB_NAME_ADJECTIVE) && !is(MB_NAME_SUFFIX);
 }
 
+string monster_info::display_name_tag() const
+{
+    // Player names and bestowed proper names remain literal, just as in the
+    // original compact tag. Unique monster types use their reviewed names.
+    if (mons_is_pghost(type) || has_proper_name())
+        return mname;
+    string shown;
+    return try_display_name(shown) ? shown : proper_name(DESC_PLAIN);
+}
+
 string monster_info::proper_name(description_level_type desc) const
 {
     if (has_proper_name())
@@ -1269,6 +1298,186 @@ string monster_info::proper_name(description_level_type desc) const
     }
     else
         return common_name(desc);
+}
+
+bool try_monster_type_display_name(monster_type type, string &output)
+{
+    ui_translation_group text;
+    if (!text.available() || invalid_monster_type(type))
+        return false;
+    const char *english = get_monster_data(type)->name;
+    text.require("display.monster", english);
+    if (!text.available())
+        return false;
+    output = text.get("display.monster", english);
+    return true;
+}
+
+// Chinese head counts are presentation only; canonical names keep upstream grammar.
+static string _display_head_count(int number, bool omit_initial_one = true)
+{
+    const char *digits[] = {"零", "一", "二", "三", "四", "五", "六", "七", "八", "九"};
+    for (const auto &group : {pair<int, const char*>(100000000, "亿"), {10000, "万"}})
+    {
+        if (number >= group.first)
+        {
+            const int remainder = number % group.first;
+            string result = _display_head_count(number / group.first, omit_initial_one) + group.second;
+            if (remainder)
+                result += string(remainder < group.first / 10 ? "零" : "")
+                    + _display_head_count(remainder, false);
+            return result;
+        }
+    }
+    string result;
+    bool zero = false;
+    for (const auto &unit : {pair<int, const char*>(1000, "千"), {100, "百"}, {10, "十"}, {1, ""}})
+    {
+        const int digit = number / unit.first;
+        number %= unit.first;
+        if (!digit)
+        {
+            if (!result.empty() && number) zero = true;
+            continue;
+        }
+        if (zero) result += "零";
+        zero = false;
+        if (!(digit == 1 && unit.first == 10 && result.empty() && omit_initial_one))
+            result += digits[digit];
+        result += unit.second;
+    }
+    return result;
+}
+
+bool monster_info::try_display_name(string &output) const
+{
+    ui_translation_group text;
+    if (!text.available() || invalid_monster_type(type)
+        || is(MB_NAME_REPLACE) || is(MB_NAME_ADJECTIVE)
+        || is(MB_NAME_SUFFIX))
+        return false;
+    auto tr = [&](const char *context, const string &key) -> string
+    {
+        text.require(context, key.c_str());
+        return text.available() ? text.get(context, key.c_str()) : "";
+    };
+    auto wrap = [&](const char *pattern, const string &value) -> string
+    {
+        const string translated = tr("display.monster.template", pattern);
+        return text.available() ? make_stringf(translated.c_str(), value.c_str()) : "";
+    };
+    monster_type kind = type;
+    if (mons_class_is_zombified(type))
+        kind = mons_is_unique(base_type) ? mons_species(base_type) : base_type;
+    else if (mons_class_is_remnant(type) || type == MONS_SENSED)
+        kind = base_type;
+    if (invalid_monster_type(kind))
+        return false;
+    string name = tr("display.monster", get_monster_data(kind)->name);
+    if (type == MONS_MUTANT_BEAST)
+    {
+        if (!props.exists(MUTANT_BEAST_TIER) || !props.exists(MUTANT_BEAST_FACETS))
+            return false;
+        name = tr("display.monster.modifier", _mutant_beast_tier_name(mutant_beast_tier(props[MUTANT_BEAST_TIER].get_short())));
+        for (const auto &facet : props[MUTANT_BEAST_FACETS].get_vector())
+            name += tr("display.monster.modifier", _mutant_beast_facet(facet.get_int()));
+        name = wrap("%s beast", name);
+    }
+    else if (type == MONS_PLAYER_GHOST)
+        name = wrap("%s's ghost", mname);
+    else if (type == MONS_PLAYER_ILLUSION)
+        name = wrap("%s's illusion", mname);
+    else if (type == MONS_PANDEMONIUM_LORD && !mname.empty())
+        name = wrap("pandemonium lord named %s", mname);
+    else if (type == MONS_DANCING_WEAPON || type == MONS_SPECTRAL_WEAPON
+             || type == MONS_HAUNTED_ARMOUR || type == MONS_ARMOUR_ECHO)
+    {
+        const item_def *item = inv[type == MONS_DANCING_WEAPON || type == MONS_SPECTRAL_WEAPON
+                                   ? MSLOT_WEAPON : MSLOT_ARMOUR].get();
+        if (item)
+        {
+            string displayed;
+            if (!try_item_display_name(*item, displayed, false, false))
+                return false;
+            name = wrap(type == MONS_DANCING_WEAPON ? "dancing %s"
+                        : type == MONS_SPECTRAL_WEAPON ? "spectral %s"
+                        : type == MONS_ARMOUR_ECHO ? "echoed %s" : "haunted %s", displayed);
+        }
+    }
+    else if (type == MONS_LIVING_SPELL && has_spells())
+    {
+        const char *key = spells[0].spell == SPELL_BANISHMENT ? "living banishment spell"
+                        : spells[0].spell == SPELL_LEHUDIBS_CRYSTAL_SPEAR ? "living crystal spell"
+                        : spells[0].spell == SPELL_SMITING ? "living smiting commandment"
+                        : spells[0].spell == SPELL_PARALYSE ? "living paralysis spell" : nullptr;
+        if (key)
+            name = tr("display.monster", key);
+    }
+    else if (type == MONS_SLIME_CREATURE && slime_size != 1)
+    {
+        const char *sizes[] = {"buggy", "", "large", "very large", "enormous", "titanic"};
+        if (slime_size < 1 || slime_size >= static_cast<int>(ARRAYSZ(sizes)))
+            return false;
+        name = tr("display.monster.modifier", sizes[slime_size]) + name;
+    }
+    else if (type == MONS_UGLY_THING || type == MONS_VERY_UGLY_THING)
+        name = tr("display.monster.modifier", ugly_thing_colour_name(_colour)) + name;
+    if (mons_is_draconian_job(type) && base_type != MONS_NO_MONSTER)
+        name = tr("display.monster.modifier", draconian_colour_name(base_type)) + name;
+
+    if (has_hydra_multi_attack() && type != MONS_SENSED && !mons_class_is_remnant(type))
+    {
+        if (num_heads <= 0)
+            return false;
+        const string pattern = tr("display.monster.template", "%s-headed %s");
+        if (text.available())
+        {
+            const string heads = num_heads == 1 ? "单" : num_heads == 2 ? "双"
+                                                 : _display_head_count(num_heads);
+            name = make_stringf(pattern.c_str(), heads.c_str(), name.c_str());
+        }
+    }
+    const bool nocore = mons_class_is_zombified(type) && mons_is_unique(base_type)
+                        && base_type == mons_species(base_type) && base_type != MONS_SERPENT_OF_HELL;
+    if (!is(MB_NAME_ZOMBIE))
+    {
+        if (type == MONS_ZOMBIE)
+            name = nocore ? tr("display.monster", "zombie") : wrap("%s zombie", name);
+        else if (type == MONS_DRAUGR)
+            name = nocore ? tr("display.monster", "draugr") : wrap("%s draugr", name);
+        else if (type == MONS_SIMULACRUM)
+            name = nocore ? tr("display.monster", "simulacrum") : wrap("%s simulacrum", name);
+        else if (type == MONS_SPECTRAL_THING)
+            name = nocore ? tr("display.monster", "spectre") : wrap("spectral %s", name);
+        else if (type == MONS_BOUND_SOUL)
+            name = nocore ? tr("display.monster", "bound soul") : wrap("bound %s", name);
+    }
+    if (type == MONS_PILLAR_OF_SALT && base_type != type)
+        name = wrap("%s-shaped pillar of salt", name);
+    if (type == MONS_BLOCK_OF_ICE && base_type != type)
+        name = wrap("%s-shaped block of ice", name);
+    if (type == MONS_SENSED && !mons_is_sensed(base_type))
+        name = wrap("sensed %s", name);
+    if (props.exists(HELPLESS_KEY))
+        name = wrap("helpless %s", name);
+    if (is(MB_SPECTRALISED))
+        name = wrap("ghostly %s", name);
+    if (is(MB_VAMPIRE_THRALL))
+        name = wrap("vampire %s", name);
+    if (type == MONS_BALLISTOMYCETE && is_active)
+        name = wrap("active %s", name);
+    if (is(MB_SHAPESHIFTER) && mons_genus(type) != MONS_SHAPESHIFTER)
+        name = wrap("%s shaped shifter", name);
+    if (has_proper_name())
+    {
+        const string pattern = tr("display.monster.template", "%s the %s");
+        if (text.available())
+            name = make_stringf(pattern.c_str(), mname.c_str(), name.c_str());
+    }
+    if (!text.available())
+        return false;
+    output = name;
+    return true;
 }
 
 string monster_info::full_name(description_level_type desc) const
@@ -1385,12 +1594,13 @@ bool monster_info::less_than(const monster_info& m1, const monster_info& m2,
     return false;
 }
 
-static string _verbose_info(const monster_info& mi)
+static string _verbose_info(const monster_info& mi, bool display = false,
+                            bool *translated = nullptr)
 {
     string desc= "";
     vector<monster_info> miv;
     miv.push_back(mi);
-    mons_conditions_string(desc, miv, 0, 1, false);
+    mons_conditions_string(desc, miv, 0, 1, false, display, translated);
     return desc;
 }
 
@@ -1420,8 +1630,9 @@ string monster_info::pluralised_name(bool fullname) const
 
 void monster_info::to_string(int count, string& desc, int& desc_colour,
                              bool fullname, const char *adj,
-                             bool verbose) const
+                             bool verbose, bool display, bool *translation_available) const
 {
+    if (translation_available) *translation_available = false;
     ostringstream out;
     monster_list_colour_type colour_type = NUM_MLC;
 
@@ -1488,6 +1699,59 @@ void monster_info::to_string(int count, string& desc, int& desc_colour,
         desc_colour = LIGHTGREY;
 
     desc = out.str();
+#ifndef DEBUG_DIAGNOSTICS
+    string displayed;
+    bool translated = false;
+    if (display)
+    {
+        // Match pluralised_name's deliberate loss of individual colours,
+        // equipment and personal names when several different monsters merge.
+        const bool unique = mons_is_unique(type) && type != MONS_MARA;
+        if (count != 1 && !unique && mons_genus(type) == MONS_DRACONIAN)
+            translated = try_monster_type_display_name(MONS_DRACONIAN, displayed);
+        else if (count != 1 && !unique &&
+                 (type == MONS_UGLY_THING || type == MONS_VERY_UGLY_THING
+                  || type == MONS_DANCING_WEAPON || type == MONS_SPECTRAL_WEAPON
+                  || type == MONS_ARMOUR_ECHO || type == MONS_MUTANT_BEAST
+                  || type == MONS_HAUNTED_ARMOUR || !fullname))
+            translated = try_monster_type_display_name(type, displayed);
+        else if (count != 1 && has_proper_name())
+        {
+            monster_info common = *this;
+            common.mname.clear();
+            translated = common.try_display_name(displayed);
+        }
+        else
+            translated = try_display_name(displayed);
+        if (translated && count == 1 && verbose)
+        {
+            bool conditions_available = false;
+            const string conditions = _verbose_info(*this, true, &conditions_available);
+            translated = conditions_available;
+            if (translated) displayed += conditions;
+        }
+        if (translated && adj)
+        {
+            displayed = ui_render("o.monster.attitude", "%s %s", "",
+                {ui_text_arg("d.monster.state", adj), ui_literal_arg(displayed)});
+            translated = !displayed.empty();
+        }
+        if (translated && (attitude == ATT_GOOD_NEUTRAL || attitude == ATT_MARIONETTE
+#if TAG_MAJOR_VERSION == 34
+                           || attitude == ATT_OLD_STRICT_NEUTRAL
+#endif
+                          ) && fellow_slime())
+        {
+            ui_translation_group words({{"display.monster.state", " (fellow slime)"}});
+            translated = words.available();
+            if (translated)
+                displayed += words.get("display.monster.state", " (fellow slime)");
+        }
+    }
+    if (translated)
+        desc = (count == 1 ? "" : std::to_string(count) + " × ") + displayed;
+    if (translation_available) *translation_available = translated;
+#endif
 }
 
 static bool _hide_moninfo_flag(monster_info_flags f)
@@ -1529,6 +1793,47 @@ vector<string> monster_info::attributes() const
     }
 
     return v;
+}
+
+vector<ui_arg> monster_info::attribute_display_args() const
+{
+    vector<ui_arg> result;
+    for (const auto &name : monster_info_flag_names)
+    {
+        if (!is(name.flag) || _hide_moninfo_flag(name.flag)) continue;
+        if (name.flag == MB_PARALYSED && is(MB_FROZEN_IN_TERROR)) continue;
+        if (name.flag == MB_BREATH_WEAPON)
+            result.push_back(ui_text_arg("m.moncondition", "catching breath"));
+        else if (name.flag == MB_PAIN_BOND)
+            result.push_back(ui_text_arg("m.moncondition", "pain bonded"));
+        else result.push_back(ui_text_arg("d.monster.state", name.long_singular));
+    }
+    if (type == MONS_NAMELESS_REVENANT)
+    {
+        const int count = props.exists(NOBODY_MEMORIES_KEY)
+            ? props[NOBODY_MEMORIES_KEY].get_vector().size() : NOBODY_MAX_MEMORIES;
+        result.push_back(m_sentence_arg("%s memories left", {{std::to_string(count), true}}));
+    }
+    return result;
+}
+
+ui_arg monster_info::wounds_display_arg(bool use_colour) const
+{
+    if (dam == MDAM_OKAY) return {"", true};
+    ui_arg result = ui_text_arg("d.monster.state", get_damage_level_string(holi, dam));
+    if (result.available && use_colour)
+        result.text = colour_string(result.text, channel_to_colour(MSGCH_MONSTER_DAMAGE, dam));
+    return result;
+}
+
+ui_arg monster_info::constriction_display_arg() const
+{
+    vector<ui_arg> parts;
+    if (!constrictor_name.empty()) parts.push_back(constrictor_display);
+    if (constricting_name.size() != constricting_display.size()) return {"", false};
+    parts.insert(parts.end(), constricting_display.begin(), constricting_display.end());
+    if (!parts.empty() && !m_display_active("m.clause", "constricting %s")) return {"", false};
+    return m_join_args(parts, "，");
 }
 
 string monster_info::wounds_description_sentence() const
@@ -1970,8 +2275,13 @@ void mons_to_string_pane(string& desc, int& desc_colour, bool fullname,
                          const vector<monster_info>& mi, int start,
                          int count)
 {
-    mi[start].to_string(count, desc, desc_colour, fullname, nullptr, false);
+    mi[start].to_string(count, desc, desc_colour, fullname, nullptr, false, false);
     mons_conditions_string(desc, mi, start, count, true);
+    string shown, conditions;
+    bool name_available = false, conditions_available = false;
+    mi[start].to_string(count, shown, desc_colour, fullname, nullptr, false, true, &name_available);
+    mons_conditions_string(conditions, mi, start, count, true, true, &conditions_available);
+    if (name_available && conditions_available) desc = shown + conditions;
 }
 
 static bool _has_polearm(const monster_info& mi)
@@ -2049,9 +2359,22 @@ static string _condition_string(int num, int count,
 }
 
 void mons_conditions_string(string& desc, const vector<monster_info>& mi,
-                            int start, int count, bool equipment)
+                            int start, int count, bool equipment, bool display, bool *translated)
 {
+    if (translated) *translated = false;
     vector<string> conditions;
+    vector<ui_arg> shown;
+    const auto add_condition = [&](int num, int total, const monster_info_flag_name &name) {
+        conditions.push_back(_condition_string(num, total, name));
+        const string &word = num == 1 ? name.short_singular : name.plural;
+        ui_arg label = ui_text_arg("m.moncondition", word);
+        if (num == total) shown.push_back(label);
+        else
+        {
+            const ui_arg amount{std::to_string(num), true};
+            shown.push_back(m_sentence_arg("%s %s", {amount, label}));
+        }
+    };
 
     if (equipment)
     {
@@ -2086,59 +2409,59 @@ void mons_conditions_string(string& desc, const vector<monster_info>& mi,
 
         if (wand_count)
         {
-            conditions.push_back(_condition_string(wand_count, count,
+            add_condition(wand_count, count,
                                                    {MB_UNSAFE, "wand",
-                                                    "wand", "wands"}));
+                                                    "wand", "wands"});
         }
 
         if (polearm_count)
         {
-            conditions.push_back(_condition_string(polearm_count, count,
+            add_condition(polearm_count, count,
                                                    {MB_UNSAFE, "polearm",
-                                                    "polearm", "polearms"}));
+                                                    "polearm", "polearms"});
         }
 
         if (launcher_count)
         {
-            conditions.push_back(_condition_string(launcher_count, count,
+            add_condition(launcher_count, count,
                                                    {MB_UNSAFE, "launcher",
-                                                    "launcher", "launchers"}));
+                                                    "launcher", "launchers"});
         }
 
         if (missile_count)
         {
-            conditions.push_back(_condition_string(missile_count, count,
+            add_condition(missile_count, count,
                                                    {MB_UNSAFE, "missile",
-                                                    "missile", "missiles"}));
+                                                    "missile", "missiles"});
         }
 
         if (reach_count)
         {
-            conditions.push_back(_condition_string(reach_count, count,
+            add_condition(reach_count, count,
                                                    {MB_UNSAFE, "reaching",
-                                                    "reaching", "reaching"}));
+                                                    "reaching", "reaching"});
         }
 
         if (constrict_count)
         {
-            conditions.push_back(_condition_string(constrict_count, count,
+            add_condition(constrict_count, count,
                                                    {MB_UNSAFE, "constriction",
                                                     "constriction",
-                                                    "constriction"}));
+                                                    "constriction"});
         }
 
         if (trample_count)
         {
-            conditions.push_back(_condition_string(trample_count, count,
+            add_condition(trample_count, count,
                                                    {MB_UNSAFE, "trample",
-                                                    "trample", "trample"}));
+                                                    "trample", "trample"});
         }
 
         if (drag_count)
         {
-            conditions.push_back(_condition_string(drag_count, count,
+            add_condition(drag_count, count,
                                                    {MB_UNSAFE, "drag",
-                                                    "drag", "drag"}));
+                                                    "drag", "drag"});
         }
     }
 
@@ -2153,12 +2476,18 @@ void mons_conditions_string(string& desc, const vector<monster_info>& mi,
                 num++;
         }
         if (num && !name.short_singular.empty())
-            conditions.push_back(_condition_string(num, count, name));
+            add_condition(num, count, name);
     }
 
 
-    if (conditions.empty())
+    const ui_arg labels = m_join_args(shown, "，");
+    if (translated) *translated = labels.available;
+    if (conditions.empty()) return;
+    if (display && labels.available)
+    {
+        desc += "（" + labels.text + "）";
         return;
+    }
 
     desc += " ("
          + join_strings(conditions.begin(), conditions.end(), ", ") + ")";

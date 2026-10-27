@@ -1,0 +1,416 @@
+{
+  "batch": "source-c-01",
+  "cloud_types": 40,
+  "cloud_name_forms": 49,
+  "added": 48,
+  "reused": 1,
+  "glossary_terms": 1755,
+  "before_sha256": "92bf553f99af5641c1425d31753540e1fe182bfaa5129a4a140ce70d9d27d999",
+  "glossary_sha256": "b51f181d6a97fe84dd51abbfbbc9d3c2a9a67f952d62f5365d0bffc08492c6fe",
+  "definitions": [
+    {
+      "type": "CLOUD_FIRE",
+      "terse": "flame",
+      "verbose": "blazing flames"
+    },
+    {
+      "type": "CLOUD_MEPHITIC",
+      "terse": "noxious fumes",
+      "verbose": "noxious fumes"
+    },
+    {
+      "type": "CLOUD_COLD",
+      "terse": "freezing vapour",
+      "verbose": "freezing vapours"
+    },
+    {
+      "type": "CLOUD_POISON",
+      "terse": "poison gas",
+      "verbose": "poison gas"
+    },
+    {
+      "type": "CLOUD_BLACK_SMOKE",
+      "terse": "black smoke",
+      "verbose": "black smoke"
+    },
+    {
+      "type": "CLOUD_GREY_SMOKE",
+      "terse": "grey smoke",
+      "verbose": "grey smoke"
+    },
+    {
+      "type": "CLOUD_BLUE_SMOKE",
+      "terse": "blue smoke",
+      "verbose": "blue smoke"
+    },
+    {
+      "type": "CLOUD_PURPLE_SMOKE",
+      "terse": "purple smoke",
+      "verbose": "purple smoke"
+    },
+    {
+      "type": "CLOUD_TLOC_ENERGY",
+      "terse": "translocational energy",
+      "verbose": "translocational energy"
+    },
+    {
+      "type": "CLOUD_FOREST_FIRE",
+      "terse": "spreading flames",
+      "verbose": "a forest fire"
+    },
+    {
+      "type": "CLOUD_STEAM",
+      "terse": "steam",
+      "verbose": "a cloud of scalding steam"
+    },
+    {
+      "type": "CLOUD_GLOOM",
+      "terse": "gloom",
+      "verbose": "thick gloom"
+    },
+    {
+      "type": "CLOUD_INK",
+      "terse": "ink",
+      "verbose": "ink"
+    },
+    {
+      "type": "CLOUD_PETRIFY",
+      "terse": "calcifying dust",
+      "verbose": "calcifying dust"
+    },
+    {
+      "type": "CLOUD_HOLY",
+      "terse": "blessed fire",
+      "verbose": "blessed fire"
+    },
+    {
+      "type": "CLOUD_MIASMA",
+      "terse": "foul pestilence",
+      "verbose": "dark miasma"
+    },
+    {
+      "type": "CLOUD_MIST",
+      "terse": "thin mist",
+      "verbose": "thin mist"
+    },
+    {
+      "type": "CLOUD_CHAOS",
+      "terse": "seething chaos",
+      "verbose": "seething chaos"
+    },
+    {
+      "type": "CLOUD_RAIN",
+      "terse": "rain",
+      "verbose": "the rain"
+    },
+    {
+      "type": "CLOUD_MUTAGENIC",
+      "terse": "mutagenic fog",
+      "verbose": "mutagenic fog"
+    },
+    {
+      "type": "CLOUD_MAGIC_TRAIL",
+      "terse": "magical condensation",
+      "verbose": "magical condensation"
+    },
+    {
+      "type": "CLOUD_VORTEX",
+      "terse": "whirling frost",
+      "verbose": "whirling frost"
+    },
+    {
+      "type": "CLOUD_DUST",
+      "terse": "sparse dust",
+      "verbose": "sparse dust"
+    },
+    {
+      "type": "CLOUD_SPECTRAL",
+      "terse": "spectral mist",
+      "verbose": "spectral mist"
+    },
+    {
+      "type": "CLOUD_ACID",
+      "terse": "acidic fog",
+      "verbose": "acidic fog"
+    },
+    {
+      "type": "CLOUD_STORM",
+      "terse": "thunder",
+      "verbose": "a thunderstorm"
+    },
+    {
+      "type": "CLOUD_MISERY",
+      "terse": "excruciating misery",
+      "verbose": "excruciating misery"
+    },
+    {
+      "type": "CLOUD_FLUFFY",
+      "terse": "white fluffiness",
+      "verbose": "white fluffiness"
+    },
+    {
+      "type": "CLOUD_XOM_TRAIL",
+      "terse": "magical condensation",
+      "verbose": "magical condensation"
+    },
+    {
+      "type": "CLOUD_SALT",
+      "terse": "salt",
+      "verbose": "salt"
+    },
+    {
+      "type": "CLOUD_GOLD_DUST",
+      "terse": "golden dust",
+      "verbose": "golden dust"
+    },
+    {
+      "type": "CLOUD_EMBERS",
+      "terse": "smouldering embers",
+      "verbose": "embers"
+    },
+    {
+      "type": "CLOUD_FLAME",
+      "terse": "wisps of flame",
+      "verbose": "wisps of flame"
+    },
+    {
+      "type": "CLOUD_ALCOHOL",
+      "terse": "alcoholic mist",
+      "verbose": "alcoholic mist"
+    },
+    {
+      "type": "CLOUD_BLASTMOTES",
+      "terse": "blastmotes",
+      "verbose": "volatile sparks"
+    },
+    {
+      "type": "CLOUD_ELECTRICITY",
+      "terse": "sparks",
+      "verbose": "sparks"
+    },
+    {
+      "type": "CLOUD_FAINT_MIASMA",
+      "terse": "faint pestilence",
+      "verbose": "faint pestilence"
+    },
+    {
+      "type": "CLOUD_MAGNETISED_DUST",
+      "terse": "magnetised fragments",
+      "verbose": "magnetised fragments"
+    },
+    {
+      "type": "CLOUD_BATS",
+      "terse": "bats",
+      "verbose": "bats"
+    },
+    {
+      "type": "CLOUD_RUST",
+      "terse": "rust",
+      "verbose": "rust"
+    }
+  ],
+  "added_terms": [
+    {
+      "term": "flame",
+      "translation": "火焰"
+    },
+    {
+      "term": "blazing flames",
+      "translation": "熊熊烈焰"
+    },
+    {
+      "term": "noxious fumes",
+      "translation": "恶臭烟雾"
+    },
+    {
+      "term": "freezing vapour",
+      "translation": "冰冷蒸气"
+    },
+    {
+      "term": "freezing vapours",
+      "translation": "冰冷蒸气"
+    },
+    {
+      "term": "poison gas",
+      "translation": "毒气"
+    },
+    {
+      "term": "black smoke",
+      "translation": "黑烟"
+    },
+    {
+      "term": "grey smoke",
+      "translation": "灰烟"
+    },
+    {
+      "term": "blue smoke",
+      "translation": "蓝烟"
+    },
+    {
+      "term": "purple smoke",
+      "translation": "紫烟"
+    },
+    {
+      "term": "translocational energy",
+      "translation": "位移能量"
+    },
+    {
+      "term": "spreading flames",
+      "translation": "蔓延烈焰"
+    },
+    {
+      "term": "a forest fire",
+      "translation": "林火"
+    },
+    {
+      "term": "steam",
+      "translation": "蒸汽"
+    },
+    {
+      "term": "a cloud of scalding steam",
+      "translation": "灼热蒸汽云"
+    },
+    {
+      "term": "thick gloom",
+      "translation": "浓重幽暗"
+    },
+    {
+      "term": "ink",
+      "translation": "墨汁"
+    },
+    {
+      "term": "calcifying dust",
+      "translation": "钙化粉尘"
+    },
+    {
+      "term": "blessed fire",
+      "translation": "祝福之火"
+    },
+    {
+      "term": "foul pestilence",
+      "translation": "恶疫"
+    },
+    {
+      "term": "dark miasma",
+      "translation": "黑暗瘴气"
+    },
+    {
+      "term": "thin mist",
+      "translation": "薄雾"
+    },
+    {
+      "term": "seething chaos",
+      "translation": "翻涌混沌"
+    },
+    {
+      "term": "rain",
+      "translation": "雨水"
+    },
+    {
+      "term": "the rain",
+      "translation": "雨水"
+    },
+    {
+      "term": "mutagenic fog",
+      "translation": "诱变雾气"
+    },
+    {
+      "term": "magical condensation",
+      "translation": "魔法凝雾"
+    },
+    {
+      "term": "whirling frost",
+      "translation": "旋转冰霜"
+    },
+    {
+      "term": "sparse dust",
+      "translation": "稀薄尘埃"
+    },
+    {
+      "term": "spectral mist",
+      "translation": "幽魂薄雾"
+    },
+    {
+      "term": "acidic fog",
+      "translation": "酸雾"
+    },
+    {
+      "term": "thunder",
+      "translation": "雷霆"
+    },
+    {
+      "term": "a thunderstorm",
+      "translation": "雷暴"
+    },
+    {
+      "term": "excruciating misery",
+      "translation": "极度苦难"
+    },
+    {
+      "term": "white fluffiness",
+      "translation": "白色绒云"
+    },
+    {
+      "term": "salt",
+      "translation": "盐尘"
+    },
+    {
+      "term": "golden dust",
+      "translation": "金色尘埃"
+    },
+    {
+      "term": "smouldering embers",
+      "translation": "阴燃余烬"
+    },
+    {
+      "term": "embers",
+      "translation": "余烬"
+    },
+    {
+      "term": "wisps of flame",
+      "translation": "缕缕火焰"
+    },
+    {
+      "term": "alcoholic mist",
+      "translation": "酒精薄雾"
+    },
+    {
+      "term": "blastmotes",
+      "translation": "爆裂微灵"
+    },
+    {
+      "term": "volatile sparks",
+      "translation": "不稳定火花"
+    },
+    {
+      "term": "sparks",
+      "translation": "电火花"
+    },
+    {
+      "term": "faint pestilence",
+      "translation": "微弱恶疫"
+    },
+    {
+      "term": "magnetised fragments",
+      "translation": "磁化碎片"
+    },
+    {
+      "term": "bats",
+      "translation": "蝙蝠群"
+    },
+    {
+      "term": "rust",
+      "translation": "锈尘"
+    }
+  ],
+  "reused_terms": [
+    {
+      "term": "Gloom",
+      "cloud_name": "gloom",
+      "translation": "幽暗",
+      "types": [
+        "CLOUD_GLOOM"
+      ]
+    }
+  ]
+}

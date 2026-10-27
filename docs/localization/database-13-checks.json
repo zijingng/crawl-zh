@@ -1,0 +1,33 @@
+{
+  "reviewed_this_batch": 71,
+  "candidates": 119,
+  "source_keys": 132,
+  "cumulative_reviewed": 120,
+  "remaining_keys": [
+    "default dry_fountain",
+    "default fountain_blood",
+    "default fountain_blue",
+    "default fountain_sparkling",
+    "default peaceful dry_fountain",
+    "default peaceful fountain_blue",
+    "default peaceful fountain_sparkling",
+    "elyvilon peaceful fountain_blue",
+    "gozag fountain_blood",
+    "makhleb peaceful fountain_blood",
+    "okawaru peaceful fountain_blue",
+    "trog peaceful fountain_blue"
+  ],
+  "runtime_eof_variants": 1,
+  "english_source_unchanged": true,
+  "previous_49_entries_unchanged": true,
+  "po_consistency": "passed",
+  "weights_references_bracket_order": "passed",
+  "duplicate_random_alternatives_preserved": true,
+  "changed_child_alias_fallback": "passed",
+  "native_tests": 152,
+  "native_assertions": 494052,
+  "python_tests": 29,
+  "tiles_build": "passed",
+  "visual_test": "not_run",
+  "executable_sha256": "03f09d5706adf425b6c9ed4e0397998b27a160725488ad45099fdcaa9e6e6976"
+}

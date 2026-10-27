@@ -1,4 +1,5 @@
 #include "AppHdr.h"
+#include "t-display.h"
 
 #ifdef USE_TILE_LOCAL
 
@@ -217,7 +218,8 @@ void MonsterRegion::draw_tag()
     if (!mon)
         return;
 
-    string desc = mon->proper_name(DESC_A);
+    const ui_arg display = t_monster_info_arg(*mon);
+    string desc = display.available ? display.text : mon->proper_name(DESC_A);
     draw_desc(desc.c_str());
 }
 

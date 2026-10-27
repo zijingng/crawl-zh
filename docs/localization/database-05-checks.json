@@ -1,0 +1,2470 @@
+{
+  "runtime_body_variants": [
+    "eel hand solo actions"
+  ],
+  "reviewed_keys": 19,
+  "new_keys": 16,
+  "legacy_reviewed_keys": 3,
+  "literal_candidates": 88,
+  "legacy_unreviewed_keys": [
+    "_beast_",
+    "_beastly_adjective_",
+    "_body_part_",
+    "_common_speaking_no_tension_",
+    "_corpses_",
+    "_crimson_",
+    "_exasperated_",
+    "_glorious_",
+    "_godless_sorter_",
+    "_instrumental_noises_",
+    "_kind_of_scales_",
+    "_loudly_",
+    "_miscreants_",
+    "_musical_topic_",
+    "_pets_",
+    "_rare_chatter_",
+    "_rare_speaking_no_tension_",
+    "_real_song_high_tension_",
+    "_real_song_low-high_tension_",
+    "_real_song_low_tension_",
+    "_real_song_no_tension_",
+    "_rhyme_word_",
+    "_scream_",
+    "_screams_",
+    "_screams_how_",
+    "_singing_no-low_tension_",
+    "_singing_no_tension_",
+    "_song_theme_",
+    "_speaking_high_tension_",
+    "_speaking_low-high_tension_",
+    "_speaking_low_tension_",
+    "_speaking_no_tension_",
+    "_strikes_up_what_",
+    "_weapon_chatter_",
+    "_weapon_noises_low-high_tension_",
+    "frozen axe \"frostbite\"",
+    "noisy weapon",
+    "shield of the gong",
+    "singing sword high_tension",
+    "singing sword low_tension",
+    "singing sword no_tension",
+    "singing sword scream",
+    "singing sword silenced",
+    "trishula \"condemnation\"",
+    "weapon_noise",
+    "weapon_noises"
+  ],
+  "unreviewed_prefix_unchanged": true,
+  "applied_source_hashes": {
+    "crawl-ref/source/art-func.h": "3713c64ec7dde56d9c8e0600b6af024ecd1db25691e0fbe274be1c3256264331",
+    "crawl-ref/source/player-equip.cc": "e894bd90bc18adb604c3ad43af11a3c6318bb3f28228acb3eb3048ab0246aeb5",
+    "crawl-ref/source/player-reacts.cc": "f8ef81935893c37e42d2f9e0fbc8de86b40c572112a13e11f889b9252c564f8c",
+    "crawl-ref/source/spl-cast.cc": "98b7ca41d4d36857030bef31f94f94c7d84a7cfc4f2fc98002e63366a1f0b9c8",
+    "crawl-ref/source/dat/database/zh/wpnnoise.txt": "91097c0da57d7e0c7700078b486e8299eeb7743c157b7fffc3febebef23fb7d6"
+  },
+  "english_source_unchanged": true,
+  "validation": {
+    "python_tests": 29,
+    "native_tests": 150,
+    "native_assertions": 388889,
+    "tiles_build": "passed",
+    "visual_test": "not_run"
+  },
+  "reviewed_coverage": {
+    "source_keys": 65,
+    "chinese_keys_present": 65,
+    "reviewed_this_batch": 19,
+    "legacy_still_unreviewed": 46
+  },
+  "dependency_refresh_summary": [
+    {
+      "source": "crawl-ref/source/art-func.h",
+      "context": "a.art-func",
+      "count": 99
+    },
+    {
+      "source": "crawl-ref/source/art-func.h",
+      "context": "display.item.appearance",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/art-func.h",
+      "context": "display.item.artifact",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/art-func.h",
+      "context": "log.god",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/art-func.h",
+      "context": "log.monster",
+      "count": 10
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "f.attack.action",
+      "count": 20
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "i.brand",
+      "count": 17
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "i.colour",
+      "count": 7
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "i.danger",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "i.enchant",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "i.evoker",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "i.identify",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "i.inventory.empty",
+      "count": 30
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "i.item.base",
+      "count": 15
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "i.items",
+      "count": 29
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "i.menu",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "i.operation",
+      "count": 17
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "i.reason",
+      "count": 165
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "i.runes",
+      "count": 18
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "i.scroll",
+      "count": 3
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "i.scroll.confirm",
+      "count": 5
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "i.scroll.part",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "i.skin",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "i.target",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "i.ui",
+      "count": 42
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "i.use",
+      "count": 23
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "i.warning",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "i.warning.part",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.abyss",
+      "count": 17
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.body",
+      "count": 3
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.clause",
+      "count": 234
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.distortion",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.duration",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.duration.message",
+      "count": 13
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.equipment.detail",
+      "count": 3
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.equipment.reason",
+      "count": 40
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.extra",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.faith",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.0",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.1",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.10",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.100",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.101",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.102",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.103",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.104",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.105",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.106",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.107",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.108",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.109",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.11",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.110",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.111",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.112",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.113",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.114",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.115",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.116",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.117",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.118",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.119",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.12",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.120",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.121",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.122",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.123",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.124",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.125",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.126",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.127",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.128",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.129",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.13",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.130",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.131",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.132",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.133",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.134",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.135",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.136",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.14",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.15",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.16",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.17",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.18",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.19",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.2",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.20",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.21",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.22",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.23",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.24",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.25",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.26",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.27",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.28",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.29",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.3",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.30",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.31",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.32",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.33",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.34",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.35",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.36",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.37",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.38",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.4",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.40",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.41",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.42",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.43",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.44",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.45",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.46",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.47",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.48",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.49",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.5",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.53",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.57",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.6",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.60",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.61",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.62",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.66",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.67",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.68",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.69",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.7",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.71",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.72",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.73",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.74",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.75",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.76",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.77",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.78",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.79",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.8",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.80",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.81",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.82",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.84",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.9",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.90",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.91",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.92",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.93",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.94",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.95",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.96",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.97",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.98",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.log.99",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.move",
+      "count": 10
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.prompt",
+      "count": 17
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.reason",
+      "count": 26
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.speech",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.stats.gain",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.status",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.ui",
+      "count": 240
+    },
+    {
+      "source": "crawl-ref/source/player-equip.cc",
+      "context": "p.warning",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "a.ability.reason",
+      "count": 9
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.blessing",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.challenge",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.common",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.companion",
+      "count": 7
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.conduct",
+      "count": 44
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.favour",
+      "count": 7
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.gender",
+      "count": 3
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.level",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.martial",
+      "count": 5
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.message",
+      "count": 222
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.prayer",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.protection",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.recite.closure",
+      "count": 9
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.recite.finish",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.recite.reference",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.recite.verse",
+      "count": 81
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.recite.word",
+      "count": 96
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.sacrifice",
+      "count": 18
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.shop",
+      "count": 3
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.shop.suffix",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.shop.type",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.sifu",
+      "count": 5
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.soul",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.trap",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.wall",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "g.wrath",
+      "count": 3
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "i.reason",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "log.god",
+      "count": 166
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "log.monster",
+      "count": 35
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "log.projectile.name",
+      "count": 13
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.abyss",
+      "count": 17
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.body",
+      "count": 3
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.clause",
+      "count": 234
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.distortion",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.duration",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.duration.message",
+      "count": 13
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.extra",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.faith",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.0",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.1",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.10",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.100",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.101",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.102",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.103",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.104",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.105",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.106",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.107",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.108",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.109",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.11",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.110",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.111",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.112",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.113",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.114",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.115",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.116",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.117",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.118",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.119",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.12",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.120",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.121",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.122",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.123",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.124",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.125",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.126",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.127",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.128",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.129",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.13",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.130",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.131",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.132",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.133",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.134",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.135",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.136",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.14",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.15",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.16",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.17",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.18",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.19",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.2",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.20",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.21",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.22",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.23",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.24",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.25",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.26",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.27",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.28",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.29",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.3",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.30",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.31",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.32",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.33",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.34",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.35",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.36",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.37",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.38",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.4",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.40",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.41",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.42",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.43",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.44",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.45",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.46",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.47",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.48",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.49",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.5",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.53",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.57",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.6",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.60",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.61",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.62",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.66",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.67",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.68",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.69",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.7",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.71",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.72",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.73",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.74",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.75",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.76",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.77",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.78",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.79",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.8",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.80",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.81",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.82",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.84",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.9",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.90",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.91",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.92",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.93",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.94",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.95",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.96",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.97",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.98",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.log.99",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.move",
+      "count": 10
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.prompt",
+      "count": 17
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.reason",
+      "count": 26
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.speech",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.stats.gain",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.status",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.ui",
+      "count": 240
+    },
+    {
+      "source": "crawl-ref/source/player-reacts.cc",
+      "context": "p.warning",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.action",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.ancestor.upgrade",
+      "count": 20
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.attack",
+      "count": 10
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.attack.damage",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.attack.damage.type",
+      "count": 7
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.attack.effect",
+      "count": 50
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.attack.name",
+      "count": 21
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.attack.table",
+      "count": 5
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.attack.throw",
+      "count": 7
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.bane",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.beast",
+      "count": 5
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.beast.facet",
+      "count": 7
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.cancel",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.cancel.effect",
+      "count": 3
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.cards",
+      "count": 58
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.cards.action",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.cards.deck.kind",
+      "count": 3
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.curse",
+      "count": 23
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.damage",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.database",
+      "count": 3
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.delay",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.delay.activity",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.demon",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.demon.colour",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.demon.part",
+      "count": 105
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.describe",
+      "count": 109
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.draconian",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.duration",
+      "count": 2097
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.equip.action",
+      "count": 10
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.equip.category",
+      "count": 3
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.equipment",
+      "count": 62
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.equipment.field",
+      "count": 3
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.equipment.type",
+      "count": 7
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.feature",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.feature.cover",
+      "count": 5
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.feature.door",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.feature.help",
+      "count": 15
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.feature.name",
+      "count": 183
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.form",
+      "count": 28
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.ghost",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.ghost.rank",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.god",
+      "count": 79
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.god.degree",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.god.power",
+      "count": 131
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.god.title",
+      "count": 209
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.god.title.component",
+      "count": 98
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.god.xom.favour",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.hit",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.hit.aux",
+      "count": 22
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.item.kind",
+      "count": 18
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.item.origin",
+      "count": 10
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.item.reason",
+      "count": 51
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.item.useless",
+      "count": 7
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.messages",
+      "count": 5
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.monster.equipment",
+      "count": 9
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.monster.field",
+      "count": 18
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.monster.observation",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.monster.pronoun",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.monster.prose",
+      "count": 17
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.monster.speed",
+      "count": 5
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.monster.speed.action",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.monster.stat",
+      "count": 10
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.monster.state",
+      "count": 363
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.monster.target",
+      "count": 3
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.monster.trait",
+      "count": 24
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.overview",
+      "count": 21
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.property",
+      "count": 62
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.resist",
+      "count": 11
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.shoals",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.skill.prose",
+      "count": 9
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.skill.title",
+      "count": 249
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.skill.title.walker",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.skill.title.weight",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.skin",
+      "count": 7
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.spell.miscast",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.spell.noise",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.spell.prose",
+      "count": 21
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.spell.reason",
+      "count": 64
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.spell.stat",
+      "count": 10
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.spells",
+      "count": 17
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.square",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.square.state",
+      "count": 9
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.target",
+      "count": 33
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.target.action",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.target.kind",
+      "count": 3
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.target.menu",
+      "count": 3
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.target.prefix",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.threat",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "d.training",
+      "count": 9
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "display.spell",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "item.action",
+      "count": 3
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "log.cast",
+      "count": 3
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "log.cast.severity",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "log.god",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "log.monster",
+      "count": 39
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "log.projectile.name",
+      "count": 39
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "q.clause",
+      "count": 7
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "q.keys",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "q.log",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "q.menu",
+      "count": 3
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "q.prompt",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "q.row",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "q.ui",
+      "count": 26
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "q.verb",
+      "count": 55
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.aim",
+      "count": 7
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.aim.verb",
+      "count": 3
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.anatomy",
+      "count": 122
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.breath",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.channel",
+      "count": 3
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.channel.reminder",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.clause",
+      "count": 157
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.contamination",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.count",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.duration.start",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.forest",
+      "count": 5
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.forest.hit",
+      "count": 9
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.gravity",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.jinx",
+      "count": 7
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.library",
+      "count": 7
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.log",
+      "count": 170
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.los",
+      "count": 9
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.noise",
+      "count": 10
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.poison",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.potion.flavour",
+      "count": 18
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.reason",
+      "count": 75
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.rune",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.search",
+      "count": 11
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.search.row",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.shop",
+      "count": 21
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.shop.help",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.shop.row",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.shop.suffix",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.shop.type",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.stairs",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.stash",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.stash.item",
+      "count": 3
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.stash.shop",
+      "count": 1
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.stat",
+      "count": 3
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.status",
+      "count": 22
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.status.number",
+      "count": 18
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.summon",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.target",
+      "count": 27
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.target.prompt",
+      "count": 3
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "s.ui",
+      "count": 102
+    },
+    {
+      "source": "crawl-ref/source/spl-cast.cc",
+      "context": "spell.action",
+      "count": 2
+    }
+  ],
+  "executable_sha256": "ed0b6f0f9fb5c878b4a7ac584cdbc4846448a6c1dd27eef92b363465f0e57e1e",
+  "source_changes": {
+    "art-func.h": {
+      "before_sha256": "9b538075368d128e952a8bf2d56d41db6c704e10ad67a5f1028e6658ca854822",
+      "after_sha256": "3713c64ec7dde56d9c8e0600b6af024ecd1db25691e0fbe274be1c3256264331"
+    },
+    "player-equip.cc": {
+      "before_sha256": "4124635b9a4276ce088458ee2503d984271ca27efdf60e70c9c17e96c8f6d124",
+      "after_sha256": "e894bd90bc18adb604c3ad43af11a3c6318bb3f28228acb3eb3048ab0246aeb5"
+    },
+    "player-reacts.cc": {
+      "before_sha256": "980fc321e1d6e29dc0e03d17d6187f07de52aca9aaceedc03f1a326598624737",
+      "after_sha256": "f8ef81935893c37e42d2f9e0fbc8de86b40c572112a13e11f889b9252c564f8c"
+    },
+    "spl-cast.cc": {
+      "before_sha256": "5b26bc714729a52571894ae9d6b4cee612ef0de9955541d0c19101053bcfc3c2",
+      "after_sha256": "98b7ca41d4d36857030bef31f94f94c7d84a7cfc4f2fc98002e63366a1f0b9c8"
+    }
+  }
+}

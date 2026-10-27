@@ -1,0 +1,5030 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "selected": [
+    {
+      "file": "godspeak.txt",
+      "key": "xom general effect",
+      "source": "Xom snickers.\n\n\"How about this?\"\n\n\"Let's try an experiment, hmmm?\"\n\nw:1\n\"I wonder... What does this button do?\"\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆窃笑着。\n\n“这个怎么样？”\n\n“我们来做个实验吧，嗯？”\n\nw:1\n“我想知道……这个按钮是做什么的？”\n",
+      "legacy": "佐姆窃笑着。\n\n“这个怎么样？”\n\n“我们来做个实验吧，嗯？”\n\nw:1\n“我想知道……这个按钮是做什么的？”\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom general gift",
+      "source": "Xom grants you a gift!\n\n\"Here.\"\n\nXom's generous nature manifests itself.\n\nXom grants you an implement of some kind.\n\n\"Take this instrument of something!\"\n\n\"Take this token of my esteem.\"\n\nXom smiles on you.\n\n\"Catch!\"\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆赐予你一件礼物！\n\n“给你。”\n\n佐姆显现着祂慷慨的本性。\n\n佐姆赐予你某种工具。\n\n“拿着这件工具！”\n\n“接受我的敬意。”\n\n佐姆对你微笑。\n\n“接住！”\n",
+      "legacy": "佐姆赐予你一件礼物！\n\n“给你。”\n\n佐姆显现着祂慷慨的本性。\n\n佐姆赐予你某种工具。\n\n“拿着这件工具！”\n\n“接受我的敬意。”\n\n佐姆对你微笑。\n\n“接住！”\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom orb gift",
+      "source": "\"Is this the Orb you wanted?\"\n\n\"Many adventurers have sought this Orb.\"\n\nw:3\n\"Ponder my incredible Orb!\"\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "the Orb",
+          "Translation": "宝珠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“这就是你想要的宝珠吗？”\n\n“许多冒险者都在寻找这个宝珠。”\n\nw:3\n“想想我那不可思议的宝珠！”\n",
+      "legacy": "“这就是你想要的宝珠吗？”\n\n“许多冒险者都在寻找这个宝珠。”\n\nw:3\n“想想我那不可思议的宝珠！”\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom single summon",
+      "source": "\"Serve the mortal, my child!\"\n\n\"Serve the toy, my child!\"\n\nXom opens a gate.\n",
+      "hits": [
+        {
+          "Term": "gate",
+          "Translation": "门",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“照顾这个凡人，我的孩子！”\n\n“照顾这个玩具，我的孩子！”\n\n佐姆打开了一扇门。\n",
+      "legacy": "“照顾这个凡人，我的孩子！”\n\n“照顾这个玩具，我的孩子！”\n\n佐姆打开了一扇门。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom multiple summons",
+      "source": "\"Serve the mortal, my children!\"\n\nXom grants you some temporary aid.\n\nXom momentarily opens a gate.\n",
+      "hits": [
+        {
+          "Term": "gate",
+          "Translation": "门",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“照顾这个凡人，我的孩子们！”\n\n佐姆给了你一些临时援助。\n\n佐姆瞬间打开了一扇门。\n",
+      "legacy": "“照顾这个凡人，我的孩子们！”\n\n佐姆给了你一些临时援助。\n\n佐姆瞬间打开了一扇门。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom animate monster weapon",
+      "source": "\"Time to have some fun!\"\n\nYou hear Xom's maniacal laughter.\n\nXom grants you a minor favour.\n\nXom smiles on you.\n",
+      "hits": [
+        {
+          "Term": "animate",
+          "Translation": "活化/活的",
+          "Part of Speech": "verb",
+          "Variants": "",
+          "Note": "【0.34.1 修订】单一首选译法；动词按宾语可用“赋予生命”，不将多个候选一起显示。 来源：dat/descript/spells.txt。\n【语境补充 2026-10-21】赋予生命的动作用活化。animate flames 等形容词表示活的或活焰。完整 Animate 系法术名优先。"
+        },
+        {
+          "Term": "maniacal",
+          "Translation": "疯狂的",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "minor",
+          "Translation": "较小的",
+          "Part of Speech": "adj",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“是时候找点乐子了!”\n\n你听到佐姆疯狂的笑声。\n\n佐姆帮了你一个小忙。\n\n佐姆对你微笑。\n",
+      "legacy": "“是时候找点乐子了!”\n\n你听到佐姆疯狂的笑声。\n\n佐姆帮了你一个小忙。\n\n佐姆对你微笑。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom flora ring",
+      "source": "Xom shows off a fistful of green thumbs.\n\nXom spreads life in this Dungeon full of death.\n\nXom incites some dramatic evolution in the adjacent floor mould.\n\n\"It's alive! It's alive!\"\n\nw:5\nXom adds fresh vegetables to this Dungeon dish.\n\nw:5\nXom plants some magic beans in the ground.\n",
+      "hits": [
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "floor",
+          "Translation": "地面/楼层/地板/向下取整",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【语境补充 2026-10-21】物理表面按语境用地面或地板。地下城深度用楼层。math.floor 为向下取整函数，代码标识符保留英文。"
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "evolution",
+          "Translation": "进化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：进化。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆炫耀着自己高超的园艺本领。\n\n佐姆在这充满死亡的地下城中播撒生机。\n\n佐姆让附近地面上的霉菌经历了一场剧烈的进化。\n\n“它活了！它活了！”\n\nw:5\n佐姆给这道地下城大餐添了些新鲜蔬菜。\n\nw:5\n佐姆把几颗魔豆种进地里。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom scenery generic",
+      "source": "Xom briefly touches your surroundings.\n\nXom complains about the scenery.\n\nXom alters the dungeon around you.\n",
+      "hits": [
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "the Dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆轻触了一下你周围的环境。\n\n佐姆抱怨起这里的景致。\n\n佐姆改变了你周围的地下城。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom scenery open_door",
+      "source": "@Xom scenery generic@\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@Xom scenery generic@\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom scenery closed_door",
+      "source": "@Xom scenery generic@\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@Xom scenery generic@\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom scenery altar_xom",
+      "source": "Xom adds some personal touches to your environment.\n\n\"There, this looks better.\"\n\n\"Just a minor improvement...\"\n\n@Xom scenery generic@\n",
+      "hits": [
+        {
+          "Term": "altar",
+          "Translation": "祭坛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "minor",
+          "Translation": "较小的",
+          "Part of Speech": "adj",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆给你周围的环境加了些自己的风格。\n\n“这下看着好多了。”\n\n“只是一点小小的改进……”\n\n@Xom scenery generic@\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom scenery cache_of_fruit",
+      "source": "Xom accidentally drops some snacks.\n\nXom prepares the finest cultivars of fruit found anywhere, then drops them.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆不小心掉下了些零食。\n\n佐姆备好了世间最优良的水果品种，然后把它们掉在了地上。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom scenery cache_of_meat",
+      "source": "Xom [offers|fetches] you some snacks.\n\nXom prepares a banquet formed from your trail of carnage through the Dungeon.\n",
+      "hits": [
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "the Dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆[送给|取来给]你一些零食。\n\n佐姆用你在地下城中一路杀戮的成果准备了一场盛宴。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom scenery cache_of_baked_goods",
+      "source": "Xom offers some snacks, fresh out of the oven.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆送来了一些刚出炉的零食。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom scenery enter_abyss",
+      "source": "Xom suggests a refreshing change of pace.\n\nXom tears open a few small holes in reality.\n\nXom bends space into knots.\n",
+      "hits": [
+        {
+          "Term": "Abyss",
+          "Translation": "深渊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆提议换个节奏，清新一下。\n\n佐姆在现实中撕开了几个小洞。\n\n佐姆把空间扭成了结。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom scenery trap_teleport",
+      "source": "@Xom scenery enter_abyss@\n",
+      "hits": [
+        {
+          "Term": "Abyss",
+          "Translation": "深渊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@Xom scenery enter_abyss@\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom kind door ring",
+      "source": "A short distance around you seems to assume a strange safe solidity.\n\nXom creates a safe adventurer enclosure.\n\n\"Would you like some space to yourself, mortal?\"\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "你周围不远处似乎形成了一片奇异而安稳的空间。\n\n佐姆造了一个安全的冒险者围栏。\n\n“想要一点属于自己的空间吗，凡人？”\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom mean door ring",
+      "source": "Xom raises up and pulls in a makeshift [warmonger|duelist]'s arena.\n\nXom locks you up as an exhibit to study.\n\nw:5\nXom constructs another @player_genus@ Petting Zoo.\n",
+      "hits": [
+        {
+          "Term": "warmonger",
+          "Translation": "战狂",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Arena",
+          "Translation": "奥格瓦如竞技场/竞技场",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Arena（规范缩写 Arena）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。\n【语境补充 2026-10-21】奥格瓦如的分支用奥格瓦如竞技场。怪物模拟模式或一般场地用竞技场。Gauntlet 依其完整专名。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆竖起一座临时的[战狂|决斗者]竞技场，并将它收拢。\n\n佐姆把你关起来，当作展品研究。\n\nw:5\n佐姆又建了一座@player_genus@宠物动物园。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom bazaar trip",
+      "source": "Xom whisks you away into a realm of unfathomable savings!\n\nXom casts you into... a shopping extravaganza?\n\nXom offers you everything you could ever need (to amuse Xom).\n\nw:5\nXom offers you everything you could ever need (in Xom's infallible divine judgment).\n\nThe world spins wildly as Xom's jovial laughter rings.\n\nw:2\n\"Your coin purse has grown too comfortable in its little world, mortal!\"\n",
+      "hits": [
+        {
+          "Term": "Bazaar",
+          "Translation": "市集",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆把你卷入了一个优惠深不可测的领域！\n\n佐姆把你扔进了……一场购物狂欢？\n\n佐姆为你提供了所有你可能需要的东西（用来逗佐姆开心）。\n\nw:5\n佐姆为你提供了所有你可能需要的东西（据佐姆绝不会出错的神圣判断）。\n\n随着佐姆欢快的笑声响起，世界疯狂地旋转起来。\n\nw:2\n“你的钱袋在它的小世界里过得太舒服了，凡人！”\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom zero miscast effect",
+      "source": "Xom almost notices you.\n\nXom's attention almost turns to you for a moment.\n\nXom's power almost touches on you for a moment.\n\nYou almost hear Xom's maniacal laughter.\n",
+      "hits": [
+        {
+          "Term": "maniacal",
+          "Translation": "疯狂的",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "miscast",
+          "Translation": "施法失误",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆几乎察觉到了你。\n\n有那么一会儿，佐姆几乎留意到了你。\n\n有那么一会儿，佐姆的力量几乎触动到了你。\n\n你几乎听到佐姆疯狂的笑声。\n",
+      "legacy": "佐姆几乎察觉到了你。\n\n有那么一会儿，佐姆几乎留意到了你。\n\n有那么一会儿，佐姆的力量几乎触动到了你。\n\n你几乎听到佐姆疯狂的笑声。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "_xom_number_",
+      "source": "two\n\nthree\n\nfour\n\nfive\n\nsix\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "两\n\n三\n\n四\n\n五\n\n六\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom feature lava",
+      "source": "@The_feature@ spits out sparks!\n\n@The_feature@ briefly solidifies.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "sparks",
+          "Translation": "电火花",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_ELECTRICITY；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@The_feature@喷出了火星！\n\n@The_feature@短暂地凝固了。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom feature shallow water",
+      "source": "@The_feature@ briefly bubbles.\n\n@The_feature@ briefly swirls.\n\n@The_feature@ briefly glows.\n\n@The_feature@ briefly glows @any_glowing_colour@.\n\n@The_feature@ briefly flashes @any_colour@.\n\n@The_feature@ briefly boils.\n\n@The_feature@ briefly freezes.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@The_feature@短暂地冒起气泡。\n\n@The_feature@短暂地打起旋来。\n\n@The_feature@短暂地发出光芒。\n\n@The_feature@短暂地发出@any_glowing_colour@的光芒。\n\n@The_feature@短暂地闪现出@any_colour@。\n\n@The_feature@短暂地沸腾了。\n\n@The_feature@短暂地结冰了。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom feature deep water",
+      "source": "@Xom feature shallow water@\n\nOff to the side, you spot something lurking in @the_feature@.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@Xom feature shallow water@\n\n你瞥见一旁的@the_feature@中潜伏着什么。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom feature blood",
+      "source": "@Xom feature shallow water@\n\n@The_feature@ briefly coagulates.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@Xom feature shallow water@\n\n@The_feature@短暂地凝结了。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom feature eyes",
+      "source": "@The_feature@ looks at you curiously.\n\n@The_feature@ looks right through you.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@The_feature@好奇地看着你。\n\n@The_feature@的目光直直穿透了你。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom feature dry",
+      "source": "Water briefly sprays from @the_feature@.\n\nSparkling water briefly sprays from @the_feature@.\n\nBlood briefly sprays from @the_feature@.\n\nDust puffs up from @the_feature@.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "水从@the_feature@中短暂地喷涌而出。\n\n闪亮的水从@the_feature@中短暂地喷涌而出。\n\n鲜血从@the_feature@中短暂地喷涌而出。\n\n尘土从@the_feature@中扬起。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom feature statuelike",
+      "source": "@The_feature@ turns to glare at you.\n\n@The_feature@ turns to stare at you.\n\n@The_feature@ turns away from you.\n\n@The_feature@ spins in place.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@The_feature@转过来怒视着你。\n\n@The_feature@转过来盯着你。\n\n@The_feature@转过身去，背对着你。\n\n@The_feature@原地旋转起来。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom feature tree",
+      "source": "@The_feature@ bends towards you.\n\n@The_feature@ bends away from you.\n\n@The_feature@ sways in place.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@The_feature@朝你弯了过来。\n\n@The_feature@向远离你的方向弯去。\n\n@The_feature@原地摇摆起来。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom feature translucent wall",
+      "source": "Dim shapes swim through @the_feature@.\n\nFaint @any_colour@ flames crawl over @the_feature@.\n\n@The_feature@ is briefly covered in @any_colour_pattern@.\n\n@The_feature@ is briefly covered in @any_glowing_colour_pattern@.\n\n@The_feature@ is briefly covered in @any_graffiti@.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "模糊的形影在@the_feature@中游动。\n\n微弱的@any_colour@火焰在@the_feature@上蔓延。\n\n@The_feature@短暂地布满了@any_colour_pattern@。\n\n@The_feature@短暂地布满了@any_glowing_colour_pattern@。\n\n@The_feature@短暂地布满了@any_graffiti@。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom feature metal wall",
+      "source": "Tendrils of electricity crawl over @the_feature@.\n\n@The_feature@ briefly appears tarnished.\n",
+      "hits": [
+        {
+          "Term": "metal wall",
+          "Translation": "金属墙壁",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "tendrils",
+          "Translation": "触须",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：触须。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "电流的细丝在@the_feature@上蔓延。\n\n@The_feature@短暂地失去了光泽。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom feature stone arch",
+      "source": "@The_feature@ briefly shows a sunny meadow on the other side.\n\n@The_feature@ briefly shows a lifeless wasteland on the other side.\n\n@The_feature@ briefly shows strange @glowing_adj@ figures on the other side.\n\n@The_feature@ briefly shows bizarre @glowing_adj@ buildings on the other side.\n\n@The_feature@ briefly shows a translucent wall covered in @any_colour_pattern@ on the other side.\n\n@The_feature@ briefly shows a translucent wall covered in @any_glowing_colour_pattern@ on the other side.\n\n@The_feature@ briefly shows a translucent wall covered in @any_graffiti@ on the other side.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@The_feature@的另一侧短暂地显现出一片阳光明媚的草地。\n\n@The_feature@的另一侧短暂地显现出一片毫无生机的荒原。\n\n@The_feature@的另一侧短暂地显现出奇异的@glowing_adj@身影。\n\n@The_feature@的另一侧短暂地显现出古怪的@glowing_adj@建筑。\n\n@The_feature@的另一侧短暂地显现出一面布满@any_colour_pattern@的透明墙。\n\n@The_feature@的另一侧短暂地显现出一面布满@any_glowing_colour_pattern@的透明墙。\n\n@The_feature@的另一侧短暂地显现出一面布满@any_graffiti@的透明墙。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom underfoot general",
+      "source": "@The_feature@ briefly shifts under you.\n\nAn imperceptible spirit brushes against @the_feature@ beside you.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Spirit",
+          "Translation": "灵魂护盾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@The_feature@在你脚下短暂地移动了。\n\n一个无法察觉的精魂轻拂过你身旁的@the_feature@。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom underfoot water",
+      "source": "@The_feature@ briefly recedes away from you.\n\nAn imperceptible spirit sends ripples through @the_feature@ beside you.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Spirit",
+          "Translation": "灵魂护盾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@The_feature@短暂地从你身边退开。\n\n一个无法察觉的精魂在你身旁的@the_feature@中激起涟漪。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom underfoot airborne general",
+      "source": "@The_feature@ seems to fall away from under you!\n\n@The_feature@ seems to rush up at you!\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@The_feature@似乎在从你身下坠落！\n\n@The_feature@似乎在向你迎面冲来！\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom underfoot airborne water",
+      "source": "@Xom underfoot airborne general@\n\nAn imperceptible spirit flows into @the_feature@ beneath you.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Spirit",
+          "Translation": "灵魂护盾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@Xom underfoot airborne general@\n\n一个无法察觉的精魂流入了你身下的@the_feature@。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom inventory singular",
+      "source": "@Your_item@ briefly glows.\n\n@Your_item@ briefly glows @any_glowing_colour@.\n\n@Your_item@ briefly vibrates.\n\n@Your_item@ briefly flashes @any_colour@.\n",
+      "hits": [
+        {
+          "Term": "Inventory",
+          "Translation": "物品栏",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@Your_item@短暂地发出光芒。\n\n@Your_item@短暂地发出@any_glowing_colour@的光芒。\n\n@Your_item@短暂地振动起来。\n\n@Your_item@短暂地闪现出@any_colour@。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom inventory plural",
+      "source": "One of @your_item@ briefly glows.\n\nOne of @your_item@ briefly glows @any_glowing_colour@.\n\nOne of @your_item@ briefly vibrates.\n\nOne of @your_item@ briefly flashes @any_colour@.\n\n@Your_item@ briefly glow.\n\n@Your_item@ briefly glow @any_glowing_colour@.\n\n@Your_item@ briefly vibrate.\n\n@Your_item@ briefly flash @any_colour@.\n",
+      "hits": [
+        {
+          "Term": "Inventory",
+          "Translation": "物品栏",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@your_item@中的一件短暂地发出光芒。\n\n@your_item@中的一件短暂地发出@any_glowing_colour@的光芒。\n\n@your_item@中的一件短暂地振动起来。\n\n@your_item@中的一件短暂地闪现出@any_colour@。\n\n@Your_item@短暂地发出光芒。\n\n@Your_item@短暂地发出@any_glowing_colour@的光芒。\n\n@Your_item@短暂地振动起来。\n\n@Your_item@短暂地闪现出@any_colour@。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom floor inventory singular",
+      "source": "@Xom inventory singular@\n\n@Your_item@ falls out of your pack, then immediately jumps back in!\n",
+      "hits": [
+        {
+          "Term": "floor",
+          "Translation": "地面/楼层/地板/向下取整",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【语境补充 2026-10-21】物理表面按语境用地面或地板。地下城深度用楼层。math.floor 为向下取整函数，代码标识符保留英文。"
+        },
+        {
+          "Term": "Inventory",
+          "Translation": "物品栏",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@Xom inventory singular@\n\n@Your_item@从背包里掉了出来，然后立刻跳了回去！\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom floor inventory plural",
+      "source": "@Xom inventory plural@\n\nOne of @your_item@ falls out of your pack, then immediately jumps back in!\n\n@Your_item@ fall out of your pack, then immediately jump back in!\n",
+      "hits": [
+        {
+          "Term": "floor",
+          "Translation": "地面/楼层/地板/向下取整",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【语境补充 2026-10-21】物理表面按语境用地面或地板。地下城深度用楼层。math.floor 为向下取整函数，代码标识符保留英文。"
+        },
+        {
+          "Term": "Inventory",
+          "Translation": "物品栏",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Jump",
+          "Translation": "跃击",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@Xom inventory plural@\n\n@your_item@中的一件从背包里掉了出来，然后立刻跳了回去！\n\n@Your_item@从背包里掉了出来，然后立刻跳了回去！\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom bandages",
+      "source": "You briefly get tangled in your bandages.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "你短暂地被自己的绷带缠住了。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom floor bandages",
+      "source": "@Xom bandages@\n\nYou trip over your bandages.\n",
+      "hits": [
+        {
+          "Term": "floor",
+          "Translation": "地面/楼层/地板/向下取整",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【语境补充 2026-10-21】物理表面按语境用地面或地板。地下城深度用楼层。math.floor 为向下取整函数，代码标识符保留英文。"
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@Xom bandages@\n\n你被自己的绷带绊了一下。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom one eye",
+      "source": "A monocle briefly appears over your eye.\n\nAn eyepatch briefly covers your eye.\n\nA burst of @any_colour@ light briefly shoots from your eye!\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Light",
+          "Translation": "轻盈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "你的眼前短暂地出现了一片单片眼镜。\n\n一只眼罩短暂地盖住了你的眼睛。\n\n一束@any_colour@的光短暂地从你的眼中射出！\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom eyes",
+      "source": "A monocle briefly appears over one of your eyes.\n\nAn eyepatch briefly covers one of your eyes.\n\nBursts of @any_colour@ light briefly shoot from your eyes!\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Light",
+          "Translation": "轻盈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "你的一只眼前短暂地出现了一片单片眼镜。\n\n一只眼罩短暂地盖住了你的一只眼睛。\n\n一道道@any_colour@的光短暂地从你的双眼中射出！\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom ears",
+      "source": "Your ears flap wildly.\n\nYour ears wiggle.\n\n[Smoke|Steam] briefly shoots from your ears!\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "steam",
+          "Translation": "蒸汽",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_STEAM；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "你的耳朵疯狂地扇动起来。\n\n你的耳朵动了动。\n\n[烟|蒸汽]短暂地从你的耳朵里喷出！\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom mouth",
+      "source": "Your mouth briefly shrinks away entirely.\n\nYour mouth briefly widens across your entire face.\n\nYou briefly grow another mouth.\n\n[Smoke|Steam] briefly pours from your mouth!\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "steam",
+          "Translation": "蒸汽",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_STEAM；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "你的嘴短暂地缩得完全消失了。\n\n你的嘴短暂地张大，横贯了整张脸。\n\n你短暂地长出了另一张嘴。\n\n[烟|蒸汽]短暂地从你的嘴里涌出！\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom hair",
+      "source": "Your eyebrows briefly feel incredibly bushy.\n\nYour eyebrows wriggle.\n\nYou briefly grow a large moustache and beard.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "你短暂地感觉自己的眉毛浓密得不可思议。\n\n你的眉毛扭动起来。\n\n你短暂地长出了浓密的胡子。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom impromptu dance",
+      "source": "You perform an impromptu @dance_name@.\n\nYou do an impromptu @acrobatic_move_name@.\n\nYou compulsively click your heels together @_xom_number_@ times.\n\nYou compulsively stomp your @feet@ @_xom_number_@ times.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Stomp",
+          "Translation": "践踏",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+        },
+        {
+          "Term": "acrobatic",
+          "Translation": "杂技",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：杂技。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "你即兴跳起了@dance_name@。\n\n你即兴做了个@acrobatic_move_name@。\n\n你不由自主地把脚跟相碰了@_xom_number_@次。\n\n你不由自主地跺了@_xom_number_@次@feet@。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "dance_name",
+      "source": "ballet\n\ncha-cha\n\nfandango\n\njig\n\nline dance\n\nmacarena\n\ntango\n\ntapdance\n\nwaltz\n",
+      "hits": [],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "芭蕾舞\n\n恰恰舞\n\n方丹戈舞\n\n吉格舞\n\n排舞\n\n玛卡莲娜舞\n\n探戈\n\n踢踏舞\n\n华尔兹\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "acrobatic_move_name",
+      "source": "@hand@stand\n\ncartwheel\n\npirouette\n\nsomersault\n",
+      "hits": [
+        {
+          "Term": "acrobatic",
+          "Translation": "杂技",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：杂技。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "用@hand@倒立\n\n侧手翻\n\n单脚旋转\n\n空翻\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom tail",
+      "source": "Your tail briefly retracts into your body.\n\nYour tail briefly grows to an incredible length.\n\nYou briefly grow another tail.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "你的尾巴短暂地缩进了体内。\n\n你的尾巴短暂地长到了不可思议的长度。\n\n你短暂地长出了另一条尾巴。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom random body part singular",
+      "source": "Your @random_body_part_internal_singular@ briefly wanders out of your body, then fuses itself back in!\n\nYour @random_body_part_external_singular@ briefly jumps off your body, then reattaches itself!\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "你的@random_body_part_internal_singular@短暂地游出体外，然后又融回了体内！\n\n你的@random_body_part_external_singular@短暂地从身上跳了下来，然后又接了回去！\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom random body part plural",
+      "source": "Your @random_body_part_internal_plural@ briefly wander out of your body, then fuse themselves back in!\n\nYour @random_body_part_external_plural@ briefly jump off your body, then reattach themselves!\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Jump",
+          "Translation": "跃击",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "你的@random_body_part_internal_plural@短暂地游出体外，然后又融回了体内！\n\n你的@random_body_part_external_plural@短暂地从身上跳了下来，然后又接了回去！\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom unarmed one hand",
+      "source": "A fancy cane briefly appears in your @hand@.\n\nYou compulsively punch the air.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Air",
+          "Translation": "空气强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "一根精美的手杖短暂地出现在你的@hand@中。\n\n你不由自主地朝空气挥了一拳。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom unarmed two hands",
+      "source": "@Xom unarmed one hand@\n\nTwo fancy canes briefly appear in your @hands@.\n\nYou compulsively clap your @hands@ @_xom_number_@ times.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@Xom unarmed one hand@\n\n两根精美的手杖短暂地出现在你的@hands@中。\n\n你不由自主地拍了@_xom_number_@次@hands@。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom cloak slot",
+      "source": "@Your_item@ billows in an unfelt wind.\n\n@Your_item@ briefly wraps itself around your @head@!\n\n@Your_item@ is briefly covered in @any_glowing_colour_pattern@!\n",
+      "hits": [
+        {
+          "Term": "cloak",
+          "Translation": "披风",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@Your_item@在感觉不到的风中鼓动。\n\n@Your_item@短暂地裹住了你的@head@！\n\n@Your_item@短暂地布满了@any_glowing_colour_pattern@！\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom helmet slot",
+      "source": "@Your_item@ leaps into the air, briefly spins, then lands back on your @head@!\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Air",
+          "Translation": "空气强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@Your_item@跃到空中，短暂地转了几圈，然后落回你的@head@上！\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom offhand slot",
+      "source": "@Your_item@ spins!\n\n@Your_item@ briefly flashes @any_glowing_colour@!\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@Your_item@旋转起来！\n\n@Your_item@短暂地闪现出@any_glowing_colour@！\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom gloves slot",
+      "source": "@Your_item@ briefly grows @_xom_number_@ extra fingers!\n",
+      "hits": [
+        {
+          "Term": "gloves",
+          "Translation": "手套",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@Your_item@短暂地多长出了@_xom_number_@根手指！\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom boots slot",
+      "source": "@Your_item@ grows to a huge size, then shrinks back down!\n",
+      "hits": [
+        {
+          "Term": "boots",
+          "Translation": "靴子",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@Your_item@膨胀得巨大无比，然后又缩回了原样！\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom amulet slot",
+      "source": "@Your_item@ pulsates!\n\n@Your_item@ flares @any_glowing_colour@, then returns to normal.\n\n@Your_item@ briefly flies off and hovers over your @head@!\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@Your_item@搏动起来！\n\n@Your_item@迸发出@any_glowing_colour@的光芒，然后恢复了原样。\n\n@Your_item@短暂地飞了起来，悬在你的@head@上方！\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom gizmo slot",
+      "source": "@Your_item@ jiggles!\n\n@Your_item@ leaks @rainbow_colour@ smoke!\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@Your_item@晃动起来！\n\n@Your_item@冒出了@rainbow_colour@的烟！\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom ring slot",
+      "source": "@Your_item@ twitches!\n\n@Your_item@ briefly dulls, then brightens again!\n\n@Your_item@ briefly brightens, then dulls again!\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@Your_item@抽动了一下！\n\n@Your_item@短暂地变得黯淡，然后又亮了起来！\n\n@Your_item@短暂地变亮，然后又黯淡下来！\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom dragon armour",
+      "source": "The scales on @your_item@ wiggle briefly.\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "dragon",
+          "Translation": "龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@your_item@上的鳞片短暂地扭动起来。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom animal skin",
+      "source": "The fur on @your_item@ grows longer at an alarming rate, then retracts back to normal.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@your_item@上的毛皮以惊人的速度变长，然后又缩回原样。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom leather armour",
+      "source": "@Your_item@ briefly grows fur, then returns to normal.\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@Your_item@短暂地长出了毛皮，然后恢复了原样。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom robe",
+      "source": "You briefly become tangled in @your_item@.\n",
+      "hits": [
+        {
+          "Term": "robe",
+          "Translation": "长袍",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "你短暂地被@your_item@缠住了。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom metal armour",
+      "source": "@Your_item@ briefly appears rusty.\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@Your_item@短暂地显得锈迹斑斑。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom rearrange the pieces",
+      "source": "Xom decides to rearrange the pieces.\n\n\"First here, now there.\"\n\n\"This might be better!\"\n\n\"This is how I like it!\"\n",
+      "hits": [
+        {
+          "Term": "pieces",
+          "Translation": "碎片",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Might",
+          "Translation": "强力术/可能/力量",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术或能力标题保留强力术。情态动词 might 表示可能。名词 might 表示力量或威力。"
+        },
+        {
+          "Term": "Rearrange the Pieces",
+          "Translation": "重排碎片",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆决定重新排列这些棋子。\n\n“先到这儿，再到那儿。”\n\n“这可能会更好！”\n\n“这就是我喜欢的！”\n",
+      "legacy": "佐姆决定重新排列这些棋子。\n\n“先到这儿，再到那儿。”\n\n“这可能会更好！”\n\n“这就是我喜欢的！”\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom teleportation journey",
+      "source": "\"Whee!\"\n\n\"Let's go for a ride!\"\n\n\"Where it stops, nobody knows!\"\n\nXom twists space around you.\n",
+      "hits": [
+        {
+          "Term": "teleportation journey",
+          "Translation": "传送旅行",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Nobody",
+          "Translation": "无名氏",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“哟！”\n\n“我们去兜风吧！”\n\n“停在哪里，没人知道！”\n\n佐姆扭曲了你周围的空间。\n",
+      "legacy": "“哟！”\n\n“我们去兜风吧！”\n\n“停在哪里，没人知道！”\n\n佐姆扭曲了你周围的空间。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom confusion",
+      "source": "\"Heh heh heh...\"\n\nXom's power touches on your mind for a moment.\n\nXom titters.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "confusion",
+          "Translation": "混乱",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/状态】状态名，区别动词 confuse。 来源：duration-data.h。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“呵呵……”\n\n有那么一会儿，佐姆的力量触动到了你的心灵。\n\n佐姆咯咯地笑着。\n",
+      "legacy": "“呵呵……”\n\n有那么一会儿，佐姆的力量触动到了你的心灵。\n\n佐姆咯咯地笑着。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom drinkless confusion",
+      "source": "\"Stumble well, my pet!\"\n\nXom's power touches upon your body and mind for a moment.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "confusion",
+          "Translation": "混乱",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/状态】状态名，区别动词 confuse。 来源：duration-data.h。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“好好踉跄吧，我的宠物！”\n\n佐姆的力量短暂地触及了你的身心。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom suffering",
+      "source": "\"You have displeased me, mortal.\"\n\n\"You have grown too confident for your meagre worth.\"\n\nXom's power touches on you for a moment.\n\nYou hear Xom's maniacal laughter.\n\n\"Suffer!\"\n\nXom's malign attention turns to you for a moment.\n",
+      "hits": [
+        {
+          "Term": "maniacal",
+          "Translation": "疯狂的",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“你让我不高兴了，凡人。”\n\n“你这点可怜的本事，却变得如此自信。”\n\n佐姆的力量短暂地触及了你。\n\n你听到佐姆疯狂的笑声。\n\n“受苦吧！”\n\n佐姆恶意的目光短暂地转向了你。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom torment all",
+      "source": "Xom torments the living!\n\nXom spreads torment and darkness!\n\nXom unleashes waves of agony!\n\nXom's malign attention turns towards your situation for a moment.\n\nw:5\nThe hand of Xom pokes all present souls.\n",
+      "hits": [
+        {
+          "Term": "torment",
+          "Translation": "折磨",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Agony",
+          "Translation": "剧痛术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Darkness",
+          "Translation": "黑暗术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆折磨着活物！\n\n佐姆散播着折磨与黑暗！\n\n佐姆释放出一波波苦痛！\n\n佐姆恶意的目光短暂地转向了你眼下的处境。\n\nw:5\n佐姆之手戳了戳在场的所有灵魂。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom hostile monster",
+      "source": "\"Time to have some fun!\"\n\n\"Fight to survive, mortal.\"\n\n\"Let's see if it's strong enough to survive yet.\"\n\nYou hear Xom's maniacal laughter.\n",
+      "hits": [
+        {
+          "Term": "hostile",
+          "Translation": "敌对",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "maniacal",
+          "Translation": "疯狂的",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "strong",
+          "Translation": "强壮",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：强壮。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“是时候找点乐子了!”\n\n“为生存而战，凡人。”\n\n“我们看看他是否足够强大，能够存活下来。”\n\n你听到佐姆疯狂的笑声。\n",
+      "legacy": "“是时候找点乐子了!”\n\n“为生存而战，凡人。”\n\n“我们看看他是否足够强大，能够存活下来。”\n\n你听到佐姆疯狂的笑声。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom send in the clones",
+      "source": "Xom feels like there should be more of you to share with the Dungeon.\n\nXom gently smashes a mirror over your [@random_body_part_external_singular@|@random_body_part_external_plural@].\n\n\"Multiply and go forth!\"\n",
+      "hits": [
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "the Dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆觉得地下城里应该多几个你，好让大家分享。\n\n佐姆轻轻地把一面镜子砸碎在你的[@random_body_part_external_singular@|@random_body_part_external_plural@]上。\n\n“繁衍吧，然后出发！”\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom brain drain",
+      "source": "w:20\nXom displaces most of your magic for a moment.\n\nw:20\nXom reveals to you one of the great and terrible secrets of magic.\n\nw:20\nXom curiously channels energy out of your body.\n\nXom picks up your mind and accidentally drops it.\n\nXom gives you a terrible headache.\n\n\"You don't need this, do you?\"\n",
+      "hits": [
+        {
+          "Term": "drain",
+          "Translation": "吸能/吸取/消耗",
+          "Part of Speech": "verb",
+          "Variants": "",
+          "Note": "【0.34.1 修订】吸能状态与负能量、属性降低并非同一概念；具体消息区分吸取 HP、MP、最大 HP 等。 来源：dat/descript/status.txt; player.cc。\n【语境补充 2026-10-21】负能量或生命上限机制用吸能。吸血、汲取资源用吸取。维持法术耗费魔力用消耗。"
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Energy",
+          "Translation": "能量",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "w:20\n佐姆短暂地移走了你大部分的魔力。\n\nw:20\n佐姆向你揭示了魔法中一个伟大而可怕的秘密。\n\nw:20\n佐姆好奇地从你体内引出了能量。\n\n佐姆捧起你的心智，又不小心把它摔了下来。\n\n佐姆让你头痛欲裂。\n\n“这个你用不着，对吧？”\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom drained brain",
+      "source": "w:20\nYour magic slithers out of your reeling mind!\n\nYour power and thoughts are overwhelmed by magic-eaters manifest!\n\nYour magic wrenches itself out of your [@random_body_part_internal_singular@|@random_body_part_internal_plural@]!\n\nYour magic flows out through your [@random_body_part_external_singular@|@random_body_part_external_plural@]!\n\nYour magic rips itself out through your [@random_body_part_any_singular@|@random_body_part_any_plural@]!\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "w:20\n你的魔力从晕眩的心智中蜿蜒而出！\n\n显现的噬魔者淹没了你的力量和思绪！\n\n你的魔力从[@random_body_part_internal_singular@|@random_body_part_internal_plural@]中挣脱而出！\n\n你的魔力从[@random_body_part_external_singular@|@random_body_part_external_plural@]中流出！\n\n你的魔力从[@random_body_part_any_singular@|@random_body_part_any_plural@]中撕裂而出！\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom banishment",
+      "source": "\"You have grown too comfortable in your little world, mortal!\"\n\nXom casts you into the Abyss!\n\nThe world seems to spin as Xom's maniacal laughter rings.\n",
+      "hits": [
+        {
+          "Term": "Abyss",
+          "Translation": "深渊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "banishment",
+          "Translation": "放逐",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "maniacal",
+          "Translation": "疯狂的",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "the Abyss",
+          "Translation": "深渊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Abyss（规范缩写 Abyss）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“你在你的小世界里过得太舒服了，凡人！”\n\n佐姆把你放逐到了深渊！\n\n随着佐姆疯狂的笑声响起，世界似乎旋转起来。\n",
+      "legacy": "“你在你的小世界里变得太舒服了，凡人！”\n\n佐姆把你扔入地狱！\n\n当佐姆疯狂的笑声在你耳边响起时，世界似乎在旋转。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom revert own banishment",
+      "source": "w:30\n\"Kidding!\"\n\n\"On second thoughts, though...\"\n\n\"No, I've changed my mind.\"\n\nXom pulls you back into the comparable quietude of the dungeon.\n",
+      "hits": [
+        {
+          "Term": "banishment",
+          "Translation": "放逐",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "the Dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "w:30\n“开玩笑的！”\n\n“不过，转念一想……”\n\n“不，我改主意了。”\n\n佐姆把你拉回了相对安静的地下城。\n",
+      "legacy": "w:30\n“开个玩笑！”\n\n“不过，转念一想……”\n\n“不，我改变主意了。”\n\n佐姆把你拉回到类似地牢的宁静之中。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom revert other banishment",
+      "source": "\"Get back here!\"\n\n\"No you don't!\"\n\nXom pulls you back into the comparable quietude of the dungeon.\n",
+      "hits": [
+        {
+          "Term": "banishment",
+          "Translation": "放逐",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "the Dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“给我回来！”\n\n“想得美！”\n\n佐姆把你拉回了相对安静的地下城。\n",
+      "legacy": "“给我回来！”\n\n“别那样！”\n\n佐姆把你拉回到类似地牢的宁静之中。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom chaos upgrade",
+      "source": "Xom's power touches on a nearby weapon.\n\n\"Have a taste of chaos, mortal.\"\n\nXom chortles.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "chaos",
+          "Translation": "混沌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆的力量触及了附近的一件武器。\n\n“尝尝混沌的滋味吧，凡人。”\n\n佐姆咯咯地笑着。\n",
+      "legacy": "佐姆的力量触动了附近的一把武器。\n\n“尝尝混乱的滋味吧，凡人。”\n\n佐姆咯咯地欢笑。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom noise",
+      "source": "Xom makes a sudden noise! You hear @weapon_noise@\n\nw:1\n\"Boo!\"\n\nw:1\nXom does a drum roll.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "noise",
+          "Translation": "噪音/声音/巨响",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/战斗机制】影响听觉警觉，不同于画面显示延迟。 来源：shout.cc。\n【语境补充 2026-10-21】机制、标题及数值用噪音。具体可听声响按语境用声音或巨响，不强制把研磨声等改为噪音。"
+        },
+        {
+          "Term": "Roll",
+          "Translation": "翻滚",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆突然弄出了声响！你听到@weapon_noise@\n\nw:1\n“哇！”\n\nw:1\n佐姆敲起了滚奏。\n",
+      "legacy": "佐姆制造了急剧的噪音！你听到@weapon_noise@\n\nw:1\n“嘘！”\n\nw:1\n佐姆在击鼓。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom fake shatter",
+      "source": "w:30\n\"Ka-crash!\"\n\n\"Let the forces of chaos tear it all down!\"\n\nXom reshapes the earth.\n\nw:1\nXom reveals the great annihilating truth to the Dungeon's walls!\n",
+      "hits": [
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Shatter",
+          "Translation": "粉碎术/打碎/震碎",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】高等级法术标题用粉碎术。普通破坏动作用打碎。神器独立效果可用震碎，不能一律当作施放粉碎术。"
+        },
+        {
+          "Term": "the Dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "Earth",
+          "Translation": "大地强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "chaos",
+          "Translation": "混沌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "w:30\n“咔——轰！”\n\n“让混沌之力把一切都拆掉吧！”\n\n佐姆重塑了大地。\n\nw:1\n佐姆向地下城的墙壁揭示了那毁灭一切的伟大真理！\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom blink monsters",
+      "source": "\"Over there now!\"\n\n\"Get over here!\"\n\nXom decides to shift things around a little.\n",
+      "hits": [
+        {
+          "Term": "blink",
+          "Translation": "闪烁/闪现/眨眼",
+          "Part of Speech": "verb",
+          "Variants": "",
+          "Note": "\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】位移效果优先用闪烁。普通快速显现可用闪现，眨眼为生理动作。完整法术名优先，不改动英文控制字。"
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“快到那边去！”\n\n“快过来！”\n\n佐姆决定对周围的东西做一些改变。\n",
+      "legacy": "“快到那边去！”\n\n“快过来！”\n\n佐姆决定对周围的东西做一些改变。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom fast forward",
+      "source": "Xom speeds up the battle.\n\nXom demands a faster pace.\n\n\"Hurry it up!\"\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆加快了战斗的速度。\n\n佐姆要求加快节奏。\n\n“快一点！”\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom slow motion",
+      "source": "Xom feels like nobody present is taking it easy enough.\n\nXom bends time into knots.\n\n\"Don't be so hasty!\"\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Slow",
+          "Translation": "缓慢术/减速/缓慢/迟缓",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用缓慢术。施加状态用减速。普通动作或反应用缓慢、迟缓。"
+        },
+        {
+          "Term": "Nobody",
+          "Translation": "无名氏",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆觉得在场的人都不够悠闲。\n\n佐姆把时间扭成了结。\n\n“别这么急！”\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom pause",
+      "source": "Xom stops everything to savour the moment.\n\nXom stomps on time for a few moments.\n\nw:1\nXom prepares the audience for the floor's solo!\n",
+      "hits": [
+        {
+          "Term": "floor",
+          "Translation": "地面/楼层/地板/向下取整",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【语境补充 2026-10-21】物理表面按语境用地面或地板。地下城深度用楼层。math.floor 为向下取整函数，代码标识符保留英文。"
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆让一切停下，细细品味这一刻。\n\n佐姆把时间踩住了片刻。\n\nw:1\n佐姆让观众准备欣赏地板的独奏！\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom grant word of recall",
+      "source": "Xom feels like this meagre party needs more guests.\n\nXom sends out highly concerning invitations.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Word of Recall",
+          "Translation": "召回真言",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Recall",
+          "Translation": "召回术/召回",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用召回术。召回先祖、法球等动作用召回。Word of Recall 使用完整专名召回真言。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆觉得这场寒酸的聚会需要更多客人。\n\n佐姆发出了一些令人极其不安的邀请。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom grant voiceless word of recall",
+      "source": "Xom demands a dramatic dialogue!\n\nXom grants a terrible voice to the voiceless.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Word of Recall",
+          "Translation": "召回真言",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Recall",
+          "Translation": "召回术/召回",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用召回术。召回先祖、法球等动作用召回。Word of Recall 使用完整专名召回真言。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆要求来一段戏剧性的对话！\n\n佐姆赐予无声者可怕的嗓音。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom potion effect",
+      "source": "\"Go forth and destroy!\"\n\n\"Go forth and cause havoc, mortal!\"\n\nXom grants you a minor favour.\n\nXom smiles on you.\n",
+      "hits": [
+        {
+          "Term": "minor",
+          "Translation": "较小的",
+          "Part of Speech": "adj",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "potion",
+          "Translation": "药水",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“去毁灭吧!”\n\n“去制造浩劫吧，凡人！”\n\n佐姆帮了你一个小忙。\n\n佐姆对你微笑。\n",
+      "legacy": "“去毁灭吧!”\n\n“去制造浩劫吧，凡人！”\n\n佐姆帮了你一个小忙。\n\n佐姆对你微笑。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom cleaving",
+      "source": "@Xom potion effect@\n",
+      "hits": [
+        {
+          "Term": "potion",
+          "Translation": "药水",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@Xom potion effect@\n",
+      "legacy": "@Xom potion effect@\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom divination",
+      "source": "\"See what I see, my child!\"\n\nXom grants you insight.\n\nXom smirks.\n",
+      "hits": [
+        {
+          "Term": "divination",
+          "Translation": "占卜",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“见我所能见到的，我的孩子！”\n\n佐姆赐予你洞察力。\n\n佐姆得意地笑着。\n",
+      "legacy": "“见我所能见到的，我的孩子！”\n\n佐姆赐予你洞察力。\n\n佐姆得意地笑着。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom spell effect",
+      "source": "Xom's power flows through you!\n\nXom plays with reality for a moment.\n\nXom guffaws.\n",
+      "hits": [
+        {
+          "Term": "spell",
+          "Translation": "法术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆的力量在你身上流动！\n\n有那么一会儿，佐姆玩弄了一下现实。\n\n佐姆狂笑着。\n",
+      "legacy": "佐姆的力量在你身上流动！\n\n有那么一会儿，佐姆玩弄了一下现实。\n\n佐姆狂笑着。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom cloud trail",
+      "source": "\"Go forth and redecorate, my child!\"\n\n\"This place needs a little more atmosphere.\"\n",
+      "hits": [
+        {
+          "Term": "cloud trail",
+          "Translation": "云径",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“去重新装点周围环境吧，我的孩子！”\n\n“这个地方需要营造一点儿氛围。”\n",
+      "legacy": "“去重新装点周围环境吧，我的孩子！”\n\n“这个地方需要营造一点儿氛围。”\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom good monster polymorph",
+      "source": "\"This might be better!\"\n\n\"Hum-dee-hum-dee-hum...\"\n\nXom's power touches your surroundings.\n\nYou hear Xom's avuncular chuckle.\n",
+      "hits": [
+        {
+          "Term": "good monster polymorph",
+          "Translation": "好的怪物变形",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Polymorph",
+          "Translation": "变形术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Might",
+          "Translation": "强力术/可能/力量",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术或能力标题保留强力术。情态动词 might 表示可能。名词 might 表示力量或威力。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“这样也许更好！”\n\n“哼哼哼，哼哼哼……”\n\n佐姆的力量触及了你周围的环境。\n\n你听到佐姆慈爱的轻笑声。\n",
+      "legacy": "“这可能会更好！”\n\n“哼，该死的……”\n\n佐姆的力量触动了附近的一个怪物。\n\n你听到佐姆慈爱的轻笑声。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom bad monster polymorph",
+      "source": "@Xom good monster polymorph@\n",
+      "hits": [
+        {
+          "Term": "good monster polymorph",
+          "Translation": "好的怪物变形",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Polymorph",
+          "Translation": "变形术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@Xom good monster polymorph@\n",
+      "legacy": "@Xom good monster polymorph@\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom wave of despair",
+      "source": "Xom recounts a horror story in an instant.\n\nw:2\nXom joyfully recalls the collapse of multiple Dungeon civilisations.\n",
+      "hits": [
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆在一瞬间讲完了一个恐怖故事。\n\nw:2\n佐姆欢快地回忆起多个地下城文明的崩溃。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom good mutations",
+      "source": "\"You need some minor adjustments, mortal!\"\n\n\"Let me alter your pitiful body.\"\n\nXom's power touches on you for a moment.\n\nYou hear Xom's maniacal cackling.\n\nWith a gout of [@rainbow_colour@|@misc_colour@] light, Xom rebuilds you.\n",
+      "hits": [
+        {
+          "Term": "maniacal",
+          "Translation": "疯狂的",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "minor",
+          "Translation": "较小的",
+          "Part of Speech": "adj",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "mutations",
+          "Translation": "变异",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Light",
+          "Translation": "轻盈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“你需要稍微调整一下，凡人！”\n\n“让我改变你那可怜的身体吧。”\n\n佐姆的力量短暂地触及了你。\n\n你听到佐姆疯狂地咯咯笑着。\n\n一团[@rainbow_colour@|@misc_colour@]的光喷涌而出，佐姆重塑了你。\n",
+      "legacy": "“你需要稍微调整一下，凡人！”\n\n“让我来改变你那可怜的身体吧。”\n\n有那么一会儿，佐姆的力量触动到了你。\n\n你听到佐姆疯狂的咯咯笑声。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom random mutations",
+      "source": "\"You need some minor improvements, mortal!\"\n\n\"Let me alter your body.\"\n\nXom's power brushes against you for a moment.\n\nYou hear Xom's avuncular chuckle.\n\nWith a flash of [@rainbow_colour@|@misc_colour@] light, Xom rebuilds you.\n",
+      "hits": [
+        {
+          "Term": "minor",
+          "Translation": "较小的",
+          "Part of Speech": "adj",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "mutations",
+          "Translation": "变异",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Light",
+          "Translation": "轻盈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“你需要一点小小的改进，凡人！”\n\n“让我改变你的身体吧。”\n\n佐姆的力量短暂地拂过了你。\n\n你听到佐姆慈爱的轻笑声。\n\n一道[@rainbow_colour@|@misc_colour@]的光闪过，佐姆重塑了你。\n",
+      "legacy": "“你需要一些小小的提升，凡人！”\n\n“让我来改变你的身体吧。”\n\n有那么一会儿，佐姆的力量轻拂过你。\n\n你听到佐姆慈爱的轻笑声。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom divine lightning",
+      "source": "The area is suffused with divine lightning!\n\nXom hurls blasts of lightning!\n\n\"Ready, aim, fire!\"\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Fire",
+          "Translation": "火焰强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "神圣的闪电充斥了这片区域！\n\n佐姆掷出一道道闪电！\n\n“准备，瞄准，开火！”\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom snakes to sticks",
+      "source": "Xom transforms those around you.\n\n\"I like them better like this.\"\n\n\"Never liked these squiggly things.\"\n\nXom touches your surroundings.\n\n@Xom good monster polymorph@\n",
+      "hits": [
+        {
+          "Term": "good monster polymorph",
+          "Translation": "好的怪物变形",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "squiggly",
+          "Translation": "弯曲的",
+          "Part of Speech": "adj",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Polymorph",
+          "Translation": "变形术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆改变了你周围的怪物。\n\n“我更喜欢他们这样。”\n\n“我从来不喜欢这些扭曲的东西。”\n\n佐姆接触你周围的环境。\n\n@Xom good monster polymorph@\n",
+      "legacy": "佐姆改变了你周围的怪物。\n\n“我更喜欢他们这样。”\n\n“我从来不喜欢这些扭曲的东西。”\n\n佐姆接触你周围的环境。\n\n@Xom good monster polymorph@\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom lights up webs",
+      "source": "Xom [gleefully|mirthfully] wrecks local arachnid artwork.\n\nThe light of Xom [brushes upon|sweeps through] your surroundings.\n\nw:1\n@Xom fake destruction@\n",
+      "hits": [
+        {
+          "Term": "fake destruction",
+          "Translation": "虚假的破坏",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Light",
+          "Translation": "轻盈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆[兴高采烈|乐不可支]地破坏了当地蜘蛛的艺术品。\n\n佐姆之光[拂过|扫过]了你周围的环境。\n\nw:1\n@Xom fake destruction@\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom destruction",
+      "source": "\"Burn, baby, burn!\"\n\n\"Ka-boom!\"\n\nXom calls forth mighty explosions.\n\nXom rains down devastation!\n\nw:5\nXom sneezes violently.\n\n@Xom fake destruction@\n",
+      "hits": [
+        {
+          "Term": "fake destruction",
+          "Translation": "虚假的破坏",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“烧吧，宝贝，烧吧！”\n\n“轰！”\n\n佐姆召来强烈的爆炸。\n\n佐姆降下毁灭之雨！\n\nw:5\n佐姆猛烈地打了个喷嚏。\n\n@Xom fake destruction@\n",
+      "legacy": "“燃烧，宝贝，燃烧！”\n\n“嘭！”\n\n佐姆激发了巨大的爆炸。\n\n佐姆将灾难倾泻而下！\n\n@Xom fake destruction@\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom fake destruction",
+      "source": "\"Feel my power!\"\n\nXom gives a demonstration of destructive might.\n\nw:1\n\"Let it end in hellfire!\"\n",
+      "hits": [
+        {
+          "Term": "fake destruction",
+          "Translation": "虚假的破坏",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Might",
+          "Translation": "强力术/可能/力量",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术或能力标题保留强力术。情态动词 might 表示可能。名词 might 表示力量或威力。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“感受我的力量！”\n\n佐姆展示了毁灭性的力量。\n\nw:1\n“让一切在地狱之火中终结吧！”\n",
+      "legacy": "“感受我的力量！”\n\n佐姆展示了毁灭性的力量。\n\nw:1\n“让一切在地狱之火中终结吧！”\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom force lance fleet",
+      "source": "Xom drops down a force battalion!\n\nXom calls in the force cavalry!\n\nXom lights up the force fireworks!\n\nw:1\nXom launches an entire fire-cart's barrage!\n\nw:1\nXom manifests dramatic pipe organ chords!\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Force Lance",
+          "Translation": "力场长枪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Fire",
+          "Translation": "火焰强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆空投了一支原力营！\n\n佐姆召来了原力骑兵！\n\n佐姆点燃了原力烟花！\n\nw:1\n佐姆发射了一整辆火箭车的齐射！\n\nw:1\n佐姆奏响了戏剧性的管风琴和弦！\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom accidental homicide",
+      "source": "\"Oops, I didn't mean to do that!\"\n",
+      "hits": [
+        {
+          "Term": "accidental homicide",
+          "Translation": "意外杀人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“哎呀，我不是故意的！”\n",
+      "legacy": "“哎呀，我不是故意的！”\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom weird death",
+      "source": "\"How'd that happen? Weird.\"\n",
+      "hits": [
+        {
+          "Term": "weird",
+          "Translation": "奇怪的",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“那是怎么回事？奇怪。”\n",
+      "legacy": "“那是怎么回事？奇怪。”\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom resurrection",
+      "source": "\"Let me repair your body.\"\n\nXom tricks Death into leaving you alone.\n\nXom's maniacal laughter scares Death away.\n\nXom's power revives you.\n\nXom brings you back to life.\n\nXom smiles on you.\n\n\"Toy, don't you die on me yet!\"\n\nXom saves you before everything goes @mono_colour@.\n\nw:1\n\"One more [life|try|go].\"\n",
+      "hits": [
+        {
+          "Term": "maniacal",
+          "Translation": "疯狂的",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“让我修复你的身体。”\n\n佐姆骗得死神放过了你。\n\n佐姆疯狂的笑声吓跑了死神。\n\n佐姆的力量让你复活了。\n\n佐姆让你起死回生。\n\n佐姆对你微笑。\n\n“玩具，你可别现在就给我死了！”\n\n在一切都变成@mono_colour@之前，佐姆救下了你。\n\nw:1\n“再[活一次|试一次|来一次]。”\n",
+      "legacy": "“让我来修复你的身体。”\n\n佐姆欺骗了死神，把你留了下来。\n\n佐姆疯狂的笑声把死神吓跑了。\n\n佐姆的力量使你恢复生机。\n\n佐姆让你起死回生。\n\n佐姆对你微笑。\n\n“玩具，你先别死在我的眼前！”\n\nw:1\n“再[活|试|出发]一次。”\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom repel stairs",
+      "source": "Xom changes the scenery.\n\nXom pokes at a nearby @staircase@.\n\nXom pushes on a nearby @staircase@.\n\nXom pulls on a nearby @staircase@.\n\n\"Tag, you're it!\"\n\nXom alters the dungeon around you.\n",
+      "hits": [
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "staircase",
+          "Translation": "楼梯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "the Dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆改变了这里的景致。\n\n佐姆戳了戳附近的@staircase@。\n\n佐姆推了推附近的@staircase@。\n\n佐姆拉了拉附近的@staircase@。\n\n“抓到你了，轮到你了！”\n\n佐姆改变了你周围的地下城。\n",
+      "legacy": "佐姆改变了场景。\n\n佐姆戳了戳附近的一个楼梯。\n\n“抓到你了！”\n\n佐姆改变了你周围的地牢环境。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom good enchant monster",
+      "source": "@Xom good monster polymorph@\n",
+      "hits": [
+        {
+          "Term": "Enchant",
+          "Translation": "附魔",
+          "Part of Speech": "verb",
+          "Variants": "",
+          "Note": "【0.34.1 修订】保留术语；当前武器附魔提高武器附魔值，防具附魔提高防具附魔值。与给武器赋予 brand（印记）区分。 来源：dat/descript/items.txt。"
+        },
+        {
+          "Term": "good monster polymorph",
+          "Translation": "好的怪物变形",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Polymorph",
+          "Translation": "变形术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@Xom good monster polymorph@\n",
+      "legacy": "@Xom good monster polymorph@\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom bad enchant monster",
+      "source": "@Xom good enchant monster@\n",
+      "hits": [
+        {
+          "Term": "Enchant",
+          "Translation": "附魔",
+          "Part of Speech": "verb",
+          "Variants": "",
+          "Note": "【0.34.1 修订】保留术语；当前武器附魔提高武器附魔值，防具附魔提高防具附魔值。与给武器赋予 brand（印记）区分。 来源：dat/descript/items.txt。"
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "@Xom good enchant monster@\n",
+      "legacy": "@Xom good enchant monster@\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom good hyper enchant monster",
+      "source": "\"Witness the rise of a true [hero|champion]!\"\n\nXom demands grand glory in combat!\n\nXom's power very briefly touches upon your surroundings.\n\nYou hear Xom's avuncular cackling.\n",
+      "hits": [
+        {
+          "Term": "Enchant",
+          "Translation": "附魔",
+          "Part of Speech": "verb",
+          "Variants": "",
+          "Note": "【0.34.1 修订】保留术语；当前武器附魔提高武器附魔值，防具附魔提高防具附魔值。与给武器赋予 brand（印记）区分。 来源：dat/descript/items.txt。"
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“见证一位真正的[英雄|勇士]崛起吧！”\n\n佐姆要求一场荣耀无比的战斗！\n\n佐姆的力量极短暂地触及了你周围的环境。\n\n你听到佐姆慈爱地咯咯笑着。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom mass charm",
+      "source": "Xom readies the chaos crusade!\n\nXom seizes a variety of puppet strings.\n\n\"Would you like more friends, my child?\"\n\nw:5\nXom bribes nearby enemies with the offer of @_trout_species_@ trout.\n\nw:5\nThe hand of Xom pokes present minds.\n",
+      "hits": [
+        {
+          "Term": "species",
+          "Translation": "种族",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Charm",
+          "Translation": "魅惑术/护符/符印",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术用魅惑术。普通实体 charm 按作用用护符或符印，不与变形护符种类混同。"
+        },
+        {
+          "Term": "chaos",
+          "Translation": "混沌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆准备好了混沌圣战！\n\n佐姆抓住了各种提线木偶的线。\n\n“想要更多朋友吗，我的孩子？”\n\nw:5\n佐姆许诺送出@_trout_species_@鳟鱼，贿赂附近的敌人。\n\nw:5\n佐姆之手戳了戳在场者的心智。\n",
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom stealth player",
+      "source": "Xom shushes you conspicuously.\n\nXom whispers: Shhh!\n",
+      "hits": [
+        {
+          "Term": "stealth",
+          "Translation": "潜行",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "一种技能\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆大张旗鼓地示意你安静。\n\n佐姆低声说：嘘！\n",
+      "legacy": "佐姆使你显著地安静下来。\n\n佐姆低语道：嘘！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom cloud",
+      "source": "\"The weather's been a little too boring around here.\"\n\nXom asks Qazlal to spice things up a little.\n\n\"Forecast: mostly cloudy.\"\n",
+      "hits": [
+        {
+          "Term": "Qazlal",
+          "Translation": "卡兹拉尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "风暴之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“这里的天气有点太无聊了。”\n\n佐姆要求卡兹拉尔，让事情变得有趣一些。\n\n“天气预报：多云。”\n",
+      "legacy": "“这里的天气有点太无聊了。”\n\n佐姆要求卡兹拉尔，让事情变得有趣一些。\n\n“天气预报：多云。”\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom life saving general",
+      "source": "\"What? Wait, NO!\"\n\n\"Hey, things were just getting interesting!\"\n\n\"NOOOOOOO, not my @_xom_plaything_@!\"\n\n\"Not here, not now.\"\n\n\"Just one more try.\"\n\nXom is feeling generous.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "“什么？等等，不！”\n\n“嘿，事情才刚变得有趣呢！”\n\n“不——我的@_xom_plaything_@啊！”\n\n“不能在这里，不能是现在。”\n\n“再试一次就好。”\n\n佐姆感觉自己很慷慨。\n",
+      "legacy": "“怎么了？等等，不！”\n\n“嘿，事情才刚刚变得有趣了呢！”\n\n“不不不，这不是我的@_xom_plaything_@！”\n\n“不是这里，不是现在。”\n\n“再试一次。”\n\n佐姆感觉自己很宽厚。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom life saving actor",
+      "source": "w:20\n@Xom life saving general@\n\n\"Hey, that's my @_xom_plaything_@!\"\n\n\"Oh, no, you don't!\"\n\n\"That's my @_xom_plaything_@, go get your own!\"\n\n\"Leave my @_xom_plaything_@ alone!\"\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "w:20\n@Xom life saving general@\n\n“嘿，那是我的@_xom_plaything_@！”\n\n“噢，不，别那样！”\n\n“那是我的@_xom_plaything_@，去拿你自己的吧！”\n\n“别碰我的@_xom_plaything_@！”\n",
+      "legacy": "w:20\n@Xom life saving general@\n\n“嘿，那是我的@_xom_plaything_@！”\n\n“噢，不，别那样！”\n\n“那是我的@_xom_plaything_@，去拿你自己的吧！”\n\n“别碰我的@_xom_plaything_@！”\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom boring death",
+      "source": "Xom yawns loudly!\n\n\"Boring in life, boring in death...\"\n\n\"What!? That's it?\"\n\n\"I guess I need a new plaything now.\"\n\n\"Huh? Did I miss anything?\"\n\n\"It was about time.\"\n\n\"This toy is broken.\"\n\n\"It's all fun and games until someone loses an eye.\"\n\nw:1\n\"It's not fun and games unless someone loses an eye.\"\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆大声打着哈欠！\n\n“生也无趣，死也无趣……”\n\n“什么！？就这？”\n\n“我想，我现在需要一个新玩物了。”\n\n“嗯？我错过什么了吗？”\n\n“是时候了。”\n\n“这个玩具坏了。”\n\n“在有人失去一只眼睛前，这一切都是娱乐和游戏。”\n\nw:1\n“除非有人失去一只眼睛，否则这就不是娱乐和游戏。”\n",
+      "legacy": "佐姆大声打着哈欠！\n\n“生也无趣，死也无趣……”\n\n“什么！？就这？”\n\n“我想，我现在需要一个新玩物了。”\n\n“嗯？我错过什么了吗？”\n\n“是时候了。”\n\n“这个玩具坏了。”\n\n“在有人失去一只眼睛前，这一切都是娱乐和游戏。”\n\nw:1\n“除非有人失去一只眼睛，否则这就不是娱乐和游戏。”\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom laughter",
+      "source": "Xom guffaws!\n\nXom roars with laughter!\n\nXom thinks this is hilarious!\n\nXom is highly amused!\n\nXom cackles wildly!\n\nXom snickers!\n\nXom laughs nastily!\n\nXom howls with laughter!\n\nXom bursts into laughter!\n\nXom giggles madly!\n\nXom titters!\n\nXom chuckles heartily!\n\nXom chortles!\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆狂笑起来！\n\n佐姆放声大笑！\n\n佐姆觉得这太滑稽了！\n\n佐姆乐坏了！\n\n佐姆放肆地咯咯大笑！\n\n佐姆窃笑起来！\n\n佐姆恶狠狠地笑起来！\n\n佐姆笑得嗷嗷直叫！\n\n佐姆爆发出一阵大笑！\n\n佐姆疯狂地咯咯笑着！\n\n佐姆吃吃地笑着！\n\n佐姆由衷地轻笑起来！\n\n佐姆咯咯地笑着！\n",
+      "legacy": "佐姆狂笑着！\n\n佐姆呵呵大笑！\n\n佐姆觉得这太滑稽了！\n\n佐姆被逗乐了！\n\n佐姆放荡地咯咯笑！\n\n佐姆窃笑着！\n\n佐姆恶意地笑着！\n\n佐姆开怀大笑！\n\n佐姆发出一阵大笑！\n\n佐姆疯狂地咯咯笑！\n\n佐姆咯咯地笑着！\n\n佐姆关切地轻笑着！\n\n佐姆咯咯地欢笑！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "_xom_plaything_",
+      "source": "{{\nif you.piety_rank() > 4 then\n    return \"teddy bear\"\nelseif you.piety_rank() > 2 then\n    return \"toy\"\nelse\n    return \"plaything\"\nend\n}}\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "piety",
+          "Translation": "虔诚",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇机制】神祇资源，不等同经验值。 来源：religion.cc。"
+        },
+        {
+          "Term": "bear",
+          "Translation": "熊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "{{\nif you.piety_rank() > 4 then\n    return \"玩具熊\"\nelseif you.piety_rank() > 2 then\n    return \"玩具\"\nelse\n    return \"玩物\"\nend\n}}\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "recite_closure",
+      "source": "\"Amen!\"\n\n\"Glory to Zin!\"\n\n\"And thus was it written.\"\n\n\"So sayeth Zin.\"\n\n\"Purity be upon you all.\"\n\n\"Written in blood; sealed by your death.\"\n\n\"From Zin's mouth, by Zin's hand.\"\n\nw:5\n\"Thus shall it ever be.\"\n\nw:3\n\"In fire! In pain!\"\n",
+      "hits": [
+        {
+          "Term": "Zin",
+          "Translation": "辛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "法则之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Pain",
+          "Translation": "痛苦术/痛苦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用痛苦术。卡牌、武器印记或普通感受用痛苦，完整物品专名优先。\n【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Recite",
+          "Translation": "诵经",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+        },
+        {
+          "Term": "Fire",
+          "Translation": "火焰强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "“阿门！”\n\n“荣耀归于辛！”\n\n“原文如此。”\n\n“辛言道。”\n\n“愿你纯洁。”\n\n“以血书写；以你的死为印戳。”\n\n“从辛的口，经辛的手。”\n\nw:5\n“它将永远如此。”\n\nw:3\n“经受火焰！经受痛楚！”\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "ignis elemental wrath",
+      "source": "\"Attack, my last stalwart servants!\"\n\nIgnis wails with rage, and rains down burning fury!\n\nIgnis calls forth spirits of fire to unmake you!\n\n\"Burn! Burn until nothing is left!\"\n\n\"These will know how to inflict the punishment due to you!\"\n\n\"Betrayer! Apostate! Perish!\"\n\nw:5\n\"With a thousand fires I burned cities, but these will suffice for you!\"\n\nw:5\n\"My hands, my teeth, my burning tears: these will never betray me!\"\n",
+      "hits": [
+        {
+          "Term": "Ignis",
+          "Translation": "伊格尼斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇】垂熄之焰神祇，不能用旧神 Pakellas 替代。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "elemental",
+          "Translation": "元素生物",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Wrath",
+          "Translation": "神怒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Fire",
+          "Translation": "火焰强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "“进攻，我最后的坚定仆从！”\n\n伊格尼斯哀号着，狂怒倾泻而出！\n\n伊格尼斯召唤火之灵来毁灭你！\n\n“燃烧吧！烧到什么都不剩！”\n\n“他们会知道如何惩罚你！”\n\n“叛徒！变节者！毁灭吧！”\n\nw:5\n“我曾用一千场火来烧毁城市，但只用这些来对付你也足够了！”\n\nw:5\n“我的手，我的牙齿，我灼热的泪水：这些永远不会背叛我！”\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "makhleb executioner chatter",
+      "source": "w:40\n\"Kill. Kill. Kill!\"\n\n\"More. More. More!\"\n\n\"Another! And another! And another!\"\n\n\"Slaughter. Them. All!\"\n\nw:5\n\"Everything deserves to die!\"\n",
+      "hits": [
+        {
+          "Term": "Makhleb",
+          "Translation": "马科列布",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Executioner",
+          "Translation": "刽子手",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "ashenzari welcome",
+      "source": "Ashenzari says: Partake of my vision. Partake of my curse.\n",
+      "hits": [
+        {
+          "Term": "Ashenzari",
+          "Translation": "艾申扎利",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "艾申扎利说：分享我的视野。分担我的诅咒。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "beogh penance",
+      "source": "Beogh says: Do not betray your orcish brethren!\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "penance",
+          "Translation": "赎罪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇机制】神祇惩戒/欠罪语境，不等同退出信仰后的全部神罚。 来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "比欧弗说：不要背叛你的兽人兄弟！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "beogh welcome",
+      "source": "Beogh says: Show the world what it means to be an orc!\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "比欧弗说：把不信教者淹死在血海里！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "beogh apostle challenge",
+      "source": "Beware that a challenger has come seeking you in battle. Prove your devotion to me! Unite all my children beneath one banner!\n\nThe time has come, seeker, to test your mettle in combat. Prove yourself an orc! Join your true people!\n\nScrew your courage to the sticking place, and face a challenge. Fight to survive! In the great war, all will be orcs!\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": null
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "cheibriados penance",
+      "source": "Cheibriados says: Don't be so hasty!\n",
+      "hits": [
+        {
+          "Term": "Cheibriados",
+          "Translation": "切布理亚多",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "审慎之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "penance",
+          "Translation": "赎罪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇机制】神祇惩戒/欠罪语境，不等同退出信仰后的全部神罚。 来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "切布理亚多说：不要那么仓促！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "cheibriados welcome",
+      "source": "Cheibriados says: Take it easy.\n",
+      "hits": [
+        {
+          "Term": "Cheibriados",
+          "Translation": "切布理亚多",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "审慎之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "切布理亚多说：慢慢来。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "cheibriados death",
+      "source": "Cheibriados appreciates the motionlessness of death.\n",
+      "hits": [
+        {
+          "Term": "Cheibriados",
+          "Translation": "切布理亚多",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "审慎之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "切布理亚多欣赏死亡的静止。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "dithmenos welcome",
+      "source": "Dithmenos says: Walk in the dark places.\n",
+      "hits": [
+        {
+          "Term": "Dithmenos",
+          "Translation": "迪斯姆诺",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "隐没者，黑暗之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "迪斯姆诺说：铺开永恒的黑夜。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "elyvilon penance",
+      "source": "Elyvilon says: Be more diligent in your ministrations.\n",
+      "hits": [
+        {
+          "Term": "Elyvilon",
+          "Translation": "艾利维隆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "penance",
+          "Translation": "赎罪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇机制】神祇惩戒/欠罪语境，不等同退出信仰后的全部神罚。 来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "艾利维隆说：你在照料的时候要更勤奋。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "elyvilon welcome",
+      "source": "Elyvilon says: Go forth and aid the weak!\n",
+      "hits": [
+        {
+          "Term": "Elyvilon",
+          "Translation": "艾利维隆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "weak",
+          "Translation": "虚弱",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：虚弱。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "艾利维隆说：去救助弱者吧！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "fedhas penance",
+      "source": "Fedhas protests your encroaching upon nature.\n",
+      "hits": [
+        {
+          "Term": "Fedhas",
+          "Translation": "费德哈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "penance",
+          "Translation": "赎罪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇机制】神祇惩戒/欠罪语境，不等同退出信仰后的全部神罚。 来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "费德哈抗议你侵犯自然。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "fedhas welcome",
+      "source": "Fedhas says: Spread life and death.\n",
+      "hits": [
+        {
+          "Term": "Fedhas",
+          "Translation": "费德哈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "费德哈说：散播生命和死亡。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "fedhas death",
+      "source": "Fedhas appreciates your contribution to the ecosystem.\n",
+      "hits": [
+        {
+          "Term": "Fedhas",
+          "Translation": "费德哈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "费德哈感谢你对生态系统做出的贡献。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "gozag welcome",
+      "source": "Gozag says: Greed is good.\n",
+      "hits": [
+        {
+          "Term": "Gozag",
+          "Translation": "哥萨戈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "哥萨戈说：贪婪是好的。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "hepliaklqana welcome",
+      "source": "Hepliaklqana says: Your past becomes your present!\n",
+      "hits": [
+        {
+          "Term": "Hepliaklqana",
+          "Translation": "惠普利亚卡纳",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "遗忘者\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "惠普利亚卡纳：你的过去变成了你的现在！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "hepliaklqana death",
+      "source": "Hepliaklqana delivers you to your ancestors.\n",
+      "hits": [
+        {
+          "Term": "Hepliaklqana",
+          "Translation": "惠普利亚卡纳",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "遗忘者\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "惠普利亚卡纳把你带到你的先祖那里。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "ignis welcome",
+      "source": "The flames of Ignis gently warm you.\n",
+      "hits": [
+        {
+          "Term": "Ignis",
+          "Translation": "伊格尼斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇】垂熄之焰神祇，不能用旧神 Pakellas 替代。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "伊格尼斯的火焰柔和地温暖着你。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "ignis death",
+      "source": "Ignis goes out, and joins you in death.\n",
+      "hits": [
+        {
+          "Term": "Ignis",
+          "Translation": "伊格尼斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇】垂熄之焰神祇，不能用旧神 Pakellas 替代。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "伊格尼斯寂灭了，和你一起走向死亡。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "jiyva welcome",
+      "source": "Slime for the Slime God!\n\nw:1\nLong live the new flesh!\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Jiyva",
+          "Translation": "吉瓦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "吉瓦是统治软泥怪的混沌古神。\n【现行神祇】名称由 god_name_jiyva 单独生成，随机后缀不能当作另一位神祇。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "黏液效忠黏液神！\n\nw:1\n新肉体万岁！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "jiyva death corpse",
+      "source": "Jiyva sends a jelly to digest your remains.\n",
+      "hits": [
+        {
+          "Term": "corpse",
+          "Translation": "尸体",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Jiyva",
+          "Translation": "吉瓦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "吉瓦是统治软泥怪的混沌古神。\n【现行神祇】名称由 god_name_jiyva 单独生成，随机后缀不能当作另一位神祇。来源：religion.cc。"
+        },
+        {
+          "Term": "jelly",
+          "Translation": "胶怪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "吉瓦派来一个胶冻来消化你的尸体。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "jiyva death corpse undead",
+      "source": "@Jiyva death corpse@\n",
+      "hits": [
+        {
+          "Term": "corpse",
+          "Translation": "尸体",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Jiyva",
+          "Translation": "吉瓦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "吉瓦是统治软泥怪的混沌古神。\n【现行神祇】名称由 god_name_jiyva 单独生成，随机后缀不能当作另一位神祇。来源：religion.cc。"
+        },
+        {
+          "Term": "undead",
+          "Translation": "亡灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】指不死生物类别，并不表示无法被杀死。 来源：mon-util.cc。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "@Jiyva death corpse@\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "jiyva death corpse nonliving",
+      "source": "Jiyva sends a jelly to digest your equipment.\n",
+      "hits": [
+        {
+          "Term": "corpse",
+          "Translation": "尸体",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Jiyva",
+          "Translation": "吉瓦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "吉瓦是统治软泥怪的混沌古神。\n【现行神祇】名称由 god_name_jiyva 单独生成，随机后缀不能当作另一位神祇。来源：religion.cc。"
+        },
+        {
+          "Term": "jelly",
+          "Translation": "胶怪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "吉瓦派来一个胶冻来消化你的装备。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "kikubaaqudgha welcome",
+      "source": "Kikubaaqudgha says: Spread unending ruin and despair!\n",
+      "hits": [
+        {
+          "Term": "Kikubaaqudgha",
+          "Translation": "奇库巴库哈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "奇库巴库哈说：散播无尽的折磨和黑暗！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "kikubaaqudgha death",
+      "source": "Kikubaaqudgha rasps: You have failed me! Welcome... death!\n",
+      "hits": [
+        {
+          "Term": "Kikubaaqudgha",
+          "Translation": "奇库巴库哈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "奇库巴库哈厉声说：你让我失望了！欢迎……死亡！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "kikubaaqudgha death corpse undead",
+      "source": "Kikubaaqudgha rasps: You have failed me! Welcome... oblivion!\n",
+      "hits": [
+        {
+          "Term": "corpse",
+          "Translation": "尸体",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Kikubaaqudgha",
+          "Translation": "奇库巴库哈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "undead",
+          "Translation": "亡灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】指不死生物类别，并不表示无法被杀死。 来源：mon-util.cc。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "奇库巴库哈厉声说：你让我失望了！欢迎……湮灭！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "kikubaaqudgha death corpse nonliving",
+      "source": "@Kikubaaqudgha death corpse undead@\n",
+      "hits": [
+        {
+          "Term": "corpse",
+          "Translation": "尸体",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Kikubaaqudgha",
+          "Translation": "奇库巴库哈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "undead",
+          "Translation": "亡灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】指不死生物类别，并不表示无法被杀死。 来源：mon-util.cc。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "@Kikubaaqudgha death corpse undead@\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "kikubaaqudgha death undead",
+      "source": "@Kikubaaqudgha death corpse undead@\n",
+      "hits": [
+        {
+          "Term": "corpse",
+          "Translation": "尸体",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Kikubaaqudgha",
+          "Translation": "奇库巴库哈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "undead",
+          "Translation": "亡灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】指不死生物类别，并不表示无法被杀死。 来源：mon-util.cc。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "@Kikubaaqudgha death corpse undead@\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "kikubaaqudgha death nonliving",
+      "source": "@Kikubaaqudgha death corpse undead@\n",
+      "hits": [
+        {
+          "Term": "corpse",
+          "Translation": "尸体",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Kikubaaqudgha",
+          "Translation": "奇库巴库哈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "undead",
+          "Translation": "亡灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】指不死生物类别，并不表示无法被杀死。 来源：mon-util.cc。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "@Kikubaaqudgha death corpse undead@\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "lugonu welcome",
+      "source": "Lugonu says: Spread carnage and corruption!\n",
+      "hits": [
+        {
+          "Term": "Lugonu",
+          "Translation": "卢戈努",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇】补齐现行神祇名称。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "卢格努说：散布屠杀和腐化！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "lugonu newgame",
+      "source": "Lugonu says: Depart the Abyss and spread corruption, my servant!\n<lightgrey>(use the <w>a</w>bility menu to exit the Abyss)</lightgrey>\n",
+      "hits": [
+        {
+          "Term": "Abyss",
+          "Translation": "深渊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "exit",
+          "Translation": "出口/退出/离开",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】名词用出口；命令动词用退出，按上下文处理，不把两者拼成一条输出。 来源：feature-data.h。\n【语境补充 2026-10-21】地点或设施用出口。菜单命令用退出。离开区域的动作用离开。"
+        },
+        {
+          "Term": "Lugonu",
+          "Translation": "卢戈努",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇】补齐现行神祇名称。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Depart the Abyss",
+          "Translation": "离开深渊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+        },
+        {
+          "Term": "the Abyss",
+          "Translation": "深渊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Abyss（规范缩写 Abyss）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "卢格努说：离开深渊去散布腐化吧，我的仆人！\n<lightgrey>（使用能力（<w>a</w>）菜单退出深渊）</lightgrey>\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "makhleb welcome",
+      "source": "Blood and souls for Makhleb!\n",
+      "hits": [
+        {
+          "Term": "Makhleb",
+          "Translation": "马科列布",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "血与灵魂，献给马科列布！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "nemelex xobeh welcome",
+      "source": "Nemelex Xobeh says: It's all in the cards!\n",
+      "hits": [
+        {
+          "Term": "Nemelex Xobeh",
+          "Translation": "尼姆雷斯・索布",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "骗术之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "尼姆雷斯・索布说：一切尽在卡牌中！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "okawaru penance",
+      "source": "Okawaru says: Regain your honour in battle!\n",
+      "hits": [
+        {
+          "Term": "Okawaru",
+          "Translation": "奥格瓦如",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "penance",
+          "Translation": "赎罪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇机制】神祇惩戒/欠罪语境，不等同退出信仰后的全部神罚。 来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "奥卡瓦鲁说：在战斗中夺回你的荣誉！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "okawaru welcome",
+      "source": "Okawaru says: Bring me glory in combat!\n",
+      "hits": [
+        {
+          "Term": "Okawaru",
+          "Translation": "奥格瓦如",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "奥卡瓦鲁说：给我带回战斗中的荣耀！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "pakellas penance",
+      "source": "Pakellas says: That's one approach which won't work here.\n\nPakellas says: Disappointing results so far.\n\nPakellas says: We may have to discontinue the experiment at this rate.\n\nPakellas says: Do not stand in the way of progress!\n",
+      "hits": [
+        {
+          "Term": "Pakellas",
+          "Translation": "帕克拉斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【版本/语境】已移除的玩家神祇；保留历史资料用途，不作为 0.34.1 可选神祇。 来源：god-type.h。"
+        },
+        {
+          "Term": "penance",
+          "Translation": "赎罪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇机制】神祇惩戒/欠罪语境，不等同退出信仰后的全部神罚。 来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "帕克拉斯说：这种方法在这里行不通。\n\n帕克拉斯说：到目前为止，结果令人失望。\n\n帕克拉斯说：按照这个速度，我们可能不得不停止这项实验。\n\n帕克拉斯说：不要阻碍进程！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "pakellas welcome",
+      "source": "Pakellas says: Time to continue the experiment.\n\nPakellas says: Time to find some more test subjects.\n\nPakellas says: Ready to try out some more devices?\n\nPakellas says: This is producing some very interesting results.\n\nPakellas says: What solutions will you come up with next?\n\nPakellas says: Progress or perish!\n\nw:5\nPakellas says: No one tells a god not to play god!\n\nw:1\nPakellas says: They called me mad... well, we'll show them!\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Pakellas",
+          "Translation": "帕克拉斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【版本/语境】已移除的玩家神祇；保留历史资料用途，不作为 0.34.1 可选神祇。 来源：god-type.h。"
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "帕克拉斯说：是时候继续实验了。\n\n帕克拉斯说：是时候寻找更多测试对象了。\n\n帕克拉斯说：准备好尝试更多装置了吗？\n\n帕克拉斯说：这产生了一些非常有趣的结果。\n\n帕克拉斯说：你接下来会拿出什么解决方案？\n\n帕克拉斯说：前进或是消亡！\n\nw:5\n帕克拉斯说：没有人告诉神，不要扮演神！\n\nw:1\n帕克拉斯说：他们说我疯了……好吧，我们让他们看看！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "pakellas death",
+      "source": "Pakellas says: Back to the drawing board!\n\nPakellas says: Good help is so hard to find these days!\n\nPakellas says: Time to find a new assistant...\n\nPakellas says: That's one more possible approach eliminated.\n\nPakellas says: Time to start the next experiment...\n",
+      "hits": [
+        {
+          "Term": "Pakellas",
+          "Translation": "帕克拉斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【版本/语境】已移除的玩家神祇；保留历史资料用途，不作为 0.34.1 可选神祇。 来源：god-type.h。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "帕克拉斯说：重新开始！\n\n帕克拉斯说：现在好助手太难找了！\n\n帕克拉斯说：是时候找一个新助手了……\n\n帕克拉斯说：这可能是另一种被淘汰的方法。\n\n帕克拉斯说：是时候开始下一个实验了……\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "qazlal penance",
+      "source": "Qazlal thunders: Do not interfere with the natural order!\n",
+      "hits": [
+        {
+          "Term": "Qazlal",
+          "Translation": "卡兹拉尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "风暴之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "penance",
+          "Translation": "赎罪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇机制】神祇惩戒/欠罪语境，不等同退出信仰后的全部神罚。 来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "卡兹拉尔大发雷霆：不要干涉自然秩序！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "qazlal welcome",
+      "source": "Qazlal says: Let the forces of nature tear it all down!\n",
+      "hits": [
+        {
+          "Term": "Qazlal",
+          "Translation": "卡兹拉尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "风暴之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "卡兹拉尔说：让自然的力量摧毁一切！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "ru welcome",
+      "source": "Ru says: Cut away your false body!\n",
+      "hits": [
+        {
+          "Term": "Ru",
+          "Translation": "入",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "牺牲与内在力量之神\n【版本/语境】专名沿用原译“入”，不是单词“进入”；献祭祭坛组合用“入神”。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "入说：切除你虚妄的肉体！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "ru death",
+      "source": "Ru respects your ultimate sacrifice.\n",
+      "hits": [
+        {
+          "Term": "Ru",
+          "Translation": "入",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "牺牲与内在力量之神\n【版本/语境】专名沿用原译“入”，不是单词“进入”；献祭祭坛组合用“入神”。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Sacrifice",
+          "Translation": "献祭/牺牲/祭仪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】献祭选项与能力用献祭。付出代价或失去能力用牺牲。叙事中的献神仪式可用祭仪。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "入尊重你的终极舍弃。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "sif muna penance",
+      "source": "Sif Muna says: Seek out more knowledge and wisdom.\n",
+      "hits": [
+        {
+          "Term": "Sif Muna",
+          "Translation": "席夫·穆纳",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "penance",
+          "Translation": "赎罪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇机制】神祇惩戒/欠罪语境，不等同退出信仰后的全部神罚。 来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "席夫·穆纳说：去寻求更多知识和智慧。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "sif muna welcome",
+      "source": "Sif Muna whispers: I know many secrets...\n",
+      "hits": [
+        {
+          "Term": "Sif Muna",
+          "Translation": "席夫·穆纳",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "席夫·穆纳低语道：我知晓很多秘密……\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "the shining one penance",
+      "source": "The Shining One says: Being a martyr may wash away your sin!\n",
+      "hits": [
+        {
+          "Term": "the Shining One",
+          "Translation": "光明神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "penance",
+          "Translation": "赎罪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇机制】神祇惩戒/欠罪语境，不等同退出信仰后的全部神罚。 来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "光明神说：成为一名殉道者才有可能洗去你的罪恶！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "the shining one welcome",
+      "source": "The Shining One says: Lead the forces of light to victory!\n",
+      "hits": [
+        {
+          "Term": "the Shining One",
+          "Translation": "光明神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Light",
+          "Translation": "轻盈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "光明神说：带领光明力量走向胜利！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "trog penance",
+      "source": "Trog rages: Kill them all!\n",
+      "hits": [
+        {
+          "Term": "Trog",
+          "Translation": "特洛戈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "penance",
+          "Translation": "赎罪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇机制】神祇惩戒/欠罪语境，不等同退出信仰后的全部神罚。 来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "特洛戈暴怒：杀光他们！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "trog welcome",
+      "source": "Trog says: Kill them all!\n",
+      "hits": [
+        {
+          "Term": "Trog",
+          "Translation": "特洛戈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "特洛戈说：杀光他们！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "uskayaw welcome",
+      "source": "Uskayaw says: Surrender yourself to the rhythm!\n",
+      "hits": [
+        {
+          "Term": "Uskayaw",
+          "Translation": "阿斯卡亚",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "狂欢者，舞神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "乌斯卡亚说：让自己沉浸于节奏中！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "uskayaw death corpse",
+      "source": "Your body falls in perfect tune with the rhythm.\n",
+      "hits": [
+        {
+          "Term": "corpse",
+          "Translation": "尸体",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Uskayaw",
+          "Translation": "阿斯卡亚",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "狂欢者，舞神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "你的身体随着节奏完美落下。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "uskayaw death corpse undead",
+      "source": "@Uskayaw death corpse@\n",
+      "hits": [
+        {
+          "Term": "corpse",
+          "Translation": "尸体",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "undead",
+          "Translation": "亡灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】指不死生物类别，并不表示无法被杀死。 来源：mon-util.cc。"
+        },
+        {
+          "Term": "Uskayaw",
+          "Translation": "阿斯卡亚",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "狂欢者，舞神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "@Uskayaw death corpse@\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "uskayaw death corpse nonliving",
+      "source": "@Uskayaw death corpse@\n",
+      "hits": [
+        {
+          "Term": "corpse",
+          "Translation": "尸体",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Uskayaw",
+          "Translation": "阿斯卡亚",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "狂欢者，舞神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "@Uskayaw death corpse@\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "vehumet welcome",
+      "source": "Vehumet says: Let it end in hellfire!\n",
+      "hits": [
+        {
+          "Term": "Vehumet",
+          "Translation": "维胡梅特",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "维胡梅特说：让一切在地狱之火中终结吧！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "wu jian welcome",
+      "source": "The Council says: Follow the path of wisdom and battle!\n",
+      "hits": [
+        {
+          "Term": "Wu Jian",
+          "Translation": "武剑会",
+          "Part of Speech": "noun",
+          "Variants": "Wu Jian Council",
+          "Note": "【0.34.1 译名建议】指共同升格为神的武僧集体；正文中的 the Council 和简称 The Council 均按语境称“武剑会”或“本会”，不译作政治机构“议会”；旧备注“无间道”不是英文原文依据，不据此扩写神话背景。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "门派有言：践行智慧和战斗之路！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom bored",
+      "source": "Xom yawns.\n\n\"I wonder what else is on...\"\n\n@Xom welcome@\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆打着哈欠。\n\n“我想知道，还有什么新花样……”\n\n@Xom welcome@\n",
+      "legacy": "佐姆打着哈欠。\n\n“我想知道，还有什么新花样……”\n\n@Xom welcome@\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom newgame",
+      "source": "Xom says: A new plaything!\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆说：一个新玩物！\n",
+      "legacy": "佐姆说：一个新玩物！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "xom welcome",
+      "source": "Xom snickers.\n\nXom titters.\n\nw:3\n@_xom_welcome_rare_@\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "佐姆窃笑着。\n\n佐姆咯咯地笑着。\n\nw:3\n@_xom_welcome_rare_@\n",
+      "legacy": "佐姆窃笑着。\n\n佐姆咯咯地笑着。\n\nw:3\n@_xom_welcome_rare_@\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "_xom_welcome_rare_",
+      "source": "Xom says: I'm watching you, my @_xom_child_@ child.\n\nXom slaps you with @_trout_species_@ trout!\n",
+      "hits": [
+        {
+          "Term": "species",
+          "Translation": "种族",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "佐姆说：我在注视着你，我@_xom_child_@孩子。\n\n佐姆用@_trout_species_@鳟鱼扇你耳光！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "_xom_child_",
+      "source": "misbegotten\n\nbastard\n\nugly\n\nred-headed step\n\nsilly\n\nworthless\n\nprodigal\n\ninsane\n\nnaughty\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "拙劣的\n\n奇形怪状的\n\n丑陋的\n\n讨厌的\n\n愚蠢的\n\n没用的\n\n放荡的\n\n疯狂的\n\n淘气的\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "_trout_species_",
+      "source": "a rainbow\n\na flathead\n\na cutthroat\n\na bull\n\na silver\n\nw:3\n@_trout_species_rare_@\n",
+      "hits": [
+        {
+          "Term": "species",
+          "Translation": "种族",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "silver",
+          "Translation": "白银",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "一条虹\n\n一条平头\n\n一条割喉\n\n一条牛\n\n一条银\n\nw:3\n@_trout_species_rare_@\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "_trout_species_rare_",
+      "source": "a complex\n\na polygonal\n\nan imaginary\n\nan inverse\n\nan unlikely\n\na used\n\na second-hand\n\na prohibited\n\na challenging\n\na delicious\n\na mouldy\n\na fake\n\na moist\n\nw:2\na kilgore\n",
+      "hits": [
+        {
+          "Term": "species",
+          "Translation": "种族",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ],
+      "existing_ui_context": "x.speech",
+      "existing_ui_translation": "一条复杂的\n\n一条多边形的\n\n一条虚构的\n\n一条反向的\n\n一条不可思议的\n\n一条用过的\n\n一条二手的\n\n一条被禁止的\n\n一条充满挑战的\n\n一条美味的\n\n一条发霉的\n\n一条假的\n\n一条湿润的\n\nw:2\n一条基尔戈\n",
+      "legacy": "一条费解的\n\n一条多边的\n\n一条虚构的\n\n一条反转的\n\n一条不寻常的\n\n一条用过的\n\n一条二手的\n\n一条禁用的\n\n一条令人沉思的\n\n一条美味的\n\n一条发霉的\n\n一条虚假的\n\nw:2\n一条基尔戈\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "yredelemnul penance",
+      "source": "Yredelemnul says: All are equal in death! Holy martyrdom means nothing!\n",
+      "hits": [
+        {
+          "Term": "Yredelemnul",
+          "Translation": "伊莱德莱姆努尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "penance",
+          "Translation": "赎罪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇机制】神祇惩戒/欠罪语境，不等同退出信仰后的全部神罚。 来源：religion.cc。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "holy",
+          "Translation": "神圣之怒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "伊莱德莱姆努尔说：死亡面前，一切平等！神圣的殉道毫无意义！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "yredelemnul welcome",
+      "source": "Yredelemnul says: Carry the black torch! Rouse the idle dead!\n",
+      "hits": [
+        {
+          "Term": "Yredelemnul",
+          "Translation": "伊莱德莱姆努尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "伊莱德莱姆努尔说：拿着黑色的火炬！唤醒无所事事的死者！\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "yredelemnul death corpse",
+      "source": "Your body rises from the dead as a mindless zombie.\n",
+      "hits": [
+        {
+          "Term": "corpse",
+          "Translation": "尸体",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Yredelemnul",
+          "Translation": "伊莱德莱姆努尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "zombie",
+          "Translation": "丧尸",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "你的身体以一个没有意识的丧尸的形式重生了。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "yredelemnul death corpse undead",
+      "source": "You join the legions of the undead harvest.\n",
+      "hits": [
+        {
+          "Term": "corpse",
+          "Translation": "尸体",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "undead",
+          "Translation": "亡灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】指不死生物类别，并不表示无法被杀死。 来源：mon-util.cc。"
+        },
+        {
+          "Term": "Yredelemnul",
+          "Translation": "伊莱德莱姆努尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "你加入了亡灵的收割军团。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "yredelemnul death corpse nonliving",
+      "source": "Your body vanishes in a gout of umbral fire.\n",
+      "hits": [
+        {
+          "Term": "corpse",
+          "Translation": "尸体",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Yredelemnul",
+          "Translation": "伊莱德莱姆努尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Fire",
+          "Translation": "火焰强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "你的身体化为黑色火炬的燃料。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "yredelemnul death undead",
+      "source": "@Yredelemnul death corpse undead@\n",
+      "hits": [
+        {
+          "Term": "corpse",
+          "Translation": "尸体",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "undead",
+          "Translation": "亡灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】指不死生物类别，并不表示无法被杀死。 来源：mon-util.cc。"
+        },
+        {
+          "Term": "Yredelemnul",
+          "Translation": "伊莱德莱姆努尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "@Yredelemnul death corpse undead@\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "zin penance",
+      "source": "Zin castigates you for your disobedience of the Law.\n\nZin sternly explains the importance of @_important_subject_@\n",
+      "hits": [
+        {
+          "Term": "Zin",
+          "Translation": "辛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "法则之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "penance",
+          "Translation": "赎罪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇机制】神祇惩戒/欠罪语境，不等同退出信仰后的全部神罚。 来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "因为你违背律令，辛惩戒你。\n\n辛严厉地解释了“@_important_subject_@”的重要性。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "zin welcome",
+      "source": "Zin says: Spread the light, my child.\n",
+      "hits": [
+        {
+          "Term": "Zin",
+          "Translation": "辛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "法则之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Light",
+          "Translation": "轻盈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "辛说：传播光，我的孩子。\n"
+    },
+    {
+      "file": "godspeak.txt",
+      "key": "zot death",
+      "source": "Zot has found you!\n\nZot unmakes you!\n\nZot excises you from existence.\n\nZot touches you for a single instant, and you cease to be.\n\nw:5\nZot's tendrils burst from within you!\n\nw:3\nZot's will forges a new reality, without you in it.\n\nw:3\nZot snuffs you out like a light.\n\nw:3\nZot's power takes hold, and you dissolve into a dark mist.\n",
+      "hits": [
+        {
+          "Term": "Zot",
+          "Translation": "佐特",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "tendrils",
+          "Translation": "触须",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：触须。"
+        },
+        {
+          "Term": "Light",
+          "Translation": "轻盈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "佐特发现了你！\n\n佐特毁灭了你！\n\n佐特抹除了你的存在。\n\n在一瞬间佐特触碰到了你，你就不复存在了。\n\nw:5\n佐特的触须从你的体内爆裂！\n\nw:3\n佐特用意志创造了一个没有你的新世界。\n\nw:3\n佐特像掐灭一盏灯一样，扼杀了你。\n\nw:3\n佐特的力量控制了你，你化成了一团黑雾。\n"
+    },
+    {
+      "file": "monflee.txt",
+      "key": "dream sheep flee",
+      "source": "w:30\n@The_monster@ bleats in terror.\n\nVISUAL:@The_monster@ is struck with panic!\n\nVISUAL:@The_monster@ panics and turns to flee.\n\nVISUAL:A frightened @monster@ leaps away.\n\nVISUAL:@The_monster@ stampedes away.\n",
+      "hits": [
+        {
+          "Term": "dream sheep",
+          "Translation": "梦羊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": "w:30\n@The_monster@吓得大叫起来。\n\nVISUAL:@The_monster@被吓坏了！\n\nVISUAL:@The_monster@惊慌失措，转身逃跑。\n\nVISUAL:一个吓坏了的@monster@跳走了。\n\nVISUAL:@The_monster@仓皇而逃。\n"
+    },
+    {
+      "file": "monspeak.txt",
+      "key": "_important_subject_",
+      "source": "w:50\n@_axioms_of_law_@\n\nthe eternal Law.\n\nobedience to the Law.\n\nthe one true way.\n\npurity of body and mind.\n\npreserving your bodily integrity.\n\nkeeping your body clean and pure.\n\nproper care of body and soul.\n\navoiding mutations.\n\njust saying no to mutations.\n\nproper burial practice.\n\nnot dealing with demons.\n\nrejecting the service of demons.\n\nnot transforming your body with [talismans|baubles].\n\nshunning all [talismans|baubles].\n",
+      "hits": [
+        {
+          "Term": "mutations",
+          "Translation": "变异",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": null
+    },
+    {
+      "file": "monspeak.txt",
+      "key": "_axioms_of_law_",
+      "source": "Zin's Axioms of Law.\n\nthe Axioms of Law.\n\nthe books of the Law.\n\nthe sacred Law of Zin.\n",
+      "hits": [
+        {
+          "Term": "axioms of law",
+          "Translation": "法则公理",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Zin",
+          "Translation": "辛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "法则之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "existing_ui_context": null,
+      "existing_ui_translation": null,
+      "legacy": null
+    }
+  ]
+}

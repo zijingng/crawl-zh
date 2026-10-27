@@ -52,3 +52,6 @@ spret divine_exegesis(bool fail);
 spret imbue_servitor();
 
 book_type choose_book_type(int item_level);
+
+// Display only; canonical school metadata remains English.
+string spell_library_school_label(spell_type spell);

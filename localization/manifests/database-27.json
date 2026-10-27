@@ -1,0 +1,141 @@
+{
+  "source": "database/monspeak.txt",
+  "entries": [
+    {
+      "key": "_Killer_Klown_common_",
+      "context": "textdb:database/monspeak.txt:_killer_klown_common_",
+      "source_sha256": "4738ca1ac16ab00be63a2f29004610013d63e252ac8f07d0f61a47c3b5a2345b",
+      "review_status": "reviewed",
+      "review_batch": "database-27"
+    },
+    {
+      "key": "_Killer_Klown_rare_",
+      "context": "textdb:database/monspeak.txt:_killer_klown_rare_",
+      "source_sha256": "d0f578c03579f087b6bd08f50a47c4a6c9af2671a7d681dfdd62cccd5dd29c3a",
+      "review_status": "reviewed",
+      "review_batch": "database-27"
+    },
+    {
+      "key": "Killer Klown triumphant",
+      "context": "textdb:database/monspeak.txt:killer klown triumphant",
+      "source_sha256": "ed25468fd2fada0a04e87e6e4817a4b5971e550a7971145f6fb71c2ba46ca1b9",
+      "review_status": "reviewed",
+      "review_batch": "database-27"
+    },
+    {
+      "key": "laughing skull",
+      "context": "textdb:database/monspeak.txt:laughing skull",
+      "source_sha256": "4ddac6b2a2aa893c374461330c59067c8509aceffc4cb44b9eed477776e83a9a",
+      "review_status": "reviewed",
+      "review_batch": "database-27",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_laughs_",
+          "source_sha256": "0d303156f9f4d1703d1b84ffd2f12cd421580373034f5c4e7d660f7c0425ec55",
+          "translation_sha256": "bd9e3f710a9bdc4efd5bd52978def17d10bce1fe6bd3f4bda0740615b3714ab0"
+        }
+      ]
+    },
+    {
+      "key": "friendly laughing skull",
+      "context": "textdb:database/monspeak.txt:friendly laughing skull",
+      "source_sha256": "38f943fc8ce2f0420f9eb32d0686752353eb4394a6d18288ba9e1889ccd63e8f",
+      "review_status": "reviewed",
+      "review_batch": "database-27",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "laughing skull",
+          "source_sha256": "4ddac6b2a2aa893c374461330c59067c8509aceffc4cb44b9eed477776e83a9a",
+          "translation_sha256": "56ce5cf5b266f855460f1c81e15e0da1e51a917e7952ee9c8446ab1eec99b17b"
+        }
+      ]
+    },
+    {
+      "key": "laughing skull triumphant",
+      "context": "textdb:database/monspeak.txt:laughing skull triumphant",
+      "source_sha256": "ed71b2dac51289876aa5b7159f502b325bd79e7169b6684ff94f6109968c3c7c",
+      "review_status": "reviewed",
+      "review_batch": "database-27"
+    },
+    {
+      "key": "moth of wrath",
+      "context": "textdb:database/monspeak.txt:moth of wrath",
+      "source_sha256": "9c9d70cf0a309fb3e09eecabce4623643c648bc3a818e4032591483d25436402",
+      "review_status": "reviewed",
+      "review_batch": "database-27"
+    },
+    {
+      "key": "obsidian bat",
+      "context": "textdb:database/monspeak.txt:obsidian bat",
+      "source_sha256": "28d0cf1a0161629ee38b79cf1c30e2f1c265fa8c8f1bdd8da4f1a4569385df69",
+      "review_status": "reviewed",
+      "review_batch": "database-27"
+    },
+    {
+      "key": "default obsidian statue",
+      "context": "textdb:database/monspeak.txt:default obsidian statue",
+      "source_sha256": "bf727a4fa316bd80fac57b8d822f7a2f575201b50103f7b023ad18f6bb3fa3a5",
+      "review_status": "reviewed",
+      "review_batch": "database-27"
+    },
+    {
+      "key": "default orange crystal statue",
+      "context": "textdb:database/monspeak.txt:default orange crystal statue",
+      "source_sha256": "c745627a9b368c56b8fc9acfea5e9a9208a25828ddda8f69f0d891b59df73473",
+      "review_status": "reviewed",
+      "review_batch": "database-27"
+    },
+    {
+      "key": "default hoarfrost cannon",
+      "context": "textdb:database/monspeak.txt:default hoarfrost cannon",
+      "source_sha256": "242596e7277cb5ccc4696caf556a4cc7dcca90832550576b7ad6395cb85ae11d",
+      "review_status": "reviewed",
+      "review_batch": "database-27"
+    },
+    {
+      "key": "protean progenitor",
+      "context": "textdb:database/monspeak.txt:protean progenitor",
+      "source_sha256": "4e51c876f7f715925294e21864a3b857940545bddcd706e30a1fb81823ae1bd5",
+      "review_status": "reviewed",
+      "review_batch": "database-27"
+    },
+    {
+      "key": "friendly protean progenitor",
+      "context": "textdb:database/monspeak.txt:friendly protean progenitor",
+      "source_sha256": "efc64452266776b453909b50c55970a504c49149950b05d1ed696dff2040c080",
+      "review_status": "reviewed",
+      "review_batch": "database-27",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "protean progenitor",
+          "source_sha256": "4e51c876f7f715925294e21864a3b857940545bddcd706e30a1fb81823ae1bd5",
+          "translation_sha256": "80f501ab17f859b02582b960050464e435888418d3ed3dcdb54f985df84f9c5e"
+        }
+      ]
+    },
+    {
+      "key": "raven",
+      "context": "textdb:database/monspeak.txt:raven",
+      "source_sha256": "8752937c7da13ffbc369fd8ae6ee2ae7013263aa7953221c48b9ec00a40d58c5",
+      "review_status": "reviewed",
+      "review_batch": "database-27"
+    },
+    {
+      "key": "reaper",
+      "context": "textdb:database/monspeak.txt:reaper",
+      "source_sha256": "6e8be65b6c53c29d6579bccd5c36b5fed7547021d5bc596ba30c6fccdf585c45",
+      "review_status": "reviewed",
+      "review_batch": "database-27"
+    },
+    {
+      "key": "silenced silent spectre",
+      "context": "textdb:database/monspeak.txt:silenced silent spectre",
+      "source_sha256": "67e91765172c2225d0a604ddaa658514a73fdcfcd528371ef1fe9daf7d86ec5d",
+      "review_status": "reviewed",
+      "review_batch": "database-27"
+    }
+  ]
+}

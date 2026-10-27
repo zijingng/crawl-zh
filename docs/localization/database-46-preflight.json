@@ -1,0 +1,764 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "selected": [
+    {
+      "source": "database/rand_arm.txt",
+      "key": "_armour_animal_",
+      "english": "Amoeba\n\nTardigrade\n\nAnt\n\nButterfly\n\nCicada\n\nCockroach\n\nCricket\n\nLadybird\n\nLocust\n\nLouse\n\nMantidfly\n\nTick\n\nCentipede\n\nCuttlefish\n\nGastropod\n\nSlug\n\nSnail\n\nTrilobite\n\nWorm\n\nBarnacle\n\nClam\n\nLobster\n\nQuahog\n\nTarantula\n\nFrog\n\nKomodo Dragon\n\nLizard\n\nSalamander\n\nSerpent\n\nTurtle\n\nBarracuda\n\nCatfish\n\nCichlid\n\nMackerel\n\nMarlin\n\nSalmon\n\nSturgeon\n\nSunfish\n\nTrout\n\nTuna\n\nAlbatross\n\nEagle\n\nFalcon\n\nHeron\n\nMeadowlark\n\nNightingale\n\nRaven\n\nRobin\n\nShrike\n\nSparrow\n\nSwan\n\nTurtledove\n\nBull\n\nCamelopard\n\nCatamount\n\nDolphin\n\nEchidna\n\nElephant\n\nHart\n\nHippo\n\nKangaroo\n\nLion\n\nMonkey\n\nOkapi\n\nStag\n\nStallion\n\nZebra\n\nCircus Animal\n\nMonkey's Uncle\n\nCentaur\n\nCockatrice\n\nChimera\n\nDragon\n\nGriffon\n\nHecatoncheires\n\nHippogriff\n\nKraken\n\nLeogriff\n\nNuckelavee\n\nPooka\n\nQuinotaur\n\nSea Goat\n\nSkiapode\n\nUnicorn\n\n\nAkabeko\n\nBaku\n\nByakko\n\nIkuchi\n\nKappa\n\nKitsune\n\nKodama\n\nOni\n\nShishi\n\nTsukumogami\n\n\nCarbunclo\n\nCherruve\n\nCuero\n\nCurupira\n\nEbigane\n\nGasogonaga\n\nMpinguari\n\nTapire-iauara\n\n\nBiloko\n\nGuiamala\n\nImpundulu\n\nIsitwalangcengce\n\nNkala\n\nZankallala\n\n\nBakunawa\n\nMinokawa\n\n\nGiraffataur\n\nElephantaur\n\nMertaur\n\nMerwolf\n\nPlatytaur\n\nRhinotaur\n\nTaurataur\n\nTreeataur\n\nWereyak\n\nZebrataur\n\nChupacabra\n\nDropbear\n\nJackalope\n\nJersey Devil\n\nSkvader\n\nSnallygaster\n\nTatzelwurm\n\nWild Haggis\n\nYeti\n\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "centaur",
+          "Translation": "半人马",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【版本/语境】怪物仍有此名；旧玩家种族已废弃。 来源：dat/species/deprecated-centaur.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "komodo dragon",
+          "Translation": "科莫多巨蜥",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "kraken",
+          "Translation": "海妖",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "salamander",
+          "Translation": "沙罗曼蛇",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "slug",
+          "Translation": "鼻涕虫/弹丸",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【语境补充 2026-10-21】生物用鼻涕虫。手铳等射出的金属 slug 用弹丸。"
+        },
+        {
+          "Term": "worm",
+          "Translation": "蠕虫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Oni",
+          "Translation": "鬼人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/oni.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Robin",
+          "Translation": "罗宾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "butterfly",
+          "Translation": "蝴蝶",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "dragon",
+          "Translation": "龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "elephant",
+          "Translation": "大象",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "hippogriff",
+          "Translation": "骏鹰",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "raven",
+          "Translation": "渡鸦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "book_name",
+      "english": "w:9\n@book_noun@ of\n\nw:4\n@_book_noun_on_@ on\n",
+      "hits": [
+        {
+          "Term": "book",
+          "Translation": "魔法书/书/手册",
+          "Part of Speech": "noun",
+          "Variants": "book of",
+          "Note": "【使用约束】book of 是组合前缀，不是完整法术书名；不得把所有 book 都补成魔法书。\n【语境补充 2026-10-21】含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "air",
+      "english": "Aeromancy\n\nAir\n\nAnemomancy\n\nAstrapomancy\n\nAustromancy\n\nBreath\n\nCeraunoscopy\n\nClouds\n\nConduction\n\nElectricity\n\nElectrocution\n\nExhalation\n\nFeathers\n\nFog\n\nFumes\n\nGases\n\nGusts\n\nHaze\n\nInhalation\n\nLightning\n\nNephomancy\n\nOuranomancy\n\nOzone\n\nThunder\n\nTurbulence\n\nWeather\n\nVapour\n\nVoltage\n\nthe Atmosphere\n\nthe Birds\n\nthe Brume\n\nthe Cumulonimbus\n\nthe Lungs\n\nthe Nimbus\n\nthe Sixfirhy\n\nthe Sky\n\nthe Squall\n\nthe Storm\n\nthe Tempest\n\nthe Welkin\n\nthe Wind\n\nthe Zephyr\n",
+      "hits": [
+        {
+          "Term": "thunder",
+          "Translation": "雷霆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_STORM；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        },
+        {
+          "Term": "sixfirhy",
+          "Translation": "六弗利",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "the Storm",
+          "Translation": "风暴",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Air",
+          "Translation": "空气强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "conjuration",
+      "english": "Arcane Combat\n\nArcane Weapons\n\nAssaults\n\nAttacks\n\nBattle Magic\n\nBattling\n\nBlasting\n\nBlasts\n\nBlows\n\nBolts\n\nBombardment\n\nBruises\n\nCombat Magic\n\nCollision\n\nConflict\n\nConfrontation\n\nConjuration\n\nConjuring\n\nConjury\n\nDamage\n\nDestruction\n\nEnergy\n\nForce\n\nForces\n\nFulmination\n\nHurting\n\nImpulse\n\nInjury\n\nKinetic Energy\n\nMomentum\n\nOutbursts\n\nPercussion\n\nPower\n\nStriking\n\nTrauma\n\nw:2\nTraumaturgy\n\nViolence\n\nWounds\n\nthe Barrage\n\nthe Discharge\n\nthe Fifth Circle\n\nthe Impact\n\nthe Missiles\n\nthe Salvo\n\nthe Shot\n\nthe Volley\n",
+      "hits": [
+        {
+          "Term": "conjuration",
+          "Translation": "塑能",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Striking",
+          "Translation": "打击术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Energy",
+          "Translation": "能量",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "missile",
+          "Translation": "投射物/投掷物/弹药",
+          "Part of Speech": "noun",
+          "Variants": "missiles",
+          "Note": "【语境统一】飞行中的物理或魔法攻击载体用投射物；当前物品大类及石块、飞镖、标枪、回旋镖、投网等用投掷物；明确指武器配套消耗物资时用弹药。魔法飞弹等固定专名保留，具体箭矢、弩矢、弹丸按实体命名。"
+        },
+        {
+          "Term": "Missiles",
+          "Translation": "投掷物",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【语境统一/物品分类】当前版本背包、拾取、帮助及巫师物品分类用投掷物；规范 OBJ_MISSILES、数据库键及配置值保留英文。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "earth",
+      "english": "Amathomancy\n\nBedrock\n\nBreccia\n\nClay\n\nCleavage\n\nDetritus\n\nEarth\n\nErosion\n\nExcavation\n\nGeology\n\nGeomancy\n\nGrit\n\nLithomancy\n\nMetal\n\nMinerals\n\nMud\n\nOrogeny\n\nOromancy\n\nQuicksand\n\nScree\n\nSilt\n\nSpelunking\n\nStones\n\nTalus\n\nTephra\n\nTerra Firma\n\nTerrain\n\nTopography\n\nTopomancy\n\nthe Anticline\n\nthe Boulder\n\nthe Caves\n\nthe Crater\n\nthe Cwm\n\nthe Fault\n\nthe Fjord\n\nthe Gargoyle\n\nthe Geologist\n\nthe Ground\n\nthe Lithosphere\n\nthe Mantle\n\nthe Mesa\n\nthe Mountains\n\nthe Plateau\n\nthe Quake\n\nthe Quarry\n\nthe Rocks\n\nthe Syncline\n\nthe Tektite\n\nthe Valley\n\nthe Volcano\n\nthe Xenolith\n",
+      "hits": [
+        {
+          "Term": "gargoyle",
+          "Translation": "石像鬼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/gargoyle.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "volcano",
+          "Translation": "火山",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "boulder",
+          "Translation": "巨石",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Earth",
+          "Translation": "大地强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "fire",
+      "english": "Accelerants\n\nAnthracomancy\n\nArson\n\nAshes\n\nBurning\n\nCalefaction\n\nCausimancy\n\nCinders\n\nCombustion\n\nConflagration\n\nEmbers\n\nFever\n\nFire\n\nFlame\n\nFlames\n\nHeat\n\nHyperthermia\n\nIgnition\n\nImmolation\n\nIncandescence\n\nIncineration\n\nKindling\n\nLava\n\nOxidation\n\nPhlogiston\n\nPyromancy\n\nPyromania\n\nSoot\n\nSparks\n\nw:2\nThermatology\n\nWildfire\n\nthe Arsonist\n\nthe Blaze\n\nthe Bonfire\n\nthe Burn\n\nthe Coals\n\nthe Dragon\n\nthe Inferno\n\nthe Pyre\n\nthe Pyromaniac\n\nthe Salamander\n\nthe Summer\n\nthe Sun\n\nthe Torch\n\nthe Tropics\n\nthe Volcano\n",
+      "hits": [
+        {
+          "Term": "salamander",
+          "Translation": "沙罗曼蛇",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "volcano",
+          "Translation": "火山",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Ignition",
+          "Translation": "引燃术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "flame",
+          "Translation": "火焰",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_FIRE；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        },
+        {
+          "Term": "embers",
+          "Translation": "余烬",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_EMBERS；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        },
+        {
+          "Term": "sparks",
+          "Translation": "电火花",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_ELECTRICITY；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        },
+        {
+          "Term": "dragon",
+          "Translation": "龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Fire",
+          "Translation": "火焰强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "Pyromania",
+          "Translation": "纵火",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "hexes",
+      "english": "Ambsace\n\nAnathema\n\nBad Luck\n\nBeguiling\n\nBewitchment\n\nCharms\n\nCurses\n\nDestiny\n\nDoom\n\nEnchantment\n\nEnsorcelling\n\nExecration\n\nFascination\n\nFate\n\nGlamour\n\nGuile\n\nHexes\n\nHexing\n\nIll Luck\n\nImprecation\n\nInterference\n\nJinxing\n\nMalediction\n\nMaleficia\n\nMalisons\n\nMischance\n\nMisfortune\n\nObstruction\n\nOmens\n\nPortents\n\nSigns\n\nSpellbinding\n\nthe Curse\n\nthe Evil Eye\n\nthe Faeries\n\nthe Fairies\n\nthe Fair Folk\n\nthe Jinx\n\nthe Maleficium\n\nthe Oath\n\nthe Sphinx\n\nw:2\nthe Whammy\n\nthe Wyrd\n",
+      "hits": [
+        {
+          "Term": "Charms",
+          "Translation": "增益系魔法",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】旧学派，侧重增益，不与 Hexes 混用；现行技能表仅保留兼容槽位。 来源：skills.cc; docs/changelog.txt。"
+        },
+        {
+          "Term": "Hexes",
+          "Translation": "妖术系魔法/妖术强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】区分敌对魔法学派与物品诅咒，也与 hexer（妖术师）统一。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。\n【装备语境】学派名称用妖术系魔法；装备的 Hexes 标签表示该学派法术强度增强，用妖术强化。"
+        },
+        {
+          "Term": "sphinx",
+          "Translation": "斯芬克斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Charm",
+          "Translation": "魅惑术/护符/符印",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术用魅惑术。普通实体 charm 按作用用护符或符印，不与变形护符种类混同。"
+        },
+        {
+          "Term": "Guile",
+          "Translation": "狡诈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "ice",
+      "english": "Algor\n\nChilblains\n\nCold\n\nCongelation\n\nCryomancy\n\nFirn\n\nFreezing\n\nFrost\n\nFrostbite\n\nGlaciation\n\nGraupel\n\nHail\n\nHoarfrost\n\nHypothermia\n\nIce\n\nRefrigeration\n\nRime\n\nSnow\n\nthe Blizzard\n\nthe Chill\n\nthe Crevasse\n\nthe Deep Freeze\n\nthe Glacier\n\nthe Iceberg\n\nthe Icicle\n\nthe Serac\n\nthe Snowflakes\n\nthe Tundra\n\nthe Wendigo\n\nthe Winter\n",
+      "hits": [
+        {
+          "Term": "Freeze",
+          "Translation": "冰冻术/冰冻/冻结/冻伤",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】能力或法术名保留冰冻。结成冰用冻结。攻击动词造成寒冷伤害可用冻伤。\n【名称统一】法术名称采用“冰冻术”；实体、伤害、状态或普通动词按语境使用原有译法，不给一般效果描述机械加“术”。"
+        },
+        {
+          "Term": "wendigo",
+          "Translation": "温迪戈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Ice",
+          "Translation": "寒冰强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "necromancy",
+      "english": "Bodies\n\nBones\n\nCadavers\n\nCarcasses\n\nCarrion\n\nCaskets\n\nCoffins\n\nCorpses\n\nDarkness\n\nDeath\n\nDesecration\n\nDespair\n\nDiablerie\n\nEctoplasm\n\nEvil\n\nExhumation\n\nFinality\n\nGloom\n\nLamentation\n\nLast Rites\n\nMisery\n\nMortality\n\nMortification\n\nNecromancy\n\nNightshade\n\nOpen Graves\n\nRemains\n\nRot\n\nResurrection\n\nSciomancy\n\nShades\n\nShadows\n\nSkeletons\n\nSpectres\n\nStolen Souls\n\nZombies\n\nthe Autopsy\n\nthe Catacomb\n\nthe Cemetery\n\nthe Charnel House\n\nthe Crypt\n\nthe Damned\n\nthe Dead\n\nthe Departed\n\nthe End\n\nthe Grave\n\nthe Graveyard\n\nthe Mausoleum\n\nthe Morgue\n\nthe Mortuary\n\nthe Necropsy\n\nthe Ossuary\n\nthe Sarcophagus\n\nthe Tomb\n\nthe Undead\n\nw:200\n@_Evil_adjective_@ @_Evil_noun_@\n",
+      "hits": [
+        {
+          "Term": "carrion",
+          "Translation": "腐肉",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【历史系统】不作为现行玩家饥饿/进食系统术语；可能仍见于历史文本、怪物和存档兼容数据。来源：docs/changelog.txt。"
+        },
+        {
+          "Term": "corpse",
+          "Translation": "尸体",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Crypt",
+          "Translation": "墓室",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Necromancy",
+          "Translation": "死灵系魔法",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "Ossuary",
+          "Translation": "埋骨地",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "rot",
+          "Translation": "腐烂",
+          "Part of Speech": "noun",
+          "Variants": "rotting",
+          "Note": ""
+        },
+        {
+          "Term": "shadow",
+          "Translation": "影",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Tomb",
+          "Translation": "灵庙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "undead",
+          "Translation": "亡灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】指不死生物类别，并不表示无法被杀死。 来源：mon-util.cc。"
+        },
+        {
+          "Term": "zombie",
+          "Translation": "丧尸",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Gloom",
+          "Translation": "幽暗/愁苦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】暗处或对应魔法用幽暗。花朵枯死等情绪修辞可用愁苦。\n【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_GLOOM；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        },
+        {
+          "Term": "Darkness",
+          "Translation": "黑暗术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "the Crypt",
+          "Translation": "墓室",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Crypt（规范缩写 Crypt）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "spectre",
+          "Translation": "幽灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "the Tomb",
+          "Translation": "陵墓",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "mortality",
+          "Translation": "必死",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：必死。"
+        },
+        {
+          "Term": "Shadows",
+          "Translation": "阴影",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "_evil_adjective_",
+      "english": "Abhorrent\n\nAbominable\n\nBlack\n\nBlasphemous\n\nDark\n\nDebased\n\nDefiled\n\nDespicable\n\nEvil\n\nIniquitous\n\nLeft-handed\n\nMaleficent\n\nMalevolent\n\nMalignant\n\nNecromantic\n\nProfane\n\nSinister\n\nw:2\nSpooky\n\nUnhallowed\n\nUnholy\n\nUnspeakable\n\nVitiated\n\nWicked\n",
+      "hits": [
+        {
+          "Term": "necromantic",
+          "Translation": "死灵的",
+          "Part of Speech": "adj",
+          "Variants": "",
+          "Note": "【0.34.1 修订】形容词指向 Necromancy（死灵系魔法），不泛译巫术。 来源：dat/descript/spells.txt。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "_evil_noun_",
+      "english": "Acts\n\nArts\n\nCeremonies\n\nDeeds\n\nLiturgies\n\nMagic\n\nMagicks\n\nMysteries\n\nRites\n\nRituals\n\nSecrets\n\nSpells\n\nWords\n",
+      "hits": [
+        {
+          "Term": "spell",
+          "Translation": "法术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "alchemy",
+      "english": "Albedo\n\nAlchemy\n\nAlteration\n\nArgyropoeia\n\nAzoth\n\nCalcination\n\nCeration\n\nChemistry\n\nChrysopoeia\n\nCitrinitas\n\nCohobation\n\nComposition\n\nCompounds\n\nConcoctions\n\nCongelation\n\nContamination\n\nCrysopoeia\n\nDecantation\n\nDecomposition\n\nDegeneration\n\nDistillation\n\nEffluvium\n\nEsoterica\n\nEssence\n\nFermentation\n\nFlux\n\nFormulae\n\nHermetica\n\nImpurities\n\nIntoxication\n\nIosis\n\nLeucosis\n\nLitharge\n\nMelanosis\n\nNigredo\n\nPollution\n\nPrima Materia\n\nProjection\n\nQuintessence\n\nReagents\n\nReconfiguration\n\nReformation\n\nRubedo\n\nSolvents\n\nSpagyria\n\nSublimation\n\nSubstances\n\nSynthesis\n\nTakwin\n\nTinctures\n\nToxicants\n\nToxicity\n\nToxicology\n\nToxins\n\nTransfiguration\n\nTransformation\n\nTransmogrification\n\nTransmutation\n\nVenin\n\nVenom\n\nVirulence\n\nVitriol\n\nXanthosis\n\nthe Adder\n\nthe Alembic\n\nthe Alkahest\n\nthe Athanor\n\nthe Beaker\n\nthe Catalyst\n\nthe Crucible\n\nthe Cucurbite\n\nthe Decanter\n\nthe Elixir\n\nthe Gift\n\nthe Great Work\n\nthe Hornet\n\nthe Iliaster\n\nthe Magnum Opus\n\nthe Mortar\n\nthe Ouroboros\n\nthe Panacea\n\nthe Pestle\n\nthe Prime Material\n\nthe Queen Bee\n\nthe Rebis\n\nthe Scorpion\n\nthe Snake\n\nthe Solution\n\nthe Tincture\n\nthe Yliaster\n\n",
+      "hits": [
+        {
+          "Term": "Alchemy",
+          "Translation": "炼金术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "contamination",
+          "Translation": "魔法污染",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/状态】魔法语境，与原 magic contamination 统一。 来源：duration-data.h。"
+        },
+        {
+          "Term": "Virulence",
+          "Translation": "毒性激增",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Crucible",
+          "Translation": "血肉熔炉",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Crucible（规范缩写 Crucible）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "adder",
+          "Translation": "蝰蛇",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "hornet",
+          "Translation": "大黄蜂",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "queen bee",
+          "Translation": "蜂后",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "scorpion",
+          "Translation": "蝎子",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "snake",
+          "Translation": "蛇",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "the Elixir",
+          "Translation": "灵药",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Vitriol",
+          "Translation": "强酸",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Degeneration",
+          "Translation": "退化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Chemistry",
+          "Translation": "化学",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "venom",
+          "Translation": "淬毒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "summoning",
+      "english": "Accompaniment\n\nAccomplices\n\nAdjuration\n\nAllies\n\nApparitions\n\nArrival\n\nAssembling\n\nAttendants\n\nBeckoning\n\nBringing Forth\n\nCalling\n\nCommand\n\nCompanions\n\nCompany\n\nConvocation\n\nCreation\n\nFormation\n\nGeneration\n\nIllusion\n\nInvitation\n\nLeadership\n\nMustering\n\nPhantasms\n\nProduction\n\nRallying\n\nSidekicks\n\nSummoning\n\nSupport\n\nthe Band\n\nthe Boggart\n\nthe Comitatus\n\nthe Commander\n\nthe Congregation\n\nthe Entourage\n\nthe Escort\n\nthe Familiar\n\nthe Flock\n\nthe Gang\n\nthe Gathering\n\nthe Legion\n\nthe Mirage\n\nthe Mob\n\nthe Retinue\n\nthe Swarm\n\nthe Throng\n\nthe Union\n",
+      "hits": [
+        {
+          "Term": "boggart",
+          "Translation": "博格特",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "the Swarm",
+          "Translation": "虫群",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Command",
+          "Translation": "统御",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "translocation",
+      "english": "Angles\n\nCoordinates\n\nCorrespondence\n\nDirection\n\nDislocation\n\nDisplacement\n\nDistance\n\nElsewhere\n\nGeometries\n\nGeometry\n\nLocality\n\nLocation\n\nMovement\n\nNonlocality\n\nOrientation\n\nPeregrination\n\nPlaces\n\nPoints\n\nPortals\n\nPosition\n\nRelocation\n\nShifting\n\nSpace\n\nw:2\nSpooky Action\n\nSubspace\n\nSuperposition\n\nTopology\n\nTranslocation\n\nTransportation\n\nTransposition\n\nWanderlust\n\nthe Blink Frog\n\nthe Compass\n\nthe Door\n\nthe Excursion\n\nthe Geodesic\n\nthe Jaunt\n\nthe Manifold\n\nthe Map\n\nthe Singularity\n\nthe Tesseract\n\nthe Traveller\n\nthe Vector\n\nthe Vertex\n\nthe Voyage\n\nthe Wayfarer\n",
+      "hits": [
+        {
+          "Term": "blink",
+          "Translation": "闪烁/闪现/眨眼",
+          "Part of Speech": "verb",
+          "Variants": "",
+          "Note": "\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】位移效果优先用闪烁。普通快速显现可用闪现，眨眼为生理动作。完整法术名优先，不改动英文控制字。"
+        },
+        {
+          "Term": "portal",
+          "Translation": "传送门",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Singularity",
+          "Translation": "奇点术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "blink frog",
+          "Translation": "闪烁蛙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "forgecraft",
+      "english": "Artifice\n\nAssemblage\n\nAssembly\n\nAutomation\n\nBlueprints\n\nClockwork\n\nCogs\n\nComposition\n\nConstruction\n\nCrafting\n\nDesign\n\nDiagrams\n\nDrafting\n\nFabrication\n\nForgecraft\n\nFrameworks\n\nGears\n\nIndustry\n\nInfrastructure\n\nInstantiation\n\nInvention\n\nLevers\n\nLinkages\n\nMachinery\n\nMachining\n\nMechanics\n\nMechanisms\n\nMechanomancy\n\nMetallurgy\n\nMetalwork\n\nMetalworking\n\nOverdrive\n\nRealisation\n\nReification\n\nSchematics\n\nSpellforging\n\nSpellsmithing\n\nSprings\n\nSprockets\n\nSteel\n\nStructure\n\nTechnology\n\nTechnomancy\n\nTools\n\nTorque\n\nthe Anvil\n\nthe Architect\n\nthe Artificer\n\nthe Automaton\n\nthe Blacksmith\n\nthe Configuration\n\nthe Construct\n\nthe Contraption\n\nthe Edifice\n\nthe Engine\n\nthe Engineer\n\nthe Escapement\n\nthe Factory\n\nthe Flywheel\n\nthe Forge\n\nthe Forgewright\n\nthe Foundry\n\nthe Hammer\n\nthe Inventor\n\nthe Ironworks\n\nthe Linchpin\n\nthe Machine\n\nthe Machinist\n\nthe Mainspring\n\nthe Maker\n\nthe Mallet\n\nthe Masterpiece\n\nthe Masterwork\n\nthe Mechanist\n\nthe Pendulum\n\nthe Pinion\n\nthe Ratchet\n\nthe Rivet\n\nthe Servo\n\nthe Sledgehammer\n\nthe Smith\n\nthe Smithy\n\nthe Spellforge\n\nthe Spellsmith\n\nthe Tinker\n\nthe Tinkerer\n\nthe Watchmaker\n\nthe Workbench\n",
+      "hits": [
+        {
+          "Term": "Artificer",
+          "Translation": "修补匠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的背景名称清单对应。来源：dat/jobs/artificer.yaml。"
+        },
+        {
+          "Term": "Forgewright",
+          "Translation": "锻造师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/forgewright.yaml。"
+        },
+        {
+          "Term": "Forgecraft",
+          "Translation": "锻造术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "Forge",
+          "Translation": "锻造强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    }
+  ],
+  "supplementary_skill_lookup": [
+    {
+      "Term": "Conjurations",
+      "Translation": "塑能系魔法/魔法",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。\n【语境补充 2026-10-21】学派或技能用塑能系魔法。泛指施展的魔法时可用魔法，不把普通复数名词强制改成技能标签。"
+    },
+    {
+      "Term": "Summonings",
+      "Translation": "召唤系魔法",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+    },
+    {
+      "Term": "Translocations",
+      "Translation": "位移系魔法",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+    }
+  ],
+  "supplementary_skill_lookup_note": "Singular/plural school names additionally checked with rg before writing translations."
+}

@@ -81,18 +81,18 @@ function TimedMarker:timeout(marker, verbose)
 
   if x == yx and y == yy and you.taking_stairs() then
     if verbose then
-      crawl.mpr( dgn.feature_desc_at(x, y, "The") .. " vanishes " ..
-                "just as you enter it!")
+      crawl.mpr( crawl.ui_format("lua.ui", "%s vanishes just as you enter it!", dgn.feature_desc_at(x, y, "The") .. " vanishes " ..
+                "just as you enter it!", crawl.ui_feature_at(x, y)))
       return
     end
   end
 
   if verbose then
     if you.see_cell(marker:pos()) then
-      crawl.mpr( util.expand_entity(self.props.entity, self.props.disappear) or
-                 dgn.feature_desc_at(x, y, "The") .. " disappears!")
+      crawl.mpr( util.display_message(self.props.entity, self.props.disappear) or
+                 crawl.ui_format("lua.ui", "%s disappears!", dgn.feature_desc_at(x, y, "The") .. " disappears!", crawl.ui_feature_at(x, y)))
     else
-      crawl.mpr("The walls and floor vibrate strangely for a moment.")
+      crawl.mpr(crawl.ui_translate("lua.ui", "The walls and floor vibrate strangely for a moment."))
     end
   end
 

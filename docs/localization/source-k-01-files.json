@@ -1,0 +1,56 @@
+[
+  {
+    "file": "crawl-ref/source/KeymapContext.h",
+    "scope": "keymap context enums; identifiers preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/kill-category.h",
+    "scope": "kill category IDs and order preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/kill-dump-options-type.h",
+    "scope": "dump option enums preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/kill-method-type.h",
+    "scope": "death method IDs and compatibility preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/killer-type.h",
+    "scope": "killer IDs and compatibility preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/kills.cc",
+    "scope": "opt-in native kill display; typed counts/modifiers/places; shipped Lua display helpers; original Lua accessors, callbacks and English builders preserved",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/kills.h",
+    "scope": "explicit optional display parameter and display method; persisted fields unchanged",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/known-items.cc",
+    "scope": "recognition titles, reset prompt, other-items heading and bound-key footer; original name/category lookup and sorting preserved",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/known-items.h",
+    "scope": "existing menu entry point; no additional prose",
+    "new": false,
+    "changed": false
+  }
+]

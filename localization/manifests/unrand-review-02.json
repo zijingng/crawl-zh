@@ -1,0 +1,1946 @@
+{
+  "batch": "unrand-review-02",
+  "baseline": "0.34.1",
+  "glossary_terms": 1665,
+  "glossary_sha256": "7643f2c67d8cd26a12bcc304dc02c72c15ab7a1f331c52f2aa3bf28a76e4cd9d",
+  "names": [
+    {
+      "english": "Singing Sword",
+      "translation": "歌唱之剑",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "Wrath of Trog",
+      "translation": "特洛戈之怒",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "mace of Variability",
+      "translation": "万变钉头锤",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "glaive of Prune",
+      "translation": "普鲁恩偃月刀",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "sword of Power",
+      "translation": "力量之剑",
+      "canonical": true,
+      "textdb": false
+    },
+    {
+      "english": "staff of Olgreb",
+      "translation": "奥格雷布之杖",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "crystal ball of Wucad Mu",
+      "translation": "乌卡德穆水晶球",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "Vampire's Tooth",
+      "translation": "吸血鬼之牙",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "scythe of Curses",
+      "translation": "诅咒镰刀",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "sceptre of Torment",
+      "translation": "折磨权杖",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "sword of Zonguldrok",
+      "translation": "宗古多克之剑",
+      "canonical": true,
+      "textdb": false
+    },
+    {
+      "english": "sword of Cerebov",
+      "translation": "瑟雷波夫之剑",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "orb of Dispater",
+      "translation": "狄斯帕特宝球",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "sceptre of Asmodeus",
+      "translation": "阿斯蒙蒂斯的权杖",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "faerie dragon scales",
+      "translation": "仙灵龙鳞",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "demon blade \"Bloodbane\"",
+      "translation": "恶魔之刃「血祸」",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "scimitar of Flaming Death",
+      "translation": "烈焰死亡弯刀",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "eveningstar \"Brilliance\"",
+      "translation": "昏星锤「辉煌」",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "demon blade \"Leech\"",
+      "translation": "恶魔之刃「水蛭」",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "dagger of Chilly Death",
+      "translation": "寒冷死亡匕首",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "dagger \"Morg\"",
+      "translation": "匕首「莫格」",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "scythe \"Finisher\"",
+      "translation": "镰刀「终结者」",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "greatsling \"Punk\"",
+      "translation": "巨型投石索「庞克」",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "longbow \"Zephyr\"",
+      "translation": "长弓「西风」",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "giant club \"Skullcrusher\"",
+      "translation": "巨型木棒「碎颅者」",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "glaive of the Guard",
+      "translation": "守卫偃月刀",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "zealot's sword",
+      "translation": "狂信者之剑",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "arbalest \"Damnation\"",
+      "translation": "劲弩「天谴」",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "sword of the Dread Knight",
+      "translation": "恐怖骑士之剑",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "morningstar \"Eos\"",
+      "translation": "晨星锤「厄俄斯」",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "spear of the Botono",
+      "translation": "博托诺之矛",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "trident of the Octopus King",
+      "translation": "章鱼王的三叉戟",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "mithril axe \"Arga\"",
+      "translation": "秘银斧「阿尔加」",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "Elemental Staff",
+      "translation": "元素法杖",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "heavy crossbow \"Sniper\"",
+      "translation": "「狙击者」重弩",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "longbow \"Piercer\"",
+      "translation": "长弓「穿透者」",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "blowgun of the Assassin",
+      "translation": "刺客吹箭筒",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "lance \"Wyrmbane\"",
+      "translation": "骑枪「龙祸」",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "Spriggan's Knife",
+      "translation": "斯普利根之刃",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "plutonium sword",
+      "translation": "钚剑",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "great mace \"Undeadhunter\"",
+      "translation": "「亡灵猎手」巨型钉头锤",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "whip \"Snakebite\"",
+      "translation": "「蛇咬」鞭",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "knife of Accuracy",
+      "translation": "精准之刃",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "Lehudib's crystal spear",
+      "translation": "雷胡迪布的水晶矛",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "captain's cutlass",
+      "translation": "船长弯刀",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "storm bow",
+      "translation": "风暴之弓",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "tower shield of Ignorance",
+      "translation": "无知塔盾",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "robe of Augmentation",
+      "translation": "强化长袍",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "cloak of the Thief",
+      "translation": "盗贼斗篷",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "tower shield \"Bullseye\"",
+      "translation": "塔盾「靶心」",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "crown of Dyrovepreva",
+      "translation": "迪罗维普雷瓦之冠",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "hat of the Bear Spirit",
+      "translation": "熊灵帽",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "robe of Misfortune",
+      "translation": "不幸长袍",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "cloak of Flash",
+      "translation": "闪光斗篷",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "hood of the Assassin",
+      "translation": "刺客兜帽",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "Lear's hauberk",
+      "translation": "李尔锁子甲",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "skin of Zhor",
+      "translation": "佐尔之皮",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "salamander hide armour",
+      "translation": "蝾螈皮甲",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "gauntlets of War",
+      "translation": "战争护手",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "shield of Resistance",
+      "translation": "抗性盾",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "robe of Folly",
+      "translation": "愚行长袍",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "Maxwell's patent armour",
+      "translation": "麦克斯韦专利铠甲",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "mask of the Dragon",
+      "translation": "巨龙面具",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "robe of Night",
+      "translation": "夜之长袍",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "scales of the Dragon King",
+      "translation": "龙王鳞甲",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "hat of the Alchemist",
+      "translation": "炼金术士帽",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "fencer's gloves",
+      "translation": "剑客手套",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "cloak of Starlight",
+      "translation": "星光斗篷",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "ratskin cloak",
+      "translation": "鼠皮斗篷",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "shield of the Gong",
+      "translation": "铜锣盾",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "amulet of the Air",
+      "translation": "气之护身符",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "ring of Shadows",
+      "translation": "影之戒",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "amulet of Cekugob",
+      "translation": "塞库戈布护身符",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "amulet of the Four Winds",
+      "translation": "四风护身符",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "necklace of Bloodlust",
+      "translation": "嗜血项链",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "ring of the Hare",
+      "translation": "野兔之戒",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "ring of the Tortoise",
+      "translation": "陆龟之戒",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "ring of the Mage",
+      "translation": "法师之戒",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "brooch of Shielding",
+      "translation": "护盾胸针",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "robe of Clouds",
+      "translation": "云雾长袍",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "hat of Pondering",
+      "translation": "思想帽",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "obsidian axe",
+      "translation": "黑曜石斧",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "lightning scales",
+      "translation": "闪电鳞甲",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "Black Knight's barding",
+      "translation": "黑骑士护身甲",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "amulet of Vitality",
+      "translation": "活力护身符",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "autumn katana",
+      "translation": "秋之武士刀",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "shillelagh \"Devastator\"",
+      "translation": "橡木棍「毁灭者」",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "dragonskin cloak",
+      "translation": "龙皮斗篷",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "ring of the Octopus King",
+      "translation": "章鱼王之戒",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "Axe of Woe",
+      "translation": "悲哀之斧",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "moon troll leather armour",
+      "translation": "月亮巨魔皮甲",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "macabre finger necklace",
+      "translation": "阴森手指项链",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "boots of the spider",
+      "translation": "蜘蛛靴",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "dark maul",
+      "translation": "暗黑重锤",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "hat of the High Council",
+      "translation": "高级议会帽",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "arc blade",
+      "translation": "弧刃",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "demon whip \"Spellbinder\"",
+      "translation": "恶魔长鞭「缚法者」",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "lajatang of Order",
+      "translation": "「守序」月牙铲",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "great mace \"Firestarter\"",
+      "translation": "「烈焰」巨型钉头锤",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "orange crystal plate armour",
+      "translation": "橙色水晶板甲",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "Majin-Bo",
+      "translation": "魔神棒",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "pair of quick blades \"Gyre\" and \"Gimble\"",
+      "translation": "快刃「翻转」和「平衡」",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "Maxwell's etheric cage",
+      "translation": "麦克斯韦的以太笼",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "crown of Eternal Torment",
+      "translation": "永恒折磨之冠",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "robe of Vines",
+      "translation": "藤蔓长袍",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "Kryia's mail coat",
+      "translation": "克里亚链甲",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "frozen axe \"Frostbite\"",
+      "translation": "「寒噬」冰斧",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "armour of Talos",
+      "translation": "塔洛斯铠甲",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "warlock's mirror",
+      "translation": "术士的镜子",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "amulet of invisibility",
+      "translation": "隐形护身符",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "Maxwell's thermic engine",
+      "translation": "麦克斯韦热能引擎",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "demon trident \"Rift\"",
+      "translation": "「裂痕」恶魔三叉戟",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "sphere of Battle",
+      "translation": "战斗宝球",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "Cigotuvi's embrace",
+      "translation": "西戈图维的拥抱",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "seven-league boots",
+      "translation": "七里靴",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "Mad Mage's Maulers",
+      "translation": "疯法师重击手套",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "dreamshard necklace",
+      "translation": "梦晶项链",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "Delatra's gloves",
+      "translation": "德拉特拉手套",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "woodcutter's axe",
+      "translation": "樵夫之斧",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "Throatcutter",
+      "translation": "割喉者",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "staff of the Meek",
+      "translation": "谦卑者之杖",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "trishula \"Condemnation\"",
+      "translation": "三叉圣戟「定罪」",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "amulet of Elemental Vulnerability",
+      "translation": "元素脆弱护身符",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "mountain boots",
+      "translation": "山岳之靴",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "Lochaber axe",
+      "translation": "洛哈伯斧",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "Hermit's Pendant",
+      "translation": "隐士吊坠",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "slick slippers",
+      "translation": "光滑便鞋",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "Force Lance",
+      "translation": "力场长枪",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "consecrated labrys",
+      "translation": "祝圣双刃斧",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "toga \"Victory\"",
+      "translation": "托加袍「胜利」",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "Storm Queen's Shield",
+      "translation": "风暴女王之盾",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "dreamdust necklace",
+      "translation": "梦尘项链",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "hand cannon \"Mule\"",
+      "translation": "手炮「骡子」",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "gloves of the gadgeteer",
+      "translation": "巧匠手套",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "Charlatan's Orb",
+      "translation": "骗子宝球",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "justicar's regalia",
+      "translation": "审判官礼服",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "skull of Zonguldrok",
+      "translation": "宗古多克之颅",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "fungal fisticloak",
+      "translation": "真菌拳击斗篷",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "crown of vainglory",
+      "translation": "虚荣之冠",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "scarf of invisibility",
+      "translation": "隐形围巾",
+      "canonical": true,
+      "textdb": true
+    },
+    {
+      "english": "Sulking Sword",
+      "translation": "怏怏之剑",
+      "canonical": false,
+      "textdb": true
+    },
+    {
+      "english": "Screaming Sword",
+      "translation": "尖啸之剑",
+      "canonical": false,
+      "textdb": true
+    }
+  ],
+  "added_terms": 113,
+  "reviewed": 140,
+  "corrected": 41,
+  "retained": 99,
+  "entries": [
+    {
+      "key": "singing sword",
+      "source_sha256": "5be7d91b2069f788483ac6408701c0ab282c3f2aea403d61c8ccd9258d528902",
+      "translation_sha256": "3fe8a548d9167a53e14fe538f3f0f93b461b2f1822be658d0ca0880fd79f7d2a",
+      "action": "corrected"
+    },
+    {
+      "key": "sulking sword",
+      "source_sha256": "b30f6da341320339d050d6c57754ffff2202c68fc2f2d7b34201d806f7f812aa",
+      "translation_sha256": "b30f6da341320339d050d6c57754ffff2202c68fc2f2d7b34201d806f7f812aa",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "screaming sword",
+      "source_sha256": "b30f6da341320339d050d6c57754ffff2202c68fc2f2d7b34201d806f7f812aa",
+      "translation_sha256": "b30f6da341320339d050d6c57754ffff2202c68fc2f2d7b34201d806f7f812aa",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "wrath of trog",
+      "source_sha256": "5807e21cd96d3a5a7bb4f6d96d9fb393cf5ea7a102c299101705d86ccb626fa9",
+      "translation_sha256": "a933003eb6b78cd7f6db4ec4b11ab75dfd427a009dfb7cf5dd238cece4c1164b",
+      "action": "corrected"
+    },
+    {
+      "key": "mace of variability",
+      "source_sha256": "76930998f6ed4e1a037a7dd5afa7010771a38d81bc903919915b1c480f0f38a8",
+      "translation_sha256": "c06958a4cc5fabf8637cdbfe30a95b00fd3e6c2d509a48efc9c8a63fc32f392e",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "glaive of prune",
+      "source_sha256": "25e4c28101f0294813ab3b41cb46bcf345d41712b3a2580fda6fa9ee5d0e24f4",
+      "translation_sha256": "f4603f9f5c0b7f36d47b8936abfbd9d188090c92f6842fb35290d80888180aab",
+      "action": "corrected"
+    },
+    {
+      "key": "staff of olgreb",
+      "source_sha256": "2fd4d9fa512ae4f16cb2f47c9081eaaea5f3898ec152d5cd11fb385aab7b2462",
+      "translation_sha256": "bb551aedc8755491baf7727189ae734fbdee50af265a8dd54cadebf77751ccde",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "crystal ball of wucad mu",
+      "source_sha256": "661ded6f81c99cc3f766eb15851e36551ae73987bdfc9c85163bc60928341fb1",
+      "translation_sha256": "cc20390a74b49425dd9b093c291d61fdd105592f6f997cbd9fcfea5ed693ecd8",
+      "action": "corrected"
+    },
+    {
+      "key": "vampire's tooth",
+      "source_sha256": "34a800f75f9b3168ba7ea24e4da75033fbb777329ff7660390d345d3d096efa5",
+      "translation_sha256": "9d0cc3e543903f4d3d767348b8f05f7314985365a284410ba81ab0073785093d",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "scythe of curses",
+      "source_sha256": "aa1597813e61ea8d8ce19f519acb93a2eae235b38046c741b46c1bfa9ae76da8",
+      "translation_sha256": "ee50d0de45ba879d132d84137385b66a513ba5babceba390e781ebd200b7bdf3",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "sceptre of torment",
+      "source_sha256": "4a2c7dcadc056da7b06a437eaf9b97c4a6a83cf831bb009ddacd5885faf080c6",
+      "translation_sha256": "93882c3b2bc8edefc79b7c9f0a480f0a390552ee36a622353eee4e7cb01bb6f4",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "sword of cerebov",
+      "source_sha256": "a2d2938e5e0b6bc714b18a5c1e2894c9ae852ed4dcdcd58d54523a647c3fdf2a",
+      "translation_sha256": "61df44594ed0d40af3f4911a9bbd331e931d23c1702006e69821cbb31c90850c",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "orb of dispater",
+      "source_sha256": "686b2e8b84519df1248cc5ed69494a430ec7a38d0260fac10c049259731ae576",
+      "translation_sha256": "0f4cec16aa3f022182b9106c1cd7a5a9928299f4e3116161ea804a77dff406ce",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "sceptre of asmodeus",
+      "source_sha256": "e41b00b72bf3747a2fb1904132165ddf0e5c6ebb6d8105bc5f855b8d2080f917",
+      "translation_sha256": "6e39251c5c42852b04d08f1a7d31479c40b1e1bf145c625937fbcd1796c56efa",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "faerie dragon scales",
+      "source_sha256": "2c435a3a09ee8d08b4b2f53a2d2214201e32f931b108a6b81470fdbbd6154110",
+      "translation_sha256": "8d5f1b513819f4d0a1dcfc8e110fbef677faa0c689783681561c44c72a7108d4",
+      "action": "corrected"
+    },
+    {
+      "key": "demon blade \"bloodbane\"",
+      "source_sha256": "3da055b396e518ed63ea6545d77dd28fb9d66bb5e122d35c1badf07fd7ae2bb5",
+      "translation_sha256": "dcf0e9e9ad28b177c05555357a0f96747c6612f0d714d6cc6c6f7f16d170e5f3",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "scimitar of flaming death",
+      "source_sha256": "960ceb94a8a03f03d4be263b8234f0e95d70e69275af6c472d23a7daa1ca0513",
+      "translation_sha256": "e2455575210c7f2d6d99ae7879ef1fc59b6d0c79894ec745009e0dda0acae33c",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "eveningstar \"brilliance\"",
+      "source_sha256": "9ee667d9f1b87f157c157e798410b8230b8305ee53c26fcc40c0cd6ad5a5a91b",
+      "translation_sha256": "79d66c0e03617454b02d4f10734b9d8d46d798067f0bb697d64ab6fa700eb9fa",
+      "action": "corrected"
+    },
+    {
+      "key": "demon blade \"leech\"",
+      "source_sha256": "c90d399a82009ee0418900b9a0dd142251cdf4bd1cb11c95a373808e30bd7661",
+      "translation_sha256": "881e1139295a3e2d5ca133464b845228b283696e5113453aa37f2ecc062f09b3",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "dagger of chilly death",
+      "source_sha256": "d5e0612b7727ba499f3f483624d0594daf3e0a9d58f56af7e7de820455298f06",
+      "translation_sha256": "fe9c65308bbdb9bc140030d40e73071df1c18bc96accf381ea3f044c7bb7b529",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "dagger \"morg\"",
+      "source_sha256": "d5c3e242d32f6e8417ecce870e29a3ae224c15fd0d12084492c41d6bf5c1cd4f",
+      "translation_sha256": "228b0328c220b7f5a20f806bb67943f92b28bed8f2385863de3c1499ed9fecca",
+      "action": "corrected"
+    },
+    {
+      "key": "scythe \"finisher\"",
+      "source_sha256": "57964378514b3f6aef7f5aeee4c8e237d5fcc8a151c7b1a2ed3e9f0afee60eae",
+      "translation_sha256": "ba356d22002b2f65a8da93894a789d64e72cb65d5909223f56226bf2f74525fd",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "greatsling \"punk\"",
+      "source_sha256": "41755909b8a185f453798b43caad8f4c423c212d41c22f9e1197cbeb4807c30e",
+      "translation_sha256": "da55c12ff7cf45b81ceb142d736aefeb76b0bdc9b932c6f5b63842c3bbc949c0",
+      "action": "corrected"
+    },
+    {
+      "key": "longbow \"zephyr\"",
+      "source_sha256": "7fe09fb3866ec8030105d3faa7042ea03aa36035c182ab1275c8828cbd474478",
+      "translation_sha256": "58496aba9e3ec5813b7d5c62d8b5d19087db20e416d798aa977bef8440763c14",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "giant club \"skullcrusher\"",
+      "source_sha256": "80cda615173d91860d001c8093fa4de2b69dc7d9b8852157454d3875bd358e02",
+      "translation_sha256": "4ac2a995c463851ab8d3210955bdd8d7b1e75981f1c93129dba14cc38696f06f",
+      "action": "corrected"
+    },
+    {
+      "key": "glaive of the guard",
+      "source_sha256": "59f266d880fb3526d2a80c817b19963b6d8f1aa3b9a0447f6563f3554ecd9e7f",
+      "translation_sha256": "abddd24ca038215bf55e0b88017764df828ab9a61036a042642437abefb8990a",
+      "action": "corrected"
+    },
+    {
+      "key": "zealot's sword",
+      "source_sha256": "095dfe100fe6152bcc17271ec20591f56bafa47d141bb1d4bf52b3dfce605e79",
+      "translation_sha256": "93428084bab60e5c6d618d96da90e39d7b9f277fd838148acd465e3d4c158ee1",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "arbalest \"damnation\"",
+      "source_sha256": "2e6c721b12176d6c3de21ed32d48a42103c1141aaa57bebed8ac01323e8ddc67",
+      "translation_sha256": "f645417a2d59eb7f8c55c536c0b6b68e770ca6335962b6b437905dfef51cc2f0",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "sword of the dread knight",
+      "source_sha256": "0e633c6d2a3af48486f42f87514dfd2d1b21e8da1c2bd92c36b57b7c58e89a2d",
+      "translation_sha256": "dca60dbc32b506594630b46e9fb677c6ee9a43de3898d54c503bee0aa0e931b2",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "morningstar \"eos\"",
+      "source_sha256": "c430a2037d84db97a802aab7467f794ec6779726236330f16bd951fe9929e26a",
+      "translation_sha256": "01361a984c7e3d70a52f55dd7394addcc324b01f144d8528b567b48b02ff4a33",
+      "action": "corrected"
+    },
+    {
+      "key": "spear of the botono",
+      "source_sha256": "0b5d39f4b55daefcbe6c6f981a3158c2d04e88463e7b87887ae260ea10aa987a",
+      "translation_sha256": "c80651d5493d514a135057315e7910ef052c019ed9a242b6c783b4cb8d856dc5",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "trident of the octopus king",
+      "source_sha256": "3c54fe839cdd19391a605f35cd689fc5ab101ca998ac7d962cf532326163dd27",
+      "translation_sha256": "f17a1c0bf33b79f8967f64520d0731fc524b639098a5e553983d834abb151728",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "mithril axe \"arga\"",
+      "source_sha256": "3b1299bb5cd91536b9b89feb89bd8b92863c26eba4c61b27d5444c9675c12301",
+      "translation_sha256": "a95953e00c8c9cc23311c3233a03673236e4b4c97ea4322b86ba7421168129a1",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "elemental staff",
+      "source_sha256": "10d6016c645919842789b260a664129fe30b306cecbb600c52f8c51de098d7b4",
+      "translation_sha256": "edc176fc78928fd660aac7fe70ad72643af7c03174113337f52b5056b9616c5f",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "heavy crossbow \"sniper\"",
+      "source_sha256": "c7275eac4dd34bcf3f0d80a6ad460f90e218f968baa3e0c83ff615de9732fcf5",
+      "translation_sha256": "6c2184aa6664b6615eff63460302b8443f622b25b05171894282e5b6ee53c492",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "longbow \"piercer\"",
+      "source_sha256": "38dedd76eb410f1076fab8e6d35d25ec14ca08215995645cbd79ddc621581d5e",
+      "translation_sha256": "6d1b29227d9f9729055cdcdc34d503e4a73c54facad3de584ee7bfa783e63b29",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "blowgun of the assassin",
+      "source_sha256": "e173c570aa557a38ef739afce2b6e17096abcc63d62fac3de242ff7e03ab73c7",
+      "translation_sha256": "081be89d3b91a952ffe51271de14ee4a8326f2b9da705c093fa2b1a07cd28071",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "lance \"wyrmbane\"",
+      "source_sha256": "a371b02bcb4b3fa6d04a58a7954d8647a3d88b45510115d6583838eb761c299c",
+      "translation_sha256": "a071dce4d6ed3c549ee6b54bf297d65983335aacd916e9f6faa57a6cb9702ff4",
+      "action": "corrected"
+    },
+    {
+      "key": "spriggan's knife",
+      "source_sha256": "97faec970badbe2fd13f57fe99c3b450c63b27a1b97248fa5def830bc88eef92",
+      "translation_sha256": "cc135e621534cfbc4c109f6c39b2126c22fdad32aa28f9638a2c312f04fe9d66",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "plutonium sword",
+      "source_sha256": "8922a940cbbf68a1a1cde5ba31687854bba0a8fac75b2a294066d6dfa67f230a",
+      "translation_sha256": "b42d4c16a6e8b303896db7837bdd3e7b037e9608567007679372d5507d2385de",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "great mace \"undeadhunter\"",
+      "source_sha256": "e9f2f74f7656ae8a87d546ff9bd373561f401d8f7b2ea9e35e8690a8b2185ce6",
+      "translation_sha256": "9cd66fb8f96c042e40f86c239b80f6226e415bce324169ff659d6f8404b26ced",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "whip \"snakebite\"",
+      "source_sha256": "9967b3bb956665964981e2a86c3fcfa8b4574aaad132f7b1dba042dcf22f6db4",
+      "translation_sha256": "da425abb69efbd52abda54223601ad4f1479958a53c55970a01d23efb5ab08a7",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "knife of accuracy",
+      "source_sha256": "6982a203275cdd8f2d60779eb345dbf2cab2935a62698daf581d105c52859380",
+      "translation_sha256": "992a0a32c74b904459926f43ec33ca74754a72e7f55dd21b8ffac0b4d0784c16",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "lehudib's crystal spear",
+      "source_sha256": "2831ff1d295d6d53bc7fbede83643b97e5bd70092ada45f9ee0bd884841455d2",
+      "translation_sha256": "cf659183ea38ebe99447a98cc1a2512b3531094e5521e36f8abc4b4560b1f454",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "captain's cutlass",
+      "source_sha256": "1922fe4781fe1db43bdfbad79a0712e8170793b37aa3703d86aefc461ba86fa4",
+      "translation_sha256": "b78825d7c91754a31ce623be8ef1c0c911d1e8014b94ab6942e62fa1ecd8da0b",
+      "action": "corrected"
+    },
+    {
+      "key": "storm bow",
+      "source_sha256": "6803de0b9d55c5742ddca583e545ef5708e4dc8f34e9e2474a1363cb80df0f24",
+      "translation_sha256": "01be4eedff44971b06cb429c4cc06f189f84b60c0cf4bce828dbcad0bbdb7f63",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "tower shield of ignorance",
+      "source_sha256": "82ccace3cd3e1eb4c0f726b3764bb0a82cc9a188a02ee4a7d2ade1aa67416e5b",
+      "translation_sha256": "560c8e7d843d448081f6401d10274e35cd96cbdbfafbed1412ef2ebfcf2e417b",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "robe of augmentation",
+      "source_sha256": "b3e4894d0b1dc23c4b120723b330130c70b8f9161a78131030d6213b3e6a0893",
+      "translation_sha256": "3275e6de17b39b5fe0a24e339f15e6f3f80b2c26e9a31117d8ba5273a9be0764",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "cloak of the thief",
+      "source_sha256": "4c9f9753a2ec2d95f431c2461b5dc8e7ec93e80d702ba6e14c7ea47010cddd20",
+      "translation_sha256": "02ad0c13c4769aa3a58dd4c71da40dce0cb496696d561242ae68585c776ceff9",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "tower shield \"bullseye\"",
+      "source_sha256": "77e443bc05d73a0bf155758635294076cefbde807625d472f31724edb2dc9137",
+      "translation_sha256": "e03e5c8afc5fb5f2209d0e3c394cf58e66920424b84d29912d05874178307f89",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "crown of dyrovepreva",
+      "source_sha256": "ccb48b7c20c8990456804fcfca65ac60c5c773ff36ee8992e6684e142e89283f",
+      "translation_sha256": "f4b440920180cadb781817ca57f246957c05c27da61f1601d0121b10444b3452",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "hat of the bear spirit",
+      "source_sha256": "8f7a5d5d7d44b71e4a62f81196b69a6e3ae3df88cb1ff49a9fee88f6d32aead5",
+      "translation_sha256": "9322550b3bba215dc7fb6cc92d1aedbfce1bf53cdd2230098f2aba3635bdcd83",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "robe of misfortune",
+      "source_sha256": "fac49e56880f164c67c07ef002e5aa61ebfa6650ae63f78bf625aa59306fdb3b",
+      "translation_sha256": "e6932707b24cc69511d0ed3e499a1ef815d80f4ccfa8cc961744f83220fdfd0b",
+      "action": "corrected"
+    },
+    {
+      "key": "cloak of flash",
+      "source_sha256": "2802968b90164eb6c3ce21e6d92460e86d422496e7b549d7c1f1230d16e30e4f",
+      "translation_sha256": "f42e2cf1d03bf529928fee42e9f7a68a8574ea35fec88fbd1e54328cef3a7e24",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "hood of the assassin",
+      "source_sha256": "551a0938af7ccf3512b4594d55a405ed3d05bba2a8753aab16ba058197a57d52",
+      "translation_sha256": "303f737981a8ae20cbff7c1d29347d341266f317a94dc20a395c07eb9f3a17a3",
+      "action": "corrected"
+    },
+    {
+      "key": "lear's hauberk",
+      "source_sha256": "5a095a68fcfc1d4726e18ea8d26c303fadaa6be92b4ae7e8208d1d3b8479e767",
+      "translation_sha256": "34d4c167f40c6c04d431ce6f927a20733eaf0bb5d9d5ab37464459af20b89161",
+      "action": "corrected"
+    },
+    {
+      "key": "skin of zhor",
+      "source_sha256": "eedcf87b1e2fb80568f71b787ca56cdabe0d985457accd7f52c8fc4cf70472b3",
+      "translation_sha256": "03c990ed7f9f23656536e9ed18ad3bb96a23a0feba658d9b79e4d53a0b03591f",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "salamander hide armour",
+      "source_sha256": "1588b3eab730e30d77b7455ed89381468f08fba9746423475034739c72d76281",
+      "translation_sha256": "5fd1a13487c29f19482dccd85db50a6b9deac5bfb78db2d1ad24c50460cb0a76",
+      "action": "corrected"
+    },
+    {
+      "key": "gauntlets of war",
+      "source_sha256": "f728f5bc7328bbc0840bb86c65d276521fb208a9401fc1d86ab8428f16fe0461",
+      "translation_sha256": "457dc8c3ab6d7ae310ed1ced9768a450a24374951b45fec9b67025a35900f8f3",
+      "action": "corrected"
+    },
+    {
+      "key": "shield of resistance",
+      "source_sha256": "3adf83be3eb4f19abc3f2e1405dd8e0478f3ba669951b3a5f9224ff2bfba0d66",
+      "translation_sha256": "452e15bcbe155cfedf1f42cff34fec3a4dd02ee9617012ecaf36039798bde3f3",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "robe of folly",
+      "source_sha256": "cb8e918c2e73ac7b6029b1a14519ca8537a8f9a514b5ca4b7d98db55a13b4023",
+      "translation_sha256": "0e5b935d9fd89317eefd108aebe7ab2c51a92162b97d88a1ce33e483fbcba960",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "maxwell's patent armour",
+      "source_sha256": "3e7f335e55f90dc8116e34c6b2e8b1605333f5123f683034e3b7a7605aaef2cc",
+      "translation_sha256": "03fdc5642112fcf28e53ff253cf64b7615604f0c4acdbdf3de06089761c596e0",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "mask of the dragon",
+      "source_sha256": "e2f9f925df539098129c0be22532ab6b97cce042174ea21cdeee7092e9dc3ded",
+      "translation_sha256": "9405f115e4d4684ce34b621dcd7fe369d74d0bd8318e8b3054eefa003e66a7a1",
+      "action": "corrected"
+    },
+    {
+      "key": "robe of night",
+      "source_sha256": "3c88d1de42f3e33aad0a7cdfcbfed1e33b06bcb4881afb6f1ccb7daa2082168f",
+      "translation_sha256": "27c517fc741940b8625eeba2f097eb59b9e0210e3c8012c8ddd2b186db5244bb",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "scales of the dragon king",
+      "source_sha256": "7e423da3948cb3239ec1d67e144c3a310c91e22f8bd397d39934bed1295a3e1d",
+      "translation_sha256": "0f51dbf726893194fe6c4b867261dff968d6975cab142656098e147e7826c04d",
+      "action": "corrected"
+    },
+    {
+      "key": "hat of the alchemist",
+      "source_sha256": "b13413330eddd2c516f14d1b882e3d0068340370ab469c9c5b783c0459207726",
+      "translation_sha256": "47af2d4df7c228c6b3a6845e7bc735fd74a7c6e1cbedfa23f95e4c8cbd054133",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "fencer's gloves",
+      "source_sha256": "86e6b44d6530cf2a252f6efda1d53c5789d3fa82a0c1db605f4278bc88c6a0ae",
+      "translation_sha256": "0a6552420b5364d81dfef8998e636a71bf01edbf861698d2c252776b121272af",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "cloak of starlight",
+      "source_sha256": "8961a83c2522d86497630f652acb4061dfb11ef47f73f0c28e67670529bac52d",
+      "translation_sha256": "db424c3b7fb149d47548f8c8fbc4cc3187965acfdf22d1f4126ec2c39c525e64",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "ratskin cloak",
+      "source_sha256": "c4e0cd530990c48f42419f05385fdb6ee00e573695c1ae92938f63ff6cce7cd1",
+      "translation_sha256": "93585cdd1b8a63844a945081246e710b182320514d429cecf65998f1d2cfac8a",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "shield of the gong",
+      "source_sha256": "22ebc886e9654eae09a550f9d39204b390defc87c04a95b8736dd7c5b45f3bfd",
+      "translation_sha256": "631719248e5d3802e03107f27bc0aa299c5981a7dfa06062430299f4914cddda",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "amulet of the air",
+      "source_sha256": "1ed586b64e84b3fe1d72854524bd169f2020ad2772ead5b059f2d5601aca7df0",
+      "translation_sha256": "36ad02ec1686df6b7c8d0451b21cc7ecce07751b0e8cb215e9e8188ba1feb621",
+      "action": "corrected"
+    },
+    {
+      "key": "ring of shadows",
+      "source_sha256": "a1dce15e3d86bdb75f01ba5b6e3b017f3e563b18ff872497064f129858d8a6f9",
+      "translation_sha256": "52a923bcef4d2fe02a873d5db69fd646fc91f5eb5e64f9c079fd0a11354d7844",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "amulet of cekugob",
+      "source_sha256": "62f1b53430a189241f43bb7288f0e21ecd72d3db4af752a43a5565026259c258",
+      "translation_sha256": "fbe9c5b65f0bec602096a50d5d8632899cdccc11cb3fe83fb45b6624460d2b4b",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "amulet of the four winds",
+      "source_sha256": "489537bbee530866cd4422c25ed3c6ad6666be43fc7ab2b3a71d7fa3bcdd5ab4",
+      "translation_sha256": "980580ddda872eb4bf0397c0d627e78425b396d490ece122ee2bd7766cff4b83",
+      "action": "corrected"
+    },
+    {
+      "key": "necklace of bloodlust",
+      "source_sha256": "6f3f42bcf3e9c10f0f610d5f9f3ba0d236bcc730b9e267ae7755c2bebb5ba396",
+      "translation_sha256": "a7b222008bb3ddb9eb65edab38a0a4bb5870d1f9bb094ac17a95b236f3bb8469",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "ring of the hare",
+      "source_sha256": "6eda80f58e88fc498bff8ca0550fb3373d44598eea3a84a6703890bde1857c55",
+      "translation_sha256": "f11d0214e7b2d33881465681c0e18e51445132173a906fd811d4987ed2f7aa90",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "ring of the tortoise",
+      "source_sha256": "a6d3947691bf56c6a8c25b773596cb4e17fc75b12d462bc0842c50e96a73e1c3",
+      "translation_sha256": "1cf75a3c627b4cd05b2a0d50edfa4d474de453dc1c83b4f290700e77c25e8d1c",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "ring of the mage",
+      "source_sha256": "53dee883d69ffba6098a46d4c40baaceb5e8a54a38dd36057647f4526f239209",
+      "translation_sha256": "c0c871e8d26ac4eddac16782e1e3ca6d1da253afaaf9026be73f13e48c3e77b6",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "brooch of shielding",
+      "source_sha256": "1252304dd4c10f0d0b96eb6635d96783cbc82c4c2ef3060f7f2f172e8bcf45bc",
+      "translation_sha256": "94f2dfd03bac422f10804dabcac49f19e25bdd020c69564e3f6c332b7730fece",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "robe of clouds",
+      "source_sha256": "ccb0602f18be2b6ac44498bc4d80b6b2207c204c4b502502876109ee442b1bd6",
+      "translation_sha256": "35bc284cedaeda984208e4a1797fe74e070ba59e1cb174a8ed295d21b7bacd6c",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "hat of pondering",
+      "source_sha256": "bdce17d3a1da465ffcc21bdb72e988110f1aa9afd30b57fabf0e2d1685f44efe",
+      "translation_sha256": "813fde224294c784e016d172f9fd4d48d184af2f91e309b97f88ae351992cbe0",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "obsidian axe",
+      "source_sha256": "d466cd5bbd93f6908b13c644e3b303bf5f64e18075dd4a436871d7e8eda3f970",
+      "translation_sha256": "09f73deb226248d847e7f85dcc0ecef702f981b8e36d37aa51c9b4da223afac7",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "consecrated labrys",
+      "source_sha256": "8a834167e607ab19915b3bab4263c26e7ee8db02ba3eb756cb01c5eeada7cfd0",
+      "translation_sha256": "da7ffc6d238f6383251afef04fe571680a9d15296d00719fb9ca3bc223d45819",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "lightning scales",
+      "source_sha256": "f6630914425282081bc79e1b5ee887086ff34be8ab4e6b07844bfdba5185d3cf",
+      "translation_sha256": "63136c4ea5047c947c69914a83360cd79d8e698dd9fe17f7c210231c26cd5f94",
+      "action": "corrected"
+    },
+    {
+      "key": "black knight's barding",
+      "source_sha256": "54e34ac8595b32492ed9e2ca92b9b47dae79f8611d3cffb9d2b1f8e9c9da014a",
+      "translation_sha256": "641640689a2bd11a67544308856490781fe96264b17a3cfa6e394fbbf3ceb939",
+      "action": "corrected"
+    },
+    {
+      "key": "amulet of vitality",
+      "source_sha256": "2f41780ce139b4f15fdadfab009abb371e3eafdfdda6f3bbe093dbdf8d89a45f",
+      "translation_sha256": "6f4e079056ce8c7e7c6c5f3b11a9063be8ed6d6169f5d55d7441bd2ca87cdb2f",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "autumn katana",
+      "source_sha256": "be1ba445784eaec60e8f0ddf8180c26e19fd95fd9212711e9451af25c4ebf30c",
+      "translation_sha256": "04965207e4e073765397b1393fa87dbb68c5e0423d12bbbdafccc2d3d9240c77",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "shillelagh \"devastator\"",
+      "source_sha256": "771591b9b5d54a452c9a193edba695930e7cab821b50c1f72afb0715eeec2d6f",
+      "translation_sha256": "d2f18e0b0c9aca47d11ede7dc299ca84d59476fbfa394e09a2c4590dc3d196aa",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "dragonskin cloak",
+      "source_sha256": "27262aa9945c08119f66897827f9bc149a228a43632491add6004d5dcd0b8954",
+      "translation_sha256": "3c39e9b71d9a87f5df1d7a0263312098a4c5eb6b394ffe32413eaa9257ee0f58",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "ring of the octopus king",
+      "source_sha256": "23fd948580d860f1a46235161a01b6318d73bb0f8774bf532a8c0266b378c5a5",
+      "translation_sha256": "b6c5f1ce8600d8687d58286cda1d28e1cfee75153feafa832ac610d44aa22c46",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "axe of woe",
+      "source_sha256": "b43e9efe146b4cd86dbe99cc24e0438f59d866dbb3382ad17b9436c284767090",
+      "translation_sha256": "fd626021002cf004f7d44de733b283ce79c4904fdea6dddcce156adc578baa0e",
+      "action": "corrected"
+    },
+    {
+      "key": "moon troll leather armour",
+      "source_sha256": "2dece7f54cd35f64059fdcbf315e67fe6e7390c3e1e90a52bf40942f61ce6810",
+      "translation_sha256": "7c0a9694a1d49819b874e51ecc6105c75e3b64e25a6204273ca4bcfc41afc440",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "macabre finger necklace",
+      "source_sha256": "8eca89b8caf70af3133b817c64f8b3f14a7e30415090716ee3499c735a72f0aa",
+      "translation_sha256": "9d3215ca5494210c1669795ca95641928e7e892cca358b1801303eeb0dec8c3b",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "boots of the spider",
+      "source_sha256": "450821a653ce7b7b0b4c3593ec0d0683dcf9b53d24b3252931e25718a1eb3109",
+      "translation_sha256": "f2196a9900efb06a6a80fa5ecfddaa0a49ace33baecddeafbc76975ff855ce3d",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "dark maul",
+      "source_sha256": "aae279a7f65f3c34a7ab3c10df8cc38bd1226dcc9e351e7d316d4782e5eba2f7",
+      "translation_sha256": "0696b60020628e7bc4154add3a4363ffaef2a6063b342fb51b7ee60a0f4cada8",
+      "action": "corrected"
+    },
+    {
+      "key": "hat of the high council",
+      "source_sha256": "a8eb460cef619bf9d8ea07726d73564bacb67b565d734bc4d334a58f0f80b278",
+      "translation_sha256": "eeb73817a7af0be529eccd3bbc9be65d066b0585029631db3ceb63ba81ec3c6a",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "arc blade",
+      "source_sha256": "15de79216feb466a1176112ff55bf862c19cdb2f7af64809f2edf2bd294b04e1",
+      "translation_sha256": "d7eac541e3a75015f7e5f6a65f720c0b0f9b3558afea8b307abcdca3225e1c83",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "demon whip \"spellbinder\"",
+      "source_sha256": "c5449ebf90972aaa9ab8212b74823b3689af60754fba3ea1be65cf8e48d0737f",
+      "translation_sha256": "e7a5f0f87cef898dbc31b2021bba3ed433eb704b73743014a02e4ce614f230f0",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "lajatang of order",
+      "source_sha256": "9b75d1cf7d2f608170cd4a68fe736517174df5d40ab37c8494e92b7fabecd001",
+      "translation_sha256": "b4ac33691a0ae5d2733356acf669c623315cc8c5239ec39667646fbe4c7d5046",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "great mace \"firestarter\"",
+      "source_sha256": "0687986775fc919956195c6c9dbfad7ed2839f5834dd7aa4e57dfec425f4a572",
+      "translation_sha256": "3d193641efb552483598d703e0b0739d24c2320c8daa4fd50dfafa4dfad7e4e5",
+      "action": "corrected"
+    },
+    {
+      "key": "orange crystal plate armour",
+      "source_sha256": "16accad186da8d9ba54b227914e7e1710b349218dacd3610b037b99c4b6563b2",
+      "translation_sha256": "1e521e72e0a74b63e072b32667886cdb8bba29659a82ec7dde61b8d619e2fb35",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "majin-bo",
+      "source_sha256": "05ade79b727a60bc1f1a949c8dc6ee38c407ab86b3f29539f02a8f38a353982d",
+      "translation_sha256": "89f714f20dde20d536b1f5ef045b7ee12b7d39689b8a0875368a935cb4fff1c6",
+      "action": "corrected"
+    },
+    {
+      "key": "pair of quick blades \"gyre\" and \"gimble\"",
+      "source_sha256": "1bb9a64a47980d712fb338916a7c40bcb4760a85b3c5ede57eb6aaba0f6d7d65",
+      "translation_sha256": "e979edc09f9b05a76e9f48dfd2d3689e1958be19e06079872c7256328667489d",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "maxwell's etheric cage",
+      "source_sha256": "8f8ec0f0c0606cd9f31263137232aa6e1d99bf3b5184ff88db455a2e13c592bf",
+      "translation_sha256": "6abde6f91a4744fa39a865f5619ed6ba24f3a2577c0b1598b8081f47729bea75",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "crown of eternal torment",
+      "source_sha256": "58815df8805b9a0ce573b256fab55bfc3837ecbdc8f2f5af3e7760a0110fa2dc",
+      "translation_sha256": "da106b06fbe5e2063a90bce4ee436e7550a3756e6ccaed39f43836438b87dbf6",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "robe of vines",
+      "source_sha256": "c7f069146813a3e95e80bf46e0dc3b2a5a6083eaf671d12fd70f5e6e0e6f9858",
+      "translation_sha256": "8471ca8096007b60b2e35d03be38870ef40a450db1aaf68604c962b7cf68f850",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "kryia's mail coat",
+      "source_sha256": "46f080b32d85d44c4fdb1a8cc52c5c98ca6c3f717de119b885e19774e5441d53",
+      "translation_sha256": "665b3f5af3c487c1214065c9028d436881f625baf6d008bc473b75712d8f510b",
+      "action": "corrected"
+    },
+    {
+      "key": "frozen axe \"frostbite\"",
+      "source_sha256": "40fbdc8982267e2ba7a5fc6738e2785934deedc75f721f15052825c636179a46",
+      "translation_sha256": "21a77cc83824d3e2a093a4e244c58211aacfa6218172ba919bf1e7739068106e",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "armour of talos",
+      "source_sha256": "ccdc9abb9f6821ca458e45cd8f05f0920bebc433b64840954a7069b8723dcd9d",
+      "translation_sha256": "e7be0bb6db78b3a3470facb0e21b6db78b0cf27035c380b3860d27bfcfc93474",
+      "action": "corrected"
+    },
+    {
+      "key": "warlock's mirror",
+      "source_sha256": "fad0c564437f17fc4b0a36ae8e9c8f361dbc66c6f39e28161a35b354c3a26ce2",
+      "translation_sha256": "d82de08e309236d131fa42c791a92d5d64dee0ce792646efe261af8f10f0cf78",
+      "action": "corrected"
+    },
+    {
+      "key": "amulet of invisibility",
+      "source_sha256": "de20189e6d759b037c3bae065ce4aec854c290bfc39d137405f9c374f668178f",
+      "translation_sha256": "c8930719d1e1e5f358842215c10aacdfbbffa6ef7e03a8cb1c98c2ee28bd4c79",
+      "action": "corrected"
+    },
+    {
+      "key": "scarf of invisibility",
+      "source_sha256": "ae000083bc33ea30e9927ddd8e1dd7b328b4f591a78e2a989100c6a4e49ebe53",
+      "translation_sha256": "54e3e69a4cfd7fbc6c57fb5a74cea473f936f5d508c6d19821bac631952bc10b",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "maxwell's thermic engine",
+      "source_sha256": "fcf925e43393d0c425a53760dbf7ad79dc0e30597364fc531a019b3487f6ccf3",
+      "translation_sha256": "6df67d73b8cbd2047ab719a0d7d5325e25bac14893ffa525630c0839e273e944",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "demon trident \"rift\"",
+      "source_sha256": "b2288620c8c8fe496ac6f994c82e31285822a97eca67f6385bf79de1485d88c7",
+      "translation_sha256": "0529904ffd4751cf29cf2155d66205983408bba29470fa462df074c90be46825",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "sphere of battle",
+      "source_sha256": "d8ebb450b838fd0a7c42d03603a641ee9a8d03c4a50f20ca142ee99da96ef7ee",
+      "translation_sha256": "3abaf43676190bbb77c99abcd6706c769c0f713f1a8bdc0e9914332da3a8fb11",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "cigotuvi's embrace",
+      "source_sha256": "2b72d518aa443072d3febcacbf67c98ac784e30d70b01315869e1b2f3ad2ec57",
+      "translation_sha256": "5dc5aa9ba57f649ac839f384cb573633fc480272d1002ed183af5cef62499116",
+      "action": "corrected"
+    },
+    {
+      "key": "seven-league boots",
+      "source_sha256": "f741030456b565ac480cd951dac037efa4e2ed080a8077923c4272dba4a0079f",
+      "translation_sha256": "ea43fe7e3067195670ae14c2930d920bf7af7b9ff19a70e3f43957929c1a00f6",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "mad mage's maulers",
+      "source_sha256": "90a42e19cf88618f2c101f3533c865719618d7e667db96a8c3bd39c097b3db8d",
+      "translation_sha256": "120ae75a71d5c24287923b545d3e48705542ccdbf3773aef916100f64595fe23",
+      "action": "corrected"
+    },
+    {
+      "key": "dreamdust necklace",
+      "source_sha256": "2e8b82b2d751c999e6a8cd784ec978317850187a4b519c5733975c486131b25f",
+      "translation_sha256": "0a1baf076d3303bbebd484490626453192c0a0b55b3278027fee51b696abcd97",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "dreamshard necklace",
+      "source_sha256": "e015a67da22f6a3603846e3587848ac061506ea5b00a9561011eadc90fa3264f",
+      "translation_sha256": "9e884c263c2ffc31d9ab1fc3cdefc8b83ffd1597b90f8d3c0c9c637a2b4a10ac",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "delatra's gloves",
+      "source_sha256": "bf154d166e3df01402bcb790b8d98e87fbd56ccf8a463822bb54d3ff644b3a77",
+      "translation_sha256": "ddcbcb2b6c70e792ec9d14a277950a97269ffb783f3772538edf1e4c253be0b1",
+      "action": "corrected"
+    },
+    {
+      "key": "woodcutter's axe",
+      "source_sha256": "e75676e7644c8db0b06f679fd3731ae30b557ff0d426d59c9c298c050df9a244",
+      "translation_sha256": "872759052d851288a1d1b49a0731726cac5a53e4f6fa9230aa8d532891f0ba88",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "throatcutter",
+      "source_sha256": "4655b150f2dc05861419057956101866ad474c378c8ede518e1615382cc56ef2",
+      "translation_sha256": "275a1483354a6a6c2f483d581d2b0af2f018b0372f47e9bb008c51929bfb5d65",
+      "action": "corrected"
+    },
+    {
+      "key": "staff of the meek",
+      "source_sha256": "6afe3858fa9aa0ef880ad9a67bd1c64e7e5c9d6f3cc171603db1545cfe372876",
+      "translation_sha256": "4850fcc0e3a01853f492b2fc0bfee58d0b30cacfb84494d58305cbd429651c6b",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "trishula \"condemnation\"",
+      "source_sha256": "e61367107c26463a9228b87da2ad5940442563ae8dfd06310abc8205aacface6",
+      "translation_sha256": "88d4f5b8d890e1aa5db2e581306302eb4c624649a8c16fcf822ab16e61d88737",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "amulet of elemental vulnerability",
+      "source_sha256": "ee618908a9e66c2e322c4bd2ccdfa6068cac1d2bb77cf4cdacacd0fcb3f5fa9c",
+      "translation_sha256": "cb92f4bf2e6b30d0eb3171141baba6f872a7b9e39b38532769e190277337d095",
+      "action": "corrected"
+    },
+    {
+      "key": "mountain boots",
+      "source_sha256": "dab0eb3d9d01b3c19fb0a0516cf5951548e9977937100a20547ee03672d2df11",
+      "translation_sha256": "b3f6c170f979b8d8300189e271b0b38f898d9a23c2763d41d0dec9e1ae77e437",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "lochaber axe",
+      "source_sha256": "51ede907c35e43ded7b90c4f508146da239a1569fcef438fa4a5d03ead959cd8",
+      "translation_sha256": "da2d30916a5520866962ea4dc0ad9c32decc0393ee853d4f508ae5da1259b85a",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "hermit's pendant",
+      "source_sha256": "c228eb6b922340c4e1a985cfaeee7410cdd79836bfc0fc1689a7edb3b2a0f9b6",
+      "translation_sha256": "8cb92a101a894f2cc7c304ecd1e269c2fb2eb49e0eb342213a742caede578778",
+      "action": "corrected"
+    },
+    {
+      "key": "slick slippers",
+      "source_sha256": "53d00aa0579b6c0534d53e64d9856f300182d590b676cebc7adbf10b883e4088",
+      "translation_sha256": "e875fcb4277b81bc48610aacd159bf06355b927d0dc1b090e53878c076ccf3c0",
+      "action": "corrected"
+    },
+    {
+      "key": "force lance",
+      "source_sha256": "d0121454c78abbfa17d87aaf74e123c153a127393fffd810e7603ecac40440f7",
+      "translation_sha256": "3b6d945044acf05e5eec36e94dcd3b793b9c2206afb3cdf962caa3e547fa2b76",
+      "action": "corrected"
+    },
+    {
+      "key": "toga \"victory\"",
+      "source_sha256": "1be025129b5e83283622bd3d9b741d9c8b82a3473098d160a22b394b4c1552f0",
+      "translation_sha256": "88f560a7f0f95469961c73a84d0fed1ebd8e0957c681b925136c023bab81b253",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "storm queen's shield",
+      "source_sha256": "56bb80e38343ea907db38054233869b1fe91506259a08ff6a1f589cbafc40dee",
+      "translation_sha256": "b9458b99b9731677b8394f9be90aa22e6abb3ecbd13ad1db64217ad215b85746",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "hand cannon \"mule\"",
+      "source_sha256": "eb6adbd3c20c1406842fd2e73b65aa1bbc9f86c29fe7485d23bfc01e3be7471d",
+      "translation_sha256": "7d78783feaf2fac8489e8fb6916cc4a0b2dacfc311220382dafca2c7fbe4f630",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "gloves of the gadgeteer",
+      "source_sha256": "e583a37d7820e12104c35c986e212d2756cd91f7e531a4756040fcadc9579441",
+      "translation_sha256": "1d84aabc146c391a44123fe40f9065a8d362f2eac0679a3242b9212288eb3fa0",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "charlatan's orb",
+      "source_sha256": "b4085c3ee1704859e32c8c110ca2e070db414a4c0b499396dbc83f4f4e3a6901",
+      "translation_sha256": "5d34783b144e7d12a3caa67e414e5638477b62254b05e496bc436348af818456",
+      "action": "corrected"
+    },
+    {
+      "key": "justicar's regalia",
+      "source_sha256": "83e8d0362431f485ccbcab725b9cd288cfdb3f490a21d3d856956310c1f8782b",
+      "translation_sha256": "9bebb5a3b191956b19c93878b384042bbed13af09229939c8a9bb8c20105c103",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "skull of zonguldrok",
+      "source_sha256": "fa54528829b2f2c28056bafb4a88b6d340856d3975c1b25879404beb63651327",
+      "translation_sha256": "02513fc26d1224f7571016ab660d2c0be8e0594976b9003e932078f3942956a9",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "fungal fisticloak",
+      "source_sha256": "aea502d9c90f845fe003c592ce01626f52f80014966fa6b97ddaa597b632bbab",
+      "translation_sha256": "3fb9a335525e007b77948eef4772c3d52690e6ff00914a492621b88e490766e0",
+      "action": "retained_after_review"
+    },
+    {
+      "key": "crown of vainglory",
+      "source_sha256": "7a45b7cf1b16d9e410b44cee8185686daf86988e6517f5e73c21a428803aa496",
+      "translation_sha256": "e1bd6fd69d5aee5e17689d097e20fb5bee459913be40f20f3cd6a1db000c35e0",
+      "action": "retained_after_review"
+    }
+  ],
+  "changes": [
+    {
+      "key": "singing sword",
+      "before": "这件被施了魔法的有刃武器最喜欢对它的主人唱歌，\n至于主人想不想听它唱，它可管不着。\n",
+      "after": "一把附魔剑，最喜欢给主人唱歌，不管主人想不想听。\n"
+    },
+    {
+      "key": "wrath of trog",
+      "before": "这把血迹斑斑的斧头在遗失之前，曾是古神特洛戈最爱的武器。\n当在战斗中使用它时，它会引发嗜血狂暴，\n凡人哪怕只是装备它，暂时都会被特洛戈的力量所压倒。\n",
+      "after": "这把血迹斑斑的斧头在遗失之前，曾是古神特洛戈最爱的武器。在战斗中使用它会引发嗜血的狂暴，而持用它的凡人也会暂时被特洛戈的力量压倒。\n"
+    },
+    {
+      "key": "glaive of prune",
+      "before": "梅干大刀带有可怕而阴险的诅咒。持用者若不能保持坚定的自制力，就注定经历一场恐怖但短暂的变形。通常很容易抵抗这道诅咒，但无法正常行动的持用者必定中招，变成噩梦般紫色、软糯而美味的东西。唯一的安慰是，一颗巨型梅干竟然很难被伤到。\n",
+      "after": "普鲁恩偃月刀带有可怕而阴险的诅咒。持用者若不能保持坚定的自制力，就注定经历一场恐怖但短暂的变形。通常很容易抵抗这道诅咒，但无法正常行动的持用者必定中招，变成噩梦般紫色、软糯而美味的东西。唯一的安慰是，一颗巨型梅干竟然很难被伤到。\n"
+    },
+    {
+      "key": "crystal ball of wucad mu",
+      "before": "一颗无瑕的水晶球，由无数真言塑成。凝神注视它时，“自我”与“他者”的边界有时似乎会变得模糊。\n{{\n    if you.race() == \"Djinni\" then\n        return \"它对灯神完全无用。\"\n    end\n}}\n",
+      "after": "一颗无瑕的水晶球，由无数真言塑成。凝神注视它时，“自我”与“他者”的边界有时似乎会变得模糊。\n{{\n    if you.race() == \"Djinni\" then\n        return \"它对灯灵完全无用。\"\n    end\n}}\n"
+    },
+    {
+      "key": "faerie dragon scales",
+      "before": "这套魔力铠甲，由一种稀有品种的龙的鳞片制成，而这个物种现在被认为已经灭绝。\n这件珍贵的遗物是色彩鲜艳的精灵龙曾经存在过的最后证据之一。\n",
+      "after": "一套以稀有龙种的鳞片制成的附魔防具。这个龙种如今被认为已经灭绝；这件珍贵遗物，是色彩鲜艳的仙灵龙曾经存在过的最后证据之一。\n"
+    },
+    {
+      "key": "eveningstar \"brilliance\"",
+      "before": "堕落后不久，伊莱德莱姆努尔试图将神圣能量扭曲为自身的黑暗讽刺，使其反过来伤害创造它的存在，却不再擅长伤害亡灵和恶魔。等到发现这种彻底的亵渎无法控制时，已经太迟了：污秽烈焰使几乎所有灌注之物失稳或毁灭，唯有几个恶魔试验体和一件盗来的神圣武器幸免。较弱却更稳定的黑暗能量最终证明更为可用，成为伊莱德莱姆努尔的幽影。\n\n这正是那件武器：尽管名为“光辉”，这柄昏星锤的光芒早已消逝。它的阴影排斥着那些曾受其光芒慰藉的存在……\n",
+      "after": "堕落后不久，伊莱德莱姆努尔试图将神圣能量扭曲为自身的黑暗讽刺，使其反过来伤害创造它的存在，却不再擅长伤害亡灵和恶魔。等到发现这种彻底的亵渎无法控制时，已经太迟了：污秽烈焰使几乎所有灌注之物失稳或毁灭，唯有几个恶魔试验体和一件盗来的神圣武器幸免。较弱却更稳定的黑暗能量最终证明更为可用，成为伊莱德莱姆努尔的幽影。\n\n这正是那件武器：尽管名为“辉煌”，这柄昏星锤的光芒早已消逝。它的阴影排斥着那些曾受其光芒慰藉的存在……\n"
+    },
+    {
+      "key": "dagger \"morg\"",
+      "before": "一把丑陋、生锈的匕首。很多年前为一位名叫鲍里斯的强大法师所有。\n他在地牢中搜寻宝珠时失踪了。\n",
+      "after": "一把丑陋、生锈的匕首。很多年前为一位名叫鲍里斯的强大法师所有。\n他在地下城中搜寻佐特宝珠时失踪了。\n"
+    },
+    {
+      "key": "greatsling \"punk\"",
+      "before": "用奇怪的绿色皮革制成的投石索，渗出着腐蚀性的黏液。\n它最初是臭名昭著的恶作剧制造者和小捣乱鬼的武器，后来落入令人不快的生物手中。\n",
+      "after": "一条用古怪的绿色皮革制成、渗出腐蚀黏液的投石索。它原本属于一个臭名昭著、四处捣乱的恶作剧高手，后来又落入了更不堪的人手中。\n"
+    },
+    {
+      "key": "giant club \"skullcrusher\"",
+      "before": "一根巨大被施入魔法的棍棒，会增强任何强大到能够挥舞它的人本就相当强大的力量。\n",
+      "after": "一根巨大的附魔木棒。任何强壮到足以挥舞它的人，都会发现自己本就惊人的力量更上一层楼。\n"
+    },
+    {
+      "key": "glaive of the guard",
+      "before": "几年前，一位富有的女王担心庞大国库的安全，委托打造了这把大刀。铁匠保证，没有敌人能击败手持此刀的卫兵！\n\n几个月后，它和女王金库里的其他财宝一起被盗。事后发现，卫兵当时正在打盹。不过，交给醒着的人使用，它应该仍绰绰有余。\n",
+      "after": "几年前，一位富有的女王担心庞大国库的安全，委托打造了这把偃月刀。铁匠保证，没有敌人能击败手持此刀的卫兵！\n\n几个月后，它和女王金库里的其他财宝一起被盗。事后发现，卫兵当时正在打盹。不过，交给醒着的人使用，它应该仍绰绰有余。\n"
+    },
+    {
+      "key": "morningstar \"eos\"",
+      "before": "一把镶有宝石的晨星锤，在曙光下熠熠生辉。\n它照亮了地牢的幽深处，令那些想要隐身的怪物的图谋无所遁形。\n",
+      "after": "一把镶有宝石的晨星锤，在曙光下熠熠生辉。\n它照亮了地下城的幽深处，令那些想要隐身的怪物的图谋无所遁形。\n"
+    },
+    {
+      "key": "lance \"wyrmbane\"",
+      "before": "一把对所有龙类致命的魔法长枪。\n每对一只强大的龙造成致命一击都使它的威力就会更强。\n它的威力越强，与它相称的强敌越少。\n",
+      "after": "一把对所有龙类都极为致命的附魔骑枪。每当它给予一头强大的龙致命一击，威力就会增强。它越强，就越难找到与之相称的对手。\n"
+    },
+    {
+      "key": "captain's cutlass",
+      "before": "曾经有个邪恶的海盗船长用这件臭名昭著的武器杀了无数的无辜之人。\n当一只海怪吞下他的船时，他终于碰到了自己的劫数，\n而那把短弯刀曾被认为和他一样，不知所踪。\n",
+      "after": "曾经有个邪恶的海盗船长用这件臭名昭著的武器杀了无数的无辜之人。\n当一只海妖吞下他的船时，他终于碰到了自己的劫数，\n而那把短弯刀曾被认为和他一样，不知所踪。\n"
+    },
+    {
+      "key": "robe of misfortune",
+      "before": "一件精美、顺滑的长袍，用毛皮和丝绸织成，其幸运的色彩已经褪去。\n",
+      "after": "一件以毛皮与丝绸制成、华美飘逸的长袍，象征幸运的色彩已然褪去。\n"
+    },
+    {
+      "key": "hood of the assassin",
+      "before": "一种柔软的兜帽，被刺客公会成员施入魔法，可以让佩戴者感知附近潜在的受击者，\n并在接近他们后，轻易发现其弱点。\n",
+      "after": "一顶柔软的兜帽，由刺客公会成员附魔，使穿戴者能够感知附近潜在的猎物，并在接近后轻易发现其弱点。\n"
+    },
+    {
+      "key": "lear's hauberk",
+      "before": "这套做工精良的黄金锁子甲能覆盖穿戴者的所有身体部位。\n这套防具中包含一顶锁子甲防护帽、一副腿甲，和一副链制手套。\n",
+      "after": "一件做工精良、覆盖穿戴者全身的黄金锁子甲，包括锁子头巾、锁子腿甲和锁子护手。\n"
+    },
+    {
+      "key": "salamander hide armour",
+      "before": "大多数火蜥蜴死后，尸体都会被送回它们诞生的火焰深渊。不过，火蜥蜴偶尔也会保存逝者的皮。皮上的符文和装饰表明，它曾属于一位受敬重的战士或祭司，甚至可能是一位王者。炽热的灵魂仍留在皮中，将力量赋予穿戴者。\n",
+      "after": "大多数沙罗曼蛇死后，尸体都会被送回它们诞生的火焰深渊。不过，沙罗曼蛇偶尔也会保存逝者的皮。皮上的符文和装饰表明，它曾属于一位受敬重的战士或祭司，甚至可能是一位王者。炽热的灵魂仍留在皮中，将力量赋予穿戴者。\n"
+    },
+    {
+      "key": "gauntlets of war",
+      "before": "一双厚厚的钢手套。这是奥格瓦如对伟大的将军的赏赐。\n它的主人注定要死在战斗中，但那将是一场多么惨烈的死亡啊！\n",
+      "after": "一副厚重的钢护手，是奥格瓦如赐给一位强大军阀的奖赏。它的主人注定战死，但那将是何等壮烈的死亡！\n"
+    },
+    {
+      "key": "mask of the dragon",
+      "before": "古代埃瑞博拉的高级祭司的面具。在古代，埃瑞博拉人的神灵不再响应他们的祈祷，\n在绝望中，人们转而皈依被禁止的龙。现在，他们的遗物，只剩这个面具。\n",
+      "after": "古代埃瑞博拉大祭司的面具。彼时，埃瑞博拉人的诸神不再回应祈祷，绝望的人民便转向遭到禁止的龙崇拜。如今，他们的造物只剩这副面具。\n"
+    },
+    {
+      "key": "scales of the dragon king",
+      "before": "一套盔甲，由曾经强大的龙王的带有魔法的鳞片制成。\n在他的时代，泰坦和较小的龙与他搏斗是徒劳的——但就像所有的事情一样，\n即使是他最终也被打倒和毁灭。这是所有留存下来的，关于他的一生和事迹。\n",
+      "after": "一套以昔日强大龙王的附魔鳞片制成的防具。它在世时，泰坦与较弱的龙都无法与之抗衡。然而，如同世间万物，它最终也遭到推翻与毁灭。关于它的一生与功业，只剩下这件遗物。\n"
+    },
+    {
+      "key": "amulet of the air",
+      "before": "一个天蓝色的护身符，充满了保护佩戴者的魔法，并能让他们的气法术更强大。\n它的创造者只缺一样东西：一只稳健的手。\n",
+      "after": "一枚天蓝色护身符，蕴含着保护佩戴者、增强其气系法术的魔力。它的创造者只缺一样东西：一双稳健的手。\n"
+    },
+    {
+      "key": "amulet of the four winds",
+      "before": "这个垂饰是用纯净的玉制成的。它能赋予佩戴者强大的意志力和毅力。\n",
+      "after": "一枚以至纯美玉制成的吊坠，赋予佩戴者强大的意志与精神韧性。\n"
+    },
+    {
+      "key": "lightning scales",
+      "before": "一套用来保护下半身长而有鳞的生物板甲。\n它发出微弱的电荷爆裂声，让佩戴者风驰电掣。\n",
+      "after": "一套为下半身修长且覆有鳞片的生物打造的身甲。它发出轻微的电流噼啪声，使穿戴者的移动能力大幅增强。\n"
+    },
+    {
+      "key": "black knight's barding",
+      "before": "一件重装马铠，由乌黑的钢制成并嵌有黑色钻石板。\n在黑骑士的恐怖统治期间，它曾保护过他们的骏马。\n穿戴上它后会部分变成亡灵，会获得相应好处，而没有不幸的弱点，\n尽管金属和石头的巨大重量会让佩戴者变慢一些。\n",
+      "after": "一件以漆黑钢铁制成、嵌有黑钻石片的沉重身甲。黑骑士施行恐怖统治时，它曾保护其坐骑。穿戴者会部分化为亡灵，获得一些相应的好处，却不必承受那些不幸的弱点。不过，金属与石头的巨大重量会略微拖慢穿戴者。\n"
+    },
+    {
+      "key": "axe of woe",
+      "before": "手中拿着这柄斧子的时候，你感觉你的身体似乎不再完全受你控制。\n你的身体开始展现远超极限的力量，而马科列布似乎在指引着你的动作。\n",
+      "after": "握住这柄斧头时，你感觉自己的心智似乎不再完全属于自己。身体开始展现远超极限的力量，动作也受马科列布引导。\n"
+    },
+    {
+      "key": "dark maul",
+      "before": "一个大型铁锤，专门用来进行强有力的打击。\n这个能力是有代价的：大锤的头部太重了，需要长时间休整才能再次抬起挥动。\n",
+      "after": "一把包铁的大槌，专为打出威力惊人的重击而造。力量也有代价：槌头重得惊人，每次挥击后，都要花很长时间才能再次举起。\n"
+    },
+    {
+      "key": "great mace \"firestarter\"",
+      "before": "一柄灌注强大火系魔法的巨型钉头锤。它使受击者充满内焰，并保护持用者免受部分由此引发的破坏。\n",
+      "after": "一柄灌注强大火系魔法的巨型钉头锤。它使受击者充满心火，并保护持用者免受部分由此引发的破坏。\n"
+    },
+    {
+      "key": "majin-bo",
+      "before": "一个居住着强大的恶魔的法杖，很久之前她就被以这种形式欺骗和困住。\n为了活命，她现在在一笔可怕的交易中要付出巨大的奥术力量：\n施法者每次施法时她会从中获取一小部分生命精华，\n而她会将被法术伤害的生物的生命精华导向施法者。\n",
+      "after": "一根寄宿着强大恶魔的法杖。她很久以前遭到欺骗，被困在这副形体中。如今，为了生存，她以强大的奥术力量换取一桩可怕的交易：持用者每次施法，她都会抽取其少量生命精华，作为回报，则将被法术伤害的生物的生命精华导向施法者。\n"
+    },
+    {
+      "key": "kryia's mail coat",
+      "before": "据说，这件锁子甲是为晚年的克里娅女王打造的。直到老迈昏聩，她仍坚持身先士卒。随着衰老的身体渐渐不支，这件锁子甲增强了维持她生命的治疗药剂。\n",
+      "after": "据说，这件链甲是为晚年的克里亚女王打造的。直到老迈昏聩，她仍坚持身先士卒。随着衰老的身体渐渐不支，这件链甲增强了维持她生命的治疗药剂。\n"
+    },
+    {
+      "key": "armour of talos",
+      "before": "一个巨大而笨重的青铜板甲。只有拥有与之相称的巨大身躯的人能够穿戴。\n",
+      "after": "一套巨大而沉重的青铜板甲，只有身躯同样巨大的人才能穿戴。\n"
+    },
+    {
+      "key": "warlock's mirror",
+      "before": "一组手持六角镜，由极其奇异的物质合成，并抛光至令人目眩的光泽。\n",
+      "after": "一组可手持的六角镜，由极为奇异的物质合成，抛光得耀眼夺目。\n"
+    },
+    {
+      "key": "amulet of invisibility",
+      "before": "一个激活可以让佩戴者隐形的护身符。\n",
+      "after": "一枚可以发动、使佩戴者隐形的护身符。\n"
+    },
+    {
+      "key": "cigotuvi's embrace",
+      "before": "一套由腐肉、骨骼和软骨制成的防具，一个早已死去的巫师弥留的意志维系着它的完整。\n里面的可怕能量召唤着刚刚死去的人的尸体，用腐肉茧保护着穿戴者。\n",
+      "after": "一套由腐肉、骨骼和软骨制成的防具，靠一位死去已久的巫师的意志维系完整。内藏的可怖能量会召来新死者的尸体，以腐肉之茧保护穿戴者。\n"
+    },
+    {
+      "key": "mad mage's maulers",
+      "before": "一副用来小心控制和引导魔法流动的手套，\n后来被地狱第五层的疯狂杀人犯法师们误用并毁坏了。\n它会让穿戴者完全无法施法——穿戴者的魔力被转而用于做更血腥的事情。\n",
+      "after": "一副原本用来精细控制并引导魔力流动的手套，后来遭到第五圈那些疯狂的杀人法师滥用和摧残。它使穿戴者完全无法施法，将其魔力转用于血腥得多的用途。\n"
+    },
+    {
+      "key": "delatra's gloves",
+      "before": "很久以前由一位著名的实验炼金术士戴过的一副群青色长手套。\n它引导发现的能量，当佩戴者盲目地从未知到确定的探索时，会赋予其力量。\n",
+      "after": "一副群青色长手套，远古时曾由一位著名的实验炼金术士佩戴。它引导探索发现的能量，将从无知盲目迈向确定的那一步所释放的力量赋予穿戴者。\n"
+    },
+    {
+      "key": "throatcutter",
+      "before": "一个普通的扒手谋杀了一位光明神的圣骑士，\n并从其手上夺走了割喉者，此后用它干了一系列越来越肮脏的事迹。\n鲜血、谋杀和背叛玷污了它的历史和刀锋，\n曾经为无辜的人格挡危险的刀锋现在几乎没有留下什么痕迹。\n",
+      "after": "一个普通扒手谋杀了一位光明神的女圣骑士，并从她手中夺走了割喉者，此后用它干下了一连串愈发卑劣的勾当。鲜血、谋杀与背叛玷污了它的历史和剑刃。那把曾挡在危险与无辜者之间的利刃，如今几乎已无迹可寻。\n"
+    },
+    {
+      "key": "amulet of elemental vulnerability",
+      "before": "一枚蓝色钢制护身符。它的创造者是一位非常务实的女性，\n设计它旨在提供强大的保护，防止被轻易戳伤、刺伤和咬伤。\n戴上它会更难应付火和霜，但有多少人真的需要担心这一点？\n",
+      "after": "一枚蓝钢护身符。它的创造者是一位极为务实的女性，设计它是为了强力抵御寻常的戳击、刺击与撕咬。面对火焰与寒霜，它不但无用，反而有害——可又有多少人真需要担心这些呢？\n"
+    },
+    {
+      "key": "hermit's pendant",
+      "before": "一位苦行者曾许下神圣的誓言，放弃使用魔法工具和除此垂饰以外拥有的一切。\n是向哪一位神许下这个誓言仍然是虔诚者之间激烈争论的焦点，\n但垂饰的力量——和局限性是无可辩驳的。\n",
+      "after": "一位苦行者曾立下神圣誓言，弃用魔法器具，并放弃除这枚吊坠以外的一切财物。虔诚信徒至今仍为此誓言究竟献给哪位神争执不休，但隐士吊坠的力量及其局限却无可辩驳。\n"
+    },
+    {
+      "key": "slick slippers",
+      "before": "这双拖鞋是用西方天鲨的光滑的皮鞣制而成的，舒适得令人称奇。\n它没有好靴子那样的保护作用，但它能让穿着者摆脱几乎所有束缚。\n",
+      "after": "这双便鞋用西方天鲨鞣制后的光滑皮革制成，舒适得令人惊叹。它虽没有优质靴子提供的防护，却能让穿戴者摆脱几乎一切束缚。\n"
+    },
+    {
+      "key": "force lance",
+      "before": "这个普通的铁矛，通过法师盖尔的技艺，充满了超自然的威严。\n它的打击力量比持用者所施加的力量强许多倍。\n",
+      "after": "一把普通的铁制骑枪，经法师盖尔的巧思赋予了超自然的威势。它击出的力量是持用者施力的许多倍。\n"
+    },
+    {
+      "key": "charlatan's orb",
+      "before": "这颗宝珠出自一位受雇寻找宝珠的魔法工匠大师之手。比起职业操守，此人更珍惜自己的性命。赝品忠实再现了真宝珠的诡异光芒和扭曲空间的特性，但所赋予的力量只是人造的，也只有熟练的唤发者才能运用。\n",
+      "after": "这颗宝球出自一位受雇寻找佐特宝珠的魔法工匠大师之手。比起职业操守，此人更珍惜自己的性命。骗子宝球忠实再现了真宝珠的诡异光芒和扭曲空间的特性，但所赋予的力量只是人造的，只有精于唤发的人才能运用。\n"
+    }
+  ],
+  "display_name_changes": [
+    {
+      "english": "staff of Olgreb",
+      "before": "奥尔格雷布之杖",
+      "after": "奥格雷布之杖"
+    },
+    {
+      "english": "eveningstar \"Brilliance\"",
+      "before": "黄昏之星「辉煌」",
+      "after": "昏星锤「辉煌」"
+    },
+    {
+      "english": "morningstar \"Eos\"",
+      "before": "钉头锤「厄俄斯」",
+      "after": "晨星锤「厄俄斯」"
+    },
+    {
+      "english": "Lehudib's crystal spear",
+      "before": "雷胡迪布水晶矛",
+      "after": "雷胡迪布的水晶矛"
+    },
+    {
+      "english": "Cigotuvi's embrace",
+      "before": "西戈图维之拥",
+      "after": "西戈图维的拥抱"
+    },
+    {
+      "english": "Force Lance",
+      "before": "力场之枪",
+      "after": "力场长枪"
+    }
+  ],
+  "english_sha256": "69c2cf00d0fa3146722dc171e436d4e2424f1de717630705c9a8f2601a9c53e0"
+}

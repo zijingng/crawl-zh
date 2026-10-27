@@ -1,0 +1,710 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "files": {
+    "insult.txt": [
+      {
+        "key": "imp_taunt",
+        "source_sha256": "fd6ac71456eec8c34ed900a368e36682abd6746c2468bb901354e0895c52178a",
+        "hits": []
+      },
+      {
+        "key": "run_or_give_up",
+        "source_sha256": "f4c0ece63aec787f11c53dcae8709023787baac46e3da1e843bb3ab5ac48496b",
+        "hits": []
+      },
+      {
+        "key": "demon_taunt",
+        "source_sha256": "b6d1df37b6f67c9a8e2a3f967ea3255e76dce7a3d96d5073a3cf9b5813e1e3aa",
+        "hits": []
+      },
+      {
+        "key": "demon_taunt_special",
+        "source_sha256": "6849c14c59227292b0c59b6d52a8c08ef9b84d94cb5c69286cc7dad028305673",
+        "hits": [
+          {
+            "Term": "Will",
+            "Translation": "意志/将会/会",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+          }
+        ]
+      },
+      {
+        "key": "run_away",
+        "source_sha256": "a8819ccd79ab7a615428333dd4e2c9fa86d0e92e02c7722dde58e399a604a8f5",
+        "hits": [
+          {
+            "Term": "turn",
+            "Translation": "回合/转向/变成/轮流",
+            "Part of Speech": "noun",
+            "Variants": "turns",
+            "Note": "【版本/语境】回合/动作叙述用语；不是固定时间单位 aut，动作耗时可不同。 来源：player-act.cc。\n【语境补充 2026-10-21】时间单位用回合。动词及 in turn、turn into 等短语按句意选择转向、变成、轮流等译法。"
+          },
+          {
+            "Term": "Fly",
+            "Translation": "飞行",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "give_up",
+        "source_sha256": "3668968735e79d64db20d2351158a39e23dbdc58bcba7c7b8494ddf311be5a47",
+        "hits": []
+      },
+      {
+        "key": "whilst_thou_can",
+        "source_sha256": "dbaa0b38ab07c827dcebc8e580aac9b477e6213a558917ea14f308de04d02b28",
+        "hits": [
+          {
+            "Term": "Death",
+            "Translation": "死亡",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "body_or_spiritual_part",
+        "source_sha256": "ccf09a835a5e676f71938eb55742326864980fd1e0e6243157f17289a06756e5",
+        "hits": []
+      },
+      {
+        "key": "will_or_shall",
+        "source_sha256": "e9e02029b51a185cbe2aa5b538e9c9f6ac47294f6a3017c34ec689c87f1f2e2e",
+        "hits": [
+          {
+            "Term": "Will",
+            "Translation": "意志/将会/会",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+          }
+        ]
+      },
+      {
+        "key": "feast_or_devour",
+        "source_sha256": "9a9e619d13f939ed165242a4e45a79ba8d5481a15abdf356e565bf8bcf00273d",
+        "hits": []
+      },
+      {
+        "key": "important_body_part",
+        "source_sha256": "61a481f58fdf5b810cc86125bd4b0edf96b44975d7362556687801ed6b4dbf66",
+        "hits": []
+      },
+      {
+        "key": "important_spiritual_part",
+        "source_sha256": "09405056a0ee292a280ae9185220ffc3d7754e0ad0b5ea7bc9b9299488f06d27",
+        "hits": [
+          {
+            "Term": "Will",
+            "Translation": "意志/将会/会",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+          },
+          {
+            "Term": "faith",
+            "Translation": "信仰",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：信仰。"
+          },
+          {
+            "Term": "Spirit",
+            "Translation": "灵魂护盾",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Light",
+            "Translation": "轻盈",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "meal",
+        "source_sha256": "3ff9c119ea05e1ffa2e6798a2d4a4752d9e250690aa1d860a3e72e642abec68e",
+        "hits": []
+      },
+      {
+        "key": "generic_insult",
+        "source_sha256": "6ae4b9f30839521722a7578734399b84b4be433b2654a7759bb921b4b8ce6dad",
+        "hits": []
+      },
+      {
+        "key": "insult_adjective1",
+        "source_sha256": "efa2d95b04df76814913f21943abd1872dd4def9b09889051e0c881203b529c3",
+        "hits": [
+          {
+            "Term": "species",
+            "Translation": "种族",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          }
+        ]
+      },
+      {
+        "key": "insult general adj1",
+        "source_sha256": "1c16a16ece3cbad8113d67952e53d84b9b5a42f6dd4712a48dff1629b408f59a",
+        "hits": []
+      },
+      {
+        "key": "insult elf adj1",
+        "source_sha256": "391d06216fbff044a2b509f10b5c5eede16e795075f7def039ec6b3663b18707",
+        "hits": [
+          {
+            "Term": "elf",
+            "Translation": "精灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "frail",
+            "Translation": "体弱",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：体弱。"
+          }
+        ]
+      },
+      {
+        "key": "insult felid adj1",
+        "source_sha256": "19a99ced5dd43ce1b1a0e757aab52b4b4659e32b698477dad815764b1ba96b4a",
+        "hits": [
+          {
+            "Term": "Felid",
+            "Translation": "猫族",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/felid.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "insult_adjective2",
+        "source_sha256": "f1429ba3753501a6753eb6d5e7250bf21782724f61006361859b85065fa1b017",
+        "hits": [
+          {
+            "Term": "species",
+            "Translation": "种族",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          }
+        ]
+      },
+      {
+        "key": "insult general adj2",
+        "source_sha256": "731369c7f4a80c33806d631cfa2118f30ef8353e0960566d8d9b635bb92def94",
+        "hits": [
+          {
+            "Term": "bat",
+            "Translation": "蝙蝠",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "dread",
+            "Translation": "恐惧",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "hat",
+            "Translation": "帽子",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "Hell",
+            "Translation": "地狱",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "kobold",
+            "Translation": "狗头人",
+            "Part of Speech": "noun",
+            "Variants": "kobolds",
+            "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/kobold.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "elf",
+            "Translation": "精灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Fly",
+            "Translation": "飞行",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Earth",
+            "Translation": "大地强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "insult dwarf adj2",
+        "source_sha256": "957d35c542ea4d08d1268d363253d091756cbcc5dd7bd4ee8074dbd0a76d77ce",
+        "hits": [
+          {
+            "Term": "dwarf",
+            "Translation": "矮人",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "insult felid adj2",
+        "source_sha256": "98b8d30dc19560a131eb59cd6ca1ca1c69d55b8f6b67b8fa2aa1370e8eead33e",
+        "hits": [
+          {
+            "Term": "rot",
+            "Translation": "腐烂",
+            "Part of Speech": "noun",
+            "Variants": "rotting",
+            "Note": ""
+          },
+          {
+            "Term": "worm",
+            "Translation": "蠕虫",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "Felid",
+            "Translation": "猫族",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/felid.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Death",
+            "Translation": "死亡",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "insult tengu adj2",
+        "source_sha256": "11b338e85cef22b7ca92ed1b30a019fff5953e2916c60e69fc0e0f5a75efb476",
+        "hits": [
+          {
+            "Term": "tengu",
+            "Translation": "天狗",
+            "Part of Speech": "noun",
+            "Variants": "Te",
+            "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/tengu.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "frail",
+            "Translation": "体弱",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：体弱。"
+          },
+          {
+            "Term": "beak",
+            "Translation": "鸟喙",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：鸟喙。"
+          }
+        ]
+      },
+      {
+        "key": "insult mummy adj2",
+        "source_sha256": "04ea6b2e7b2989dbd8a807b6b6dee6c6a47cfc152845c7268a0f48c080edbf24",
+        "hits": [
+          {
+            "Term": "mummy",
+            "Translation": "木乃伊",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/mummy.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "undead",
+            "Translation": "亡灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】指不死生物类别，并不表示无法被杀死。 来源：mon-util.cc。"
+          }
+        ]
+      },
+      {
+        "key": "insult vampire adj2",
+        "source_sha256": "ce1c85d59dc7a1f9416a5c6f39a3c35692ddcd413869c74f45e3a1255b814e01",
+        "hits": [
+          {
+            "Term": "bat",
+            "Translation": "蝙蝠",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "undead",
+            "Translation": "亡灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】指不死生物类别，并不表示无法被杀死。 来源：mon-util.cc。"
+          },
+          {
+            "Term": "vampire",
+            "Translation": "吸血鬼",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【版本/语境】怪物译名保留；玩家种族已废弃。 来源：dat/species/deprecated-vampire.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Light",
+            "Translation": "轻盈",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "insult undead adj2",
+        "source_sha256": "c8d68c202ba714e59b3be75dfc68fc32ba1147267b0be5d331ed1f92b6d7b94e",
+        "hits": [
+          {
+            "Term": "corpse",
+            "Translation": "尸体",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "undead",
+            "Translation": "亡灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】指不死生物类别，并不表示无法被杀死。 来源：mon-util.cc。"
+          }
+        ]
+      },
+      {
+        "key": "insult_noun",
+        "source_sha256": "efcd1aad6c11a53a98e49b3e4c3323c761f0a4d6242e0d79d5873576ff6dd119",
+        "hits": [
+          {
+            "Term": "species",
+            "Translation": "种族",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          }
+        ]
+      },
+      {
+        "key": "insult general noun",
+        "source_sha256": "4c26ec5f542177be26a7295771de7ae999c6b530e679cdc94c741a661790caa7",
+        "hits": [
+          {
+            "Term": "Bailey",
+            "Translation": "堡场",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "bat",
+            "Translation": "蝙蝠",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Gnoll",
+            "Translation": "豺狼人",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/gnoll.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "harpy",
+            "Translation": "哈耳庇厄",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "worm",
+            "Translation": "蠕虫",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "zombie",
+            "Translation": "丧尸",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Brigand",
+            "Translation": "强盗",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/brigand.yaml。"
+          },
+          {
+            "Term": "Nobody",
+            "Translation": "无名氏",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "crab",
+            "Translation": "蟹",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "snake",
+            "Translation": "蛇",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "yak",
+            "Translation": "牦牛",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Death",
+            "Translation": "死亡",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "small_food",
+        "source_sha256": "5113567f3b5e74ab5d863b11c9a89a100cbc5253ee8ec88be0e103be3fc4176e",
+        "hits": []
+      },
+      {
+        "key": "insult felid noun",
+        "source_sha256": "0613fd208e758cb187010b266301c323f57bde4be90eb89e25501a6fb4317d8c",
+        "hits": [
+          {
+            "Term": "Felid",
+            "Translation": "猫族",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/felid.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "insult spriggan noun",
+        "source_sha256": "2a2d87dab246b262f8c6dfee76d5591560224f8eac0659335676c24dce8886f5",
+        "hits": [
+          {
+            "Term": "spell",
+            "Translation": "法术",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "Spriggan",
+            "Translation": "斯普利根",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/spriggan.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "rat",
+            "Translation": "老鼠",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "insult minotaur noun",
+        "source_sha256": "11fa695300faf7222b2b94f140759623f4d7dfd3701ca3779a7f8571fd988a7b",
+        "hits": [
+          {
+            "Term": "Minotaur",
+            "Translation": "牛头人",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/minotaur.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "insult mummy noun",
+        "source_sha256": "a044e7520309b78cd74620cfde1af2754625d52b4d79794d57cf749d5577fd6a",
+        "hits": [
+          {
+            "Term": "mummy",
+            "Translation": "木乃伊",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/mummy.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Roll",
+            "Translation": "翻滚",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+          }
+        ]
+      }
+    ]
+  },
+  "speech_verbs": [
+    {
+      "source": "says",
+      "hits": []
+    },
+    {
+      "source": "shouts",
+      "hits": []
+    },
+    {
+      "source": "barks",
+      "hits": []
+    },
+    {
+      "source": "howls",
+      "hits": []
+    },
+    {
+      "source": "roars",
+      "hits": []
+    },
+    {
+      "source": "screams",
+      "hits": []
+    },
+    {
+      "source": "bellows",
+      "hits": []
+    },
+    {
+      "source": "bleats",
+      "hits": []
+    },
+    {
+      "source": "trumpets",
+      "hits": []
+    },
+    {
+      "source": "screeches",
+      "hits": []
+    },
+    {
+      "source": "buzzes",
+      "hits": []
+    },
+    {
+      "source": "moans",
+      "hits": []
+    },
+    {
+      "source": "gurgles",
+      "hits": []
+    },
+    {
+      "source": "croaks",
+      "hits": []
+    },
+    {
+      "source": "growls",
+      "hits": []
+    },
+    {
+      "source": "hisses",
+      "hits": []
+    },
+    {
+      "source": "skitters",
+      "hits": []
+    },
+    {
+      "source": "skitters faintly",
+      "hits": []
+    },
+    {
+      "source": "sneers",
+      "hits": []
+    },
+    {
+      "source": "squeals",
+      "hits": []
+    },
+    {
+      "source": "rustles",
+      "hits": []
+    },
+    {
+      "source": "squeaks",
+      "hits": []
+    },
+    {
+      "source": "buggily says",
+      "hits": []
+    },
+    {
+      "source": "breathes",
+      "hits": []
+    },
+    {
+      "source": "whispers",
+      "hits": []
+    },
+    {
+      "source": "caws",
+      "hits": []
+    },
+    {
+      "source": "laughs",
+      "hits": []
+    }
+  ]
+}

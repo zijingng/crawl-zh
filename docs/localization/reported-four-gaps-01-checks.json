@@ -1,0 +1,35 @@
+{
+  "batch": "reported-four-gaps-01",
+  "build": {
+    "windows_tiles": "passed",
+    "exe_bytes": 27797465,
+    "exe_sha256": "4245a007a13dfd120825a08444a60c66027ab25a1a61b2bd6da076b804212040"
+  },
+  "native": {
+    "cases": 18,
+    "assertions": 78212,
+    "passed": true
+  },
+  "python": {
+    "cases": 33,
+    "passed": true
+  },
+  "new_reviewed_templates": 3,
+  "canonical_english_fixtures": {
+    "native-bilingual.txt": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+    "native-explicit-english.txt": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+    "native-language-english.txt": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087"
+  },
+  "coverage": [
+    "Feature and shop notes; ordinary, random and fixed artefact identification notes",
+    "Note serialization roundtrip, immutable historical item snapshots, bilingual morgue exports",
+    "Okawaru peaceful blue fountain typed weapon and body-part parameters",
+    "Dynamic actor corrosion; unchanged corrosion amount, duration and RNG",
+    "Equipped ring rows, inventory letters, hotkey escaping and English fallback"
+  ],
+  "limitations": [
+    "No live game UI session",
+    "Old notes without typed snapshots, unsupported blessing descriptions and unknown components retain complete English",
+    "Item snapshots require the matching save serialization version"
+  ]
+}

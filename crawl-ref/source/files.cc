@@ -11,6 +11,7 @@
 #include <stdint.h>
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "files.h"
 
@@ -1294,16 +1295,18 @@ static void _grab_followers_and_expire_summons()
         // Summons won't follow and will time out.
         if (non_stair_using_summons > 0)
         {
-            mprf("Your summoned %s left behind.",
-                 non_stair_using_allies > 1 ? "allies are" : "ally is");
+            const string original = make_stringf("Your summoned %s left behind.",
+                non_stair_using_allies > 1 ? "allies are" : "ally is");
+            mpr(ui_translate("f.files", original.c_str()));
         }
         else
         {
             const bool all_dead = non_stair_using_undead == non_stair_using_allies;
             // Permanent undead are left behind but stay.
-            mprf("Your mindless puppet%s behind%s.",
-                 non_stair_using_allies > 1 ? "s stay" : " stays",
-                 all_dead ? " to rot" : "");
+            const string original = make_stringf("Your mindless puppet%s behind%s.",
+                non_stair_using_allies > 1 ? "s stay" : " stays",
+                all_dead ? " to rot" : "");
+            mpr(ui_translate("f.files", original.c_str()));
         }
     }
 
@@ -1948,7 +1951,7 @@ bool pregen_dungeon(const level_id &stopping_point)
         // be sure that AK start doesn't interfere with the builder
         unwind_var<game_chapter> chapter(you.chapter, CHAPTER_ORB_HUNTING);
 
-        ui::progress_popup progress("Generating dungeon...\n\n", 35);
+        ui::progress_popup progress(ui_translate("f.files", "Generating dungeon...\n\n"), 35);
         progress.advance_progress();
 
         for (const level_id &new_level : to_generate)
@@ -2342,8 +2345,10 @@ bool load_level(dungeon_feature_type stair_taken, load_mode_type load_mode,
         && !get_level_annotation().empty()
         && !crawl_state.level_annotation_shown)
     {
-        mprf(MSGCH_PLAIN, YELLOW, "Level annotation: %s",
-             get_level_annotation().c_str());
+        mprf(MSGCH_PLAIN, YELLOW, "%s", ui_render("f.files", "Level annotation: %s",
+            make_stringf("Level annotation: %s", get_level_annotation().c_str()),
+            {ui_literal_arg(get_level_annotation(level_id::current(), false, false,
+                                                 false, LIGHTRED, true))}).c_str());
     }
 
     if (load_mode != LOAD_VISITOR)
@@ -2464,14 +2469,22 @@ bool load_level(dungeon_feature_type stair_taken, load_mode_type load_mode,
                 if (coinflip()
                     && slide_feature_over(you.pos()))
                 {
-                    mprf("%s slides away from you right after you %s it!",
-                         stair_str.c_str(), verb.c_str());
+                    string display_stair;
+                    const bool known = try_feature_display_name(feat, NUM_TRAPS, display_stair);
+                    mpr(ui_render("f.files", "%s slides away from you right after you %s it!",
+                        make_stringf("%s slides away from you right after you %s it!",
+                                     stair_str.c_str(), verb.c_str()),
+                        {{display_stair, known}, ui_text_arg("f.stair.verb", verb)}));
                 }
 
                 if (coinflip())
                 {
                     // Stairs stop fleeing from you now you actually caught one.
-                    mprf("%s settles down.", stair_str.c_str());
+                    string display_stair;
+                    const bool known = try_feature_display_name(feat, NUM_TRAPS, display_stair);
+                    mpr(ui_render("f.files", "%s settles down.",
+                        make_stringf("%s settles down.", stair_str.c_str()),
+                        {{display_stair, known}}));
                     you.duration[DUR_REPEL_STAIRS_MOVE]  = 0;
                     you.duration[DUR_REPEL_STAIRS_CLIMB] = 0;
                 }
@@ -2638,7 +2651,7 @@ void save_game(bool leave_game, const char *farewellmsg)
     {
         if (!dump_char(you.your_name, true))
         {
-            mpr("Char dump unsuccessful! Sorry about that.");
+            mpr(ui_translate("f.files", "Char dump unsuccessful! Sorry about that."));
             if (!crawl_state.seen_hups)
                 more();
         }
@@ -2676,7 +2689,9 @@ void save_game(bool leave_game, const char *farewellmsg)
     _save_game_exit();
 
     game_ended(game_exit::save, farewellmsg ? farewellmsg
-                                : "See you soon, " + you.your_name + "!");
+                                : ui_render("f.files", "See you soon, %s!",
+                                    "See you soon, " + you.your_name + "!",
+                                    {ui_literal_arg(you.your_name)}));
 }
 
 // Saves the game without exiting.
@@ -3210,12 +3225,12 @@ static bool _restore_game(const string& filename)
     {
         // Note: if we are here, the save info was properly read, it would
         // raise an exception otherwise.
-        if (yesno(("There is an existing game for name '" + save_info.name +
+        if (yesno(ui_render("f.files", "There is an existing game for name '%s' from an incompatible version of Crawl (%s).\nUnless you reinstall that version, you can't load it.\nDo you want to DELETE that game and start a new one?", ("There is an existing game for name '" + save_info.name +
                    "' from an incompatible version of Crawl ("
                    + save_info.prev_save_version + ").\n"
                    "Unless you reinstall that version, you can't load it.\n"
                    "Do you want to DELETE that game and start a new one?"
-                  ).c_str(),
+                  ), {ui_literal_arg(save_info.name), ui_literal_arg(save_info.prev_save_version)}).c_str(),
                   true, 'n'))
         {
             you.save->unlink();
@@ -3228,17 +3243,17 @@ static bool _restore_game(const string& filename)
         delete you.save;
         you.save = 0;
         game_ended(game_exit::abort,
-                save_info.name
-                + " is from an incompatible version and can't be loaded.");
+                ui_render("f.files", "%s is from an incompatible version and can't be loaded.", save_info.name
+                + " is from an incompatible version and can't be loaded.", {ui_literal_arg(save_info.name)}));
     }
 
     if (!crawl_state.bypassed_startup_menu
         && menu_game_type != crawl_state.type)
     {
         auto atype = article_a(_type_name_processed(save_info.saved_game_type));
-        if (!yesno(("You already have " + atype +
+        if (!yesno(ui_render("f.files", "You already have %s game saved under the name '%s';\ndo you want to load that instead?", ("You already have " + atype +
                     " game saved under the name '" + save_info.name + "';\n"
-                    "do you want to load that instead?").c_str(),
+                    "do you want to load that instead?"), {ui_text_arg("f.game.mode", _type_name_processed(save_info.saved_game_type)), ui_literal_arg(save_info.name)}).c_str(),
                    true, 'n'))
         {
             you.save->abort(); // don't even rewrite the header
@@ -3246,8 +3261,8 @@ static bool _restore_game(const string& filename)
             you.save = 0;
             // explicitly don't set default startup name here
             game_ended(game_exit::abort,
-                "Please use a different name to start a new " +
-                _type_name_processed(menu_game_type) + " game, then.");
+                ui_render("f.files", "Please use a different name to start a new %s game, then.", "Please use a different name to start a new " +
+                _type_name_processed(menu_game_type) + " game, then.", {ui_text_arg("f.game.mode", _type_name_processed(menu_game_type))}));
         }
     }
     if (Options.remember_name)
@@ -3256,17 +3271,17 @@ static bool _restore_game(const string& filename)
     if (numcmp(save_info.prev_save_version.c_str(), Version::Long, 2) == -1
         && version_is_stable(save_info.prev_save_version.c_str()))
     {
-        if (!yesno(("This game comes from a previous release of Crawl (" +
+        if (!yesno(ui_render("f.files", "This game comes from a previous release of Crawl (%s).\n\nIf you load it now, you won't be able to go back. Continue?", ("This game comes from a previous release of Crawl (" +
                     save_info.prev_save_version + ").\n\nIf you load it now,"
-                    " you won't be able to go back. Continue?").c_str(),
+                    " you won't be able to go back. Continue?"), {ui_literal_arg(save_info.prev_save_version)}).c_str(),
                     true, 'n'))
         {
             you.save->abort(); // don't even rewrite the header
             delete you.save;
             you.save = 0;
-            game_ended(game_exit::abort, "Please use version " +
+            game_ended(game_exit::abort, ui_render("f.files", "Please use version %s to load %s then.", "Please use version " +
                 save_info.prev_save_version
-                + " to load " + save_info.name + " then.");
+                + " to load " + save_info.name + " then.", {ui_literal_arg(save_info.prev_save_version), ui_literal_arg(save_info.name)}));
         }
     }
     you.init_from_save_info(save_info);
@@ -3549,16 +3564,16 @@ static bool _convert_obsolete_species()
     if (you.species == SP_LAVA_ORC)
     {
         if (!yesno(
-            "This Lava Orc save game cannot be loaded as-is. If you load it now,\n"
-            "your character will be converted to a Mountain Dwarf. Continue?",
+            ui_translate("f.files", "This Lava Orc save game cannot be loaded as-is. If you load it now,\n"
+            "your character will be converted to a Mountain Dwarf. Continue?"),
                        false, 'N'))
         {
             you.save->abort(); // don't even rewrite the header
             delete you.save;
             you.save = 0;
             game_ended(game_exit::abort,
-                "Please load the save in an earlier version "
-                "if you want to keep it as a Lava Orc.");
+                ui_translate("f.files", "Please load the save in an earlier version "
+                "if you want to keep it as a Lava Orc."));
         }
         change_species_to(SP_MOUNTAIN_DWARF);
         // No need for conservation
@@ -3574,16 +3589,16 @@ static bool _convert_obsolete_species()
     else if (you.species == SP_VAMPIRE)
     {
         if (!yesno(
-            "This Vampire save game cannot be loaded as-is. If you load it now,\n"
-            "your character will be converted to a Human. Continue?",
+            ui_translate("f.files", "This Vampire save game cannot be loaded as-is. If you load it now,\n"
+            "your character will be converted to a Human. Continue?"),
                        false, 'N'))
         {
             you.save->abort(); // don't even rewrite the header
             delete you.save;
             you.save = 0;
             game_ended(game_exit::abort,
-                "Please load the save in an earlier version "
-                "if you want to remain a Vampire.");
+                ui_translate("f.files", "Please load the save in an earlier version "
+                "if you want to remain a Vampire."));
         }
         change_species_to(SP_HUMAN);
         return true;

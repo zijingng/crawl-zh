@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
+#include "item-name.h"
 
 #include "decks.h"
 #include "describe.h"
@@ -118,7 +120,7 @@ protected:
             {
                 lastch = CONTROL('D');
                 temp_title = title->text;
-                set_title("Select to reset item to default ([*] for all): ");
+                set_title(ui_translate("k.known", "Select to reset item to default ([*] for all): "));
             }
 
             return true;
@@ -156,7 +158,7 @@ protected:
                     + menu_keyhelp_cmd(CMD_MENU_PAGE_UP) + " page up  ";
             }
             navigation += "</lightgrey>";
-            navigation = pad_more_with_esc(navigation);
+            navigation = pad_more_with(navigation, menu_keyhelp_cmd(CMD_MENU_EXIT) + " exit");
             navigation +=
                     "\n<lightgrey>"
                     "Letters toggle autopickup  ";
@@ -174,12 +176,79 @@ protected:
             }
         }
 
+        ui_translation_group footer({
+            {"k.known", " page down  "}, {"k.known", " page up  "},
+            {"k.known", " recognised  "}, {"k.known", " exit"},
+            {"k.known", " select  "}, {"k.known", "Letters toggle autopickup  "},
+            {"k.known", " toggle selected  "}, {"k.known", " unrecognised"},
+        });
+        if (footer.available())
+        {
+            auto tr = [&](const char *key) { return footer.get("k.known", key); };
+            string shown = "<lightgrey>";
+            if (!is_set(MF_NOSELECT))
+                shown += menu_keyhelp_select_keys() + tr(" select  ");
+            if (scrollable)
+                shown += menu_keyhelp_cmd(CMD_MENU_PAGE_DOWN) + tr(" page down  ")
+                         + menu_keyhelp_cmd(CMD_MENU_PAGE_UP) + tr(" page up  ");
+            if (is_set(MF_NOSELECT))
+                shown += "[<w>-</w>]" + string(tr(" recognised  "))
+                         + menu_keyhelp_cmd(CMD_MENU_EXIT) + tr(" exit")
+                         + "</lightgrey>";
+            else
+            {
+                // Keep the same exit binding and spacing as the English footer.
+                shown += "</lightgrey>";
+                shown = pad_more_with(shown, menu_keyhelp_cmd(CMD_MENU_EXIT)
+                                            + tr(" exit"));
+                shown += "\n<lightgrey>" + string(tr("Letters toggle autopickup  "));
+                if (is_set(MF_ARROWS_SELECT))
+                    shown += menu_keyhelp_cmd(CMD_MENU_TOGGLE_SELECTED)
+                             + tr(" toggle selected  ");
+                if (!all_items_known)
+                    shown += "[<w>-</w>]" + string(tr(" unrecognised"));
+                shown += "</lightgrey>";
+            }
+            navigation = shown;
+        }
+
         return pad_more_with(navigation,
                             "<lightgrey>[<w>XXX</w>]</lightgrey>", MIN_COLS);
     }
 
     bool all_items_known;
 };
+
+static bool _try_catalogue_label(const item_def &item, const string &english,
+                                 string &output)
+{
+    ui_translation_group category({{"display.item.category", english.c_str()}});
+    if (category.available())
+    {
+        output = category.get("display.item.category", english.c_str());
+        return true;
+    }
+    ui_translation_group text;
+    if (!text.available())
+        return false;
+    // This menu already explicitly names unseen kinds in English (ident=true).
+    // Use a local copy; never change the player's item or knowledge tables.
+    item_def visible = item;
+    visible.flags |= ISFLAG_IDENTIFIED;
+    visible.quantity = 1;
+    const string key = visible.name(DESC_DBNAME, true, true, false);
+    text.require("display.item", key.c_str());
+    const bool rarity = item.base_type == OBJ_POTIONS || item.base_type == OBJ_SCROLLS;
+    const string rank = rarity ? describe_item_rarity(item) : "";
+    if (rarity)
+        text.require("display.item.rarity", rank.c_str());
+    if (!text.available())
+        return false;
+    output = text.get("display.item", key.c_str());
+    if (rarity)
+        output += "（" + string(text.get("display.item.rarity", rank.c_str())) + "）";
+    return true;
+}
 
 class KnownEntry : public InvEntry
 {
@@ -239,6 +308,9 @@ public:
             name = pluralise(name);
         }
 
+        string displayed;
+        if (_try_catalogue_label(*item, name, displayed))
+            name = displayed;
         char symbol;
         if (selected_qty == 0)
             symbol = item_needs_autopickup(*item) ? '+' : '-';
@@ -297,6 +369,9 @@ public:
 
     virtual string get_text() const override
     {
+        string displayed;
+        if (_try_catalogue_label(*item, "", displayed))
+            return " " + displayed;
         if (item->base_type == OBJ_SCROLLS || item->base_type == OBJ_POTIONS)
         {
             return " " + item->name(DESC_PLAIN, false, true, false)
@@ -502,13 +577,13 @@ void check_item_knowledge(bool unknown_items)
     string stitle;
 
     if (unknown_items)
-        stitle = "Items not yet recognised:";
+        stitle = ui_translate("k.known", "Items not yet recognised:");
     else if (!all_items_known)
-        stitle = "Recognised items. (Select to toggle autopickup)";
+        stitle = ui_translate("k.known", "Recognised items. (Select to toggle autopickup)");
     else
-        stitle = "You recognise all items. (Select to toggle autopickup)";
+        stitle = ui_translate("k.known", "You recognise all items. (Select to toggle autopickup)");
 
-    string prompt = "(_ for help)";
+    string prompt = ui_translate("k.known", "(_ for help)");
     //TODO: when the menu is opened, the text is not justified properly.
     stitle = stitle + string(max(0, MIN_COLS - strwidth(stitle + prompt)),
                              ' ') + prompt;
@@ -527,7 +602,7 @@ void check_item_knowledge(bool unknown_items)
     ml = menu.load_items(items_baubles, known_item_mangle, ml, false);
     if (!items_other.empty())
     {
-        menu.add_entry(new MenuEntry("Other Items", MEL_SUBTITLE));
+        menu.add_entry(new MenuEntry(ui_translate("k.known", "Other Items"), MEL_SUBTITLE));
         ml = menu.load_items_seq(items_other, known_item_mangle, ml);
     }
 

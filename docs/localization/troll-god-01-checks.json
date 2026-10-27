@@ -1,0 +1,55 @@
+{
+  "po_replacements": {
+    "ui.po": {
+      "deep_troll_occurrences": 3,
+      "navigation_typos": 0
+    },
+    "textdb.po": {
+      "deep_troll_occurrences": 2,
+      "navigation_typos": 10
+    }
+  },
+  "textdb_changed_entries": [
+    {
+      "source": "descript/commands.txt",
+      "key": "cmd_map_add_waypoint"
+    },
+    {
+      "source": "descript/commands.txt",
+      "key": "cmd_map_add_waypoint verbose"
+    },
+    {
+      "source": "descript/commands.txt",
+      "key": "cmd_map_find_waypoint"
+    },
+    {
+      "source": "database/help.txt",
+      "key": "interlevel-travel.branch.prompt"
+    },
+    {
+      "source": "database/help.txt",
+      "key": "stash-search.prompt"
+    },
+    {
+      "source": "database/help.txt",
+      "key": "level-map"
+    },
+    {
+      "source": "descript/monsters.txt",
+      "key": "deep troll earth mage"
+    },
+    {
+      "source": "descript/monsters.txt",
+      "key": "deep troll shaman"
+    }
+  ],
+  "matching_dependencies_refreshed": 5958,
+  "output_source_before": "6a6dfc8527253fee470a121bd0013b9260092ad97d8988cbcc1b51a88c1d0792",
+  "output_source_after": "0e9b08c76cb297dcefe8cc2bd85e6e15a58a59172ba386fabcbb9b1aed5c0783",
+  "glossary_cells_updated": 3,
+  "windows_tiles_build": "passed",
+  "python_tests_passed": 32,
+  "native_cases_passed": 3,
+  "native_assertions_passed": 73,
+  "gui_visual_test": false
+}

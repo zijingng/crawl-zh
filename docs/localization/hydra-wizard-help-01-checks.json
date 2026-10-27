@@ -1,0 +1,31 @@
+{
+  "source_hashes": {
+    "crawl-ref/source/mon-info.cc": {
+      "before": "dc4e71622a561d13e660c1fb2077ed9591190d75fbdc7e4293526dea43eecdb0",
+      "after": "7ebbe76173f7156098aa3fcd9ec8aae830d9f12bd5e43ce38ccb29261a4f7735"
+    },
+    "crawl-ref/source/command.cc": {
+      "before": "17b7c75b709bd9d038dc0b1880b17377780ab8169bacbd1cdbf4be54cb9b4a57",
+      "after": "94d6714b1243d3028ea0d978c0c5a75270debb1036b920956755647a5bb4de96"
+    }
+  },
+  "matching_dependencies_refreshed": {
+    "ui-sample.json": 13059,
+    "textdb-phase3.json": 1
+  },
+  "help_page": "wiz-monster",
+  "existing_search_page": "stash-search.prompt",
+  "head_forms": {
+    "1": "单",
+    "2": "双"
+  },
+  "glossary_hits": {
+    "hydra": "海德拉",
+    "wizard mode": "巫师模式"
+  },
+  "windows_tiles_build": "passed",
+  "python_tests_passed": 32,
+  "native_test_cases_passed": 1,
+  "native_assertions_passed": 87,
+  "gui_visual_test": false
+}

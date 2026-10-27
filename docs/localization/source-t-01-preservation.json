@@ -1,0 +1,381 @@
+{
+  "batch": "source-t-01",
+  "canonical_functions": [
+    {
+      "file": "transform.cc",
+      "function": "Form::melding_description",
+      "overloads": 1,
+      "sha256": "24e5536985a79100bb73db436bc61c95d90bd07294f17321a0b43f87ec899d96",
+      "unchanged": true
+    },
+    {
+      "file": "transform.cc",
+      "function": "Form::get_description",
+      "overloads": 1,
+      "sha256": "806d6af1e344f2c6b100c5a04307ba2bf66425fffc4a2f2953006e7391f9b62b",
+      "unchanged": true
+    },
+    {
+      "file": "transform.cc",
+      "function": "Form::transform_message",
+      "overloads": 1,
+      "sha256": "62437601e8cee0205f0a852f994daa5bf3bd7d84cfdefbcab6599b97b1c1a217",
+      "unchanged": true
+    },
+    {
+      "file": "transform.cc",
+      "function": "Form::get_untransform_message",
+      "overloads": 1,
+      "sha256": "5223b46ed6827d1b9a64f2664d4fabd0536a921210511f40f507adc3cc60e8f5",
+      "unchanged": true
+    },
+    {
+      "file": "transform.cc",
+      "function": "get_description",
+      "overloads": 7,
+      "sha256": "d68587934145e8ca0a0394cec7c2e59e43724e8636a53f8b0f6592b43a19ae1c",
+      "unchanged": true
+    },
+    {
+      "file": "transform.cc",
+      "function": "transform_message",
+      "overloads": 10,
+      "sha256": "d39c77d811d5ed9acf53c9585a0cb327f8b6a3499ff4e5773a666406a7600d90",
+      "unchanged": true
+    },
+    {
+      "file": "transform.cc",
+      "function": "get_untransform_message",
+      "overloads": 17,
+      "sha256": "c552076453aabe61aecec10e9e76289c00e5809a200e22d6c46e8173503b72c4",
+      "unchanged": true
+    },
+    {
+      "file": "transform.cc",
+      "function": "get_transform_description",
+      "overloads": 3,
+      "sha256": "7510340f805e6f503bfdfa4bb0e322dbb56e7f53a5b4930811c0bb18a0bbab17",
+      "unchanged": true
+    },
+    {
+      "file": "transform.cc",
+      "function": "get_long_name",
+      "overloads": 2,
+      "sha256": "167b7ad70af149e0d03e9e7e1027a52bac9acacc96458fb5b53332880b00f915",
+      "unchanged": true
+    },
+    {
+      "file": "transform.cc",
+      "function": "get_uc_attack_name",
+      "overloads": 4,
+      "sha256": "d2a2fbe66f203a678a714221467e8286c86c3066d35e37df6ea2ca82b16dceea",
+      "unchanged": true
+    },
+    {
+      "file": "transform.cc",
+      "function": "Form::player_prayer_action",
+      "overloads": 1,
+      "sha256": "8989531bfa252905bf663cf84ebbb194afb86efac0fe6a93bf632990bc2e0fb0",
+      "unchanged": true
+    },
+    {
+      "file": "transform.cc",
+      "function": "cant_transform_reason",
+      "overloads": 1,
+      "sha256": "406656d2d007508c1dce3f50a3df358d13a45ac81f88aa8df192f7205ad1e40d",
+      "unchanged": true
+    },
+    {
+      "file": "transform.cc",
+      "function": "feat_dangerous_for_form",
+      "overloads": 1,
+      "sha256": "754b1fd063b95d1abcaad98659dd478250abbcfcf3f429038c2a2806d19ba5fc",
+      "unchanged": true
+    },
+    {
+      "file": "transform.cc",
+      "function": "lifeless_prevents_form",
+      "overloads": 1,
+      "sha256": "9175650ac9bedcc7fcda5cdca1f4b144128d744b5b3c1d39dff4211000b2ce4e",
+      "unchanged": true
+    },
+    {
+      "file": "terrain.cc",
+      "function": "feat_preposition",
+      "overloads": 1,
+      "sha256": "e501472914fe3b2dbb72a11a28f0f0891993694260dcb6970e6c6f11c577049d",
+      "unchanged": true
+    },
+    {
+      "file": "terrain.cc",
+      "function": "stair_climb_verb",
+      "overloads": 1,
+      "sha256": "e619413b981976a61663b12ef4679aad1a4eca6876ac66c43f227634ad2ef0a5",
+      "unchanged": true
+    },
+    {
+      "file": "terrain.cc",
+      "function": "feat_type_name",
+      "overloads": 1,
+      "sha256": "aed338029b3ced82719de04f99826e9095e0e8904af6aa46c0a0f0b3af2647f7",
+      "unchanged": true
+    },
+    {
+      "file": "traps.cc",
+      "function": "trap_def::name",
+      "overloads": 1,
+      "sha256": "22985bed5d8ecf75f9971dbbf79af0ee434cd96c7160a30e1fb2ebbd7950d0e1",
+      "unchanged": true
+    },
+    {
+      "file": "traps.cc",
+      "function": "held_status",
+      "overloads": 1,
+      "sha256": "2c7d04ff4f010493f38065a8d94bfb6727613e0810b7e590d8f591933957643e",
+      "unchanged": true
+    },
+    {
+      "file": "traps.cc",
+      "function": "_net_immune_reason",
+      "overloads": 1,
+      "sha256": "b8ad0cf5b9388fb572d708c47e2d3ef09d426bd877fb8c83a15c3a51f002be38",
+      "unchanged": true
+    },
+    {
+      "file": "traps.cc",
+      "function": "_malev_msg",
+      "overloads": 1,
+      "sha256": "03cb68c95d7b4d7bcfd3697e793f5bfc56e0fcc05c9d4c5e4c5b2763cab1b6d7",
+      "unchanged": true
+    },
+    {
+      "file": "traps.cc",
+      "function": "trap_rate_for_place",
+      "overloads": 1,
+      "sha256": "29bfbf7a21515fa89a3e8fb7e746ac48225c6207c6664a7112e08a076f7695de",
+      "unchanged": true
+    },
+    {
+      "file": "target.cc",
+      "function": "_wallmsg",
+      "overloads": 1,
+      "sha256": "27171e648e847108fdebfad6f82a63259b4498085664ee18c2a018022462a84c",
+      "unchanged": true
+    },
+    {
+      "file": "travel.cc",
+      "function": "_get_trans_travel_dest",
+      "overloads": 1,
+      "sha256": "054fb351c72f09a57241b4dfdb7ad19eb80f0df2d33b98e3c0a9ceb4e9d99a0f",
+      "unchanged": true
+    },
+    {
+      "file": "travel.cc",
+      "function": "level_id::describe",
+      "overloads": 1,
+      "sha256": "5608efcd3d086ff5cf5a94aa1b739a628badb57df6a5420dd9e83dfee9137e5b",
+      "unchanged": true
+    },
+    {
+      "file": "travel.cc",
+      "function": "_run_mode_name",
+      "overloads": 1,
+      "sha256": "72a52ce513a9b75dedcf964010edb4c9431ad192d02c08a1c1921c74f3c48346",
+      "unchanged": true
+    },
+    {
+      "file": "travel.cc",
+      "function": "runrest::runmode_name",
+      "overloads": 1,
+      "sha256": "7f3289d0cbd18a4c7dc4cce09ca4a9d717263a87e77ed2398b4a44e49a523016",
+      "unchanged": true
+    },
+    {
+      "file": "travel.cc",
+      "function": "TravelCache::get_waypoint_descs",
+      "overloads": 1,
+      "sha256": "a93e67aa3091646eac218f1ded08c98d1a058e10e8449780bd9764d63410dfe9",
+      "unchanged": true
+    },
+    {
+      "file": "travel.cc",
+      "function": "explore_discoveries::cleaned_feature_description",
+      "overloads": 1,
+      "sha256": "19cce2f3f0fc87a7fe6d9a6b6023ab82154dd63863b93c5fafa9a5ed1f1f1051",
+      "unchanged": true
+    },
+    {
+      "file": "travel.cc",
+      "function": "explore_discoveries::apply_quantities",
+      "overloads": 1,
+      "sha256": "5ff3902b67094bb9fe717d7470d3e4ef64c1f409ce1f0f53ae263dfc177fdb0d",
+      "unchanged": true
+    },
+    {
+      "file": "travel.cc",
+      "function": "explore_discoveries::merge_feature",
+      "overloads": 1,
+      "sha256": "e41cc6012f3e4f871a3a89a3b3a56525f53bc5da2ae3cb612242eb7683a3d17c",
+      "unchanged": true
+    },
+    {
+      "file": "travel.cc",
+      "function": "explore_discoveries::add_stair",
+      "overloads": 1,
+      "sha256": "34b7e284ebc4066f05ec2a6e8ea7686ea959d2737c8e7800d837f63b6335dd86",
+      "unchanged": true
+    },
+    {
+      "file": "travel.cc",
+      "function": "explore_discoveries::has_duplicates",
+      "overloads": 1,
+      "sha256": "6d987c1c8df63c5cf26f9d9dbbcbd342e96c1f92457f2ab3b13ed319f8b76e47",
+      "unchanged": true
+    }
+  ],
+  "unmatched_candidates": [],
+  "random_and_script_calls": [
+    {
+      "file": "tags.cc",
+      "calls": 7,
+      "expressions_and_lexical_order_unchanged": true
+    },
+    {
+      "file": "teleport.cc",
+      "calls": 8,
+      "expressions_and_lexical_order_unchanged": true
+    },
+    {
+      "file": "terrain.cc",
+      "calls": 9,
+      "expressions_and_lexical_order_unchanged": true
+    },
+    {
+      "file": "throw.cc",
+      "calls": 9,
+      "expressions_and_lexical_order_unchanged": true
+    },
+    {
+      "file": "tiledoll.cc",
+      "calls": 6,
+      "expressions_and_lexical_order_unchanged": true
+    },
+    {
+      "file": "tilepick-p.cc",
+      "calls": 1,
+      "expressions_and_lexical_order_unchanged": true
+    },
+    {
+      "file": "tilepick.cc",
+      "calls": 1,
+      "expressions_and_lexical_order_unchanged": true
+    },
+    {
+      "file": "tileview.cc",
+      "calls": 13,
+      "expressions_and_lexical_order_unchanged": true
+    },
+    {
+      "file": "timed-effects.cc",
+      "calls": 39,
+      "expressions_and_lexical_order_unchanged": true
+    },
+    {
+      "file": "transform.cc",
+      "calls": 15,
+      "expressions_and_lexical_order_unchanged": true
+    },
+    {
+      "file": "traps.cc",
+      "calls": 36,
+      "expressions_and_lexical_order_unchanged": true
+    }
+  ],
+  "unchanged_t_files": [
+    "tag-pref.h",
+    "tag-version.h",
+    "tags.cc",
+    "tags.h",
+    "targ-mode-type.h",
+    "target-compass.h",
+    "targeting-type.h",
+    "teleport.h",
+    "terrain-change-type.h",
+    "terrain.h",
+    "text-tag-type.h",
+    "threads.h",
+    "throw.h",
+    "tile-env.h",
+    "tile-flags.h",
+    "tile-inventory-flags.h",
+    "tile-player-flag-cut.h",
+    "tile-player-flags.h",
+    "tilebuf.cc",
+    "tilebuf.h",
+    "tilecell.cc",
+    "tilecell.h",
+    "tiledgnbuf.cc",
+    "tiledgnbuf.h",
+    "tiledoll.cc",
+    "tiledoll.h",
+    "tilefont.cc",
+    "tilefont.h",
+    "tilemcache.cc",
+    "tilemcache.h",
+    "tilepick-p.cc",
+    "tilepick-p.h",
+    "tilepick.cc",
+    "tilepick.h",
+    "tilereg-abl.h",
+    "tilereg-cmd.h",
+    "tilereg-crt.cc",
+    "tilereg-crt.h",
+    "tilereg-dgn.h",
+    "tilereg-doll.h",
+    "tilereg-grid.cc",
+    "tilereg-grid.h",
+    "tilereg-inv.h",
+    "tilereg-map.cc",
+    "tilereg-map.h",
+    "tilereg-mem.h",
+    "tilereg-mon.cc",
+    "tilereg-mon.h",
+    "tilereg-msg.h",
+    "tilereg-skl.h",
+    "tilereg-spl.h",
+    "tilereg-stat.h",
+    "tilereg-tab.h",
+    "tilereg-text.cc",
+    "tilereg-text.h",
+    "tilereg.cc",
+    "tilereg.h",
+    "tiles-build-specific.h",
+    "tiles.h",
+    "tilesdl.h",
+    "tiletex.cc",
+    "tiletex.h",
+    "tileview.cc",
+    "tileview.h",
+    "tileweb-text.cc",
+    "tileweb-text.h",
+    "tileweb.h",
+    "timed-effect-type.h",
+    "timed-effects.h",
+    "torment-source-type.h",
+    "transformation.h",
+    "trap-def.h",
+    "trap-type.h",
+    "traps.h",
+    "travel-defs.h",
+    "travel-open-doors-type.h",
+    "tutorial.cc",
+    "tutorial.h"
+  ],
+  "manual_review": [
+    "Transform entry/exit messages are obtained once; display adapters never repeat the random statue joke or original virtual message method.",
+    "Harlequin trap TextDB selection and embedded Lua run once; the selected known result is passed to the display adapter.",
+    "Marker stop_explore text is queried once; a boolean records whether its description is custom.",
+    "Target validators retain canonical why_not; ephemeral display metadata is cleared for each failure and guarded against direct writes and language changes.",
+    "Explore grouping, deduplication, pathfinding, branch/god hotkeys, canonical tab names and save identifiers remain English."
+  ]
+}

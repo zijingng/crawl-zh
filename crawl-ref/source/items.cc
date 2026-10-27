@@ -6,6 +6,8 @@
 #include "AppHdr.h"
 
 #include "items.h"
+#include "i18n.h"
+#include "i18n-item.h"
 
 #include <algorithm>
 #include <cctype>
@@ -52,6 +54,7 @@
 #include "macro.h"
 #include "makeitem.h"
 #include "message.h"
+#include "menu.h"
 #include "nearby-danger.h"
 #include "notes.h"
 #include "options.h"
@@ -212,7 +215,7 @@ static int _cull_items()
 
     // XXX: Not the prettiest of messages, but the player
     // deserves to know whenever this kicks in. -- bwr
-    mprf(MSGCH_WARN, "Too many items on level, removing some.");
+    mprf(MSGCH_WARN, "%s", ui_translate("i.items", "Too many items on level, removing some."));
 
     // Rules:
     //  1. Don't cleanup anything nearby the player
@@ -906,6 +909,31 @@ string item_message(vector<const item_def *> const &items)
     return join_strings(colour_names.begin(), colour_names.end(), "; ");
 }
 
+bool try_ui_floor_item_list(const vector<const item_def*> &items, string &output)
+{
+    ui_translation_group group({{"log.discovery.items", "Things that are here:"}});
+    if (!group.available())
+        return false;
+    vector<string> names;
+    for (const item_def *item : items)
+    {
+        string name;
+        if (!try_item_display_name(*item, name, false, false))
+            return false;
+        // Keep menu-colour matching on canonical English, just like the
+        // original menu_colour_item_name path, but colour the translated name.
+        const int col = menu_colour(item->name(DESC_A), item_prefix(*item, false), "pickup", false);
+        if (col != -1)
+        {
+            const string colour = colour_to_str(col);
+            name = "<" + colour + ">" + name + "</" + colour + ">";
+        }
+        names.push_back(name);
+    }
+    output = join_strings(names.begin(), names.end(), "; ");
+    return true;
+}
+
 void item_check()
 {
     describe_floor();
@@ -923,21 +951,34 @@ void item_check()
     {
         const item_def& it(*items[0]);
         string name = menu_colour_item_name(it, DESC_A);
-        strm << "You see here " << name << '.' << endl;
+        string translated;
+        if (try_ui_item_log("You see here %s.", it, translated))
+            strm << translated << endl;
+        else
+            strm << "You see here " << name << '.' << endl;
         return;
     }
 
     string desc_string = item_message(items);
     // Stack summary case
     if (static_cast<int>(items.size()) >= Options.item_stack_summary_minimum)
-        mprf_nojoin(MSGCH_FLOOR_ITEMS, "Items here: %s.", desc_string.c_str());
+        mprf_nojoin(MSGCH_FLOOR_ITEMS, ui_translate("log.discovery.items", "Items here: %s."), desc_string.c_str());
     else if (items.size() <= msgwin_lines() - 1)
     {
-        mpr_nojoin(MSGCH_FLOOR_ITEMS, "Things that are here:");
-        mprf_nocap("%s", desc_string.c_str());
+        string translated;
+        if (try_ui_floor_item_list(items, translated))
+        {
+            mpr_nojoin(MSGCH_FLOOR_ITEMS, ui_translate("log.discovery.items", "Things that are here:"));
+            mprf_nocap("%s", translated.c_str());
+        }
+        else
+        {
+            mpr_nojoin(MSGCH_FLOOR_ITEMS, "Things that are here:");
+            mprf_nocap("%s", desc_string.c_str());
+        }
     }
     else
-        strm << "There are many items here." << endl;
+        strm << ui_translate("log.discovery.items", "There are many items here.") << endl;
 
     if (items.size() > 2 && crawl_state.game_is_hints_tutorial())
     {
@@ -992,8 +1033,7 @@ void identify_item(item_def& item)
         && !(item.flags & (ISFLAG_NOTED_ID)))
     {
         // Make a note of it.
-        take_note(Note(NOTE_ID_ITEM, 0, 0, item.name(DESC_A),
-                       origin_desc(item)));
+        take_note(make_identified_item_note(item, origin_desc(item)));
 
         // Sometimes (e.g. shops) you can ID an item before you get it;
         // don't note twice in those cases.
@@ -1052,10 +1092,10 @@ void pickup_menu(int item_link)
     auto items = const_item_list_on_square(item_link);
     ASSERT(items.size());
 
-    string prompt = "Pick up what? " + slot_description() + " (_ for help)";
+    string prompt = ui_translate("i.items", "Pick up what? ") + slot_description() + ui_translate("i.items", " (_ for help)");
 
     if (items.size() == 1 && items[0]->quantity > 1)
-        prompt = "Select pick up quantity by entering a number, then select the item";
+        prompt = ui_translate("i.items", "Select pick up quantity by entering a number, then select the item");
     vector<SelItem> selected = select_items(items, prompt.c_str(), false,
                                             menu_type::pickup);
     if (selected.empty())
@@ -1087,7 +1127,7 @@ void pickup_menu(int item_link)
                 // floor.
                 if (!move_item_to_inv(j, num_to_take))
                 {
-                    pickup_warning = "You can't carry that many items.";
+                    pickup_warning = ui_translate("i.items", "You can't carry that many items.");
                     if (env.item[j].defined())
                         env.item[j].flags = oldflags;
                 }
@@ -1191,8 +1231,7 @@ static void _check_note_item(item_def &item)
     if (item_is_collectible(item) || is_artefact(item))
     {
         int v = item.base_type == OBJ_GEMS ? gem_time_left(item.sub_type) : 0;
-        take_note(Note(NOTE_GET_ITEM, v, 0, item.name(DESC_A),
-                       origin_desc(item)));
+        take_note(make_obtained_item_note(item, v));
         item.flags |= ISFLAG_NOTED_GET;
 
         // If it's already fully identified when picked up, don't take
@@ -1384,11 +1423,11 @@ bool pickup_single_item(int link, int qty)
     item_def* item = &env.item[link];
     if (item_is_stationary(env.item[link]))
     {
-        mpr("You can't pick that up.");
+        mpr(ui_translate("log.items", "You can't pick that up."));
         return false;
     }
     if (item->base_type == OBJ_GOLD && !qty && !i_feel_safe()
-        && !yesno("Are you sure you want to pick up this pile of gold now?",
+        && !yesno(ui_translate("i.items", "Are you sure you want to pick up this pile of gold now?"),
                   true, 'n'))
     {
         canned_msg(MSG_OK);
@@ -1396,10 +1435,9 @@ bool pickup_single_item(int link, int qty)
     }
     if (qty == 0 && item->quantity > 1 && item->base_type != OBJ_GOLD)
     {
-        const string prompt
-                = make_stringf("Pick up how many of %s (; or enter for all)? ",
-                               item->name(DESC_THE, false,
-                                          false, false).c_str());
+        const string prompt = ui_render("i.items", "Pick up how many of %s (; or enter for all)? ",
+            make_stringf("Pick up how many of %s (; or enter for all)? ",
+                item->name(DESC_THE, false, false, false).c_str()), {ui_item_arg(*item)});
 
         qty = prompt_for_quantity(prompt.c_str());
         if (qty == -1)
@@ -1428,7 +1466,7 @@ bool pickup_single_item(int link, int qty)
 
     if (!pickup_succ)
     {
-        mpr("You can't carry that many items.");
+        mpr(ui_translate("log.items", ui_translate("i.items", "You can't carry that many items.")));
         learned_something_new(HINT_FULL_INVENTORY);
         return false;
     }
@@ -1463,7 +1501,7 @@ void pickup(bool partial_quantity)
     you.last_pickup.clear();
 
     if (o == NON_ITEM)
-        mpr("There are no items here.");
+        mpr(ui_translate("log.items", "There are no items here."));
     else if (num_items == 1) // just one movable item?
     {
         // Get the link to the movable item in the pile.
@@ -1482,9 +1520,9 @@ void pickup(bool partial_quantity)
     {
         int next;
         if (num_items == 0)
-            mpr("There are no objects that can be picked up here.");
+            mpr(ui_translate("log.items", "There are no objects that can be picked up here."));
         else
-            mpr("There are several objects here.");
+            mpr(ui_translate("log.items", "There are several objects here."));
         string pickup_warning;
         bool any_selectable = false;
         while (o != NON_ITEM)
@@ -1503,8 +1541,11 @@ void pickup(bool partial_quantity)
             {
                 string prompt = "Pick up %s? ((y)es/(n)o/(a)ll/(m)enu/*?g,/q)";
 
-                mprf(MSGCH_PROMPT, prompt.c_str(),
-                     menu_colour_item_name(env.item[o], DESC_A).c_str());
+                ui_arg display_name;
+                const string coloured = menu_colour_item_name(env.item[o], DESC_A, &display_name);
+                mprf(MSGCH_PROMPT, "%s", ui_render("i.items",
+                    "Pick up %s? ((y)es/(n)o/(a)ll/(m)enu/*?g,/q)",
+                    make_stringf(prompt.c_str(), coloured.c_str()), {display_name}).c_str());
 
                 mouse_control mc(MOUSE_MODE_YESNO);
                 keyin = getch_ck();
@@ -1532,7 +1573,7 @@ void pickup(bool partial_quantity)
                 // attempt to actually pick up the object.
                 if (!move_item_to_inv(o, num_to_take))
                 {
-                    pickup_warning = "You can't carry that many items.";
+                    pickup_warning = ui_translate("i.items", "You can't carry that many items.");
                     env.item[o].flags = old_flags;
                 }
             }
@@ -1548,7 +1589,11 @@ void pickup(bool partial_quantity)
         if (!any_selectable)
         {
             for (stack_iterator si(you.pos(), true); si; ++si)
-                mprf_nocap("%s", menu_colour_item_name(*si, DESC_A).c_str());
+            {
+                ui_arg shown;
+                const string canonical = menu_colour_item_name(*si, DESC_A, &shown);
+                mprf_nocap("%s", shown.available ? shown.text.c_str() : canonical.c_str());
+            }
         }
 
         if (!pickup_warning.empty())
@@ -1746,8 +1791,13 @@ void get_gold(const item_def& item, int quant, bool quiet)
                             ? make_stringf(" (gained %d)", quant)
                             : "";
 
-        mprf("You now have %d gold piece%s%s.",
+        const string original = make_stringf("You now have %d gold piece%s%s.",
              you.gold, you.gold != 1 ? "s" : "", gain.c_str());
+        mpr(quant != you.gold
+            ? ui_render("i.items", "You now have %s gold pieces (gained %s).", original,
+                {ui_literal_arg(to_string(you.gold)), ui_literal_arg(to_string(quant))})
+            : ui_render("i.items", "You now have %s gold pieces.", original,
+                {ui_literal_arg(to_string(you.gold))}));
         learned_something_new(HINT_SEEN_GOLD);
     }
 }
@@ -1765,7 +1815,7 @@ static bool _put_item_in_inv(item_def& it, int quant_got, bool quiet, bool& put_
     if (item_is_stationary(it))
     {
         if (!quiet)
-            mpr("You can't pick that up.");
+            mpr(ui_translate("log.items", "You can't pick that up."));
         // Fake a successful pickup (return 1), so we can continue to
         // pick up anything else that might be on this square.
         return true;
@@ -1844,21 +1894,28 @@ bool move_item_to_inv(int obj, int quant_got, bool quiet)
 
 static void _get_book(item_def& it)
 {
+    string translated;
     if (it.sub_type != BOOK_MANUAL)
     {
         if (you.has_mutation(MUT_INNATE_CASTER))
         {
-            mprf("%s burns to shimmering ash in your grasp.",
-                 it.name(DESC_THE).c_str());
+            const char *source = "%s burns to shimmering ash in your grasp.";
+            if (try_ui_item_log(source, it, translated))
+                mpr(translated);
+            else
+                mprf(source, it.name(DESC_THE).c_str());
             return;
         }
-        mprf("You pick up %s and begin reading...", it.name(DESC_A).c_str());
+        const char *source = "You pick up %s and begin reading...";
+        if (try_ui_item_log(source, it, translated))
+            mpr(translated);
+        else
+            mprf(source, it.name(DESC_A).c_str());
 
         if (!library_add_spells(spells_in_book(it)))
-            mpr("Unfortunately, you learned nothing new or useful.");
+            mpr(ui_translate("log.items", "Unfortunately, you learned nothing new or useful."));
 
         taken_new_item(it.base_type);
-
         return;
     }
     // This is mainly for save compat: if a manual generated somehow that is not
@@ -1868,22 +1925,38 @@ static void _get_book(item_def& it)
 
     if (is_useless_skill(sk))
     {
-        mprf("You pick up %s. Unfortunately, it's quite useless to you.",
-             it.name(DESC_A).c_str());
+        const char *source = "You pick up %s. Unfortunately, it's quite useless to you.";
+        if (try_ui_item_log(source, it, translated))
+            mpr(translated);
+        else
+            mprf(source, it.name(DESC_A).c_str());
         return;
     }
-
     if (you.skills[sk] >= MAX_SKILL_LEVEL)
     {
-        mprf("You pick up %s, but it has nothing more to teach you.",
-             it.name(DESC_A).c_str());
+        const char *source = "You pick up %s, but it has nothing more to teach you.";
+        if (try_ui_item_log(source, it, translated))
+            mpr(translated);
+        else
+            mprf(source, it.name(DESC_A).c_str());
         return;
     }
-
     if (you.skill_manual_points[sk])
-        mprf("You pick up another %s and continue studying.", it.name(DESC_PLAIN).c_str());
+    {
+        const char *source = "You pick up another %s and continue studying.";
+        if (try_ui_item_log(source, it, translated))
+            mpr(translated);
+        else
+            mprf(source, it.name(DESC_PLAIN).c_str());
+    }
     else
-        mprf("You pick up %s and begin studying.", it.name(DESC_A).c_str());
+    {
+        const char *source = "You pick up %s and begin studying.";
+        if (try_ui_item_log(source, it, translated))
+            mpr(translated);
+        else
+            mprf(source, it.name(DESC_A).c_str());
+    }
     you.skill_manual_points[sk] += it.skill_points;
     you.skills_to_show.insert(sk);
 }
@@ -1934,29 +2007,32 @@ static void _get_rune(const item_def& it, bool quiet)
     if (!quiet)
     {
         flash_view_delay(UA_PICKUP, rune_colour(it.sub_type), 300);
-        mprf("You pick up the %s rune and feel its power.",
-             rune_type_name(it.sub_type));
+        mpr(ui_render("i.items", "You pick up %s and feel its power.",
+            make_stringf("You pick up the %s rune and feel its power.", rune_type_name(it.sub_type)),
+            {ui_item_arg(it)}));
         int nrunes = runes_in_pack();
         if (nrunes >= you.obtainable_runes)
-            mpr("You have collected all the runes! Now go and win!");
+            mpr(ui_translate("log.items", "You have collected all the runes! Now go and win!"));
         else if (nrunes == ZOT_ENTRY_RUNES)
         {
             // might be inappropriate in new Sprints, please change it then
-            mprf("%d runes! That's enough to enter the realm of Zot.",
-                 nrunes);
+            mpr(ui_render("i.items", "%s runes! That's enough to enter the realm of Zot.",
+                make_stringf("%d runes! That's enough to enter the realm of Zot.", nrunes),
+                {ui_literal_arg(to_string(nrunes))}));
         }
         else if (nrunes > 1)
         {
             if (player_in_branch(BRANCH_PANDEMONIUM) && _got_all_pan_runes())
-                mpr("You've emptied out Pandemonium! Nothing left here but demons.");
-            mprf("You now have %d runes.", nrunes);
+                mpr(ui_translate("log.items", "You've emptied out Pandemonium! Nothing left here but demons."));
+            mpr(ui_render("i.items", "You now have %s runes.",
+                make_stringf("You now have %d runes.", nrunes), {ui_literal_arg(to_string(nrunes))}));
         }
 
-        mpr("Press } to see all the runes you have collected.");
+        mpr(ui_translate("log.items", "Press } to see all the runes you have collected."));
     }
 
     if (it.sub_type == RUNE_ABYSSAL)
-        mpr("You feel the abyssal rune guiding you out of this place.");
+        mpr(ui_translate("log.items", "You feel the abyssal rune guiding you out of this place."));
 }
 
 static bool _is_disabled_gem(gem_type gem)
@@ -2001,14 +2077,21 @@ static void _get_gem(const item_def& it, bool quiet)
 
     flash_view_delay(UA_PICKUP, it.gem_colour(), 300);
     // XXX: consider customizing this message per-gem
-    mprf("You pick up %s and feel its impossibly delicate weight in your %s.",
-         it.name(DESC_THE).c_str(), you.hand_name(true).c_str());
+    mpr(ui_render("i.items", "You pick up %s and feel its impossibly delicate weight in your %s.",
+        make_stringf("You pick up %s and feel its impossibly delicate weight in your %s.",
+            it.name(DESC_THE).c_str(), you.hand_name(true).c_str()),
+        {ui_item_arg(it), ui_text_arg("a.bodypart", you.hand_name(true))}));
     if (_got_all_gems())
     {
-        mprf("You've found all the gems! Together, they sparkle an otherworldly %s!",
-             getSpeakString("misc_colour").c_str());
+        // Pick once from the canonical weighted table; never redraw a colour
+        // to obtain a translated variant. Unknown TextDB colours keep the
+        // complete English congratulation.
+        const string colour = getSpeakString("misc_colour", Options.language == lang_t::ZH);
+        mpr(ui_render("i.items", "You've found all the gems! Together, they sparkle an otherworldly %s!",
+            make_stringf("You've found all the gems! Together, they sparkle an otherworldly %s!", colour.c_str()),
+            {ui_text_arg("i.colour", colour)}));
     }
-    mpr("Press } and ! to see all the gems you have collected.");
+    mpr(ui_translate("log.items", "Press } and ! to see all the gems you have collected."));
     print_gem_warnings(it.sub_type, 0);
 }
 
@@ -2019,16 +2102,16 @@ static void _get_orb()
 {
     run_animation(ANIMATION_ORB, UA_PICKUP);
 
-    mprf(MSGCH_ORB, "You pick up the Orb of Zot!");
+    mprf(MSGCH_ORB, "%s", ui_translate("log.items", "You pick up the Orb of Zot!"));
 
     if (bezotted())
-        mpr("Zot can harm you no longer.");
+        mpr(ui_translate("log.items", "Zot can harm you no longer."));
 
     env.orb_pos = you.pos(); // can be wrong in wizmode
     orb_pickup_noise(you.pos(), 30);
 
-    start_orb_run(CHAPTER_ESCAPING, "Now all you have to do is get back out "
-                                    "of the dungeon!");
+    start_orb_run(CHAPTER_ESCAPING, ui_translate("i.items", "Now all you have to do is get back out "
+                                    "of the dungeon!"));
 
 #if TAG_MAJOR_VERSION == 34
     if (you.species == SP_METEORAN)
@@ -2085,11 +2168,11 @@ static bool _merge_stackable_item_into_inv(const item_def &it, int quant_got,
 #endif
             string prefix = you.inv[inv_slot].slot != old_slot
                             ? make_stringf("%c -> ", old_slot) : "";
-            mprf_nocap("%s%s (gained %d)",
-                        prefix.c_str(),
-                        menu_colour_item_name(you.inv[inv_slot],
-                                                    DESC_INVENTORY).c_str(),
-                        quant_got);
+            ui_arg display;
+            const string name = menu_colour_item_name(you.inv[inv_slot], DESC_INVENTORY, &display);
+            mprf_nocap("%s", ui_render("i.items", "%s%s (gained %s)",
+                make_stringf("%s%s (gained %d)", prefix.c_str(), name.c_str(), quant_got),
+                {ui_literal_arg(prefix), display, ui_literal_arg(to_string(quant_got))}).c_str());
         }
         return true;
     }
@@ -2113,8 +2196,9 @@ static bool _merge_evokers(const item_def &it, int &inv_slot, bool quiet)
         {
             if (!quiet)
             {
-                mprf("%s cannot be improved any further.",
-                     you.inv[inv_slot].name(DESC_YOUR).c_str());
+                mpr(ui_render("i.items", "%s cannot be improved any further.",
+                    make_stringf("%s cannot be improved any further.", you.inv[inv_slot].name(DESC_YOUR).c_str()),
+                    {ui_item_arg(you.inv[inv_slot])}));
             }
             return true;
         }
@@ -2128,9 +2212,10 @@ static bool _merge_evokers(const item_def &it, int &inv_slot, bool quiet)
 #ifdef USE_SOUND
             parse_sound(PICKUP_SOUND);
 #endif
-            mprf_nocap("%s (improved by +1).",
-                        menu_colour_item_name(you.inv[inv_slot],
-                                                    DESC_INVENTORY).c_str());
+            ui_arg display;
+            const string name = menu_colour_item_name(you.inv[inv_slot], DESC_INVENTORY, &display);
+            mprf_nocap("%s", ui_render("i.items", "%s (improved by +1).",
+                make_stringf("%s (improved by +1).", name.c_str()), {display}).c_str());
         }
 
         return true;
@@ -2167,10 +2252,11 @@ static bool _merge_wand_charges(const item_def &it, int &inv_slot, bool quiet)
 #ifdef USE_SOUND
             parse_sound(PICKUP_SOUND);
 #endif
-            mprf_nocap("%s (gained %d charge%s)",
-                        menu_colour_item_name(you.inv[inv_slot],
-                                                    DESC_INVENTORY).c_str(),
-                        it.charges, it.charges == 1 ? "" : "s");
+            ui_arg display;
+            const string name = menu_colour_item_name(you.inv[inv_slot], DESC_INVENTORY, &display);
+            mprf_nocap("%s", ui_render("i.items", "%s (gained %s charges)",
+                make_stringf("%s (gained %d charge%s)", name.c_str(), it.charges, it.charges == 1 ? "" : "s"),
+                {display, ui_literal_arg(to_string(it.charges))}).c_str());
         }
 
         return true;
@@ -2439,7 +2525,11 @@ static int _place_item_in_free_slot(item_def &it, int quant_got,
 #ifdef USE_SOUND
         parse_sound(PICKUP_SOUND);
 #endif
-        mprf_nocap("%s", menu_colour_item_name(item, DESC_INVENTORY).c_str());
+        string translated;
+        if (try_ui_item_log("You pick up %s.", item, translated))
+            mprf_nocap("%c - %s", item.slot, translated.c_str());
+        else
+            mprf_nocap("%s", menu_colour_item_name(item, DESC_INVENTORY).c_str());
     }
 
     return item.link;
@@ -2654,7 +2744,14 @@ bool move_item_to_grid(int *const obj, const coord_def& p, bool silent)
     }
 
     if (p == you.pos() && _id_floor_item(item))
-        mprf("You see here %s.", item.name(DESC_A).c_str());
+    {
+        const char *source = "You see here %s.";
+        string translated;
+        if (try_ui_item_log(source, item, translated))
+            mpr(translated);
+        else
+            mprf(source, item.name(DESC_A).c_str());
+    }
 
     return true;
 }
@@ -2810,6 +2907,12 @@ static bool _check_dangerous_drop(const item_def & item)
                   + "You won't be able to retrieve "
                   + (item.quantity == 1 ? "it." : "them.");
 
+    string terrain;
+    const bool terrain_available = try_feature_display_at(you.pos(), false, terrain);
+    prompt = ui_render("i.items",
+        "Are you sure you want to drop %s into %s? You will not be able to retrieve it.",
+        prompt, {ui_item_arg(item), {terrain, terrain_available}});
+
     // don't interrupt delays; this might do something strange to macros
     // that trigger it, but the main way drops interact with delays is
     // through multidrop and armour delays
@@ -2844,14 +2947,14 @@ bool drop_item(int item_dropped, int quant_drop)
     {
         if (item.base_type == OBJ_GIZMOS)
         {
-            mpr("That is permanently installed in your exoskeleton.");
+            mpr(ui_translate("log.items", "That is permanently installed in your exoskeleton."));
             return false;
         }
 
         const bool is_wpn = is_weapon(item);
         if (!Options.easy_unequip && !is_wpn)
         {
-            mprf(MSGCH_PROMPT, "You will have to take that off first.");
+            mprf(MSGCH_PROMPT, "%s", ui_translate("log.items", "You will have to take that off first."));
             return false;
         }
 
@@ -2878,11 +2981,16 @@ bool drop_item(int item_dropped, int quant_drop)
 
     if (copy_item_to_grid(item, you.pos(), quant_drop, true, true) == NON_ITEM)
     {
-        mpr("Too many items on this level, not dropping the item.");
+        mpr(ui_translate("log.items", "Too many items on this level, not dropping the item."));
         return false;
     }
 
-    mprf("You drop %s.", quant_name(item, quant_drop, DESC_A).c_str());
+    const char *source = "You drop %s.";
+    string translated;
+    if (try_ui_item_log(source, item, translated, quant_drop))
+        mpr(translated);
+    else
+        mprf(source, quant_name(item, quant_drop, DESC_A).c_str());
 
     // If you drop an item in as a merfolk, it is below the water line and
     // makes no noise falling.
@@ -2912,7 +3020,7 @@ void drop_last()
     }
 
     if (items_to_drop.empty())
-        mpr("No item to drop.");
+        mpr(ui_translate("log.items", "No item to drop."));
     else
     {
         you.last_pickup.clear();
@@ -2986,11 +3094,14 @@ static void _maybe_disable_autopickup_for_dropped_items(vector<SelItem> &items)
     }
     if (autopickup_remove_count == 1)
     {
-        mprf("Autopickup disabled for %s.",
-             pluralise(last_touched_item->name(DESC_DBNAME)).c_str());
+        mpr(ui_render("i.items", "Autopickup disabled for %s.",
+            make_stringf("Autopickup disabled for %s.", pluralise(last_touched_item->name(DESC_DBNAME)).c_str()),
+            {ui_single_item_arg(*last_touched_item)}));
     }
     else if (autopickup_remove_count > 1)
-        mprf("Autopickup disabled for %d items.", autopickup_remove_count);
+        mpr(ui_render("i.items", "Autopickup disabled for %s items.",
+            make_stringf("Autopickup disabled for %d items.", autopickup_remove_count),
+            {ui_literal_arg(to_string(autopickup_remove_count))}));
 }
 
 /**
@@ -3471,7 +3582,7 @@ static void _do_autopickup()
             else
             {
                 n_tried_pickup++;
-                pickup_warning = "Your pack is full.";
+                pickup_warning = ui_translate("i.items", "Your pack is full.");
                 mi.flags = iflags;
             }
         }
@@ -4756,7 +4867,7 @@ bool get_item_by_name(item_def *item, const char* specs,
                 item->skill = skill;
             else
             {
-                mpr("Sorry, no books on that skill today.");
+                mpr(ui_translate("log.items", "Sorry, no books on that skill today."));
                 item->skill = SK_FIGHTING; // Was probably that anyway.
             }
             item->skill_points = random_range(2000, 3000);
@@ -4768,7 +4879,7 @@ bool get_item_by_name(item_def *item, const char* specs,
             if (buf[0] != '\0')
             {
                 if (!_book_from_spell(buf, *item))
-                    mpr("That parchment doesn't seem to exist.");
+                    mpr(ui_translate("log.items", "That parchment doesn't seem to exist."));
             }
         }
         else if (type_wanted == BOOK_RANDART_THEME)
@@ -4991,11 +5102,15 @@ static void _identify_last_item(item_def &item)
     const string class_name = item.base_type == OBJ_JEWELLERY ?
                                     item_base_name(item) :
                                     item_class_name(item.base_type, true);
-    mprf("You have identified the last %s.", class_name.c_str());
+    mpr(ui_render("i.items", "You have identified the last %s.",
+        make_stringf("You have identified the last %s.", class_name.c_str()),
+        {ui_text_arg("i.item.base", class_name)}));
 
     if (in_inventory(item))
     {
-        mprf_nocap("%s", item.name(DESC_INVENTORY_EQUIP).c_str());
+        const ui_arg display = ui_inventory_item_arg(item, true);
+        mprf_nocap("%s", display.available ? display.text.c_str()
+            : item.name(DESC_INVENTORY_EQUIP).c_str());
         auto_assign_item_slot(item);
     }
 }
@@ -5087,8 +5202,19 @@ void maybe_name_weapon(item_def &item, bool silent)
     string full_name = get_weapon_name(item, true);
 
     // TODO: variant messages? (in the database?)
-    mprf("You welcome %s%s into your grasp.", full_name.c_str(),
-         new_name ? "" : " back");
+    ui_arg display_name = ui_item_arg(item);
+    if (!has_own_name)
+    {
+        item_def unnamed = item;
+        unnamed.inscription.clear();
+        const string named = ui_render("i.items", "%s \"%s\"", "",
+            {ui_item_arg(unnamed), ui_literal_arg(item.props[WEAPON_NAME_KEY].get_string())});
+        display_name = {named, !named.empty()};
+    }
+    mpr(ui_render("i.items", new_name ? "You welcome %s into your grasp."
+                                      : "You welcome %s back into your grasp.",
+        make_stringf("You welcome %s%s into your grasp.", full_name.c_str(), new_name ? "" : " back"),
+        {display_name}));
 }
 
 void say_farewell_to_weapon(const item_def &item)
@@ -5096,7 +5222,9 @@ void say_farewell_to_weapon(const item_def &item)
     string name = get_weapon_name(item, false);
 
     // TODO: variant messages? (in the database?)
-    mprf("You whisper farewell to %s.", name.c_str());
+    mpr(ui_render("i.items", "You whisper farewell to %s.",
+        make_stringf("You whisper farewell to %s.", name.c_str()),
+        {is_artefact(item) ? ui_item_arg(item) : ui_literal_arg(name)}));
 }
 
 // Returns whether an additional copy of a given item in the player's inventory

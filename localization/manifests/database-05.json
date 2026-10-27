@@ -1,0 +1,188 @@
+{
+  "baseline": "0.34.1",
+  "source": "crawl-ref/source/dat/database/wpnnoise.txt",
+  "runtime": "strict paired speech",
+  "entries": [
+    {
+      "key": "majin-bo greeting",
+      "context": "textdb:database/wpnnoise.txt:majin-bo greeting",
+      "source_sha256": "5aeb71416f82790f6e6b1e384adf9671b23775c1e5f88cc56295afb7aceac600",
+      "translation_sha256": "12536eb58664a36a2a4f9b586bd5cdbab960e195062161d6e1caf578c5bfdada",
+      "review_status": "reviewed"
+    },
+    {
+      "key": "majin-bo cast",
+      "context": "textdb:database/wpnnoise.txt:majin-bo cast",
+      "source_sha256": "2602b4708d8924fd834b7e36466f8ede078f3930249c771d811e95d63f2c6dd2",
+      "translation_sha256": "5b93dc09cc099363e71a70dc85488ae978bc2ae53aa659b5c67ebc5c4799112f",
+      "review_status": "reviewed"
+    },
+    {
+      "key": "majin-bo cast weak",
+      "context": "textdb:database/wpnnoise.txt:majin-bo cast weak",
+      "source_sha256": "90038a193b918241f72fa471b96c3d8c254ab99cec3f08cbafe9a320e374447b",
+      "translation_sha256": "866c8e9b79f89c461344b1b5e967bcfa62a7d5fa11e66ba3ef4ba84de4f78344",
+      "review_status": "reviewed"
+    },
+    {
+      "key": "zonguldrok greeting",
+      "context": "textdb:database/wpnnoise.txt:zonguldrok greeting",
+      "source_sha256": "d28ff424f5f462c767da2d583b1e21a74304137e80b298c1b5dc3c641ab005ac",
+      "translation_sha256": "f9d8f1d07c200c5d172ae376b54f3698f301be6efd739eb9ae4ef4d0cfaf5798",
+      "review_status": "reviewed"
+    },
+    {
+      "key": "zonguldrok reprise",
+      "context": "textdb:database/wpnnoise.txt:zonguldrok reprise",
+      "source_sha256": "56421747be7fa40c1d7ecb20ee071797bba11a05251b8dbee442945a4c816339",
+      "translation_sha256": "5e9a6216e85a73d58df4e3a8893d79b9f2ba166b4da2baa61e88ed5ca2672316",
+      "review_status": "reviewed"
+    },
+    {
+      "key": "zonguldrok farewell",
+      "context": "textdb:database/wpnnoise.txt:zonguldrok farewell",
+      "source_sha256": "3571f31a3f65fe9ade5ec670ae03a54a4eb027bfcff507baed80670657d0b9d6",
+      "translation_sha256": "8213db7516f7eb96015028a22188689b57bd52249e564af9716b3c2a01eacd39",
+      "review_status": "reviewed"
+    },
+    {
+      "key": "zonguldrok hat good",
+      "context": "textdb:database/wpnnoise.txt:zonguldrok hat good",
+      "source_sha256": "7882d9a8e098c2b1361c00249b923bab7431668a14fa3e1508745e0f3c0c7940",
+      "translation_sha256": "8b231aa9d03f8991435cf6584c79f7a3e7f1d85272acf0baeb957e407d26af48",
+      "review_status": "reviewed"
+    },
+    {
+      "key": "zonguldrok hat okay",
+      "context": "textdb:database/wpnnoise.txt:zonguldrok hat okay",
+      "source_sha256": "964d8516fda649802df81557175f1440b3252179856d1cbe5beb94dfae8f77b4",
+      "translation_sha256": "51e95d74bc2a31bb733f85cd716aa0dab5ee781c7338ec6b95ed31dcc428188b",
+      "review_status": "reviewed"
+    },
+    {
+      "key": "zonguldrok hat bad",
+      "context": "textdb:database/wpnnoise.txt:zonguldrok hat bad",
+      "source_sha256": "e517a39f24cb8a86707747bae816f9d5e7c207157c3199ce0a7b3722518845c6",
+      "translation_sha256": "4d9d0692d8b8e579471e9fdd524ae431e9c3bbc063e536dd47b854dad8fb1891",
+      "review_status": "reviewed"
+    },
+    {
+      "key": "zonguldrok hat crown of Dyrovepreva",
+      "context": "textdb:database/wpnnoise.txt:zonguldrok hat crown of dyrovepreva",
+      "source_sha256": "1fb999f5ceea6ef50782c91c1589b0c5e68c2eb9088f803ebef6639b24120da2",
+      "translation_sha256": "a017d02a5fa4a168e4ca4020aca699e72a16ed157c30b272b81fb4ad1fe823ff",
+      "review_status": "reviewed"
+    },
+    {
+      "key": "zonguldrok hat hat of the Bear Spirit",
+      "context": "textdb:database/wpnnoise.txt:zonguldrok hat hat of the bear spirit",
+      "source_sha256": "e6fe30556812a8e491ddc1eebae022428fb81193a1e65737027962a83bc4ab80",
+      "translation_sha256": "b9006a794b55da7a441031ec22c8ee11b13395a0c8219b8c0aeee80f11571b98",
+      "review_status": "reviewed"
+    },
+    {
+      "key": "zonguldrok hat hood of the Assassin",
+      "context": "textdb:database/wpnnoise.txt:zonguldrok hat hood of the assassin",
+      "source_sha256": "a58917c925964b06f047a265acbde9f97bc2e8b9c5f7af6d5809f459ba6f24c9",
+      "translation_sha256": "966ae386535930d270376f7d7addb9dc21b9600daa165175d4469065a69711b8",
+      "review_status": "reviewed"
+    },
+    {
+      "key": "zonguldrok hat mask of the Dragon",
+      "context": "textdb:database/wpnnoise.txt:zonguldrok hat mask of the dragon",
+      "source_sha256": "110f5819b9595c7b5bc873652eab97e62281733e67d6bf975681ac7a6643b8d4",
+      "translation_sha256": "7f2549ee921aa7935ca1d43138348e5de15e72e26ccd87a1bd17e9d59d80e119",
+      "review_status": "reviewed"
+    },
+    {
+      "key": "zonguldrok hat hat of the Alchemist",
+      "context": "textdb:database/wpnnoise.txt:zonguldrok hat hat of the alchemist",
+      "source_sha256": "699e0be36a12c83068ddf225dd5395c8306da117c8fb526bac6630869c95349c",
+      "translation_sha256": "fa16a1442d06a2b8fcd627813f79294a13666ebf7ad85f33e717cfa658039029",
+      "review_status": "reviewed"
+    },
+    {
+      "key": "zonguldrok hat hat of Pondering",
+      "context": "textdb:database/wpnnoise.txt:zonguldrok hat hat of pondering",
+      "source_sha256": "c56e5bdbc4d78ffe9a7c59da86d458388ee8c14a9103d8130d5e8bf784dcca15",
+      "translation_sha256": "a3dffab6745ece993672dece80af12353d1764815e040aa569c543abc1def194",
+      "review_status": "reviewed"
+    },
+    {
+      "key": "zonguldrok hat crown of vainglory",
+      "context": "textdb:database/wpnnoise.txt:zonguldrok hat crown of vainglory",
+      "source_sha256": "ab192ad553ac1b02958d3122ded182941f66db82ee3f8bfe78de685607b8ebda",
+      "translation_sha256": "18534ad22c53f068dcd981d43551957bc08cdd47fbf1fff804f7735e13202176",
+      "review_status": "reviewed"
+    },
+    {
+      "key": "fungus thoughts",
+      "context": "textdb:database/wpnnoise.txt:fungus thoughts",
+      "source_sha256": "fd2804e5b7456778e3bf51bf0f776e0581ec8c493050b9f14ac7b2f128b91d0b",
+      "translation_sha256": "75719c06eb2a1e0083edab45472ffe0db2e0480d14077b59574c99b0d9954a0a",
+      "review_status": "reviewed"
+    },
+    {
+      "key": "eel hand actions",
+      "context": "textdb:database/wpnnoise.txt:eel hand actions",
+      "source_sha256": "9e7f2460193091046e48f01ffc461aac18c36ece5bd0fc63894a13f9535be66e",
+      "translation_sha256": "4f71bdca5fa724bd3637d108a285ecdb4b5aa980801546c0badf4f3246fd2075",
+      "review_status": "reviewed"
+    },
+    {
+      "key": "eel hand solo actions",
+      "context": "textdb:database/wpnnoise.txt:eel hand solo actions",
+      "source_sha256": "cb7af91e9fd215bf222a450d33728cfde67614bb899331fa152ed34b7102301b",
+      "translation_sha256": "2848a04ea78ce85ea7e48413a9b2b86df9e78077392a015834ba6b8b4ae596f8",
+      "review_status": "reviewed"
+    }
+  ],
+  "legacy_unreviewed_keys": [
+    "_beast_",
+    "_beastly_adjective_",
+    "_body_part_",
+    "_common_speaking_no_tension_",
+    "_corpses_",
+    "_crimson_",
+    "_exasperated_",
+    "_glorious_",
+    "_godless_sorter_",
+    "_instrumental_noises_",
+    "_kind_of_scales_",
+    "_loudly_",
+    "_miscreants_",
+    "_musical_topic_",
+    "_pets_",
+    "_rare_chatter_",
+    "_rare_speaking_no_tension_",
+    "_real_song_high_tension_",
+    "_real_song_low-high_tension_",
+    "_real_song_low_tension_",
+    "_real_song_no_tension_",
+    "_rhyme_word_",
+    "_scream_",
+    "_screams_",
+    "_screams_how_",
+    "_singing_no-low_tension_",
+    "_singing_no_tension_",
+    "_song_theme_",
+    "_speaking_high_tension_",
+    "_speaking_low-high_tension_",
+    "_speaking_low_tension_",
+    "_speaking_no_tension_",
+    "_strikes_up_what_",
+    "_weapon_chatter_",
+    "_weapon_noises_low-high_tension_",
+    "frozen axe \"frostbite\"",
+    "noisy weapon",
+    "shield of the gong",
+    "singing sword high_tension",
+    "singing sword low_tension",
+    "singing sword no_tension",
+    "singing sword scream",
+    "singing sword silenced",
+    "trishula \"condemnation\"",
+    "weapon_noise",
+    "weapon_noises"
+  ]
+}

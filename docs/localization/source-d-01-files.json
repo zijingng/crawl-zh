@@ -1,0 +1,392 @@
+[
+  {
+    "file": "crawl-ref/source/daction-type.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dactions.cc",
+    "changed": true,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dactions.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/database.cc",
+    "changed": true,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/database.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dbg-asrt.cc",
+    "changed": false,
+    "scope": "debug_excluded",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dbg-maps.cc",
+    "changed": false,
+    "scope": "debug_excluded",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dbg-maps.h",
+    "changed": false,
+    "scope": "debug_excluded",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dbg-objstat.cc",
+    "changed": false,
+    "scope": "debug_excluded",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dbg-objstat.h",
+    "changed": false,
+    "scope": "debug_excluded",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dbg-scan.cc",
+    "changed": false,
+    "scope": "debug_excluded",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dbg-scan.h",
+    "changed": false,
+    "scope": "debug_excluded",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dbg-util.cc",
+    "changed": false,
+    "scope": "debug_excluded",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dbg-util.h",
+    "changed": false,
+    "scope": "debug_excluded",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/death-curse.cc",
+    "changed": true,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/death-curse.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/debug-defines.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/debug.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/deck-type.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/decks.cc",
+    "changed": true,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": false
+  },
+  {
+    "file": "crawl-ref/source/decks.h",
+    "changed": true,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/defines.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/delay.cc",
+    "changed": true,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/delay.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/describe-god.cc",
+    "changed": true,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": false
+  },
+  {
+    "file": "crawl-ref/source/describe-god.h",
+    "changed": true,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/describe-spells.cc",
+    "changed": true,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/describe-spells.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/describe.cc",
+    "changed": true,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": false
+  },
+  {
+    "file": "crawl-ref/source/describe.h",
+    "changed": true,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/description-level-type.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dgl-message.cc",
+    "changed": true,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dgl-message.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dgn-delve.cc",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dgn-delve.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dgn-event.cc",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dgn-event.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dgn-height.cc",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dgn-height.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dgn-irregular-box.cc",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dgn-irregular-box.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dgn-layouts.cc",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dgn-layouts.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dgn-overview.cc",
+    "changed": true,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dgn-overview.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dgn-proclayouts.cc",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dgn-proclayouts.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dgn-shoals.cc",
+    "changed": true,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dgn-shoals.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dgn-swamp.cc",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dgn-swamp.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/directn.cc",
+    "changed": true,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": false
+  },
+  {
+    "file": "crawl-ref/source/directn.h",
+    "changed": true,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/disable-type.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dlua.cc",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dlua.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/domino-data.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/domino.cc",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/domino.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dungeon-char-type.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dungeon-feature-type.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dungeon.cc",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/dungeon.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/duration-data.h",
+    "changed": true,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  },
+  {
+    "file": "crawl-ref/source/duration-type.h",
+    "changed": false,
+    "scope": "player_text_and_internal_identifiers_separated",
+    "complete": null
+  }
+]

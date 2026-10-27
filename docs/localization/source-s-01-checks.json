@@ -1,0 +1,21 @@
+{
+  "batch": "source-s-01",
+  "date": "2026-10-24",
+  "reviewed_messages": 2501,
+  "generated_expiration_variants": 1398,
+  "catalogue_matches": 2501,
+  "missing_messages": [],
+  "stale_dependencies": [],
+  "original_top_level_s_files": 86,
+  "current_top_level_s_files": 87,
+  "changed_original_s_files": 23,
+  "windows_tiles_build": true,
+  "native_cases": 96,
+  "native_assertions": 189046,
+  "python_tests": 28,
+  "limitations": [
+    "No in-game visual smoke test; Windows Tiles only.",
+    "Technical/debug diagnostics, opaque TextDB/Lua messages and arbitrary saved descriptions retain established fallback boundaries.",
+    "Search, sort, save/config/Lua keys and proper-name generation remain canonical English."
+  ]
+}

@@ -12,6 +12,7 @@
  * - Scythe of curses
  */
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "death-curse.h"
 
@@ -40,19 +41,26 @@
 #include "stringutil.h"
 
 static void _do_msg(actor& target, string player_msg, string mon_seen_msg,
-                    string mon_unseen_msg)
+                    string mon_unseen_msg, const char *player_source,
+                    const char *seen_source, const char *unseen_source,
+                    const string &punct = "")
 {
     if (target.is_player() && !player_msg.empty())
-        mpr(player_msg);
+        mpr(ui_render("d.curse", player_source, player_msg,
+                      {ui_attack_punctuation(punct)}));
     else if (you.can_see(target) && !mon_seen_msg.empty())
     {
-        mpr(do_mon_str_replacements(mon_seen_msg,
-            *target.as_monster(), S_SILENT));
+        const string original = do_mon_str_replacements(mon_seen_msg,
+            *target.as_monster(), S_SILENT);
+        mpr(ui_render("d.curse", seen_source, original,
+                      {ui_actor_arg(target), ui_attack_punctuation(punct)}));
     }
     else if (you.see_cell(target.pos()) && !mon_unseen_msg.empty())
     {
-        mpr(do_mon_str_replacements(mon_unseen_msg,
-            *target.as_monster(), S_SILENT));
+        const string original = do_mon_str_replacements(mon_unseen_msg,
+            *target.as_monster(), S_SILENT);
+        mpr(ui_render("d.curse", unseen_source, original,
+                      {ui_attack_punctuation(punct)}));
     }
 }
 
@@ -124,7 +132,9 @@ static void _curse_message(actor& target, actor* /*source*/,
         messages.push_back("You smell decay.");
 
     const string skin = species::skin_name(you.species).c_str();
-    if (starts_with(skin, "bandage"))
+    const size_t skin_message = messages.size();
+    const bool bandaged = starts_with(skin, "bandage");
+    if (bandaged)
         messages.push_back("Your bandages flutter.");
     else
     {
@@ -138,7 +148,12 @@ static void _curse_message(actor& target, actor* /*source*/,
     if (you.has_bones())
         messages.push_back("Your bones ache.");
 
-    mpr(*random_iterator(messages));
+    const string &original = *random_iterator(messages);
+    if (!bandaged && &original == &messages[skin_message])
+        mpr(ui_render("d.curse", "Your %s prickles.", original,
+                      {ui_text_arg("d.skin", skin)}));
+    else
+        mpr(ui_translate("d.curse", original.c_str()));
 }
 
 /** Table of possible curse effects
@@ -174,7 +189,10 @@ static const vector<curse_effect> curse_effects = {
             string punct = attack_strength_punctuation(dmg);
             _do_msg(target, "A forgotten god smites you" + punct,
                     "A forgotten god smites @The_monster@" + punct,
-                    "A forgotten god smites something" + punct);
+                    "A forgotten god smites something" + punct,
+                    "A forgotten god smites you%s",
+                    "A forgotten god smites %s%s",
+                    "A forgotten god smites something%s", punct);
             _ouch(target, source, dmg, cause);
         },
         10, 25,
@@ -184,7 +202,8 @@ static const vector<curse_effect> curse_effects = {
         [](actor& target, actor* /*source*/, string /*cause*/, int severity) {
             _do_msg(target, "You feel doom gather around you.",
                             "Doom gathers around @the_monster@.",
-                            "");
+                            "", "You feel doom gather around you.%s",
+                            "Doom gathers around %s.%s", "");
             target.doom(random_range(10, 15 + severity * 2 / 3));
         },
         0, 25
@@ -195,7 +214,8 @@ static const vector<curse_effect> curse_effects = {
             _do_msg(target,
                     "You feel horribly lethargic.",
                     "@The_monster@ looks incredibly listless.",
-                    "");
+                    "", "You feel horribly lethargic.%s",
+                    "%s looks incredibly listless.%s", "");
             target.slow_down(source, severity);
         },
         0, 15,
@@ -206,7 +226,10 @@ static const vector<curse_effect> curse_effects = {
             _do_msg(target,
                     "You are engulfed in negative energy!",
                     "@The_monster@ is engulfed in negative energy!",
-                    "Something is engulfed in negative energy!");
+                    "Something is engulfed in negative energy!",
+                    "You are engulfed in negative energy!%s",
+                    "%s is engulfed in negative energy!%s",
+                    "Something is engulfed in negative energy!%s");
             target.drain(source, false, ( severity * 100 ) / 27);
         },
         10, 20,

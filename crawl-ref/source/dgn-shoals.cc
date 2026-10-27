@@ -1,4 +1,5 @@
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "dgn-shoals.h"
 
@@ -1071,8 +1072,11 @@ void shoals_release_tide(monster* mons)
     {
         if (player_can_hear(mons->pos()))
         {
-            mprf(MSGCH_SOUND, "The tide is released from %s call.",
-                 apostrophise(mons->name(DESC_YOUR, true)).c_str());
+            mprf(MSGCH_SOUND, "%s", ui_render("d.shoals",
+                "The tide is released from %s's call.",
+                make_stringf("The tide is released from %s call.",
+                    apostrophise(mons->name(DESC_YOUR, true)).c_str()),
+                {ui_actor_arg(*mons)}).c_str());
             if (you.see_cell(mons->pos()))
                 flash_view_delay(UA_MONSTER, ETC_WATER, 150);
         }

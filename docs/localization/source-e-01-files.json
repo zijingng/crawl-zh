@@ -1,0 +1,112 @@
+[
+  {
+    "file": "crawl-ref/source/easy-confirm-type.h",
+    "scope": "no_owned_player_text; declarations_enums_protocol_or_training_logic",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/enchant-type.h",
+    "scope": "no_owned_player_text; declarations_enums_protocol_or_training_logic",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/end.cc",
+    "scope": "player_text_reviewed; canonical_helpers_and_external_formatters_separated",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/end.h",
+    "scope": "no_owned_player_text; declarations_enums_protocol_or_training_logic",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/endianness.h",
+    "scope": "no_owned_player_text; declarations_enums_protocol_or_training_logic",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/energy-use-type.h",
+    "scope": "no_owned_player_text; declarations_enums_protocol_or_training_logic",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/english.cc",
+    "scope": "canonical_English_grammar_preserved",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/english.h",
+    "scope": "canonical_English_grammar_preserved",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/enum.h",
+    "scope": "no_owned_player_text; declarations_enums_protocol_or_training_logic",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/env.h",
+    "scope": "no_owned_player_text; declarations_enums_protocol_or_training_logic",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/equipment-slot.h",
+    "scope": "no_owned_player_text; declarations_enums_protocol_or_training_logic",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/errors.cc",
+    "scope": "diagnostic_error_transport_preserved",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/errors.h",
+    "scope": "diagnostic_error_transport_preserved",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/evoke.cc",
+    "scope": "player_text_reviewed; canonical_helpers_and_external_formatters_separated",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/evoke.h",
+    "scope": "no_owned_player_text; declarations_enums_protocol_or_training_logic",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/exclude.cc",
+    "scope": "player_text_reviewed; canonical_helpers_and_external_formatters_separated",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/exclude.h",
+    "scope": "no_owned_player_text; declarations_enums_protocol_or_training_logic",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/exercise.cc",
+    "scope": "no_owned_player_text; declarations_enums_protocol_or_training_logic",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/exercise.h",
+    "scope": "no_owned_player_text; declarations_enums_protocol_or_training_logic",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/explore-greedy-options.h",
+    "scope": "no_owned_player_text; declarations_enums_protocol_or_training_logic",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/explore-stop-options.h",
+    "scope": "no_owned_player_text; declarations_enums_protocol_or_training_logic",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/externs.h",
+    "scope": "no_owned_player_text; declarations_enums_protocol_or_training_logic",
+    "changed": false
+  }
+]

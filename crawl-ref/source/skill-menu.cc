@@ -6,6 +6,7 @@
 // this precompiled header must be the first include otherwise
 // includes before it will be ignored without any warning in MSVC
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include <cmath>
 #include <clocale>
@@ -34,6 +35,7 @@
 #endif
 #include "ui.h"
 #include "unwind.h"
+#include "unicode.h"
 
 using namespace ui;
 
@@ -222,8 +224,10 @@ void SkillMenuEntry::set_name(bool keep_hotkey)
         m_name->allow_highlight(false);
     }
 
-    m_name->set_text(make_stringf("%s %-15s", get_prefix().c_str(),
-                                skill_name(m_sk)));
+    const ui_translation_group name_text({{"display.skill", skill_name(m_sk)}});
+    m_name->set_text(name_text.available()
+        ? get_prefix() + " " + chop_string(name_text.get("display.skill", skill_name(m_sk)), 15)
+        : make_stringf("%s %-15s", get_prefix().c_str(), skill_name(m_sk)));
     m_name->set_fg_colour(get_colour());
 #ifdef USE_TILE_LOCAL
     if (is_set(SKMF_SKILL_ICONS))
@@ -422,24 +426,24 @@ void SkillMenuEntry::set_targets()
 void SkillMenuEntry::set_title()
 {
     m_name->allow_highlight(false);
-    m_name->set_text("     Skill");
-    m_level->set_text("Level");
+    m_name->set_text(ui_translate("phase3.skill-menu", "     Skill"));
+    m_level->set_text(ui_translate("phase3.skill-menu", "Level"));
 
     m_name->set_fg_colour(BLUE);
     m_level->set_fg_colour(BLUE);
     m_progress->set_fg_colour(BLUE);
 
     if (is_set(SKMF_APTITUDE))
-        m_aptitude->set_text("<blue>Apt </blue>");
+        m_aptitude->set_text(ui_translate("phase3.skill-menu", "<blue>Apt </blue>"));
 
     switch (skm.get_state(SKM_VIEW))
     {
-    case SKM_VIEW_TRAINING:  m_progress->set_text("Train"); break;
-    case SKM_VIEW_TARGETS:   m_progress->set_text("Target"); break;
-    case SKM_VIEW_PROGRESS:  m_progress->set_text("Progr"); break;
-    case SKM_VIEW_POINTS:    m_progress->set_text("Points");break;
-    case SKM_VIEW_COST:      m_progress->set_text("Cost");  break;
-    case SKM_VIEW_NEW_LEVEL: m_progress->set_text("> New"); break;
+    case SKM_VIEW_TRAINING:  m_progress->set_text(ui_translate("phase3.skill-menu", "Train")); break;
+    case SKM_VIEW_TARGETS:   m_progress->set_text(ui_translate("phase3.skill-menu", "Target")); break;
+    case SKM_VIEW_PROGRESS:  m_progress->set_text(ui_translate("phase3.skill-menu", "Progr")); break;
+    case SKM_VIEW_POINTS:    m_progress->set_text(ui_translate("phase3.skill-menu", "Points"));break;
+    case SKM_VIEW_COST:      m_progress->set_text(ui_translate("phase3.skill-menu", "Cost"));  break;
+    case SKM_VIEW_NEW_LEVEL: m_progress->set_text(ui_translate("phase3.skill-menu", "> New")); break;
     default: die("Invalid view state.");
     }
 }
@@ -553,22 +557,22 @@ string SkillMenuSwitch::get_help()
     switch (m_state)
     {
     case SKM_MODE_AUTO:
-        return "In automatic mode, skills are trained as you use them.";
+        return ui_translate("phase3.skill-menu", "In automatic mode, skills are trained as you use them.");
     case SKM_MODE_MANUAL:
-        return "In manual mode, experience is spread evenly across all "
-                "activated skills.";
+        return ui_translate("phase3.skill-menu", "In manual mode, experience is spread evenly across all "
+                "activated skills.");
     case SKM_DO_PRACTISE:
         if (skm.is_set(SKMF_SIMPLE))
             return hints_skills_info();
         else
-            return "Press the letter of a skill to choose whether you want to "
+            return ui_translate("phase3.skill-menu", "Press the letter of a skill to choose whether you want to "
                    "practise it. Skills marked with '<darkgrey>-</darkgrey>' "
-                   "will not be trained.";
+                   "will not be trained.");
     case SKM_DO_FOCUS:
-        return "Press the letter of a skill to cycle between "
+        return ui_translate("phase3.skill-menu", "Press the letter of a skill to cycle between "
                "<darkgrey>disabled</darkgrey> (<darkgrey>-</darkgrey>), "
                "enabled (+) and <white>focused</white> (<white>*</white>). "
-               "Focused skills train twice as fast relative to others.";
+               "Focused skills train twice as fast relative to others.");
     case SKM_LEVEL_ENHANCED:
     {
         string result;
@@ -594,9 +598,24 @@ string SkillMenuSwitch::get_help()
                 causes.push_back("the Charlatan's Orb");
             if (you.form == transformation::walking_scroll)
                 causes.push_back("scribal knowledge");
-            result = "Skills enhanced by "
-                     + comma_separated_line(causes.begin(), causes.end())
-                     + " are in <green>green</green>.";
+            ui_translation_group translated({
+                {"skill.enhanced", "Skills enhanced by %s are in <green>green</green>."}
+            });
+            for (const auto &cause : causes)
+                translated.require("phase3.skill-menu", cause.c_str());
+            if (translated.available())
+            {
+                vector<string> names;
+                for (const auto &cause : causes)
+                    names.push_back(translated.get("phase3.skill-menu", cause.c_str()));
+                result = make_stringf(translated.get("skill.enhanced",
+                    "Skills enhanced by %s are in <green>green</green>."),
+                    comma_separated_line(names.begin(), names.end(), "和", "、").c_str());
+            }
+            else
+                result = "Skills enhanced by "
+                         + comma_separated_line(causes.begin(), causes.end())
+                         + " are in <green>green</green>.";
         }
 
         if (skm.is_set(SKMF_REDUCED))
@@ -610,9 +629,24 @@ string SkillMenuSwitch::get_help()
                 causes.push_back("the Bane of the Dilettante");
             if (!result.empty())
                 result += " ";
-            result += "Skills reduced by "
-                      + comma_separated_line(causes.begin(), causes.end())
-                      + " are in <magenta>magenta</magenta>.";
+            ui_translation_group translated({
+                {"skill.reduced", "Skills reduced by %s are in <magenta>magenta</magenta>."}
+            });
+            for (const auto cause : causes)
+                translated.require("phase3.skill-menu", cause);
+            if (translated.available())
+            {
+                vector<string> names;
+                for (const auto cause : causes)
+                    names.push_back(translated.get("phase3.skill-menu", cause));
+                result += make_stringf(translated.get("skill.reduced",
+                    "Skills reduced by %s are in <magenta>magenta</magenta>."),
+                    comma_separated_line(names.begin(), names.end(), "和", "、").c_str());
+            }
+            else
+                result += "Skills reduced by "
+                          + comma_separated_line(causes.begin(), causes.end())
+                          + " are in <magenta>magenta</magenta>.";
         }
 
         if (!result.empty())
@@ -622,28 +656,28 @@ string SkillMenuSwitch::get_help()
         if (skm.is_set(SKMF_SIMPLE))
             return hints_skill_training_info();
         else
-            return "The percentage of incoming experience used"
-                   " to train each skill is in <brown>brown</brown>.\n";
+            return ui_translate("phase3.skill-menu", "The percentage of incoming experience used"
+                   " to train each skill is in <brown>brown</brown>.\n");
     case SKM_VIEW_TARGETS:
         if (skm.is_set(SKMF_SIMPLE))
             return hints_skill_targets_info();
         else
-            return "The current training targets, if any.\n";
+            return ui_translate("phase3.skill-menu", "The current training targets, if any.\n");
     case SKM_VIEW_PROGRESS:
-        return "The percentage of the progress done before reaching next "
-               "level is in <cyan>cyan</cyan>.\n";
+        return ui_translate("phase3.skill-menu", "The percentage of the progress done before reaching next "
+               "level is in <cyan>cyan</cyan>.\n");
     case SKM_VIEW_COST:
     {
         if (skm.is_set(SKMF_SIMPLE))
             return hints_skill_costs_info();
 
         string result =
-               "The relative cost of raising each skill is in "
-               "<cyan>cyan</cyan>";
+               ui_translate("phase3.skill-menu", "The relative cost of raising each skill is in "
+               "<cyan>cyan</cyan>");
         if (skm.is_set(SKMF_MANUAL))
         {
-            result += " (or <lightred>red</lightred> if enhanced by a "
-                      "manual)";
+            result += ui_translate("phase3.skill-menu", " (or <lightred>red</lightred> if enhanced by a "
+                      "manual)");
         }
         result += ".\n";
         return result;
@@ -656,24 +690,24 @@ string SkillMenuSwitch::get_name(skill_menu_state state)
 {
     switch (state)
     {
-    case SKM_MODE_AUTO:      return "auto";
-    case SKM_MODE_MANUAL:    return "manual";
-    case SKM_DO_PRACTISE:    return "train";
-    case SKM_DO_FOCUS:       return "focus";
-    case SKM_SHOW_DEFAULT:   return "useful";
-    case SKM_SHOW_ALL:       return "all";
+    case SKM_MODE_AUTO:      return ui_translate("phase3.skill-menu", "auto");
+    case SKM_MODE_MANUAL:    return ui_translate("phase3.skill-menu", "manual");
+    case SKM_DO_PRACTISE:    return ui_translate("phase3.skill-menu", "train");
+    case SKM_DO_FOCUS:       return ui_translate("phase3.skill-menu", "focus");
+    case SKM_SHOW_DEFAULT:   return ui_translate("phase3.skill-menu", "useful");
+    case SKM_SHOW_ALL:       return ui_translate("phase3.skill-menu", "all");
     case SKM_LEVEL_ENHANCED:
         return (skm.is_set(SKMF_ENHANCED)
-                && skm.is_set(SKMF_REDUCED)) ? "modified" :
-                   skm.is_set(SKMF_ENHANCED) ? "enhanced"
-                                             : "reduced";
-    case SKM_LEVEL_NORMAL:   return "base";
-    case SKM_VIEW_TRAINING:  return "training";
-    case SKM_VIEW_TARGETS:   return "targets";
-    case SKM_VIEW_PROGRESS:  return "progress";
-    case SKM_VIEW_POINTS:    return "points";
-    case SKM_VIEW_NEW_LEVEL: return "new level";
-    case SKM_VIEW_COST:      return "cost";
+                && skm.is_set(SKMF_REDUCED)) ? ui_translate("phase3.skill-menu", "modified") :
+                   skm.is_set(SKMF_ENHANCED) ? ui_translate("phase3.skill-menu", "enhanced")
+                                             : ui_translate("phase3.skill-menu", "reduced");
+    case SKM_LEVEL_NORMAL:   return ui_translate("phase3.skill-menu", "base");
+    case SKM_VIEW_TRAINING:  return ui_translate("phase3.skill-menu", "training");
+    case SKM_VIEW_TARGETS:   return ui_translate("phase3.skill-menu", "targets");
+    case SKM_VIEW_PROGRESS:  return ui_translate("phase3.skill-menu", "progress");
+    case SKM_VIEW_POINTS:    return ui_translate("phase3.skill-menu", "points");
+    case SKM_VIEW_NEW_LEVEL: return ui_translate("phase3.skill-menu", "new level");
+    case SKM_VIEW_COST:      return ui_translate("phase3.skill-menu", "cost");
     default: die ("Invalid switch state.");
     }
 }
@@ -738,7 +772,7 @@ void SkillMenuSwitch::update()
     if (m_name.empty())
         text += "  ";
     else
-        text += make_stringf(" %s  ", m_name.c_str());
+        text += make_stringf(" %s  ", ui_translate("skill.switch.label", m_name.c_str()));
     set_text(text);
 }
 
@@ -934,7 +968,7 @@ int SkillMenu::read_skill_target(skill_type sk)
     progress->set_highlight_colour(RED);
 
     // for webtiles dialog input
-    progress->set_prompt(make_stringf("Enter a skill target for %s: ",
+    progress->set_prompt(make_stringf(ui_translate("phase3.skill-menu", "Enter a skill target for %s: "),
                                             skill_name(sk)));
     progress->set_tag("skill_target");
 
@@ -1040,7 +1074,7 @@ bool SkillMenu::do_skill_enabled_check()
         // Shouldn't happen, but crash rather than locking the player in the
         // menu. Training will be fixed up on load.
         ASSERT(!you.has_mutation(MUT_DISTRIBUTED_TRAINING));
-        set_help("<lightred>You need to enable at least one skill.</lightred>");
+        set_help(ui_translate("phase3.skill-menu", "<lightred>You need to enable at least one skill.</lightred>"));
         // It can be confusing if the only trainable skills are hidden. Turn on
         // SKM_SHOW_ALL if so.
         if (get_state(SKM_SHOW) == SKM_SHOW_DEFAULT)
@@ -1170,9 +1204,9 @@ void SkillMenu::help()
         if (is_set(SKMF_SIMPLE))
             text = hints_skills_description_info();
         else
-            text = "Press the letter of a skill to read its description.\n"
+            text = ui_translate("phase3.skill-menu", "Press the letter of a skill to read its description.\n"
                    "Press <w>?</w> for a general explanation"
-                   " of skilling and the various toggles.";
+                   " of skilling and the various toggles.");
         set_help(text);
     }
     else
@@ -1446,30 +1480,30 @@ void SkillMenu::refresh_button_row()
     const string helpstring = "[<yellow>?</yellow>] ";
     const string azstring = "[<yellow>a</yellow>-<yellow>z</yellow>] ";
 
-    string legend = is_set(SKMF_SIMPLE) ? "Skill descriptions" : "Help";
+    string legend = is_set(SKMF_SIMPLE) ? ui_translate("phase3.skill-menu", "Skill descriptions") : ui_translate("phase3.skill-menu", "Help");
     string midlegend = "";
     string clearlegend = "";
     if (is_set(SKMF_HELP))
     {
-        legend = is_set(SKMF_SIMPLE) ? "Return to skill selection"
-                 : "<w>Help</w>";
-        midlegend = azstring + "skill descriptions";
+        legend = is_set(SKMF_SIMPLE) ? ui_translate("phase3.skill-menu", "Return to skill selection")
+                 : ui_translate("phase3.skill-menu", "<w>Help</w>");
+        midlegend = azstring + ui_translate("phase3.skill-menu", "skill descriptions");
     }
     else if (!is_set(SKMF_SIMPLE) && get_state(SKM_VIEW) == SKM_VIEW_TARGETS)
     {
         if (is_set(SKMF_SET_TARGET))
         {
-            midlegend = azstring + "set skill target";
-            clearlegend = "[<yellow>-</yellow>] clear selected target";
+            midlegend = azstring + ui_translate("phase3.skill-menu", "set skill target");
+            clearlegend = ui_translate("phase3.skill-menu", "[<yellow>-</yellow>] clear selected target");
         }
         else
         {
-            midlegend = "[<yellow>=</yellow>] set a skill target";
-            clearlegend = "[<yellow>-</yellow>] clear all targets";
+            midlegend = ui_translate("phase3.skill-menu", "[<yellow>=</yellow>] set a skill target");
+            clearlegend = ui_translate("phase3.skill-menu", "[<yellow>-</yellow>] clear all targets");
         }
     }
     else if (!you.has_mutation(MUT_DISTRIBUTED_TRAINING)) // SKM_VIEW_TARGETS unavailable for Gn
-        midlegend = "[<yellow>=</yellow>] set a skill target";
+        midlegend = ui_translate("phase3.skill-menu", "[<yellow>=</yellow>] set a skill target");
 
     m_help_button->set_text(helpstring + legend);
     m_middle_button->set_text(midlegend);
@@ -1505,9 +1539,9 @@ void SkillMenu::set_default_help()
     string text;
     if (is_set(SKMF_EXPERIENCE))
     {
-        text = "Select the skills you want to be trained. "
+        text = ui_translate("phase3.skill-menu", "Select the skills you want to be trained. "
                "The chosen skills will be raised to the level shown in "
-               "<cyan>cyan</cyan>.";
+               "<cyan>cyan</cyan>.");
     }
     else if (is_set(SKMF_SIMPLE))
         text = hints_skills_info();
@@ -1519,10 +1553,10 @@ void SkillMenu::set_default_help()
         if (get_state(SKM_LEVEL) == SKM_LEVEL_ENHANCED)
             text += m_switches[SKM_LEVEL]->get_help() + " ";
         else
-            text += "The species aptitude is in <white>white</white>. ";
+            text += ui_translate("phase3.skill-menu", "The species aptitude is in <white>white</white>. ");
 
         if (is_set(SKMF_MANUAL))
-            text += "Bonus from skill manuals is in <lightred>red</lightred>. ";
+            text += ui_translate("phase3.skill-menu", "Bonus from skill manuals is in <lightred>red</lightred>. ");
     }
 
     m_help->set_text(text);
@@ -1635,8 +1669,8 @@ void SkillMenu::set_title()
     string t;
     if (is_set(SKMF_EXPERIENCE))
     {
-        t = "You have gained great experience. "
-            "Select the skills to train.";
+        t = ui_translate("phase3.skill-menu", "You have gained great experience. "
+            "Select the skills to train.");
     }
 
     m_title->set_text(t);
@@ -1819,7 +1853,7 @@ void skill_menu(int flag, int exp)
     // case where we abort is if all in-principle trainable skills are maxed.
     if (flag & SKMF_EXPERIENCE && !trainable_skills(true))
     {
-        mpr("You feel omnipotent.");
+        mpr(ui_translate("s.ui", "You feel omnipotent."));
         return;
     }
 

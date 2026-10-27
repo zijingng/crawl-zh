@@ -1,4 +1,5 @@
 #include "AppHdr.h"
+#include "t-display.h"
 
 #ifdef USE_TILE_LOCAL
 
@@ -227,8 +228,8 @@ bool InventoryRegion::update_tab_tip_text(string &tip, bool active)
     const char *prefix2 = active ? "" : "          ";
 
     tip = make_stringf("%s%s\n%s%s",
-                       prefix1, "Display inventory",
-                       prefix2, "Use items");
+                       prefix1, ui_translate("t.tiles", "Display inventory"),
+                       prefix2, ui_translate("t.tiles", "Use items"));
 
     return true;
 }
@@ -245,12 +246,12 @@ bool InventoryRegion::update_tip_text(string& tip)
     // page next/prev
     if (_is_next_button(item_idx))
     {
-        tip = "Next page\n[L-Click] Show next page of items";
+        tip = ui_translate("t.tiles", "Next page\n[L-Click] Show next page of items");
         return true;
     }
     else if (_is_prev_button(item_idx))
     {
-        tip = "Previous page\n[L-Click] Show previous page of items";
+        tip = ui_translate("t.tiles", "Previous page\n[L-Click] Show previous page of items");
         return true;
     }
 
@@ -277,18 +278,19 @@ bool InventoryRegion::update_tip_text(string& tip)
             tip += " - ";
         }
 
-        tip += item.name(DESC_A);
+        string item_display;
+        tip += try_item_display_name(item, item_display) ? item_display : item.name(DESC_A);
 
         if (!display_actions)
             return true;
 
         if (!item_is_stationary(item))
         {
-            tip += "\n[L-Click] Pick up (%)";
+            tip += ui_translate("t.tiles", "\n[L-Click] Pick up (%)");
             cmd.push_back(CMD_PICKUP);
             if (item.quantity > 1)
             {
-                tip += "\n[Ctrl + L-Click] Partial pick up (%)";
+                tip += ui_translate("t.tiles", "\n[Ctrl + L-Click] Partial pick up (%)");
                 cmd.push_back(CMD_PICKUP_QUANTITY);
             }
         }
@@ -299,7 +301,8 @@ bool InventoryRegion::update_tip_text(string& tip)
         if (!item.defined())
             return false;
 
-        tip = item.name(DESC_INVENTORY_EQUIP);
+        string item_display;
+        tip = try_item_display_name(item, item_display, true) ? item_display : item.name(DESC_INVENTORY_EQUIP);
 
         if (!display_actions)
             return true;
@@ -335,79 +338,79 @@ bool InventoryRegion::update_tip_text(string& tip)
             case OBJ_STAVES:
                 if (!you.has_mutation(MUT_NO_GRASPING))
                 {
-                    tmp += "Wield (%)";
+                    tmp += ui_translate("t.tiles", "Wield (%)");
                     cmd.push_back(CMD_WIELD_WEAPON);
                     if (you.has_mutation(MUT_WIELD_OFFHAND)
                         && you.hands_reqd(item) == HANDS_ONE)
                     {
-                        tmp += "\n[Ctrl + L-Click] Offhand";
+                        tmp += ui_translate("t.tiles", "\n[Ctrl + L-Click] Offhand");
                     }
                 }
                 break;
             case OBJ_WEAPONS + EQUIP_OFFSET:
-                tmp += "Unwield (%-)";
+                tmp += ui_translate("t.tiles", "Unwield (%-)");
                 cmd.push_back(CMD_WIELD_WEAPON);
                 break;
             case OBJ_MISCELLANY:
             case OBJ_WANDS:
             case OBJ_TALISMANS:
-                tmp += "Evoke (%)";
+                tmp += ui_translate("t.tiles", "Evoke (%)");
                 cmd.push_back(CMD_EVOKE);
                 break;
             case OBJ_ARMOUR:
                 if (!you.has_mutation(MUT_NO_ARMOUR))
                 {
-                    tmp += "Wear (%)";
+                    tmp += ui_translate("t.tiles", "Wear (%)");
                     cmd.push_back(CMD_WEAR_ARMOUR);
                 }
                 break;
             case OBJ_ARMOUR + EQUIP_OFFSET:
-                tmp += "Take off (%)";
+                tmp += ui_translate("t.tiles", "Take off (%)");
                 cmd.push_back(CMD_REMOVE_ARMOUR);
                 break;
             case OBJ_JEWELLERY:
-                tmp += "Put on (%)";
+                tmp += ui_translate("t.tiles", "Put on (%)");
                 cmd.push_back(CMD_WEAR_JEWELLERY);
                 break;
             case OBJ_JEWELLERY + EQUIP_OFFSET:
-                tmp += "Remove (%)";
+                tmp += ui_translate("t.tiles", "Remove (%)");
                 cmd.push_back(CMD_REMOVE_JEWELLERY);
                 break;
             case OBJ_MISSILES:
                 if (!you.has_mutation(MUT_NO_GRASPING))
                 {
-                    tmp += "Fire (%)";
+                    tmp += ui_translate("t.tiles", "Fire (%)");
                     cmd.push_back(CMD_FIRE);
                 }
                 break;
             case OBJ_SCROLLS:
-                tmp += "Read (%)";
+                tmp += ui_translate("t.tiles", "Read (%)");
                 cmd.push_back(CMD_READ);
                 break;
             case OBJ_POTIONS:
-                tmp += "Quaff (%)";
+                tmp += ui_translate("t.tiles", "Quaff (%)");
                 cmd.push_back(CMD_QUAFF);
                 break;
             case OBJ_CORPSES:
             case OBJ_BOOKS:
                 break;
             default:
-                tmp += "Use";
+                tmp += ui_translate("t.tiles", "Use");
             }
 
             if (!tmp.empty())
                 tip += tip_prefix + tmp;
         }
 
-        tip += "\n[R-Click] Describe";
+        tip += ui_translate("t.tiles", "\n[R-Click] Describe");
         // Has to be non-equipped or non-cursed to drop.
         if (!equipped || !you.inv[idx].cursed())
         {
-            tip += "\n[Shift + L-Click] Drop (%)";
+            tip += ui_translate("t.tiles", "\n[Shift + L-Click] Drop (%)");
             cmd.push_back(CMD_DROP);
             if (you.inv[idx].quantity > 1)
             {
-                tip += "\n[Ctrl-Shift + L-Click] Drop quantity (%#)";
+                tip += ui_translate("t.tiles", "\n[Ctrl-Shift + L-Click] Drop quantity (%#)");
                 cmd.push_back(CMD_DROP);
             }
         }
@@ -447,12 +450,12 @@ bool InventoryRegion::update_alt_text(string &alt)
     if (_is_next_button(item_idx))
     {
         // alt text for next page button
-        inf.title = "Next page";
+        inf.title = ui_translate("t.tiles", "Next page");
     }
     else if (_is_prev_button(item_idx))
     {
         // alt text for prev page button
-        inf.title = "Previous page";
+        inf.title = ui_translate("t.tiles", "Previous page");
     }
     else
         get_item_desc(*item, inf);
@@ -475,13 +478,21 @@ void InventoryRegion::draw_tag()
     bool floor = m_items[curs_index].flag & TILEI_FLAG_FLOOR;
 
     if (_is_next_button(curs_index))
-        draw_desc("Next page");
+        draw_desc(ui_translate("t.tiles", "Next page"));
     else if (_is_prev_button(curs_index))
-        draw_desc("Previous page");
+        draw_desc(ui_translate("t.tiles", "Previous page"));
     else if (floor && env.item[idx].defined())
-        draw_desc(env.item[idx].name(DESC_PLAIN).c_str());
+    {
+        string shown;
+        draw_desc(try_item_display_name(env.item[idx], shown, false, false)
+            ? shown.c_str() : env.item[idx].name(DESC_PLAIN).c_str());
+    }
     else if (!floor && you.inv[idx].defined())
-        draw_desc(you.inv[idx].name(DESC_INVENTORY_EQUIP).c_str());
+    {
+        string shown;
+        draw_desc(try_item_display_name(you.inv[idx], shown, true)
+            ? shown.c_str() : you.inv[idx].name(DESC_INVENTORY_EQUIP).c_str());
+    }
 }
 
 void InventoryRegion::activate()

@@ -1,0 +1,22 @@
+{
+  "baseline": "0.34.1",
+  "source": "crawl-ref/source/dat/database/wpnnoise.txt",
+  "entries": [
+    {
+      "key": "_SCREAM_",
+      "context": "textdb:database/wpnnoise.txt:_scream_",
+      "source_sha256": "570135012a13311292162df5a82cfed97d079d3753bb5ffccdcaae7cb4e95ff4",
+      "translation_sha256": "f6f970c829a6c8a717faeaec4bce8cf86874abe62b032752b9bd5d287b6498cf",
+      "review_status": "reviewed",
+      "candidates": 71
+    }
+  ],
+  "reviewed_this_batch": 1,
+  "candidates": 71,
+  "cumulative_reviewed": 65,
+  "legacy_unreviewed_keys": [],
+  "english_source_unchanged": true,
+  "unselected_entries_unchanged": true,
+  "runtime_adapter": "strict paired item_noise; whole canonical English for unavailable components and opaque Lua",
+  "whole_file_export": "localization/manifests/textdb-phase3.json"
+}

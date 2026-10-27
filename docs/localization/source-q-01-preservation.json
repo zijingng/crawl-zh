@@ -1,0 +1,101 @@
+{
+  "batch": "source-q-01",
+  "canonical_function_bodies": [
+    {
+      "signature": "void action::save(",
+      "unchanged": true
+    },
+    {
+      "signature": "void spell_action::save(",
+      "unchanged": true
+    },
+    {
+      "signature": "void ability_action::save(",
+      "unchanged": true
+    },
+    {
+      "signature": "void melee_action::save(",
+      "unchanged": true
+    },
+    {
+      "signature": "static shared_ptr<action> _load_action(",
+      "unchanged": true
+    },
+    {
+      "signature": "void action_cycler::save(",
+      "unchanged": true
+    },
+    {
+      "signature": "void action_cycler::load(",
+      "unchanged": true
+    },
+    {
+      "signature": "shared_ptr<action> slot_to_action(",
+      "unchanged": true
+    },
+    {
+      "signature": "shared_ptr<action> get_primary_action(",
+      "unchanged": true
+    },
+    {
+      "signature": "shared_ptr<action> spell_to_action(",
+      "unchanged": true
+    },
+    {
+      "signature": "shared_ptr<action> ability_to_action(",
+      "unchanged": true
+    }
+  ],
+  "save_type_and_inscription_literals_unchanged": true,
+  "glossary_sha256": "5b0e7563973cc4449b02977ed1d7b4cfb7f9aa33877063cff3f665c99ff50965",
+  "selected_terms": [
+    {
+      "Term": "Cleave status",
+      "Translation": "劈斩/顺劈状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：劈斩。"
+    },
+    {
+      "Term": "Evocations",
+      "Translation": "唤发",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】技能而非魔法物品；影响魔杖和其他可唤发物品的强度或成功率，当前说明不含提高 MP 上限。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+    },
+    {
+      "Term": "magic points",
+      "Translation": "魔力值",
+      "Part of Speech": "noun",
+      "Variants": "MP",
+      "Note": "【0.34.1 修订】HP 对应生命值，MP 统一魔力值；删除过宽别名 Magic，保留 MP。 来源：player.cc。"
+    },
+    {
+      "Term": "confusion",
+      "Translation": "混乱",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态】状态名，区别动词 confuse。 来源：duration-data.h。"
+    },
+    {
+      "Term": "Maxwell's Capacitive Coupling",
+      "Translation": "麦克斯韦的电容耦合",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Grave Claw",
+      "Translation": "坟墓之爪",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    }
+  ],
+  "notes": [
+    "General action selection uses 备选动作, consistent with existing help/command labels. Item-specific historical 箭袋 text elsewhere is outside this batch.",
+    "Capacitive Coupling is the upstream abbreviated title, displayed as 电容耦合.",
+    "Canonical quiver_verb values and item/ability/spell identifiers stay English.",
+    "Partial spell/item/ability rows and quivered annotations fall back as complete rows."
+  ]
+}

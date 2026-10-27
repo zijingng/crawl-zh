@@ -1,0 +1,41 @@
+{
+  "batch": "database-44",
+  "reviewed_keys": 29,
+  "candidates": 576,
+  "sources": {
+    "rand_all.txt": {
+      "new_keys": 5,
+      "new_candidates": 61,
+      "total_reviewed_keys": 18,
+      "total_candidates": 584
+    },
+    "rand_wpn.txt": {
+      "new_keys": 24,
+      "new_candidates": 515
+    }
+  },
+  "canonical_sources_unchanged": true,
+  "python_tests": 32,
+  "native_test_cases": 9,
+  "native_assertions": 129081,
+  "targeted_native_seconds": 1.311,
+  "new_title_test_seconds": 0.268,
+  "tiles_crawl_exe_build": "passed",
+  "reviewed_alias_exports": "passed",
+  "complete_phrase_precedence": [
+    "Quick Death",
+    "the People",
+    "Shrieking Terror",
+    "the Heavens"
+  ],
+  "english_and_unknown_fallback": "passed",
+  "canonical_name_properties_rng": "passed",
+  "diff_check": "passed",
+  "gui_test": false,
+  "remaining": [
+    "Other rand_wpn naming dictionaries",
+    "rand_arm naming dictionaries",
+    "Composed spellbook titles",
+    "Random character names"
+  ]
+}

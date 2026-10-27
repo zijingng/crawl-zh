@@ -1,0 +1,3301 @@
+{
+  "baseline": "0.34.1",
+  "batch": "source-k-01",
+  "messages": [
+    {
+      "context": "k.known",
+      "english": "Select to reset item to default ([*] for all): ",
+      "translation": "选择要恢复默认设置的物品（[*] 选择全部）：",
+      "module": "known-items.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "8233c87384ed7d3f2d00fa39ed64f412afdb25a67559e43834700689f7745d12",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.known",
+      "english": "Items not yet recognised:",
+      "translation": "尚未识别的物品：",
+      "module": "known-items.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "cfe65f46c50b3316c17cf8d6da2b29dab87230615fff5784720424d5174612a0",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.known",
+      "english": "Recognised items. (Select to toggle autopickup)",
+      "translation": "已识别的物品。（选择以切换自动拾取）",
+      "module": "known-items.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "06d9c50af7d9c5466bf9304b6b0f11672347a545d54d222525b80f755355c09b",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.known",
+      "english": "You recognise all items. (Select to toggle autopickup)",
+      "translation": "你已识别所有物品。（选择以切换自动拾取）",
+      "module": "known-items.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "74fbd4435611ba3362a1880868151e0c03737f98bbfd9d52bb67128ac394d880",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.known",
+      "english": "(_ for help)",
+      "translation": "（_ 查看帮助）",
+      "module": "known-items.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "bfd24fd5bda5cd99ff8d728a5f9115e97885c54ff604cd214f017e01b0975525",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.known",
+      "english": "Other Items",
+      "translation": "其他物品",
+      "module": "known-items.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "e975ba4c36c7161336c75968a2bc592215da4f43f7af5f6aeaf8e6041d30b0ca",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.known",
+      "english": " page down  ",
+      "translation": " 下一页  ",
+      "module": "known-items.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "ff79ff3edaefcae82f7303c45b214e5683bb291715532130d57e3368feadd69a",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.known",
+      "english": " page up  ",
+      "translation": " 上一页  ",
+      "module": "known-items.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "63d6f353dbbaad8d6b4dfccd4a2e7b6c67fedb8278017c2d8eda92d5e8f58c67",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.known",
+      "english": " recognised  ",
+      "translation": " 已识别  ",
+      "module": "known-items.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "f0ed1949a7a1d2642cb3829e1ce7af70a8ab59fa44a5879d43e5501d167f487b",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.known",
+      "english": " exit",
+      "translation": " 退出",
+      "module": "known-items.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "b9acca6363e010d6fba6ca82a4b851c052d6632e84bd28d63546e6b167f65283",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.known",
+      "english": " select  ",
+      "translation": " 选择  ",
+      "module": "known-items.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "d5e03c5219dfa51f3759cafd51a357ec27c791a827c0da520b29e962c4aaf179",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.known",
+      "english": "Letters toggle autopickup  ",
+      "translation": "字母键切换自动拾取  ",
+      "module": "known-items.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "7ef0426fa9c1521047daeb2fce636362935c52e39ca639a687bf0e3765c20620",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.known",
+      "english": " toggle selected  ",
+      "translation": " 切换选中项  ",
+      "module": "known-items.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "1d170dedc805e5d2ad1315bf07fef36c4845255c2369a4d7f4a1ff1035f56221",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.known",
+      "english": " unrecognised",
+      "translation": " 未识别",
+      "module": "known-items.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "66f6b87b7a05ee070536c5ce9e422471afc5452909ed0d42694169a8cab4421b",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.kills",
+      "english": "Vanquished Creatures",
+      "translation": "击杀的生物",
+      "module": "kills.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "1e57830d261e208f81951d2c10ace8d4a1f5253744990183f11def267ceb4444",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.kills",
+      "english": "Vanquished Creatures (%s)",
+      "translation": "击杀的生物（%s）",
+      "module": "kills.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "7c9703f8e24a46d193f1764ea25aea81cd0675caa9b93e6a82403ae805e284e8",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.kills",
+      "english": "Grand Total: %s creatures vanquished",
+      "translation": "总计：击杀了%s个生物",
+      "module": "kills.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "a270c500801bb8aaeaf5986b2adda3f85a7bea81a95706c737124c126efdb884",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.kills",
+      "english": "%s %s",
+      "translation": "%s个%s",
+      "module": "kills.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "8a977da5cd5bd9940b8a838a30d5a6647750e925b27f11a52712e8e89d2c649a",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.kills",
+      "english": " (shapeshifter)",
+      "translation": "（变形者）",
+      "module": "kills.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "9d04d57dc140d780b3aa51a11e07d8fa0874c54bef9dfd03aab8c6a16121be7d",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.kills",
+      "english": " (%s times)",
+      "translation": "（%s次）",
+      "module": "kills.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "2fbd13d0fe4474b8ae3cc6bcdd935a61440400352b90755c390814aa6e541464",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.kills",
+      "english": "%s creatures vanquished.\n",
+      "translation": "击杀了%s个生物。\n",
+      "module": "kills.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "b216f1a3846476174cb40c2bda40edd7e5c7377d576de8ac46330c80fa05a5f1",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.kills",
+      "english": "%s creatures vanquished.",
+      "translation": "击杀了%s个生物。",
+      "module": "kills.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "0b171f1818db79a217713d373ceba122b3ce0602354b103e0332acca0c54cf89",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.category",
+      "english": "collateral kills",
+      "translation": "间接击杀",
+      "module": "kills.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "82828143d3a8047049a990611e17b40865de4c1e483e03748f71d2e5aba3f098",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.category",
+      "english": "others",
+      "translation": "其他来源",
+      "module": "kills.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "01db91d06032cc64162c16f8e35725b0e632beebdde8b2c2459979d04fb1e20c",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.category",
+      "english": "you",
+      "translation": "你",
+      "module": "kills.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "bb0347a468d97e98a9c00e37cebec1ab930f6f1221cae0f1fbb92b07e1900ba2",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.breakdown",
+      "english": "Strange Monsters",
+      "translation": "异类怪物",
+      "module": "kills.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "display_script": "dat/clua/kills.lua",
+      "source_sha256": "763adca44279d663c5e82a6dbc5eef8583740142f0a40a820e063fd7f8be5001",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.breakdown",
+      "english": "Uniques",
+      "translation": "独特怪物",
+      "module": "kills.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "display_script": "dat/clua/kills.lua",
+      "source_sha256": "d25b4f9d54c0e73339370a6b9f22561c04ddf43de6d2752f2d1d2602a9d66da3",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.breakdown",
+      "english": "Holy Monsters",
+      "translation": "神圣怪物",
+      "module": "kills.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "display_script": "dat/clua/kills.lua",
+      "source_sha256": "cc54fa07b38ff2f21d049fef2ca640d79962cf9dfc7697cdf822212d69737317",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.breakdown",
+      "english": "Natural Monsters",
+      "translation": "自然生物",
+      "module": "kills.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "display_script": "dat/clua/kills.lua",
+      "source_sha256": "65f66e05e590794126b7ad2fb8cdb6022167f4b848c90da709e1f3a71b52f86d",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.breakdown",
+      "english": "Undead Monsters",
+      "translation": "亡灵怪物",
+      "module": "kills.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "display_script": "dat/clua/kills.lua",
+      "source_sha256": "8742435478fd3cc14d07b87f94c6464cc52e15169ebda2698e4742167ff90235",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.breakdown",
+      "english": "Demonic Monsters",
+      "translation": "恶魔怪物",
+      "module": "kills.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "display_script": "dat/clua/kills.lua",
+      "source_sha256": "0785d0c1a555494a7c3a25502ed1f41358c7e9844565ae285dfe872e742aab33",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.breakdown",
+      "english": "Non-Living Monsters",
+      "translation": "非生命怪物",
+      "module": "kills.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "display_script": "dat/clua/kills.lua",
+      "source_sha256": "705e8f101cdc9784141a8b6b679135e0119faaaaed27c5ca8a6b8b7085b4f0be",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.breakdown",
+      "english": "Plants",
+      "translation": "植物",
+      "module": "kills.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "display_script": "dat/clua/kills.lua",
+      "source_sha256": "b81ce6bddc184917f5ba6e4acb98baa1dab41ba28675975261f0c21874f82582",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.breakdown",
+      "english": "  Monster Nature",
+      "translation": "  怪物本质",
+      "module": "kills.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "display_script": "dat/clua/kills.lua",
+      "source_sha256": "a7f2b8eef502ca683067c8ecf33e551aaca329c3bed95e848d1e53e20e072ce3",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.breakdown",
+      "english": "  Ascending Order",
+      "translation": "  按击杀数量升序排列",
+      "module": "kills.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "display_script": "dat/clua/kills.lua",
+      "source_sha256": "0324ae59f653b5c353292746b699a7f96f1c525421cbb5046116b0464c5d6d20",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.breakdown",
+      "english": "  Monster Symbol",
+      "translation": "  怪物符号",
+      "module": "kills.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "display_script": "dat/clua/kills.lua",
+      "source_sha256": "6fe688b644f4faa19c3c5a1291bda02f8c301b35ac96920d60cd65458a79dba1",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.breakdown",
+      "english": "All '%s'",
+      "translation": "所有“%s”",
+      "module": "kills.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "display_script": "dat/clua/kills.lua",
+      "source_sha256": "5c15b530f8f721b43c5dccf451b313a64a5c961b0dc3949e66e01fb514945de9",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.breakdown",
+      "english": "  Kills minus zombies and skeletons",
+      "translation": "  除丧尸和骷髅外的击杀",
+      "module": "kills.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "display_script": "dat/clua/kills.lua",
+      "source_sha256": "67e44861b82ab0a665eee79726590284e375dc1240f85cdad17e79b7bbfc355b",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "k.breakdown",
+      "english": "  The 3-digit Club",
+      "translation": "  击杀数量达到三位数的怪物",
+      "module": "kills.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "display_script": "dat/clua/kills.lua",
+      "source_sha256": "dd7ef62f8173d16ff398d3dcc28ff74e57bc331fffb2baaed37499174ff7fdcf",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "display.item.category",
+      "english": "spellbooks",
+      "translation": "魔法书",
+      "module": "known-items.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "05593e6e452c8f20ceea02b834a1dbd0cac0777035910ff9c6bc113007ef0af0",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    },
+    {
+      "context": "display.item.category",
+      "english": "unknown books",
+      "translation": "未知魔法书",
+      "module": "known-items.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-k-01",
+      "source_sha256": "a48a0692dd74603bd7a9b2f74f9217971499b52614bd0809d357a8c29d239e2b",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/chardump.cc",
+          "sha256": "402b3d21faaadee88470597297c3394ba0294054e0a75a2384c76284516ff990"
+        },
+        {
+          "source": "crawl-ref/source/dat/clua/kills.lua",
+          "sha256": "d31a930f2f24ba2820cbfca92dcd16409480ced9ad6adb0f9fffc8c0b863233d"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/kills.cc",
+          "sha256": "fe6a997561bdc17366ffa1349548d8ca3bb6c5722b2997d0cbae0321e5023334"
+        },
+        {
+          "source": "crawl-ref/source/kills.h",
+          "sha256": "445171227d89577ed0e2356b1bb7d19f75475b29212d69a23eee267776964659"
+        },
+        {
+          "source": "crawl-ref/source/known-items.cc",
+          "sha256": "fb7a37622a7d32510f4f07d07007041ff6042d9ce7f8553dd4d3936fb1e26e96"
+        },
+        {
+          "source": "crawl-ref/source/known-items.h",
+          "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51"
+        },
+        {
+          "source": "crawl-ref/source/menu.cc",
+          "sha256": "5234c908eb78ad9ea28f70d4946346f1b8d47d1d7f2e7a99ece42b0f276ab80b"
+        },
+        {
+          "source": "crawl-ref/source/menu.h",
+          "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "7992e1b075f33ae97d74f0b8d0f3210bb739edd7dbe6b903607998706fdc7898"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "cef633b74bbb8b4153bd616350d61111359398644ef08ae47c26f4d6c751c840"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "9a795c7afdc978e9238ee8e2d8c4b0b1e53967bf5178a8adbbb5b7da11323ebe"
+        }
+      ]
+    }
+  ],
+  "shared_dependency_rechecks": []
+}

@@ -1,0 +1,22 @@
+{
+  "batch": "source-a-01",
+  "files_reviewed": 34,
+  "messages": 1106,
+  "added": 1105,
+  "reused": 1,
+  "glossary_terms": 1552,
+  "ability_terms_added": 138,
+  "artefact_fields": 179,
+  "manifest_dependencies_current": true,
+  "english_source_hashes_current": true,
+  "glossary_hash_current": true,
+  "rng_call_sequence_unchanged_in_a_files": true,
+  "canonical_generated_artifact_data_unchanged": true,
+  "gui_playtest": false,
+  "generated_ui_entries": 7600,
+  "all_batch_translations_exported": true,
+  "cpp_test_cases": 25,
+  "cpp_assertions": 13619,
+  "python_tests": 22,
+  "windows_tiles_build": true
+}

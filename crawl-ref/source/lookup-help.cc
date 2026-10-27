@@ -4,6 +4,7 @@
  **/
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "lookup-help.h"
 
@@ -260,14 +261,14 @@ namespace
 
         void set_prompt()
         {
-            string prompt = "Describe which? ";
+            string prompt = ui_translate("phase3.lookup-help", "Describe which? ");
 
             if (toggleable_sort)
             {
                 if (sort_alpha)
-                    prompt += "(CTRL-S to sort by monster toughness)";
+                    prompt += ui_translate("phase3.lookup-help", "(CTRL-S to sort by monster toughness)");
                 else
-                    prompt += "(CTRL-S to sort by name)";
+                    prompt += ui_translate("phase3.lookup-help", "(CTRL-S to sort by name)");
             }
             set_title(new MenuEntry(prompt, MEL_TITLE));
         }
@@ -618,9 +619,153 @@ static void _recap_feat_keys(vector<string> &keys)
  * @param key       The raw database key for the entry. (E.g. "blade card".)
  * @return          A new menu entry.
  */
+class ItemNameLookupEntry : public MenuEntry
+{
+    string key;
+public:
+    ItemNameLookupEntry(char letter, const string &label, string &source)
+        : MenuEntry(label, MEL_ITEM, 1, letter), key(source) { data = &source; }
+    string get_text() const override
+    {
+        const char *translated = ui_translate("display.item", key.c_str());
+        if (translated == key.c_str())
+            translated = ui_translate("display.item.artifact", key.c_str());
+        return translated == key.c_str() ? MenuEntry::get_text() : _get_text_preface() + translated;
+    }
+    string get_filter_text() const override
+    {
+        const string original = MenuEntry::get_text(), displayed = get_text();
+        return original == displayed ? original : original + " " + displayed;
+    }
+};
+
+class MonsterNameLookupEntry : public MonsterMenuEntry
+{
+    string prefix;
+    bool special;
+public:
+    MonsterNameLookupEntry(const string &title, const string &name,
+                          monster_info *info, char letter, bool special_name)
+        : MonsterMenuEntry(title, info, letter),
+          prefix(title.substr(0, title.size() - name.size())), special(special_name) { }
+    string get_text() const override
+    {
+        string displayed;
+        const auto *info = static_cast<const monster_info *>(data);
+        if (try_monster_type_display_name(info->type, displayed))
+        {
+            if (special)
+            {
+                const branch_type branch = serpent_of_hell_branch(info->type);
+                const ui_arg location = ui_text_arg("b.branch.name", branches[branch].longname);
+                ui_translation_group title({{"l.lookup", "%s (%s)"}});
+                if (!title.available() || !location.available)
+                    return MonsterMenuEntry::get_text();
+                displayed = make_stringf(title.get("l.lookup", "%s (%s)"),
+                                         displayed.c_str(), location.text.c_str());
+            }
+            return _get_text_preface() + prefix + displayed;
+        }
+        return MonsterMenuEntry::get_text();
+    }
+    string get_filter_text() const override
+    {
+        const string original = MonsterMenuEntry::get_text(), displayed = get_text();
+        return original == displayed ? original : original + " " + displayed;
+    }
+};
+
+bool try_lookup_help_display_name(const string &key, string &output)
+{
+    ui_translation_group active;
+    if (!active.available())
+        return false;
+    string name = key;
+    const string lower = lowercase_string(key);
+    ui_arg shown{"", false};
+    if (ends_with(lower, " spell"))
+    {
+        name.resize(name.size() - 6);
+        const spell_type spell = spell_by_name(name);
+        if (spell != SPELL_NO_SPELL)
+            shown = ui_text_arg("display.spell", spell_title(spell));
+    }
+    else if (ends_with(lower, " ability"))
+    {
+        name.resize(name.size() - 8);
+        const ability_type ability = ability_by_name(name);
+        if (ability != ABIL_NON_ABILITY)
+            shown = ui_text_arg("display.ability", ability_name(ability));
+    }
+    else if (ends_with(lower, " card"))
+    {
+        name.resize(name.size() - 5);
+        const card_type card = name_to_card(name);
+        if (card != NUM_CARDS)
+            shown = ui_text_arg("a.card.name", card_name(card));
+    }
+    else if (ends_with(lower, " mutation"))
+    {
+        name.resize(name.size() - 9);
+        const mutation_type mut = mutation_from_name(name, false);
+        if (mut != NUM_MUTATIONS)
+            shown = ui_text_arg("a.mutation.name", mutation_name(mut));
+    }
+    else if (ends_with(lower, " bane"))
+    {
+        name.resize(name.size() - 5);
+        const bane_type bane = bane_from_name(name);
+        if (bane != NUM_BANES)
+        {
+            output = bane_display_name(bane);
+            return output != bane_name(bane);
+        }
+    }
+    else if (ends_with(lower, " status") || ends_with(lower, " passive"))
+        shown = ui_text_arg("l.lookup.name", lower);
+    else
+    {
+        const branch_type branch = branch_by_shortname(name);
+        const skill_type skill = str_to_skill(name);
+        if (branch != NUM_BRANCHES)
+            shown = ui_text_arg("b.branch.name", branches[branch].shortname);
+        else if (skill != SK_NONE)
+            shown = ui_text_arg("display.skill", skill_name(skill));
+        else
+        {
+            const dungeon_feature_type feat = lower == "a shop" ? DNGN_ENTER_SHOP : feat_by_desc(name);
+            if (feat && try_feature_display_name(feat, NUM_TRAPS, output))
+                return true;
+        }
+    }
+    if (!shown.available)
+        return false;
+    output = shown.text;
+    return true;
+}
+
+class LookupDisplayEntry : public MenuEntry
+{
+    string key;
+public:
+    LookupDisplayEntry(char letter, const string &label, string &source)
+        : MenuEntry(label, MEL_ITEM, 1, letter), key(source) { data = &source; }
+    string get_text() const override
+    {
+        string shown;
+        return try_lookup_help_display_name(key, shown)
+            ? _get_text_preface() + shown : MenuEntry::get_text();
+    }
+    string get_filter_text() const override
+    {
+        const string original = MenuEntry::get_text(), shown = get_text();
+        return original == shown ? original : original + " " + shown;
+    }
+};
+
 static MenuEntry* _simple_menu_gen(char letter, const string &str, string &key)
 {
-    MenuEntry* me = new MenuEntry(str, MEL_ITEM, 1, letter);
+    MenuEntry* me = new LookupDisplayEntry(letter, str, key);
     me->data = &key;
     return me;
 }
@@ -672,7 +817,7 @@ static MenuEntry* _monster_menu_gen(char letter, const string &str,
     // NOTE: MonsterMenuEntry::get_tiles() takes care of setting
     // up a fake weapon when displaying a fake dancing weapon's
     // tile.
-    return new MonsterMenuEntry(title, &mslot, letter);
+    return new MonsterNameLookupEntry(title, name, &mslot, letter, _is_soh(str));
 }
 
 static bool _make_item_fake_unrandart(item_def &item, int unrand_index)
@@ -692,7 +837,7 @@ static bool _make_item_fake_unrandart(item_def &item, int unrand_index)
  */
 static MenuEntry* _item_menu_gen(char letter, const string &str, string &key)
 {
-    MenuEntry* me = _simple_menu_gen(letter, str, key);
+    MenuEntry* me = new ItemNameLookupEntry(letter, str, key);
     item_def item;
     item_kind kind = item_kind_by_name(key);
     if (kind.base_type == OBJ_UNASSIGNED)
@@ -713,7 +858,7 @@ static MenuEntry* _item_menu_gen(char letter, const string &str, string &key)
  */
 static MenuEntry* _feature_menu_gen(char letter, const string &str, string &key)
 {
-    MenuEntry* me = new MenuEntry(str, MEL_ITEM, 1, letter);
+    MenuEntry* me = new LookupDisplayEntry(letter, str, key);
     me->data = &key;
 
     const dungeon_feature_type feat = feat_by_desc(str);
@@ -767,7 +912,9 @@ static MenuEntry* _spell_menu_gen(char letter, const string &str, string &key)
 
     const spell_type spell = spell_by_name(str);
     if (spell != SPELL_NO_SPELL)
+    {
         me->add_tile(tile_def(tileidx_spell(spell)));
+    }
     me->colour = is_player_spell(spell) ? WHITE
                                         : DARKGREY; // monster-only
 
@@ -805,13 +952,31 @@ static MenuEntry* _branch_menu_gen(char letter, const string &str, string &key)
 /**
  * Generate a ?/L menu entry. (ref. _simple_menu_gen()).
  */
+class CloudNameLookupEntry : public MenuEntry
+{
+    cloud_type type;
+public:
+    CloudNameLookupEntry(char letter, const string &label, string &key, cloud_type cloud)
+        : MenuEntry(label, MEL_ITEM, 1, letter), type(cloud) { data = &key; }
+    string get_text() const override
+    {
+        string shown;
+        return try_cloud_display_name(type, true, shown)
+            ? _get_text_preface() + shown : MenuEntry::get_text();
+    }
+    string get_filter_text() const override
+    {
+        const string original = MenuEntry::get_text(), shown = get_text();
+        return original == shown ? original : original + " " + shown;
+    }
+};
+
 static MenuEntry* _cloud_menu_gen(char letter, const string &str, string &key)
 {
-    MenuEntry* me = _simple_menu_gen(letter, str, key);
-
     const string cloud_name = lowercase_string(str);
     const cloud_type cloud = cloud_name_to_type(cloud_name);
     ASSERT(cloud != NUM_CLOUD_TYPES);
+    MenuEntry* me = new CloudNameLookupEntry(letter, str, key, cloud);
 
     cloud_struct fake_cloud;
     fake_cloud.type = cloud;
@@ -999,10 +1164,11 @@ string LookupType::key_to_menu_str(const string &key) const
  */
 int LookupType::describe(const string &key, bool exact_match) const
 {
-    const string footer
-        = exact_match ? "This entry is an exact match for '" + key
-        + "'. To see non-exact matches, press space."
-        : "";
+    string footer = exact_match ? "This entry is an exact match for '" + key
+        + "'. To see non-exact matches, press space." : "";
+    if (exact_match)
+        footer = ui_render("l.lookup", "This entry is an exact match for '%s'. To see non-exact matches, press space.",
+                           footer, {ui_literal_arg(key)});
     return describer(key, suffix(), footer);
 }
 
@@ -1028,7 +1194,14 @@ static int _describe_key(const string &key, const string &suffix,
     inf.title = [&]() {
         string title = key;
         strip_suffix(title, suffix);
-        return uppercase_first(title);
+        if (suffix == " cloud")
+        {
+            const cloud_type cloud = cloud_name_to_type(title);
+            if (cloud > CLOUD_NONE && cloud < NUM_CLOUD_TYPES)
+                return cloud_display_name(cloud);
+        }
+        string shown;
+        return try_lookup_help_display_name(key, shown) ? shown : uppercase_first(title);
     }();
     inf.footer = footer;
 
@@ -1245,10 +1418,14 @@ static string _branch_transit_runes(branch_type br)
     string desc;
     const bool exit = br == BRANCH_VAULTS;
     const int num_runes = br == BRANCH_ZOT ? ZOT_ENTRY_RUNES : 1;
-    return make_stringf("\n\nThis branch can only be %sed while carrying at "
+    const string original = make_stringf("\n\nThis branch can only be %sed while carrying at "
                         "least %d rune%s of Zot.",
                         exit ? "exit" : "enter",
                         num_runes, num_runes > 1 ? "s" : "");
+    return ui_render("l.branch", exit
+        ? "\n\nThis branch can only be exited while carrying at least %s runes of Zot."
+        : "\n\nThis branch can only be entered while carrying at least %s runes of Zot.",
+        original, {ui_literal_arg(to_string(num_runes))});
 }
 
 static string _branch_depth(branch_type br)
@@ -1259,8 +1436,11 @@ static string _branch_depth(branch_type br)
     // Abyss depth is explained in the description.
     if (br == BRANCH_ABYSS)
     {
+        const int abyss_depth = abyss_default_depth(true);
         desc = make_stringf("\n(If you entered the Abyss now, you could be "
-                            "pulled as deep as Abyss:%d.)", abyss_default_depth(true));
+                            "pulled as deep as Abyss:%d.)", abyss_depth);
+        desc = ui_render("l.branch", "\n(If you entered the Abyss now, you could be pulled as deep as Abyss:%s.)",
+                         desc, {ui_literal_arg(to_string(abyss_depth))});
     }
     if (depth > 1 && br != BRANCH_ABYSS)
     {
@@ -1268,6 +1448,9 @@ static string _branch_depth(branch_type br)
                             br == BRANCH_ZIGGURAT ? "portal"
                                                   : "branch",
                             depth);
+        desc = ui_render("l.branch", br == BRANCH_ZIGGURAT
+            ? "\n\nThis portal is %s levels deep." : "\n\nThis branch is %s levels deep.",
+            desc, {ui_literal_arg(to_string(depth))});
     }
 
     return desc;
@@ -1295,6 +1478,15 @@ static string _branch_location(branch_type br)
             desc += make_stringf("between levels %d and %d of ", min, max);
         desc += branches[parent].longname;
         desc += ".";
+        const ui_arg parent_name = ui_text_arg("b.branch.name", branches[parent].longname);
+        if (min != max)
+            desc = ui_render("l.branch", "\n\nThe entrance to this branch is between levels %s and %s of %s.", desc,
+                {ui_literal_arg(to_string(min)), ui_literal_arg(to_string(max)), parent_name});
+        else if (branches[parent].numlevels == 1)
+            desc = ui_render("l.branch", "\n\nThe entrance to this branch is in %s.", desc, {parent_name});
+        else
+            desc = ui_render("l.branch", "\n\nThe entrance to this branch is on level %s of %s.", desc,
+                {ui_literal_arg(to_string(min)), parent_name});
     }
 
     return desc;
@@ -1316,9 +1508,37 @@ static string _branch_subbranches(branch_type br)
                              subbranch_names.size() > 1 ? "s" : "",
                              comma_separated_line(begin(subbranch_names),
                                                   end(subbranch_names)).c_str());
+        vector<string> names;
+        bool complete = true;
+        for (const string &name : subbranch_names)
+        {
+            const ui_arg shown = ui_text_arg("b.branch.name", name);
+            complete = complete && shown.available;
+            names.push_back(shown.text);
+        }
+        desc = ui_render("l.branch", "\n\nThis branch contains entrances to %s.", desc,
+            {{join_strings(names.begin(), names.end(), "、"), complete}});
     }
 
     return desc;
+}
+
+string lookup_branch_extra_info(branch_type br)
+{
+    ASSERT_RANGE(br, 0, NUM_BRANCHES);
+    string info = "";
+    const string noise_desc = branch_noise_desc(br);
+    if (!noise_desc.empty())
+        info += "\n\n" + noise_desc;
+
+    info += _branch_location(br)
+            + _branch_transit_runes(br)
+            + _branch_depth(br)
+            + _branch_subbranches(br)
+            + "\n\n"
+            + branch_rune_desc(br, false);
+
+    return info;
 }
 
 /**
@@ -1336,17 +1556,7 @@ static int _describe_branch(const string &key, const string &suffix,
     const branch_type branch = branch_by_shortname(branch_name);
     ASSERT(branch != NUM_BRANCHES);
 
-    string info = "";
-    const string noise_desc = branch_noise_desc(branch);
-    if (!noise_desc.empty())
-        info += "\n\n" + noise_desc;
-
-    info += _branch_location(branch)
-            + _branch_transit_runes(branch)
-            + _branch_depth(branch)
-            + _branch_subbranches(branch)
-            + "\n\n"
-            + branch_rune_desc(branch, false);
+    const string info = lookup_branch_extra_info(branch);
 
     tile_def tile = tile_def(tileidx_branch(branch));
     return _describe_key(key, suffix, footer, info, &tile);
@@ -1471,10 +1681,16 @@ static string _prompt_for_regex(const LookupType &lookup_type, string &err)
                      " symbol.", pluralise(type).c_str())
         : lookup_type.type == "spell" ? " Preface with '@' to search by school."
         : "";
-    const string prompt = make_stringf(
+    string prompt = make_stringf(
          "Describe %s; partial names and regexps are fine.%s\n"
          "Describe what? ",
          article_a(type).c_str(), extra.c_str());
+    const char *extra_source = lookup_type.supports_glyph_lookup()
+        ? " Enter a single letter to list entries displayed by that symbol."
+        : type == "spell" ? " Preface with '@' to search by school." : "";
+    prompt = ui_render("l.lookup", "Describe %s; partial names and regexps are fine.%s\nDescribe what? ", prompt,
+        {ui_text_arg("l.lookup.type", type),
+         *extra_source ? ui_text_arg("l.lookup", extra_source) : ui_literal_arg("")});
 
     char buf[80];
     if (msgwin_get_line(prompt, buf, sizeof(buf)) || buf[0] == '\0')
@@ -1522,10 +1738,13 @@ static string _keylist_invalid_reason(const vector<string> &key_list,
 
     if (key_list.empty())
     {
-        if (by_symbol)
-            return "No " + plur_type + " with symbol '" + regex + "'.";
-        return make_stringf("No matching %s for search string '%s'.",
-            plur_type.c_str(), regex.c_str());
+        const string original = by_symbol
+            ? "No " + plur_type + " with symbol '" + regex + "'."
+            : make_stringf("No matching %s for search string '%s'.",
+                           plur_type.c_str(), regex.c_str());
+        return ui_render("l.lookup", by_symbol ? "No %s with symbol '%s'."
+                          : "No matching %s for search string '%s'.", original,
+                          {ui_text_arg("l.lookup.type", type), ui_literal_arg(regex)});
     }
 
     // we're good!
@@ -1571,7 +1790,7 @@ bool LookupType::find_description(string &response) const
     // not actually sure how to trigger this branch...
     if (want_regex && regex.empty())
     {
-        response = "Description must contain at least one non-space.";
+        response = ui_translate("l.lookup", "Description must contain at least one non-space.");
         return true;
     }
 
@@ -1609,7 +1828,8 @@ public:
     {
     public:
         LookupHelpMenuEntry(lookup_help_type lht)
-        : MenuEntry(uppercase_first(lookup_help_type_name(lht)),
+        : MenuEntry(ui_translate("lookup.category",
+                    uppercase_first(lookup_help_type_name(lht)).c_str()),
                     MEL_ITEM, 1, tolower(lookup_help_type_shortcut(lht))),
           typ(lht)
         {
@@ -1626,7 +1846,7 @@ public:
     {
         action_cycle = Menu::CYCLE_NONE;
         menu_action  = Menu::ACT_EXECUTE;
-        set_title(new MenuEntry("Lookup information about:", MEL_TITLE));
+        set_title(new MenuEntry(ui_translate("phase3.lookup-help", "Lookup information about:"), MEL_TITLE));
         on_single_selection = [](const MenuEntry& item)
         {
             const LookupHelpMenuEntry *lhme
@@ -1643,8 +1863,8 @@ public:
         clear();
         // XX `?/esc` doesn't go back to the main help menu, possibly should
         const string back = back_cmd == CMD_GAME_MENU
-                                ? "Back to game menu"
-                                : "Exit help lookup";
+                                ? ui_translate("phase3.lookup-help", "Back to game menu")
+                                : ui_translate("phase3.lookup-help", "Exit help lookup");
         auto back_button = new MenuEntry(back, MEL_ITEM, 1, CK_ESCAPE);
         if (back_cmd != CMD_NO_CMD)
             back_button->add_tile(tileidx_command(back_cmd));

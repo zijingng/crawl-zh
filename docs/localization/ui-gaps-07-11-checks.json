@@ -1,0 +1,32 @@
+{
+  "batch": "ui-gaps-07-11",
+  "windows_tiles_build": "passed",
+  "exe": {
+    "bytes": 27825103,
+    "sha256": "e7ff579a5b96b48e5ab67615363bec6592b54dc424fc78e02f13490cc7991fe9"
+  },
+  "native": {
+    "cases": 8,
+    "assertions": 1450,
+    "passed": true
+  },
+  "python": {
+    "cases": 33,
+    "passed": true
+  },
+  "coverage": {
+    "special_shop_literal_components": 204,
+    "rune_types": 19,
+    "new_reviewed_catalogue_entries": 200,
+    "existing_rune_labels_aligned": 6
+  },
+  "invariants": [
+    "Canonical monster names, player ghost names and custom proper names preserved",
+    "Branch shortcut and original English column layout preserved",
+    "Real-time handling and formatting evaluated once",
+    "Canonical shop owner and metadata unchanged; missing components retain English",
+    "Unknown rune translation retains complete English",
+    "RNG unchanged"
+  ],
+  "limitation": "No live game UI interaction; production display helpers and catalogue tested"
+}

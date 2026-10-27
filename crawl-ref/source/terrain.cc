@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "t-display.h"
+#include "i18n.h"
 
 #include "terrain.h"
 
@@ -937,8 +939,9 @@ void slime_wall_damage(actor* act, int delay)
     if (dam > 0 && you.see_cell_no_trans(act->pos()))
     {
         const char *verb = act->is_icy() ? "melt" : "burn";
-        mprf((walls > 1) ? "The walls %s %s!" : "The wall %ss %s!",
-              verb, act->name(DESC_THE).c_str());
+        mpr(ui_render("t.terrain", "The walls %s %s!",
+            make_stringf((walls > 1) ? "The walls %s %s!" : "The wall %ss %s!", verb, act->name(DESC_THE).c_str()),
+            {ui_text_arg("t.wall.verb", verb), ui_actor_arg(*act)}));
         act->hurt(&you, dam, BEAM_ACID);
         if (act->alive())
             behaviour_event(act->as_monster(), ME_WHACK, &you, you.pos());
@@ -978,11 +981,11 @@ void feat_splash_noise(dungeon_feature_type feat)
     {
     case DNGN_SHALLOW_WATER:
     case DNGN_DEEP_WATER:
-        mprf(MSGCH_SOUND, "You hear a splash.");
+        mprf(MSGCH_SOUND, "%s", ui_translate("t.ui", "You hear a splash."));
         return;
 
     case DNGN_LAVA:
-        mprf(MSGCH_SOUND, "You hear a sizzling splash.");
+        mprf(MSGCH_SOUND, "%s", ui_translate("t.ui", "You hear a sizzling splash."));
         return;
 
     default:
@@ -1479,7 +1482,33 @@ static void _announce_swap_real(coord_def orig_pos, coord_def dest_pos)
             str << " to " << prep << " " << dest_actor;
     }
     str << "!";
-    mpr(str.str());
+    auto relation = [&](const coord_def &where, bool present) -> ui_arg {
+        if (!present) return ui_literal_arg("");
+        const actor *who = actor_at(where);
+        if (!who) return {"", false};
+        const ui_arg name = ui_actor_arg(*who);
+        const ui_arg place = ui_text_arg("t.preposition", prep);
+        return {ui_render("t.terrain", "%s%s", "", {name, place}),
+            name.available && place.available && ui_text_arg("t.terrain", "%s%s").available};
+    };
+    const ui_arg from = relation(orig_pos, !orig_actor.empty());
+    const ui_arg to = relation(dest_pos, !dest_actor.empty());
+    auto clause = [&](const ui_arg &place, const char *key) -> ui_arg {
+        if (place.available && place.text.empty()) return ui_literal_arg("");
+        return {ui_render("t.terrain", key, "", {place}),
+            place.available && ui_text_arg("t.terrain", key).available};
+    };
+    const ui_arg feature = s_feature_at_arg(dest_pos);
+    const char *key = you.see_cell(orig_pos) && !you.see_cell(dest_pos)
+        ? "%s suddenly disappears%s!"
+        : !you.see_cell(orig_pos) && you.see_cell(dest_pos)
+            ? "%s suddenly appears%s!" : "%s moves%s%s!";
+    if (you.see_cell(orig_pos) && !you.see_cell(dest_pos))
+        mpr(ui_render("t.terrain", key, str.str(), {feature, clause(from, " from %s")}));
+    else if (!you.see_cell(orig_pos) && you.see_cell(dest_pos))
+        mpr(ui_render("t.terrain", key, str.str(), {feature, clause(to, " at %s")}));
+    else
+        mpr(ui_render("t.terrain", key, str.str(), {feature, clause(from, " from %s"), clause(to, " to %s")}));
 }
 
 static void _announce_swap(coord_def pos1, coord_def pos2)
@@ -1788,10 +1817,9 @@ void fall_into_a_pool(dungeon_feature_type terrain)
         return;
     }
 
-    mprf("You fall into the %s!",
-         (terrain == DNGN_LAVA)       ? "lava" :
+    mprf("%s", ui_render("t.log", "You fall into the %s!", make_stringf("You fall into the %s!", (terrain == DNGN_LAVA)       ? "lava" :
          (terrain == DNGN_DEEP_WATER) ? "water"
-                                      : "programming rift");
+                                      : "programming rift"), {s_feature_arg(terrain)}).c_str());
     // included in default force_more_message
     enable_emergency_flight();
 }
@@ -2618,10 +2646,7 @@ void ice_wall_damage(monster &mons, int delay)
     beam.flavour = BEAM_COLD;
     beam.thrower = KILL_YOU;
     int dam = mons_adjust_flavoured(&mons, beam, orig_dam);
-    mprf("The wall freezes %s%s%s",
-         you.can_see(mons) ? mons.name(DESC_THE).c_str() : "something",
-         dam ? "" : " but does no damage",
-         attack_strength_punctuation(dam).c_str());
+    mprf("%s", ui_render("t.log", "The wall freezes %s%s%s", make_stringf("The wall freezes %s%s%s", you.can_see(mons) ? mons.name(DESC_THE).c_str() : "something", dam ? "" : " but does no damage", attack_strength_punctuation(dam).c_str()), {ui_actor_arg(mons), t_clause_arg(dam ? "" : " but does no damage"), ui_attack_punctuation(attack_strength_punctuation(dam))}).c_str());
 
     if (dam > 0)
     {
@@ -2661,10 +2686,7 @@ void frigid_walls_damage(int delay)
         beam.flavour = BEAM_COLD;
         beam.thrower = KILL_YOU;
         int dam = mons_adjust_flavoured(*mi, beam, orig_dam);
-        mprf("The frigid air chills %s%s%s",
-            you.can_see(**mi) ? mi->name(DESC_THE).c_str() : "something",
-            dam ? "" : " but does no damage",
-            attack_strength_punctuation(dam).c_str());
+        mprf("%s", ui_render("t.log", "The frigid air chills %s%s%s", make_stringf("The frigid air chills %s%s%s", you.can_see(**mi) ? mi->name(DESC_THE).c_str() : "something", dam ? "" : " but does no damage", attack_strength_punctuation(dam).c_str()), {ui_actor_arg(**mi), t_clause_arg(dam ? "" : " but does no damage"), ui_attack_punctuation(attack_strength_punctuation(dam))}).c_str());
 
         if (dam > 0)
         {
@@ -2704,7 +2726,7 @@ void descent_crumble_stairs()
 
         dungeon_change_base_terrain(*ri, DNGN_FLOOR);
         if (you.see_cell(*ri) && !is_temp_terrain(*ri))
-            mpr("The exit collapses.");
+            mpr(ui_translate("t.ui", "The exit collapses."));
         if (env.map_knowledge(*ri).feat() == original_feat)
         {
             env.map_knowledge(*ri).set_feature(DNGN_FLOOR);

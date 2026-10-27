@@ -10,8 +10,9 @@
 using std::vector;
 
 struct dice_def;
+struct ui_arg;
 
-string manual_skill_names(bool short_text=false);
+string manual_skill_names(bool short_text=false, ui_arg* display=nullptr);
 
 void wind_blast(actor* agent, int pow, coord_def target);
 

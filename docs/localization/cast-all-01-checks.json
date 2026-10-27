@@ -1,0 +1,32 @@
+{
+  "monspell_source_keys": 262,
+  "monspell_chinese_keys": 262,
+  "missing": [],
+  "control_entries": [
+    "siren song cast",
+    "avatar song cast",
+    "seal doors cast",
+    "blink away revenant cast",
+    "blink magical cast"
+  ],
+  "reference_only_entries": [
+    "legendary destruction cast",
+    "unseen spit acid cast",
+    "unseen acid splash cast",
+    "unseen cold breath cast",
+    "unseen chilling breath cast",
+    "unseen fire breath cast",
+    "unseen searing breath cast",
+    "unseen spit poison cast",
+    "roxanne cast",
+    "basilisk cast targeted",
+    "basilisk cast",
+    "drake cast targeted"
+  ],
+  "native_test_cases": 134,
+  "native_assertions": 253327,
+  "executable_sha256": "3d888c7a60046828813c16f61a0bc20c8c6e909cb23704f3c2f7145b63f5d8b7",
+  "executable": "crawl-ref/source/crawl.exe",
+  "new_ui_rows": 396,
+  "runtime_ui_smoke_test": false
+}

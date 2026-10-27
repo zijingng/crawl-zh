@@ -1,0 +1,190 @@
+{
+  "entries": [
+    {
+      "key": "ashenzari",
+      "context": "textdb:database/randname.txt:ashenzari",
+      "source_sha256": "75246762b6f257505e25ebff21bfd5754484b8afcb95baebfb684903bd7fb472",
+      "review_status": "reviewed",
+      "review_batch": "database-49",
+      "dependencies": [
+        {
+          "source": "database/randname.txt",
+          "key": "_ashenzari_adjective_",
+          "source_sha256": "c5d1b0f0c3eaf9c7614062dcff1e272278c122f40f639a1a78469730bafcba92",
+          "translation_sha256": "c5d1b0f0c3eaf9c7614062dcff1e272278c122f40f639a1a78469730bafcba92"
+        },
+        {
+          "source": "database/randname.txt",
+          "key": "_ashenzari_bound_adjective_",
+          "source_sha256": "401787ab818f5733553c152683f2ea8202a727d9a7486109756b79badb52ed61",
+          "translation_sha256": "cc7cb132caa92249d5d4f6075d321c0887e6dc56fe230edb3aeb55f0df23f9c7"
+        },
+        {
+          "source": "database/randname.txt",
+          "key": "_ashenzari_epithet_",
+          "source_sha256": "91f6b3ccd1534743b9191edab0d12ba1a8c0bcdb08f19ab169afb6199ab3aafd",
+          "translation_sha256": "9b254a7eaa2cf4c57ed0eca5d86b835626c8f63f3d99c695977e88d4d330108e"
+        },
+        {
+          "source": "database/randname.txt",
+          "key": "_ashenzari_heavens_",
+          "source_sha256": "3f6daf6f0058e20f91832593c26aa78d823292a855d3ba6f2e20b17f8c8eea02",
+          "translation_sha256": "3d6925749e46cdd92bcced2b25fdb14015e786bd3db7d72943d65ec0d56acb7d"
+        },
+        {
+          "source": "database/randname.txt",
+          "key": "_ashenzari_knowledge_adjective_",
+          "source_sha256": "0c8db2efab464609a577ada18ef9210163ec6626b528b6446dad725cafe6d87d",
+          "translation_sha256": "d6d79a437659a74db536a5acec3ede45ad77bd7895c2ac032efe9002446b7aa1"
+        },
+        {
+          "source": "database/randname.txt",
+          "key": "_ashenzari_object_",
+          "source_sha256": "9f039c27accca77faf477d60611255ccf88f614bc576d5d3194ff061840a0c6e",
+          "translation_sha256": "eced7b10a77254bffa0304b8c8a53c11d1a6f9a4096e0d177d37080e47ced8fc"
+        },
+        {
+          "source": "database/rand_arm.txt",
+          "key": "_celestial_bodies_",
+          "source_sha256": "72d1d8ea2cf5c71a5e7f77979e2660003f508b1c01dbfa42b87264c9089bf6b9",
+          "translation_sha256": "6482350c7e13fdf38c1aeddf0be38540dad928b3e26f3caff720df6ff6648b8d"
+        }
+      ]
+    },
+    {
+      "key": "_ashenzari_object_",
+      "context": "textdb:database/randname.txt:_ashenzari_object_",
+      "source_sha256": "9f039c27accca77faf477d60611255ccf88f614bc576d5d3194ff061840a0c6e",
+      "review_status": "reviewed",
+      "review_batch": "database-49",
+      "dependencies": [
+        {
+          "source": "database/rand_arm.txt",
+          "key": "_discomfort_and_inaction_",
+          "source_sha256": "08fea3482ce691b62bd78fdec029b6c0e29a9c619aea8aa0e3147e680f498990",
+          "translation_sha256": "0bde384706c83569c6cc6b1c569da02f1f0c47d8c628f9c9c96e9035da9abbf0"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_discomfort_weapon_",
+          "source_sha256": "bd4a5af200c83d52b62044cb3aa2c08e18906d2987563b751269625351f7b569",
+          "translation_sha256": "9bdfc8aeb1562d14b298473db6e3fd71cddbc4993ae2557dfa9b2dbe074b9205"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_diviner_name_",
+          "source_sha256": "c906aef473ce2fd857f18d4fd2eb01d8833e0e565126ac765e4a9394ea9159a6",
+          "translation_sha256": "a087d04ea3fe655a235f4744364bef243189793a49526b2add372fd805b84c1d"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_philosophy_name_",
+          "source_sha256": "ff04d39fcfe8fc99012fe8242e7919035864eb9e598508a9dfa6108500f605f1",
+          "translation_sha256": "8147ac793c3430b071fef099d03431a567f96d21a5bcbb11387b1ee2b71a5aa3"
+        },
+        {
+          "source": "database/rand_all.txt",
+          "key": "_suspicion_no_conflict_name_",
+          "source_sha256": "1c4a601bbf21cbfe2b118c6d7bfec8206360c41dc508184091156547ae59371f",
+          "translation_sha256": "9a224b35b1accdd7196d7a256fbe52d8abf64bd976fa0342530341ee0eaf1855"
+        }
+      ]
+    },
+    {
+      "key": "_ashenzari_adjective_",
+      "context": "textdb:database/randname.txt:_ashenzari_adjective_",
+      "source_sha256": "c5d1b0f0c3eaf9c7614062dcff1e272278c122f40f639a1a78469730bafcba92",
+      "review_status": "reviewed",
+      "review_batch": "database-49",
+      "dependencies": [
+        {
+          "source": "database/randname.txt",
+          "key": "_ashenzari_bound_adjective_",
+          "source_sha256": "401787ab818f5733553c152683f2ea8202a727d9a7486109756b79badb52ed61",
+          "translation_sha256": "cc7cb132caa92249d5d4f6075d321c0887e6dc56fe230edb3aeb55f0df23f9c7"
+        },
+        {
+          "source": "database/randname.txt",
+          "key": "_ashenzari_celestial_adjective_",
+          "source_sha256": "7ca88c9259f477ea8ae0433947ea47c57f6f7fca11df88de4cad7b87aff8fe31",
+          "translation_sha256": "a59e84c78a10b3784719aa732e90fda8f0504d380ac561f01b17077084d217bd"
+        },
+        {
+          "source": "database/randname.txt",
+          "key": "_ashenzari_knowledge_adjective_",
+          "source_sha256": "0c8db2efab464609a577ada18ef9210163ec6626b528b6446dad725cafe6d87d",
+          "translation_sha256": "d6d79a437659a74db536a5acec3ede45ad77bd7895c2ac032efe9002446b7aa1"
+        }
+      ]
+    },
+    {
+      "key": "_ashenzari_bound_adjective_",
+      "context": "textdb:database/randname.txt:_ashenzari_bound_adjective_",
+      "source_sha256": "401787ab818f5733553c152683f2ea8202a727d9a7486109756b79badb52ed61",
+      "review_status": "reviewed",
+      "review_batch": "database-49",
+      "dependencies": []
+    },
+    {
+      "key": "_ashenzari_celestial_adjective_",
+      "context": "textdb:database/randname.txt:_ashenzari_celestial_adjective_",
+      "source_sha256": "7ca88c9259f477ea8ae0433947ea47c57f6f7fca11df88de4cad7b87aff8fe31",
+      "review_status": "reviewed",
+      "review_batch": "database-49",
+      "dependencies": []
+    },
+    {
+      "key": "_ashenzari_knowledge_adjective_",
+      "context": "textdb:database/randname.txt:_ashenzari_knowledge_adjective_",
+      "source_sha256": "0c8db2efab464609a577ada18ef9210163ec6626b528b6446dad725cafe6d87d",
+      "review_status": "reviewed",
+      "review_batch": "database-49",
+      "dependencies": []
+    },
+    {
+      "key": "_ashenzari_epithet_",
+      "context": "textdb:database/randname.txt:_ashenzari_epithet_",
+      "source_sha256": "91f6b3ccd1534743b9191edab0d12ba1a8c0bcdb08f19ab169afb6199ab3aafd",
+      "review_status": "reviewed",
+      "review_batch": "database-49",
+      "dependencies": [
+        {
+          "source": "database/randname.txt",
+          "key": "_ashenzari_adjective_",
+          "source_sha256": "c5d1b0f0c3eaf9c7614062dcff1e272278c122f40f639a1a78469730bafcba92",
+          "translation_sha256": "c5d1b0f0c3eaf9c7614062dcff1e272278c122f40f639a1a78469730bafcba92"
+        },
+        {
+          "source": "database/randname.txt",
+          "key": "_ashenzari_bound_adjective_",
+          "source_sha256": "401787ab818f5733553c152683f2ea8202a727d9a7486109756b79badb52ed61",
+          "translation_sha256": "cc7cb132caa92249d5d4f6075d321c0887e6dc56fe230edb3aeb55f0df23f9c7"
+        },
+        {
+          "source": "database/randname.txt",
+          "key": "_ashenzari_celestial_adjective_",
+          "source_sha256": "7ca88c9259f477ea8ae0433947ea47c57f6f7fca11df88de4cad7b87aff8fe31",
+          "translation_sha256": "a59e84c78a10b3784719aa732e90fda8f0504d380ac561f01b17077084d217bd"
+        }
+      ]
+    },
+    {
+      "key": "_ashenzari_heavens_",
+      "context": "textdb:database/randname.txt:_ashenzari_heavens_",
+      "source_sha256": "3f6daf6f0058e20f91832593c26aa78d823292a855d3ba6f2e20b17f8c8eea02",
+      "review_status": "reviewed",
+      "review_batch": "database-49",
+      "dependencies": []
+    }
+  ],
+  "candidates": {
+    "ashenzari": 40,
+    "_ashenzari_object_": 21,
+    "_ashenzari_adjective_": 3,
+    "_ashenzari_bound_adjective_": 12,
+    "_ashenzari_celestial_adjective_": 8,
+    "_ashenzari_knowledge_adjective_": 21,
+    "_ashenzari_epithet_": 11,
+    "_ashenzari_heavens_": 8
+  }
+}

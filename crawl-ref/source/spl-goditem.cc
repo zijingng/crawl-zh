@@ -4,8 +4,12 @@
 **/
 
 #include "AppHdr.h"
+#include "target-display.h"
+#include "s-display.h"
 
 #include "spl-goditem.h"
+#include "i18n.h"
+#include "options.h"
 
 #include "art-enum.h"
 #include "attack.h"
@@ -193,7 +197,13 @@ static spret _try_to_pacify(monster &mon, int healed, int pow,
     const string illegal_reason = unpacifiable_reason(mi);
     if (!illegal_reason.empty())
     {
-        mpr(illegal_reason);
+        const char *fixed = mi.intel() <= I_BRAINLESS || mons_is_tentacle_or_tentacle_segment(mi.type)
+            ? "You cannot pacify mindless monsters!" : mi.holi & MH_NONLIVING
+            ? "You cannot pacify nonliving monsters!" : mons_class_is_stationary(mi.type)
+            ? "You cannot pacify immobile monsters!" : nullptr;
+        if (fixed) mpr(ui_translate("s.reason", fixed));
+        else mpr(ui_render("s.log", "You cannot pacify this monster while it is %s!", illegal_reason,
+            {s_clause_arg(mi.is(MB_SLEEPING) ? "asleep" : "dormant")}));
         return spret::abort;
     }
 
@@ -204,8 +214,7 @@ static spret _try_to_pacify(monster &mon, int healed, int pow,
     if (_pacification_sides(mon.type, pow) < mon_hp)
     {
         // monster avg hp too high to ever be pacified with your invo skill.
-        mprf("%s would be completely unfazed by your meagre offer of peace.",
-             mon.name(DESC_THE).c_str());
+        mprf("%s", ui_render("s.log", "%s would be completely unfazed by your meagre offer of peace.", make_stringf("%s would be completely unfazed by your meagre offer of peace.", mon.name(DESC_THE).c_str()), {ui_actor_arg(mon)}).c_str());
         return spret::abort;
     }
 
@@ -215,16 +224,14 @@ static spret _try_to_pacify(monster &mon, int healed, int pow,
     if (pacified_roll * 23 / 20 < mon_hp)
     {
         // not even close.
-        mprf("The light of Elyvilon fails to reach %s.",
-             mon.name(DESC_THE).c_str());
+        mprf("%s", ui_render("s.log", "The light of Elyvilon fails to reach %s.", make_stringf("The light of Elyvilon fails to reach %s.", mon.name(DESC_THE).c_str()), {ui_actor_arg(mon)}).c_str());
         return spret::success;
     }
 
     if (pacified_roll < mon_hp)
     {
         // closer! ...but not quite.
-        mprf("The light of Elyvilon almost touches upon %s.",
-             mon.name(DESC_THE).c_str());
+        mprf("%s", ui_render("s.log", "The light of Elyvilon almost touches upon %s.", make_stringf("The light of Elyvilon almost touches upon %s.", mon.name(DESC_THE).c_str()), {ui_actor_arg(mon)}).c_str());
         return spret::success;
     }
 
@@ -271,7 +278,7 @@ bool heal_monster(monster& patient, int amount)
     if (!patient.heal(amount))
         return false;
 
-    mprf("You heal %s.", patient.name(DESC_THE).c_str());
+    mprf("%s", ui_render("s.log", "You heal %s.", make_stringf("You heal %s.", patient.name(DESC_THE).c_str()), {ui_actor_arg(patient)}).c_str());
 
     if (patient.hit_points == patient.max_hit_points)
         simple_monster_message(patient, " is completely healed.");
@@ -325,9 +332,9 @@ static vector<string> _desc_pacify_chance(const monster_info& mi, const int pow)
     {
         const int success = _pacify_chance(mi, pow, 100);
         if (success == 0)
-            descs.push_back(make_stringf("chance to pacify: <<1%%"));
+            descs.push_back(target_description_format("d.target.extra", "chance to pacify: <<1%%"));
         else
-            descs.push_back(make_stringf("chance to pacify: %d%%", success));
+            descs.push_back(target_description_format("d.target.extra", "chance to pacify: %d%%", success));
     }
     return descs;
 }
@@ -440,7 +447,7 @@ bool player_is_cancellable()
  *
  * @param debuffs_only   If true, contamination levels are unaffected.
  */
-string describe_player_cancellation(bool debuffs_only)
+string describe_player_cancellation(bool debuffs_only, ui_arg* display)
 {
     vector<string> effects;
 
@@ -489,6 +496,21 @@ string describe_player_cancellation(bool debuffs_only)
         effects.push_back("flying");
     }
 
+    if (display)
+    {
+        vector<string> shown;
+        bool available = Options.language == lang_t::ZH;
+        for (const auto &effect : effects)
+        {
+            // Fixed canonical status labels; dynamic labels without a reviewed
+            // entry leave the entire enclosing sentence in English.
+            ui_arg text = ui_text_arg("d.cancel.effect", effect);
+            if (!text.available) text = ui_text_arg("d.duration", effect);
+            available &= text.available;
+            shown.push_back(text.text);
+        }
+        *display = {comma_separated_line(shown.begin(), shown.end(), "或", "、"), available};
+    }
     return comma_separated_line(begin(effects), end(effects), " or ");
 }
 
@@ -507,7 +529,7 @@ void debuff_player(bool ignore_resistance)
 
     if (!buffs.empty() & !ignore_resistance && you.has_mutation(MUT_INVIOLATE_MAGIC))
     {
-        mpr("Your magical effects refuse to unravel!");
+        mpr(ui_translate("s.ui", "Your magical effects refuse to unravel!"));
         return;
     }
 
@@ -517,13 +539,13 @@ void debuff_player(bool ignore_resistance)
         if (duration == DUR_TELEPORT)
         {
             len = 0;
-            mprf(MSGCH_DURATION, "You feel strangely stable.");
+            mprf(MSGCH_DURATION, "%s", ui_translate("s.ui", "You feel strangely stable."));
             you.props.erase(TELEPORTITIS_SOURCE);
         }
         else if (duration == DUR_PETRIFYING)
         {
             len = 0;
-            mprf(MSGCH_DURATION, "You feel limber!");
+            mprf(MSGCH_DURATION, "%s", ui_translate("s.ui", "You feel limber!"));
             you.redraw_evasion = true;
         }
         else if (duration == DUR_FLAYED)
@@ -533,13 +555,13 @@ void debuff_player(bool ignore_resistance)
         }
         else if (duration == DUR_STICKY_FLAME)
         {
-            mprf(MSGCH_DURATION, "You are no longer on fire.");
+            mprf(MSGCH_DURATION, "%s", ui_translate("s.ui", "You are no longer on fire."));
             end_sticky_flame_player();
         }
         else if (duration == DUR_FORTRESS_BLAST_TIMER)
         {
             len = 0;
-            mprf(MSGCH_DURATION, "Your fortress blast dissipates harmlessly.");
+            mprf(MSGCH_DURATION, "%s", ui_translate("s.ui", "Your fortress blast dissipates harmlessly."));
         }
         else if (len > 1)
         {
@@ -549,7 +571,7 @@ void debuff_player(bool ignore_resistance)
     }
 
     if (need_msg)
-        mprf(MSGCH_WARN, "Your magical effects are unravelling.");
+        mprf(MSGCH_WARN, "%s", ui_translate("s.ui", "Your magical effects are unravelling."));
 }
 
 /**
@@ -811,12 +833,11 @@ spret cast_tomb(int pow, actor* victim, int source, bool fail)
             if (none_vis)
             {
                 fail_check();
-                mprf("You briefly glimpse something next to %s.",
-                     targname.c_str());
+                mprf("%s", ui_render("s.log", "You briefly glimpse something next to %s.", make_stringf("You briefly glimpse something next to %s.", targname.c_str()), {ui_actor_arg(*victim)}).c_str());
                 return spret::success;
             }
 
-            mprf("You need more space to imprison %s.", targname.c_str());
+            mprf("%s", ui_render("s.log", "You need more space to imprison %s.", make_stringf("You need more space to imprison %s.", targname.c_str()), {ui_actor_arg(*victim)}).c_str());
             return spret::abort;
         }
     }
@@ -911,11 +932,10 @@ spret cast_tomb(int pow, actor* victim, int source, bool fail)
     {
         if (zin)
         {
-            mprf("Zin imprisons %s with walls of pure silver!",
-                 targname.c_str());
+            mprf("%s", ui_render("s.log", "Zin imprisons %s with walls of pure silver!", make_stringf("Zin imprisons %s with walls of pure silver!", targname.c_str()), {ui_actor_arg(*victim)}).c_str());
         }
         else
-            mpr("Walls emerge from the floor!");
+            mpr(ui_translate("s.ui", "Walls emerge from the floor!"));
 
         const int tomb_duration = BASELINE_DELAY * pow;
         env.markers.add(new map_tomb_marker(where,
@@ -952,7 +972,7 @@ spret cast_smiting(int pow, monster* mons, bool fail)
 
     if (mons->friendly())
     {
-        mpr("Beogh will not strike down an ally of the cause.");
+        mpr(ui_translate("s.ui", "Beogh will not strike down an ally of the cause."));
         return spret::abort;
     }
 
@@ -976,9 +996,7 @@ spret cast_smiting(int pow, monster* mons, bool fail)
     // damage at 0 Invo ranges from 9-12 (avg 10), to 9-72 (avg 40) at 27.
     int damage = 6 + beogh_smiting_dice(pow).roll();
 
-    mprf("You smite %s%s",
-         mons->name(DESC_THE).c_str(),
-         attack_strength_punctuation(damage).c_str());
+    mprf("%s", ui_render("s.log", "You smite %s%s", make_stringf("You smite %s%s", mons->name(DESC_THE).c_str(), attack_strength_punctuation(damage).c_str()), {ui_actor_arg(*mons), ui_attack_punctuation(attack_strength_punctuation(damage))}).c_str());
 
     behaviour_event(mons, ME_ANNOY, &you);
     mons->hurt(&you, damage, BEAM_MISSILE, KILLED_BY_BEOGH_SMITING);
@@ -1002,7 +1020,7 @@ void holy_word_player(holy_word_source_type source)
     if (!hploss)
         return;
 
-    mpr("You are blasted by holy energy!");
+    mpr(ui_translate("s.ui", "You are blasted by holy energy!"));
 
     const char *aux = "holy word";
 
@@ -1072,9 +1090,7 @@ void holy_word(int pow, holy_word_source_type source, const coord_def& where,
 {
     if (!silent && attacker)
     {
-        mprf("%s %s a Word of immense power!",
-             attacker->name(DESC_THE).c_str(),
-             attacker->conj_verb("speak").c_str());
+        mprf("%s", ui_render("s.log", "%s speaks a Word of immense power!", make_stringf("%s %s a Word of immense power!", attacker->name(DESC_THE).c_str(), attacker->conj_verb("speak").c_str()), {ui_actor_arg(*attacker)}).c_str());
     }
 
     for (radius_iterator ri(where, LOS_SOLID, true); ri; ++ri)
@@ -1133,11 +1149,11 @@ int torment_player(const actor *attacker, torment_source_type taux)
 
     if (!hploss)
     {
-        mpr("You feel a surge of unholy energy.");
+        mpr(ui_translate("s.ui", "You feel a surge of unholy energy."));
         return 0;
     }
 
-    mpr("Your body is wracked with pain!");
+    mpr(ui_translate("s.ui", "Your body is wracked with pain!"));
 
     kill_method_type type = KILLED_BY_BEAM;
     if (crawl_state.is_god_acting())
@@ -1221,7 +1237,7 @@ int torment_actor(actor* victim, actor *attacker, torment_source_type taux)
         if (mons->observable())
             simple_monster_message(*mons, " convulses!");
         else if (you.see_cell(mons->pos()))
-            mpr("Something is bathed in an unholy light!");
+            mpr(ui_translate("s.ui", "Something is bathed in an unholy light!"));
 
         // Currently, torment doesn't annoy the monsters it affects
         // because it can't kill them, and because hostile monsters use
@@ -1356,7 +1372,7 @@ void dreamshard_shatter()
             break;
         }
     }
-    mpr("Your necklace shatters, unleashing a wave of protective dreams!");
+    mpr(ui_translate("s.ui", "Your necklace shatters, unleashing a wave of protective dreams!"));
     mark_milestone("dreamshard", "was saved by the dreamshard necklace!");
     take_note(NOTE_DREAMSHARD);
 

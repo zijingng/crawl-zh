@@ -1,0 +1,122 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "selected": [
+    {
+      "key": "_ijyb_common_",
+      "source": "VISUAL:@The_monster@ grins evilly.\n\nVISUAL:@The_monster@ stops to [study|check on] @possessive@ wand.\n\n@The_monster@ screams @at_foe@, \"Time for continue experiment!\"\n\n@The_monster@ screams @at_foe@, \"Me wand stronger than you!\"\n\n@The_monster@ screams @at_foe@, \"It's all mine!\"\n\n@The_monster@ screams @at_foe@, \"Level is mine! All mine!\"\n\n@The_monster@ screams @at_foe@, \"{{\n    if you.skill(\"Evocations\") >= 2 then\n      return \"Me learn from your wands next!\"\n    else\n      return \"You look like good test subject!\"\n    end }}\" @player_only@\n",
+      "hits": [
+        {
+          "Term": "Evocations",
+          "Translation": "唤发",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】技能而非魔法物品；影响魔杖和其他可唤发物品的强度或成功率，当前说明不含提高 MP 上限。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "skill",
+          "Translation": "技能",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "wand",
+          "Translation": "魔杖",
+          "Part of Speech": "noun",
+          "Variants": "wand of",
+          "Note": "【使用约束】wand of 是组合前缀；先确定完整物品名再处理中文词序。"
+        },
+        {
+          "Term": "Ijyb",
+          "Translation": "伊吉布",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "sprozz triumphant",
+      "source": "{{\n  if spells.memorised(\"launch clockwork bee\") then\n    return '@The_monster@ shouts, \"I *knew* mine was better!\"'\n  else\n    return '@The_monster@ says, \"Progress like this can\\'t be stopped by anyone!\"'\n  end\n}}\n",
+      "hits": [
+        {
+          "Term": "Launch Clockwork Bee",
+          "Translation": "启动发条蜜蜂",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【怪物与卡牌名称校对】法术名中的实体名称与对应怪物显示名统一。"
+        },
+        {
+          "Term": "Sprozz",
+          "Translation": "斯普罗兹",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "clockwork bee",
+          "Translation": "发条蜜蜂",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_terence_rare_",
+      "source": "@The_monster@ screams @at_foe@, \"Your {{\nif you.race() == \"Armataur\" then\n    return \"tough hide\"\nelse\n    return \"supposed skill\"\nend\n}} won't protect you!\" @player_only@\n\n@The_monster@ screams @at_foe@, \"Where's your {{\nif you.race() == \"Armataur\" then\n    return \"elephant\"\nelse\n    return \"power\"\nend\n}} now?!\" @player_only@\n\n@The_monster@ screams @at_foe@, \"Stand, coward! You want a fight, show some honour!\"\n\n@The_monster@ says @to_foe@, \"I'm tired of war. But if you want blood, you'll get blood!\"\n\n@The_monster@ screams @at_foe@, \"Get out, before I make you get out!\"\n\n@The_monster@ screams @at_foe@, \"I hate trespassers!\"\n\n@The_monster@ screams @at_foe@, \"I put up a 'Do Not Disturb' sign! Can't you read?!\"\n",
+      "hits": [
+        {
+          "Term": "skill",
+          "Translation": "技能",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Armataur",
+          "Translation": "犰狳人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/armataur.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Terence",
+          "Translation": "特伦斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "elephant",
+          "Translation": "大象",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "protect",
+          "Translation": "防护",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    }
+  ],
+  "legacy_overlay_present": true
+}

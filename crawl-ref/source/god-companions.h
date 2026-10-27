@@ -15,6 +15,8 @@
 
 using std::vector;
 
+bool try_apostle_display_name(int slot, bool with_title, std::string &output);
+
 struct companion
 {
     follower mons;
@@ -108,7 +110,7 @@ void beogh_resurrect_followers(bool end_ostracism_only = false);
 
 bool tile_has_valid_bfb_corpse(const coord_def pos);
 
-string apostle_short_description(int slot);
+string apostle_short_description(int slot, bool translate = false);
 
 #if TAG_MAJOR_VERSION == 34
 void fixup_bad_companions();

@@ -1,0 +1,16 @@
+{
+  "new_species_genus_results": 56,
+  "updated_templates": [
+    "_hostile_orc_beogh_believer_speech_common_",
+    "_saint roka rival_",
+    "_suck_up_noun_"
+  ],
+  "prior_rows_unchanged": 768,
+  "prior_total": 771,
+  "english_source_unchanged": true,
+  "cpp_runtime_unchanged": true,
+  "python_tests": 32,
+  "native_tests": 161,
+  "assertions": 1249074,
+  "tiles_build_success": true
+}

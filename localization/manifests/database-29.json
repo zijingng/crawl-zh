@@ -1,0 +1,255 @@
+{
+  "source": "database/monspeak.txt",
+  "entries": [
+    {
+      "key": "friendly good god 'cap-A'",
+      "context": "textdb:database/monspeak.txt:friendly good god 'cap-a'",
+      "source_sha256": "def2adc6eef10acaae383ff751756ea7fb78c636b182eb85be271c1a67082ffe",
+      "review_status": "reviewed",
+      "review_batch": "database-29",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_holy_being_",
+          "source_sha256": "08ac161b84e507db4d24cd49ddf9c11f7f9934ec93b9019f185eda433bf7ad36",
+          "translation_sha256": "0007503873d6b7496873341f675a83290716b88bd562a72aa31c3c9003897dbe"
+        }
+      ]
+    },
+    {
+      "key": "holy_being_pacification",
+      "context": "textdb:database/monspeak.txt:holy_being_pacification",
+      "source_sha256": "4fb7a9148467c0795e7cde4059543d9365f96d0126e30b0aaf75f2048e4faeef",
+      "review_status": "reviewed",
+      "review_batch": "database-29"
+    },
+    {
+      "key": "holy_being_pacification_humanoid",
+      "context": "textdb:database/monspeak.txt:holy_being_pacification_humanoid",
+      "source_sha256": "b948e6d88c33d0b0a0a94224265673427dba9b62553c3bcc0c0956c0bbfda6fa",
+      "review_status": "reviewed",
+      "review_batch": "database-29",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "holy_being_pacification",
+          "source_sha256": "4fb7a9148467c0795e7cde4059543d9365f96d0126e30b0aaf75f2048e4faeef",
+          "translation_sha256": "433de92a78e236a6793d0fb6dccbe730a0c44df6bdf41a0d3e166cd9e7b2134c"
+        }
+      ]
+    },
+    {
+      "key": "holy_being_pacification_speech",
+      "context": "textdb:database/monspeak.txt:holy_being_pacification_speech",
+      "source_sha256": "d4f7032bc82fee42321a09a0a7691865a2935b99a59326b0899eb1635f96ac4b",
+      "review_status": "reviewed",
+      "review_batch": "database-29"
+    },
+    {
+      "key": "good god '&'",
+      "context": "textdb:database/monspeak.txt:good god '&'",
+      "source_sha256": "875bd233f50c8541c43477aa50a9d63ecf0eb4156ce307ee19db15005e712166",
+      "review_status": "reviewed",
+      "review_batch": "database-29",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_demon_taunt_",
+          "source_sha256": "4785ed946afd17c18e8df5bb5a59fafdeaf464b4648b97f5488c7ffff2eb3528",
+          "translation_sha256": "129874487f461491a599e5f2e7164156ef50e13dff01a676771ed89cb84c7b6a"
+        }
+      ]
+    },
+    {
+      "key": "orc",
+      "context": "textdb:database/monspeak.txt:orc",
+      "source_sha256": "3e4782db62d00a92ef06f8ba015d904f6653a81db69cb14316e6d8137e4def03",
+      "review_status": "reviewed",
+      "review_batch": "database-29",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_orc_speech_",
+          "source_sha256": "074b98ec91eec59245a3e63402329c2250fa3e3d0e27ff30d6e70ff9dbb11557",
+          "translation_sha256": "9411b0c811abeba2b0ad7365519324beaeb50f610575b3af871e2c914577b5a3"
+        }
+      ]
+    },
+    {
+      "key": "friendly orc",
+      "context": "textdb:database/monspeak.txt:friendly orc",
+      "source_sha256": "da1c4d50c6c9c915ab11490b3c9961b5f63714531cf8c771c50c9866fdea2ece",
+      "review_status": "reviewed",
+      "review_batch": "database-29",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_orc_speech_",
+          "source_sha256": "074b98ec91eec59245a3e63402329c2250fa3e3d0e27ff30d6e70ff9dbb11557",
+          "translation_sha256": "9411b0c811abeba2b0ad7365519324beaeb50f610575b3af871e2c914577b5a3"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "default friendly humanoid",
+          "source_sha256": "c20c75c08a015b7ebaff285975022b9f02deb622a530d6813675f6185e3d312d",
+          "translation_sha256": "c20c75c08a015b7ebaff285975022b9f02deb622a530d6813675f6185e3d312d"
+        }
+      ]
+    },
+    {
+      "key": "friendly related orc",
+      "context": "textdb:database/monspeak.txt:friendly related orc",
+      "source_sha256": "5ca82619ab785aeb988904f9d113061d0ccdc8f8c25a1fef2839d93a3ed8cc58",
+      "review_status": "reviewed",
+      "review_batch": "database-29",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_orc_speech_",
+          "source_sha256": "074b98ec91eec59245a3e63402329c2250fa3e3d0e27ff30d6e70ff9dbb11557",
+          "translation_sha256": "9411b0c811abeba2b0ad7365519324beaeb50f610575b3af871e2c914577b5a3"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "default friendly related humanoid",
+          "source_sha256": "2ae08ff0bc9dfd15c6791888be1ee79866a58b9e5d526235c94193b6396cf66f",
+          "translation_sha256": "2ae08ff0bc9dfd15c6791888be1ee79866a58b9e5d526235c94193b6396cf66f"
+        }
+      ]
+    },
+    {
+      "key": "_orc_says_",
+      "context": "textdb:database/monspeak.txt:_orc_says_",
+      "source_sha256": "62be86336fd1df30d16b1fc2408a8a0d2de63cdb479a7afe757ec5df9f890149",
+      "review_status": "reviewed",
+      "review_batch": "database-29"
+    },
+    {
+      "key": "_says_or_shouts_",
+      "context": "textdb:database/monspeak.txt:_says_or_shouts_",
+      "source_sha256": "b9df4814798ad309767ea5384256f98fd00239e3d562f3fc7b2a340201544ffe",
+      "review_status": "reviewed",
+      "review_batch": "database-29"
+    },
+    {
+      "key": "related unbeliever orc",
+      "context": "textdb:database/monspeak.txt:related unbeliever orc",
+      "source_sha256": "f5a872fd4d925241fa396aa01dabcb8c67ac598257b626a478c0cc2938e2c380",
+      "review_status": "reviewed",
+      "review_batch": "database-29",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_orc_speech_",
+          "source_sha256": "074b98ec91eec59245a3e63402329c2250fa3e3d0e27ff30d6e70ff9dbb11557",
+          "translation_sha256": "9411b0c811abeba2b0ad7365519324beaeb50f610575b3af871e2c914577b5a3"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_hostile_orc_beogh_unbeliever_speech_",
+          "source_sha256": "610cc837a387340fc7eca8c6cfb72b44118025405ea792cd58ad27e6c4ccf6f6",
+          "translation_sha256": "610cc837a387340fc7eca8c6cfb72b44118025405ea792cd58ad27e6c4ccf6f6"
+        }
+      ]
+    },
+    {
+      "key": "related beogh orc",
+      "context": "textdb:database/monspeak.txt:related beogh orc",
+      "source_sha256": "830d674a2bb23d99e9063bb2773b0604adc91b4e27d672a184497936e9686b1c",
+      "review_status": "reviewed",
+      "review_batch": "database-29",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_orc_speech_",
+          "source_sha256": "074b98ec91eec59245a3e63402329c2250fa3e3d0e27ff30d6e70ff9dbb11557",
+          "translation_sha256": "9411b0c811abeba2b0ad7365519324beaeb50f610575b3af871e2c914577b5a3"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_hostile_orc_beogh_believer_speech_",
+          "source_sha256": "de3674e8a279940db666a55743d99a604ba17fb0c3870b5bb6389fba3cb98603",
+          "translation_sha256": "de3674e8a279940db666a55743d99a604ba17fb0c3870b5bb6389fba3cb98603"
+        }
+      ]
+    },
+    {
+      "key": "_hostile_orc_beogh_believer_speech_",
+      "context": "textdb:database/monspeak.txt:_hostile_orc_beogh_believer_speech_",
+      "source_sha256": "de3674e8a279940db666a55743d99a604ba17fb0c3870b5bb6389fba3cb98603",
+      "review_status": "reviewed",
+      "review_batch": "database-29",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_hostile_orc_beogh_believer_speech_common_",
+          "source_sha256": "ae4f7738265a0cec4439106a7c58e1c417f5583ce0745d308468d912209297b3",
+          "translation_sha256": "a2e3b66ed2d62112f797f0666a225c33517d242a17b7067639db16e1b62b4294"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_hostile_orc_beogh_believer_speech_rare_",
+          "source_sha256": "823be633303b31a7de57fb958afed35a37f1715a38bae8f9ebc745cf3e7cf58c",
+          "translation_sha256": "4a7501dd18f40f9167a92e5f2cfcf9ac5663e81c7cfa9f9bc0baad17bfbcb2a5"
+        }
+      ]
+    },
+    {
+      "key": "_hostile_orc_beogh_unbeliever_speech_",
+      "context": "textdb:database/monspeak.txt:_hostile_orc_beogh_unbeliever_speech_",
+      "source_sha256": "610cc837a387340fc7eca8c6cfb72b44118025405ea792cd58ad27e6c4ccf6f6",
+      "review_status": "reviewed",
+      "review_batch": "database-29",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_hostile_orc_beogh_unbeliever_speech_common_",
+          "source_sha256": "2bc63e4aeb332a68a97494bb26345b3e8756103cd6370ad3004d3b8bffca99f7",
+          "translation_sha256": "4997d9d68317b14e6eec03dfc21de679b7da17faf3aa97b1415c249f915356b8"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_hostile_orc_beogh_unbeliever_speech_rare_",
+          "source_sha256": "8b49dc7c76dc0732732fb085fb2e8d504e3034e981c208b629eecea449907965",
+          "translation_sha256": "aec41dab8544a57f120157d1461311e4463df2a9078e78d9c045aec9e2a5d96b"
+        }
+      ]
+    },
+    {
+      "key": "_hostile_orc_beogh_unbeliever_speech_common_",
+      "context": "textdb:database/monspeak.txt:_hostile_orc_beogh_unbeliever_speech_common_",
+      "source_sha256": "2bc63e4aeb332a68a97494bb26345b3e8756103cd6370ad3004d3b8bffca99f7",
+      "review_status": "reviewed",
+      "review_batch": "database-29",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_orc_says_to_foe_",
+          "source_sha256": "220319971c768823976e38c24f77aa8cd5679af664a48b1e4c38e3c376e0ab66",
+          "translation_sha256": "880cfa6b74d399ef5d4536f0b1acd6757fc41cab1617b00c8e762f759a7ac3fe"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_shouts_",
+          "source_sha256": "82905179e411b95af8411ee9a9cd2ec14e46cd56dfe133d9ce19d630b492508a",
+          "translation_sha256": "04a1ce1d7878f119796b9e3173d6909a493d2654680db1e77f66e338852eb381"
+        }
+      ]
+    },
+    {
+      "key": "_hostile_orc_beogh_unbeliever_speech_rare_",
+      "context": "textdb:database/monspeak.txt:_hostile_orc_beogh_unbeliever_speech_rare_",
+      "source_sha256": "8b49dc7c76dc0732732fb085fb2e8d504e3034e981c208b629eecea449907965",
+      "review_status": "reviewed",
+      "review_batch": "database-29",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_orc_says_to_foe_",
+          "source_sha256": "220319971c768823976e38c24f77aa8cd5679af664a48b1e4c38e3c376e0ab66",
+          "translation_sha256": "880cfa6b74d399ef5d4536f0b1acd6757fc41cab1617b00c8e762f759a7ac3fe"
+        }
+      ]
+    }
+  ]
+}

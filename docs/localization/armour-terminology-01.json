@@ -1,0 +1,355 @@
+{
+  "batch": "armour-terminology-01",
+  "translation_entries": 48,
+  "ui_entries": 10,
+  "textdb_entries": 38,
+  "reviewed_dependency_updates": 0,
+  "changes": [
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/backgrounds.txt:artificer",
+      "english": "Artificers start with a few magic wands and a club. They'll need to find better\nweapons and armour before their wands run out.\n",
+      "before": "修补匠起始携带几根魔杖和一根棍棒。他们需要在魔杖耗尽之前找到更好的武器和护甲。\n",
+      "after": "修补匠起始携带几根魔杖和一根棍棒。他们需要在魔杖耗尽之前找到更好的武器和防具。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/egos.txt:command (command) armour ego",
+      "english": "It improves the power and success of your Summoning spells in proportion to your\nArmour skill.\n",
+      "before": "它依照你的护甲技能，提高召唤系法术的强度和成功率。\n",
+      "after": "它依照你的防具技能，提高召唤系法术的强度和成功率。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/unrand.txt:lear's hauberk",
+      "english": "A well-made golden hauberk that covers all of its wearer's body parts. It\nincludes a chainmail coif, chausses and maille gauntlets.\n",
+      "before": "这套做工精良的黄金锁子甲能覆盖穿戴者的所有身体部位。\n这套护甲中包含一顶锁子甲防护帽、一副腿甲，和一副链制手套。\n",
+      "after": "这套做工精良的黄金锁子甲能覆盖穿戴者的所有身体部位。\n这套防具中包含一顶锁子甲防护帽、一副腿甲，和一副链制手套。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/unrand.txt:moon troll leather armour",
+      "english": "A suit of armour rumoured to have been created by enchanting the hide of a\nnow-extinct species of troll. Whether the name rings true or is merely\nappropriated to add mystique is something of a mystery. The armour's innate\npowers of regeneration and magical protection, however, are hard to dispute.\n",
+      "before": "据说，这件护甲由一种现已灭绝的巨魔皮施法制成。其名称究竟确有其事，还是仅为增添神秘色彩，至今仍是个谜。不过，它固有的再生与魔法防护能力确凿无疑。\n",
+      "after": "据说，这件皮甲由一种现已灭绝的巨魔皮施法制成。其名称究竟确有其事，还是仅为增添神秘色彩，至今仍是个谜。不过，它固有的再生与魔法防护能力确凿无疑。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/unrand.txt:orange crystal plate armour",
+      "english": "A suit of armour carved from transparent orange crystal. It provides remarkable\nprotection for both mind and body. The wearer can even channel psychic energies\nthrough the crystal itself, enhancing their magical abilities. However, it's\nrather heavy...\n",
+      "before": "一套用透明的橙色水晶雕刻而成的护甲。可以为肉体和心灵提供卓越的保护能力。\n穿戴者甚至可以通过水晶引导精神力量来增强魔法能力。但是相当重……\n",
+      "after": "一套用透明的橙色水晶雕刻而成的防具。可以为肉体和心灵提供卓越的保护能力。\n穿戴者甚至可以通过水晶引导精神力量来增强魔法能力。但是相当重……\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/unrand.txt:kryia's mail coat",
+      "english": "A coat of armour said to have been forged for Queen Kryia in her old age. She\ncontinued to insist on leading her armies from the front even into her dotage,\nand as her aging body failed her, this coat helped to enhance the healing\ndraughts that kept her alive.\n",
+      "before": "据说，这件护甲是为晚年的克里娅女王打造的。直到老迈昏聩，她仍坚持身先士卒。随着衰老的身体渐渐不支，这件护甲增强了维持她生命的治疗药剂。\n",
+      "after": "据说，这件锁子甲是为晚年的克里娅女王打造的。直到老迈昏聩，她仍坚持身先士卒。随着衰老的身体渐渐不支，这件锁子甲增强了维持她生命的治疗药剂。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/unrand.txt:cigotuvi's embrace",
+      "english": "A suit of armour borne of rotten flesh and bone and gristle, held intact by the\nwill of a long-dead sorcerer. The dreadful energies within it call to the bodies\nof the recently dead, protecting the wearer with a cocoon of carrion.\n",
+      "before": "一套由腐肉、骨骼和软骨制成的护甲，一个早已死去的巫师弥留的意志维系着它的完整。\n里面的可怕能量召唤着刚刚死去的人的尸体，用腐肉茧保护着穿戴者。\n",
+      "after": "一套由腐肉、骨骼和软骨制成的防具，一个早已死去的巫师弥留的意志维系着它的完整。\n里面的可怕能量召唤着刚刚死去的人的尸体，用腐肉茧保护着穿戴者。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/hints.txt:hint_seen_armour",
+      "english": "This is the first piece of armour<console> ('<w>$item[armour]</w>')</console>\nyou've picked up. <localtiles>You can click on it to wear it, and click again\nto remove it. <w>Right-clicking</w> on it will give more information.\n</localtiles><nomouse>Use <w>$cmd[CMD_WEAR_ARMOUR]</w> to wear it and\n<w>$cmd[CMD_REMOVE_ARMOUR]</w> to take it off again. You can view its\nproperties from your <w>$cmd[CMD_DISPLAY_INVENTORY]</w>nventory.\n</nomouse>\n\n{{\n    if you.get_base_mutation_level(\"horns\") > 0 then\n        return \"Note that because of your horns you will be unable to wear\"\n               .. \" helmets. (Press <w>$cmd[CMD_DISPLAY_MUTATIONS]</w> to see\"\n               .. \" a list of your mutations and innate abilities.)\"\n    end\n}}\n",
+      "before": "这是你捡到的第一件护甲<console>（“<w>$item[armour]</w>”）</console>。<localtiles>点击可穿上，再点击一次可脱下；对它按<w>鼠标右键</w>可查看更多信息。</localtiles><nomouse>按 <w>$cmd[CMD_WEAR_ARMOUR]</w> 穿上，按 <w>$cmd[CMD_REMOVE_ARMOUR]</w> 脱下。在背包（<w>$cmd[CMD_DISPLAY_INVENTORY]</w>）中可查看属性。</nomouse>\n\n{{\n    if you.get_base_mutation_level(\"horns\") > 0 then\n        return \"注意，因为你长有角，无法佩戴\"\n               .. \"头盔。（按 <w>$cmd[CMD_DISPLAY_MUTATIONS]</w> 可查看\"\n               .. \"变异和天生能力列表。）\"\n    end\n}}\n",
+      "after": "这是你捡到的第一件防具<console>（“<w>$item[armour]</w>”）</console>。<localtiles>点击可穿上，再点击一次可脱下；对它按<w>鼠标右键</w>可查看更多信息。</localtiles><nomouse>按 <w>$cmd[CMD_WEAR_ARMOUR]</w> 穿上，按 <w>$cmd[CMD_REMOVE_ARMOUR]</w> 脱下。在背包（<w>$cmd[CMD_DISPLAY_INVENTORY]</w>）中可查看属性。</nomouse>\n\n{{\n    if you.get_base_mutation_level(\"horns\") > 0 then\n        return \"注意，因为你长有角，无法佩戴\"\n               .. \"头盔。（按 <w>$cmd[CMD_DISPLAY_MUTATIONS]</w> 可查看\"\n               .. \"变异和天生能力列表。）\"\n    end\n}}\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/hints.txt:hint_miscast_armour",
+      "english": "Wearing heavy body armour or using a shield, especially a large one, can\nseverely hamper your spellcasting abilities. You can check the effect of this\nby comparing the failure rates on the <w>$cmd[CMD_CAST_SPELL]\\?</w> screen with\nand without the item being worn.\n",
+      "before": "重型躯干护甲或盾牌，尤其大盾，会严重妨碍施法。可以在穿戴前后，比较 <w>$cmd[CMD_CAST_SPELL]\\?</w> 界面中的失败率。\n",
+      "after": "重型躯干防具或盾牌，尤其大盾，会严重妨碍施法。可以在穿戴前后，比较 <w>$cmd[CMD_CAST_SPELL]\\?</w> 界面中的失败率。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/monsters.txt:margery",
+      "english": "A lithe spellcaster in service to the powers of Hell; it is her duty to ensure\nthat the inhabitants of the Dungeon never forget their place. She personally\nslew the ancient dragon from whose hide her strange armour is crafted.\n",
+      "before": "一位身手敏捷、侍奉地狱势力的施法者，职责是确保地牢居民永远记得自己的卑微地位。她亲手杀死了一条古龙，并用龙皮制成身上那件奇异护甲。\n",
+      "after": "一位身手敏捷、侍奉地狱势力的施法者，职责是确保地牢居民永远记得自己的卑微地位。她亲手杀死了一条古龙，并用龙皮制成身上那件奇异防具。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/monsters.txt:armour echo",
+      "english": "The sweat and toil of the armourer working leather and steel infuses an\nintention into their creation, a unique spark within every cuirass, pauldron and\nvambrace. A skilled forgewright can manifest these intentions in physical form,\nallowing their armour to protect its wearer in a more aggressive fashion than\narmour customarily does.\n",
+      "before": "护甲匠加工皮革与钢铁时付出的汗水和辛劳，会在造物中留下意念，每件胸甲、护肩和臂甲中都有一簇独特火花。熟练的锻造术士能将这些意念化为实体，让护甲以比通常更主动的方式保护穿戴者。\n",
+      "after": "制甲匠加工皮革与钢铁时付出的汗水和辛劳，会在造物中留下意念，每件胸甲、护肩和臂甲中都有一簇独特火花。熟练的锻造术士能将这些意念化为实体，让防具以比通常更主动的方式保护穿戴者。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/monsters.txt:briar patch",
+      "english": "A tangled cluster of thorny briars, sharp enough to pierce thick hide and\narmour. Although stationary, its branches are possessed with a will of their\nown. They move to allow magic and missiles fired by those friendly to this\nplant to pass through unaffected.\n",
+      "before": "一丛缠绕的带刺荆棘，锋利得足以刺穿厚皮和护甲。\n它尽管静止不动，但却有着自己的意志。\n他们会进行摆动，让那些对这种植物友好的人所发射的魔法和飞弹不受影响地穿过。\n",
+      "after": "一丛缠绕的带刺荆棘，锋利得足以刺穿厚皮和防具。\n它尽管静止不动，但却有着自己的意志。\n他们会进行摆动，让那些对这种植物友好的人所发射的魔法和飞弹不受影响地穿过。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/monsters.txt:ironbound convoker",
+      "english": "A guardian mage clad in pattern-etched armour. It can recite words of power\nto summon distant allies and imbue them with unnatural might.\n",
+      "before": "一个身披蚀纹护甲的守卫法师，能吟诵真言，将远处盟友召来，并赋予它们超自然的力量。\n",
+      "after": "一个身披蚀纹防具的守卫法师，能吟诵真言，将远处盟友召来，并赋予它们超自然的力量。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/monsters.txt:knight",
+      "english": "A humanoid construct of insubstantial memory, floating through the air. Though\nperhaps somewhat changed in shape and bearing few discernable features, still\nit seems somehow to resemble a warrior from the distantly remembered past,\nwell equipped with arms and armour both.\n",
+      "before": "一个由无实体记忆构成的人形造物，漂浮在空中。虽然外形或许有些改变，且少有可辨特征，仍依稀像一位来自遥远记忆的战士，武器和护甲都装备精良。\n",
+      "after": "一个由无实体记忆构成的人形造物，漂浮在空中。虽然外形或许有些改变，且少有可辨特征，仍依稀像一位来自遥远记忆的战士，武器和防具都装备精良。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/monsters.txt:haunted armour",
+      "english": "An ordinary piece of armour, held in your haunting grip. It can attack nearby\nenemies, but must return to your side if you ever stray too far from it.\n",
+      "before": "一件被你的幽魂之力控制的普通护甲。它能攻击附近敌人，但你若离得太远，它就必须返回你身旁。\n",
+      "after": "一件被你的幽魂之力控制的普通防具。它能攻击附近敌人，但你若离得太远，它就必须返回你身旁。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/monsters.txt:morphogenic ooze",
+      "english": "A multihued mire of roiling flesh and fluctuating sludge, striving and failing\nfor more coherence than any other slime. As a fresh carrier of the ruinous\ncontagion that overtook the Slime Pits, it can impart unto others the same\nhorrible fate. While it may not be a permanent transformation for you, the\nmelding of weapons and armour, as well as the severe weakening of spells, may\nmake it a lethal one regardless.\n",
+      "before": "一片由翻涌血肉与变幻污泥构成的多彩泥沼，比其他黏液更竭力追求完整形态，却总是失败。它新近携带着席卷黏液坑洞的毁灭性传染病，也能让其他生物遭遇相同命运。对你而言，变形或许并非永久，但武器与护甲融化、法术严重削弱，仍足以致命。\n",
+      "after": "一片由翻涌血肉与变幻污泥构成的多彩泥沼，比其他黏液更竭力追求完整形态，却总是失败。它新近携带着席卷黏液坑洞的毁灭性传染病，也能让其他生物遭遇相同命运。对你而言，变形或许并非永久，但武器与防具融化、法术严重削弱，仍足以致命。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:database/help.txt:stash-search.prompt",
+      "english": "<h>Searching the stash-tracker</h>\n\nYou can search for items and dungeon features by name (or a substring of the\nname). In the list of search results, you can select a search result by its\nhotkey to travel to its location.\n\nSome examples of search strings:\n<w>mutation</w>      find all potions of mutation, including potions in shops.\n<w>throwing net</w>  finds every single throwing net and piles of nets.\n<w>shop</w>          lists all shops. Press <w>!</w> and a shop's letter for the stock.\n<w>Lair:2</w>        find everything known to be on Lair:2.\n<w>/D:[2-4]</w>      finds everything on Dungeon levels 2-4. Regexes are allowed!\n              Note that /D:[3-10] will not work as intended, since [x-y] is a\n              regex character range.\n<w>rPois</w>         finds all items with an rPois resistance.\n<w>rC++</w>          finds all items with an rC++ resistance.\n<w>+3</w>            finds all items with a +3 enchantment.\n<w>/Lair.*axe</w> and <w>axe && Lair</w> both show all axes in the Lair.\n\nSome shortcuts:\n<w>.</w>             lists everything on your current level.\n<w>..</w>            lists all items you know.\n<w>0</w> to <w>9</w>        lists all items at the specified waypoint.\n<w>*</w>             lists all items at all waypoints.\n<w>@<<query></w>      lists everything matching <<query> on your current level.\n<w>/<<regex></w>      lists items matching <<regex> as a regular expression.\n<w>=<<string></w>     lists items containing <<string> as a substring.\n\nYou can also examine shops and items in the search results by pressing <w>?</w> and\nthen selecting the hotkey for the search result. This will give a description\nof the item or the contents of the shop.\n\nThe stash search string is case-insensitive.\n\n<h>Searching by item properties:</h>\n\nYou can search for spell names (such as <w>Ignite Poison</w>) to find spellbooks\nthat contain the spell.\n\nYou can search for artefact item properties (such as <w>/prevents.*teleport</w>)\nto find artefacts that have the property.\n\nYou can search by some additional item properties: <w>artefact</w> or\n<w>artifact</w> will find identified artefacts, <w>ego</w> or <w>branded</w>\nwill find non-artefacts with a brand and unidentified items which may be\nbranded, <w>throwable</w> will find things you can throw, <w>dropped</w> will\nfind items you have dropped, <w>in_shop</w> will find items in shops, and (if\nthe autopickup_search option is enabled) <w>autopickup</w> will find items that\nwould be automatically picked up.\n\nSkill names (such as <w>Polearms</w> or <w>Long Blades</w>) will find all weapons that\ntrain that skill. You can also look for <w>melee weapon</w> and <w>ranged weapon</w>.\n\nYou can also search by item types such as <w>book</w> or <w>manual</w> or <w>jewellery</w>.\nFor armour slots, use <w>helmet</w> (all headgear), <w>gloves</w>, <w>shield</w>, and <w>body</w>.\nUse <w>armour && !!body</w> to list all armour pieces except for body armour.\n\n<h>Finding Dungeon Features:</h>\n\nYou can search for dungeon features by name: all shops will be found by a search\nfor <w>shop</w> (including shops that do not have \"shop\" in their name); other\ndungeon features can also be found by name: <w>dispersal trap</w>, <w>altar</w>,\netc. You can also search for altars by deity name: <w>Zin</w>.\n\n<h>Non-regex operators:</h>\n\nYou can use !! to negate a search string, && for a boolean AND, || for\nboolean OR, and <<<< >> for grouping.\n\nFor instance, to find rings (jewellery) but not ring mail you could use:\n<w>ring && !!mail</w>\n\nNote that <w>/</w> and <w>=</w> apply to individual patterns, not the entire query:\nyou should search for <w>armour && /r(C|F|Pois|Elec)</w>, not\n<w>/armour && r(C|F|Pois|Elec)</w>.\n",
+      "before": "<h>搜索物品记录</h>\n\n你可以按名称或名称的一部分搜索物品与地下城设施。在搜索结果中，按对应快捷键即可前往结果所在位置。\n\n搜索词示例：\n<w>mutation</w>      查找所有变异药水，包括商店中的药水。\n<w>throwing net</w>  查找每张投掷网及投掷网堆。\n<w>shop</w>          列出所有商店；按 <w>!</w> 再按商店字母可查看货物。\n<w>Lair:2</w>        查找已知位于野兽巢穴第 2 层的一切。\n<w>/D:[2-4]</w>      查找主地下城第 2 至 4 层的物品；可以使用正则表达式！\n              注意：/D:[3-10] 不会按预期工作，因为 [x-y] 表示正则字符范围。\n<w>rPois</w>         查找具有 rPois 毒素抗性的物品。\n<w>rC++</w>          查找具有 rC++ 寒冷抗性的物品。\n<w>+3</w>            查找附魔值为 +3 的物品。\n<w>/Lair.*axe</w> 与 <w>axe && Lair</w> 都会列出野兽巢穴中的所有斧类。\n\n一些简写：\n<w>.</w>             列出当前层的一切。\n<w>..</w>            列出所有已知物品。\n<w>0</w> 至 <w>9</w>       列出指定路标处的所有物品。\n<w>*</w>             列出所有路标处的所有物品。\n<w>@<<query></w>      列出当前层中匹配 <<query> 的一切。\n<w>/<<regex></w>      将 <<regex> 作为正则表达式搜索物品。\n<w>=<<string></w>     搜索包含 <<string> 这一子串的物品。\n\n在搜索结果中按 <w>?</w>，再按对应结果的快捷键，也可以检查商店与物品，查看物品说明或商店货物。\n\n物品搜索不区分大小写。\n\n<h>按物品属性搜索：</h>\n\n你可以搜索法术名，例如 <w>Ignite Poison</w>，来查找包含该法术的法术书。\n\n你可以搜索神器属性，例如 <w>/prevents.*teleport</w>，来查找具有该属性的神器。\n\n还可以使用额外的物品属性：<w>artefact</w> 或 <w>artifact</w> 查找已鉴定神器；<w>ego</w> 或 <w>branded</w> 查找带词缀的非神器，以及可能带词缀的未鉴定物品；<w>throwable</w> 查找可投掷物；<w>dropped</w> 查找你丢弃过的物品；<w>in_shop</w> 查找商店中的物品；如果启用了 autopickup_search 选项，<w>autopickup</w> 会查找将被自动拾取的物品。\n\n技能名，例如 <w>Polearms</w> 或 <w>Long Blades</w>，可以查找使用该技能的所有武器。也可以搜索 <w>melee weapon</w> 与 <w>ranged weapon</w>。\n\n还可以搜索物品类别，例如 <w>book</w>、<w>manual</w> 或 <w>jewellery</w>。护甲栏位可使用 <w>helmet</w>（所有头部装备）、<w>gloves</w>、<w>shield</w> 与 <w>body</w>。使用 <w>armour && !!body</w> 可列出躯干护甲以外的所有护甲。\n\n<h>查找地下城设施：</h>\n\n你可以按名称搜索地下城设施：<w>shop</w> 会找到所有商店，包括名称中没有“shop”的商店。其他设施也能按名称查找，例如 <w>dispersal trap</w>、<w>altar</w> 等。还可以按神祇名称搜索祭坛，例如 <w>Zin</w>。\n\n<h>非正则运算符：</h>\n\n使用 !! 对搜索词取反，&& 表示逻辑“与”，|| 表示逻辑“或”，<<<< >> 用于分组。\n\n例如，要查找戒指（首饰）而排除环甲，可以使用：\n<w>ring && !!mail</w>\n\n注意：<w>/</w> 与 <w>=</w> 只作用于单个模式，而非整个查询。因此，应搜索 <w>armour && /r(C|F|Pois|Elec)</w>，而非 <w>/armour && r(C|F|Pois|Elec)</w>。\n",
+      "after": "<h>搜索物品记录</h>\n\n你可以按名称或名称的一部分搜索物品与地下城设施。在搜索结果中，按对应快捷键即可前往结果所在位置。\n\n搜索词示例：\n<w>mutation</w>      查找所有变异药水，包括商店中的药水。\n<w>throwing net</w>  查找每张投掷网及投掷网堆。\n<w>shop</w>          列出所有商店；按 <w>!</w> 再按商店字母可查看货物。\n<w>Lair:2</w>        查找已知位于野兽巢穴第 2 层的一切。\n<w>/D:[2-4]</w>      查找主地下城第 2 至 4 层的物品；可以使用正则表达式！\n              注意：/D:[3-10] 不会按预期工作，因为 [x-y] 表示正则字符范围。\n<w>rPois</w>         查找具有 rPois 毒素抗性的物品。\n<w>rC++</w>          查找具有 rC++ 寒冷抗性的物品。\n<w>+3</w>            查找附魔值为 +3 的物品。\n<w>/Lair.*axe</w> 与 <w>axe && Lair</w> 都会列出野兽巢穴中的所有斧类。\n\n一些简写：\n<w>.</w>             列出当前层的一切。\n<w>..</w>            列出所有已知物品。\n<w>0</w> 至 <w>9</w>       列出指定路标处的所有物品。\n<w>*</w>             列出所有路标处的所有物品。\n<w>@<<query></w>      列出当前层中匹配 <<query> 的一切。\n<w>/<<regex></w>      将 <<regex> 作为正则表达式搜索物品。\n<w>=<<string></w>     搜索包含 <<string> 这一子串的物品。\n\n在搜索结果中按 <w>?</w>，再按对应结果的快捷键，也可以检查商店与物品，查看物品说明或商店货物。\n\n物品搜索不区分大小写。\n\n<h>按物品属性搜索：</h>\n\n你可以搜索法术名，例如 <w>Ignite Poison</w>，来查找包含该法术的法术书。\n\n你可以搜索神器属性，例如 <w>/prevents.*teleport</w>，来查找具有该属性的神器。\n\n还可以使用额外的物品属性：<w>artefact</w> 或 <w>artifact</w> 查找已鉴定神器；<w>ego</w> 或 <w>branded</w> 查找带词缀的非神器，以及可能带词缀的未鉴定物品；<w>throwable</w> 查找可投掷物；<w>dropped</w> 查找你丢弃过的物品；<w>in_shop</w> 查找商店中的物品；如果启用了 autopickup_search 选项，<w>autopickup</w> 会查找将被自动拾取的物品。\n\n技能名，例如 <w>Polearms</w> 或 <w>Long Blades</w>，可以查找使用该技能的所有武器。也可以搜索 <w>melee weapon</w> 与 <w>ranged weapon</w>。\n\n还可以搜索物品类别，例如 <w>book</w>、<w>manual</w> 或 <w>jewellery</w>。防具栏位可使用 <w>helmet</w>（所有头部装备）、<w>gloves</w>、<w>shield</w> 与 <w>body</w>。使用 <w>armour && !!body</w> 可列出躯干防具以外的所有防具。\n\n<h>查找地下城设施：</h>\n\n你可以按名称搜索地下城设施：<w>shop</w> 会找到所有商店，包括名称中没有“shop”的商店。其他设施也能按名称查找，例如 <w>dispersal trap</w>、<w>altar</w> 等。还可以按神祇名称搜索祭坛，例如 <w>Zin</w>。\n\n<h>非正则运算符：</h>\n\n使用 !! 对搜索词取反，&& 表示逻辑“与”，|| 表示逻辑“或”，<<<< >> 用于分组。\n\n例如，要查找戒指（首饰）而排除环甲，可以使用：\n<w>ring && !!mail</w>\n\n注意：<w>/</w> 与 <w>=</w> 只作用于单个模式，而非整个查询。因此，应搜索 <w>armour && /r(C|F|Pois|Elec)</w>，而非 <w>/armour && r(C|F|Pois|Elec)</w>。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/items.txt:barding",
+      "english": "Armour for the scaly midsections of nagas and armataurs.\n",
+      "before": "保护娜迦与犰狳人鳞片覆盖的躯干中段的护甲。\n",
+      "after": "保护娜迦与犰狳人鳞片覆盖的躯干中段的防具。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/items.txt:blade talisman",
+      "english": "A jagged cluster of blades, almost impossible to grasp without injury. Causes\nlong, needle-thin blades to grow from the wearer's body, allowing them to\nperform rapid auxiliary melee attacks and even parry blows. Having so many\nfragments of metal inside one's body reduces the effectiveness of body armour,\nbut Shapeshifting skill mitigates this effect as well as increases the damage\ndealt.\n",
+      "before": "一簇参差的刀刃，几乎不可能在握持时不受伤。它会使佩戴者体内长出细长如针的刀刃，能够迅速发动额外近战攻击，甚至招架打击。体内如此多的金属碎片会削弱躯干护甲的效果；变形术技能可以减轻这一影响，并提高造成的伤害。\n",
+      "after": "一簇参差的刀刃，几乎不可能在握持时不受伤。它会使佩戴者体内长出细长如针的刀刃，能够迅速发动额外近战攻击，甚至招架打击。体内如此多的金属碎片会削弱躯干防具的效果；变形术技能可以减轻这一影响，并提高造成的伤害。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/items.txt:crystal plate armour",
+      "english": "An incredibly heavy but extremely effective suit of crystalline armour.\n",
+      "before": "一套由晶体构成的护甲，极其沉重，却有极佳的防护。\n",
+      "after": "一套由晶体构成的板甲，极其沉重，却有极佳的防护。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/items.txt:fortress talisman",
+      "english": "A miniature battlement, carved from a piece of shell. Transforms the wearer into\na heavily armoured crab, fusing whatever body armour they are wearing into the\nshell in the process. In this form, they are slow-moving, but well-defended and\neven capable of wielding a weapon in their large main claw. Despite all this\nbulk, they are well-adapted to the water. They can also breathe clouds of rust\nat the cost of their own HP, which corrode and weaken enemies.\n",
+      "before": "一座用贝壳雕成的微型城垛。它会把佩戴者变成重甲螃蟹，并将所穿的躯干护甲融入甲壳。此形态移动缓慢，但防护坚实，甚至能用巨大的主螯持握武器。尽管如此笨重，它仍很适应水中环境。它还可以消耗自身生命，吐出能腐蚀并削弱敌人的锈蚀云雾。\n",
+      "after": "一座用贝壳雕成的微型城垛。它会把佩戴者变成重甲螃蟹，并将所穿的躯干防具融入甲壳。此形态移动缓慢，但防护坚实，甚至能用巨大的主螯持握武器。尽管如此笨重，它仍很适应水中环境。它还可以消耗自身生命，吐出能腐蚀并削弱敌人的锈蚀云雾。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/gods.txt:okawaru powers",
+      "english": "Followers of Okawaru will gain the ability to temporarily increase their skills\nin combat, and, much later, to deal much faster blows. Okawaru will eventually\ngift followers with ammunition, weapons and armour. The most favoured of\nOkawaru may challenge their foes to honourable single combat.\n",
+      "before": "信徒能够暂时提高战斗技能，在更晚的时候还能大幅加快攻击。奥格瓦如 最终会赐予弹药、武器和护甲。最受宠者可以向敌人发起光荣的一对一决斗。\n",
+      "after": "信徒能够暂时提高战斗技能，在更晚的时候还能大幅加快攻击。奥格瓦如 最终会赐予弹药、武器和防具。最受宠者可以向敌人发起光荣的一对一决斗。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/species.txt:felid",
+      "english": "Felids are many-lived sentient cats. They cannot use armour or weapons.\n",
+      "before": "猫族是拥有多条性命的智慧猫类。它们无法使用护甲或武器。\n",
+      "after": "猫族是拥有多条性命的智慧猫类。它们无法使用防具或武器。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/species.txt:octopode",
+      "english": "Octopodes are a species of amphibious cephalopods. They can wear eight rings,\nbut almost no armour fits them.\n",
+      "before": "章鱼人是一种两栖头足类生物。它们可以佩戴八枚戒指，但几乎没有护甲适合它们。\n",
+      "after": "章鱼人是一种两栖头足类生物。它们可以佩戴八枚戒指，但几乎没有防具适合它们。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/species.txt:poltergeist",
+      "english": "Formless ghosts who delight in hexing their enemies. They can equip many\ndifferent hats, gloves, boots, or cloaks at once, but cannot wear body armour.\n",
+      "before": "骚灵是喜欢用妖术捉弄敌人的无形幽魂。它们可以同时装备多顶帽子、多副手套、多双靴子或多件披风，但无法穿戴躯干护甲。\n",
+      "after": "骚灵是喜欢用妖术捉弄敌人的无形幽魂。它们可以同时装备多顶帽子、多副手套、多双靴子或多件披风，但无法穿戴躯干防具。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/backgrounds.txt:fighter",
+      "english": "Fighters are equipped with armour and shield, as well as a weapon of their\nchoice and potions of might.\n",
+      "before": "战士起始配有护甲、盾牌、自选武器和力量药水。\n",
+      "after": "战士起始配有防具、盾牌、自选武器和力量药水。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/skills.txt:armour",
+      "english": "Armour skill multiplies the AC gained from wearing armour of all kinds, both\nfrom body armour and cloaks, gloves, etc. It also slightly lessens penalties\nto spellcasting and ranged weapon speed from heavy armour.\n",
+      "before": "护甲技能按比例提高穿戴各种护甲获得的护甲值（AC），既包括躯干护甲，也包括披风、手套等。它还会略微减轻重甲对施法和远程武器攻击速度的惩罚。\n",
+      "after": "防具技能按比例提高穿戴各种防具获得的护甲值（AC），既包括躯干防具，也包括披风、手套等。它还会略微减轻重甲对施法和远程武器攻击速度的惩罚。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/skills.txt:forgecraft",
+      "english": "Forgecraft is the art of shaping tangible objects out of magic. Forgecraft\nspells can construct a wide array of mechanical creatures that will fight\nalongside the caster, as well as create traps and barricades and even turn the\nphysical resilience of one's armour into a weapon.\n\nBeing skilled in Forgecraft increases the success rate and spell power of\nspells in this school. Many spells belong to a combination of several schools,\nin which case spellcasting success and power will depend on the average skill\nin these schools.\n",
+      "before": "锻造术是用魔法塑造实体物件的技艺。此类法术能创造多种机械生物与施法者并肩作战，也能制造陷阱和路障，甚至把护甲的物理坚固性化为武器。\n\n精通锻造术能提高该流派法术的成功率和法术强度。许多法术同时属于多个流派，此时施法成功率和法术强度取决于这些流派技能的平均值。\n",
+      "after": "锻造术是用魔法塑造实体物件的技艺。此类法术能创造多种机械生物与施法者并肩作战，也能制造陷阱和路障，甚至把防具的物理坚固性化为武器。\n\n精通锻造术能提高该流派法术的成功率和法术强度。许多法术同时属于多个流派，此时施法成功率和法术强度取决于这些流派技能的平均值。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/items.txt:leather armour",
+      "english": "A suit made from layers of tanned animal hide. It provides basic protection\nwith almost no hindrance to spellcasting or stealthy movement.\n",
+      "before": "一套用多层鞣制兽皮制成的护甲。它提供基本防护，几乎不妨碍施法或潜行。\n",
+      "after": "一套用多层鞣制兽皮制成的皮甲。它提供基本防护，几乎不妨碍施法或潜行。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/items.txt:chain mail",
+      "english": "A suit of armour made entirely out of tiny metal rings.\n",
+      "before": "一套完全由细小金属环编成的护甲。\n",
+      "after": "一套完全由细小金属环编成的锁子甲。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/items.txt:scroll of enchant armour",
+      "english": "A scroll that places an enchantment on a piece of armour chosen by the reader.\nBody armour and bardings can be enchanted up to the same value as their base\narmour rating. Bucklers, kite shields and tower shields can be enchanted up to\n+3, +5 or +8 respectively, and other armour can be enchanted up to +2. Magical\nartefacts cannot be enchanted at all.\n",
+      "before": "一种能为阅读者选定的护甲附魔的卷轴。躯干护甲和腹甲的强化上限等于其基础护甲值。小圆盾、鸢盾和塔盾的强化上限分别为 +3、+5 和 +8，其他护甲则为 +2。魔法神器完全无法附魔。\n",
+      "after": "一种能为阅读者选定的防具附魔的卷轴。躯干防具和腹甲的强化上限等于其基础护甲值。小圆盾、鸢盾和塔盾的强化上限分别为 +3、+5 和 +8，其他防具则为 +2。魔法神器完全无法附魔。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:database/help.txt:pick-up",
+      "english": "                   <h>Picking up and dropping items</h>\n\n<h>Navigation and selecting items</h>\nUse the usual navigation keys (<w>arrow</w> keys, <w>pgdn</w>/<w>pgup</w>, <w>home</w>, <w>end</w>) to select\nitems, and <w>Space</w>/<w>.</w> to toggle whether the selected item will be picked up or\ndropped. Pressing an item's letter key will also toggle its pickup/drop state.\nGear, potions, scrolls, and evocable items are on separate pages which can be\nswitched between by <w>left arrow</w> and <w>right arrow</w>.\nPress <w>Return</w> to accept the current set of items.\n\nEntering a number before selecting by letter will toggle just that quantity of\na stack of items.\n\n<h>Regular expressions</h>\nYou can press <w>Ctrl-F</w> to enter a word (or a regular expression). All matching\nitems will be selected.\n\n<h>Category shortcuts</h>\nYou can quickly select items by type by pressing:\n<w>!</w>   potions      <w>(</w>   weapons        <w>)</w>   ammunition      <w>[</w>   armour\n<w>/</w>   wands        <w>|</w>   magical staves <w>?</w>   scrolls         <w>:</w>   books\n<w>\"</w>   amulets      <w>=</w>   rings          <w>}</w>   miscellaneous\nGlobal selects:  <w>,</w>   select all     <w>*</w>   invert all      <w>-</w>   deselect all\n                 <w>;</w>   select last unequipped\nNote that for dropping, the <w>,</w> command uses the <w>drop_filter</w> option, which\nnarrows the range of items to be (de)selected. The default is all useless items.\n",
+      "before": "                   <h>拾取和丢弃物品</h>\n\n<h>浏览与选择物品</h>\n用常见浏览键（<w>方向</w>键、<w>pgdn</w>/<w>pgup</w>、<w>home</w>、<w>end</w>）选择物品，\n用 <w>Space</w>/<w>.</w> 切换选中物品的拾取或丢弃状态。\n按物品对应的字母键也能切换其拾取或丢弃状态。\n装备、药水、卷轴和可发动的物品分在不同页面，可用<w>左方向键</w>和<w>右方向键</w>切换。\n按 <w>Return</w> 确认当前选中的物品。\n\n先输入数量，再按字母选择，就只会切换一叠物品中相应数量的选择状态。\n\n<h>正则表达式</h>\n按 <w>Ctrl-F</w> 输入词语或正则表达式，所有匹配的物品都会被选中。\n\n<h>类别快捷键</h>\n按以下键可按类型快速选择物品：\n<w>!</w> 药水    <w>(</w> 武器    <w>)</w> 弹药    <w>[</w> 护甲\n<w>/</w> 魔杖    <w>|</w> 魔法杖  <w>?</w> 卷轴    <w>:</w> 书籍\n<w>\"</w> 护身符  <w>=</w> 戒指    <w>}</w> 杂项\n全局选择：<w>,</w> 全选    <w>*</w> 全部反选    <w>-</w> 全部取消\n          <w>;</w> 选择上次卸下的装备\n注意，丢弃物品时，<w>,</w> 命令受 <w>drop_filter</w> 选项影响，\n该选项限制可被选择或取消选择的物品范围，默认只包括无用物品。\n",
+      "after": "                   <h>拾取和丢弃物品</h>\n\n<h>浏览与选择物品</h>\n用常见浏览键（<w>方向</w>键、<w>pgdn</w>/<w>pgup</w>、<w>home</w>、<w>end</w>）选择物品，\n用 <w>Space</w>/<w>.</w> 切换选中物品的拾取或丢弃状态。\n按物品对应的字母键也能切换其拾取或丢弃状态。\n装备、药水、卷轴和可发动的物品分在不同页面，可用<w>左方向键</w>和<w>右方向键</w>切换。\n按 <w>Return</w> 确认当前选中的物品。\n\n先输入数量，再按字母选择，就只会切换一叠物品中相应数量的选择状态。\n\n<h>正则表达式</h>\n按 <w>Ctrl-F</w> 输入词语或正则表达式，所有匹配的物品都会被选中。\n\n<h>类别快捷键</h>\n按以下键可按类型快速选择物品：\n<w>!</w> 药水    <w>(</w> 武器    <w>)</w> 弹药    <w>[</w> 防具\n<w>/</w> 魔杖    <w>|</w> 魔法杖  <w>?</w> 卷轴    <w>:</w> 书籍\n<w>\"</w> 护身符  <w>=</w> 戒指    <w>}</w> 杂项\n全局选择：<w>,</w> 全选    <w>*</w> 全部反选    <w>-</w> 全部取消\n          <w>;</w> 选择上次卸下的装备\n注意，丢弃物品时，<w>,</w> 命令受 <w>drop_filter</w> 选项影响，\n该选项限制可被选择或取消选择的物品范围，默认只包括无用物品。\n"
+    },
+    {
+      "file": "ui.po",
+      "context": "log.spl-summoning",
+      "english": "You aren't wearing any armour!",
+      "before": "你没有穿着任何护甲！",
+      "after": "你没有穿着任何防具！"
+    },
+    {
+      "file": "ui.po",
+      "context": "display.spell",
+      "english": "Awaken Armour",
+      "before": "唤醒护甲",
+      "after": "唤醒防具"
+    },
+    {
+      "file": "ui.po",
+      "context": "help.interface",
+      "english": "<cyan>[</cyan> : armour (<w>%</w>ear and <w>%</w>ake off)",
+      "before": "<cyan>[</cyan> : 护甲（<w>%</w> 穿上、<w>%</w> 脱下）",
+      "after": "<cyan>[</cyan> : 防具（<w>%</w> 穿上、<w>%</w> 脱下）"
+    },
+    {
+      "file": "ui.po",
+      "context": "help.interface",
+      "english": "display worn armour",
+      "before": "显示穿戴的护甲",
+      "after": "显示穿戴的防具"
+    },
+    {
+      "file": "ui.po",
+      "context": "help.interface",
+      "english": "<w>%</w>/<w>%</w> : Wear or Take off armour",
+      "before": "<w>%</w>/<w>%</w> : 穿上／脱下护甲",
+      "after": "<w>%</w>/<w>%</w> : 穿上／脱下防具"
+    },
+    {
+      "file": "ui.po",
+      "context": "help.interface",
+      "english": "<console><cyan>[</cyan> : </console>armour (<w>%</w>ear and <w>%</w>ake off)",
+      "before": "<console><cyan>[</cyan> : </console>护甲（<w>%</w> 穿上、<w>%</w> 脱下）",
+      "after": "<console><cyan>[</cyan> : </console>防具（<w>%</w> 穿上、<w>%</w> 脱下）"
+    },
+    {
+      "file": "ui.po",
+      "context": "display.monster",
+      "english": "armour echo",
+      "before": "护甲回响",
+      "after": "防具回响"
+    },
+    {
+      "file": "ui.po",
+      "context": "display.monster",
+      "english": "haunted armour",
+      "before": "附魂护甲",
+      "after": "附魂防具"
+    },
+    {
+      "file": "ui.po",
+      "context": "inventory.category",
+      "english": "Armour",
+      "before": "护甲",
+      "after": "防具"
+    },
+    {
+      "file": "ui.po",
+      "context": "display.skill",
+      "english": "Armour",
+      "before": "护甲",
+      "after": "防具"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/spells.txt:ozocubu's armour spell",
+      "english": "Envelops the caster's body in a protective layer of thick ice, granting a\nsubstantial bonus to armour as long as they remain in their current location.\nThe ice will crack and fall away if the caster moves to a new position. The\nspell decreases in effectiveness in heavier armour, granting a lower bonus the\nhigher the encumbrance rating of the caster's armour.\n",
+      "before": "以厚实冰层包裹施法者，提供可观的护甲加成，只要施法者留在原地就能维持。施法者移动到其他位置时，冰层就会碎裂脱落。穿戴越重的护甲，法术效果越弱：护甲累赘值越高，加成就越低。\n",
+      "after": "以厚实冰层包裹施法者，提供可观的护甲值加成，只要施法者留在原地就能维持。施法者移动到其他位置时，冰层就会碎裂脱落。穿戴越重的防具，法术效果越弱：防具累赘值越高，加成就越低。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/spells.txt:irradiate spell",
+      "english": "Transmutes an ultra-thin layer of the caster's skin (or equivalent) directly\ninto pure magical energy, blasting adjacent creatures. It may heavily deform\nits victims, weakening them and reducing their armour. The caster is not left\nentirely unaffected; some of the magic lingers, enough to leave them\ndangerously contaminated after a few castings.\n",
+      "before": "将施法者极薄的一层皮肤（或相应结构）直接转化为纯粹魔法能量，轰击相邻生物。它可能使受害者严重畸变，削弱其力量并降低护甲。施法者也并非毫发无损；部分魔力会残留，施放数次后就足以造成危险的魔法污染。\n",
+      "after": "将施法者极薄的一层皮肤（或相应结构）直接转化为纯粹魔法能量，轰击相邻生物。它可能使受害者严重畸变，削弱其力量并降低护甲值。施法者也并非毫发无损；部分魔力会残留，施放数次后就足以造成危险的魔法污染。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/items.txt:granite talisman",
+      "english": "A heavy stone icon, bearing the countenance of some long-forgotten king or god.\nTransforms the wearer into a slow, stone statue. The wearer's stone body is\nimmune to poison and miasma, and gains resistance to electricity, negative\nenergy, and torment. Shapeshifting skill increases armour granted.\n",
+      "before": "一尊沉重的石像，面容属于某位早已被遗忘的君王或神祇。它会把佩戴者变成缓慢的石像。石质身体免疫毒素与瘴气，并抵御电击、负能量及折磨。变形术技能会提高获得的护甲。\n",
+      "after": "一尊沉重的石像，面容属于某位早已被遗忘的君王或神祇。它会把佩戴者变成缓慢的石像。石质身体免疫毒素与瘴气，并抵御电击、负能量及折磨。变形术技能会提高获得的护甲值。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/items.txt:potion of lignification",
+      "english": "A potion which transforms the imbiber into an animated tree with sap for blood and\nbranches capable of holding weapons. Such a tree has minimal evasion but increased\nhealth and natural armour, and is resistant to poison, and immune to torment and\ndrowning. However, it is rooted in place while the transformation lasts, and\ncannot teleport.\n",
+      "before": "一种能使饮用者变成活动树木的药水，树液化为血液，枝干可以持握武器。这棵树的闪避极低，但生命和天然护甲提高，具备毒素抗性，并免疫折磨和溺水。然而，变形持续期间会扎根原地，无法传送。\n",
+      "after": "一种能使饮用者变成活动树木的药水，树液化为血液，枝干可以持握武器。这棵树的闪避极低，但生命和天然护甲值提高，具备毒素抗性，并免疫折磨和溺水。然而，变形持续期间会扎根原地，无法传送。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/spells.txt:passwall spell",
+      "english": "Allows the caster to travel a short distance through an adjacent rock wall and\nemerge again on the other side. This spell takes an unusally long time to cast,\nduring which the caster will be unable to act, but also gain increased armour\nfrom their attunement to the rock.\n",
+      "before": "允许施法者短距离穿过相邻岩壁，从另一侧重新出现。施放此法术需要异常长的时间，期间施法者无法行动，但与岩石的调谐也会提高护甲。\n",
+      "after": "允许施法者短距离穿过相邻岩壁，从另一侧重新出现。施放此法术需要异常长的时间，期间施法者无法行动，但与岩石的调谐也会提高护甲值。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/status.txt:corr status",
+      "english": "You are corroded, reducing your damage in physical combat and your armour by an\namount depending on the severity of the corrosion.\n",
+      "before": "你遭到腐蚀，物理战斗伤害和护甲都会降低，降低程度取决于腐蚀的严重程度。\n",
+      "after": "你遭到腐蚀，物理战斗伤害和护甲值都会降低，降低程度取决于腐蚀的严重程度。\n"
+    }
+  ],
+  "checks": {
+    "all_48_changes_exported": true,
+    "glossary_terms": 1414,
+    "textdb_exported": 3038,
+    "windows_tiles_build": "passed",
+    "cpp_test_cases": 21,
+    "cpp_assertions": 11209,
+    "python_tests": 22,
+    "gui_visual_review": false
+  }
+}

@@ -1,0 +1,4024 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "queries": [
+    "conjuration",
+    "hexes",
+    "summoning",
+    "necromancy",
+    "translocation",
+    "fire",
+    "ice",
+    "air",
+    "earth",
+    "alchemy",
+    "forgecraft",
+    "miscast",
+    "hand",
+    "hands",
+    "negative energy",
+    "magic",
+    "space",
+    "frost",
+    "sand",
+    "shrapnel",
+    "salt",
+    "cinnabar"
+  ],
+  "hits": [
+    {
+      "Term": "conjuration",
+      "Translation": "塑能",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Hexes",
+      "Translation": "妖术系魔法/妖术强化",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】区分敌对魔法学派与物品诅咒，也与 hexer（妖术师）统一。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。\n【装备语境】学派名称用妖术系魔法；装备的 Hexes 标签表示该学派法术强度增强，用妖术强化。"
+    },
+    {
+      "Term": "miscast",
+      "Translation": "施法失误",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+    },
+    {
+      "Term": "Necromancy",
+      "Translation": "死灵系魔法",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+    },
+    {
+      "Term": "Forgecraft",
+      "Translation": "锻造术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+    },
+    {
+      "Term": "Alchemy",
+      "Translation": "炼金术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+    },
+    {
+      "Term": "salt",
+      "Translation": "盐尘",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_SALT；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+    },
+    {
+      "Term": "Fire",
+      "Translation": "火焰强化",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+    },
+    {
+      "Term": "Ice",
+      "Translation": "寒冰强化",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+    },
+    {
+      "Term": "Air",
+      "Translation": "空气强化",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+    },
+    {
+      "Term": "Earth",
+      "Translation": "大地强化",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+    }
+  ],
+  "coverage_before": [
+    {
+      "file": "colourname.txt",
+      "total": 9,
+      "exported": 0,
+      "missing": [
+        "rainbow_colour",
+        "misc_colour",
+        "mono_colour",
+        "any_colour",
+        "any_pattern",
+        "glowing_adj",
+        "any_glowing_colour",
+        "any_colour_pattern",
+        "any_glowing_colour_pattern"
+      ],
+      "duplicates": []
+    },
+    {
+      "file": "decorlines.txt",
+      "total": 132,
+      "exported": 0,
+      "missing": [
+        "default peaceful fountain_blue",
+        "default fountain_blue",
+        "default peaceful fountain_sparkling",
+        "sparkling_message",
+        "default fountain_sparkling",
+        "default fountain_blood",
+        "default fountain_eyes",
+        "default peaceful dry_fountain",
+        "default dry_fountain",
+        "ashenzari peaceful fountain_blue",
+        "ashenzari fountain_blue",
+        "beogh fountain_blue",
+        "beogh fountain_sparkling",
+        "cheibriados fountain_sparkling",
+        "cheibriados peaceful dry_fountain",
+        "dithmenos fountain_blood",
+        "elyvilon peaceful fountain_blue",
+        "fedhas peaceful fountain_blue",
+        "fedhas peaceful fountain_sparkling",
+        "fedhas peaceful fountain_blood",
+        "fedhas peaceful fountain_eyes",
+        "gozag peaceful fountain_blue",
+        "gozag peaceful fountain_sparkling",
+        "gozag fountain_blood",
+        "hepliaklqana fountain_blue",
+        "hepliaklqana dry_fountain",
+        "hepliaklqana peaceful fountain_blood",
+        "ignis fountain_blue",
+        "ignis fountain_sparkling",
+        "ignis fountain_blood",
+        "jiyva peaceful fountain_blue",
+        "jiyva fountain_eyes",
+        "kikubaaqudgha peaceful dry_fountain",
+        "lugonu peaceful fountain_eyes",
+        "makhleb peaceful fountain_blood",
+        "nemelex xobeh peaceful fountain_blue",
+        "nemelex xobeh peaceful fountain_sparkling",
+        "okawaru peaceful fountain_blue",
+        "qazlal peaceful fountain_blue",
+        "qazlal fountain_blue",
+        "qazlal fountain_sparkling",
+        "qazlal fountain_blood",
+        "ru peaceful fountain_blue",
+        "ru peaceful fountain_eyes",
+        "sif muna peaceful fountain_sparkling",
+        "sif muna peaceful fountain_blood",
+        "sif muna peaceful fountain_eyes",
+        "trog peaceful fountain_blue",
+        "uskayaw peaceful fountain_blue",
+        "uskayaw fountain_blood",
+        "vehumet fountain_blood",
+        "wu jian peaceful fountain_blue",
+        "xom fountain_blue",
+        "xom fountain_sparkling",
+        "xom fountain_blood",
+        "yredelemnul fountain_blue",
+        "yredelemnul fountain_sparkling",
+        "yredelemnul fountain_blood",
+        "zin fountain_sparkling",
+        "zin fountain_eyes",
+        "the shining one fountain_blood",
+        "fruit cache",
+        "meat cache",
+        "baked goods cache",
+        "_fruit_and_reaction_",
+        "_meat_and_reaction_",
+        "_baked_good_and_reaction_",
+        "carnivore fruit cache",
+        "carnivore baked goods cache",
+        "short fruit cache",
+        "short meat cache",
+        "short baked goods cache",
+        "stone fruit cache",
+        "stone meat cache",
+        "stone baked goods cache",
+        "inediate fruit cache",
+        "inediate meat cache",
+        "inediate baked goods cache",
+        "draconian fruit cache",
+        "felid fruit cache",
+        "felid meat cache",
+        "felid baked goods cache",
+        "gargoyle fruit cache",
+        "gargoyle meat cache",
+        "gargoyle baked goods cache",
+        "kobold fruit cache",
+        "kobold meat cache",
+        "kobold baked goods cache",
+        "mummy fruit cache",
+        "mummy meat cache",
+        "mummy baked goods cache",
+        "oni fruit cache",
+        "oni baked goods cache",
+        "poltergeist fruit cache",
+        "poltergeist meat cache",
+        "poltergeist baked goods cache",
+        "revenant fruit cache",
+        "revenant meat cache",
+        "revenant baked goods cache",
+        "spriggan fruit cache",
+        "spriggan meat cache",
+        "spriggan baked goods cache",
+        "tengu baked goods cache",
+        "troll fruit cache",
+        "troll baked goods cache",
+        "amphisbaena fruit cache",
+        "amphisbaena meat cache",
+        "amphisbaena baked goods cache",
+        "bat fruit cache",
+        "bat baked goods cache",
+        "blade fruit cache",
+        "blade meat cache",
+        "death fruit cache",
+        "death meat cache",
+        "death baked goods cache",
+        "dragon fruit cache",
+        "maw fruit cache",
+        "maw meat cache",
+        "maw baked goods cache",
+        "pig fruit cache",
+        "pig meat cache",
+        "pig baked goods cache",
+        "statue fruit cache",
+        "statue meat cache",
+        "statue baked goods cache",
+        "storm fruit cache",
+        "storm meat cache",
+        "tree fruit cache",
+        "tree meat cache",
+        "tree baked goods cache",
+        "vampire fruit cache",
+        "vampire baked goods cache"
+      ],
+      "duplicates": [
+        "jiyva peaceful fountain_blue"
+      ]
+    },
+    {
+      "file": "FAQ.txt",
+      "total": 38,
+      "exported": 38,
+      "missing": [],
+      "duplicates": []
+    },
+    {
+      "file": "gizmo.txt",
+      "total": 3,
+      "exported": 0,
+      "missing": [
+        "gizmo_adjective",
+        "gizmo_noun",
+        "gizmo_modifier"
+      ],
+      "duplicates": []
+    },
+    {
+      "file": "godname.txt",
+      "total": 23,
+      "exported": 23,
+      "missing": [],
+      "duplicates": []
+    },
+    {
+      "file": "godspeak.txt",
+      "total": 193,
+      "exported": 114,
+      "missing": [
+        "xom flora ring",
+        "xom scenery generic",
+        "xom scenery open_door",
+        "xom scenery closed_door",
+        "xom scenery altar_xom",
+        "xom scenery cache_of_fruit",
+        "xom scenery cache_of_meat",
+        "xom scenery cache_of_baked_goods",
+        "xom scenery enter_abyss",
+        "xom scenery trap_teleport",
+        "xom kind door ring",
+        "xom mean door ring",
+        "xom bazaar trip",
+        "_xom_number_",
+        "xom feature lava",
+        "xom feature shallow water",
+        "xom feature deep water",
+        "xom feature blood",
+        "xom feature eyes",
+        "xom feature dry",
+        "xom feature statuelike",
+        "xom feature tree",
+        "xom feature translucent wall",
+        "xom feature metal wall",
+        "xom feature stone arch",
+        "xom underfoot general",
+        "xom underfoot water",
+        "xom underfoot airborne general",
+        "xom underfoot airborne water",
+        "xom inventory singular",
+        "xom inventory plural",
+        "xom floor inventory singular",
+        "xom floor inventory plural",
+        "xom bandages",
+        "xom floor bandages",
+        "xom one eye",
+        "xom eyes",
+        "xom ears",
+        "xom mouth",
+        "xom hair",
+        "xom impromptu dance",
+        "dance_name",
+        "acrobatic_move_name",
+        "xom tail",
+        "xom random body part singular",
+        "xom random body part plural",
+        "xom unarmed one hand",
+        "xom unarmed two hands",
+        "xom cloak slot",
+        "xom helmet slot",
+        "xom offhand slot",
+        "xom gloves slot",
+        "xom boots slot",
+        "xom amulet slot",
+        "xom gizmo slot",
+        "xom ring slot",
+        "xom dragon armour",
+        "xom animal skin",
+        "xom leather armour",
+        "xom robe",
+        "xom metal armour",
+        "xom drinkless confusion",
+        "xom suffering",
+        "xom torment all",
+        "xom send in the clones",
+        "xom brain drain",
+        "xom drained brain",
+        "xom fake shatter",
+        "xom fast forward",
+        "xom slow motion",
+        "xom pause",
+        "xom grant word of recall",
+        "xom grant voiceless word of recall",
+        "xom wave of despair",
+        "xom divine lightning",
+        "xom lights up webs",
+        "xom force lance fleet",
+        "xom good hyper enchant monster",
+        "xom mass charm",
+        "makhleb executioner chatter",
+        "beogh apostle challenge"
+      ],
+      "duplicates": []
+    },
+    {
+      "file": "graffiti.txt",
+      "total": 58,
+      "exported": 0,
+      "missing": [
+        "_graffiti_author_any_",
+        "_graffiti_author_any_changeable_",
+        "_graffiti_author_any_changeable_non-randgen_",
+        "_graffiti_author_any_non-orc_",
+        "_graffiti_author_bland_",
+        "_graffiti_author_orc_",
+        "_rare_graffiti_author_any_",
+        "_rare_graffiti_author_any_non-orc_",
+        "_rare_graffiti_author_god_",
+        "_rare_graffiti_author_orc_",
+        "_rare_graffiti_author_ordinary_",
+        "_rare_graffiti_author_title_",
+        "_pattern_type_",
+        "_writing_adj_",
+        "_writing_noun_",
+        "_writing_style_",
+        "_writing_type_",
+        "_graffiti_type_",
+        "_graffiti_type_with_signature_maybe_",
+        "_graffiti_type_with_signature_maybe_non-orc_",
+        "_graffiti_type_with_signature_maybe_orc_",
+        "_graffiti_advertisement_",
+        "_graffiti_changed_names_",
+        "_graffiti_changed_or_compared_religions_",
+        "_graffiti_class_any_",
+        "_graffiti_class_master_",
+        "_graffiti_class_remedial_",
+        "_graffiti_duplicate_",
+        "_graffiti_fight_",
+        "_graffiti_hailed_god_",
+        "_graffiti_happened_reason_",
+        "_graffiti_image_",
+        "_graffiti_life_or_death_",
+        "_graffiti_loves_or_hates_",
+        "_graffiti_mass_meeting_ordinary_",
+        "_graffiti_mass_meeting_religious_",
+        "_graffiti_obscenities_",
+        "_graffiti_professor_",
+        "_graffiti_professor_evocations_type_",
+        "_graffiti_professor_invocations_type_",
+        "_graffiti_professor_magic_type_",
+        "_graffiti_professor_mundane_type_",
+        "_graffiti_professor_necromancy_type_",
+        "_graffiti_professor_shapeshifting_type_",
+        "_graffiti_relative_or_quality_",
+        "_graffiti_religion_better_or_worse_",
+        "_graffiti_religion_non-orc_",
+        "_graffiti_religion_not_non-orc_or_orc_",
+        "_graffiti_religion_orc_",
+        "_graffiti_rumour_",
+        "_graffiti_short_saying_",
+        "_graffiti_species_",
+        "_graffiti_unique_comment_",
+        "_graffiti_unreadable_",
+        "_graffiti_vengeance_",
+        "_graffiti_vengeance_reason_",
+        "_graffiti_wares_quality_",
+        "any_graffiti"
+      ],
+      "duplicates": []
+    },
+    {
+      "file": "help.txt",
+      "total": 13,
+      "exported": 13,
+      "missing": [],
+      "duplicates": []
+    },
+    {
+      "file": "insult.txt",
+      "total": 33,
+      "exported": 0,
+      "missing": [
+        "imp_taunt",
+        "run_or_give_up",
+        "demon_taunt",
+        "demon_taunt_special",
+        "run_away",
+        "give_up",
+        "whilst_thou_can",
+        "body_or_spiritual_part",
+        "will_or_shall",
+        "feast_or_devour",
+        "important_body_part",
+        "important_spiritual_part",
+        "meal",
+        "generic_insult",
+        "insult_adjective1",
+        "insult general adj1",
+        "insult elf adj1",
+        "insult felid adj1",
+        "insult_adjective2",
+        "insult general adj2",
+        "insult dwarf adj2",
+        "insult felid adj2",
+        "insult tengu adj2",
+        "insult mummy adj2",
+        "insult vampire adj2",
+        "insult undead adj2",
+        "insult_noun",
+        "insult general noun",
+        "small_food",
+        "insult felid noun",
+        "insult spriggan noun",
+        "insult minotaur noun",
+        "insult mummy noun"
+      ],
+      "duplicates": []
+    },
+    {
+      "file": "miscast.txt",
+      "total": 33,
+      "exported": 0,
+      "missing": [
+        "conjuration miscast player",
+        "conjuration miscast monster",
+        "conjuration miscast unseen",
+        "hexes miscast player",
+        "hexes miscast monster",
+        "hexes miscast unseen",
+        "summoning miscast player",
+        "summoning miscast monster",
+        "summoning miscast unseen",
+        "necromancy miscast player",
+        "necromancy miscast monster",
+        "necromancy miscast unseen",
+        "translocation miscast player",
+        "translocation miscast monster",
+        "translocation miscast unseen",
+        "fire miscast player",
+        "fire miscast monster",
+        "fire miscast unseen",
+        "ice miscast player",
+        "ice miscast monster",
+        "ice miscast unseen",
+        "air miscast player",
+        "air miscast monster",
+        "air miscast unseen",
+        "earth miscast player",
+        "earth miscast monster",
+        "earth miscast unseen",
+        "alchemy miscast player",
+        "alchemy miscast monster",
+        "alchemy miscast unseen",
+        "forgecraft miscast player",
+        "forgecraft miscast monster",
+        "forgecraft miscast unseen"
+      ],
+      "duplicates": []
+    },
+    {
+      "file": "miscname.txt",
+      "total": 10,
+      "exported": 9,
+      "missing": [
+        "summon_horrible_things",
+        "harlequin_trap_lines"
+      ],
+      "duplicates": []
+    },
+    {
+      "file": "monflee.txt",
+      "total": 1,
+      "exported": 1,
+      "missing": [],
+      "duplicates": []
+    },
+    {
+      "file": "monname.txt",
+      "total": 52,
+      "exported": 0,
+      "missing": [
+        "any orc name",
+        "orc name",
+        "orc apostle warrior name",
+        "orc apostle wizard name",
+        "orc apostle priest name",
+        "_orc_warrior_name_",
+        "_orc_wizard_name_",
+        "_orc_priest_name_",
+        "_beogh_name_",
+        "_orcish_name_",
+        "_other_orcish_name_",
+        "ancestor name",
+        "ancestor male name",
+        "ancestor female name",
+        "_west_european_male_name_",
+        "_roman_male_name_",
+        "_aztec_male_name_",
+        "_mesopotamian_male_name_",
+        "_egyptian_male_name_",
+        "_zulu_male_name_",
+        "_arabic_male_name_",
+        "_slavic_male_name_",
+        "_west_european_female_name_",
+        "_roman_female_name_",
+        "_aztec_female_name_",
+        "_mesopotamian_female_name_",
+        "_egyptian_female_name_",
+        "_zulu_female_name_",
+        "_arabic_female_name_",
+        "_slavic_female_name_",
+        "_brazilian_female_name_",
+        "_brazilian_male_name_",
+        "steelspirit name",
+        "bland name",
+        "_bland_female_name_",
+        "_bland_male_name_",
+        "_cantonese_female_name_",
+        "_cantonese_male_name_",
+        "_german_female_name_",
+        "_german_male_name_",
+        "_hispanic_female_name_",
+        "_hispanic_male_name_",
+        "_irish_female_name_",
+        "_irish_male_name_",
+        "_japanese_female_name_",
+        "_japanese_male_name_",
+        "_korean_female_name_",
+        "_korean_male_name_",
+        "_sikh_female_name_",
+        "_sikh_male_name_",
+        "_thai_female_name_",
+        "_thai_male_name_"
+      ],
+      "duplicates": []
+    },
+    {
+      "file": "monspeak.txt",
+      "total": 731,
+      "exported": 0,
+      "missing": [
+        "_shouts_",
+        "_yells_",
+        "_wails_",
+        "_begs_",
+        "_mutters_",
+        "_pointless_",
+        "_high_priest_",
+        "_high_priest_common_",
+        "_high_priest_medium_",
+        "_high_priest_rare_",
+        "_mercenary_guard_",
+        "_mercenary_guard_common_",
+        "_mercenary_guard_medium_",
+        "_mercenary_guard_rare_",
+        "_wizard_",
+        "_wizard_common_spell_",
+        "_fake_spell_effect_",
+        "_wizard_medium_",
+        "_wizard_rare_",
+        "_friendly_imp_",
+        "_friendly_imp_common_",
+        "_friendly_imp_rare_",
+        "_friendly_imp_greeting",
+        "_cause_or_spread_",
+        "_mayhem_",
+        "_truckle_",
+        "_vassalage_",
+        "_suck_up_address_",
+        "_suck_up_adj1_",
+        "_suck_up_adj2_",
+        "_suck_up_noun_",
+        "_hostile_imp_",
+        "_hostile_imp_common_",
+        "_hostile_imp_rare_",
+        "_hell_lord_taunt_",
+        "_demon_taunt_",
+        "_says_imp_taunt_",
+        "default stupid friendly humanoid",
+        "default stupid fleeing humanoid",
+        "default stupid silenced humanoid",
+        "default stupid confused humanoid",
+        "default silenced confused humanoid",
+        "default fleeing silenced humanoid",
+        "_fleeing_silenced_common_",
+        "_fleeing_silenced_rare_",
+        "default friendly silenced humanoid",
+        "_friendly_silenced_common_",
+        "_friendly_silenced_rare_",
+        "default silenced humanoid",
+        "_silenced_humanoid_common_",
+        "_silenced_humanoid_rare_",
+        "default friendly confused humanoid",
+        "_friendly_confused_common_",
+        "_friendly_confused_medium_",
+        "_friendly_confused_rare_",
+        "default confused humanoid",
+        "_confused_humanoid_common_",
+        "_confused_humanoid_medium_",
+        "_confused_humanoid_rare_",
+        "default friendly fleeing humanoid",
+        "_friendly_fleeing_common_",
+        "_friendly_fleeing_rare_",
+        "default fleeing humanoid",
+        "_fleeing_humanoid_common_",
+        "_fleeing_humanoid_rare_",
+        "_friendly_family_",
+        "default friendly related humanoid",
+        "default friendly humanoid",
+        "_friendly_humanoid_common_",
+        "_friendly_humanoid_medium_",
+        "_friendly_humanoid_rare_",
+        "hound",
+        "friendly hound",
+        "friendly shoals hound",
+        "default insect",
+        "default confused insect",
+        "default confused winged insect",
+        "default confused arachnid",
+        "centipede",
+        "default confused centipede",
+        "default confused 'b'",
+        "default 'cap-g'",
+        "default 'cap-j'",
+        "'l'",
+        "'r'",
+        "default confused 'r'",
+        "default confused 'y'",
+        "default silenced confused 'y'",
+        "default '8'",
+        "elephant slug",
+        "default confused moth",
+        "'&'",
+        "'1'",
+        "'2'",
+        "'3'",
+        "'4'",
+        "default '&'",
+        "default '1'",
+        "default '2'",
+        "default '3'",
+        "default '4'",
+        "default '5'",
+        "friendly '5'",
+        "default player ghost",
+        "silenced player ghost",
+        "fighting player ghost",
+        "short blades player ghost",
+        "long blades player ghost",
+        "axes player ghost",
+        "maces & flails player ghost",
+        "polearms player ghost",
+        "staves player ghost",
+        "slings player ghost",
+        "ranged weapons player ghost",
+        "crossbows player ghost",
+        "throwing player ghost",
+        "armour player ghost",
+        "dodging player ghost",
+        "stealth player ghost",
+        "shields player ghost",
+        "unarmed combat player ghost",
+        "spellcasting player ghost",
+        "conjurations player ghost",
+        "hexes player ghost",
+        "summonings player ghost",
+        "necromancy player ghost",
+        "translocations player ghost",
+        "fire magic player ghost",
+        "ice magic player ghost",
+        "air magic player ghost",
+        "earth magic player ghost",
+        "alchemy player ghost",
+        "invocations player ghost",
+        "evocations player ghost",
+        "shapeshifting player ghost",
+        "forgecraft player ghost",
+        "ashenzari player ghost",
+        "beogh player ghost",
+        "cheibriados player ghost",
+        "dithmenos player ghost",
+        "elyvilon player ghost",
+        "fedhas player ghost",
+        "gozag player ghost",
+        "hepliaklqana player ghost",
+        "ignis player ghost",
+        "jiyva player ghost",
+        "kikubaaqudgha player ghost",
+        "lugonu player ghost",
+        "makhleb player ghost",
+        "nemelex xobeh player ghost",
+        "okawaru player ghost",
+        "pakellas player ghost",
+        "qazlal player ghost",
+        "ru player ghost",
+        "sif muna player ghost",
+        "the shining one player ghost",
+        "trog player ghost",
+        "uskayaw player ghost",
+        "vehumet player ghost",
+        "wu jian player ghost",
+        "xom player ghost",
+        "yredelemnul player ghost",
+        "zin player ghost",
+        "_generic_ranged_",
+        "_form_",
+        "_laughs_",
+        "player ghost",
+        "_player_ghost_common_",
+        "_player_ghost_medium_",
+        "_player_ghost_rare_",
+        "aizul",
+        "_aizul_common_",
+        "_aizul_rare_",
+        "agnes",
+        "_agnes_common_",
+        "_agnes_rare_",
+        "agnes triumphant",
+        "antaeus",
+        "antaeus triumphant",
+        "amaemon",
+        "_amaemon_common_",
+        "_amaemon_rare_",
+        "arachne",
+        "arachne triumphant",
+        "asterion",
+        "_asterion_common_",
+        "_asterion_rare_",
+        "asterion triumphant",
+        "azrael",
+        "_azrael_common_",
+        "_azrael_rare_",
+        "_player_arms_",
+        "bai suzhen",
+        "_bai_suzhen_common_",
+        "_bai_suzhen_rare_",
+        "blorkula the orcula",
+        "blorkula the orcula triumphant",
+        "_blorkula_colour_",
+        "_blorkula_common_",
+        "_blorkula_rare_",
+        "blorkula the orcula killed",
+        "boris",
+        "_boris_common_",
+        "_boris_medium_",
+        "_boris_rare_",
+        "boris killed",
+        "_boris_return_common_",
+        "_boris_return_rare_",
+        "boris timeout",
+        "friendly boris timeout",
+        "boris triumphant",
+        "boris riddle",
+        "cassandra",
+        "cassandra triumphant",
+        "cassandra killed",
+        "friendly cassandra",
+        "chuck",
+        "_chuck_generic_",
+        "_chuck_rare_",
+        "crazy yiuf",
+        "xom crazy yiuf",
+        "orb crazy yiuf",
+        "confused crazy yiuf",
+        "_crazy_yiuf_speech_",
+        "_crazy_yiuf_speech_verbs_",
+        "_crazy_yiuf_sentence_",
+        "_crazy_yiuf_wordlist1_",
+        "_crazy_yiuf_wordlist2_",
+        "dissolution",
+        "_dissolution_common_",
+        "_dissolution_speech_",
+        "_dissolution_rare_",
+        "temple donald",
+        "orc donald",
+        "elf donald",
+        "swamp donald",
+        "shoals donald",
+        "spider donald",
+        "slime donald",
+        "snake donald",
+        "vaults donald",
+        "crypt donald",
+        "abyss donald",
+        "zot donald",
+        "orb donald",
+        "zin donald",
+        "the shining one donald",
+        "kikubaaqudgha donald",
+        "friendly yredelemnul donald",
+        "yredelemnul donald",
+        "_yredelemnul_donald_",
+        "okawaru donald",
+        "makhleb donald",
+        "sif muna donald",
+        "trog donald",
+        "nemelex xobeh donald",
+        "elyvilon donald",
+        "lugonu donald",
+        "beogh donald",
+        "ignis donald",
+        "jiyva donald",
+        "fedhas donald",
+        "cheibriados donald",
+        "xom donald",
+        "vehumet donald",
+        "ashenzari donald",
+        "dithmenos donald",
+        "gozag donald",
+        "qazlal donald",
+        "ru donald",
+        "pakellas donald",
+        "hepliaklqana donald",
+        "uskayaw donald",
+        "wu jian donald",
+        "no god donald",
+        "_generic_donald_",
+        "friendly donald",
+        "default hostile confused donald",
+        "donald marionette",
+        "donald riddle",
+        "donald killed",
+        "donald banished",
+        "donald triumphant",
+        "twin_died dowan",
+        "twin_banished dowan",
+        "twin_slimified dowan",
+        "dowan",
+        "fleeing dowan",
+        "_dowan_common_",
+        "_dowan_rare_",
+        "dowan_duvessa_dies",
+        "dowan_duvessa_dies_invisible",
+        "dowan_duvessa_dies_distance",
+        "dowan_duvessa_dies_bytwin",
+        "dowan_duvessa_dies_invisible_bytwin",
+        "dowan_duvessa_dies_distance_bytwin",
+        "twin_died duvessa",
+        "twin_ikilled duvessa",
+        "twin_banished duvessa",
+        "twin_ikilled dowan",
+        "duvessa",
+        "_duvessa_common_",
+        "_duvessa_rare_",
+        "duvessa_dowan_dies",
+        "duvessa_dowan_dies_invisible",
+        "duvessa_dowan_dies_distance",
+        "duvessa_dowan_dies_bytwin",
+        "duvessa_dowan_dies_invisible_bytwin",
+        "duvessa_dowan_dies_distance_bytwin",
+        "edmund",
+        "_edmund_common_",
+        "_edmund_rare_",
+        "edmund triumphant",
+        "erica",
+        "_erica_common_",
+        "_erica_rare_",
+        "erica triumphant",
+        "erolcha",
+        "_erolcha_common_",
+        "_erolcha_rare_",
+        "erolcha banished",
+        "eustachio",
+        "_eustachio_common_",
+        "_eustachio_rare_",
+        "eustachio triumphant",
+        "frances",
+        "_frances_common_",
+        "_frances_rare_",
+        "frederick",
+        "beogh frederick",
+        "okawaru frederick",
+        "_frederick_common_",
+        "_frederick_rare_",
+        "frederick triumphant",
+        "frederick riddle",
+        "ashenzari frederick triumphant",
+        "beogh frederick triumphant",
+        "cheibriados frederick triumphant",
+        "dithmenos frederick triumphant",
+        "elyvilon frederick triumphant",
+        "fedhas frederick triumphant",
+        "gozag frederick triumphant",
+        "hepliaklqana frederick triumphant",
+        "ignis frederick triumphant",
+        "jivya frederick triumphant",
+        "kikubaaqudgha frederick triumphant",
+        "lugonu frederick triumphant",
+        "makhleb frederick triumphant",
+        "nemelex xobeh frederick triumphant",
+        "okawaru frederick triumphant",
+        "qazlal frederick triumphant",
+        "ru frederick triumphant",
+        "sif muna frederick triumphant",
+        "trog frederick triumphant",
+        "uskayaw frederick triumphant",
+        "vehumet frederick triumphant",
+        "wu jian frederick triumphant",
+        "xom frederick triumphant",
+        "yredelemnul frederick triumphant",
+        "zin frederick triumphant",
+        "the shining one frederick triumphant",
+        "fannar",
+        "_fannar_common_",
+        "_fannar_rare_",
+        "gastronok",
+        "_gastronok_common_",
+        "_gastronok_rare_",
+        "gastronok triumphant",
+        "grinder",
+        "_grinder_common_",
+        "_grinder_rare_",
+        "grinder triumphant",
+        "grum",
+        "_grum_common_",
+        "_grum_rare_",
+        "_grum_verb_",
+        "_grum_dog_name_",
+        "grunn",
+        "_grunn_common_",
+        "_grunn_rare_",
+        "harold",
+        "_harold_common_",
+        "_harold_rare_",
+        "fleeing harold",
+        "harold killed",
+        "harold triumphant",
+        "_harold_retirement_plan_",
+        "_harold_ret_house_",
+        "_harold_ret_place_",
+        "_harold_ret_hobby_",
+        "ignacio",
+        "_ignacio_common_",
+        "_ignacio_rare_",
+        "ijyb",
+        "_ijyb_common_",
+        "_ijyb_rare_",
+        "confused ijyb",
+        "ijyb triumphant",
+        "ilsuiw",
+        "_ilsuiw_common_",
+        "_ilsuiw_rare_",
+        "jessica",
+        "_jessica_common_",
+        "_jessica_rare_",
+        "jeremiah",
+        "_jeremiah_common_",
+        "_jeremiah_rare_",
+        "jeremiah triumphant",
+        "jorgrun",
+        "_jorgrun_common_",
+        "_jorgrun_rare_",
+        "silenced jory",
+        "jory",
+        "_jory_common_",
+        "_jory_silent_",
+        "jory killed",
+        "silent jory killed",
+        "jory triumphant",
+        "joseph",
+        "_joseph_common_",
+        "_joseph_rare_",
+        "josephina",
+        "_josephina_common_",
+        "_josephina_rare_",
+        "josephine",
+        "khufu",
+        "kirke",
+        "lodul",
+        "_lodul_common_",
+        "_lodul_rare_",
+        "louise",
+        "_louise_common_",
+        "_louise_rare_",
+        "louise banished",
+        "maggie",
+        "_maggie_common_",
+        "_maggie_rare_",
+        "mara",
+        "_mara_common_",
+        "_mara_rare_",
+        "mara riddle",
+        "margery",
+        "_spell_colour_",
+        "_margery_spell_results_",
+        "_margery_common_",
+        "_margery_rare_",
+        "maurice",
+        "_maurice_common_",
+        "_maurice_medium_",
+        "_maurice_rare_",
+        "maurice nonstealing",
+        "maurice confused nonstealing",
+        "menkaure",
+        "_menkaure_common_",
+        "_menkaure_rare_",
+        "_menkaure_verb_",
+        "default mennas",
+        "murray",
+        "_murray_common_",
+        "_murray_rare_",
+        "silenced murray",
+        "natasha",
+        "_natasha_common_",
+        "_natasha_rare_",
+        "friendly natasha",
+        "natasha killed",
+        "_natasha_death_common_",
+        "_natasha_death_rare_",
+        "natasha permanently killed",
+        "confused natasha killed",
+        "confused natasha permanently killed",
+        "natasha triumphant",
+        "robin",
+        "_robin_common_",
+        "_robin_rare_",
+        "robin triumphant",
+        "nellie",
+        "_nellie_common_",
+        "_nellie_rare_",
+        "nergalle",
+        "confused nergalle",
+        "nessos",
+        "_nessos_common_",
+        "_nessos_rare_",
+        "nikola",
+        "nobody",
+        "nobody triumph",
+        "nobody killed",
+        "nobody_recollection fire",
+        "nobody_recollection cold",
+        "nobody_recollection xxx",
+        "nobody_recollection undead",
+        "nobody_recollection soldiers",
+        "nobody_recollection rockslide",
+        "nobody_recollection electricity",
+        "nobody_recollection poison",
+        "nobody_recollection fear",
+        "nobody_recollection vermin",
+        "nobody_recollection demons",
+        "norris",
+        "_norris_common_",
+        "_norris_rare_",
+        "_norris_verb_",
+        "norris triumphant",
+        "pikel",
+        "_pikel_common_",
+        "_pikel_rare_",
+        "pikel triumphant",
+        "polyphemus",
+        "_polyphemus_common_",
+        "_polyphemus_rare_",
+        "polyphemus killed",
+        "polyphemus triumphant",
+        "prince ribbit",
+        "_prince_ribbit_common_",
+        "_prince_ribbit_rare_",
+        "_frog_food_",
+        "pargi",
+        "_pargi_common_",
+        "_pargi_rare_",
+        "parghit",
+        "_parghit_common_",
+        "_parghit_rare_",
+        "roxanne",
+        "_roxanne_common_",
+        "_roxanne_medium_",
+        "_roxanne_rare_",
+        "roxanne blink_other_closer",
+        "rupert",
+        "_rupert_common_",
+        "_rupert_rare_",
+        "rupert triumphant",
+        "saint roka",
+        "_saint roka generic_",
+        "related saint roka",
+        "_saint roka rival_",
+        "related beogh saint roka",
+        "saint roka triumphant",
+        "sigmund",
+        "_sigmund_common_",
+        "_sigmund_rare_",
+        "sigmund triumphant",
+        "snorg",
+        "_snorg_common_",
+        "_snorg_rare_",
+        "sojobo",
+        "_sojobo_common_",
+        "_sojobo_rare_",
+        "_sojobo_advice_",
+        "sojobo triumphant",
+        "sonja",
+        "_sonja_common_",
+        "_sonja_rare_",
+        "sonja triumphant",
+        "sprozz",
+        "_sprozz_thief_",
+        "_sprozz_common_",
+        "sprozz triumphant",
+        "terence",
+        "_terence_common_",
+        "_terence_rare_",
+        "terence triumphant",
+        "urug",
+        "_urug_common_",
+        "_urug_rare_",
+        "urug triumphant",
+        "vashnia",
+        "related vashnia",
+        "_vashnia_common_",
+        "_vashnia_rare_",
+        "_vashnia_naga_",
+        "_vashnia_nonnaga_",
+        "vashnia triumphant",
+        "wiglaf",
+        "related wiglaf",
+        "_wiglaf_common_",
+        "_wiglaf_rare_",
+        "_wiglaf_nondwarf_",
+        "xak'krixis",
+        "_xak'krixis_monster_thoughts_",
+        "xak'krixis triumphant",
+        "xtahua",
+        "_xtahua_common_",
+        "_xtahua_rare_",
+        "xtahua triumphant",
+        "xtahua riddle",
+        "zenata",
+        "_zenata_common_",
+        "_zenata_rare_",
+        "zenata triumphant",
+        "orb spider charge",
+        "alderking",
+        "alderking triumphant",
+        "bennu",
+        "bennu killed",
+        "_bennu_death_",
+        "bennu permanently killed",
+        "confused bennu killed",
+        "confused bennu permanently killed",
+        "brain worm",
+        "sewer brain worm",
+        "bullfrog",
+        "chaos spawn",
+        "catoblepas",
+        "cognitogaunt",
+        "silenced cognitogaunt",
+        "friendly cognitogaunt",
+        "confused cognitogaunt",
+        "crystal guardian",
+        "death cob",
+        "death yak",
+        "deep elf high priest",
+        "deep elf sorcerer",
+        "dream sheep",
+        "default electric golem",
+        "erythrospite",
+        "frilled lizard",
+        "hell lord",
+        "crimson imp",
+        "iron imp",
+        "shadow imp",
+        "white imp",
+        "default ice statue",
+        "kobold blastminer",
+        "killer klown",
+        "_killer_klown_common_",
+        "_killer_klown_rare_",
+        "killer klown triumphant",
+        "laughing skull",
+        "friendly laughing skull",
+        "laughing skull triumphant",
+        "moth of wrath",
+        "obsidian bat",
+        "default obsidian statue",
+        "default orange crystal statue",
+        "default hoarfrost cannon",
+        "nekomata",
+        "default profane servitor",
+        "protean progenitor",
+        "friendly protean progenitor",
+        "raven",
+        "reaper",
+        "silenced silent spectre",
+        "thermic dynamo",
+        "tormentor",
+        "_tormentor_",
+        "_tormentor_common_",
+        "_tormentor_rare_",
+        "weeping skull",
+        "_weeping_skull_common_",
+        "_weeping_skull_rare_",
+        "weeping skull triumphant",
+        "_weeps_",
+        "arcanist",
+        "occultist",
+        "yak",
+        "_good_god_",
+        "_holy_being_",
+        "neutral good god 'cap-a'",
+        "friendly good god 'cap-a'",
+        "default 'cap-a'",
+        "holy_being_pacification",
+        "holy_being_pacification_humanoid",
+        "holy_being_pacification_speech",
+        "good god '&'",
+        "_orc_shouts_",
+        "_loudly_or_repeatedly_",
+        "_orc_modifier_",
+        "_generic_orc_speech_",
+        "_orc_heathen_",
+        "orc",
+        "friendly orc",
+        "friendly related orc",
+        "_orc_says_to_foe_",
+        "_orc_says_",
+        "_says_or_shouts_",
+        "related unbeliever orc",
+        "related beogh orc",
+        "_hostile_orc_beogh_believer_speech_",
+        "_hostile_orc_beogh_unbeliever_speech_",
+        "_hostile_orc_beogh_unbeliever_speech_common_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_hostile_orc_beogh_unbeliever_speech_rare_",
+        "_hostile_orc_beogh_believer_speech_rare_",
+        "friendly related beogh orc",
+        "_friendly_beogh_speech_",
+        "_friendly_beogh_speech_common_",
+        "_friendly_beogh_speech_rare_",
+        "related beogh orc high priest",
+        "orc high priest",
+        "related beogh orc sorcerer",
+        "orc sorcerer",
+        "related beogh blorkula the orcula",
+        "related beogh urug",
+        "beogh_converted_orc_reaction_sight",
+        "beogh_converted_orc_speech_sight",
+        "beogh_converted_orc_reaction_battle",
+        "beogh_converted_orc_speech_battle",
+        "beogh_converted_orc_speech_vengeance",
+        "beogh_converted_orc_resurrection",
+        "beogh_converted_orc_reaction_battle_follower",
+        "beogh_converted_orc_speech_battle_follower",
+        "beogh_converted_orc_speech_vengeance_follower",
+        "orc_priest_apostate",
+        "orc_priest_preaching",
+        "orc_apostle_yield",
+        "orc_apostle_dismissed",
+        "orc_apostle_unbanished",
+        "friendly bfb orc",
+        "cherub",
+        "zin angel",
+        "_recites_start_",
+        "_recite_what_",
+        "_lecture_modifier_",
+        "_axioms_of_law_",
+        "_important_subject_",
+        "_recite_subject_",
+        "confused zin angel",
+        "silenced zin angel",
+        "deformed humanoid",
+        "gozag bribe",
+        "gozag permabribe",
+        "spectator",
+        "_spectator_speech_",
+        "goblin sharper",
+        "_deck_of_oddities_card_",
+        "_misplaced_card_",
+        "_deck_of_destruction_line_",
+        "_deck_of_escape_line_",
+        "_deck_of_summoning_line_",
+        "_deck_of_punishment_line_"
+      ],
+      "duplicates": [
+        "_laughs_"
+      ]
+    },
+    {
+      "file": "monspell.txt",
+      "total": 262,
+      "exported": 262,
+      "missing": [],
+      "duplicates": []
+    },
+    {
+      "file": "montitle.txt",
+      "total": 86,
+      "exported": 81,
+      "missing": [
+        "cassandra title",
+        "nobody title",
+        "sprozz title",
+        "wiglaf title",
+        "xak'krixis title"
+      ],
+      "duplicates": []
+    },
+    {
+      "file": "rand_all.txt",
+      "total": 18,
+      "exported": 0,
+      "missing": [
+        "_jewellery_animal_",
+        "_jewellery_special_name_",
+        "_suspicion_no_conflict_name_",
+        "_suspicion_name_",
+        "divine_esteem",
+        "_xom_esteem_",
+        "_time_name_",
+        "_sky_colour_name_",
+        "_sky_or_light_",
+        "_virtue_or_vice_",
+        "_virtue_name_",
+        "_vice_name_",
+        "_destiny_name_",
+        "_number_or_qualifier_",
+        "_thing_names_",
+        "_verbing_",
+        "_adjective_",
+        "_fruit_name_"
+      ],
+      "duplicates": []
+    },
+    {
+      "file": "rand_arm.txt",
+      "total": 19,
+      "exported": 0,
+      "missing": [
+        "_armour_animal_",
+        "_flower_name_",
+        "_critter_name_",
+        "_discomfort_and_inaction_",
+        "_good_or_divine_",
+        "_armour_name_shielding_",
+        "_armour_property_name_",
+        "_wacky_armour_name_",
+        "_celestial_bodies_",
+        "_instrument_name_",
+        "_evil_being_",
+        "_weather_name_",
+        "_profession_name_",
+        "_game_name_",
+        "_politics_name_armour_",
+        "_other_armour_name_",
+        "_card_",
+        "_suit_",
+        "_plain_armour_name_"
+      ],
+      "duplicates": []
+    },
+    {
+      "file": "rand_wpn.txt",
+      "total": 45,
+      "exported": 0,
+      "missing": [
+        "_power_or_anger_",
+        "_power_name_",
+        "_conflict_name_",
+        "_anger_name_",
+        "_anger_quality_",
+        "_anger_possessive_",
+        "_battle_or_war_",
+        "death_or_doom",
+        "_strategy_or_justice_",
+        "_strategy_name_",
+        "_valour_name_",
+        "_justice_name_",
+        "_diviner_name_",
+        "_people_name_",
+        "_weapon_animal_",
+        "_crustacean_name_",
+        "_arachnid_name_",
+        "_amphibian_name_",
+        "_reptile_name_",
+        "_fish_name_",
+        "_bird_name_",
+        "_mammal_name_",
+        "_plant_name_",
+        "_evil_stuff_",
+        "_catastrophe_name_",
+        "_chaos_name_",
+        "_balance_or_order_",
+        "_economics_or_politics_",
+        "_place_name_",
+        "_discomfort_weapon_",
+        "_philosophy_or_science_",
+        "_philosophy_name_",
+        "_science_name_",
+        "_item_name_",
+        "_magic_name_",
+        "_substance_name_",
+        "other_weapon_name",
+        "short_monster_name_",
+        "_monster_name_",
+        "_short_killer_name_",
+        "killer_name",
+        "_long_killer_name_",
+        "_real_weapon_name_",
+        "_joke_weapon_name_",
+        "_plain_weapon_name_"
+      ],
+      "duplicates": []
+    },
+    {
+      "file": "randbook.txt",
+      "total": 72,
+      "exported": 0,
+      "missing": [
+        "book appearance",
+        "book_noun",
+        "_book_noun_on_",
+        "book_name",
+        "random_book_title",
+        "_book_plant_animal_",
+        "xom_book_title",
+        "_book_adjective_",
+        "_the_book_magic_",
+        "_book_magic_",
+        "_occult_adjective_",
+        "_beginners_",
+        "starting level book",
+        "easy level book",
+        "moderate level book",
+        "_powerful_caster_",
+        "_the_powerful_caster_",
+        "_last_or_lost_",
+        "_testament_noun_",
+        "_difficult level book owner_",
+        "difficult level book",
+        "air",
+        "conjuration",
+        "earth",
+        "fire",
+        "hexes",
+        "ice",
+        "necromancy",
+        "_evil_adjective_",
+        "_evil_noun_",
+        "alchemy",
+        "summoning",
+        "translocation",
+        "forgecraft",
+        "air adj",
+        "conjuration adj",
+        "earth adj",
+        "fire adj",
+        "hexes adj",
+        "ice adj",
+        "necromancy adj",
+        "alchemy adj",
+        "summoning adj",
+        "translocation adj",
+        "forgecraft adj",
+        "highlevel conjuration earth owner",
+        "conjuration earth owner",
+        "highlevel conjuration fire owner",
+        "highlevel conjuration necromancy owner",
+        "highlevel conjuration summoning owner",
+        "alchemy earth owner",
+        "highlevel earth summoning owner",
+        "highlevel fire summoning owner",
+        "fire ice owner",
+        "highlevel alchemy necromancy owner",
+        "alchemy necromancy owner",
+        "highlevel conjuration owner",
+        "conjuration owner",
+        "highlevel earth owner",
+        "earth owner",
+        "highlevel fire owner",
+        "ice owner",
+        "air owner",
+        "highlevel necromancy owner",
+        "necromancy owner",
+        "highlevel alchemy owner",
+        "alchemy owner",
+        "highlevel summoning owner",
+        "summoning owner",
+        "highlevel translocation owner",
+        "translocation owner",
+        "hexes owner"
+      ],
+      "duplicates": []
+    },
+    {
+      "file": "randname.txt",
+      "total": 33,
+      "exported": 0,
+      "missing": [
+        "weapon",
+        "talisman",
+        "armour",
+        "jewellery",
+        "trog weapon",
+        "okawaru weapon",
+        "okawaru robe",
+        "okawaru body armour",
+        "okawaru armour",
+        "xom weapon",
+        "xom robe",
+        "xom body armour",
+        "xom armour",
+        "xom jewellery",
+        "ashenzari",
+        "_ashenzari_object_",
+        "_ashenzari_adjective_",
+        "_ashenzari_bound_adjective_",
+        "_ashenzari_celestial_adjective_",
+        "_ashenzari_knowledge_adjective_",
+        "_ashenzari_epithet_",
+        "_ashenzari_heavens_",
+        "general appearance",
+        "weapon appearance",
+        "robe appearance",
+        "body armour appearance",
+        "armour appearance",
+        "_gemstone_",
+        "_jewellery appearance_",
+        "_ring material_",
+        "_amulet material_",
+        "ring appearance",
+        "amulet appearance"
+      ],
+      "duplicates": []
+    },
+    {
+      "file": "shout.txt",
+      "total": 93,
+      "exported": 81,
+      "missing": [
+        "__caw seen",
+        "__caw unseen",
+        "__laugh seen",
+        "__laugh unseen",
+        "player sphinx riddle lines",
+        "_riddle_adj_",
+        "_riddle_fail_acknowledged_",
+        "_riddle_fail_general_",
+        "_riddle_prefix_",
+        "sphinx riddle success",
+        "sphinx riddle failure",
+        "sphinx riddle failure acknowledged"
+      ],
+      "duplicates": []
+    },
+    {
+      "file": "wpnnoise.txt",
+      "total": 65,
+      "exported": 49,
+      "missing": [
+        "zonguldrok greeting",
+        "zonguldrok reprise",
+        "zonguldrok farewell",
+        "zonguldrok hat good",
+        "zonguldrok hat okay",
+        "zonguldrok hat bad",
+        "zonguldrok hat crown of dyrovepreva",
+        "zonguldrok hat hat of the bear spirit",
+        "zonguldrok hat hood of the assassin",
+        "zonguldrok hat mask of the dragon",
+        "zonguldrok hat hat of the alchemist",
+        "zonguldrok hat hat of pondering",
+        "zonguldrok hat crown of vainglory",
+        "fungus thoughts",
+        "eel hand actions",
+        "eel hand solo actions"
+      ],
+      "duplicates": []
+    }
+  ],
+  "selected_files": {
+    "miscast.txt": [
+      {
+        "key": "conjuration miscast player",
+        "source_sha256": "4fa9dea82e4d358aadb19d667befbb2a3710ab9e315466974c6327bb459577c7",
+        "hits": [
+          {
+            "Term": "conjuration",
+            "Translation": "塑能",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "sparks",
+            "Translation": "电火花",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_ELECTRICITY；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Fly",
+            "Translation": "飞行",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Energy",
+            "Translation": "能量",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "conjuration miscast monster",
+        "source_sha256": "04973feba4631918f3597158ae9880818c058f2c5dee6c6d03637a0407eb1533",
+        "hits": [
+          {
+            "Term": "conjuration",
+            "Translation": "塑能",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "sparks",
+            "Translation": "电火花",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_ELECTRICITY；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+          },
+          {
+            "Term": "Fly",
+            "Translation": "飞行",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Light",
+            "Translation": "轻盈",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Energy",
+            "Translation": "能量",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "conjuration miscast unseen",
+        "source_sha256": "e7ec441f4b9b2eb103566f240cbae2095d0c9d55794768ce1cb2d1a5e1de0542",
+        "hits": [
+          {
+            "Term": "conjuration",
+            "Translation": "塑能",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "Air",
+            "Translation": "空气强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Energy",
+            "Translation": "能量",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "hexes miscast player",
+        "source_sha256": "964006e0540bd205b5d16fd8e95cf2641a4c5fe7bad417d3e349d7cef68fe546",
+        "hits": [
+          {
+            "Term": "Hexes",
+            "Translation": "妖术系魔法/妖术强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分敌对魔法学派与物品诅咒，也与 hexer（妖术师）统一。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。\n【装备语境】学派名称用妖术系魔法；装备的 Hexes 标签表示该学派法术强度增强，用妖术强化。"
+          },
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Light",
+            "Translation": "轻盈",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Energy",
+            "Translation": "能量",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "hexes miscast monster",
+        "source_sha256": "d3fd1f5370acca22acb4f281df5435417385a434c918ae07b4addeaeb4a906a6",
+        "hits": [
+          {
+            "Term": "Hexes",
+            "Translation": "妖术系魔法/妖术强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分敌对魔法学派与物品诅咒，也与 hexer（妖术师）统一。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。\n【装备语境】学派名称用妖术系魔法；装备的 Hexes 标签表示该学派法术强度增强，用妖术强化。"
+          },
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "Light",
+            "Translation": "轻盈",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "hexes miscast unseen",
+        "source_sha256": "0558b5d39deddc4de716913fa697f716348a20e349e61e681c883fc3b8dc1ace",
+        "hits": [
+          {
+            "Term": "Hexes",
+            "Translation": "妖术系魔法/妖术强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分敌对魔法学派与物品诅咒，也与 hexer（妖术师）统一。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。\n【装备语境】学派名称用妖术系魔法；装备的 Hexes 标签表示该学派法术强度增强，用妖术强化。"
+          },
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "Air",
+            "Translation": "空气强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Light",
+            "Translation": "轻盈",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "summoning miscast player",
+        "source_sha256": "9186ad9efe3059c0173c373225f8a5361a2f399a9e742d794a8508dbba76cb80",
+        "hits": [
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Air",
+            "Translation": "空气强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "summoning miscast monster",
+        "source_sha256": "d562b495913fb3980d5e61c37ba6f9921fbfa58fb3ce97c09ea3894dde8d4439",
+        "hits": [
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          }
+        ]
+      },
+      {
+        "key": "summoning miscast unseen",
+        "source_sha256": "df0504cf84ddc16a9187b286e0d6516481ebcedd17caa26251bcbbe35f45da0e",
+        "hits": [
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          }
+        ]
+      },
+      {
+        "key": "necromancy miscast player",
+        "source_sha256": "2e60ebf54fc8696fdba08dca60b7a0274d67b342cca6dca0077dfcb8f1dc5b1a",
+        "hits": [
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "Necromancy",
+            "Translation": "死灵系魔法",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+          },
+          {
+            "Term": "Pain",
+            "Translation": "痛苦术/痛苦",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用痛苦术。卡牌、武器印记或普通感受用痛苦，完整物品专名优先。\n【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Shadows",
+            "Translation": "阴影",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Energy",
+            "Translation": "能量",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "necromancy miscast monster",
+        "source_sha256": "6cc9b55a83bdc16c4a6f0f08caf3ae08e0a7927ad171e246ec79f22ce5943905",
+        "hits": [
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "Necromancy",
+            "Translation": "死灵系魔法",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+          },
+          {
+            "Term": "Pain",
+            "Translation": "痛苦术/痛苦",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用痛苦术。卡牌、武器印记或普通感受用痛苦，完整物品专名优先。\n【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+          },
+          {
+            "Term": "Shadows",
+            "Translation": "阴影",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Energy",
+            "Translation": "能量",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "necromancy miscast unseen",
+        "source_sha256": "0550df1d4f1bc6b50823440ecb4d1490040865cb6cc4b78348fb52ae86e18936",
+        "hits": [
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "Necromancy",
+            "Translation": "死灵系魔法",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+          },
+          {
+            "Term": "Air",
+            "Translation": "空气强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Shadows",
+            "Translation": "阴影",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "translocation miscast player",
+        "source_sha256": "534b49bf873e58d855ee0302018b04764aa688393babf8c7431682ea91751c2c",
+        "hits": [
+          {
+            "Term": "floor",
+            "Translation": "地面/楼层/地板/向下取整",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【语境补充 2026-10-21】物理表面按语境用地面或地板。地下城深度用楼层。math.floor 为向下取整函数，代码标识符保留英文。"
+          },
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "translocation miscast monster",
+        "source_sha256": "708b65f43b5e25ced3bf345d0c4f87ac9354390c067727704a3a50871f153cc7",
+        "hits": [
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          }
+        ]
+      },
+      {
+        "key": "translocation miscast unseen",
+        "source_sha256": "89c1bbd4637ae67c8b76a5c6ec4d047de2a84b45ed47ef96c76ff02b2919d018",
+        "hits": [
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          }
+        ]
+      },
+      {
+        "key": "fire miscast player",
+        "source_sha256": "8590ec2afabe33ce9ebd726580f796b849d775a8e0b4dd5fd88a398b5b048305",
+        "hits": [
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Fly",
+            "Translation": "飞行",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Fire",
+            "Translation": "火焰强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Air",
+            "Translation": "空气强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Energy",
+            "Translation": "能量",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "fire miscast monster",
+        "source_sha256": "c0e42c213a12ac608fc70fc73acf205414c22bb0d726c7ac6ed2b7851252dee8",
+        "hits": [
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "Fly",
+            "Translation": "飞行",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Fire",
+            "Translation": "火焰强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Air",
+            "Translation": "空气强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Energy",
+            "Translation": "能量",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "fire miscast unseen",
+        "source_sha256": "4fc0c940cb0fa5d52c539cd584b4eca054f56528e4a8f3663b62e740e7e85523",
+        "hits": [
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "flame",
+            "Translation": "火焰",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_FIRE；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+          },
+          {
+            "Term": "Fire",
+            "Translation": "火焰强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Air",
+            "Translation": "空气强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "ice miscast player",
+        "source_sha256": "f9ac22dae93c5c300b62bc6e15923d3413a73e1ce8ebdde23bd1b581ae19877f",
+        "hits": [
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Conj",
+            "Translation": "塑能强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Ice",
+            "Translation": "寒冰强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "ice miscast monster",
+        "source_sha256": "755d6d1c9583aa7baf154fa54e89313340215ea1b42280c2f5c0cf3eabe2939e",
+        "hits": [
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "Ice",
+            "Translation": "寒冰强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "ice miscast unseen",
+        "source_sha256": "cebaa44965265a7e3c1d5b84098b57914385e71a564d62f13bdba4a97d096b45",
+        "hits": [
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "Ice",
+            "Translation": "寒冰强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Air",
+            "Translation": "空气强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "air miscast player",
+        "source_sha256": "850ad3735bd1df9cc78040581178fcd7a7788275ea1dd2bd84582d07637f2a20",
+        "hits": [
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "Shock",
+            "Translation": "电击术/电击",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【名称统一】法术名称采用“电击术”；实体、伤害、状态或普通动词按语境使用原有译法，不给一般效果描述机械加“术”。"
+          },
+          {
+            "Term": "sparks",
+            "Translation": "电火花",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_ELECTRICITY；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Air",
+            "Translation": "空气强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Energy",
+            "Translation": "能量",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "air miscast monster",
+        "source_sha256": "fa2927dce282a96aba70573247a3bb665cd213f83ef8f61a17e72815b9b84795",
+        "hits": [
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "sparks",
+            "Translation": "电火花",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_ELECTRICITY；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+          },
+          {
+            "Term": "Air",
+            "Translation": "空气强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Energy",
+            "Translation": "能量",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "air miscast unseen",
+        "source_sha256": "d55c5d84455494eae1a12db1302e10cba1d9c158a6adb190a30a075263b181b6",
+        "hits": [
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "Air",
+            "Translation": "空气强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Energy",
+            "Translation": "能量",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "earth miscast player",
+        "source_sha256": "42ce18ce8007b557e59f084fb0cc8a0536f691124e6471ab98253bd8d0fc7292",
+        "hits": [
+          {
+            "Term": "floor",
+            "Translation": "地面/楼层/地板/向下取整",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【语境补充 2026-10-21】物理表面按语境用地面或地板。地下城深度用楼层。math.floor 为向下取整函数，代码标识符保留英文。"
+          },
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Earth",
+            "Translation": "大地强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Energy",
+            "Translation": "能量",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "earth miscast monster",
+        "source_sha256": "db9884a304ae7d6c11aca7a1183aacc691489e6487e4fc1836dfb39f4b757831",
+        "hits": [
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "Earth",
+            "Translation": "大地强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "earth miscast unseen",
+        "source_sha256": "bf95a2b24ede90a259fa4d21d3f84fa165e1eaf651fc66eaa745ca3239b98d12",
+        "hits": [
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "Air",
+            "Translation": "空气强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Earth",
+            "Translation": "大地强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "alchemy miscast player",
+        "source_sha256": "4239a3159c240bd74c94190b80a0a97213e65c5650e27a4996d6f2e655cc65f1",
+        "hits": [
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "turn",
+            "Translation": "回合/转向/变成/轮流",
+            "Part of Speech": "noun",
+            "Variants": "turns",
+            "Note": "【版本/语境】回合/动作叙述用语；不是固定时间单位 aut，动作耗时可不同。 来源：player-act.cc。\n【语境补充 2026-10-21】时间单位用回合。动词及 in turn、turn into 等短语按句意选择转向、变成、轮流等译法。"
+          },
+          {
+            "Term": "Alchemy",
+            "Translation": "炼金术",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "alchemy miscast monster",
+        "source_sha256": "b410a4b57089e31932edbf3463a64c4ccc2fdbad7a22eab50b75043d2509a13f",
+        "hits": [
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "Alchemy",
+            "Translation": "炼金术",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+          },
+          {
+            "Term": "salt",
+            "Translation": "盐尘",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_SALT；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+          }
+        ]
+      },
+      {
+        "key": "alchemy miscast unseen",
+        "source_sha256": "defcc158c7a0080830c232823319e84536c7ad83d2fc8165a22a2a09dc6e1c9a",
+        "hits": [
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "Alchemy",
+            "Translation": "炼金术",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+          },
+          {
+            "Term": "salt",
+            "Translation": "盐尘",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_SALT；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+          },
+          {
+            "Term": "Air",
+            "Translation": "空气强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "forgecraft miscast player",
+        "source_sha256": "654afb192dbb8abf2e35433a266a09288589dc042e839e4dcf63f0396ab722e9",
+        "hits": [
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "Forgecraft",
+            "Translation": "锻造术",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "forgecraft miscast monster",
+        "source_sha256": "bcd4ab4dd44a88ad93b356534fc18db1fa62847062917bf3b8a605c3e2c507fe",
+        "hits": [
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "Forgecraft",
+            "Translation": "锻造术",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+          }
+        ]
+      },
+      {
+        "key": "forgecraft miscast unseen",
+        "source_sha256": "f92853768876557300ff3e9e19ba4b212fb865d57cd0623d53ddcf7d6667a976",
+        "hits": [
+          {
+            "Term": "miscast",
+            "Translation": "施法失误",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+          },
+          {
+            "Term": "Forgecraft",
+            "Translation": "锻造术",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+          },
+          {
+            "Term": "rain",
+            "Translation": "雨水",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_RAIN；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+          },
+          {
+            "Term": "Air",
+            "Translation": "空气强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      }
+    ],
+    "montitle.txt": [
+      {
+        "key": "Agnes title",
+        "source_sha256": "8c3f6d68301c7b9d82ed492bb56652f7e5c6e7dd6b7513099bf77e5e8afeeec1",
+        "hits": [
+          {
+            "Term": "Wanderer",
+            "Translation": "漫游者",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/wanderer.yaml。"
+          },
+          {
+            "Term": "Agnes",
+            "Translation": "阿格尼斯",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Aizul title",
+        "source_sha256": "005970a6d36fee05b02d98d25996d3630dc37848c7a0a66f217233840ea0af89",
+        "hits": [
+          {
+            "Term": "Aizul",
+            "Translation": "艾祖尔",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Amaemon title",
+        "source_sha256": "54ed0629c1d27cb36b46fe79d2b8b5a2801d8503983052a805b1d19876c704cf",
+        "hits": [
+          {
+            "Term": "Amaemon",
+            "Translation": "阿玛埃蒙",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Antaeus title",
+        "source_sha256": "b6bc88c36920bb43496078b1a91b7b8b018bd1e2cfd7f310a45803ce27dfed5e",
+        "hits": [
+          {
+            "Term": "Antaeus",
+            "Translation": "安泰俄斯",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Cocytus",
+            "Translation": "悲叹河",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          }
+        ]
+      },
+      {
+        "key": "Arachne title",
+        "source_sha256": "eca1a302de41045a3e8688c17448e3aec1b2e6e9077152a74256fb3c542d70c9",
+        "hits": [
+          {
+            "Term": "Arachne",
+            "Translation": "阿拉克涅",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Asmodeus title",
+        "source_sha256": "6b0cdfd7ce9e4c7d0ad1deebfbadab76f831c6c356835b935043fd1cf42105a8",
+        "hits": [
+          {
+            "Term": "Gehenna",
+            "Translation": "欣嫩谷",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "Asmodeus",
+            "Translation": "阿斯蒙蒂斯",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Asterion title",
+        "source_sha256": "2a38830408c54b9096532938becabd8c28d22f8d3e043cdbde91c4fcff0aa249",
+        "hits": [
+          {
+            "Term": "Asterion",
+            "Translation": "阿斯忒里翁",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Azrael title",
+        "source_sha256": "6c9ff1ee6a24f7aaed9458e15dd0a84c6d565423f0dc00fed6d8ee3ee23905ce",
+        "hits": [
+          {
+            "Term": "flame",
+            "Translation": "火焰",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_FIRE；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+          },
+          {
+            "Term": "Azrael",
+            "Translation": "阿兹拉尔",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Bai Suzhen title",
+        "source_sha256": "d422b471ae3bfd808eb4e4ee3111befdbac02ad3c3c2a546d3437512d4f5c595",
+        "hits": [
+          {
+            "Term": "Bai Suzhen",
+            "Translation": "白素贞",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "snake",
+            "Translation": "蛇",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Boris title",
+        "source_sha256": "a9cd7791ec9d4bb70fb0c6110a44f8efa2cbb8b6fe465f3b77a0a8995427b6fe",
+        "hits": [
+          {
+            "Term": "Boris",
+            "Translation": "鲍里斯",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Death",
+            "Translation": "死亡",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "Cassandra title",
+        "source_sha256": "96c4b4244e16aa1fb6367bc29b0b3f0ea9ab04d50393cc067570dc749288bef4",
+        "hits": [
+          {
+            "Term": "Cassandra",
+            "Translation": "卡珊德拉",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Cerebov title",
+        "source_sha256": "0684ce30ce72b7f56ef7a6e1028732fbace9a7000e04fc8d3376854fc9908fa8",
+        "hits": [
+          {
+            "Term": "Cerebov",
+            "Translation": "瑟雷波夫",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Fire",
+            "Translation": "火焰强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "Chuck title",
+        "source_sha256": "b6fc4f4f811a6f03e9828661feb4ae6aee4e2b087354a4ce44fe1321b31581b1",
+        "hits": [
+          {
+            "Term": "Chuck",
+            "Translation": "查克",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Crazy Yiuf title",
+        "source_sha256": "cba714ff9c89588ee203ef89cc3577898021051ef040cb71a17b250a19930bbb",
+        "hits": [
+          {
+            "Term": "Crazy Yiuf",
+            "Translation": "疯子尤夫",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Dispater title",
+        "source_sha256": "00cd3fd0d8548a06ef46a6d73148cf0e5bc284f94c5acf47a91e2f0d851e72e0",
+        "hits": [
+          {
+            "Term": "Dispater",
+            "Translation": "迪斯帕特",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Dissolution title",
+        "source_sha256": "6f5d9fba2877d865dc87fdd02e871c630e8cec8f1acb61beaebd3b6fde3b615a",
+        "hits": [
+          {
+            "Term": "Jiyva",
+            "Translation": "吉瓦",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "吉瓦是统治软泥怪的混沌古神。\n【现行神祇】名称由 god_name_jiyva 单独生成，随机后缀不能当作另一位神祇。来源：religion.cc。"
+          },
+          {
+            "Term": "Dissolution",
+            "Translation": "溶解者",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Donald title",
+        "source_sha256": "e4087c933d550ed0e82ae204b56d346ebb7bfa96cb632b6ecc022262328d33c3",
+        "hits": [
+          {
+            "Term": "Donald",
+            "Translation": "唐纳德",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Dowan title",
+        "source_sha256": "2e2db5865d861b68b61e92d32e033c639f77aa401e3cdde01698e7b56b51e19d",
+        "hits": [
+          {
+            "Term": "Dowan",
+            "Translation": "多万",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Duvessa",
+            "Translation": "杜维莎",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Duvessa title",
+        "source_sha256": "3ba0471db288b558e77ffc7975f7b783a24e081f594215f0f4eb45b5ae5241ba",
+        "hits": [
+          {
+            "Term": "Dowan",
+            "Translation": "多万",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Duvessa",
+            "Translation": "杜维莎",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Edmund title",
+        "source_sha256": "3a4c06ea600f050f89429fbc8bda81c72f519bd2f1559e8fe834b04118eb435d",
+        "hits": [
+          {
+            "Term": "Edmund",
+            "Translation": "埃德蒙",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Ereshkigal title",
+        "source_sha256": "d5fe46641c6621c37dbe130b349e1fc2d4b72977b72b7633919ce6d7f113d63d",
+        "hits": [
+          {
+            "Term": "Tartarus",
+            "Translation": "塔尔塔罗斯",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "Ereshkigal",
+            "Translation": "埃列什基伽勒",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Erica title",
+        "source_sha256": "77800e194f938ad72d0b41c418da9a5bea87cb1a6249ed03d80157cb8b9ca26c",
+        "hits": [
+          {
+            "Term": "Erica",
+            "Translation": "埃里卡",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Erolcha title",
+        "source_sha256": "64b2ce185a9bd195f7de44a43d418c427a15ed621c317957cf47d8b4d0f9aca4",
+        "hits": [
+          {
+            "Term": "Erolcha",
+            "Translation": "埃罗尔查",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Eustachio title",
+        "source_sha256": "0824d16a6e6dcb02ccfa7fedabfe99b4d39b56299940814dc0baa39ef55d619e",
+        "hits": [
+          {
+            "Term": "Eustachio",
+            "Translation": "尤斯塔基奥",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Fannar title",
+        "source_sha256": "b38561f14f4a6c82a97aa5404f0e85e5cd45f245d84ba7b9142e429d4014f617",
+        "hits": [
+          {
+            "Term": "Fannar",
+            "Translation": "范纳尔",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Frances title",
+        "source_sha256": "a832af66ec2ccfab63612967e4c38191c5ded758f9328dd1db146e27af544f87",
+        "hits": [
+          {
+            "Term": "Pandemonium",
+            "Translation": "魔窟",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "Frances",
+            "Translation": "弗朗西丝",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Frederick title",
+        "source_sha256": "e6c979f6131bce8afbfa0cfb726b009264101084097f5e31d606360cca830b3c",
+        "hits": [
+          {
+            "Term": "Frederick",
+            "Translation": "弗雷德里克",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Gastronok title",
+        "source_sha256": "7b68a52ced873a0e8a102b813860dbffdfc1de14719ec2453c4ef6ac08dcc8ed",
+        "hits": [
+          {
+            "Term": "Gastronok",
+            "Translation": "加斯特罗诺克",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Ponderous",
+            "Translation": "笨重",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "Geryon title",
+        "source_sha256": "1f0144620df4f9d06df9477d5d72aa8945a9482f1544b7e7a8ddae2c10949729",
+        "hits": [
+          {
+            "Term": "Geryon",
+            "Translation": "革律翁",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Hell",
+            "Translation": "地狱",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          }
+        ]
+      },
+      {
+        "key": "Gloorx Vloq title",
+        "source_sha256": "0653c5d6664a1e0fec8b119ee428f25be09d37c8684f58703331b6b1d0ceda77",
+        "hits": [
+          {
+            "Term": "Darkness",
+            "Translation": "黑暗术",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+          },
+          {
+            "Term": "Gloorx Vloq",
+            "Translation": "格洛克斯·弗洛克",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Grum title",
+        "source_sha256": "bbe58659f36745358e36cdb5c2a16a826ea1570d77237ad4c38bdc0a5c9dba05",
+        "hits": [
+          {
+            "Term": "Hunter",
+            "Translation": "猎手",
+            "Part of Speech": "noun",
+            "Variants": "Hu",
+            "Note": "【现行清单】已与 0.34.1 的背景名称清单对应。来源：dat/jobs/hunter.yaml。"
+          },
+          {
+            "Term": "Grum",
+            "Translation": "格鲁姆",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Grunn title",
+        "source_sha256": "f3969420ddd03525827f64e595ed298157470eca042209aedf646e9482be882a",
+        "hits": [
+          {
+            "Term": "Grunn",
+            "Translation": "格伦",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Harold title",
+        "source_sha256": "8d5bd876036ef3bf5428cd6b26749a69074c8d7e55e9a9c83bbcd88f3a2d74f5",
+        "hits": [
+          {
+            "Term": "Harold",
+            "Translation": "哈罗德",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Ignacio title",
+        "source_sha256": "4972b2300c007e070cee0e13b538855bd30b9123bac258c76347f6c0d1504b84",
+        "hits": [
+          {
+            "Term": "Pain",
+            "Translation": "痛苦术/痛苦",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用痛苦术。卡牌、武器印记或普通感受用痛苦，完整物品专名优先。\n【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+          },
+          {
+            "Term": "Ignacio",
+            "Translation": "伊格纳西奥",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Ilsuiw title",
+        "source_sha256": "581e53b25f541f7c0f371ae353c9560b390ae8f6d3f0ac078f4aaffae01ecb36",
+        "hits": [
+          {
+            "Term": "witch",
+            "Translation": "巫婆",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "Ilsuiw",
+            "Translation": "伊尔苏伊",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Ijyb title",
+        "source_sha256": "18291327f44f10823190957f6074f0def815e344899791448cffc449929d5173",
+        "hits": [
+          {
+            "Term": "Ijyb",
+            "Translation": "伊吉布",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Jessica title",
+        "source_sha256": "5de910996191f847e34e7f294eacc0cbe22dadab1a79e7463f271408cd8fb07b",
+        "hits": [
+          {
+            "Term": "Jessica",
+            "Translation": "杰西卡",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Jeremiah title",
+        "source_sha256": "0a5eeeda80966f26fa25ad53af0fb45a1c1ef404b79117f740d24df438c5d09e",
+        "hits": [
+          {
+            "Term": "barachi",
+            "Translation": "蛙人",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/barachi.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Jeremiah",
+            "Translation": "耶利米",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Jorgrun title",
+        "source_sha256": "51b60bcf8fd5e32a652b3a63b21a7080110cbf843f416438bd90e7964f2fecc0",
+        "hits": [
+          {
+            "Term": "Jorgrun",
+            "Translation": "乔格伦",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Jory title",
+        "source_sha256": "4e37a76f148958e968a31610b4f4df815119a47e81764ceaa61cf69af8bc8bfd",
+        "hits": [
+          {
+            "Term": "Jory",
+            "Translation": "乔里",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Joseph title",
+        "source_sha256": "eff10e01d51a4035f5730db000307a036ce9c2d23a2df145894e5e8f511b8c46",
+        "hits": [
+          {
+            "Term": "Joseph",
+            "Translation": "约瑟夫",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Josephina title",
+        "source_sha256": "f7407baabcccb45808adf0c2454c90718fdcf67a77887704b36a4095411fc35f",
+        "hits": [
+          {
+            "Term": "lich",
+            "Translation": "巫妖",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Josephina",
+            "Translation": "约瑟菲娜",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Ice",
+            "Translation": "寒冰强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "Josephine title",
+        "source_sha256": "86c5c081fd590b8b5b8adbee3b8a1c6c3fa0c9e909f1d289d37a1c4cd44e4b71",
+        "hits": [
+          {
+            "Term": "Necromancer",
+            "Translation": "死灵法师",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/necromancer.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Josephine",
+            "Translation": "约瑟芬",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Khufu title",
+        "source_sha256": "03d337a93f793b1409e8ef0c2f910686cf2b6cace34f2286f859cc916c7fd8c4",
+        "hits": [
+          {
+            "Term": "Khufu",
+            "Translation": "胡夫",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Kirke title",
+        "source_sha256": "4715a5e46141f59482d0f17c18d07b6cd9b308b5862767717d424af963bd3cdd",
+        "hits": [
+          {
+            "Term": "Kirke",
+            "Translation": "喀耳刻",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Lodul title",
+        "source_sha256": "a5372414651e2aac5308bcafddf23eb4b4e1b050d5e9bd4379360ea76b691352",
+        "hits": [
+          {
+            "Term": "Lodul",
+            "Translation": "洛杜尔",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Lom Lobon title",
+        "source_sha256": "28b02f64a564015cc1756a3251951651f4ccf81c202f8b36cc586788bec043b5",
+        "hits": [
+          {
+            "Term": "Lom Lobon",
+            "Translation": "洛姆·洛邦",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Louise title",
+        "source_sha256": "0bc6e7b58191e3df2b826a1271d25ffbea09cef21d8dbe25eb39c1d37f8169bc",
+        "hits": [
+          {
+            "Term": "Louise",
+            "Translation": "路易丝",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Maggie title",
+        "source_sha256": "58b2b5eddbf55fd703eb7324f7571ce901d33f875cd13f849bd4c17bd27102ce",
+        "hits": [
+          {
+            "Term": "Maggie",
+            "Translation": "玛姬",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Mara title",
+        "source_sha256": "c3b07b7f3c54eb6451b80933e59e3fe853b81ca670b443b4caf404c05926683d",
+        "hits": [
+          {
+            "Term": "Mara",
+            "Translation": "玛拉",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Margery title",
+        "source_sha256": "d0cab9c7446eb6001a9528ed097d68dc2276c5284bfd1ff8f153a6516f29e2ce",
+        "hits": [
+          {
+            "Term": "Margery",
+            "Translation": "玛格丽",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Maurice title",
+        "source_sha256": "a6531935f49da38eb39e8429e8ab1896c1a955efb209c0722efa8a0a9dbb89d4",
+        "hits": [
+          {
+            "Term": "Maurice",
+            "Translation": "莫里斯",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Menkaure title",
+        "source_sha256": "611103bcd6193c2fd3241783385361e91b443f8cc96ef011fc7bb796d7d56b75",
+        "hits": [
+          {
+            "Term": "Menkaure",
+            "Translation": "孟卡拉",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Mennas title",
+        "source_sha256": "2c671f2f50978b69023c82bb152f6b725fb3a8bde4150f9300d3c05165e0a079",
+        "hits": [
+          {
+            "Term": "Zin",
+            "Translation": "辛",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "法则之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+          },
+          {
+            "Term": "Mennas",
+            "Translation": "门纳斯",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Mlioglotl title",
+        "source_sha256": "a7175798a23498bcfa330e92e4e6576ad28e998ab1122f92c2cbb07b2134c44e",
+        "hits": [
+          {
+            "Term": "Mlioglotl",
+            "Translation": "姆利奥格洛特尔",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Mnoleg title",
+        "source_sha256": "d4fc77cfd65f7a23596937a620573db80ced5b64eaa82b9ffdc2d1fb4c8649c2",
+        "hits": [
+          {
+            "Term": "Mnoleg",
+            "Translation": "姆诺莱格",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "chaos",
+            "Translation": "混沌",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "Murray title",
+        "source_sha256": "dba1d9fdba3ad6aec66b7f1fd8f2575ed1d1c0c8864c742bba7ed54c346d768a",
+        "hits": [
+          {
+            "Term": "Murray",
+            "Translation": "莫瑞",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Natasha title",
+        "source_sha256": "7bfedeee373cc1dd037c666216f546d8284ea9736d5bf55214dd244579b1d469",
+        "hits": [
+          {
+            "Term": "Natasha",
+            "Translation": "娜塔莎",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Death",
+            "Translation": "死亡",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "Nellie title",
+        "source_sha256": "fe4eb971b387042a92b9c35d37bda91e3ede66571599304eee0d55fa00101a0d",
+        "hits": [
+          {
+            "Term": "Nellie",
+            "Translation": "内莉",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Nergalle title",
+        "source_sha256": "a3177b407448af3bda6d166f577e9ca5927ebb08652f1f671943cd9bd5820ecb",
+        "hits": [
+          {
+            "Term": "Nergalle",
+            "Translation": "内尔加勒",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Nessos title",
+        "source_sha256": "c4a2d68ffa0acf23888ea2a1142666e7bf6058cebfd9351092e6f8175ae8c153",
+        "hits": [
+          {
+            "Term": "Nessos",
+            "Translation": "涅索斯",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Nikola title",
+        "source_sha256": "621003a45fb79b8a31d5ac968fccaf3218e343779de5377a8ee4e603ccab308c",
+        "hits": [
+          {
+            "Term": "Nikola",
+            "Translation": "尼古拉",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Nobody title",
+        "source_sha256": "73a2bff76cc235a1f9fabacd0d9c5f34b9dd8de457b1bd694154abbe53baa340",
+        "hits": [
+          {
+            "Term": "Nobody",
+            "Translation": "无名氏",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Norris title",
+        "source_sha256": "b1846bc58426add5ac5b8b4984b0ab52841b9a835f1ef8c785649d6447e764c2",
+        "hits": [
+          {
+            "Term": "Norris",
+            "Translation": "诺里斯",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Parghit title",
+        "source_sha256": "fd9f256daafb0a3ce0d8e7d675063e17b8c58cdcf11030c8f129e763c36a0538",
+        "hits": [
+          {
+            "Term": "Parghit",
+            "Translation": "帕尔吉特",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Pargi title",
+        "source_sha256": "24b8464183539247aac15767644724c638bc8266a05f9bee33b6b2e44543a594",
+        "hits": [
+          {
+            "Term": "Pargi",
+            "Translation": "帕尔吉",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "meek",
+            "Translation": "温顺",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：温顺。"
+          }
+        ]
+      },
+      {
+        "key": "Pikel title",
+        "source_sha256": "8322321787f64149c6aa563a27742f80c9b8ab6aa69b71882bd843e5442529d4",
+        "hits": [
+          {
+            "Term": "Pikel",
+            "Translation": "皮克尔",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Polyphemus title",
+        "source_sha256": "71ccca45db56b6ff0dd3aaeaaa16fa6a44a3e61c07d5c2f2aed17832e54e1528",
+        "hits": [
+          {
+            "Term": "Polyphemus",
+            "Translation": "波吕斐摩斯",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Robin title",
+        "source_sha256": "af7aa86adcf3a666136688894c932eec297144d3c35fa4c4bcc4c895dd5361f5",
+        "hits": [
+          {
+            "Term": "Robin",
+            "Translation": "罗宾",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "strong",
+            "Translation": "强壮",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：强壮。"
+          }
+        ]
+      },
+      {
+        "key": "Roxanne title",
+        "source_sha256": "ad708e3408833a97bc3dd6be15fc2da63eb3fc2d65e69566b2f46bb203b90c9e",
+        "hits": [
+          {
+            "Term": "Roxanne",
+            "Translation": "罗克珊",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Rupert title",
+        "source_sha256": "2be9fc912a15df36de5d5d312cf05318af37e4520039f19e4c322b06ecd251b6",
+        "hits": [
+          {
+            "Term": "Rupert",
+            "Translation": "鲁珀特",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Saint Roka title",
+        "source_sha256": "7f81086f587b8595dfb9c02cca30c0ffaeedd7b6d2f24efb853cc58eeb66862d",
+        "hits": [
+          {
+            "Term": "Saint Roka",
+            "Translation": "圣徒罗卡",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Sigmund title",
+        "source_sha256": "1bb6864cdd5eb7200aa4e328afbacb5a74a243f598763f6191a58ec68f2b0976",
+        "hits": [
+          {
+            "Term": "Sigmund",
+            "Translation": "西格蒙德",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Snorg title",
+        "source_sha256": "dffd721a691d00499b8dc76e44e0b895251a1c09d420c2330819ef04e6351c01",
+        "hits": [
+          {
+            "Term": "Snorg",
+            "Translation": "斯诺格",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Sojobo title",
+        "source_sha256": "c4ce35f4f9c9e45546bfcf3254b7b195589c6989c2b77812be1489e1ed5747d5",
+        "hits": [
+          {
+            "Term": "tengu",
+            "Translation": "天狗",
+            "Part of Speech": "noun",
+            "Variants": "Te",
+            "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/tengu.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Sojobo",
+            "Translation": "僧正坊",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Sonja title",
+        "source_sha256": "cced367a6c271ada7deebd3561120c316603dc7e2ed6c670d36e88b698acd529",
+        "hits": [
+          {
+            "Term": "Sonja",
+            "Translation": "索尼娅",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Sprozz title",
+        "source_sha256": "6864e0872f355801091f6c834c37449348f175f8c691c1b3a8ae57a95fad17aa",
+        "hits": [
+          {
+            "Term": "Sprozz",
+            "Translation": "斯普罗兹",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Terence title",
+        "source_sha256": "a003bd2f61b590293c38bee75e546e640a1081dc6694aeccd112a78c61112b9f",
+        "hits": [
+          {
+            "Term": "Terence",
+            "Translation": "特伦斯",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Tiamat title",
+        "source_sha256": "d95388e143d53e3f37ad2754039b363460628886884a8ff573c7d7e55d7041c2",
+        "hits": [
+          {
+            "Term": "Tiamat",
+            "Translation": "提亚玛特",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Urug title",
+        "source_sha256": "dfadee10e9d82c4d826d581711a8a63973fc5616c4b21826f1e2bd1c757ccf90",
+        "hits": [
+          {
+            "Term": "Urug",
+            "Translation": "乌鲁格",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Wiglaf title",
+        "source_sha256": "cb8cde8bd81d1fb226fa14b7fd0569fd06382c3199feca68ba44236839ae55e8",
+        "hits": [
+          {
+            "Term": "Wiglaf",
+            "Translation": "威格拉夫",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Vashnia title",
+        "source_sha256": "adeb0aace3b6e1a9061de81c8402b38f87d2cb865512ed7fa639a2b4f77a0b19",
+        "hits": [
+          {
+            "Term": "Vashnia",
+            "Translation": "瓦莎妮娅",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Vv title",
+        "source_sha256": "1cbfd2b63c49b47476f35be59149040a0aad495c4ce23243cd7854e32574cede",
+        "hits": [
+          {
+            "Term": "Vv",
+            "Translation": "薇薇",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Exile",
+            "Translation": "放逐",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+          }
+        ]
+      },
+      {
+        "key": "Xak'krixis title",
+        "source_sha256": "a4dc3d87ee5c65a7bf516dcc6314a170fa252a5eb2fc560ec6c1a8b60b6e20f3",
+        "hits": [
+          {
+            "Term": "Alchemist",
+            "Translation": "炼金术士",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/alchemist.yaml。"
+          },
+          {
+            "Term": "Xak'krixis",
+            "Translation": "扎克克里克西斯",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Xtahua title",
+        "source_sha256": "d559a710bbe7181b1eb07cdb63456d6d935415d2256b060c59cac16ae451ef0d",
+        "hits": [
+          {
+            "Term": "Xtahua",
+            "Translation": "克塔华",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      },
+      {
+        "key": "Zenata title",
+        "source_sha256": "e3ce6bc950226d28f740c7d67642bf3a9890bc0500976571d3810cbcf65ae99f",
+        "hits": [
+          {
+            "Term": "Sheza",
+            "Translation": "西泽",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "Zenata",
+            "Translation": "泽娜塔",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ]
+      }
+    ]
+  }
+}

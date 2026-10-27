@@ -1,0 +1,182 @@
+{
+  "glossary_sha256": "5b0e7563973cc4449b02977ed1d7b4cfb7f9aa33877063cff3f665c99ff50965",
+  "files": [
+    {
+      "file": "ui-scissor.h",
+      "sha256": "97aed56c6e5935b5304c2e969daa7bcc1720724d073f61195ed9da6ab2693e40",
+      "hits": []
+    },
+    {
+      "file": "ui.cc",
+      "sha256": "f956541a5404b5dab357a74ff370cc226d350422c36e02519032c56923c978b5",
+      "hits": [
+        {
+          "term": "Console",
+          "translation": "字符版/控制台/终端",
+          "note": "【0.34.1 修订】DCSS 版本类型，与 Tiles（图形版）成对；命令行控制台本身按上下文另译。 来源：Makefile。\n【语境补充 2026-10-21】游戏显示模式用字符版。系统控制台或终端按上下文用对应词。条件标签保留英文。"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城",
+          "note": ""
+        },
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开",
+          "note": "【0.34.1 修订】名词用出口；命令动词用退出，按上下文处理，不把两者拼成一条输出。 来源：feature-data.h。\n【语境补充 2026-10-21】地点或设施用出口。菜单命令用退出。离开区域的动作用离开。"
+        },
+        {
+          "term": "max",
+          "translation": "最大值",
+          "note": "【0.34.1 修订】通用上限词，不限于 HP/MP；reserves 表储备，不是 maximum 同义词。 来源：player.cc。"
+        },
+        {
+          "term": "skill",
+          "translation": "技能",
+          "note": ""
+        },
+        {
+          "term": "throw",
+          "translation": "投掷",
+          "note": "【0.34.1 修订】本条是动作动词；独立补充 Throwing 技能，不把普通 throwing 自动视为技能名。 来源：skills.cc。\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格",
+          "note": "【语境补充 2026-10-21】与 Console 对举的客户端模式用图形版。资源图像用图块。地图位置的 tiles 用方格。条件标签保留英文。"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会",
+          "note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术或能力标题保留强力术。情态动词 might 表示可能。名词 might 表示力量或威力。"
+        },
+        {
+          "term": "player",
+          "translation": "玩家",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "float",
+          "translation": "飘浮",
+          "note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：飘浮。"
+        }
+      ]
+    },
+    {
+      "file": "ui.h",
+      "sha256": "1d4a81bfa37a0fd0b56d7c944d94f429f9960ce79719f02253cf3ca9700b9acf",
+      "hits": [
+        {
+          "term": "dungeon",
+          "translation": "地下城",
+          "note": ""
+        },
+        {
+          "term": "max",
+          "translation": "最大值",
+          "note": "【0.34.1 修订】通用上限词，不限于 HP/MP；reserves 表储备，不是 maximum 同义词。 来源：player.cc。"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格",
+          "note": "【语境补充 2026-10-21】与 Console 对举的客户端模式用图形版。资源图像用图块。地图位置的 tiles 用方格。条件标签保留英文。"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会",
+          "note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        }
+      ]
+    },
+    {
+      "file": "uncancel.cc",
+      "sha256": "0bd366f3c883defd6e7bdc7ba4089b4f255322ad35cf54182e486be6974a7efa",
+      "hits": [
+        {
+          "term": "god",
+          "translation": "神",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "file": "uncancel.h",
+      "sha256": "f36a92648a227976701f159a1860cf3a3b27f562186e7da2d9ad4ac5235caa7e",
+      "hits": []
+    },
+    {
+      "file": "uncancellable-type.h",
+      "sha256": "fd41b9b69b63e49cb176d1db0f7b865d72eee7419710a7a55300b4f82027b023",
+      "hits": []
+    },
+    {
+      "file": "undead-state-type.h",
+      "sha256": "975e8db84b8ad55fccdedaaa97148dae3cd4684ce25bf023f7b221b087a7519a",
+      "hits": []
+    },
+    {
+      "file": "unicode-wrap.h",
+      "sha256": "ff397f08829fe1afef25abda36a70a1f72117a76c7a679bcf03b4ce2a493d315",
+      "hits": [
+        {
+          "term": "background",
+          "translation": "背景",
+          "note": "【0.34.1 修订】角色创建的起始背景，不是固定职业成长系统。 来源：dat/jobs/*.yaml。"
+        }
+      ]
+    },
+    {
+      "file": "unicode.cc",
+      "sha256": "083001deaa013dc50f9de1c1c054fe881cddb01d97d75ffff9b5d43758522aad",
+      "hits": [
+        {
+          "term": "character",
+          "translation": "角色/字符/性格",
+          "note": "【语境补充 2026-10-21】玩家或游戏人物用角色。键位、文本编码用字符。人物性情用性格。"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术或能力标题保留强力术。情态动词 might 表示可能。名词 might 表示力量或威力。"
+        }
+      ]
+    },
+    {
+      "file": "unicode.h",
+      "sha256": "7f268bb303dc38b9ea981ebb9f1d6ed4c89d9efd6d895f32a3f1b26dc71e9942",
+      "hits": [
+        {
+          "term": "character",
+          "translation": "角色/字符/性格",
+          "note": "【语境补充 2026-10-21】玩家或游戏人物用角色。键位、文本编码用字符。人物性情用性格。"
+        }
+      ]
+    },
+    {
+      "file": "unique-creature-list-type.h",
+      "sha256": "693fabe9b9f553ced1200efb3cf1280d0df3734881ee3d9bb28fa377bedad6b8",
+      "hits": []
+    },
+    {
+      "file": "unique-item-status-type.h",
+      "sha256": "c8411cac62224e7ad82336ae8ebf3faaee617bb99e02c79b73b335f33804c025",
+      "hits": []
+    },
+    {
+      "file": "unwind.h",
+      "sha256": "65329cebe371dce727a482824d244d7f4cdb6d6248915f862f40ef6ef0ae6ccf",
+      "hits": [
+        {
+          "term": "Will",
+          "translation": "意志/将会/会",
+          "note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        }
+      ]
+    }
+  ]
+}

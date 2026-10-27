@@ -331,6 +331,15 @@ endif
 # Should be the first rule, but must come after $(GAME) is set.
 all: greet check-fonts $(GAME) docs webserver
 
+# Export only reviewed, source-matching TextDB entries. Always check so deleted
+# outputs and upstream text edits cannot leave stale Chinese files behind.
+.PHONY: textdb-zh
+textdb-zh:
+	$(QUIET_PYTHON)$(PYTHON) ../../tools/localization/build_textdb.py
+	$(QUIET_PYTHON)$(PYTHON) ../../tools/localization/build_help_documents.py
+
+$(GAME): | textdb-zh
+
 # XX these are set wrong on mac cross-compiling
 LIBPCRE := contrib/install/$(ARCH)/lib/libpcre.a
 LIBSDL2 := contrib/install/$(ARCH)/lib/libSDL2.a
@@ -1266,7 +1275,7 @@ DOC_TEMPLATES   := $(DOC_BASE)/template
 GENERATED_DOCS  := $(DOC_BASE)/aptitudes.txt $(DOC_BASE)/aptitudes-wide.txt $(DOC_BASE)/FAQ.html $(DOC_BASE)/crawl_manual.txt $(DOC_BASE)/quickstart.txt
 # Headers that need to exist before attempting to compile cc files
 GENERATED_HEADERS := art-enum.h config.h mon-mst.h species-type.h job-type.h \
-                     form-data.h $(RLTILES)status-icon-sizes.h
+                     form-data.h $(RLTILES)status-icon-sizes.h i18n-catalogue.h
 # All other generated files will be created later
 GENERATED_FILES := $(GENERATED_HEADERS) art-data.h mi-enum.h \
                    $(RLTILES)/dc-unrand.txt build.h compflag.h dat/dlua/tags.lua \
@@ -1285,6 +1294,13 @@ export WINARCH
 # Update .ver file if SRC_VERSION has changed
 .ver: FORCE
 	@echo '$(SRC_VERSION)' | cmp -s - $@ || echo '$(SRC_VERSION)' > $@
+
+# PO is the editable source; the native executable needs no gettext DLL.
+# Re-check reviewed dynamic expressions when their argument/state construction
+# changes. The exporter omits stale entries, keeping the English branch active.
+I18N_LOG_SOURCES = Makefile ability.cc ability.h abyss.cc acquire.cc actor.cc adjust.cc areas.cc arena.cc art-data.h art-data.txt art-func.h artefact.cc attack.cc attack.h attitude-change.cc bane-data.h bane-type.h beam.cc beam.h behold.cc branch-data.h branch.cc branch.h chardump.cc chardump.h cloud.cc cloud.h clua.cc colour.cc command.cc dactions.cc dat/clua/autofight.lua dat/clua/automagic.lua dat/clua/delays.lua dat/clua/kills.lua dat/clua/stash.lua dat/database/colourname.txt dat/database/godspeak.txt dat/database/montitle.txt dat/database/shout.txt dat/database/wpnnoise.txt dat/database/zh/shout.txt dat/des/portals/arena.des dat/des/portals/bailey.des dat/des/portals/bazaar.des dat/des/portals/crucible.des dat/des/portals/desolation.des dat/des/portals/gauntlet.des dat/des/portals/icecave.des dat/des/portals/necropolis.des dat/des/portals/ossuary.des dat/des/portals/sewer.des dat/des/portals/trove.des dat/des/portals/volcano.des dat/des/portals/wizlab.des dat/des/portals/ziggurat.des dat/descript/mutations.txt dat/descript/passives.txt dat/descript/status.txt dat/descript/zh/mutations.txt dat/dlua/debug.lua dat/dlua/dungeon.lua dat/dlua/explorer.lua dat/dlua/fnwrap.lua dat/dlua/gauntlet.lua dat/dlua/ghost.lua dat/dlua/init.lua dat/dlua/iter.lua dat/dlua/layout/geoelf.lua dat/dlua/layout/geoelf_corridors.lua dat/dlua/layout/geoelf_directions.lua dat/dlua/layout/geoelf_glyphs.lua dat/dlua/layout/geoelf_rooms.lua dat/dlua/layout/hyper.lua dat/dlua/layout/hyper_caves.lua dat/dlua/layout/hyper_city.lua dat/dlua/layout/hyper_debug.lua dat/dlua/layout/hyper_decor.lua dat/dlua/layout/hyper_fort.lua dat/dlua/layout/hyper_paint.lua dat/dlua/layout/hyper_place.lua dat/dlua/layout/hyper_rooms.lua dat/dlua/layout/hyper_shapes.lua dat/dlua/layout/hyper_strategy.lua dat/dlua/layout/hyper_usage.lua dat/dlua/layout/layout.lua dat/dlua/layout/minimum_map_area.lua dat/dlua/layout/omnigrid.lua dat/dlua/layout/procedural.lua dat/dlua/layout/procedural_complex.lua dat/dlua/layout/procedural_primitives.lua dat/dlua/layout/procedural_transform.lua dat/dlua/layout/rooms_primitive.lua dat/dlua/layout/theme.lua dat/dlua/layout/vector.lua dat/dlua/layout/zonify.lua dat/dlua/lm_1way.lua dat/dlua/lm_door.lua dat/dlua/lm_fog.lua dat/dlua/lm_items.lua dat/dlua/lm_mon_prop.lua dat/dlua/lm_monst.lua dat/dlua/lm_named_hatch.lua dat/dlua/lm_pdesc.lua dat/dlua/lm_props.lua dat/dlua/lm_replica.lua dat/dlua/lm_timed.lua dat/dlua/lm_tmsg.lua dat/dlua/lm_toll.lua dat/dlua/lm_trans.lua dat/dlua/lm_trig.lua dat/dlua/lm_trove.lua dat/dlua/loadmaps.lua dat/dlua/luamark.lua dat/dlua/macro.lua dat/dlua/mapinit.lua dat/dlua/persist.lua dat/dlua/point.lua dat/dlua/profiler.lua dat/dlua/sanity.lua dat/dlua/sprint.lua dat/dlua/stress.lua dat/dlua/tags.lua dat/dlua/test.lua dat/dlua/tutorial.lua dat/dlua/userbase.lua dat/dlua/util.lua dat/dlua/v_debug.lua dat/dlua/v_layouts.lua dat/dlua/v_paint.lua dat/dlua/v_rooms.lua dat/dlua/v_shapes.lua dat/dlua/vault.lua dat/dlua/ziggurat.lua dat/lua-wiz/damtally.lua database.cc database.h death-curse.cc decks.cc decks.h delay.cc describe-god.cc describe-god.h describe-spells.cc describe.cc describe.h dgl-message.cc dgn-overview.cc dgn-overview.h dgn-shoals.cc directn.cc directn.h duration-data.h end.cc evoke.cc evoke.h exclude.cc exclude.h fearmonger.cc feature-data.h fight.cc fight.h files.cc fineff.cc fineff.h form-data.h format.cc format.h god-abil.cc god-abil.h god-blessing.cc god-companions.cc god-companions.h god-conduct.cc god-conduct.h god-passive.cc god-prayer.cc god-wrath.cc hints-display.h hints.cc hiscores.cc hiscores.h i18n-item.h i18n.cc i18n.h invent.cc item-name.cc item-name.h item-prop.cc item-prop.h item-use.cc items.cc items.h jobs.cc kills.cc kills.h known-items.cc known-items.h l-crawl.cc l-item.cc l-you.cc loading-screen.cc lookup-help.cc lookup-help.h m-display.h macro.cc main.cc makeitem.cc map-knowledge.cc melee-attack.cc melee-attack.h menu.cc menu.h message-stream.cc message.cc message.h misc.cc mon-abil.cc mon-act.cc mon-aura.cc mon-behv.cc mon-cast.cc mon-clone.cc mon-death.cc mon-ench.cc mon-explode.cc mon-info-flag-name.h mon-info.cc mon-info.h mon-place.cc mon-poly.cc mon-project.cc mon-speak.cc mon-tentacle.cc mon-transit.cc mon-util.cc mon-util.h monster.cc monster.h movement.cc mutation-data.h mutation.cc mutation.h nearby-danger.cc nearby-danger.h newgame.cc newgame.h ng-input.cc notes.cc notes.h options.h orb.cc ouch.cc output.cc output.h p-display.h player-act.cc player-equip.cc player-notices.cc player-reacts.cc player-save-info.h player-stats.cc player.cc player.h potion.cc prompt.cc prompt.h quiver.cc quiver.h random.cc random.h ranged-attack.cc ranged-attack.h religion.cc religion.h s-display.h sacrifice-data.h scripts/csim.lua scripts/genlevel.lua scripts/genmap.lua scripts/place-population.lua scripts/placement.lua scripts/seed_explorer.lua scripts/training_simu.lua shopping.cc shopping.h shout.cc shout.h skill-menu.cc skills.cc skills.h species-data.h species.cc spl-book.cc spl-cast.cc spl-cast.h spl-clouds.cc spl-damage.cc spl-data.h spl-goditem.cc spl-goditem.h spl-miscast.cc spl-monench.cc spl-other.cc spl-selfench.cc spl-summoning.cc spl-transloc.cc spl-util.cc spl-util.h spl-vortex.cc stairs.cc startup.cc stash.cc stash.h state.cc status.cc status.h store.h t-display.h target-compass.cc target.cc target.h teleport.cc teleport.h terrain.cc terrain.h test/abyss_shift.lua test/bounce.lua test/bounce2.lua test/bstair-gen.lua test/corpse.lua test/fsim.lua test/los_csc.lua test/los_maps.lua test/los_symm.lua test/moncast.lua test/monplace.lua test/monster-name.lua test/mut_species.lua test/mutation.lua test/rune-gen.lua test/seed_explorer.lua test/shoal-hut.lua test/snake-rune.lua test/unique.lua test/uniquegen.lua test/vault_catalog.lua test/youdie.lua throw.cc throw.h tilereg-abl.cc tilereg-cmd.cc tilereg-dgn.cc tilereg-doll.cc tilereg-inv.cc tilereg-mem.cc tilereg-msg.cc tilereg-skl.cc tilereg-spl.cc tilereg-stat.cc tilereg-tab.cc tilesdl.cc tileweb.cc timed-effects.cc transform.cc transform.h trap-def.h traps.cc traps.h travel.cc travel.h unicode.cc unicode.h version.cc version.h view.cc view.h viewmap.cc viewmap.h wiz-dgn.cc wiz-dump.cc wiz-fsim.cc wiz-item.cc wiz-mon.cc wiz-you.cc wizard.cc wizard.h x-display.h xom.cc xp-evoker-data.h zap-data.h zap-type.h zot.cc zot.h
+i18n-catalogue.h: $(I18N_LOG_SOURCES) ../../localization/zh_CN/ui.po ../../localization/manifests/ui-sample.json ../../tools/localization/build_catalogue.py
+	$(QUIET_PYTHON)$(PYTHON) ../../tools/localization/build_catalogue.py --manifest ../../localization/manifests/ui-sample.json --po ../../localization/zh_CN/ui.po --output $@
 
 PKG_SRC_DIR   := $(SRC_PKG_BASE)-$(SRC_VERSION)
 SRC_PKG_TAR   := $(PKG_SRC_DIR).tar.xz
@@ -1354,6 +1370,10 @@ endif
 GAME_OBJS=$(OBJECTS) main.o $(EXTRA_OBJECTS)
 MONSTER_OBJS=$(OBJECTS) util/monster/monster-main.o $(EXTRA_OBJECTS)
 CATCH2_TEST_OBJECTS = $(OBJECTS) $(TEST_OBJECTS) catch2-tests/catch_amalgamated.o catch2-tests/test_main.o $(EXTRA_OBJECTS)
+
+# Catch2 also needs C++14 when building the executable directly, without the
+# coverage-enabled catch2-tests target. Gameplay objects remain C++11.
+$(TEST_OBJECTS) catch2-tests/catch_amalgamated.o catch2-tests/test_main.o: STDFLAG = -std=c++14
 
 
 ifneq (,$(filter plug-and-play-tests,$(MAKECMDGOALS)))
@@ -1824,7 +1844,7 @@ header-build-tests: $(HEADER_OBJECTS)
 $(CONTRIB_LIBS): .contrib-libs
 	@:
 
-.contrib-libs: .cflags
+.contrib-libs: .cflags contrib/Makefile
 ifneq (,$(CONTRIBS))
 	@echo "    * Need to build contribs: $(CONTRIBS)"
 	+@$(MAKE) -C contrib $(CONTRIBS) ARCH=$(ARCH)

@@ -4,6 +4,7 @@
  **/
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "adjust.h"
 
@@ -27,8 +28,8 @@ static void _adjust_ability();
 
 void adjust()
 {
-    mprf(MSGCH_PROMPT, "Adjust (g)ear, (s)pells, (a)bilities, "
-                       "(p)otions, sc(r)olls or e(v)ocables? ");
+    mprf(MSGCH_PROMPT, "%s", ui_translate("a.adjust", "Adjust (g)ear, (s)pells, (a)bilities, "
+                       "(p)otions, sc(r)olls or e(v)ocables? "));
 
     const int keyin = toalower(get_ch());
 
@@ -72,7 +73,7 @@ void adjust_item(int selector, item_def* to_adjust)
 
     if (!to_adjust)
     {
-        const int from_slot = prompt_invent_item("Adjust which item?",
+        const int from_slot = prompt_invent_item(ui_translate("a.adjust", "Adjust which item?"),
                                        menu_type::invlist, selector, OPER_ANY);
         if (prompt_failed(from_slot))
             return;
@@ -82,7 +83,7 @@ void adjust_item(int selector, item_def* to_adjust)
         mprf_nocap("%s", to_adjust->name(DESC_INVENTORY_EQUIP).c_str());
     }
 
-    const int to_slot = prompt_invent_item("Adjust to which letter? ",
+    const int to_slot = prompt_invent_item(ui_translate("a.adjust", "Adjust to which letter? "),
                                            menu_type::invlist,
                                            selector, OPER_ANY,
                                            invprompt_flag::unthings_ok
@@ -109,7 +110,7 @@ static void _adjust_spell()
     }
 
     // Select starting slot
-    mprf(MSGCH_PROMPT, "Adjust which spell? ");
+    mprf(MSGCH_PROMPT, "%s", ui_translate("a.adjust", "Adjust which spell? "));
     int keyin = list_spells(false, false, false, false, "adjust");
 
     if (!isaalpha(keyin))
@@ -124,7 +125,7 @@ static void _adjust_spell()
 
     if (spell == SPELL_NO_SPELL)
     {
-        mpr("You don't know that spell.");
+        mpr(ui_translate("a.adjust", "You don't know that spell."));
         return;
     }
 
@@ -135,7 +136,7 @@ static void _adjust_spell()
     keyin = 0;
     while (!isaalpha(keyin))
     {
-        mprf(MSGCH_PROMPT, "Adjust to which letter? ");
+        mprf(MSGCH_PROMPT, "%s", ui_translate("a.adjust", "Adjust to which letter? "));
         keyin = get_ch();
         if (key_is_escape(keyin))
         {
@@ -183,27 +184,27 @@ static void _adjust_ability()
 
     if (talents.empty())
     {
-        mpr("You don't currently have any abilities.");
+        mpr(ui_translate("a.adjust", "You don't currently have any abilities."));
         return;
     }
 
-    mprf(MSGCH_PROMPT, "Adjust which ability? ");
+    mprf(MSGCH_PROMPT, "%s", ui_translate("a.adjust", "Adjust which ability? "));
     int selected = choose_ability_menu(talents);
 
     // If we couldn't find anything, cancel out.
     if (selected == -1)
     {
-        mpr("No such ability.");
+        mpr(ui_translate("a.adjust", "No such ability."));
         return;
     }
 
     char old_key = static_cast<char>(talents[selected].hotkey);
 
-    mprf_nocap("%c - %s", old_key, ability_name(talents[selected].which).c_str());
+    mprf_nocap("%c - %s", old_key, ability_display_name(talents[selected].which).c_str());
 
     const int index1 = letter_to_index(old_key);
 
-    mprf(MSGCH_PROMPT, "Adjust to which letter?");
+    mprf(MSGCH_PROMPT, "%s", ui_translate("a.adjust", "Adjust to which letter?"));
 
     const int keyin = get_ch();
 

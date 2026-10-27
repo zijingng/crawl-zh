@@ -1,0 +1,167 @@
+{
+  "entries": [
+    {
+      "key": "_armour_animal_",
+      "context": "textdb:database/rand_arm.txt:_armour_animal_",
+      "source_sha256": "d106842d2983834c9c1a513db95881879de4a3c26263af3e99cb582f832c79fb",
+      "review_status": "reviewed",
+      "review_batch": "database-46",
+      "dependencies": []
+    },
+    {
+      "key": "book_name",
+      "context": "textdb:database/randbook.txt:book_name",
+      "source_sha256": "fb2b2cda78db24eee4b50b15a060300aaf31ab569f5190cded04d21c36219884",
+      "review_status": "reviewed",
+      "review_batch": "database-46",
+      "dependencies": [
+        {
+          "source": "database/randbook.txt",
+          "key": "_book_noun_on_",
+          "source_sha256": "c3d8d56897715535c32fdc55ff144b9425dca4653195e4743d2900a45d815634",
+          "translation_sha256": "eb185d565d2f107e380c5d6211b3608cc0ca9478a949437ea4c280412ab3e2c0"
+        },
+        {
+          "source": "database/randbook.txt",
+          "key": "book_noun",
+          "source_sha256": "a14accaf0d6d1a7c8e038bc75c5e4cfc7e82784b68175c064ef58a4209c7b9ad",
+          "translation_sha256": "1e52b86da6af68c89ca0088b367325ee37b6185aab28792db944f69c55cd0a9f"
+        }
+      ]
+    },
+    {
+      "key": "air",
+      "context": "textdb:database/randbook.txt:air",
+      "source_sha256": "1030909744c511049fb7f957da99d56d832c19cd24bea403dcdff4f545444fab",
+      "review_status": "reviewed",
+      "review_batch": "database-46",
+      "dependencies": []
+    },
+    {
+      "key": "conjuration",
+      "context": "textdb:database/randbook.txt:conjuration",
+      "source_sha256": "97184f43f518b10252d688501f4bfd9ff25d7719d4275547b4a4af6c3813473f",
+      "review_status": "reviewed",
+      "review_batch": "database-46",
+      "dependencies": []
+    },
+    {
+      "key": "earth",
+      "context": "textdb:database/randbook.txt:earth",
+      "source_sha256": "60f263212cbeeec428eb26825d40cbbd068543b6a53a599f9cb18eba290e6eb6",
+      "review_status": "reviewed",
+      "review_batch": "database-46",
+      "dependencies": []
+    },
+    {
+      "key": "fire",
+      "context": "textdb:database/randbook.txt:fire",
+      "source_sha256": "e9f7ecc487076910db69bdd163667a557d3d42f495ca8236a4cc15b1ff4e2a82",
+      "review_status": "reviewed",
+      "review_batch": "database-46",
+      "dependencies": []
+    },
+    {
+      "key": "hexes",
+      "context": "textdb:database/randbook.txt:hexes",
+      "source_sha256": "a3ceb66925a855f02424b47992adf32bfc302ec63183d12bff2e2913ea8d75e7",
+      "review_status": "reviewed",
+      "review_batch": "database-46",
+      "dependencies": []
+    },
+    {
+      "key": "ice",
+      "context": "textdb:database/randbook.txt:ice",
+      "source_sha256": "b5ea7820c25fccbe8f9a34aebb24b0341278bb8947f055b37b75f174a7642afa",
+      "review_status": "reviewed",
+      "review_batch": "database-46",
+      "dependencies": []
+    },
+    {
+      "key": "necromancy",
+      "context": "textdb:database/randbook.txt:necromancy",
+      "source_sha256": "584e2e4195470a83d2c6cd0ca0c518a2aee5162b7319f08711d9d10e7a920b3c",
+      "review_status": "reviewed",
+      "review_batch": "database-46",
+      "dependencies": [
+        {
+          "source": "database/randbook.txt",
+          "key": "_evil_adjective_",
+          "source_sha256": "01c54bc26d22ae9bb2a72fb997c8ccb6961a756aec18941a008ad7f30b175c0c",
+          "translation_sha256": "2e3b350ab6988bba8b8b52109e3b294157f563f1a1077fd63651d3761b360dff"
+        },
+        {
+          "source": "database/randbook.txt",
+          "key": "_evil_noun_",
+          "source_sha256": "59be59bb83b132ffdbf396d7735fc5d795a68af143a1d0aee331cf06cfd83ff5",
+          "translation_sha256": "70ee78afed14d23a695dd60521f7e07fda7b40c2b3d7f84b32c8bad97d677c25"
+        }
+      ]
+    },
+    {
+      "key": "_evil_adjective_",
+      "context": "textdb:database/randbook.txt:_evil_adjective_",
+      "source_sha256": "01c54bc26d22ae9bb2a72fb997c8ccb6961a756aec18941a008ad7f30b175c0c",
+      "review_status": "reviewed",
+      "review_batch": "database-46",
+      "dependencies": []
+    },
+    {
+      "key": "_evil_noun_",
+      "context": "textdb:database/randbook.txt:_evil_noun_",
+      "source_sha256": "59be59bb83b132ffdbf396d7735fc5d795a68af143a1d0aee331cf06cfd83ff5",
+      "review_status": "reviewed",
+      "review_batch": "database-46",
+      "dependencies": []
+    },
+    {
+      "key": "alchemy",
+      "context": "textdb:database/randbook.txt:alchemy",
+      "source_sha256": "bc84aa81425a541c3d9db833f24ba6feb9bcf4a5c93eab66eb7f1b2e638768e6",
+      "review_status": "reviewed",
+      "review_batch": "database-46",
+      "dependencies": []
+    },
+    {
+      "key": "summoning",
+      "context": "textdb:database/randbook.txt:summoning",
+      "source_sha256": "1a7967b18f98bd9c65afb24bad2169a067808977d976e650a67cfb63c3aaa089",
+      "review_status": "reviewed",
+      "review_batch": "database-46",
+      "dependencies": []
+    },
+    {
+      "key": "translocation",
+      "context": "textdb:database/randbook.txt:translocation",
+      "source_sha256": "746cab1c26db8b90d591032b3c9f436bbaa4e9859db61e6a083e0aed48b743c6",
+      "review_status": "reviewed",
+      "review_batch": "database-46",
+      "dependencies": []
+    },
+    {
+      "key": "forgecraft",
+      "context": "textdb:database/randbook.txt:forgecraft",
+      "source_sha256": "3e645e07d6fa62019eb0c565222921b2337f1ad938b3587db749b3076959b7f5",
+      "review_status": "reviewed",
+      "review_batch": "database-46",
+      "dependencies": []
+    }
+  ],
+  "candidates": {
+    "_armour_animal_": 129,
+    "book_name": 2,
+    "air": 42,
+    "conjuration": 46,
+    "earth": 52,
+    "fire": 46,
+    "hexes": 43,
+    "ice": 30,
+    "necromancy": 56,
+    "_evil_adjective_": 23,
+    "_evil_noun_": 13,
+    "alchemy": 90,
+    "summoning": 46,
+    "translocation": 46,
+    "forgecraft": 88
+  }
+}

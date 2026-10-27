@@ -5,6 +5,8 @@
 
 #pragma once
 
+struct ui_arg;
+
 #include <set>
 
 #include "enum.h"
@@ -106,6 +108,9 @@ public:
     virtual string get_transform_description() const { return description; }
 
     virtual string get_description(bool past_tense = false) const;
+    string display_description(bool past_tense = false) const;
+    string display_long_name() const;
+    string display_form_message(const string &original, bool ending = false) const;
     virtual string transform_message() const;
     virtual string get_untransform_message() const;
 
@@ -139,6 +144,7 @@ public:
     virtual brand_type get_uc_brand() const { return uc_brand; }
 
     virtual string get_uc_attack_name(string default_name) const;
+    ui_arg uc_attack_display_arg(const string& default_name) const;
     virtual int slay_bonus(bool /*random*/ = true, int /*skill*/ = -1) const { return 0; }
     virtual int will_bonus() const { return 0; };
     virtual int get_ac_bonus(int skill = -1) const;
@@ -168,6 +174,7 @@ public:
 
     string player_prayer_action() const;
     string melding_description(bool itemized) const;
+    string display_melding_description(bool itemized) const;
 
     virtual vector<pair<string, string>> get_fakemuts() const;
     virtual vector<pair<string, string>> get_bad_fakemuts() const;

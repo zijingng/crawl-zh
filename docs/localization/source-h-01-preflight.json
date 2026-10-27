@@ -1,0 +1,755 @@
+{
+  "glossary_sha256": "52a49cacc2a408942ddf87655c491c1631c5ad7f7286553126fd959e04f66ee0",
+  "files": [
+    {
+      "file": "hash.cc",
+      "sha256": "2fc07a663d11d634d99faddf9e397024ba76021c0d6679341fec54dbe0a1eff3",
+      "hits": []
+    },
+    {
+      "file": "hash.h",
+      "sha256": "3b4e2609559b7f55a03bdd1ed9c7e3f719ba4287dce530f44b5b0e43a3dc4fa7",
+      "hits": []
+    },
+    {
+      "file": "hints.cc",
+      "sha256": "9d9ded1a4b054f96420d17a600e412829b4bae26c9ac47278bcb250fca670a78",
+      "hits": [
+        {
+          "term": "ability",
+          "translation": "能力"
+        },
+        {
+          "term": "Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "altar",
+          "translation": "祭坛"
+        },
+        {
+          "term": "aptitude",
+          "translation": "技能天资/天资"
+        },
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "Ashenzari",
+          "translation": "艾申扎利"
+        },
+        {
+          "term": "Bazaar",
+          "translation": "市集"
+        },
+        {
+          "term": "book",
+          "translation": "魔法书/书/手册"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "Console",
+          "translation": "字符版/控制台/终端"
+        },
+        {
+          "term": "corpse",
+          "translation": "尸体"
+        },
+        {
+          "term": "dart",
+          "translation": "飞镖"
+        },
+        {
+          "term": "downstairs",
+          "translation": "下楼楼梯"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "entrance",
+          "translation": "入口"
+        },
+        {
+          "term": "exclusion",
+          "translation": "移动禁区"
+        },
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开"
+        },
+        {
+          "term": "experience",
+          "translation": "经验值"
+        },
+        {
+          "term": "Fighter",
+          "translation": "战士"
+        },
+        {
+          "term": "Fighting",
+          "translation": "战斗/作战/格斗"
+        },
+        {
+          "term": "ghost",
+          "translation": "鬼魂"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Gozag",
+          "translation": "哥萨戈"
+        },
+        {
+          "term": "hostile",
+          "translation": "敌对"
+        },
+        {
+          "term": "Hunter",
+          "translation": "猎手"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "manual",
+          "translation": "手册/手动"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "mutations",
+          "translation": "变异"
+        },
+        {
+          "term": "necromantic",
+          "translation": "死灵的"
+        },
+        {
+          "term": "Orb of Zot",
+          "translation": "佐特宝珠"
+        },
+        {
+          "term": "pieces",
+          "translation": "碎片"
+        },
+        {
+          "term": "portal",
+          "translation": "传送门"
+        },
+        {
+          "term": "potion",
+          "translation": "药水"
+        },
+        {
+          "term": "Ru",
+          "translation": "入"
+        },
+        {
+          "term": "school",
+          "translation": "魔法学派/流派"
+        },
+        {
+          "term": "Shield",
+          "translation": "格挡值/盾牌/保护"
+        },
+        {
+          "term": "Shields",
+          "translation": "盾牌/保护"
+        },
+        {
+          "term": "shortbow",
+          "translation": "短弓"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "spellbook",
+          "translation": "魔法书"
+        },
+        {
+          "term": "Spellcasting",
+          "translation": "施法"
+        },
+        {
+          "term": "Spider Nest",
+          "translation": "蜘蛛巢"
+        },
+        {
+          "term": "staff",
+          "translation": "法杖/工作人员"
+        },
+        {
+          "term": "statue",
+          "translation": "雕像"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "upstairs",
+          "translation": "上楼楼梯"
+        },
+        {
+          "term": "Uskayaw",
+          "translation": "阿斯卡亚"
+        },
+        {
+          "term": "wand",
+          "translation": "魔杖"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        },
+        {
+          "term": "Yredelemnul",
+          "translation": "伊莱德莱姆努尔"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特"
+        },
+        {
+          "term": "Berserker",
+          "translation": "狂战士"
+        },
+        {
+          "term": "Conjurer",
+          "translation": "塑能师"
+        },
+        {
+          "term": "Ranged Weapons",
+          "translation": "远程武器"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "piety",
+          "translation": "虔诚"
+        },
+        {
+          "term": "encumbrance",
+          "translation": "累赘"
+        },
+        {
+          "term": "barding",
+          "translation": "身甲"
+        },
+        {
+          "term": "berserk",
+          "translation": "狂暴"
+        },
+        {
+          "term": "Magic Dart",
+          "translation": "魔法飞弹"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Ensnare",
+          "translation": "蛛网缠缚/束缚/诱捕"
+        },
+        {
+          "term": "Flight",
+          "translation": "飞行术/飞行/一群"
+        },
+        {
+          "term": "Melee",
+          "translation": "近战"
+        },
+        {
+          "term": "body armour",
+          "translation": "躯干防具"
+        },
+        {
+          "term": "Jump",
+          "translation": "跃击"
+        },
+        {
+          "term": "the Dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "the Spider Nest",
+          "translation": "蜘蛛巢"
+        },
+        {
+          "term": "the Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "a bazaar",
+          "translation": "市集"
+        },
+        {
+          "term": "giant",
+          "translation": "巨人"
+        },
+        {
+          "term": "oklob plant",
+          "translation": "奥克罗布植物"
+        },
+        {
+          "term": "plant",
+          "translation": "植物"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "spider",
+          "translation": "蜘蛛"
+        },
+        {
+          "term": "Wrath",
+          "translation": "神怒"
+        }
+      ]
+    },
+    {
+      "file": "hints.h",
+      "sha256": "0677f287021e5085457a8de40b692cb5e0769277e229536dbf96d7e123033741",
+      "hits": [
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        }
+      ]
+    },
+    {
+      "file": "hiscores.cc",
+      "sha256": "683130f230bbfb5d2e0edbd57def87232c7aec56bddcbb419521ab722cfc2508",
+      "hits": [
+        {
+          "term": "AC",
+          "translation": "护甲值"
+        },
+        {
+          "term": "Beogh",
+          "translation": "比欧弗"
+        },
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "Console",
+          "translation": "字符版/控制台/终端"
+        },
+        {
+          "term": "damnation",
+          "translation": "天谴/诅咒"
+        },
+        {
+          "term": "downstairs",
+          "translation": "下楼楼梯"
+        },
+        {
+          "term": "draining",
+          "translation": "吸能/汲取/耗损"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "experience",
+          "translation": "经验值"
+        },
+        {
+          "term": "explore mode",
+          "translation": "探索模式"
+        },
+        {
+          "term": "gate",
+          "translation": "门"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "ogre",
+          "translation": "食人魔"
+        },
+        {
+          "term": "Pandemonium",
+          "translation": "魔窟"
+        },
+        {
+          "term": "robust",
+          "translation": "强健"
+        },
+        {
+          "term": "shadow",
+          "translation": "影"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "stats",
+          "translation": "属性"
+        },
+        {
+          "term": "the Shining One",
+          "translation": "光明神"
+        },
+        {
+          "term": "throw",
+          "translation": "投掷"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特"
+        },
+        {
+          "term": "Deep Elf",
+          "translation": "地底精灵"
+        },
+        {
+          "term": "Djinni",
+          "translation": "灯灵"
+        },
+        {
+          "term": "Human",
+          "translation": "人类"
+        },
+        {
+          "term": "Mountain Dwarf",
+          "translation": "山地矮人"
+        },
+        {
+          "term": "Reaver",
+          "translation": "掠夺者"
+        },
+        {
+          "term": "Shapeshifter",
+          "translation": "变形者"
+        },
+        {
+          "term": "Lugonu",
+          "translation": "卢戈努"
+        },
+        {
+          "term": "SH",
+          "translation": "格挡值"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "piety",
+          "translation": "虔诚"
+        },
+        {
+          "term": "penance",
+          "translation": "赎罪"
+        },
+        {
+          "term": "aut",
+          "translation": "时间单位"
+        },
+        {
+          "term": "poison",
+          "translation": "毒"
+        },
+        {
+          "term": "petrified",
+          "translation": "已石化"
+        },
+        {
+          "term": "Disjunction",
+          "translation": "离散术"
+        },
+        {
+          "term": "Freeze",
+          "translation": "冰冻术/冰冻/冻结/冻伤"
+        },
+        {
+          "term": "Sticky Flame",
+          "translation": "黏附火焰"
+        },
+        {
+          "term": "Sleep",
+          "translation": "睡眠术"
+        },
+        {
+          "term": "Creeping Frost",
+          "translation": "蔓延寒霜"
+        },
+        {
+          "term": "Flight",
+          "translation": "飞行术/飞行/一群"
+        },
+        {
+          "term": "Melee",
+          "translation": "近战"
+        },
+        {
+          "term": "the Dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "flame",
+          "translation": "火焰"
+        },
+        {
+          "term": "Cassandra",
+          "translation": "卡珊德拉"
+        },
+        {
+          "term": "Ijyb",
+          "translation": "伊吉布"
+        },
+        {
+          "term": "Robin",
+          "translation": "罗宾"
+        },
+        {
+          "term": "death knight",
+          "translation": "死亡骑士"
+        },
+        {
+          "term": "dwarf",
+          "translation": "矮人"
+        },
+        {
+          "term": "elf",
+          "translation": "精灵"
+        },
+        {
+          "term": "glowing shapeshifter",
+          "translation": "发光变形怪"
+        },
+        {
+          "term": "knight",
+          "translation": "骑士"
+        },
+        {
+          "term": "manticore",
+          "translation": "蝎尾狮"
+        },
+        {
+          "term": "orc",
+          "translation": "兽人"
+        },
+        {
+          "term": "pandemonium lord",
+          "translation": "魔窟领主"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "program bug",
+          "translation": "程序缺陷"
+        },
+        {
+          "term": "undying armoury",
+          "translation": "不死军械库"
+        },
+        {
+          "term": "Wild Magic",
+          "translation": "狂野魔法"
+        },
+        {
+          "term": "Wrath",
+          "translation": "神怒"
+        },
+        {
+          "term": "the Orb",
+          "translation": "宝珠"
+        }
+      ]
+    },
+    {
+      "file": "hiscores.h",
+      "sha256": "ee56ac77a65a00a10bc7a924c440bdbbd232d7ae4ee06d6f33dfa63f2e9e75e3",
+      "hits": [
+        {
+          "term": "AC",
+          "translation": "护甲值"
+        },
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "drain",
+          "translation": "吸能/吸取/消耗"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "explore mode",
+          "translation": "探索模式"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "Ziggurat",
+          "translation": "神塔"
+        },
+        {
+          "term": "SH",
+          "translation": "格挡值"
+        },
+        {
+          "term": "piety",
+          "translation": "虔诚"
+        },
+        {
+          "term": "penance",
+          "translation": "赎罪"
+        },
+        {
+          "term": "aut",
+          "translation": "时间单位"
+        },
+        {
+          "term": "a ziggurat",
+          "translation": "神塔"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "holy-word-source-type.h",
+      "sha256": "23300d32ffb4630adb7f7d1ce362560ba381677b294e4ed76a59aa2d58f96bb6",
+      "hits": [
+        {
+          "term": "Recite",
+          "translation": "诵经"
+        },
+        {
+          "term": "Wrath",
+          "translation": "神怒"
+        }
+      ]
+    }
+  ],
+  "shared_baselines": [
+    {
+      "file": "database.cc",
+      "sha256": "6d1f9acd1f0dbff3f7a42fa299a40b1a4f9f0625bb1959fdd2b90471cedb096c"
+    },
+    {
+      "file": "database.h",
+      "sha256": "907d48551da5272288a158d524d4b335461d0b81feb6f2c37366842694ae4b74"
+    },
+    {
+      "file": "end.cc",
+      "sha256": "b883847a3d30102eab31ee94146045817982e514d66c535414e55595b921351d"
+    },
+    {
+      "file": "Makefile",
+      "sha256": "5a9f7ffcb79c0d9d8dcc6225a3bd5c89232c11005d6c0b0e7faaa28bfff0e240"
+    }
+  ]
+}

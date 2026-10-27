@@ -1,0 +1,879 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "selected": [
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_people_name_",
+      "english": "Ancients\n\nCoward\n\nEnemy\n\nFool\n\nGenius\n\nHero\n\nJester\n\nKing\n\nMadman\n\nMessenger\n\nPariah\n\nPhilosopher\n\nPriest\n\nQueen\n\nSaviour\n\nScapegrace\n\nScavenger\n\nTraitor\n\nw:15\n@_diviner_name_@\n",
+      "hits": []
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_weapon_animal_",
+      "english": "@_arachnid_name_@\n\n@_crustacean_name_@\n\n@_fish_name_@\n\n@_amphibian_name_@\n\n@_reptile_name_@\n\n@_bird_name_@\n\n@_mammal_name_@\n\n",
+      "hits": []
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_crustacean_name_",
+      "english": "Ant\n\nBarnacle\n\nBee\n\nBlowfly\n\nBristletail\n\nButterfly\n\nCaddisfly\n\nCrab\n\nCrayfish\n\nDamselfly\n\nDragonfly\n\nFirefly\n\nFlea\n\nGnat\n\nHornet\n\nJune-Bug\n\nKrill\n\nLacewing\n\nLobster\n\nLouse\n\nMayfly\n\nMosquito\n\nMoth\n\nPill Bug\n\nPrawn\n\nShrimp\n\nSilverfish\n\nWasp\n\nWeta\n\nWoodlouse\n\nYellowjacket\n\n",
+      "hits": [
+        {
+          "Term": "butterfly",
+          "Translation": "蝴蝶",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "crab",
+          "Translation": "蟹",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "hornet",
+          "Translation": "大黄蜂",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "moth",
+          "Translation": "蛾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_arachnid_name_",
+      "english": "Harvestman\n\nScorpion\n\nSpider\n\nTick\n\n",
+      "hits": [
+        {
+          "Term": "scorpion",
+          "Translation": "蝎子",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "spider",
+          "Translation": "蜘蛛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_amphibian_name_",
+      "english": "Axolotl\n\nCaecilian\n\nFrog\n\nHellbender\n\nNewt\n\nOlm\n\nSalamander\n\nSiren\n\nToad\n\n",
+      "hits": [
+        {
+          "Term": "salamander",
+          "Translation": "沙罗曼蛇",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_reptile_name_",
+      "english": "Alligator\n\nAsp\n\nCrocodile\n\nGecko\n\nGharial\n\nKrait\n\nLeatherback\n\nLizard\n\nPython\n\nRattlesnake\n\nSkink\n\nTerrapin\n\nTortoise\n\nTurtle\n\nViper\n\n",
+      "hits": [
+        {
+          "Term": "alligator",
+          "Translation": "短吻鳄",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "crocodile",
+          "Translation": "鳄鱼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_fish_name_",
+      "english": "Big Fish\n\nEel\n\nLamprey\n\nSalmon\n\nShark\n\n",
+      "hits": []
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_bird_name_",
+      "english": "Apostlebird\n\nArctic Tern\n\nAuk\n\nBustard\n\nBuzzard\n\nCardinal\n\nCassowary\n\nDove\n\nDuck\n\nEmu\n\nFlamingo\n\nForest Kingfisher\n\nFulmar\n\nGoose\n\nGuillemot\n\nHawk\n\nHummingbird\n\nHoatzin\n\nKiwi\n\nKookaburra\n\nMoa\n\nNoisy Friarbird\n\nOstrich\n\nOwl\n\nPenguin\n\nPigeon\n\nPotoo\n\nPuffin\n\nRainbow Bee-Eater\n\nRazorbill\n\nRhea\n\nRoseate Spoonbill\n\nSage Grouse\n\nShrike\n\nStork\n\nSwan\n\nSuperb Lyrebird\n\nTawny Frogmouth\n\nVulture\n\n",
+      "hits": [
+        {
+          "Term": "Forest",
+          "Translation": "魔法森林",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Forest（规范缩写 Forest）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_mammal_name_",
+      "english": "Ass\n\nBadger\n\nBear\n\nBoar\n\nFox\n\nGoat\n\nRat\n\nw:5\nStoat\n\nTiger\n\nw:5\nWeasel\n\nWhale\n\nWolf\n",
+      "hits": [
+        {
+          "Term": "bear",
+          "Translation": "熊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "rat",
+          "Translation": "老鼠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "wolf",
+          "Translation": "狼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_plant_name_",
+      "english": "Eggplant\n\nChickpea\n\nLettuce\n\nRadish\n\nSugar Beet\n\nShallot\n\nTomato\n\nTurnip\n\nWhelk\n\n\nw:5\nMagic Mushroom\n\nMushroom\n\nPuffball\n\nSlime-mould\n\nToadstool\n",
+      "hits": [
+        {
+          "Term": "plant",
+          "Translation": "植物",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "toadstool",
+          "Translation": "毒蘑菇",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_philosophy_or_science_",
+      "english": "@_philosophy_name_@\n\n@_science_name_@\n",
+      "hits": []
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_item_name_",
+      "english": "Candelabrum\n\nCandle\n\nChain\n\nCoin\n\nCup\n\nEgg\n\nFeather\n\nGirdle\n\nGlobe\n\nHorn\n\nKey\n\nOrb\n\nPillar\n\nPurse\n\nRing\n\nScroll\n\nShip\n\nTent\n\nVase\n\nVine\n\nWalnut\n\nWheel\n\nYoke\n\nBrain\n\nFoot\n\nHand\n\nHead\n\nHeart\n\nKidney\n\nMouth\n\nThroat\n\nTooth\n\n",
+      "hits": []
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "other_weapon_name",
+      "english": "Broken Luck\n\nButchery\n\nCheckmate\n\nConversion\n\nCrawling\n\nDesertification\n\nDoors\n\nEntrepreneurial Spirit\n\nFalse Hope\n\nFulguration\n\nGin and Tonic\n\nGrontol\n\nHard Scrabble\n\nInterdependent Arising\n\nIrrepressible Laughter\n\nNo Interval\n\nPrescription\n\nRed Wine\n\nRes Nullius\n\nSpontaneous Combustion\n\nTerra Nullius\n\nTraps\n\nUndoing\n\nVodka\n\nthe Blind Eye\n\nthe Briny Deep\n\nthe Empty Page\n\nthe Final Chapter\n\nthe Omega Point\n\nthe Open Hand\n\nthe Pharaoh's Fist\n\nthe Real Monster\n\nthe Spinneret\n\nthe Two Names\n\nthe Unkillable\n\nthe Vendetta\n\n",
+      "hits": [
+        {
+          "Term": "Spirit",
+          "Translation": "灵魂护盾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "short_monster_name_",
+      "english": "w:1\nAcarine\n\nBeast\n\nBeetle\n\nDemon\n\nDragon\n\nGiant\n\nGoblin\n\nHydra\n\nImp\n\nJelly\n\nw:1\nLacertilian\n\nNewt\n\nOgre\n\nSpider\n\nw:1\nTestudine\n",
+      "hits": [
+        {
+          "Term": "hydra",
+          "Translation": "海德拉",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "ogre",
+          "Translation": "食人魔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【版本/语境】怪物名；现行玩家种族为 Oni，不直接把 Ogre 当作当前种族。 来源：dat/species/oni.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "dragon",
+          "Translation": "龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "giant",
+          "Translation": "巨人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "goblin",
+          "Translation": "地精",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "jelly",
+          "Translation": "胶怪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "spider",
+          "Translation": "蜘蛛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_monster_name_",
+      "english": "@short_monster_name_@\n\n@player_species@\n\nKiller Bee\n\nKiller Klown\n\nOrb Guardian\n",
+      "hits": [
+        {
+          "Term": "killer bee",
+          "Translation": "杀人蜂",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "species",
+          "Translation": "种族",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Killer Klown",
+          "Translation": "杀戮小丑",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Orb Guardian",
+          "Translation": "宝珠守卫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_short_killer_name_",
+      "english": "bane\n\nslayer\n",
+      "hits": [
+        {
+          "Term": "Bane",
+          "Translation": "灾厄",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "killer_name",
+      "english": "'s Bane\n\n's Curse\n\n's Death\n\n's Doom\n\n's Foe\n\n's Peril\n\n's Regret\n",
+      "hits": [
+        {
+          "Term": "Bane",
+          "Translation": "灾厄",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_long_killer_name_",
+      "english": "'s Death Toll\n\n's Demise\n\n's Funeral\n\n's Nightmare\n\n's Undoing\n\nw:1\n's Looming Annihilation\n",
+      "hits": [
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_real_weapon_name_",
+      "english": "Arbiter\n\nArcanum\n\nConcordance\n\nConservator\n\nDeath Rattle\n\nDragon's Tongue\n\nEarthworm\n\nEmbalmer\n\nEviscerator\n\nGrim\n\nGrim Tooth\n\nHell-Harrower\n\nHellblazer\n\nLeviticus\n\nLifebane\n\nMurmur\n\nPendulum\n\nSarcophage\n\nTormentor\n\nTransmigrator\n\nTrog's @_anger_quality_@\n\nUltimatum\n\nUndertaker\n\nw:5\nWidowermaker\n\nw:5\nWidowmaker\n\nWorm\n\nWorm's Wrath\n\nGram\n",
+      "hits": [
+        {
+          "Term": "Hell",
+          "Translation": "地狱",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Trog",
+          "Translation": "特洛戈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "worm",
+          "Translation": "蠕虫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Death Rattle",
+          "Translation": "死亡喉鸣",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "dragon",
+          "Translation": "龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "tormentor",
+          "Translation": "折磨者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "undertaker",
+          "Translation": "殡葬师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Wrath",
+          "Translation": "神怒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_joke_weapon_name_",
+      "english": "Aubergine\n\nBackscratcher\n\nBingo\n\nBlob\n\nBrush\n\nBung\n\nCookie Cutter\n\nETAOIN SHRDLU\n\nEgg\n\nFish\n\nGiant's Toothpick\n\nGlobulus\n\nGrom\n\nGrum\n\nHulk\n\nLorem Ipsum\n\nMud Pie of Death\n\nNo More Talking\n\nOmelette\n\nOx\n\nQ\n\nRaisin\n\nRummage\n\nSecret Weapon\n\nStarlight\n\nString\n\nStringbean\n\nTattletale\n\nThing\n\nWith Two Names\n\nX\n\nXom's @_xom_esteem_@\n\nZ\n\nGlorpo\n\nLoopy\n\nPlojy\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Grum",
+          "Translation": "格鲁姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "giant",
+          "Translation": "巨人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_plain_weapon_name_",
+      "english": "w:15\n@short_monster_name_@@_short_killer_name_@\n\nw:8\n@_monster_name_@@killer_name@\n\nw:2\n@short_monster_name_@@_long_killer_name_@\n\nw:1\n@player_death@\n\nw:15\n@_real_weapon_name_@\n\nw:5\n@_joke_weapon_name_@\n",
+      "hits": [
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_arm.txt",
+      "key": "_flower_name_",
+      "english": "Daffodils\n\nDaisies\n\nLilacs\n\nPeriwinkles\n\nPurple Dead-Nettles\n\nTulips\n\nViolets\n\nthe Garden\n\nthe Horehound\n\nthe Lily\n\nthe Lotus Blossom\n\nthe Rose\n\nthe Thistle\n\n",
+      "hits": []
+    },
+    {
+      "source": "database/rand_arm.txt",
+      "key": "_critter_name_",
+      "english": "Alphagorgon\n\nSlorg\n\nEight Boll Weevils\n\nGrue\n\nHot Ocelot\n\nJabberwock\n\nw:1\nWere-rabbit\n\nWumpus\n",
+      "hits": []
+    },
+    {
+      "source": "database/rand_arm.txt",
+      "key": "_discomfort_and_inaction_",
+      "english": "Bad Feelings\n\nBitterness\n\nDisappointment\n\nEntitlement\n\nFailure\n\nInsecurity\n\nMinor Irritation\n\nNegation\n\nServitude\n\nSubmission\n\nVexation\n\nApathy\n\nBoredom\n\nEnnui\n\nInaction\n\nLethargy\n\nLifelessness\n\nNegligence\n\nOblivion\n\nOmission\n\nRestlessness\n\nthe Doldrums\n\n",
+      "hits": [
+        {
+          "Term": "minor",
+          "Translation": "较小的",
+          "Part of Speech": "adj",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "lethargy",
+          "Translation": "迟缓",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：迟缓。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_arm.txt",
+      "key": "_good_or_divine_",
+      "english": "Amelioration\n\nAwe\n\nBeauty\n\nBirdsong\n\nCleverness\n\nContentment\n\nCreativity\n\nCuriosity\n\nFreedom\n\nFun\n\nHappiness\n\nJoy\n\nKnowledge\n\nLeaves\n\nLiberty\n\nLife\n\nLucidity\n\nMirth\n\nMusic\n\nNew Discoveries\n\nSatisfaction\n\nSurprise\n\nTender Moments\n\nWonder\n\nthe Good\n\nthe Leaf\n\nDivine Compulsion\n\nDivine Intervention\n\nIntercession\n\nMiracles\n\nSalvation\n\nthe Invisible Hand\n\nthe Will of the Gods\n\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_arm.txt",
+      "key": "_armour_name_shielding_",
+      "english": "Complete Protection\n\nDeath's Door\n\nDefence\n\nExclusion\n\nFortification\n\nImpermeability\n\nInviolability\n\nRefuge\n\nRepulsion\n\nShielding\n\nthe Armoured One\n\nthe Bulwark\n\nthe Gate\n\nthe Saviour\n\nthe Stone Wall\n\nthe Unbroken\n\nthe Untouchables\n\nthe Ward\n\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "exclusion",
+          "Translation": "移动禁区",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "gate",
+          "Translation": "门",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Death's Door",
+          "Translation": "死亡之门",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Repulsion",
+          "Translation": "排斥",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_arm.txt",
+      "key": "_armour_property_name_",
+      "english": "Death Resistance\n\nDisguise\n\nFashionability\n\nFullness\n\nGrace\n\nGravitas\n\nImpressiveness\n\nLeast Resistance\n\nPolish\n\nPrivacy\n\nProtective Custody\n\nResilience\n\nShadows and Fog\n\nSupple Strength\n\nWeightlessness\n\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "shadow",
+          "Translation": "影",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Strength",
+          "Translation": "力量/强度/威力",
+          "Part of Speech": "noun",
+          "Variants": "Str",
+          "Note": "三大基础属性之一\n【语境补充 2026-10-21】Str 属性用力量。法术、效果或攻击的 strength 按语境用强度或威力。"
+        },
+        {
+          "Term": "Shadows",
+          "Translation": "阴影",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_arm.txt",
+      "key": "_wacky_armour_name_",
+      "english": "Absence\n\nAnaesthesia\n\nBaldness\n\nCompression\n\nDecompression\n\nDramatic Exits\n\nDuck's Teeth\n\nForking Paths\n\nGood Intentions\n\nHadjma\n\nHairiness\n\nHedging\n\nHubris\n\nIncorporation\n\nIndecent Exposure\n\nIndemnity\n\nLimited Liability\n\nLoss\n\nLove and Death\n\nMezcal\n\nPathos\n\nPhilately\n\nPlasticity\n\nPoor Excuses\n\nPrecision Catastrophes\n\nSpace\n\nTerror\n\nThrice Damned Blessings\n\nToo Many Cooks\n\nUntold Secrets\n\nVlad\n\nWeirdness\n\nthe Arcane\n\nthe Armadillo\n\nthe Blind Marksman\n\nthe Earth\n\nthe Eternal Fruit\n\nthe Loofah\n\nthe Old and Reckless\n\nthe Onion\n\nthe Pink Corner\n\nthe Plethaurus\n\nthe Road Less Travelled\n\nthe True Pharaoh\n\nthe Unemployed Unperson\n\nthe Vacuum\n\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "exit",
+          "Translation": "出口/退出/离开",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】名词用出口；命令动词用退出，按上下文处理，不把两者拼成一条输出。 来源：feature-data.h。\n【语境补充 2026-10-21】地点或设施用出口。菜单命令用退出。离开区域的动作用离开。"
+        },
+        {
+          "Term": "reckless",
+          "Translation": "鲁莽",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：鲁莽。"
+        },
+        {
+          "Term": "Earth",
+          "Translation": "大地强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_arm.txt",
+      "key": "_celestial_bodies_",
+      "english": "w:5\nBlue Moon\n\nComet\n\nConstellations\n\nEvening Star\n\nw:5\nHarvest Moon\n\nw:5\nMidnight Sun\n\nMoon\n\nMorning Star\n\nNorthern Lights\n\nPlanets\n\nPleiades\n\nStars\n\nSun\n\nBlack Moon\n",
+      "hits": [
+        {
+          "Term": "Light",
+          "Translation": "轻盈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_arm.txt",
+      "key": "_instrument_name_",
+      "english": "Chimes\n\nPan-Flutes\n\nTrumpets\n\nthe Accordion\n\nthe Bagpipe\n\nthe Bells\n\nthe Fiddle\n\nthe Fife\n\nthe Flute\n\nthe Gusle\n\nthe Harp\n\nthe Kazoo\n\nthe Kettle-Drum\n\nthe Lute\n\nthe Trombone\n\n",
+      "hits": []
+    },
+    {
+      "source": "database/rand_arm.txt",
+      "key": "_evil_being_",
+      "english": "Demons\n\nGreater Demons\n\nLesser Demons\n\nTempters\n\nVampiric Thralls\n\nw:5\nthe Archfiend\n\nthe Demon Prince\n\nthe Devil\n\nthe Devil's Advocate\n\nthe Devil's Team\n\nthe Evil One\n\nthe Fiend\n\nthe Furies\n\nthe Imp\n\nthe Iron Devil\n\nthe Lich-sworn\n\nthe Little Devil\n\nthe Prince of Darkness\n\nthe Tormentor\n\nthe Villain\n\n",
+      "hits": [
+        {
+          "Term": "lich",
+          "Translation": "巫妖",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Darkness",
+          "Translation": "黑暗术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "tormentor",
+          "Translation": "折磨者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_arm.txt",
+      "key": "_weather_name_",
+      "english": "Blue Skies\n\nBoiling Hail\n\nChill Winds\n\nCloud Cover\n\nDust Devils\n\nHowling Wind\n\nLightning Storm\n\nPerpetual Drought\n\nPleasant Breezes\n\nQuiet Fog\n\nSoft Rains\n\nSpring Thaw\n\nthe Blizzard\n\nthe First Snow\n\nthe Hurricane\n\nthe Thunderstorm\n\n",
+      "hits": [
+        {
+          "Term": "rain",
+          "Translation": "雨水",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_RAIN；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_arm.txt",
+      "key": "_profession_name_",
+      "english": "Apprentice\n\nApothecary\n\nBaker\n\nBarber Surgeon\n\nBard\n\nBeekeeper\n\nBeggar\n\nBlacksmith\n\nBuccaneer\n\nButcher\n\nCandlemaker\n\nCarpenter\n\nCartwright\n\nCobbler\n\nCooper\n\nDitch-Digger\n\nEngineer\n\nFarmer\n\nFarrier\n\nFisher\n\nFletcher\n\nFurrier\n\nGardener\n\nGoldsmith\n\nGravedigger\n\nGuardian\n\nGuild-Master\n\nGuilds\n\nHunter\n\nJourneyman\n\nLearner\n\nMerchant\n\nMiller\n\nMinstrel\n\nMoneychanger\n\nMonk\n\nPirate\n\nPlaywright\n\nSailor\n\nScribe\n\nSilversmith\n\nSoldier\n\nStonemason\n\nTanner\n\nTeacher\n\nThinker\n\nUndertaker\n\nWatchman\n\nWeaver\n\nWheelwright\n\n",
+      "hits": [
+        {
+          "Term": "Hunter",
+          "Translation": "猎手",
+          "Part of Speech": "noun",
+          "Variants": "Hu",
+          "Note": "【现行清单】已与 0.34.1 的背景名称清单对应。来源：dat/jobs/hunter.yaml。"
+        },
+        {
+          "Term": "Monk",
+          "Translation": "武僧",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/monk.yaml。"
+        },
+        {
+          "Term": "undertaker",
+          "Translation": "殡葬师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_arm.txt",
+      "key": "_game_name_",
+      "english": "Dice, Bag, and Bottle\n\nFun and Games\n\nParlour Games\n\nthe Game Afoot\n\nthe Game of Kings\n\nthe Great Game\n\nFollow the Leader\n\nHide-and-Seek\n\nHopscotch\n\nLeapfrog\n\nMumblety Peg\n\nPeek-a-Boo\n\nthe King of the Hill\n\nCard Tricks\n\nHangman\n\nJigsaw\n\nMarbles\n\nNoughts and Crosses\n\nSnakes and Ladders\n\nWhack-A-Mole\n\nthe Dice\n\nthe Game of Life\n\n",
+      "hits": [
+        {
+          "Term": "snake",
+          "Translation": "蛇",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_arm.txt",
+      "key": "_politics_name_armour_",
+      "english": "Coronation\n\nDemocracy\n\nNobility\n\nRoyalty\n\nSovereignty\n\nthe Ban\n\nthe Burgomaster\n\nthe Cast Vote\n\nthe Castellan\n\nthe City\n\nthe Commoners\n\nthe Country\n\nthe Crown\n\nthe Doge\n\nthe Duchess\n\nthe Duke\n\nthe Empire\n\nthe Failed Coup\n\nthe Greedy\n\nthe King\n\nthe Komtur\n\nthe Mutiny\n\nthe Oligarchy\n\nthe Peasants\n\nthe Prince\n\nthe Princeling\n\nthe Princess\n\nthe Queen\n\nthe Rabble\n\nthe Republic\n\nthe Suburbs\n\nthe Townfolk\n\nthe Voivode\n\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_arm.txt",
+      "key": "_card_",
+      "english": "Two\n\nThree\n\nFour\n\nFive\n\nSix\n\nSeven\n\nEight\n\nNine\n\nTen\n\nPage\n\nKnight\n\nQueen\n\nKing\n\nAce\n",
+      "hits": [
+        {
+          "Term": "knight",
+          "Translation": "骑士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_arm.txt",
+      "key": "_suit_",
+      "english": "Cups\n\nPentacles\n\nSwords\n\nWands\n",
+      "hits": [
+        {
+          "Term": "wand",
+          "Translation": "魔杖",
+          "Part of Speech": "noun",
+          "Variants": "wand of",
+          "Note": "【使用约束】wand of 是组合前缀；先确定完整物品名再处理中文词序。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_arm.txt",
+      "key": "_plain_armour_name_",
+      "english": "Damnable Contraption\n\nEarthly Heaven\n\nForget-Me-Not\n\nHero's Friend\n\nPut-Me-On\n\nTrusted Companion\n\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_arm.txt",
+      "key": "_other_armour_name_",
+      "english": "Filth\n\nw:5\nGrot\n\nw:5\nGrottiness\n\nSlovenliness\n\nBedevilment\n\nBroken Taboos\n\nGestures\n\nMagic\n\nMuttered Phrases\n\nSorcery\n\nWords of Power\n\nthe Arcane\n\nCrawling\n\nDisaster\n\nDogmatism\n\nFeasting\n\nGoing Fast\n\nHappy Babbling\n\nHedge Wizardry\n\nImperfection\n\nInevitability\n\nInsatiable Hunger\n\nInsurance\n\nMisanthropy\n\nPerfidy\n\nTime Monsters\n\nTrial and Error\n\nUnambiguity\n\nUndesirable Species\n\nWasted Space\n\nWrong Decisions\n\nthe @_card_@ of @_suit_@\n\nthe Hanged Man\n\nthe Lost Path\n\nthe Moon Troll\n\nthe Orb\n\nthe Orb Guardian\n\nthe Other World\n\nthe Sacrificial Victim\n\nthe Slightly Bent\n\nthe Storm King\n\nRavioli\n\nSpaghetti\n\nTortelloni\n\nFarfalle\n\nRotini\n\nVermicelli\n\nMacaroni\n\nStrozzapreti\n\nw:1\nthe Pastamancer\n\nMeatballs\n",
+      "hits": [
+        {
+          "Term": "hunger",
+          "Translation": "饥饿值/饥饿/渴望",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【历史系统】不作为现行玩家饥饿/进食系统术语；可能仍见于历史文本、怪物和存档兼容数据。来源：docs/changelog.txt。\n【语境补充 2026-10-21】旧版机制数值用饥饿值。生理状态用饥饿。hunger for power/life 为渴望，不暗示当前存在饥饿机制。"
+        },
+        {
+          "Term": "species",
+          "Translation": "种族",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "troll",
+          "Translation": "巨魔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/troll.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Orb Guardian",
+          "Translation": "宝珠守卫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "moon troll",
+          "Translation": "月亮巨魔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "the Storm",
+          "Translation": "风暴",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "the Orb",
+          "Translation": "宝珠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        }
+      ]
+    }
+  ]
+}

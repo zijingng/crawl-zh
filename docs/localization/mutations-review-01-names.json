@@ -1,0 +1,3856 @@
+{
+  "names": [
+    {
+      "english": "inhibited regeneration",
+      "chinese": "再生受阻"
+    },
+    {
+      "english": "weak",
+      "chinese": "虚弱"
+    },
+    {
+      "english": "dopey",
+      "chinese": "迟钝"
+    },
+    {
+      "english": "clumsy",
+      "chinese": "笨拙"
+    },
+    {
+      "english": "screaming",
+      "chinese": "尖叫"
+    },
+    {
+      "english": "frail",
+      "chinese": "体弱"
+    },
+    {
+      "english": "off-hand wielding",
+      "chinese": "副手持械"
+    },
+    {
+      "english": "low MP",
+      "chinese": "魔力低下"
+    },
+    {
+      "english": "no potion heal",
+      "chinese": "无法通过药水治疗"
+    },
+    {
+      "english": "renounce potions",
+      "chinese": "放弃药水"
+    },
+    {
+      "english": "renounce scrolls",
+      "chinese": "放弃卷轴"
+    },
+    {
+      "english": "missing a hand",
+      "chinese": "缺失一只手"
+    },
+    {
+      "english": "no stealth",
+      "chinese": "无法潜行"
+    },
+    {
+      "english": "inability to use devices",
+      "chinese": "无法使用装置"
+    },
+    {
+      "english": "hated by all",
+      "chinese": "众生憎恶"
+    },
+    {
+      "english": "cowardly",
+      "chinese": "怯懦"
+    },
+    {
+      "english": "inability to train dodging",
+      "chinese": "无法训练闪避"
+    },
+    {
+      "english": "inability to train armour",
+      "chinese": "无法训练防具"
+    },
+    {
+      "english": "no air magic",
+      "chinese": "无法使用气系魔法"
+    },
+    {
+      "english": "no conjurations magic",
+      "chinese": "无法使用塑能系魔法"
+    },
+    {
+      "english": "no earth magic",
+      "chinese": "无法使用土系魔法"
+    },
+    {
+      "english": "no fire magic",
+      "chinese": "无法使用火系魔法"
+    },
+    {
+      "english": "no hexes magic",
+      "chinese": "无法使用妖术系魔法"
+    },
+    {
+      "english": "no ice magic",
+      "chinese": "无法使用冰系魔法"
+    },
+    {
+      "english": "no necromancy magic",
+      "chinese": "无法使用死灵系魔法"
+    },
+    {
+      "english": "no alchemy magic",
+      "chinese": "无法使用炼金术"
+    },
+    {
+      "english": "no forgecraft magic",
+      "chinese": "无法使用锻造术"
+    },
+    {
+      "english": "no summoning magic",
+      "chinese": "无法使用召唤系魔法"
+    },
+    {
+      "english": "no translocations magic",
+      "chinese": "无法使用位移系魔法"
+    },
+    {
+      "english": "reduced AC",
+      "chinese": "护甲值降低"
+    },
+    {
+      "english": "reduced EV",
+      "chinese": "闪避值降低"
+    },
+    {
+      "english": "weak-willed",
+      "chinese": "意志薄弱"
+    },
+    {
+      "english": "disrupted magic",
+      "chinese": "施法受扰"
+    },
+    {
+      "english": "unskilled",
+      "chinese": "技能不足"
+    },
+    {
+      "english": "inexperienced",
+      "chinese": "经验不足"
+    },
+    {
+      "english": "missing an eye",
+      "chinese": "缺失一只眼"
+    },
+    {
+      "english": "temperature sensitive",
+      "chinese": "对温度敏感"
+    },
+    {
+      "english": "no forms",
+      "chinese": "无法变形"
+    },
+    {
+      "english": "no potions",
+      "chinese": "无法使用药水"
+    },
+    {
+      "english": "Mark of Haemoclasm",
+      "chinese": "血爆烙印"
+    },
+    {
+      "english": "Mark of the Legion",
+      "chinese": "军团烙印"
+    },
+    {
+      "english": "Mark of Carnage",
+      "chinese": "屠戮烙印"
+    },
+    {
+      "english": "Mark of Annihilation",
+      "chinese": "湮灭烙印"
+    },
+    {
+      "english": "Mark of the Tyrant",
+      "chinese": "暴君烙印"
+    },
+    {
+      "english": "Mark of the Celebrant",
+      "chinese": "主祭烙印"
+    },
+    {
+      "english": "Mark of Execution",
+      "chinese": "处决烙印"
+    },
+    {
+      "english": "Mark of Atrocity",
+      "chinese": "暴行烙印"
+    },
+    {
+      "english": "Mark of the Fanatic",
+      "chinese": "狂信烙印"
+    },
+    {
+      "english": "iron-fused scales",
+      "chinese": "铁融鳞片"
+    },
+    {
+      "english": "inviolate magic",
+      "chinese": "魔法不侵"
+    },
+    {
+      "english": "tough skin",
+      "chinese": "坚韧皮肤"
+    },
+    {
+      "english": "strong",
+      "chinese": "强壮"
+    },
+    {
+      "english": "clever",
+      "chinese": "聪颖"
+    },
+    {
+      "english": "agile",
+      "chinese": "敏捷"
+    },
+    {
+      "english": "poison resistance",
+      "chinese": "毒素抗性"
+    },
+    {
+      "english": "fire resistance",
+      "chinese": "火焰抗性"
+    },
+    {
+      "english": "cold resistance",
+      "chinese": "寒冷抗性"
+    },
+    {
+      "english": "heat vulnerability",
+      "chinese": "高温易伤"
+    },
+    {
+      "english": "cold vulnerability",
+      "chinese": "寒冷易伤"
+    },
+    {
+      "english": "demonic guardian",
+      "chinese": "恶魔守护者"
+    },
+    {
+      "english": "electricity resistance",
+      "chinese": "电击抗性"
+    },
+    {
+      "english": "electricity vulnerability",
+      "chinese": "电击易伤"
+    },
+    {
+      "english": "regeneration",
+      "chinese": "再生"
+    },
+    {
+      "english": "feed off suffering",
+      "chinese": "汲取苦难"
+    },
+    {
+      "english": "lucky",
+      "chinese": "幸运"
+    },
+    {
+      "english": "meek",
+      "chinese": "温顺"
+    },
+    {
+      "english": "teleportitis",
+      "chinese": "随机传送"
+    },
+    {
+      "english": "persistent drain",
+      "chinese": "持久吸能"
+    },
+    {
+      "english": "contamination susceptible",
+      "chinese": "易受魔法污染"
+    },
+    {
+      "english": "strong-willed",
+      "chinese": "坚定意志"
+    },
+    {
+      "english": "speed",
+      "chinese": "快速"
+    },
+    {
+      "english": "slowness",
+      "chinese": "缓慢"
+    },
+    {
+      "english": "see invisible",
+      "chinese": "看破隐形"
+    },
+    {
+      "english": "deformed body",
+      "chinese": "畸形身体"
+    },
+    {
+      "english": "spit poison",
+      "chinese": "喷吐毒液"
+    },
+    {
+      "english": "clarity",
+      "chinese": "清明"
+    },
+    {
+      "english": "poor constitution",
+      "chinese": "体质不佳"
+    },
+    {
+      "english": "mutation resistance",
+      "chinese": "变异抗性"
+    },
+    {
+      "english": "evolution",
+      "chinese": "进化"
+    },
+    {
+      "english": "devolution",
+      "chinese": "退化"
+    },
+    {
+      "english": "protean grace",
+      "chinese": "变幻恩惠"
+    },
+    {
+      "english": "robust",
+      "chinese": "强健"
+    },
+    {
+      "english": "torment resistance",
+      "chinese": "折磨抗性"
+    },
+    {
+      "english": "negative energy resistance",
+      "chinese": "负能量抗性"
+    },
+    {
+      "english": "in touch with death",
+      "chinese": "接触死亡"
+    },
+    {
+      "english": "evasive flight",
+      "chinese": "闪避飞行"
+    },
+    {
+      "english": "acrobatic",
+      "chinese": "杂技"
+    },
+    {
+      "english": "slow wielding",
+      "chinese": "缓慢持械"
+    },
+    {
+      "english": "initially attractive",
+      "chinese": "初见吸引"
+    },
+    {
+      "english": "warmup strikes",
+      "chinese": "热身攻击"
+    },
+    {
+      "english": "no jewellery",
+      "chinese": "无法佩戴首饰"
+    },
+    {
+      "english": "hurl damnation",
+      "chinese": "投掷地狱火"
+    },
+    {
+      "english": "horns",
+      "chinese": "犄角"
+    },
+    {
+      "english": "beak",
+      "chinese": "鸟喙"
+    },
+    {
+      "english": "claws",
+      "chinese": "利爪"
+    },
+    {
+      "english": "fangs",
+      "chinese": "獠牙"
+    },
+    {
+      "english": "hooves",
+      "chinese": "蹄足"
+    },
+    {
+      "english": "antennae",
+      "chinese": "触角"
+    },
+    {
+      "english": "talons",
+      "chinese": "趾爪"
+    },
+    {
+      "english": "tentacle spike",
+      "chinese": "触手尖刺"
+    },
+    {
+      "english": "naga tail",
+      "chinese": "娜迦蛇尾"
+    },
+    {
+      "english": "stinger",
+      "chinese": "螫刺"
+    },
+    {
+      "english": "big wings",
+      "chinese": "巨大翅膀"
+    },
+    {
+      "english": "frog-like legs",
+      "chinese": "蛙腿"
+    },
+    {
+      "english": "armoured tail",
+      "chinese": "披甲尾巴"
+    },
+    {
+      "english": "rollpage",
+      "chinese": "翻滚冲撞"
+    },
+    {
+      "english": "shaggy fur",
+      "chinese": "蓬松毛皮"
+    },
+    {
+      "english": "high MP",
+      "chinese": "高魔力"
+    },
+    {
+      "english": "wild magic",
+      "chinese": "狂野魔法"
+    },
+    {
+      "english": "subdued magic",
+      "chinese": "温和魔法"
+    },
+    {
+      "english": "efficient magic",
+      "chinese": "高效魔法"
+    },
+    {
+      "english": "ephemeral shield",
+      "chinese": "短暂护盾"
+    },
+    {
+      "english": "time-warped blood",
+      "chinese": "时间扭曲之血"
+    },
+    {
+      "english": "demonic magic",
+      "chinese": "恶魔魔法"
+    },
+    {
+      "english": "forlorn",
+      "chinese": "被遗弃"
+    },
+    {
+      "english": "sense surroundings",
+      "chinese": "感知环境"
+    },
+    {
+      "english": "icemail",
+      "chinese": "冰甲"
+    },
+    {
+      "english": "condensation shield",
+      "chinese": "凝结护盾"
+    },
+    {
+      "english": "passive freeze",
+      "chinese": "被动冻结"
+    },
+    {
+      "english": "nightstalker",
+      "chinese": "夜行者"
+    },
+    {
+      "english": "spiny",
+      "chinese": "尖刺"
+    },
+    {
+      "english": "powered by death",
+      "chinese": "死亡之力"
+    },
+    {
+      "english": "powered by pain",
+      "chinese": "痛苦之力"
+    },
+    {
+      "english": "augmentation",
+      "chinese": "生命增幅"
+    },
+    {
+      "english": "magic shield",
+      "chinese": "魔法护盾"
+    },
+    {
+      "english": "magic regeneration",
+      "chinese": "魔力再生"
+    },
+    {
+      "english": "magic link",
+      "chinese": "魔力连接"
+    },
+    {
+      "english": "gelatinous body",
+      "chinese": "凝胶身体"
+    },
+    {
+      "english": "eyeballs",
+      "chinese": "眼球"
+    },
+    {
+      "english": "translucent skin",
+      "chinese": "半透明皮肤"
+    },
+    {
+      "english": "pseudopods",
+      "chinese": "伪足"
+    },
+    {
+      "english": "acidic bite",
+      "chinese": "酸性噬咬"
+    },
+    {
+      "english": "slime shroud",
+      "chinese": "黏液护罩"
+    },
+    {
+      "english": "antimagic bite",
+      "chinese": "反魔法噬咬"
+    },
+    {
+      "english": "efficient metabolism",
+      "chinese": "高效代谢"
+    },
+    {
+      "english": "reckless",
+      "chinese": "鲁莽"
+    },
+    {
+      "english": "spatial entanglement",
+      "chinese": "空间纠缠"
+    },
+    {
+      "english": "repulsion field",
+      "chinese": "排斥力场"
+    },
+    {
+      "english": "icy blue scales",
+      "chinese": "冰蓝色鳞片"
+    },
+    {
+      "english": "iridescent scales",
+      "chinese": "虹彩鳞片"
+    },
+    {
+      "english": "large bone plates",
+      "chinese": "大块骨板"
+    },
+    {
+      "english": "molten scales",
+      "chinese": "熔融鳞片"
+    },
+    {
+      "english": "rugged brown scales",
+      "chinese": "粗糙棕色鳞片"
+    },
+    {
+      "english": "slimy green scales",
+      "chinese": "黏滑绿色鳞片"
+    },
+    {
+      "english": "thin metallic scales",
+      "chinese": "薄金属鳞片"
+    },
+    {
+      "english": "thin skeletal structure",
+      "chinese": "纤细骨架"
+    },
+    {
+      "english": "yellow scales",
+      "chinese": "黄色鳞片"
+    },
+    {
+      "english": "sharp scales",
+      "chinese": "尖锐鳞片"
+    },
+    {
+      "english": "sturdy frame",
+      "chinese": "结实体格"
+    },
+    {
+      "english": "sanguine armour",
+      "chinese": "凝血护甲"
+    },
+    {
+      "english": "big brain",
+      "chinese": "巨大大脑"
+    },
+    {
+      "english": "camouflage",
+      "chinese": "伪装"
+    },
+    {
+      "english": "ignite blood",
+      "chinese": "点燃鲜血"
+    },
+    {
+      "english": "foul stench",
+      "chinese": "腐败恶臭"
+    },
+    {
+      "english": "tendrils",
+      "chinese": "触须"
+    },
+    {
+      "english": "jelly sensing items",
+      "chinese": "胶怪感物"
+    },
+    {
+      "english": "jelly absorbing missiles",
+      "chinese": "胶怪吸弹"
+    },
+    {
+      "english": "stone body",
+      "chinese": "岩石身体"
+    },
+    {
+      "english": "black mark",
+      "chinese": "黑色印记"
+    },
+    {
+      "english": "aura of silence",
+      "chinese": "沉默光环"
+    },
+    {
+      "english": "bedevilling",
+      "chinese": "恶魔妖术"
+    },
+    {
+      "english": "corrupting presence",
+      "chinese": "腐化之躯"
+    },
+    {
+      "english": "word of chaos",
+      "chinese": "混沌真言"
+    },
+    {
+      "english": "demonic willpower",
+      "chinese": "恶魔意志"
+    },
+    {
+      "english": "weakness stinger",
+      "chinese": "虚弱螫刺"
+    },
+    {
+      "english": "demonic touch",
+      "chinese": "恶魔之触"
+    },
+    {
+      "english": "cold-blooded",
+      "chinese": "冷血"
+    },
+    {
+      "english": "flame cloud immunity",
+      "chinese": "火焰云免疫"
+    },
+    {
+      "english": "freezing cloud immunity",
+      "chinese": "冰冻云雾免疫"
+    },
+    {
+      "english": "booming voice",
+      "chinese": "洪亮嗓音"
+    },
+    {
+      "english": "potion fungus",
+      "chinese": "药水真菌"
+    },
+    {
+      "english": "MP-powered wands",
+      "chinese": "魔力强化魔杖"
+    },
+    {
+      "english": "stealthy paws",
+      "chinese": "潜行爪掌"
+    },
+    {
+      "english": "no regeneration",
+      "chinese": "无法再生"
+    },
+    {
+      "english": "treasure sense",
+      "chinese": "财宝感知"
+    },
+    {
+      "english": "acid resistance",
+      "chinese": "酸液抗性"
+    },
+    {
+      "english": "four strong arms",
+      "chinese": "四条强臂"
+    },
+    {
+      "english": "faith",
+      "chinese": "信仰"
+    },
+    {
+      "english": "retaliatory headbutt",
+      "chinese": "反击头撞"
+    },
+    {
+      "english": "steam resistance",
+      "chinese": "蒸汽抗性"
+    },
+    {
+      "english": "no weapons or thrown items",
+      "chinese": "无法持械或投掷"
+    },
+    {
+      "english": "no armour",
+      "chinese": "无法穿戴防具"
+    },
+    {
+      "english": "multi-lived",
+      "chinese": "多条生命"
+    },
+    {
+      "english": "distributed training",
+      "chinese": "均衡训练"
+    },
+    {
+      "english": "nimble swimmer",
+      "chinese": "灵巧游泳"
+    },
+    {
+      "english": "tentacles",
+      "chinese": "触手"
+    },
+    {
+      "english": "mertail",
+      "chinese": "人鱼尾巴"
+    },
+    {
+      "english": "float",
+      "chinese": "飘浮"
+    },
+    {
+      "english": "innate caster",
+      "chinese": "天生施法"
+    },
+    {
+      "english": "HP casting",
+      "chinese": "生命施法"
+    },
+    {
+      "english": "extra vitality",
+      "chinese": "额外生命力"
+    },
+    {
+      "english": "ooze flood",
+      "chinese": "黏液灌注"
+    },
+    {
+      "english": "+LOS",
+      "chinese": "扩展视野"
+    },
+    {
+      "english": "divine attributes",
+      "chinese": "神圣属性"
+    },
+    {
+      "english": "devour on kill",
+      "chinese": "击杀吞噬"
+    },
+    {
+      "english": "otherworldly",
+      "chinese": "异界之身"
+    },
+    {
+      "english": "foul shadow",
+      "chinese": "邪恶阴影"
+    },
+    {
+      "english": "explore regen",
+      "chinese": "探索恢复"
+    },
+    {
+      "english": "double potion healing",
+      "chinese": "双倍药水治疗"
+    },
+    {
+      "english": "drunken brawling",
+      "chinese": "醉饮乱斗"
+    },
+    {
+      "english": "artefact enchanting",
+      "chinese": "神器附魔"
+    },
+    {
+      "english": "runic magic",
+      "chinese": "符文魔法"
+    },
+    {
+      "english": "formless",
+      "chinese": "无形之身"
+    },
+    {
+      "english": "trickster",
+      "chinese": "诡术师"
+    },
+    {
+      "english": "mnemnophage",
+      "chinese": "噬忆者"
+    },
+    {
+      "english": "spellclaws",
+      "chinese": "法术利爪"
+    },
+    {
+      "english": "accursed",
+      "chinese": "被诅咒者"
+    },
+    {
+      "english": "spiteful blood",
+      "chinese": "怨毒之血"
+    },
+    {
+      "english": "Gehenna destruction",
+      "chinese": "欣嫩谷毁灭之力"
+    },
+    {
+      "english": "Cocytus destruction",
+      "chinese": "悲叹河毁灭之力"
+    },
+    {
+      "english": "Tartarus destruction",
+      "chinese": "塔尔塔罗斯毁灭之力"
+    },
+    {
+      "english": "Dis destruction",
+      "chinese": "冥府毁灭之力"
+    },
+    {
+      "english": "no rings",
+      "chinese": "无法佩戴戒指"
+    },
+    {
+      "english": "vampire fangs",
+      "chinese": "吸血獠牙"
+    },
+    {
+      "english": "bloodcurse",
+      "chinese": "血咒"
+    },
+    {
+      "english": "insubstantial",
+      "chinese": "虚体"
+    },
+    {
+      "english": "frigid aura",
+      "chinese": "严寒光环"
+    },
+    {
+      "english": "hive swarm",
+      "chinese": "蜂群护体"
+    },
+    {
+      "english": "water reaching",
+      "chinese": "水体延伸"
+    },
+    {
+      "english": "water splatter",
+      "chinese": "水体飞溅"
+    },
+    {
+      "english": "freeze response",
+      "chinese": "遇寒冻结"
+    },
+    {
+      "english": "steam response",
+      "chinese": "遇火生汽"
+    },
+    {
+      "english": "airstrike attack",
+      "chinese": "空气打击"
+    },
+    {
+      "english": "hex mastery",
+      "chinese": "妖术精通"
+    },
+    {
+      "english": "riddle compulsion",
+      "chinese": "强迫出谜"
+    },
+    {
+      "english": "werefury",
+      "chinese": "兽化怒意"
+    },
+    {
+      "english": "werehowl",
+      "chinese": "兽化嚎叫"
+    },
+    {
+      "english": "stinger hair",
+      "chinese": "刺丝长发"
+    },
+    {
+      "english": "lithotoxin",
+      "chinese": "石化毒素"
+    },
+    {
+      "english": "contaminating",
+      "chinese": "污染攻击"
+    },
+    {
+      "english": "maw attack",
+      "chinese": "巨口攻击"
+    },
+    {
+      "english": "devouring maw",
+      "chinese": "吞噬巨口"
+    },
+    {
+      "english": "growling stomach",
+      "chinese": "饥肠鸣响"
+    },
+    {
+      "english": "eel punch",
+      "chinese": "电鳗拳"
+    },
+    {
+      "english": "eeljolt",
+      "chinese": "电鳗震击"
+    },
+    {
+      "english": "blade parry",
+      "chinese": "刀刃招架"
+    },
+    {
+      "english": "sporulate",
+      "chinese": "孢子繁殖"
+    },
+    {
+      "english": "armoured shell",
+      "chinese": "装甲甲壳"
+    },
+    {
+      "english": "hypnotic gaze",
+      "chinese": "催眠凝视"
+    },
+    {
+      "english": "lethargy",
+      "chinese": "迟缓"
+    },
+    {
+      "english": "heatstroke",
+      "chinese": "中暑"
+    },
+    {
+      "english": "snow-blindness",
+      "chinese": "雪盲"
+    },
+    {
+      "english": "electrospasm",
+      "chinese": "电痉挛"
+    },
+    {
+      "english": "claustrophobia",
+      "chinese": "幽闭恐惧"
+    },
+    {
+      "english": "stumbling",
+      "chinese": "踉跄"
+    },
+    {
+      "english": "succour",
+      "chinese": "援敌"
+    },
+    {
+      "english": "multiplicity",
+      "chinese": "增殖"
+    },
+    {
+      "english": "dilettante",
+      "chinese": "浅学者"
+    },
+    {
+      "english": "paradox",
+      "chinese": "悖论"
+    },
+    {
+      "english": "warding",
+      "chinese": "护持"
+    },
+    {
+      "english": "hunted",
+      "chinese": "被猎者"
+    },
+    {
+      "english": "mortality",
+      "chinese": "必死"
+    }
+  ],
+  "changes": [
+    {
+      "term": "inhibited regeneration",
+      "action": "added",
+      "after": {
+        "Term": "inhibited regeneration",
+        "Translation": "再生受阻",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：再生受阻。"
+      }
+    },
+    {
+      "term": "weak",
+      "action": "added",
+      "after": {
+        "Term": "weak",
+        "Translation": "虚弱",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：虚弱。"
+      }
+    },
+    {
+      "term": "dopey",
+      "action": "added",
+      "after": {
+        "Term": "dopey",
+        "Translation": "迟钝",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：迟钝。"
+      }
+    },
+    {
+      "term": "clumsy",
+      "action": "added",
+      "after": {
+        "Term": "clumsy",
+        "Translation": "笨拙",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：笨拙。"
+      }
+    },
+    {
+      "term": "screaming",
+      "action": "added",
+      "after": {
+        "Term": "screaming",
+        "Translation": "尖叫",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：尖叫。"
+      }
+    },
+    {
+      "term": "frail",
+      "action": "added",
+      "after": {
+        "Term": "frail",
+        "Translation": "体弱",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：体弱。"
+      }
+    },
+    {
+      "term": "off-hand wielding",
+      "action": "added",
+      "after": {
+        "Term": "off-hand wielding",
+        "Translation": "副手持械",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：副手持械。"
+      }
+    },
+    {
+      "term": "low MP",
+      "action": "added",
+      "after": {
+        "Term": "low MP",
+        "Translation": "魔力低下",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：魔力低下。"
+      }
+    },
+    {
+      "term": "no potion heal",
+      "action": "added",
+      "after": {
+        "Term": "no potion heal",
+        "Translation": "无法通过药水治疗",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法通过药水治疗。"
+      }
+    },
+    {
+      "term": "renounce potions",
+      "action": "added",
+      "after": {
+        "Term": "renounce potions",
+        "Translation": "放弃药水",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：放弃药水。"
+      }
+    },
+    {
+      "term": "renounce scrolls",
+      "action": "added",
+      "after": {
+        "Term": "renounce scrolls",
+        "Translation": "放弃卷轴",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：放弃卷轴。"
+      }
+    },
+    {
+      "term": "missing a hand",
+      "action": "added",
+      "after": {
+        "Term": "missing a hand",
+        "Translation": "缺失一只手",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：缺失一只手。"
+      }
+    },
+    {
+      "term": "no stealth",
+      "action": "added",
+      "after": {
+        "Term": "no stealth",
+        "Translation": "无法潜行",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法潜行。"
+      }
+    },
+    {
+      "term": "inability to use devices",
+      "action": "added",
+      "after": {
+        "Term": "inability to use devices",
+        "Translation": "无法使用装置",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法使用装置。"
+      }
+    },
+    {
+      "term": "hated by all",
+      "action": "added",
+      "after": {
+        "Term": "hated by all",
+        "Translation": "众生憎恶",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：众生憎恶。"
+      }
+    },
+    {
+      "term": "cowardly",
+      "action": "added",
+      "after": {
+        "Term": "cowardly",
+        "Translation": "怯懦",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：怯懦。"
+      }
+    },
+    {
+      "term": "inability to train dodging",
+      "action": "added",
+      "after": {
+        "Term": "inability to train dodging",
+        "Translation": "无法训练闪避",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法训练闪避。"
+      }
+    },
+    {
+      "term": "inability to train armour",
+      "action": "added",
+      "after": {
+        "Term": "inability to train armour",
+        "Translation": "无法训练防具",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法训练防具。"
+      }
+    },
+    {
+      "term": "no air magic",
+      "action": "added",
+      "after": {
+        "Term": "no air magic",
+        "Translation": "无法使用气系魔法",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法使用气系魔法。"
+      }
+    },
+    {
+      "term": "no conjurations magic",
+      "action": "added",
+      "after": {
+        "Term": "no conjurations magic",
+        "Translation": "无法使用塑能系魔法",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法使用塑能系魔法。"
+      }
+    },
+    {
+      "term": "no earth magic",
+      "action": "added",
+      "after": {
+        "Term": "no earth magic",
+        "Translation": "无法使用土系魔法",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法使用土系魔法。"
+      }
+    },
+    {
+      "term": "no fire magic",
+      "action": "added",
+      "after": {
+        "Term": "no fire magic",
+        "Translation": "无法使用火系魔法",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法使用火系魔法。"
+      }
+    },
+    {
+      "term": "no hexes magic",
+      "action": "added",
+      "after": {
+        "Term": "no hexes magic",
+        "Translation": "无法使用妖术系魔法",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法使用妖术系魔法。"
+      }
+    },
+    {
+      "term": "no ice magic",
+      "action": "added",
+      "after": {
+        "Term": "no ice magic",
+        "Translation": "无法使用冰系魔法",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法使用冰系魔法。"
+      }
+    },
+    {
+      "term": "no necromancy magic",
+      "action": "added",
+      "after": {
+        "Term": "no necromancy magic",
+        "Translation": "无法使用死灵系魔法",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法使用死灵系魔法。"
+      }
+    },
+    {
+      "term": "no alchemy magic",
+      "action": "added",
+      "after": {
+        "Term": "no alchemy magic",
+        "Translation": "无法使用炼金术",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法使用炼金术。"
+      }
+    },
+    {
+      "term": "no forgecraft magic",
+      "action": "added",
+      "after": {
+        "Term": "no forgecraft magic",
+        "Translation": "无法使用锻造术",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法使用锻造术。"
+      }
+    },
+    {
+      "term": "no summoning magic",
+      "action": "added",
+      "after": {
+        "Term": "no summoning magic",
+        "Translation": "无法使用召唤系魔法",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法使用召唤系魔法。"
+      }
+    },
+    {
+      "term": "no translocations magic",
+      "action": "added",
+      "after": {
+        "Term": "no translocations magic",
+        "Translation": "无法使用位移系魔法",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法使用位移系魔法。"
+      }
+    },
+    {
+      "term": "reduced AC",
+      "action": "added",
+      "after": {
+        "Term": "reduced AC",
+        "Translation": "护甲值降低",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：护甲值降低。"
+      }
+    },
+    {
+      "term": "reduced EV",
+      "action": "added",
+      "after": {
+        "Term": "reduced EV",
+        "Translation": "闪避值降低",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：闪避值降低。"
+      }
+    },
+    {
+      "term": "weak-willed",
+      "action": "added",
+      "after": {
+        "Term": "weak-willed",
+        "Translation": "意志薄弱",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：意志薄弱。"
+      }
+    },
+    {
+      "term": "disrupted magic",
+      "action": "added",
+      "after": {
+        "Term": "disrupted magic",
+        "Translation": "施法受扰",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：施法受扰。"
+      }
+    },
+    {
+      "term": "unskilled",
+      "action": "added",
+      "after": {
+        "Term": "unskilled",
+        "Translation": "技能不足",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：技能不足。"
+      }
+    },
+    {
+      "term": "inexperienced",
+      "action": "added",
+      "after": {
+        "Term": "inexperienced",
+        "Translation": "经验不足",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：经验不足。"
+      }
+    },
+    {
+      "term": "missing an eye",
+      "action": "added",
+      "after": {
+        "Term": "missing an eye",
+        "Translation": "缺失一只眼",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：缺失一只眼。"
+      }
+    },
+    {
+      "term": "temperature sensitive",
+      "action": "added",
+      "after": {
+        "Term": "temperature sensitive",
+        "Translation": "对温度敏感",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：对温度敏感。"
+      }
+    },
+    {
+      "term": "no forms",
+      "action": "added",
+      "after": {
+        "Term": "no forms",
+        "Translation": "无法变形",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法变形。"
+      }
+    },
+    {
+      "term": "no potions",
+      "action": "added",
+      "after": {
+        "Term": "no potions",
+        "Translation": "无法使用药水",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法使用药水。"
+      }
+    },
+    {
+      "term": "Mark of Haemoclasm",
+      "action": "added",
+      "after": {
+        "Term": "Mark of Haemoclasm",
+        "Translation": "血爆烙印",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：血爆烙印。"
+      }
+    },
+    {
+      "term": "Mark of the Legion",
+      "action": "added",
+      "after": {
+        "Term": "Mark of the Legion",
+        "Translation": "军团烙印",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：军团烙印。"
+      }
+    },
+    {
+      "term": "Mark of Carnage",
+      "action": "added",
+      "after": {
+        "Term": "Mark of Carnage",
+        "Translation": "屠戮烙印",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：屠戮烙印。"
+      }
+    },
+    {
+      "term": "Mark of Annihilation",
+      "action": "added",
+      "after": {
+        "Term": "Mark of Annihilation",
+        "Translation": "湮灭烙印",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：湮灭烙印。"
+      }
+    },
+    {
+      "term": "Mark of the Tyrant",
+      "action": "added",
+      "after": {
+        "Term": "Mark of the Tyrant",
+        "Translation": "暴君烙印",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：暴君烙印。"
+      }
+    },
+    {
+      "term": "Mark of the Celebrant",
+      "action": "added",
+      "after": {
+        "Term": "Mark of the Celebrant",
+        "Translation": "主祭烙印",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：主祭烙印。"
+      }
+    },
+    {
+      "term": "Mark of Execution",
+      "action": "added",
+      "after": {
+        "Term": "Mark of Execution",
+        "Translation": "处决烙印",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：处决烙印。"
+      }
+    },
+    {
+      "term": "Mark of Atrocity",
+      "action": "added",
+      "after": {
+        "Term": "Mark of Atrocity",
+        "Translation": "暴行烙印",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：暴行烙印。"
+      }
+    },
+    {
+      "term": "Mark of the Fanatic",
+      "action": "added",
+      "after": {
+        "Term": "Mark of the Fanatic",
+        "Translation": "狂信烙印",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：狂信烙印。"
+      }
+    },
+    {
+      "term": "iron-fused scales",
+      "action": "added",
+      "after": {
+        "Term": "iron-fused scales",
+        "Translation": "铁融鳞片",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：铁融鳞片。"
+      }
+    },
+    {
+      "term": "inviolate magic",
+      "action": "added",
+      "after": {
+        "Term": "inviolate magic",
+        "Translation": "魔法不侵",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：魔法不侵。"
+      }
+    },
+    {
+      "term": "tough skin",
+      "action": "added",
+      "after": {
+        "Term": "tough skin",
+        "Translation": "坚韧皮肤",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：坚韧皮肤。"
+      }
+    },
+    {
+      "term": "strong",
+      "action": "added",
+      "after": {
+        "Term": "strong",
+        "Translation": "强壮",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：强壮。"
+      }
+    },
+    {
+      "term": "clever",
+      "action": "added",
+      "after": {
+        "Term": "clever",
+        "Translation": "聪颖",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：聪颖。"
+      }
+    },
+    {
+      "term": "agile",
+      "action": "added",
+      "after": {
+        "Term": "agile",
+        "Translation": "敏捷",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：敏捷。"
+      }
+    },
+    {
+      "term": "poison resistance",
+      "action": "added",
+      "after": {
+        "Term": "poison resistance",
+        "Translation": "毒素抗性",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：毒素抗性。"
+      }
+    },
+    {
+      "term": "fire resistance",
+      "action": "added",
+      "after": {
+        "Term": "fire resistance",
+        "Translation": "火焰抗性",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：火焰抗性。"
+      }
+    },
+    {
+      "term": "cold resistance",
+      "action": "added",
+      "after": {
+        "Term": "cold resistance",
+        "Translation": "寒冷抗性",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：寒冷抗性。"
+      }
+    },
+    {
+      "term": "heat vulnerability",
+      "action": "added",
+      "after": {
+        "Term": "heat vulnerability",
+        "Translation": "高温易伤",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：高温易伤。"
+      }
+    },
+    {
+      "term": "cold vulnerability",
+      "action": "added",
+      "after": {
+        "Term": "cold vulnerability",
+        "Translation": "寒冷易伤",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：寒冷易伤。"
+      }
+    },
+    {
+      "term": "demonic guardian",
+      "action": "added",
+      "after": {
+        "Term": "demonic guardian",
+        "Translation": "恶魔守护者",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：恶魔守护者。"
+      }
+    },
+    {
+      "term": "electricity resistance",
+      "action": "added",
+      "after": {
+        "Term": "electricity resistance",
+        "Translation": "电击抗性",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：电击抗性。"
+      }
+    },
+    {
+      "term": "electricity vulnerability",
+      "action": "added",
+      "after": {
+        "Term": "electricity vulnerability",
+        "Translation": "电击易伤",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：电击易伤。"
+      }
+    },
+    {
+      "term": "regeneration",
+      "action": "annotated",
+      "before": {
+        "Term": "Regeneration",
+        "Translation": "再生术/再生/恢复",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用再生术。状态或生命再生机制用再生。普通恢复过程按句意表达。"
+      },
+      "after": {
+        "Term": "Regeneration",
+        "Translation": "再生术/再生/恢复",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用再生术。状态或生命再生机制用再生。普通恢复过程按句意表达。\n【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：再生。"
+      }
+    },
+    {
+      "term": "feed off suffering",
+      "action": "added",
+      "after": {
+        "Term": "feed off suffering",
+        "Translation": "汲取苦难",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：汲取苦难。"
+      }
+    },
+    {
+      "term": "lucky",
+      "action": "added",
+      "after": {
+        "Term": "lucky",
+        "Translation": "幸运",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：幸运。"
+      }
+    },
+    {
+      "term": "meek",
+      "action": "added",
+      "after": {
+        "Term": "meek",
+        "Translation": "温顺",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：温顺。"
+      }
+    },
+    {
+      "term": "teleportitis",
+      "action": "added",
+      "after": {
+        "Term": "teleportitis",
+        "Translation": "随机传送",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：随机传送。"
+      }
+    },
+    {
+      "term": "persistent drain",
+      "action": "added",
+      "after": {
+        "Term": "persistent drain",
+        "Translation": "持久吸能",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：持久吸能。"
+      }
+    },
+    {
+      "term": "contamination susceptible",
+      "action": "added",
+      "after": {
+        "Term": "contamination susceptible",
+        "Translation": "易受魔法污染",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：易受魔法污染。"
+      }
+    },
+    {
+      "term": "strong-willed",
+      "action": "added",
+      "after": {
+        "Term": "strong-willed",
+        "Translation": "坚定意志",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：坚定意志。"
+      }
+    },
+    {
+      "term": "speed",
+      "action": "added",
+      "after": {
+        "Term": "speed",
+        "Translation": "快速",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：快速。"
+      }
+    },
+    {
+      "term": "slowness",
+      "action": "added",
+      "after": {
+        "Term": "slowness",
+        "Translation": "缓慢",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：缓慢。"
+      }
+    },
+    {
+      "term": "see invisible",
+      "action": "annotated",
+      "before": {
+        "Term": "See Invisible",
+        "Translation": "看破隐形",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+      },
+      "after": {
+        "Term": "See Invisible",
+        "Translation": "看破隐形",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：看破隐形。"
+      }
+    },
+    {
+      "term": "deformed body",
+      "action": "added",
+      "after": {
+        "Term": "deformed body",
+        "Translation": "畸形身体",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：畸形身体。"
+      }
+    },
+    {
+      "term": "spit poison",
+      "action": "annotated",
+      "before": {
+        "Term": "Spit Poison",
+        "Translation": "喷吐毒液",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+      },
+      "after": {
+        "Term": "Spit Poison",
+        "Translation": "喷吐毒液",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：喷吐毒液。"
+      }
+    },
+    {
+      "term": "clarity",
+      "action": "added",
+      "after": {
+        "Term": "clarity",
+        "Translation": "清明",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：清明。"
+      }
+    },
+    {
+      "term": "poor constitution",
+      "action": "added",
+      "after": {
+        "Term": "poor constitution",
+        "Translation": "体质不佳",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：体质不佳。"
+      }
+    },
+    {
+      "term": "mutation resistance",
+      "action": "added",
+      "after": {
+        "Term": "mutation resistance",
+        "Translation": "变异抗性",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：变异抗性。"
+      }
+    },
+    {
+      "term": "evolution",
+      "action": "added",
+      "after": {
+        "Term": "evolution",
+        "Translation": "进化",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：进化。"
+      }
+    },
+    {
+      "term": "devolution",
+      "action": "added",
+      "after": {
+        "Term": "devolution",
+        "Translation": "退化",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：退化。"
+      }
+    },
+    {
+      "term": "protean grace",
+      "action": "added",
+      "after": {
+        "Term": "protean grace",
+        "Translation": "变幻恩惠",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：变幻恩惠。"
+      }
+    },
+    {
+      "term": "robust",
+      "action": "annotated",
+      "before": {
+        "Term": "robust",
+        "Translation": "强健",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": ""
+      },
+      "after": {
+        "Term": "robust",
+        "Translation": "强健",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "\n【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：强健。"
+      }
+    },
+    {
+      "term": "torment resistance",
+      "action": "added",
+      "after": {
+        "Term": "torment resistance",
+        "Translation": "折磨抗性",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：折磨抗性。"
+      }
+    },
+    {
+      "term": "negative energy resistance",
+      "action": "added",
+      "after": {
+        "Term": "negative energy resistance",
+        "Translation": "负能量抗性",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：负能量抗性。"
+      }
+    },
+    {
+      "term": "in touch with death",
+      "action": "added",
+      "after": {
+        "Term": "in touch with death",
+        "Translation": "接触死亡",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：接触死亡。"
+      }
+    },
+    {
+      "term": "evasive flight",
+      "action": "added",
+      "after": {
+        "Term": "evasive flight",
+        "Translation": "闪避飞行",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：闪避飞行。"
+      }
+    },
+    {
+      "term": "acrobatic",
+      "action": "added",
+      "after": {
+        "Term": "acrobatic",
+        "Translation": "杂技",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：杂技。"
+      }
+    },
+    {
+      "term": "slow wielding",
+      "action": "added",
+      "after": {
+        "Term": "slow wielding",
+        "Translation": "缓慢持械",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：缓慢持械。"
+      }
+    },
+    {
+      "term": "initially attractive",
+      "action": "added",
+      "after": {
+        "Term": "initially attractive",
+        "Translation": "初见吸引",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：初见吸引。"
+      }
+    },
+    {
+      "term": "warmup strikes",
+      "action": "added",
+      "after": {
+        "Term": "warmup strikes",
+        "Translation": "热身攻击",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：热身攻击。"
+      }
+    },
+    {
+      "term": "no jewellery",
+      "action": "added",
+      "after": {
+        "Term": "no jewellery",
+        "Translation": "无法佩戴首饰",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法佩戴首饰。"
+      }
+    },
+    {
+      "term": "hurl damnation",
+      "action": "annotated",
+      "before": {
+        "Term": "Hurl Damnation",
+        "Translation": "投掷地狱火",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+      },
+      "after": {
+        "Term": "Hurl Damnation",
+        "Translation": "投掷地狱火",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：投掷地狱火。"
+      }
+    },
+    {
+      "term": "horns",
+      "action": "added",
+      "after": {
+        "Term": "horns",
+        "Translation": "犄角",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：犄角。"
+      }
+    },
+    {
+      "term": "beak",
+      "action": "added",
+      "after": {
+        "Term": "beak",
+        "Translation": "鸟喙",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：鸟喙。"
+      }
+    },
+    {
+      "term": "claws",
+      "action": "added",
+      "after": {
+        "Term": "claws",
+        "Translation": "利爪",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：利爪。"
+      }
+    },
+    {
+      "term": "fangs",
+      "action": "added",
+      "after": {
+        "Term": "fangs",
+        "Translation": "獠牙",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：獠牙。"
+      }
+    },
+    {
+      "term": "hooves",
+      "action": "added",
+      "after": {
+        "Term": "hooves",
+        "Translation": "蹄足",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：蹄足。"
+      }
+    },
+    {
+      "term": "antennae",
+      "action": "added",
+      "after": {
+        "Term": "antennae",
+        "Translation": "触角",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：触角。"
+      }
+    },
+    {
+      "term": "talons",
+      "action": "added",
+      "after": {
+        "Term": "talons",
+        "Translation": "趾爪",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：趾爪。"
+      }
+    },
+    {
+      "term": "tentacle spike",
+      "action": "added",
+      "after": {
+        "Term": "tentacle spike",
+        "Translation": "触手尖刺",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：触手尖刺。"
+      }
+    },
+    {
+      "term": "naga tail",
+      "action": "added",
+      "after": {
+        "Term": "naga tail",
+        "Translation": "娜迦蛇尾",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：娜迦蛇尾。"
+      }
+    },
+    {
+      "term": "stinger",
+      "action": "added",
+      "after": {
+        "Term": "stinger",
+        "Translation": "螫刺",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：螫刺。"
+      }
+    },
+    {
+      "term": "big wings",
+      "action": "added",
+      "after": {
+        "Term": "big wings",
+        "Translation": "巨大翅膀",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：巨大翅膀。"
+      }
+    },
+    {
+      "term": "frog-like legs",
+      "action": "added",
+      "after": {
+        "Term": "frog-like legs",
+        "Translation": "蛙腿",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：蛙腿。"
+      }
+    },
+    {
+      "term": "armoured tail",
+      "action": "added",
+      "after": {
+        "Term": "armoured tail",
+        "Translation": "披甲尾巴",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：披甲尾巴。"
+      }
+    },
+    {
+      "term": "rollpage",
+      "action": "added",
+      "after": {
+        "Term": "rollpage",
+        "Translation": "翻滚冲撞",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：翻滚冲撞。"
+      }
+    },
+    {
+      "term": "shaggy fur",
+      "action": "added",
+      "after": {
+        "Term": "shaggy fur",
+        "Translation": "蓬松毛皮",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：蓬松毛皮。"
+      }
+    },
+    {
+      "term": "high MP",
+      "action": "added",
+      "after": {
+        "Term": "high MP",
+        "Translation": "高魔力",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：高魔力。"
+      }
+    },
+    {
+      "term": "wild magic",
+      "action": "annotated",
+      "before": {
+        "Term": "Wild Magic",
+        "Translation": "狂野魔法",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+      },
+      "after": {
+        "Term": "Wild Magic",
+        "Translation": "狂野魔法",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。\n【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：狂野魔法。"
+      }
+    },
+    {
+      "term": "subdued magic",
+      "action": "added",
+      "after": {
+        "Term": "subdued magic",
+        "Translation": "温和魔法",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：温和魔法。"
+      }
+    },
+    {
+      "term": "efficient magic",
+      "action": "added",
+      "after": {
+        "Term": "efficient magic",
+        "Translation": "高效魔法",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：高效魔法。"
+      }
+    },
+    {
+      "term": "ephemeral shield",
+      "action": "added",
+      "after": {
+        "Term": "ephemeral shield",
+        "Translation": "短暂护盾",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：短暂护盾。"
+      }
+    },
+    {
+      "term": "time-warped blood",
+      "action": "added",
+      "after": {
+        "Term": "time-warped blood",
+        "Translation": "时间扭曲之血",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：时间扭曲之血。"
+      }
+    },
+    {
+      "term": "demonic magic",
+      "action": "added",
+      "after": {
+        "Term": "demonic magic",
+        "Translation": "恶魔魔法",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：恶魔魔法。"
+      }
+    },
+    {
+      "term": "forlorn",
+      "action": "added",
+      "after": {
+        "Term": "forlorn",
+        "Translation": "被遗弃",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：被遗弃。"
+      }
+    },
+    {
+      "term": "sense surroundings",
+      "action": "added",
+      "after": {
+        "Term": "sense surroundings",
+        "Translation": "感知环境",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：感知环境。"
+      }
+    },
+    {
+      "term": "icemail",
+      "action": "added",
+      "after": {
+        "Term": "icemail",
+        "Translation": "冰甲",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：冰甲。"
+      }
+    },
+    {
+      "term": "condensation shield",
+      "action": "annotated",
+      "before": {
+        "Term": "Condensation Shield",
+        "Translation": "凝结护盾",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+      },
+      "after": {
+        "Term": "Condensation Shield",
+        "Translation": "凝结护盾",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：凝结护盾。"
+      }
+    },
+    {
+      "term": "passive freeze",
+      "action": "added",
+      "after": {
+        "Term": "passive freeze",
+        "Translation": "被动冻结",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：被动冻结。"
+      }
+    },
+    {
+      "term": "nightstalker",
+      "action": "added",
+      "after": {
+        "Term": "nightstalker",
+        "Translation": "夜行者",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：夜行者。"
+      }
+    },
+    {
+      "term": "spiny",
+      "action": "added",
+      "after": {
+        "Term": "spiny",
+        "Translation": "尖刺",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：尖刺。"
+      }
+    },
+    {
+      "term": "powered by death",
+      "action": "added",
+      "after": {
+        "Term": "powered by death",
+        "Translation": "死亡之力",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：死亡之力。"
+      }
+    },
+    {
+      "term": "powered by pain",
+      "action": "added",
+      "after": {
+        "Term": "powered by pain",
+        "Translation": "痛苦之力",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：痛苦之力。"
+      }
+    },
+    {
+      "term": "augmentation",
+      "action": "added",
+      "after": {
+        "Term": "augmentation",
+        "Translation": "生命增幅",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：生命增幅。"
+      }
+    },
+    {
+      "term": "magic shield",
+      "action": "added",
+      "after": {
+        "Term": "magic shield",
+        "Translation": "魔法护盾",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：魔法护盾。"
+      }
+    },
+    {
+      "term": "magic regeneration",
+      "action": "added",
+      "after": {
+        "Term": "magic regeneration",
+        "Translation": "魔力再生",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：魔力再生。"
+      }
+    },
+    {
+      "term": "magic link",
+      "action": "added",
+      "after": {
+        "Term": "magic link",
+        "Translation": "魔力连接",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：魔力连接。"
+      }
+    },
+    {
+      "term": "gelatinous body",
+      "action": "added",
+      "after": {
+        "Term": "gelatinous body",
+        "Translation": "凝胶身体",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：凝胶身体。"
+      }
+    },
+    {
+      "term": "eyeballs",
+      "action": "added",
+      "after": {
+        "Term": "eyeballs",
+        "Translation": "眼球",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：眼球。"
+      }
+    },
+    {
+      "term": "translucent skin",
+      "action": "added",
+      "after": {
+        "Term": "translucent skin",
+        "Translation": "半透明皮肤",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：半透明皮肤。"
+      }
+    },
+    {
+      "term": "pseudopods",
+      "action": "added",
+      "after": {
+        "Term": "pseudopods",
+        "Translation": "伪足",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：伪足。"
+      }
+    },
+    {
+      "term": "acidic bite",
+      "action": "added",
+      "after": {
+        "Term": "acidic bite",
+        "Translation": "酸性噬咬",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：酸性噬咬。"
+      }
+    },
+    {
+      "term": "slime shroud",
+      "action": "added",
+      "after": {
+        "Term": "slime shroud",
+        "Translation": "黏液护罩",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：黏液护罩。"
+      }
+    },
+    {
+      "term": "antimagic bite",
+      "action": "added",
+      "after": {
+        "Term": "antimagic bite",
+        "Translation": "反魔法噬咬",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：反魔法噬咬。"
+      }
+    },
+    {
+      "term": "efficient metabolism",
+      "action": "added",
+      "after": {
+        "Term": "efficient metabolism",
+        "Translation": "高效代谢",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：高效代谢。"
+      }
+    },
+    {
+      "term": "reckless",
+      "action": "added",
+      "after": {
+        "Term": "reckless",
+        "Translation": "鲁莽",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：鲁莽。"
+      }
+    },
+    {
+      "term": "spatial entanglement",
+      "action": "added",
+      "after": {
+        "Term": "spatial entanglement",
+        "Translation": "空间纠缠",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：空间纠缠。"
+      }
+    },
+    {
+      "term": "repulsion field",
+      "action": "added",
+      "after": {
+        "Term": "repulsion field",
+        "Translation": "排斥力场",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：排斥力场。"
+      }
+    },
+    {
+      "term": "icy blue scales",
+      "action": "added",
+      "after": {
+        "Term": "icy blue scales",
+        "Translation": "冰蓝色鳞片",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：冰蓝色鳞片。"
+      }
+    },
+    {
+      "term": "iridescent scales",
+      "action": "added",
+      "after": {
+        "Term": "iridescent scales",
+        "Translation": "虹彩鳞片",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：虹彩鳞片。"
+      }
+    },
+    {
+      "term": "large bone plates",
+      "action": "added",
+      "after": {
+        "Term": "large bone plates",
+        "Translation": "大块骨板",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：大块骨板。"
+      }
+    },
+    {
+      "term": "molten scales",
+      "action": "added",
+      "after": {
+        "Term": "molten scales",
+        "Translation": "熔融鳞片",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：熔融鳞片。"
+      }
+    },
+    {
+      "term": "rugged brown scales",
+      "action": "added",
+      "after": {
+        "Term": "rugged brown scales",
+        "Translation": "粗糙棕色鳞片",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：粗糙棕色鳞片。"
+      }
+    },
+    {
+      "term": "slimy green scales",
+      "action": "added",
+      "after": {
+        "Term": "slimy green scales",
+        "Translation": "黏滑绿色鳞片",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：黏滑绿色鳞片。"
+      }
+    },
+    {
+      "term": "thin metallic scales",
+      "action": "added",
+      "after": {
+        "Term": "thin metallic scales",
+        "Translation": "薄金属鳞片",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：薄金属鳞片。"
+      }
+    },
+    {
+      "term": "thin skeletal structure",
+      "action": "added",
+      "after": {
+        "Term": "thin skeletal structure",
+        "Translation": "纤细骨架",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：纤细骨架。"
+      }
+    },
+    {
+      "term": "yellow scales",
+      "action": "added",
+      "after": {
+        "Term": "yellow scales",
+        "Translation": "黄色鳞片",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：黄色鳞片。"
+      }
+    },
+    {
+      "term": "sharp scales",
+      "action": "added",
+      "after": {
+        "Term": "sharp scales",
+        "Translation": "尖锐鳞片",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：尖锐鳞片。"
+      }
+    },
+    {
+      "term": "sturdy frame",
+      "action": "added",
+      "after": {
+        "Term": "sturdy frame",
+        "Translation": "结实体格",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：结实体格。"
+      }
+    },
+    {
+      "term": "sanguine armour",
+      "action": "added",
+      "after": {
+        "Term": "sanguine armour",
+        "Translation": "凝血护甲",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：凝血护甲。"
+      }
+    },
+    {
+      "term": "big brain",
+      "action": "added",
+      "after": {
+        "Term": "big brain",
+        "Translation": "巨大大脑",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：巨大大脑。"
+      }
+    },
+    {
+      "term": "camouflage",
+      "action": "added",
+      "after": {
+        "Term": "camouflage",
+        "Translation": "伪装",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：伪装。"
+      }
+    },
+    {
+      "term": "ignite blood",
+      "action": "added",
+      "after": {
+        "Term": "ignite blood",
+        "Translation": "点燃鲜血",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：点燃鲜血。"
+      }
+    },
+    {
+      "term": "foul stench",
+      "action": "added",
+      "after": {
+        "Term": "foul stench",
+        "Translation": "腐败恶臭",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：腐败恶臭。"
+      }
+    },
+    {
+      "term": "tendrils",
+      "action": "added",
+      "after": {
+        "Term": "tendrils",
+        "Translation": "触须",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：触须。"
+      }
+    },
+    {
+      "term": "jelly sensing items",
+      "action": "added",
+      "after": {
+        "Term": "jelly sensing items",
+        "Translation": "胶怪感物",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：胶怪感物。"
+      }
+    },
+    {
+      "term": "jelly absorbing missiles",
+      "action": "added",
+      "after": {
+        "Term": "jelly absorbing missiles",
+        "Translation": "胶怪吸弹",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：胶怪吸弹。"
+      }
+    },
+    {
+      "term": "stone body",
+      "action": "added",
+      "after": {
+        "Term": "stone body",
+        "Translation": "岩石身体",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：岩石身体。"
+      }
+    },
+    {
+      "term": "black mark",
+      "action": "added",
+      "after": {
+        "Term": "black mark",
+        "Translation": "黑色印记",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：黑色印记。"
+      }
+    },
+    {
+      "term": "aura of silence",
+      "action": "added",
+      "after": {
+        "Term": "aura of silence",
+        "Translation": "沉默光环",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：沉默光环。"
+      }
+    },
+    {
+      "term": "bedevilling",
+      "action": "added",
+      "after": {
+        "Term": "bedevilling",
+        "Translation": "恶魔妖术",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：恶魔妖术。"
+      }
+    },
+    {
+      "term": "corrupting presence",
+      "action": "added",
+      "after": {
+        "Term": "corrupting presence",
+        "Translation": "腐化之躯",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：腐化之躯。"
+      }
+    },
+    {
+      "term": "word of chaos",
+      "action": "annotated",
+      "before": {
+        "Term": "Word of Chaos",
+        "Translation": "混沌真言",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+      },
+      "after": {
+        "Term": "Word of Chaos",
+        "Translation": "混沌真言",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。\n【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：混沌真言。"
+      }
+    },
+    {
+      "term": "demonic willpower",
+      "action": "added",
+      "after": {
+        "Term": "demonic willpower",
+        "Translation": "恶魔意志",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：恶魔意志。"
+      }
+    },
+    {
+      "term": "weakness stinger",
+      "action": "added",
+      "after": {
+        "Term": "weakness stinger",
+        "Translation": "虚弱螫刺",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：虚弱螫刺。"
+      }
+    },
+    {
+      "term": "demonic touch",
+      "action": "added",
+      "after": {
+        "Term": "demonic touch",
+        "Translation": "恶魔之触",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：恶魔之触。"
+      }
+    },
+    {
+      "term": "cold-blooded",
+      "action": "added",
+      "after": {
+        "Term": "cold-blooded",
+        "Translation": "冷血",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：冷血。"
+      }
+    },
+    {
+      "term": "flame cloud immunity",
+      "action": "added",
+      "after": {
+        "Term": "flame cloud immunity",
+        "Translation": "火焰云免疫",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：火焰云免疫。"
+      }
+    },
+    {
+      "term": "freezing cloud immunity",
+      "action": "added",
+      "after": {
+        "Term": "freezing cloud immunity",
+        "Translation": "冰冻云雾免疫",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：冰冻云雾免疫。"
+      }
+    },
+    {
+      "term": "booming voice",
+      "action": "added",
+      "after": {
+        "Term": "booming voice",
+        "Translation": "洪亮嗓音",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：洪亮嗓音。"
+      }
+    },
+    {
+      "term": "potion fungus",
+      "action": "added",
+      "after": {
+        "Term": "potion fungus",
+        "Translation": "药水真菌",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：药水真菌。"
+      }
+    },
+    {
+      "term": "MP-powered wands",
+      "action": "added",
+      "after": {
+        "Term": "MP-powered wands",
+        "Translation": "魔力强化魔杖",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：魔力强化魔杖。"
+      }
+    },
+    {
+      "term": "stealthy paws",
+      "action": "added",
+      "after": {
+        "Term": "stealthy paws",
+        "Translation": "潜行爪掌",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：潜行爪掌。"
+      }
+    },
+    {
+      "term": "no regeneration",
+      "action": "added",
+      "after": {
+        "Term": "no regeneration",
+        "Translation": "无法再生",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法再生。"
+      }
+    },
+    {
+      "term": "treasure sense",
+      "action": "added",
+      "after": {
+        "Term": "treasure sense",
+        "Translation": "财宝感知",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：财宝感知。"
+      }
+    },
+    {
+      "term": "acid resistance",
+      "action": "added",
+      "after": {
+        "Term": "acid resistance",
+        "Translation": "酸液抗性",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：酸液抗性。"
+      }
+    },
+    {
+      "term": "four strong arms",
+      "action": "added",
+      "after": {
+        "Term": "four strong arms",
+        "Translation": "四条强臂",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：四条强臂。"
+      }
+    },
+    {
+      "term": "faith",
+      "action": "added",
+      "after": {
+        "Term": "faith",
+        "Translation": "信仰",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：信仰。"
+      }
+    },
+    {
+      "term": "retaliatory headbutt",
+      "action": "added",
+      "after": {
+        "Term": "retaliatory headbutt",
+        "Translation": "反击头撞",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：反击头撞。"
+      }
+    },
+    {
+      "term": "steam resistance",
+      "action": "added",
+      "after": {
+        "Term": "steam resistance",
+        "Translation": "蒸汽抗性",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：蒸汽抗性。"
+      }
+    },
+    {
+      "term": "no weapons or thrown items",
+      "action": "added",
+      "after": {
+        "Term": "no weapons or thrown items",
+        "Translation": "无法持械或投掷",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法持械或投掷。"
+      }
+    },
+    {
+      "term": "no armour",
+      "action": "added",
+      "after": {
+        "Term": "no armour",
+        "Translation": "无法穿戴防具",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法穿戴防具。"
+      }
+    },
+    {
+      "term": "multi-lived",
+      "action": "added",
+      "after": {
+        "Term": "multi-lived",
+        "Translation": "多条生命",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：多条生命。"
+      }
+    },
+    {
+      "term": "distributed training",
+      "action": "added",
+      "after": {
+        "Term": "distributed training",
+        "Translation": "均衡训练",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：均衡训练。"
+      }
+    },
+    {
+      "term": "nimble swimmer",
+      "action": "added",
+      "after": {
+        "Term": "nimble swimmer",
+        "Translation": "灵巧游泳",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：灵巧游泳。"
+      }
+    },
+    {
+      "term": "tentacles",
+      "action": "added",
+      "after": {
+        "Term": "tentacles",
+        "Translation": "触手",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：触手。"
+      }
+    },
+    {
+      "term": "mertail",
+      "action": "added",
+      "after": {
+        "Term": "mertail",
+        "Translation": "人鱼尾巴",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：人鱼尾巴。"
+      }
+    },
+    {
+      "term": "float",
+      "action": "added",
+      "after": {
+        "Term": "float",
+        "Translation": "飘浮",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：飘浮。"
+      }
+    },
+    {
+      "term": "innate caster",
+      "action": "added",
+      "after": {
+        "Term": "innate caster",
+        "Translation": "天生施法",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：天生施法。"
+      }
+    },
+    {
+      "term": "HP casting",
+      "action": "added",
+      "after": {
+        "Term": "HP casting",
+        "Translation": "生命施法",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：生命施法。"
+      }
+    },
+    {
+      "term": "extra vitality",
+      "action": "added",
+      "after": {
+        "Term": "extra vitality",
+        "Translation": "额外生命力",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：额外生命力。"
+      }
+    },
+    {
+      "term": "ooze flood",
+      "action": "added",
+      "after": {
+        "Term": "ooze flood",
+        "Translation": "黏液灌注",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：黏液灌注。"
+      }
+    },
+    {
+      "term": "+LOS",
+      "action": "added",
+      "after": {
+        "Term": "+LOS",
+        "Translation": "扩展视野",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：扩展视野。"
+      }
+    },
+    {
+      "term": "divine attributes",
+      "action": "added",
+      "after": {
+        "Term": "divine attributes",
+        "Translation": "神圣属性",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：神圣属性。"
+      }
+    },
+    {
+      "term": "devour on kill",
+      "action": "added",
+      "after": {
+        "Term": "devour on kill",
+        "Translation": "击杀吞噬",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：击杀吞噬。"
+      }
+    },
+    {
+      "term": "otherworldly",
+      "action": "added",
+      "after": {
+        "Term": "otherworldly",
+        "Translation": "异界之身",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：异界之身。"
+      }
+    },
+    {
+      "term": "foul shadow",
+      "action": "added",
+      "after": {
+        "Term": "foul shadow",
+        "Translation": "邪恶阴影",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：邪恶阴影。"
+      }
+    },
+    {
+      "term": "explore regen",
+      "action": "added",
+      "after": {
+        "Term": "explore regen",
+        "Translation": "探索恢复",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：探索恢复。"
+      }
+    },
+    {
+      "term": "double potion healing",
+      "action": "added",
+      "after": {
+        "Term": "double potion healing",
+        "Translation": "双倍药水治疗",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：双倍药水治疗。"
+      }
+    },
+    {
+      "term": "drunken brawling",
+      "action": "added",
+      "after": {
+        "Term": "drunken brawling",
+        "Translation": "醉饮乱斗",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：醉饮乱斗。"
+      }
+    },
+    {
+      "term": "artefact enchanting",
+      "action": "added",
+      "after": {
+        "Term": "artefact enchanting",
+        "Translation": "神器附魔",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：神器附魔。"
+      }
+    },
+    {
+      "term": "runic magic",
+      "action": "added",
+      "after": {
+        "Term": "runic magic",
+        "Translation": "符文魔法",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：符文魔法。"
+      }
+    },
+    {
+      "term": "formless",
+      "action": "added",
+      "after": {
+        "Term": "formless",
+        "Translation": "无形之身",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无形之身。"
+      }
+    },
+    {
+      "term": "trickster",
+      "action": "added",
+      "after": {
+        "Term": "trickster",
+        "Translation": "诡术师",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：诡术师。"
+      }
+    },
+    {
+      "term": "mnemnophage",
+      "action": "added",
+      "after": {
+        "Term": "mnemnophage",
+        "Translation": "噬忆者",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：噬忆者。"
+      }
+    },
+    {
+      "term": "spellclaws",
+      "action": "added",
+      "after": {
+        "Term": "spellclaws",
+        "Translation": "法术利爪",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：法术利爪。"
+      }
+    },
+    {
+      "term": "accursed",
+      "action": "annotated",
+      "before": {
+        "Term": "accursed",
+        "Translation": "被诅咒者",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": ""
+      },
+      "after": {
+        "Term": "accursed",
+        "Translation": "被诅咒者",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "\n【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：被诅咒者。"
+      }
+    },
+    {
+      "term": "spiteful blood",
+      "action": "added",
+      "after": {
+        "Term": "spiteful blood",
+        "Translation": "怨毒之血",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：怨毒之血。"
+      }
+    },
+    {
+      "term": "Gehenna destruction",
+      "action": "added",
+      "after": {
+        "Term": "Gehenna destruction",
+        "Translation": "欣嫩谷毁灭之力",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：欣嫩谷毁灭之力。"
+      }
+    },
+    {
+      "term": "Cocytus destruction",
+      "action": "added",
+      "after": {
+        "Term": "Cocytus destruction",
+        "Translation": "悲叹河毁灭之力",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：悲叹河毁灭之力。"
+      }
+    },
+    {
+      "term": "Tartarus destruction",
+      "action": "added",
+      "after": {
+        "Term": "Tartarus destruction",
+        "Translation": "塔尔塔罗斯毁灭之力",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：塔尔塔罗斯毁灭之力。"
+      }
+    },
+    {
+      "term": "Dis destruction",
+      "action": "added",
+      "after": {
+        "Term": "Dis destruction",
+        "Translation": "冥府毁灭之力",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：冥府毁灭之力。"
+      }
+    },
+    {
+      "term": "no rings",
+      "action": "added",
+      "after": {
+        "Term": "no rings",
+        "Translation": "无法佩戴戒指",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法佩戴戒指。"
+      }
+    },
+    {
+      "term": "vampire fangs",
+      "action": "added",
+      "after": {
+        "Term": "vampire fangs",
+        "Translation": "吸血獠牙",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：吸血獠牙。"
+      }
+    },
+    {
+      "term": "bloodcurse",
+      "action": "added",
+      "after": {
+        "Term": "bloodcurse",
+        "Translation": "血咒",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：血咒。"
+      }
+    },
+    {
+      "term": "insubstantial",
+      "action": "added",
+      "after": {
+        "Term": "insubstantial",
+        "Translation": "虚体",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：虚体。"
+      }
+    },
+    {
+      "term": "frigid aura",
+      "action": "added",
+      "after": {
+        "Term": "frigid aura",
+        "Translation": "严寒光环",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：严寒光环。"
+      }
+    },
+    {
+      "term": "hive swarm",
+      "action": "added",
+      "after": {
+        "Term": "hive swarm",
+        "Translation": "蜂群护体",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：蜂群护体。"
+      }
+    },
+    {
+      "term": "water reaching",
+      "action": "added",
+      "after": {
+        "Term": "water reaching",
+        "Translation": "水体延伸",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：水体延伸。"
+      }
+    },
+    {
+      "term": "water splatter",
+      "action": "added",
+      "after": {
+        "Term": "water splatter",
+        "Translation": "水体飞溅",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：水体飞溅。"
+      }
+    },
+    {
+      "term": "freeze response",
+      "action": "added",
+      "after": {
+        "Term": "freeze response",
+        "Translation": "遇寒冻结",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：遇寒冻结。"
+      }
+    },
+    {
+      "term": "steam response",
+      "action": "added",
+      "after": {
+        "Term": "steam response",
+        "Translation": "遇火生汽",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：遇火生汽。"
+      }
+    },
+    {
+      "term": "airstrike attack",
+      "action": "added",
+      "after": {
+        "Term": "airstrike attack",
+        "Translation": "空气打击",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：空气打击。"
+      }
+    },
+    {
+      "term": "hex mastery",
+      "action": "added",
+      "after": {
+        "Term": "hex mastery",
+        "Translation": "妖术精通",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：妖术精通。"
+      }
+    },
+    {
+      "term": "riddle compulsion",
+      "action": "added",
+      "after": {
+        "Term": "riddle compulsion",
+        "Translation": "强迫出谜",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：强迫出谜。"
+      }
+    },
+    {
+      "term": "werefury",
+      "action": "added",
+      "after": {
+        "Term": "werefury",
+        "Translation": "兽化怒意",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：兽化怒意。"
+      }
+    },
+    {
+      "term": "werehowl",
+      "action": "added",
+      "after": {
+        "Term": "werehowl",
+        "Translation": "兽化嚎叫",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：兽化嚎叫。"
+      }
+    },
+    {
+      "term": "stinger hair",
+      "action": "added",
+      "after": {
+        "Term": "stinger hair",
+        "Translation": "刺丝长发",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：刺丝长发。"
+      }
+    },
+    {
+      "term": "lithotoxin",
+      "action": "added",
+      "after": {
+        "Term": "lithotoxin",
+        "Translation": "石化毒素",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：石化毒素。"
+      }
+    },
+    {
+      "term": "contaminating",
+      "action": "added",
+      "after": {
+        "Term": "contaminating",
+        "Translation": "污染攻击",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：污染攻击。"
+      }
+    },
+    {
+      "term": "maw attack",
+      "action": "added",
+      "after": {
+        "Term": "maw attack",
+        "Translation": "巨口攻击",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：巨口攻击。"
+      }
+    },
+    {
+      "term": "devouring maw",
+      "action": "added",
+      "after": {
+        "Term": "devouring maw",
+        "Translation": "吞噬巨口",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：吞噬巨口。"
+      }
+    },
+    {
+      "term": "growling stomach",
+      "action": "added",
+      "after": {
+        "Term": "growling stomach",
+        "Translation": "饥肠鸣响",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：饥肠鸣响。"
+      }
+    },
+    {
+      "term": "eel punch",
+      "action": "added",
+      "after": {
+        "Term": "eel punch",
+        "Translation": "电鳗拳",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：电鳗拳。"
+      }
+    },
+    {
+      "term": "eeljolt",
+      "action": "added",
+      "after": {
+        "Term": "eeljolt",
+        "Translation": "电鳗震击",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：电鳗震击。"
+      }
+    },
+    {
+      "term": "blade parry",
+      "action": "added",
+      "after": {
+        "Term": "blade parry",
+        "Translation": "刀刃招架",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：刀刃招架。"
+      }
+    },
+    {
+      "term": "sporulate",
+      "action": "annotated",
+      "before": {
+        "Term": "Sporulate",
+        "Translation": "孢子繁殖",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+      },
+      "after": {
+        "Term": "Sporulate",
+        "Translation": "孢子繁殖",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：孢子繁殖。"
+      }
+    },
+    {
+      "term": "armoured shell",
+      "action": "added",
+      "after": {
+        "Term": "armoured shell",
+        "Translation": "装甲甲壳",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：装甲甲壳。"
+      }
+    },
+    {
+      "term": "hypnotic gaze",
+      "action": "added",
+      "after": {
+        "Term": "hypnotic gaze",
+        "Translation": "催眠凝视",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：催眠凝视。"
+      }
+    },
+    {
+      "term": "lethargy",
+      "action": "added",
+      "after": {
+        "Term": "lethargy",
+        "Translation": "迟缓",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：迟缓。"
+      }
+    },
+    {
+      "term": "heatstroke",
+      "action": "added",
+      "after": {
+        "Term": "heatstroke",
+        "Translation": "中暑",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：中暑。"
+      }
+    },
+    {
+      "term": "snow-blindness",
+      "action": "added",
+      "after": {
+        "Term": "snow-blindness",
+        "Translation": "雪盲",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：雪盲。"
+      }
+    },
+    {
+      "term": "electrospasm",
+      "action": "added",
+      "after": {
+        "Term": "electrospasm",
+        "Translation": "电痉挛",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：电痉挛。"
+      }
+    },
+    {
+      "term": "claustrophobia",
+      "action": "added",
+      "after": {
+        "Term": "claustrophobia",
+        "Translation": "幽闭恐惧",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：幽闭恐惧。"
+      }
+    },
+    {
+      "term": "stumbling",
+      "action": "added",
+      "after": {
+        "Term": "stumbling",
+        "Translation": "踉跄",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：踉跄。"
+      }
+    },
+    {
+      "term": "succour",
+      "action": "added",
+      "after": {
+        "Term": "succour",
+        "Translation": "援敌",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：援敌。"
+      }
+    },
+    {
+      "term": "multiplicity",
+      "action": "added",
+      "after": {
+        "Term": "multiplicity",
+        "Translation": "增殖",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：增殖。"
+      }
+    },
+    {
+      "term": "dilettante",
+      "action": "added",
+      "after": {
+        "Term": "dilettante",
+        "Translation": "浅学者",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：浅学者。"
+      }
+    },
+    {
+      "term": "paradox",
+      "action": "added",
+      "after": {
+        "Term": "paradox",
+        "Translation": "悖论",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：悖论。"
+      }
+    },
+    {
+      "term": "warding",
+      "action": "added",
+      "after": {
+        "Term": "warding",
+        "Translation": "护持",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：护持。"
+      }
+    },
+    {
+      "term": "hunted",
+      "action": "added",
+      "after": {
+        "Term": "hunted",
+        "Translation": "被猎者",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：被猎者。"
+      }
+    },
+    {
+      "term": "mortality",
+      "action": "added",
+      "after": {
+        "Term": "mortality",
+        "Translation": "必死",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：必死。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1159 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "entries": [
+    {
+      "key": "_graffiti_author_any_",
+      "english": "w:50\n@ancestor name@\n\n@_graffiti_author_orc_@\n\nw:2\n@_graffiti_author_bland_@\n\nw:2\n@RANDGEN@\n\nw:1\n@_rare_graffiti_author_any_@\n",
+      "translation": "w:50\n@ancestor name@\n\n@_graffiti_author_orc_@\n\nw:2\n@_graffiti_author_bland_@\n\nw:2\n@RANDGEN@\n\nw:1\n@_rare_graffiti_author_any_@\n",
+      "glossary_hits": [
+        {
+          "term": "ancestor",
+          "translation": "先祖"
+        },
+        {
+          "term": "orc",
+          "translation": "兽人"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_author_any_changeable_",
+      "english": "w:50\n@ancestor name@\n\nw:2\n@_graffiti_author_bland_@\n\nw:2\n@RANDGEN@\n",
+      "translation": "w:50\n@ancestor name@\n\nw:2\n@_graffiti_author_bland_@\n\nw:2\n@RANDGEN@\n",
+      "glossary_hits": [
+        {
+          "term": "ancestor",
+          "translation": "先祖"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_author_any_changeable_non-randgen_",
+      "english": "w:50\n@ancestor name@\n\nw:2\n@_graffiti_author_bland_@\n",
+      "translation": "w:50\n@ancestor name@\n\nw:2\n@_graffiti_author_bland_@\n",
+      "glossary_hits": [
+        {
+          "term": "ancestor",
+          "translation": "先祖"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_author_any_non-orc_",
+      "english": "w:50\n@ancestor name@\n\nw:2\n@_graffiti_author_bland_@\n\nw:2\n@RANDGEN@\n\nw:1\n@_rare_graffiti_author_any_non-orc_@\n",
+      "translation": "w:50\n@ancestor name@\n\nw:2\n@_graffiti_author_bland_@\n\nw:2\n@RANDGEN@\n\nw:1\n@_rare_graffiti_author_any_non-orc_@\n",
+      "glossary_hits": [
+        {
+          "term": "ancestor",
+          "translation": "先祖"
+        },
+        {
+          "term": "orc",
+          "translation": "兽人"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_author_bland_",
+      "english": "@bland name@\n\nw:2\n@bland name@ (not that one)\n\nw:2\n@bland name@ (the other one)\n\nw:2\n@bland name@ (yes, that one)\n",
+      "translation": "@bland name@\n\nw:2\n@bland name@（不是那个人）\n\nw:2\n@bland name@（另一个）\n\nw:2\n@bland name@（对，就是那个人）\n",
+      "glossary_hits": []
+    },
+    {
+      "key": "_graffiti_author_orc_",
+      "english": "@any orc name@ the orc\n",
+      "translation": "兽人@any orc name@\n",
+      "glossary_hits": [
+        {
+          "term": "orc",
+          "translation": "兽人"
+        }
+      ]
+    },
+    {
+      "key": "_rare_graffiti_author_any_",
+      "english": "@_rare_graffiti_author_ordinary_@\n\nw:2\n@_rare_graffiti_author_orc_@\n\nw:2\n@_rare_graffiti_author_title_@\n\nw:1\n@_rare_graffiti_author_god_@\n",
+      "translation": "@_rare_graffiti_author_ordinary_@\n\nw:2\n@_rare_graffiti_author_orc_@\n\nw:2\n@_rare_graffiti_author_title_@\n\nw:1\n@_rare_graffiti_author_god_@\n",
+      "glossary_hits": [
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "orc",
+          "translation": "兽人"
+        }
+      ]
+    },
+    {
+      "key": "_rare_graffiti_author_any_non-orc_",
+      "english": "@_rare_graffiti_author_ordinary_@\n\nw:2\n@_rare_graffiti_author_title_@\n\nw:1\n@_rare_graffiti_author_god_@\n",
+      "translation": "@_rare_graffiti_author_ordinary_@\n\nw:2\n@_rare_graffiti_author_title_@\n\nw:1\n@_rare_graffiti_author_god_@\n",
+      "glossary_hits": [
+        {
+          "term": "god",
+          "translation": "神"
+        }
+      ]
+    },
+    {
+      "key": "_rare_graffiti_author_god_",
+      "english": "Woog the god\n",
+      "translation": "神明Woog\n",
+      "glossary_hits": [
+        {
+          "term": "god",
+          "translation": "神"
+        }
+      ]
+    },
+    {
+      "key": "_rare_graffiti_author_orc_",
+      "english": "Spartorcus the orc\n",
+      "translation": "兽人Spartorcus\n",
+      "glossary_hits": [
+        {
+          "term": "orc",
+          "translation": "兽人"
+        }
+      ]
+    },
+    {
+      "key": "_rare_graffiti_author_ordinary_",
+      "english": "Durwent the kobold\n\nZlaz the goblin\n\nFneeb the oni\n\nVethion the elf\n\nFrobof the imp\n",
+      "translation": "狗头人Durwent\n\n地精Zlaz\n\n鬼人Fneeb\n\n精灵Vethion\n\n小鬼Frobof\n",
+      "glossary_hits": [
+        {
+          "term": "kobold",
+          "translation": "狗头人"
+        },
+        {
+          "term": "Oni",
+          "translation": "鬼人"
+        },
+        {
+          "term": "elf",
+          "translation": "精灵"
+        },
+        {
+          "term": "goblin",
+          "translation": "地精"
+        }
+      ]
+    },
+    {
+      "key": "_rare_graffiti_author_title_",
+      "english": "Kilroy\n\nGarc the Great\n\nPlog the Peerless\n\nDead Wendell\n\nLady Dreamflight\n",
+      "translation": "Kilroy\n\n伟大的Garc\n\n无双的Plog\n\n死去的Wendell\n\nDreamflight女士\n",
+      "glossary_hits": []
+    },
+    {
+      "key": "_pattern_type_",
+      "english": "@any_colour_pattern@\n\n@any_glowing_colour_pattern@\n",
+      "translation": "@any_colour_pattern@\n\n@any_glowing_colour_pattern@\n",
+      "glossary_hits": []
+    },
+    {
+      "key": "_writing_adj_",
+      "english": "angular\n\nblocky\n\nbold\n\ncurvy\n\nflowing\n\njagged\n\npulsating\n\nshifting\n\nsinuous\n\nsloping\n\nspidery\n\nswirling\n\nthrobbing\n\ntwitching\n\nwrithing\n",
+      "translation": "棱角分明\n\n方方正正\n\n粗体\n\n弯曲\n\n流畅\n\n锯齿状\n\n脉动\n\n变幻\n\n蜿蜒\n\n倾斜\n\n蜘蛛腿般纤细\n\n旋转\n\n搏动\n\n抽动\n\n扭动\n",
+      "glossary_hits": []
+    },
+    {
+      "key": "_writing_noun_",
+      "english": "binary code\n\ncharacters\n\ncuneiform\n\nfigures\n\nglyphs\n\nhieroglyphics\n\nideograms\n\nletters\n\nprint-out\n\nrunes\n\nscrawl\n\nsigils\n\nsymbols\n\ntext\n\nwriting\n",
+      "translation": "二进制代码\n\n字符\n\n楔形文字\n\n图形\n\n字形\n\n象形文字\n\n表意文字\n\n字母\n\n打印文字\n\n符文\n\n潦草字迹\n\n印记\n\n符号\n\n文本\n\n文字\n",
+      "glossary_hits": []
+    },
+    {
+      "key": "_writing_style_",
+      "english": "@any_colour@\n\n@_writing_adj_@ @any_colour@\n\n@any_glowing_colour@\n",
+      "translation": "@any_colour@\n\n@_writing_adj_@的@any_colour@\n\n@any_glowing_colour@\n",
+      "glossary_hits": []
+    },
+    {
+      "key": "_writing_type_",
+      "english": "@_writing_style_@ @_writing_noun_@\n",
+      "translation": "@_writing_style_@@_writing_noun_@\n",
+      "glossary_hits": []
+    },
+    {
+      "key": "_graffiti_type_",
+      "english": "@_writing_style_@ graffiti\n",
+      "translation": "@_writing_style_@涂鸦\n",
+      "glossary_hits": []
+    },
+    {
+      "key": "_graffiti_type_with_signature_maybe_",
+      "english": "@_graffiti_type_@\n\n@_graffiti_type_@ signed by @_graffiti_author_any_@\n",
+      "translation": "@_graffiti_type_@\n\n@_graffiti_type_@，署名为@_graffiti_author_any_@\n",
+      "glossary_hits": []
+    },
+    {
+      "key": "_graffiti_type_with_signature_maybe_non-orc_",
+      "english": "@_graffiti_type_@\n\n@_graffiti_type_@ signed by @_graffiti_author_any_non-orc_@\n",
+      "translation": "@_graffiti_type_@\n\n@_graffiti_type_@，署名为@_graffiti_author_any_non-orc_@\n",
+      "glossary_hits": [
+        {
+          "term": "orc",
+          "translation": "兽人"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_type_with_signature_maybe_orc_",
+      "english": "@_graffiti_type_@\n\n@_graffiti_type_@ signed by @_graffiti_author_orc_@\n",
+      "translation": "@_graffiti_type_@\n\n@_graffiti_type_@，署名为@_graffiti_author_orc_@\n",
+      "glossary_hits": [
+        {
+          "term": "orc",
+          "translation": "兽人"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_advertisement_",
+      "english": "advertising a meeting @_graffiti_mass_meeting_ordinary_@\n\nadvertising a meeting @_graffiti_mass_meeting_religious_@\n\nadvertising a shop in the dungeon with [cheap|exclusive|expensive|quality|rare|useful] goods\n\nw:2\nadvertising @_graffiti_class_any_@\n\nw:1\nadvertising a meet-up with @_graffiti_author_any_@ to learn how to survive in the dungeon\n\nw:1\nadvertising a meet-up with @_graffiti_author_any_@ for a good time\n\nw:1\nadvertising the very paint used to make it\n",
+      "translation": "宣传一场@_graffiti_mass_meeting_ordinary_@的聚会\n\n宣传一场@_graffiti_mass_meeting_religious_@的聚会\n\n为地牢中一家出售[廉价|独家|昂贵|优质|稀有|实用]商品的商店做广告\n\nw:2\n宣传@_graffiti_class_any_@\n\nw:1\n宣传与@_graffiti_author_any_@见面学习地牢求生之道的活动\n\nw:1\n宣传与@_graffiti_author_any_@相聚共度美好时光的活动\n\nw:1\n为画这幅涂鸦所用的颜料做广告\n",
+      "glossary_hits": [
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "shop",
+          "translation": "商店"
+        },
+        {
+          "term": "the Dungeon",
+          "translation": "地下城"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_changed_names_",
+      "english": "@_graffiti_author_any_changeable_@ has changed names and now goes by @_graffiti_author_any_changeable_@\n\nw:2\n@_graffiti_author_orc_@ has changed names and now goes by @_graffiti_author_orc_@\n\nw:2\n@_rare_graffiti_author_any_@ has passed on the name to someone else worthy of it\n\nw:1\n@_graffiti_author_any_changeable_non-randgen_@ has changed names due to Xom's influence and now goes by @RANDGEN@\n",
+      "translation": "@_graffiti_author_any_changeable_@已经改名，现在叫@_graffiti_author_any_changeable_@\n\nw:2\n@_graffiti_author_orc_@已经改名，现在叫@_graffiti_author_orc_@\n\nw:2\n@_rare_graffiti_author_any_@已将这个名字传给另一个配得上它的人\n\nw:1\n@_graffiti_author_any_changeable_non-randgen_@受佐姆影响改了名，现在叫@RANDGEN@\n",
+      "glossary_hits": [
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        },
+        {
+          "term": "orc",
+          "translation": "兽人"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_changed_or_compared_religions_",
+      "english": "@_graffiti_author_any_@ has abandoned @random_god@\n\n@_graffiti_author_any_@ has converted away from @random_god@\n\n@_graffiti_author_any_@ has converted to @random_god@\n\n@_graffiti_author_any_@ is @_graffiti_religion_better_or_worse_@ than @_graffiti_author_any_@\n\n@_graffiti_author_any_@ is secretly an atheist\n\n@_graffiti_author_any_@ is secretly not an atheist\n\n@_graffiti_author_any_@ is secretly @random_god@\n\n@_graffiti_author_any_@ secretly worships Zin\n\n@_graffiti_author_any_@ secretly worships Zin instead of @random_god_chaotic@\n\n@_graffiti_author_any_@ secretly worships @random_god_chaotic@\n\n@_graffiti_author_any_@ secretly worships @random_god_chaotic@ instead of Zin\n\n@_graffiti_author_any_@ secretly worships @random_god_good@\n\n@_graffiti_author_any_@ secretly worships @random_god_good@ instead of @random_god_evil@\n\n@_graffiti_author_any_@ secretly worships @random_god_evil@\n\n@_graffiti_author_any_@ secretly worships @random_god_evil@ instead of @random_god_good@\n\nw:1\n@_graffiti_author_any_@ is secretly @_graffiti_hailed_god_@\n\nw:1\n@_graffiti_author_any_@ secretly worships @_graffiti_hailed_god_@\n",
+      "translation": "@_graffiti_author_any_@已抛弃@random_god@\n\n@_graffiti_author_any_@已不再信奉@random_god@\n\n@_graffiti_author_any_@已改信@random_god@\n\n@_graffiti_author_any_@与@_graffiti_author_any_@相比，@_graffiti_religion_better_or_worse_@\n\n@_graffiti_author_any_@暗地里是个无神论者\n\n@_graffiti_author_any_@暗地里并非无神论者\n\n@_graffiti_author_any_@其实就是@random_god@\n\n@_graffiti_author_any_@暗中信奉辛\n\n@_graffiti_author_any_@暗中信奉辛，而非@random_god_chaotic@\n\n@_graffiti_author_any_@暗中信奉@random_god_chaotic@\n\n@_graffiti_author_any_@暗中信奉@random_god_chaotic@，而非辛\n\n@_graffiti_author_any_@暗中信奉@random_god_good@\n\n@_graffiti_author_any_@暗中信奉@random_god_good@，而非@random_god_evil@\n\n@_graffiti_author_any_@暗中信奉@random_god_evil@\n\n@_graffiti_author_any_@暗中信奉@random_god_evil@，而非@random_god_good@\n\nw:1\n@_graffiti_author_any_@其实就是@_graffiti_hailed_god_@\n\nw:1\n@_graffiti_author_any_@暗中信奉@_graffiti_hailed_god_@\n",
+      "glossary_hits": [
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Zin",
+          "translation": "辛"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_class_any_",
+      "english": "@_graffiti_class_remedial_@\n\nw:2\n@_graffiti_class_master_@\n",
+      "translation": "@_graffiti_class_remedial_@\n\nw:2\n@_graffiti_class_master_@\n",
+      "glossary_hits": []
+    },
+    {
+      "key": "_graffiti_class_master_",
+      "english": "a master class on excavation taught by formicids\n\na master class on insults taught by [demons|imps]\n\na master class on the many uses of giant clubs taught by [ogres|oni]\n\na master class on Unarmed Combat taught by felids\n\nw:1\na master class on [art|calligraphy] taught by anonymous graffiti authors\n",
+      "translation": "蚁族教授的挖掘大师课\n\n[恶魔|小鬼]教授的辱骂大师课\n\n[食人魔|鬼人]教授的巨型木棒多用途大师课\n\n猫族教授的徒手格斗大师课\n\nw:1\n匿名涂鸦作者教授的[艺术|书法]大师课\n",
+      "glossary_hits": [
+        {
+          "term": "Unarmed Combat",
+          "translation": "徒手格斗"
+        },
+        {
+          "term": "Oni",
+          "translation": "鬼人"
+        },
+        {
+          "term": "giant",
+          "translation": "巨人"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_class_remedial_",
+      "english": "a Remedial @random_skill@ class taught by @_graffiti_professor_@\n\na Remedial @random_skill_magic@ class taught by the @_graffiti_professor_magic_type_@ @_graffiti_professor_@\n\na Remedial @random_skill_mundane@ class taught by the @_graffiti_professor_mundane_type_@ @_graffiti_professor_@\n\nw:2\na Remedial Evocations class taught by the @_graffiti_professor_evocations_type_@ @_graffiti_professor_@\n\nw:2\na Remedial Invocations class taught by the @_graffiti_professor_invocations_type_@ @_graffiti_professor_@\n\nw:2\na Remedial Shapeshifting class taught by the @_graffiti_professor_shapeshifting_type_@ @_graffiti_professor_@\n\n\nw:2\na Remedial Necromancy class taught by the @_graffiti_professor_necromancy_type_@ @_graffiti_professor_@\n\nw:2\na Remedial @random_skill_magic@ class taught by the @_graffiti_professor_necromancy_type_@ @_graffiti_professor_@\n",
+      "translation": "由@_graffiti_professor_@教授的@random_skill@补习课\n\n由@_graffiti_professor_magic_type_@@_graffiti_professor_@教授的@random_skill_magic@补习课\n\n由@_graffiti_professor_mundane_type_@@_graffiti_professor_@教授的@random_skill_mundane@补习课\n\nw:2\n由@_graffiti_professor_evocations_type_@@_graffiti_professor_@教授的唤发补习课\n\nw:2\n由@_graffiti_professor_invocations_type_@@_graffiti_professor_@教授的祈祷补习课\n\nw:2\n由@_graffiti_professor_shapeshifting_type_@@_graffiti_professor_@教授的变形术补习课\n\n\nw:2\n由@_graffiti_professor_necromancy_type_@@_graffiti_professor_@教授的死灵系魔法补习课\n\nw:2\n由@_graffiti_professor_necromancy_type_@@_graffiti_professor_@教授的@random_skill_magic@补习课\n",
+      "glossary_hits": [
+        {
+          "term": "Evocations",
+          "translation": "唤发"
+        },
+        {
+          "term": "Invocations",
+          "translation": "祈祷"
+        },
+        {
+          "term": "Necromancy",
+          "translation": "死灵系魔法"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "Shapeshifting",
+          "translation": "变形术"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_duplicate_",
+      "english": "a duplicate\n\na duplicate indistinguishable from the original\n\nan impostor\n\nan impostor from another reality\n\na shapeshifter\n",
+      "translation": "一个复制体\n\n一个与原版毫无区别的复制体\n\n一个冒牌货\n\n一个来自另一现实的冒牌货\n\n一个变形者\n",
+      "glossary_hits": [
+        {
+          "term": "Shapeshifter",
+          "translation": "变形者"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_fight_",
+      "english": "of an argument between @_graffiti_author_any_@ and @_graffiti_author_any_@\n\nof a three-way argument between @_graffiti_author_any_@, @_graffiti_author_any_@, and @_graffiti_author_any_@\n\nw:2\nof a fight between [berserkers|Trog worshippers] and erythrospite sufferers over the true meaning of blood rage\n\nw:2\nof a fight between [\"artists\"|artists|Dithmenos worshippers] and [death knights|death mages|Yredelemnul worshippers|necromancers] over whether something was a shadow or a shadowghast\n",
+      "translation": "描绘@_graffiti_author_any_@与@_graffiti_author_any_@的争论\n\n描绘@_graffiti_author_any_@、@_graffiti_author_any_@与@_graffiti_author_any_@的三方争论\n\nw:2\n描绘[狂战士|特洛戈信徒]与猩红怨体患者为血怒的真谛而打斗\n\nw:2\n描绘[“艺术家”|艺术家|迪斯姆诺信徒]与[死亡骑士|死亡法师|伊莱德莱姆努尔信徒|死灵法师]为某物究竟是影还是阴影怨魂而打斗\n",
+      "glossary_hits": [
+        {
+          "term": "Dithmenos",
+          "translation": "迪斯姆诺"
+        },
+        {
+          "term": "shadow",
+          "translation": "影"
+        },
+        {
+          "term": "Trog",
+          "translation": "特洛戈"
+        },
+        {
+          "term": "Yredelemnul",
+          "translation": "伊莱德莱姆努尔"
+        },
+        {
+          "term": "erythrospite",
+          "translation": "猩红怨体"
+        },
+        {
+          "term": "shadowghast",
+          "translation": "阴影怨魂"
+        },
+        {
+          "term": "Death",
+          "translation": "死亡"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_hailed_god_",
+      "english": "Xom\n\nw:2\nan unknown god\n\nw:1\n@_rare_graffiti_author_god_@\n\nw:1\nthe power of cheese\n\nw:1\na wagon full of pancakes\n",
+      "translation": "佐姆\n\nw:2\n一位未知神祇\n\nw:1\n@_rare_graffiti_author_god_@\n\nw:1\n奶酪的力量\n\nw:1\n一车煎饼\n",
+      "glossary_hits": [
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_happened_reason_",
+      "english": "an accident\n\na coincidence\n\na coincidence but @_graffiti_author_any_@ doesn't trust coincidences\n\na cover-up\n\na farce\n\na frame-up\n\na mistake\n\na travesty\n\na warning to others\n\nagainst the will of the gods\n\ncompletely random\n\ndeliberate\n\ndeserved\n\njust\n\nnecessary\n\nno accident\n\nno mistake\n\npart of a larger plot\n\nthe work of the \"Plog\" Conspiracy\n\nself-inflicted\n\nthe will of the gods\n\nuncalled for\n\nundeserved\n\nunjust\n\nunnecessary\n\nunthinkable\n",
+      "translation": "一场意外\n\n一个巧合\n\n一个巧合，但@_graffiti_author_any_@不相信巧合\n\n一场掩盖真相的行动\n\n一场闹剧\n\n一场栽赃\n\n一个错误\n\n一场荒唐的歪曲\n\n对其他人的警告\n\n违背众神意志的事\n\n完全随机的\n\n蓄意的\n\n应得的\n\n公正的\n\n必要的\n\n绝非意外\n\n绝非错误\n\n一个更大阴谋的一部分\n\n“Plog”阴谋集团的手笔\n\n自找的\n\n众神的意志\n\n无端的\n\n不该承受的\n\n不公正的\n\n不必要的\n\n不可思议的\n",
+      "glossary_hits": [
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_image_",
+      "english": "of [a goblin|a kobold|a spriggan] with its head poking out of a tunnel\n\nof [a dragon|an elephant|a yak] trampling over all in its path\n\nof [a gnoll|a human|an orc] brandishing a nasty-looking weapon\n\nof [an ogre|an oni|a troll] ripping one of its enemies in half\n\nof [a deep elf|a lich|a tengu] shooting a blast of magic\n\nof a felid hanging from a tree branch\n\nof a demon grinning evilly\n\nof an eggplant just sitting there\n\nthat looks like nothing you recognise\n",
+      "translation": "画着[地精|狗头人|斯普利根]把头探出隧道\n\n画着[龙|大象|牦牛]践踏沿途的一切\n\n画着[豺狼人|人类|兽人]挥舞一件模样凶恶的武器\n\n画着[食人魔|鬼人|巨魔]把一个敌人撕成两半\n\n画着[地底精灵|巫妖|天狗]射出一道魔法\n\n画着一只挂在树枝上的猫族\n\n画着一个邪笑的恶魔\n\n画着一个静静摆着的茄子\n\n画的东西你完全认不出来\n",
+      "glossary_hits": [
+        {
+          "term": "Gnoll",
+          "translation": "豺狼人"
+        },
+        {
+          "term": "kobold",
+          "translation": "狗头人"
+        },
+        {
+          "term": "lich",
+          "translation": "巫妖"
+        },
+        {
+          "term": "ogre",
+          "translation": "食人魔"
+        },
+        {
+          "term": "tengu",
+          "translation": "天狗"
+        },
+        {
+          "term": "troll",
+          "translation": "巨魔"
+        },
+        {
+          "term": "Deep Elf",
+          "translation": "地底精灵"
+        },
+        {
+          "term": "Felid",
+          "translation": "猫族"
+        },
+        {
+          "term": "Human",
+          "translation": "人类"
+        },
+        {
+          "term": "Oni",
+          "translation": "鬼人"
+        },
+        {
+          "term": "Spriggan",
+          "translation": "斯普利根"
+        },
+        {
+          "term": "dragon",
+          "translation": "龙"
+        },
+        {
+          "term": "elephant",
+          "translation": "大象"
+        },
+        {
+          "term": "elf",
+          "translation": "精灵"
+        },
+        {
+          "term": "goblin",
+          "translation": "地精"
+        },
+        {
+          "term": "orc",
+          "translation": "兽人"
+        },
+        {
+          "term": "yak",
+          "translation": "牦牛"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_life_or_death_",
+      "english": "deserves death\n\ndeserves undeath\n\ndeserves life\n\nis dead\n\nis undead\n\nlives\n",
+      "translation": "该死\n\n该化为亡灵\n\n该活下去\n\n已经死了\n\n是亡灵\n\n还活着\n",
+      "glossary_hits": [
+        {
+          "term": "undead",
+          "translation": "亡灵"
+        },
+        {
+          "term": "Death",
+          "translation": "死亡"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_loves_or_hates_",
+      "english": "curses\n\ndefends\n\nhates\n\ninsults\n\nloves\n\npraises\n",
+      "translation": "诅咒\n\n维护\n\n憎恨\n\n辱骂\n\n喜爱\n\n赞美\n",
+      "glossary_hits": []
+    },
+    {
+      "key": "_graffiti_mass_meeting_ordinary_",
+      "english": "of an athletic club playing [cards|darts|hammer throw|javelin throw|Whack-A-Rock-Fish]\n\nof an artificer club [testing|tinkering with] [devices|evokables|wands]\n\nof a support group for veterans of the surface wars\n\nof a group of [bakers|fruit vendors|meat vendors|shopkeepers] peddling their wares in the dungeon\n\nof a group of [apiarists|hive talisman users] discussing the [antics|emotional state|health] of their bees\n\nof a group of rich people discussing how to make more money\n\nof a group of [knights|veterans|warlords|warriors] practising barely-restrained combat\n\nof a group of [knights|veterans|warlords|warriors] practising solo combat\n\nof a group of [mages|sorcerers|spellcasters|wizards] practising [eclectic|esoteric] magic\n\nof a group of [mages|sorcerers|spellcasters|wizards] practising [cataclysmic|destructive] magic\n\nof a group of [death mages|necromancers] practising [necromancy|bringing things to unlife]\n\nof a group of philosophers discussing [perfection|the nature of time] for who knows how long\n\nof a group of [masochists|sadists] holding a pain endurance contest\n\nof a group of gardeners showing off their green thumbs\n\nof a group of [bards|historians|lorekeepers] sharing glorious tales of their ancestors\n\nof a group of revellers throwing a wild dance party\n\nof a group of [\"artists\" holding a \"shadow play\"|artists holding a shadow play]\n\nof a group of monks practising martial [attacks|movements]\n\nof a group of potion makers practising healing others\n\nof a group of ascetics despising their bodies and discussing sacrifices\n\nof a group of [crusaders|moralists] [discussing|opposing] evil in the world\n\nof a varied group of people discussing their experiences in the Abyss\n",
+      "translation": "一个体育俱乐部玩[纸牌|飞镖|链球|标枪|打岩鱼]\n\n一个修补匠俱乐部[测试|摆弄][装置|唤发物品|魔棒]\n\n一个为地表战争老兵提供互助的团体\n\n一群[面包师|水果商|肉贩|店主]在地牢里兜售商品\n\n一群[养蜂人|蜂巢护符使用者]讨论蜜蜂的[滑稽举动|情绪状态|健康状况]\n\n一群富人讨论如何赚更多的钱\n\n一群[骑士|老兵|军阀|勇士]练习几乎不加克制的战斗\n\n一群[骑士|老兵|军阀|勇士]练习单打独斗\n\n一群[法师|术士|施法者|巫师]练习[兼收并蓄的|深奥的]魔法\n\n一群[法师|术士|施法者|巫师]练习[灾变性|破坏性]魔法\n\n一群[死亡法师|死灵法师]练习[死灵系魔法|将事物变为亡灵]\n\n一群哲学家讨论[完美|时间的本质]，不知已讨论了多久\n\n一群[受虐狂|施虐狂]举行忍痛比赛\n\n一群园丁炫耀园艺本领\n\n一群[吟游诗人|历史学家|传说守护者]分享先祖的光辉事迹\n\n一群狂欢者举办狂野的舞会\n\n一群[“艺术家”表演“皮影戏”|艺术家表演皮影戏]\n\n一群武僧练习武术[招式|身法]\n\n一群药剂师练习为他人疗伤\n\n一群苦行者鄙弃肉体、讨论牺牲\n\n一群[圣战士|道德家][讨论|反对]世间邪恶\n\n一群形形色色的人讨论在深渊中的经历\n",
+      "glossary_hits": [
+        {
+          "term": "Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "Artificer",
+          "translation": "修补匠"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "Necromancy",
+          "translation": "死灵系魔法"
+        },
+        {
+          "term": "potion",
+          "translation": "药水"
+        },
+        {
+          "term": "shadow",
+          "translation": "影"
+        },
+        {
+          "term": "throw",
+          "translation": "投掷"
+        },
+        {
+          "term": "Throwing",
+          "translation": "投掷"
+        },
+        {
+          "term": "talisman",
+          "translation": "变形护符"
+        },
+        {
+          "term": "hive talisman",
+          "translation": "蜂巢护符"
+        },
+        {
+          "term": "Pain",
+          "translation": "痛苦术/痛苦"
+        },
+        {
+          "term": "the Dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "the Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "Death",
+          "translation": "死亡"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_mass_meeting_religious_",
+      "english": "of a [sharper club|group of Nemelex Xobeh worshippers] playing cards the way Nemelex Xobeh intended\n\nof a group of Zin worshippers supporting the Axioms of Law\n\nof a group of [chaos knights|Xom worshippers] contemplating the Divine Madness\n\nof a group of [death knights|Yredelemnul worshippers] embracing the Inexorable Grip\n\nof a group of Gozag worshippers discussing how to make more money\n\nof a group of [berserkers|Trog worshippers] practising barely-restrained combat\n\nof a group of Okawaru worshippers practising solo combat\n\nof a group of Sif Muna worshippers practising [eclectic|esoteric] magic\n\nof a group of Vehumet worshippers practising [cataclysmic|destructive] magic\n\nof a group of Kikubaaqudgha worshippers practising [necromancy|bringing things to unlife]\n\nof a group of Cheibriados worshippers discussing [perfection|the nature of time] for who knows how long\n\nof a group of Makhleb worshippers holding a pain endurance contest\n\nof a group of Fedhas worshippers showing off their green thumbs\n\nof a group of Hepliaklqana worshippers sharing glorious tales of their ancestors\n\nof a group of Uskayaw worshippers throwing a wild dance party\n\nof a group of Dithmenos worshippers holding a [\"shadow play\"|shadow play]\n\nof a group of worshippers of the Wu Jian Council practising martial [attacks|movements]\n\nof a group of Qazlal worshippers changing the weather indoors\n\nof a group of Elyvilon worshippers practising healing others\n\nof a group of Ashenzari worshippers practising scrying on things\n\nof a group of Ru worshippers despising their bodies and discussing sacrifices\n\nof a group of worshippers of the Shining One [discussing|opposing] evil in the world\n\nof a group of [Lugonu worshippers|mad acolytes of Lugonu] discussing their experiences in the Abyss\n\nof a group of orcs promoting Beogh's word\n",
+      "translation": "一个[老千俱乐部|尼姆雷斯・索布信徒团体]按尼姆雷斯・索布的旨意打牌\n\n一群辛的信徒拥护法则公理\n\n一群[混沌骑士|佐姆信徒]沉思神圣疯狂\n\n一群[死亡骑士|伊莱德莱姆努尔信徒]拥抱无可抗拒之握\n\n一群哥萨戈信徒讨论如何赚更多的钱\n\n一群[狂战士|特洛戈信徒]练习几乎不加克制的战斗\n\n一群奥格瓦如信徒练习单打独斗\n\n一群席夫·穆纳信徒练习[兼收并蓄的|深奥的]魔法\n\n一群维胡梅特信徒练习[灾变性|破坏性]魔法\n\n一群奇库巴库哈信徒练习[死灵系魔法|将事物变为亡灵]\n\n一群切布理亚多信徒讨论[完美|时间的本质]，不知已讨论了多久\n\n一群马科列布信徒举行忍痛比赛\n\n一群费德哈信徒炫耀园艺本领\n\n一群惠普利亚卡纳信徒分享先祖的光辉事迹\n\n一群阿斯卡亚信徒举办狂野的舞会\n\n一群迪斯姆诺信徒表演[“皮影戏”|皮影戏]\n\n一群武剑会信徒练习武术[招式|身法]\n\n一群卡兹拉尔信徒在室内改变天气\n\n一群艾利维隆信徒练习为他人疗伤\n\n一群艾申扎利信徒练习占视事物\n\n一群入的信徒鄙弃肉体、讨论牺牲\n\n一群光明神信徒[讨论|反对]世间邪恶\n\n一群[卢戈努信徒|卢戈努的疯狂侍僧]讨论在深渊中的经历\n\n一群兽人宣扬比欧弗的教诲\n",
+      "glossary_hits": [
+        {
+          "term": "Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "Ashenzari",
+          "translation": "艾申扎利"
+        },
+        {
+          "term": "axioms of law",
+          "translation": "法则公理"
+        },
+        {
+          "term": "Beogh",
+          "translation": "比欧弗"
+        },
+        {
+          "term": "Cheibriados",
+          "translation": "切布理亚多"
+        },
+        {
+          "term": "Dithmenos",
+          "translation": "迪斯姆诺"
+        },
+        {
+          "term": "Elyvilon",
+          "translation": "艾利维隆"
+        },
+        {
+          "term": "Fedhas",
+          "translation": "费德哈"
+        },
+        {
+          "term": "Gozag",
+          "translation": "哥萨戈"
+        },
+        {
+          "term": "Hepliaklqana",
+          "translation": "惠普利亚卡纳"
+        },
+        {
+          "term": "Kikubaaqudgha",
+          "translation": "奇库巴库哈"
+        },
+        {
+          "term": "Makhleb",
+          "translation": "马科列布"
+        },
+        {
+          "term": "Necromancy",
+          "translation": "死灵系魔法"
+        },
+        {
+          "term": "Nemelex Xobeh",
+          "translation": "尼姆雷斯・索布"
+        },
+        {
+          "term": "Okawaru",
+          "translation": "奥格瓦如"
+        },
+        {
+          "term": "Qazlal",
+          "translation": "卡兹拉尔"
+        },
+        {
+          "term": "Ru",
+          "translation": "入"
+        },
+        {
+          "term": "shadow",
+          "translation": "影"
+        },
+        {
+          "term": "Sif Muna",
+          "translation": "席夫·穆纳"
+        },
+        {
+          "term": "the Shining One",
+          "translation": "光明神"
+        },
+        {
+          "term": "Trog",
+          "translation": "特洛戈"
+        },
+        {
+          "term": "Uskayaw",
+          "translation": "阿斯卡亚"
+        },
+        {
+          "term": "Vehumet",
+          "translation": "维胡梅特"
+        },
+        {
+          "term": "Wu Jian",
+          "translation": "武剑会"
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        },
+        {
+          "term": "Yredelemnul",
+          "translation": "伊莱德莱姆努尔"
+        },
+        {
+          "term": "Zin",
+          "translation": "辛"
+        },
+        {
+          "term": "Throwing",
+          "translation": "投掷"
+        },
+        {
+          "term": "Lugonu",
+          "translation": "卢戈努"
+        },
+        {
+          "term": "Pain",
+          "translation": "痛苦术/痛苦"
+        },
+        {
+          "term": "the Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "Death",
+          "translation": "死亡"
+        },
+        {
+          "term": "chaos",
+          "translation": "混沌"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_obscenities_",
+      "english": "of various obscenities\n\nw:1\nof some very imaginative obscenities you've never seen before\n",
+      "translation": "写着各种污言秽语\n\nw:1\n写着一些你从未见过、极富想象力的污言秽语\n",
+      "glossary_hits": []
+    },
+    {
+      "key": "_graffiti_professor_",
+      "english": "@_graffiti_author_any_changeable_@\n\nw:2\n@_graffiti_author_orc_@\n\nw:1\n@_rare_graffiti_author_any_@ (supposedly)\n",
+      "translation": "@_graffiti_author_any_changeable_@\n\nw:2\n@_graffiti_author_orc_@\n\nw:1\n@_rare_graffiti_author_any_@（据说如此）\n",
+      "glossary_hits": [
+        {
+          "term": "orc",
+          "translation": "兽人"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_professor_evocations_type_",
+      "english": "artificer\n\ntinkerer\n",
+      "translation": "修补匠\n\n工匠\n",
+      "glossary_hits": [
+        {
+          "term": "Artificer",
+          "translation": "修补匠"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_professor_invocations_type_",
+      "english": "cleric\n\nhigh priest\n\npriest\n\ntheologian\n",
+      "translation": "教士\n\n大祭司\n\n祭司\n\n神学家\n",
+      "glossary_hits": []
+    },
+    {
+      "key": "_graffiti_professor_magic_type_",
+      "english": "mage\n\nsorcerer\n\nspellcaster\n\nwizard\n",
+      "translation": "法师\n\n术士\n\n施法者\n\n巫师\n",
+      "glossary_hits": [
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_professor_mundane_type_",
+      "english": "knight\n\nveteran\n\nwarlord\n\nwarrior\n",
+      "translation": "骑士\n\n老兵\n\n军阀\n\n勇士\n",
+      "glossary_hits": [
+        {
+          "term": "Warrior",
+          "translation": "勇士"
+        },
+        {
+          "term": "knight",
+          "translation": "骑士"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_professor_necromancy_type_",
+      "english": "death mage\n\nnecromancer\n",
+      "translation": "死亡法师\n\n死灵法师\n",
+      "glossary_hits": [
+        {
+          "term": "Necromancer",
+          "translation": "死灵法师"
+        },
+        {
+          "term": "Death",
+          "translation": "死亡"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_professor_shapeshifting_type_",
+      "english": "shapeshifter\n\ntalismancer\n",
+      "translation": "变形者\n\n护符师\n",
+      "glossary_hits": [
+        {
+          "term": "Shapeshifter",
+          "translation": "变形者"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_relative_or_quality_",
+      "english": "all associates\n\nthe bloodline\n\nthe child\n\nthe children\n\nthe clan\n\nthe dexterity\n\nthe entire species\n\nthe family\n\nthe friend\n\nthe friends\n\nthe god\n\nthe intelligence\n\nthe lover\n\nthe lovers\n\nthe mate\n\nthe mates\n\nthe parent\n\nthe parents\n\nthe personality\n\nthe spouse\n\nthe spouses\n\nthe strength\n",
+      "translation": "所有同伙\n\n血脉\n\n孩子\n\n孩子们\n\n氏族\n\n灵巧\n\n整个种族\n\n家人\n\n朋友\n\n朋友们\n\n神明\n\n智慧\n\n情人\n\n情人们\n\n伴侣\n\n伴侣们\n\n父母中的一位\n\n父母\n\n性格\n\n配偶\n\n配偶们\n\n力量\n",
+      "glossary_hits": [
+        {
+          "term": "Dexterity",
+          "translation": "敏捷/灵巧"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Intelligence",
+          "translation": "智力/智慧/心智"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "Strength",
+          "translation": "力量/强度/威力"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_religion_better_or_worse_",
+      "english": "less of a believer\n\nmore of a believer\n\n\nw:1\na better atheist\n\nw:1\na worse atheist\n",
+      "translation": "信仰更不虔诚\n\n信仰更虔诚\n\n\nw:1\n是更好的无神论者\n\nw:1\n是更差的无神论者\n",
+      "glossary_hits": []
+    },
+    {
+      "key": "_graffiti_religion_non-orc_",
+      "english": "lauding Zin and Zin's laws\n\nlauding Zin and talking about how following Zin's laws is essential\n\nlauding Zin and talking about how those who break Zin's laws deserve punishment\n\nlauding Zin but warning that putting graffiti on surfaces is often unlawful\n",
+      "translation": "赞颂辛及其律法\n\n赞颂辛，并宣称遵守辛的律法至关重要\n\n赞颂辛，并宣称违反辛的律法者理应受罚\n\n赞颂辛，却警告说乱涂乱画往往违法\n",
+      "glossary_hits": [
+        {
+          "term": "Zin",
+          "translation": "辛"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_religion_not_non-orc_or_orc_",
+      "english": "[glorifying|blaspheming] the gods\n\nglorifying @random_god@ and blaspheming @random_god@\n\n\nrevering Xom and the randomness of everything\n\ndelighting in Nemelex Xobeh and whatever the next card deck brings\n\nextolling Yredelemnul and all things unholy\n\ncommending Gozag and talking about how enough gold can buy anything\n\npraising Trog and talking about how blood rage can get rid of anything in your way\n\nadoring Okawaru and talking about how Okawaru is the only ally you need as a warrior\n\napplauding Sif Muna and talking about how all magic is accessible with enough effort\n\nvenerating Vehumet and talking about how weaponised magic is the key to victory\n\nfawning over Kikubaaqudgha and talking about how necromancy turns all flesh and blood into useful tools\n\ngiving kudos to Cheibriados and talking about how the slow and steady can conquer all\n\npaying tribute to Makhleb and talking about all the powers of hell that Makhleb grants\n\nexulting Fedhas and the enduring powers of nature\n\nhonouring Hepliaklqana and talking about how those who live on in others' memories never truly die\n\nshowing devotion to Uskayaw and talking about the complex dance that is life itself\n\ndoting on Dithmenos and talking about the many things [shadows|the night] can do\n\ngiving thanks to the Wu Jian Council and talking about how proper discipline is the key to greatness\n\nacclaiming Qazlal and talking about how the elements can work for you\n\npromoting Elyvilon and talking about how bringing peace to the world is essential\n\nadmiring Ashenzari and talking about how curses and bondage are blessings when they lead to knowledge\n\npaying homage to Ru and talking about how all of reality is not what you think it is\n\ngiving adulation to the Shining One and talking about how honourably removing evil from the world is essential\n\nflattering Lugonu and talking about how Lugonu and the forces of the Abyss will soon rule over all\n\nw:1\nglorifying an unknown god\n\nw:1\nnot just hailing but glorifying @_graffiti_hailed_god_@\n",
+      "translation": "[赞颂|亵渎]众神\n\n赞颂@random_god@，并亵渎@random_god@\n\n\n崇敬佐姆与万事万物的随机性\n\n赞美尼姆雷斯・索布，并期待下一副牌带来的一切\n\n颂扬伊莱德莱姆努尔及一切不洁之物\n\n称颂哥萨戈，并宣称只要金币够多，什么都能买到\n\n赞美特洛戈，并宣称血怒能扫清一切障碍\n\n敬爱奥格瓦如，并宣称勇士只需要奥格瓦如这一个盟友\n\n赞颂席夫·穆纳，并宣称只要足够努力，就能掌握一切魔法\n\n敬奉维胡梅特，并宣称将魔法化作武器是胜利的关键\n\n奉承奇库巴库哈，并宣称死灵系魔法能将一切血肉变成有用的工具\n\n称赞切布理亚多，并宣称缓慢而稳健就能征服一切\n\n向马科列布致敬，并谈论马科列布赐予的种种地狱之力\n\n赞颂费德哈与大自然经久不衰的力量\n\n尊崇惠普利亚卡纳，并宣称活在他人记忆中的人永不会真正死去\n\n向阿斯卡亚献上忠诚，并谈论生命本身这支复杂的舞蹈\n\n倾慕迪斯姆诺，并谈论[阴影|黑夜]的种种妙用\n\n感谢武剑会，并宣称严明的纪律是成就伟业的关键\n\n赞颂卡兹拉尔，并宣称元素能为你效力\n\n宣扬艾利维隆，并宣称为世界带来和平至关重要\n\n敬慕艾申扎利，并宣称只要能带来知识，诅咒与束缚便是祝福\n\n向入致敬，并宣称现实的一切都与你的认知不同\n\n赞颂光明神，并宣称以光明磊落的方式扫除世间邪恶至关重要\n\n奉承卢戈努，并宣称卢戈努与深渊之力即将统治一切\n\nw:1\n赞颂一位未知神祇\n\nw:1\n不只是向@_graffiti_hailed_god_@致意，更将其大加颂扬\n",
+      "glossary_hits": [
+        {
+          "term": "Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "Ashenzari",
+          "translation": "艾申扎利"
+        },
+        {
+          "term": "Cheibriados",
+          "translation": "切布理亚多"
+        },
+        {
+          "term": "deck",
+          "translation": "套牌"
+        },
+        {
+          "term": "Dithmenos",
+          "translation": "迪斯姆诺"
+        },
+        {
+          "term": "Elyvilon",
+          "translation": "艾利维隆"
+        },
+        {
+          "term": "Fedhas",
+          "translation": "费德哈"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Gozag",
+          "translation": "哥萨戈"
+        },
+        {
+          "term": "Hell",
+          "translation": "地狱"
+        },
+        {
+          "term": "Hepliaklqana",
+          "translation": "惠普利亚卡纳"
+        },
+        {
+          "term": "Kikubaaqudgha",
+          "translation": "奇库巴库哈"
+        },
+        {
+          "term": "Makhleb",
+          "translation": "马科列布"
+        },
+        {
+          "term": "Necromancy",
+          "translation": "死灵系魔法"
+        },
+        {
+          "term": "Nemelex Xobeh",
+          "translation": "尼姆雷斯・索布"
+        },
+        {
+          "term": "Okawaru",
+          "translation": "奥格瓦如"
+        },
+        {
+          "term": "Qazlal",
+          "translation": "卡兹拉尔"
+        },
+        {
+          "term": "Ru",
+          "translation": "入"
+        },
+        {
+          "term": "Sif Muna",
+          "translation": "席夫·穆纳"
+        },
+        {
+          "term": "the Shining One",
+          "translation": "光明神"
+        },
+        {
+          "term": "Trog",
+          "translation": "特洛戈"
+        },
+        {
+          "term": "Uskayaw",
+          "translation": "阿斯卡亚"
+        },
+        {
+          "term": "Vehumet",
+          "translation": "维胡梅特"
+        },
+        {
+          "term": "Warrior",
+          "translation": "勇士"
+        },
+        {
+          "term": "Wu Jian",
+          "translation": "武剑会"
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        },
+        {
+          "term": "Yredelemnul",
+          "translation": "伊莱德莱姆努尔"
+        },
+        {
+          "term": "Lugonu",
+          "translation": "卢戈努"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "Slow",
+          "translation": "缓慢术/减速/缓慢/迟缓"
+        },
+        {
+          "term": "the Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "the Elements",
+          "translation": "元素"
+        },
+        {
+          "term": "Shadows",
+          "translation": "阴影"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_religion_orc_",
+      "english": "proselytising for Beogh and proper orcishness\n\nproclaiming that Beogh's messiah will soon come\n\nthanking Beogh for granting salvation while the other gods just watched\n\ntalking about how Beogh will help you when the other gods turn away from you\n\ntalking about how Beogh is with them and not those other heretic orcs\n",
+      "translation": "宣扬比欧弗的信仰与真正的兽人精神\n\n宣告比欧弗的救世主即将到来\n\n感谢比欧弗在其他神祇袖手旁观时赐予救赎\n\n讲述当其他神祇背弃你时，比欧弗会如何帮助你\n\n宣称比欧弗与自己同在，而非与那些异端兽人同在\n",
+      "glossary_hits": [
+        {
+          "term": "Beogh",
+          "translation": "比欧弗"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_rumour_",
+      "english": "speculating about the powers of the Orb of Zot\n\ntalking about how the Orb of Zot will [save|destroy] everyone and everything\n\ntalking about how everyone is mistaken and the Orb of Zot is really the [Cube|Egg|Pyramid] of Zot\n\ntelling of a secret passageway straight from here to the Orb of Zot\n\ncounting down the days until the world ends\n\nclaiming to know the meaning of [life|unlife]\n\nclaiming to have found the elusive [cave yeti|death quokka|dire dormouse]\n\nalluding to the \"Plog\" Conspiracy and why it hides that word everywhere\n",
+      "translation": "猜测佐特宝珠的力量\n\n宣称佐特宝珠将[拯救|毁灭]所有人及一切事物\n\n宣称所有人都搞错了，佐特宝珠其实是佐特[方块|蛋|金字塔]\n\n描述一条从这里直通佐特宝珠的秘密通道\n\n倒数世界末日来临的天数\n\n声称知道[生命|亡灵存在]的意义\n\n声称找到了难觅踪影的[洞穴雪人|死亡短尾矮袋鼠|恐怖睡鼠]\n\n影射“Plog”阴谋集团，以及它为何到处藏着这个词\n",
+      "glossary_hits": [
+        {
+          "term": "Orb of Zot",
+          "translation": "佐特宝珠"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "quokka",
+          "translation": "短尾矮袋鼠"
+        },
+        {
+          "term": "the Orb",
+          "translation": "宝珠"
+        },
+        {
+          "term": "Death",
+          "translation": "死亡"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_short_saying_",
+      "english": "@_graffiti_author_any_@ was here\n\n@_graffiti_author_any_@ @_graffiti_loves_or_hates_@ @_graffiti_author_any_@\n\n@_graffiti_author_any_@ @_graffiti_loves_or_hates_@ @_graffiti_relative_or_quality_@ of @_graffiti_author_any_@\n\n@_graffiti_author_any_@ @_graffiti_life_or_death_@\n\n@_graffiti_author_any_@ sells @_graffiti_wares_quality_@ wares\n\n@_graffiti_author_any_@ steals from @_graffiti_author_any_@\n\nwhat happened to @_graffiti_author_any_@ was @_graffiti_happened_reason_@\n\n@_graffiti_author_any_@ has been replaced by @_graffiti_duplicate_@\n\n@_graffiti_vengeance_@\n\n@_graffiti_changed_or_compared_religions_@\n\nall life begins with \"Plog\" and ends with \"Plog\"\n\nw:2\n@_graffiti_changed_names_@\n",
+      "translation": "@_graffiti_author_any_@到此一游\n\n@_graffiti_author_any_@@_graffiti_loves_or_hates_@@_graffiti_author_any_@\n\n@_graffiti_author_any_@@_graffiti_loves_or_hates_@@_graffiti_author_any_@的@_graffiti_relative_or_quality_@\n\n@_graffiti_author_any_@@_graffiti_life_or_death_@\n\n@_graffiti_author_any_@出售@_graffiti_wares_quality_@商品\n\n@_graffiti_author_any_@偷了@_graffiti_author_any_@的东西\n\n@_graffiti_author_any_@的遭遇是@_graffiti_happened_reason_@\n\n@_graffiti_author_any_@已被@_graffiti_duplicate_@取代\n\n@_graffiti_vengeance_@\n\n@_graffiti_changed_or_compared_religions_@\n\n一切生命始于“Plog”，终于“Plog”\n\nw:2\n@_graffiti_changed_names_@\n",
+      "glossary_hits": [
+        {
+          "term": "Death",
+          "translation": "死亡"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_species_",
+      "english": "bemoaning how bizarre coglin engineering is to non-coglins\n\nrepeating the legend of the lost prototype exo-suit that let a coglin wield three weapons at once\n\nwondering what led the barachim to rebel against the gods\n\nwondering if boneless species can ever spawn revenants\n\nwondering if Trog stops dead berserkers from spawning revenants\n\nclaiming to know where goblins originally came from\n\nclaiming to know the true origin of kobolds\n\ndetailing the persecution of the cave orcs' ancestors\n\nclaiming that some of the gods secretly serve the oni instead of the other way around\n\n\nclaiming that some of the hill dwarves still live\n\nwondering what really happened to the last of the sludge elves\n\n\nclaiming that gnomes really exist and are just superb at hiding\n",
+      "translation": "感叹机甲哥布林的工程技术在其他种族眼中何其古怪\n\n复述失落的外骨骼原型机传说：它曾让一个机甲哥布林同时挥舞三件武器\n\n猜想蛙人为何反抗众神\n\n猜想没有骨头的种族是否也能产生还魂者\n\n猜想特洛戈是否阻止死去的狂战士变为还魂者\n\n声称知道地精最初来自何方\n\n声称知道狗头人的真正起源\n\n详述洞穴兽人先祖遭受的迫害\n\n声称某些神祇暗中侍奉鬼人，而非鬼人侍奉它们\n\n\n声称仍有一些丘陵矮人活着\n\n猜想最后的淤泥精灵究竟遭遇了什么\n\n\n声称侏儒确实存在，只是极善于隐藏\n",
+      "glossary_hits": [
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "Trog",
+          "translation": "特洛戈"
+        },
+        {
+          "term": "Coglin",
+          "translation": "机甲哥布林"
+        },
+        {
+          "term": "Oni",
+          "translation": "鬼人"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_unique_comment_",
+      "english": "saying that Cassandra should stop being so negative\n\nsaying that Crazy Yiuf needs to stop making so [little|much] sense\n\nsaying that Donald should shut up and stop complaining\n\nsaying that Sigmund needs to put down the scythe\n\nsaying that Edmund needs to get over himself\n\nsaying that Sprozz has gone too far trying to replace real bees with mechanical ones\n\nwondering how Robin can possibly throw that hard\n\nwondering why Terence wants to spend his retirement in the dungeon\n\nwondering whether Dowan and Duvessa are secretly triplets and have a third sibling\n\nwondering what else Ijyb can make besides wands\n\nspeculating on the true nature of Jeremiah's master\n",
+      "translation": "说卡珊德拉不该再这么消极\n\n说疯子尤夫不该再说得这么[不着边际|有道理]\n\n说唐纳德该闭嘴，别再抱怨\n\n说西格蒙德该放下镰刀\n\n说埃德蒙该别再自命不凡\n\n说斯普罗兹试图用机械蜜蜂取代真正蜜蜂的做法太过分了\n\n纳闷罗宾怎么能把东西扔得那么有力\n\n纳闷特伦斯为何想在地牢里度过退休生活\n\n猜想多万与杜维莎是否其实是三胞胎，还有另一个兄弟姐妹\n\n纳闷伊吉布除了魔棒还能造什么\n\n猜测耶利米主人的真实本质\n",
+      "glossary_hits": [
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "throw",
+          "translation": "投掷"
+        },
+        {
+          "term": "the Dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "Cassandra",
+          "translation": "卡珊德拉"
+        },
+        {
+          "term": "Crazy Yiuf",
+          "translation": "疯子尤夫"
+        },
+        {
+          "term": "Donald",
+          "translation": "唐纳德"
+        },
+        {
+          "term": "Dowan",
+          "translation": "多万"
+        },
+        {
+          "term": "Duvessa",
+          "translation": "杜维莎"
+        },
+        {
+          "term": "Edmund",
+          "translation": "埃德蒙"
+        },
+        {
+          "term": "Ijyb",
+          "translation": "伊吉布"
+        },
+        {
+          "term": "Jeremiah",
+          "translation": "耶利米"
+        },
+        {
+          "term": "Robin",
+          "translation": "罗宾"
+        },
+        {
+          "term": "Sigmund",
+          "translation": "西格蒙德"
+        },
+        {
+          "term": "Sprozz",
+          "translation": "斯普罗兹"
+        },
+        {
+          "term": "Terence",
+          "translation": "特伦斯"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_unreadable_",
+      "english": "graffiti of unreadable @_writing_type_@\n\ngraffiti of @_writing_type_@ that are unreadable except for a signature by @_graffiti_author_any_@\n\nw:1\ngraffiti of @_writing_type_@ that are unreadable except for bits hailing @_graffiti_hailed_god_@\n\nw:1\ngraffiti of @_writing_type_@ that are unreadable except for bits hailing @_graffiti_hailed_god_@ and a signature by @_graffiti_author_any_@\n",
+      "translation": "用无法辨认的@_writing_type_@写成的涂鸦\n\n用@_writing_type_@写成的涂鸦，除了@_graffiti_author_any_@的署名外全都无法辨认\n\nw:1\n用@_writing_type_@写成的涂鸦，除了向@_graffiti_hailed_god_@致意的片段外全都无法辨认\n\nw:1\n用@_writing_type_@写成的涂鸦，除了向@_graffiti_hailed_god_@致意的片段和@_graffiti_author_any_@的署名外全都无法辨认\n",
+      "glossary_hits": [
+        {
+          "term": "god",
+          "translation": "神"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_vengeance_",
+      "english": "@_graffiti_author_any_@ has avenged @_graffiti_author_any_@\n\n@_graffiti_author_any_@ has avenged @graffiti_author_any@ for @_graffiti_vengeance_reason_@\n\n@_graffiti_author_any_@ swears vengeance on @_graffiti_author_any_@\n\n@_graffiti_author_any_@ swears vengeance on @_graffiti_author_any_@ for @_graffiti_vengeance_reason_@\n\nthe ghost of @_graffiti_author_any_@ still haunts @_graffiti_author_any_@\n\nthe ghost of @_graffiti_author_any_@ still haunts @_graffiti_author_any_@ for @_graffiti_vengeance_reason_@\n\n\n@_graffiti_author_orc_@ has avenged @_graffiti_author_any_@\n\n@_graffiti_author_orc_@ has avenged @_graffiti_author_any_@ for @_graffiti_vengeance_reason_@\n\n@_graffiti_author_orc_@ swears vengeance on @_graffiti_author_any_@\n\n@_graffiti_author_orc_@ swears vengeance on @_graffiti_author_any_@ for @_graffiti_vengeance_reason_@\n\nthe ghost of @_graffiti_author_orc_@ still haunts @_graffiti_author_any_@\n\nthe ghost of @_graffiti_author_orc_@ still haunts @_graffiti_author_any_@ for @_graffiti_vengeance_reason_@\n",
+      "translation": "@_graffiti_author_any_@已为@_graffiti_author_any_@报仇\n\n@_graffiti_author_any_@因@_graffiti_vengeance_reason_@，已为@graffiti_author_any@报仇\n\n@_graffiti_author_any_@发誓向@_graffiti_author_any_@复仇\n\n@_graffiti_author_any_@发誓向@_graffiti_author_any_@复仇，因为对方@_graffiti_vengeance_reason_@\n\n@_graffiti_author_any_@的鬼魂仍缠着@_graffiti_author_any_@\n\n@_graffiti_author_any_@的鬼魂仍缠着@_graffiti_author_any_@，因为对方@_graffiti_vengeance_reason_@\n\n\n@_graffiti_author_orc_@已为@_graffiti_author_any_@报仇\n\n@_graffiti_author_orc_@因@_graffiti_vengeance_reason_@，已为@_graffiti_author_any_@报仇\n\n@_graffiti_author_orc_@发誓向@_graffiti_author_any_@复仇\n\n@_graffiti_author_orc_@发誓向@_graffiti_author_any_@复仇，因为对方@_graffiti_vengeance_reason_@\n\n@_graffiti_author_orc_@的鬼魂仍缠着@_graffiti_author_any_@\n\n@_graffiti_author_orc_@的鬼魂仍缠着@_graffiti_author_any_@，因为对方@_graffiti_vengeance_reason_@\n",
+      "glossary_hits": [
+        {
+          "term": "ghost",
+          "translation": "鬼魂"
+        },
+        {
+          "term": "orc",
+          "translation": "兽人"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_vengeance_reason_",
+      "english": "abandoning @_graffiti_author_any_@\n\nabandoning them\n\nbetraying @_graffiti_author_any_@\n\nbetraying them\n\nkilling @_graffiti_author_any_@\n\nkilling them\n\nstealing from @_graffiti_author_any_@\n\nstealing from them\n\nwounding @_graffiti_author_any_@\n\nwounding them\n",
+      "translation": "抛弃了@_graffiti_author_any_@\n\n抛弃了自己\n\n背叛了@_graffiti_author_any_@\n\n背叛了自己\n\n杀死了@_graffiti_author_any_@\n\n杀死了自己\n\n偷了@_graffiti_author_any_@的东西\n\n偷了自己的东西\n\n伤害了@_graffiti_author_any_@\n\n伤害了自己\n",
+      "glossary_hits": []
+    },
+    {
+      "key": "_graffiti_wares_quality_",
+      "english": "inferior\n\nhigh-quality\n\nlow-quality\n\nmediocre\n\nsuperior\n",
+      "translation": "劣等\n\n高品质\n\n低品质\n\n平庸\n\n上等\n",
+      "glossary_hits": []
+    },
+    {
+      "key": "any_graffiti",
+      "english": "graffiti of @_pattern_type_@\n\ngraffiti of @_writing_type_@\n\n@_graffiti_unreadable_@\n\n@_graffiti_type_with_signature_maybe_@\n\n@_graffiti_type_with_signature_maybe_@ @_graffiti_image_@\n\n@_graffiti_type_with_signature_maybe_@ @_graffiti_rumour_@\n\n@_graffiti_type_with_signature_maybe_@ @_graffiti_unique_comment_@\n\n@_graffiti_type_with_signature_maybe_@ @_graffiti_species_@\n\n@_graffiti_type_@ @_graffiti_fight_@\n\n@_graffiti_type_@ @_graffiti_advertisement_@\n\n@_graffiti_type_@ saying that @_graffiti_short_saying_@\n\nw:2\n@_graffiti_type_with_signature_maybe_@ @_graffiti_religion_not_non-orc_or_orc_@\n\nw:2\n@_graffiti_type_with_signature_maybe_non-orc_@ @_graffiti_religion_non-orc_@\n\nw:2\n@_graffiti_type_with_signature_maybe_orc_@ @_graffiti_religion_orc_@\n\nw:1\n@_graffiti_type_@ @_graffiti_obscenities_@\n",
+      "translation": "绘有@_pattern_type_@的涂鸦\n\n用@_writing_type_@写成的涂鸦\n\n@_graffiti_unreadable_@\n\n@_graffiti_type_with_signature_maybe_@\n\n@_graffiti_type_with_signature_maybe_@，@_graffiti_image_@\n\n@_graffiti_type_with_signature_maybe_@，@_graffiti_rumour_@\n\n@_graffiti_type_with_signature_maybe_@，@_graffiti_unique_comment_@\n\n@_graffiti_type_with_signature_maybe_@，@_graffiti_species_@\n\n@_graffiti_type_@，@_graffiti_fight_@\n\n@_graffiti_type_@，@_graffiti_advertisement_@\n\n@_graffiti_type_@，声称@_graffiti_short_saying_@\n\nw:2\n@_graffiti_type_with_signature_maybe_@，@_graffiti_religion_not_non-orc_or_orc_@\n\nw:2\n@_graffiti_type_with_signature_maybe_non-orc_@，@_graffiti_religion_non-orc_@\n\nw:2\n@_graffiti_type_with_signature_maybe_orc_@，@_graffiti_religion_orc_@\n\nw:1\n@_graffiti_type_@，@_graffiti_obscenities_@\n",
+      "glossary_hits": [
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "orc",
+          "translation": "兽人"
+        }
+      ]
+    }
+  ]
+}

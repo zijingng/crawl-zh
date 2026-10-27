@@ -21,6 +21,7 @@ public:
 
     // font loading
     virtual bool load_font(const char *font_name, unsigned int font_size) = 0;
+    virtual bool load_fallback(const char *) { return false; }
     virtual bool configure_font() = 0;
     virtual bool resize(unsigned int size) = 0;
 

@@ -75,7 +75,9 @@ namespace quiver
 
         virtual vector<tile_def> get_tiles() const;
 
-        virtual formatted_string quiver_description(bool short_desc=false) const;
+        // Optional flag reports complete display translation, for menu annotations.
+        virtual formatted_string quiver_description(bool short_desc=false,
+                                                     bool *translated=nullptr) const;
         virtual string quiver_verb() const { return ""; } // currently only for items
 
         // basically noops for this class, but keep `target` clean

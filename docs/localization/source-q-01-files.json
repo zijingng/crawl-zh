@@ -1,0 +1,16 @@
+[
+  {
+    "file": "crawl-ref/source/quiver.cc",
+    "scope": "Quiver actions, melee/reach logs, full item/spell/ability rows, selection menu and command hints; original entities, colours, numbers, canonical verbs, serialization and inscriptions retained",
+    "sha256": "36064e60c0870cd34b65318ec5343f0c681eb1c76ca28b531e444830e7b63a53",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/quiver.h",
+    "scope": "Quiver public interfaces, save keys and action classes; optional display-completeness flag only, canonical save/command identifiers retained",
+    "sha256": "58cdce09c863618e418eebcd13c55fe12a8a71d31e2979f8ba6fd431ea0cfc41",
+    "new": false,
+    "changed": true
+  }
+]

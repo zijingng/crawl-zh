@@ -1,0 +1,64 @@
+{
+  "batch": "morgue-05",
+  "build": {
+    "windows_tiles": "passed",
+    "exe_bytes": 27792924,
+    "exe_sha256": "c128d8cc45c0c97fe3b9b7090ff91c32ed0e013de417d13c05bb3e10f973d29b"
+  },
+  "native": {
+    "cases": 13,
+    "assertions": 866,
+    "passed": true
+  },
+  "python": {
+    "cases": 33,
+    "passed": true
+  },
+  "reviewed_templates_added": 21,
+  "canonical_previous_fixtures": {
+    "native-bilingual.txt": {
+      "before": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+      "after": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+      "unchanged": true
+    },
+    "native-explicit-english.txt": {
+      "before": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+      "after": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+      "unchanged": true
+    },
+    "native-language-english.txt": {
+      "before": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+      "after": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+      "unchanged": true
+    }
+  },
+  "runtime_files": {
+    "native-frozen.lst": {
+      "bytes": 28,
+      "sha256": "cd8cee2c8d82ec681507a850e4fdb07e79cade6ce24d58f3446f3c4e0947808b"
+    },
+    "native-frozen.txt": {
+      "bytes": 449,
+      "sha256": "a43a96e46b56ecb0e9a63b95ba5fd68e2499fbc9376e515bc554298cc2ba6d6b"
+    },
+    "native-frozen.zh.txt": {
+      "bytes": 501,
+      "sha256": "75ba709f12880743c74a0218e665a719890ce31a1902a118eeae8d98520e1f21"
+    }
+  },
+  "verified": [
+    "Frozen to death by an endoplasm with actor and damage in actual paired morgue files",
+    "Burning with Jessica and sticky flame, draining, rotting, disjunction, acid and collision attribution",
+    "Nonlethal frozen/burnt causes use injury words and retain canonical damage numbers",
+    "Compact snapshots work on damage-only score objects without character score initialization",
+    "Unknown or unavailable displayed components and unsupported circumstances retain complete English",
+    "Unseen damage sources do not reveal actor identity",
+    "Damage-note serialization round trip and original English names unchanged",
+    "Canonical English files, raw score records and RNG unchanged"
+  ],
+  "remaining": [
+    "Old untyped HP notes retain complete English",
+    "Historical static morgue files are not rewritten",
+    "Unrecognized summoner and disabling circumstances retain English"
+  ]
+}

@@ -1,0 +1,474 @@
+{
+  "glossary_sha256": "e8b68cdbeb69768c2b1bf2f973a2335c21e45c3e8ade4729316bd2f6bd1ae6f1",
+  "queried_terms": [
+    "a flying bit",
+    "acid",
+    "batters",
+    "blasts",
+    "burns",
+    "corrosion",
+    "drowns",
+    "engulf",
+    "entropic weave",
+    "entropy weaver",
+    "envelops",
+    "feebly blasts",
+    "foxfire",
+    "grasp",
+    "grips",
+    "passes through",
+    "pelts",
+    "rat",
+    "rust",
+    "skewer",
+    "skewers",
+    "slices through",
+    "the acid",
+    "the entropic weave",
+    "the rust",
+    "the trap's stomach acid",
+    "throw barbs",
+    "weakly hits",
+    "wild magic",
+    "your corrupting presence"
+  ],
+  "hits": [
+    {
+      "Term": "corrosion",
+      "Translation": "腐蚀",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态】区别腐蚀抗性。 来源：duration-data.h。"
+    },
+    {
+      "Term": "Throw Barbs",
+      "Translation": "投掷倒刺",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Entropic Weave",
+      "Translation": "熵之编织",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Foxfire",
+      "Translation": "狐火术/狐火",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。\n【名称统一】法术名称采用“狐火术”；实体、伤害、状态或普通动词按语境使用原有译法，不给一般效果描述机械加“术”。"
+    },
+    {
+      "Term": "rust",
+      "Translation": "锈尘",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_RUST；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+    },
+    {
+      "Term": "entropy weaver",
+      "Translation": "熵织者",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "rat",
+      "Translation": "老鼠",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Wild Magic",
+      "Translation": "狂野魔法",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。\n【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：狂野魔法。"
+    },
+    {
+      "Term": "acid",
+      "Translation": "酸蚀",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+    }
+  ],
+  "hit_verb_assignments": [
+    {
+      "source": "beam.cc",
+      "line": 2336,
+      "expression": "parent.hit_verb",
+      "literals": []
+    },
+    {
+      "source": "beam.cc",
+      "line": 4405,
+      "expression": "engulfs ? \"engulfs\" : \"hits\"",
+      "literals": [
+        "engulfs",
+        "hits"
+      ]
+    },
+    {
+      "source": "beam.cc",
+      "line": 4455,
+      "expression": "engulfs ? \"engulfs\" : \"hits\"",
+      "literals": [
+        "engulfs",
+        "hits"
+      ]
+    },
+    {
+      "source": "beam.cc",
+      "line": 5723,
+      "expression": "engulfs ? \"engulfs\" : \"hits\"",
+      "literals": [
+        "engulfs",
+        "hits"
+      ]
+    },
+    {
+      "source": "beam.cc",
+      "line": 5874,
+      "expression": "engulfs ? \"engulfs\" : \"hits\"",
+      "literals": [
+        "engulfs",
+        "hits"
+      ]
+    },
+    {
+      "source": "beam.cc",
+      "line": 8227,
+      "expression": "attk.attack_verb",
+      "literals": []
+    },
+    {
+      "source": "god-abil.cc",
+      "line": 4084,
+      "expression": "\"engulfs\"",
+      "literals": [
+        "engulfs"
+      ]
+    },
+    {
+      "source": "mon-act.cc",
+      "line": 1263,
+      "expression": "\"slices through\"",
+      "literals": [
+        "slices through"
+      ]
+    },
+    {
+      "source": "mon-act.cc",
+      "line": 1436,
+      "expression": "\"engulf\"",
+      "literals": [
+        "engulf"
+      ]
+    },
+    {
+      "source": "mon-cast.cc",
+      "line": 2535,
+      "expression": "\"envelops\"",
+      "literals": [
+        "envelops"
+      ]
+    },
+    {
+      "source": "mon-cast.cc",
+      "line": 2540,
+      "expression": "\"skewers\"",
+      "literals": [
+        "skewers"
+      ]
+    },
+    {
+      "source": "mon-cast.cc",
+      "line": 2555,
+      "expression": "\"passes through\"",
+      "literals": [
+        "passes through"
+      ]
+    },
+    {
+      "source": "mon-cast.cc",
+      "line": 3696,
+      "expression": "\"grips\"",
+      "literals": [
+        "grips"
+      ]
+    },
+    {
+      "source": "mon-cast.cc",
+      "line": 3705,
+      "expression": "\"grasp\"",
+      "literals": [
+        "grasp"
+      ]
+    },
+    {
+      "source": "mon-cast.cc",
+      "line": 4874,
+      "expression": "\"batters\"",
+      "literals": [
+        "batters"
+      ]
+    },
+    {
+      "source": "mon-cast.cc",
+      "line": 7138,
+      "expression": "\"engulfs\"",
+      "literals": [
+        "engulfs"
+      ]
+    },
+    {
+      "source": "mon-explode.cc",
+      "line": 215,
+      "expression": "\"batters\"",
+      "literals": [
+        "batters"
+      ]
+    },
+    {
+      "source": "mon-project.cc",
+      "line": 365,
+      "expression": "\"weakly hits\"",
+      "literals": [
+        "weakly hits"
+      ]
+    },
+    {
+      "source": "mon-project.cc",
+      "line": 398,
+      "expression": "\"blasts\"",
+      "literals": [
+        "blasts"
+      ]
+    },
+    {
+      "source": "mon-project.cc",
+      "line": 401,
+      "expression": "\"feebly blasts\"",
+      "literals": [
+        "feebly blasts"
+      ]
+    },
+    {
+      "source": "spl-damage.cc",
+      "line": 3175,
+      "expression": "\"engulfs\"",
+      "literals": [
+        "engulfs"
+      ]
+    },
+    {
+      "source": "spl-damage.cc",
+      "line": 3187,
+      "expression": "\"drowns\"",
+      "literals": [
+        "drowns"
+      ]
+    },
+    {
+      "source": "spl-damage.cc",
+      "line": 3980,
+      "expression": "\"engulfs\"",
+      "literals": [
+        "engulfs"
+      ]
+    },
+    {
+      "source": "spl-damage.cc",
+      "line": 4237,
+      "expression": "(seeker.type == MONS_FOXFIRE ? \"burns\" : \"hits\")",
+      "literals": [
+        "burns",
+        "hits"
+      ]
+    },
+    {
+      "source": "spl-damage.cc",
+      "line": 4274,
+      "expression": "\"pelts\"",
+      "literals": [
+        "pelts"
+      ]
+    },
+    {
+      "source": "spl-damage.cc",
+      "line": 4983,
+      "expression": "\"engulfs\"",
+      "literals": [
+        "engulfs"
+      ]
+    },
+    {
+      "source": "spl-damage.cc",
+      "line": 5155,
+      "expression": "\"skewer\"",
+      "literals": [
+        "skewer"
+      ]
+    },
+    {
+      "source": "spl-monench.cc",
+      "line": 323,
+      "expression": "\"hits\"",
+      "literals": [
+        "hits"
+      ]
+    },
+    {
+      "source": "spl-other.cc",
+      "line": 681,
+      "expression": "\"skewers\"",
+      "literals": [
+        "skewers"
+      ]
+    }
+  ],
+  "corrode_call_sites": [
+    {
+      "source": "beam.cc",
+      "line": 1644,
+      "expression": "corrode(pbolt.agent());"
+    },
+    {
+      "source": "beam.cc",
+      "line": 4596,
+      "expression": "corrode(agent(), \"the acid\", 6);"
+    },
+    {
+      "source": "beam.cc",
+      "line": 4598,
+      "expression": "corrode(agent());"
+    },
+    {
+      "source": "cloud.cc",
+      "line": 1199,
+      "expression": "corrode(cloud.agent());"
+    },
+    {
+      "source": "cloud.cc",
+      "line": 1203,
+      "expression": "corrode(cloud.agent(), \"the rust\", 1);"
+    },
+    {
+      "source": "cloud.cc",
+      "line": 2120,
+      "expression": "corrode(source);"
+    },
+    {
+      "source": "decks.cc",
+      "line": 1284,
+      "expression": "corrode(&you);"
+    },
+    {
+      "source": "god-wrath.cc",
+      "line": 1569,
+      "expression": "corrode(nullptr, _god_wrath_name(god).c_str(), 8);"
+    },
+    {
+      "source": "melee-attack.cc",
+      "line": 2772,
+      "expression": "corrode(&you);"
+    },
+    {
+      "source": "melee-attack.cc",
+      "line": 3495,
+      "expression": "corrode(defender);"
+    },
+    {
+      "source": "melee-attack.cc",
+      "line": 4358,
+      "expression": "corrode(attacker, atk_name(DESC_THE).c_str());"
+    },
+    {
+      "source": "mon-cast.cc",
+      "line": 8740,
+      "expression": "corrode(mons, \"the entropic weave\");"
+    },
+    {
+      "source": "mon-util.cc",
+      "line": 5655,
+      "expression": "corrode(&you, \"a flying bit\");"
+    },
+    {
+      "source": "monster.cc",
+      "line": 4208,
+      "expression": "corrode(const actor* source, const char* corrosion_msg, int amount)\n{\n    const int res = res_corr();"
+    },
+    {
+      "source": "monster.cc",
+      "line": 4271,
+      "expression": "corrode(evildoer);"
+    },
+    {
+      "source": "monster.cc",
+      "line": 4435,
+      "expression": "corrode(&you, \"Your corrupting presence\");"
+    },
+    {
+      "source": "monster.cc",
+      "line": 6185,
+      "expression": "corrode(oppressor, make_stringf(\"%s corrosive artefact\",\n                                        name(DESC_ITS).c_str()).c_str());"
+    },
+    {
+      "source": "ouch.cc",
+      "line": 1062,
+      "expression": "corrode(nullptr, \"Your corrosive artefact\");"
+    },
+    {
+      "source": "player.cc",
+      "line": 7382,
+      "expression": "corrode(const actor* /*source*/, const char* corrosion_msg, int amount)\n{\n    // always increase duration, but...\n    increase_duration(DUR_CORROSION, 10 + roll_dice(2, 4), 50,\n                      ui_render(\"o.corrode\", \"%s corrodes you!\",\n                          make_stringf(\"%s corrodes you!\", corrosion_msg),\n                          {ui_text_arg(\"o.corrode.source\", corrosion_msg)}).c_str());"
+    },
+    {
+      "source": "player.cc",
+      "line": 7429,
+      "expression": "corrode(evildoer);"
+    },
+    {
+      "source": "spl-miscast.cc",
+      "line": 300,
+      "expression": "corrode(source, \"wild magic\", 4 + div_rand_round(dam, 4));"
+    },
+    {
+      "source": "traps.cc",
+      "line": 559,
+      "expression": "corrode(nullptr, \"The trap's stomach acid\", 6);"
+    }
+  ],
+  "reviewed_verbs": {
+    "burns": "灼烧",
+    "skewers": "刺穿",
+    "skewer": "刺穿",
+    "envelops": "笼罩",
+    "slices through": "切穿",
+    "engulf": "吞没",
+    "batters": "猛击",
+    "passes through": "穿过",
+    "grips": "紧攫",
+    "grasp": "攫住",
+    "weakly hits": "轻轻击中",
+    "blasts": "轰击",
+    "feebly blasts": "无力地轰击",
+    "drowns": "淹没",
+    "pelts": "连续击打"
+  },
+  "reviewed_corrosion_sources": {
+    "the acid": "酸液",
+    "the rust": "锈蚀",
+    "the entropic weave": "熵之编织",
+    "a flying bit": "飞散的碎片",
+    "Your corrupting presence": "你的腐化气息",
+    "wild magic": "狂野魔法",
+    "The trap's stomach acid": "陷阱的胃酸"
+  },
+  "dynamic_sources": "Actor names, god wrath and owner possessives retain whole English fallback unless explicitly covered. No rendered-English parsing."
+}

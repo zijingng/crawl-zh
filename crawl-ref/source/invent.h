@@ -95,6 +95,7 @@ public:
     const item_def *item;
 
     InvEntry(const item_def &i);
+    string get_text() const override;
     void set_show_glyph(bool doshow);
     void set_show_coordinates(bool doshow);
 

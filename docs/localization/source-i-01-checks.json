@@ -1,0 +1,22 @@
+{
+  "batch": "source-i-01",
+  "date": "2026-10-23",
+  "reviewed_messages": 451,
+  "catalogue_matches": 451,
+  "missing_messages": [],
+  "stale_dependencies": [],
+  "original_handwritten_i_files": 18,
+  "current_handwritten_i_files": 19,
+  "generated_i_files": 1,
+  "windows_tiles_build": true,
+  "native_cases": 66,
+  "native_assertions": 174966,
+  "python_tests": 28,
+  "limitations": [
+    "Externally owned dynamic item-use reasons without a typed adapter remain complete English sentences.",
+    "Weighted TextDB colour names without a reviewed mapping cause complete English congratulation fallback; no extra random draw.",
+    "Missing required names, clauses or source fingerprints cause complete English sentence fallback.",
+    "Technical diagnostics, debug text, configuration/Lua/save keys and canonical item names remain English.",
+    "No in-game visual smoke test; Windows Tiles only."
+  ]
+}

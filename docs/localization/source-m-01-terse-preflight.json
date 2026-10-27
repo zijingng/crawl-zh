@@ -1,0 +1,490 @@
+[
+  {
+    "english": "ensnaring attack",
+    "hits": []
+  },
+  {
+    "english": "rampage",
+    "hits": []
+  },
+  {
+    "english": "jumping",
+    "hits": []
+  },
+  {
+    "english": "stealth",
+    "hits": [
+      {
+        "term": "stealth",
+        "translation": "潜行"
+      }
+    ]
+  },
+  {
+    "english": "poison vulnerability",
+    "hits": [
+      {
+        "term": "poison",
+        "translation": "毒"
+      }
+    ]
+  },
+  {
+    "english": "blade aux",
+    "hits": []
+  },
+  {
+    "english": "blade parry",
+    "hits": []
+  },
+  {
+    "english": "powerful",
+    "hits": []
+  },
+  {
+    "english": "torment resistance 1",
+    "hits": [
+      {
+        "term": "torment",
+        "translation": "折磨"
+      }
+    ]
+  },
+  {
+    "english": "slow",
+    "hits": [
+      {
+        "term": "Slow",
+        "translation": "缓慢术/减速/缓慢/迟缓"
+      }
+    ]
+  },
+  {
+    "english": "reduced EV",
+    "hits": []
+  },
+  {
+    "english": "constrict",
+    "hits": []
+  },
+  {
+    "english": "two hats",
+    "hits": []
+  },
+  {
+    "english": "dragon claw",
+    "hits": [
+      {
+        "term": "dragon",
+        "translation": "龙"
+      }
+    ]
+  },
+  {
+    "english": "dragon scales",
+    "hits": [
+      {
+        "term": "dragon",
+        "translation": "龙"
+      }
+    ]
+  },
+  {
+    "english": "vile attack",
+    "hits": [
+      {
+        "term": "vile",
+        "translation": "噩"
+      }
+    ]
+  },
+  {
+    "english": "siphon essence",
+    "hits": [
+      {
+        "term": "Siphon Essence",
+        "translation": "汲取精华"
+      }
+    ]
+  },
+  {
+    "english": "torment immunity",
+    "hits": [
+      {
+        "term": "torment",
+        "translation": "折磨"
+      }
+    ]
+  },
+  {
+    "english": "no potions",
+    "hits": []
+  },
+  {
+    "english": "accursed",
+    "hits": [
+      {
+        "term": "accursed",
+        "translation": "被诅咒者"
+      }
+    ]
+  },
+  {
+    "english": "extremely fast",
+    "hits": []
+  },
+  {
+    "english": "weak attacks",
+    "hits": []
+  },
+  {
+    "english": "very fast",
+    "hits": []
+  },
+  {
+    "english": "resilient",
+    "hits": []
+  },
+  {
+    "english": "branches",
+    "hits": []
+  },
+  {
+    "english": "stationary",
+    "hits": []
+  },
+  {
+    "english": "-Tele",
+    "hits": []
+  },
+  {
+    "english": "insubstantial",
+    "hits": []
+  },
+  {
+    "english": "highly resistant",
+    "hits": []
+  },
+  {
+    "english": "acid body",
+    "hits": []
+  },
+  {
+    "english": "amorphous state",
+    "hits": []
+  },
+  {
+    "english": "acidic touch",
+    "hits": []
+  },
+  {
+    "english": "heavily diminished spells",
+    "hits": []
+  },
+  {
+    "english": "spores",
+    "hits": []
+  },
+  {
+    "english": "terrified",
+    "hits": []
+  },
+  {
+    "english": "half damage",
+    "hits": []
+  },
+  {
+    "english": "bleed smoke",
+    "hits": []
+  },
+  {
+    "english": "invisible",
+    "hits": []
+  },
+  {
+    "english": "unshakeable will",
+    "hits": [
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      }
+    ]
+  },
+  {
+    "english": "weak spells",
+    "hits": []
+  },
+  {
+    "english": "fast swimmer",
+    "hits": []
+  },
+  {
+    "english": "devour",
+    "hits": []
+  },
+  {
+    "english": "electrical cleaving",
+    "hits": []
+  },
+  {
+    "english": "evasive",
+    "hits": []
+  },
+  {
+    "english": "blinkbolt",
+    "hits": [
+      {
+        "term": "Blinkbolt",
+        "translation": "闪现雷击"
+      }
+    ]
+  },
+  {
+    "english": "quills",
+    "hits": []
+  },
+  {
+    "english": "maw attack",
+    "hits": []
+  },
+  {
+    "english": "devouring maw",
+    "hits": []
+  },
+  {
+    "english": "growling stomach",
+    "hits": []
+  },
+  {
+    "english": "low body AC",
+    "hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      }
+    ]
+  },
+  {
+    "english": "contaminating",
+    "hits": []
+  },
+  {
+    "english": "glow",
+    "hits": []
+  },
+  {
+    "english": "damage resistance",
+    "hits": []
+  },
+  {
+    "english": "doubled heal-on-kills",
+    "hits": []
+  },
+  {
+    "english": "demonic bargain",
+    "hits": []
+  },
+  {
+    "english": "vampire fangs",
+    "hits": [
+      {
+        "term": "vampire",
+        "translation": "吸血鬼"
+      }
+    ]
+  },
+  {
+    "english": "bloodcurse",
+    "hits": []
+  },
+  {
+    "english": "bat form",
+    "hits": [
+      {
+        "term": "bat",
+        "translation": "蝙蝠"
+      }
+    ]
+  },
+  {
+    "english": "hypnotic gaze",
+    "hits": []
+  },
+  {
+    "english": "very stealthy",
+    "hits": []
+  },
+  {
+    "english": "inhibited regeneration",
+    "hits": [
+      {
+        "term": "Regeneration",
+        "translation": "再生术/再生/恢复"
+      }
+    ]
+  },
+  {
+    "english": "frigid aura",
+    "hits": []
+  },
+  {
+    "english": "ice wizardry",
+    "hits": []
+  },
+  {
+    "english": "hive swarm",
+    "hits": []
+  },
+  {
+    "english": "hive regen",
+    "hits": []
+  },
+  {
+    "english": "water reaching",
+    "hits": []
+  },
+  {
+    "english": "water splatter",
+    "hits": []
+  },
+  {
+    "english": "watery grave",
+    "hits": [
+      {
+        "term": "Watery Grave",
+        "translation": "水葬"
+      }
+    ]
+  },
+  {
+    "english": "steam response",
+    "hits": [
+      {
+        "term": "steam",
+        "translation": "蒸汽"
+      }
+    ]
+  },
+  {
+    "english": "freeze response",
+    "hits": [
+      {
+        "term": "Freeze",
+        "translation": "冰冻术/冰冻/冻结/冻伤"
+      }
+    ]
+  },
+  {
+    "english": "airstrike attack",
+    "hits": [
+      {
+        "term": "Airstrike",
+        "translation": "空气打击"
+      }
+    ]
+  },
+  {
+    "english": "hex mastery",
+    "hits": []
+  },
+  {
+    "english": "riddle compulsion",
+    "hits": []
+  },
+  {
+    "english": "werefury",
+    "hits": []
+  },
+  {
+    "english": "werehowl",
+    "hits": []
+  },
+  {
+    "english": "bestial takedown",
+    "hits": [
+      {
+        "term": "Bestial Takedown",
+        "translation": "野兽扑杀"
+      }
+    ]
+  },
+  {
+    "english": "scribal knowledge",
+    "hits": []
+  },
+  {
+    "english": "magic absorption",
+    "hits": []
+  },
+  {
+    "english": "novice magic",
+    "hits": []
+  },
+  {
+    "english": "armoured shell",
+    "hits": []
+  },
+  {
+    "english": "rust breath",
+    "hits": [
+      {
+        "term": "Rust Breath",
+        "translation": "锈蚀吐息"
+      },
+      {
+        "term": "rust",
+        "translation": "锈尘"
+      }
+    ]
+  },
+  {
+    "english": "slow movement",
+    "hits": [
+      {
+        "term": "Slow",
+        "translation": "缓慢术/减速/缓慢/迟缓"
+      }
+    ]
+  },
+  {
+    "english": "sun companion",
+    "hits": []
+  },
+  {
+    "english": "searing attack",
+    "hits": []
+  },
+  {
+    "english": "fire wizardry",
+    "hits": []
+  },
+  {
+    "english": "stinger hair",
+    "hits": []
+  },
+  {
+    "english": "lithotoxin",
+    "hits": []
+  },
+  {
+    "english": "eel punch",
+    "hits": []
+  },
+  {
+    "english": "eeljolt",
+    "hits": []
+  },
+  {
+    "english": "weakening spores",
+    "hits": []
+  },
+  {
+    "english": "sporulate",
+    "hits": [
+      {
+        "term": "Sporulate",
+        "translation": "孢子繁殖"
+      }
+    ]
+  }
+]

@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
+#include "unwind.h"
 
 #include "evoke.h"
 
@@ -85,7 +87,7 @@ static bool _evoke_horn_of_geryon()
 
     bool created = false;
 
-    mprf(MSGCH_SOUND, "You produce a hideous howling noise!");
+    mprf(MSGCH_SOUND, "%s", ui_translate("e.evoke", "You produce a hideous howling noise!"));
     noisy(15, you.pos()); // same as hell effect noise
     did_god_conduct(DID_EVIL, 3);
     int num = 1;
@@ -111,7 +113,7 @@ static bool _evoke_horn_of_geryon()
             created = true;
     }
     if (!created)
-        mpr("Nothing answers your call.");
+        mpr(ui_translate("phase4.evoke", "Nothing answers your call."));
     return true;
 }
 
@@ -174,7 +176,7 @@ void zap_wand(int slot, dist *_target)
     {
         // TODO: move to UseItemMenu? This code path is currently unbound and
         // it's unclear to me if anyone ever uses it
-        item_slot = prompt_invent_item("Zap which item?",
+        item_slot = prompt_invent_item(ui_translate("e.evoke", "Zap which item?"),
                                        menu_type::invlist,
                                        OBJ_WANDS,
                                        OPER_ZAP);
@@ -186,7 +188,7 @@ void zap_wand(int slot, dist *_target)
     item_def& wand = you.inv[item_slot];
     if (wand.base_type != OBJ_WANDS)
     {
-        mpr("You can't zap that!");
+        mpr(ui_translate("phase4.evoke", "You can't zap that!"));
         return;
     }
 
@@ -229,7 +231,7 @@ void zap_wand(int slot, dist *_target)
         || you.unrand_equipped(UNRAND_GADGETEER))
         && x_chance_in_y(3, 10))
     {
-        mpr("You conserve a charge of your wand.");
+        mpr(ui_translate("phase4.evoke", "You conserve a charge of your wand."));
     }
     else
         wand.charges--;
@@ -238,7 +240,7 @@ void zap_wand(int slot, dist *_target)
     {
         ASSERT(in_inventory(wand));
 
-        mpr("The now-empty wand crumbles to dust.");
+        mpr(ui_translate("phase4.evoke", "The now-empty wand crumbles to dust."));
         dec_inv_item_quantity(wand.link, 1);
     }
 
@@ -248,13 +250,31 @@ void zap_wand(int slot, dist *_target)
     you.turn_is_over = true;
 }
 
-string manual_skill_names(bool short_text)
+string manual_skill_names(bool short_text, ui_arg* display)
 {
     skill_set skills;
     for (skill_type sk = SK_FIRST_SKILL; sk < NUM_SKILLS; sk++)
         if (you.skill_manual_points[sk])
             skills.insert(sk);
 
+    if (display)
+    {
+        vector<string> shown;
+        bool available = Options.language == lang_t::ZH;
+        for (const auto skill : skills)
+        {
+            const ui_arg name = ui_text_arg("display.skill", skill_name(skill));
+            available &= name.available;
+            shown.push_back(name.text);
+        }
+        if (short_text && skills.size() > 1)
+        {
+            const string count = ui_render("e.manual", "%s skills", "",
+                {ui_literal_arg(to_string(skills.size()))});
+            *display = {count, !count.empty()};
+        }
+        else *display = {join_strings(shown.begin(), shown.end(), "、"), available};
+    }
     if (short_text && skills.size() > 1)
         return make_stringf("%d skills", static_cast<int>(skills.size()));
     else
@@ -268,7 +288,7 @@ static bool _box_of_beasts()
     if (!player_summon_check(MONS_MUTANT_BEAST))
         return false;
 
-    mpr("You open the lid...");
+    mpr(ui_translate("phase4.evoke", "You open the lid..."));
 
     // two rolls to reduce std deviation - +-6 so can get < max even at 27 sk
     int rnd_factor = random2(7);
@@ -288,12 +308,14 @@ static bool _box_of_beasts()
     if (!mons)
     {
         // Failed to create monster for some reason
-        mpr("...but nothing happens.");
+        mpr(ui_translate("phase4.evoke", "...but nothing happens."));
         return true;
     }
 
-    mprf("...and %s %s out!",
-         mons->name(DESC_A).c_str(), mons->airborne() ? "flies" : "leaps");
+    const bool flies = mons->airborne();
+    mpr(ui_render("e.evoke", flies ? "...and %s flies out!" : "...and %s leaps out!",
+        make_stringf("...and %s %s out!", mons->name(DESC_A).c_str(), flies ? "flies" : "leaps"),
+        {ui_actor_arg(*mons)}));
     did_god_conduct(DID_CHAOS, random_range(5,10));
 
     return true;
@@ -392,21 +414,21 @@ static bool _sack_of_spiders()
     if (!player_summon_check(MONS_REDBACK))
         return false;
 
-    mpr("You reach into the sack...");
+    mpr(ui_translate("phase4.evoke", "You reach into the sack..."));
 
     const bool made_mons = _spill_out_spiders();
     if (made_mons)
-        mpr("...and things crawl out!");
+        mpr(ui_translate("phase4.evoke", "...and things crawl out!"));
 
     const bool webbed = _place_webs();
     if (!made_mons && !webbed)
     {
-        mpr("...but nothing happens.");
+        mpr(ui_translate("phase4.evoke", "...but nothing happens."));
         return true;
     }
 
     if (!made_mons)
-        mpr("...but only cobwebs fall out.");
+        mpr(ui_translate("phase4.evoke", "...but only cobwebs fall out."));
     return true;
 }
 
@@ -417,7 +439,7 @@ static bool _make_zig(item_def &zig)
         || player_in_branch(BRANCH_ARENA)
         || is_temp_terrain(you.pos()))
     {
-        mpr("You can't place a gateway to a ziggurat here.");
+        mpr(ui_translate("phase4.evoke", "You can't place a gateway to a ziggurat here."));
         return false;
     }
     for (int lev = 1; lev <= brdepth[BRANCH_ZIGGURAT]; lev++)
@@ -425,7 +447,7 @@ static bool _make_zig(item_def &zig)
         if (is_level_on_stack(level_id(BRANCH_ZIGGURAT, lev))
             || you.where_are_you == BRANCH_ZIGGURAT)
         {
-            mpr("Finish your current ziggurat first!");
+            mpr(ui_translate("phase4.evoke", "Finish your current ziggurat first!"));
             return false;
         }
     }
@@ -433,7 +455,7 @@ static bool _make_zig(item_def &zig)
     ASSERT(in_inventory(zig));
     dec_inv_item_quantity(zig.link, 1);
     dungeon_terrain_changed(you.pos(), DNGN_ENTER_ZIGGURAT);
-    mpr("You set the figurine down, and a mystic portal to a ziggurat forms.");
+    mpr(ui_translate("phase4.evoke", "You set the figurine down, and a mystic portal to a ziggurat forms."));
     return true;
 }
 
@@ -501,9 +523,9 @@ void wind_blast(actor* agent, int pow, coord_def target)
     {
         // Nemelex card only.
         if (pow > 120)
-            mpr("A mighty gale blasts forth from the card!");
+            mpr(ui_translate("e.evoke", "A mighty gale blasts forth from the card!"));
         else
-            mpr("A fierce wind blows from the card.");
+            mpr(ui_translate("e.evoke", "A fierce wind blows from the card."));
     }
 
     noisy(8, agent->pos());
@@ -604,7 +626,7 @@ static bool _phial_of_floods(dist *target)
     // TODO: this needs a custom targeter
     direction_chooser_args args;
     args.mode = TARG_HOSTILE;
-    args.top_prompt = "Aim the phial where?";
+    args.top_prompt = ui_translate("e.evoke", "Aim the phial where?");
 
     unique_ptr<targeter> hitfunc = find_spell_targeter(SPELL_PRIMAL_WAVE,
             power, beam.range);
@@ -640,7 +662,7 @@ static spret _phantom_mirror(dist *target)
     args.restricts = DIR_TARGET;
     args.needs_path = false;
     args.self = confirm_prompt_type::cancel;
-    args.top_prompt = "Aiming: <white>Phantom Mirror</white>";
+    args.top_prompt = ui_translate("e.evoke", "Aiming: <white>Phantom Mirror</white>");
     args.hitfunc = &tgt;
     if (!spell_direction(*target, beam, &args))
         return spret::abort;
@@ -648,9 +670,9 @@ static spret _phantom_mirror(dist *target)
     if (!victim || !you.can_see(*victim))
     {
         if (beam.target == you.pos())
-            mpr("You can't use the mirror on yourself.");
+            mpr(ui_translate("phase4.evoke", "You can't use the mirror on yourself."));
         else
-            mpr("You can't see anything there to clone.");
+            mpr(ui_translate("phase4.evoke", "You can't see anything there to clone."));
         return spret::abort;
     }
 
@@ -659,7 +681,7 @@ static spret _phantom_mirror(dist *target)
     if (!actor_is_illusion_cloneable(victim)
         && !victim->has_ench(ENCH_PHANTOM_MIRROR))
     {
-        mpr("The mirror can't reflect that.");
+        mpr(ui_translate("phase4.evoke", "The mirror can't reflect that."));
         return spret::abort;
     }
 
@@ -705,8 +727,9 @@ static spret _phantom_mirror(dist *target)
     // mirrored copy will not properly count as summoned for some purposes.
     mon->flags &= ~(MF_HARD_RESET | MF_NO_REWARD);
 
-    mprf("You reflect %s with the mirror!",
-         victim->name(DESC_THE).c_str());
+    mpr(ui_render("e.evoke", "You reflect %s with the mirror!",
+        make_stringf("You reflect %s with the mirror!", victim->name(DESC_THE).c_str()),
+        {ui_actor_arg(*victim)}));
 
     return spret::success;
 }
@@ -843,7 +866,7 @@ static spret _tremorstone()
         return act && _valid_tremorstone_target(*act->as_monster());
     };
     if ((!see_target
-        && !yesno("You can't see anything, release a tremorstone anyway?",
+        && !yesno(ui_translate("e.evoke", "You can't see anything, release a tremorstone anyway?"),
                  true, 'n'))
         || stop_attack_prompt(hitfunc, "release a tremorstone", vulnerable))
     {
@@ -860,7 +883,7 @@ static spret _tremorstone()
     beam.ex_size = 2;
     beam.target = center;
 
-    mpr("The tremorstone explodes into fragments!");
+    mpr(ui_translate("e.evoke", "The tremorstone explodes into fragments!"));
 
     const int num_explosions = tremorstone_count(power);
     for (int i = 0; i < num_explosions; i++)
@@ -914,7 +937,7 @@ static spret _condenser()
     }
 
     if (!see_targets
-        && !yesno("You can't see anything. Try to condense clouds anyway?",
+        && !yesno(ui_translate("e.evoke", "You can't see anything. Try to condense clouds anyway?"),
                   true, 'n'))
     {
         canned_msg(MSG_OK);
@@ -952,7 +975,7 @@ static spret _condenser()
     }
 
     if (did_something)
-        mpr("Clouds condense from the air!");
+        mpr(ui_translate("e.evoke", "Clouds condense from the air!"));
 
     return spret::success;
 }
@@ -1074,7 +1097,17 @@ bool item_currently_evokable(const item_def *item)
 {
     const string err = cannot_evoke_item_reason(item);
     if (!err.empty())
-        mpr(err);
+    {
+        ui_arg reason = ui_text_arg("d.item.reason", err);
+        if (!reason.available) reason = ui_text_arg("e.evoke", err);
+        if (!reason.available && item && is_xp_evoker(*item)
+            && err == "The " + item->name(DESC_DBNAME) + " is presently inert.")
+        {
+            const string shown = ui_render("d.item.reason", "The %s is presently inert.", "", {ui_item_arg(*item)});
+            reason = {shown, !shown.empty()};
+        }
+        mpr(reason.available ? reason.text : err);
+    }
     return err.empty();
 }
 
@@ -1099,16 +1132,20 @@ bool evoke_item(item_def& item, dist *preselect)
         return true;
 
     case OBJ_BAUBLES:
+    {
         if (!check_transform_into(transformation::flux, false))
             return false;
 
-        mprf("You crush the flux bauble in your %s and feel its energy "
-            "flooding your body.", you.hand_name(false).c_str());
+        const string hand = you.hand_name(false);
+        mpr(ui_render("e.evoke", "You crush the flux bauble in your %s and feel its energy flooding your body.",
+            make_stringf("You crush the flux bauble in your %s and feel its energy flooding your body.", hand.c_str()),
+            {ui_text_arg("a.bodypart", hand)}));
         ASSERT(in_inventory(item));
         dec_inv_item_quantity(item.link, 1);
         transform(0, transformation::flux, true);
         you.props[FLUX_ENERGY_KEY] = 45;
         return true;
+    }
 
     case OBJ_MISCELLANY:
         ASSERT(in_inventory(item));
@@ -1158,7 +1195,7 @@ bool evoke_item(item_def& item, dist *preselect)
                 return false;
             expend_xp_evoker(item.sub_type);
             if (!evoker_charges(item.sub_type))
-                mpr("The box is emptied!");
+                mpr(ui_translate("phase4.evoke", "The box is emptied!"));
             practise_evoking(1);
             break;
 
@@ -1167,7 +1204,7 @@ bool evoke_item(item_def& item, dist *preselect)
                 return false;
             expend_xp_evoker(item.sub_type);
             if (!evoker_charges(item.sub_type))
-                mpr("The sack is emptied!");
+                mpr(ui_translate("phase4.evoke", "The sack is emptied!"));
             practise_evoking(1);
             break;
 
@@ -1177,14 +1214,14 @@ bool evoke_item(item_def& item, dist *preselect)
                 practise_evoking(1);
                 expend_xp_evoker(item.sub_type);
                 if (!evoker_charges(item.sub_type))
-                    mpr("The lightning rod overheats!");
+                    mpr(ui_translate("phase4.evoke", "The lightning rod overheats!"));
             }
             else
                 return false;
             break;
 
         case MISC_QUAD_DAMAGE:
-            mpr("QUAD DAMAGE!");
+            mpr(ui_translate("e.evoke", "QUAD DAMAGE!"));
             you.duration[DUR_QUAD_DAMAGE] = 30 * BASELINE_DELAY;
             ASSERT(in_inventory(item));
             dec_inv_item_quantity(item.link, 1);
@@ -1201,7 +1238,7 @@ bool evoke_item(item_def& item, dist *preselect)
                 case spret::success:
                     expend_xp_evoker(item.sub_type);
                     if (!evoker_charges(item.sub_type))
-                        mpr("The mirror clouds!");
+                        mpr(ui_translate("phase4.evoke", "The mirror clouds!"));
                     // deliberate fall-through
                 case spret::fail:
                     practise_evoking(1);
@@ -1224,7 +1261,7 @@ bool evoke_item(item_def& item, dist *preselect)
                 case spret::success:
                     expend_xp_evoker(item.sub_type);
                     if (!evoker_charges(item.sub_type))
-                        mpr("The tin is emptied!");
+                        mpr(ui_translate("phase4.evoke", "The tin is emptied!"));
                 case spret::fail:
                     practise_evoking(1);
                     break;
@@ -1241,7 +1278,7 @@ bool evoke_item(item_def& item, dist *preselect)
                 case spret::success:
                     expend_xp_evoker(item.sub_type);
                     if (!evoker_charges(item.sub_type))
-                        mpr("The condenser dries out!");
+                        mpr(ui_translate("phase4.evoke", "The condenser dries out!"));
                 case spret::fail:
                     practise_evoking(1);
                     break;
@@ -1283,6 +1320,8 @@ bool evoke_item(item_def& item, dist *preselect)
  **/
 string target_evoke_desc(const monster_info& mi, const item_def& item)
 {
+    // Lua-facing descriptions retain canonical English regardless of UI language.
+    unwind_var<lang_t> language(Options.language, lang_t::EN);
     spell_type spell;
     int power;
     int range;

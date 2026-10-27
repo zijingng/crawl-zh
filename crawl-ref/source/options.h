@@ -907,10 +907,15 @@ public:
     int         game_scale;
     // font settings
     string      tile_font_crt_file;
+    string      tile_font_crt_fallback_file;
     string      tile_font_msg_file;
+    string      tile_font_msg_fallback_file;
     string      tile_font_stat_file;
+    string      tile_font_stat_fallback_file;
     string      tile_font_lbl_file;
+    string      tile_font_lbl_fallback_file;
     string      tile_font_tip_file;
+    string      tile_font_tip_fallback_file;
 #endif
 #ifdef USE_TILE_WEB
     string      tile_font_crt_family;

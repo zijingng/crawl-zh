@@ -6,6 +6,8 @@
 #include "AppHdr.h"
 
 #include "kills.h"
+#include "i18n.h"
+#include "branch.h"
 
 #include <algorithm>
 
@@ -31,6 +33,106 @@
 #define KILLS_MINOR_VERSION 1
 
 static void kill_lua_filltable(vector<kill_exp> &v);
+
+// Scoped presentation state. Lua inputs and canonical accessors never change.
+static bool _kill_display = false;
+static int _kill_grand_total = 0;
+
+static string _kill_title(const char *category)
+{
+    const string original = "Vanquished Creatures"
+        + (category ? string(" (") + category + ")" : "");
+    if (!_kill_display)
+        return original;
+    return category
+        ? ui_render("k.kills", "Vanquished Creatures (%s)", original,
+                    {ui_text_arg("k.category", category)})
+        : ui_translate("k.kills", "Vanquished Creatures");
+}
+
+static string _kill_total(const string &original)
+{
+    return _kill_display
+        ? ui_render("k.kills", "Grand Total: %s creatures vanquished", original,
+                    {ui_literal_arg(to_string(_kill_grand_total))})
+        : original;
+}
+
+string kill_exp::display_description() const
+{
+    ui_translation_group text;
+    string name;
+    // Old ghost/demon records contain rendered proper descriptions only.
+    // Preserve their entire original line rather than guessing its grammar.
+    if (!text.available() || monnum == MONS_PROGRAM_BUG
+        || !try_monster_type_display_name(monnum, name))
+        return desc;
+    const char *pattern = nullptr;
+    switch (modifier)
+    {
+    case kill_monster_desc::M_ZOMBIE: pattern = "%s zombie"; break;
+    case kill_monster_desc::M_DRAUGR: pattern = "%s draugr"; break;
+    case kill_monster_desc::M_SIMULACRUM: pattern = "%s simulacrum"; break;
+    case kill_monster_desc::M_SPECTRE: pattern = "spectral %s"; break;
+    case kill_monster_desc::M_NORMAL:
+    case kill_monster_desc::M_SHAPESHIFTER: break;
+    default: return desc;
+    }
+    if (pattern)
+    {
+        text.require("display.monster.template", pattern);
+        if (!text.available())
+            return desc;
+        name = make_stringf(text.get("display.monster.template", pattern), name.c_str());
+    }
+    if (!mons_is_unique(monnum))
+    {
+        const char *source = "%s %s";
+        text.require("k.kills", source);
+        if (!text.available())
+            return desc;
+        name = make_stringf(text.get("k.kills", source),
+                            to_string(nkills).c_str(), name.c_str());
+        if (modifier == kill_monster_desc::M_SHAPESHIFTER
+            && monnum != MONS_SHAPESHIFTER && monnum != MONS_GLOWING_SHAPESHIFTER)
+        {
+            text.require("k.kills", " (shapeshifter)");
+            if (!text.available())
+                return desc;
+            name += text.get("k.kills", " (shapeshifter)");
+        }
+    }
+    else if (nkills > 1)
+    {
+        text.require("k.kills", " (%s times)");
+        if (!text.available())
+            return desc;
+        name += make_stringf(text.get("k.kills", " (%s times)"),
+                             to_string(nkills).c_str());
+    }
+    if (Options.dump_kill_places != KDO_NO_PLACES
+        && (places.size() == 1 || mons_is_unique(monnum)
+            || Options.dump_kill_places == KDO_ALL_PLACES))
+    {
+        string locations;
+        for (const auto &place : places)
+        {
+            if (place.branch < 0 || place.branch >= NUM_BRANCHES)
+                return desc;
+            const char *branch = branches[place.branch].shortname;
+            text.require("b.branch.name", branch);
+            if (!text.available())
+                return desc;
+            if (!locations.empty())
+                locations += " ";
+            locations += text.get("b.branch.name", branch);
+            if (brdepth[place.branch] != 1)
+                locations += ":" + (place.depth ? to_string(place.depth) : string("$"));
+        }
+        name += "（" + locations + "）";
+    }
+    return name;
+}
 
 ///////////////////////////////////////////////////////////////////////////
 // KillMaster
@@ -110,8 +212,10 @@ int KillMaster::total_kills() const
     return grandtotal;
 }
 
-string KillMaster::kill_info() const
+string KillMaster::kill_info(bool display) const
 {
+    unwind_var<bool> display_scope(_kill_display, display && Options.language == lang_t::ZH);
+    unwind_var<int> total_scope(_kill_grand_total, 0);
     if (empty())
         return "";
 
@@ -160,6 +264,7 @@ string KillMaster::kill_info() const
         grandt = buf;
     }
 
+    _kill_grand_total = grandtotal;
     bool custom = false;
     unwind_var<int> lthrottle(clua.throttle_unit_lines, 500000);
     // Call the kill dump Lua function with null a, to tell it we're done.
@@ -171,7 +276,7 @@ string KillMaster::kill_info() const
         {
             // Give ourselves a newline first
             killtext += "\n";
-            killtext += grandt + "\n";
+            killtext += _kill_total(grandt) + "\n";
         }
     }
 
@@ -211,17 +316,18 @@ void KillMaster::add_kill_info(string &killtext,
         if (separator)
             killtext += "\n";
 
-        killtext += "Vanquished Creatures";
-        if (category)
-            killtext += string(" (") + category + ")";
+        killtext += _kill_title(category);
 
         killtext += "\n";
 
         for (const kill_exp &kill : kills)
-            killtext += "  " + kill.desc + "\n";
+            killtext += "  " + (_kill_display ? kill.display_description() : kill.desc) + "\n";
 
-        killtext += make_stringf("%d creature%s vanquished.\n",
-                                 count, count == 1 ? "" : "s");
+        const string original = make_stringf("%d creature%s vanquished.\n",
+                                              count, count == 1 ? "" : "s");
+        killtext += _kill_display
+            ? ui_render("k.kills", "%s creatures vanquished.\n", original,
+                        {ui_literal_arg(to_string(count))}) : original;
     }
     lua_pop(clua, 1);
 }
@@ -908,7 +1014,7 @@ static int kill_lualc_write(lua_State *ls)
     return 0;
 }
 
-static int kill_lualc_summary(lua_State *ls)
+static int _kill_lua_summary(lua_State *ls, bool display)
 {
     if (!lua_istable(ls, 1))
     {
@@ -944,12 +1050,74 @@ static int kill_lualc_summary(lua_State *ls)
         snprintf(buf, sizeof buf, "%u creature%s vanquished.",
                 count, count > 1? "s" : "");
     }
-    lua_pushstring(ls, buf);
+    const string original = buf;
+    const string shown = display && count
+        ? ui_render("k.kills", "%s creatures vanquished.", original,
+                    {ui_literal_arg(to_string(count))}) : original;
+    lua_pushstring(ls, shown.c_str());
+    return 1;
+}
+
+static int kill_lualc_summary(lua_State *ls)
+{
+    return _kill_lua_summary(ls, false);
+}
+
+static int kill_lualc_display_desc(lua_State *ls)
+{
+    if (!lua_islightuserdata(ls, 1))
+        return luaL_argerror(ls, 1, "Unexpected argument type");
+    const kill_exp *ke = static_cast<kill_exp*>(lua_touserdata(ls, 1));
+    if (!ke)
+        return 0;
+    lua_pushstring(ls, (_kill_display ? ke->display_description() : ke->desc).c_str());
+    return 1;
+}
+
+static int kill_lualc_display_summary(lua_State *ls)
+{
+    return _kill_lua_summary(ls, _kill_display);
+}
+
+static int kill_lualc_display_title(lua_State *ls)
+{
+    lua_pushstring(ls, _kill_title(lua_isnoneornil(ls, 1) ? nullptr
+                                  : luaL_checkstring(ls, 1)).c_str());
+    return 1;
+}
+
+static int kill_lualc_display_total(lua_State *ls)
+{
+    lua_pushstring(ls, _kill_total(luaL_checkstring(ls, 1)).c_str());
+    return 1;
+}
+
+static int kill_lualc_display_text(lua_State *ls)
+{
+    const char *original = luaL_checkstring(ls, 1);
+    lua_pushstring(ls, _kill_display ? ui_translate("k.breakdown", original) : original);
+    return 1;
+}
+
+static int kill_lualc_display_symbol(lua_State *ls)
+{
+    const string symbol = luaL_checkstring(ls, 1);
+    const string original = "All '" + symbol + "'";
+    const string shown = _kill_display
+        ? ui_render("k.breakdown", "All '%s'", original, {ui_literal_arg(symbol)})
+        : original;
+    lua_pushstring(ls, shown.c_str());
     return 1;
 }
 
 static const struct luaL_Reg kill_lib[] =
 {
+    { "display_desc",    kill_lualc_display_desc },
+    { "display_summary", kill_lualc_display_summary },
+    { "display_title",   kill_lualc_display_title },
+    { "display_total",   kill_lualc_display_total },
+    { "display_text",    kill_lualc_display_text },
+    { "display_symbol",  kill_lualc_display_symbol },
     { "nkills",     kill_lualc_nkills },
     { "exp"   ,     kill_lualc_exp },
     { "base_name",  kill_lualc_base_name },

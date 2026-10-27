@@ -1,0 +1,1043 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "selected": [
+    {
+      "key": "thermic dynamo",
+      "source": "VISUAL:@The_monster@ revs up and whimsically whirls.\n\nVISUAL:@The_monster@ hisses and glimmers.\n",
+      "hits": [
+        {
+          "Term": "thermic dynamo",
+          "Translation": "热能发电机",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "tormentor",
+      "source": "w:1\n@_demon_taunt_@\n\nw:9\n@_tormentor_@\n",
+      "hits": [
+        {
+          "Term": "tormentor",
+          "Translation": "折磨者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_tormentor_",
+      "source": "@_tormentor_common_@\n\nw:5\n@_tormentor_rare_@\n",
+      "hits": [
+        {
+          "Term": "tormentor",
+          "Translation": "折磨者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_tormentor_common_",
+      "source": "w:15\n@The_monster@ says @to_foe@, \"I'll crush your bones, one by one.\"\n\nVISUAL:@The_monster@ grins evilly.\n\nVISUAL:@The_monster@ grins madly.\n\nVISUAL:@The_monster@ grins malevolently.\n\n@The_monster@ says @to_foe@, \"I will show you what pain is.\"\n\n@The_monster@ says @to_foe@, \"You will wish to die when I get to you.\"\n\n@The_monster@ says @to_foe@, \"I know your fate. It's pain.\"\n\n@The_monster@ screams @at_foe@, \"You will die horribly!\"\n",
+      "hits": [
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "Pain",
+          "Translation": "痛苦术/痛苦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用痛苦术。卡牌、武器印记或普通感受用痛苦，完整物品专名优先。\n【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "tormentor",
+          "Translation": "折磨者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_tormentor_rare_",
+      "source": "@The_monster@ laughs crazily.\n\n@The_monster@ says @to_foe@, \"I am all your nightmares come true.\"\n\n@The_monster@ says @to_foe@, \"I will drown you in your own blood.\"\n\n@The_monster@ says @to_foe@, \"I will eat your liver.\"\n\n@The_monster@ says @to_foe@, \"I know a thousand and one ways to kill you.\"\n\n@The_monster@ says @to_foe@, \"I'll show you my torture chamber!\"\n\n@The_monster@ says @to_foe@, \"Get ready! Throes of agony await you.\"\n\n@The_monster@ shouts @at_foe@, \"Prepare for my thousand needles of pain!\"\n\n@The_monster@ shouts @at_foe@, \"I'll tear you apart!\"\n",
+      "hits": [
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "Pain",
+          "Translation": "痛苦术/痛苦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用痛苦术。卡牌、武器印记或普通感受用痛苦，完整物品专名优先。\n【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Agony",
+          "Translation": "剧痛术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "tormentor",
+          "Translation": "折磨者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "weeping skull",
+      "source": "w:7\n@_weeping_skull_common_@\n\nw:1\n@_weeping_skull_rare_@\n\nw:3\n__NONE\n",
+      "hits": [
+        {
+          "Term": "weeping skull",
+          "Translation": "哭泣头骨",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_weeping_skull_common_",
+      "source": "@The_monster@ @_weeps_@ for your inevitable fate. @player_only@\n\n@The_monster@ @_weeps_@ at its own [deplorable|decrepit] state.\n\n@The_monster@ grieves for the multitudes of fallen [empires|civilisations].\n\n@The_monster@ begs for proper burials for the Dungeon's restless dead.\n",
+      "hits": [
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "the Dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_weeping_skull_rare_",
+      "source": "@The_monster@ @_weeps_@ over the unstoppable march of time and entropy.\n\n@The_monster@ asks how much longer can this world bear the weight of past lives.\n\nw:5\n@The_monster@ mourns the many lost in the orcish exodus to the Dungeon.\n\nw:1\n@The_monster@ weeps.\n",
+      "hits": [
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "the Dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "bear",
+          "Translation": "熊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "weeping skull triumphant",
+      "source": "@The_monster@ crumbles to pieces from sheer guilt.\n",
+      "hits": [
+        {
+          "Term": "pieces",
+          "Translation": "碎片",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "weeping skull",
+          "Translation": "哭泣头骨",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_weeps_",
+      "source": "moans\n\nwails\n\nsobs\n",
+      "hits": []
+    },
+    {
+      "key": "arcanist",
+      "source": "w:20\n@_wizard_@\n\nw:1\n@The_monster@ [grouses|grumbles] about occultists.\n\nw:9\n__NONE\n",
+      "hits": [
+        {
+          "Term": "wizard",
+          "Translation": "巫师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "arcanist",
+          "Translation": "奥术师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "occultist",
+      "source": "w:20\n@_wizard_@\n\nw:1\n@The_monster@ [grouses|grumbles] about arcanists.\n\nw:9\n__NONE\n",
+      "hits": [
+        {
+          "Term": "wizard",
+          "Translation": "巫师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "occultist",
+          "Translation": "秘术师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "yak",
+      "source": "@The_monster@ snorts and paws the @surface@.\n",
+      "hits": [
+        {
+          "Term": "yak",
+          "Translation": "牦牛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_good_god_",
+      "source": "Zin\n\nthe Shining One\n\nElyvilon\n",
+      "hits": [
+        {
+          "Term": "Elyvilon",
+          "Translation": "艾利维隆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "the Shining One",
+          "Translation": "光明神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Zin",
+          "Translation": "辛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "法则之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "_holy_being_",
+      "source": "w:2\n@The_monster@ intones a prayer.\nVISUAL:A sense of peace washes over you.\n\nw:1\n@The_monster@ says @to_foe@, \"Thou must remain pure in the battle against evil.\"\n\nw:1\n@The_monster@ says @to_foe@, \"May @foe_god@ always shine on thee, @foe_name@!\"\n\nw:1\n@The_monster@ says @to_foe@, \"@foe_god@ be with thee, mortal!\" @player_only@\n\nw:1\n@The_monster@ says @to_foe@, \"Praised be @_good_god_@ in the heavens above!\"\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "holy",
+          "Translation": "神圣之怒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "neutral good god 'cap-a'",
+      "source": "__NONE\n\nw:1\n@_holy_being_@\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "holy",
+          "Translation": "神圣之怒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "friendly good god 'cap-a'",
+      "source": "w:19\n__NONE\n\nw:1\n@_holy_being_@\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "holy",
+          "Translation": "神圣之怒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "holy_being_pacification",
+      "source": "VISUAL:@The_monster@ is calmed by your holy aura.\n",
+      "hits": [
+        {
+          "Term": "holy",
+          "Translation": "神圣之怒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "holy_being_pacification_humanoid",
+      "source": "w:5\n@holy_being_pacification@\n\nVISUAL:@The_monster@ relaxes @possessive@ fighting stance.\n\nVISUAL:@The_monster@ salutes you.\n",
+      "hits": [
+        {
+          "Term": "Fighting",
+          "Translation": "战斗/作战/格斗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】物理战斗通用技能，亦增加生命上限；与 Unarmed Combat（徒手格斗）区分。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。\n【语境补充 2026-10-21】技能标签固定用战斗。普通动作按句意用作战或格斗。"
+        },
+        {
+          "Term": "holy",
+          "Translation": "神圣之怒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "holy_being_pacification_speech",
+      "source": "@The_monster@ shouts at you, \"Continue thy quest, mortal!\"\n\n@The_monster@ says to you, \"Forge ahead, servant of Elyvilon!\"\n\n@The_monster@ says to you, \"Carry on, mortal.\"\n",
+      "hits": [
+        {
+          "Term": "Elyvilon",
+          "Translation": "艾利维隆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Forge",
+          "Translation": "锻造强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "holy",
+          "Translation": "神圣之怒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "good god '&'",
+      "source": "w:20\n@_demon_taunt_@\n\nw:1\n@The_monster@ screams @at_foe@, \"@Foe_god@ won't protect you, @foe_name@!\"\n\nw:1\n@The_monster@ screams @at_foe@, \"@Foe_god@ is but a nuisance to me, mortal!\"\n\nw:1\n@The_monster@ screams @at_foe@, \"@Foe_god@ will weep as I flay your corpse!\"\n",
+      "hits": [
+        {
+          "Term": "corpse",
+          "Translation": "尸体",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "Flay",
+          "Translation": "剥皮术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "protect",
+          "Translation": "防护",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "orc",
+      "source": "w:19\n__NONE\n\nw:1\n@_generic_orc_speech_@\n",
+      "hits": [
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "friendly orc",
+      "source": "@default friendly humanoid@\n\nw:5\n@_generic_orc_speech_@\n",
+      "hits": [
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "friendly related orc",
+      "source": "@default friendly related humanoid@\n\nw:5\n@_generic_orc_speech_@\n",
+      "hits": [
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_orc_says_",
+      "source": "shouts\n\nsays\n\ngrunts\n\nw:5\nsneers\n",
+      "hits": [
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_says_or_shouts_",
+      "source": "says\n\nshouts\n",
+      "hits": []
+    },
+    {
+      "key": "related unbeliever orc",
+      "source": "w:60\n__NONE\n\nw:1\n@_generic_orc_speech_@\n\nw:5\n@_hostile_orc_beogh_unbeliever_speech_@\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "hostile",
+          "Translation": "敌对",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "related beogh orc",
+      "source": "w:60\n__NONE\n\nw:1\n@_generic_orc_speech_@\n\nw:5\n@_hostile_orc_beogh_believer_speech_@\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "hostile",
+          "Translation": "敌对",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_hostile_orc_beogh_believer_speech_",
+      "source": "@_hostile_orc_beogh_believer_speech_common_@\n\nw:4\n@_hostile_orc_beogh_believer_speech_rare_@\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "hostile",
+          "Translation": "敌对",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_hostile_orc_beogh_unbeliever_speech_",
+      "source": "@_hostile_orc_beogh_unbeliever_speech_common_@\n\nw:4\n@_hostile_orc_beogh_unbeliever_speech_rare_@\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "hostile",
+          "Translation": "敌对",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_hostile_orc_beogh_unbeliever_speech_common_",
+      "source": "@The_monster@ @_orc_says_to_foe_@, \"Beogh doesn't tell me what to do!\"\n\n@The_monster@ @_shouts_@ @at_foe@, \"You're not the messiah, I am!\"\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "hostile",
+          "Translation": "敌对",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_hostile_orc_beogh_unbeliever_speech_rare_",
+      "source": "@The_monster@ @_orc_says_to_foe_@, \"Orcs don't need Beogh!\"\n\n@The_monster@ @_orc_says_to_foe_@, \"Beogh's messiah is just a fairy-tale.\"\n\n@The_monster@ says @to_foe@, \"Even if there were a messiah, it wouldn't be you.\"\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "hostile",
+          "Translation": "敌对",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "friendly related beogh orc",
+      "source": "w:20\n__NONE\n\nw:1\n@default friendly humanoid@\n\nw:2\n@_generic_orc_speech_@\n\nw:12\n@_friendly_beogh_speech_@\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_friendly_beogh_speech_",
+      "source": "@_friendly_beogh_speech_common_@\n\nw:5\n@_friendly_beogh_speech_rare_@\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "_friendly_beogh_speech_common_",
+      "source": "w:5\n@The_monster@ @_loudly_or_repeatedly_@ @_shouts_@ encouragement@_orc_modifier_@\n\n@The_monster@ shouts, \"Orcs kill for Beogh, Orcs die for Beogh!\"\n\n@The_monster@ says, \"Your appearance changed my life!\"\n\n@The_monster@ @_says_or_shouts_@, \"Dying for Beogh gives my life meaning.\"\n\n@The_monster@ @_shouts_@, \"Blood in Beogh's name!\"\n\n@The_monster@ shouts, \"All our enemies must die!\"\n\n@The_monster@ @_shouts_@, \"Let's [kill|smash|burn|maim] whoever stands in our way!\"\n\n@The_monster@ @_orc_says_@, \"With Beogh's help we'll overthrow all the false gods!\"\n\n@The_monster@ @_shouts_@, \"Smite the @_orc_heathen_@s!\"\n\n@The_monster@ @_shouts_@, \"Take back everything that was taken from us!\"\n\n@The_monster@ @_says_or_shouts_@, \"I'm proud to serve; I'm ready to die.\"\n\n@The_monster@ says, \"May Beogh smile on you, @player_name@.\"\n\n@The_monster@ shouts, \"Fear not, @player_name@! Beogh smiles on those who fall in battle!\"\n\n@The_monster@ lets loose a series of foul curses in Beogh's name.\n\n@The_monster@ @_says_or_shouts_@, \"I fight for @player_name@, for Beogh shepherds all!\"\n\n@The_monster@ @_says_or_shouts_@, \"Orcs will kill them all!\"\n\n@The_monster@ @_shouts_@, \"Orcs rule!\"\n\n@The_monster@ says, \"I just want to die in your service, @player_name@!\"\n\n@The_monster@ says, \"Beogh doesn't mind all this killing, you know.\"\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "smite",
+          "Translation": "神罚",
+          "Part of Speech": "verb",
+          "Variants": "smiting",
+          "Note": ""
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_friendly_beogh_speech_rare_",
+      "source": "@The_monster@ @_says_or_shouts_@, \"Beogh is great, and so is @player_name@!\"\n\n@The_monster@ @_says_or_shouts_@, \"I am so glad I met you.\"\n\n@The_monster@ @_orc_says_@, \"A dead @_orc_heathen_@ will not bedevil my soul.\"\n\n@The_monster@ says, \"I never had a vision before.\"\n\n@The_monster@ @_says_or_shouts_@, \"Our fallen brethren won't be forgotten.\"\n\nVISUAL:@The_monster@ looks @at_foe/around@ nervously.\n\n@The_monster@ looks @at_foe@ and says, \"I'd rather not die in your service, @player_name@.\"\n\n@The_monster@ chants, \"I shall fear no evil, for @player_name@ is my saviour.\"\n\n@The_monster@ says, \"I'm proud to be an orc.\"\n\n@The_monster@ says, \"I'm an Orc, you're an Orc, it's OK.\"\n\n@The_monster@ seems like @subjective@ is about to say something to you, then stops.\n\n@The_monster@ @_mutters_@, \"When this is all over, I'm going to start a fungus farm.\"\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "fungus",
+          "Translation": "真菌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "related beogh orc high priest",
+      "source": "__NONE\n\nw:5\n@_high_priest_@\n\nw:3\n@related beogh orc@\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "orc high priest",
+          "Translation": "兽人大祭司",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "orc high priest",
+      "source": "@_high_priest_@\n\nw:1\n@_generic_orc_speech_@\n\nw:1\n__NONE\n",
+      "hits": [
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "orc high priest",
+          "Translation": "兽人大祭司",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "related beogh orc sorcerer",
+      "source": "__NONE\n\nw:5\n@_wizard_@\n\nw:3\n@related beogh orc@\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "wizard",
+          "Translation": "巫师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "orc sorcerer",
+          "Translation": "兽人术士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "orc sorcerer",
+      "source": "@_wizard_@\n\nw:1\n@_generic_orc_speech_@\n\nw:1\n__NONE\n",
+      "hits": [
+        {
+          "Term": "wizard",
+          "Translation": "巫师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "orc sorcerer",
+          "Translation": "兽人术士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "related beogh blorkula the orcula",
+      "source": "@Blorkula the orcula@\n\nw:4\n@related beogh orc@\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Blorkula the orcula",
+          "Translation": "兽人吸血鬼布洛库拉",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "related beogh urug",
+      "source": "@Urug@\n\nw:4\n@related beogh orc@\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Urug",
+          "Translation": "乌鲁格",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "beogh_converted_orc_reaction_sight",
+      "source": "@The_monster@ stares at you in amazement and kneels.\n\n@The_monster@ relaxes @possessive@ fighting stance and smiles at you.\n\n@The_monster@ falls on @possessive@ knees before you.\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Fighting",
+          "Translation": "战斗/作战/格斗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】物理战斗通用技能，亦增加生命上限；与 Unarmed Combat（徒手格斗）区分。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。\n【语境补充 2026-10-21】技能标签固定用战斗。普通动作按句意用作战或格斗。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "beogh_converted_orc_speech_sight",
+      "source": "@Subjective@ shouts, \"@player_name@ is one of us!\"\n\n@Subjective@ shouts, \"Surely Beogh must have sent you!\"\n\n@Subjective@ asks, \"Are you our saviour?\"\n\n@Subjective@ says, \"I'm so glad you are here now.\"\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "beogh_converted_orc_reaction_battle",
+      "source": "@The_monster@ surrenders.\n\n@The_monster@ falls to @possessive@ knees.\n\n@The_monster@ raises @possessive@ hands in surrender.\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "beogh_converted_orc_speech_battle",
+      "source": "@Subjective@ shouts, \"I'll follow you! Let me live!\"\n\n@Subjective@ says, \"You must be the Messiah, I see it now!\"\n\n@Subjective@ yells, \"I follow Beogh's word, I swear it!\"\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    }
+  ],
+  "legacy_overlay_present": true
+}

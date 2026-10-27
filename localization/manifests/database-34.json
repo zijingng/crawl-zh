@@ -1,0 +1,70 @@
+{
+  "source": "database/monspeak.txt",
+  "entries": [
+    {
+      "key": "nekomata",
+      "context": "textdb:database/monspeak.txt:nekomata",
+      "source_sha256": "eff6339856f33ca6e45c817782ed34425663db6f747debcd7e74a3135b80c612",
+      "review_status": "reviewed",
+      "review_batch": "database-34"
+    }
+  ],
+  "lua_results": [
+    {
+      "context": "textdb-lua:database/monspeak.txt",
+      "english": "@The_monster@ grumbles @to_foe@, \"Young upstarts should know their place.\" @player_only@",
+      "keys": [
+        "nekomata"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "context": "textdb-lua:database/monspeak.txt",
+      "english": "VISUAL:@The_monster@ examines your form and snarls in deep contempt. @player_only@",
+      "keys": [
+        "nekomata"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "context": "textdb-lua:database/monspeak.txt",
+      "english": "@The_monster@ sighs and remarks, \"You haven't even grown your second tail yet.\" @player_only@",
+      "keys": [
+        "nekomata"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "context": "textdb-lua:database/monspeak.txt",
+      "english": "VISUAL:@The_monster@ scoffs at your paltry magic. @player_only@",
+      "keys": [
+        "nekomata"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "context": "textdb-lua:database/monspeak.txt",
+      "english": "VISUAL:@The_monster@ regards your strength with dismissive scorn. @player_only@",
+      "keys": [
+        "nekomata"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "context": "textdb-lua:database/monspeak.txt",
+      "english": "@The_monster@ advises @to_foe@, \"Grace and deceit. The only things anyone needs.\" @player_only@",
+      "keys": [
+        "nekomata"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "context": "textdb-lua:database/monspeak.txt",
+      "english": "VISUAL:@The_monster@ briefly ignores you to bat at some conjured hitodama. @player_only@",
+      "keys": [
+        "nekomata"
+      ],
+      "review_status": "reviewed"
+    }
+  ]
+}

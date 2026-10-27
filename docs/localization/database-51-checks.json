@@ -1,0 +1,28 @@
+{
+  "batch": 51,
+  "new_translation_keys": 0,
+  "proofread_keys": [
+    "_book_magic_"
+  ],
+  "display_programs": {
+    "starting level book": 25,
+    "easy level book": 21,
+    "moderate level book": 19,
+    "_difficult level book owner_": 15,
+    "difficult level book": 6
+  },
+  "display_candidates": 86,
+  "randbook_reviewed_keys": 72,
+  "english_source_unchanged": true,
+  "other_translations_unchanged": true,
+  "python_tests_passed": 32,
+  "native_unique_cases_passed_after_focused_rerun": 5,
+  "new_case_assertions": 2153,
+  "related_native_seconds": 1.992,
+  "windows_tiles_build": "passed",
+  "gui_visual_test": false,
+  "remaining": [
+    "random_book_title and Xom_book_title runtime display",
+    "unknown random authors retain complete English"
+  ]
+}

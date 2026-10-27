@@ -1,0 +1,274 @@
+[
+  {
+    "file": "ability-type.h",
+    "modified": false,
+    "reviewed_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 1,
+    "classification": "reviewed: declarations, enums, canonical data or no new display text; existing display catalogue applies"
+  },
+  {
+    "file": "ability.cc",
+    "modified": true,
+    "reviewed_entries": 597,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 854,
+    "classification": "display templates reviewed; canonical identifiers, parser/config keys, developer diagnostics and structured symbols retain English"
+  },
+  {
+    "file": "ability.h",
+    "modified": true,
+    "reviewed_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 3,
+    "classification": "display templates reviewed; canonical identifiers, parser/config keys, developer diagnostics and structured symbols retain English"
+  },
+  {
+    "file": "abyss.cc",
+    "modified": true,
+    "reviewed_entries": 11,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 139,
+    "classification": "display templates reviewed; canonical identifiers, parser/config keys, developer diagnostics and structured symbols retain English"
+  },
+  {
+    "file": "abyss.h",
+    "modified": false,
+    "reviewed_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 5,
+    "classification": "reviewed: declarations, enums, canonical data or no new display text; existing display catalogue applies"
+  },
+  {
+    "file": "ac-type.h",
+    "modified": false,
+    "reviewed_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 0,
+    "classification": "reviewed: declarations, enums, canonical data or no new display text; existing display catalogue applies"
+  },
+  {
+    "file": "acquire.cc",
+    "modified": true,
+    "reviewed_entries": 16,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 141,
+    "classification": "display templates reviewed; canonical identifiers, parser/config keys, developer diagnostics and structured symbols retain English"
+  },
+  {
+    "file": "acquire.h",
+    "modified": false,
+    "reviewed_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 10,
+    "classification": "reviewed: declarations, enums, canonical data or no new display text; existing display catalogue applies"
+  },
+  {
+    "file": "act-iter.cc",
+    "modified": false,
+    "reviewed_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 4,
+    "classification": "reviewed: declarations, enums, canonical data or no new display text; existing display catalogue applies"
+  },
+  {
+    "file": "act-iter.h",
+    "modified": false,
+    "reviewed_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 1,
+    "classification": "reviewed: declarations, enums, canonical data or no new display text; existing display catalogue applies"
+  },
+  {
+    "file": "activity-interrupt-type.h",
+    "modified": false,
+    "reviewed_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 0,
+    "classification": "reviewed: declarations, enums, canonical data or no new display text; existing display catalogue applies"
+  },
+  {
+    "file": "actor-los.cc",
+    "modified": false,
+    "reviewed_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 7,
+    "classification": "reviewed: declarations, enums, canonical data or no new display text; existing display catalogue applies"
+  },
+  {
+    "file": "actor.cc",
+    "modified": true,
+    "reviewed_entries": 76,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 155,
+    "classification": "display templates reviewed; canonical identifiers, parser/config keys, developer diagnostics and structured symbols retain English"
+  },
+  {
+    "file": "actor.h",
+    "modified": false,
+    "reviewed_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 32,
+    "classification": "reviewed: declarations, enums, canonical data or no new display text; existing display catalogue applies"
+  },
+  {
+    "file": "adjust.cc",
+    "modified": true,
+    "reviewed_entries": 11,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 51,
+    "classification": "display templates reviewed; canonical identifiers, parser/config keys, developer diagnostics and structured symbols retain English"
+  },
+  {
+    "file": "adjust.h",
+    "modified": false,
+    "reviewed_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 1,
+    "classification": "reviewed: declarations, enums, canonical data or no new display text; existing display catalogue applies"
+  },
+  {
+    "file": "AppHdr.cc",
+    "modified": false,
+    "reviewed_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 11,
+    "classification": "reviewed: declarations, enums, canonical data or no new display text; existing display catalogue applies"
+  },
+  {
+    "file": "AppHdr.h",
+    "modified": false,
+    "reviewed_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 16,
+    "classification": "reviewed: declarations, enums, canonical data or no new display text; existing display catalogue applies"
+  },
+  {
+    "file": "aptitudes.h",
+    "modified": false,
+    "reviewed_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 1,
+    "classification": "reviewed: declarations, enums, canonical data or no new display text; existing display catalogue applies"
+  },
+  {
+    "file": "areas.cc",
+    "modified": true,
+    "reviewed_entries": 6,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 43,
+    "classification": "display templates reviewed; canonical identifiers, parser/config keys, developer diagnostics and structured symbols retain English"
+  },
+  {
+    "file": "areas.h",
+    "modified": false,
+    "reviewed_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 1,
+    "classification": "reviewed: declarations, enums, canonical data or no new display text; existing display catalogue applies"
+  },
+  {
+    "file": "arena.cc",
+    "modified": true,
+    "reviewed_entries": 17,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 169,
+    "classification": "display templates reviewed; canonical identifiers, parser/config keys, developer diagnostics and structured symbols retain English"
+  },
+  {
+    "file": "arena.h",
+    "modified": false,
+    "reviewed_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 1,
+    "classification": "reviewed: declarations, enums, canonical data or no new display text; existing display catalogue applies"
+  },
+  {
+    "file": "art-data.h",
+    "modified": false,
+    "reviewed_entries": 176,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 481,
+    "classification": "display templates reviewed; canonical identifiers, parser/config keys, developer diagnostics and structured symbols retain English"
+  },
+  {
+    "file": "art-enum.h",
+    "modified": false,
+    "reviewed_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 0,
+    "classification": "reviewed: declarations, enums, canonical data or no new display text; existing display catalogue applies"
+  },
+  {
+    "file": "art-func.h",
+    "modified": true,
+    "reviewed_entries": 126,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 384,
+    "classification": "display templates reviewed; canonical identifiers, parser/config keys, developer diagnostics and structured symbols retain English"
+  },
+  {
+    "file": "artefact-prop-type.h",
+    "modified": false,
+    "reviewed_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 1,
+    "classification": "reviewed: declarations, enums, canonical data or no new display text; existing display catalogue applies"
+  },
+  {
+    "file": "artefact.cc",
+    "modified": false,
+    "reviewed_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 155,
+    "classification": "reviewed: declarations, enums, canonical data or no new display text; existing display catalogue applies"
+  },
+  {
+    "file": "artefact.h",
+    "modified": false,
+    "reviewed_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 14,
+    "classification": "reviewed: declarations, enums, canonical data or no new display text; existing display catalogue applies"
+  },
+  {
+    "file": "attack.cc",
+    "modified": true,
+    "reviewed_entries": 19,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 162,
+    "classification": "display templates reviewed; canonical identifiers, parser/config keys, developer diagnostics and structured symbols retain English"
+  },
+  {
+    "file": "attack.h",
+    "modified": true,
+    "reviewed_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 7,
+    "classification": "display templates reviewed; canonical identifiers, parser/config keys, developer diagnostics and structured symbols retain English"
+  },
+  {
+    "file": "attitude-change.cc",
+    "modified": true,
+    "reviewed_entries": 2,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 48,
+    "classification": "display templates reviewed; canonical identifiers, parser/config keys, developer diagnostics and structured symbols retain English"
+  },
+  {
+    "file": "attitude-change.h",
+    "modified": false,
+    "reviewed_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 1,
+    "classification": "reviewed: declarations, enums, canonical data or no new display text; existing display catalogue applies"
+  },
+  {
+    "file": "attribute-type.h",
+    "modified": false,
+    "reviewed_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "literal_tokens": 1,
+    "classification": "reviewed: declarations, enums, canonical data or no new display text; existing display catalogue applies"
+  }
+]

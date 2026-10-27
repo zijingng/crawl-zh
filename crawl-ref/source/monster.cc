@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "m-display.h"
+#include "i18n.h"
 
 #include <cmath>
 #include <algorithm>
@@ -720,60 +722,62 @@ void monster::equip_weapon_message(item_def &item)
 {
     const string str = " wields " +
                        item.name(DESC_A, false, false, true, false) + ".";
-    simple_monster_message(*this, str.c_str());
+    m_monster_event(*this, str.c_str(), "%s wields %s.", {m_actor_arg(*this), ui_item_arg(item)});
 
     const int brand = get_weapon_brand(item);
 
     switch (brand)
     {
     case SPWPN_FLAMING:
-        mpr("It bursts into flame!");
+        mpr(ui_translate("m.ui", "It bursts into flame!"));
         break;
     case SPWPN_FREEZING:
         mpr(is_range_weapon(item) ? "It is covered in frost."
                                   : "It glows with a cold blue light!");
         break;
     case SPWPN_HOLY_WRATH:
-        mpr("It softly glows with a divine radiance!");
+        mpr(ui_translate("m.ui", "It softly glows with a divine radiance!"));
         break;
     case SPWPN_FOUL_FLAME:
-        mpr("It glows horrifically with a foul blackness!");
+        mpr(ui_translate("m.ui", "It glows horrifically with a foul blackness!"));
         break;
     case SPWPN_ELECTROCUTION:
-        mprf(MSGCH_SOUND, "You hear the crackle of electricity.");
+        mprf(MSGCH_SOUND, "%s", ui_translate("m.ui", "You hear the crackle of electricity."));
         break;
     case SPWPN_VENOM:
-        mpr("It begins to drip with poison!");
+        mpr(ui_translate("m.ui", "It begins to drip with poison!"));
         break;
     case SPWPN_DRAINING:
-        mpr("You sense an unholy aura.");
+        mpr(ui_translate("m.ui", "You sense an unholy aura."));
         break;
     case SPWPN_DISTORTION:
-        mpr("Its appearance distorts for a moment.");
+        mpr(ui_translate("m.ui", "Its appearance distorts for a moment."));
         break;
     case SPWPN_CHAOS:
-        mpr("It is briefly surrounded by a scintillating aura of "
-            "random colours.");
+        mpr(ui_translate("m.ui", "It is briefly surrounded by a scintillating aura of random colours."));
         break;
     case SPWPN_PENETRATION:
     {
         bool plural = true;
         string hand = hand_name(true, &plural);
-        mprf("%s %s briefly %s through it before %s %s to get a "
-             "firm grip on it.",
-             pronoun(PRONOUN_POSSESSIVE).c_str(),
-             hand.c_str(),
-             // Not conj_verb: the monster isn't the subject.
-             conjugate_verb("pass", plural).c_str(),
-             pronoun(PRONOUN_SUBJECTIVE).c_str(),
-             conjugate_verb("manage", pronoun_plurality()).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = pronoun(PRONOUN_POSSESSIVE);
+                const string _m1 = hand;
+                const string _m2 = // Not conj_verb: the monster isn't the subject.
+             conjugate_verb("pass", plural);
+                const string _m3 = pronoun(PRONOUN_SUBJECTIVE);
+                const string _m4 = conjugate_verb("manage", pronoun_plurality());
+                const string _original = make_stringf("%s %s briefly %s through it before %s %s to get a firm grip on it.", _m0.c_str(), _m1.c_str(), _m2.c_str(), _m3.c_str(), _m4.c_str());
+                if (!m_display_active("m.log.235", "%s %s briefly %s through it before %s %s to get a firm grip on it.")) return _original;
+                return ui_render("m.log.235", "%s %s briefly %s through it before %s %s to get a firm grip on it.", _original, {m_actor_arg(*this), ui_text_arg("a.bodypart", hand), {"", true}, {"", true}, {"", true}});
+            })().c_str());
     }
         break;
     case SPWPN_REAPING:
-        mpr("It is briefly surrounded by shifting shadows.");
+        mpr(ui_translate("m.ui", "It is briefly surrounded by shifting shadows."));
         break;
     case SPWPN_ACID:
-        mpr("It begins to drip corrosive slime!");
+        mpr(ui_translate("m.ui", "It begins to drip corrosive slime!"));
         break;
 
     default:
@@ -803,7 +807,7 @@ void monster::equip_armour_message(item_def &item)
 {
     const string str = " wears " +
                        item.name(DESC_A) + ".";
-    simple_monster_message(*this, str.c_str());
+    m_monster_event(*this, str.c_str(), "%s wears %s.", {m_actor_arg(*this), ui_item_arg(item)});
 }
 
 void monster::equip_jewellery_message(item_def &item)
@@ -812,7 +816,7 @@ void monster::equip_jewellery_message(item_def &item)
 
     const string str = " puts on " +
                        item.name(DESC_A) + ".";
-    simple_monster_message(*this, str.c_str());
+    m_monster_event(*this, str.c_str(), "%s puts on %s.", {m_actor_arg(*this), ui_item_arg(item)});
 }
 
 void monster::equip_message(item_def &item)
@@ -843,7 +847,7 @@ void monster::unequip_weapon(item_def &item, bool msg)
     {
         const string str = " unwields " +
                            item.name(DESC_A, false, false, true, false) + ".";
-        msg = simple_monster_message(*this, str.c_str());
+        msg = m_monster_event(*this, str.c_str(), "%s unwields %s.", {m_actor_arg(*this), ui_item_arg(item)});
     }
 
     const int brand = get_weapon_brand(item);
@@ -852,24 +856,24 @@ void monster::unequip_weapon(item_def &item, bool msg)
         switch (brand)
         {
         case SPWPN_FLAMING:
-            mpr("It stops flaming.");
+            mpr(ui_translate("m.ui", "It stops flaming."));
             break;
 
         case SPWPN_HOLY_WRATH:
         case SPWPN_FOUL_FLAME:
-            mpr("It stops glowing.");
+            mpr(ui_translate("m.ui", "It stops glowing."));
             break;
 
         case SPWPN_ELECTROCUTION:
-            mpr("It stops crackling.");
+            mpr(ui_translate("m.ui", "It stops crackling."));
             break;
 
         case SPWPN_VENOM:
-            mpr("It stops dripping with poison.");
+            mpr(ui_translate("m.ui", "It stops dripping with poison."));
             break;
 
         case SPWPN_DISTORTION:
-            mpr("Its appearance distorts for a moment.");
+            mpr(ui_translate("m.ui", "Its appearance distorts for a moment."));
             break;
 
         default:
@@ -888,7 +892,7 @@ void monster::unequip_armour(item_def &item, bool msg)
     {
         const string str = " takes off " +
                            item.name(DESC_A) + ".";
-        simple_monster_message(*this, str.c_str());
+        m_monster_event(*this, str.c_str(), "%s takes off %s.", {m_actor_arg(*this), ui_item_arg(item)});
     }
 }
 
@@ -900,7 +904,7 @@ void monster::unequip_jewellery(item_def &item, bool msg)
     {
         const string str = " takes off " +
                            item.name(DESC_A) + ".";
-        simple_monster_message(*this, str.c_str());
+        m_monster_event(*this, str.c_str(), "%s takes off %s.", {m_actor_arg(*this), ui_item_arg(item)});
     }
 }
 
@@ -988,10 +992,14 @@ void monster::lose_pickup_energy()
 
 void monster::pickup_message(const item_def &item)
 {
-    mprf("%s picks up %s.",
-         name(DESC_THE).c_str(),
-         item.base_type == OBJ_GOLD ? "some gold"
-                                    : item.name(DESC_A).c_str());
+    mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _m1 = item.base_type == OBJ_GOLD ? "some gold"
+                                    : item.name(DESC_A);
+                const string _original = make_stringf("%s picks up %s.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.236", "%s picks up %s.")) return _original;
+                return ui_render("m.log.236", "%s picks up %s.", _original, {m_actor_arg(*this), item.base_type == OBJ_GOLD ? m_clause_arg("some gold") : ui_item_arg(item)});
+            })().c_str());
 }
 
 bool monster::pickup(item_def &item, mon_inv_type slot, bool msg)
@@ -1161,8 +1169,14 @@ bool monster::drop_item(mon_inv_type eslot, bool msg)
     {
         if (msg)
         {
-            mprf("%s drops %s.", name(DESC_THE).c_str(),
-                pitem.name(DESC_A).c_str());
+            const char *source = "%s drops %s.";
+            ui_translation_group group({{"log.monster.item", source}});
+            string subject, object;
+            if (group.available() && try_ui_actor_name(*this, subject)
+                && try_item_display_name(pitem, object, false, false))
+                mprf(group.get("log.monster.item", source), subject.c_str(), object.c_str());
+            else
+                mprf(source, name(DESC_THE).c_str(), pitem.name(DESC_A).c_str());
         }
 
         if (!move_item_to_grid(&item_index, pos(), swimming()))
@@ -2617,14 +2631,20 @@ bool monster::fumbles_attack()
     {
         if (you.can_see(*this))
         {
-            mprf("%s %s", name(DESC_THE).c_str(), liquefied(pos())
+            mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _m1 = liquefied(pos())
                  ? "becomes momentarily stuck in the liquid earth."
                  : env.grid(pos()) == DNGN_TOXIC_BOG
                  ? "becomes momentarily stuck in the toxic bog."
-                 : "splashes around in the water.");
+                 : "splashes around in the water.";
+                const string _original = make_stringf("%s %s", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.237", "%s %s")) return _original;
+                return ui_render("m.log.237", "%s %s", _original, {m_actor_arg(*this), m_clause_arg(_m1)});
+            })().c_str());
         }
         else if (player_can_hear(pos(), LOS_RADIUS))
-            mprf(MSGCH_SOUND, "You hear a splashing noise.");
+            mprf(MSGCH_SOUND, "%s", ui_translate("m.ui", "You hear a splashing noise."));
 
         return true;
     }
@@ -2649,9 +2669,8 @@ bool monster::go_frenzy(actor *source)
     if (has_ench(ENCH_SLOW))
     {
         del_ench(ENCH_SLOW, true); // Give no additional message.
-        simple_monster_message(*this,
-            make_stringf(" shakes off %s lethargy.",
-                         pronoun(PRONOUN_POSSESSIVE).c_str()).c_str());
+        m_monster_event(*this, make_stringf(" shakes off %s lethargy.",
+                         pronoun(PRONOUN_POSSESSIVE).c_str()).c_str(), "%s shakes off its lethargy.", {m_actor_arg(*this)});
     }
     del_ench(ENCH_HASTE, true);
     del_ench(ENCH_FATIGUE, true); // Give no additional message.
@@ -2680,9 +2699,8 @@ bool monster::go_berserk(bool intentional, bool /* potion */)
     if (has_ench(ENCH_SLOW))
     {
         del_ench(ENCH_SLOW, true); // Give no additional message.
-        simple_monster_message(*this,
-            make_stringf(" shakes off %s lethargy.",
-                         pronoun(PRONOUN_POSSESSIVE).c_str()).c_str());
+        m_monster_event(*this, make_stringf(" shakes off %s lethargy.",
+                         pronoun(PRONOUN_POSSESSIVE).c_str()).c_str(), "%s shakes off its lethargy.", {m_actor_arg(*this)});
     }
     del_ench(ENCH_FATIGUE, true); // Give no additional message.
     del_ench(ENCH_FEAR, true);    // Going berserk breaks fear.
@@ -4162,7 +4180,12 @@ bool monster::drain(const actor *agent, bool quiet, int /*pow*/)
         return false;
 
     if (!quiet && you.can_see(*this))
-        mprf("%s is drained!", name(DESC_THE).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _original = make_stringf("%s is drained!", _m0.c_str());
+                if (!m_display_active("m.log.238", "%s is drained!")) return _original;
+                return ui_render("m.log.238", "%s is drained!", _original, {m_actor_arg(*this)});
+            })().c_str());
 
     // If quiet, don't clean up the monster in order to credit properly.
     hurt(agent, 2 + random2(3), BEAM_NEG, KILLED_BY_DRAINING, "", "", !quiet);
@@ -4197,9 +4220,20 @@ bool monster::corrode(const actor* source, const char* corrosion_msg, int amount
     if (you.see_cell(pos()))
     {
         if (!has_ench(ENCH_CORROSION))
-            mprf("%s corrodes %s!", corrosion_msg, name(DESC_THE).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = corrosion_msg;
+                const string _m1 = name(DESC_THE);
+                const string _original = make_stringf("%s corrodes %s!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.239", "%s corrodes %s!")) return _original;
+                return ui_render("m.log.239", "%s corrodes %s!", _original, {ui_corrode_source_arg(source, _m0), m_actor_arg(*this)});
+            })().c_str());
         else
-            mprf("%s seems to be corroded for longer.", name(DESC_THE).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _original = make_stringf("%s seems to be corroded for longer.", _m0.c_str());
+                if (!m_display_active("m.log.240", "%s seems to be corroded for longer.")) return _original;
+                return ui_render("m.log.240", "%s seems to be corroded for longer.", _original, {m_actor_arg(*this)});
+            })().c_str());
     }
 
     // XXX: Make rust cloud corrosion wear off more quickly
@@ -4224,8 +4258,13 @@ void monster::splash_with_acid(actor* evildoer)
 
     if (this->observable())
     {
-        mprf("%s is splashed with acid%s", this->name(DESC_THE).c_str(),
-             attack_strength_punctuation(post_res_dam).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = this->name(DESC_THE);
+                const string _m1 = attack_strength_punctuation(post_res_dam);
+                const string _original = make_stringf("%s is splashed with acid%s", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.241", "%s is splashed with acid%s")) return _original;
+                return ui_render("m.log.241", "%s is splashed with acid%s", _original, {m_actor_arg(*this), ui_literal_arg(_m1)});
+            })().c_str());
     }
 
     if (!one_chance_in(3))
@@ -4426,11 +4465,26 @@ int monster::hurt(const actor *agent, int amount, beam_type flavour,
             if (you.can_see(*this))
             {
                 if (type == MONS_WITHERED_PLANT)
-                    mprf("%s begins to crumble.", this->name(DESC_THE).c_str());
+                    mprf("%s", ([&]() -> string {
+                const string _m0 = this->name(DESC_THE);
+                const string _original = make_stringf("%s begins to crumble.", _m0.c_str());
+                if (!m_display_active("m.log.242", "%s begins to crumble.")) return _original;
+                return ui_render("m.log.242", "%s begins to crumble.", _original, {m_actor_arg(*this)});
+            })().c_str());
                 if (type == MONS_PILE_OF_DEBRIS)
-                    mprf("%s begins to collapse.", this->name(DESC_THE).c_str());
+                    mprf("%s", ([&]() -> string {
+                const string _m0 = this->name(DESC_THE);
+                const string _original = make_stringf("%s begins to collapse.", _m0.c_str());
+                if (!m_display_active("m.log.243", "%s begins to collapse.")) return _original;
+                return ui_render("m.log.243", "%s begins to collapse.", _original, {m_actor_arg(*this)});
+            })().c_str());
                 else
-                    mprf("%s begins to die.", this->name(DESC_THE).c_str());
+                    mprf("%s", ([&]() -> string {
+                const string _m0 = this->name(DESC_THE);
+                const string _original = make_stringf("%s begins to die.", _m0.c_str());
+                if (!m_display_active("m.log.244", "%s begins to die.")) return _original;
+                return ui_render("m.log.244", "%s begins to die.", _original, {m_actor_arg(*this)});
+            })().c_str());
             }
         }
     }
@@ -4892,7 +4946,12 @@ bool monster::sicken(int amount)
     if (!has_ench(ENCH_SICK) && you.can_see(*this))
     {
         // Yes, could be confused with poisoning.
-        mprf("%s looks sick.", name(DESC_THE).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _original = make_stringf("%s looks sick.", _m0.c_str());
+                if (!m_display_active("m.log.245", "%s looks sick.")) return _original;
+                return ui_render("m.log.245", "%s looks sick.", _original, {m_actor_arg(*this)});
+            })().c_str());
     }
 
     add_ench(mon_enchant(ENCH_SICK, nullptr, amount * BASELINE_DELAY));
@@ -5271,7 +5330,12 @@ bool monster::doom(int amount)
     {
         stacks = 0;
         if (you.can_see(*this))
-            mprf("Doom befalls %s.", name(DESC_THE).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _original = make_stringf("Doom befalls %s.", _m0.c_str());
+                if (!m_display_active("m.log.246", "Doom befalls %s.")) return _original;
+                return ui_render("m.log.246", "Doom befalls %s.", _original, {m_actor_arg(*this)});
+            })().c_str());
 
         enchant_type ench = random_choose(ENCH_SLOW, ENCH_VITRIFIED, ENCH_WEAK, ENCH_BLIND, ENCH_DRAINED);
 
@@ -5499,8 +5563,13 @@ void monster::finalise_movement(const actor* to_blame)
         {
             if (you.can_see(*this))
             {
-                mprf("%s dives back into the %s!", name(DESC_THE).c_str(),
-                                                   feat_type_name(env.grid(pos())));
+                mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _m1 = feat_type_name(env.grid(pos()));
+                const string _original = make_stringf("%s dives back into the %s!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.247", "%s dives back into the %s!")) return _original;
+                return ui_render("m.log.247", "%s dives back into the %s!", _original, {m_actor_arg(*this), m_feature_arg(pos())});
+            })().c_str());
             }
             del_ench(ENCH_AQUATIC_LAND);
         }
@@ -5542,7 +5611,12 @@ void monster::finalise_movement(const actor* to_blame)
             {
                 string desc =
                     feature_description_at(pos(), false, DESC_THE);
-                mprf("The bloodstain on %s disappears!", desc.c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = desc;
+                const string _original = make_stringf("The bloodstain on %s disappears!", _m0.c_str());
+                if (!m_display_active("m.log.248", "The bloodstain on %s disappears!")) return _original;
+                return ui_render("m.log.248", "The bloodstain on %s disappears!", _original, {m_feature_arg(pos())});
+            })().c_str());
             }
         }
     }
@@ -5581,7 +5655,7 @@ void monster::finalise_movement(const actor* to_blame)
                 const string message = " shakes off the sticky flame as "
                     + pronoun(PRONOUN_SUBJECTIVE) + " "
                     + conjugate_verb("move", pronoun_plurality()) + ".";
-                simple_monster_message(*this, message.c_str());
+                m_monster_event(*this, message.c_str(), "%s shakes off the sticky flame as it moves.", {m_actor_arg(*this)});
                 del_ench(ENCH_STICKY_FLAME, true);
             }
             else
@@ -5704,7 +5778,7 @@ bool monster::do_shaft()
     string msg = make_stringf(" %s a shaft!",
                               airborne() ? "is sucked into" : "falls through");
 
-    const bool reveal = simple_monster_message(*this, msg.c_str());
+    const bool reveal = m_monster_event(*this, msg.c_str(), "%s %s a shaft!", {m_actor_arg(*this), m_clause_arg(airborne() ? "is sucked into" : "falls through")});
 
     place_cloud(CLOUD_DUST, pos(), 1 + random2(3), this);
 
@@ -5755,9 +5829,19 @@ void monster::diminish(const actor *attacker, int pow)
         return;
 
     if (!has_ench(ENCH_DIMINISHED_SPELLS))
-        mprf("%s spells grow weaker.", name(DESC_ITS).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_ITS);
+                const string _original = make_stringf("%s spells grow weaker.", _m0.c_str());
+                if (!m_display_active("m.log.249", "%s spells grow weaker.")) return _original;
+                return ui_render("m.log.249", "%s spells grow weaker.", _original, {m_actor_arg(*this)});
+            })().c_str());
     else
-        mprf("%s spells grow weaker yet longer.", name(DESC_ITS).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_ITS);
+                const string _original = make_stringf("%s spells grow weaker yet longer.", _m0.c_str());
+                if (!m_display_active("m.log.250", "%s spells grow weaker yet longer.")) return _original;
+                return ui_render("m.log.250", "%s spells grow weaker yet longer.", _original, {m_actor_arg(*this)});
+            })().c_str());
 
     add_ench(mon_enchant(ENCH_DIMINISHED_SPELLS, attacker,
                          (pow + random2(pow + 3)) * BASELINE_DELAY));
@@ -5770,7 +5854,12 @@ bool monster::strip_willpower(actor *attacker, int dur, bool quiet)
         return false;
 
     if (!quiet && !has_ench(ENCH_LOWERED_WL) && you.can_see(*this))
-        mprf("%s willpower is stripped away!", name(DESC_ITS).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_ITS);
+                const string _original = make_stringf("%s willpower is stripped away!", _m0.c_str());
+                if (!m_display_active("m.log.251", "%s willpower is stripped away!")) return _original;
+                return ui_render("m.log.251", "%s willpower is stripped away!", _original, {m_actor_arg(*this)});
+            })().c_str());
 
     mon_enchant lowered_wl(ENCH_LOWERED_WL, attacker, dur * BASELINE_DELAY);
     return add_ench(lowered_wl);
@@ -5790,7 +5879,12 @@ bool monster::drain_magic(actor *attacker, int pow)
 
     add_ench(mon_enchant(ENCH_ANTIMAGIC, attacker, dur));
     if (you.can_see(*this))
-        mprf("%s magic leaks into the air.", name(DESC_ITS).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_ITS);
+                const string _original = make_stringf("%s magic leaks into the air.", _m0.c_str());
+                if (!m_display_active("m.log.252", "%s magic leaks into the air.")) return _original;
+                return ui_render("m.log.252", "%s magic leaks into the air.", _original, {m_actor_arg(*this)});
+            })().c_str());
 
     return true;
 }
@@ -5818,9 +5912,19 @@ void monster::vitrify(const actor *attacker, int duration, bool quiet)
     if (!quiet && you.can_see(*this))
     {
         if (has_ench(ENCH_VITRIFIED))
-            mprf("%s looks even more glass-like.", name(DESC_THE).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _original = make_stringf("%s looks even more glass-like.", _m0.c_str());
+                if (!m_display_active("m.log.253", "%s looks even more glass-like.")) return _original;
+                return ui_render("m.log.253", "%s looks even more glass-like.", _original, {m_actor_arg(*this)});
+            })().c_str());
         else
-            mprf("%s becomes as fragile as glass!", name(DESC_THE).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _original = make_stringf("%s becomes as fragile as glass!", _m0.c_str());
+                if (!m_display_active("m.log.254", "%s becomes as fragile as glass!")) return _original;
+                return ui_render("m.log.254", "%s becomes as fragile as glass!", _original, {m_actor_arg(*this)});
+            })().c_str());
     }
 
     add_ench(mon_enchant(ENCH_VITRIFIED, attacker, duration * BASELINE_DELAY));
@@ -5839,9 +5943,14 @@ bool monster::floodify(const actor* attacker, int duration, const char* substanc
         // Assume any vertebrate bodyplan (and is alive and isn't aquatic) has
         // something that can be called lungs.
         const bool has_lungs = get_mon_shape(*this) < MON_SHAPE_INSECT;
-        mprf("%s floods into %s %s!",
-                substance, name(DESC_ITS).c_str(),
-                has_lungs ? "lungs" : "airways");
+        mprf("%s", ([&]() -> string {
+                const string _m0 = substance;
+                const string _m1 = name(DESC_ITS);
+                const string _m2 = has_lungs ? "lungs" : "airways";
+                const string _original = make_stringf("%s floods into %s %s!", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.255", "%s floods into %s %s!")) return _original;
+                return ui_render("m.log.255", "%s floods into %s %s!", _original, {m_clause_arg(_m0), m_actor_arg(*this), m_clause_arg(_m2)});
+            })().c_str());
     }
 
     return true;
@@ -6005,13 +6114,13 @@ void monster::react_to_damage(const actor *oppressor, int damage,
             if (shared_damage > 0 && owner->alive())
             {
                 if (owner->is_player())
-                    mpr("Your spectral weapon shares its damage with you!");
+                    mpr(ui_translate("m.ui", "Your spectral weapon shares its damage with you!"));
                 else if (you.can_see(*owner))
                 {
                     string buf = " shares ";
                     buf += owner->pronoun(PRONOUN_POSSESSIVE);
                     buf += " spectral weapon's damage!";
-                    simple_monster_message(*owner->as_monster(), buf.c_str());
+                    m_monster_event(*owner->as_monster(), buf.c_str(), "%s shares its spectral weapon's damage!", {m_actor_arg(*owner->as_monster())});
                 }
 
                 // Share damage using a fineff, so that it's non-fatal
@@ -6062,7 +6171,12 @@ void monster::react_to_damage(const actor *oppressor, int damage,
     {
         mon_enchant i_f = get_ench(ENCH_INNER_FLAME);
         if (you.see_cell(pos()))
-            mprf("Flame seeps out of %s.", name(DESC_THE).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _original = make_stringf("Flame seeps out of %s.", _m0.c_str());
+                if (!m_display_active("m.log.256", "Flame seeps out of %s.")) return _original;
+                return ui_render("m.log.256", "Flame seeps out of %s.", _original, {m_actor_arg(*this)});
+            })().c_str());
         place_cloud(CLOUD_FIRE, pos(), 3, actor_by_mid(i_f.source));
     }
 
@@ -6142,19 +6256,27 @@ void monster::react_to_damage(const actor *oppressor, int damage,
                 hit_points = 0;
                 if (observable())
                 {
-                    mprf("As %s mount dies, %s plunges down into %s!",
-                         pronoun(PRONOUN_POSSESSIVE).c_str(),
-                         name(DESC_THE).c_str(),
-                         env.grid(pos()) == DNGN_LAVA ?
+                    mprf("%s", ([&]() -> string {
+                const string _m0 = pronoun(PRONOUN_POSSESSIVE);
+                const string _m1 = name(DESC_THE);
+                const string _m2 = env.grid(pos()) == DNGN_LAVA ?
                              "lava and is incinerated" :
-                             "deep water and drowns");
+                             "deep water and drowns";
+                const string _original = make_stringf("As %s mount dies, %s plunges down into %s!", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.257", "As %s mount dies, %s plunges down into %s!")) return _original;
+                return ui_render("m.log.257", "As %s mount dies, %s plunges down into %s!", _original, {m_actor_arg(*this), m_actor_arg(*this), m_clause_arg(_m2)});
+            })().c_str());
                 }
             }
             else if (fly_died && observable())
             {
-                mprf("%s falls from %s now dead mount.",
-                     name(DESC_THE).c_str(),
-                     pronoun(PRONOUN_POSSESSIVE).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _m1 = pronoun(PRONOUN_POSSESSIVE);
+                const string _original = make_stringf("%s falls from %s now dead mount.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.258", "%s falls from %s now dead mount.")) return _original;
+                return ui_render("m.log.258", "%s falls from %s now dead mount.", _original, {m_actor_arg(*this), ui_literal_arg("")});
+            })().c_str());
             }
         }
     }
@@ -6204,9 +6326,12 @@ void monster::react_to_damage(const actor *oppressor, int damage,
 
         if (observable())
         {
-            mprf(MSGCH_WARN,
-                "%s roars in fury and transforms into a fierce dragon!",
-                name(DESC_THE).c_str());
+            mprf(MSGCH_WARN, "%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _original = make_stringf("%s roars in fury and transforms into a fierce dragon!", _m0.c_str());
+                if (!m_display_active("m.log.259", "%s roars in fury and transforms into a fierce dragon!")) return _original;
+                return ui_render("m.log.259", "%s roars in fury and transforms into a fierce dragon!", _original, {m_actor_arg(*this)});
+            })().c_str());
         }
         if (this->is_constricted())
             this->stop_being_constricted();
@@ -6258,7 +6383,7 @@ void monster::steal_item_from_player()
         if (!msg.empty() && msg != "__NONE")
         {
             msg = replace_all(msg, "@The_monster@", name(DESC_THE));
-            mprf(MSGCH_TALK, "%s", msg.c_str());
+            mprf(MSGCH_TALK, "%s",ui_translate("m.ui", msg.c_str()));
         }
         return;
     }
@@ -6330,7 +6455,7 @@ void monster::steal_item_from_player()
             {
                 complaint = replace_all(complaint, "@The_monster@",
                                         name(DESC_THE));
-                mprf(MSGCH_TALK, "%s", complaint.c_str());
+                mprf(MSGCH_TALK, "%s",ui_translate("m.ui", complaint.c_str()));
             }
 
             return;
@@ -6371,10 +6496,14 @@ void monster::steal_item_from_player()
             inv[MSLOT_GOLD] = idx;
             new_item.set_holding_monster(*this);
         }
-        mprf("%s steals %d gold piece%s!",
-             name(DESC_THE).c_str(),
-             stolen_amount,
-             stolen_amount != 1 ? "s" : "");
+        mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const auto _m1 = stolen_amount;
+                const string _m2 = stolen_amount != 1 ? "s" : "";
+                const string _original = make_stringf("%s steals %d gold piece%s!", _m0.c_str(), _m1, _m2.c_str());
+                if (!m_display_active("m.log.260", "%s steals %s gold piece%s!")) return _original;
+                return ui_render("m.log.260", "%s steals %s gold piece%s!", _original, {m_actor_arg(*this), {std::to_string(_m1), true}, {"", true}});
+            })().c_str());
 
         const string what = make_stringf("%s stole %d gold",
                                         uppercase_first(name(DESC_A)).c_str(),
@@ -6384,8 +6513,13 @@ void monster::steal_item_from_player()
         you.attribute[ATTR_GOLD_FOUND] -= stolen_amount;
 
         you.del_gold(stolen_amount);
-        mprf("You now have %d gold piece%s.",
-             you.gold, you.gold != 1 ? "s" : "");
+        mprf("%s", ([&]() -> string {
+                const auto _m0 = you.gold;
+                const string _m1 = you.gold != 1 ? "s" : "";
+                const string _original = make_stringf("You now have %d gold piece%s.", _m0, _m1.c_str());
+                if (!m_display_active("m.log.261", "You now have %s gold piece%s.")) return _original;
+                return ui_render("m.log.261", "You now have %s gold piece%s.", _original, {{std::to_string(_m0), true}, {"", true}});
+            })().c_str());
 
         return;
     }
@@ -6430,16 +6564,24 @@ item_def* monster::take_item(int steal_what, mon_inv_type mslot,
         const int stolen_amount = 1 + random2(new_item.quantity);
         if (stolen_amount < new_item.quantity)
         {
-            mprf("%s steals %d of %s!",
-                 name(DESC_THE).c_str(),
-                 stolen_amount,
-                 new_item.name(DESC_YOUR).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const auto _m1 = stolen_amount;
+                const string _m2 = new_item.name(DESC_YOUR);
+                const string _original = make_stringf("%s steals %d of %s!", _m0.c_str(), _m1, _m2.c_str());
+                if (!m_display_active("m.log.262", "%s steals %s of %s!")) return _original;
+                return ui_render("m.log.262", "%s steals %s of %s!", _original, {m_actor_arg(*this), ui_literal_arg(to_string(_m1)), ui_item_arg(new_item)});
+            })().c_str());
         }
         else
         {
-            mprf("%s steals %s!",
-                 name(DESC_THE).c_str(),
-                 new_item.name(DESC_YOUR).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _m1 = new_item.name(DESC_YOUR);
+                const string _original = make_stringf("%s steals %s!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.263", "%s steals %s!")) return _original;
+                return ui_render("m.log.263", "%s steals %s!", _original, {m_actor_arg(*this), ui_item_arg(new_item)});
+            })().c_str());
         }
         const string what = make_stringf("%s stole %s",
                                         uppercase_first(name(DESC_A)).c_str(),

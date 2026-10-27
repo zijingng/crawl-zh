@@ -1,7 +1,8 @@
+# Generated from localization/zh_CN/textdb.po; do not edit.
 %%%%
 no teleportation passive
 
-你无法传送或闪现。
+你无法传送或闪烁。
 %%%%
 no spellcasting passive
 
@@ -9,51 +10,51 @@ no spellcasting passive
 %%%%
 random rage passive
 
-当你近战攻击时，你有可能变得狂暴。
+你进行近战攻击时有一定几率狂暴。
 %%%%
 corrode self passive
 
-当你受到伤害时，你有可能会被腐蚀。
+你受到伤害时有一定几率遭到腐蚀。
 %%%%
 slow self passive
 
-当你受到伤害时，你有可能会变慢。
+你受到伤害时有一定几率被减速。
 %%%%
 harm passive
 
-你造成的和承受的伤害都有所增加。
+你造成和受到的所有伤害都会增加。
 %%%%
 mayhem passive
 
-当你杀死敌人时，有可能会让看得见的怪物变得疯狂。
+你击杀敌人时有一定几率让视野内的怪物陷入狂乱。
 %%%%
 repel missiles passive
 
-你驱逐了飞弹，提升了躲开它们的几率。
+你能偏转投射物，提高躲开投射物的几率。
 %%%%
 reflection passive
 
-你将被格挡的远程攻击，返给攻击者。
+你会将成功格挡的远程攻击反射回攻击者。
 %%%%
 acrobat passive
 
-当你移动和等待时，你的闪避有所提升。
+你在移动和等待时的闪避值提高。
 %%%%
 clarity passive
 
-你受到保护，不会不由自主地混乱、狂暴、畏惧和迷惑。
+你不会被迫陷入混乱、狂暴、恐惧或魅惑。
 %%%%
 resist mutation passive
 
-你能抵抗部分变异。
+你受到一定程度的变异防护。
 %%%%
 guardian spirit passive
 
-你受到的任何伤害，都会被生命和魔力储备分摊承受。
+你受到的所有伤害由生命和魔力储备共同承担。
 %%%%
 rampage passive
 
-当你向敌人移动时，你会获得额外的一个自由步。
+你朝敌人移动时会额外免费前进一步。
 %%%%
 roll passive
 
@@ -61,22 +62,20 @@ roll passive
 %%%%
 faith passive
 
-神很快会眷顾你，但也会更容易察觉到你在信仰上的冒犯行为。
+你能更快地获得神恩，但宗教上的过失也会受到更多关注。
 %%%%
 wizardry passive
 
-你的法术成功率有所提升。
+你的施法成功率提高。
 %%%%
 archmagi passive
 
-你的法力有所提升。
+你的法术强度提高。
 %%%%
 channel magic passive
 
-当你成功施法时，有可能重新获得施法时所消耗的魔力；
-当你施法失败时，总是能重新获得所消耗的魔力。
+成功施法时，你有一定几率收回消耗的魔力；施法失败时，则总能收回消耗的魔力。
 %%%%
 infuse magic passive
 
-你每次近战攻击时都会消耗魔力，让你的攻击更有力量。
-%%%%
+你每次近战攻击都会消耗魔力，强化打击。

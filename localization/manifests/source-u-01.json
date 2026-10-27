@@ -1,0 +1,21 @@
+{
+  "baseline": "0.34.1",
+  "batch": "source-u-01",
+  "messages": [],
+  "reviewed_files": [
+    "crawl-ref/source/ui-scissor.h",
+    "crawl-ref/source/ui.cc",
+    "crawl-ref/source/ui.h",
+    "crawl-ref/source/uncancel.cc",
+    "crawl-ref/source/uncancel.h",
+    "crawl-ref/source/uncancellable-type.h",
+    "crawl-ref/source/undead-state-type.h",
+    "crawl-ref/source/unicode-wrap.h",
+    "crawl-ref/source/unicode.cc",
+    "crawl-ref/source/unicode.h",
+    "crawl-ref/source/unique-creature-list-type.h",
+    "crawl-ref/source/unique-item-status-type.h",
+    "crawl-ref/source/unwind.h"
+  ],
+  "disposition": "No new translatable prose in this scope; preserve generic UI, canonical keys and Unicode/restoration mechanics."
+}

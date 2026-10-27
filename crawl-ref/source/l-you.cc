@@ -2,6 +2,7 @@
  * @module you
  */
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include <cmath>
 
@@ -1848,7 +1849,7 @@ LUAFN(you_change_species)
 
     if (sp == SP_UNKNOWN)
     {
-        mpr("That species isn't available.");
+        mpr(ui_translate("l.ui", "That species isn't available."));
         PLUARET(boolean, false);
     }
 

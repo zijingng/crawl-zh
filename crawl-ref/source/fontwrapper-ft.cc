@@ -20,12 +20,13 @@
 #include "tilefont.h"
 #include "tilesdl.h"
 #include "unicode.h"
+#include "unicode-wrap.h"
 #include "unwind.h"
 
 // maximum number of unique glyphs that can be rendered with this font at once; e.g. 4096, 256, 36
-#define MAX_GLYPHS 256
+#define MAX_GLYPHS 1024
 // dimensions of glyph grid; GLYPHS_PER_ROWCOL^2 <= MAX_GLYPHS; e.g. 64, 16, 6
-#define GLYPHS_PER_ROWCOL 16
+#define GLYPHS_PER_ROWCOL 32
 // char to use if we can't find it in the font (upside-down question mark)
 #define MISSING_CHAR 0xbf
 
@@ -62,7 +63,9 @@ FontWrapper* FontWrapper::create()
 
 FTFontWrapper::FTFontWrapper() :
     m_atlas(nullptr),
+    n_subst(0),
     m_max_advance(0, 0),
+    m_cell_width(0),
     m_min_offset(0),
     charsz(1,1),
     m_max_width(0),
@@ -82,6 +85,8 @@ FTFontWrapper::~FTFontWrapper()
     delete m_buf;
     if (face)
         FT_Done_Face(face);
+    if (fallback_face)
+        FT_Done_Face(fallback_face);
     delete[] ttf;
 }
 
@@ -98,12 +103,23 @@ bool FTFontWrapper::configure_font()
                                 display_density.logical_to_device(fsize));
     ASSERT(!error);
 
+    if (fallback_face)
+    {
+        error = FT_Set_Pixel_Sizes(fallback_face, 0,
+                     display_density.logical_to_device(fsize));
+        ASSERT(!error);
+    }
+
     // Get maximum advance and other global metrics
     FT_Size_Metrics metrics = face->size->metrics;
     m_max_advance   = coord_def(0,0);
     m_max_advance.x = metrics.max_advance >> 6;
     m_max_advance.y = (metrics.ascender-metrics.descender)>>6;
     m_ascender      = (metrics.ascender>>6);
+    m_cell_width = m_max_advance.x;
+    if (FT_Get_Char_Index(face, U'中')
+        && !FT_Load_Char(face, 'M', FT_LOAD_DEFAULT))
+        m_cell_width = max(1, int(face->glyph->advance.x >> 6));
     // if you're looking for realistic glyph sizes use m_max_advance
     // or char_width, these are still scaled.
     // (TODO: why would you ever use these values? m_max_advance is almost
@@ -112,6 +128,17 @@ bool FTFontWrapper::configure_font()
     m_max_height    = (face->bbox.yMax >> 6) - (face->bbox.yMin >> 6);
     m_min_offset    = 0;
 
+    if (fallback_face)
+    {
+        const auto &fm = fallback_face->size->metrics;
+        const int descent = max(int(-metrics.descender >> 6),
+                                int(-fm.descender >> 6));
+        m_ascender = max(m_ascender, int(fm.ascender >> 6));
+        m_max_advance.y = m_ascender + descent;
+        m_max_advance.x = max(m_max_advance.x,
+                             int(fm.max_advance >> 6));
+    }
+
     charsz = coord_def(1,1);
     // Grow character size to power of 2
     while (charsz.x <= m_max_advance.x)
@@ -119,7 +146,7 @@ bool FTFontWrapper::configure_font()
     while (charsz.y <= m_max_advance.y)
         charsz.y *= 2;
 
-    // Fill out texture to be (16*charsz.x) X (16*charsz.y) X (32-bit)
+    // The texture has GLYPHS_PER_ROWCOL cells in each dimension (32-bit RGBA).
     // Having to blow out 8-bit alpha values into full 32-bit textures is
     // kind of frustrating, but not all OpenGL implementations support the
     // "esoteric" ALPHA8 format and it's not like this texture is very large.
@@ -145,6 +172,8 @@ bool FTFontWrapper::configure_font()
     m_tex.load_texture(nullptr, m_ft_width, m_ft_height, MIPMAP_NONE);
 
     m_glyphs.clear();
+    m_atlas_lru.clear();
+    n_subst = 0;
 
     for (int i = 0; i < MAX_GLYPHS; i++)
         m_atlas[i] = FontAtlasEntry();
@@ -219,6 +248,30 @@ bool FTFontWrapper::load_font(const char *font_name, unsigned int font_size)
     return configure_font();
 }
 
+bool FTFontWrapper::load_fallback(const char *font_name)
+{
+    const string path = datafile_path(font_name, false, true);
+    FILE *f = path.empty() ? nullptr : fopen_u(path.c_str(), "rb");
+    if (!f)
+        end(1, false, "Could not read fallback font '%s'", font_name);
+    fallback_data.resize(file_size(f));
+    const bool read_ok = fread(fallback_data.data(), 1, fallback_data.size(), f)
+                         == fallback_data.size();
+    fclose(f);
+    if (!read_ok || FT_New_Memory_Face(FontLibrary::get(), fallback_data.data(),
+                         fallback_data.size(), 0, &fallback_face))
+        end(1, false, "Invalid fallback font '%s'", font_name);
+    return configure_font();
+}
+
+FT_Face FTFontWrapper::glyph_face(char32_t ch) const
+{
+    if (!FT_Get_Char_Index(face, ch) && fallback_face
+        && FT_Get_Char_Index(fallback_face, ch))
+        return fallback_face;
+    return face;
+}
+
 bool FTFontWrapper::resize(unsigned int size)
 {
     fsize = size;
@@ -239,19 +292,22 @@ FTFontWrapper::GlyphInfo& FTFontWrapper::get_glyph_info(char32_t ch)
     GlyphInfo &glyph = m_glyphs[ch];
     if (!glyph.valid)
     {
-        FT_Int glyph_index = FT_Get_Char_Index(face, ch);
+        FT_Face selected = glyph_face(ch);
+        FT_Int glyph_index = FT_Get_Char_Index(selected, ch);
         if (!glyph_index)
-            glyph_index = FT_Get_Char_Index(face, MISSING_CHAR);
+            glyph_index = FT_Get_Char_Index(selected, MISSING_CHAR);
         // need to use FT_LOAD_RENDER, otherwise glyph->bitmap isn't loaded
-        FT_Error error = FT_Load_Glyph(face, glyph_index, FT_LOAD_RENDER |
+        FT_Error error = FT_Load_Glyph(selected, glyph_index, FT_LOAD_RENDER |
                 (Options.tile_font_ft_light ? FT_LOAD_TARGET_LIGHT : 0));
         ASSERT(!error);
-        FT_Bitmap *bmp = &face->glyph->bitmap;
+        FT_Bitmap *bmp = &selected->glyph->bitmap;
         ASSERT(bmp);
 
-        glyph.offset = face->glyph->bitmap_left;
-        glyph.advance = face->glyph->advance.x >> 6;
-        glyph.ascender = face->glyph->bitmap_top;
+        glyph.offset = selected->glyph->bitmap_left;
+        glyph.advance = selected == fallback_face
+                      ? m_cell_width * max(1, wcwidth(ch))
+                      : int(selected->glyph->advance.x >> 6);
+        glyph.ascender = selected->glyph->bitmap_top;
         glyph.width = bmp->width;
         glyph.renderable = !!bmp->buffer;
         glyph.valid = true;
@@ -263,16 +319,17 @@ void FTFontWrapper::load_glyph(unsigned int c, char32_t uchar)
 {
     // get on with rendering the new glyph
     FT_Error error;
-    FT_Int glyph_index = FT_Get_Char_Index(face, uchar);
+    FT_Face selected = glyph_face(uchar);
+    FT_Int glyph_index = FT_Get_Char_Index(selected, uchar);
 
     if (!glyph_index)
-        glyph_index = FT_Get_Char_Index(face, MISSING_CHAR);
+        glyph_index = FT_Get_Char_Index(selected, MISSING_CHAR);
 
-    error = FT_Load_Glyph(face, glyph_index, FT_LOAD_RENDER |
+    error = FT_Load_Glyph(selected, glyph_index, FT_LOAD_RENDER |
         (Options.tile_font_ft_light ? FT_LOAD_TARGET_LIGHT : 0));
     ASSERT(!error);
 
-    FT_Bitmap *bmp = &face->glyph->bitmap;
+    FT_Bitmap *bmp = &selected->glyph->bitmap;
     ASSERT(bmp);
 
     // Was int prior to freetype 2.5.4, then became unsigned.
@@ -344,7 +401,7 @@ unsigned int FTFontWrapper::map_unicode(char32_t uchar)
         n_subst++;
     }
 
-    auto it = find(m_atlas_lru.begin(), m_atlas_lru.end(), (uint8_t)c);
+    auto it = find(m_atlas_lru.begin(), m_atlas_lru.end(), c);
     if (it != m_atlas_lru.end())
         m_atlas_lru.erase(it);
     m_atlas_lru.push_back(c);
@@ -373,6 +430,13 @@ void FTFontWrapper::render_textblock(unsigned int x_pos, unsigned int y_pos,
     {
         for (unsigned int x = 0; x < width; x++)
         {
+            // Zero is a continuation cell, not an extra missing glyph.
+            adv.x = x * m_cell_width;
+            if (!chars[i])
+            {
+                i++;
+                continue;
+            }
             GlyphInfo &glyph = get_glyph_info(chars[i]);
             uint8_t col_bg = colours[i] >> 4;
             uint8_t col_fg = colours[i] & 0xF;
@@ -380,7 +444,8 @@ void FTFontWrapper::render_textblock(unsigned int x_pos, unsigned int y_pos,
             if (col_bg != 0)
             {
                 GLWPrim rect(adv.x, adv.y,
-                             adv.x + m_max_advance.x, adv.y + m_max_advance.y);
+                             adv.x + m_cell_width * max(1, wcwidth(chars[i])),
+                             adv.y + m_max_advance.y);
                 // Leave tex coords at their default 0.0f
                 VColour col(term_colours[col_bg].r,
                             term_colours[col_bg].g,
@@ -601,17 +666,7 @@ formatted_string FTFontWrapper::split(const formatted_string &str,
             space_idx = nl;
         else
         {
-            space_idx = -1;
-            for (char *search = &line[line_end];
-                 search > line;
-                 search = prev_glyph(search, line))
-            {
-                if (*search == ' ')
-                {
-                    space_idx = search - line;
-                    break;
-                }
-            }
+            space_idx = cjk_wrap_break(line, line_end);
         }
 
         if (++num_lines >= max_lines || space_idx == -1)
@@ -636,8 +691,21 @@ formatted_string FTFontWrapper::split(const formatted_string &str,
         }
         else if (space_idx != nl)
         {
-            line[space_idx] = '\n';
-            ret[&line[space_idx] - &base[0]] = '\n';
+            if (line[space_idx] == ' ')
+            {
+                line[space_idx] = '\n';
+                ret[&line[space_idx] - &base[0]] = '\n';
+            }
+            else
+            {
+                // Insert between UTF-8 glyphs, never replace a glyph byte.
+                const int offset = line - &base[0] + space_idx;
+                const bool inserted = insert_wrap_break(ret, offset);
+                ASSERT(inserted);
+                base.insert(offset, "\n");
+                line = &base[offset + 1];
+                continue;
+            }
         }
 
         line = &line[space_idx+1];
@@ -952,7 +1020,7 @@ unsigned int FTFontWrapper::char_height(bool logical) const
  */
 unsigned int FTFontWrapper::max_width(int length, bool logical) const
 {
-    const int device_length = m_max_advance.x * length;
+    const int device_length = m_cell_width * length;
 
     return logical ? display_density.device_to_logical(device_length)
                    : device_length;

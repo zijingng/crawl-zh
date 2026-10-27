@@ -1,0 +1,183 @@
+{
+  "glossary_sha256": "5b0e7563973cc4449b02977ed1d7b4cfb7f9aa33877063cff3f665c99ff50965",
+  "files": [
+    {
+      "file": "quiver.cc",
+      "sha256": "f405068c017d2d2a20c918e430dfbcdafd897b9cc893e0cb3b015fd625ff1d27",
+      "hits": [
+        {
+          "term": "ability",
+          "translation": "能力"
+        },
+        {
+          "term": "ancestor",
+          "translation": "先祖"
+        },
+        {
+          "term": "arrow",
+          "translation": "箭"
+        },
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开"
+        },
+        {
+          "term": "Fighting",
+          "translation": "战斗/作战/格斗"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "hostile",
+          "translation": "敌对"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "manual",
+          "translation": "手册/手动"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "potion",
+          "translation": "药水"
+        },
+        {
+          "term": "smite",
+          "translation": "神罚"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "stats",
+          "translation": "属性"
+        },
+        {
+          "term": "throw",
+          "translation": "投掷"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "Unarmed Combat",
+          "translation": "徒手格斗"
+        },
+        {
+          "term": "wand",
+          "translation": "魔杖"
+        },
+        {
+          "term": "weird",
+          "translation": "奇怪的"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "Throwing",
+          "translation": "投掷"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "piety",
+          "translation": "虔诚"
+        },
+        {
+          "term": "evoke",
+          "translation": "唤发/发动/使用"
+        },
+        {
+          "term": "berserk",
+          "translation": "狂暴"
+        },
+        {
+          "term": "silence",
+          "translation": "沉默"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Roll",
+          "translation": "翻滚"
+        },
+        {
+          "term": "Melee",
+          "translation": "近战"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "clarity",
+          "translation": "清明"
+        },
+        {
+          "term": "stumbling",
+          "translation": "踉跄"
+        }
+      ]
+    },
+    {
+      "file": "quiver.h",
+      "sha256": "5d427fbfa5b2f78c975974251ad5a9d72bbc46aad2516b06c282e21c80f45d62",
+      "hits": [
+        {
+          "term": "ability",
+          "translation": "能力"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "weird",
+          "translation": "奇怪的"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    }
+  ],
+  "shared_baselines": [
+    {
+      "file": "Makefile",
+      "sha256": "c6cf1aae924c56ebbac8ee40f0d051ba63fdcb0912156f46bdb2841a0e55e200"
+    }
+  ]
+}

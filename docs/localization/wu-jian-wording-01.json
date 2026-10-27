@@ -1,0 +1,26 @@
+{
+  "batch": "wu-jian-wording-01",
+  "glossary_before_sha256": "e8b68cdbeb69768c2b1bf2f973a2335c21e45c3e8ade4729316bd2f6bd1ae6f1",
+  "term": {
+    "Term": "Wu Jian",
+    "Translation": "武剑会",
+    "Part of Speech": "noun",
+    "Variants": "Wu Jian Council",
+    "Note": "【0.34.1 译名建议】作为武术神祇集体的建议译名，与 Council 含义一致；旧备注“无间道”不是英文原文依据，不据此扩写神话背景。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+  },
+  "english_gods_sha256": "ea181f131f0373a3979ac841c5a60cf44ea4cfb3179d64bb10233e570196aabd",
+  "glossary_after_sha256": "9e60ee9a1e553fe630745f45296700cd386fc81a9ea4f31a880ab8f172e3c910",
+  "changed_textdb_keys": [
+    "wu jian",
+    "wu jian powers"
+  ],
+  "ui_change": {
+    "context": "display.god",
+    "english": "The Council",
+    "chinese": "武剑会"
+  },
+  "export_changed": [
+    "gods.txt"
+  ],
+  "english_unchanged": true
+}

@@ -138,3 +138,6 @@ vector<branch_type> random_choose_disabled_branches();
 bool vaults_is_locked();
 void lock_vaults();
 void unlock_vaults();
+
+// Player-facing name; canonical Branch fields remain untranslated.
+const char *branch_display_name(branch_type br, bool long_name = false);

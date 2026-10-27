@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "t-display.h"
+#include "i18n.h"
 
 #include "coord.h"
 #include "directn.h"
@@ -57,7 +59,7 @@ static int targeting_behaviour_get_key()
 
 coord_def prompt_compass_direction()
 {
-    mprf(MSGCH_PROMPT, "Which direction?");
+    mprf(MSGCH_PROMPT, "%s", ui_translate("t.ui", "Which direction?"));
 
     coord_def delta = {0, 0};
     bool cancel = false;

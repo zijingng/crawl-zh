@@ -289,7 +289,7 @@ vault_placement *dgn_vault_at(coord_def gp);
 void dgn_seen_vault_at(coord_def gp);
 vault_placement *dgn_find_layout();
 
-string dump_vault_maps();
+string dump_vault_maps(bool display = false);
 
 bool dgn_square_travel_ok(const coord_def &c);
 

@@ -48,6 +48,9 @@ public:
     }
 };
 
+// Presentation only: canonical level_id::describe() stays English.
+string viewmap_display_level_name(const level_id &id);
+
 class feature_list;
 
 class map_control_state

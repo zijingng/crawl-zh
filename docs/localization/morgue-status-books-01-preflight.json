@@ -1,0 +1,95 @@
+{
+  "queries": [
+    "Precepts",
+    "Stones",
+    "Pandemonium lord",
+    "paralysis",
+    "mutation"
+  ],
+  "hits": [
+    {
+      "Term": "mutation",
+      "Translation": "变异",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "mutations",
+      "Translation": "变异",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "potion of mutation",
+      "Translation": "变异药水",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Transmutations",
+      "Translation": "变化系魔法",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【历史学派】独立技能已合并为 Alchemy（炼金术）；不作为现行可训练学派。来源：docs/changelog.txt。"
+    },
+    {
+      "Term": "paralysis",
+      "Translation": "麻痹",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态】状态名，区别动词 paralyze/paralyse。 来源：duration-data.h。"
+    },
+    {
+      "Term": "Paralysis Gaze",
+      "Translation": "麻痹凝视",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Stoneskin",
+      "Translation": "石肤术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Necromutation",
+      "Translation": "死灵变形",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "living paralysis spell",
+      "Translation": "活体麻痹法术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "pandemonium lord",
+      "Translation": "魔窟领主",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "resist mutation passive",
+      "Translation": "抵抗变异",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 被动效果名称】来源：dat/descript/passives.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：抵抗变异。"
+    },
+    {
+      "Term": "mutation resistance",
+      "Translation": "变异抗性",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：变异抗性。"
+    }
+  ]
+}

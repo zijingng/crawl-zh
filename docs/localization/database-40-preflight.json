@@ -1,0 +1,123 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "selected": [
+    {
+      "source": "database/monspeak.txt",
+      "key": "sprozz",
+      "english": "{{\n  if spells.memorised(\"launch clockwork bee\") then\n    return '@_Sprozz_thief_@'\n  else\n    return '@_Sprozz_common_@'\n  end\n}} @player_only@\n",
+      "hits": [
+        {
+          "Term": "Launch Clockwork Bee",
+          "Translation": "启动发条蜜蜂",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【怪物与卡牌名称校对】法术名中的实体名称与对应怪物显示名统一。"
+        },
+        {
+          "Term": "Sprozz",
+          "Translation": "斯普罗兹",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "clockwork bee",
+          "Translation": "发条蜜蜂",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/monspeak.txt",
+      "key": "_sprozz_thief_",
+      "english": "@The_monster@ shouts, \"Patent thief! You won\\'t get away with this!\"\n\n@The_monster@ yells, \"I thought of it first! Give it back!\"\n\n@The_monster@ grumbles, \"I\\'ll bet your bee is still using copper gearwork!\"\n\n@The_monster@ shouts, \"Who\\'s been selling my blueprints? Tell me!\"\n",
+      "hits": [
+        {
+          "Term": "Sprozz",
+          "Translation": "斯普罗兹",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/monspeak.txt",
+      "key": "_sprozz_common_",
+      "english": "@The_monster@ says, \"Allow me to demonstrate the bee of the future!\"\n\n@The_monster@ says, \"It makes honey *and* kills pests. Ingenious!\"\n\n@The_monster@ says, \"Clockwork honey contains at least 35% more iron! Nutritious.\"\n\n@The_monster@ says, \"Chitin is about to be a thing of the past!\"\n\n@The_monster@ grins. \"Soon, every apiary\\'s gonna want a piece of Sprozz!\"\n\n@The_monster@ says, \"I need a test subject for my new stingers. I volunteer you.\"\n\n@The_monster@ says, \"Tell me how much this hurts, okay? I need more data.\"\n\n@The_monster@ mumbles, \"Perhaps it could use a bit more zinc in the wings....\"\n\n@The_monster@ mutters, \"Next time I\\'m using spur gears. Less buzzing.\"\n\n@The_monster@ mumbles, \"Pollen collection still 41% less efficient. Must improve.\"\n\n@The_monster@ mumbles, \"Nectar collection still 37% less efficient. Must improve.\"\n",
+      "hits": [
+        {
+          "Term": "Sprozz",
+          "Translation": "斯普罗兹",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/wpnnoise.txt",
+      "key": "_speaking_high_tension_",
+      "english": "@The_weapon@ yells, \"I hereby consecrate these halls WITH BLOOD!\"\n\n@The_weapon@ shouts, \"Lose my temper? Nonsense! My steel will be strong forever!\"\n\n@The_weapon@ shouts, \"Cut 'em off! All their little heads at once!\"\n\n@The_weapon@ shouts, \"Kill 'em all and let {{ if you.god() == \"No God\" then\nreturn \"@_godless_sorter_@\"; else return \"@player_god@\"; end }} sort them out!\"\n\n@The_weapon@ shouts, \"Screaming and crying is the perfect accompaniment.\"\n\n@The_weapon@ shouts, \"I'll make piano strings from your guts!\"\n\n@The_weapon@ shouts, \"Oh, the @_glorious_@ feeling of steel cutting flesh.\"\n\n@The_weapon@ shouts, \"I just love to dig into intestines.\"\n\n@The_weapon@ @_screams_@, \"Among all these lost souls, we reign supreme!\"\n\n@The_weapon@ shouts, \"Die. Die. Die!\"\n\n@The_weapon@ shouts, \"You shall lie beneath the ground but I, I will glint in the sun!\"\n\nw:1\n@The_weapon@ shouts, \"Born from this womb, sliced by this blade!\"\n\n@The_weapon@ @_screams_@, \"When this war is won, I will wage the next one.\"\n\n@The_weapon@ @_screams_@, \"Blade-deep in blood!\"\n\n@The_weapon@ @_screams_@, \"I revel, I sever!\"\n\n@The_weapon@ @_screams_@, \"All those pillows!\"\n\n@The_weapon@ @_screams_@, \"No rest until they move no more!\"\n\n@The_weapon@ @_screams_@, \"As long as they die, we live!\"\n\n@The_weapon@ @_screams_@, \"The future is bloody!\"\n\nw:1\n@The_weapon@ @_screams_@, \"The bloody future is ours!\"\n\n@The_weapon@ @_screams_@, \"Dismember the living, dismember the dead!\"\n\n@The_weapon@ @_screams_@, \"We will celebrate on a pile of carcasses!\"\n\n@The_weapon@ @_screams_@, \"@player_name@, you will [dine|feast] on fine @_corpses_@ today!\"\n\n@The_weapon@ @_screams_@, \"Go for the jugular!\"\n\n@The_weapon@ @_screams_@, \"My instinct to kill is stronger than their will to live!\"\n\n@The_weapon@ @_screams_@, \"I am covered in blood! It feels so good!\"\n\n@The_weapon@ @_screams_@, \"Aah! This piece of @_body_part_@ is stuck to me. Wipe it off!\"\n\n@The_weapon@ @_screams_@, \"My edge gets dull! My edge gets dull!\"\n\n@The_weapon@ @_screams_@, \"Don't stick me into that one, please.\"\n\n@The_weapon@ @_screams_@, \"My victories add up!\"\n\nw:1\n@The_weapon@ @_screams_@, \"Blood as far as the eye can see! Blood for all eternity!\"\n\nw:1\n@The_weapon@ @_screams_@, \"Blood must spurt and blood must flow! Blood must gush from every foe!\"\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "Dig",
+          "Translation": "挖掘术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "screaming",
+          "Translation": "尖叫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：尖叫。"
+        },
+        {
+          "Term": "strong",
+          "Translation": "强壮",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：强壮。"
+        }
+      ]
+    },
+    {
+      "source": "database/wpnnoise.txt",
+      "key": "_godless_sorter_",
+      "english": "w:5\nfate\n\nw:5\nthe lot\n\nworms\n\nthe godless void\n\nw:1\nautolysis\n\nw:4\nputrefaction\n",
+      "hits": []
+    }
+  ]
+}

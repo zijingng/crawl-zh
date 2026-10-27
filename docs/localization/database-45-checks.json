@@ -1,0 +1,40 @@
+{
+  "batch": "database-45",
+  "reviewed_keys": 39,
+  "candidates": 730,
+  "data": {
+    "rand_wpn.txt": {
+      "new_keys": 21,
+      "new_candidates": 330,
+      "reviewed_keys": 45,
+      "source_keys": 45,
+      "english_fallback": []
+    },
+    "rand_arm.txt": {
+      "new_keys": 18,
+      "new_candidates": 400,
+      "reviewed_keys": 18,
+      "source_keys": 19,
+      "english_fallback": [
+        "_armour_animal_"
+      ]
+    }
+  },
+  "canonical_sources_unchanged": true,
+  "previous_weapon_translations_unchanged": true,
+  "python_tests": 32,
+  "native_test_cases": 10,
+  "native_assertions": 200424,
+  "targeted_native_seconds": 2.012,
+  "new_title_test_seconds": 0.486,
+  "tiles_crawl_exe_build": "passed",
+  "typed_parameters": [
+    "species genus",
+    "known monster owner",
+    "literal current player name"
+  ],
+  "canonical_name_properties_rng": "passed",
+  "unknown_and_english_fallback": "passed",
+  "diff_check": "passed",
+  "gui_test": false
+}

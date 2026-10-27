@@ -1,0 +1,33 @@
+{
+  "batch": "dynamic-logs-01",
+  "entries": 934,
+  "added": 871,
+  "updated": 63,
+  "by_kind": {
+    "fixed_log": 227,
+    "combat_verb": 66,
+    "combat_degree": 27,
+    "monster_event": 62,
+    "dynamic_template": 19,
+    "death_verb": 6,
+    "failure_severity": 6,
+    "item_log": 10,
+    "spell_name": 511
+  },
+  "all_batch_entries_in_po_and_generated_catalogue": true,
+  "all_source_and_code_fingerprints_current": true,
+  "glossary_unchanged": true,
+  "ui_manifest_entries": 6002,
+  "ui_exported": 6001,
+  "cpp_test_cases": 17,
+  "cpp_assertions": 10668,
+  "python_tests": 22,
+  "windows_tiles_build": "passed",
+  "gui_visual_review": false,
+  "code_review_notes": [
+    "命中与未命中共用英文源模板，英文分支保留冠词和动词变化",
+    "随机怪物攻击动词只选择一次，译文缺失不重新抽取",
+    "频道、可见性门槛、物品鉴定状态与实际掉落数量保留",
+    "复杂日志依赖代码变化时不导出旧译，Makefile 自动触发复核"
+  ]
+}

@@ -100,6 +100,8 @@ int count_bits(enum_bitfield<E, Exp> bits)
 }
 
 const char *spell_title(spell_type which_spell);
+// UI only; spell_title remains the canonical English lookup/script name.
+const char *spell_display_title(spell_type which_spell);
 const char* spelltype_short_name(spschool which_spelltype);
 const char* spelltype_long_name(spschool which_spelltype);
 

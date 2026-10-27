@@ -1,4 +1,5 @@
 OBJECTS = \
+i18n.o \
 ability.o \
 abyss.o \
 acquire.o \
@@ -307,6 +308,7 @@ glwrapper-ogl.o \
 fontwrapper-ft.o
 
 TEST_OBJECTS = \
+catch2-tests/test_localization.o \
 catch2-tests/test_branch.o \
 catch2-tests/test_coordit.o \
 catch2-tests/test_describe.o \

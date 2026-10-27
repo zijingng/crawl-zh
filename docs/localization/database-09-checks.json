@@ -1,0 +1,23 @@
+{
+  "reviewed_keys": 3,
+  "candidates": 53,
+  "cumulative_reviewed": 56,
+  "remaining_legacy_keys": 9,
+  "source_keys": 65,
+  "unselected_62_entries_unchanged": true,
+  "english_source_unchanged": true,
+  "weights_references_bracket_order": "passed",
+  "po_consistency": "passed",
+  "changed_source_lookup_fallback": "passed",
+  "native_tests": 151,
+  "native_assertions": 415899,
+  "python_tests": 29,
+  "tiles_build": "passed",
+  "visual_test": "not_run",
+  "executable_sha256": "7368220329643d59725a4ae6e8cd1c264509be72a187e0e6a8811e8ca2954f78",
+  "runtime_adapter": "strict paired item_noise; unreviewed or missing components use whole canonical English",
+  "embedded_lua_programs_unchanged": 2,
+  "lua_display_candidates": "2 candidates retain complete canonical English",
+  "high_tension_legacy_candidates": 33,
+  "high_tension_current_candidates": 32
+}

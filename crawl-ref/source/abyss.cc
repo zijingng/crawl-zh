@@ -4,6 +4,7 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "abyss.h"
 
@@ -281,7 +282,7 @@ void clear_abyssal_rune_knowledge()
 {
     coord_def &cur_loc = you.props[ABYSSAL_RUNE_LOC_KEY].get_coord();
     if (in_bounds(cur_loc) && !you.runes[RUNE_ABYSSAL])
-        mpr("Your memory of the abyssal rune fades away.");
+        mpr(ui_translate("a.abyss", "Your memory of the abyssal rune fades away."));
     cur_loc = coord_def(-1,-1);
 }
 
@@ -327,14 +328,16 @@ static void _update_abyssal_map_knowledge()
 
     if (existed)
     {
-        mprf("The abyss shimmers again as the detected "
+        mprf("%s", ui_render("a.abyss", "The abyss shimmers again as the detected abyssal rune vanishes from your memory%s.",
+                make_stringf("The abyss shimmers again as the detected "
             "abyssal rune vanishes from your memory%s.",
-            detected ? " and reappears" : "");
+            detected ? " and reappears" : ""),
+                {(detected ? ui_text_arg("a.abyss.state", " and reappears") : ui_literal_arg(""))}).c_str());
     }
     else if (detected)
     {
-        mpr("The abyssal matter surrounding you shimmers strangely.");
-        mpr("You detect the abyssal rune!");
+        mpr(ui_translate("a.abyss", "The abyssal matter surrounding you shimmers strangely."));
+        mpr(ui_translate("a.abyss", "You detect the abyssal rune!"));
     }
 
     // XX could do the xom check from here?
@@ -408,7 +411,7 @@ void banished(const string &who)
         else
         {
             // On Abyss:$ we can't go deeper; cause a shift to a new area
-            mprf(MSGCH_BANISHMENT, "You are banished to a different region of the Abyss.");
+            mprf(MSGCH_BANISHMENT, "%s", ui_translate("a.abyss", "You are banished to a different region of the Abyss."));
             abyss_teleport();
         }
         return;
@@ -444,11 +447,11 @@ void check_banished()
         mons_reset_just_seen();
         ASSERT(brdepth[BRANCH_ABYSS] != -1);
         if (!player_in_branch(BRANCH_ABYSS))
-            mprf(MSGCH_BANISHMENT, "You are cast into the Abyss!");
+            mprf(MSGCH_BANISHMENT, "%s", ui_translate("a.abyss", "You are cast into the Abyss!"));
         else if (you.depth < brdepth[BRANCH_ABYSS])
-            mprf(MSGCH_BANISHMENT, "You are cast deeper into the Abyss!");
+            mprf(MSGCH_BANISHMENT, "%s", ui_translate("a.abyss", "You are cast deeper into the Abyss!"));
         else
-            mprf(MSGCH_BANISHMENT, "The Abyss bends around you!");
+            mprf(MSGCH_BANISHMENT, "%s", ui_translate("a.abyss", "The Abyss bends around you!"));
         // these are included in default force_more_message
         banished(you.banished_by);
     }
@@ -1769,8 +1772,8 @@ void abyss_teleport(bool wizard_tele)
         return;
     }
 
-    mprf(MSGCH_BANISHMENT, "You are suddenly pulled into a different region of"
-        " the Abyss!");
+    mprf(MSGCH_BANISHMENT, "%s", ui_translate("a.abyss", "You are suddenly pulled into a different region of"
+        " the Abyss!"));
     _abyss_generate_new_area();
     _write_abyssal_features();
     env.grid(you.pos()) = _veto_dangerous_terrain(env.grid(you.pos()));
@@ -2270,7 +2273,7 @@ bool is_level_incorruptible(bool quiet)
     if (_is_level_corrupted())
     {
         if (!quiet)
-            mpr("This place is already infused with evil and corruption.");
+            mpr(ui_translate("a.abyss", "This place is already infused with evil and corruption."));
         return true;
     }
 
@@ -2394,8 +2397,10 @@ void abyss_maybe_spawn_xp_exit()
     redraw_screen(); // before the force-more
     update_screen();
     mprf(MSGCH_BANISHMENT,
-         "The substance of the Abyss twists violently,"
-         " and a gateway leading %s appears!", stairs ? "down" : "out");
+         "%s", ui_render("a.abyss", "The substance of the Abyss twists violently, and a gateway leading %s appears!",
+                make_stringf("The substance of the Abyss twists violently,"
+         " and a gateway leading %s appears!", stairs ? "down" : "out"),
+                {ui_text_arg("a.noun", stairs ? "down" : "out")}).c_str());
 
     you.props[ABYSS_STAIR_XP_KEY] = EXIT_XP_COST;
     you.props[ABYSS_SPAWNED_XP_EXIT_KEY] = true;

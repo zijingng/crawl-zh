@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "m-display.h"
+#include "i18n.h"
 
 #include "mon-project.h"
 
@@ -577,8 +579,13 @@ move_again:
             && you.see_cell(pos)
             && you.see_cell(starting_pos))
         {
-            mprf("%s hits %s.", mon.name(DESC_THE, true).c_str(),
-                 feature_description_at(pos, false, DESC_A).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = mon.name(DESC_THE, true);
+                const string _m1 = feature_description_at(pos, false, DESC_A);
+                const string _original = make_stringf("%s hits %s.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.220", "%s hits %s.")) return _original;
+                return ui_render("m.log.220", "%s hits %s.", _original, {m_actor_arg(mon), m_feature_arg(pos)});
+            })().c_str());
         }
 
         monster* mons = (victim && victim->is_monster()) ?
@@ -595,7 +602,7 @@ move_again:
                 if (mons->props[IOOD_DIST].get_int() < 2)
                 {
                     if (you.see_cell(pos))
-                        mpr("The orb fizzles.");
+                        mpr(ui_translate("m.ui", "The orb fizzles."));
                     monster_die(*mons, KILL_RESET, NON_MONSTER);
                 }
 
@@ -603,7 +610,7 @@ move_again:
                 if (mon.props[IOOD_DIST].get_int() < 2)
                 {
                     if (you.see_cell(pos))
-                        mpr("The orb fizzles.");
+                        mpr(ui_translate("m.ui", "The orb fizzles."));
                     monster_die(mon, KILL_RESET, NON_MONSTER);
                     return true;
                 }
@@ -611,9 +618,9 @@ move_again:
             else
             {
                 if (mon.observable())
-                    mpr("The orbs collide in a blinding explosion!");
+                    mpr(ui_translate("m.ui", "The orbs collide in a blinding explosion!"));
                 else
-                    mpr("You hear a loud magical explosion!");
+                    mpr(ui_translate("m.ui", "You hear a loud magical explosion!"));
                 noisy(25, pos);
                 monster_die(*mons, KILL_RESET, NON_MONSTER);
                 _iood_hit(mon, pos, true);
@@ -626,11 +633,16 @@ move_again:
             if (!victim->reflection())
             {
                 if (victim->is_player())
-                    mprf("You block %s.", mon.name(DESC_THE, true).c_str());
+                    mprf("%s", ([&]() -> string {
+                const string _m0 = mon.name(DESC_THE, true);
+                const string _original = make_stringf("You block %s.", _m0.c_str());
+                if (!m_display_active("m.log.221", "You block %s.")) return _original;
+                return ui_render("m.log.221", "You block %s.", _original, {m_actor_arg(mon)});
+            })().c_str());
                 else
                 {
-                    simple_monster_message(*mons, (" blocks "
-                        + mon.name(DESC_THE, true) + ".").c_str());
+                    m_monster_event(*mons, (" blocks "
+                        + mon.name(DESC_THE, true) + ".").c_str(), "%s blocks %s.", {m_actor_arg(*mons), m_actor_arg(mon)});
                 }
                 victim->shield_block_succeeded(&mon);
                 _iood_stop(mon);
@@ -642,14 +654,22 @@ move_again:
             {
                 if (shield && shield_reflects(*shield))
                 {
-                    mprf("Your %s blocks %s... and reflects it back!",
-                         shield->name(DESC_PLAIN).c_str(),
-                         mon.name(DESC_THE, true).c_str());
+                    mprf("%s", ([&]() -> string {
+                const string _m0 = shield->name(DESC_PLAIN);
+                const string _m1 = mon.name(DESC_THE, true);
+                const string _original = make_stringf("Your %s blocks %s... and reflects it back!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.222", "Your %s blocks %s... and reflects it back!")) return _original;
+                return ui_render("m.log.222", "Your %s blocks %s... and reflects it back!", _original, {ui_item_arg(*shield), m_actor_arg(mon)});
+            })().c_str());
                 }
                 else // has reflection property not from shield
                 {
-                    mprf("You block %s... and reflect it back!",
-                         mon.name(DESC_THE, true).c_str());
+                    mprf("%s", ([&]() -> string {
+                const string _m0 = mon.name(DESC_THE, true);
+                const string _original = make_stringf("You block %s... and reflect it back!", _m0.c_str());
+                if (!m_display_active("m.log.223", "You block %s... and reflect it back!")) return _original;
+                return ui_render("m.log.223", "You block %s... and reflect it back!", _original, {m_actor_arg(mon)});
+            })().c_str());
                 }
             }
             else if (you.see_cell(pos))
@@ -658,23 +678,35 @@ move_again:
                 {
                     if (shield && shield_reflects(*shield))
                     {
-                        mprf("%s blocks %s with %s %s... and reflects it back!",
-                             victim->name(DESC_THE, true).c_str(),
-                             mon.name(DESC_THE, true).c_str(),
-                             victim->pronoun(PRONOUN_POSSESSIVE).c_str(),
-                             shield->name(DESC_PLAIN).c_str());
+                        mprf("%s", ([&]() -> string {
+                const string _m0 = victim->name(DESC_THE, true);
+                const string _m1 = mon.name(DESC_THE, true);
+                const string _m2 = victim->pronoun(PRONOUN_POSSESSIVE);
+                const string _m3 = shield->name(DESC_PLAIN);
+                const string _original = make_stringf("%s blocks %s with %s %s... and reflects it back!", _m0.c_str(), _m1.c_str(), _m2.c_str(), _m3.c_str());
+                if (!m_display_active("m.log.224", "%s blocks %s with %s %s... and reflects it back!")) return _original;
+                return ui_render("m.log.224", "%s blocks %s with %s %s... and reflects it back!", _original, {m_actor_arg(*victim), m_actor_arg(mon), ui_literal_arg(""), ui_item_arg(*shield)});
+            })().c_str());
                     }
                     else
                     {
-                        mprf("%s reflects off an invisible shield around %s!",
-                             mon.name(DESC_THE, true).c_str(),
-                             victim->name(DESC_THE, true).c_str());
+                        mprf("%s", ([&]() -> string {
+                const string _m0 = mon.name(DESC_THE, true);
+                const string _m1 = victim->name(DESC_THE, true);
+                const string _original = make_stringf("%s reflects off an invisible shield around %s!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.225", "%s reflects off an invisible shield around %s!")) return _original;
+                return ui_render("m.log.225", "%s reflects off an invisible shield around %s!", _original, {m_actor_arg(mon), m_actor_arg(*victim)});
+            })().c_str());
                     }
                 }
                 else
                 {
-                    mprf("%s bounces off of thin air!",
-                         mon.name(DESC_THE, true).c_str());
+                    mprf("%s", ([&]() -> string {
+                const string _m0 = mon.name(DESC_THE, true);
+                const string _original = make_stringf("%s bounces off of thin air!", _m0.c_str());
+                if (!m_display_active("m.log.226", "%s bounces off of thin air!")) return _original;
+                return ui_render("m.log.226", "%s bounces off of thin air!", _original, {m_actor_arg(mon)});
+            })().c_str());
                 }
             }
             victim->shield_block_succeeded(&mon);

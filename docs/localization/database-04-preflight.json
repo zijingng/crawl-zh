@@ -1,0 +1,392 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "files": {
+    "miscname.txt": [
+      {
+        "key": "summon_horrible_things",
+        "source_sha256": "009e7941c4a35bb3ec57ac6935d8587659f6af6a11911a6e9605f700cf485e53",
+        "legacy_same_key": false,
+        "hits": [
+          {
+            "Term": "Depths",
+            "Translation": "地底/深处",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "A branch\n【语境补充 2026-10-21】分支专名用地底。the depths of the dungeon 等普通深度描述用深处，不额外引入地底分支。"
+          },
+          {
+            "Term": "gateway",
+            "Translation": "入口/传送门/出口",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【语境补充 2026-10-21】强调进入功能时用入口。连接区域的设施可用传送门。强调离开当前位置时用出口。"
+          },
+          {
+            "Term": "portal",
+            "Translation": "传送门",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "Gloom",
+            "Translation": "幽暗/愁苦",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】暗处或对应魔法用幽暗。花朵枯死等情绪修辞可用愁苦。\n【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_GLOOM；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+          },
+          {
+            "Term": "Agony",
+            "Translation": "剧痛术",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+          },
+          {
+            "Term": "tendrils",
+            "Translation": "触须",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：触须。"
+          }
+        ]
+      },
+      {
+        "key": "harlequin_trap_lines",
+        "source_sha256": "30ed2f0fd851172ea531293928f090b2091a177409681867071c3f27cf4cb03d",
+        "legacy_same_key": false,
+        "hits": []
+      },
+      {
+        "key": "_great_adj_",
+        "source_sha256": "9ad8325d2d264d56e58e587e886720cbb1944118e4f5f363722d2d3c20a78fbc",
+        "legacy_same_key": true,
+        "hits": []
+      },
+      {
+        "key": "welcome_spam",
+        "source_sha256": "50c2358a450b254e3e4180807359049bb4db960d166a9bb1b4096f811848c8aa",
+        "legacy_same_key": true,
+        "hits": [
+          {
+            "Term": "artefact",
+            "Translation": "神器",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "Depths",
+            "Translation": "地底/深处",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "A branch\n【语境补充 2026-10-21】分支专名用地底。the depths of the dungeon 等普通深度描述用深处，不额外引入地底分支。"
+          },
+          {
+            "Term": "dungeon",
+            "Translation": "地下城",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "god",
+            "Translation": "神",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "Orb of Zot",
+            "Translation": "佐特宝珠",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "你玩这游戏的原因，MacGuffin"
+          },
+          {
+            "Term": "Zot",
+            "Translation": "佐特",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "Will",
+            "Translation": "意志/将会/会",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+          },
+          {
+            "Term": "Resurrect",
+            "Translation": "复活术/复活",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用复活术。神祇让使徒重新存活的动作用复活。"
+          },
+          {
+            "Term": "the Depths",
+            "Translation": "地底/深处",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 分支名称】来源：branch-data.h；Depths（规范缩写 Depths）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。\n【语境补充 2026-10-21】分支专名用地底。普通地点的纵深描述用深处。"
+          },
+          {
+            "Term": "the Orb",
+            "Translation": "宝珠",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+          }
+        ]
+      },
+      {
+        "key": "welcome_spam dungeon descent",
+        "source_sha256": "da8d97709b2bdee6f6c32beaade8e2b94b9048dd8ab7a21d448ec8022b13cdbb",
+        "legacy_same_key": true,
+        "hits": [
+          {
+            "Term": "Depths",
+            "Translation": "地底/深处",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "A branch\n【语境补充 2026-10-21】分支专名用地底。the depths of the dungeon 等普通深度描述用深处，不额外引入地底分支。"
+          },
+          {
+            "Term": "dungeon",
+            "Translation": "地下城",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "Orb of Zot",
+            "Translation": "佐特宝珠",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "你玩这游戏的原因，MacGuffin"
+          },
+          {
+            "Term": "Zot",
+            "Translation": "佐特",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "Will",
+            "Translation": "意志/将会/会",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+          },
+          {
+            "Term": "the Orb",
+            "Translation": "宝珠",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+          }
+        ]
+      },
+      {
+        "key": "_halloween_things_",
+        "source_sha256": "3d8aa403caf98ace0995196b208b7b4b020a1b636c984f7c4119a9e09c4535ae",
+        "legacy_same_key": true,
+        "hits": []
+      },
+      {
+        "key": "_lowly_",
+        "source_sha256": "e6b115fe49d47402eb0f99d4dcf7fafec2e07dc460f555c526520ff05a3637a4",
+        "legacy_same_key": true,
+        "hits": [
+          {
+            "Term": "slug",
+            "Translation": "鼻涕虫/弹丸",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【语境补充 2026-10-21】生物用鼻涕虫。手铳等射出的金属 slug 用弹丸。"
+          },
+          {
+            "Term": "worm",
+            "Translation": "蠕虫",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          }
+        ]
+      },
+      {
+        "key": "welcome_spam Halloween",
+        "source_sha256": "3b17f192faf3b3e0902f910c0cd0af77543e0a7214ae55d615e6aa795204f1a2",
+        "legacy_same_key": true,
+        "hits": [
+          {
+            "Term": "dungeon",
+            "Translation": "地下城",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "Hell",
+            "Translation": "地狱",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "Orb of Zot",
+            "Translation": "佐特宝珠",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "你玩这游戏的原因，MacGuffin"
+          },
+          {
+            "Term": "turn",
+            "Translation": "回合/转向/变成/轮流",
+            "Part of Speech": "noun",
+            "Variants": "turns",
+            "Note": "【版本/语境】回合/动作叙述用语；不是固定时间单位 aut，动作耗时可不同。 来源：player-act.cc。\n【语境补充 2026-10-21】时间单位用回合。动词及 in turn、turn into 等短语按句意选择转向、变成、轮流等译法。"
+          },
+          {
+            "Term": "witch",
+            "Translation": "巫婆",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "Zot",
+            "Translation": "佐特",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "the Dungeon",
+            "Translation": "地下城",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+          },
+          {
+            "Term": "the Orb",
+            "Translation": "宝珠",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+          }
+        ]
+      },
+      {
+        "key": "hell_effect_quiet",
+        "source_sha256": "938c080e1465c8e325e90a569396752eb754559a1cff6af1a0fc5dcbf84a0298",
+        "legacy_same_key": true,
+        "hits": [
+          {
+            "Term": "dread",
+            "Translation": "恐惧",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "Hell",
+            "Translation": "地狱",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "hostile",
+            "Translation": "敌对",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "Will",
+            "Translation": "意志/将会/会",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+          },
+          {
+            "Term": "weak",
+            "Translation": "虚弱",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：虚弱。"
+          },
+          {
+            "Term": "Shadows",
+            "Translation": "阴影",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Death",
+            "Translation": "死亡",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      },
+      {
+        "key": "hell_effect_noisy",
+        "source_sha256": "55356d367ef46d34a610a8ca246b3d6dfa636aed229eb1727cdf5934eedf771b",
+        "legacy_same_key": true,
+        "hits": [
+          {
+            "Term": "Hell",
+            "Translation": "地狱",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "Agony",
+            "Translation": "剧痛术",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+          },
+          {
+            "Term": "Cacophony",
+            "Translation": "不谐狂响",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+          },
+          {
+            "Term": "screaming",
+            "Translation": "尖叫",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：尖叫。"
+          },
+          {
+            "Term": "Air",
+            "Translation": "空气强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Death",
+            "Translation": "死亡",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ]
+      }
+    ]
+  },
+  "obsolete_legacy_keys": [
+    "sht_int_loss"
+  ]
+}

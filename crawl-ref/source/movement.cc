@@ -9,6 +9,8 @@
 #include <sstream>
 
 #include "AppHdr.h"
+#include "m-display.h"
+#include "i18n.h"
 
 #include "movement.h"
 
@@ -74,7 +76,12 @@ void player_displace_monster(monster* mons, const coord_def &loc)
 
     // Friendly seekers dissipate when the player swaps into them.
     if (loc != you.pos())
-        mprf("You push %s out of the way.", mons->name(DESC_THE).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = mons->name(DESC_THE);
+                const string _original = make_stringf("You push %s out of the way.", _m0.c_str());
+                if (!m_display_active("m.log.264", "You push %s out of the way.")) return _original;
+                return ui_render("m.log.264", "You push %s out of the way.", _original, {m_actor_arg(*mons)});
+            })().c_str());
     else if (mons_is_seeker(*mons))
     {
         simple_monster_message(*mons, " dissipates!", false,
@@ -83,7 +90,12 @@ void player_displace_monster(monster* mons, const coord_def &loc)
         return;
     }
     else
-        mprf("You swap places with %s.", mons->name(DESC_THE).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = mons->name(DESC_THE);
+                const string _original = make_stringf("You swap places with %s.", _m0.c_str());
+                if (!m_display_active("m.log.265", "You swap places with %s.")) return _original;
+                return ui_render("m.log.265", "You swap places with %s.", _original, {m_actor_arg(*mons)});
+            })().c_str());
 
     mons->move_to(loc, MV_ALLOW_OVERLAP, true);
 }
@@ -127,6 +139,7 @@ static bool _cancel_barbed_move()
     {
         std::string prompt = "The barbs in your skin will harm you if you move.";
         prompt += " Continue?";
+        prompt = ui_translate("m.move.confirm", prompt.c_str());
         if (!yesno(prompt.c_str(), false, 'n'))
         {
             canned_msg(MSG_OK);
@@ -143,8 +156,7 @@ static void _apply_barbs_damage()
 {
     if (you.duration[DUR_BARBS])
     {
-        mprf(MSGCH_WARN, "The barbed spikes dig painfully into your body "
-                         "as you move.");
+        mprf(MSGCH_WARN, "%s", ui_translate("m.ui", "The barbed spikes dig painfully into your body as you move."));
         ouch(roll_dice(2, you.attribute[ATTR_BARBS_POW]), KILLED_BY_BARBS);
         bleed_onto_floor(you.pos(), MONS_PLAYER, 2, false);
 
@@ -203,8 +215,7 @@ void remove_ice_movement()
 {
     if (you.duration[DUR_ICY_ARMOUR])
     {
-        mprf(MSGCH_DURATION, "Your icy armour cracks and falls away as "
-                             "you move.");
+        mprf(MSGCH_DURATION, "%s", ui_translate("m.ui", "Your icy armour cracks and falls away as you move."));
         you.duration[DUR_ICY_ARMOUR] = 0;
         you.redraw_armour_class = true;
     }
@@ -213,7 +224,7 @@ void remove_ice_movement()
     {
         you.duration[DUR_FROZEN_RAMPARTS] = 0;
         end_frozen_ramparts();
-        mprf(MSGCH_DURATION, "The frozen ramparts melt away as you move.");
+        mprf(MSGCH_DURATION, "%s", ui_translate("m.ui", "The frozen ramparts melt away as you move."));
     }
 }
 
@@ -365,7 +376,7 @@ void open_door_action(coord_def move)
 
         if (num == 0)
         {
-            mpr("There's nothing to open nearby.");
+            mpr(ui_translate("m.ui", "There's nothing to open nearby."));
             return;
         }
 
@@ -392,9 +403,9 @@ void open_door_action(coord_def move)
                                                                  MAT_ANY,
                                                                  "veto_reason");
         if (door_veto_message.empty())
-            mpr("The door is shut tight!");
+            mpr(ui_translate("m.ui", "The door is shut tight!"));
         else
-            mpr(door_veto_message);
+            mpr(ui_translate("m.ui", string(door_veto_message).c_str()));
         if (you.confused())
             you.turn_is_over = true;
 
@@ -422,17 +433,17 @@ void open_door_action(coord_def move)
         }
 
         if (!door_already_open.empty())
-            mpr(door_already_open);
+            mpr(ui_translate("m.ui", string(door_already_open).c_str()));
         else
-            mpr("It's already open!");
+            mpr(ui_translate("m.ui", "It's already open!"));
         break;
     }
     case DNGN_SEALED_DOOR:
     case DNGN_SEALED_CLEAR_DOOR:
-        mpr("That door is sealed shut!"); // should use door noun?
+        mpr(ui_translate("m.ui", "That door is sealed shut!")); // should use door noun?
         break;
     default:
-        mpr("There isn't anything that you can open there!");
+        mpr(ui_translate("m.ui", "There isn't anything that you can open there!"));
         break;
     }
 }
@@ -441,7 +452,12 @@ void close_door_action(coord_def move)
 {
     if (you.attribute[ATTR_HELD])
     {
-        mprf("You can't close doors while %s.", held_status());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = held_status();
+                const string _original = make_stringf("You can't close doors while %s.", _m0.c_str());
+                if (!m_display_active("m.log.266", "You can't close doors while %s.")) return _original;
+                return ui_render("m.log.266", "You can't close doors while %s.", _original, {m_clause_arg(_m0)});
+            })().c_str());
         return;
     }
 
@@ -463,10 +479,10 @@ void close_door_action(coord_def move)
             if (_check_adjacent(DNGN_BROKEN_DOOR, move)
                 || _check_adjacent(DNGN_BROKEN_CLEAR_DOOR, move))
             {
-                mpr("It's broken and can't be closed.");
+                mpr(ui_translate("m.ui", "It's broken and can't be closed."));
             }
             else
-                mpr("There's nothing to close nearby.");
+                mpr(ui_translate("m.ui", "There's nothing to close nearby."));
             return;
         }
         // move got set in _check_adjacent
@@ -498,14 +514,14 @@ void close_door_action(coord_def move)
     case DNGN_RUNED_CLEAR_DOOR:
     case DNGN_SEALED_DOOR:
     case DNGN_SEALED_CLEAR_DOOR:
-        mpr("It's already closed!");
+        mpr(ui_translate("m.ui", "It's already closed!"));
         break;
     case DNGN_BROKEN_DOOR:
     case DNGN_BROKEN_CLEAR_DOOR:
-        mpr("It's broken and can't be closed!");
+        mpr(ui_translate("m.ui", "It's broken and can't be closed!"));
         break;
     default:
-        mpr("There isn't anything that you can close there!");
+        mpr(ui_translate("m.ui", "There isn't anything that you can close there!"));
         break;
     }
 }
@@ -518,13 +534,14 @@ bool prompt_dangerous_portal(dungeon_feature_type ftype)
     {
     case DNGN_ENTER_PANDEMONIUM:
     case DNGN_ENTER_ZIGGURAT:
-        return yesno("If you enter this portal you might not be able to return "
-                     "immediately. Continue?", false, 'n');
+        return yesno(ui_translate("m.ui", "If you enter this portal you might not be able to return immediately. Continue?"), false, 'n');
     case DNGN_ENTER_ABYSS:
     {
-        return yesno(make_stringf("If you enter this portal you could be pulled as "
-                     "deep as Abyss:%d and might not be able to return immediately. "
-                     "Continue?", abyss_default_depth(true)).c_str(), false, 'n');
+        const int depth = abyss_default_depth(true);
+        const string original = make_stringf("If you enter this portal you could be pulled as "
+                     "deep as Abyss:%d and might not be able to return immediately. Continue?", depth);
+        return yesno(ui_render("m.ui", "If you enter this portal you could be pulled as deep as Abyss:%s and might not be able to return immediately. Continue?",
+            original, {{std::to_string(depth), true}}).c_str(), false, 'n');
     }
     default:
         return true;
@@ -536,8 +553,7 @@ bool prompt_descent_shortcut(dungeon_feature_type ftype)
     if (ftype == DNGN_ENTER_DEPTHS && !player_in_branch(BRANCH_SLIME)
         || ftype == DNGN_ENTER_SLIME && !player_in_branch(BRANCH_VAULTS))
     {
-        return yesno("This entrance appears to skip some branches and may be "
-                     "quite dangerous. Continue anyway?", false, 'n');
+        return yesno(ui_translate("m.ui", "This entrance appears to skip some branches and may be quite dangerous. Continue anyway?"), false, 'n');
     }
     return true;
 }
@@ -623,27 +639,27 @@ monster* get_rampage_target(coord_def move)
 static void _handle_trying_to_move_into_unpassable_terrain(coord_def targ)
 {
     if (env.grid(targ) == DNGN_OPEN_SEA)
-        mpr("The ferocious winds and tides of the open sea thwart your progress.");
+        mpr(ui_translate("m.ui", "The ferocious winds and tides of the open sea thwart your progress."));
     else if (env.grid(targ) == DNGN_LAVA_SEA)
-        mpr("The endless sea of lava is not a nice place.");
+        mpr(ui_translate("m.ui", "The endless sea of lava is not a nice place."));
     else if (feat_is_tree(env.grid(targ)) && you_worship(GOD_FEDHAS))
     {
         if (you.digging)
-            mpr("You cannot dig through the dense trees.");
+            mpr(ui_translate("m.ui", "You cannot dig through the dense trees."));
         else
-            mpr("You cannot walk through the dense trees.");
+            mpr(ui_translate("m.ui", "You cannot walk through the dense trees."));
     }
     else if (env.grid(targ) == DNGN_MALIGN_GATEWAY)
-        mpr("The malign portal rejects you as you step towards it.");
+        mpr(ui_translate("m.ui", "The malign portal rejects you as you step towards it."));
     // Why isn't the border permarock?
     else if (you.digging && !in_bounds(targ))
-        mpr("This wall is too hard to dig through.");
+        mpr(ui_translate("m.ui", "This wall is too hard to dig through."));
     else if (you.digging && env.grid(targ) == DNGN_SLIMY_WALL)
-        mpr("Trying to dig through that would dissolve your mandibles.");
+        mpr(ui_translate("m.ui", "Trying to dig through that would dissolve your mandibles."));
     else if (you.digging)
-        mpr("You can't dig through that.");
+        mpr(ui_translate("m.ui", "You can't dig through that."));
     else if (you.current_vision == 0)
-        mpr("You feel something solid in that direction.");
+        mpr(ui_translate("m.ui", "You feel something solid in that direction."));
 
     // Show the player the wall they've just bumped into, if they can't see it.
     if (you.current_vision == 0)
@@ -669,8 +685,7 @@ static bool _adjust_confused_movement(coord_def& move)
         // Don't choose a random location to try to attack into - allows
         // abuse, since trying to move (not attack) takes no time, and
         // shouldn't. Just force confused trees to use ctrl.
-        mpr("You cannot move. (Use ctrl+direction or * direction to "
-            "attack while stationary and confused.)");
+        mpr(ui_translate("m.ui", "You cannot move. (Use ctrl+direction or * direction to attack while stationary and confused.)"));
         return false;
     }
 
@@ -686,7 +701,7 @@ static bool _adjust_confused_movement(coord_def& move)
         move.y = random2(3) - 1;
         if (move.origin())
         {
-            mpr("You're too confused to move!");
+            mpr(ui_translate("m.ui", "You're too confused to move!"));
             you.turn_is_over = true;
             crawl_state.cancel_cmd_repeat();
             return false;
@@ -698,17 +713,25 @@ static bool _adjust_confused_movement(coord_def& move)
     // Test if our new location is somewhere we cannot move, and abort early if so.
     if (!in_bounds(new_targ) || !you.can_pass_through(new_targ))
     {
-        mprf("You bump into %s.",
-                    feature_description_at(new_targ, false,
-                                        DESC_THE).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = feature_description_at(new_targ, false,
+                                        DESC_THE);
+                const string _original = make_stringf("You bump into %s.", _m0.c_str());
+                if (!m_display_active("m.log.267", "You bump into %s.")) return _original;
+                return ui_render("m.log.267", "You bump into %s.", _original, {m_feature_arg(new_targ)});
+            })().c_str());
         you.turn_is_over = true;
         crawl_state.cancel_cmd_repeat();
         return false;
     }
     else if (is_feat_dangerous(env.grid(new_targ)))
     {
-        mprf("You nearly stumble into %s!",
-                feature_description_at(new_targ, false, DESC_THE).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = feature_description_at(new_targ, false, DESC_THE);
+                const string _original = make_stringf("You nearly stumble into %s!", _m0.c_str());
+                if (!m_display_active("m.log.268", "You nearly stumble into %s!")) return _original;
+                return ui_render("m.log.268", "You nearly stumble into %s!", _original, {m_feature_arg(new_targ)});
+            })().c_str());
         you.turn_is_over = true;
         crawl_state.cancel_cmd_repeat();
         return false;
@@ -840,7 +863,7 @@ static bool _handle_player_step(const coord_def& targ, int& delay, bool rampagin
     {
         if (you.is_nervous())
         {
-            mpr("You're too terrified to move while being watched!");
+            mpr(ui_translate("m.ui", "You're too terrified to move while being watched!"));
             return false;
         }
         // If we're rampaging, we've already determined that the endpoint is at
@@ -849,14 +872,22 @@ static bool _handle_player_step(const coord_def& targ, int& delay, bool rampagin
         {
             if (monster* beholder = you.get_beholder(targ))
             {
-                mprf("You cannot move away from %s!",
-                     beholder->name(DESC_THE).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = beholder->name(DESC_THE);
+                const string _original = make_stringf("You cannot move away from %s!", _m0.c_str());
+                if (!m_display_active("m.log.269", "You cannot move away from %s!")) return _original;
+                return ui_render("m.log.269", "You cannot move away from %s!", _original, {m_actor_arg(*beholder)});
+            })().c_str());
                 return false;
             }
             else if (monster* fearmonger = you.get_fearmonger(targ))
             {
-                mprf("You cannot move closer to %s!",
-                    fearmonger->name(DESC_THE).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = fearmonger->name(DESC_THE);
+                const string _original = make_stringf("You cannot move closer to %s!", _m0.c_str());
+                if (!m_display_active("m.log.270", "You cannot move closer to %s!")) return _original;
+                return ui_render("m.log.270", "You cannot move closer to %s!", _original, {m_actor_arg(*fearmonger)});
+            })().c_str());
                 return false;
             }
         }
@@ -871,8 +902,13 @@ static bool _handle_player_step(const coord_def& targ, int& delay, bool rampagin
             you.digging = false;
         else
         {
-            mprf("You dig through %s.", feature_description_at(targ, false,
-                    DESC_THE).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = feature_description_at(targ, false,
+                    DESC_THE);
+                const string _original = make_stringf("You dig through %s.", _m0.c_str());
+                if (!m_display_active("m.log.271", "You dig through %s.")) return _original;
+                return ui_render("m.log.271", "You dig through %s.", _original, {m_feature_arg(targ)});
+            })().c_str());
             destroy_wall(targ);
             noisy(6, you.pos());
             drain_player(15, false, true);
@@ -891,10 +927,14 @@ static bool _handle_player_step(const coord_def& targ, int& delay, bool rampagin
             const monster* current = monster_at(you.pos());
             if (!current || !fedhas_passthrough(current))
             {
-                mprf("You %s carefully through the %s.",
-                        _get_move_verb(rampaging).c_str(),
-                    mons_genus(mon->type) == MONS_FUNGUS ? "fungus"
-                                                         : "plants");
+                mprf("%s", ([&]() -> string {
+                const string _m0 = _get_move_verb(rampaging);
+                const string _m1 = mons_genus(mon->type) == MONS_FUNGUS ? "fungus"
+                                                         : "plants";
+                const string _original = make_stringf("You %s carefully through the %s.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.272", "You %s carefully through the %s.")) return _original;
+                return ui_render("m.log.272", "You %s carefully through the %s.", _original, {m_clause_arg(_m0), m_clause_arg(_m1)});
+            })().c_str());
             }
         }
         else
@@ -925,7 +965,7 @@ static bool _handle_player_step(const coord_def& targ, int& delay, bool rampagin
             && mon->hit_points < mon->max_hit_points)
         {
             mon->heal(mon->max_hit_points * 3 / 4);
-            mprf("You weave more energy into your solar ember.");
+            mprf( "%s", ui_translate("m.ui", "You weave more energy into your solar ember."));
         }
 
         mon->finalise_movement();
@@ -1021,7 +1061,13 @@ void move_player_action(coord_def move)
     // Print a message, if rampaging.
     if (num_steps > 1)
     {
-        mprf("You %s towards %s!", move_verb.c_str(), mon_target->name(DESC_THE, true).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = move_verb;
+                const string _m1 = mon_target->name(DESC_THE, true);
+                const string _original = make_stringf("You %s towards %s!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.273", "You %s towards %s!")) return _original;
+                return ui_render("m.log.273", "You %s towards %s!", _original, {m_clause_arg(_m0), m_actor_arg(*mon_target)});
+            })().c_str());
 
         // Prevent full-LoS stabbing with Seven League Boots.
         if (you.unrand_equipped(UNRAND_SEVEN_LEAGUE_BOOTS))

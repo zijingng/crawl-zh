@@ -1,0 +1,165 @@
+{
+  "source": "database/monspeak.txt",
+  "entries": [
+    {
+      "key": "alderking",
+      "context": "textdb:database/monspeak.txt:alderking",
+      "source_sha256": "0336b2b9590b15b507e0196e190ffd4847f87adf2ffa9a0c93b5d887e99458c7",
+      "review_status": "reviewed",
+      "review_batch": "database-25"
+    },
+    {
+      "key": "alderking triumphant",
+      "context": "textdb:database/monspeak.txt:alderking triumphant",
+      "source_sha256": "49f8c1385758ba3d0d92193e743e4280174b3c7c5600388d4d0bd6dacd0f3011",
+      "review_status": "reviewed",
+      "review_batch": "database-25"
+    },
+    {
+      "key": "bennu",
+      "context": "textdb:database/monspeak.txt:bennu",
+      "source_sha256": "1aeb120469908c69b629daeb7d0e5931aadca921251659cba3ad6252f2bee054",
+      "review_status": "reviewed",
+      "review_batch": "database-25"
+    },
+    {
+      "key": "Bennu killed",
+      "context": "textdb:database/monspeak.txt:bennu killed",
+      "source_sha256": "8351a7a91e7e1bfd81bc6f5c30c8d9b91a852bcda0a32b8eff6c93d747a1367a",
+      "review_status": "reviewed",
+      "review_batch": "database-25",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_bennu_death_",
+          "source_sha256": "518688c886b081acc9a3f82dec4ccb1eee2962e29713069f5b79094e14a1605d",
+          "translation_sha256": "d8610a9cc62e812d1d67e7260c4b634fee3d0234f4535cca35881be2ec40ea50"
+        }
+      ]
+    },
+    {
+      "key": "_Bennu_death_",
+      "context": "textdb:database/monspeak.txt:_bennu_death_",
+      "source_sha256": "518688c886b081acc9a3f82dec4ccb1eee2962e29713069f5b79094e14a1605d",
+      "review_status": "reviewed",
+      "review_batch": "database-25"
+    },
+    {
+      "key": "Bennu permanently killed",
+      "context": "textdb:database/monspeak.txt:bennu permanently killed",
+      "source_sha256": "0ed6622b85076889e689bfb841d29be69e4d8459ee9d4d75ad65d481f143e7b4",
+      "review_status": "reviewed",
+      "review_batch": "database-25"
+    },
+    {
+      "key": "confused Bennu killed",
+      "context": "textdb:database/monspeak.txt:confused bennu killed",
+      "source_sha256": "930376a9400d525f9f989fdf522d58a2e14439ab8ff3673336333712b1d9961c",
+      "review_status": "reviewed",
+      "review_batch": "database-25",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "bennu killed",
+          "source_sha256": "8351a7a91e7e1bfd81bc6f5c30c8d9b91a852bcda0a32b8eff6c93d747a1367a",
+          "translation_sha256": "8351a7a91e7e1bfd81bc6f5c30c8d9b91a852bcda0a32b8eff6c93d747a1367a"
+        }
+      ]
+    },
+    {
+      "key": "confused Bennu permanently killed",
+      "context": "textdb:database/monspeak.txt:confused bennu permanently killed",
+      "source_sha256": "94328e6ea7e94744e86a528acad460c7c34b94da8c7c24bdd88b50d564d737df",
+      "review_status": "reviewed",
+      "review_batch": "database-25",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "bennu permanently killed",
+          "source_sha256": "0ed6622b85076889e689bfb841d29be69e4d8459ee9d4d75ad65d481f143e7b4",
+          "translation_sha256": "33123e2ed4c9c52936e14d579953bb8bb030662fce3a8cbd1bf0d0f5659055f5"
+        }
+      ]
+    },
+    {
+      "key": "brain worm",
+      "context": "textdb:database/monspeak.txt:brain worm",
+      "source_sha256": "7c8629b3122811d5212d6c03b1ddc27b92f73d6df64de9f2fc06accdb6610189",
+      "review_status": "reviewed",
+      "review_batch": "database-25"
+    },
+    {
+      "key": "Sewer brain worm",
+      "context": "textdb:database/monspeak.txt:sewer brain worm",
+      "source_sha256": "82f1bfc0e18a7b30245d6d8c1a90a0d93719624daafbdbacf15f99d75d950c0a",
+      "review_status": "reviewed",
+      "review_batch": "database-25",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "brain worm",
+          "source_sha256": "7c8629b3122811d5212d6c03b1ddc27b92f73d6df64de9f2fc06accdb6610189",
+          "translation_sha256": "79e82c095cfc93d6a5a7cdd93cfb915fd1ffd86ebc9bf28804bcbeedee6bdb1d"
+        }
+      ]
+    },
+    {
+      "key": "bullfrog",
+      "context": "textdb:database/monspeak.txt:bullfrog",
+      "source_sha256": "d92f8015432e8cee37b37bf342c5b50b5d71d214a17e4eeb9d6c3117d6d3d475",
+      "review_status": "reviewed",
+      "review_batch": "database-25",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_frog_food_",
+          "source_sha256": "2aaba17dc336ca5caabfadb93a8d7a1c07b351effd4729e86bb0dabb784c64d6",
+          "translation_sha256": "1bd50c1c528163939f1a856fd8bc2b2bd8a88aa327e16e94aac6447fe2a958aa"
+        }
+      ]
+    },
+    {
+      "key": "chaos spawn",
+      "context": "textdb:database/monspeak.txt:chaos spawn",
+      "source_sha256": "eb58ffe01e73c02f4d0ae2f6c15e14a52da9d36bbf4122528d62aba219e5133c",
+      "review_status": "reviewed",
+      "review_batch": "database-25"
+    },
+    {
+      "key": "catoblepas",
+      "context": "textdb:database/monspeak.txt:catoblepas",
+      "source_sha256": "facd3190d14f571f2dded99303ce4cb1f9c08c6a9438ed1347724dc979bf6210",
+      "review_status": "reviewed",
+      "review_batch": "database-25"
+    },
+    {
+      "key": "cognitogaunt",
+      "context": "textdb:database/monspeak.txt:cognitogaunt",
+      "source_sha256": "d17d1c1bce78b21fe559d892ed644b0e3f9f85e797deb664f2566c825c320277",
+      "review_status": "reviewed",
+      "review_batch": "database-25"
+    },
+    {
+      "key": "silenced cognitogaunt",
+      "context": "textdb:database/monspeak.txt:silenced cognitogaunt",
+      "source_sha256": "4ec976216520e1c61905c414b2a2a3dfa55ff4abb61bb4a5560ac61eab2553bf",
+      "review_status": "reviewed",
+      "review_batch": "database-25"
+    },
+    {
+      "key": "friendly cognitogaunt",
+      "context": "textdb:database/monspeak.txt:friendly cognitogaunt",
+      "source_sha256": "656acf49a92fbe74bfbbb7f30fd1961b676985d32952967a1503980b7380aad2",
+      "review_status": "reviewed",
+      "review_batch": "database-25",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "cognitogaunt",
+          "source_sha256": "d17d1c1bce78b21fe559d892ed644b0e3f9f85e797deb664f2566c825c320277",
+          "translation_sha256": "2d2e336e99a04b0705893e88f1b23e5954ff0ee5141e6b8d53f7150011b99e41"
+        }
+      ]
+    }
+  ]
+}

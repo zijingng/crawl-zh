@@ -4,6 +4,9 @@
 **/
 
 #include "AppHdr.h"
+#include "stringutil.h"
+#include "s-display.h"
+#include "i18n.h"
 
 #include "spl-clouds.h"
 
@@ -48,7 +51,7 @@ spret cast_putrefaction(monster* target, int pow, bool fail)
     env.markers.add(marker);
     env.markers.clear_need_activate();
 
-    mprf("Rot billows forth from %s wounds!", target->name(DESC_ITS).c_str());
+    mprf("%s", ui_render("s.log", "Rot billows forth from %s wounds!", make_stringf("Rot billows forth from %s wounds!", target->name(DESC_ITS).c_str()), {ui_actor_arg(*target)}).c_str());
 
     drain_player(75 - div_rand_round(pow * 4, 10), true, true);
 
@@ -59,7 +62,7 @@ spret kindle_blastmotes(int pow, bool fail)
 {
     if (cloud_at(you.pos()))
     {
-        mpr("There's already a cloud here!");
+        mpr(ui_translate("log.spl-clouds", "There's already a cloud here!"));
         return spret::abort;
     }
 
@@ -71,7 +74,7 @@ spret kindle_blastmotes(int pow, bool fail)
     // Longish duration to support setting up silly traps.
     you.props[BLASTMOTE_IMMUNE_KEY] = true;
     place_cloud(CLOUD_BLASTMOTES, you.pos(), random_range(20, 30), &you);
-    mpr("A cloud of volatile blastmotes flares up around you! Run!");
+    mpr(ui_translate("log.spl-clouds", "A cloud of volatile blastmotes flares up around you! Run!"));
 
     return spret::success;
 }
@@ -186,7 +189,7 @@ void holy_flames(monster* caster, actor* defender)
     if (cloud_count)
     {
         if (defender->is_player())
-            mpr("Blessed fire suddenly surrounds you!");
+            mpr(ui_translate("log.spl-clouds", "Blessed fire suddenly surrounds you!"));
         else
             simple_monster_message(*defender->as_monster(),
                                    " is surrounded by blessed fire!");
@@ -211,12 +214,12 @@ spret scroll_of_poison(bool scroll_unknown)
 
     if (created > 0)
     {
-        mpr("The air fills with toxic fumes!");
+        mpr(ui_translate("log.spl-clouds", "The air fills with toxic fumes!"));
         return spret::success;
     }
     if (!scroll_unknown && !unknown_unseen)
     {
-        mpr("There's no open space to fill with poison.");
+        mpr(ui_translate("log.spl-clouds", "There's no open space to fill with poison."));
         return spret::abort;
     }
     canned_msg(MSG_NOTHING_HAPPENS);

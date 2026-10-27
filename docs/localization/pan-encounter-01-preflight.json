@@ -1,0 +1,87 @@
+{
+  "queried_terms": [
+    "Brimstone Fiend",
+    "Executioner",
+    "Ice Fiend",
+    "balrug",
+    "blizzard demon",
+    "demonspawn blood saint",
+    "demonspawn corrupter",
+    "dimensional conduit",
+    "orange demon",
+    "rakshasa",
+    "weirdly glowing ball"
+  ],
+  "glossary_hits": [
+    {
+      "Term": "Brimstone Fiend",
+      "Translation": "硫磺魔",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Executioner",
+      "Translation": "刽子手",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Ice Fiend",
+      "Translation": "寒冰魔",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "balrug",
+      "Translation": "巴尔鲁格",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "blizzard demon",
+      "Translation": "暴雪恶魔",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "demonspawn blood saint",
+      "Translation": "魔人鲜血圣徒",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "demonspawn corrupter",
+      "Translation": "魔人腐化者",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "orange demon",
+      "Translation": "橙色恶魔",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "rakshasa",
+      "Translation": "罗刹",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    }
+  ],
+  "history": [
+    "textdb.po miscname titles",
+    "textdb.po descript/features.txt",
+    "ui.po display.monster and d.feature.name"
+  ],
+  "new_entries": 25,
+  "removed_duplicate_title_translations": 86
+}

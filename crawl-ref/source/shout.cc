@@ -4,8 +4,12 @@
 **/
 
 #include "AppHdr.h"
+#include "s-display.h"
+#include "i18n.h"
+#include "options.h"
 
 #include "shout.h"
+#include "item-noise-display.h"
 
 #include <sstream>
 
@@ -15,6 +19,7 @@
 #include "artefact.h"
 #include "branch.h"
 #include "database.h"
+#include "misc-display.h"
 #include "directn.h"
 #include "english.h"
 #include "env.h"
@@ -150,6 +155,41 @@ bool monster_attempt_shout(monster &mon)
  * @param mons      The monster in question.
  * @param shout    The shout_type to use.
  */
+string monster_shout_display(const textdb_speech &speech, const monster &mons,
+                              const string &original)
+{
+    if (Options.language != lang_t::ZH || !speech.complete
+        || speech.english == speech.translated
+        || speech.translated.find_first_of("[{") != string::npos)
+        return original;
+    string shown = speech.translated;
+    msg_channel_type en_channel = MSGCH_TALK, zh_channel = MSGCH_TALK;
+    string source = speech.english;
+    strip_channel_prefix(source, en_channel);
+    strip_channel_prefix(shown, zh_channel);
+    if (en_channel != zh_channel)
+        return original;
+    const ui_arg name = ui_actor_arg(mons);
+    for (const char *marker : {"@monster@", "@Monster@", "@a_monster@", "@A_monster@",
+          "@the_monster@", "@The_monster@", "@something@", "@Something@",
+          "@a_something@", "@A_something@", "@the_something@", "@The_something@"})
+    {
+        if (shown.find(marker) != string::npos && !name.available)
+            return original;
+        shown = replace_all(shown, marker, name.text);
+    }
+    for (const char *marker : {"@the_monster_possessive@", "@The_monster_possessive@",
+                               "@the_something_possessive@", "@The_something_possessive@"})
+    {
+        if (shown.find(marker) != string::npos && !name.available)
+            return original;
+        shown = replace_all(shown, marker, name.text + "的");
+    }
+    // Other grammar, random body parts, Lua and unknown tokens require a
+    // dedicated typed adapter. Never leak an English noun into this sentence.
+    return shown.find('@') == string::npos ? shown : original;
+}
+
 void monster_shout(monster &mons, int shout)
 {
     shout_type s_type = static_cast<shout_type>(shout);
@@ -171,10 +211,16 @@ void monster_shout(monster &mons, int shout)
     // and if no such entry exists then looks simply for "name".
     const bool seen = you.can_see(mons);
     const string suffix = seen ? " seen" : " unseen";
-    string message = getShoutString(key, suffix);
+    textdb_speech speech;
+    const auto lookup_shout = [&](const string &lookup_key, const string &lookup_suffix)
+    {
+        speech = getPairedShoutString(lookup_key, lookup_suffix);
+        return speech.english;
+    };
+    string message = lookup_shout(key, suffix);
 
     if (message == "__DEFAULT" || message == "__NEXT")
-        message = getShoutString(default_msg_key, suffix);
+        message = lookup_shout(default_msg_key, suffix);
     else if (message.empty())
     {
         char mchar = mons_base_char(mons.type);
@@ -189,10 +235,10 @@ void monster_shout(monster &mons, int shout)
 
         glyph_key += mchar;
         glyph_key += "'";
-        message = getShoutString(glyph_key, suffix);
+        message = lookup_shout(glyph_key, suffix);
 
         if (message.empty() || message == "__DEFAULT")
-            message = getShoutString(default_msg_key, suffix);
+            message = lookup_shout(default_msg_key, suffix);
     }
 
     if (default_msg_key == "__BUGGY")
@@ -225,11 +271,17 @@ void monster_shout(monster &mons, int shout)
         if (s_type == S_SILENT)
             channel = MSGCH_TALK_VISUAL;
 
+        msg_channel_type display_channel = channel;
         strip_channel_prefix(message, channel);
+        strip_channel_prefix(speech.translated, display_channel);
+        speech.complete = speech.complete && display_channel == channel;
 
         if (channel != MSGCH_TALK_VISUAL || seen)
         {
-            message = do_mon_str_replacements(message, mons, s_type);
+            // Fill the paired pronouns/body markers during the original
+            // replacement pass, sharing every random substring choice.
+            message = do_mon_str_replacements(message, mons, s_type, &speech);
+            message = monster_shout_display(speech, mons, message);
             msg::streams(channel) << message << endl;
         }
     }
@@ -299,7 +351,29 @@ bool check_awaken(monster* mons, int stealth)
     return false;
 }
 
-void item_noise(const item_def &item, actor &act, string msg, int loudness)
+static msg_channel_type _item_noise_channel(string &msg)
+{
+    const auto pos = msg.find(':');
+    if (pos == string::npos)
+        return MSGCH_TALK;
+    const string param = msg.substr(0, pos);
+    const pair<const char *, msg_channel_type> channels[] = {
+        {"DANGER", MSGCH_DANGER}, {"WARN", MSGCH_WARN},
+        {"SOUND", MSGCH_SOUND}, {"PLAIN", MSGCH_PLAIN},
+        {"SPELL", MSGCH_FRIEND_SPELL}, {"ENCHANT", MSGCH_FRIEND_ENCHANT},
+        {"VISUAL", MSGCH_TALK_VISUAL}, {"TALK", MSGCH_TALK}
+    };
+    for (const auto &entry : channels)
+        if (param == entry.first)
+        {
+            msg = msg.substr(pos + 1);
+            return entry.second;
+        }
+    return MSGCH_TALK;
+}
+
+string render_item_noise(const item_def &item, textdb_speech speech,
+                         msg_channel_type &channel)
 {
     // TODO: messaging for cases where act != you. (This doesn't come up right
     // now.)
@@ -307,77 +381,91 @@ void item_noise(const item_def &item, actor &act, string msg, int loudness)
     {
         // "Your Singing Sword" sounds disrespectful
         // (as if there could be more than one!)
-        msg = replace_all(msg, "@Your_weapon@", "@The_weapon@");
-        msg = replace_all(msg, "@your_weapon@", "@the_weapon@");
+        speech.replace("@Your_weapon@", "@The_weapon@", "@The_weapon@", true);
+        speech.replace("@your_weapon@", "@the_weapon@", "@the_weapon@", true);
     }
 
     // Set appropriate channel (will usually be TALK).
-    msg_channel_type channel = MSGCH_TALK;
-
-    string param;
-    const string::size_type pos = msg.find(":");
-
-    if (pos != string::npos)
-        param = msg.substr(0, pos);
-
-    if (!param.empty())
-    {
-        bool match = true;
-
-        if (param == "DANGER")
-            channel = MSGCH_DANGER;
-        else if (param == "WARN")
-            channel = MSGCH_WARN;
-        else if (param == "SOUND")
-            channel = MSGCH_SOUND;
-        else if (param == "PLAIN")
-            channel = MSGCH_PLAIN;
-        else if (param == "SPELL")
-            channel = MSGCH_FRIEND_SPELL;
-        else if (param == "ENCHANT")
-            channel = MSGCH_FRIEND_ENCHANT;
-        else if (param == "VISUAL")
-            channel = MSGCH_TALK_VISUAL;
-        else if (param != "TALK")
-            match = false;
-
-        if (match)
-            msg = msg.substr(pos + 1);
-    }
-
-    if (msg.empty()) // give default noises
+    channel = _item_noise_channel(speech.english);
+    const auto translated_channel = _item_noise_channel(speech.translated);
+    speech.complete = speech.complete && channel == translated_channel;
+    if (speech.english.empty()) // give default noises
     {
         channel = MSGCH_SOUND;
-        msg = "You hear a strange noise.";
+        speech.english = "You hear a strange noise.";
+        speech.complete = false;
     }
 
     // Replace weapon references. Can't use DESC_THE because that includes
     // pluses etc. and we want just the basename.
-    msg = replace_all(msg, "@The_weapon@", "The @weapon@");
-    msg = replace_all(msg, "@the_weapon@", "the @weapon@");
-    msg = replace_all(msg, "@Your_weapon@", "Your @weapon@");
-    msg = replace_all(msg, "@your_weapon@", "your @weapon@");
-    msg = replace_all(msg, "@weapon@", item.name(DESC_BASENAME));
+    speech.replace("@The_weapon@", "The @weapon@", "@weapon@", true);
+    speech.replace("@the_weapon@", "the @weapon@", "@weapon@", true);
+    const auto possessive = ui_text_arg("item.noise", "your");
+    speech.replace("@Your_weapon@", "Your @weapon@", possessive.text + "@weapon@", possessive.available);
+    speech.replace("@your_weapon@", "your @weapon@", possessive.text + "@weapon@", possessive.available);
+    const string weapon = item.name(DESC_BASENAME);
+    // DESC_BASENAME still includes known pluses, brands and artefact identity.
+    // Use structured item data, without inventory annotations or inscriptions.
+    ui_arg shown_weapon;
+    shown_weapon.available = try_item_noise_display_name(item, shown_weapon.text);
+    speech.replace("@weapon@", weapon, shown_weapon.text, shown_weapon.available);
 
     // replace references to player name and god
-    msg = replace_all(msg, "@player_name@", you.your_name);
-    msg = replace_all(msg, "@player_god@",
-                      you_worship(GOD_NO_GOD) ? "atheism"
-                      : god_name(you.religion, coinflip()));
-    msg = replace_all(msg, "@player_genus@",
-                species::name(you.species, species::SPNAME_GENUS));
-    msg = replace_all(msg, "@a_player_genus@",
-                article_a(species::name(you.species, species::SPNAME_GENUS)));
-    msg = replace_all(msg, "@player_genus_plural@",
-                pluralise(species::name(you.species, species::SPNAME_GENUS)));
+    speech.replace("@player_name@", you.your_name, you.your_name, true);
+    // This draw is unconditional in the original path, even without a marker.
+    string god;
+    ui_arg shown_god;
+    if (you_worship(GOD_NO_GOD))
+    {
+        god = "atheism";
+        shown_god = ui_text_arg("item.noise", god);
+    }
+    else
+    {
+        const bool long_name = coinflip();
+        const string short_name = god_name(you.religion, false);
+        if (long_name && you.religion != GOD_JIYVA)
+        {
+            // One canonical selection supplies both names; never feed a
+            // translated TextDB long name back into the English message.
+            const auto name = getPairedMiscString(short_name + " lastname", "");
+            god = name.english.empty() ? short_name : name.english;
+            shown_god = name.english.empty()
+                ? ui_text_arg("display.god", short_name)
+                : ui_arg{name.translated, name.complete};
+        }
+        else
+        {
+            god = god_name(you.religion, long_name);
+            shown_god = ui_text_arg("display.god", god);
+        }
+    }
+    speech.replace("@player_god@", god, shown_god.text, shown_god.available);
+    const string genus = species::name(you.species, species::SPNAME_GENUS);
+    const auto shown_genus = ui_text_arg("display.creation", genus);
+    speech.replace("@player_genus@", genus, shown_genus.text, shown_genus.available);
+    speech.replace("@a_player_genus@", article_a(genus), shown_genus.text, shown_genus.available);
+    speech.replace("@player_genus_plural@", pluralise(genus), shown_genus.text, shown_genus.available);
+    speech.pick_substrings();
+    speech.english = maybe_capitalise_substring(speech.english);
+    speech.translated = maybe_capitalise_substring(speech.translated);
+    return speech.text();
+}
 
-    msg = maybe_pick_random_substring(msg);
-    msg = maybe_capitalise_substring(msg);
-
+void paired_item_noise(const item_def &item, actor &act,
+                       textdb_speech speech, int loudness)
+{
+    msg_channel_type channel;
+    const string msg = render_item_noise(item, speech, channel);
     mprf(channel, "%s", msg.c_str());
 
     if (channel != MSGCH_TALK_VISUAL)
         noisy(loudness, act.pos());
+}
+
+void item_noise(const item_def &item, actor &act, string msg, int loudness)
+{
+    paired_item_noise(item, act, {msg, "", false}, loudness);
 }
 
 // TODO: Let artefacts besides weapons generate noise.
@@ -386,20 +474,20 @@ void noisy_equipment(const item_def &weapon)
     if (silenced(you.pos()) || !one_chance_in(20))
         return;
 
-    string msg;
+    textdb_speech speech;
 
     if (is_unrandom_artefact(weapon))
     {
         string name = weapon.name(DESC_QUALNAME, false, true, false, false);
-        msg = getSpeakString(name);
-        if (msg == "NONE")
+        speech = getPairedCastString(name);
+        if (speech.english == "NONE")
             return;
     }
 
-    if (msg.empty())
-        msg = getSpeakString("noisy weapon");
+    if (speech.english.empty())
+        speech = getPairedCastString("noisy weapon");
 
-    item_noise(weapon, you, msg, 20);
+    paired_item_noise(weapon, you, speech, 20);
 }
 
 // Berserking monsters cannot be ordered around.
@@ -470,21 +558,22 @@ static void _set_allies_withdraw(const coord_def &target)
 /// Prompt the player to issue orders. Returns the key pressed.
 static int _issue_orders_prompt()
 {
-    mprf(MSGCH_PROMPT, "What are your orders?");
+    mprf(MSGCH_PROMPT, "%s", ui_translate("s.ui", "What are your orders?"));
     if (!you.cannot_speak())
     {
-        string cap_shout = you.shout_verb(false);
+        const string canonical_shout = you.shout_verb(false);
+        string cap_shout = canonical_shout;
         cap_shout[0] = toupper_safe(cap_shout[0]);
-        mprf(" t - %s!", cap_shout.c_str());
+        mprf("%s", ui_render("s.log", " t - %s!", make_stringf(" t - %s!", cap_shout.c_str()), {s_clause_arg(canonical_shout)}).c_str());
     }
 
     if (!you.berserk() && !you.confused())
     {
-        mpr("Orders for allies: a - Attack new target.");
-        mpr("                   r - Retreat!             s - Stop attacking.");
-        mpr("                   g - Guard the area.      f - Follow me.");
+        mpr(ui_translate("s.ui", "Orders for allies: a - Attack new target."));
+        mpr(ui_translate("s.ui", "                   r - Retreat!             s - Stop attacking."));
+        mpr(ui_translate("s.ui", "                   g - Guard the area.      f - Follow me."));
     }
-    mpr(" Anything else - Cancel.");
+    mpr(ui_translate("s.ui", " Anything else - Cancel."));
 
     flush_prev_message(); // buffer doesn't get flushed otherwise
 
@@ -530,14 +619,14 @@ static bool _issue_order(int keyn, int &mons_targd)
             {
                 // Don't reset patrol points for 'Stop fighting!'
                 _set_allies_patrol_point(true);
-                mpr("Follow me!");
+                mpr(ui_translate("s.ui", "Follow me!"));
             }
             else
-                mpr("Stop fighting!");
+                mpr(ui_translate("s.ui", "Stop fighting!"));
             break;
 
         case 'g':
-            mpr("Guard this area!");
+            mpr(ui_translate("s.ui", "Guard this area!"));
             mons_targd = MHITNOT;
             _set_allies_patrol_point();
             break;
@@ -548,7 +637,7 @@ static bool _issue_order(int keyn, int &mons_targd)
             args.restricts = DIR_TARGET;
             args.mode = TARG_HOSTILE;
             args.needs_path = false;
-            args.top_prompt = "Gang up on whom?";
+            args.top_prompt = ui_translate("s.aim", "Gang up on whom?");
             dist targ;
             direction(targ, args);
 
@@ -573,9 +662,7 @@ static bool _issue_order(int keyn, int &mons_targd)
 
             if (!_allies_can_see(*m))
             {
-                mprf("%s is invisible, and you have no allies that can see %s.",
-                     m->name(DESC_THE).c_str(),
-                     m->pronoun(PRONOUN_OBJECTIVE).c_str());
+                mprf("%s", ui_render("s.log", "%s is invisible, and you have no allies that can see them.", make_stringf("%s is invisible, and you have no allies that can see %s.", m->name(DESC_THE).c_str(), m->pronoun(PRONOUN_OBJECTIVE).c_str()), {ui_actor_arg(*m)}).c_str());
                 return false;
             }
 
@@ -589,7 +676,7 @@ static bool _issue_order(int keyn, int &mons_targd)
             args.restricts = DIR_TARGET;
             args.mode = TARG_NON_ACTOR;
             args.needs_path = false;
-            args.top_prompt = "Retreat in which direction?";
+            args.top_prompt = ui_translate("s.aim", "Retreat in which direction?");
             dist targ;
             direction(targ, args);
 
@@ -601,7 +688,7 @@ static bool _issue_order(int keyn, int &mons_targd)
 
             if (targ.isValid)
             {
-                mpr("Fall back!");
+                mpr(ui_translate("s.ui", "Fall back!"));
                 mons_targd = MHITNOT;
             }
 
@@ -617,7 +704,7 @@ static bool _issue_order(int keyn, int &mons_targd)
     return true;
 }
 
-static string _allies_who_cant_see_invis()
+static string _allies_who_cant_see_invis(ui_arg *display)
 {
     // We assume that at least some of your allies can see the target, since we
     // forbid giving attack orders for a target none of your allies can see.
@@ -627,12 +714,18 @@ static string _allies_who_cant_see_invis()
         if (!_follows_orders(*mi) || mi->can_see_invisible())
             continue;
         if (non_sinv_ally)
+        {
+            if (display) *display = s_clause_arg("some of your allies");
             return "some of your allies";
+        }
         non_sinv_ally = *mi;
     }
 
     if (non_sinv_ally)
+    {
+        if (display) *display = ui_actor_arg(*non_sinv_ally);
         return non_sinv_ally->name(DESC_YOUR);
+    }
     return "";
 }
 
@@ -642,13 +735,11 @@ static void _check_unseen_target(int mindex)
     if (!target.invisible())
         return;
 
-    const string allies = _allies_who_cant_see_invis();
+    ui_arg display_allies{"", false};
+    const string allies = _allies_who_cant_see_invis(&display_allies);
     if (allies.empty())
         return;
-    mprf("%s is invisible, and %s can't see %s.",
-         target.name(DESC_THE).c_str(),
-         allies.c_str(),
-         target.pronoun(PRONOUN_OBJECTIVE).c_str());
+    mprf("%s", ui_render("s.log", "%s is invisible, and %s can't see them.", make_stringf("%s is invisible, and %s can't see %s.", target.name(DESC_THE).c_str(), allies.c_str(), target.pronoun(PRONOUN_OBJECTIVE).c_str()), {ui_actor_arg(target), display_allies}).c_str());
 }
 
 /**
@@ -663,7 +754,7 @@ void issue_orders()
 
     if (you.cannot_speak() && you.berserk())
     {
-        mpr("You're too berserk to give orders, and you can't shout!");
+        mpr(ui_translate("s.ui", "You're too berserk to give orders, and you can't shout!"));
         return;
     }
 
@@ -686,7 +777,7 @@ void issue_orders()
 
     if (mons_targd != MHITNOT && mons_targd != MHITYOU)
     {
-        mpr("Attack!");
+        mpr(ui_translate("s.ui", "Attack!"));
         _check_unseen_target(mons_targd);
     }
 }
@@ -709,39 +800,31 @@ void yell(const actor* target)
         {
             if (silenced(you.pos()))
             {
-                mprf("You feel %s rip itself from your throat, "
-                     "but you make no sound!",
-                     article_a(shout_verb).c_str());
+                mprf("%s", ui_render("s.log", "You feel a %s rip itself from your throat, but you make no sound!", make_stringf("You feel %s rip itself from your throat, "
+                     "but you make no sound!", article_a(shout_verb).c_str()), {s_clause_arg(shout_verb)}).c_str());
             }
             else
             {
-                mprf("You feel a strong urge to %s, but "
-                     "you are unable to make a sound!",
-                     shout_verb.c_str());
+                mprf("%s", ui_render("s.log", "You feel a strong urge to %s, but you are unable to make a sound!", make_stringf("You feel a strong urge to %s, but "
+                     "you are unable to make a sound!", shout_verb.c_str()), {s_clause_arg(shout_verb)}).c_str());
             }
         }
         else
-            mpr("You are unable to make a sound!");
+            mpr(ui_translate("s.ui", "You are unable to make a sound!"));
 
         return;
     }
 
     if (target)
     {
-        mprf("You %s%s at %s!",
-             shout_verb.c_str(),
-             you.duration[DUR_RECITE] ? " your recitation" : "",
-             target && target->is_player() ? "yourself"
-                                           : target->name(DESC_THE).c_str());
+        mprf("%s", ui_render("s.log", "At %s you %s%s!", make_stringf("You %s%s at %s!", shout_verb.c_str(), you.duration[DUR_RECITE] ? " your recitation" : "", target && target->is_player() ? "yourself"
+                                           : target->name(DESC_THE).c_str()), {target->is_player() ? s_clause_arg("yourself") : ui_actor_arg(*target), s_clause_arg(shout_verb), s_clause_arg(you.duration[DUR_RECITE] ? " your recitation" : "")}).c_str());
     }
     else
     {
         const char *fugue_suff = you.duration[DUR_FUGUE] ?
             ", and the damned howl along" : "";
-        mprf(MSGCH_SOUND, "You %s%s%s!",
-             shout_verb.c_str(),
-             you.berserk() ? " wildly" : " for attention",
-             fugue_suff);
+        mprf(MSGCH_SOUND, "%s", ui_render("s.log", "You %s%s%s!", make_stringf("You %s%s%s!", shout_verb.c_str(), you.berserk() ? " wildly" : " for attention", fugue_suff), {s_clause_arg(shout_verb), s_clause_arg(you.berserk() ? " wildly" : " for attention"), s_clause_arg(fugue_suff)}).c_str());
     }
 
     noisy(noise_level, you.pos());

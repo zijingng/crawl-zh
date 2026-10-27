@@ -71,3 +71,6 @@ bool uncancel_identify();
 bool uncancel_enchant_armour();
 bool uncancel_amnesia();
 bool uncancel_blinking();
+
+// Quick equipment replacement rows preserve their canonical item and hotkeys.
+string equipment_swap_choice_display(const item_def &item, char key);

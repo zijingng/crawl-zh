@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
+#include "stringutil.h"
 
 #include "attitude-change.h"
 
@@ -269,15 +271,19 @@ static void _jiyva_convert_slime(monster* slime)
     {
         if (mons_genus(slime->type) == MONS_FLOATING_EYE)
         {
-            mprf(MSGCH_GOD, "%s stares at you suspiciously for a moment, "
+            mprf(MSGCH_GOD, "%s", ui_render("a.attitude-change", "%s stares at you suspiciously for a moment, then relaxes.",
+                make_stringf("%s stares at you suspiciously for a moment, "
                             "then relaxes.",
 
-            slime->name(DESC_THE).c_str());
+            slime->name(DESC_THE).c_str()),
+                {ui_actor_arg(*slime)}).c_str());
         }
         else
         {
-            mprf(MSGCH_GOD, "%s trembles before you.",
-                 slime->name(DESC_THE).c_str());
+            mprf(MSGCH_GOD, "%s", ui_render("a.attitude-change", "%s trembles before you.",
+                make_stringf("%s trembles before you.",
+                 slime->name(DESC_THE).c_str()),
+                {ui_actor_arg(*slime)}).c_str());
         }
     }
 

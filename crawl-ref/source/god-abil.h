@@ -101,7 +101,7 @@ int capstone_piety_rank(god_type god);
 bool can_do_capstone_ability(god_type god);
 bool bless_weapon(god_type god, brand_type brand, colour_t colour);
 bool zin_donate_gold();
-string zin_recite_text(const int seed, const int prayertype, int step);
+string zin_recite_text(const int seed, const int prayertype, int step, bool display = false);
 bool zin_check_able_to_recite(bool quiet = false);
 vector<coord_def> find_recite_targets();
 recite_eligibility zin_check_recite_to_single_monster(const monster *mon,
@@ -209,7 +209,7 @@ void init_sac_index();
 int get_sacrifice_piety(ability_type sac, bool include_skill = true);
 void ru_offer_new_sacrifices();
 string ru_sac_text(ability_type sac);
-string ru_sacrifice_description(ability_type sac);
+string ru_sacrifice_description(ability_type sac, string *display = nullptr);
 bool ru_do_sacrifice(ability_type sac);
 bool ru_reject_sacrifices(bool forced_rejection = false);
 void ru_reset_sacrifice_timer(bool clear_timer = false,
@@ -235,7 +235,7 @@ spret hepliaklqana_transference(bool fail);
 void hepliaklqana_choose_identity();
 
 bool wu_jian_can_wall_jump_in_principle(const coord_def& target);
-bool wu_jian_can_wall_jump(const coord_def& target, string &error_ret);
+bool wu_jian_can_wall_jump(const coord_def& target, string &error_ret, string *display = nullptr);
 bool wu_jian_do_wall_jump(coord_def targ);
 spret wu_jian_wall_jump_ability();
 void wu_jian_heavenly_storm();

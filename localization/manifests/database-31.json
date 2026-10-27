@@ -1,0 +1,106 @@
+{
+  "source": "database/monspeak.txt",
+  "entries": [
+    {
+      "key": "beogh_converted_orc_speech_vengeance",
+      "context": "textdb:database/monspeak.txt:beogh_converted_orc_speech_vengeance",
+      "source_sha256": "a977949f906ea23c61f93d3c27b608b8c04386c11abb03d2911df566436ab4fd",
+      "review_status": "reviewed",
+      "review_batch": "database-31"
+    },
+    {
+      "key": "beogh_converted_orc_resurrection",
+      "context": "textdb:database/monspeak.txt:beogh_converted_orc_resurrection",
+      "source_sha256": "bbcf7c4a41826488838b73b94cc31f9c352cbc62d60685962afa4daeb0daf9ff",
+      "review_status": "reviewed",
+      "review_batch": "database-31"
+    },
+    {
+      "key": "beogh_converted_orc_reaction_battle_follower",
+      "context": "textdb:database/monspeak.txt:beogh_converted_orc_reaction_battle_follower",
+      "source_sha256": "1e62edc15dc14bf5b85221f56e202f00dd70cd94e56d68cf17c3b7b1d0a263ee",
+      "review_status": "reviewed",
+      "review_batch": "database-31",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "beogh_converted_orc_reaction_battle",
+          "source_sha256": "170816c781ffb8aa1a31b3b6ec0c76be28b2d94762a910a3dd00983f62a6a7bc",
+          "translation_sha256": "197a7b9580dad1994ba1becca0b7792d64848d8ef2f0fdf9aadd180335d5fc71"
+        }
+      ]
+    },
+    {
+      "key": "beogh_converted_orc_speech_battle_follower",
+      "context": "textdb:database/monspeak.txt:beogh_converted_orc_speech_battle_follower",
+      "source_sha256": "16f5a10ca7c747746b72a293bb0798b8680abdfd9fa51494f00655b0c33aef32",
+      "review_status": "reviewed",
+      "review_batch": "database-31",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "beogh_converted_orc_speech_battle",
+          "source_sha256": "654b2c66fec2e72154885542e58755d01f51bd258f284b599630d19e22b488df",
+          "translation_sha256": "aa558f48206410acda9d0d38317499e30c6d603d7bee94b75c29fb8571691294"
+        }
+      ]
+    },
+    {
+      "key": "beogh_converted_orc_speech_vengeance_follower",
+      "context": "textdb:database/monspeak.txt:beogh_converted_orc_speech_vengeance_follower",
+      "source_sha256": "d5cc73873680b05bd53e9ebf8fe82571173f4631f26cafc363ee5b1d327012ef",
+      "review_status": "reviewed",
+      "review_batch": "database-31",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "beogh_converted_orc_speech_vengeance",
+          "source_sha256": "a977949f906ea23c61f93d3c27b608b8c04386c11abb03d2911df566436ab4fd",
+          "translation_sha256": "ba5a67ac7bc56524d9b59f4f29f8e06025e15dd304925dc50e14d3e786090a40"
+        }
+      ]
+    },
+    {
+      "key": "orc_priest_apostate",
+      "context": "textdb:database/monspeak.txt:orc_priest_apostate",
+      "source_sha256": "6f9fa8f7b08ccc03c6e673f79a0b6b71fc097a1c6cd7deee36902f4781b10968",
+      "review_status": "reviewed",
+      "review_batch": "database-31"
+    },
+    {
+      "key": "orc_priest_preaching",
+      "context": "textdb:database/monspeak.txt:orc_priest_preaching",
+      "source_sha256": "b626454fdccfe7fee07a714c35626952475b483922ab5bcaef249768e3a7685c",
+      "review_status": "reviewed",
+      "review_batch": "database-31"
+    },
+    {
+      "key": "orc_apostle_yield",
+      "context": "textdb:database/monspeak.txt:orc_apostle_yield",
+      "source_sha256": "f3df702e355baa30f3bacfb3c9265277ff5f949642deb235a1d253b2899453d2",
+      "review_status": "reviewed",
+      "review_batch": "database-31"
+    },
+    {
+      "key": "orc_apostle_dismissed",
+      "context": "textdb:database/monspeak.txt:orc_apostle_dismissed",
+      "source_sha256": "da5561480d1a28fda53dc57c5da47142e5125e143ab6c7cd060fcb88eb106a46",
+      "review_status": "reviewed",
+      "review_batch": "database-31"
+    },
+    {
+      "key": "orc_apostle_unbanished",
+      "context": "textdb:database/monspeak.txt:orc_apostle_unbanished",
+      "source_sha256": "89ff2d11d676d5572fe552946833f4d21418bd5371996a48bef68401038aa1cd",
+      "review_status": "reviewed",
+      "review_batch": "database-31"
+    },
+    {
+      "key": "friendly bfb orc",
+      "context": "textdb:database/monspeak.txt:friendly bfb orc",
+      "source_sha256": "e35816b8ef73c07d4cc0701800bb74eaf0d0ecbbf8ba6e2e6747bd8ce79a42cf",
+      "review_status": "reviewed",
+      "review_batch": "database-31"
+    }
+  ]
+}

@@ -1,0 +1,1004 @@
+{
+  "baseline": "0.34.1",
+  "batch": "source-z-01",
+  "messages": [
+    {
+      "context": "z.ui",
+      "english": "As you die, Zot loses track of you.",
+      "translation": "随着你死去，佐特失去了你的踪迹。",
+      "module": "zot.cc",
+      "kind": "text",
+      "review_status": "reviewed",
+      "review_batch": "source-z-01",
+      "source_sha256": "57f17cf57f825fa9390df79cdf7e6972e40e706a0e4cce3df78b1922139255f7",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49"
+        },
+        {
+          "source": "crawl-ref/source/beam.h",
+          "sha256": "942dc616cc3975ead64677576ba296f13c1a40b2466f93a95f853b8a5897a5de"
+        },
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.cc",
+          "sha256": "e0ddc025a3c62913986aa23002cd4ed7d4b9c96c2f9c3a65bbfc178b74b79baf"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.h",
+          "sha256": "89f4d9b69de4f31fb3867d55a0e44bc09bbf03a7fa237a27f0dada02ec906691"
+        },
+        {
+          "source": "crawl-ref/source/options.h",
+          "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b"
+        },
+        {
+          "source": "crawl-ref/source/zap-data.h",
+          "sha256": "ab6e357dd31fa55d72561259aa13deb693a91945ee1326f4f0da625ea696e3fa"
+        },
+        {
+          "source": "crawl-ref/source/zap-type.h",
+          "sha256": "7f50ef082114e4c42a101f3e13897013759eee78ac53970afe7e723a09789fa0"
+        },
+        {
+          "source": "crawl-ref/source/zot.cc",
+          "sha256": "320cd17c7af0316a5e63760ee9d1196b150a214ed1d7b7a6a03713b9593ad528"
+        },
+        {
+          "source": "crawl-ref/source/zot.h",
+          "sha256": "c1ffbda0c83670d6c66c1a808bd97435903185b404730bd3393094199080d136"
+        }
+      ]
+    },
+    {
+      "context": "z.ui",
+      "english": "As you enter the new level, Zot loses track of you.",
+      "translation": "随着你进入新楼层，佐特失去了你的踪迹。",
+      "module": "zot.cc",
+      "kind": "text",
+      "review_status": "reviewed",
+      "review_batch": "source-z-01",
+      "source_sha256": "ae6400423c5c25fd496f698a03d779a3ba6c81e7916278ba2301bab1d61ccf33",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49"
+        },
+        {
+          "source": "crawl-ref/source/beam.h",
+          "sha256": "942dc616cc3975ead64677576ba296f13c1a40b2466f93a95f853b8a5897a5de"
+        },
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.cc",
+          "sha256": "e0ddc025a3c62913986aa23002cd4ed7d4b9c96c2f9c3a65bbfc178b74b79baf"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.h",
+          "sha256": "89f4d9b69de4f31fb3867d55a0e44bc09bbf03a7fa237a27f0dada02ec906691"
+        },
+        {
+          "source": "crawl-ref/source/options.h",
+          "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b"
+        },
+        {
+          "source": "crawl-ref/source/zap-data.h",
+          "sha256": "ab6e357dd31fa55d72561259aa13deb693a91945ee1326f4f0da625ea696e3fa"
+        },
+        {
+          "source": "crawl-ref/source/zap-type.h",
+          "sha256": "7f50ef082114e4c42a101f3e13897013759eee78ac53970afe7e723a09789fa0"
+        },
+        {
+          "source": "crawl-ref/source/zot.cc",
+          "sha256": "320cd17c7af0316a5e63760ee9d1196b150a214ed1d7b7a6a03713b9593ad528"
+        },
+        {
+          "source": "crawl-ref/source/zot.h",
+          "sha256": "c1ffbda0c83670d6c66c1a808bd97435903185b404730bd3393094199080d136"
+        }
+      ]
+    },
+    {
+      "context": "z.ui",
+      "english": "Zot's power touches on you...",
+      "translation": "佐特的力量触及了你……",
+      "module": "zot.cc",
+      "kind": "text",
+      "review_status": "reviewed",
+      "review_batch": "source-z-01",
+      "source_sha256": "b7fd51226fe101c9bd08babc89045591a303c96a8b780168811cc60f435f55fb",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49"
+        },
+        {
+          "source": "crawl-ref/source/beam.h",
+          "sha256": "942dc616cc3975ead64677576ba296f13c1a40b2466f93a95f853b8a5897a5de"
+        },
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.cc",
+          "sha256": "e0ddc025a3c62913986aa23002cd4ed7d4b9c96c2f9c3a65bbfc178b74b79baf"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.h",
+          "sha256": "89f4d9b69de4f31fb3867d55a0e44bc09bbf03a7fa237a27f0dada02ec906691"
+        },
+        {
+          "source": "crawl-ref/source/options.h",
+          "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b"
+        },
+        {
+          "source": "crawl-ref/source/zap-data.h",
+          "sha256": "ab6e357dd31fa55d72561259aa13deb693a91945ee1326f4f0da625ea696e3fa"
+        },
+        {
+          "source": "crawl-ref/source/zap-type.h",
+          "sha256": "7f50ef082114e4c42a101f3e13897013759eee78ac53970afe7e723a09789fa0"
+        },
+        {
+          "source": "crawl-ref/source/zot.cc",
+          "sha256": "320cd17c7af0316a5e63760ee9d1196b150a214ed1d7b7a6a03713b9593ad528"
+        },
+        {
+          "source": "crawl-ref/source/zot.h",
+          "sha256": "c1ffbda0c83670d6c66c1a808bd97435903185b404730bd3393094199080d136"
+        }
+      ]
+    },
+    {
+      "context": "z.ui",
+      "english": "You have lingered too long. Zot senses you. Dive deeper or flee this branch before you suffer!",
+      "translation": "你逗留得太久了。佐特察觉到了你。赶快深入下一层或逃离此分支，否则你就要受苦了！",
+      "module": "zot.cc",
+      "kind": "text",
+      "review_status": "reviewed",
+      "review_batch": "source-z-01",
+      "source_sha256": "0c5c67594b208edc4a938b0904cc7f77655197182568601818ec27f1786fb3b7",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49"
+        },
+        {
+          "source": "crawl-ref/source/beam.h",
+          "sha256": "942dc616cc3975ead64677576ba296f13c1a40b2466f93a95f853b8a5897a5de"
+        },
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.cc",
+          "sha256": "e0ddc025a3c62913986aa23002cd4ed7d4b9c96c2f9c3a65bbfc178b74b79baf"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.h",
+          "sha256": "89f4d9b69de4f31fb3867d55a0e44bc09bbf03a7fa237a27f0dada02ec906691"
+        },
+        {
+          "source": "crawl-ref/source/options.h",
+          "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b"
+        },
+        {
+          "source": "crawl-ref/source/zap-data.h",
+          "sha256": "ab6e357dd31fa55d72561259aa13deb693a91945ee1326f4f0da625ea696e3fa"
+        },
+        {
+          "source": "crawl-ref/source/zap-type.h",
+          "sha256": "7f50ef082114e4c42a101f3e13897013759eee78ac53970afe7e723a09789fa0"
+        },
+        {
+          "source": "crawl-ref/source/zot.cc",
+          "sha256": "320cd17c7af0316a5e63760ee9d1196b150a214ed1d7b7a6a03713b9593ad528"
+        },
+        {
+          "source": "crawl-ref/source/zot.h",
+          "sha256": "c1ffbda0c83670d6c66c1a808bd97435903185b404730bd3393094199080d136"
+        }
+      ]
+    },
+    {
+      "context": "z.ui",
+      "english": "Zot draws nearer. Dive deeper or flee this branch before you suffer!",
+      "translation": "佐特正在逼近。赶快深入下一层或逃离此分支，否则你就要受苦了！",
+      "module": "zot.cc",
+      "kind": "text",
+      "review_status": "reviewed",
+      "review_batch": "source-z-01",
+      "source_sha256": "d1b01ff3bbfea79f70ad9d549f46fca4480be3e00820e52410605730f05b81e3",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49"
+        },
+        {
+          "source": "crawl-ref/source/beam.h",
+          "sha256": "942dc616cc3975ead64677576ba296f13c1a40b2466f93a95f853b8a5897a5de"
+        },
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.cc",
+          "sha256": "e0ddc025a3c62913986aa23002cd4ed7d4b9c96c2f9c3a65bbfc178b74b79baf"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.h",
+          "sha256": "89f4d9b69de4f31fb3867d55a0e44bc09bbf03a7fa237a27f0dada02ec906691"
+        },
+        {
+          "source": "crawl-ref/source/options.h",
+          "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b"
+        },
+        {
+          "source": "crawl-ref/source/zap-data.h",
+          "sha256": "ab6e357dd31fa55d72561259aa13deb693a91945ee1326f4f0da625ea696e3fa"
+        },
+        {
+          "source": "crawl-ref/source/zap-type.h",
+          "sha256": "7f50ef082114e4c42a101f3e13897013759eee78ac53970afe7e723a09789fa0"
+        },
+        {
+          "source": "crawl-ref/source/zot.cc",
+          "sha256": "320cd17c7af0316a5e63760ee9d1196b150a214ed1d7b7a6a03713b9593ad528"
+        },
+        {
+          "source": "crawl-ref/source/zot.h",
+          "sha256": "c1ffbda0c83670d6c66c1a808bd97435903185b404730bd3393094199080d136"
+        }
+      ]
+    },
+    {
+      "context": "z.ui",
+      "english": "Zot has nearly found you. Suffering is imminent. Descend or flee this branch!",
+      "translation": "佐特就快找到你了。苦难即将降临。快下楼或逃离此分支！",
+      "module": "zot.cc",
+      "kind": "text",
+      "review_status": "reviewed",
+      "review_batch": "source-z-01",
+      "source_sha256": "d80fead3a826c661ee41eeda5ac45bc40a9ac7d9c111c23ecd4fc7787400453d",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49"
+        },
+        {
+          "source": "crawl-ref/source/beam.h",
+          "sha256": "942dc616cc3975ead64677576ba296f13c1a40b2466f93a95f853b8a5897a5de"
+        },
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.cc",
+          "sha256": "e0ddc025a3c62913986aa23002cd4ed7d4b9c96c2f9c3a65bbfc178b74b79baf"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.h",
+          "sha256": "89f4d9b69de4f31fb3867d55a0e44bc09bbf03a7fa237a27f0dada02ec906691"
+        },
+        {
+          "source": "crawl-ref/source/options.h",
+          "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b"
+        },
+        {
+          "source": "crawl-ref/source/zap-data.h",
+          "sha256": "ab6e357dd31fa55d72561259aa13deb693a91945ee1326f4f0da625ea696e3fa"
+        },
+        {
+          "source": "crawl-ref/source/zap-type.h",
+          "sha256": "7f50ef082114e4c42a101f3e13897013759eee78ac53970afe7e723a09789fa0"
+        },
+        {
+          "source": "crawl-ref/source/zot.cc",
+          "sha256": "320cd17c7af0316a5e63760ee9d1196b150a214ed1d7b7a6a03713b9593ad528"
+        },
+        {
+          "source": "crawl-ref/source/zot.h",
+          "sha256": "c1ffbda0c83670d6c66c1a808bd97435903185b404730bd3393094199080d136"
+        }
+      ]
+    },
+    {
+      "context": "z.log",
+      "english": "The power of Zot manifests... and reveals the %s gem was a mimic! It cackles and vanishes.",
+      "translation": "佐特的力量显现……揭露了%s原来是拟态怪！它怪笑着消失了。",
+      "module": "zot.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-z-01",
+      "source_sha256": "a82e3d05b69211ec3928f1a2d2f36bbd598bd7baf8872065472de77f093239cf",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49"
+        },
+        {
+          "source": "crawl-ref/source/beam.h",
+          "sha256": "942dc616cc3975ead64677576ba296f13c1a40b2466f93a95f853b8a5897a5de"
+        },
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.cc",
+          "sha256": "e0ddc025a3c62913986aa23002cd4ed7d4b9c96c2f9c3a65bbfc178b74b79baf"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.h",
+          "sha256": "89f4d9b69de4f31fb3867d55a0e44bc09bbf03a7fa237a27f0dada02ec906691"
+        },
+        {
+          "source": "crawl-ref/source/options.h",
+          "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b"
+        },
+        {
+          "source": "crawl-ref/source/zap-data.h",
+          "sha256": "ab6e357dd31fa55d72561259aa13deb693a91945ee1326f4f0da625ea696e3fa"
+        },
+        {
+          "source": "crawl-ref/source/zap-type.h",
+          "sha256": "7f50ef082114e4c42a101f3e13897013759eee78ac53970afe7e723a09789fa0"
+        },
+        {
+          "source": "crawl-ref/source/zot.cc",
+          "sha256": "320cd17c7af0316a5e63760ee9d1196b150a214ed1d7b7a6a03713b9593ad528"
+        },
+        {
+          "source": "crawl-ref/source/zot.h",
+          "sha256": "c1ffbda0c83670d6c66c1a808bd97435903185b404730bd3393094199080d136"
+        }
+      ]
+    },
+    {
+      "context": "z.log",
+      "english": "With a frightful flash, the power of Zot shatters the %s gem into ten thousand fragments!",
+      "translation": "伴随着骇人的闪光，佐特的力量将%s震成了千万块碎片！",
+      "module": "zot.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-z-01",
+      "source_sha256": "6031f103ca004e871d28c66ac87e831c610c3a3831edef51d7f3778d7e5593c2",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49"
+        },
+        {
+          "source": "crawl-ref/source/beam.h",
+          "sha256": "942dc616cc3975ead64677576ba296f13c1a40b2466f93a95f853b8a5897a5de"
+        },
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.cc",
+          "sha256": "e0ddc025a3c62913986aa23002cd4ed7d4b9c96c2f9c3a65bbfc178b74b79baf"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.h",
+          "sha256": "89f4d9b69de4f31fb3867d55a0e44bc09bbf03a7fa237a27f0dada02ec906691"
+        },
+        {
+          "source": "crawl-ref/source/options.h",
+          "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b"
+        },
+        {
+          "source": "crawl-ref/source/zap-data.h",
+          "sha256": "ab6e357dd31fa55d72561259aa13deb693a91945ee1326f4f0da625ea696e3fa"
+        },
+        {
+          "source": "crawl-ref/source/zap-type.h",
+          "sha256": "7f50ef082114e4c42a101f3e13897013759eee78ac53970afe7e723a09789fa0"
+        },
+        {
+          "source": "crawl-ref/source/zot.cc",
+          "sha256": "320cd17c7af0316a5e63760ee9d1196b150a214ed1d7b7a6a03713b9593ad528"
+        },
+        {
+          "source": "crawl-ref/source/zot.h",
+          "sha256": "c1ffbda0c83670d6c66c1a808bd97435903185b404730bd3393094199080d136"
+        }
+      ]
+    },
+    {
+      "context": "z.log",
+      "english": "If you linger in this branch much longer, the power of Zot will shatter your %s gem.",
+      "translation": "如果你继续在此分支逗留，佐特的力量就会震碎你的%s。",
+      "module": "zot.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-z-01",
+      "source_sha256": "cfe3e50e43c905daef90c1a2d93a46654c2d00de13becde1668598430ae1731d",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49"
+        },
+        {
+          "source": "crawl-ref/source/beam.h",
+          "sha256": "942dc616cc3975ead64677576ba296f13c1a40b2466f93a95f853b8a5897a5de"
+        },
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.cc",
+          "sha256": "e0ddc025a3c62913986aa23002cd4ed7d4b9c96c2f9c3a65bbfc178b74b79baf"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.h",
+          "sha256": "89f4d9b69de4f31fb3867d55a0e44bc09bbf03a7fa237a27f0dada02ec906691"
+        },
+        {
+          "source": "crawl-ref/source/options.h",
+          "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b"
+        },
+        {
+          "source": "crawl-ref/source/zap-data.h",
+          "sha256": "ab6e357dd31fa55d72561259aa13deb693a91945ee1326f4f0da625ea696e3fa"
+        },
+        {
+          "source": "crawl-ref/source/zap-type.h",
+          "sha256": "7f50ef082114e4c42a101f3e13897013759eee78ac53970afe7e723a09789fa0"
+        },
+        {
+          "source": "crawl-ref/source/zot.cc",
+          "sha256": "320cd17c7af0316a5e63760ee9d1196b150a214ed1d7b7a6a03713b9593ad528"
+        },
+        {
+          "source": "crawl-ref/source/zot.h",
+          "sha256": "c1ffbda0c83670d6c66c1a808bd97435903185b404730bd3393094199080d136"
+        }
+      ]
+    },
+    {
+      "context": "z.log",
+      "english": "Zot senses the otherworldly energies of your %s gem, and will surely shatter it if you linger in this branch any longer!",
+      "translation": "佐特察觉到了你的%s蕴含的异界能量；如果你继续在此分支逗留，它必将被震碎！",
+      "module": "zot.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-z-01",
+      "source_sha256": "a8ccd7b4b43e2df608e5b379c4d2a1dd3d5856aa7f483282451b8c504970c5d5",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49"
+        },
+        {
+          "source": "crawl-ref/source/beam.h",
+          "sha256": "942dc616cc3975ead64677576ba296f13c1a40b2466f93a95f853b8a5897a5de"
+        },
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.cc",
+          "sha256": "e0ddc025a3c62913986aa23002cd4ed7d4b9c96c2f9c3a65bbfc178b74b79baf"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.h",
+          "sha256": "89f4d9b69de4f31fb3867d55a0e44bc09bbf03a7fa237a27f0dada02ec906691"
+        },
+        {
+          "source": "crawl-ref/source/options.h",
+          "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b"
+        },
+        {
+          "source": "crawl-ref/source/zap-data.h",
+          "sha256": "ab6e357dd31fa55d72561259aa13deb693a91945ee1326f4f0da625ea696e3fa"
+        },
+        {
+          "source": "crawl-ref/source/zap-type.h",
+          "sha256": "7f50ef082114e4c42a101f3e13897013759eee78ac53970afe7e723a09789fa0"
+        },
+        {
+          "source": "crawl-ref/source/zot.cc",
+          "sha256": "320cd17c7af0316a5e63760ee9d1196b150a214ed1d7b7a6a03713b9593ad528"
+        },
+        {
+          "source": "crawl-ref/source/zot.h",
+          "sha256": "c1ffbda0c83670d6c66c1a808bd97435903185b404730bd3393094199080d136"
+        }
+      ]
+    },
+    {
+      "context": "z.log",
+      "english": "With a frightful flash, the power of Zot shatters your %s gem into ten thousand fragments!",
+      "translation": "伴随着骇人的闪光，佐特的力量将你的%s震成了千万块碎片！",
+      "module": "zot.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-z-01",
+      "source_sha256": "88104eeda535610ddd3f359e28fc412de013632d6df38721572fe45a7a5f423a",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49"
+        },
+        {
+          "source": "crawl-ref/source/beam.h",
+          "sha256": "942dc616cc3975ead64677576ba296f13c1a40b2466f93a95f853b8a5897a5de"
+        },
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.cc",
+          "sha256": "e0ddc025a3c62913986aa23002cd4ed7d4b9c96c2f9c3a65bbfc178b74b79baf"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.h",
+          "sha256": "89f4d9b69de4f31fb3867d55a0e44bc09bbf03a7fa237a27f0dada02ec906691"
+        },
+        {
+          "source": "crawl-ref/source/options.h",
+          "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b"
+        },
+        {
+          "source": "crawl-ref/source/zap-data.h",
+          "sha256": "ab6e357dd31fa55d72561259aa13deb693a91945ee1326f4f0da625ea696e3fa"
+        },
+        {
+          "source": "crawl-ref/source/zap-type.h",
+          "sha256": "7f50ef082114e4c42a101f3e13897013759eee78ac53970afe7e723a09789fa0"
+        },
+        {
+          "source": "crawl-ref/source/zot.cc",
+          "sha256": "320cd17c7af0316a5e63760ee9d1196b150a214ed1d7b7a6a03713b9593ad528"
+        },
+        {
+          "source": "crawl-ref/source/zot.h",
+          "sha256": "c1ffbda0c83670d6c66c1a808bd97435903185b404730bd3393094199080d136"
+        }
+      ]
+    },
+    {
+      "context": "z.log",
+      "english": "If you linger in this branch for another %s turns, the power of Zot will shatter your %s gem.\n",
+      "translation": "如果你继续在此分支逗留%s回合，佐特的力量就会震碎你的%s。\n",
+      "module": "zot.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-z-01",
+      "source_sha256": "cfc23dec8261e541d03a1ee66802f6e9a0a9904cd926f9354d990d237cc3d078",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49"
+        },
+        {
+          "source": "crawl-ref/source/beam.h",
+          "sha256": "942dc616cc3975ead64677576ba296f13c1a40b2466f93a95f853b8a5897a5de"
+        },
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.cc",
+          "sha256": "e0ddc025a3c62913986aa23002cd4ed7d4b9c96c2f9c3a65bbfc178b74b79baf"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.h",
+          "sha256": "89f4d9b69de4f31fb3867d55a0e44bc09bbf03a7fa237a27f0dada02ec906691"
+        },
+        {
+          "source": "crawl-ref/source/options.h",
+          "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b"
+        },
+        {
+          "source": "crawl-ref/source/zap-data.h",
+          "sha256": "ab6e357dd31fa55d72561259aa13deb693a91945ee1326f4f0da625ea696e3fa"
+        },
+        {
+          "source": "crawl-ref/source/zap-type.h",
+          "sha256": "7f50ef082114e4c42a101f3e13897013759eee78ac53970afe7e723a09789fa0"
+        },
+        {
+          "source": "crawl-ref/source/zot.cc",
+          "sha256": "320cd17c7af0316a5e63760ee9d1196b150a214ed1d7b7a6a03713b9593ad528"
+        },
+        {
+          "source": "crawl-ref/source/zot.h",
+          "sha256": "c1ffbda0c83670d6c66c1a808bd97435903185b404730bd3393094199080d136"
+        }
+      ]
+    },
+    {
+      "context": "log.projectile.name",
+      "english": "crystal spear",
+      "translation": "水晶矛",
+      "module": "zap-data.h",
+      "kind": "text",
+      "review_status": "reviewed",
+      "review_batch": "source-z-01",
+      "source_sha256": "0a2bf80e150ea0ca1cfc572ec417ad1febf66dc494223ea0dc7b71b0859c3ce7",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49"
+        },
+        {
+          "source": "crawl-ref/source/beam.h",
+          "sha256": "942dc616cc3975ead64677576ba296f13c1a40b2466f93a95f853b8a5897a5de"
+        },
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/item-name.cc",
+          "sha256": "47a28aa61511f256aac6a0b753666b7b2f49af863cdc6fef26021aa5ac375693"
+        },
+        {
+          "source": "crawl-ref/source/item-name.h",
+          "sha256": "3f79b595b99635af56a3eba4342e36e6732c00fd0f7b8d8d61a7481bbda54f0a"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.cc",
+          "sha256": "e0ddc025a3c62913986aa23002cd4ed7d4b9c96c2f9c3a65bbfc178b74b79baf"
+        },
+        {
+          "source": "crawl-ref/source/item-prop.h",
+          "sha256": "89f4d9b69de4f31fb3867d55a0e44bc09bbf03a7fa237a27f0dada02ec906691"
+        },
+        {
+          "source": "crawl-ref/source/options.h",
+          "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b"
+        },
+        {
+          "source": "crawl-ref/source/zap-data.h",
+          "sha256": "ab6e357dd31fa55d72561259aa13deb693a91945ee1326f4f0da625ea696e3fa"
+        },
+        {
+          "source": "crawl-ref/source/zap-type.h",
+          "sha256": "7f50ef082114e4c42a101f3e13897013759eee78ac53970afe7e723a09789fa0"
+        },
+        {
+          "source": "crawl-ref/source/zot.cc",
+          "sha256": "320cd17c7af0316a5e63760ee9d1196b150a214ed1d7b7a6a03713b9593ad528"
+        },
+        {
+          "source": "crawl-ref/source/zot.h",
+          "sha256": "c1ffbda0c83670d6c66c1a808bd97435903185b404730bd3393094199080d136"
+        }
+      ]
+    }
+  ],
+  "shared_dependency_rechecks": [
+    {
+      "source": "crawl-ref/source/zot.cc",
+      "before": "6f4db2f881f4ff8df0bb039b39f5cd25089035ab93ed96a62c4ab28c8a58973b",
+      "after": "320cd17c7af0316a5e63760ee9d1196b150a214ed1d7b7a6a03713b9593ad528"
+    },
+    {
+      "source": "crawl-ref/source/zot.cc",
+      "before": "6f4db2f881f4ff8df0bb039b39f5cd25089035ab93ed96a62c4ab28c8a58973b",
+      "after": "320cd17c7af0316a5e63760ee9d1196b150a214ed1d7b7a6a03713b9593ad528"
+    },
+    {
+      "source": "crawl-ref/source/zot.cc",
+      "before": "6f4db2f881f4ff8df0bb039b39f5cd25089035ab93ed96a62c4ab28c8a58973b",
+      "after": "320cd17c7af0316a5e63760ee9d1196b150a214ed1d7b7a6a03713b9593ad528"
+    },
+    {
+      "source": "crawl-ref/source/zot.cc",
+      "before": "6f4db2f881f4ff8df0bb039b39f5cd25089035ab93ed96a62c4ab28c8a58973b",
+      "after": "320cd17c7af0316a5e63760ee9d1196b150a214ed1d7b7a6a03713b9593ad528"
+    },
+    {
+      "source": "crawl-ref/source/zot.cc",
+      "before": "6f4db2f881f4ff8df0bb039b39f5cd25089035ab93ed96a62c4ab28c8a58973b",
+      "after": "320cd17c7af0316a5e63760ee9d1196b150a214ed1d7b7a6a03713b9593ad528"
+    },
+    {
+      "source": "crawl-ref/source/zot.cc",
+      "before": "6f4db2f881f4ff8df0bb039b39f5cd25089035ab93ed96a62c4ab28c8a58973b",
+      "after": "320cd17c7af0316a5e63760ee9d1196b150a214ed1d7b7a6a03713b9593ad528"
+    },
+    {
+      "source": "crawl-ref/source/zot.cc",
+      "before": "6f4db2f881f4ff8df0bb039b39f5cd25089035ab93ed96a62c4ab28c8a58973b",
+      "after": "320cd17c7af0316a5e63760ee9d1196b150a214ed1d7b7a6a03713b9593ad528"
+    },
+    {
+      "source": "crawl-ref/source/zot.cc",
+      "before": "6f4db2f881f4ff8df0bb039b39f5cd25089035ab93ed96a62c4ab28c8a58973b",
+      "after": "320cd17c7af0316a5e63760ee9d1196b150a214ed1d7b7a6a03713b9593ad528"
+    },
+    {
+      "source": "crawl-ref/source/zot.cc",
+      "before": "6f4db2f881f4ff8df0bb039b39f5cd25089035ab93ed96a62c4ab28c8a58973b",
+      "after": "320cd17c7af0316a5e63760ee9d1196b150a214ed1d7b7a6a03713b9593ad528"
+    },
+    {
+      "source": "crawl-ref/source/zot.cc",
+      "before": "6f4db2f881f4ff8df0bb039b39f5cd25089035ab93ed96a62c4ab28c8a58973b",
+      "after": "320cd17c7af0316a5e63760ee9d1196b150a214ed1d7b7a6a03713b9593ad528"
+    },
+    {
+      "source": "crawl-ref/source/zot.cc",
+      "before": "6f4db2f881f4ff8df0bb039b39f5cd25089035ab93ed96a62c4ab28c8a58973b",
+      "after": "320cd17c7af0316a5e63760ee9d1196b150a214ed1d7b7a6a03713b9593ad528"
+    },
+    {
+      "source": "crawl-ref/source/zot.cc",
+      "before": "6f4db2f881f4ff8df0bb039b39f5cd25089035ab93ed96a62c4ab28c8a58973b",
+      "after": "320cd17c7af0316a5e63760ee9d1196b150a214ed1d7b7a6a03713b9593ad528"
+    }
+  ]
+}

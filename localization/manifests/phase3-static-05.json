@@ -1,0 +1,1631 @@
+{
+  "baseline": "0.34.1",
+  "batch": "phase3-static-05",
+  "glossary_sha256": "2c2041390a82e14b9a05b05bd5de2db212369f05cdb2862461ffad562765d81f",
+  "new_textdb": 198,
+  "by_file": {
+    "database/help.txt": 5,
+    "database/FAQ.txt": 38,
+    "descript/tutorial.txt": 88,
+    "descript/cards.txt": 24,
+    "descript/unident.txt": 7,
+    "descript/branches.txt": 36
+  },
+  "entries": [
+    {
+      "source": "database/help.txt",
+      "key": "stash-search.prompt",
+      "context": "textdb:database/help.txt:stash-search.prompt",
+      "source_sha256": "47737ab11fbeee6a517c932d23f7fd5b6f29bffc8f14f42fe15ace9c72a9f2fa",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "database/help.txt",
+      "key": "wiz-monster",
+      "context": "textdb:database/help.txt:wiz-monster",
+      "source_sha256": "53d2ea5ac1f248eb98b2ead9d10dc53ad422e23323ab187b456bcba231effe59",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "database/help.txt",
+      "key": "macro-menu",
+      "context": "textdb:database/help.txt:macro-menu",
+      "source_sha256": "337738d7c3b1ef03fee86f757166912763f836fe66a0afd0e5d6362a23c91ebf",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/help.txt",
+      "key": "console-keycodes",
+      "context": "textdb:database/help.txt:console-keycodes",
+      "source_sha256": "2a89bc89193c11e97ccae0b89d85c7dad42ea2b9a165eef2c503c388d78ff360",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/help.txt",
+      "key": "level-map",
+      "context": "textdb:database/help.txt:level-map",
+      "source_sha256": "a22a7bf8e9b97d426afbc834b02ffa087d2d64dc43167496e2d3e86bcee07691",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01",
+      "lua_text_indices": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "Q:goal",
+      "context": "textdb:database/FAQ.txt:q:goal",
+      "source_sha256": "3c4906b846ce3a75d684f91b652a5a9a3a68338de5df6e36ccacf9319f37f747",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "A:goal",
+      "context": "textdb:database/FAQ.txt:a:goal",
+      "source_sha256": "ded992907d2b3e1956eb3a91290402272e7c14021dc02a99b771f03ebb0220d2",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "Q:userdir",
+      "context": "textdb:database/FAQ.txt:q:userdir",
+      "source_sha256": "59fb745ddbc23a587d07d2e0a1ab62c3d19a6e0bf924071c6311af47f0a7411b",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "A:userdir",
+      "context": "textdb:database/FAQ.txt:a:userdir",
+      "source_sha256": "403e7b22c172d9bca2bc54ec76bb270cbf45043d956cf386b8799f0a80266e14",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "Q:roguelike difference",
+      "context": "textdb:database/FAQ.txt:q:roguelike difference",
+      "source_sha256": "4798b290eafd3a1c87c21002f7d6d8640c7c5fa6f39129871f7050c4a15529e3",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "A:roguelike difference",
+      "context": "textdb:database/FAQ.txt:a:roguelike difference",
+      "source_sha256": "24e20b87a34422738e15ed48870949932e070cce1547d7890850c311cc9ffa73",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "Q:survival",
+      "context": "textdb:database/FAQ.txt:q:survival",
+      "source_sha256": "69f80d9a5e972bbf0dbc058991a74dffc270ecb74baa5ec01b35a0537e3fdfb5",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "A:survival",
+      "context": "textdb:database/FAQ.txt:a:survival",
+      "source_sha256": "67984341a453a15ba7daaeb91532250500f6b90a4891a9ccbef579cbb6beab84",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "Q:downstairs",
+      "context": "textdb:database/FAQ.txt:q:downstairs",
+      "source_sha256": "521939216f818e26b8a3fbbce0d5c257ac4c0561a2337517f9066ace73012aef",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "A:downstairs",
+      "context": "textdb:database/FAQ.txt:a:downstairs",
+      "source_sha256": "3a7f16d5fc5e59aa463db13092b16868b9191f622402ada0cd8b34633ff337f1",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "Q:cheating",
+      "context": "textdb:database/FAQ.txt:q:cheating",
+      "source_sha256": "23fd74116acf6c7839a26d1b7b3f66ec2119b45951b712faf0882920afd30545",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "A:cheating",
+      "context": "textdb:database/FAQ.txt:a:cheating",
+      "source_sha256": "962c24c8a494c3739cf5cb86fd9d51ce9520c2fe2296473e5d49ba46bcc6a65f",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "Q:weapons",
+      "context": "textdb:database/FAQ.txt:q:weapons",
+      "source_sha256": "e4cc838cd8181f1f9907cbdf54573a5f422d31b9a553ea5c6b353bead09681a6",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "A:weapons",
+      "context": "textdb:database/FAQ.txt:a:weapons",
+      "source_sha256": "fb93186379e4a7ba1e221895a6dffb797f1fbc057a8ed4a680b7201306bd85ab",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "Q:religion",
+      "context": "textdb:database/FAQ.txt:q:religion",
+      "source_sha256": "a3e1814ccd6436e20775e083cac5b1c1fc164b849e87420b04cdff4699feba8a",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "A:religion",
+      "context": "textdb:database/FAQ.txt:a:religion",
+      "source_sha256": "9a51db91b870c31bc9095f8746bc97d4720e7d20f39c78f5ca3995af212d74db",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "Q:ghosts",
+      "context": "textdb:database/FAQ.txt:q:ghosts",
+      "source_sha256": "5a687584fa2972522ae16a49b51c15e3fc9bf29973109130eff1b2389c6b0e9f",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "A:ghosts",
+      "context": "textdb:database/FAQ.txt:a:ghosts",
+      "source_sha256": "e53c0d0092fc6fee21c9dcf3f4a51c83ed1cb42c5279463c1b046f704f8ad249",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "Q:abyss",
+      "context": "textdb:database/FAQ.txt:q:abyss",
+      "source_sha256": "4417b06d6cba875c54b4dbf7e13aa0c276d3dbe9bf722b5ff1dabb65cb141f43",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "A:abyss",
+      "context": "textdb:database/FAQ.txt:a:abyss",
+      "source_sha256": "2f0480f6f91a9e1e67fafccacca7c4d54fadcde88dad11329cba19b94dd3f2a3",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "Q:randart",
+      "context": "textdb:database/FAQ.txt:q:randart",
+      "source_sha256": "92ffded1ad0fb80c40b305d982a2302358e77c06cb4604069f1fea1d5d7cf39e",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "A:randart",
+      "context": "textdb:database/FAQ.txt:a:randart",
+      "source_sha256": "8b22d068a7cd5afa6f6e06807d2a2ac45c1fe3ae037b90b9f567862491051020",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "Q:interact",
+      "context": "textdb:database/FAQ.txt:q:interact",
+      "source_sha256": "e76e6f2647027f63ba5d5db7502527b70fd470c83be4acbf4ecccfa44b8f0c6c",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "A:interact",
+      "context": "textdb:database/FAQ.txt:a:interact",
+      "source_sha256": "26fbc87c14e57954df4565cf07cca4615482457b5dd7da06dcaa0cacc66d31a8",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "Q:version",
+      "context": "textdb:database/FAQ.txt:q:version",
+      "source_sha256": "f98874e275d27945f017a9b71ef04e991b3bb2fc5b8c19ba140a6fdbff120c3c",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "A:version",
+      "context": "textdb:database/FAQ.txt:a:version",
+      "source_sha256": "d6efd374064637936151bc131c65a21e3d2d361f5ee9201bca2e8faca639a066",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "Q:beta",
+      "context": "textdb:database/FAQ.txt:q:beta",
+      "source_sha256": "369a95d5a74f2ed42de1d4276a2969488a741fda064c15de98ab0d420feb886d",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "A:beta",
+      "context": "textdb:database/FAQ.txt:a:beta",
+      "source_sha256": "fa38b25c4d0e9e45a97255de1e6b64d0489306e25bd3f3726bfc618d7529091c",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "Q:bug",
+      "context": "textdb:database/FAQ.txt:q:bug",
+      "source_sha256": "9f7115ff74b66b94a88faa0e1fc7f4072508c1dbbba6376c2ba86d358d12e61d",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "A:bug",
+      "context": "textdb:database/FAQ.txt:a:bug",
+      "source_sha256": "0d6ee269a83142e8c2ac34f9d108d0b37bfe0e3081fbe83a817c50cd3aaf0c98",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "Q:idea",
+      "context": "textdb:database/FAQ.txt:q:idea",
+      "source_sha256": "42d10e12c9e4f98d390fd19e5192460d9f513434070bd05a04b490c421987637",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "A:idea",
+      "context": "textdb:database/FAQ.txt:a:idea",
+      "source_sha256": "ebad0edc65b82454b3e3490ab35e0986e210aacd680865dacf7e183540d0d1c4",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "Q:help",
+      "context": "textdb:database/FAQ.txt:q:help",
+      "source_sha256": "76c1350096089f6ca7420536027f54cd91b61ffca8d06f9d9b5dee8fb7ae32ec",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "A:help",
+      "context": "textdb:database/FAQ.txt:a:help",
+      "source_sha256": "8c2dcea4fd6aad260dc8f58f30d7652c8c6f6e076175cbf2db2ae386cd0f4f46",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "Q:changes",
+      "context": "textdb:database/FAQ.txt:q:changes",
+      "source_sha256": "e894669da58091204214af24e3c61bd95ed47d5c7f80cf8c2d3c6b77599c498c",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "A:changes",
+      "context": "textdb:database/FAQ.txt:a:changes",
+      "source_sha256": "f72fd0ee6781092624026d876932175b8dab3f01aaca1e7e39804a2aac226532",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "Q:tiles lag",
+      "context": "textdb:database/FAQ.txt:q:tiles lag",
+      "source_sha256": "475fd70c804c60422da78cb1b76a45321cbeeb594a26bfc3569b54a3d5c8cb4d",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "database/FAQ.txt",
+      "key": "A:tiles lag",
+      "context": "textdb:database/FAQ.txt:a:tiles lag",
+      "source_sha256": "1214fbf6da10763c30e9b6e31d5eadb0691d5177143843b9f05a1dc407ad6fc4",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial intro",
+      "context": "textdb:descript/tutorial.txt:tutorial intro",
+      "source_sha256": "259d2c2270a35f05fca802c3248986480ac52ff9267806c3d1f06b9971b7883e",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial death",
+      "context": "textdb:descript/tutorial.txt:tutorial death",
+      "source_sha256": "4716d160005a4c74fca0260e05030d61c570545f932a26ddb10aee8dbaf86bbe",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial1 start",
+      "context": "textdb:descript/tutorial.txt:tutorial1 start",
+      "source_sha256": "7b35632981836e44219b8d41cc21f1c07ba93974e3800766e74407104615a931",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial1 go_on",
+      "context": "textdb:descript/tutorial.txt:tutorial1 go_on",
+      "source_sha256": "4de72baebfb799e705c8e8211c89c84acf10291e20e71088342418bf65d280d3",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial1 diagonal",
+      "context": "textdb:descript/tutorial.txt:tutorial1 diagonal",
+      "source_sha256": "52ea7e24cc55cabc23a15889e4b41ca00b191fb17a989d383abb772c770d57b6",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial1 shiftmove",
+      "context": "textdb:descript/tutorial.txt:tutorial1 shiftmove",
+      "source_sha256": "f6134abd5c3e67de017bdd4e404c33067aa5a947fb5e320c4de034abdd8d844b",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial1 downstairs",
+      "context": "textdb:descript/tutorial.txt:tutorial1 downstairs",
+      "source_sha256": "e3164d98b2fec8c1291ce47ef22c689677d97b7fc69b7c23f7d205e7f9d510e0",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial1 levelmap",
+      "context": "textdb:descript/tutorial.txt:tutorial1 levelmap",
+      "source_sha256": "8210a29a9cba3d6a7701e7c05e280ee72054d5af71bc4a0eed2e0488f3675afa",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial1 autoexplore",
+      "context": "textdb:descript/tutorial.txt:tutorial1 autoexplore",
+      "source_sha256": "7e640f94f4d6445059cf22da3d27ea34870a60dbc04faf94e1941834832c6f2e",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial1 exclusion",
+      "context": "textdb:descript/tutorial.txt:tutorial1 exclusion",
+      "source_sha256": "6ac4ff27410391ba808c8c80b12143532c2f5dfd6896f9a7369aac67e47c2958",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial1 autoexplore_announce",
+      "context": "textdb:descript/tutorial.txt:tutorial1 autoexplore_announce",
+      "source_sha256": "ef85091e6f7fa6183ffca836c8d0236ec3ba7ac213d9a9dee7159e3ce8874954",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial1 tutorial_end",
+      "context": "textdb:descript/tutorial.txt:tutorial1 tutorial_end",
+      "source_sha256": "ffca5f03ba14b630f981cd04f9d0db2e3b284eaf49f2a40e3044e80150d83d1b",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial1 newlevel",
+      "context": "textdb:descript/tutorial.txt:tutorial1 newlevel",
+      "source_sha256": "3d36b8da4ef2b4a083acd975f4d19fcc43f9e35bf167081bc506b2d835c9530f",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial1 door",
+      "context": "textdb:descript/tutorial.txt:tutorial1 door",
+      "source_sha256": "a50d1c57d92758409b032bbdeb710e0e259c1f71d59aa3a719ec893a7ca8d48b",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial1 close_door",
+      "context": "textdb:descript/tutorial.txt:tutorial1 close_door",
+      "source_sha256": "2e478037c741c64c0c779a7a70cb810cf8a80b3f971d1a62887514ed270fa74a",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial1 water",
+      "context": "textdb:descript/tutorial.txt:tutorial1 water",
+      "source_sha256": "8ef6aa12fdb76bb7e50da80506de97a0fbe110393aa10b9d8e82762fcae02bec",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial1 upstairs",
+      "context": "textdb:descript/tutorial.txt:tutorial1 upstairs",
+      "source_sha256": "2346e780308e0e31195a4f3cc4f0a553615e0ae0498a025aa81de7e1f6bff7ac",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial1 exit",
+      "context": "textdb:descript/tutorial.txt:tutorial1 exit",
+      "source_sha256": "c5c4003ab573c2fc5f9391bbc21ce8e06f5fe0f14f36e85bcafc0f584dbe1f4d",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial2 start",
+      "context": "textdb:descript/tutorial.txt:tutorial2 start",
+      "source_sha256": "4dc95da977b9fbc78a5ec6476e9aeda63c093b344619240e1043b03885dec0af",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial2 pickup_weapon",
+      "context": "textdb:descript/tutorial.txt:tutorial2 pickup_weapon",
+      "source_sha256": "72b5ef08d09bd973c0f5fa9276d5c2ca2dc008ae58c7eeb6064ae984c90d051d",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial2 melee",
+      "context": "textdb:descript/tutorial.txt:tutorial2 melee",
+      "source_sha256": "38746bcda9286d3baf9052938fa2cd9e497b5520c9cca114cbdacb64468735b2",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial2 resting",
+      "context": "textdb:descript/tutorial.txt:tutorial2 resting",
+      "source_sha256": "afae145ee7f7b9e52d635f5a950a453a51952f6cacc2c461362047945c289058",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial2 wait",
+      "context": "textdb:descript/tutorial.txt:tutorial2 wait",
+      "source_sha256": "00bd27d6b1550b904079e17857d0ed442e2b90290e0207c0fbd21bacc2ec6525",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial2 resting_reminder",
+      "context": "textdb:descript/tutorial.txt:tutorial2 resting_reminder",
+      "source_sha256": "131cf6d057994a0740a8b136f0c02649ff693bb45224cdf9f48dbeadb2956ccd",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial2 compare_monster_desc",
+      "context": "textdb:descript/tutorial.txt:tutorial2 compare_monster_desc",
+      "source_sha256": "1a7102b9b85b6ca0189481d075d492ec6c9fe779497e6d29b563e004ebc76727",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial2 downstairs",
+      "context": "textdb:descript/tutorial.txt:tutorial2 downstairs",
+      "source_sha256": "b7e8e01873427dcb28f60ea5f32569bd06d93f681b0b8e02745951ff0c3a7bd3",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial2 newlevel",
+      "context": "textdb:descript/tutorial.txt:tutorial2 newlevel",
+      "source_sha256": "b896e44fb357706c9b7d5ee834a89eb070d3d7d119f58a1040bbabb148da5c36",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial2 boomerangs",
+      "context": "textdb:descript/tutorial.txt:tutorial2 boomerangs",
+      "source_sha256": "d007861200188f648c1efd7cfda2d3e67e48dfc4ef5b27ab1dee7f2c76308673",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial2 throwing",
+      "context": "textdb:descript/tutorial.txt:tutorial2 throwing",
+      "source_sha256": "39277988fa622a47ff74d5968ee50c965e9727d77808070ab1369fbfea1c0642",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial2 wield_bow",
+      "context": "textdb:descript/tutorial.txt:tutorial2 wield_bow",
+      "source_sha256": "bcaa85c632fec2465814d808c513d65ba8e868c5360cd1e4931a24f9febd5f74",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial2 firing",
+      "context": "textdb:descript/tutorial.txt:tutorial2 firing",
+      "source_sha256": "b850930c7878e7806aed5d98a68c2fee3eea72f511c44aa362468c070d4f71f3",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial2 travel_reminder",
+      "context": "textdb:descript/tutorial.txt:tutorial2 travel_reminder",
+      "source_sha256": "06262e39457f4c00ddbc3fa743b1e3adc1f81b8f09a8da28e850fd7801bc97df",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial2 explore",
+      "context": "textdb:descript/tutorial.txt:tutorial2 explore",
+      "source_sha256": "c27d0edf61d96f902625ac677d81c345a3a5d7ae6e7904736e1702e2b52f4174",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial2 tutorial_end",
+      "context": "textdb:descript/tutorial.txt:tutorial2 tutorial_end",
+      "source_sha256": "d85b9f217b81d4136a560cafbd4d6d6cbdf0c98b525fed633ba67d5fe76145b2",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial2 exit",
+      "context": "textdb:descript/tutorial.txt:tutorial2 exit",
+      "source_sha256": "ae500014c73667e6084334ae6c516fcf86acc83fbd03a307daf3bc6e8576c1bc",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial3 start",
+      "context": "textdb:descript/tutorial.txt:tutorial3 start",
+      "source_sha256": "77d1e918dd4528a456bd94c317345c3dfa986facd5343d8f592dd111ceaf084a",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial3 armour",
+      "context": "textdb:descript/tutorial.txt:tutorial3 armour",
+      "source_sha256": "85b760620337e6ac8ec07a43f89d42551e528d9194dfb3bbc0a8f78455e31771",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial3 autopickup",
+      "context": "textdb:descript/tutorial.txt:tutorial3 autopickup",
+      "source_sha256": "af7c827db3539d69e9614cbc84b817cb357da3a4383a57fea520574ccef46de0",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial3 scroll",
+      "context": "textdb:descript/tutorial.txt:tutorial3 scroll",
+      "source_sha256": "ff50ae804708686139203cd5427b12d7dd6f5a01a6b8df06a1390795e6bc64ca",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial3 scroll_noautopickup",
+      "context": "textdb:descript/tutorial.txt:tutorial3 scroll_noautopickup",
+      "source_sha256": "01575d400e846593a2d6ed38f581a3effe09974de8751191e337a04b5f71cea8",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial3 ego_weapon",
+      "context": "textdb:descript/tutorial.txt:tutorial3 ego_weapon",
+      "source_sha256": "62b28591740ea79cd7aa98f21e1cee761d448f37cc4440d6d9ac6c0d774b60c4",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial3 inventory",
+      "context": "textdb:descript/tutorial.txt:tutorial3 inventory",
+      "source_sha256": "8c01f6f7e21fbb909a1da091beb449a6279892cf93781f4e8b443f04ae540c49",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial3 battle",
+      "context": "textdb:descript/tutorial.txt:tutorial3 battle",
+      "source_sha256": "b3310e22a65315de83af186d4604eb027413567c49e41ebbf1ac35e102a780ae",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial3 downstairs",
+      "context": "textdb:descript/tutorial.txt:tutorial3 downstairs",
+      "source_sha256": "6bf71ff32c335db373f1d0f10fc7139aa8f707f00904cf4b93447f8d0bbc6fdf",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial3 command_help",
+      "context": "textdb:descript/tutorial.txt:tutorial3 command_help",
+      "source_sha256": "c27ebe247beba8353fc6e1bfcf5473fd6f9dcc7b5a867b032b8ca7258ee42310",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial3 trap",
+      "context": "textdb:descript/tutorial.txt:tutorial3 trap",
+      "source_sha256": "2545c531e9c3d5f08a6926e467f5bf1418158d00a68c1f482931ea0f1ec8d691",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial3 potion",
+      "context": "textdb:descript/tutorial.txt:tutorial3 potion",
+      "source_sha256": "23f7707a05dd1ce2023c2c52d61b85468ca3cd443ef49749acac84b0261aaa47",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial3 artefact_armour",
+      "context": "textdb:descript/tutorial.txt:tutorial3 artefact_armour",
+      "source_sha256": "827c340eca1670d29c967d8b96f4fd40c7556071a7eb658b74d972f893ed3392",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial3 wand_fire",
+      "context": "textdb:descript/tutorial.txt:tutorial3 wand_fire",
+      "source_sha256": "6f4a5e156db0e5e28c30019dddea466a0fbf46794622fe63b947be9e5dfe0141",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial3 wand_digging",
+      "context": "textdb:descript/tutorial.txt:tutorial3 wand_digging",
+      "source_sha256": "5f2b078a537e67a584bb752831dd6873c255c9c85d7fdd72b09d9ebdfa6cd3b4",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial3 amulet",
+      "context": "textdb:descript/tutorial.txt:tutorial3 amulet",
+      "source_sha256": "1ea091b6c7c4cc3155a7fee6e9d93b43aded77660a932bbe73015050331f42e7",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial3 drop",
+      "context": "textdb:descript/tutorial.txt:tutorial3 drop",
+      "source_sha256": "47cd0e2609a7bf6623dbdd7857274c7836ab34ede9b90d9ce08d4cb359688240",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial3 gold",
+      "context": "textdb:descript/tutorial.txt:tutorial3 gold",
+      "source_sha256": "6a3ed40213064a73c304ba26093b5b34edcf9433d8f5af6ca5d97fbe0bc964ba",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial3 shop",
+      "context": "textdb:descript/tutorial.txt:tutorial3 shop",
+      "source_sha256": "033317dadc8d42fa7dd51eff3f0a3c5ce0c4e51292a2bccaa8672fb570401a47",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial3 enter_shop",
+      "context": "textdb:descript/tutorial.txt:tutorial3 enter_shop",
+      "source_sha256": "a793ef7d3afd33c39c2bb79a48ac5c64c54efb373f93ef2fde3cf9fcffd1cc6b",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial3 autoexplore_reminder",
+      "context": "textdb:descript/tutorial.txt:tutorial3 autoexplore_reminder",
+      "source_sha256": "ac81da4aea88957501978d863ff8d832cfebd10dfa4455464675e4695ff427e3",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial3 go_shopping",
+      "context": "textdb:descript/tutorial.txt:tutorial3 go_shopping",
+      "source_sha256": "98fcdc223952014b35af0c7b3b205fdcb37fb17ae746d733feb1ee01de893dc0",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial3 optional_battle",
+      "context": "textdb:descript/tutorial.txt:tutorial3 optional_battle",
+      "source_sha256": "a9dbb0abcdf967f94466dcda5fcaa1b60f3d4da792ad60b74e9a5fe31fd739b7",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial3 tutorial_end",
+      "context": "textdb:descript/tutorial.txt:tutorial3 tutorial_end",
+      "source_sha256": "3ee38c9e6a281a2e86fc6d777914d08fe29b4330538516df1985fe6509f257b2",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial3 exit",
+      "context": "textdb:descript/tutorial.txt:tutorial3 exit",
+      "source_sha256": "6ec10f5a025023258f592c9967911242ba8c2c48ba6ee9a7fde004287749f8ba",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial4 start",
+      "context": "textdb:descript/tutorial.txt:tutorial4 start",
+      "source_sha256": "e141f4b7ee8fef9d713eb7e3d6df956a2c18bff90015e4e5ec8832fe54f8156b",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial4 spellbook",
+      "context": "textdb:descript/tutorial.txt:tutorial4 spellbook",
+      "source_sha256": "d0f63882efbd26bdacc7da52d0d7234f2ed4b8e463cf52cf28aa1aff2246bee9",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial4 spellcasting",
+      "context": "textdb:descript/tutorial.txt:tutorial4 spellcasting",
+      "source_sha256": "197ca595a6c333b67e0b1bf5c1eec56d07f2b73055b027d0a170a9ebe3cd1ac6",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial4 spellquivering",
+      "context": "textdb:descript/tutorial.txt:tutorial4 spellquivering",
+      "source_sha256": "c7efec3c52e3d4825f1a4ae9103c69f514a3bc9d1d4888d31b5ce00e4916c6d5",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial4 ring_power",
+      "context": "textdb:descript/tutorial.txt:tutorial4 ring_power",
+      "source_sha256": "859b9961f8cd7720ff3dac456b57906797712e48fbf35ef8771463a5ab946c60",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial4 undead",
+      "context": "textdb:descript/tutorial.txt:tutorial4 undead",
+      "source_sha256": "7b9bf1ddc25f5be1a9103eef94af0b7b212478c8fb07784a6034da1b1f009cb5",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial4 spell_success",
+      "context": "textdb:descript/tutorial.txt:tutorial4 spell_success",
+      "source_sha256": "52474c6be141a55d379e13d4fe28faba6dbbeeb6680661725a3db33b89ea51d6",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial4 mephitic_cloud",
+      "context": "textdb:descript/tutorial.txt:tutorial4 mephitic_cloud",
+      "source_sha256": "56f3caf5f5ace97a76e7645f78f8dc8b0429cb01bd43a3cb919b7acd9af2af55",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial4 meph_reminder",
+      "context": "textdb:descript/tutorial.txt:tutorial4 meph_reminder",
+      "source_sha256": "c3a8c5f41d3f8c21b36f1ab731ff292a653e78446f9fa091b4baaafd36a3e633",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial4 aiming_clouds",
+      "context": "textdb:descript/tutorial.txt:tutorial4 aiming_clouds",
+      "source_sha256": "b0c540de56f63a7ec67cb36041dce0eeef1fb03af880675a9a256300a9ed39f2",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial4 forget_spell",
+      "context": "textdb:descript/tutorial.txt:tutorial4 forget_spell",
+      "source_sha256": "7f68c63ff97f7c2bb81aad7fa408729e032139bc25faa2a990b40321ed2826e3",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial4 memorise2",
+      "context": "textdb:descript/tutorial.txt:tutorial4 memorise2",
+      "source_sha256": "2ac5a0b783e98e2b1d45171ca545f4daa8897fb3239e9372fe77793d54f153ec",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial4 displace_allies",
+      "context": "textdb:descript/tutorial.txt:tutorial4 displace_allies",
+      "source_sha256": "0c1681fe153a12d5dd5b50225e10e41dc89e49199282659ae39ee8065385f570",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial4 order_allies",
+      "context": "textdb:descript/tutorial.txt:tutorial4 order_allies",
+      "source_sha256": "b8c84a4ebe703ae05773a305aa82c29e6bef4cfa98133856b34fe57fee12f992",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial4 heavy_armour",
+      "context": "textdb:descript/tutorial.txt:tutorial4 heavy_armour",
+      "source_sha256": "79a663e045777a2cee553c03a813c4379a09f4bcedd0e01640fe907e7f62dff8",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial4 resting_reminder",
+      "context": "textdb:descript/tutorial.txt:tutorial4 resting_reminder",
+      "source_sha256": "8c662f8c2a35116beef9fdbb96c9d8ee6ad2c6c7f9ae2c998b21f6237427f02a",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial4 tutorial_end",
+      "context": "textdb:descript/tutorial.txt:tutorial4 tutorial_end",
+      "source_sha256": "44dd50a1b7aebb1c7d3f6395a6043044979c2959093f4a5fdda6a0a68da1f376",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial4 exit",
+      "context": "textdb:descript/tutorial.txt:tutorial4 exit",
+      "source_sha256": "e710adeeac3065067b1d1b94b30613822fda9dcb9f345ab5df5e378f15230aba",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial5 start",
+      "context": "textdb:descript/tutorial.txt:tutorial5 start",
+      "source_sha256": "dc960ce83988aabb2f887bb4d3847d331946878a8bd6fd79e450cc79eecc6a57",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial5 dungeon_overview",
+      "context": "textdb:descript/tutorial.txt:tutorial5 dungeon_overview",
+      "source_sha256": "d31759248619aaa08126005c421f8e78257faa720df79397db8dd859468620e8",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial5 altar",
+      "context": "textdb:descript/tutorial.txt:tutorial5 altar",
+      "source_sha256": "63a347f72dc8736c5dfaebefe8af3a7ad63f1b0eba0d8078e87cdef5bd1e207e",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial5 religion",
+      "context": "textdb:descript/tutorial.txt:tutorial5 religion",
+      "source_sha256": "1614573cd82ff8c97fce00e031615b872c10036565240a9750bf39a22b6be0da",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial5 piety_on_kill",
+      "context": "textdb:descript/tutorial.txt:tutorial5 piety_on_kill",
+      "source_sha256": "e40781e9c48655b5ca0c958f7c9ca03ffea55c6b45a729a791372431c06d8d5f",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial5 berserk",
+      "context": "textdb:descript/tutorial.txt:tutorial5 berserk",
+      "source_sha256": "b91e038cf6ddd49eee0c91326fa9c80ebd40a40b7b90f9a48ef254d93487a920",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial5 exhaustion",
+      "context": "textdb:descript/tutorial.txt:tutorial5 exhaustion",
+      "source_sha256": "8d2d457c6d540fb42f10209226f50ac3476b996318f35c78e26878d52bcb9c60",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial5 berserk2",
+      "context": "textdb:descript/tutorial.txt:tutorial5 berserk2",
+      "source_sha256": "d817a928a4c958e11878f3814e663e78d877171a4e7f257d01627bfb5d66dbb6",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial5 tutorial_end",
+      "context": "textdb:descript/tutorial.txt:tutorial5 tutorial_end",
+      "source_sha256": "7cf5a547f480e30a8f2017bf2e67538cb4bf6e688e46dbf81d4d1c1f9ebdb254",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "key": "tutorial5 exit",
+      "context": "textdb:descript/tutorial.txt:tutorial5 exit",
+      "source_sha256": "d13cffd691d666f3b9ce6af2a37f0cc2409510cabfb894d013abec3ec75203ac",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/cards.txt",
+      "key": "Velocity card",
+      "context": "textdb:descript/cards.txt:velocity card",
+      "source_sha256": "e2e3e834346eeaa87d5e42ad8f998f7147044c35bcdcc886947c91360f642790",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/cards.txt",
+      "key": "the Tomb card",
+      "context": "textdb:descript/cards.txt:the tomb card",
+      "source_sha256": "9675646005a0d5ba03a0bca2c004ec0c8aec72da719b8e3b828bccc3d107283a",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/cards.txt",
+      "key": "Exile card",
+      "context": "textdb:descript/cards.txt:exile card",
+      "source_sha256": "555bdf72fe061fb170540c918d049af0187e2e4bb2066708c205b6d25e1d1039",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/cards.txt",
+      "key": "the Shaft card",
+      "context": "textdb:descript/cards.txt:the shaft card",
+      "source_sha256": "061184de22cd5a818da83a0d37b59d5ff5d46d99ed1bcbf19972dd05598d509b",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/cards.txt",
+      "key": "the Elixir card",
+      "context": "textdb:descript/cards.txt:the elixir card",
+      "source_sha256": "1321b7e2bbec89da8e17ea998bf4f019f28ea994396fc3f412a091ab7050a847",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/cards.txt",
+      "key": "the Cloud card",
+      "context": "textdb:descript/cards.txt:the cloud card",
+      "source_sha256": "68d52971c47684f607193c8506eb8f105eca58e07d83d4f7e54e72401f2fe533",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/cards.txt",
+      "key": "Vitriol card",
+      "context": "textdb:descript/cards.txt:vitriol card",
+      "source_sha256": "a416774d607a8444ef988ec36a6b89fbc0b1d180905083ebbff4e5943e860648",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/cards.txt",
+      "key": "the Storm card",
+      "context": "textdb:descript/cards.txt:the storm card",
+      "source_sha256": "5f96a501aa4c9ac53a8afb09512e758ef28124b45cc43a3b2c74d0278d04dfad",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/cards.txt",
+      "key": "Pain card",
+      "context": "textdb:descript/cards.txt:pain card",
+      "source_sha256": "6aa9944281d0a8ee9048f1d768359e2d0f0fd753d4ee3ca84e35fb5a17c1c459",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/cards.txt",
+      "key": "the Orb card",
+      "context": "textdb:descript/cards.txt:the orb card",
+      "source_sha256": "799b027e74ee55143a2922d58cc3eefda03dd3285c462a9709ec79ab3e5a46eb",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/cards.txt",
+      "key": "Degeneration card",
+      "context": "textdb:descript/cards.txt:degeneration card",
+      "source_sha256": "332580efc56c6b351c3e48d022688b6d5c84759830ca1b4b80a25981c73e8dd7",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/cards.txt",
+      "key": "Wild Magic card",
+      "context": "textdb:descript/cards.txt:wild magic card",
+      "source_sha256": "5e611d8b442df51596fb4d9a0bf29473eb5c68cf4250342077d8c494a6afdfb4",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/cards.txt",
+      "key": "the Elements card",
+      "context": "textdb:descript/cards.txt:the elements card",
+      "source_sha256": "9da7f85ad0d73529130287e066fab56e38d42f0471305189ccdca10dc2d90f7a",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/cards.txt",
+      "key": "the Pentagram card",
+      "context": "textdb:descript/cards.txt:the pentagram card",
+      "source_sha256": "d35ab4f1eaf21fee5d2696ce786ec72a33874210aed356f2cec0da1fa234ac6c",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/cards.txt",
+      "key": "the Dance card",
+      "context": "textdb:descript/cards.txt:the dance card",
+      "source_sha256": "f403e795266d237f294ceabd24549433d785e0b8d9373249892938bb637daef8",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/cards.txt",
+      "key": "the Swarm card",
+      "context": "textdb:descript/cards.txt:the swarm card",
+      "source_sha256": "ffa8154c77bf1e3aaa59b42602be784ac97b10339c984c54dbe571d12ebc1077",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/cards.txt",
+      "key": "the Rangers card",
+      "context": "textdb:descript/cards.txt:the rangers card",
+      "source_sha256": "d584e49a4d2414469b64b0276bea9b44d39c9d5fcb7404ae157170ff6804c92b",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/cards.txt",
+      "key": "the Illusion card",
+      "context": "textdb:descript/cards.txt:the illusion card",
+      "source_sha256": "ba051aa57eedead25a1a19d71ac15ebf7ffedf02430f075c4e33a5902fc25745",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/cards.txt",
+      "key": "Wrath card",
+      "context": "textdb:descript/cards.txt:wrath card",
+      "source_sha256": "d961d274f076182a9711e89312e81b7f8f3d34455cd1c50c97ad5eafc80a1d99",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/cards.txt",
+      "key": "the Wraith card",
+      "context": "textdb:descript/cards.txt:the wraith card",
+      "source_sha256": "371ec3ef3fd013db09cde6683611ead28bf14f6d7150c45477d804eb45fbd471",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/cards.txt",
+      "key": "the Swine card",
+      "context": "textdb:descript/cards.txt:the swine card",
+      "source_sha256": "e9901f40aa287c0a9e8649c7d59e76837423033eee5b05f6d86aad26555261be",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/cards.txt",
+      "key": "Torment card",
+      "context": "textdb:descript/cards.txt:torment card",
+      "source_sha256": "954745055655e70f5ba878b2c977dd7eab78f23687227b78f26fbdc5d1027c34",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/cards.txt",
+      "key": "a buggy card",
+      "context": "textdb:descript/cards.txt:a buggy card",
+      "source_sha256": "d008cf6f646f9eac1aa18a25c47e109a4d774576b3fdb6a481dd47518fcb7f77",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/cards.txt",
+      "key": "a very buggy card",
+      "context": "textdb:descript/cards.txt:a very buggy card",
+      "source_sha256": "4a0300afe92df3ed3d4e374c97281065438af69a73d1b782c245e3fb7a19948a",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/unident.txt",
+      "key": "amulet",
+      "context": "textdb:descript/unident.txt:amulet",
+      "source_sha256": "3b509ebe6542c85e716c00139939b80f058f821ff6ddf6738709a0493f56e3df",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/unident.txt",
+      "key": "book",
+      "context": "textdb:descript/unident.txt:book",
+      "source_sha256": "e456b0b9db4f18a1b27eef4b134a11937cc6febfebb9e171cf2eaa459f184bf9",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/unident.txt",
+      "key": "potion",
+      "context": "textdb:descript/unident.txt:potion",
+      "source_sha256": "aefab8250388a0ca8c669be33a85601b12a14b82fc609505bccdac6e19910981",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/unident.txt",
+      "key": "ring",
+      "context": "textdb:descript/unident.txt:ring",
+      "source_sha256": "948d0e67e740db7c8543eb2666ffbc75f88860bdea6e2fef269831d552616884",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/unident.txt",
+      "key": "scroll",
+      "context": "textdb:descript/unident.txt:scroll",
+      "source_sha256": "e20464b1f3b8bae1b85ca4f6969375ed5dbb905db07ba8030447a1b17cbf525b",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/unident.txt",
+      "key": "staff",
+      "context": "textdb:descript/unident.txt:staff",
+      "source_sha256": "b34771ca002ffd4bd9e9b171aed8806ff585b53a12602db24ee92e49973cb0d1",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/unident.txt",
+      "key": "wand",
+      "context": "textdb:descript/unident.txt:wand",
+      "source_sha256": "60655f56f67024f8643bb35777187f3742822baa739b93c26cbb9185cd003b7d",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Dungeon",
+      "context": "textdb:descript/branches.txt:dungeon",
+      "source_sha256": "989328bd26f1f89c0fd515dacbaa54ded37457ca541f9f6644922df7425c76a1",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Temple",
+      "context": "textdb:descript/branches.txt:temple",
+      "source_sha256": "fa427f004e4356304d54e9751fb6e5128d495c9e069cccbd85f08d880b68c545",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Orcish Mines",
+      "context": "textdb:descript/branches.txt:orcish mines",
+      "source_sha256": "eca8579da65552a4928854ae55f4d26c38007770b6dea9afe214a095f8d7e0fa",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Elven Halls",
+      "context": "textdb:descript/branches.txt:elven halls",
+      "source_sha256": "4f37156be5d94bf242749e1a321a11a9aa37f9751e27add93ca5de4da56ee9c8",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Lair",
+      "context": "textdb:descript/branches.txt:lair",
+      "source_sha256": "a2abcfdf01e1f451f41a5a16487537b96577b9cd556dbd4a1d271a9673bfa77f",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Swamp",
+      "context": "textdb:descript/branches.txt:swamp",
+      "source_sha256": "967cc750e2da9dccc082f7a7a6e9a5019f3ab909edc828d7b603acd2d74f6463",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Shoals",
+      "context": "textdb:descript/branches.txt:shoals",
+      "source_sha256": "dfadfa696bcf8c176c1c2c7d91af34c7f2766986b14b2bfa8b486149a7757897",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Snake Pit",
+      "context": "textdb:descript/branches.txt:snake pit",
+      "source_sha256": "2df4c8fb3fa98836671bd686e325b375298877e3c1cb871ec4a915a4db6b32b7",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Spider Nest",
+      "context": "textdb:descript/branches.txt:spider nest",
+      "source_sha256": "540bd41d8086e74fa15a90ab1dae9a099418f2686b80f635d1f88dc0be672a27",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Slime Pits",
+      "context": "textdb:descript/branches.txt:slime pits",
+      "source_sha256": "886f3a1e19aaad9f0c724b26135f7d93043c82c1655755a3a2f1d44dd7237497",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Vaults",
+      "context": "textdb:descript/branches.txt:vaults",
+      "source_sha256": "7c1143bc78e88b21c18e6ed0c7334c5b63f48e95d83562ce8c6b7656128fcaca",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Crypt",
+      "context": "textdb:descript/branches.txt:crypt",
+      "source_sha256": "d08fdd48b7f81707a8e276e58cd2b79a38db88d0e6564515d01e4965728ca6eb",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Tomb",
+      "context": "textdb:descript/branches.txt:tomb",
+      "source_sha256": "b1a8434beb0c0cf41ab69ea11056747779710a594bc9ddc6d57fc682cbb79eaa",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Hell",
+      "context": "textdb:descript/branches.txt:hell",
+      "source_sha256": "91d72723da85f8c8f10c7cf42ab60a3f05314c0b11a424e2a069d690f36f8593",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Dis",
+      "context": "textdb:descript/branches.txt:dis",
+      "source_sha256": "8df22d433fdc7581e693ffe6feb7572dbbd2edd626184baa2eb12359f7476725",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Gehenna",
+      "context": "textdb:descript/branches.txt:gehenna",
+      "source_sha256": "80ef7e665659f61407b46ac3f7db225ab5a1d298749d9a910eeaeb4a9647a40f",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Cocytus",
+      "context": "textdb:descript/branches.txt:cocytus",
+      "source_sha256": "2df0b7c043115828a2411a97ed2cdada18cdb357710fa80abcb81a967af8c134",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Tartarus",
+      "context": "textdb:descript/branches.txt:tartarus",
+      "source_sha256": "bee38a7f1234b77e444df69390304d9f0ad0f73fdb43281c82ce9b46678c88e1",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Zot",
+      "context": "textdb:descript/branches.txt:zot",
+      "source_sha256": "45be99fa3a6e0476bb955049f7e90934b9833a8c4decac58d17d7dfad3d345d6",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Abyss",
+      "context": "textdb:descript/branches.txt:abyss",
+      "source_sha256": "da9ca18f163e58d209fb265b126136a4f80794437ce6ec1f09586383b459de61",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Pandemonium",
+      "context": "textdb:descript/branches.txt:pandemonium",
+      "source_sha256": "7df701dcc202ea8f65652124dbc7f02cebb7dd0be3d9388cc09c4ea69664e082",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Ziggurat",
+      "context": "textdb:descript/branches.txt:ziggurat",
+      "source_sha256": "11d0c0e66606ef353809169d32a01d54267f2d957bbf37dbb7e68b76484e2017",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Gauntlet",
+      "context": "textdb:descript/branches.txt:gauntlet",
+      "source_sha256": "6e269ca38d6f26ce5d177ebac2c62fd4f67c3ca8465734d50effe06b80382d99",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Bazaar",
+      "context": "textdb:descript/branches.txt:bazaar",
+      "source_sha256": "9d0da34174fe1a2d7699271c1e32ac2e4e28f1a6f6e854b14b07f0218dbc1792",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Trove",
+      "context": "textdb:descript/branches.txt:trove",
+      "source_sha256": "1f0aa7f13e49671edc36f6c230740de27d5f270e2af9684a5e7ded889498b893",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Necropolis",
+      "context": "textdb:descript/branches.txt:necropolis",
+      "source_sha256": "297c7254c87ab777f6996c35ad2382967ed4fccd89f0193841fa2f89f6a3d642",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Sewer",
+      "context": "textdb:descript/branches.txt:sewer",
+      "source_sha256": "32bda9a5e54a69ae30d33446b47539353bdbff2b8595bf3100abd8aea1f2efdb",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Ossuary",
+      "context": "textdb:descript/branches.txt:ossuary",
+      "source_sha256": "d85a0ef3fdd55a47df4cda52cede67ef675a86c53ffeaf531694240b130c715c",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Bailey",
+      "context": "textdb:descript/branches.txt:bailey",
+      "source_sha256": "3fe58b3ad0aae988d8b2eb736bf8c7d741a2a624bb4ed938c794394c7248d8be",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Ice Cave",
+      "context": "textdb:descript/branches.txt:ice cave",
+      "source_sha256": "67c0434caf2f06dde681122b885363a0c77579f6cb693b7cd14e9590d1d281a5",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05",
+      "lua_text_indices": [
+        5,
+        6
+      ]
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Volcano",
+      "context": "textdb:descript/branches.txt:volcano",
+      "source_sha256": "cf21dfb584486991b65b1d2bb49433eaf493d0e07b2064ada37083952d28a78f",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Wizlab",
+      "context": "textdb:descript/branches.txt:wizlab",
+      "source_sha256": "bbd6ef108aeb3bfa3266a0a17376fad1a304bc270a48ddc03dd08d3ad03fe877",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Depths",
+      "context": "textdb:descript/branches.txt:depths",
+      "source_sha256": "d12ba4bc8b80a9f939f4e9157b780c2edcb0a9b66cb52756ffb03cca575bd41a",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Desolation",
+      "context": "textdb:descript/branches.txt:desolation",
+      "source_sha256": "b0d9be6d0f6d266d26834cf8449e9f36842c9086e881fe568e51c5f02f492268",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Arena",
+      "context": "textdb:descript/branches.txt:arena",
+      "source_sha256": "90153195dc5bfa64d04efeb7a11aee17a4e275aeae74aea3d7228af325f3de54",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/branches.txt",
+      "key": "Crucible",
+      "context": "textdb:descript/branches.txt:crucible",
+      "source_sha256": "c894b1d03918f453bb054c6982ee0a3c29e032c6f11e0046597e62eda80b022e",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-05"
+    }
+  ],
+  "syntax_preserved": [
+    "wizard monster specs",
+    "search expressions",
+    "key codes",
+    "macro syntax",
+    "$cmd[CMD_*]",
+    ":nowrap"
+  ],
+  "provisional_names": {
+    "Necropolis": "大墓地",
+    "Arena": "斗技场",
+    "Crucible": "血肉熔炉",
+    "glacial chasm": "冰川裂隙"
+  },
+  "unagreed_names_preserved": [
+    "Cerebov",
+    "Mnoleg",
+    "Lom Lobon",
+    "Gloorx Vloq",
+    "Sheza",
+    "Sargol"
+  ]
+}

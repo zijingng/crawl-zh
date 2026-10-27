@@ -1,0 +1,12 @@
+{
+  "new_keys": 32,
+  "new_candidates": 192,
+  "new_lua_results": 7,
+  "reviewed_monster_keys": 731,
+  "source_monster_keys": 731,
+  "prior_unchanged": 699,
+  "english_source_unchanged": true,
+  "python_tests": 32,
+  "native_tests": 161,
+  "tiles_build_success": true
+}

@@ -1,0 +1,20 @@
+{
+  "batch": "source-e-01",
+  "date": "2026-10-23",
+  "new_messages": 58,
+  "catalogue_matches": 58,
+  "missing_messages": [],
+  "stale_dependencies": [],
+  "top_level_e_files": 22,
+  "owned_literal_review_complete": true,
+  "limitations": [
+    "External high-score/death summaries remain owned by hiscores.cc.",
+    "Unknown custom exclusion metadata and cross-module transformation restrictions fall back to whole English text.",
+    "No in-game visual smoke test; Windows Tiles tested, Android/web/console not built."
+  ],
+  "native_test_cases": 52,
+  "native_assertions": 32583,
+  "python_test_cases": 27,
+  "windows_tiles_build": "passed",
+  "whitespace_check": "passed"
+}

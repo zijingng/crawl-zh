@@ -1,0 +1,31 @@
+{
+  "baseline": "0.34.1",
+  "batch_messages": 160,
+  "po_matches_and_hashes": "pass",
+  "original_help_function_english_literals_unchanged": "pass",
+  "percent_placeholders": "pass",
+  "cpp_tests": {
+    "cases": 15,
+    "assertions": 9258,
+    "result": "pass"
+  },
+  "python_tests": {
+    "cases": 18,
+    "result": "pass"
+  },
+  "windows_local_tiles_build": "pass",
+  "catalogue": {
+    "messages": 5131,
+    "reviewed": 5130
+  },
+  "gui": {
+    "help_home": "已在独立测试窗口看到中文帮助首页、主手册目录及 Tiles 帮助入口。",
+    "other_pages": "键盘自动化未能确认翻页结果；不作为已完成视觉检查记录。"
+  },
+  "remaining_english": [
+    "crawl_manual.txt 正文",
+    "options_guide.txt 正文",
+    "aptitudes.txt 表格及图例",
+    "Wizard 调试用瞄准帮助、版本及诊断细节"
+  ]
+}

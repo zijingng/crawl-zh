@@ -104,7 +104,7 @@ local function move_towards(dx, dy)
     if move == nil then move = try_move(sign(dx), 0) end
   end
   if move == nil then
-    crawl.mpr("Failed to move towards target.")
+    crawl.mpr(crawl.ui_translate("lua.ui", "Failed to move towards target."))
   else
     crawl.process_keys(move)
   end
@@ -249,52 +249,52 @@ function mag_attack(allow_movement)
   local x, y, info = get_target()
   local cur_mana = you.race() == "Djinni" and you.hp() or you.mp()
   if af_hp_is_low() then
-    crawl.mpr("You are too injured to fight recklessly!")
+    crawl.mpr(crawl.ui_translate("lua.ui", "You are too injured to fight recklessly!"))
   elseif you.confused() then
-    crawl.mpr("You are too confused!")
+    crawl.mpr(crawl.ui_translate("lua.ui", "You are too confused!"))
   elseif info == nil then
-    crawl.mpr("No target in view!")
+    crawl.mpr(crawl.ui_translate("fix.autotarget", "No target in view!"))
   elseif spells.mana_cost(you.spell_table()[AUTOMAGIC_SPELL_SLOT]) > cur_mana then
     -- If you want to resort to melee, set AUTOMAGIC_FIGHT to true in rc
     -- First check for enough magic points, then check if below threshold
     if AUTOMAGIC_FIGHT then
       attack(allow_movement)
     else
-      crawl.mpr("You don't have enough magic to cast " ..
-          you.spell_table()[AUTOMAGIC_SPELL_SLOT] .. "!")
+      crawl.mpr(crawl.ui_format("lua.ui", "You don't have enough magic to cast %s!", "You don't have enough magic to cast " ..
+          you.spell_table()[AUTOMAGIC_SPELL_SLOT] .. "!", crawl.ui_name("display.spell", you.spell_table()[AUTOMAGIC_SPELL_SLOT])))
     end
   elseif mp_is_low() then
     if AUTOMAGIC_FIGHT then
       attack(allow_movement)
     else
-      crawl.mpr("You are too depleted to cast spells recklessly!")
+      crawl.mpr(crawl.ui_translate("lua.ui", "You are too depleted to cast spells recklessly!"))
     end
   elseif info.attack_type == 1 then
     spell_attack(x,y)
   elseif allow_movement then
     move_towards(x,y)
   else
-    crawl.mpr("No target in range!")
+    crawl.mpr(crawl.ui_translate("fix.autotarget", "No target in range!"))
   end
 end
 
 -- Set this as a macro to change which spell is cast, in game!
 function am_set_spell()
-  crawl.mpr("Which spell slot to assign to automagic? (Enter to disable, Esc to cancel)", "prompt")
+  crawl.mpr(crawl.ui_translate("lua.ui", "Which spell slot to assign to automagic? (Enter to disable, Esc to cancel)"), "prompt")
   local slot = getkey()
   crawl.clear_messages()
 
   if slot == "escape" then
-    crawl.mpr("Cancelled.")
+    crawl.mpr(crawl.ui_translate("lua.ui", "Cancelled."))
     return false
 
   elseif slot == "null" then
-    crawl.mpr("Deactivated automagic.")
+    crawl.mpr(crawl.ui_translate("lua.ui", "Deactivated automagic."))
     crawl.setopt("automagic_enable = false")
     return false
 
   elseif slot == "invalid" then
-    crawl.mpr("Invalid spell slot.")
+    crawl.mpr(crawl.ui_translate("lua.ui", "Invalid spell slot."))
     return false
 
   else
@@ -307,8 +307,14 @@ function am_set_spell()
     end
     AUTOMAGIC_SPELL_SLOT = slot
     spell_name = you.spell_table()[AUTOMAGIC_SPELL_SLOT] or "no spell currently"
-    crawl.mpr("Automagic" .. message .. " will cast spell in slot " .. slot .. " (" ..
-        spell_name .. ")" .. ".")
+    crawl.mpr(crawl.ui_format("lua.ui", message == ""
+        and "Automagic will cast spell in slot %s (%s)."
+        or "Automagic enabled, will cast spell in slot %s (%s).",
+        "Automagic" .. message .. " will cast spell in slot " .. slot .. " (" ..
+        spell_name .. ")" .. ".", slot,
+        spell_name == "no spell currently"
+        and crawl.ui_name("lua.ui", spell_name)
+        or crawl.ui_name("display.spell", spell_name)))
     return false
 
   end

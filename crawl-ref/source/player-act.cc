@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
+#include "p-display.h"
 
 #include "player.h"
 
@@ -583,6 +585,35 @@ string player::arm_name(bool plural, bool *can_plural) const
  *
  * @return  A string describing the player's UC attack 'weapon'.
  */
+ui_arg p_hand_arg()
+{
+    const ui_arg base = p_clause_arg(_hand_name_singular(true));
+    if (you.form != transformation::eel_hands)
+        return base;
+    const string display = ui_render("p.body", "eel %s", "", {base});
+    return {display, !display.empty()};
+}
+
+ui_arg p_foot_arg()
+{
+    bool plural = true;
+    return p_clause_arg(_foot_name_singular(&plural));
+}
+
+ui_arg p_arm_arg()
+{
+    if (form_changes_anatomy())
+        return p_hand_arg();
+    const ui_arg noun = p_clause_arg(species::arm_name(you.species));
+    const string skin = you.form == transformation::death ? "fossilised"
+        : species::skin_name(you.species, true);
+    if (skin == "fleshy")
+        return noun;
+    const string display = ui_render("p.body", "%s %s", "",
+        {p_clause_arg(skin), noun});
+    return {display, !display.empty()};
+}
+
 string player::unarmed_attack_name(string default_name) const
 {
     if (has_usable_claws(true))
@@ -608,7 +639,7 @@ bool player::fumbles_attack()
     {
         if (x_chance_in_y(3, 8))
         {
-            mpr("Your unstable footing causes you to fumble your attack.");
+            mpr(ui_translate("p.ui", "Your unstable footing causes you to fumble your attack."));
             did_fumble = true;
         }
         if (floundering())
@@ -644,9 +675,9 @@ static bool _god_prevents_berserk_haste(bool intentional)
         return false;
 
     if (intentional)
-        simple_god_message(" forces you to slow down.");
+        simple_god_message(" forces you to slow down.", false, you.religion, ui_render("p.log.0", "%s forces you to slow down.", "", {ui_text_arg("display.god", god_name(you.religion))}));
     else
-        simple_god_message(" protects you from inadvertent hurry.");
+        simple_god_message(" protects you from inadvertent hurry.", false, you.religion, ui_render("p.log.1", "%s protects you from inadvertent hurry.", "", {ui_text_arg("display.god", god_name(you.religion))}));
 
     return true;
 }
@@ -670,25 +701,25 @@ bool player::go_berserk(bool intentional, bool potion)
     if (crawl_state.game_is_hints())
         Hints.hints_berserk_counter++;
 
-    mpr("A red film seems to cover your vision as you go berserk!");
+    mpr(ui_translate("p.ui", "A red film seems to cover your vision as you go berserk!"));
 
     if (you.duration[DUR_FINESSE] > 0)
     {
         you.duration[DUR_FINESSE] = 0; // Totally incompatible.
-        mpr("Your finesse ends abruptly.");
+        mpr(ui_translate("p.ui", "Your finesse ends abruptly."));
     }
 
     if (you.duration[DUR_AFRAID] > 0)
     {
         you.clear_fearmongers();
         you.duration[DUR_AFRAID] = 0; // Too angry to be scared.
-        mpr("Your anger overwhelms your terror!");
+        mpr(ui_translate("p.ui", "Your anger overwhelms your terror!"));
     }
 
     if (!_god_prevents_berserk_haste(intentional))
-        mpr("You feel yourself moving faster!");
+        mpr(ui_translate("p.ui", "You feel yourself moving faster!"));
 
-    mpr("You feel mighty!");
+    mpr(ui_translate("p.ui", "You feel mighty!"));
 
     int dur = (20 + random2avg(19,2)) / 2;
     if (potion && you.has_mutation(MUT_EFFICIENT_METABOLISM))
@@ -743,7 +774,7 @@ bool player::can_go_berserk(bool intentional, bool potion, bool quiet,
     if (!success)
     {
         if (verbose)
-            mpr(msg);
+            mpr(ui_translate("p.reason", msg.c_str()));
         if (reason)
             *reason = msg;
     }

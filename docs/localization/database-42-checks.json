@@ -1,0 +1,31 @@
+{
+  "batch": "database-42",
+  "reviewed_keys": 15,
+  "candidates": 309,
+  "sources": {
+    "randname.txt": {
+      "keys": 11,
+      "candidates": 174
+    },
+    "randbook.txt": {
+      "keys": 4,
+      "candidates": 135
+    }
+  },
+  "canonical_sources_unchanged": true,
+  "python_tests": 32,
+  "native_test_cases": 6,
+  "native_assertions": 29678,
+  "new_appearance_test_seconds": 0.14,
+  "gizmo_test_seconds": 0.66,
+  "tiles_crawl_exe_build": "passed",
+  "unknown_and_english_fallback": "passed",
+  "canonical_generation_rng": "passed: 64 seeds x 5 appearance namespaces",
+  "diff_check": "passed",
+  "gui_test": false,
+  "remaining": [
+    "Full random artefact titles",
+    "Composed spellbook titles and owners",
+    "Other random-name dictionaries"
+  ]
+}

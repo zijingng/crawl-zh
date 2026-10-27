@@ -1,0 +1,25 @@
+{
+  "batch": "database-43",
+  "source": "database/rand_all.txt",
+  "reviewed_keys": 13,
+  "candidates": 523,
+  "unreviewed_keys_excluded": 5,
+  "canonical_source_unchanged": true,
+  "python_tests": 32,
+  "native_test_cases": 8,
+  "native_assertions": 64591,
+  "title_combinations": 11383,
+  "title_test_seconds": 0.232,
+  "all_targeted_tests_seconds": 0.94,
+  "tiles_crawl_exe_build": "passed",
+  "canonical_generation_rng": "passed: 64 seeds x 5 namespaces",
+  "unknown_and_english_fallback": "passed",
+  "diff_check": "passed",
+  "gui_test": false,
+  "remaining": [
+    "5 cross-reference or god-parameter keys in rand_all.txt",
+    "Other random-name dictionaries",
+    "Composed spellbook titles and owners"
+  ],
+  "final_proofread_retest": "passed: 1 case,34853 assertions,0.255 seconds; final crawl.exe built"
+}

@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "m-display.h"
+#include "i18n.h"
 
 #include "mon-act.h"
 
@@ -213,8 +215,12 @@ static void _melee_attack_player(monster &mons, monster* ru_target)
         // attack that target
         mons.target = ru_target->pos();
         mons.foe = ru_target->mindex();
-        mprf(MSGCH_GOD, "You redirect %s's attack!",
-             mons.name(DESC_THE).c_str());
+        mprf(MSGCH_GOD, "%s", ([&]() -> string {
+                const string _m0 = mons.name(DESC_THE);
+                const string _original = make_stringf("You redirect %s's attack!", _m0.c_str());
+                if (!m_display_active("m.log.092", "You redirect %s's attack!")) return _original;
+                return ui_render("m.log.092", "You redirect %s's attack!", _original, {m_actor_arg(mons)});
+            })().c_str());
         fight_melee(&mons, ru_target);
     }
     else
@@ -819,15 +825,23 @@ static bool _handle_swoop_or_flank(monster& mons)
         {
             if (is_swoop)
             {
-                mprf("%s swoops through the air toward %s!",
-                mons.name(DESC_THE).c_str(),
-                defender->name(DESC_THE).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = mons.name(DESC_THE);
+                const string _m1 = defender->name(DESC_THE);
+                const string _original = make_stringf("%s swoops through the air toward %s!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.093", "%s swoops through the air toward %s!")) return _original;
+                return ui_render("m.log.093", "%s swoops through the air toward %s!", _original, {m_actor_arg(mons), m_actor_arg(*defender)});
+            })().c_str());
             }
             else
             {
-                mprf("%s slips past %s!",
-                mons.name(DESC_THE).c_str(),
-                defender->name(DESC_THE).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = mons.name(DESC_THE);
+                const string _m1 = defender->name(DESC_THE);
+                const string _original = make_stringf("%s slips past %s!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.094", "%s slips past %s!")) return _original;
+                return ui_render("m.log.094", "%s slips past %s!", _original, {m_actor_arg(mons), m_actor_arg(*defender)});
+            })().c_str());
             }
         }
         mons.move_to(tracer.path_taken[j+1], MV_DELIBERATE, true);
@@ -916,9 +930,13 @@ static void _handle_boulder_movement(monster& boulder)
     {
         if (you.can_see(boulder))
         {
-            mprf("%s slams into %s and falls apart!",
-                 boulder.name(DESC_THE).c_str(),
-                 article_a(feat_type_name(env.grid(targ))).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = boulder.name(DESC_THE);
+                const string _m1 = article_a(feat_type_name(env.grid(targ)));
+                const string _original = make_stringf("%s slams into %s and falls apart!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.095", "%s slams into %s and falls apart!")) return _original;
+                return ui_render("m.log.095", "%s slams into %s and falls apart!", _original, {m_actor_arg(boulder), m_feature_arg(targ)});
+            })().c_str());
         }
         monster_die(boulder, KILL_NONE, true);
         return;
@@ -971,10 +989,14 @@ static void _handle_boulder_movement(monster& boulder)
             {
                 if (you.can_see(boulder) || you.can_see(*obstruction))
                 {
-                    mprf("%s crushes %s against %s and falls apart!",
-                            boulder.name(DESC_THE).c_str(),
-                            obstruction->name(DESC_THE).c_str(),
-                            blocker_name.c_str());
+                    mprf("%s", ([&]() -> string {
+                const string _m0 = boulder.name(DESC_THE);
+                const string _m1 = obstruction->name(DESC_THE);
+                const string _m2 = blocker_name;
+                const string _original = make_stringf("%s crushes %s against %s and falls apart!", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.096", "%s crushes %s against %s and falls apart!")) return _original;
+                return ui_render("m.log.096", "%s crushes %s against %s and falls apart!", _original, {m_actor_arg(boulder), m_actor_arg(*obstruction), blocker ? m_actor_arg(*blocker) : m_feature_arg(targ + dir)});
+            })().c_str());
                 }
                 do_boulder_impact(boulder, *obstruction, true);
             }
@@ -986,9 +1008,13 @@ static void _handle_boulder_movement(monster& boulder)
             {
                 if (you.can_see(boulder))
                 {
-                    mprf("%s crumbles against %s.",
-                            boulder.name(DESC_THE).c_str(),
-                            obstruction->name(DESC_THE).c_str());
+                    mprf("%s", ([&]() -> string {
+                const string _m0 = boulder.name(DESC_THE);
+                const string _m1 = obstruction->name(DESC_THE);
+                const string _original = make_stringf("%s crumbles against %s.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.097", "%s crumbles against %s.")) return _original;
+                return ui_render("m.log.097", "%s crumbles against %s.", _original, {m_actor_arg(boulder), m_actor_arg(*obstruction)});
+            })().c_str());
                 }
             }
 
@@ -1009,19 +1035,28 @@ static void _handle_boulder_movement(monster& boulder)
         // Abrade boulder by the number of solid tiles we passed by just now
         int solid_count = 0;
         string solid_name;
+        ui_arg solid_display{"", false};
         for (adjacent_iterator ai(boulder.pos()); ai; ++ai)
             if (cell_is_solid(*ai))
             {
                 ++solid_count;
                 if (solid_name.empty())
+                {
                     solid_name = feat_type_name(env.grid(*ai));
+                    solid_display = m_feature_arg(*ai);
+                }
             }
 
         const int self_dmg = roll_dice(solid_count, BOULDER_ABRASION_DAMAGE);
         if (self_dmg > boulder.hit_points)
         {
-            mprf("%s is abraded by the %s and falls apart.",
-                    boulder.name(DESC_THE).c_str(), solid_name.c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = boulder.name(DESC_THE);
+                const string _m1 = solid_name;
+                const string _original = make_stringf("%s is abraded by the %s and falls apart.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.098", "%s is abraded by the %s and falls apart.")) return _original;
+                return ui_render("m.log.098", "%s is abraded by the %s and falls apart.", _original, {m_actor_arg(boulder), solid_display});
+            })().c_str());
             monster_die(boulder, nullptr, true);
         }
         else
@@ -1107,8 +1142,10 @@ static void _handle_hellfire_mortar(monster& mortar)
                     else
                         collides = _and = "";
 
-                    mpr(mortar.name(DESC_THE) + collides + barrier + _and +
-                        " sinks back into the magma.");
+                    const string original = mortar.name(DESC_THE) + collides + barrier + _and + " sinks back into the magma.";
+                    mpr(collides.empty() ? ui_render("m.clause", "%s sinks back into the magma.", original, {m_actor_arg(mortar)})
+                        : ui_render("m.clause", "%s collides with %s and sinks back into the magma.", original,
+                            {m_actor_arg(mortar), actor_at(new_pos) ? m_actor_arg(actor_at(new_pos)) : m_feature_arg(new_pos)}));
                 }
 
                 monster_die(mortar, KILL_NON_ACTOR, NON_MONSTER, true);
@@ -1421,7 +1458,7 @@ static void _mons_fire_wand(monster& mons, spell_type mzap, bolt &beem)
     if (!simple_monster_message(mons, " zaps a wand."))
     {
         if (!silenced(you.pos()))
-            mprf(MSGCH_SOUND, "You hear a zap.");
+            mprf(MSGCH_SOUND, "%s", ui_translate("m.ui", "You hear a zap."));
     }
     mons_cast(&mons, beem, mzap, MON_SPELL_EVOKE, false);
     mons.lose_energy(EUT_ITEM);
@@ -1599,8 +1636,12 @@ bool handle_throw(monster* mons, bolt & beem, bool teleport, bool check_only, bo
         }
         else if (interference == DO_REDIRECT_ATTACK)
         {
-            mprf(MSGCH_GOD, "You redirect %s's attack!",
-                    mons->name(DESC_THE).c_str());
+            mprf(MSGCH_GOD, "%s", ([&]() -> string {
+                const string _m0 = mons->name(DESC_THE);
+                const string _original = make_stringf("You redirect %s's attack!", _m0.c_str());
+                if (!m_display_active("m.log.099", "You redirect %s's attack!")) return _original;
+                return ui_render("m.log.099", "You redirect %s's attack!", _original, {m_actor_arg(*mons)});
+            })().c_str());
             int pfound = 0;
             for (radius_iterator ri(you.pos(),
                 LOS_DEFAULT); ri; ++ri)
@@ -2015,7 +2056,7 @@ void handle_monster_move(monster* mons)
                                            MSGCH_WARN);
                 }
                 else
-                    mprf(MSGCH_SOUND, "You hear a loud crackle.");
+                    mprf(MSGCH_SOUND, "%s", ui_translate("m.ui", "You hear a loud crackle."));
             }
             // Done this way to keep the detonation timer predictable
             mons->speed_increment -= BASELINE_DELAY;
@@ -2449,7 +2490,7 @@ void monster::struggle_against_net()
             if (you.see_cell(pos()))
             {
                 if (!visible_to(&you))
-                    mpr("Something you can't see is thrashing in a web.");
+                    mpr(ui_translate("m.ui", "Something you can't see is thrashing in a web."));
                 else
                     simple_monster_message(*this,
                                         " struggles to get unstuck from the web.");
@@ -2466,7 +2507,7 @@ void monster::struggle_against_net()
     if (you.see_cell(pos()))
     {
         if (!visible_to(&you))
-            mpr("Something wriggles in the net.");
+            mpr(ui_translate("m.ui", "Something wriggles in the net."));
         else
             simple_monster_message(*this, " struggles against the net.");
     }
@@ -2488,11 +2529,15 @@ void monster::struggle_against_net()
         {
             if (visible_to(&you))
             {
-                mprf("The net rips apart, and %s comes free!",
-                     name(DESC_THE).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _original = make_stringf("The net rips apart, and %s comes free!", _m0.c_str());
+                if (!m_display_active("m.log.100", "The net rips apart, and %s comes free!")) return _original;
+                return ui_render("m.log.100", "The net rips apart, and %s comes free!", _original, {m_actor_arg(*this)});
+            })().c_str());
             }
             else
-                mpr("All of a sudden the net rips apart!");
+                mpr(ui_translate("m.ui", "All of a sudden the net rips apart!"));
         }
         stop_being_caught(false);
     }
@@ -2536,9 +2581,12 @@ static void _ancient_zyme_sicken(monster* mons)
         {
             if (!you.duration[DUR_SICKENING])
             {
-                mprf(MSGCH_WARN, "You feel yourself growing ill in the "
-                                 "presence of %s.",
-                    mons->name(DESC_THE).c_str());
+                mprf(MSGCH_WARN, "%s", ([&]() -> string {
+                const string _m0 = mons->name(DESC_THE);
+                const string _original = make_stringf("You feel yourself growing ill in the presence of %s.", _m0.c_str());
+                if (!m_display_active("m.log.101", "You feel yourself growing ill in the presence of %s.")) return _original;
+                return ui_render("m.log.101", "You feel yourself growing ill in the presence of %s.", _original, {m_actor_arg(*mons)});
+            })().c_str());
             }
 
             you.duration[DUR_SICKENING] += (2 + random2(4)) * BASELINE_DELAY;
@@ -2602,9 +2650,13 @@ static void _post_monster_move(monster* mons)
                     && env.grid(*ai) != DNGN_FLOOR
                     && you.see_cell(*ai))
                 {
-                    mprf("%s watery aura covers %s.",
-                         apostrophise(mons->name(DESC_THE)).c_str(),
-                         feature_description_at(*ai, false, DESC_THE).c_str());
+                    mprf("%s", ([&]() -> string {
+                const string _m0 = apostrophise(mons->name(DESC_THE));
+                const string _m1 = feature_description_at(*ai, false, DESC_THE);
+                const string _original = make_stringf("%s watery aura covers %s.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.102", "%s watery aura covers %s.")) return _original;
+                return ui_render("m.log.102", "%s watery aura covers %s.", _original, {m_actor_arg(*mons), m_feature_arg(*ai)});
+            })().c_str());
                 }
                 temp_change_terrain(*ai, DNGN_SHALLOW_WATER,
                                     random_range(50, 80),
@@ -2739,8 +2791,12 @@ void print_mons_left_view_messages()
             // The monster should be visible to be in this queue.
             if (in_bounds(m->pos()) && !you.see_cell(m->pos()))
             {
-                mprf(MSGCH_PLAIN, "%s leaves your sight.",
-                     m->name(DESC_THE, true).c_str());
+                mprf(MSGCH_PLAIN, "%s", ([&]() -> string {
+                const string _m0 = m->name(DESC_THE, true);
+                const string _original = make_stringf("%s leaves your sight.", _m0.c_str());
+                if (!m_display_active("m.log.103", "%s leaves your sight.")) return _original;
+                return ui_render("m.log.103", "%s leaves your sight.", _original, {m_actor_arg(*m)});
+            })().c_str());
             }
         }
     }
@@ -2859,7 +2915,7 @@ static bool _jelly_divide(monster& parent)
     if (!simple_monster_message(parent, " splits in two!")
         && (player_can_hear(parent.pos()) || player_can_hear(child->pos())))
     {
-        mprf(MSGCH_SOUND, "You hear a squelching noise.");
+        mprf(MSGCH_SOUND, "%s", ui_translate("m.ui", "You hear a squelching noise."));
     }
 
     if (crawl_state.game_is_arena())
@@ -2911,8 +2967,12 @@ static bool _monster_eat_item(monster* mons)
 
         if (eaten && !shown_msg && player_can_hear(mons->pos()))
         {
-            mprf(MSGCH_SOUND, "You hear a%s slurping noise.",
-                 you.see_cell(mons->pos()) ? "" : " distant");
+            mprf(MSGCH_SOUND, "%s", ([&]() -> string {
+                const string _m0 = you.see_cell(mons->pos()) ? "" : " distant";
+                const string _original = make_stringf("You hear a%s slurping noise.", _m0.c_str());
+                if (!m_display_active("m.log.104", "You hear a%s slurping noise.")) return _original;
+                return ui_render("m.log.104", "You hear a%s slurping noise.", _original, {m_clause_arg(_m0)});
+            })().c_str());
             shown_msg = true;
         }
 
@@ -3061,11 +3121,22 @@ static void _mons_open_door(monster& mons, const coord_def &pos)
 
         if (!you.can_see(mons))
         {
-            mprf("Something unseen %s", open_str.c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = open_str;
+                const string _original = make_stringf("Something unseen %s", _m0.c_str());
+                if (!m_display_active("m.log.105", "Something unseen %s")) return _original;
+                return ui_render("m.log.105", "Something unseen %s", _original, {m_sentence_arg(broken ? "breaks down %s%s" : "opens %s%s", { *adj ? ui_text_arg("d.feature.door", adj) : ui_arg{"", true}, ui_text_arg("d.feature.door", noun)})});
+            })().c_str());
             interrupt_activity(activity_interrupt::sense_monster);
         }
         else
-            mprf("%s %s", mons.name(DESC_A).c_str(), open_str.c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = mons.name(DESC_A);
+                const string _m1 = open_str;
+                const string _original = make_stringf("%s %s", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.106", "%s %s")) return _original;
+                return ui_render("m.log.106", "%s %s", _original, {m_actor_arg(mons), m_sentence_arg(broken ? "breaks down %s%s" : "opens %s%s", { *adj ? ui_text_arg("d.feature.door", adj) : ui_arg{"", true}, ui_text_arg("d.feature.door", noun)})});
+            })().c_str());
 
         update_monsters_in_view();
     }
@@ -3540,8 +3611,12 @@ static void _jelly_grows(monster& mons)
 {
     if (player_can_hear(mons.pos()))
     {
-        mprf(MSGCH_SOUND, "You hear a%s slurping noise.",
-             you.see_cell(mons.pos()) ? "" : " distant");
+        mprf(MSGCH_SOUND, "%s", ([&]() -> string {
+                const string _m0 = you.see_cell(mons.pos()) ? "" : " distant";
+                const string _original = make_stringf("You hear a%s slurping noise.", _m0.c_str());
+                if (!m_display_active("m.log.107", "You hear a%s slurping noise.")) return _original;
+                return ui_render("m.log.107", "You hear a%s slurping noise.", _original, {m_clause_arg(_m0)});
+            })().c_str());
     }
 
     const int avg_hp = mons_avg_hp(mons.type);
@@ -3683,7 +3758,7 @@ static void _maybe_launch_opportunity_attack(monster &mon, coord_def orig_pos)
     const string msg = make_stringf(" attacks as %s pursue%s you!",
                                     mon.pronoun(PRONOUN_SUBJECTIVE).c_str(),
                                     mon.pronoun_plurality() ? "" : "s");
-    simple_monster_message(mon, msg.c_str());
+    m_monster_event(mon, msg.c_str(), "%s attacks as %s pursue%s you!", {m_actor_arg(mon), ui_arg{"", true}, ui_arg{"", true}});
     const int old_energy = mon.speed_increment;
     _launch_opportunity_attack(mon);
     // Refund most of the energy from the attack - for normal attack
@@ -3748,7 +3823,7 @@ static bool _do_move_monster(monster& mons, const coord_def& delta)
 
                 if (!you.can_see(mons))
                 {
-                    mpr("The door bursts into shrapnel!");
+                    mpr(ui_translate("m.ui", "The door bursts into shrapnel!"));
                     interrupt_activity(activity_interrupt::sense_monster);
                 }
                 else
@@ -3776,7 +3851,7 @@ static bool _do_move_monster(monster& mons, const coord_def& delta)
 
                 if (!you.can_see(mons))
                 {
-                    mpr("The door mysteriously vanishes.");
+                    mpr(ui_translate("m.ui", "The door mysteriously vanishes."));
                     interrupt_activity(activity_interrupt::sense_monster);
                 }
                 else
@@ -3821,7 +3896,12 @@ static bool _monster_move(monster* mons, coord_def& delta)
 
     // TODO: move the below logic out of move code.
     if (one_chance_in(10) && you.can_see(*mons) && mons->berserk())
-        mprf(MSGCH_TALK_VISUAL, "%s rages.", mons->name(DESC_THE).c_str());
+        mprf(MSGCH_TALK_VISUAL, "%s", ([&]() -> string {
+                const string _m0 = mons->name(DESC_THE);
+                const string _original = make_stringf("%s rages.", _m0.c_str());
+                if (!m_display_active("m.log.108", "%s rages.")) return _original;
+                return ui_render("m.log.108", "%s rages.", _original, {m_actor_arg(*mons)});
+            })().c_str());
     // Look, this is silly.
     if (one_chance_in(5)
         && mons->has_ench(ENCH_FRENZIED)
@@ -4004,9 +4084,13 @@ static bool _monster_move(monster* mons, coord_def& delta)
             if (you.see_cell(target))
             {
                 const bool actor_visible = you.can_see(*mons);
-                mprf("%s knocks down a tree!",
-                        actor_visible?
-                        mons->name(DESC_THE).c_str() : "Something");
+                mprf("%s", ([&]() -> string {
+                const string _m0 = actor_visible?
+                        mons->name(DESC_THE).c_str() : "Something";
+                const string _original = make_stringf("%s knocks down a tree!", _m0.c_str());
+                if (!m_display_active("m.log.109", "%s knocks down a tree!")) return _original;
+                return ui_render("m.log.109", "%s knocks down a tree!", _original, {actor_visible ? m_actor_arg(*mons) : ui_text_arg("log.actor", "Something")});
+            })().c_str());
                 noisy(25, target);
             }
             else
@@ -4015,9 +4099,9 @@ static bool _monster_move(monster* mons, coord_def& delta)
         // Dissolution dissolves walls.
         else if (player_can_hear(target))
         {
-            mprf(MSGCH_SOUND, mons->type == MONS_DISSOLUTION
+            mprf(MSGCH_SOUND,"%s", ui_translate("m.ui", (mons->type == MONS_DISSOLUTION
                                 ? "You hear a sizzling sound."
-                                : "You hear a grinding noise.");
+                                : "You hear a grinding noise.")));
         }
     }
 

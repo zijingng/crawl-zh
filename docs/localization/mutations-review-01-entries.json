@@ -1,0 +1,6726 @@
+[
+  {
+    "key": "tough skin mutation",
+    "source_sha256": "f53c6eb3e74537bcb5ca58dbbb0ab79643ced00061f08135d901a27adc116a33",
+    "old_translation": "你的表皮已经硬化，这会提供少量保护。这个变异每升一级会加1点防护。\n",
+    "translation": "你的表皮变得坚韧，提供少量防护。此变异每级使护甲值增加1点。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "rot",
+        "translation": "腐烂"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "shaggy fur mutation",
+    "source_sha256": "cb2c6b9e8c8d1b1a66114b652088729498122242c822b6c9fbd1dfe0bf59876e",
+    "old_translation": "你被皮毛覆盖，这会提供少量保护。这个变异每升一级会加1点防护。\n这个变异达到第三级会提供寒抗。\n",
+    "translation": "你的身体覆盖着毛皮，提供少量防护。此变异每级使护甲值增加1点；第三级还提供寒冷抗性。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "rot",
+        "translation": "腐烂"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "repulsion field mutation",
+    "source_sha256": "a7596c3395c61aa0c0f3d04af7f5543edc8c85eb12ad6a1d503a6ef758cc5f5e",
+    "old_translation": "你被排斥力场围绕，这会提供少量闪避。\n这个变异每升一级会提供更多闪避。\n这个变异达到第三级也会使射向你的远程攻击的命中率减半。\n",
+    "translation": "排斥力场环绕着你，提供少量闪避。此变异每级都会提高闪避值；第三级还能偏转飞射物，大幅提高你对这类攻击的闪避值。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "evasion",
+        "translation": "闪避值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "icy blue scales mutation",
+    "source_sha256": "78965e983cfec24cd9d635e4a3c247f3b7b9a36a0461e889881081f0c7cf9e1f",
+    "old_translation": "你被蓝色鳞片覆盖，这会提供少量保护。这个变异每升一级会提供更多防护。\n这个变异达到第三级会提供寒抗。\n",
+    "translation": "你的身体覆盖着蓝色鳞片，提供少量防护。此变异每级都会提高护甲值；第三级还提供寒冷抗性。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "rot",
+        "translation": "腐烂"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "molten scales mutation",
+    "source_sha256": "588d331f726ab094834432ee3369c9785d7f2c87674efd576dcfadd5b8cfe88b",
+    "old_translation": "你被熔融的鳞片覆盖，这会提供少量保护。这个变异每升一级会提供更多防护。\n这个变异达到第三级会提供火抗。\n",
+    "translation": "你的身体覆盖着熔融鳞片，提供少量防护。此变异每级都会提高护甲值；第三级还提供火焰抗性。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "rot",
+        "translation": "腐烂"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "slimy green scales mutation",
+    "source_sha256": "bc5ddc2e1c2cd0d673374e0cf869f9b98508b93cf81e6ae2ae11991405b81d57",
+    "old_translation": "你被绿色鳞片覆盖，这会提供少量保护。这个变异每升一级会提供更多防护。\n这个变异达到第三级会提供毒抗。\n",
+    "translation": "你的身体覆盖着绿色鳞片，提供少量防护。此变异每级都会提高护甲值；第三级还提供毒素抗性。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "rot",
+        "translation": "腐烂"
+      },
+      {
+        "term": "poison",
+        "translation": "毒"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "yellow scales mutation",
+    "source_sha256": "f53a55788a254edbe9913d20138b6e2de2de75ff0a0402fc8d0158c2a0fe5576",
+    "old_translation": "你被黄色鳞片覆盖，这会提供少量保护。这个变异每升一级会提供更多防护。\n这个变异达到第三级会提供酸抗和腐蚀抗。\n",
+    "translation": "你的身体覆盖着黄色鳞片，提供少量防护。此变异每级都会提高护甲值；第三级还提供酸液抗性和腐蚀抗性。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "rot",
+        "translation": "腐烂"
+      },
+      {
+        "term": "corrosion",
+        "translation": "腐蚀"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "thin metallic scales mutation",
+    "source_sha256": "798913b54ddb6a47d756eb4a0dee23ce1cb3ccad42358bd5da624de7b20d4821",
+    "old_translation": "你被金属鳞片覆盖，这会提供少量保护。\n这个变异每升一级会提供更多防护。这个变异达到第三级会提供电抗。\n",
+    "translation": "你的身体覆盖着金属鳞片，提供少量防护。此变异每级都会提高护甲值；第三级还提供电击抗性。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "rot",
+        "translation": "腐烂"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "rugged brown scales mutation",
+    "source_sha256": "8674366f154ec08bd708705c853ddea7922bb8653b6f29c57a4e33d4dafa6313",
+    "old_translation": "你被褐色鳞片覆盖，这会提供少量保护。\n这个变异每升一级会加1点防护，并会稍稍提升你的生命力。\n",
+    "translation": "你的身体覆盖着棕色鳞片，提供少量防护。此变异每级使护甲值增加1点，并略微提高生命值。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "rot",
+        "translation": "腐烂"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "sharp scales mutation",
+    "source_sha256": "a7ac3d636b2a97709046cdd36f66518c0fdcbf89a97e75908fc858eece7a5817",
+    "old_translation": "你被尖锐的鳞片覆盖，这会提供少量保护。这个变异每升一级会加1点防护和1点杀戮，\n这会提升你在近身和远程攻击中的命中率和伤害。\n",
+    "translation": "你的身体覆盖着尖锐鳞片，提供少量防护。此变异每级使护甲值和杀戮各增加1点，提高近战及远程攻击的命中率和伤害。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "accuracy",
+        "translation": "命中率"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "rot",
+        "translation": "腐烂"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "iridescent scales mutation",
+    "source_sha256": "96a950aa80fcd1a88130b4e89dbcca40cb38aa2f04100693a662e3c691a4fda4",
+    "old_translation": "你被彩色鳞片覆盖，这会提供少量保护。这个变异每升一级会加2点防护。\n",
+    "translation": "你的身体覆盖着虹彩鳞片，提供少量防护。此变异每级使护甲值增加2点。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "rot",
+        "translation": "腐烂"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "large bone plates mutation",
+    "source_sha256": "56f6a4edd4c6c8f22c68cf90f2d47a66e7b54b4298a66e8396205dc5ff20a8db",
+    "old_translation": "你被大骨板保护着，这会提供少量格挡。这个变异每升一级会提供更多格挡。\n",
+    "translation": "你的身体覆盖着骨板，提供少量格挡。此变异每级都会提高格挡值。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "Shield",
+        "translation": "格挡值/盾牌/保护"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "thin skeletal structure mutation",
+    "source_sha256": "5b6b85ada475847fb015fb3142e4916420f6c6bd95e9ec66f985b380b19f564e",
+    "old_translation": "你的骨头变得轻巧、多孔。这个变异每升一级会加2点敏捷和潜行。\n",
+    "translation": "你的骨骼轻巧而多孔。此变异每级使敏捷增加2点，并提高潜行能力。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Dexterity",
+        "translation": "敏捷/灵巧"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "stealth",
+        "translation": "潜行"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "strong mutation",
+    "source_sha256": "38a5511eef90d358c91a7972ae8a60df500547538a658f5b17d625e853cb842b",
+    "old_translation": "你的肌肉变得异常强壮。这个变异每升一级会加4点力量，\n但额外的肌肉会让你的动作和思维变得迟钝，每升一级，你的智力和敏捷会减1点。\n",
+    "translation": "你的肌肉变得异常强壮。此变异每级使力量增加4点，但额外的肌肉会拖慢动作和思维，使智力和敏捷各降低1点。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Dexterity",
+        "translation": "敏捷/灵巧"
+      },
+      {
+        "term": "Intelligence",
+        "translation": "智力/智慧/心智"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "Strength",
+        "translation": "力量/强度/威力"
+      },
+      {
+        "term": "Slow",
+        "translation": "缓慢术/减速/缓慢/迟缓"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "clever mutation",
+    "source_sha256": "6f7a52128167bfa5175be18c65a349a99d26122beb8c24ebd6b03e9af83951ae",
+    "old_translation": "你的心智变得异常敏锐。这个变异每升一级会加4点智力，\n但所有的血液都供向了头部，因而削弱了你的体质，\n每升一级，你的力量和敏捷会减1点。\n",
+    "translation": "你的头脑变得异常敏锐。此变异每级使智力增加4点，但大量血液流向头部会削弱体质，使力量和敏捷各降低1点。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Dexterity",
+        "translation": "敏捷/灵巧"
+      },
+      {
+        "term": "Intelligence",
+        "translation": "智力/智慧/心智"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "Strength",
+        "translation": "力量/强度/威力"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "agile mutation",
+    "source_sha256": "0fe165c130135ce9d8ffbd8aae5e7b354608de617a55eee18391eaf2a3164747",
+    "old_translation": "你的反应变得异常迅捷。这个变异每升一级会加4点敏捷，\n但你身体的其他部分无法跟上你的速度，每升一级，你的力量和智力会减1点。\n",
+    "translation": "你的反应变得异常迅速。此变异每级使敏捷增加4点，但身体的其他部分跟不上这种速度，使力量和智力各降低1点。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Dexterity",
+        "translation": "敏捷/灵巧"
+      },
+      {
+        "term": "Intelligence",
+        "translation": "智力/智慧/心智"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "Strength",
+        "translation": "力量/强度/威力"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "weak mutation",
+    "source_sha256": "acc28f2edabbf04690e5b0b1b52b32df202019b99f37ac1856c186be210dfec5",
+    "old_translation": "你的肌肉变得异常虚弱。这个变异每升一级会减2点力量。\n",
+    "translation": "你的肌肉变得异常无力。此变异每级使力量降低3点。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "Strength",
+        "translation": "力量/强度/威力"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "dopey mutation",
+    "source_sha256": "cfb595cace0982df11fcf5d63fa140ac42206bb5812b07388234ec66b7c3f298",
+    "old_translation": "你的心智变得异常愚钝。这个变异每升一级会减2点智力。\n",
+    "translation": "你的头脑变得异常迟钝。此变异每级使智力降低3点。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Intelligence",
+        "translation": "智力/智慧/心智"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "clumsy mutation",
+    "source_sha256": "3ab8b18fbdc0199ee96903bd311e5ce15ebf4ff2bc0103e7b0d71c55e916d6ae",
+    "old_translation": "你的反应变得异常笨拙。这个变异每升一级会减2点敏捷。\n",
+    "translation": "你的反应变得异常笨拙。此变异每级使敏捷降低3点。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Dexterity",
+        "translation": "敏捷/灵巧"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "high mp mutation",
+    "source_sha256": "da9f7fe6cb0d8fb078fb8922a7adb9e27f65cee5a8194439960e4d7270de585f",
+    "old_translation": "你的魔力储备会增加。这个变异每升一级会加10点魔力。\n",
+    "translation": "你的魔力储备有所增加。此变异每级使魔法值增加10%。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "low mp mutation",
+    "source_sha256": "1e8f4631894e97eeffcb6b0ac6ffcbe6d6de51c7f1a3799193aad6e470c28dfb",
+    "old_translation": "你的魔力储备会减少。这个变异每升一级会减10点魔力。\n",
+    "translation": "你的魔力容量较低。此变异每级使魔法值降低10%。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "efficient magic mutation",
+    "source_sha256": "a67977690dd974329dd76e3f4cfe935a124d93651cecff9b2cc61b87fe8130e7",
+    "old_translation": "",
+    "translation": "你天生理解魔力的流向，并能更精准地控制它，从而更高效地施法。此变异每级使法术消耗减少1点魔法值，但最低仍需消耗1点。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "ettin",
+        "translation": "双头巨人"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "spell",
+        "translation": "法术"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "ephemeral shield mutation",
+    "source_sha256": "4c977bf91741770763060cf10aa148dba52bc7a5e5d3204f54d99b091f20d816",
+    "old_translation": "",
+    "translation": "每当你使用有任何消耗的法术或神祇能力时，逸散的魔力或神力都会形成护盾，保护你。法术的魔力只能让护盾维持片刻，神祇能力的神力则能让它多维持一小段时间。\n",
+    "glossary_hits": [
+      {
+        "term": "Shield",
+        "translation": "格挡值/盾牌/保护"
+      },
+      {
+        "term": "spell",
+        "translation": "法术"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "camouflage mutation",
+    "source_sha256": "7e7e7095f3fd540af049865dd27627c5789f5d60f3563e0d8114f9416617e4a4",
+    "old_translation": "你的皮肤会根据周围环境而变色。这个变异每升一级会提升潜行。\n",
+    "translation": "你的皮肤会改变颜色以融入周围环境。此变异每级都会提高潜行能力。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "stealth",
+        "translation": "潜行"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "passive freeze mutation",
+    "source_sha256": "4f29507e1979a420ba771b02ff7c6d898758a5d7c0fb5ab60992fea3187d9b2b",
+    "old_translation": "近战攻击你的敌人会被冻结，并受到伤害。\n如果敌人造成了任何伤害，这个效果就必会触发。\n",
+    "translation": "近战击中你的敌人会被冻结并受到伤害。只要敌人的攻击造成了伤害，此效果就必定触发。\n",
+    "glossary_hits": [
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "time-warped blood mutation",
+    "source_sha256": "7c09e212f464c7491de4ae498568915f42addd49c136f694040b3bb76691b56f",
+    "old_translation": "",
+    "translation": "你的血液已脱离正常时间流。每当生命值降至上限的50%以下，流出的鲜血就会以奇异的方式涌动，使视野内最强大的盟友加速；此变异每级可影响两名盟友。触发后，必须等生命值完全恢复，血液才能再次扭曲时间。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "angel",
+        "translation": "天使"
+      },
+      {
+        "term": "max",
+        "translation": "最大值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "Oni",
+        "translation": "鬼人"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "Sting",
+        "translation": "毒刺"
+      },
+      {
+        "term": "elf",
+        "translation": "精灵"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "efficient metabolism mutation",
+    "source_sha256": "20bb547fb3e158492251e53ef2f6374a9afc177e1ed5ce31bbb73cb8026fc9b3",
+    "old_translation": "",
+    "translation": "你改变后的消化系统能从某些药水中获取更多效力，使通过药水获得的所有状态效果持续时间翻倍。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "potion",
+        "translation": "药水"
+      },
+      {
+        "term": "ration",
+        "translation": "口粮"
+      },
+      {
+        "term": "Dig",
+        "translation": "挖掘术"
+      },
+      {
+        "term": "rat",
+        "translation": "老鼠"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "protean grace mutation",
+    "source_sha256": "56eecb834015eaeaa6a2057a3102db6ada3096e111cfb71d4b6d2c65a7e80786",
+    "old_translation": "",
+    "translation": "你的四肢充满塑形之力，引导着每一个动作。除本变异外，你每拥有一项非天生变异，就额外获得1点闪避值和1点杀戮加成，最多计入7项，提高近战及远程攻击的命中率和伤害。即使这些变异被其他形态压制，此加成仍然有效。\n\n你目前从此变异获得的加成为\n{{\n    num = math.min(you.how_mutated(true, false, false, true, false), 7) - 1\n    return \"+\" .. num .. \"点闪避值和+\" .. num .. \"点杀戮。\"\n}}\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "accuracy",
+        "translation": "命中率"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "mutations",
+        "translation": "变异"
+      },
+      {
+        "term": "rF",
+        "translation": "火抗"
+      },
+      {
+        "term": "Ru",
+        "translation": "入"
+      },
+      {
+        "term": "turn",
+        "translation": "回合/转向/变成/轮流"
+      },
+      {
+        "term": "rN",
+        "translation": "负能量抗性"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      },
+      {
+        "term": "hog",
+        "translation": "猪"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "feed off suffering mutation",
+    "source_sha256": "c769b656ac25ab4c6a92c0782bfc612592e105641d0b9b6ce3f16f40b01587da",
+    "old_translation": "",
+    "translation": "一股邪恶却令人振奋的能量充斥着你的灵魂，与死亡时释放的某些能量产生共鸣。视野内中毒或受到吸能的敌人死亡时，你有机会汲取少量生命力和魔力。此变异每级都会提高触发概率和汲取量。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "drain",
+        "translation": "吸能/吸取/消耗"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "rC",
+        "translation": "冰抗"
+      },
+      {
+        "term": "vile",
+        "translation": "噩"
+      },
+      {
+        "term": "poison",
+        "translation": "毒"
+      },
+      {
+        "term": "rain",
+        "translation": "雨水"
+      },
+      {
+        "term": "orc",
+        "translation": "兽人"
+      },
+      {
+        "term": "rat",
+        "translation": "老鼠"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "lucky mutation",
+    "source_sha256": "19202a90b40f409eef7910e858251808398af4b8e8544f0c64e06229b744d45f",
+    "old_translation": "",
+    "translation": "你有着不可思议的眼光，能发现别人视为普通物品的隐藏特性。每当你首次遇到地上的一件新物品，都有极小概率发现它其实是一件神器。此变异每级都会提高这一概率。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "artefact",
+        "translation": "神器"
+      },
+      {
+        "term": "Dis",
+        "translation": "冥府"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "Might",
+        "translation": "强力术/可能/力量"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "reckless mutation",
+    "source_sha256": "b54a0372d1248414d1098c1c45995b22e29d963c4b7b3b6cc6520a7e3398855b",
+    "old_translation": "",
+    "translation": "你的鲁莽使格挡值减半，但使用双手近战武器造成的伤害提高15%。\n",
+    "glossary_hits": [
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "horns mutation",
+    "source_sha256": "2ca887660b144493c3a6a8d08bfbbcd8562826e7995a67b9ac7c5bf4a2219abe",
+    "old_translation": "你的头上长出角，在近战时会尝试顶伤敌人，但无法戴头盔。这个变异每升一级，\n就会增加你顶撞的攻击力。这个变异达到第三级，你将无法戴任何帽子。\n",
+    "translation": "你的头上长着犄角，近战攻击时可尝试顶刺敌人，但无法佩戴头盔。此变异每级都会提高顶刺伤害；第三级会使你无法佩戴任何头部装备。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "rN",
+        "translation": "负能量抗性"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "beak mutation",
+    "source_sha256": "799d44aa295c490e43eb35f4064caa8ae309555bf1d47847cba59b41be6ec02b",
+    "old_translation": "你的嘴成了鸟喙，在近战时能够啄击敌人，但无法戴头盔。\n",
+    "translation": "你的嘴变成了鸟喙，近战攻击时可以啄击敌人，但无法佩戴头盔。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "fangs mutation",
+    "source_sha256": "24124e1b3e1b1952c446664020b95a6f4024bea21bfe022cb209025bd1916613",
+    "old_translation": "你长出锋利的牙齿，在近战时能够撕咬敌人。\n这个变异每升一级，你的牙齿就会更尖、更长、更强。\n",
+    "translation": "你长着尖牙，近战攻击时可以噬咬敌人。此变异每级都会使牙齿更加尖锐、修长和强壮。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "acidic bite mutation",
+    "source_sha256": "a1af72335e92705770a4abe84ceacf47440e1d9979695a51158c8b7c274fc7dc",
+    "old_translation": "你有了酸性唾液，在近战时能够咬伤敌人，并对其造成腐蚀。\n",
+    "translation": "你的唾液具有酸性，近战攻击时可以噬咬敌人并使其受到腐蚀。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "corrosion",
+        "translation": "腐蚀"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "antimagic bite mutation",
+    "source_sha256": "52d08858501711b65fc77f3ab90ecb9b020cc92b57903229cfde54912d7ddd70",
+    "old_translation": "你对魔法有着渴求，在近战时能够咬伤敌人。\n这可以恢复你的魔力并扰乱使用魔法的敌人，有时会让他们无法行动。\n",
+    "translation": "你渴求魔力，近战攻击时可以噬咬敌人，恢复自己的魔力储备，并扰乱拥有魔法能力的敌人，有时会使其无法行动。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Dis",
+        "translation": "冥府"
+      },
+      {
+        "term": "Ru",
+        "translation": "入"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "claws mutation",
+    "source_sha256": "18279975a96625f9967be6095719cc17c6a00ebbdead113df35477cfb9c19aee",
+    "old_translation": "你长出锋利的指甲，如果不戴手套，会增加主手的徒手攻击强度。\n如果你的副手没有装备东西，也会增强其拳击强度。这个变异每升一级，\n你的指甲就会更尖、更长、更强。这个变异达到第三级，你将无法戴手套。\n",
+    "translation": "你的指甲十分锋利，未戴手套时会增强主手徒手攻击。副手空闲时，副手拳击也会增强。此变异每级都会使指甲更加尖锐、修长和强壮；第三级会使你无法佩戴手套。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "gloves",
+        "translation": "手套"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "Strength",
+        "translation": "力量/强度/威力"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "demonic touch mutation",
+    "source_sha256": "e45ccafb8c02ec336794bb463e3710f3a16c7b8437a2f0e9ddeacaac8f316cdd",
+    "old_translation": "你的手散发着邪恶的能量，只要你的副手没有装备东西，\n在近战时就能造成无法抵御的伤害。你的触碰攻击会造成无视护甲的伤害，\n并且这个变异每升一级会增加更多攻击力。这个变异达到第三级，\n能削弱受到你触碰攻击的敌人的意志力，但你将无法戴手套。\n",
+    "translation": "你的双手闪耀着邪恶能量，只要副手空闲，就能在近战攻击时造成无法抵抗的伤害。这种触碰攻击无视防具，此变异每级都会提高其伤害。第三级会使你无法佩戴手套，并使触碰攻击降低敌人的意志。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Armour",
+        "translation": "防具/护身"
+      },
+      {
+        "term": "gloves",
+        "translation": "手套"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "willpower",
+        "translation": "意志"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "hooves mutation",
+    "source_sha256": "c8a20e782ecebd7fbcbf00a9e079da2d0c45d347e6b0e2d70606aeded6bb12c0",
+    "old_translation": "你长出蹄子，如果不穿靴子，在近战时能够踢击敌人。这个变异每升一级，\n你的蹄子就会更硬、更强。这个变异达到第三级，你将无法穿靴子。\n",
+    "translation": "你长着蹄足，未穿靴子时可以在近战攻击中踢击敌人。此变异每级都会使蹄足更加坚硬有力；第三级会使你无法穿戴靴子。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "boots",
+        "translation": "靴子"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "talons mutation",
+    "source_sha256": "207bbe0b25a138f73d398bb8bd2b1a4c54008bc45eda7dffa2e2e4e1bc14107a",
+    "old_translation": "你长出锋利的趾甲，如果不穿靴子，在近战时能够踢击敌人。这个变异每升一级，\n你的趾甲就会更尖、更长、更强。这个变异达到第三级，你将无法穿靴子。\n",
+    "translation": "你的脚趾甲十分锋利，未穿靴子时可以在近战攻击中踢击敌人。此变异每级都会使趾爪更加尖锐、修长和强壮；第三级会使你无法穿戴靴子。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "boots",
+        "translation": "靴子"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "antennae mutation",
+    "source_sha256": "1ee3443f8f43d40c80fcff2e5e7e2edda302683fb5b51c219cd67e8275d29a82",
+    "old_translation": "你长出触角，可以感知周围的怪物，但无法戴头盔。这个变异每升一级，\n你会感知到更远的怪物。这个变异达到第三级，\n能看到隐形的怪物，但你将无法戴任何帽子。\n",
+    "translation": "你长着触角，能够感知附近的怪物，但无法佩戴头盔。此变异每级都会扩大感知范围；第三级会使你无法佩戴任何头部装备，并赋予你看破隐形能力。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "See Invisible",
+        "translation": "看破隐形"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "tentacle spike mutation",
+    "source_sha256": "7c9844058ed6fefc8576a047cd6c7db66847450d7ec55ef280c2747d2cf41b43",
+    "old_translation": "你长出一个带有尖刺的触手，在近战时能够刺穿敌人。\n这个变异每升一级，你的刺就会更尖、更长、更强。\n",
+    "translation": "你的一条触手长着尖刺，近战攻击时可以刺穿敌人。此变异每级都会使尖刺更加尖锐、修长和强壮。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "rC",
+        "translation": "冰抗"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      },
+      {
+        "term": "tentacle",
+        "translation": "触手"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "naga tail mutation",
+    "source_sha256": "daaa56b6d6a5554c457fa1a17a017d336c66d75f290ba643e0f342f3e3b116aa",
+    "old_translation": "你的脚变成一条长长的蛇状尾巴。这个变异达到第二级，\n你在近战时可以用尾巴束缚敌人。你的尾巴一次只能束缚一个敌人，\n在这个变异等级，每次攻击都会尝试开始或再次进行束缚。\n成功率主要取决于敏捷、格斗技能和任何杀戮加成。\n",
+    "translation": "你没有双脚，而是长着一条蛇形长尾。这让你在水中保持稳定，但移动速度远慢于大多数种族。\n\n此变异达到第二级后，你可以在近战攻击时用尾巴绞缠敌人。尾巴一次只能绞缠一名敌人，此等级下每次攻击都会发起或延续一次绞缠尝试。成功概率主要取决于敏捷、战斗技能和杀戮加成。\n",
+    "glossary_hits": [
+      {
+        "term": "ability",
+        "translation": "能力"
+      },
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Dexterity",
+        "translation": "敏捷/灵巧"
+      },
+      {
+        "term": "Fighting",
+        "translation": "战斗/作战/格斗"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "skill",
+        "translation": "技能"
+      },
+      {
+        "term": "species",
+        "translation": "种族"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "slaying",
+        "translation": "杀戮"
+      },
+      {
+        "term": "Slow",
+        "translation": "缓慢术/减速/缓慢/迟缓"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      },
+      {
+        "term": "snake",
+        "translation": "蛇"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "stinger mutation",
+    "source_sha256": "cf7d52f8532587362845271282371d5aeeec736fbec7289ae138b93e3f095a2d",
+    "old_translation": "你的尾部长出一个毒刺，在近战时能够蛰刺敌人。\n这个变异每升一级，你的螫刺就会更尖、更长、更强。\n",
+    "translation": "你的尾尖长着毒刺，近战攻击时可以螫刺敌人。此变异每级都会使毒刺更加尖锐、修长和强壮。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Sting",
+        "translation": "毒刺"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "weakness stinger mutation",
+    "source_sha256": "521cc9c4900b3b27ca86aabd43d446d1da0e01ec44c388b0a2c5582fe3723af2",
+    "old_translation": "你长出一条细长的红色尾巴，在近战时能够扫打敌人。\n这个变异每升一级会增强你的尾巴的力量，并使其变成尖锐的螫刺。\n这个变异达到第三级，那些不幸被螫刺击中的怪物会被短暂虚弱，\n但你将无法穿戴披风或围巾。\n",
+    "translation": "你长着一条细长的橙色尾巴，近战攻击时可以用它攻击敌人。此变异每级都会增强尾巴，令其逐渐变成锋利的螫刺。第三级会使你无法佩戴斗篷或围巾，并使螫刺短暂削弱被击中的敌人。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "cloak",
+        "translation": "披风"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "Ru",
+        "translation": "入"
+      },
+      {
+        "term": "Strength",
+        "translation": "力量/强度/威力"
+      },
+      {
+        "term": "turn",
+        "translation": "回合/转向/变成/轮流"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "rN",
+        "translation": "负能量抗性"
+      },
+      {
+        "term": "Sting",
+        "translation": "毒刺"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "armoured tail mutation",
+    "source_sha256": "809b7371cc80b7544c4cd233569c8564d1d08d5f0663f7e2980db15bd53e99bf",
+    "old_translation": "你长出一条披着甲的大尾巴，在近战时能够扫打敌人。\n",
+    "translation": "你长着一条覆盖鳞片的粗大尾巴，近战攻击时可以用尾巴拍击敌人。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "pseudopods mutation",
+    "source_sha256": "8446997eae45b8942e5f233304ab8e167bc93e3f0c7b178bd01f2f891250179d",
+    "old_translation": "你身上长满了伪足，在近战时能够扫打敌人，但在一定程度上会削弱护甲提供的防护。\n这对护甲附魔提供的防护没有影响，也不会影响训练的护甲技能的防御效果。\n这个变异每升一级，你的伪足就会更大、更强。\n",
+    "translation": "你的身体覆盖着伪足，近战攻击时可以用它们拍打敌人，但躯干防具提供的防护会略微降低。防具附魔提供的防护不受影响。此变异每级都会使伪足更加粗大有力。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Armour",
+        "translation": "防具/护身"
+      },
+      {
+        "term": "Enchant",
+        "translation": "附魔"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "rot",
+        "translation": "腐烂"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "steam resistance mutation",
+    "source_sha256": "a3829e4245bd79beb79295ea6736117de047f9e08d8f25594e74ee2d53d908de",
+    "old_translation": "你对蒸汽吐息和蒸汽云的伤害免疫。\n",
+    "translation": "你免疫蒸汽吐息和蒸汽云造成的伤害。\n",
+    "glossary_hits": [
+      {
+        "term": "steam cloud",
+        "translation": "蒸汽云"
+      },
+      {
+        "term": "Steam Breath",
+        "translation": "蒸汽吐息"
+      },
+      {
+        "term": "steam",
+        "translation": "蒸汽"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "mutation resistance mutation",
+    "source_sha256": "6b387a3583ffcc2df97396112abca2e97d804e395783b2c90bde3e0d8af2d983",
+    "old_translation": "你的遗传密码出奇地稳定，使你不太可能发生变异（或消除现有变异）。\n这个变异每升一级，你就会有更强的抵抗力。\n",
+    "translation": "你的遗传结构异常稳定，更不容易发生变异，也更不容易失去已有变异。此变异每级都会增强这种抗性。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "mutations",
+        "translation": "变异"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "Sting",
+        "translation": "毒刺"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "torment resistance mutation",
+    "source_sha256": "de90934e1ce6a5fc946c5a604f9a86fb4e55f74344356610cf84c8eae4bdce62",
+    "old_translation": "折磨对你的影响较弱，否则这会让你的生命值减半。\n这个变异达到第二级，你将完全免疫折磨。\n",
+    "translation": "你受到邪恶折磨的影响较小；通常，折磨会使生命值减半。此变异达到第二级后，你将完全免疫折磨。\n",
+    "glossary_hits": [
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "torment",
+        "translation": "折磨"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "poison resistance mutation",
+    "source_sha256": "0e8c351fbb68de6f7f1f31f018caaed89fd5bf1a5849d45bdcc5ab58d8af94c8",
+    "old_translation": "你对毒物、毒素和其他污染物有着抗性。\n它不会赋予完全的免疫力，但你中毒的几率会降低到原先的三分之一左右。\n",
+    "translation": "你能抵抗毒物、毒素和其他污染物。这并非完全免疫，而是将受影响的概率降至通常情况的约三分之一。\n",
+    "glossary_hits": [
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "poison",
+        "translation": "毒"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "fire resistance mutation",
+    "source_sha256": "db29db6e73827d94d68f9601f31da234f28a7fc1a27757ca3312254165d68027",
+    "old_translation": "你抵抗热。这个变异每升一级，就会削弱火对你造成的伤害。\n",
+    "translation": "你能抵抗高温。此变异每级都会减少受到的火焰伤害。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "cold resistance mutation",
+    "source_sha256": "1b97e61b8955545eea3524fd1a57f202e4cbb98c4ca551482642995dc39b84d8",
+    "old_translation": "你抵抗寒冷。这个变异每升一级，就会削弱寒冷对你造成的伤害。\n",
+    "translation": "你能抵抗寒冷。此变异每级都会减少受到的寒冷伤害。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "electricity resistance mutation",
+    "source_sha256": "ffd609a27c583f2fe42579834b4696028ff18da2d103527db6d4abc19e51190e",
+    "old_translation": "你抵抗电（rElec），电对你造成的伤害变弱。\n",
+    "translation": "你拥有电击抗性（rElec），受到的电击伤害较少。\n",
+    "glossary_hits": [
+      {
+        "term": "rElec",
+        "translation": "电抗"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "acid resistance mutation",
+    "source_sha256": "7e0bc74a4624040e5898a3be351f2c6b920cf60ba026f43bf03b471a27b56d0e",
+    "old_translation": "你抵抗酸（rCorr），酸对你造成的伤害变弱。你也变得更难被腐蚀。\n",
+    "translation": "你能抵抗酸液（腐蚀抗性，rCorr），受到的酸液伤害较少，也更不容易受到腐蚀。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "rC",
+        "translation": "冰抗"
+      },
+      {
+        "term": "rCorr",
+        "translation": "腐蚀抗性"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "negative energy resistance mutation",
+    "source_sha256": "31ed5a1eb57f7b8839f52ffb48c54716249b083207458533401220d9e222638c",
+    "old_translation": "你抵抗负能量。\n这个变异每升一级，就会减小负能量对你造成的伤害和从你身上汲取的生命值。\n",
+    "translation": "你能抵抗负能量。此变异每级都会减少受到的负能量伤害，以及由此造成的生命值吸能。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "drain",
+        "translation": "吸能/吸取/消耗"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "rain",
+        "translation": "雨水"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "heat vulnerability mutation",
+    "source_sha256": "c1d23746a00a6a49649f8c94548fb2c9516c30f890f543647e7474ab9d22beb4",
+    "old_translation": "火很容易对你造成伤害，并会对你造成更多伤害。\n",
+    "translation": "你容易受到火焰伤害，会因此受到更多伤害。\n",
+    "glossary_hits": [],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "cold vulnerability mutation",
+    "source_sha256": "376840a934d0e36474f4a670d67bca79da2f457dde92360ab26d4f23ca6b32c7",
+    "old_translation": "寒冷很容易对你造成伤害，并会对你造成更多伤害。\n",
+    "translation": "你容易受到寒冷伤害，会因此受到更多伤害。\n",
+    "glossary_hits": [],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "temperature sensitive mutation",
+    "source_sha256": "eb89f52d17562fef232117970d174fe453a98836019c7daf228c5c3293eed275",
+    "old_translation": "寒冷和火都很容易对你造成伤害，并会对你造成更多伤害。\n",
+    "translation": "你同时容易受到寒冷和火焰伤害，这两类效果都会对你造成更多伤害。\n",
+    "glossary_hits": [],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "electricity vulnerability mutation",
+    "source_sha256": "dcf55e5944f4f0283dbd14d7547615996f72c83d3a97778cf1d27aa785fd726d",
+    "old_translation": "电很容易对你造成伤害，并会对你造成更多伤害。\n",
+    "translation": "你容易受到电击伤害，会因此受到更多伤害。\n",
+    "glossary_hits": [],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "strong-willed mutation",
+    "source_sha256": "cc62cd78a8ee47071dfbd9cd0fcd30171e0786daa5ba1f6e43674414c136df89",
+    "old_translation": "你有着异常强大的意志，提升了对某类敌对魔法的抵抗力。\n这个变异每升一级，就会增加你的意志力。\n",
+    "translation": "你的意志异常坚定，更能抵抗某些敌对魔法。此变异每级都会进一步提高意志。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "hostile",
+        "translation": "敌对"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "willpower",
+        "translation": "意志"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "weak-willed mutation",
+    "source_sha256": "b66b1015dc6f7946933723dea6219b4b8ce42fdf7cafcd8ef151db8a75f626cd",
+    "old_translation": "你有着异常疲弱的意志，削弱了对某类敌对魔法的抵抗力。\n这个变异每升一级，就会削弱你的意志力。\n",
+    "translation": "你的意志异常薄弱，更难抵抗某些敌对魔法。此变异每级都会进一步降低意志。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "hostile",
+        "translation": "敌对"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "willpower",
+        "translation": "意志"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "see invisible mutation",
+    "source_sha256": "020dffa6ed6d2a4856548ea45b572a83bc41aadb00ca407060fba37f5b2a3a76",
+    "old_translation": "你有着超乎寻常的敏锐视力，可以看到隐藏在世俗眼界之外的怪物。\n然而，它对你的命中率没有影响。\n",
+    "translation": "你的视力超乎寻常地敏锐，能够看见普通视觉无法发现的怪物。除此之外，此变异不会影响你的命中率。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "accuracy",
+        "translation": "命中率"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "rN",
+        "translation": "负能量抗性"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "clarity mutation",
+    "source_sha256": "0375e36ba54b30d682d4743b363cc0198a455deb7556c49b25f53ab00411278f",
+    "old_translation": "你的头脑异常清晰，你不会被混乱、迷惑或产生超自然的恐惧。\n你也不会不由自主地狂暴。\n",
+    "translation": "你的头脑格外清明，不会陷入混乱、迷惑或超自然恐惧，也不会被迫狂暴。\n",
+    "glossary_hits": [
+      {
+        "term": "confuse",
+        "translation": "混乱"
+      },
+      {
+        "term": "rN",
+        "translation": "负能量抗性"
+      },
+      {
+        "term": "Mesmerise",
+        "translation": "迷魂术/迷住/迷惑"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "sense surroundings mutation",
+    "source_sha256": "911e49fe9a6ad5a4123f670d1c6a7936f938e165ca66460ae8e7b6e39facbc01",
+    "old_translation": "你对地牢有第二种感知，可以感知到你还没有看到的地形。\n这个变异每升一级，你的感知就越来越全面。\n",
+    "translation": "你对地下城有一种额外感知，能够察觉尚未亲眼见过的地形。此变异每级都会使感知更加全面、深入。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "dungeon",
+        "translation": "地下城"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "the Dungeon",
+        "translation": "地下城"
+      },
+      {
+        "term": "rain",
+        "translation": "雨水"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "MP-powered wands mutation",
+    "source_sha256": "78fb3ff15aa05b249da9ed8fa9465bef899f95c82ef2b7997038b97c87559b01",
+    "old_translation": "你的魔杖会汲取你的魔力，在这个过程中会变得更强大。\n如果你没有魔力了，你的魔杖的效果会恢复正常。\n",
+    "translation": "你的魔杖会汲取魔法值来略微提高威力。没有魔法值可供汲取时，魔杖仍能照常使用。\n",
+    "glossary_hits": [
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "rF",
+        "translation": "火抗"
+      },
+      {
+        "term": "wand",
+        "translation": "魔杖"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "regeneration mutation",
+    "source_sha256": "d8017a1d726c3b0e520db3eb334990c64d5ab1a1e8616b0324a22649c5e8abfb",
+    "old_translation": "你愈合得很快。这个变异每升一级，就会增加你的愈合速率。\n",
+    "translation": "你的伤口愈合迅速。此变异每级都会提高生命恢复速度。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "rat",
+        "translation": "老鼠"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "inhibited regeneration mutation",
+    "source_sha256": "3275c16109de681672a27dd2a0ff55ef3441c589f44a52822df8716796e21ecd",
+    "old_translation": "当敌人出现时，你不会随着时间推移而痊愈。其他治疗来源，如药水，不受此影响。\n",
+    "translation": "有敌人在视野内时，你无法随时间恢复生命值。药水等其他治疗来源不受影响。\n",
+    "glossary_hits": [
+      {
+        "term": "potion",
+        "translation": "药水"
+      },
+      {
+        "term": "rC",
+        "translation": "冰抗"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "speed mutation",
+    "source_sha256": "591a0155ec24fcd41b65c76bd6be609a08407a31da8fd4c96feeca90f9c84b2b",
+    "old_translation": "你行进得很快——移动到新位置所需的时间会更短。它对其他类型的动作没有影响，\n比如攻击或施法。这个变异每升一级，你移动得会更快。\n",
+    "translation": "你的移动速度很快，移动到新位置所需的时间更少。攻击、施法等其他行动不受影响。此变异每级都会进一步加快移动速度。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "spell",
+        "translation": "法术"
+      },
+      {
+        "term": "Sting",
+        "translation": "毒刺"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "slowness mutation",
+    "source_sha256": "c70e8b1e0e9c38c6ec865870e684e4c78b6b9d5dbfb629ec86b93f5b03c5734e",
+    "old_translation": "你行进得很慢——移动到新位置所需的时间会更长。它对其他类型的动作没有影响，\n比如攻击或施法。这个变异每升一级，你移动得会更慢。\n",
+    "translation": "你的移动速度缓慢，移动到新位置所需的时间更多。攻击、施法等其他行动不受影响。此变异每级都会进一步减慢移动速度。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "spell",
+        "translation": "法术"
+      },
+      {
+        "term": "Slow",
+        "translation": "缓慢术/减速/缓慢/迟缓"
+      },
+      {
+        "term": "Sting",
+        "translation": "毒刺"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "robust mutation",
+    "source_sha256": "e03aaa5d168dee987ebb04231c8d004c6b7c96cd34e0deed82785fb3b694392f",
+    "old_translation": "你承受得住打击。这个变异每升一级，你的健康状况会改善（+10%生命值）。\n",
+    "translation": "你十分耐打。此变异每级使生命值上限增加10%。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "frail mutation",
+    "source_sha256": "088dadfe1b2b029e0fc2e8a7cc2f5158076e88680b72f1db58bdf0e6a739269f",
+    "old_translation": "你的健康状况很差。这个变异每升一级，你的健康状况会恶化（-10%生命值）。\n",
+    "translation": "你的身体虚弱。此变异每级使生命值上限降低10%。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "evolution mutation",
+    "source_sha256": "6588ce4d5aa232978d8b1594513c70b39eaa37ceb4c0dd7df68a4d4c68ccf95f",
+    "old_translation": "当你获得经验时，你身体的隐藏特质会导致新的有益变异。\n",
+    "translation": "随着你获得经验值，身体的潜能会逐渐显现，带来新的有益变异。\n",
+    "glossary_hits": [
+      {
+        "term": "experience",
+        "translation": "经验值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "mutations",
+        "translation": "变异"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "elf",
+        "translation": "精灵"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "devolution mutation",
+    "source_sha256": "c655fbbdffa6c7ad6bf93199a5831bd6eb6bde772bdb895679ba1d6b4fa88115",
+    "old_translation": "当你获得经验时，你身体的隐藏特质会导致新的有害变异。\n",
+    "translation": "随着你获得经验值，身体的潜能会逐渐显现，带来新的有害变异。\n",
+    "glossary_hits": [
+      {
+        "term": "experience",
+        "translation": "经验值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "mutations",
+        "translation": "变异"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "elf",
+        "translation": "精灵"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "wild magic mutation",
+    "source_sha256": "c660694925ba4f0c269346934d9001e3a53d3e31dceeafb816eec1b8db6d4eba",
+    "old_translation": "你的法术将略难施放（增加了失误率和判定的严苛程度），但威力会变强。\n这个变异每升一级，两方面的效果都会增强。\n",
+    "translation": "你的法术更难施放，施法失误的概率和后果严重程度都会提高，但法术强度也更强。此变异每级都会进一步增强这两方面效果。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "miscast",
+        "translation": "施法失误"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "rF",
+        "translation": "火抗"
+      },
+      {
+        "term": "spell",
+        "translation": "法术"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "subdued magic mutation",
+    "source_sha256": "a978694d25cdc1ff9b971015c473014dadbdb611ef1b1459172fef5945a1c3be",
+    "old_translation": "你的法术将略易施放（减少了失误率和判定的严苛程度），但威力会变弱。\n这个变异每升一级，两方面的效果都会增强。\n",
+    "translation": "你的法术更易施放，施法失误的概率和后果严重程度都会降低，但法术强度也更弱。此变异每级都会进一步增强这两方面效果。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "miscast",
+        "translation": "施法失误"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "rF",
+        "translation": "火抗"
+      },
+      {
+        "term": "spell",
+        "translation": "法术"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "teleportitis mutation",
+    "source_sha256": "01d14af4f11f01c7353ad7cdf8b3f4215c510f2d3b75b1b03f3d4cb120c1ebdb",
+    "old_translation": "你偶尔会穿过本层，传送到敌方怪物那里。\n这个变异每升一级，就会增加这种情况发生的频率。\n",
+    "translation": "你会周期性地传送到敌对怪物附近。传送前数个回合，你就会感到自身开始不稳定；阅读传送卷轴可以暂时抑制这种情况。\n\n此变异每级都会提高开始传送的频率。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "hostile",
+        "translation": "敌对"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "scroll of teleportation",
+        "translation": "传送卷轴"
+      },
+      {
+        "term": "turn",
+        "translation": "回合/转向/变成/轮流"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "rN",
+        "translation": "负能量抗性"
+      },
+      {
+        "term": "Roll",
+        "translation": "翻滚"
+      },
+      {
+        "term": "elf",
+        "translation": "精灵"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "deformed body mutation",
+    "source_sha256": "54dd3c7edfea65a1db51efa4b53b5f3a6fe1d282500c0cef51764dd6a18a10f0",
+    "old_translation": "你的身体被一种非人的方式塑造，这在一定程度上削弱了铠甲提供的防护。\n这对护甲附魔提供的防护没有影响，也不会影响训练的护甲技能的防御效果。\n",
+    "translation": "你的身体形状异于常人，躯干防具提供的防护会略微降低。防具附魔提供的防护不受影响。\n",
+    "glossary_hits": [
+      {
+        "term": "Armour",
+        "translation": "防具/护身"
+      },
+      {
+        "term": "Enchant",
+        "translation": "附魔"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "rot",
+        "translation": "腐烂"
+      },
+      {
+        "term": "Human",
+        "translation": "人类"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "body armour",
+        "translation": "躯干防具"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "screaming mutation",
+    "source_sha256": "ae911a1d1b91bae99c2315218b4bba8ae67d33f1ede66702cff88996a9a36ca9",
+    "old_translation": "当敌人第一次出现在你的视线中时，有时你会有种无法克制的冲动，要冲他们喊叫。\n你的喊叫声也都比平时更大。这个变异达到第二级，你将更难克制那股冲动，\n你的喊叫声也会更大。\n",
+    "translation": "受伤时，你有时会产生无法抑制的尖叫冲动。你的所有喊叫也都会比平时更响亮。\n\n此变异达到第二级后，这种冲动将更难抵抗，喊叫也会更加响亮。\n",
+    "glossary_hits": [
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "troll",
+        "translation": "巨魔"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Roll",
+        "translation": "翻滚"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "poor constitution mutation",
+    "source_sha256": "03ab68ac35e3bc4b33265748b4420275700e61d94a7b386f35e43531f319a92d",
+    "old_translation": "",
+    "translation": "你的身体难以承受伤痛，受到伤害时有概率使攻击短暂减弱。此变异达到第二级后，有时还会使你减速。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Slow",
+        "translation": "缓慢术/减速/缓慢/迟缓"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "no potion heal mutation",
+    "source_sha256": "beeb565f35bdd9e293d2fe02a2ca86fb16ff7865bcdebf239dffb362d6822f39",
+    "old_translation": "你的系统会抗拒饮用的灵丹妙药，削弱了各种治疗药水的效果。\n这个变异达到第二级，会完全阻断药水的疗效。（哥萨戈神的援助不受影响。）\n",
+    "translation": "你的身体对口服灵药有抗性，各类治疗药水的效果都会降低。此变异达到第二级后，药水将完全无法治疗你。哥萨戈的援助不受影响。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "god",
+        "translation": "神"
+      },
+      {
+        "term": "Gozag",
+        "translation": "哥萨戈"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "potion",
+        "translation": "药水"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "persistent drain mutation",
+    "source_sha256": "b56d870ca7049ae7b01f02345546cf7894851be3d4b96f584b39c7ee35d42d3c",
+    "old_translation": "你衰竭后，恢复正常所用的时间是原先的两倍。（所需的总经验值增加了一倍。）\n",
+    "translation": "受到吸能后，你的生命值恢复速度减半，恢复所需的总经验值翻倍。\n",
+    "glossary_hits": [
+      {
+        "term": "drain",
+        "translation": "吸能/吸取/消耗"
+      },
+      {
+        "term": "experience",
+        "translation": "经验值"
+      },
+      {
+        "term": "Slow",
+        "translation": "缓慢术/减速/缓慢/迟缓"
+      },
+      {
+        "term": "rain",
+        "translation": "雨水"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "contamination susceptible mutation",
+    "source_sha256": "0ab5d7f201289b989ef09bb731c097f16116449792df411b8e000ee572ad7aae",
+    "old_translation": "",
+    "translation": "受到魔法污染时，你吸收的致变异能量是通常的两倍。\n",
+    "glossary_hits": [],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "initially attractive mutation",
+    "source_sha256": "8f5ed7208a9fcae695a146b2baa04c22d21d5caa5ccce22af29e5d771d9b1bcb",
+    "old_translation": "",
+    "translation": "你初次看见一只怪物时，有可能将其以魔法力量拉向自己。这有机会惊醒沉睡的怪物，但它们未必会因此发现你的位置。\n\n此变异达到第二级后，触发概率会提高。\n",
+    "glossary_hits": [
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "Sleep",
+        "translation": "睡眠术"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "booming voice mutation",
+    "source_sha256": "9b6c0e7b2706395c72314e728ef40d3b5dcbd051b5b990a2dec9b443e299d536",
+    "old_translation": "",
+    "translation": "有敌对怪物在视野内时，你阅读卷轴的声音会响亮得惊人。\n",
+    "glossary_hits": [
+      {
+        "term": "hostile",
+        "translation": "敌对"
+      },
+      {
+        "term": "Ru",
+        "translation": "入"
+      },
+      {
+        "term": "Roll",
+        "translation": "翻滚"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "potion fungus mutation",
+    "source_sha256": "42881ec4406f719cfbea00d4f6c62fd32c66976be38e03356482852c6acc3833",
+    "old_translation": "",
+    "translation": "你的身体覆盖着真菌，会代谢你喝下的有益药水，并且有时释放孢子，将药水效果传给附近的怪物，无论敌友。\n",
+    "glossary_hits": [
+      {
+        "term": "fungus",
+        "translation": "真菌"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "potion",
+        "translation": "药水"
+      },
+      {
+        "term": "ink",
+        "translation": "墨汁"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "spiteful blood mutation",
+    "source_sha256": "d5b885d532087587404dc3bad570f71a47c5429e3532d75fc02bff8560569c02",
+    "old_translation": "",
+    "translation": "你的血液涌动着奇异而凶恶的敌意。受到重创时，部分血液可能会化形攻击你；触发后，必须等生命值完全恢复才能再次发生。\n\n此变异达到第二级后，会同时生成两只猩红怨体。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "erythrospite",
+        "translation": "猩红怨体"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "spatial entanglement mutation",
+    "source_sha256": "1caa61810a20240d30541e68e58b789e4eab995b1632e8aff5afc654bc0ec1f9",
+    "old_translation": "",
+    "translation": "每当你进行位移，都有概率将另一只怪物一并拉到新位置。短距离位移只会拉来原位置视野内的怪物；长距离传送则可能拉来本层任意位置的怪物。\n\n被拉来的怪物会短暂迷失方向，无法立即行动。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Dis",
+        "translation": "冥府"
+      },
+      {
+        "term": "experience",
+        "translation": "经验值"
+      },
+      {
+        "term": "floor",
+        "translation": "地面/楼层/地板/向下取整"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "meek mutation",
+    "source_sha256": "cefc8b5075a075d058e707e457b464b5d8c38278a99af4a0e23ba61468314075",
+    "old_translation": "",
+    "translation": "你的所有攻击都较为无力，伤害降低，命中率也略有下降。此变异每级都会进一步加重这些影响。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "rat",
+        "translation": "老鼠"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "demonic guardian mutation",
+    "source_sha256": "c6efe661b5e7396346437f393e476d8e3f09bd8e63498e0e05dd982edb7fda9f",
+    "old_translation": "当你受到伤害时，可能会有恶魔守卫冲过来帮助你。受到的伤害越大，离死亡越近，\n其可能性就越大。这个变异每升一级，就会增加你的守卫的力量。\n",
+    "translation": "受伤时，有概率出现恶魔守护者前来援助你。受到的伤害越大、离死亡越近，触发概率就越高。此变异每级都会增强守护者的实力。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "Ru",
+        "translation": "入"
+      },
+      {
+        "term": "Strength",
+        "translation": "力量/强度/威力"
+      },
+      {
+        "term": "Oni",
+        "translation": "鬼人"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "powered by pain mutation",
+    "source_sha256": "43bfb8f76558c70399bda8b0446c30942c7787471650fbea3e42660a4a472f9e",
+    "old_translation": "当你受伤时，有时你会获得能量，它会注入你的魔力储备，\n有时你的敏捷或力量会得到暂时的提升。这个变异每升一级，其效果就会增强。\n",
+    "translation": "受伤时，你有时会获得力量，恢复魔法值，或暂时获得灵巧或强力效果。此变异每级都会增强这些效果。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "Might",
+        "translation": "强力术/可能/力量"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "foul stench mutation",
+    "source_sha256": "c5d23f9bb9b5073e25a0868184afb4c325c3cae73763b2729bf419a3fc92b050",
+    "old_translation": "敌人的近战攻击有时会让你发出一团恶臭的瘴气，\n卷入其中的怪物会变慢并受到严重毒害。\n这个变异还能让你对（任何来源的）瘴气免疫。\n",
+    "translation": "近战击中你的敌人有时会使你释放恶臭瘴气云，使其中的生物减速并严重中毒。此变异还使你免疫任何来源的瘴气。\n",
+    "glossary_hits": [
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "rC",
+        "translation": "冰抗"
+      },
+      {
+        "term": "Oni",
+        "translation": "鬼人"
+      },
+      {
+        "term": "poison",
+        "translation": "毒"
+      },
+      {
+        "term": "Slow",
+        "translation": "缓慢术/减速/缓慢/迟缓"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "spiny mutation",
+    "source_sha256": "a6cd1b3ab909020df6826cfeb3957e98b764d0a9110ac40ac220204d73554f5b",
+    "old_translation": "近战中，你的敌人有50%的几率被你的尖刺所刺穿，并受到伤害。\n这个变异每升一级，就会增加攻击力。\n",
+    "translation": "近战击中你的敌人有50%的概率被你身上的尖刺刺伤。此变异每级都会提高伤害，并且使你免疫绞缠。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "augmentation mutation",
+    "source_sha256": "2a8648db201dccf7b72ca5e5bc38c4144072e67fa1087f94949419cc0f71d21f",
+    "old_translation": "在健康状况良好的情况下，你会更有能量，更有效地施展法术并杀死敌人。\n这个变异每升一级，其效果都会增强。\n",
+    "translation": "生命充沛时，你会更加强大，法术强度和杀戮能力都会增强。此变异每级都会进一步增强效果。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "rF",
+        "translation": "火抗"
+      },
+      {
+        "term": "spell",
+        "translation": "法术"
+      },
+      {
+        "term": "slaying",
+        "translation": "杀戮"
+      },
+      {
+        "term": "Sting",
+        "translation": "毒刺"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "magic shield mutation",
+    "source_sha256": "c0e291536c05d4476e668a3e31946204f5c244f2b590745dc092e245a468cc43",
+    "old_translation": "当你受到伤害时，一些伤害会转而消耗你的魔力储备。\n",
+    "translation": "受伤时，部分伤害会转而消耗你的魔法值。\n",
+    "glossary_hits": [],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "magic regeneration mutation",
+    "source_sha256": "7b63856a9146b9860953f7355cf02d3e1f427bd50411488e30784b720820107d",
+    "old_translation": "你的魔力储备的恢复速度变快。\n",
+    "translation": "你的魔法值恢复得很快。\n",
+    "glossary_hits": [
+      {
+        "term": "rat",
+        "translation": "老鼠"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "magic link mutation",
+    "source_sha256": "436bb48b5d693be4979ff436dc07713104aa974d6fdd628ac45a51f813489d27",
+    "old_translation": "当魔力不足时，你会恢复魔法而不是生命值。\n",
+    "translation": "魔法值较低时，你会恢复魔法值而非生命值。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "demonic magic mutation",
+    "source_sha256": "7961472345ecf928494d89bab4ae4a4685db0281cbc60a5be84f668068e1a0da",
+    "old_translation": "当你施放法术时，相邻的怪物可能会麻痹。在施放更高等级的法术时，\n效果会更为强大，但具有更强意志力的怪物能够抵御它。这个变异每升一级，\n就能影响更远的怪物。这个变异达到第三级，你在挥动魔杖时也能麻痹怪物。\n",
+    "translation": "施法时，你有概率使相邻怪物麻痹。法术等级越高，效果越强，但意志坚定的怪物可以抵抗。此变异每级都会扩大影响范围；第三级还允许你在使用魔杖时以同样方式麻痹怪物。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Dis",
+        "translation": "冥府"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "rF",
+        "translation": "火抗"
+      },
+      {
+        "term": "spell",
+        "translation": "法术"
+      },
+      {
+        "term": "wand",
+        "translation": "魔杖"
+      },
+      {
+        "term": "willpower",
+        "translation": "意志"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "Sting",
+        "translation": "毒刺"
+      },
+      {
+        "term": "Paralyse",
+        "translation": "麻痹术/麻痹"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "icemail mutation",
+    "source_sha256": "3fb0cdc5135b89dc4635571795c50fb689937c237c9ff05d6a70beb1bae8f6ed",
+    "old_translation": "你身上覆盖着一层起保护作用的冰。火焰攻击能暂时融化冰层，\n在冰层重新形成之前会消除保护。这个变异每升一级，就会提升获得的保护。\n",
+    "translation": "你的身体覆盖着一层具有防护作用的冰。火焰攻击会暂时融化冰层，使你失去防护，直到冰层重新形成。此变异每级都会提高防护效果。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "rot",
+        "translation": "腐烂"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "condensation shield mutation",
+    "source_sha256": "9e5a61ec418a5f6681bc0f939238f6483941a02493f2c81516789b922456664c",
+    "old_translation": "一个冰霜盾守护着你，阻挡着一些来袭的攻击。火焰攻击能暂时融化此盾。\n",
+    "translation": "一面霜冰护盾保护着你，能够格挡部分攻击。火焰攻击会暂时融化护盾。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Shield",
+        "translation": "格挡值/盾牌/保护"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "powered by death mutation",
+    "source_sha256": "24d998d8f751940a4070b18183b2f2c84aebd9269796a1aaa58fdac1623e2c59",
+    "old_translation": "死亡滋养着你，你每夺取一条生命，就能得到一定程度的治疗。\n这个变异每升一级，治疗效果就会增强。\n",
+    "translation": "死亡赋予你力量，每次夺取生命都能恢复一些生命值。此变异每级都会增加恢复量。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "sturdy frame mutation",
+    "source_sha256": "420c72f063d754dac5e88b1d1033e6c85784c8f9ea438efe42931dcb86574e0a",
+    "old_translation": "你的行动将少受到护甲的阻碍，\n并减少了护甲对施法的成功率、命中率和远程武器的攻击速度的负面影响。\n这个变异每升一级，就会减少2点护甲的妨碍等级。\n",
+    "translation": "你穿戴防具时行动更加自如，法术施放成功率、闪避值和远程武器攻击速度所受的惩罚都会减轻。此变异每级使防具的累赘值降低2点。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Armour",
+        "translation": "防具/护身"
+      },
+      {
+        "term": "evasion",
+        "translation": "闪避值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "spell",
+        "translation": "法术"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "sanguine armour mutation",
+    "source_sha256": "6a4ea3196ae74b56b4c460cdf77604839e2e1f03e7f819da1acb28d44b26e4d8",
+    "old_translation": "当受重伤时，你的血液会在你周围凝结，形成护甲。这个变异每升一级就会提升防护。\n",
+    "translation": "受到重创时，你的血液会在体表凝结成护甲。此变异每级都会提高所提供的护甲值。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Armour",
+        "translation": "防具/护身"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "big brain mutation",
+    "source_sha256": "ba38fc1d5c06c8223d280d0bfe47facb13780a36261d89bc0bad20c00d1dec73",
+    "old_translation": "出什么事了？你有一个大脑袋。这个变异每升一级会加2点智力。\n这个变异达到第三级，你在施法时就更不容易失误。\n",
+    "translation": "怎么了？你的大脑很大。此变异每级使智力增加2点；第三级还会降低施法失误的概率。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "Intelligence",
+        "translation": "智力/智慧/心智"
+      },
+      {
+        "term": "miscast",
+        "translation": "施法失误"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "spell",
+        "translation": "法术"
+      },
+      {
+        "term": "rain",
+        "translation": "雨水"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "ignite blood mutation",
+    "source_sha256": "1a0d09d5e3b065ea4ff03caa7d9e7f793e008a7b40ab49af98d875235d46762d",
+    "old_translation": "每当你看到（你的或他人的）飞溅的血液，它可能会燃烧，爆发成火焰云。\n这个变异每升一级，这种可能性就越大。这个变异还能让你免疫火焰云。\n",
+    "translation": "每当你看见鲜血溅出，无论是自己的还是别人的，都有概率将其点燃，形成火焰云。此变异每级都会提高触发概率，并且使你免疫火焰云。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "Sting",
+        "translation": "毒刺"
+      },
+      {
+        "term": "flame",
+        "translation": "火焰"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "corrupting presence mutation",
+    "source_sha256": "51f49b37a0f9de2fa137ad9cb04926c0d97758b692e8ea808efc616cdaf14c5d",
+    "old_translation": "当你伤害到敌人时，攻击力可能会增强，并能腐蚀他们的武器和防具。\n这个变异达到第二级，事态会更为严重，你那可怜的受害者将有可能被变异、变形。\n",
+    "translation": "你伤害敌人时，自身散发的腐化力量可能会加重其创伤，腐蚀敌人的武器和防护。此变异达到第二级后，受害者还有概率发生变异，身体畸形。\n",
+    "glossary_hits": [
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "black mark mutation",
+    "source_sha256": "c15a8d0b2e75300d51e3455672877d55096f8257c05a2d1495236b15c67920de",
+    "old_translation": "当你近战攻击敌人时，你身上的黑色标记可能会削弱敌人。\n它能够虚弱敌人、汲取他们的生命力，或扰乱他们的魔法。\n",
+    "translation": "近战击中敌人时，你身上的黑色印记有概率使其衰弱，可能造成虚弱、生命值吸能，或扰乱其魔法。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Dis",
+        "translation": "冥府"
+      },
+      {
+        "term": "drain",
+        "translation": "吸能/吸取/消耗"
+      },
+      {
+        "term": "Ru",
+        "translation": "入"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      },
+      {
+        "term": "rain",
+        "translation": "雨水"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "aura of silence mutation",
+    "source_sha256": "0073ce529b35cfac290535673060815583c1a621db360aef1562e95f76b359b0",
+    "old_translation": "你被沉默力场所围绕。与你相邻的怪物无法发出任何声音。\n它可以阻止大多数形式的施法和祈祷，但恶魔的魔法是无声的，不受此影响。\n",
+    "translation": "沉默光环环绕着你，相邻者无法发出任何声音。这会阻止大多数施法和祈祷，但恶魔魔法无需声音，因此不受影响。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "spell",
+        "translation": "法术"
+      },
+      {
+        "term": "Spellcasting",
+        "translation": "施法"
+      },
+      {
+        "term": "Oni",
+        "translation": "鬼人"
+      },
+      {
+        "term": "noise",
+        "translation": "噪音/声音/巨响"
+      },
+      {
+        "term": "silence",
+        "translation": "沉默"
+      },
+      {
+        "term": "Sting",
+        "translation": "毒刺"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "bedevilling mutation",
+    "source_sha256": "8aacd50467f2624a3a4bd6a096c82592857cb5beaf5a889ee40432cc388212ff",
+    "old_translation": "你施放的妖术威力增强。\n",
+    "translation": "你施放妖术系法术时，法术强度更高。\n",
+    "glossary_hits": [
+      {
+        "term": "spell",
+        "translation": "法术"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "demonic willpower mutation",
+    "source_sha256": "9b8d03aff56e7ac3c10bfe16813034c8d4361d856b35ccc3a03942efd813eb79",
+    "old_translation": "你的意志力有了自己的意图，有时它会伤害那些试图给你下咒的人。\n这个变异还会增强你的意志力。\n",
+    "translation": "你的意志仿佛拥有自己的意志，有时会伤害试图以妖术影响你的敌人。此变异也会增强你的意志。\n",
+    "glossary_hits": [
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "willpower",
+        "translation": "意志"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "hurl damnation mutation",
+    "source_sha256": "63aa3f95a80d0a95a8acf6f34b04a03b332213228ab7549f1e979b59a0c213f3",
+    "old_translation": "你可以通过<input>$cmd[CMD_USE_ABILITY]</input>发动天遣。敌人们可要当心了！\n",
+    "translation": "你可以通过<input>$cmd[CMD_USE_ABILITY]</input>投掷地狱火。敌人可要小心了！\n",
+    "glossary_hits": [
+      {
+        "term": "ability",
+        "translation": "能力"
+      },
+      {
+        "term": "damnation",
+        "translation": "天谴/诅咒"
+      },
+      {
+        "term": "Hurl Damnation",
+        "translation": "投掷地狱火"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "word of chaos mutation",
+    "source_sha256": "e7a7a5114219f53226437fd32e3371941347caddd1e1170a60d2c349ecc95615",
+    "old_translation": "你可以通过<input>$cmd[CMD_USE_ABILITY]</input>念出混沌之语。\n",
+    "translation": "你可以通过<input>$cmd[CMD_USE_ABILITY]</input>说出混沌真言。\n",
+    "glossary_hits": [
+      {
+        "term": "ability",
+        "translation": "能力"
+      },
+      {
+        "term": "Word of Chaos",
+        "translation": "混沌真言"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "freezing cloud immunity mutation",
+    "source_sha256": "cbebcd18f573fb1f5e4b81228af56b2ba3f3d55754159d52c8013ce97deaecaa",
+    "old_translation": "你免疫冰汽云。\n",
+    "translation": "你免疫冰冻云雾。\n",
+    "glossary_hits": [
+      {
+        "term": "Zin",
+        "translation": "辛"
+      },
+      {
+        "term": "Freezing Cloud",
+        "translation": "冰冻云雾"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "flame cloud immunity mutation",
+    "source_sha256": "156e2e9aa48cf7fc6505196713eb41a097cbae074c5bd9ab8155ef286804d793",
+    "old_translation": "你免疫火焰云。\n",
+    "translation": "你免疫火焰云。\n",
+    "glossary_hits": [
+      {
+        "term": "flame",
+        "translation": "火焰"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "spit poison mutation",
+    "source_sha256": "c556956e3e87194d894116eb053f2374a2703c4283154633d85c2322d0ca2612",
+    "old_translation": "你可以通过<input>$cmd[CMD_USE_ABILITY]</input>喷吐毒液。\n这个变异达到第二级，毒素会从一小团毒液，变成一大片毒云。\n",
+    "translation": "你可以通过<input>$cmd[CMD_USE_ABILITY]</input>喷吐毒液。此变异达到第二级后，喷出的毒液会从一团增强为一大片毒云。\n",
+    "glossary_hits": [
+      {
+        "term": "ability",
+        "translation": "能力"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "poison",
+        "translation": "毒"
+      },
+      {
+        "term": "Spit Poison",
+        "translation": "喷吐毒液"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "in touch with death mutation",
+    "source_sha256": "063a1f8db69c157f4c39a52e77360338792fb60ff8fd239f2a018bb9043845d4",
+    "old_translation": "你的死灵法术变得更为强大。这个变异达到第二级，就会增强你的死灵术的法力。\n",
+    "translation": "你的死灵系魔法的法术强度更高。此变异达到第二级后，会进一步增强死灵系魔法的法术强度。\n",
+    "glossary_hits": [
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "Necromancy",
+        "translation": "死灵系魔法"
+      },
+      {
+        "term": "rF",
+        "translation": "火抗"
+      },
+      {
+        "term": "spell",
+        "translation": "法术"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "acrobatic mutation",
+    "source_sha256": "1fa11bfc92def0d8b96a99d8ffee3ab1c68c50b983d9165c0746749135b412ad",
+    "old_translation": "你那神奇的天性有助于你杂技般地翻滚你的空心骨头，从而能在移动或等待时躲避攻击。\n",
+    "translation": "你的魔法本质帮助你灵活翻腾中空的骨骼，使你在移动或等待时更容易闪避攻击。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "bat",
+        "translation": "蝙蝠"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "evasive flight mutation",
+    "source_sha256": "0a273802d99797dc2cc435a1ced7fe8db054c98fe31f6d90c86a0f5c0946e09e",
+    "old_translation": "你地在空中扑闪，闪避能力得到一定提升。\n",
+    "translation": "你在空中灵活飞行，闪避值略有提高。\n",
+    "glossary_hits": [
+      {
+        "term": "evasion",
+        "translation": "闪避值"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "big wings mutation",
+    "source_sha256": "6bf59ca42d5e6b1dfaf1c2a430f05eda05812bf0f09516ad71a59de2a637842f",
+    "old_translation": "你长出巨大、强壮的翅膀，它能够承载你在空中飞行。\n",
+    "translation": "你长着巨大而强壮的翅膀，足以承载你飞行。\n",
+    "glossary_hits": [
+      {
+        "term": "bear",
+        "translation": "熊"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "float mutation",
+    "source_sha256": "21138eb399bce17a265717a53550cfac80f8fe631a87b6a902ea509f5cd41f95",
+    "old_translation": "你在空中悬浮，永远摆脱了大地的束缚。\n",
+    "translation": "你飘浮在空中，永远摆脱了大地的束缚。\n",
+    "glossary_hits": [],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "innate caster mutation",
+    "source_sha256": "54560a4781a7c7cfea9d11e5ab5e067cb8ad010c180d4d3aecb3a018bff1cda7",
+    "old_translation": "你无法从书本习得法术。取而代之的是，随着你经验的增加，\n越来越高级的法术从你炽热的内心中涌现。\n这些法术是不可预知的，且不受你皈依的神影响。\n你无法训练特定的法术流派——要么同时都进行训练，要么一个都不进行训练。\n",
+    "translation": "你无法从法术书学习法术。随着经验值增长，等级越来越高的法术会从你炽热的心中涌现。这些法术无法预测，也不受你所信奉神祇的影响。你无法单独训练某个魔法学派，只能同时训练所有学派，或者完全不训练。\n",
+    "glossary_hits": [
+      {
+        "term": "book",
+        "translation": "魔法书/书/手册"
+      },
+      {
+        "term": "experience",
+        "translation": "经验值"
+      },
+      {
+        "term": "god",
+        "translation": "神"
+      },
+      {
+        "term": "school",
+        "translation": "魔法学派/流派"
+      },
+      {
+        "term": "spell",
+        "translation": "法术"
+      },
+      {
+        "term": "rN",
+        "translation": "负能量抗性"
+      },
+      {
+        "term": "rain",
+        "translation": "雨水"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "hp casting mutation",
+    "source_sha256": "cb9810389b55e6e85e007ae020a3eb686a34a5cf54d8a50ce478b10730378330",
+    "old_translation": "你没有独立的魔力储备，任何会影响魔力的都将对你失效。\n当施展法术、使用能力或做任何对其他物种来说需要花费魔力的事时，\n你将转而消耗生命值。\n",
+    "translation": "你没有独立的魔力储备，任何影响魔法值的效果都对你无效。施法、使用能力或进行其他通常需要消耗魔法值的行为时，你会改为消耗生命值。\n",
+    "glossary_hits": [
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "species",
+        "translation": "种族"
+      },
+      {
+        "term": "spell",
+        "translation": "法术"
+      },
+      {
+        "term": "Sting",
+        "translation": "毒刺"
+      },
+      {
+        "term": "rat",
+        "translation": "老鼠"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "extra vitality mutation",
+    "source_sha256": "3983f8bb693794b2634e29e924cf3da40707c88a42e0bf72c4f760ff92f882ea",
+    "old_translation": "你的身体结构与大多数物种不同，这让你略难被杀死。\n这个变异每升一级，你的生命值上限就会增加4点。\n",
+    "translation": "你的身体构造与大多数种族不同，因此略微更难被杀死。此变异每级使生命值上限增加4点。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "max",
+        "translation": "最大值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "species",
+        "translation": "种族"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "frog-like legs mutation",
+    "source_sha256": "f0f55e983ee61a504c797c3ff709c9d39041fdd1b8c6666eb807ddf293d5e1f4",
+    "old_translation": "",
+    "translation": "你肌肉发达的双腿能让你通过<input>$cmd[CMD_USE_ABILITY]</input>在眨眼间跳过一小段距离，但你的步行速度低于平均水平。\n\n此变异达到第二级后，可以跳得更远。\n",
+    "glossary_hits": [
+      {
+        "term": "ability",
+        "translation": "能力"
+      },
+      {
+        "term": "blink",
+        "translation": "闪烁/闪现/眨眼"
+      },
+      {
+        "term": "Dis",
+        "translation": "冥府"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Hop",
+        "translation": "跳跃"
+      },
+      {
+        "term": "ink",
+        "translation": "墨汁"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "forlorn mutation",
+    "source_sha256": "8b95de4279070b5d0a919cfde5177445606d82954ef227c5275f5d6c85c5b655",
+    "old_translation": "你不能、不会、也永远无法皈依任何神。\n",
+    "translation": "你不能、不愿，也永远不会信奉任何神祇。\n",
+    "glossary_hits": [
+      {
+        "term": "god",
+        "translation": "神"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "nightstalker mutation",
+    "source_sha256": "cbddc871ce66b965b8cad09747f25ffa3ee136564767bfbc0a59c5d37543187f",
+    "old_translation": "你适应了阴影，减小了你能看到和被看到的距离。\n",
+    "translation": "你与阴影相契合，能看见的距离和被看见的距离都会缩短。\n",
+    "glossary_hits": [
+      {
+        "term": "Dis",
+        "translation": "冥府"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "shadow",
+        "translation": "影"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "+LOS mutation",
+    "source_sha256": "ad364ac2d44db52bd4ed0bcbb69d804069335a9356a19ad9e3f86ac06a0a7ad3",
+    "old_translation": "在你的道路上黑暗会遁形，从而扩大了视野和远程攻击范围（+1视线），\n但也使得你能从更远的地方被发现并成为潜在目标。\n",
+    "translation": "黑暗在你面前退却，使你的视野和远程攻击范围扩大，视野距离增加1格；但你也会被更远处的敌人发现，并可能成为它们的目标。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "line of sight",
+        "translation": "视线"
+      },
+      {
+        "term": "Darkness",
+        "translation": "黑暗术"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "stone body mutation",
+    "source_sha256": "d3a474404e2b279098fce2049f118f1bbcbdc304b87526f02d16f03de2147daa",
+    "old_translation": "",
+    "translation": "你的身体由活岩石构成，极其耐打。你获得大量护甲值加成，并随经验等级提高而增加，同时免疫石化、毒素、疾病、睡眠及某些其他效果。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Dis",
+        "translation": "冥府"
+      },
+      {
+        "term": "experience",
+        "translation": "经验值"
+      },
+      {
+        "term": "poison",
+        "translation": "毒"
+      },
+      {
+        "term": "Sleep",
+        "translation": "睡眠术"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "cold-blooded mutation",
+    "source_sha256": "98407398c01de40906719b11db5057b3d9af38b0d839fddf3d3c730878eaa408",
+    "old_translation": "当受到寒冷攻击时，你可能会变慢，直到你的血液再次变暖。\n",
+    "translation": "受到寒冷攻击时，你有概率被减速，直到血液重新暖和起来。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Ru",
+        "translation": "入"
+      },
+      {
+        "term": "Slow",
+        "translation": "缓慢术/减速/缓慢/迟缓"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "stealthy paws mutation",
+    "source_sha256": "539d6c328a17771a6cf9e7e4b83588d0aa108ec1401cdc82e9acad220b666c15",
+    "old_translation": "当你攻击没有意识或失去行动能力的敌人时，你会造成额外的伤害，\n就像人类使用短刀一样。\n",
+    "translation": "攻击未察觉你或无法行动的敌人时，你会造成额外伤害，方式与人类使用短刃刺杀相同。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Human",
+        "translation": "人类"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Might",
+        "translation": "强力术/可能/力量"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "four strong arms mutation",
+    "source_sha256": "26b652b610db2e26beaaedd39bdd24fb2876219c16c7065e63634618b51a35ab",
+    "old_translation": "你有两对双臂，可以一对手持双手武器，另一对手持盾牌。\n你甚至可以挥舞极其巨大的武器，比如大棒，不过这需要两对手臂的配合。\n每对手臂的副臂的形状都很奇怪，因此你无法戴上额外的手套或魔法戒指。\n",
+    "translation": "你长着两对手臂，可以用一对持双手武器，另一对持盾牌，还能额外穿戴一副手套。你甚至可以使用巨型棍棒等极大型武器，但需要同时动用两对手臂。\n",
+    "glossary_hits": [
+      {
+        "term": "gloves",
+        "translation": "手套"
+      },
+      {
+        "term": "Shield",
+        "translation": "格挡值/盾牌/保护"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "giant",
+        "translation": "巨人"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "retaliatory headbutt mutation",
+    "source_sha256": "65b051b40d62228e31c7c44e80d965957672c89f8d67fa49eac3e80d352f3e36",
+    "old_translation": "当敌人未在近战中击中你时，你可能会本能地进行报复，试图用你的角顶伤攻击者。\n",
+    "translation": "敌人的近战攻击落空时，你可能会本能地用犄角顶刺反击。每次玩家行动期间，对同一敌人最多反击一次。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "rF",
+        "translation": "火抗"
+      },
+      {
+        "term": "rN",
+        "translation": "负能量抗性"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      },
+      {
+        "term": "player",
+        "translation": "玩家"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "multi-lived mutation",
+    "source_sha256": "b25c4445ef8a9f3836954d43bdf9ab2cd81bb812db6bdaac5634114d49896984",
+    "old_translation": "每过三级，你将获得额外的生命。\n如果你被杀的时候还有一条命，你会在当前楼层的其他地方重新出现。\n即使你达到了最高的经验等级，你也可以继续获得额外的生命，\n但最多只能有两条额外生命。\n",
+    "translation": "你每提升三个经验等级就会获得一条额外生命。如果被杀时仍有额外生命，你会在当前楼层的其他位置重现。即使达到经验等级上限，仍能继续获得额外生命，但最多只能同时拥有两条。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "experience",
+        "translation": "经验值"
+      },
+      {
+        "term": "floor",
+        "translation": "地面/楼层/地板/向下取整"
+      },
+      {
+        "term": "max",
+        "translation": "最大值"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "distributed training mutation",
+    "source_sha256": "3b5863f374f35052759ae156f2a2b8917462369ac3af4bc5cf7405243f87dedb",
+    "old_translation": "无论你何时获得经验，它都会分配到你的所有技能之中。\n你无法选择技能进行着重训练。\n此效果让你无法训练特定技能，仿佛是神的限制，不会让你的其他技能提升得更快。\n",
+    "translation": "你获得的经验会分摊至所有技能，无法选择专注训练。神祇限制等阻止你训练某些技能的效果，不会因此加快其他技能的提升。\n",
+    "glossary_hits": [
+      {
+        "term": "experience",
+        "translation": "经验值"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "skill",
+        "translation": "技能"
+      },
+      {
+        "term": "rain",
+        "translation": "雨水"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "nimble swimmer mutation",
+    "source_sha256": "017b24773755e1c5580ce3afcf9c25d353e26409faac69617df05bb6c33519d5",
+    "old_translation": "你在水中游泳或在水面上飞行时能融入波浪，潜行获得加成。\n这个变异达到第二级，还会提升你在水中或水上的闪避能力和移动速度。\n",
+    "translation": "你在水中游泳或水面上方飞行时能够融入波涛，提高潜行能力。此变异达到第二级后，还会提高你在水中或水面上方的闪避值和移动速度。\n",
+    "glossary_hits": [
+      {
+        "term": "evasion",
+        "translation": "闪避值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "stealth",
+        "translation": "潜行"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "divine attributes mutation",
+    "source_sha256": "e87f7612f02f6e3502fa60d53d4fcab17223dc2fb34bacf58005fdb940973880",
+    "old_translation": "当你与其他物种相比，无论是在数值还是在发育程度的掌控上，\n神圣属性都显著提升了你的属性增益（力量、智力和敏捷）。\n每过三级，你可以选一个属性，提升四点。\n",
+    "translation": "你的神圣血统使升级时获得的力量、智力和敏捷远超其他种族，无论增长量还是成长方向，都更容易由你掌控。每升三级，你可以选择一项属性提高4点。\n",
+    "glossary_hits": [
+      {
+        "term": "Dexterity",
+        "translation": "敏捷/灵巧"
+      },
+      {
+        "term": "Intelligence",
+        "translation": "智力/智慧/心智"
+      },
+      {
+        "term": "species",
+        "translation": "种族"
+      },
+      {
+        "term": "Strength",
+        "translation": "力量/强度/威力"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "tentacles mutation",
+    "source_sha256": "ad16610854e8371be679994c5d0c66bf726701d37ac8eee4c3ae5423c8a95f79",
+    "old_translation": "你的胶状身体有八个触手，可以帮助你在浅水或深水中移动，并能在近战时束缚敌人。\n每只触手都可以戴上戒指，但你需要四只触手用来移动，根据武器的大小，\n两只或四只触手可以拿一把武器，两只触手可以拿一面盾牌。\n\n当你近战时，你的触手会尝试束缚敌人。（你无法束缚比你大的怪物。）\n顺便一提，每当你近战攻击时，你有三分之二的机会发动破坏性的“挤压”攻击。\n",
+    "translation": "你的凝胶身体有八条触手，能帮助你在浅水或深水中移动，也能在近战攻击时绞缠敌人。每条触手都能戴一枚戒指，但你需要四条触手移动；持握武器需要两条或四条，取决于武器大小；持盾牌则需要两条。\n\n触手会尝试绞缠你近战攻击的敌人，但无法绞缠体型比你大的怪物。此外，每次近战攻击都独立有三分之二的概率发动造成伤害的挤压攻击。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "Shield",
+        "translation": "格挡值/盾牌/保护"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      },
+      {
+        "term": "tentacle",
+        "translation": "触手"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "mertail mutation",
+    "source_sha256": "918b76ebd453e4b91b3f1347ad30ee2280e961077ffdd2c5b4cd6bff2d436f6f",
+    "old_translation": "你的基体形态不稳定，当你在浅水或深水中，\n你的下半身会变成强有力的水生生物的尾巴。一旦你离开水面，它会很快变成腿。\n处于人鱼形态时，你的尾巴在近战时能够扫打敌人。\n",
+    "translation": "你的塑形结构不稳定，进入浅水或深水后，下半身会变成强壮的水生尾巴；离开水后，很快又会变回双腿。处于人鱼形态时，你可以在近战攻击中用尾巴拍击敌人。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "rF",
+        "translation": "火抗"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      },
+      {
+        "term": "hog",
+        "translation": "猪"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "no regeneration mutation",
+    "source_sha256": "de04f6f0635b79dff78678afa1e12e7ec52f926a2915b5e0e5d421f59f7bf221",
+    "old_translation": "你在休息时无法恢复健康，也无法获得提升恢复速度的魔法效果。\n至于提升生命力的手段，像药水和虔诚的祈祷仍能治疗你，\n某些神圣祈祷能力可以短暂赋予你自愈的能力。\n作为补偿，你可以通过<input>$cmd[CMD_USE_ABILITY]</input> 键治疗自己，\n但代价是要永久地失去一些魔力。\n",
+    "translation": "你休息时不会再生生命值，也无法受益于加快再生的魔法。药水、神祇祈祷等生命恢复来源仍能治疗你，某些祈祷还能暂时赋予你再生能力。作为补偿，你可以通过<input>$cmd[CMD_USE_ABILITY]</input>治疗自己，代价是永久失去魔法值。\n",
+    "glossary_hits": [
+      {
+        "term": "ability",
+        "translation": "能力"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "Invocations",
+        "translation": "祈祷"
+      },
+      {
+        "term": "potion",
+        "translation": "药水"
+      },
+      {
+        "term": "ration",
+        "translation": "口粮"
+      },
+      {
+        "term": "rC",
+        "translation": "冰抗"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "haste",
+        "translation": "疾速"
+      },
+      {
+        "term": "Sting",
+        "translation": "毒刺"
+      },
+      {
+        "term": "Regeneration",
+        "translation": "再生术/再生/恢复"
+      },
+      {
+        "term": "elf",
+        "translation": "精灵"
+      },
+      {
+        "term": "rat",
+        "translation": "老鼠"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "treasure sense mutation",
+    "source_sha256": "3e61d6dd6abe302a9c84f6996855584b4a27d4881d023e3f3470337cc4fd4640",
+    "old_translation": "",
+    "translation": "你总能不可思议地知道哪里藏着物品。探索地下城时，附近未被直接看见的物品位置会出现标记，表示那里有尚未发现的物品。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Dis",
+        "translation": "冥府"
+      },
+      {
+        "term": "dungeon",
+        "translation": "地下城"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "the Dungeon",
+        "translation": "地下城"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "gelatinous body mutation",
+    "source_sha256": "747c10bbcceda8eedc461faebb5394f2b7268b2172a6a1c49a7944584f594220",
+    "old_translation": "你的身体富有弹性，你的敌人就像胶水。这个变异每升一级会加1点防护和1点闪避。\n",
+    "translation": "你的身体像橡胶般柔韧，敌人却像胶水一样难缠。此变异每级使护甲值和闪避值各增加1点。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "Ru",
+        "translation": "入"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "eyeballs mutation",
+    "source_sha256": "8d00046635dbfefa750159f0d644cc9be4a0e9ebc67edd7fe7f9a4d19d227ab9",
+    "old_translation": "金色的眼球像蘑菇一样从你的肉里长出来，能够混乱你的敌人。\n这个变异每升一级，就能提升你的武器、徒手攻击、辅助攻击和法术的命中率。\n这个变异达到第三级，你将能够看到隐形的敌人。\n",
+    "translation": "金色眼球如蘑菇般从你的血肉中长出，扰乱敌人。此变异每级都会提高武器攻击、徒手攻击、辅助攻击和法术的命中率；第三级还赋予你看破隐形能力。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "accuracy",
+        "translation": "命中率"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "spell",
+        "translation": "法术"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "See Invisible",
+        "translation": "看破隐形"
+      },
+      {
+        "term": "golden eye",
+        "translation": "黄金眼"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "translucent skin mutation",
+    "source_sha256": "a53ca6287772ea64fb245a6ac714f85449f3a62c0d70d1ab02daed5be627fed0",
+    "old_translation": "你的皮肤是透明的，你的潜行能力得到提升，敌人攻击你的命中率会降低。\n这个变异每升一级，就会削弱你的敌人的命中率。\n",
+    "translation": "你的皮肤透明，既能提高潜行能力，也会降低敌人攻击你的命中率。此变异每级都会进一步降低敌人的命中率。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "accuracy",
+        "translation": "命中率"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "stealth",
+        "translation": "潜行"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "slime shroud mutation",
+    "source_sha256": "c59c158049ca29467eaa8052d20ba5d56fa2afbb9aac2ff8685b1b6df265e59d",
+    "old_translation": "",
+    "translation": "遭到近战攻击时，覆盖身体的黏液护罩可能会使攻击偏转。不过，这会破坏护罩，需要一段时间才能重新形成。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Ru",
+        "translation": "入"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      },
+      {
+        "term": "elf",
+        "translation": "精灵"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "tendrils mutation",
+    "source_sha256": "1ece2174ebacb494f67a6c9e0d6588287a816026d9ce8a6092782ae8db03b043",
+    "old_translation": "受到近战伤害时，覆盖在你身体上的黏稠卷须可能会抓住攻击者的武器，\n并从他手上将其拽出，解除他们的武装。\n",
+    "translation": "遭到近战攻击时，覆盖身体的黏滑触须可能抓住攻击者的武器并将其夺走，使其失去武器。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Dis",
+        "translation": "冥府"
+      },
+      {
+        "term": "Ru",
+        "translation": "入"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "jelly sensing items mutation",
+    "source_sha256": "f8a7848e8de37372f2b506147af946cfb8c0a9fa31df7f54bb0eb4d118add973",
+    "old_translation": "你身上附有一个小胶冻，它可以感知周围物品。\n",
+    "translation": "你身上附着一只小胶怪，能够感知附近的物品。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "jelly",
+        "translation": "胶怪"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "jelly absorbing missiles mutation",
+    "source_sha256": "cdc5f181235f33ad08b29b3587bd11951bd043b5ec729fafea51faef420c5a08",
+    "old_translation": "当你被飞弹击中时（比如箭或弩箭），你身上的胶冻可能会吞掉它，并进行一定治疗。\n",
+    "translation": "被箭矢、弩矢等飞射物击中时，你身上的胶怪可能会将其吞下，为你恢复一些生命值。\n",
+    "glossary_hits": [
+      {
+        "term": "arrow",
+        "translation": "箭"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "Ru",
+        "translation": "入"
+      },
+      {
+        "term": "jelly",
+        "translation": "胶怪"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "ooze flood mutation",
+    "source_sha256": "228f05c2a5d4fff280696fcf0b9865e44ac9aa242c627ca0fb938342cd358564",
+    "old_translation": "",
+    "translation": "你的近战攻击可能用黏液灌满敌人的呼吸道。需要呼吸空气的敌人会被沉默，并持续受到窒息伤害。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "silence",
+        "translation": "沉默"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "otherworldly mutation",
+    "source_sha256": "99f054a54ec669db39ac97618a4ea323a04dede439bd1d0ffca8464137dfddd3",
+    "old_translation": "你与这个世界格格不入，很容易被黑暗势力察觉。\n在佐特找到你并永久降低你的生命值之前，你在每层地牢的时间只有正常时间的十分之一。\n",
+    "translation": "你不属于这个世界，容易被黑暗力量察觉。在每层地下城中，佐特找到你并永久降低你的生命值之前，你只有通常十分之一的时间。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "dungeon",
+        "translation": "地下城"
+      },
+      {
+        "term": "floor",
+        "translation": "地面/楼层/地板/向下取整"
+      },
+      {
+        "term": "rC",
+        "translation": "冰抗"
+      },
+      {
+        "term": "Zot",
+        "translation": "佐特"
+      },
+      {
+        "term": "orc",
+        "translation": "兽人"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "foul shadow mutation",
+    "source_sha256": "cdef8af68000a956cfc3c8a7c9e16722d6ea46611308bf6018aeccd0965f8f14",
+    "old_translation": "",
+    "translation": "污秽火焰的阴影笼罩着你，使敌人更难击中你，并大幅提高潜行能力。近战击中你的敌人有时会被污秽火焰灼伤；亡灵和恶魔受到的伤害较少，神圣生物与善神信徒受到的伤害较多。\n",
+    "glossary_hits": [
+      {
+        "term": "god",
+        "translation": "神"
+      },
+      {
+        "term": "shadow",
+        "translation": "影"
+      },
+      {
+        "term": "stealth",
+        "translation": "潜行"
+      },
+      {
+        "term": "undead",
+        "translation": "亡灵"
+      },
+      {
+        "term": "Oni",
+        "translation": "鬼人"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      },
+      {
+        "term": "flame",
+        "translation": "火焰"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "explore regen mutation",
+    "source_sha256": "0006543cdfe9b6ca3baedb207f4088a9242e3a668818af0951cc93fb215e992f",
+    "old_translation": "探索未知会让你精神振奋。当你探索地牢时，你的伤口会愈合，你的魔力会恢复。\n",
+    "translation": "探索未知会使你精神振奋。探索地下城时，你的伤口会愈合，魔法值也会恢复。\n",
+    "glossary_hits": [
+      {
+        "term": "Dis",
+        "translation": "冥府"
+      },
+      {
+        "term": "dungeon",
+        "translation": "地下城"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "the Dungeon",
+        "translation": "地下城"
+      },
+      {
+        "term": "rat",
+        "translation": "老鼠"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "faith mutation",
+    "source_sha256": "8ffaf7fdfe34bc776507f290aadcb083a4cfaaba0bedae69dffba4c8abf14332",
+    "old_translation": "你被熏了圣油和圣香料，被蒙福的布裹着。\n现在你与神有一种特殊的联系，你会更快被你皈依的神所赏识。\n",
+    "translation": "你的身体曾用圣油与圣香防腐，并由受祝福的布料包裹。如今，你与神明有着特殊联系，更容易获得所信奉神祇的青睐。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "god",
+        "translation": "神"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "devour on kill mutation",
+    "source_sha256": "35c0be0cdcbe64c69e199fe579e9792c0536e8565e765223d875622cc0236394",
+    "old_translation": "当你杀死生物时，你有机会吞噬它们的生命力并恢复健康。\n",
+    "translation": "杀死活物时，你有概率吞噬其生命力，恢复自己的生命值。\n",
+    "glossary_hits": [
+      {
+        "term": "rC",
+        "translation": "冰抗"
+      },
+      {
+        "term": "orc",
+        "translation": "兽人"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "rollpage mutation",
+    "source_sha256": "ff74029987aace21873569b2bebd209f71276f44df4e32ae5ea7e9eafc3740c4",
+    "old_translation": "当你移向敌人时会本能地翻滚，会向前再冲出一格。\n这个变异能在你滚动时提升魔力恢复速度；\n这个变异达到第二级，魔力和生命值的恢复速度会同时提升。\n",
+    "translation": "你移向敌人时会本能地翻滚，向前额外冲撞一格。此变异会使你在翻滚时恢复魔法值；第二级则会同时恢复魔法值和生命值。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "ration",
+        "translation": "口粮"
+      },
+      {
+        "term": "Roll",
+        "translation": "翻滚"
+      },
+      {
+        "term": "Regeneration",
+        "translation": "再生术/再生/恢复"
+      },
+      {
+        "term": "rat",
+        "translation": "老鼠"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "double potion healing mutation",
+    "source_sha256": "f83a0017873d6aa85c94a304b0d51ba89e61f83ba2633eac0019c4af1bf0bf3c",
+    "old_translation": "每当药水恢复你的生命值或魔力时，其恢复量是原先的两倍。\n",
+    "translation": "药水恢复你的生命值或魔法值时，恢复量翻倍。\n",
+    "glossary_hits": [
+      {
+        "term": "potion",
+        "translation": "药水"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "drunken brawling mutation",
+    "source_sha256": "fc21979540057b199e6095dfa69ac355fd6ba8d568d01f0e3ae7e5de87319f08",
+    "old_translation": "当你喝下恢复健康或魔力的药水时，你会立即攻击附近的所有敌人。\n\n（这包括治疗、愈伤、魔力和琼浆药水。）\n",
+    "translation": "每当你饮用恢复生命值或魔法值的药水，就会立即攻击所有相邻敌人。\n\n这包括治疗药水、愈伤药水、魔力药水和琼浆药水。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "potion",
+        "translation": "药水"
+      },
+      {
+        "term": "rF",
+        "translation": "火抗"
+      },
+      {
+        "term": "Heal Wounds",
+        "translation": "治疗伤口"
+      },
+      {
+        "term": "ink",
+        "translation": "墨汁"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "artefact enchanting mutation",
+    "source_sha256": "dbc2b131c1e9121a80f19b7e0d6049f1574ddc1334657643cb55feeda33cb1a4",
+    "old_translation": "",
+    "translation": "你可以对随机神器使用武器附魔卷轴和防具附魔卷轴，但附魔值不能超过同类普通物品通常能达到的上限，也无法影响特别奇异的神器。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Armour",
+        "translation": "防具/护身"
+      },
+      {
+        "term": "artefact",
+        "translation": "神器"
+      },
+      {
+        "term": "Enchant",
+        "translation": "附魔"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "Roll",
+        "translation": "翻滚"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "runic magic mutation",
+    "source_sha256": "d7104756df3902f99fa2037b28f574ee307e3d7f4152e111c8085a34bd619d03",
+    "old_translation": "",
+    "translation": "你借助刻在防具上的符文施法，大幅减少通常所需的复杂动作。\n\n计算法术施放成功率时，你所穿戴的所有防具的累赘值减半。\n",
+    "glossary_hits": [
+      {
+        "term": "Armour",
+        "translation": "防具/护身"
+      },
+      {
+        "term": "spell",
+        "translation": "法术"
+      },
+      {
+        "term": "encumbrance rating",
+        "translation": "累赘值"
+      },
+      {
+        "term": "encumbrance",
+        "translation": "累赘"
+      },
+      {
+        "term": "rat",
+        "translation": "老鼠"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "off-hand wielding mutation",
+    "source_sha256": "75c5950edda7c18dab46259a6ade10f68fff7a0dfb28b51c57fbebfd28603a1c",
+    "old_translation": "",
+    "translation": "没有持握双手武器、盾牌或宝珠时，你可以用副手持握一把单手武器。主手武器攻击后，副手武器会跟进攻击，攻击延迟取两把武器的平均值。远程武器只能跟进远程武器的攻击，近战武器亦然。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Shield",
+        "translation": "格挡值/盾牌/保护"
+      },
+      {
+        "term": "Ranged Weapons",
+        "translation": "远程武器"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "slow wielding mutation",
+    "source_sha256": "416ab1d3b1859a4c483abca66632ca22950344691837a74099bc1b3263761216",
+    "old_translation": "",
+    "translation": "装备或卸下武器时，你必须重新校准机械臂，所需时间与穿上防具相同。\n",
+    "glossary_hits": [
+      {
+        "term": "Armour",
+        "translation": "防具/护身"
+      },
+      {
+        "term": "rat",
+        "translation": "老鼠"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "warmup strikes mutation",
+    "source_sha256": "2581d2f635b7029448a8ee44b3b0259c2fff644c7820991a54b5e448b4853564",
+    "old_translation": "",
+    "translation": "你的机械臂需要时间才能活动开，因此每场战斗的前几次攻击效果较差。缓慢而沉重的攻击比快速攻击更有助于热身。武器攻击和徒手攻击都会受到影响。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Slow",
+        "translation": "缓慢术/减速/缓慢/迟缓"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "no rings mutation",
+    "source_sha256": "b17fa3adb291ec1e20925b3d2d015600a78b6c4d2253b28d053d7d041ef98d5e",
+    "old_translation": "",
+    "translation": "你的双手嵌在机械臂的控制装置内，没有位置佩戴魔法戒指，否则会引发灾难性的魔法干扰。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Dis",
+        "translation": "冥府"
+      },
+      {
+        "term": "rF",
+        "translation": "火抗"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "iron-fused scales mutation",
+    "source_sha256": "8c7f587163b82f302d51a18b33444987d6cc46a293d1926fa1be614b7d7d1dce",
+    "old_translation": "",
+    "translation": "你的鳞片与厚厚的铁层融合，获得堪比整套防具的坚韧程度，护甲值增加5点。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Armour",
+        "translation": "防具/护身"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "inviolate magic mutation",
+    "source_sha256": "98b01f88e25ebc49219b96a2b22d7e7e54bdffbd8e1cd1f248a29936f989b02e",
+    "old_translation": "",
+    "translation": "你的魔法不易受到外力干扰。敌对效果对你魔法值的消耗降至原来的三分之一；除你自己以外，任何人都无法移除你身上的魔法效果。\n",
+    "glossary_hits": [
+      {
+        "term": "Dis",
+        "translation": "冥府"
+      },
+      {
+        "term": "drain",
+        "translation": "吸能/吸取/消耗"
+      },
+      {
+        "term": "hostile",
+        "translation": "敌对"
+      },
+      {
+        "term": "rC",
+        "translation": "冰抗"
+      },
+      {
+        "term": "Ru",
+        "translation": "入"
+      },
+      {
+        "term": "rain",
+        "translation": "雨水"
+      },
+      {
+        "term": "elf",
+        "translation": "精灵"
+      },
+      {
+        "term": "orc",
+        "translation": "兽人"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "formless mutation",
+    "source_sha256": "e3caf6ebfd8d94ccceeafd01bb86e81c38411e63c3f85aee7f668824c90af7e2",
+    "old_translation": "",
+    "translation": "你没有实体身体，而是通过附身物件与世界互动。因此，你可以任意组合“装备”最多6件靴子、手套、斗篷或头盔，但躯干防具过大，无法以这种方式有效操纵。\n\n等级较高后，你甚至能短暂驱使附身的防具自行出击，攻击敌人。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Armour",
+        "translation": "防具/护身"
+      },
+      {
+        "term": "boots",
+        "translation": "靴子"
+      },
+      {
+        "term": "cloak",
+        "translation": "披风"
+      },
+      {
+        "term": "gloves",
+        "translation": "手套"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Haunt",
+        "translation": "鬼魂缠身"
+      },
+      {
+        "term": "body armour",
+        "translation": "躯干防具"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "trickster mutation",
+    "source_sha256": "a617da28ab903255ff00032c680837025c1f665576f1ec3cbbc3d320f72398bc",
+    "old_translation": "",
+    "translation": "散播不幸会加强你与生者世界的联系。\n\n每当你或盟友使附近敌人新增中毒以外的负面状态，你的护甲值都会暂时提高。受到影响的不同敌人越多，加成就越高；若不继续制造新的不幸，加成会随时间衰减。\n\n以你当前的经验等级，最多可通过这种方式获得{{return 6 + you.xl() * 4 / 5;}}点护甲值加成。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "max",
+        "translation": "最大值"
+      },
+      {
+        "term": "turn",
+        "translation": "回合/转向/变成/轮流"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "rN",
+        "translation": "负能量抗性"
+      },
+      {
+        "term": "poison",
+        "translation": "毒"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "mnemnophage mutation",
+    "source_sha256": "f8c6c8f091b9dd2be80d51664ee8a07b13ebf8dd9a854c0c83aed92d712bf99c",
+    "old_translation": "",
+    "translation": "你吞噬死于你手者的记忆，乃至其存在本身，将其融入环绕身体的邪火。\n\n积累足够记忆后，你可以将其全部燃尽，作为燃料在短时间内大幅增强施法。\n\n以你当前的经验等级，你能储存的记忆最多足以支持连续施放{{return 3 + math.floor(you.xl() * 3 / 20);}}个法术。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "experience",
+        "translation": "经验值"
+      },
+      {
+        "term": "floor",
+        "translation": "地面/楼层/地板/向下取整"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "max",
+        "translation": "最大值"
+      },
+      {
+        "term": "spell",
+        "translation": "法术"
+      },
+      {
+        "term": "Spellcasting",
+        "translation": "施法"
+      },
+      {
+        "term": "turn",
+        "translation": "回合/转向/变成/轮流"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "rN",
+        "translation": "负能量抗性"
+      },
+      {
+        "term": "Sting",
+        "translation": "毒刺"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "spellclaws mutation",
+    "source_sha256": "17c057c56ab1de48e15280a593878d938e1f207825dac621b7574e9e41930b47",
+    "old_translation": "",
+    "translation": "你会本能地通过利爪引导毁灭魔法。施放造成伤害的法术时，你还会近战攻击攻击范围内生命值最高的敌人。\n\n如果你的攻击速度慢于施法速度，这次攻击造成的伤害会降低。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "rF",
+        "translation": "火抗"
+      },
+      {
+        "term": "Ru",
+        "translation": "入"
+      },
+      {
+        "term": "spell",
+        "translation": "法术"
+      },
+      {
+        "term": "Slow",
+        "translation": "缓慢术/减速/缓慢/迟缓"
+      },
+      {
+        "term": "Sting",
+        "translation": "毒刺"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "accursed mutation",
+    "source_sha256": "a5e061a9da5961ab4108d5c8c65795c5f61f211ae1c07ceaea878d3ef50e3776",
+    "old_translation": "",
+    "translation": "你的诅咒本质让恶性力量更难从身上驱散，使你从厄运和厄咒中恢复得更慢。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "accursed",
+        "translation": "被诅咒者"
+      },
+      {
+        "term": "Dis",
+        "translation": "冥府"
+      },
+      {
+        "term": "rat",
+        "translation": "老鼠"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "vampire fangs mutation",
+    "source_sha256": "4e45f4c26d0c651e4f7abd82d9793041a14b1bc3bbbdb08643a75a9d123751e6",
+    "old_translation": "",
+    "translation": "对有血液的活体怪物发动刺杀时，你会按造成的总伤害恢复一部分生命值。生命值不高于上限的50%时，你的所有近战攻击都有三分之二的概率触发这种效果。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "max",
+        "translation": "最大值"
+      },
+      {
+        "term": "rF",
+        "translation": "火抗"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "bloodcurse mutation",
+    "source_sha256": "4820171f9055a9acfc58437a1bfd1ea94677da01fe8ecda5d7149e0d06f6bf04",
+    "old_translation": "",
+    "translation": "用刺杀杀死活体怪物时，对方有概率复起，成为服侍你的吸血奴仆。奴仆保留生前的所有能力，但会变为亡灵，并获得吸血噬咬攻击，对沉睡敌人的近战伤害也会提高。会施法的奴仆还会学会吸血法术。\n\n你同时只能拥有一名奴仆，而且它终将在短时间后化为尘土。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "drain",
+        "translation": "吸能/吸取/消耗"
+      },
+      {
+        "term": "draining",
+        "translation": "吸能/汲取/耗损"
+      },
+      {
+        "term": "spell",
+        "translation": "法术"
+      },
+      {
+        "term": "turn",
+        "translation": "回合/转向/变成/轮流"
+      },
+      {
+        "term": "undead",
+        "translation": "亡灵"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "rN",
+        "translation": "负能量抗性"
+      },
+      {
+        "term": "Vampiric Draining",
+        "translation": "吸血"
+      },
+      {
+        "term": "Sleep",
+        "translation": "睡眠术"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      },
+      {
+        "term": "rain",
+        "translation": "雨水"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "insubstantial mutation",
+    "source_sha256": "624797835a7bd8ba440cc05650642bb8ff5340cb6b1394880f9ce50e18799b0f",
+    "old_translation": "",
+    "translation": "你的身躯虚无缥缈，免疫许多需要实体身体才能生效的效果。你不会被绞缠、石化、倒钩刺穿、黏附火焰覆盖，也不会被蛛网、网或流星索困住。\n",
+    "glossary_hits": [
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "petrified",
+        "translation": "已石化"
+      },
+      {
+        "term": "Sticky Flame",
+        "translation": "黏附火焰"
+      },
+      {
+        "term": "flame",
+        "translation": "火焰"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "frigid aura mutation",
+    "source_sha256": "dae3b19ee0a1a19828e7e991ef900cf08efe71beebfb2051db0ba6c502ff1e98",
+    "old_translation": "",
+    "translation": "你的呼吸散发着彻骨寒意，战斗时会冻结附近墙壁。\n\n每次攻击，你都会冻结目标或自己身边的一面随机相邻墙壁。严寒墙壁每回合都会伤害相邻敌人；敌人相邻的严寒墙壁达到最多时，伤害最高可翻倍。伤害随变形术技能提高。\n\n停止攻击后，墙壁会迅速解冻。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "skill",
+        "translation": "技能"
+      },
+      {
+        "term": "turn",
+        "translation": "回合/转向/变成/轮流"
+      },
+      {
+        "term": "Shapeshifting",
+        "translation": "变形术"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "rN",
+        "translation": "负能量抗性"
+      },
+      {
+        "term": "Freeze",
+        "translation": "冰冻术/冰冻/冻结/冻伤"
+      },
+      {
+        "term": "elf",
+        "translation": "精灵"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "hive swarm mutation",
+    "source_sha256": "3e97ccdf5d3c1ba870076d63a0f9ee4e8109934788cf37674293f7efbcee07bf",
+    "old_translation": "",
+    "translation": "伤害使你的生命值降至上限的50%以下时，愤怒的蜜蜂会从你体内涌出，保护你。\n\n触发后，必须等生命值完全恢复才能再次触发。\n",
+    "glossary_hits": [
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "water reaching mutation",
+    "source_sha256": "817bed174902bf4ebdd7b0feb9d2ff32f0e5ba27845c0f3c558ce6784d9405f4",
+    "old_translation": "",
+    "translation": "你的身体由灵活变形的元素之水构成，能够从数格之外进行近战攻击，包括各种辅助攻击。\n\n刺杀需要精准动作，因此仍须与目标相邻；无论攻击落在何处，斧类武器的顺劈都只能波及与你相邻的敌人。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Axes",
+        "translation": "斧"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "rF",
+        "translation": "火抗"
+      },
+      {
+        "term": "Tiles",
+        "translation": "图形版/图块/方格"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      },
+      {
+        "term": "elemental",
+        "translation": "元素生物"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "water splatter mutation",
+    "source_sha256": "71bd502f655dbb143f84cd83240388e1e053ee11c427c2ca070f22e3d580eb4c",
+    "old_translation": "",
+    "translation": "受伤时，你水构成的身体可能飞溅到附近，形成浅水。单次受到的伤害越多，溅出的水就越多。\n",
+    "glossary_hits": [
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "freeze response mutation",
+    "source_sha256": "b8edbafd294eb4006a2226b895e03d18896c95ae3bed129aa241e357edc4cffd",
+    "old_translation": "",
+    "translation": "受到寒冷伤害时，你有概率被冻结，移动速度会在短时间内降低。\n",
+    "glossary_hits": [
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "steam response mutation",
+    "source_sha256": "19f323ff9952d3b331231166825972333d5656ab1f4ab467ce5c5681efac9ca5",
+    "old_translation": "",
+    "translation": "受到飞射物造成的火焰伤害时，你有概率在周围产生蒸汽云，受到的伤害越大，概率越高。\n",
+    "glossary_hits": [
+      {
+        "term": "steam cloud",
+        "translation": "蒸汽云"
+      },
+      {
+        "term": "steam",
+        "translation": "蒸汽"
+      },
+      {
+        "term": "elf",
+        "translation": "精灵"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "airstrike attack mutation",
+    "source_sha256": "d0723a2e8a97f97f3ece24b54eaf76263bf1ea0625a7db3548fab3e29b2fedd2",
+    "old_translation": "",
+    "translation": "你的近战攻击击中敌人时，风会随之扭转，造成额外伤害。敌人身边每多一个空位，伤害就会提高。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "hex mastery mutation",
+    "source_sha256": "5dfd0eed50fc338a0f21d4f6ed21a6f034bad045f53e8fdec369311e8c903c14",
+    "old_translation": "",
+    "translation": "你的妖术系法术更容易施放，施法失误概率和严重程度都会大幅降低；敌人抵抗你所有效果时的意志也会降低。\n",
+    "glossary_hits": [
+      {
+        "term": "Hexes",
+        "translation": "妖术系魔法"
+      },
+      {
+        "term": "miscast",
+        "translation": "施法失误"
+      },
+      {
+        "term": "spell",
+        "translation": "法术"
+      },
+      {
+        "term": "willpower",
+        "translation": "意志"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "riddle compulsion mutation",
+    "source_sha256": "bd1c869e1d8c9b3cb1a3cec4054acdd54745e7481bb2f57613987cb0ff658264",
+    "old_translation": "",
+    "translation": "遇见敌人时，你会不由自主地向它们出谜语。偶尔，这会使它们混乱或陷入恼咒，但大多数时候只会吸引它们的注意。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "confuse",
+        "translation": "混乱"
+      },
+      {
+        "term": "Vex",
+        "translation": "恼乱术"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "werefury mutation",
+    "source_sha256": "f4743eb85f2e27e5a3f2a8cda8cffa77a01bce086015eea64b63e51d7197304c",
+    "old_translation": "",
+    "translation": "近战杀死敌人时，你会获得随变形术技能提高的临时杀戮加成。\n\n此加成最多叠至+12，只要持续进行近战攻击就不会消失。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "rF",
+        "translation": "火抗"
+      },
+      {
+        "term": "skill",
+        "translation": "技能"
+      },
+      {
+        "term": "Shapeshifting",
+        "translation": "变形术"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "slaying",
+        "translation": "杀戮"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "werehowl mutation",
+    "source_sha256": "8ba734653c04d13a537d99637a60a7cf79a83bd6d47a3ae25de9828c5a59b30c",
+    "old_translation": "",
+    "translation": "近战杀死敌人时，如果兽化怒意加成至少为5，你就有概率发出恐怖嚎叫。若能压倒附近敌人的意志，嚎叫就会使它们因恐惧而僵在原地。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "rC",
+        "translation": "冰抗"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "willpower",
+        "translation": "意志"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "Freeze",
+        "translation": "冰冻术/冰冻/冻结/冻伤"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "stinger hair mutation",
+    "source_sha256": "c98dce798bedb193c1d8333de32076a59575bea7eb3aa46e578e99c15b18b9dc",
+    "old_translation": "",
+    "translation": "你的头发由水母触须般细长、能抓握的丝状物构成。每次近战攻击时，它们都会抽向你周围2格内随机选中的数名可见敌人，尝试使其中毒。\n\n变形术技能可以提高同时影响的敌人数。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "skill",
+        "translation": "技能"
+      },
+      {
+        "term": "Tiles",
+        "translation": "图形版/图块/方格"
+      },
+      {
+        "term": "Shapeshifting",
+        "translation": "变形术"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "poison",
+        "translation": "毒"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      },
+      {
+        "term": "jelly",
+        "translation": "胶怪"
+      },
+      {
+        "term": "player",
+        "translation": "玩家"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "lithotoxin mutation",
+    "source_sha256": "70f4dc57740d986418aeb4c23713385a231e9cdecf22308df2036917aa107f1e",
+    "old_translation": "",
+    "translation": "生命值降至上限的60%或以下时，你的触须会本能地尝试石化周围3格内所有中毒的敌人。\n\n触发后，必须等生命值完全恢复才能再次触发。成功概率随变形术技能提高。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "max",
+        "translation": "最大值"
+      },
+      {
+        "term": "skill",
+        "translation": "技能"
+      },
+      {
+        "term": "Tiles",
+        "translation": "图形版/图块/方格"
+      },
+      {
+        "term": "Shapeshifting",
+        "translation": "变形术"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "poison",
+        "translation": "毒"
+      },
+      {
+        "term": "Petrify",
+        "translation": "石化术/石化"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "contaminating mutation",
+    "source_sha256": "9f91f14342eb11655e9983bf44316a4bc116159d677f992e07f20828e4a72dfd",
+    "old_translation": "",
+    "translation": "近战击中敌人时，涌动的变形能量会部分污染对方。连续第三次命中时，污染会剧烈到扭曲其身体，造成大量无视护甲值的伤害，并使其产生有害变异。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "contamination",
+        "translation": "魔法污染"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "maw attack mutation",
+    "source_sha256": "d50cf0107b0c282d60f06d6e652da6bd5b892a236cbfca7227725f63ab1cc47f",
+    "old_translation": "",
+    "translation": "你的巨口有时会近战噬咬敌人，其频率与你自己的攻击速度无关，平均每15个时间单位攻击一次。巨口的基础伤害会直接增加相当于你力量75%的数值。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Strength",
+        "translation": "力量/强度/威力"
+      },
+      {
+        "term": "aut",
+        "translation": "时间单位"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      },
+      {
+        "term": "rat",
+        "translation": "老鼠"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "devouring maw mutation",
+    "source_sha256": "79b3593c935a073bd42e25bf3b5e8094bfb8a7747c1a76d61d57029a266e692a",
+    "old_translation": "",
+    "translation": "近战杀死可食用的敌人时，巨口会将其吞噬，在短时间内大幅提高再生速度。可食用敌人包括敌对、非召唤的活体或植物怪物。敌人越强，效果持续越久。\n",
+    "glossary_hits": [
+      {
+        "term": "hostile",
+        "translation": "敌对"
+      },
+      {
+        "term": "ration",
+        "translation": "口粮"
+      },
+      {
+        "term": "rF",
+        "translation": "火抗"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      },
+      {
+        "term": "Regeneration",
+        "translation": "再生术/再生/恢复"
+      },
+      {
+        "term": "plant",
+        "translation": "植物"
+      },
+      {
+        "term": "rat",
+        "translation": "老鼠"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "growling stomach mutation",
+    "source_sha256": "b6ff2d1fa2fbc40e5676b5fdbbcdee42d2185e8e68da9a08b3226bbfad781137",
+    "old_translation": "",
+    "translation": "你的巨口永远吃不饱。每当你初次遇见可食用的怪物，都有概率被它迷住，并发出响亮的腹鸣。\n",
+    "glossary_hits": [
+      {
+        "term": "Mesmerise",
+        "translation": "迷魂术/迷住/迷惑"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "eel punch mutation",
+    "source_sha256": "06ca2847309ae6a4902cf14eaec869bf0d4e5f49d8e5f0527c35b9625f5034f2",
+    "old_translation": "",
+    "translation": "你的近战攻击命中时有50%的概率释放电弧，在数名相互连通的敌人之间传导。\n",
+    "glossary_hits": [
+      {
+        "term": "Dis",
+        "translation": "冥府"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "rC",
+        "translation": "冰抗"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "eeljolt mutation",
+    "source_sha256": "6ecf819cf382bbc5d10aa40405e3acb1f49dc344d24cb11a650245192217d501",
+    "old_translation": "",
+    "translation": "生命值降至上限的40%时，你的电鳗会猛烈放电，击中你周围2格内所有相互连通的目标，无论敌友；伤害为通常放电的两倍。\n\n触发后，必须等生命值完全恢复才能再次触发。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Dis",
+        "translation": "冥府"
+      },
+      {
+        "term": "max",
+        "translation": "最大值"
+      },
+      {
+        "term": "Tiles",
+        "translation": "图形版/图块/方格"
+      },
+      {
+        "term": "Striking",
+        "translation": "打击术"
+      },
+      {
+        "term": "elf",
+        "translation": "精灵"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "blade parry mutation",
+    "source_sha256": "aaa3ceef5701e6e1f3250b81b1696470d1f5d7917f9739e4a068029e55f185d1",
+    "old_translation": "",
+    "translation": "每次进行近战攻击时，你都会短暂获得等同于杀戮加成的格挡值，并额外获得随变形术技能提高的固定加成。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "rF",
+        "translation": "火抗"
+      },
+      {
+        "term": "skill",
+        "translation": "技能"
+      },
+      {
+        "term": "Shapeshifting",
+        "translation": "变形术"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "slaying",
+        "translation": "杀戮"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "sporulate mutation",
+    "source_sha256": "ad2cb88e093cae40108ab2723e2639a7b74e706d36a76053ec7a4866405cbe23",
+    "old_translation": "",
+    "translation": "你的近战攻击会使多株爆裂蘑菇在目标后方的空位开始生长。若能生长数个回合，它们就会爆出孢子，伤害附近敌人，并可能使其短暂恍惚。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "Tiles",
+        "translation": "图形版/图块/方格"
+      },
+      {
+        "term": "turn",
+        "translation": "回合/转向/变成/轮流"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "rN",
+        "translation": "负能量抗性"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      },
+      {
+        "term": "burstshroom",
+        "translation": "爆裂蘑菇"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "armoured shell mutation",
+    "source_sha256": "e82987af75ada95504ffb07e389b8dd2e27a799707e0b0e65091888ce9a2b87f",
+    "old_translation": "",
+    "translation": "你的躯干防具与甲壳融合，基础护甲值会乘上一个随变形术技能提高的系数。其附加属性及大多数神器属性的效果也会翻倍，但某些罕见神器过于特殊，无法以这种方式增强。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Armour",
+        "translation": "防具/护身"
+      },
+      {
+        "term": "artefact",
+        "translation": "神器"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "Hell",
+        "translation": "地狱"
+      },
+      {
+        "term": "skill",
+        "translation": "技能"
+      },
+      {
+        "term": "Shapeshifting",
+        "translation": "变形术"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "body armour",
+        "translation": "躯干防具"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "hypnotic gaze mutation",
+    "source_sha256": "3a71bd5ac17e347a6c7b6833f2de6d638a1fe3a0dfdc503f695b46afd4aa2d2a",
+    "old_translation": "",
+    "translation": "你的凝视对许多生物具有催眠效果。活体、恶魔或神圣怪物首次察觉你时，可能会短暂恍惚，无法喊叫。未通过意志检定的生物会恍惚更久。\n",
+    "glossary_hits": [
+      {
+        "term": "Oni",
+        "translation": "鬼人"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "willpower",
+        "translation": "意志"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "Gehenna destruction mutation",
+    "source_sha256": "720cbf6449f4be0a2ca8a82d65223060ddd79b1508234ca50e9c46df824c0786",
+    "old_translation": "",
+    "translation": "你的释放毁灭能力获得欣嫩谷之力加持。你会投掷岩浆束取代寒冷束，火焰束还能剥除受害者的火焰抗性。\n",
+    "glossary_hits": [
+      {
+        "term": "ability",
+        "translation": "能力"
+      },
+      {
+        "term": "Gehenna",
+        "translation": "欣嫩谷"
+      },
+      {
+        "term": "Ru",
+        "translation": "入"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Unleash Destruction",
+        "translation": "释放毁灭"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "Cocytus destruction mutation",
+    "source_sha256": "f599b10af1ea3c8e12b336f716d22f1660033826b9d0948ab42d04e8c1736693",
+    "old_translation": "",
+    "translation": "你的释放毁灭能力获得悲叹河之力加持。你会投掷冰块束取代火焰束，寒冷束还能将受害者冻僵，减慢其移动速度。\n",
+    "glossary_hits": [
+      {
+        "term": "ability",
+        "translation": "能力"
+      },
+      {
+        "term": "Cocytus",
+        "translation": "悲叹河"
+      },
+      {
+        "term": "Ru",
+        "translation": "入"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Slow",
+        "translation": "缓慢术/减速/缓慢/迟缓"
+      },
+      {
+        "term": "Freeze",
+        "translation": "冰冻术/冰冻/冻结/冻伤"
+      },
+      {
+        "term": "Unleash Destruction",
+        "translation": "释放毁灭"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "Tartarus destruction mutation",
+    "source_sha256": "55eea5716197584ea118466e19a8b9551f35a915e1773dca0dc9da8d6cb6d4e1",
+    "old_translation": "",
+    "translation": "你的释放毁灭能力获得塔尔塔罗斯之力加持。你会投掷能降低受害者意志的毁灭束取代闪电束，负能量束的威力也会提高。\n",
+    "glossary_hits": [
+      {
+        "term": "ability",
+        "translation": "能力"
+      },
+      {
+        "term": "rF",
+        "translation": "火抗"
+      },
+      {
+        "term": "Ru",
+        "translation": "入"
+      },
+      {
+        "term": "Tartarus",
+        "translation": "塔尔塔罗斯"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "willpower",
+        "translation": "意志"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "Unleash Destruction",
+        "translation": "释放毁灭"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "Dis destruction mutation",
+    "source_sha256": "5bcf38851b9b9aed8ede826c3a331c86b1fa07ddd8626e588509c9963faf7710",
+    "old_translation": "",
+    "translation": "你的释放毁灭能力获得冥府之力加持。你会投掷腐蚀酸液束和金属碎片取代负能量束。\n",
+    "glossary_hits": [
+      {
+        "term": "ability",
+        "translation": "能力"
+      },
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Dis",
+        "translation": "冥府"
+      },
+      {
+        "term": "Ru",
+        "translation": "入"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Metal Splinters",
+        "translation": "金属碎片"
+      },
+      {
+        "term": "Unleash Destruction",
+        "translation": "释放毁灭"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "Mark of the Tyrant mutation",
+    "source_sha256": "78459388aa2b625aadc924e8a8fddb79877193ca8e01693c2e75b380a01a3c86",
+    "old_translation": "",
+    "translation": "你的地狱仆从持续时间更长；祈祷技能极高时，还能以额外虔诚为代价召唤更强大的仆从。你杀死敌人时，一名随机仆从可能获得疾速、强力、再生或聪慧效果之一。\n",
+    "glossary_hits": [
+      {
+        "term": "Invocations",
+        "translation": "祈祷"
+      },
+      {
+        "term": "ration",
+        "translation": "口粮"
+      },
+      {
+        "term": "rN",
+        "translation": "负能量抗性"
+      },
+      {
+        "term": "piety",
+        "translation": "虔诚"
+      },
+      {
+        "term": "haste",
+        "translation": "疾速"
+      },
+      {
+        "term": "Might",
+        "translation": "强力术/可能/力量"
+      },
+      {
+        "term": "Infernal Servant",
+        "translation": "地狱仆从"
+      },
+      {
+        "term": "Regeneration",
+        "translation": "再生术/再生/恢复"
+      },
+      {
+        "term": "rat",
+        "translation": "老鼠"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "Mark of Carnage mutation",
+    "source_sha256": "75c602382c6e3083dbf87cf4b9440ed5986fa2d60063835089c0be15acebb654",
+    "old_translation": "",
+    "translation": "你的地狱仆从会出现在一名随机敌人的相邻位置，而非你的附近。它们现身时，会释放一次具有你独特毁灭之力的爆发，不会伤害你或其他盟友。\n\n你的仆从会释放以下两类爆发之一：\n{{\n    if you.get_base_mutation_level(\"Dis destruction\") == 1 then\n        return \"酸液或金属碎片\"\n    elseif you.get_base_mutation_level(\"Tartarus destruction\") == 1 then\n        return \"负能量或毁灭之力\"\n    elseif you.get_base_mutation_level(\"Gehenna destruction\") == 1 then\n        return \"火焰或熔岩\"\n    elseif you.get_base_mutation_level(\"Cocytus destruction\") == 1 then\n        return \"寒冷或冰块\"\n    end\n}}。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "character",
+        "translation": "角色/字符/性格"
+      },
+      {
+        "term": "Cocytus",
+        "translation": "悲叹河"
+      },
+      {
+        "term": "Dis",
+        "translation": "冥府"
+      },
+      {
+        "term": "Gehenna",
+        "translation": "欣嫩谷"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "Ru",
+        "translation": "入"
+      },
+      {
+        "term": "Tartarus",
+        "translation": "塔尔塔罗斯"
+      },
+      {
+        "term": "turn",
+        "translation": "回合/转向/变成/轮流"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "rN",
+        "translation": "负能量抗性"
+      },
+      {
+        "term": "Metal Splinters",
+        "translation": "金属碎片"
+      },
+      {
+        "term": "Infernal Servant",
+        "translation": "地狱仆从"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "Mark of the Legion mutation",
+    "source_sha256": "57a4c7554c59c0bdc57b76c966dd97a49781ab781c5b50724fc6434df07ef9dd",
+    "old_translation": "",
+    "translation": "你的地狱仆从能力被地狱军团取代，允许你在一段时间内不断召来一小支恶魔军队。每只恶魔的存在时间虽然短暂，但只要状态仍然持续，它们就会源源不断地到来，而且绝不会对你敌对。\n\n你还能让马科列布的毁灭之力穿过你召唤的盟友，而不伤害它们。\n",
+    "glossary_hits": [
+      {
+        "term": "ability",
+        "translation": "能力"
+      },
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "hostile",
+        "translation": "敌对"
+      },
+      {
+        "term": "Makhleb",
+        "translation": "马科列布"
+      },
+      {
+        "term": "Ru",
+        "translation": "入"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "rN",
+        "translation": "负能量抗性"
+      },
+      {
+        "term": "Infernal Servant",
+        "translation": "地狱仆从"
+      },
+      {
+        "term": "Infernal Legion",
+        "translation": "地狱军团"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "Mark of Annihilation mutation",
+    "source_sha256": "b924ee67918a1637b5c269e7544be290e10c34fbf0d5497c852620b354bec54b",
+    "old_translation": "",
+    "translation": "你的地狱仆从能力被湮灭之球取代，允许你投出缓慢移动、蕴藏强大毁灭之力的球体，以你独特的毁灭之力引发巨大爆炸。\n\n你的湮灭之球会释放以下两类爆发之一：\n{{\n    if you.get_base_mutation_level(\"Dis destruction\") == 1 then\n        return \"酸液或金属碎片\"\n    elseif you.get_base_mutation_level(\"Tartarus destruction\") == 1 then\n        return \"负能量或毁灭之力\"\n    elseif you.get_base_mutation_level(\"Gehenna destruction\") == 1 then\n        return \"火焰或熔岩\"\n    elseif you.get_base_mutation_level(\"Cocytus destruction\") == 1 then\n        return \"寒冷或冰块\"\n    end\n}}。\n",
+    "glossary_hits": [
+      {
+        "term": "ability",
+        "translation": "能力"
+      },
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "character",
+        "translation": "角色/字符/性格"
+      },
+      {
+        "term": "Cocytus",
+        "translation": "悲叹河"
+      },
+      {
+        "term": "Dis",
+        "translation": "冥府"
+      },
+      {
+        "term": "Gehenna",
+        "translation": "欣嫩谷"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "mutation",
+        "translation": "变异"
+      },
+      {
+        "term": "rC",
+        "translation": "冰抗"
+      },
+      {
+        "term": "Ru",
+        "translation": "入"
+      },
+      {
+        "term": "Tartarus",
+        "translation": "塔尔塔罗斯"
+      },
+      {
+        "term": "turn",
+        "translation": "回合/转向/变成/轮流"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "rN",
+        "translation": "负能量抗性"
+      },
+      {
+        "term": "Slow",
+        "translation": "缓慢术/减速/缓慢/迟缓"
+      },
+      {
+        "term": "Metal Splinters",
+        "translation": "金属碎片"
+      },
+      {
+        "term": "Infernal Servant",
+        "translation": "地狱仆从"
+      },
+      {
+        "term": "Globe of Annihilation",
+        "translation": "湮灭之球"
+      },
+      {
+        "term": "orc",
+        "translation": "兽人"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "Mark of Haemoclasm mutation",
+    "source_sha256": "8a8054495829f183079226f3449a9636f8095355017dedcf65e24898f5f2ca72",
+    "old_translation": "",
+    "translation": "你杀死的敌人有小概率爆成猛烈的血雨，对相邻敌人造成与死者生命值上限成正比的伤害。\n\n被这次爆炸杀死的敌人必定也会爆炸。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "max",
+        "translation": "最大值"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "rain",
+        "translation": "雨水"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "Mark of the Celebrant mutation",
+    "source_sha256": "eeb318cb15b9d9b0e39a7a20d3673b1d76f8b63bf377990e6c3053684f84caff",
+    "old_translation": "",
+    "translation": "每当生命值降至上限的50%以下，你都会举行地狱祭仪，向附近敌人发射一阵血箭。每个有效目标都至少会受到一支血箭攻击；目标较少时，还可能射出额外血箭。祈祷技能会提高血箭伤害，马科列布必定会因这些血箭杀死的敌人而赐予你治疗。\n\n举行血之祭仪后，必须等生命值完全恢复才能再次举行。\n",
+    "glossary_hits": [
+      {
+        "term": "arrow",
+        "translation": "箭"
+      },
+      {
+        "term": "Invocations",
+        "translation": "祈祷"
+      },
+      {
+        "term": "Makhleb",
+        "translation": "马科列布"
+      },
+      {
+        "term": "max",
+        "translation": "最大值"
+      },
+      {
+        "term": "rF",
+        "translation": "火抗"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "rN",
+        "translation": "负能量抗性"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "Mark of Execution mutation",
+    "source_sha256": "526c332ee1c7c454ed8f00231953574cf11d93bcadc85304a41596f30c2e8600",
+    "old_translation": "",
+    "translation": "你的灵魂中沉睡着一个杀戮的恶魔化身。每当你近战杀死敌人，它都有小概率苏醒，化作环绕你的镰刀状刀刃风暴。这些刀刃会随你一同攻击，也会在你成功闪避敌人的攻击后反击。\n\n被附身时，你可以迅速冲撞至敌人身边；但若在短时间内没有持续攻击，而是进行其他活动，恶魔就会再次沉睡在你体内。\n",
+    "glossary_hits": [
+      {
+        "term": "ability",
+        "translation": "能力"
+      },
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Oni",
+        "translation": "鬼人"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "rN",
+        "translation": "负能量抗性"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "Mark of Atrocity mutation",
+    "source_sha256": "80f5e0504da2224a4e8a55c0fe50a65b54b7d0885a4dd03c5265eb2d3f27ebc3",
+    "old_translation": "",
+    "translation": "你连续不断地使用释放毁灭时，伤害和生命值消耗都会逐次提高。连续第四次使用时，你会自动向随机目标额外发射一阵狂乱的能量束，并重置这项增幅。\n",
+    "glossary_hits": [
+      {
+        "term": "Ru",
+        "translation": "入"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "aut",
+        "translation": "时间单位"
+      },
+      {
+        "term": "Unleash Destruction",
+        "translation": "释放毁灭"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "Mark of the Fanatic mutation",
+    "source_sha256": "a3d028fac161d3c91fa147a0f179a604eed92ea36379f97a9232db8663e12cfd",
+    "old_translation": "",
+    "translation": "你获得杀戮容器能力，可以短暂化身为强大的恶魔化身，大幅增强进攻和防御。代价是在效果结束后被拖入血肉熔炉，必须为自由而战。\n",
+    "glossary_hits": [
+      {
+        "term": "ability",
+        "translation": "能力"
+      },
+      {
+        "term": "rF",
+        "translation": "火抗"
+      },
+      {
+        "term": "Ru",
+        "translation": "入"
+      },
+      {
+        "term": "Oni",
+        "translation": "鬼人"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Vessel of Slaughter",
+        "translation": "杀戮容器"
+      },
+      {
+        "term": "Crucible",
+        "translation": "血肉熔炉"
+      },
+      {
+        "term": "the Crucible of Flesh",
+        "translation": "血肉熔炉"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "renounce potions mutation",
+    "source_sha256": "98bb7d81b8f17125eb97f3ec1cee5e769822f28bc80fa38c2eee5bb51a8fa7cd",
+    "old_translation": "",
+    "translation": "除非身受重伤，你拒绝在战斗中饮用药水。敌人在视野内时，以及之后的数个回合，只有生命值低于上限的50%时你才能饮用药水。\n",
+    "glossary_hits": [
+      {
+        "term": "bat",
+        "translation": "蝙蝠"
+      },
+      {
+        "term": "max",
+        "translation": "最大值"
+      },
+      {
+        "term": "potion",
+        "translation": "药水"
+      },
+      {
+        "term": "turn",
+        "translation": "回合/转向/变成/轮流"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "rN",
+        "translation": "负能量抗性"
+      },
+      {
+        "term": "line of sight",
+        "translation": "视线"
+      },
+      {
+        "term": "ink",
+        "translation": "墨汁"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "renounce scrolls mutation",
+    "source_sha256": "a3ccaf9e23c601f1e699b124b274ec2642f156f379dc1880e2870917fb29ff90",
+    "old_translation": "",
+    "translation": "除非身受重伤，你拒绝在战斗中阅读卷轴。敌人在视野内时，以及之后的数个回合，只有生命值低于上限的50%时你才能阅读卷轴。\n",
+    "glossary_hits": [
+      {
+        "term": "bat",
+        "translation": "蝙蝠"
+      },
+      {
+        "term": "max",
+        "translation": "最大值"
+      },
+      {
+        "term": "turn",
+        "translation": "回合/转向/变成/轮流"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "rN",
+        "translation": "负能量抗性"
+      },
+      {
+        "term": "line of sight",
+        "translation": "视线"
+      },
+      {
+        "term": "Roll",
+        "translation": "翻滚"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "missing a hand mutation",
+    "source_sha256": "cce477eae2cb4c2e13a8814a7ec71e69dc641c0b6ec8c0b7057a982e7bea9d7e",
+    "old_translation": "你的手要比以前不方便得多。\n你不能使用双手武器、装备盾牌、发起徒手攻击或一次使用多个魔法戒指。\n",
+    "translation": "你已远不如从前那样得心应手。你无法使用双手武器、佩戴盾牌或进行副手攻击，同时也只能佩戴一枚魔法戒指。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Shield",
+        "translation": "格挡值/盾牌/保护"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "no stealth mutation",
+    "source_sha256": "36d0029d96873cdf3cf05f3f8082010a0c2895d5f9c9637261859a8ea2d2d678",
+    "old_translation": "你无法潜行。\n当敌人能看到你时，你总是能引起他们的警觉，并且他们能够轻易追踪你。\n",
+    "translation": "你完全无法潜行。怪物只要看见你就必定会被惊动，而且能非常有效地追踪你。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "stealth",
+        "translation": "潜行"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "no forms mutation",
+    "source_sha256": "4a623d5079be891c44495a2cd53df2413630240fe5b7232e76e0aa5072f74b3a",
+    "old_translation": "你无法通过符咒、药水或其他任何方式自行改变形态。\n但你仍有可能会被变形魔杖等方式不由自主地改变形态。\n",
+    "translation": "你无法通过变形护符、药水或其他任何手段主动变换形态，但仍可能被变形术魔杖等效果强制变形。\n",
+    "glossary_hits": [
+      {
+        "term": "potion",
+        "translation": "药水"
+      },
+      {
+        "term": "wand",
+        "translation": "魔杖"
+      },
+      {
+        "term": "talisman",
+        "translation": "变形护符"
+      },
+      {
+        "term": "Polymorph",
+        "translation": "变形术"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "inability to use devices mutation",
+    "source_sha256": "f68d178fd6495c07ff629ce4db29958e3f5459ccc643fff369760cd65350475b",
+    "old_translation": "你无法使用魔法设备。\n其中包括魔杖和大多数需要通过<input>$cmd[CMD_EVOKE]</input>激活的物品，\n但不包括获得的武器、符咒和金字塔雕像。这也使得法杖在近战时的威力大大降低。\n",
+    "translation": "你无法使用魔法装置，包括魔杖和大多数通过<input>$cmd[CMD_EVOKE]</input>使用的物品；能延伸攻击的武器、变形护符和神塔雕像除外。此变异还会大幅降低魔法法杖的近战效果。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "Staves",
+        "translation": "棍杖"
+      },
+      {
+        "term": "wand",
+        "translation": "魔杖"
+      },
+      {
+        "term": "Ziggurat",
+        "translation": "神塔"
+      },
+      {
+        "term": "evoke",
+        "translation": "唤发/发动/使用"
+      },
+      {
+        "term": "talisman",
+        "translation": "变形护符"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      },
+      {
+        "term": "rat",
+        "translation": "老鼠"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "hated by all mutation",
+    "source_sha256": "110a37be5dc59f9ceec6085e0fb6bc7631258f8b9735036fd3422d811630eb79",
+    "old_translation": "你被所有怪物憎恨，无法以任何方式获得暂时或永久的盟友。\n简单、没有意识的魔法造物，比如幽灵武器、毁灭球和作战球则不受此影响。\n",
+    "translation": "所有生物都憎恶你，你无法以任何方式获得临时或永久盟友。幽魂武器、毁灭之球和作战球等结构简单、没有思维的魔法造物不受影响。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "bat",
+        "translation": "蝙蝠"
+      },
+      {
+        "term": "battlesphere",
+        "translation": "作战球"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "Ru",
+        "translation": "入"
+      },
+      {
+        "term": "Spectral Weapon",
+        "translation": "幽魂武器"
+      },
+      {
+        "term": "ink",
+        "translation": "墨汁"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "cowardly mutation",
+    "source_sha256": "73ff6f00507457817a250cdb6e02f5864f5cb25dfeadb73993bb977e0981e44e",
+    "old_translation": "看到有威胁的怪物会让你充满恐惧，\n你的法术威力、近战和远程攻击杀怪物的能力都会受到削弱。\n一次看到多个这样的怪物，或极其危险的怪物，会让情况变得更糟。\n",
+    "translation": "看见有威胁的怪物会让你心生恐惧，降低法术强度，以及近战和远程攻击的杀戮能力。同时看见多只这样的怪物，或看见极具威胁的怪物时，影响会更严重。\n",
+    "glossary_hits": [
+      {
+        "term": "ability",
+        "translation": "能力"
+      },
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "dread",
+        "translation": "恐惧"
+      },
+      {
+        "term": "spell",
+        "translation": "法术"
+      },
+      {
+        "term": "Melee",
+        "translation": "近战"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "disrupted magic mutation",
+    "source_sha256": "0224b068c17344715bb57c86992e34d4bdf6d1983990b5e5ce8cae1a855f2915",
+    "old_translation": "你施法的失误几率会更高。这个舍弃每升一级，施法就越容易失误。\n",
+    "translation": "你的施法失误概率提高。此献祭每级都会进一步提高施法失误概率。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "miscast",
+        "translation": "施法失误"
+      },
+      {
+        "term": "spell",
+        "translation": "法术"
+      },
+      {
+        "term": "Sacrifice",
+        "translation": "献祭/牺牲/祭仪"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "unskilled mutation",
+    "source_sha256": "3348d45c15c1f354e1c1def457372ef57af17c50b81ec3c0bc77876afa22d595",
+    "old_translation": "你提升技能需要更多经验。这个舍弃每升一级，技能成本就会更高。\n",
+    "translation": "你需要更多经验值才能提高技能。此献祭每级都会进一步增加技能所需经验。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "experience",
+        "translation": "经验值"
+      },
+      {
+        "term": "skill",
+        "translation": "技能"
+      },
+      {
+        "term": "Sacrifice",
+        "translation": "献祭/牺牲/祭仪"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "reduced AC mutation",
+    "source_sha256": "4e522b786a157739a46e1e8fa495df62eb797cef94ba33836f6c9e340fc0d774",
+    "old_translation": "你很容易受到创伤，你的防具的增益受到削弱。\n",
+    "translation": "你很容易被打得遍体鳞伤，防具提供的防护会降低。\n",
+    "glossary_hits": [
+      {
+        "term": "Armour",
+        "translation": "防具/护身"
+      },
+      {
+        "term": "bat",
+        "translation": "蝙蝠"
+      },
+      {
+        "term": "Ru",
+        "translation": "入"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "reduced EV mutation",
+    "source_sha256": "a79f481cb40c2196e919a8bbe056341b4e56d146cf5523620c03897a7c0e6a2d",
+    "old_translation": "你的反应很慢，敌人很容易攻击你。\n",
+    "translation": "你的反应迟缓，敌人更容易击中你。\n",
+    "glossary_hits": [
+      {
+        "term": "Slow",
+        "translation": "缓慢术/减速/缓慢/迟缓"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "inexperienced mutation",
+    "source_sha256": "d6c16f0dfc60ab426780df0670b6f41774adadb2842e08771ecc28fd48e81498",
+    "old_translation": "你缺乏经验，无法完全升到27级。\n",
+    "translation": "你经验不足，无法完整获得27个经验等级。\n",
+    "glossary_hits": [
+      {
+        "term": "experience",
+        "translation": "经验值"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "missing an eye mutation",
+    "source_sha256": "fb5e3a696a84894f849dc034adbc7a5a4dc24179d7118cca9f554d3217a8420f",
+    "old_translation": "你失去了一只眼睛，降低了你的物理和魔法攻击的命中率。\n",
+    "translation": "你缺失一只眼，物理攻击和魔法攻击的命中率都会降低。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "accuracy",
+        "translation": "命中率"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "no potions mutation",
+    "source_sha256": "cef2f56b34662ce28075386f6d566b193065f34ae6acd98119243b5033c316ec",
+    "old_translation": "你无法饮用药水。\n",
+    "translation": "你无法饮用药水。\n",
+    "glossary_hits": [
+      {
+        "term": "potion",
+        "translation": "药水"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "no weapons or thrown items mutation",
+    "source_sha256": "76d70cf69cfa0c3c5179791e66882ac5783479e89bfe7975a38315cd38f04957",
+    "old_translation": "你无法装备武器或投掷物品。\n",
+    "translation": "你无法持握武器或投掷物品。\n",
+    "glossary_hits": [
+      {
+        "term": "throw",
+        "translation": "投掷"
+      },
+      {
+        "term": "Throwing",
+        "translation": "投掷"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "no armour mutation",
+    "source_sha256": "5c6624e2802da19c5acaefc4c89825855c2be307cf11b5839d4508e671f1219e",
+    "old_translation": "你无法装备防具。\n",
+    "translation": "你无法穿戴防具。\n",
+    "glossary_hits": [
+      {
+        "term": "Armour",
+        "translation": "防具/护身"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "inability to train dodging mutation",
+    "source_sha256": "036b1ff1f08cad7e9dfe3efc3bd99c2f349d8b1d50aecc3e8443aeef0129362a",
+    "old_translation": "你的闪避技能等级为0，你也无法训练它。\n",
+    "translation": "你的闪避技能为0，而且无法训练。\n",
+    "glossary_hits": [
+      {
+        "term": "Dodging",
+        "translation": "闪避"
+      },
+      {
+        "term": "skill",
+        "translation": "技能"
+      },
+      {
+        "term": "rain",
+        "translation": "雨水"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "inability to train armour mutation",
+    "source_sha256": "dbf86ef90e9848c06d2d698fe46e97b0a3c6c5e68feb4517a7326559c0abf043",
+    "old_translation": "你的护甲技能等级为0，你也无法训练它。\n",
+    "translation": "你的防具技能为0，而且无法训练。\n",
+    "glossary_hits": [
+      {
+        "term": "Armour",
+        "translation": "防具/护身"
+      },
+      {
+        "term": "skill",
+        "translation": "技能"
+      },
+      {
+        "term": "rain",
+        "translation": "雨水"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "no air magic mutation",
+    "source_sha256": "034e8fa1cad8fd2a27f461a2f7e6b55fa124b3aa01e03d3a001f568a85e90db9",
+    "old_translation": "你的气系魔法技能等级为0，你也无法训练它。\n",
+    "translation": "你的气系魔法技能为0，而且无法训练。\n",
+    "glossary_hits": [
+      {
+        "term": "air magic",
+        "translation": "气系魔法"
+      },
+      {
+        "term": "skill",
+        "translation": "技能"
+      },
+      {
+        "term": "rain",
+        "translation": "雨水"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "no conjurations magic mutation",
+    "source_sha256": "271ded41daa41e3e33cbf61e091d4201bf7740ab4dd390b7e665903b79582aeb",
+    "old_translation": "你的塑能技能等级为0，你也无法训练它。\n",
+    "translation": "你的塑能系魔法技能为0，而且无法训练。\n",
+    "glossary_hits": [
+      {
+        "term": "conjuration",
+        "translation": "塑能"
+      },
+      {
+        "term": "Conjurations",
+        "translation": "塑能系魔法/魔法"
+      },
+      {
+        "term": "ration",
+        "translation": "口粮"
+      },
+      {
+        "term": "skill",
+        "translation": "技能"
+      },
+      {
+        "term": "rain",
+        "translation": "雨水"
+      },
+      {
+        "term": "rat",
+        "translation": "老鼠"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "no earth magic mutation",
+    "source_sha256": "058a309b37dda13960b30c5777335247cfd6b9c6efeb98e42c8c9add2a001e1f",
+    "old_translation": "你的土系魔法技能等级为0，你也无法训练它。\n",
+    "translation": "你的土系魔法技能为0，而且无法训练。\n",
+    "glossary_hits": [
+      {
+        "term": "earth magic",
+        "translation": "土系魔法"
+      },
+      {
+        "term": "skill",
+        "translation": "技能"
+      },
+      {
+        "term": "rain",
+        "translation": "雨水"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "no fire magic mutation",
+    "source_sha256": "9777a653f6a91f280276465f3f9383348ac0a815d1774f7373438c6596b81c6d",
+    "old_translation": "你的火系魔法技能等级为0，你也无法训练它。\n",
+    "translation": "你的火系魔法技能为0，而且无法训练。\n",
+    "glossary_hits": [
+      {
+        "term": "fire magic",
+        "translation": "火系魔法"
+      },
+      {
+        "term": "skill",
+        "translation": "技能"
+      },
+      {
+        "term": "rain",
+        "translation": "雨水"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "no hexes magic mutation",
+    "source_sha256": "ef9e14b3143bc7b3a8250da683cbdd2f96f03a71fdb78824282e4cd25782b029",
+    "old_translation": "你的妖术技能等级为0，你也无法训练它。\n",
+    "translation": "你的妖术系魔法技能为0，而且无法训练。\n",
+    "glossary_hits": [
+      {
+        "term": "Hexes",
+        "translation": "妖术系魔法"
+      },
+      {
+        "term": "skill",
+        "translation": "技能"
+      },
+      {
+        "term": "rain",
+        "translation": "雨水"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "no ice magic mutation",
+    "source_sha256": "c23558febba4867657f2d100f426cdaf5a045c589b7a5e702cdbce4a07e77579",
+    "old_translation": "你的冰系魔法技能等级为0，你也无法训练它。\n",
+    "translation": "你的冰系魔法技能为0，而且无法训练。\n",
+    "glossary_hits": [
+      {
+        "term": "ice magic",
+        "translation": "冰系魔法"
+      },
+      {
+        "term": "skill",
+        "translation": "技能"
+      },
+      {
+        "term": "rain",
+        "translation": "雨水"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "no necromancy magic mutation",
+    "source_sha256": "b1b7a489397718a9524c6a56f88e1f8da91c12c3b18566464d29c3ed4c536e04",
+    "old_translation": "你的死灵术技能等级为0，你也无法训练它。\n",
+    "translation": "你的死灵系魔法技能为0，而且无法训练。\n",
+    "glossary_hits": [
+      {
+        "term": "Necromancy",
+        "translation": "死灵系魔法"
+      },
+      {
+        "term": "skill",
+        "translation": "技能"
+      },
+      {
+        "term": "rain",
+        "translation": "雨水"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "no alchemy magic mutation",
+    "source_sha256": "655cd92f3862cefe5af165c6b058140ca0b3d700aec5f332d8c395db517c1691",
+    "old_translation": "你的炼金术技能等级为0，你也无法训练它。\n",
+    "translation": "你的炼金术技能为0，而且无法训练。\n",
+    "glossary_hits": [
+      {
+        "term": "skill",
+        "translation": "技能"
+      },
+      {
+        "term": "Alchemy",
+        "translation": "炼金术"
+      },
+      {
+        "term": "rain",
+        "translation": "雨水"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "no summoning magic mutation",
+    "source_sha256": "de790f6c978f21c77eea2a94d1f9a8a67e9a05090aaa45d868b7472a5b5ae854",
+    "old_translation": "你的召唤技能等级为0，你也无法训练它。\n",
+    "translation": "你的召唤系魔法技能为0，而且无法训练。\n",
+    "glossary_hits": [
+      {
+        "term": "skill",
+        "translation": "技能"
+      },
+      {
+        "term": "Oni",
+        "translation": "鬼人"
+      },
+      {
+        "term": "rain",
+        "translation": "雨水"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "no translocations magic mutation",
+    "source_sha256": "57b25b529fe4151221f912cf966ceb14d259efdb525ca579dadfd2f6ec9fea0c",
+    "old_translation": "你的移位技能等级为0，你也无法训练它。\n",
+    "translation": "你的位移系魔法技能为0，而且无法训练。\n",
+    "glossary_hits": [
+      {
+        "term": "skill",
+        "translation": "技能"
+      },
+      {
+        "term": "Translocations",
+        "translation": "位移系魔法"
+      },
+      {
+        "term": "rain",
+        "translation": "雨水"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "no forgecraft magic mutation",
+    "source_sha256": "691cfb03ae0137e35b1baea0a10f9067ad1bda5f8616ecabfb9a07ba2a33f12e",
+    "old_translation": "",
+    "translation": "你的锻造术技能为0，而且无法训练。\n",
+    "glossary_hits": [
+      {
+        "term": "skill",
+        "translation": "技能"
+      },
+      {
+        "term": "Forgecraft",
+        "translation": "锻造术"
+      },
+      {
+        "term": "rain",
+        "translation": "雨水"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "lethargy bane",
+    "source_sha256": "4eadcc61fd8eef299a50b1577b40b67be106e9fac5cfd852e9a6ee85bba7b0a8",
+    "old_translation": "",
+    "translation": "你的移动速度缓慢，移动到新位置所需的时间比平时多30%。攻击、施法等其他行动不受影响。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "spell",
+        "translation": "法术"
+      },
+      {
+        "term": "Slow",
+        "translation": "缓慢术/减速/缓慢/迟缓"
+      },
+      {
+        "term": "Sting",
+        "translation": "毒刺"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "heatstroke bane",
+    "source_sha256": "8f01a202f8dec37461531cf5806d0da2ee458467899bdda19ffab511919ba85f",
+    "old_translation": "",
+    "translation": "受到火焰伤害时，你有较高概率被减速一段时间。当前的火焰抗性越高，这一概率就越低。\n",
+    "glossary_hits": [
+      {
+        "term": "Slow",
+        "translation": "缓慢术/减速/缓慢/迟缓"
+      },
+      {
+        "term": "rat",
+        "translation": "老鼠"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "snow-blindness bane",
+    "source_sha256": "2396ba7e597831367129a3234d9390ec242d8608f5f03a34d0c1f98e106635e3",
+    "old_translation": "",
+    "translation": "受到寒冷伤害时，你有较高概率在一段时间内变得虚弱并失明。当前的寒冷抗性越高，这一概率就越低。\n",
+    "glossary_hits": [
+      {
+        "term": "rat",
+        "translation": "老鼠"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "electrospasm bane",
+    "source_sha256": "916be7c809baf3b446cb7f87cf31c2f15a3f5fdd51321bf2a69ac58dd7f6df32",
+    "old_translation": "",
+    "translation": "受到电击伤害时，你有概率被束缚在原地，短时间内无法移动。当前的电击抗性越高，这一概率就越低。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "claustrophobia bane",
+    "source_sha256": "73d6697b327d3195f53c8c3471ec5c17b6cc6ee0cc632f21b48f97e504f169ef",
+    "old_translation": "",
+    "translation": "你身边相邻的实体地形越多，攻击的伤害和命中率，以及法术强度就越低。每个相邻的实体地形使杀戮降低2点、法术强度降低10%。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "accuracy",
+        "translation": "命中率"
+      },
+      {
+        "term": "spell",
+        "translation": "法术"
+      },
+      {
+        "term": "spell power",
+        "translation": "法术强度"
+      },
+      {
+        "term": "slaying",
+        "translation": "杀戮"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "stumbling bane",
+    "source_sha256": "a9514fe9a65faf90b844cd23e9dd4796e014703d2a2d99ed5b58d0aa8238c1b1",
+    "old_translation": "",
+    "translation": "某回合中，只要你进行了移动或原地等待而没有做其他事情，闪避值就会在该回合降低25点。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "evasion",
+        "translation": "闪避值"
+      },
+      {
+        "term": "turn",
+        "translation": "回合/转向/变成/轮流"
+      },
+      {
+        "term": "rN",
+        "translation": "负能量抗性"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "succour bane",
+    "source_sha256": "c01cec8c8c55aec0946916d9f787abc8800c55d85cb685883ee4971758f3513b",
+    "old_translation": "",
+    "translation": "每当你杀死一名敌人，附近所有其他敌人都会恢复生命值，恢复量为死者生命值上限的一大部分。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "hat",
+        "translation": "帽子"
+      },
+      {
+        "term": "max",
+        "translation": "最大值"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "multiplicity bane",
+    "source_sha256": "37c716f2a4e50118260936b4881b717580c06d6f86aa2b1a5444dcaa73a1d790",
+    "old_translation": "",
+    "translation": "视野内的敌人每回合都有小概率制造多个自身复制体。这些复制体十分脆弱，攻击和法术伤害也较低，但不会自行消失。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "spell",
+        "translation": "法术"
+      },
+      {
+        "term": "turn",
+        "translation": "回合/转向/变成/轮流"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "rN",
+        "translation": "负能量抗性"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "dilettante bane",
+    "source_sha256": "d9dd17828dc21c5ad34102fa5f94241bae6c777ee9f46faa479495b1e9488aeb",
+    "old_translation": "",
+    "translation": "在受到此厄咒时，你等级最高的武器技能会降低50%；在魔法学派、祈祷和唤发之中，等级最高的两项技能会降低25%。\n",
+    "glossary_hits": [
+      {
+        "term": "Evocations",
+        "translation": "唤发"
+      },
+      {
+        "term": "Invocations",
+        "translation": "祈祷"
+      },
+      {
+        "term": "school",
+        "translation": "魔法学派/流派"
+      },
+      {
+        "term": "skill",
+        "translation": "技能"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "paradox bane",
+    "source_sha256": "21073123ace5d3e4bc7c66153a586fbb3c8f7ad00fa0210e3ab26ffe2c285a3a",
+    "old_translation": "",
+    "translation": "每当你首次发现一只怪物，它都有概率受到悖论触碰，从而获得作为天生能力使用多重突袭的本领；使用后还有小概率随机闪现。\n",
+    "glossary_hits": [
+      {
+        "term": "ability",
+        "translation": "能力"
+      },
+      {
+        "term": "blink",
+        "translation": "闪烁/闪现/眨眼"
+      },
+      {
+        "term": "Manifold Assault",
+        "translation": "多重突袭"
+      },
+      {
+        "term": "ink",
+        "translation": "墨汁"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "warding bane",
+    "source_sha256": "5ecfbe4d495937d4668d92c8b5ccc65a52d80f5018fdf0f355ff3898d8f5d7df",
+    "old_translation": "",
+    "translation": "你遇见的敌群可能拥有护持，免受所有不与其相邻的来源造成的伤害。这也包括云雾：只要制造云雾者当前不与它们相邻，云雾就无法造成伤害。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "rC",
+        "translation": "冰抗"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "hunted bane",
+    "source_sha256": "372ae153f6d4cf3bf7e8ab3d2d1c32b275f555cda20465da39d9b2096a2b6dc3",
+    "old_translation": "",
+    "translation": "敌人召唤怪物来对付你时，召唤物通常会出现在你的相邻位置，而非召唤者身边。它们的持续时间也会延长；无论你逃到哪里，它们都不会失去对你位置的掌握。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "ration",
+        "translation": "口粮"
+      },
+      {
+        "term": "Summoner",
+        "translation": "召唤师"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "rat",
+        "translation": "老鼠"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  },
+  {
+    "key": "mortality bane",
+    "source_sha256": "019fa5ba87cafb095b76b3fcca379f7d2d09f91c10f230530ab78f1230bd9037",
+    "old_translation": "",
+    "translation": "当你身受重伤又孤身一人时，收割者可能会前来索命。这些收割者免疫不与其相邻的来源造成的所有伤害；若你的经验等级低于14，它们的还会行动缓慢。经验等级较高时，可能同时出现多名收割者。\n\n此厄咒解除时，以这种方式召来的所有收割者都会立即消失。\n",
+    "glossary_hits": [
+      {
+        "term": "AC",
+        "translation": "护甲值"
+      },
+      {
+        "term": "rC",
+        "translation": "冰抗"
+      },
+      {
+        "term": "SH",
+        "translation": "格挡值"
+      },
+      {
+        "term": "Will",
+        "translation": "意志/将会/会"
+      },
+      {
+        "term": "Slow",
+        "translation": "缓慢术/减速/缓慢/迟缓"
+      },
+      {
+        "term": "reaper",
+        "translation": "收割者"
+      }
+    ],
+    "status": "retranslated_and_reviewed"
+  }
+]

@@ -1,0 +1,1021 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "selected": [
+    {
+      "key": "nekomata",
+      "source": "{{\n  if you.race() == \"Felid\" then\n    return '@The_monster@ grumbles @to_foe@, \"Young upstarts should know their place.\"'\n  else\n    return 'VISUAL:@The_monster@ examines your form and snarls in deep contempt.'\n  end\n}} @player_only@\n\n{{\n  if you.race() == \"Felid\" then\n    return [[@The_monster@ sighs and remarks, \"You haven't even grown your second tail yet.\"]]\n  elseif you.skill(\"Spellcasting\") >= 5 then\n    return 'VISUAL:@The_monster@ scoffs at your paltry magic.'\n  else\n    return 'VISUAL:@The_monster@ regards your strength with dismissive scorn.'\n  end\n}} @player_only@\n\n{{\n  if you.race() == \"Felid\" then\n    return '@The_monster@ advises @to_foe@, \"Grace and deceit. The only things anyone needs.\"'\n  else\n    return 'VISUAL:@The_monster@ briefly ignores you to bat at some conjured hitodama.'\n  end\n}} @player_only@\n\nw:1\n@The_monster@ states, \"It's not just demons who despoil everything they cannot have.\"\n",
+      "hits": [
+        {
+          "Term": "bat",
+          "Translation": "蝙蝠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "skill",
+          "Translation": "技能",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Spellcasting",
+          "Translation": "施法",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "Strength",
+          "Translation": "力量/强度/威力",
+          "Part of Speech": "noun",
+          "Variants": "Str",
+          "Note": "三大基础属性之一\n【语境补充 2026-10-21】Str 属性用力量。法术、效果或攻击的 strength 按语境用强度或威力。"
+        },
+        {
+          "Term": "Felid",
+          "Translation": "猫族",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/felid.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "nekomata",
+          "Translation": "猫又",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "beogh_converted_orc_speech_vengeance",
+      "source": "@Subjective@ shouts, \"You have your revenge! Let me go!\"\n\n@Subjective@ shouts, \"Spare me, and you'll never see me again!\"\n\n@Subjective@ says, \"I deserve death, but Beogh is merciful!\"\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "beogh_converted_orc_resurrection",
+      "source": "@The_monster@ shouts, \"You saved me!\"\n\n@The_monster@ says, \"You really are the Messiah.\"\n\n@The_monster@ thanks you for bringing @objective@ back to life.\n\n@The_monster@ says, \"I knew I could rely on you.\"\n\n@The_monster@ says, \"Now I can live to fight another day.\"\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "beogh_converted_orc_reaction_battle_follower",
+      "source": "@beogh_converted_orc_reaction_battle@\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "beogh_converted_orc_speech_battle_follower",
+      "source": "@beogh_converted_orc_speech_battle@\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "beogh_converted_orc_speech_vengeance_follower",
+      "source": "@beogh_converted_orc_speech_vengeance@\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "orc_priest_apostate",
+      "source": "The priest shouts, \"Disloyal scoundrel, leave my sight!\"\n\nThe priest snarls, \"I'll spare you only if you run away! Begone!\"\n\nThe priest curses, \"Your faithless show of piety disgusts me!\"\n\nThe priest sneers, \"Beogh may forgive you, but I don't!\"\n\nThe priest shouts, \"You had your chance, apostate scum!\"\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "piety",
+          "Translation": "虔诚",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇机制】神祇资源，不等同经验值。 来源：religion.cc。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "orc_priest_preaching",
+      "source": "@The_monster@ shouts, \"Beogh offers mercy even to people such as you. Join us and be reborn!\"\n\n@The_monster@ shouts, \"The Pantheon deserves no one's loyalty. Let us show you the true path!\"\n\n@The_monster@ shouts, \"Surrender to Beogh and we'll let you live!\"\n\n@The_monster@ threatens, \"Beogh's wrath is as vast as Beogh's mercy. Make your choice!\"\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Wrath",
+          "Translation": "神怒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        }
+      ]
+    },
+    {
+      "key": "orc_apostle_yield",
+      "source": "@The_monster@ shouts, \"I yield! You are indeed the chosen one!\"\n\n@The_monster@ shouts, \"I yield! Victory is yours!\"\n\n@The_monster@ falls to @possessive@ knees and submits.\n",
+      "hits": [
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "orc_apostle_dismissed",
+      "source": "@The_monster@ says, \"I will never forget you!\"\n\n@The_monster@ leaves to spread the word of Beogh to the surface.\n\n@The_monster@ salutes you before departing.\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "orc_apostle_unbanished",
+      "source": "VISUAL:@The_monster@ pulls a severed tentacle out of their boot and sighs heavily.\n\n@The_monster@ grins, \"Not even the Unformed can stop the chosen ones of Beogh!\"\n\n@The_monster@ shouts triumpantly, \"Who's laughing NOW?\"\n\n@The_monster@ shudders. \"I think my head was attached to my elbow for a minute there...\"\n\n@The_monster@ says, \"I don't think I'll ever look at the stars the same way again.\"\n\n@The_monster@ yells, \"Just try that again; I dare you!\"\n\nw:1\n@The_monster@ gibbers softly, \"It was just one butterfly....\"\n\nVISUAL:@The_monster@ wobbles unsteadily, but gives you a thumbs up.\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "butterfly",
+          "Translation": "蝴蝶",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "tentacle",
+          "Translation": "触手",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "friendly bfb orc",
+      "source": "@The_monster@ shouts, \"Vengeance for the fallen!\"\n\n@The_monster@ shouts, \"Blood calls out to blood!\"\n\n@The_monster@ cries, \"Kill them all! Beogh will know Beogh's own!\"\n\n@The_monster@ beats @possessive@ weapon against @possessive@ chest and roars.\n\n@The_monster@ cries out, \"For our kin! And for all that died before them!\"\n\n@The_monster@ smears @possessive@ weapon with vermillion and lifts it high.\n\n@The_monster@ shouts, \"Eye for eye, tooth for tooth, life for life!\"\n\n@The_monster@ cries, \"Return their pain upon them a hundredfold!\"\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "Pain",
+          "Translation": "痛苦术/痛苦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用痛苦术。卡牌、武器印记或普通感受用痛苦，完整物品专名优先。\n【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "cherub",
+      "source": "@The_monster@ sings praise to the Shining One, in four-part harmony.\n\n@The_monster_possessive@ lion-head roars!\n\n@The_monster_possessive@ eagle-head screeches!\n\n@The_monster@ sings praise to Zin.\n\n@The_monster@ sings praise to Elyvilon.\n",
+      "hits": [
+        {
+          "Term": "cherub",
+          "Translation": "智天使",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Elyvilon",
+          "Translation": "艾利维隆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "the Shining One",
+          "Translation": "光明神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Zin",
+          "Translation": "辛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "法则之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "zin angel",
+      "source": "w:40\n@The_monster@ recites @_axioms_of_law_@\n\n@The_monster@ recites @_recite_what_@ @_recite_subject_@\n\n@The_monster@ preaches about @_recite_subject_@\n\n@The_monster@ @_recites_start_@ a @_lecture_modifier_@ lecture about @_recite_subject_@\n\n@The_monster@ explains in detail about @_recite_subject_@\n\n@The_monster@ explains the importance of @_important_subject_@\n\n@The_monster@ @_recites_start_@ a @_lecture_modifier_@ sermon about @_recite_subject_@\n\n@The_monster@ @_recites_start_@ a @_lecture_modifier_@ speech about @_recite_subject_@\n\nw:5\n@The_monster@ speaks about @_recite_subject_@\n",
+      "hits": [
+        {
+          "Term": "angel",
+          "Translation": "天使",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Zin",
+          "Translation": "辛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "法则之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "zin angel",
+          "Translation": "辛天使",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Recite",
+          "Translation": "诵经",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_recites_start_",
+      "source": "begins\n\nlaunches into\n\nembarks on\n",
+      "hits": []
+    },
+    {
+      "key": "_recite_what_",
+      "source": "a poem about\n\nthe sacred texts on\n\nthe word of Zin on\n\nsonorously on\n\nloudly on\n",
+      "hits": [
+        {
+          "Term": "Zin",
+          "Translation": "辛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "法则之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Recite",
+          "Translation": "诵经",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_lecture_modifier_",
+      "source": "lengthy\n\npassionate\n\nrighteous\n\nstern\n",
+      "hits": []
+    },
+    {
+      "key": "_recite_subject_",
+      "source": "w:120\n@_important_subject_@\n\nw:80\n@_axioms_of_law_@\n\nthe Law and the prophets.\n\nthe importance of the Law.\n\nmutations, and how to avoid them.\n\npotions of mutation - the devil's brew!\n\nneqoxecs and zykzyls - may they all be destroyed!\n\na proper diet respecting intelligent beings.\n\nthe evils of necromancy.\n\nthe lawlessness of gambling.\n\nundead, and why they are evil.\n\nthe fall of Yredelemnul.\n\nthe reprobation of Lugonu.\n\nthe alliance of Zin and the Shining One.\n\nthe alliance of Zin and Elyvilon.\n\nthe lawlessness of @random_god_chaotic@.\n\nthe evilness of @random_god_evil@.\n\nthe goodness of @random_god_good@.\n",
+      "hits": [
+        {
+          "Term": "Elyvilon",
+          "Translation": "艾利维隆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "mutation",
+          "Translation": "变异",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "mutations",
+          "Translation": "变异",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Necromancy",
+          "Translation": "死灵系魔法",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "the Shining One",
+          "Translation": "光明神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "undead",
+          "Translation": "亡灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】指不死生物类别，并不表示无法被杀死。 来源：mon-util.cc。"
+        },
+        {
+          "Term": "Yredelemnul",
+          "Translation": "伊莱德莱姆努尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Zin",
+          "Translation": "辛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "法则之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Lugonu",
+          "Translation": "卢戈努",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇】补齐现行神祇名称。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Recite",
+          "Translation": "诵经",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "confused zin angel",
+      "source": "@The_monster@ rambles incoherently.\n\n@The_monster@ lectures the ground at length about @_important_subject_@\n\n@The_monster@ lectures @possessive@ feet at length about @_important_subject_@\n\nVISUAL:@The_monster@ stares off into space for a moment.\n",
+      "hits": [
+        {
+          "Term": "angel",
+          "Translation": "天使",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Zin",
+          "Translation": "辛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "法则之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "zin angel",
+          "Translation": "辛天使",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "silenced zin angel",
+      "source": "VISUAL:@The_monster@ gestures @at_foe@ frantically.\n\nVISUAL:@The_monster@ looks angrily to the heavens.\n\nVISUAL:@The_monster@ furiously gestures all around.\n\nVISUAL:@The_monster@ scowls with righteous anger.\n",
+      "hits": [
+        {
+          "Term": "angel",
+          "Translation": "天使",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Zin",
+          "Translation": "辛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "法则之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "zin angel",
+          "Translation": "辛天使",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "deformed humanoid",
+      "source": "VISUAL:@The_monster@ howls in pain.\n\nVISUAL:@The_monster@ wails in agony.\n\nVISUAL:@The_monster@ weeps.\n\nVISUAL:@The_monster@ sobs.\n\n@The_monster@ screams, \"The pain, the pain!\"\n\nVISUAL:@The_monster@ begins coughing up blood.\n\n@The_monster@ yells, \"Please, just kill me!\"\n\nw:1\nVISUAL:@The_monster@ begins hyperventilating.\n\nVISUAL:@The_monster@ twists in agony.\n\nVISUAL:@The_monster@ stares vacantly at @possessive@ hideously deformed hands.\n\n@The_monster@ asks, \"What has happened to me?\"\n\n@The_monster@ asks, \"What has been done to me?\"\n\nVISUAL:@The_monster@ prays for aid.\n\n@The_monster@ says, \"I think I died... I think I'm dead...\"\n\nw:3\n@The_monster@ wails, \"So itchy! Itchy, itchy, itchy! Always itchy!\"\n\nVISUAL:@The_monster@ gurgles, unable to form words.\n\nw:1\n@The_monster@ yells, \"I will have my revenge on the monster who did this!\"\n\n@The_monster@ mumbles, \"Took all my skin, all gone, all gone...\"\n\n@The_monster@ says, \"I was beautiful once. Now look at me.\"\n\nVISUAL:@The_monster@ wriggles @possessive@ tentacles.\n\nVISUAL:A dozen eyes blink open in @the_monster_possessive@ chest.\n\nVISUAL:Strange appendages sprout from @the_monster_possessive@ back.\n\nVISUAL:@The_monster@ lashes @possessive@ tail.\n\nVISUAL:@The_monster@ suddenly sprouts two large horns!\n\nw:3\nVISUAL:@The_monster_possessive@ flesh secretes a thick mucus.\n\nVISUAL:Hollow, blind eyes appear on @the_monster_possessive@ head.\n\nVISUAL:Suppurating sores blossom under @the_monster_possessive@ eyelids.\n\n@The_monster@ begs you to kill @objective@.\n\nVISUAL:@The_monster@ looks at @possessive@ body and cries without tears.\n\n@The_monster@ screams, \"I am only a sick, bizarre, defaced creation.\"\n",
+      "hits": [
+        {
+          "Term": "blink",
+          "Translation": "闪烁/闪现/眨眼",
+          "Part of Speech": "verb",
+          "Variants": "",
+          "Note": "\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】位移效果优先用闪烁。普通快速显现可用闪现，眨眼为生理动作。完整法术名优先，不改动英文控制字。"
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "Pain",
+          "Translation": "痛苦术/痛苦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用痛苦术。卡牌、武器印记或普通感受用痛苦，完整物品专名优先。\n【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Agony",
+          "Translation": "剧痛术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "horns",
+          "Translation": "犄角",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：犄角。"
+        },
+        {
+          "Term": "tentacles",
+          "Translation": "触手",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：触手。"
+        }
+      ]
+    },
+    {
+      "key": "gozag bribe",
+      "source": "@The_monster@ stares @at_foe@, then turns away, jangling a coin purse.\n",
+      "hits": [
+        {
+          "Term": "Gozag",
+          "Translation": "哥萨戈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "gozag permabribe",
+      "source": "@The_monster@ grins @at_foe@ greedily, jangling a coin purse.\n",
+      "hits": [
+        {
+          "Term": "Gozag",
+          "Translation": "哥萨戈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "spectator",
+      "source": "@_spectator_speech_@\n\nw:70\n__NONE\n",
+      "hits": [
+        {
+          "Term": "spectator",
+          "Translation": "旁观者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_spectator_speech_",
+      "source": "@The_monster@ jeers @_loudly_or_repeatedly_@ at you.\n\n@The_monster@ cheers @_loudly_or_repeatedly_@.\n\n@The_monster@ @_shouts_@ with approval.\n\n@The_monster@ @_mutters_@ to another spectator.\n\nVISUAL:@The_monster@ waves excitedly.\n\nw:5\nVISUAL:@The_monster@ waves a pennant with your name on it.\n\nw:5\nVISUAL:@The_monster@ waves a pennant, rooting for your enemy!\n\nw:5\nVISUAL:@The_monster_possessive@ armour gleams in the torchlight.\n\nw:1\nVISUAL:@The_monster@, chosen of Okawaru, glows resplendent with favour.\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "Okawaru",
+          "Translation": "奥格瓦如",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "spectator",
+          "Translation": "旁观者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "goblin sharper",
+      "source": "VISUAL:@The_monster@ fiddles with @possessive@ portable altar.\n\nVISUAL:@The_monster@ shuffles one of @possessive@ decks.\n\nVISUAL:@The_monster@ fans some cards from one of @possessive@ decks.\n\nVISUAL:@The_monster_possessive@ deck briefly glows with a rainbow of weird colours.\n\n@The_monster@ chants, \"Know when to hold 'em, know when to fold 'em...\"\n\n@The_monster@ praises @possessive_God@.\n\n@The_monster@ grins. \"So many cards! Brought to you by @my_God@!\"\n\n@The_monster@ refuses insurance.\n\nw:20\n@_deck_of_destruction_line_@\n\nw:20\n@_deck_of_escape_line_@\n\nw:20\n@_deck_of_summoning_line_@\n\nw:10\n@_deck_of_punishment_line_@\n\nw:5\n@The_monster@ draws @_deck_of_oddities_card_@. \"Wait, this doesn't belong here!\"\n\nw:5\n@The_monster@ draws @_misplaced_card_@. \"Wait, where'd this come from?\"\n\nw:5\n@The_monster@ fumbles a card and drops it. \"Whoops!\"\n\nw:1\n@The_monster@ says, \"I wanted to be a wyvern-rider, but @my_God@ had other plans!\"\n",
+      "hits": [
+        {
+          "Term": "altar",
+          "Translation": "祭坛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "deck",
+          "Translation": "套牌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "weird",
+          "Translation": "奇怪的",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "goblin",
+          "Translation": "地精",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "wyvern",
+          "Translation": "双足飞龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_deck_of_oddities_card_",
+      "source": "the Bargain\n\nthe Curse\n\nFamine\n\nFocus\n\nthe Feast\n\nthe Genie\n\nthe Helix\n\nXom\n",
+      "hits": [
+        {
+          "Term": "deck",
+          "Translation": "套牌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "_misplaced_card_",
+      "source": "the Ace of Spades\n\nthe Joker\n\nthe Old Maid\n\nthe Hanged Man\n\nthe Happy Squirrel\n\nWild Draw Four\n",
+      "hits": []
+    },
+    {
+      "key": "_deck_of_destruction_line_",
+      "source": "@The_monster@ draws Degeneration. \"So many ways to mutate things!\"\n\n@The_monster@ draws the Orb. \"Orbs of destruction hurt!\"\n\n@The_monster@ draws Pain. \"Necromancy hurts!\"\n\n@The_monster@ draws the Storm. \"Thunder and lightning everywhere!\"\n\n@The_monster@ draws Vitriol. \"Acid hurts!\"\n\n@The_monster@ draws Wild Magic. \"So many ways magic can go wrong!\"\n",
+      "hits": [
+        {
+          "Term": "deck",
+          "Translation": "套牌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Necromancy",
+          "Translation": "死灵系魔法",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "Pain",
+          "Translation": "痛苦术/痛苦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用痛苦术。卡牌、武器印记或普通感受用痛苦，完整物品专名优先。\n【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "thunder",
+          "Translation": "雷霆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_STORM；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        },
+        {
+          "Term": "Wild Magic",
+          "Translation": "狂野魔法",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。\n【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：狂野魔法。"
+        },
+        {
+          "Term": "Vitriol",
+          "Translation": "强酸",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "the Storm",
+          "Translation": "风暴",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "the Orb",
+          "Translation": "宝珠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Degeneration",
+          "Translation": "退化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "acid",
+          "Translation": "酸蚀",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "_deck_of_escape_line_",
+      "source": "@The_monster@ draws the Cloud. \"No fresh air for enemies!\"\n\n@The_monster@ draws the Elixir. \"Healing and magic? Woohoo!\"\n\n@The_monster@ draws Exile. \"The Abyss is a horrible place!\"\n\n@The_monster@ draws the Tomb. \"I don't want to be sealed in with no windows!\"\n\n@The_monster@ draws Velocity. \"Know when to walk away, know when to run.\"\n",
+      "hits": [
+        {
+          "Term": "Abyss",
+          "Translation": "深渊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "deck",
+          "Translation": "套牌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Tomb",
+          "Translation": "灵庙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "the Abyss",
+          "Translation": "深渊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Abyss（规范缩写 Abyss）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "Velocity",
+          "Translation": "迅捷",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Exile",
+          "Translation": "放逐",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "the Elixir",
+          "Translation": "灵药",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "the Tomb",
+          "Translation": "陵墓",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "the Cloud",
+          "Translation": "云雾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Air",
+          "Translation": "空气强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "_deck_of_summoning_line_",
+      "source": "@The_monster@ draws the Dance. \"Hope the weapon's aim is true!\"\n\n@The_monster@ draws the Elements. \"Elemental beasts everywhere!\"\n\n@The_monster@ draws the Illusion. \"I have a twin now!\"\n\n@The_monster@ draws the Pentagram. \"Hope the demon is friendly!\"\n\n@The_monster@ draws the Rangers. \"New friends who can shoot!\"\n\n@The_monster@ draws the Swarm. \"Bees, bees everywhere!\"\n",
+      "hits": [
+        {
+          "Term": "deck",
+          "Translation": "套牌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "elemental",
+          "Translation": "元素生物",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "the Elements",
+          "Translation": "元素",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "the Pentagram",
+          "Translation": "五芒星",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "the Dance",
+          "Translation": "舞蹈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "the Swarm",
+          "Translation": "虫群",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "the Rangers",
+          "Translation": "游侠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "the Illusion",
+          "Translation": "幻象",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        }
+      ]
+    },
+    {
+      "key": "_deck_of_punishment_line_",
+      "source": "@The_monster@ draws the Swine. \"I'm a pig now!\"\n\n@The_monster@ draws Torment. \"Half my health gone? Yikes!\"\n\n@The_monster@ draws the Wraith. \"Draining hurts!\"\n\n@The_monster@ draws Wrath. \"So many ways gods can punish you!\"\n",
+      "hits": [
+        {
+          "Term": "deck",
+          "Translation": "套牌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "draining",
+          "Translation": "吸能/汲取/耗损",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】与 drain 统一；作为武器印记或负能量效果时按场景表达，不机械译为流失。 来源：dat/descript/egos.txt。\n【语境补充 2026-10-21】印记、攻击效果或状态用吸能。叙述生命获取用汲取。使用物品付出生命代价用耗损。"
+        },
+        {
+          "Term": "torment",
+          "Translation": "折磨",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "wraith",
+          "Translation": "怨灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Wrath",
+          "Translation": "神怒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "the Wraith",
+          "Translation": "怨灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "the Swine",
+          "Translation": "猪群",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        }
+      ]
+    }
+  ],
+  "legacy_overlay_present": true
+}

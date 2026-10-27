@@ -1,0 +1,27 @@
+{
+  "glossary_sha256": "95cc9538a701536b1581f31834203bbbb3160668ec622f7862f43921be96fdb1",
+  "looked_up": [
+    "rock wall",
+    "stone wall",
+    "closed door",
+    "floor",
+    "staircase"
+  ],
+  "hits": [
+    {
+      "Term": "floor",
+      "Translation": "地面/楼层/地板/向下取整",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【语境补充 2026-10-21】物理表面按语境用地面或地板。地下城深度用楼层。math.floor 为向下取整函数，代码标识符保留英文。"
+    },
+    {
+      "Term": "staircase",
+      "Translation": "楼梯",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    }
+  ],
+  "existing_feature_catalogue_reused": true
+}

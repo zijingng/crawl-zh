@@ -1,0 +1,1559 @@
+{
+  "date": "2026-10-23",
+  "source": "source-l-01-name-review.json",
+  "status_names": 237,
+  "passive_names": 20,
+  "added": 166,
+  "updated": 91,
+  "previous_terms": 2268,
+  "current_terms": 2434,
+  "duplicate_terms": 0,
+  "all_existing_alternatives_retained": true,
+  "unrelated_entries_unchanged": true,
+  "before_sha256": "52a49cacc2a408942ddf87655c491c1631c5ad7f7286553126fd959e04f66ee0",
+  "after_sha256": "ea903b3f76ce2ed10b3c788c64d67c6b26e04c5a82703a8d011f926837cca024",
+  "changes": [
+    {
+      "term": "no teleportation passive",
+      "display_name": "禁止传送",
+      "translation": "禁止传送",
+      "action": "added"
+    },
+    {
+      "term": "no spellcasting passive",
+      "display_name": "禁止施法",
+      "translation": "禁止施法",
+      "action": "added"
+    },
+    {
+      "term": "random rage passive",
+      "display_name": "随机狂暴",
+      "translation": "随机狂暴",
+      "action": "added"
+    },
+    {
+      "term": "corrode self passive",
+      "display_name": "自身腐蚀",
+      "translation": "自身腐蚀",
+      "action": "added"
+    },
+    {
+      "term": "slow self passive",
+      "display_name": "自身减速",
+      "translation": "自身减速",
+      "action": "added"
+    },
+    {
+      "term": "harm passive",
+      "display_name": "伤害增幅",
+      "translation": "伤害增幅",
+      "action": "added"
+    },
+    {
+      "term": "mayhem passive",
+      "display_name": "大混乱",
+      "translation": "大混乱",
+      "action": "added"
+    },
+    {
+      "term": "repel missiles passive",
+      "display_name": "偏斥飞弹",
+      "translation": "偏斥飞弹",
+      "action": "added"
+    },
+    {
+      "term": "reflection passive",
+      "display_name": "反射",
+      "translation": "反射",
+      "action": "added"
+    },
+    {
+      "term": "acrobat passive",
+      "display_name": "杂技",
+      "translation": "杂技",
+      "action": "added"
+    },
+    {
+      "term": "clarity passive",
+      "display_name": "清明",
+      "translation": "清明",
+      "action": "added"
+    },
+    {
+      "term": "resist mutation passive",
+      "display_name": "抵抗变异",
+      "translation": "抵抗变异",
+      "action": "added"
+    },
+    {
+      "term": "guardian spirit passive",
+      "display_name": "守护之灵",
+      "translation": "守护之灵",
+      "action": "added"
+    },
+    {
+      "term": "rampage passive",
+      "display_name": "横冲直撞",
+      "translation": "横冲直撞",
+      "action": "added"
+    },
+    {
+      "term": "roll passive",
+      "display_name": "翻滚",
+      "translation": "翻滚",
+      "action": "added"
+    },
+    {
+      "term": "faith passive",
+      "display_name": "信仰",
+      "translation": "信仰",
+      "action": "added"
+    },
+    {
+      "term": "wizardry passive",
+      "display_name": "施法辅助",
+      "translation": "施法辅助",
+      "action": "added"
+    },
+    {
+      "term": "archmagi passive",
+      "display_name": "大法师",
+      "translation": "大法师",
+      "action": "added"
+    },
+    {
+      "term": "channel magic passive",
+      "display_name": "引导魔力",
+      "translation": "引导魔力",
+      "action": "added"
+    },
+    {
+      "term": "infuse magic passive",
+      "display_name": "魔力灌注",
+      "translation": "魔力灌注",
+      "action": "added"
+    },
+    {
+      "term": "Fast status",
+      "display_name": "疾速",
+      "translation": "疾速/疾速状态",
+      "action": "updated"
+    },
+    {
+      "term": "Invis status",
+      "display_name": "隐形",
+      "translation": "隐形/隐形状态",
+      "action": "updated"
+    },
+    {
+      "term": "Tele status",
+      "display_name": "即将传送",
+      "translation": "即将传送/即将传送状态",
+      "action": "updated"
+    },
+    {
+      "term": "!Tele! status",
+      "display_name": "传送至敌群",
+      "translation": "传送至敌群",
+      "action": "added"
+    },
+    {
+      "term": "Fly status",
+      "display_name": "飞行",
+      "translation": "飞行/飞行状态",
+      "action": "updated"
+    },
+    {
+      "term": "Agi status",
+      "display_name": "敏捷",
+      "translation": "敏捷",
+      "action": "added"
+    },
+    {
+      "term": "Brill status",
+      "display_name": "聪慧",
+      "translation": "聪慧/聪慧状态",
+      "action": "updated"
+    },
+    {
+      "term": "Might status",
+      "display_name": "强力术",
+      "translation": "强力术/强力状态",
+      "action": "updated"
+    },
+    {
+      "term": "Regen status",
+      "display_name": "生命再生",
+      "translation": "生命再生/生命再生状态",
+      "action": "updated"
+    },
+    {
+      "term": "-Regen status",
+      "display_name": "无法再生",
+      "translation": "无法再生",
+      "action": "added"
+    },
+    {
+      "term": "MPRegen status",
+      "display_name": "魔力再生",
+      "translation": "魔力再生/魔力再生状态",
+      "action": "updated"
+    },
+    {
+      "term": "Touch status",
+      "display_name": "混乱之触",
+      "translation": "混乱之触",
+      "action": "added"
+    },
+    {
+      "term": "Will++ status",
+      "display_name": "意志增强++",
+      "translation": "意志增强++",
+      "action": "added"
+    },
+    {
+      "term": "Regen Will++ status",
+      "display_name": "再生时意志增强++",
+      "translation": "再生时意志增强++",
+      "action": "added"
+    },
+    {
+      "term": "Berserk status",
+      "display_name": "狂暴",
+      "translation": "狂暴/狂暴状态",
+      "action": "updated"
+    },
+    {
+      "term": "-Berserk status",
+      "display_name": "狂暴冷却",
+      "translation": "狂暴冷却",
+      "action": "added"
+    },
+    {
+      "term": "Bearserk status",
+      "display_name": "熊之狂暴",
+      "translation": "熊之狂暴",
+      "action": "added"
+    },
+    {
+      "term": "Pois status",
+      "display_name": "中毒",
+      "translation": "中毒/中毒状态",
+      "action": "updated"
+    },
+    {
+      "term": "Conf status",
+      "display_name": "混乱",
+      "translation": "混乱/混乱状态",
+      "action": "updated"
+    },
+    {
+      "term": "Contam status",
+      "display_name": "魔法污染",
+      "translation": "魔法污染/魔法污染状态",
+      "action": "updated"
+    },
+    {
+      "term": "Drain status",
+      "display_name": "吸能",
+      "translation": "吸能/吸能状态",
+      "action": "updated"
+    },
+    {
+      "term": "-Breath status",
+      "display_name": "吐息冷却",
+      "translation": "吐息冷却",
+      "action": "added"
+    },
+    {
+      "term": "Breath status",
+      "display_name": "龙息",
+      "translation": "龙息",
+      "action": "added"
+    },
+    {
+      "term": "Breath+ status",
+      "display_name": "龙息+",
+      "translation": "龙息+",
+      "action": "added"
+    },
+    {
+      "term": "Breath++ status",
+      "display_name": "龙息++",
+      "translation": "龙息++",
+      "action": "added"
+    },
+    {
+      "term": "Exh status",
+      "display_name": "疲惫",
+      "translation": "疲惫",
+      "action": "added"
+    },
+    {
+      "term": "Slow status",
+      "display_name": "缓慢",
+      "translation": "缓慢/缓慢状态",
+      "action": "updated"
+    },
+    {
+      "term": "Para status",
+      "display_name": "麻痹",
+      "translation": "麻痹/麻痹状态",
+      "action": "updated"
+    },
+    {
+      "term": "Sleep status",
+      "display_name": "睡眠",
+      "translation": "睡眠/睡眠状态",
+      "action": "updated"
+    },
+    {
+      "term": "Held status",
+      "display_name": "受困",
+      "translation": "受困/受困状态",
+      "action": "updated"
+    },
+    {
+      "term": "Constr status",
+      "display_name": "缠绕",
+      "translation": "缠绕/缠绕状态",
+      "action": "updated"
+    },
+    {
+      "term": "Mesm status",
+      "display_name": "魅惑牵引",
+      "translation": "魅惑牵引/魅惑牵引状态",
+      "action": "updated"
+    },
+    {
+      "term": "Fear status",
+      "display_name": "恐惧",
+      "translation": "恐惧/恐惧状态",
+      "action": "updated"
+    },
+    {
+      "term": "-Tele status",
+      "display_name": "次元锚定",
+      "translation": "次元锚定",
+      "action": "added"
+    },
+    {
+      "term": "-Move status",
+      "display_name": "无法移动",
+      "translation": "无法移动",
+      "action": "added"
+    },
+    {
+      "term": "Mark status",
+      "display_name": "哨兵印记",
+      "translation": "哨兵印记/标记状态",
+      "action": "updated"
+    },
+    {
+      "term": "Fire status",
+      "display_name": "着火",
+      "translation": "着火/着火状态",
+      "action": "updated"
+    },
+    {
+      "term": "Fire+ status",
+      "display_name": "着火+",
+      "translation": "着火+",
+      "action": "added"
+    },
+    {
+      "term": "Fire++ status",
+      "display_name": "着火++",
+      "translation": "着火++",
+      "action": "added"
+    },
+    {
+      "term": "Corona status",
+      "display_name": "光晕术",
+      "translation": "光晕术",
+      "action": "added"
+    },
+    {
+      "term": "Barbs status",
+      "display_name": "倒刺",
+      "translation": "倒刺/倒刺状态",
+      "action": "updated"
+    },
+    {
+      "term": "Sick status",
+      "display_name": "疾病",
+      "translation": "疾病",
+      "action": "added"
+    },
+    {
+      "term": "Vertigo status",
+      "display_name": "眩晕",
+      "translation": "眩晕/眩晕状态",
+      "action": "updated"
+    },
+    {
+      "term": "Corr status",
+      "display_name": "腐蚀",
+      "translation": "腐蚀/腐蚀状态",
+      "action": "updated"
+    },
+    {
+      "term": "Flay status",
+      "display_name": "剥皮",
+      "translation": "剥皮/剥皮状态",
+      "action": "updated"
+    },
+    {
+      "term": "Weak status",
+      "display_name": "虚弱",
+      "translation": "虚弱/虚弱状态",
+      "action": "updated"
+    },
+    {
+      "term": "Frozen status",
+      "display_name": "冻结",
+      "translation": "冻结",
+      "action": "added"
+    },
+    {
+      "term": "Sap status",
+      "display_name": "魔力枯竭",
+      "translation": "魔力枯竭",
+      "action": "added"
+    },
+    {
+      "term": "-Cast status",
+      "display_name": "无法施法",
+      "translation": "无法施法",
+      "action": "added"
+    },
+    {
+      "term": "Crippled status",
+      "display_name": "属性归零",
+      "translation": "属性归零",
+      "action": "added"
+    },
+    {
+      "term": "DChan status",
+      "display_name": "死亡通道",
+      "translation": "死亡通道/死亡通道状态",
+      "action": "updated"
+    },
+    {
+      "term": "Vit status",
+      "display_name": "神赐活力",
+      "translation": "神赐活力/活力状态",
+      "action": "updated"
+    },
+    {
+      "term": "Will/2 status",
+      "display_name": "意志减半",
+      "translation": "意志减半/意志减半状态",
+      "action": "updated"
+    },
+    {
+      "term": "Stone status",
+      "display_name": "石化",
+      "translation": "石化/已石化状态",
+      "action": "updated"
+    },
+    {
+      "term": "Petr status",
+      "display_name": "石化中",
+      "translation": "石化中/正在石化状态",
+      "action": "updated"
+    },
+    {
+      "term": "Resist status",
+      "display_name": "抗性",
+      "translation": "抗性/抗性状态",
+      "action": "updated"
+    },
+    {
+      "term": "Slime status",
+      "display_name": "黏液化",
+      "translation": "黏液化/黏液状态",
+      "action": "updated"
+    },
+    {
+      "term": "Swift status",
+      "display_name": "迅捷",
+      "translation": "迅捷",
+      "action": "added"
+    },
+    {
+      "term": "-Swift status",
+      "display_name": "迅捷后迟缓",
+      "translation": "迅捷后迟缓",
+      "action": "added"
+    },
+    {
+      "term": "DDoor status",
+      "display_name": "死亡之门",
+      "translation": "死亡之门/死亡之门状态",
+      "action": "updated"
+    },
+    {
+      "term": "-DDoor status",
+      "display_name": "死亡之门冷却",
+      "translation": "死亡之门冷却",
+      "action": "added"
+    },
+    {
+      "term": "Quad status",
+      "display_name": "四倍伤害",
+      "translation": "四倍伤害/四倍状态",
+      "action": "updated"
+    },
+    {
+      "term": "Sil status",
+      "display_name": "沉默",
+      "translation": "沉默/沉默状态",
+      "action": "updated"
+    },
+    {
+      "term": "Flooded status",
+      "display_name": "肺部积水",
+      "translation": "肺部积水",
+      "action": "added"
+    },
+    {
+      "term": "Stealth status",
+      "display_name": "潜行",
+      "translation": "潜行/潜行状态",
+      "action": "updated"
+    },
+    {
+      "term": "Vortex status",
+      "display_name": "极地涡流",
+      "translation": "极地涡流",
+      "action": "added"
+    },
+    {
+      "term": "-Vortex status",
+      "display_name": "涡流冷却",
+      "translation": "涡流冷却",
+      "action": "added"
+    },
+    {
+      "term": "Liquid status",
+      "display_name": "液化",
+      "translation": "液化/地面液化状态",
+      "action": "updated"
+    },
+    {
+      "term": "Hero status",
+      "display_name": "英雄气概",
+      "translation": "英雄气概/英雄气概状态",
+      "action": "updated"
+    },
+    {
+      "term": "Finesse status",
+      "display_name": "精湛技艺",
+      "translation": "精湛技艺/精妙技艺状态",
+      "action": "updated"
+    },
+    {
+      "term": "Duel status",
+      "display_name": "决斗",
+      "translation": "决斗",
+      "action": "added"
+    },
+    {
+      "term": "Disjoin status",
+      "display_name": "空间分离",
+      "translation": "空间分离/分离状态",
+      "action": "updated"
+    },
+    {
+      "term": "Fugue status",
+      "display_name": "阵亡者赋格",
+      "translation": "阵亡者赋格",
+      "action": "added"
+    },
+    {
+      "term": "Debt status",
+      "display_name": "生命欠债",
+      "translation": "生命欠债",
+      "action": "added"
+    },
+    {
+      "term": "Toxic status",
+      "display_name": "剧毒光环",
+      "translation": "剧毒光环/毒性辐射状态",
+      "action": "updated"
+    },
+    {
+      "term": "Recite status",
+      "display_name": "诵经",
+      "translation": "诵经/吟诵状态",
+      "action": "updated"
+    },
+    {
+      "term": "-Recite status",
+      "display_name": "诵经冷却",
+      "translation": "诵经冷却",
+      "action": "added"
+    },
+    {
+      "term": "rF- status",
+      "display_name": "火焰易伤",
+      "translation": "火焰易伤/火抗-状态",
+      "action": "updated"
+    },
+    {
+      "term": "rP- status",
+      "display_name": "毒素易伤",
+      "translation": "毒素易伤",
+      "action": "added"
+    },
+    {
+      "term": "Bullseye status",
+      "display_name": "空间靶心",
+      "translation": "空间靶心",
+      "action": "added"
+    },
+    {
+      "term": "Forest status",
+      "display_name": "召唤森林",
+      "translation": "召唤森林/森林状态",
+      "action": "updated"
+    },
+    {
+      "term": "Dragoncall status",
+      "display_name": "召唤龙群",
+      "translation": "召唤龙群/唤龙状态",
+      "action": "updated"
+    },
+    {
+      "term": "-Dragoncall status",
+      "display_name": "龙群冷却",
+      "translation": "龙群冷却",
+      "action": "added"
+    },
+    {
+      "term": "-Potion status",
+      "display_name": "禁饮药水",
+      "translation": "禁饮药水/禁饮药水状态",
+      "action": "updated"
+    },
+    {
+      "term": "rF+ status",
+      "display_name": "火焰防护",
+      "translation": "火焰防护/火抗+状态",
+      "action": "updated"
+    },
+    {
+      "term": "rC+ status",
+      "display_name": "寒冷防护",
+      "translation": "寒冷防护/冰抗+状态",
+      "action": "updated"
+    },
+    {
+      "term": "rElec+ status",
+      "display_name": "电击防护",
+      "translation": "电击防护/电抗+状态",
+      "action": "updated"
+    },
+    {
+      "term": "Horr status",
+      "display_name": "惊骇",
+      "translation": "惊骇/恐惧状态",
+      "action": "updated"
+    },
+    {
+      "term": "-Scroll status",
+      "display_name": "禁读卷轴",
+      "translation": "禁读卷轴/禁读卷轴状态",
+      "action": "updated"
+    },
+    {
+      "term": "Cleave status",
+      "display_name": "劈斩",
+      "translation": "劈斩/顺劈状态",
+      "action": "updated"
+    },
+    {
+      "term": "Ambros status",
+      "display_name": "神酒",
+      "translation": "神酒/琼浆状态",
+      "action": "updated"
+    },
+    {
+      "term": "Surge status",
+      "display_name": "激涌",
+      "translation": "激涌/激涌状态",
+      "action": "updated"
+    },
+    {
+      "term": "Howl status",
+      "display_name": "遗忘之嚎",
+      "translation": "遗忘之嚎/嚎叫状态",
+      "action": "updated"
+    },
+    {
+      "term": "Blood status",
+      "display_name": "鲜血护甲",
+      "translation": "鲜血护甲/凝血护甲状态",
+      "action": "updated"
+    },
+    {
+      "term": "Channel status",
+      "display_name": "魔力引导",
+      "translation": "魔力引导/引导魔力状态",
+      "action": "updated"
+    },
+    {
+      "term": "Beast status",
+      "display_name": "野兽形态",
+      "translation": "野兽形态",
+      "action": "added"
+    },
+    {
+      "term": "Flux status",
+      "display_name": "流变",
+      "translation": "流变",
+      "action": "added"
+    },
+    {
+      "term": "Serpent status",
+      "display_name": "双头蛇",
+      "translation": "双头蛇",
+      "action": "added"
+    },
+    {
+      "term": "Maw status",
+      "display_name": "巨口",
+      "translation": "巨口",
+      "action": "added"
+    },
+    {
+      "term": "Statue status",
+      "display_name": "雕像",
+      "translation": "雕像/雕像状态",
+      "action": "updated"
+    },
+    {
+      "term": "Dragon status",
+      "display_name": "龙",
+      "translation": "龙/龙状态",
+      "action": "updated"
+    },
+    {
+      "term": "Storm status",
+      "display_name": "风暴",
+      "translation": "风暴",
+      "action": "added"
+    },
+    {
+      "term": "Death status",
+      "display_name": "死亡",
+      "translation": "死亡",
+      "action": "added"
+    },
+    {
+      "term": "Bat status",
+      "display_name": "蝙蝠",
+      "translation": "蝙蝠/蝙蝠状态",
+      "action": "updated"
+    },
+    {
+      "term": "Pig status",
+      "display_name": "猪",
+      "translation": "猪/猪状态",
+      "action": "updated"
+    },
+    {
+      "term": "App status",
+      "display_name": "附肢",
+      "translation": "附肢/附肢状态",
+      "action": "updated"
+    },
+    {
+      "term": "Tree status",
+      "display_name": "树木",
+      "translation": "树木/树状态",
+      "action": "updated"
+    },
+    {
+      "term": "Wisp status",
+      "display_name": "幽火",
+      "translation": "幽火/气团形态状态",
+      "action": "updated"
+    },
+    {
+      "term": "Fungus status",
+      "display_name": "真菌",
+      "translation": "真菌/真菌状态",
+      "action": "updated"
+    },
+    {
+      "term": "Shadow status",
+      "display_name": "暗影",
+      "translation": "暗影/影状态",
+      "action": "updated"
+    },
+    {
+      "term": "Orb status",
+      "display_name": "佐特宝珠",
+      "translation": "佐特宝珠/宝珠状态",
+      "action": "updated"
+    },
+    {
+      "term": "Orb? status",
+      "display_name": "骗子宝球",
+      "translation": "骗子宝球",
+      "action": "added"
+    },
+    {
+      "term": "-Hop status",
+      "display_name": "跳跃冷却",
+      "translation": "跳跃冷却/跳跃冷却状态",
+      "action": "updated"
+    },
+    {
+      "term": "Ray status",
+      "display_name": "灼热射线",
+      "translation": "灼热射线/射线状态",
+      "action": "updated"
+    },
+    {
+      "term": "Ray+ status",
+      "display_name": "灼热射线+",
+      "translation": "灼热射线+",
+      "action": "added"
+    },
+    {
+      "term": "Ray++ status",
+      "display_name": "灼热射线++",
+      "translation": "灼热射线++",
+      "action": "added"
+    },
+    {
+      "term": "Lash status",
+      "display_name": "腾蛇鞭",
+      "translation": "腾蛇鞭/腾蛇鞭状态",
+      "action": "updated"
+    },
+    {
+      "term": "Heavenly status",
+      "display_name": "天界风暴",
+      "translation": "天界风暴/天界风暴状态",
+      "action": "updated"
+    },
+    {
+      "term": "SlowM status",
+      "display_name": "移动减缓",
+      "translation": "移动减缓/移动减缓状态",
+      "action": "updated"
+    },
+    {
+      "term": "Alive status",
+      "display_name": "充血",
+      "translation": "充血/充血状态",
+      "action": "updated"
+    },
+    {
+      "term": "Aug status",
+      "display_name": "生命增幅",
+      "translation": "生命增幅/生命增幅状态",
+      "action": "updated"
+    },
+    {
+      "term": "Beogh status",
+      "display_name": "比欧弗",
+      "translation": "比欧弗/比欧弗状态",
+      "action": "updated"
+    },
+    {
+      "term": "Bloodless status",
+      "display_name": "无血",
+      "translation": "无血/无血状态",
+      "action": "updated"
+    },
+    {
+      "term": "Bribe status",
+      "display_name": "贿赂",
+      "translation": "贿赂/贿赂状态",
+      "action": "updated"
+    },
+    {
+      "term": "Cloud status",
+      "display_name": "云雾",
+      "translation": "云雾/云状态",
+      "action": "updated"
+    },
+    {
+      "term": "-Clouds status",
+      "display_name": "无法制造云雾",
+      "translation": "无法制造云雾/禁云状态",
+      "action": "updated"
+    },
+    {
+      "term": "Dig status",
+      "display_name": "挖掘",
+      "translation": "挖掘/挖掘状态",
+      "action": "updated"
+    },
+    {
+      "term": "Elixir status",
+      "display_name": "灵药",
+      "translation": "灵药/灵药状态",
+      "action": "updated"
+    },
+    {
+      "term": "Fast+Slow status",
+      "display_name": "疾速与缓慢",
+      "translation": "疾速与缓慢/快速＋缓慢状态",
+      "action": "updated"
+    },
+    {
+      "term": "Lava status",
+      "display_name": "岩浆",
+      "translation": "岩浆/岩浆状态",
+      "action": "updated"
+    },
+    {
+      "term": "Recall status",
+      "display_name": "召回",
+      "translation": "召回/召回状态",
+      "action": "updated"
+    },
+    {
+      "term": "Water status",
+      "display_name": "水域",
+      "translation": "水域/水状态",
+      "action": "updated"
+    },
+    {
+      "term": "Attr status",
+      "display_name": "吸引",
+      "translation": "吸引",
+      "action": "added"
+    },
+    {
+      "term": "Zot status",
+      "display_name": "佐特时钟",
+      "translation": "佐特时钟",
+      "action": "added"
+    },
+    {
+      "term": "Zot count status",
+      "display_name": "佐特剩余时间",
+      "translation": "佐特剩余时间",
+      "action": "added"
+    },
+    {
+      "term": "Gem status",
+      "display_name": "宝石",
+      "translation": "宝石",
+      "action": "added"
+    },
+    {
+      "term": "Gem (*) status",
+      "display_name": "宝石（本分支仍完整）",
+      "translation": "宝石（本分支仍完整）",
+      "action": "added"
+    },
+    {
+      "term": "rF0 status",
+      "display_name": "火抗归零",
+      "translation": "火抗归零",
+      "action": "added"
+    },
+    {
+      "term": "-Blink status",
+      "display_name": "闪现冷却",
+      "translation": "闪现冷却",
+      "action": "added"
+    },
+    {
+      "term": "-Bbolt status",
+      "display_name": "闪现雷击冷却",
+      "translation": "闪现雷击冷却",
+      "action": "added"
+    },
+    {
+      "term": "Charge- status",
+      "display_name": "蓄电-",
+      "translation": "蓄电-",
+      "action": "added"
+    },
+    {
+      "term": "Charge/ status",
+      "display_name": "蓄电/",
+      "translation": "蓄电",
+      "action": "added"
+    },
+    {
+      "term": "Charge\\ status",
+      "display_name": "蓄电\\",
+      "translation": "蓄电\\",
+      "action": "added"
+    },
+    {
+      "term": "Charge| status",
+      "display_name": "蓄电|",
+      "translation": "蓄电|",
+      "action": "added"
+    },
+    {
+      "term": "Wave status",
+      "display_name": "火焰波",
+      "translation": "火焰波",
+      "action": "added"
+    },
+    {
+      "term": "Wave+ status",
+      "display_name": "火焰波+",
+      "translation": "火焰波+",
+      "action": "added"
+    },
+    {
+      "term": "Ramparts status",
+      "display_name": "冰霜壁垒",
+      "translation": "冰霜壁垒",
+      "action": "added"
+    },
+    {
+      "term": "Bog status",
+      "display_name": "毒沼",
+      "translation": "毒沼",
+      "action": "added"
+    },
+    {
+      "term": "Enlightened status",
+      "display_name": "启明",
+      "translation": "启明",
+      "action": "added"
+    },
+    {
+      "term": "Will+ status",
+      "display_name": "意志增强",
+      "translation": "意志增强",
+      "action": "added"
+    },
+    {
+      "term": "Reap status",
+      "display_name": "活化死者",
+      "translation": "活化死者",
+      "action": "added"
+    },
+    {
+      "term": "Peek status",
+      "display_name": "窥探楼层",
+      "translation": "窥探楼层",
+      "action": "added"
+    },
+    {
+      "term": "Fragile status",
+      "display_name": "脆弱",
+      "translation": "脆弱",
+      "action": "added"
+    },
+    {
+      "term": "Ooze status",
+      "display_name": "唤泥",
+      "translation": "唤泥",
+      "action": "added"
+    },
+    {
+      "term": "Dog status",
+      "display_name": "犬类使魔",
+      "translation": "犬类使魔",
+      "action": "added"
+    },
+    {
+      "term": "-Dog status",
+      "display_name": "魔宠冷却",
+      "translation": "魔宠冷却",
+      "action": "added"
+    },
+    {
+      "term": "-Siphon status",
+      "display_name": "虹吸冷却",
+      "translation": "虹吸冷却",
+      "action": "added"
+    },
+    {
+      "term": "-Word status",
+      "display_name": "混沌真言冷却",
+      "translation": "混沌真言冷却",
+      "action": "added"
+    },
+    {
+      "term": "Jinx status",
+      "display_name": "厄咒之啮",
+      "translation": "厄咒之啮",
+      "action": "added"
+    },
+    {
+      "term": "Rise status",
+      "display_name": "上升",
+      "translation": "上升",
+      "action": "added"
+    },
+    {
+      "term": "Challenge status",
+      "display_name": "使徒挑战",
+      "translation": "使徒挑战",
+      "action": "added"
+    },
+    {
+      "term": "Vengeance status",
+      "display_name": "复仇",
+      "translation": "复仇",
+      "action": "added"
+    },
+    {
+      "term": "Pray status",
+      "display_name": "以血还血",
+      "translation": "以血还血",
+      "action": "added"
+    },
+    {
+      "term": "Recruit status",
+      "display_name": "可招募",
+      "translation": "可招募",
+      "action": "added"
+    },
+    {
+      "term": "Torch status",
+      "display_name": "黑炬",
+      "translation": "黑炬",
+      "action": "added"
+    },
+    {
+      "term": "Shackles status",
+      "display_name": "无底镣铐",
+      "translation": "无底镣铐",
+      "action": "added"
+    },
+    {
+      "term": "Rev status",
+      "display_name": "热身",
+      "translation": "热身",
+      "action": "added"
+    },
+    {
+      "term": "Rev+ status",
+      "display_name": "热身+",
+      "translation": "热身+",
+      "action": "added"
+    },
+    {
+      "term": "Rev* status",
+      "display_name": "热身*",
+      "translation": "热身*",
+      "action": "added"
+    },
+    {
+      "term": "-Gavotte status",
+      "display_name": "加沃特冷却",
+      "translation": "加沃特冷却",
+      "action": "added"
+    },
+    {
+      "term": "Fusillade status",
+      "display_name": "炼金弹幕",
+      "translation": "炼金弹幕",
+      "action": "added"
+    },
+    {
+      "term": "Nightfall status",
+      "display_name": "夜幕",
+      "translation": "夜幕",
+      "action": "added"
+    },
+    {
+      "term": "Blind status",
+      "display_name": "致盲",
+      "translation": "致盲",
+      "action": "added"
+    },
+    {
+      "term": "Ruin status",
+      "display_name": "毁灭征兆",
+      "translation": "毁灭征兆",
+      "action": "added"
+    },
+    {
+      "term": "-GClaw status",
+      "display_name": "坟墓之爪尚未充能",
+      "translation": "坟墓之爪尚未充能",
+      "action": "added"
+    },
+    {
+      "term": "Legion status",
+      "display_name": "地狱军团",
+      "translation": "地狱军团",
+      "action": "added"
+    },
+    {
+      "term": "-Bloodrite status",
+      "display_name": "血仪冷却",
+      "translation": "血仪冷却",
+      "action": "added"
+    },
+    {
+      "term": "Execution status",
+      "display_name": "行刑",
+      "translation": "行刑",
+      "action": "added"
+    },
+    {
+      "term": "Destr status",
+      "display_name": "毁灭增长",
+      "translation": "毁灭增长",
+      "action": "added"
+    },
+    {
+      "term": "Destr+ status",
+      "display_name": "毁灭庇护+",
+      "translation": "毁灭庇护+",
+      "action": "added"
+    },
+    {
+      "term": "Destr++ status",
+      "display_name": "毁灭庇护++",
+      "translation": "毁灭庇护++",
+      "action": "added"
+    },
+    {
+      "term": "Destr+++ status",
+      "display_name": "毁灭庇护+++",
+      "translation": "毁灭庇护+++",
+      "action": "added"
+    },
+    {
+      "term": "Slaughter status",
+      "display_name": "屠戮",
+      "translation": "屠戮",
+      "action": "added"
+    },
+    {
+      "term": "Pact status",
+      "display_name": "契约",
+      "translation": "契约",
+      "action": "added"
+    },
+    {
+      "term": "Escape! status",
+      "display_name": "逃脱！",
+      "translation": "逃脱！",
+      "action": "added"
+    },
+    {
+      "term": "Shield status",
+      "display_name": "神圣护盾",
+      "translation": "神圣护盾",
+      "action": "added"
+    },
+    {
+      "term": "Blast status",
+      "display_name": "动能冲击蓄力",
+      "translation": "动能冲击蓄力",
+      "action": "added"
+    },
+    {
+      "term": "Blast. status",
+      "display_name": "动能冲击蓄力.",
+      "translation": "动能冲击蓄力.",
+      "action": "added"
+    },
+    {
+      "term": "Blast.. status",
+      "display_name": "动能冲击蓄力..",
+      "translation": "动能冲击蓄力..",
+      "action": "added"
+    },
+    {
+      "term": "Blast... status",
+      "display_name": "动能冲击蓄力...",
+      "translation": "动能冲击蓄力...",
+      "action": "added"
+    },
+    {
+      "term": "Winding status",
+      "display_name": "上发条",
+      "translation": "上发条",
+      "action": "added"
+    },
+    {
+      "term": "Winding. status",
+      "display_name": "上发条.",
+      "translation": "上发条.",
+      "action": "added"
+    },
+    {
+      "term": "Winding.. status",
+      "display_name": "上发条..",
+      "translation": "上发条..",
+      "action": "added"
+    },
+    {
+      "term": "Winding... status",
+      "display_name": "上发条...",
+      "translation": "上发条...",
+      "action": "added"
+    },
+    {
+      "term": "Unstable status",
+      "display_name": "不稳定闪现",
+      "translation": "不稳定闪现",
+      "action": "added"
+    },
+    {
+      "term": "Vainglory status",
+      "display_name": "虚荣",
+      "translation": "虚荣",
+      "action": "added"
+    },
+    {
+      "term": "Protected status",
+      "display_name": "受到保护",
+      "translation": "受到保护",
+      "action": "added"
+    },
+    {
+      "term": "Vexed status",
+      "display_name": "恼咒",
+      "translation": "恼咒",
+      "action": "added"
+    },
+    {
+      "term": "Drowsy status",
+      "display_name": "困倦",
+      "translation": "困倦",
+      "action": "added"
+    },
+    {
+      "term": "Vampire status",
+      "display_name": "吸血鬼",
+      "translation": "吸血鬼",
+      "action": "added"
+    },
+    {
+      "term": "Swarm status",
+      "display_name": "蝙蝠群",
+      "translation": "蝙蝠群",
+      "action": "added"
+    },
+    {
+      "term": "Memories status",
+      "display_name": "法术记忆",
+      "translation": "法术记忆",
+      "action": "added"
+    },
+    {
+      "term": "Enkindled status",
+      "display_name": "燃忆",
+      "translation": "燃忆",
+      "action": "added"
+    },
+    {
+      "term": "Cacophony status",
+      "display_name": "不谐狂响",
+      "translation": "不谐狂响",
+      "action": "added"
+    },
+    {
+      "term": "Catalyst status",
+      "display_name": "催化",
+      "translation": "催化",
+      "action": "added"
+    },
+    {
+      "term": "Shroud status",
+      "display_name": "黏液帷幕修复中",
+      "translation": "黏液帷幕修复中/护罩状态",
+      "action": "updated"
+    },
+    {
+      "term": "Yak status",
+      "display_name": "牦牛",
+      "translation": "牦牛",
+      "action": "added"
+    },
+    {
+      "term": "Spider status",
+      "display_name": "蜘蛛",
+      "translation": "蜘蛛/蜘蛛状态",
+      "action": "updated"
+    },
+    {
+      "term": "Quill status",
+      "display_name": "棘刺",
+      "translation": "棘刺",
+      "action": "added"
+    },
+    {
+      "term": "Hive status",
+      "display_name": "蜂巢",
+      "translation": "蜂巢",
+      "action": "added"
+    },
+    {
+      "term": "-Swarm status",
+      "display_name": "虫群冷却",
+      "translation": "虫群冷却",
+      "action": "added"
+    },
+    {
+      "term": "Aqua status",
+      "display_name": "水体",
+      "translation": "水体",
+      "action": "added"
+    },
+    {
+      "term": "Sphinx status",
+      "display_name": "斯芬克斯",
+      "translation": "斯芬克斯",
+      "action": "added"
+    },
+    {
+      "term": "Werewolf status",
+      "display_name": "狼人",
+      "translation": "狼人",
+      "action": "added"
+    },
+    {
+      "term": "Slay status",
+      "display_name": "嗜血",
+      "translation": "嗜血/杀戮状态",
+      "action": "updated"
+    },
+    {
+      "term": "Scroll status",
+      "display_name": "卷轴",
+      "translation": "卷轴",
+      "action": "added"
+    },
+    {
+      "term": "Crab status",
+      "display_name": "蟹",
+      "translation": "蟹",
+      "action": "added"
+    },
+    {
+      "term": "Scarab status",
+      "display_name": "圣甲虫",
+      "translation": "圣甲虫",
+      "action": "added"
+    },
+    {
+      "term": "Medusa status",
+      "display_name": "水母",
+      "translation": "水母",
+      "action": "added"
+    },
+    {
+      "term": "-Lithotox status",
+      "display_name": "石毒冷却",
+      "translation": "石毒冷却",
+      "action": "added"
+    },
+    {
+      "term": "Doom status",
+      "display_name": "厄运",
+      "translation": "厄运",
+      "action": "added"
+    },
+    {
+      "term": "Ostracised status",
+      "display_name": "放逐术影响",
+      "translation": "放逐术影响",
+      "action": "added"
+    },
+    {
+      "term": "Tesseract status",
+      "display_name": "超立方体",
+      "translation": "超立方体",
+      "action": "added"
+    },
+    {
+      "term": "-Star status",
+      "display_name": "星尘冷却",
+      "translation": "星尘冷却",
+      "action": "added"
+    },
+    {
+      "term": "-Mesm status",
+      "display_name": "魅惑冷却",
+      "translation": "魅惑冷却",
+      "action": "added"
+    },
+    {
+      "term": "Phobia status",
+      "display_name": "恐惧症",
+      "translation": "恐惧症",
+      "action": "added"
+    },
+    {
+      "term": "Dim status",
+      "display_name": "法术削弱",
+      "translation": "法术削弱",
+      "action": "added"
+    },
+    {
+      "term": "Sunder status",
+      "display_name": "破敌一击",
+      "translation": "破敌一击",
+      "action": "added"
+    },
+    {
+      "term": "Devious status",
+      "display_name": "诡诈",
+      "translation": "诡诈",
+      "action": "added"
+    },
+    {
+      "term": "Slimifying status",
+      "display_name": "黏液化中",
+      "translation": "黏液化中",
+      "action": "added"
+    },
+    {
+      "term": "Jelly status",
+      "display_name": "胶怪",
+      "translation": "胶怪",
+      "action": "added"
+    },
+    {
+      "term": "OozeRegen status",
+      "display_name": "再生黏液",
+      "translation": "再生黏液",
+      "action": "added"
+    },
+    {
+      "term": "-Hellfire status",
+      "display_name": "地狱火迫击炮冷却",
+      "translation": "地狱火迫击炮冷却",
+      "action": "added"
+    },
+    {
+      "term": "Engorged status",
+      "display_name": "饱食",
+      "translation": "饱食",
+      "action": "added"
+    },
+    {
+      "term": "Eel status",
+      "display_name": "电鳗",
+      "translation": "电鳗",
+      "action": "added"
+    },
+    {
+      "term": "Blade status",
+      "display_name": "刀刃",
+      "translation": "刀刃/刃手状态",
+      "action": "updated"
+    },
+    {
+      "term": "Spore status",
+      "display_name": "孢子",
+      "translation": "孢子",
+      "action": "added"
+    }
+  ]
+}

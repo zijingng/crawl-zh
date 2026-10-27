@@ -1,19 +1,16 @@
-###############################################################################
-# 怪物称号。
-# 在他们第一次出现时、在他们的描述界面中进行显示。
-#########
+# Generated from localization/zh_CN/textdb.po; do not edit.
 %%%%
 Agnes title
 
-漫游者艾格尼丝
+漫游者阿格尼斯
 %%%%
 Aizul title
 
-疏忽的守卫艾祖
+疏忽的守卫艾祖尔
 %%%%
 Amaemon title
 
-恶魔投毒者亚麦依蒙
+恶魔投毒者阿玛埃蒙
 %%%%
 Antaeus title
 
@@ -21,7 +18,7 @@ Antaeus title
 %%%%
 Arachne title
 
-编织者阿拉克尼
+遭放逐的阿拉克涅
 %%%%
 Asmodeus title
 
@@ -29,11 +26,11 @@ Asmodeus title
 %%%%
 Asterion title
 
-堕落之王阿斯忒里翁
+陨落之王阿斯忒里翁
 %%%%
 Azrael title
 
-无边烈焰亚兹拉尔
+无边烈焰阿兹拉尔
 %%%%
 Bai Suzhen title
 
@@ -43,9 +40,13 @@ Boris title
 
 鲍里斯，生死大师
 %%%%
+Cassandra title
+
+劫数难逃的先知卡珊德拉
+%%%%
 Cerebov title
 
-赛里鲍夫，火与钢之恶魔领主
+瑟雷波夫，火与钢之恶魔领主
 %%%%
 Chuck title
 
@@ -53,7 +54,7 @@ Chuck title
 %%%%
 Crazy Yiuf title
 
-开悟者疯狂的伊夫
+开悟者疯子尤夫
 %%%%
 Dispater title
 
@@ -61,7 +62,7 @@ Dispater title
 %%%%
 Dissolution title
 
-分解者，吉瓦的高级祭司
+溶解者，吉瓦的高阶祭司
 %%%%
 Donald title
 
@@ -69,11 +70,11 @@ Donald title
 %%%%
 Dowan title
 
-多万，多维莎的哥哥
+多万，杜维莎的兄弟
 %%%%
 Duvessa title
 
-多维莎，多万的妹妹
+杜维莎，多万的姐妹
 %%%%
 Edmund title
 
@@ -89,11 +90,11 @@ Erica title
 %%%%
 Erolcha title
 
-狡猾的厄洛卡
+狡猾的埃罗尔查
 %%%%
 Eustachio title
 
-奇伟的埃乌斯塔乔
+威风凛凛的尤斯塔基奥
 %%%%
 Fannar title
 
@@ -101,7 +102,7 @@ Fannar title
 %%%%
 Frances title
 
-弗朗西丝，魔窟的女公爵
+弗朗西丝，魔窟女公爵
 %%%%
 Frederick title
 
@@ -109,15 +110,15 @@ Frederick title
 %%%%
 Gastronok title
 
-沉思的加斯特罗克
+笨重的加斯特罗诺克
 %%%%
 Geryon title
 
-吉里昂，地狱的守门人
+革律翁，地狱的守门人
 %%%%
 Gloorx Vloq title
 
-克罗克斯·弗拉克，暗之恶魔领主
+格洛克斯·弗洛克，黑暗之恶魔领主
 %%%%
 Grum title
 
@@ -125,7 +126,7 @@ Grum title
 %%%%
 Grunn title
 
-被惩罚的格鲁
+受罚者格伦
 %%%%
 Harold title
 
@@ -133,15 +134,15 @@ Harold title
 %%%%
 Ignacio title
 
-伊格纳西欧，剧痛大师
+伊格纳西奥，剧痛大师
 %%%%
 Ilsuiw title
 
-伊尔斯，潮汐女巫
+伊尔苏伊，潮汐巫婆
 %%%%
 Ijyb title
 
-爱钻研的伊吉布
+好奇的伊吉布
 %%%%
 Jessica title
 
@@ -149,15 +150,15 @@ Jessica title
 %%%%
 Jeremiah title
 
-耶利米，蛙人神游者
+耶利米，蛙人逐梦者
 %%%%
 Jorgrun title
 
-撼地者约格伦
+撼地者乔格伦
 %%%%
 Jory title
 
-血腥伯爵乔里
+血染的伯爵乔里
 %%%%
 Joseph title
 
@@ -165,7 +166,7 @@ Joseph title
 %%%%
 Josephina title
 
-冰巫妖约瑟芬娜
+寒冰巫妖约瑟菲娜
 %%%%
 Josephine title
 
@@ -173,7 +174,7 @@ Josephine title
 %%%%
 Khufu title
 
-不朽的法老胡夫
+不死法老胡夫
 %%%%
 Kirke title
 
@@ -193,7 +194,7 @@ Louise title
 %%%%
 Maggie title
 
-自负的玛吉
+自负的玛姬
 %%%%
 Mara title
 
@@ -201,7 +202,7 @@ Mara title
 %%%%
 Margery title
 
-屠龙者玛杰丽
+屠龙者玛格丽
 %%%%
 Maurice title
 
@@ -213,11 +214,11 @@ Menkaure title
 %%%%
 Mennas title
 
-梅纳斯，辛的代言人
+门纳斯，辛的代言人
 %%%%
 Mlioglotl title
 
-姆利格洛特，无形的恐怖
+姆利奥格洛特尔，无形的恐怖
 %%%%
 Mnoleg title
 
@@ -225,7 +226,7 @@ Mnoleg title
 %%%%
 Murray title
 
-会说话的恶魔头骨默里
+会说话的恶魔头骨莫瑞
 %%%%
 Natasha title
 
@@ -237,15 +238,19 @@ Nellie title
 %%%%
 Nergalle title
 
-缚魂者内尔伽莉
+内尔加勒，逝者传承的守护者
 %%%%
 Nessos title
 
-精英半人马内萨斯
+神射半人马涅索斯
 %%%%
 Nikola title
 
 疯狂的发明家尼古拉
+%%%%
+Nobody title
+
+无名氏，无人哀悼者的怨恨
 %%%%
 Norris title
 
@@ -253,11 +258,11 @@ Norris title
 %%%%
 Parghit title
 
-强大的帕吉特
+强大的帕尔吉特
 %%%%
 Pargi title
 
-柔弱的帕吉
+温顺的帕尔吉
 %%%%
 Pikel title
 
@@ -265,7 +270,7 @@ Pikel title
 %%%%
 Polyphemus title
 
-警惕的牧羊人波吕斐摩斯
+警觉的牧羊人波吕斐摩斯
 %%%%
 Robin title
 
@@ -273,15 +278,15 @@ Robin title
 %%%%
 Roxanne title
 
-罗克珊，名誉堪舆师
+罗克珊，荣休地术师
 %%%%
 Rupert title
 
-野人鲁珀特
+狂野的鲁珀特
 %%%%
 Saint Roka title
 
-弥赛亚圣罗卡
+救世主圣徒罗卡
 %%%%
 Sigmund title
 
@@ -289,7 +294,7 @@ Sigmund title
 %%%%
 Snorg title
 
-饕餮的史诺格
+贪食无厌的斯诺格
 %%%%
 Sojobo title
 
@@ -299,31 +304,42 @@ Sonja title
 
 索尼娅，优雅的刺客
 %%%%
+Sprozz title
+
+斯普罗兹，巧思养蜂人
+%%%%
 Terence title
 
-鲁莽的泰伦斯
+特伦斯，老兵
 %%%%
 Tiamat title
 
-提亚玛特，龙神的化身
+提亚玛特，龙主的化身
 %%%%
 Urug title
 
-兽人弩炮尤鲁格
+兽人弩炮乌鲁格
+%%%%
+Wiglaf title
+
+矮人枪手威格拉夫
 %%%%
 Vashnia title
 
-上层精英纳迦瓦什妮亚
+精英神射纳迦瓦莎妮娅
 %%%%
 Vv title
 
-流亡的薇薇
+流亡者薇薇
+%%%%
+Xak'krixis title
+
+扎克克里克西斯，皇家远征炼金术士
 %%%%
 Xtahua title
 
-古老的西泰华
+远古的克塔华
 %%%%
 Zenata title
 
-塞奈达，西泽的追寻者
-%%%%
+泽娜塔，西泽的追寻者

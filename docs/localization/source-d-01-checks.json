@@ -1,0 +1,11 @@
+{
+  "batch": "source-d-01",
+  "date": "2026-10-22",
+  "messages": 3205,
+  "catalogue_matches": 3205,
+  "missing_messages": [],
+  "stale_dependencies": [],
+  "top_level_d_files": 65,
+  "scope_complete": false,
+  "limitation": "Remaining dynamic prose in describe.cc, directn.cc, decks.cc and describe-god.cc requires further review. No visual in-game smoke test in this batch."
+}

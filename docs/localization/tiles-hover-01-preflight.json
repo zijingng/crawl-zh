@@ -1,0 +1,91 @@
+{
+  "glossary_sha256": "95cc9538a701536b1581f31834203bbbb3160668ec622f7862f43921be96fdb1",
+  "looked_up": [
+    "magic points",
+    "mana",
+    "Clear terrain to floor",
+    "-Breath status",
+    "Breath status",
+    "Breath+ status",
+    "Breath++ status",
+    "Destr status",
+    "Destr+ status",
+    "Destr++ status",
+    "Destr+++ status",
+    "Use",
+    "Cast",
+    "Describe"
+  ],
+  "hits": [
+    {
+      "Term": "magic points",
+      "Translation": "魔力值",
+      "Part of Speech": "noun",
+      "Variants": "MP",
+      "Note": "【0.34.1 修订】HP 对应生命值，MP 统一魔力值；删除过宽别名 Magic，保留 MP。 来源：player.cc。"
+    },
+    {
+      "Term": "Clear terrain to floor",
+      "Translation": "清除地形为地板",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+    },
+    {
+      "Term": "-Breath status",
+      "Translation": "吐息冷却",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：吐息冷却。"
+    },
+    {
+      "Term": "Breath status",
+      "Translation": "龙息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：龙息。"
+    },
+    {
+      "Term": "Breath+ status",
+      "Translation": "龙息+",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：龙息+。"
+    },
+    {
+      "Term": "Breath++ status",
+      "Translation": "龙息++",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：龙息++。"
+    },
+    {
+      "Term": "Destr status",
+      "Translation": "毁灭增长",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：毁灭增长。"
+    },
+    {
+      "Term": "Destr+ status",
+      "Translation": "毁灭庇护+",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：毁灭庇护+。"
+    },
+    {
+      "Term": "Destr++ status",
+      "Translation": "毁灭庇护++",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：毁灭庇护++。"
+    },
+    {
+      "Term": "Destr+++ status",
+      "Translation": "毁灭庇护+++",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：毁灭庇护+++。"
+    }
+  ]
+}

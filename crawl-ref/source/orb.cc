@@ -4,6 +4,7 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "orb.h"
 
@@ -62,16 +63,16 @@ void orb_pickup_noise(const coord_def& where, int loudness, const char* msg, con
     if (_orb_noise(where, loudness))
     {
         if (msg)
-            mprf(MSGCH_ORB, "%s", msg);
+            mprf(MSGCH_ORB, "%s", ui_translate("o.orb", msg));
         else
-            mprf(MSGCH_ORB, "The Orb lets out an agonising shriek!");
+            mprf(MSGCH_ORB, "%s", ui_translate("o.orb", "The Orb lets out an agonising shriek!"));
     }
     else
     {
         if (msg2)
-            mprf(MSGCH_ORB, "%s", msg2);
+            mprf(MSGCH_ORB, "%s", ui_translate("o.orb", msg2));
         else
-            mprf(MSGCH_ORB, "The Orb lets out a furious burst of light!");
+            mprf(MSGCH_ORB, "%s", ui_translate("o.orb", "The Orb lets out a furious burst of light!"));
     }
 }
 
@@ -90,12 +91,14 @@ void start_orb_run(game_chapter chapter, const char* message)
 {
     if (you.chapter != CHAPTER_ANGERED_PANDEMONIUM)
     {
-        mprf(MSGCH_WARN, "The lords of Pandemonium are not amused. Beware!");
+        mprf(MSGCH_WARN, "%s", ui_translate("o.orb", "The lords of Pandemonium are not amused. Beware!"));
         if (have_passive(passive_t::slow_orb_run))
-            simple_god_message(" tells them not to hurry.");
+            simple_god_message(" tells them not to hurry.", false, you.religion,
+                ui_render("o.god", "%s tells them not to hurry.", "",
+                    {ui_text_arg("display.god", god_name(you.religion))}));
     }
 
-    mprf(MSGCH_ORB, "%s", message);
+    mprf(MSGCH_ORB, "%s", ui_translate("o.orb", message));
     you.chapter = chapter;
     xom_is_stimulated(200, XM_INTRIGUED);
     invalidate_agrid(true);

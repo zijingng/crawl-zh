@@ -1,0 +1,51 @@
+{
+  "batch": "morgue-02",
+  "build": "Windows Tiles crawl.exe and catch2-tests-executable: passed",
+  "native_tests": {
+    "cases": 7,
+    "assertions": 166,
+    "passed": true
+  },
+  "python_tests": {
+    "cases": 33,
+    "passed": true
+  },
+  "canonical_previous_fixtures": {
+    "native-bilingual.txt": {
+      "before": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+      "after": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+      "unchanged": true
+    },
+    "native-explicit-english.txt": {
+      "before": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+      "after": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+      "unchanged": true
+    },
+    "native-language-english.txt": {
+      "before": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+      "after": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+      "unchanged": true
+    }
+  },
+  "runtime_files": {
+    "native-overview.lst": {
+      "bytes": 28,
+      "sha256": "cd8cee2c8d82ec681507a850e4fdb07e79cade6ce24d58f3446f3c4e0947808b"
+    },
+    "native-overview.txt": {
+      "bytes": 324,
+      "sha256": "5e818314b6653a9a60e7b8b202e6c00dc49175a1e3c47691fd6e18ded95c663f"
+    },
+    "native-overview.zh.txt": {
+      "bytes": 345,
+      "sha256": "4682a86f6e364e0ccc9231fd4ac0908921600989813e830bfd2c980e41aa578f"
+    }
+  },
+  "fallback_checks": [
+    "English default and explicit English output",
+    "Unknown unique name retains complete original unique annotation",
+    "Language configuration and RNG unchanged",
+    "Technical vault identifiers unchanged"
+  ],
+  "reviewed_ui_entries_added": 2
+}

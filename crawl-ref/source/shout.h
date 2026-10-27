@@ -1,5 +1,10 @@
 #pragma once
 
+struct textdb_speech;
+class monster;
+string monster_shout_display(const textdb_speech &speech, const monster &mons,
+                              const string &original);
+
 #include "mon-enum.h"
 #include "noise.h"
 

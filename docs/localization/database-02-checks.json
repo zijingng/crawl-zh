@@ -1,0 +1,6075 @@
+{
+  "translations": {
+    "colourname.txt": 9,
+    "shout.txt": 93
+  },
+  "misc_colour_choices": 370,
+  "coverage": [
+    {
+      "source": "database/colourname.txt",
+      "source_entries": 9,
+      "exported": 9,
+      "english_fallback": [],
+      "source_duplicate_keys": [],
+      "entries": [
+        {
+          "key": "rainbow_colour",
+          "status": "reviewed"
+        },
+        {
+          "key": "misc_colour",
+          "status": "reviewed"
+        },
+        {
+          "key": "mono_colour",
+          "status": "reviewed"
+        },
+        {
+          "key": "any_colour",
+          "status": "reviewed"
+        },
+        {
+          "key": "any_pattern",
+          "status": "reviewed"
+        },
+        {
+          "key": "glowing_adj",
+          "status": "reviewed"
+        },
+        {
+          "key": "any_glowing_colour",
+          "status": "reviewed"
+        },
+        {
+          "key": "any_colour_pattern",
+          "status": "reviewed"
+        },
+        {
+          "key": "any_glowing_colour_pattern",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "source": "database/shout.txt",
+      "source_entries": 93,
+      "exported": 93,
+      "english_fallback": [],
+      "source_duplicate_keys": [],
+      "entries": [
+        {
+          "key": "__buggy",
+          "status": "reviewed"
+        },
+        {
+          "key": "__shout",
+          "status": "reviewed"
+        },
+        {
+          "key": "__shout seen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__bark unseen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__bark seen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__howl unseen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__howl seen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__two_shouts unseen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__two_shouts seen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__roar unseen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__roar seen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__scream unseen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__scream seen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__bellow unseen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__bellow seen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__bleat unseen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__bleat seen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__trumpet unseen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__trumpet seen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__screech unseen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__screech seen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__buzz unseen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__buzz seen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__moan unseen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__moan seen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__gurgle unseen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__gurgle seen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__croak unseen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__croak seen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__growl unseen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__growl seen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__hiss unseen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__hiss seen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__skitter unseen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__skitter seen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__faint_skitter unseen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__faint_skitter seen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__squeal unseen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__squeal seen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__demon_taunt",
+          "status": "reviewed"
+        },
+        {
+          "key": "__cherub seen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__cherub unseen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__loud_roar unseen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__loud_roar seen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__rustle unseen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__rustle seen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__squeak unseen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__squeak seen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__caw seen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__caw unseen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__laugh seen",
+          "status": "reviewed"
+        },
+        {
+          "key": "__laugh unseen",
+          "status": "reviewed"
+        },
+        {
+          "key": "player ghost",
+          "status": "reviewed"
+        },
+        {
+          "key": "fighter player ghost",
+          "status": "reviewed"
+        },
+        {
+          "key": "hedge wizard player ghost",
+          "status": "reviewed"
+        },
+        {
+          "key": "gladiator player ghost",
+          "status": "reviewed"
+        },
+        {
+          "key": "necromancer player ghost",
+          "status": "reviewed"
+        },
+        {
+          "key": "brigand player ghost",
+          "status": "reviewed"
+        },
+        {
+          "key": "berserker player ghost",
+          "status": "reviewed"
+        },
+        {
+          "key": "hunter player ghost",
+          "status": "reviewed"
+        },
+        {
+          "key": "conjurer player ghost",
+          "status": "reviewed"
+        },
+        {
+          "key": "enchanter player ghost",
+          "status": "reviewed"
+        },
+        {
+          "key": "fire elementalist player ghost",
+          "status": "reviewed"
+        },
+        {
+          "key": "ice elementalist player ghost",
+          "status": "reviewed"
+        },
+        {
+          "key": "summoner player ghost",
+          "status": "reviewed"
+        },
+        {
+          "key": "air elementalist player ghost",
+          "status": "reviewed"
+        },
+        {
+          "key": "earth elementalist player ghost",
+          "status": "reviewed"
+        },
+        {
+          "key": "alchemist player ghost",
+          "status": "reviewed"
+        },
+        {
+          "key": "chaos knight player ghost",
+          "status": "reviewed"
+        },
+        {
+          "key": "shapeshifter player ghost",
+          "status": "reviewed"
+        },
+        {
+          "key": "monk player ghost",
+          "status": "reviewed"
+        },
+        {
+          "key": "warper player ghost",
+          "status": "reviewed"
+        },
+        {
+          "key": "wanderer player ghost",
+          "status": "reviewed"
+        },
+        {
+          "key": "'&'",
+          "status": "reviewed"
+        },
+        {
+          "key": "'cap-g'",
+          "status": "reviewed"
+        },
+        {
+          "key": "'cap-j'",
+          "status": "reviewed"
+        },
+        {
+          "key": "giant slug",
+          "status": "reviewed"
+        },
+        {
+          "key": "ballistomycete spore",
+          "status": "reviewed"
+        },
+        {
+          "key": "glowing orange brain",
+          "status": "reviewed"
+        },
+        {
+          "key": "imp",
+          "status": "reviewed"
+        },
+        {
+          "key": "moth of wrath",
+          "status": "reviewed"
+        },
+        {
+          "key": "iron imp",
+          "status": "reviewed"
+        },
+        {
+          "key": "shadow imp",
+          "status": "reviewed"
+        },
+        {
+          "key": "white imp",
+          "status": "reviewed"
+        },
+        {
+          "key": "polyphemus",
+          "status": "reviewed"
+        },
+        {
+          "key": "player sphinx riddle lines",
+          "status": "reviewed"
+        },
+        {
+          "key": "_riddle_adj_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_riddle_fail_acknowledged_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_riddle_fail_general_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_riddle_prefix_",
+          "status": "reviewed"
+        },
+        {
+          "key": "sphinx riddle success",
+          "status": "reviewed"
+        },
+        {
+          "key": "sphinx riddle failure",
+          "status": "reviewed"
+        },
+        {
+          "key": "sphinx riddle failure acknowledged",
+          "status": "reviewed"
+        }
+      ]
+    }
+  ],
+  "english_sources_unchanged": true,
+  "changed_exports": [
+    "crawl-ref/source/dat/database/zh/colourname.txt",
+    "crawl-ref/source/dat/database/zh/shout.txt"
+  ],
+  "dependency_refresh_summary": [
+    {
+      "source": "crawl-ref/source/dat/database/zh/shout.txt",
+      "context": "fix.autotarget",
+      "count": 3
+    },
+    {
+      "source": "crawl-ref/source/dat/database/zh/shout.txt",
+      "context": "fix.mode",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/dat/database/zh/shout.txt",
+      "context": "fix.save",
+      "count": 3
+    },
+    {
+      "source": "crawl-ref/source/dat/database/zh/shout.txt",
+      "context": "fix.welcome",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "a.speech",
+      "count": 34
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.action",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.ancestor.upgrade",
+      "count": 40
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.attack",
+      "count": 20
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.attack.damage",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.attack.damage.type",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.attack.effect",
+      "count": 100
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.attack.name",
+      "count": 42
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.attack.table",
+      "count": 10
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.attack.throw",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.bane",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.beast",
+      "count": 10
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.beast.facet",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.cancel",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.cancel.effect",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.cards",
+      "count": 116
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.cards.action",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.cards.deck.kind",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.curse",
+      "count": 46
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.damage",
+      "count": 24
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.database",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.delay",
+      "count": 28
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.delay.activity",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.demon",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.demon.colour",
+      "count": 32
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.demon.part",
+      "count": 210
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.describe",
+      "count": 218
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.draconian",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.duration",
+      "count": 1138
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.equip.action",
+      "count": 20
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.equip.category",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.equipment",
+      "count": 124
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.equipment.field",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.equipment.type",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.feature",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.feature.cover",
+      "count": 10
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.feature.door",
+      "count": 32
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.feature.help",
+      "count": 30
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.feature.name",
+      "count": 366
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.form",
+      "count": 56
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.ghost",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.ghost.rank",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.god",
+      "count": 158
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.god.degree",
+      "count": 24
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.god.power",
+      "count": 262
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.god.title",
+      "count": 418
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.god.title.component",
+      "count": 196
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.god.xom.favour",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.hit",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.hit.aux",
+      "count": 44
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.item.kind",
+      "count": 36
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.item.origin",
+      "count": 20
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.item.reason",
+      "count": 102
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.item.useless",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.messages",
+      "count": 10
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.monster.equipment",
+      "count": 18
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.monster.field",
+      "count": 36
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.monster.observation",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.monster.pronoun",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.monster.prose",
+      "count": 34
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.monster.speed",
+      "count": 10
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.monster.speed.action",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.monster.stat",
+      "count": 20
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.monster.state",
+      "count": 726
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.monster.target",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.monster.trait",
+      "count": 48
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.overview",
+      "count": 42
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.property",
+      "count": 124
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.resist",
+      "count": 22
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.shoals",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.skill.prose",
+      "count": 18
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.skill.title",
+      "count": 498
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.skill.title.walker",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.skill.title.weight",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.skin",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.spell.miscast",
+      "count": 24
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.spell.noise",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.spell.prose",
+      "count": 42
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.spell.reason",
+      "count": 128
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.spell.stat",
+      "count": 20
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.spells",
+      "count": 34
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.square",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.square.state",
+      "count": 18
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.target",
+      "count": 66
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.target.action",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.target.kind",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.target.menu",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.target.prefix",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.threat",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "d.training",
+      "count": 18
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "display.item.appearance",
+      "count": 24
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "fix.autotarget",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "fix.cast",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "fix.charge",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "fix.mode",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "fix.save",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "fix.welcome",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "h.event",
+      "count": 32
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "h.hints",
+      "count": 172
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "h.hints.first",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "h.hints.label",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "h.hints.menu",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "h.item",
+      "count": 86
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "h.scores",
+      "count": 120
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "h.scores.rank",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "item.action",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "log.encounter",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "log.god",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "log.monster",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "lua.distance",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "lua.entity",
+      "count": 30
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "lua.map",
+      "count": 20
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "lua.pace",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "lua.sound",
+      "count": 20
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "lua.ui",
+      "count": 122
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "mon.cast.body",
+      "count": 206
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "mon.cast.branch",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "mon.cast.grammar",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "mon.cast.preposition",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "mon.cast.speech",
+      "count": 518
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "mon.cast.target",
+      "count": 10
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "mon.cast.target.suffix",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "x.clause",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "x.log",
+      "count": 32
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "x.noun",
+      "count": 32
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "x.scenery",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "x.speech",
+      "count": 244
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "x.ui",
+      "count": 90
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "context": "x.voice",
+      "count": 50
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "d.duration",
+      "count": 3056
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "fix.autotarget",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "fix.cast",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "fix.charge",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "fix.mode",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "fix.save",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "fix.shout",
+      "count": 72
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "fix.welcome",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "log.god",
+      "count": 20
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "log.monster",
+      "count": 70
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "log.projectile.name",
+      "count": 78
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.aim",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.aim.verb",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.anatomy",
+      "count": 244
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.breath",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.channel",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.channel.reminder",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.clause",
+      "count": 314
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.contamination",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.count",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.duration.start",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.forest",
+      "count": 10
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.forest.hit",
+      "count": 18
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.gravity",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.jinx",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.library",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.log",
+      "count": 340
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.los",
+      "count": 18
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.noise",
+      "count": 20
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.poison",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.potion.flavour",
+      "count": 36
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.reason",
+      "count": 150
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.rune",
+      "count": 32
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.search",
+      "count": 22
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.search.row",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.shop",
+      "count": 42
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.shop.help",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.shop.row",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.shop.suffix",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.shop.type",
+      "count": 24
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.stairs",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.stash",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.stash.item",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.stash.shop",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.stat",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.status",
+      "count": 44
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.status.number",
+      "count": 36
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.summon",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.target",
+      "count": 54
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.target.prompt",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "context": "s.ui",
+      "count": 204
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "a.ability",
+      "count": 230
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "a.ability.cost",
+      "count": 88
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "a.ability.damage",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "a.ability.reason",
+      "count": 48
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "a.apostle",
+      "count": 10
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "a.apostle.title",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "a.bodypart",
+      "count": 92
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "a.card.name",
+      "count": 44
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "a.curse.abbr",
+      "count": 20
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "a.curse.name",
+      "count": 20
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "a.mutation.name",
+      "count": 424
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "a.mutation.summary",
+      "count": 160
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "a.range",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "a.warning",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "d.duration",
+      "count": 3056
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "d.god.power",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "display.ability",
+      "count": 322
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "display.spell",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "e.end",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "e.end.game",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "e.evoke",
+      "count": 32
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "e.exclude",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "e.exclude.name",
+      "count": 34
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "e.manual",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "f.attack.action",
+      "count": 78
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "f.files",
+      "count": 44
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "f.form.description",
+      "count": 140
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "f.form.expiring",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "f.form.label",
+      "count": 18
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "f.form.name",
+      "count": 136
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "f.form.trait",
+      "count": 200
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "f.game.mode",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "f.message",
+      "count": 48
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "f.stair.verb",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "f.warning",
+      "count": 32
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "fix.shout",
+      "count": 72
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.blessing",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.challenge",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.common",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.companion",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.conduct",
+      "count": 88
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.favour",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.gender",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.level",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.martial",
+      "count": 10
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.message",
+      "count": 444
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.prayer",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.protection",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.recite.closure",
+      "count": 18
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.recite.finish",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.recite.reference",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.recite.verse",
+      "count": 162
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.recite.word",
+      "count": 192
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.sacrifice",
+      "count": 36
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.shop",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.shop.suffix",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.shop.type",
+      "count": 24
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.sifu",
+      "count": 10
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.soul",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.trap",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.wall",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "g.wrath",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "h.event",
+      "count": 32
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "h.hints",
+      "count": 172
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "h.hints.first",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "h.hints.label",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "h.hints.menu",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "h.item",
+      "count": 86
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "h.scores",
+      "count": 120
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "h.scores.rank",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "i.brand",
+      "count": 34
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "i.colour",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "i.danger",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "i.enchant",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "i.evoker",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "i.identify",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "i.inventory.empty",
+      "count": 60
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "i.item.base",
+      "count": 30
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "i.items",
+      "count": 58
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "i.menu",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "i.operation",
+      "count": 34
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "i.reason",
+      "count": 330
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "i.runes",
+      "count": 36
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "i.scroll",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "i.scroll.confirm",
+      "count": 10
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "i.scroll.part",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "i.skin",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "i.target",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "i.ui",
+      "count": 84
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "i.use",
+      "count": 46
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "i.warning",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "i.warning.part",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "log.god",
+      "count": 456
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "log.monster",
+      "count": 654
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "log.projectile.name",
+      "count": 106
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.aux",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.clause",
+      "count": 494
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.combine",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.equipment.slot",
+      "count": 24
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.fakemut",
+      "count": 376
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.000",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.001",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.003",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.004",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.005",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.006",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.007",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.008",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.009",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.010",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.011",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.013",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.014",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.015",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.016",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.017",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.018",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.019",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.020",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.021",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.022",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.023",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.024",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.025",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.026",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.027",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.028",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.029",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.030",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.031",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.032",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.033",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.034",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.035",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.036",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.037",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.038",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.039",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.040",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.041",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.042",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.043",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.044",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.045",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.046",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.047",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.048",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.049",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.050",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.051",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.052",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.053",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.054",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.055",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.056",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.057",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.058",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.059",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.060",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.061",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.062",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.063",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.064",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.065",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.066",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.067",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.068",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.070",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.071",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.072",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.073",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.074",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.075",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.076",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.077",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.078",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.079",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.080",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.081",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.082",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.083",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.084",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.085",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.086",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.087",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.088",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.089",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.090",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.091",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.092",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.093",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.094",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.095",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.096",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.097",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.098",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.099",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.100",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.101",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.102",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.103",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.104",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.105",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.106",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.107",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.108",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.109",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.110",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.111",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.112",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.113",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.114",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.115",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.116",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.117",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.118",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.119",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.120",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.121",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.122",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.123",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.124",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.125",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.126",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.127",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.128",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.129",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.130",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.131",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.132",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.133",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.134",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.135",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.136",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.137",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.138",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.139",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.140",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.141",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.142",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.143",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.144",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.145",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.146",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.147",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.148",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.149",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.150",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.151",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.152",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.153",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.154",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.155",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.156",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.157",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.158",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.159",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.160",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.161",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.162",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.163",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.165",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.166",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.167",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.168",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.169",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.170",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.171",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.172",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.173",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.174",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.175",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.176",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.177",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.178",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.179",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.180",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.181",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.182",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.183",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.184",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.185",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.186",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.187",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.188",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.189",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.190",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.191",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.192",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.193",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.194",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.195",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.196",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.197",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.198",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.199",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.200",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.201",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.202",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.203",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.204",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.205",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.206",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.207",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.208",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.209",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.210",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.211",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.212",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.213",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.214",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.215",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.216",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.217",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.218",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.219",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.220",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.221",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.222",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.223",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.224",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.225",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.226",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.227",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.228",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.229",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.230",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.231",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.232",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.233",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.234",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.235",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.236",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.237",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.238",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.239",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.240",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.241",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.242",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.243",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.244",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.245",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.246",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.247",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.248",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.249",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.250",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.251",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.252",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.253",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.254",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.255",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.256",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.257",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.258",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.259",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.260",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.261",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.262",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.263",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.264",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.265",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.266",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.267",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.268",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.269",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.270",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.271",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.272",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.273",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.274",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.275",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.276",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.277",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.280",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.281",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.282",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.log.283",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.macro",
+      "count": 56
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.macro.mode",
+      "count": 26
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.mapping",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.menu",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.moncondition",
+      "count": 284
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.mutation",
+      "count": 1788
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.mutation.part",
+      "count": 18
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.mutation.stat",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.mutation.ui",
+      "count": 30
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.resist",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.staff",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.ui",
+      "count": 602
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "m.verb",
+      "count": 34
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "n.character",
+      "count": 20
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "n.gametype",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "n.map",
+      "count": 28
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "n.note",
+      "count": 108
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "n.note.text",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "n.startup",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "n.ui",
+      "count": 64
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "n.warn",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "o.body",
+      "count": 28
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "o.brand",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "o.clause",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "o.corrode",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "o.corrode.source",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "o.drain",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "o.equipment",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "o.format",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "o.god",
+      "count": 10
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "o.label",
+      "count": 102
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "o.log",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "o.monsters",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "o.orb",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "o.passive",
+      "count": 48
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "o.place",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "o.runes",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "o.title",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "o.ui",
+      "count": 64
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "o.unarmed",
+      "count": 40
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.abyss",
+      "count": 34
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.body",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.clause",
+      "count": 468
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.distortion",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.duration",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.duration.message",
+      "count": 26
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.extra",
+      "count": 24
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.faith",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.0",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.1",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.10",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.100",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.101",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.102",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.103",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.104",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.105",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.106",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.107",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.108",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.109",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.11",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.110",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.111",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.112",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.113",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.114",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.115",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.116",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.117",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.118",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.119",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.12",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.120",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.121",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.122",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.123",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.124",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.125",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.126",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.127",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.128",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.129",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.13",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.130",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.131",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.132",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.133",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.134",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.135",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.136",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.14",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.15",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.16",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.17",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.18",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.19",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.2",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.20",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.21",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.22",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.23",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.24",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.25",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.26",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.27",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.28",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.29",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.3",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.30",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.31",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.32",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.33",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.34",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.35",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.36",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.37",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.38",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.4",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.40",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.41",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.42",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.43",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.44",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.45",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.46",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.47",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.48",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.49",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.5",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.53",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.57",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.6",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.60",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.61",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.62",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.66",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.67",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.68",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.69",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.7",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.71",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.72",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.73",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.74",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.75",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.76",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.77",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.78",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.79",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.8",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.80",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.81",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.82",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.84",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.9",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.90",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.91",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.92",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.93",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.94",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.95",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.96",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.97",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.98",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.log.99",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.move",
+      "count": 20
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.prompt",
+      "count": 34
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.reason",
+      "count": 52
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.speech",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.stats.gain",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.status",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.ui",
+      "count": 480
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "p.warning",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "q.clause",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "q.keys",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "q.log",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "q.menu",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "q.prompt",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "q.row",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "q.ui",
+      "count": 52
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "q.verb",
+      "count": 110
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "r.brand",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "r.clause",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "r.farewell",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "r.guilt",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "r.log",
+      "count": 38
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "r.memorise",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "r.memory.item",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "r.power",
+      "count": 226
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "r.power.wrapper",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "r.prayer",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "r.reflection",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "r.spell.warning",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "r.ui",
+      "count": 102
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "r.wrath",
+      "count": 10
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.aim",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.aim.verb",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.anatomy",
+      "count": 244
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.breath",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.channel",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.channel.reminder",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.clause",
+      "count": 314
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.contamination",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.count",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.duration.start",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.forest",
+      "count": 10
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.forest.hit",
+      "count": 18
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.gravity",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.jinx",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.library",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.log",
+      "count": 340
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.los",
+      "count": 18
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.noise",
+      "count": 20
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.poison",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.potion.flavour",
+      "count": 36
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.reason",
+      "count": 150
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.rune",
+      "count": 32
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.search",
+      "count": 22
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.search.row",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.shop",
+      "count": 42
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.shop.help",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.shop.row",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.shop.suffix",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.shop.type",
+      "count": 24
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.stairs",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.stash",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.stash.item",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.stash.shop",
+      "count": 2
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.stat",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.status",
+      "count": 44
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.status.number",
+      "count": 36
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.summon",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.target",
+      "count": 54
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.target.prompt",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "s.ui",
+      "count": 204
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "t.barrier",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "t.category",
+      "count": 30
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "t.clause",
+      "count": 46
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "t.discovery",
+      "count": 10
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "t.doll",
+      "count": 6
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "t.doll.category",
+      "count": 32
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "t.explore",
+      "count": 18
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "t.form",
+      "count": 128
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "t.harlequin",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "t.log",
+      "count": 106
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "t.meld",
+      "count": 14
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "t.preposition",
+      "count": 10
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "t.reason",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "t.runmode",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "t.target",
+      "count": 106
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "t.terrain",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "t.tiles",
+      "count": 166
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "t.tiles.row",
+      "count": 8
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "t.trap",
+      "count": 38
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "t.travel.ui",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "t.ui",
+      "count": 140
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "t.wall.verb",
+      "count": 4
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "w.clause",
+      "count": 20
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "w.entry",
+      "count": 68
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "w.help",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "w.itemclass",
+      "count": 36
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "w.log",
+      "count": 32
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "w.raw",
+      "count": 40
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "w.shop",
+      "count": 20
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "w.trap",
+      "count": 38
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "w.ui",
+      "count": 398
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "w.xom",
+      "count": 18
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "x.clause",
+      "count": 16
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "x.log",
+      "count": 32
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "x.noun",
+      "count": 32
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "x.scenery",
+      "count": 12
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "x.speech",
+      "count": 244
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "x.ui",
+      "count": 90
+    },
+    {
+      "source": "crawl-ref/source/transform.cc",
+      "context": "x.voice",
+      "count": 50
+    }
+  ],
+  "source_changes": {
+    "database.cc": {
+      "before_sha256": "1ecce25dda708f5e434818b3ebafc957b99b962c5d6f387eed4eb1a03f199669",
+      "after_sha256": "026d26fd81801cb285dbdaff6b17e116ef572acef9d026f06421e2d24f72be02"
+    },
+    "shout.cc": {
+      "before_sha256": "f0ae9587377c46827f6d43442a8b6e88e4671512f1751b2c6b31fa4f20a73e5e",
+      "after_sha256": "2a9119cba10aa86b39cfbcb587480cd1a00982dbfcfc87e78128f6e5695aa788"
+    },
+    "transform.cc": {
+      "before_sha256": "20b33ef8bba458d396e488f141c31f5cc4ba82d886b5a858be80d412924a5d14",
+      "after_sha256": "222d63aad1a6d82fc3a6843f2a9291bc7892ee6be86aed1d39ee83a5991d880a"
+    }
+  },
+  "validation": {
+    "python_tests": 29,
+    "native_tests": 147,
+    "native_assertions": 294225,
+    "tiles_build": "passed",
+    "visual_test": "not_run"
+  },
+  "executable_sha256": "1f9159dd21a40d77cc8f1be0dd54fbc628b956bbf681f477df69e819a8df1a88",
+  "final_coverage": {
+    "colourname.txt": {
+      "source_keys": 9,
+      "matching_chinese_keys": 9,
+      "missing_keys": []
+    },
+    "decorlines.txt": {
+      "source_keys": 132,
+      "matching_chinese_keys": 0,
+      "missing_keys": [
+        "_baked_good_and_reaction_",
+        "_fruit_and_reaction_",
+        "_meat_and_reaction_",
+        "amphisbaena baked goods cache",
+        "amphisbaena fruit cache",
+        "amphisbaena meat cache",
+        "ashenzari fountain_blue",
+        "ashenzari peaceful fountain_blue",
+        "baked goods cache",
+        "bat baked goods cache",
+        "bat fruit cache",
+        "beogh fountain_blue",
+        "beogh fountain_sparkling",
+        "blade fruit cache",
+        "blade meat cache",
+        "carnivore baked goods cache",
+        "carnivore fruit cache",
+        "cheibriados fountain_sparkling",
+        "cheibriados peaceful dry_fountain",
+        "death baked goods cache",
+        "death fruit cache",
+        "death meat cache",
+        "default dry_fountain",
+        "default fountain_blood",
+        "default fountain_blue",
+        "default fountain_eyes",
+        "default fountain_sparkling",
+        "default peaceful dry_fountain",
+        "default peaceful fountain_blue",
+        "default peaceful fountain_sparkling",
+        "dithmenos fountain_blood",
+        "draconian fruit cache",
+        "dragon fruit cache",
+        "elyvilon peaceful fountain_blue",
+        "fedhas peaceful fountain_blood",
+        "fedhas peaceful fountain_blue",
+        "fedhas peaceful fountain_eyes",
+        "fedhas peaceful fountain_sparkling",
+        "felid baked goods cache",
+        "felid fruit cache",
+        "felid meat cache",
+        "fruit cache",
+        "gargoyle baked goods cache",
+        "gargoyle fruit cache",
+        "gargoyle meat cache",
+        "gozag fountain_blood",
+        "gozag peaceful fountain_blue",
+        "gozag peaceful fountain_sparkling",
+        "hepliaklqana dry_fountain",
+        "hepliaklqana fountain_blue",
+        "hepliaklqana peaceful fountain_blood",
+        "ignis fountain_blood",
+        "ignis fountain_blue",
+        "ignis fountain_sparkling",
+        "inediate baked goods cache",
+        "inediate fruit cache",
+        "inediate meat cache",
+        "jiyva fountain_eyes",
+        "jiyva peaceful fountain_blue",
+        "kikubaaqudgha peaceful dry_fountain",
+        "kobold baked goods cache",
+        "kobold fruit cache",
+        "kobold meat cache",
+        "lugonu peaceful fountain_eyes",
+        "makhleb peaceful fountain_blood",
+        "maw baked goods cache",
+        "maw fruit cache",
+        "maw meat cache",
+        "meat cache",
+        "mummy baked goods cache",
+        "mummy fruit cache",
+        "mummy meat cache",
+        "nemelex xobeh peaceful fountain_blue",
+        "nemelex xobeh peaceful fountain_sparkling",
+        "okawaru peaceful fountain_blue",
+        "oni baked goods cache",
+        "oni fruit cache",
+        "pig baked goods cache",
+        "pig fruit cache",
+        "pig meat cache",
+        "poltergeist baked goods cache",
+        "poltergeist fruit cache",
+        "poltergeist meat cache",
+        "qazlal fountain_blood",
+        "qazlal fountain_blue",
+        "qazlal fountain_sparkling",
+        "qazlal peaceful fountain_blue",
+        "revenant baked goods cache",
+        "revenant fruit cache",
+        "revenant meat cache",
+        "ru peaceful fountain_blue",
+        "ru peaceful fountain_eyes",
+        "short baked goods cache",
+        "short fruit cache",
+        "short meat cache",
+        "sif muna peaceful fountain_blood",
+        "sif muna peaceful fountain_eyes",
+        "sif muna peaceful fountain_sparkling",
+        "sparkling_message",
+        "spriggan baked goods cache",
+        "spriggan fruit cache",
+        "spriggan meat cache",
+        "statue baked goods cache",
+        "statue fruit cache",
+        "statue meat cache",
+        "stone baked goods cache",
+        "stone fruit cache",
+        "stone meat cache",
+        "storm fruit cache",
+        "storm meat cache",
+        "tengu baked goods cache",
+        "the shining one fountain_blood",
+        "tree baked goods cache",
+        "tree fruit cache",
+        "tree meat cache",
+        "trog peaceful fountain_blue",
+        "troll baked goods cache",
+        "troll fruit cache",
+        "uskayaw fountain_blood",
+        "uskayaw peaceful fountain_blue",
+        "vampire baked goods cache",
+        "vampire fruit cache",
+        "vehumet fountain_blood",
+        "wu jian peaceful fountain_blue",
+        "xom fountain_blood",
+        "xom fountain_blue",
+        "xom fountain_sparkling",
+        "yredelemnul fountain_blood",
+        "yredelemnul fountain_blue",
+        "yredelemnul fountain_sparkling",
+        "zin fountain_eyes",
+        "zin fountain_sparkling"
+      ]
+    },
+    "FAQ.txt": {
+      "source_keys": 38,
+      "matching_chinese_keys": 38,
+      "missing_keys": []
+    },
+    "gizmo.txt": {
+      "source_keys": 3,
+      "matching_chinese_keys": 0,
+      "missing_keys": [
+        "gizmo_adjective",
+        "gizmo_modifier",
+        "gizmo_noun"
+      ]
+    },
+    "godname.txt": {
+      "source_keys": 23,
+      "matching_chinese_keys": 23,
+      "missing_keys": []
+    },
+    "godspeak.txt": {
+      "source_keys": 193,
+      "matching_chinese_keys": 112,
+      "missing_keys": [
+        "_xom_number_",
+        "acrobatic_move_name",
+        "beogh apostle challenge",
+        "dance_name",
+        "makhleb executioner chatter",
+        "xom amulet slot",
+        "xom animal skin",
+        "xom bandages",
+        "xom bazaar trip",
+        "xom boots slot",
+        "xom brain drain",
+        "xom cloak slot",
+        "xom divine lightning",
+        "xom dragon armour",
+        "xom drained brain",
+        "xom drinkless confusion",
+        "xom ears",
+        "xom eyes",
+        "xom fake shatter",
+        "xom fast forward",
+        "xom feature blood",
+        "xom feature deep water",
+        "xom feature dry",
+        "xom feature eyes",
+        "xom feature lava",
+        "xom feature metal wall",
+        "xom feature shallow water",
+        "xom feature statuelike",
+        "xom feature stone arch",
+        "xom feature translucent wall",
+        "xom feature tree",
+        "xom floor bandages",
+        "xom floor inventory plural",
+        "xom floor inventory singular",
+        "xom flora ring",
+        "xom force lance fleet",
+        "xom gizmo slot",
+        "xom gloves slot",
+        "xom good hyper enchant monster",
+        "xom grant voiceless word of recall",
+        "xom grant word of recall",
+        "xom hair",
+        "xom helmet slot",
+        "xom impromptu dance",
+        "xom inventory plural",
+        "xom inventory singular",
+        "xom kind door ring",
+        "xom leather armour",
+        "xom lights up webs",
+        "xom mass charm",
+        "xom mean door ring",
+        "xom metal armour",
+        "xom mouth",
+        "xom offhand slot",
+        "xom one eye",
+        "xom pause",
+        "xom random body part plural",
+        "xom random body part singular",
+        "xom ring slot",
+        "xom robe",
+        "xom scenery altar_xom",
+        "xom scenery cache_of_baked_goods",
+        "xom scenery cache_of_fruit",
+        "xom scenery cache_of_meat",
+        "xom scenery closed_door",
+        "xom scenery enter_abyss",
+        "xom scenery generic",
+        "xom scenery open_door",
+        "xom scenery trap_teleport",
+        "xom send in the clones",
+        "xom slow motion",
+        "xom suffering",
+        "xom tail",
+        "xom torment all",
+        "xom unarmed one hand",
+        "xom unarmed two hands",
+        "xom underfoot airborne general",
+        "xom underfoot airborne water",
+        "xom underfoot general",
+        "xom underfoot water",
+        "xom wave of despair"
+      ]
+    },
+    "graffiti.txt": {
+      "source_keys": 58,
+      "matching_chinese_keys": 0,
+      "missing_keys": [
+        "_graffiti_advertisement_",
+        "_graffiti_author_any_",
+        "_graffiti_author_any_changeable_",
+        "_graffiti_author_any_changeable_non-randgen_",
+        "_graffiti_author_any_non-orc_",
+        "_graffiti_author_bland_",
+        "_graffiti_author_orc_",
+        "_graffiti_changed_names_",
+        "_graffiti_changed_or_compared_religions_",
+        "_graffiti_class_any_",
+        "_graffiti_class_master_",
+        "_graffiti_class_remedial_",
+        "_graffiti_duplicate_",
+        "_graffiti_fight_",
+        "_graffiti_hailed_god_",
+        "_graffiti_happened_reason_",
+        "_graffiti_image_",
+        "_graffiti_life_or_death_",
+        "_graffiti_loves_or_hates_",
+        "_graffiti_mass_meeting_ordinary_",
+        "_graffiti_mass_meeting_religious_",
+        "_graffiti_obscenities_",
+        "_graffiti_professor_",
+        "_graffiti_professor_evocations_type_",
+        "_graffiti_professor_invocations_type_",
+        "_graffiti_professor_magic_type_",
+        "_graffiti_professor_mundane_type_",
+        "_graffiti_professor_necromancy_type_",
+        "_graffiti_professor_shapeshifting_type_",
+        "_graffiti_relative_or_quality_",
+        "_graffiti_religion_better_or_worse_",
+        "_graffiti_religion_non-orc_",
+        "_graffiti_religion_not_non-orc_or_orc_",
+        "_graffiti_religion_orc_",
+        "_graffiti_rumour_",
+        "_graffiti_short_saying_",
+        "_graffiti_species_",
+        "_graffiti_type_",
+        "_graffiti_type_with_signature_maybe_",
+        "_graffiti_type_with_signature_maybe_non-orc_",
+        "_graffiti_type_with_signature_maybe_orc_",
+        "_graffiti_unique_comment_",
+        "_graffiti_unreadable_",
+        "_graffiti_vengeance_",
+        "_graffiti_vengeance_reason_",
+        "_graffiti_wares_quality_",
+        "_pattern_type_",
+        "_rare_graffiti_author_any_",
+        "_rare_graffiti_author_any_non-orc_",
+        "_rare_graffiti_author_god_",
+        "_rare_graffiti_author_orc_",
+        "_rare_graffiti_author_ordinary_",
+        "_rare_graffiti_author_title_",
+        "_writing_adj_",
+        "_writing_noun_",
+        "_writing_style_",
+        "_writing_type_",
+        "any_graffiti"
+      ]
+    },
+    "help.txt": {
+      "source_keys": 13,
+      "matching_chinese_keys": 13,
+      "missing_keys": []
+    },
+    "insult.txt": {
+      "source_keys": 33,
+      "matching_chinese_keys": 0,
+      "missing_keys": [
+        "body_or_spiritual_part",
+        "demon_taunt",
+        "demon_taunt_special",
+        "feast_or_devour",
+        "generic_insult",
+        "give_up",
+        "imp_taunt",
+        "important_body_part",
+        "important_spiritual_part",
+        "insult dwarf adj2",
+        "insult elf adj1",
+        "insult felid adj1",
+        "insult felid adj2",
+        "insult felid noun",
+        "insult general adj1",
+        "insult general adj2",
+        "insult general noun",
+        "insult minotaur noun",
+        "insult mummy adj2",
+        "insult mummy noun",
+        "insult spriggan noun",
+        "insult tengu adj2",
+        "insult undead adj2",
+        "insult vampire adj2",
+        "insult_adjective1",
+        "insult_adjective2",
+        "insult_noun",
+        "meal",
+        "run_away",
+        "run_or_give_up",
+        "small_food",
+        "whilst_thou_can",
+        "will_or_shall"
+      ]
+    },
+    "miscast.txt": {
+      "source_keys": 33,
+      "matching_chinese_keys": 33,
+      "missing_keys": []
+    },
+    "miscname.txt": {
+      "source_keys": 10,
+      "matching_chinese_keys": 8,
+      "missing_keys": [
+        "harlequin_trap_lines",
+        "summon_horrible_things"
+      ]
+    },
+    "monflee.txt": {
+      "source_keys": 1,
+      "matching_chinese_keys": 1,
+      "missing_keys": []
+    },
+    "monname.txt": {
+      "source_keys": 52,
+      "matching_chinese_keys": 0,
+      "missing_keys": [
+        "_arabic_female_name_",
+        "_arabic_male_name_",
+        "_aztec_female_name_",
+        "_aztec_male_name_",
+        "_beogh_name_",
+        "_bland_female_name_",
+        "_bland_male_name_",
+        "_brazilian_female_name_",
+        "_brazilian_male_name_",
+        "_cantonese_female_name_",
+        "_cantonese_male_name_",
+        "_egyptian_female_name_",
+        "_egyptian_male_name_",
+        "_german_female_name_",
+        "_german_male_name_",
+        "_hispanic_female_name_",
+        "_hispanic_male_name_",
+        "_irish_female_name_",
+        "_irish_male_name_",
+        "_japanese_female_name_",
+        "_japanese_male_name_",
+        "_korean_female_name_",
+        "_korean_male_name_",
+        "_mesopotamian_female_name_",
+        "_mesopotamian_male_name_",
+        "_orc_priest_name_",
+        "_orc_warrior_name_",
+        "_orc_wizard_name_",
+        "_orcish_name_",
+        "_other_orcish_name_",
+        "_roman_female_name_",
+        "_roman_male_name_",
+        "_sikh_female_name_",
+        "_sikh_male_name_",
+        "_slavic_female_name_",
+        "_slavic_male_name_",
+        "_thai_female_name_",
+        "_thai_male_name_",
+        "_west_european_female_name_",
+        "_west_european_male_name_",
+        "_zulu_female_name_",
+        "_zulu_male_name_",
+        "ancestor female name",
+        "ancestor male name",
+        "ancestor name",
+        "any orc name",
+        "bland name",
+        "orc apostle priest name",
+        "orc apostle warrior name",
+        "orc apostle wizard name",
+        "orc name",
+        "steelspirit name"
+      ]
+    },
+    "monspeak.txt": {
+      "source_keys": 731,
+      "matching_chinese_keys": 0,
+      "missing_keys": [
+        "'&'",
+        "'1'",
+        "'2'",
+        "'3'",
+        "'4'",
+        "'l'",
+        "'r'",
+        "_agnes_common_",
+        "_agnes_rare_",
+        "_aizul_common_",
+        "_aizul_rare_",
+        "_amaemon_common_",
+        "_amaemon_rare_",
+        "_asterion_common_",
+        "_asterion_rare_",
+        "_axioms_of_law_",
+        "_azrael_common_",
+        "_azrael_rare_",
+        "_bai_suzhen_common_",
+        "_bai_suzhen_rare_",
+        "_begs_",
+        "_bennu_death_",
+        "_blorkula_colour_",
+        "_blorkula_common_",
+        "_blorkula_rare_",
+        "_boris_common_",
+        "_boris_medium_",
+        "_boris_rare_",
+        "_boris_return_common_",
+        "_boris_return_rare_",
+        "_cause_or_spread_",
+        "_chuck_generic_",
+        "_chuck_rare_",
+        "_confused_humanoid_common_",
+        "_confused_humanoid_medium_",
+        "_confused_humanoid_rare_",
+        "_crazy_yiuf_sentence_",
+        "_crazy_yiuf_speech_",
+        "_crazy_yiuf_speech_verbs_",
+        "_crazy_yiuf_wordlist1_",
+        "_crazy_yiuf_wordlist2_",
+        "_deck_of_destruction_line_",
+        "_deck_of_escape_line_",
+        "_deck_of_oddities_card_",
+        "_deck_of_punishment_line_",
+        "_deck_of_summoning_line_",
+        "_demon_taunt_",
+        "_dissolution_common_",
+        "_dissolution_rare_",
+        "_dissolution_speech_",
+        "_dowan_common_",
+        "_dowan_rare_",
+        "_duvessa_common_",
+        "_duvessa_rare_",
+        "_edmund_common_",
+        "_edmund_rare_",
+        "_erica_common_",
+        "_erica_rare_",
+        "_erolcha_common_",
+        "_erolcha_rare_",
+        "_eustachio_common_",
+        "_eustachio_rare_",
+        "_fake_spell_effect_",
+        "_fannar_common_",
+        "_fannar_rare_",
+        "_fleeing_humanoid_common_",
+        "_fleeing_humanoid_rare_",
+        "_fleeing_silenced_common_",
+        "_fleeing_silenced_rare_",
+        "_form_",
+        "_frances_common_",
+        "_frances_rare_",
+        "_frederick_common_",
+        "_frederick_rare_",
+        "_friendly_beogh_speech_",
+        "_friendly_beogh_speech_common_",
+        "_friendly_beogh_speech_rare_",
+        "_friendly_confused_common_",
+        "_friendly_confused_medium_",
+        "_friendly_confused_rare_",
+        "_friendly_family_",
+        "_friendly_fleeing_common_",
+        "_friendly_fleeing_rare_",
+        "_friendly_humanoid_common_",
+        "_friendly_humanoid_medium_",
+        "_friendly_humanoid_rare_",
+        "_friendly_imp_",
+        "_friendly_imp_common_",
+        "_friendly_imp_greeting",
+        "_friendly_imp_rare_",
+        "_friendly_silenced_common_",
+        "_friendly_silenced_rare_",
+        "_frog_food_",
+        "_gastronok_common_",
+        "_gastronok_rare_",
+        "_generic_donald_",
+        "_generic_orc_speech_",
+        "_generic_ranged_",
+        "_good_god_",
+        "_grinder_common_",
+        "_grinder_rare_",
+        "_grum_common_",
+        "_grum_dog_name_",
+        "_grum_rare_",
+        "_grum_verb_",
+        "_grunn_common_",
+        "_grunn_rare_",
+        "_harold_common_",
+        "_harold_rare_",
+        "_harold_ret_hobby_",
+        "_harold_ret_house_",
+        "_harold_ret_place_",
+        "_harold_retirement_plan_",
+        "_hell_lord_taunt_",
+        "_high_priest_",
+        "_high_priest_common_",
+        "_high_priest_medium_",
+        "_high_priest_rare_",
+        "_holy_being_",
+        "_hostile_imp_",
+        "_hostile_imp_common_",
+        "_hostile_imp_rare_",
+        "_hostile_orc_beogh_believer_speech_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_hostile_orc_beogh_believer_speech_rare_",
+        "_hostile_orc_beogh_unbeliever_speech_",
+        "_hostile_orc_beogh_unbeliever_speech_common_",
+        "_hostile_orc_beogh_unbeliever_speech_rare_",
+        "_ignacio_common_",
+        "_ignacio_rare_",
+        "_ijyb_common_",
+        "_ijyb_rare_",
+        "_ilsuiw_common_",
+        "_ilsuiw_rare_",
+        "_important_subject_",
+        "_jeremiah_common_",
+        "_jeremiah_rare_",
+        "_jessica_common_",
+        "_jessica_rare_",
+        "_jorgrun_common_",
+        "_jorgrun_rare_",
+        "_jory_common_",
+        "_jory_silent_",
+        "_joseph_common_",
+        "_joseph_rare_",
+        "_josephina_common_",
+        "_josephina_rare_",
+        "_killer_klown_common_",
+        "_killer_klown_rare_",
+        "_laughs_",
+        "_lecture_modifier_",
+        "_lodul_common_",
+        "_lodul_rare_",
+        "_loudly_or_repeatedly_",
+        "_louise_common_",
+        "_louise_rare_",
+        "_maggie_common_",
+        "_maggie_rare_",
+        "_mara_common_",
+        "_mara_rare_",
+        "_margery_common_",
+        "_margery_rare_",
+        "_margery_spell_results_",
+        "_maurice_common_",
+        "_maurice_medium_",
+        "_maurice_rare_",
+        "_mayhem_",
+        "_menkaure_common_",
+        "_menkaure_rare_",
+        "_menkaure_verb_",
+        "_mercenary_guard_",
+        "_mercenary_guard_common_",
+        "_mercenary_guard_medium_",
+        "_mercenary_guard_rare_",
+        "_misplaced_card_",
+        "_murray_common_",
+        "_murray_rare_",
+        "_mutters_",
+        "_natasha_common_",
+        "_natasha_death_common_",
+        "_natasha_death_rare_",
+        "_natasha_rare_",
+        "_nellie_common_",
+        "_nellie_rare_",
+        "_nessos_common_",
+        "_nessos_rare_",
+        "_norris_common_",
+        "_norris_rare_",
+        "_norris_verb_",
+        "_orc_heathen_",
+        "_orc_modifier_",
+        "_orc_says_",
+        "_orc_says_to_foe_",
+        "_orc_shouts_",
+        "_parghit_common_",
+        "_parghit_rare_",
+        "_pargi_common_",
+        "_pargi_rare_",
+        "_pikel_common_",
+        "_pikel_rare_",
+        "_player_arms_",
+        "_player_ghost_common_",
+        "_player_ghost_medium_",
+        "_player_ghost_rare_",
+        "_pointless_",
+        "_polyphemus_common_",
+        "_polyphemus_rare_",
+        "_prince_ribbit_common_",
+        "_prince_ribbit_rare_",
+        "_recite_subject_",
+        "_recite_what_",
+        "_recites_start_",
+        "_robin_common_",
+        "_robin_rare_",
+        "_roxanne_common_",
+        "_roxanne_medium_",
+        "_roxanne_rare_",
+        "_rupert_common_",
+        "_rupert_rare_",
+        "_saint roka generic_",
+        "_saint roka rival_",
+        "_says_imp_taunt_",
+        "_says_or_shouts_",
+        "_shouts_",
+        "_sigmund_common_",
+        "_sigmund_rare_",
+        "_silenced_humanoid_common_",
+        "_silenced_humanoid_rare_",
+        "_snorg_common_",
+        "_snorg_rare_",
+        "_sojobo_advice_",
+        "_sojobo_common_",
+        "_sojobo_rare_",
+        "_sonja_common_",
+        "_sonja_rare_",
+        "_spectator_speech_",
+        "_spell_colour_",
+        "_sprozz_common_",
+        "_sprozz_thief_",
+        "_suck_up_address_",
+        "_suck_up_adj1_",
+        "_suck_up_adj2_",
+        "_suck_up_noun_",
+        "_terence_common_",
+        "_terence_rare_",
+        "_tormentor_",
+        "_tormentor_common_",
+        "_tormentor_rare_",
+        "_truckle_",
+        "_urug_common_",
+        "_urug_rare_",
+        "_vashnia_common_",
+        "_vashnia_naga_",
+        "_vashnia_nonnaga_",
+        "_vashnia_rare_",
+        "_vassalage_",
+        "_wails_",
+        "_weeping_skull_common_",
+        "_weeping_skull_rare_",
+        "_weeps_",
+        "_wiglaf_common_",
+        "_wiglaf_nondwarf_",
+        "_wiglaf_rare_",
+        "_wizard_",
+        "_wizard_common_spell_",
+        "_wizard_medium_",
+        "_wizard_rare_",
+        "_xak'krixis_monster_thoughts_",
+        "_xtahua_common_",
+        "_xtahua_rare_",
+        "_yells_",
+        "_yredelemnul_donald_",
+        "_zenata_common_",
+        "_zenata_rare_",
+        "abyss donald",
+        "agnes",
+        "agnes triumphant",
+        "air magic player ghost",
+        "aizul",
+        "alchemy player ghost",
+        "alderking",
+        "alderking triumphant",
+        "amaemon",
+        "antaeus",
+        "antaeus triumphant",
+        "arachne",
+        "arachne triumphant",
+        "arcanist",
+        "armour player ghost",
+        "ashenzari donald",
+        "ashenzari frederick triumphant",
+        "ashenzari player ghost",
+        "asterion",
+        "asterion triumphant",
+        "axes player ghost",
+        "azrael",
+        "bai suzhen",
+        "bennu",
+        "bennu killed",
+        "bennu permanently killed",
+        "beogh donald",
+        "beogh frederick",
+        "beogh frederick triumphant",
+        "beogh player ghost",
+        "beogh_converted_orc_reaction_battle",
+        "beogh_converted_orc_reaction_battle_follower",
+        "beogh_converted_orc_reaction_sight",
+        "beogh_converted_orc_resurrection",
+        "beogh_converted_orc_speech_battle",
+        "beogh_converted_orc_speech_battle_follower",
+        "beogh_converted_orc_speech_sight",
+        "beogh_converted_orc_speech_vengeance",
+        "beogh_converted_orc_speech_vengeance_follower",
+        "blorkula the orcula",
+        "blorkula the orcula killed",
+        "blorkula the orcula triumphant",
+        "boris",
+        "boris killed",
+        "boris riddle",
+        "boris timeout",
+        "boris triumphant",
+        "brain worm",
+        "bullfrog",
+        "cassandra",
+        "cassandra killed",
+        "cassandra triumphant",
+        "catoblepas",
+        "centipede",
+        "chaos spawn",
+        "cheibriados donald",
+        "cheibriados frederick triumphant",
+        "cheibriados player ghost",
+        "cherub",
+        "chuck",
+        "cognitogaunt",
+        "confused bennu killed",
+        "confused bennu permanently killed",
+        "confused cognitogaunt",
+        "confused crazy yiuf",
+        "confused ijyb",
+        "confused natasha killed",
+        "confused natasha permanently killed",
+        "confused nergalle",
+        "confused zin angel",
+        "conjurations player ghost",
+        "crazy yiuf",
+        "crimson imp",
+        "crossbows player ghost",
+        "crypt donald",
+        "crystal guardian",
+        "death cob",
+        "death yak",
+        "deep elf high priest",
+        "deep elf sorcerer",
+        "default '&'",
+        "default '1'",
+        "default '2'",
+        "default '3'",
+        "default '4'",
+        "default '5'",
+        "default '8'",
+        "default 'cap-a'",
+        "default 'cap-g'",
+        "default 'cap-j'",
+        "default confused 'b'",
+        "default confused 'r'",
+        "default confused 'y'",
+        "default confused arachnid",
+        "default confused centipede",
+        "default confused humanoid",
+        "default confused insect",
+        "default confused moth",
+        "default confused winged insect",
+        "default electric golem",
+        "default fleeing humanoid",
+        "default fleeing silenced humanoid",
+        "default friendly confused humanoid",
+        "default friendly fleeing humanoid",
+        "default friendly humanoid",
+        "default friendly related humanoid",
+        "default friendly silenced humanoid",
+        "default hoarfrost cannon",
+        "default hostile confused donald",
+        "default ice statue",
+        "default insect",
+        "default mennas",
+        "default obsidian statue",
+        "default orange crystal statue",
+        "default player ghost",
+        "default profane servitor",
+        "default silenced confused 'y'",
+        "default silenced confused humanoid",
+        "default silenced humanoid",
+        "default stupid confused humanoid",
+        "default stupid fleeing humanoid",
+        "default stupid friendly humanoid",
+        "default stupid silenced humanoid",
+        "deformed humanoid",
+        "dissolution",
+        "dithmenos donald",
+        "dithmenos frederick triumphant",
+        "dithmenos player ghost",
+        "dodging player ghost",
+        "donald banished",
+        "donald killed",
+        "donald marionette",
+        "donald riddle",
+        "donald triumphant",
+        "dowan",
+        "dowan_duvessa_dies",
+        "dowan_duvessa_dies_bytwin",
+        "dowan_duvessa_dies_distance",
+        "dowan_duvessa_dies_distance_bytwin",
+        "dowan_duvessa_dies_invisible",
+        "dowan_duvessa_dies_invisible_bytwin",
+        "dream sheep",
+        "duvessa",
+        "duvessa_dowan_dies",
+        "duvessa_dowan_dies_bytwin",
+        "duvessa_dowan_dies_distance",
+        "duvessa_dowan_dies_distance_bytwin",
+        "duvessa_dowan_dies_invisible",
+        "duvessa_dowan_dies_invisible_bytwin",
+        "earth magic player ghost",
+        "edmund",
+        "edmund triumphant",
+        "elephant slug",
+        "elf donald",
+        "elyvilon donald",
+        "elyvilon frederick triumphant",
+        "elyvilon player ghost",
+        "erica",
+        "erica triumphant",
+        "erolcha",
+        "erolcha banished",
+        "erythrospite",
+        "eustachio",
+        "eustachio triumphant",
+        "evocations player ghost",
+        "fannar",
+        "fedhas donald",
+        "fedhas frederick triumphant",
+        "fedhas player ghost",
+        "fighting player ghost",
+        "fire magic player ghost",
+        "fleeing dowan",
+        "fleeing harold",
+        "forgecraft player ghost",
+        "frances",
+        "frederick",
+        "frederick riddle",
+        "frederick triumphant",
+        "friendly '5'",
+        "friendly bfb orc",
+        "friendly boris timeout",
+        "friendly cassandra",
+        "friendly cognitogaunt",
+        "friendly donald",
+        "friendly good god 'cap-a'",
+        "friendly hound",
+        "friendly laughing skull",
+        "friendly natasha",
+        "friendly orc",
+        "friendly protean progenitor",
+        "friendly related beogh orc",
+        "friendly related orc",
+        "friendly shoals hound",
+        "friendly yredelemnul donald",
+        "frilled lizard",
+        "gastronok",
+        "gastronok triumphant",
+        "goblin sharper",
+        "good god '&'",
+        "gozag bribe",
+        "gozag donald",
+        "gozag frederick triumphant",
+        "gozag permabribe",
+        "gozag player ghost",
+        "grinder",
+        "grinder triumphant",
+        "grum",
+        "grunn",
+        "harold",
+        "harold killed",
+        "harold triumphant",
+        "hell lord",
+        "hepliaklqana donald",
+        "hepliaklqana frederick triumphant",
+        "hepliaklqana player ghost",
+        "hexes player ghost",
+        "holy_being_pacification",
+        "holy_being_pacification_humanoid",
+        "holy_being_pacification_speech",
+        "hound",
+        "ice magic player ghost",
+        "ignacio",
+        "ignis donald",
+        "ignis frederick triumphant",
+        "ignis player ghost",
+        "ijyb",
+        "ijyb triumphant",
+        "ilsuiw",
+        "invocations player ghost",
+        "iron imp",
+        "jeremiah",
+        "jeremiah triumphant",
+        "jessica",
+        "jivya frederick triumphant",
+        "jiyva donald",
+        "jiyva player ghost",
+        "jorgrun",
+        "jory",
+        "jory killed",
+        "jory triumphant",
+        "joseph",
+        "josephina",
+        "josephine",
+        "khufu",
+        "kikubaaqudgha donald",
+        "kikubaaqudgha frederick triumphant",
+        "kikubaaqudgha player ghost",
+        "killer klown",
+        "killer klown triumphant",
+        "kirke",
+        "kobold blastminer",
+        "laughing skull",
+        "laughing skull triumphant",
+        "lodul",
+        "long blades player ghost",
+        "louise",
+        "louise banished",
+        "lugonu donald",
+        "lugonu frederick triumphant",
+        "lugonu player ghost",
+        "maces & flails player ghost",
+        "maggie",
+        "makhleb donald",
+        "makhleb frederick triumphant",
+        "makhleb player ghost",
+        "mara",
+        "mara riddle",
+        "margery",
+        "maurice",
+        "maurice confused nonstealing",
+        "maurice nonstealing",
+        "menkaure",
+        "moth of wrath",
+        "murray",
+        "natasha",
+        "natasha killed",
+        "natasha permanently killed",
+        "natasha triumphant",
+        "necromancy player ghost",
+        "nekomata",
+        "nellie",
+        "nemelex xobeh donald",
+        "nemelex xobeh frederick triumphant",
+        "nemelex xobeh player ghost",
+        "nergalle",
+        "nessos",
+        "neutral good god 'cap-a'",
+        "nikola",
+        "no god donald",
+        "nobody",
+        "nobody killed",
+        "nobody triumph",
+        "nobody_recollection cold",
+        "nobody_recollection demons",
+        "nobody_recollection electricity",
+        "nobody_recollection fear",
+        "nobody_recollection fire",
+        "nobody_recollection poison",
+        "nobody_recollection rockslide",
+        "nobody_recollection soldiers",
+        "nobody_recollection undead",
+        "nobody_recollection vermin",
+        "nobody_recollection xxx",
+        "norris",
+        "norris triumphant",
+        "obsidian bat",
+        "occultist",
+        "okawaru donald",
+        "okawaru frederick",
+        "okawaru frederick triumphant",
+        "okawaru player ghost",
+        "orb crazy yiuf",
+        "orb donald",
+        "orb spider charge",
+        "orc",
+        "orc donald",
+        "orc high priest",
+        "orc sorcerer",
+        "orc_apostle_dismissed",
+        "orc_apostle_unbanished",
+        "orc_apostle_yield",
+        "orc_priest_apostate",
+        "orc_priest_preaching",
+        "pakellas donald",
+        "pakellas player ghost",
+        "parghit",
+        "pargi",
+        "pikel",
+        "pikel triumphant",
+        "player ghost",
+        "polearms player ghost",
+        "polyphemus",
+        "polyphemus killed",
+        "polyphemus triumphant",
+        "prince ribbit",
+        "protean progenitor",
+        "qazlal donald",
+        "qazlal frederick triumphant",
+        "qazlal player ghost",
+        "ranged weapons player ghost",
+        "raven",
+        "reaper",
+        "related beogh blorkula the orcula",
+        "related beogh orc",
+        "related beogh orc high priest",
+        "related beogh orc sorcerer",
+        "related beogh saint roka",
+        "related beogh urug",
+        "related saint roka",
+        "related unbeliever orc",
+        "related vashnia",
+        "related wiglaf",
+        "robin",
+        "robin triumphant",
+        "roxanne",
+        "roxanne blink_other_closer",
+        "ru donald",
+        "ru frederick triumphant",
+        "ru player ghost",
+        "rupert",
+        "rupert triumphant",
+        "saint roka",
+        "saint roka triumphant",
+        "sewer brain worm",
+        "shadow imp",
+        "shapeshifting player ghost",
+        "shields player ghost",
+        "shoals donald",
+        "short blades player ghost",
+        "sif muna donald",
+        "sif muna frederick triumphant",
+        "sif muna player ghost",
+        "sigmund",
+        "sigmund triumphant",
+        "silenced cognitogaunt",
+        "silenced jory",
+        "silenced murray",
+        "silenced player ghost",
+        "silenced silent spectre",
+        "silenced zin angel",
+        "silent jory killed",
+        "slime donald",
+        "slings player ghost",
+        "snake donald",
+        "snorg",
+        "sojobo",
+        "sojobo triumphant",
+        "sonja",
+        "sonja triumphant",
+        "spectator",
+        "spellcasting player ghost",
+        "spider donald",
+        "sprozz",
+        "sprozz triumphant",
+        "staves player ghost",
+        "stealth player ghost",
+        "summonings player ghost",
+        "swamp donald",
+        "temple donald",
+        "terence",
+        "terence triumphant",
+        "the shining one donald",
+        "the shining one frederick triumphant",
+        "the shining one player ghost",
+        "thermic dynamo",
+        "throwing player ghost",
+        "tormentor",
+        "translocations player ghost",
+        "trog donald",
+        "trog frederick triumphant",
+        "trog player ghost",
+        "twin_banished dowan",
+        "twin_banished duvessa",
+        "twin_died dowan",
+        "twin_died duvessa",
+        "twin_ikilled dowan",
+        "twin_ikilled duvessa",
+        "twin_slimified dowan",
+        "unarmed combat player ghost",
+        "urug",
+        "urug triumphant",
+        "uskayaw donald",
+        "uskayaw frederick triumphant",
+        "uskayaw player ghost",
+        "vashnia",
+        "vashnia triumphant",
+        "vaults donald",
+        "vehumet donald",
+        "vehumet frederick triumphant",
+        "vehumet player ghost",
+        "weeping skull",
+        "weeping skull triumphant",
+        "white imp",
+        "wiglaf",
+        "wu jian donald",
+        "wu jian frederick triumphant",
+        "wu jian player ghost",
+        "xak'krixis",
+        "xak'krixis triumphant",
+        "xom crazy yiuf",
+        "xom donald",
+        "xom frederick triumphant",
+        "xom player ghost",
+        "xtahua",
+        "xtahua riddle",
+        "xtahua triumphant",
+        "yak",
+        "yredelemnul donald",
+        "yredelemnul frederick triumphant",
+        "yredelemnul player ghost",
+        "zenata",
+        "zenata triumphant",
+        "zin angel",
+        "zin donald",
+        "zin frederick triumphant",
+        "zin player ghost",
+        "zot donald"
+      ]
+    },
+    "monspell.txt": {
+      "source_keys": 262,
+      "matching_chinese_keys": 262,
+      "missing_keys": []
+    },
+    "montitle.txt": {
+      "source_keys": 86,
+      "matching_chinese_keys": 86,
+      "missing_keys": []
+    },
+    "randbook.txt": {
+      "source_keys": 72,
+      "matching_chinese_keys": 0,
+      "missing_keys": [
+        "_beginners_",
+        "_book_adjective_",
+        "_book_magic_",
+        "_book_noun_on_",
+        "_book_plant_animal_",
+        "_difficult level book owner_",
+        "_evil_adjective_",
+        "_evil_noun_",
+        "_last_or_lost_",
+        "_occult_adjective_",
+        "_powerful_caster_",
+        "_testament_noun_",
+        "_the_book_magic_",
+        "_the_powerful_caster_",
+        "air",
+        "air adj",
+        "air owner",
+        "alchemy",
+        "alchemy adj",
+        "alchemy earth owner",
+        "alchemy necromancy owner",
+        "alchemy owner",
+        "book appearance",
+        "book_name",
+        "book_noun",
+        "conjuration",
+        "conjuration adj",
+        "conjuration earth owner",
+        "conjuration owner",
+        "difficult level book",
+        "earth",
+        "earth adj",
+        "earth owner",
+        "easy level book",
+        "fire",
+        "fire adj",
+        "fire ice owner",
+        "forgecraft",
+        "forgecraft adj",
+        "hexes",
+        "hexes adj",
+        "hexes owner",
+        "highlevel alchemy necromancy owner",
+        "highlevel alchemy owner",
+        "highlevel conjuration earth owner",
+        "highlevel conjuration fire owner",
+        "highlevel conjuration necromancy owner",
+        "highlevel conjuration owner",
+        "highlevel conjuration summoning owner",
+        "highlevel earth owner",
+        "highlevel earth summoning owner",
+        "highlevel fire owner",
+        "highlevel fire summoning owner",
+        "highlevel necromancy owner",
+        "highlevel summoning owner",
+        "highlevel translocation owner",
+        "ice",
+        "ice adj",
+        "ice owner",
+        "moderate level book",
+        "necromancy",
+        "necromancy adj",
+        "necromancy owner",
+        "random_book_title",
+        "starting level book",
+        "summoning",
+        "summoning adj",
+        "summoning owner",
+        "translocation",
+        "translocation adj",
+        "translocation owner",
+        "xom_book_title"
+      ]
+    },
+    "randname.txt": {
+      "source_keys": 33,
+      "matching_chinese_keys": 0,
+      "missing_keys": [
+        "_amulet material_",
+        "_ashenzari_adjective_",
+        "_ashenzari_bound_adjective_",
+        "_ashenzari_celestial_adjective_",
+        "_ashenzari_epithet_",
+        "_ashenzari_heavens_",
+        "_ashenzari_knowledge_adjective_",
+        "_ashenzari_object_",
+        "_gemstone_",
+        "_jewellery appearance_",
+        "_ring material_",
+        "amulet appearance",
+        "armour",
+        "armour appearance",
+        "ashenzari",
+        "body armour appearance",
+        "general appearance",
+        "jewellery",
+        "okawaru armour",
+        "okawaru body armour",
+        "okawaru robe",
+        "okawaru weapon",
+        "ring appearance",
+        "robe appearance",
+        "talisman",
+        "trog weapon",
+        "weapon",
+        "weapon appearance",
+        "xom armour",
+        "xom body armour",
+        "xom jewellery",
+        "xom robe",
+        "xom weapon"
+      ]
+    },
+    "rand_all.txt": {
+      "source_keys": 18,
+      "matching_chinese_keys": 0,
+      "missing_keys": [
+        "_adjective_",
+        "_destiny_name_",
+        "_fruit_name_",
+        "_jewellery_animal_",
+        "_jewellery_special_name_",
+        "_number_or_qualifier_",
+        "_sky_colour_name_",
+        "_sky_or_light_",
+        "_suspicion_name_",
+        "_suspicion_no_conflict_name_",
+        "_thing_names_",
+        "_time_name_",
+        "_verbing_",
+        "_vice_name_",
+        "_virtue_name_",
+        "_virtue_or_vice_",
+        "_xom_esteem_",
+        "divine_esteem"
+      ]
+    },
+    "rand_arm.txt": {
+      "source_keys": 19,
+      "matching_chinese_keys": 0,
+      "missing_keys": [
+        "_armour_animal_",
+        "_armour_name_shielding_",
+        "_armour_property_name_",
+        "_card_",
+        "_celestial_bodies_",
+        "_critter_name_",
+        "_discomfort_and_inaction_",
+        "_evil_being_",
+        "_flower_name_",
+        "_game_name_",
+        "_good_or_divine_",
+        "_instrument_name_",
+        "_other_armour_name_",
+        "_plain_armour_name_",
+        "_politics_name_armour_",
+        "_profession_name_",
+        "_suit_",
+        "_wacky_armour_name_",
+        "_weather_name_"
+      ]
+    },
+    "rand_wpn.txt": {
+      "source_keys": 45,
+      "matching_chinese_keys": 0,
+      "missing_keys": [
+        "_amphibian_name_",
+        "_anger_name_",
+        "_anger_possessive_",
+        "_anger_quality_",
+        "_arachnid_name_",
+        "_balance_or_order_",
+        "_battle_or_war_",
+        "_bird_name_",
+        "_catastrophe_name_",
+        "_chaos_name_",
+        "_conflict_name_",
+        "_crustacean_name_",
+        "_discomfort_weapon_",
+        "_diviner_name_",
+        "_economics_or_politics_",
+        "_evil_stuff_",
+        "_fish_name_",
+        "_item_name_",
+        "_joke_weapon_name_",
+        "_justice_name_",
+        "_long_killer_name_",
+        "_magic_name_",
+        "_mammal_name_",
+        "_monster_name_",
+        "_people_name_",
+        "_philosophy_name_",
+        "_philosophy_or_science_",
+        "_place_name_",
+        "_plain_weapon_name_",
+        "_plant_name_",
+        "_power_name_",
+        "_power_or_anger_",
+        "_real_weapon_name_",
+        "_reptile_name_",
+        "_science_name_",
+        "_short_killer_name_",
+        "_strategy_name_",
+        "_strategy_or_justice_",
+        "_substance_name_",
+        "_valour_name_",
+        "_weapon_animal_",
+        "death_or_doom",
+        "killer_name",
+        "other_weapon_name",
+        "short_monster_name_"
+      ]
+    },
+    "shout.txt": {
+      "source_keys": 93,
+      "matching_chinese_keys": 93,
+      "missing_keys": []
+    },
+    "wpnnoise.txt": {
+      "source_keys": 65,
+      "matching_chinese_keys": 49,
+      "missing_keys": [
+        "eel hand actions",
+        "eel hand solo actions",
+        "fungus thoughts",
+        "zonguldrok farewell",
+        "zonguldrok greeting",
+        "zonguldrok hat bad",
+        "zonguldrok hat crown of dyrovepreva",
+        "zonguldrok hat crown of vainglory",
+        "zonguldrok hat good",
+        "zonguldrok hat hat of pondering",
+        "zonguldrok hat hat of the alchemist",
+        "zonguldrok hat hat of the bear spirit",
+        "zonguldrok hat hood of the assassin",
+        "zonguldrok hat mask of the dragon",
+        "zonguldrok hat okay",
+        "zonguldrok reprise"
+      ]
+    }
+  }
+}

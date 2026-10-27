@@ -1,0 +1,24 @@
+# Windows local Tiles sample with optional per-region fallback fonts.
+# Run from crawl-ref/source: ./crawl.exe -rc ../settings/zh-local-tiles.rc
+language = zh
+
+# Use the system Consolas monospace font for Latin text. Missing glyphs use the
+# system CJK fallback below; Windows font files are not distributed.
+tile_font_crt_file = C:/Windows/Fonts/consola.ttf
+tile_font_msg_file = C:/Windows/Fonts/consola.ttf
+tile_font_stat_file = C:/Windows/Fonts/consola.ttf
+tile_font_tip_file = C:/Windows/Fonts/consola.ttf
+tile_font_lbl_file = C:/Windows/Fonts/consola.ttf
+
+tile_font_crt_size = 18
+tile_font_msg_size = 18
+tile_font_stat_size = 18
+tile_font_tip_size = 18
+tile_font_lbl_size = 15
+
+# Optional per-region fallback for glyphs missing from the primary font.
+tile_font_crt_fallback_file = C:/Windows/Fonts/msyh.ttc
+tile_font_msg_fallback_file = C:/Windows/Fonts/msyh.ttc
+tile_font_stat_fallback_file = C:/Windows/Fonts/msyh.ttc
+tile_font_tip_fallback_file = C:/Windows/Fonts/msyh.ttc
+tile_font_lbl_fallback_file = C:/Windows/Fonts/msyh.ttc

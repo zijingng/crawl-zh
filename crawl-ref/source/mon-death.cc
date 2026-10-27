@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "m-display.h"
+#include "i18n.h"
 
 #include "mon-death.h"
 
@@ -308,7 +310,7 @@ static void _give_player_experience(int experience, killer_type killer,
 
     // Give a message for monsters dying out of sight.
     if (exp_gain > 0 && !was_visible)
-        mpr("You feel a bit more experienced.");
+        mpr(ui_translate("m.ui", "You feel a bit more experienced."));
 }
 
 /**
@@ -405,10 +407,16 @@ static void _create_monster_hide(monster_type mtyp, monster_type montype,
     if (you.see_cell(pos) && !silent && !feat_eliminates_items(env.grid(pos)))
     {
         // XXX: tweak for uniques/named monsters, somehow?
-        mprf("%s %s intact enough to wear.",
-             item.name(DESC_THE).c_str(),
-             mons_genus(mtyp) == MONS_DRAGON ? "are"  // scales are
-                                             : "is"); // troll armour is
+        mprf("%s", ([&]() -> string {
+                const string _m0 = item.name(DESC_THE);
+                const string _m1 = mons_genus(mtyp) == MONS_DRAGON ? "are"  // scales are
+                                             : "is";
+                const string _original = make_stringf("%s %s intact enough to wear.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.165", "%s %s intact enough to wear.")) return _original;
+                // The visible scales type is known, but enchantment is not yet identified.
+                const ui_arg visible_type = ui_text_arg("display.item", item.name(DESC_DBNAME, true, false, false));
+                return ui_render("m.log.165", "%s %s intact enough to wear.", _original, {visible_type, {"", true}});
+            })().c_str()); // troll armour is
                                                       // XXX: refactor
     }
 
@@ -433,9 +441,13 @@ static void _create_monster_wand(monster_type mtyp, coord_def pos, bool silent)
 
     if (you.see_cell(pos) && !silent && !feat_eliminates_items(env.grid(pos)))
     {
-        mprf("%s bone magically twists into %s.",
-             mons_type_name(mtyp, DESC_A).c_str(),
-             item.name(DESC_A).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = mons_type_name(mtyp, DESC_A);
+                const string _m1 = item.name(DESC_A);
+                const string _original = make_stringf("%s bone magically twists into %s.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.166", "%s bone magically twists into %s.")) return _original;
+                return ui_render("m.log.166", "%s bone magically twists into %s.", _original, {m_monster_type_arg(mtyp), ui_item_arg(item)});
+            })().c_str());
     }
 
     // Don't immediately gain knowledge of the wand if we died out of sight.
@@ -684,7 +696,9 @@ static bool _ely_protect_ally(monster* mons, killer_type killer)
     mons->hit_points = 1;
 
     const string msg = " protects " + mons->name(DESC_THE) + " from harm!";
-    simple_god_message(msg.c_str(), false);
+    simple_god_message(msg.c_str(), false, you.religion,
+        ui_render("m.clause", "%s protects %s from harm!", "",
+            {ui_text_arg("display.god", god_name(you.religion)), m_actor_arg(*mons)}));
 
     return true;
 }
@@ -735,7 +749,9 @@ static bool _ely_heal_monster(monster* mons, killer_type killer, int i)
              mons->name(DESC_THE).c_str(),
              mons->hit_points * 2 <= mons->max_hit_points ? "." : "!");
 
-    god_speaks(god, msg.c_str());
+    god_speaks(god, ui_render("m.clause", "%s heals %s%s", msg,
+        {ui_text_arg("display.god", god_name(god, false)), m_actor_arg(*mons),
+         {mons->hit_points * 2 <= mons->max_hit_points ? "." : "!", true}}).c_str());
 
     behaviour_event(mons, ME_WHACK, act);
 
@@ -782,7 +798,12 @@ static bool _vampire_make_thrall(monster* mons, killer_type killer)
     const unsigned int exp = exp_value(*mons);
 
     // Okay, let's try to make them for real!
-    mprf("%s rises to serve you!", mons->name(DESC_THE).c_str());
+    mprf("%s", ([&]() -> string {
+                const string _m0 = mons->name(DESC_THE);
+                const string _original = make_stringf("%s rises to serve you!", _m0.c_str());
+                if (!m_display_active("m.log.167", "%s rises to serve you!")) return _original;
+                return ui_render("m.log.167", "%s rises to serve you!", _original, {m_actor_arg(*mons)});
+            })().c_str());
     record_monster_defeat(mons, KILL_YOU);
 
     mons->hit_points = mons->max_hit_points;
@@ -935,8 +956,12 @@ static bool _blorkula_bat_split(monster& blorkula, killer_type ktype)
     {
         if (you.can_see(blorkula))
         {
-            mprf("%s attempts to avoid another deathblow, but is too exhausted to transform.",
-                blorkula.name(DESC_THE).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = blorkula.name(DESC_THE);
+                const string _original = make_stringf("%s attempts to avoid another deathblow, but is too exhausted to transform.", _m0.c_str());
+                if (!m_display_active("m.log.168", "%s attempts to avoid another deathblow, but is too exhausted to transform.")) return _original;
+                return ui_render("m.log.168", "%s attempts to avoid another deathblow, but is too exhausted to transform.", _original, {m_actor_arg(blorkula)});
+            })().c_str());
         }
         return false;
     }
@@ -1004,9 +1029,12 @@ static bool _blorkula_bat_split(monster& blorkula, killer_type ktype)
 
     if (you.can_see(blorkula))
     {
-        mprf(MSGCH_MONSTER_SPELL,
-            "%s avoids the killing blow by scattering into a rainbow of bats!",
-            blorkula.name(DESC_THE).c_str());
+        mprf(MSGCH_MONSTER_SPELL, "%s", ([&]() -> string {
+                const string _m0 = blorkula.name(DESC_THE);
+                const string _original = make_stringf("%s avoids the killing blow by scattering into a rainbow of bats!", _m0.c_str());
+                if (!m_display_active("m.log.169", "%s avoids the killing blow by scattering into a rainbow of bats!")) return _original;
+                return ui_render("m.log.169", "%s avoids the killing blow by scattering into a rainbow of bats!", _original, {m_actor_arg(blorkula)});
+            })().c_str());
     }
 
     monster_die(blorkula, KILL_RESET, NON_MONSTER, true);
@@ -1099,7 +1127,10 @@ static void _blorkula_bat_merge_message(monster* blork, int bat_count)
         msg += " and " + blork->name(DESC_THE)
             +  " reappears in a puff of iridescent mist.";
 
-        mprf(MSGCH_MONSTER_SPELL, "%s", msg.c_str());
+        mprf(MSGCH_MONSTER_SPELL, "%s", ui_render("m.clause", bat_count == 1
+            ? "The bat shimmers and %s reappears in a puff of iridescent mist."
+            : "The bats swarm back together and %s reappears in a puff of iridescent mist.",
+            msg, {m_actor_arg(*blork)}).c_str());
     }
 }
 
@@ -1195,13 +1226,13 @@ static void _jiyva_died()
 
     if (silenced(you.pos()))
     {
-        god_speaks(GOD_JIYVA, "With an infernal shudder, the power ruling "
-                   "this place vanishes!");
+        god_speaks(GOD_JIYVA,ui_translate("m.ui", "With an infernal shudder, the power ruling "
+                   "this place vanishes!"));
     }
     else
     {
-        god_speaks(GOD_JIYVA, "With an infernal noise, the power ruling this "
-                   "place vanishes!");
+        god_speaks(GOD_JIYVA,ui_translate("m.ui", "With an infernal noise, the power ruling this "
+                   "place vanishes!"));
     }
 }
 
@@ -1341,7 +1372,9 @@ static void _search_dungeon(const coord_def & start,
 static void _infestation_create_scarab(monster* mons)
 {
     mons->flags |= MF_EXPLODE_KILL;
-    schedule_infestation_death_fineff(mons->pos(), mons->name(DESC_THE));
+    const ui_arg display = m_actor_arg(*mons);
+    schedule_infestation_death_fineff(mons->pos(), mons->name(DESC_THE),
+                                     display.available ? display.text : "");
 }
 
 static void _pharaoh_ant_bind_souls(monster *mons)
@@ -1597,7 +1630,7 @@ static void _make_derived_undead(monster* mons, bool quiet,
         if (mons->heads() == 0)
         {
             if (!quiet)
-                mpr(fail_msg);
+                mpr(ui_translate("m.ui", string(fail_msg).c_str()));
             return;
         }
         else
@@ -1616,7 +1649,7 @@ static void _make_derived_undead(monster* mons, bool quiet,
                            god == GOD_KIKUBAAQUDGHA ? "Kikubaaqudgha cackles." :
                            _derived_undead_message(*mons, which_z, msg);
     schedule_make_derived_undead_fineff(mons->pos(), mg,
-            mons->get_experience_level(), agent_name, message);
+            mons->get_experience_level(), agent_name, ui_translate("m.ui", message.c_str()));
 }
 
 static void _druid_final_boon(const monster* mons)
@@ -1633,9 +1666,12 @@ static void _druid_final_boon(const monster* mons)
 
     if (you.can_see(*mons))
     {
-        mprf(MSGCH_MONSTER_SPELL, "With its final breath, %s offers up its power "
-                                  "to the beasts of the wild!",
-                                  mons->name(DESC_THE).c_str());
+        mprf(MSGCH_MONSTER_SPELL, "%s", ([&]() -> string {
+                const string _m0 = mons->name(DESC_THE);
+                const string _original = make_stringf("With its final breath, %s offers up its power to the beasts of the wild!", _m0.c_str());
+                if (!m_display_active("m.log.170", "With its final breath, %s offers up its power to the beasts of the wild!")) return _original;
+                return ui_render("m.log.170", "With its final breath, %s offers up its power to the beasts of the wild!", _original, {m_actor_arg(*mons)});
+            })().c_str());
     }
 
     shuffle_array(beasts);
@@ -1649,8 +1685,13 @@ static void _druid_final_boon(const monster* mons)
         if (beasts[i]->heal(roll_dice(3, mons->get_hit_dice()))
             && you.can_see(*beasts[i]))
         {
-            mprf("%s %s healed.", beasts[i]->name(DESC_THE).c_str(),
-                                  beasts[i]->conj_verb("are").c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = beasts[i]->name(DESC_THE);
+                const string _m1 = beasts[i]->conj_verb("are");
+                const string _original = make_stringf("%s %s healed.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.171", "%s %s healed.")) return _original;
+                return ui_render("m.log.171", "%s %s healed.", _original, {m_actor_arg(*beasts[i]), ui_literal_arg("")});
+            })().c_str());
         }
     }
 
@@ -1696,10 +1737,13 @@ static void _protean_explosion(monster* mons)
 
     if (you.can_see(*mons))
     {
-        mprf(MSGCH_MONSTER_WARNING, "For just a moment, %s begins to "
-                                    "look like %s, then it explodes!",
-                                    mons->name(DESC_THE).c_str(),
-                                    mons_type_name(target, DESC_A).c_str());
+        mprf(MSGCH_MONSTER_WARNING, "%s", ([&]() -> string {
+                const string _m0 = mons->name(DESC_THE);
+                const string _m1 = mons_type_name(target, DESC_A);
+                const string _original = make_stringf("For just a moment, %s begins to look like %s, then it explodes!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.172", "For just a moment, %s begins to look like %s, then it explodes!")) return _original;
+                return ui_render("m.log.172", "For just a moment, %s begins to look like %s, then it explodes!", _original, {m_actor_arg(*mons), m_monster_type_arg(target)});
+            })().c_str());
     }
 
     // Determine number of children based on the HD of what we roll.
@@ -1765,15 +1809,21 @@ static void _martyr_death_wail(monster &mons)
     {
         if (mons.friendly())
         {
-            mprf(MSGCH_FRIEND_SPELL,
-                 "%s wails in agony as it relives its own death.",
-                 mons.name(DESC_YOUR).c_str());
+            mprf(MSGCH_FRIEND_SPELL, "%s", ([&]() -> string {
+                const string _m0 = mons.name(DESC_YOUR);
+                const string _original = make_stringf("%s wails in agony as it relives its own death.", _m0.c_str());
+                if (!m_display_active("m.log.173", "%s wails in agony as it relives its own death.")) return _original;
+                return ui_render("m.log.173", "%s wails in agony as it relives its own death.", _original, {m_actor_arg(mons)});
+            })().c_str());
         }
         else
         {
-            mprf(MSGCH_MONSTER_SPELL,
-                 "%s wails in agony as it relives its own death.",
-                 mons.name(DESC_THE).c_str());
+            mprf(MSGCH_MONSTER_SPELL, "%s", ([&]() -> string {
+                const string _m0 = mons.name(DESC_THE);
+                const string _original = make_stringf("%s wails in agony as it relives its own death.", _m0.c_str());
+                if (!m_display_active("m.log.174", "%s wails in agony as it relives its own death.")) return _original;
+                return ui_render("m.log.174", "%s wails in agony as it relives its own death.", _original, {m_actor_arg(mons)});
+            })().c_str());
         }
     }
 
@@ -1853,7 +1903,7 @@ static void _cassandra_death_ambush()
     // player off lucky.
     if (spots.empty())
     {
-        mpr("You feel as though you may have cheated fate.");
+        mpr(ui_translate("m.ui", "You feel as though you may have cheated fate."));
         return;
     }
 
@@ -1911,9 +1961,9 @@ static void _cassandra_death_ambush()
     }
 
     if (placed > 0)
-        mpr("You feel an ambush drawing close....");
+        mpr(ui_translate("m.ui", "You feel an ambush drawing close...."));
     else
-        mpr("You feel as though you may have cheated fate.");
+        mpr(ui_translate("m.ui", "You feel as though you may have cheated fate."));
 
     // Now seal all stairs on the floor for a moderate duration.
     const int seal_duration = random_range(150, 300);
@@ -1949,6 +1999,8 @@ static bool _mons_reaped(actor &killer, monster& victim)
                      victim.pronoun(PRONOUN_POSSESSIVE) + " body!";
     string fail_msg = victim.name(DESC_ITS) + " spirit is momentarily torn from " +
                           victim.pronoun(PRONOUN_POSSESSIVE) + " body, then fades!";
+    msg = ui_render("m.clause", "%s spirit is torn from its body!", msg, {m_actor_arg(victim)});
+    fail_msg = ui_render("m.clause", "%s spirit is momentarily torn from its body, then fades!", fail_msg, {m_actor_arg(victim)});
     _make_derived_undead(&victim, !you.can_see(victim), MONS_SPECTRAL_THING, beh,
                          MON_SUMM_WPN_REAP, GOD_NO_GOD, msg, fail_msg);
 
@@ -2196,7 +2248,7 @@ static void _special_corpse_messaging(monster &mons)
             const string message = " shape twists and changes as "
                 + mons.pronoun(PRONOUN_SUBJECTIVE) + " "
                 + conjugate_verb("die", mons.pronoun_plurality()) + ".";
-            simple_monster_message(mons, message.c_str(), true);
+            m_monster_event(mons, message.c_str(), "%s's shape twists and changes as %s dies.", {m_actor_arg(mons), ui_arg{"", true}}, true);
         }
 
         return;
@@ -2214,7 +2266,7 @@ static void _special_corpse_messaging(monster &mons)
                             mons.pronoun(PRONOUN_SUBJECTIVE) + " " +
                             conjugate_verb("die", mons.pronoun_plurality()) +
                             ".";
-    simple_monster_message(mons, message.c_str());
+    m_monster_event(mons, message.c_str(), "%s returns to its original shape as it dies.", {m_actor_arg(mons)});
 }
 
 bool mons_will_goldify(const monster &mons)
@@ -2332,11 +2384,15 @@ static void _player_on_kill_effects(monster& mons, killer_type killer,
 
         if (feed && (healing || powering))
         {
-            mprf("You siphon power from %s's fading %s.",
-                  mons.name(DESC_THE).c_str(),
-                  mons.has_ench(ENCH_POISON) && mons.has_ench(ENCH_DRAINED) ?
+            mprf("%s", ([&]() -> string {
+                const string _m0 = mons.name(DESC_THE);
+                const string _m1 = mons.has_ench(ENCH_POISON) && mons.has_ench(ENCH_DRAINED) ?
                   "poison and negative energy" : (mons.has_ench(ENCH_POISON) ?
-                  "poison" : "negative energy"));
+                  "poison" : "negative energy");
+                const string _original = make_stringf("You siphon power from %s's fading %s.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.175", "You siphon power from %s's fading %s.")) return _original;
+                return ui_render("m.log.175", "You siphon power from %s's fading %s.", _original, {m_actor_arg(mons), m_clause_arg(_m1)});
+            })().c_str());
         }
 
         if (healing)
@@ -2372,21 +2428,24 @@ static void _player_on_kill_effects(monster& mons, killer_type killer,
 
             you.increase_duration(DUR_BERSERK, bonus);
 
-            mprf(MSGCH_GOD, you.religion,
-                 "You feel the power of %s in you as your rage grows.",
-                 uppercase_first(god_name(you.religion)).c_str());
+            mprf(MSGCH_GOD, you.religion, "%s", ([&]() -> string {
+                const string _m0 = uppercase_first(god_name(you.religion));
+                const string _original = make_stringf("You feel the power of %s in you as your rage grows.", _m0.c_str());
+                if (!m_display_active("m.log.176", "You feel the power of %s in you as your rage grows.")) return _original;
+                return ui_render("m.log.176", "You feel the power of %s in you as your rage grows.", _original, {ui_text_arg("display.god", god_name(you.religion))});
+            })().c_str());
         }
         else if (you.unrand_equipped(UNRAND_BLOODLUST) && coinflip())
         {
             const int bonus = (2 + random2(4)) / 2;
             you.increase_duration(DUR_BERSERK, bonus);
-            mpr("The necklace of Bloodlust glows a violent red.");
+            mpr(ui_translate("m.ui", "The necklace of Bloodlust glows a violent red."));
         }
         else if (you.unrand_equipped(UNRAND_TROG) && coinflip())
         {
             const int bonus = (2 + random2(4)) / 2;
             you.increase_duration(DUR_BERSERK, bonus);
-            mpr("You feel the ancient rage of your axe.");
+            mpr(ui_translate("m.ui", "You feel the ancient rage of your axe."));
         }
     }
 
@@ -2406,7 +2465,7 @@ static void _player_on_kill_effects(monster& mons, killer_type killer,
 
             // Give a message for hitting max stacks
             if (slaying_bonus + 1 == FUGUE_MAX_STACKS)
-                mpr("The wailing of the fallen reaches a fever pitch!");
+                mpr(ui_translate("m.ui", "The wailing of the fallen reaches a fever pitch!"));
         }
     }
 
@@ -2475,7 +2534,12 @@ static void _player_on_kill_effects(monster& mons, killer_type killer,
         }
 
         if (visible_effect)
-            mprf("%s allies are healed!", mons.name(DESC_ITS).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = mons.name(DESC_ITS);
+                const string _original = make_stringf("%s allies are healed!", _m0.c_str());
+                if (!m_display_active("m.log.177", "%s allies are healed!")) return _original;
+                return ui_render("m.log.177", "%s allies are healed!", _original, {m_actor_arg(mons)});
+            })().c_str());
     }
 
     if (gives_player_xp && you.attribute[ATTR_TEMP_MUTATIONS]
@@ -2676,7 +2740,7 @@ item_def* monster_die(monster& mons, killer_type killer,
             else if (source->is_player())
             {
                 you.duration[DUR_WEAK] = 0;
-                mprf(MSGCH_RECOVERY, "You feel your strength returning.");
+                mprf(MSGCH_RECOVERY, "%s", ui_translate("m.ui", "You feel your strength returning."));
             }
 
             silent = true;
@@ -2703,6 +2767,8 @@ item_def* monster_die(monster& mons, killer_type killer,
         string name = remove_prepended_the(mons_type_name(simu.base_type, DESC_PLAIN));
 
         string msg = "Your " + name + " simulacrum begins to move.";
+        msg = ui_render("m.clause", "Your %s simulacrum begins to move.", msg,
+                        {m_monster_type_arg(simu.base_type)});
         schedule_make_derived_undead_fineff(simu.pos, simu,
                                             get_monster_data(simu.base_type)->HD,
                                             "the player",
@@ -2715,8 +2781,12 @@ item_def* monster_die(monster& mons, killer_type killer,
         // Only blow up if non-dormant
         if (grid_distance(mons.pos(), you.pos()) <= 1)
         {
-            mprf(MSGCH_WARN, "%s falls apart, revealing its core!",
-                 mons.name(DESC_YOUR).c_str());
+            mprf(MSGCH_WARN, "%s", ([&]() -> string {
+                const string _m0 = mons.name(DESC_YOUR);
+                const string _original = make_stringf("%s falls apart, revealing its core!", _m0.c_str());
+                if (!m_display_active("m.log.178", "%s falls apart, revealing its core!")) return _original;
+                return ui_render("m.log.178", "%s falls apart, revealing its core!", _original, {m_actor_arg(mons)});
+            })().c_str());
 
             int old_hd = mons.get_hit_dice();
             change_monster_type(&mons, MONS_BLAZEHEART_CORE);
@@ -2792,7 +2862,7 @@ item_def* monster_die(monster& mons, killer_type killer,
     {
         you.props[SOLAR_EMBER_REVIVAL_KEY].get_int() = you.elapsed_time + random_range(200, 320);
         if (!you.can_see(mons))
-            mprf(MSGCH_MONSTER_DAMAGE, MDAM_DEAD, "You feel your sun fade away.");
+            mprf(MSGCH_MONSTER_DAMAGE, MDAM_DEAD, "%s", ui_translate("m.ui", "You feel your sun fade away."));
     }
     else if (mons.type == MONS_BATTLESPHERE)
         end_battlesphere(&mons, true);
@@ -2800,7 +2870,7 @@ item_def* monster_die(monster& mons, killer_type killer,
         end_spectral_weapon(&mons, true, true);
     else if (mons.type == MONS_RENDING_BLADE)
     {
-        mprf(MSGCH_DURATION, "Your magic returns to you!");
+        mprf(MSGCH_DURATION, "%s", ui_translate("m.ui", "Your magic returns to you!"));
         inc_mp(you.props[RENDING_BLADE_MP_KEY].get_int());
         you.props.erase(RENDING_BLADE_MP_KEY);
     }
@@ -2829,12 +2899,16 @@ item_def* monster_die(monster& mons, killer_type killer,
         {
             if (you.can_see(mons))
             {
-                mprf(MSGCH_WARN, "%s broadcasts a psychic alarm as it %s.",
-                    mons.name(DESC_THE).c_str(),
-                    (was_banished || !real_death) ? "disappears" : "dies");
+                mprf(MSGCH_WARN, "%s", ([&]() -> string {
+                const string _m0 = mons.name(DESC_THE);
+                const string _m1 = (was_banished || !real_death) ? "disappears" : "dies";
+                const string _original = make_stringf("%s broadcasts a psychic alarm as it %s.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.179", "%s broadcasts a psychic alarm as it %s.")) return _original;
+                return ui_render("m.log.179", "%s broadcasts a psychic alarm as it %s.", _original, {m_actor_arg(mons), m_clause_arg(_m1)});
+            })().c_str());
             }
             else
-                mprf(MSGCH_WARN, "You feel something broadcast a psychic alarm.");
+                mprf(MSGCH_WARN, "%s", ui_translate("m.ui", "You feel something broadcast a psychic alarm."));
 
             activate_tesseracts();
         }
@@ -2859,8 +2933,12 @@ item_def* monster_die(monster& mons, killer_type killer,
         did_death_message = true;
         if (you.see_cell(mons.pos()))
         {
-            mprf(MSGCH_MONSTER_DAMAGE, MDAM_DEAD,
-                 "Tendrils of ice devour %s body!", mons.name(DESC_ITS).c_str());
+            mprf(MSGCH_MONSTER_DAMAGE, MDAM_DEAD, "%s", ([&]() -> string {
+                const string _m0 = mons.name(DESC_ITS);
+                const string _original = make_stringf("Tendrils of ice devour %s body!", _m0.c_str());
+                if (!m_display_active("m.log.180", "Tendrils of ice devour %s body!")) return _original;
+                return ui_render("m.log.180", "Tendrils of ice devour %s body!", _original, {m_actor_arg(mons)});
+            })().c_str());
         }
         schedule_death_spawn_fineff(MONS_PILLAR_OF_RIME,
                                     mons.pos(),
@@ -2984,9 +3062,9 @@ item_def* monster_die(monster& mons, killer_type killer,
         {
             if (you.can_see(mons))
             {
-                mprf(MSGCH_MONSTER_DAMAGE, MDAM_DEAD, silenced(mons.pos()) ?
+                mprf(MSGCH_MONSTER_DAMAGE, MDAM_DEAD,"%s", ui_translate("m.ui", (silenced(mons.pos()) ?
                     "The tentacle is hauled back through the portal!" :
-                    "With a roar, the tentacle is hauled back through the portal!");
+                    "With a roar, the tentacle is hauled back through the portal!")));
             }
             silent = true;
         }
@@ -3022,18 +3100,34 @@ item_def* monster_die(monster& mons, killer_type killer,
                 if (killer == KILL_YOU_CONF
                     && (anon || !invalid_monster_index(killer_index)))
                 {
-                    mprf(MSGCH_MONSTER_DAMAGE, MDAM_DEAD, "%s is %s!",
+                    const char *verb = exploded ? "blown up" : destroyed ? "destroyed" : "killed";
+                    const char *source = "%s is %s!";
+                    ui_translation_group group({{"log.death", source},
+                                                {"log.death.verb", verb}});
+                    string name;
+                    if (group.available() && try_ui_actor_name(mons, name))
+                        mprf(MSGCH_MONSTER_DAMAGE, MDAM_DEAD,
+                             group.get("log.death", source), name.c_str(),
+                             group.get("log.death.verb", verb));
+                    else
+                        mprf(MSGCH_MONSTER_DAMAGE, MDAM_DEAD, source,
                          mons.name(DESC_THE).c_str(),
-                         exploded   ? "blown up" :
-                         destroyed  ? "destroyed"
-                                    : "killed");
+                         verb);
                 }
                 else
                 {
-                    mprf(MSGCH_MONSTER_DAMAGE, MDAM_DEAD, "You %s %s!",
-                         exploded  ? "blow up" :
-                         destroyed ? "destroy"
-                                   : "kill",
+                    const char *verb = exploded ? "blow up" : destroyed ? "destroy" : "kill";
+                    const char *source = "You %s %s!";
+                    ui_translation_group group({{"log.death", source},
+                                                {"log.death.verb", verb}});
+                    string name;
+                    if (group.available() && try_ui_actor_name(mons, name))
+                        mprf(MSGCH_MONSTER_DAMAGE, MDAM_DEAD,
+                             group.get("log.death", source),
+                             group.get("log.death.verb", verb), name.c_str());
+                    else
+                        mprf(MSGCH_MONSTER_DAMAGE, MDAM_DEAD, source,
+                         verb,
                          mons.name(DESC_THE).c_str());
                 }
             }
@@ -3050,7 +3144,7 @@ item_def* monster_die(monster& mons, killer_type killer,
                     && !mons.is_unrewarding()
                     && !mons.friendly())
                 {
-                    mpr("That felt strangely unrewarding.");
+                    mpr(ui_translate("m.ui", "That felt strangely unrewarding."));
                 }
             }
 
@@ -3233,11 +3327,20 @@ item_def* monster_die(monster& mons, killer_type killer,
             else
             {
                 if (mons.props.exists(KIKU_WRETCH_KEY))
-                    mprf("A nearby %s perishes wretchedly.", mons.name(DESC_PLAIN, false).c_str());
+                    mprf("%s", ([&]() -> string {
+                const string _m0 = mons.name(DESC_PLAIN, false);
+                const string _original = make_stringf("A nearby %s perishes wretchedly.", _m0.c_str());
+                if (!m_display_active("m.log.181", "A nearby %s perishes wretchedly.")) return _original;
+                return ui_render("m.log.181", "A nearby %s perishes wretchedly.", _original, {m_actor_arg(mons)});
+            })().c_str());
                 else if (mons_class_is_fragile(mons.type))
                 {
-                    mprf(MSGCH_MONSTER_TIMEOUT, "A nearby %s withers and dies.",
-                         mons.name(DESC_PLAIN, false).c_str());
+                    mprf(MSGCH_MONSTER_TIMEOUT, "%s", ([&]() -> string {
+                const string _m0 = mons.name(DESC_PLAIN, false);
+                const string _original = make_stringf("A nearby %s withers and dies.", _m0.c_str());
+                if (!m_display_active("m.log.182", "A nearby %s withers and dies.")) return _original;
+                return ui_render("m.log.182", "A nearby %s withers and dies.", _original, {m_actor_arg(mons)});
+            })().c_str());
                 }
                 // Default message so that at least *something* is printed.
                 else
@@ -3360,7 +3463,7 @@ item_def* monster_die(monster& mons, killer_type killer,
     {
         you.props.erase(TESSERACT_SPAWN_COUNTER_KEY);
 
-        mprf(MSGCH_ORB, "A wave of disorienting energy ripples outward as you feel the reach of Zot diminish.");
+        mprf(MSGCH_ORB, "%s", ui_translate("m.ui", "A wave of disorienting energy ripples outward as you feel the reach of Zot diminish."));
         mark_milestone("tesseract.kill", "destroyed the tesseracts.");
 
         draw_ring_animation(mons.pos(), LOS_RADIUS, MAGENTA, BLUE, true, 5);
@@ -3381,8 +3484,13 @@ item_def* monster_die(monster& mons, killer_type killer,
             {
                 if (you.can_see(**mi))
                 {
-                    mprf(MSGCH_MONSTER_TIMEOUT, "%s is cast back into %s original reality.",
-                            mi->name(DESC_THE).c_str(), mi->pronoun(PRONOUN_POSSESSIVE).c_str());
+                    mprf(MSGCH_MONSTER_TIMEOUT, "%s", ([&]() -> string {
+                const string _m0 = mi->name(DESC_THE);
+                const string _m1 = mi->pronoun(PRONOUN_POSSESSIVE);
+                const string _original = make_stringf("%s is cast back into %s original reality.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.183", "%s is cast back into %s original reality.")) return _original;
+                return ui_render("m.log.183", "%s is cast back into %s original reality.", _original, {m_actor_arg(*mi), ui_literal_arg("")});
+            })().c_str());
                 }
                 monster_die(**mi, KILL_RESET, NON_MONSTER);
             }
@@ -3401,9 +3509,9 @@ item_def* monster_die(monster& mons, killer_type killer,
             && !was_banished)
         {
             if (mons_base_type(mons) == MONS_KRAKEN)
-                mpr("The kraken's tentacles disappear.");
+                mpr(ui_translate("m.ui", "The kraken's tentacles disappear."));
             else if (mons.type == MONS_TENTACLED_STARSPAWN)
-                mpr("The starspawn's tentacles wither and die.");
+                mpr(ui_translate("m.ui", "The starspawn's tentacles wither and die."));
         }
     }
     else if (mons_is_tentacle_or_tentacle_segment(mons.type)
@@ -3450,7 +3558,12 @@ item_def* monster_die(monster& mons, killer_type killer,
     if (mons.has_ench(ENCH_RIMEBLIGHT) && !was_banished && !mons_reset)
     {
         if (you.can_see(mons))
-            mprf("Plague seeps from the dead %s.", mons.name(DESC_PLAIN).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = mons.name(DESC_PLAIN);
+                const string _original = make_stringf("Plague seeps from the dead %s.", _m0.c_str());
+                if (!m_display_active("m.log.184", "Plague seeps from the dead %s.")) return _original;
+                return ui_render("m.log.184", "Plague seeps from the dead %s.", _original, {m_actor_arg(mons)});
+            })().c_str());
 
         // Potentially infect everyone around the dead monster.
         // (100% chance at range 1, 50% chance at range 2)
@@ -3615,8 +3728,12 @@ item_def* monster_die(monster& mons, killer_type killer,
         {
             if (!you.can_see(mons))
             {
-                mprf("%s has departed this plane of existence.",
-                     hepliaklqana_ally_name().c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = hepliaklqana_ally_name();
+                const string _original = make_stringf("%s has departed this plane of existence.", _m0.c_str());
+                if (!m_display_active("m.log.185", "%s has departed this plane of existence.")) return _original;
+                return ui_render("m.log.185", "%s has departed this plane of existence.", _original, {ui_literal_arg(_m0)});
+            })().c_str());
             }
 
             // respawn in ~30-60 turns, if there wasn't another ancestor through
@@ -3676,8 +3793,12 @@ void heal_flayed_effect(actor* act, bool quiet, bool blood_only)
 
         if (you.can_see(*act) && !quiet)
         {
-            mprf("The terrible wounds on %s body vanish.",
-                 act->name(DESC_ITS).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = act->name(DESC_ITS);
+                const string _original = make_stringf("The terrible wounds on %s body vanish.", _m0.c_str());
+                if (!m_display_active("m.log.186", "The terrible wounds on %s body vanish.")) return _original;
+                return ui_render("m.log.186", "The terrible wounds on %s body vanish.", _original, {m_actor_arg(*act)});
+            })().c_str());
         }
 
         act->heal(act->props[FLAY_DAMAGE_KEY].get_int());
@@ -3811,9 +3932,13 @@ void mons_check_pool(monster* mons, const coord_def &oldpos,
     // something has fallen into the lava.
     if (you.see_cell(mons->pos()) && (oldpos == mons->pos() || env.grid(oldpos) != grid))
     {
-         mprf("%s falls into the %s!",
-             mons->name(DESC_THE).c_str(),
-             grid == DNGN_LAVA ? "lava" : "water");
+         mprf("%s", ([&]() -> string {
+                const string _m0 = mons->name(DESC_THE);
+                const string _m1 = grid == DNGN_LAVA ? "lava" : "water";
+                const string _original = make_stringf("%s falls into the %s!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.187", "%s falls into the %s!")) return _original;
+                return ui_render("m.log.187", "%s falls into the %s!", _original, {m_actor_arg(*mons), m_clause_arg(_m1)});
+            })().c_str());
     }
 
     // Even fire resistant monsters perish in lava.
@@ -4080,6 +4205,10 @@ void hogs_to_humans()
                                  any == human ? "human" : "original",
                                  any > 1 ? "forms" : "form");
     }
+    if (!final_msg.empty())
+        final_msg = ui_render("m.clause", "No longer under Kirke's spell, the %s %s %s!", final_msg,
+            {ui_text_arg("m.clause", any > 1 ? "hogs" : "hog"),
+             ui_text_arg("m.clause", any == human ? "human form" : "original form"), {"", true}});
     schedule_kirke_death_fineff(final_msg);
 }
 
@@ -4211,7 +4340,7 @@ void elven_twin_died(monster* twin, bool in_transit, killer_type killer, int kil
         if (you.see_cell(mons->pos()) && mons->can_speak())
             mons_speaks_msg(mons, death_message, MSGCH_TALK, silenced(you.pos()));
         else if (mons->can_speak())
-            mpr(death_message);
+            mpr(ui_translate("m.ui", string(death_message).c_str()));
     }
 
     // Upgrade the spellbook here, as elven_twin_energize

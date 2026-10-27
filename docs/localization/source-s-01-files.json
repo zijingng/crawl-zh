@@ -1,0 +1,611 @@
+[
+  {
+    "file": "crawl-ref/source/s-display.h",
+    "scope": "New typed display adapters; canonical feature, spell, school and actor data retained.",
+    "sha256": "2ca872ceae7a9cb847dd3890f83f6122ce4f6be6cf9fa45e773873b30d9b9c7f",
+    "changed": true,
+    "new": true
+  },
+  {
+    "file": "crawl-ref/source/sacrifice-data.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "9a28f910c4be4323ab90de7573a0d7136626c86d563bda170ef76b416cbc980e",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/score-format-type.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "44469ad33a16d12713fad0e4b7528e8a52abfa2fe1a94f120e5db7ee3e6eafdb",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/screen-mode.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "67e6f0ab20f7320410321f5d6a2608e755903901b0f5f35a211453ac2a5439a3",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/scroller.cc",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "b417f0d5a044da6d318d1a23574493588766cf6e717dd1f3f2d7e44e4465be6f",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/scroller.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "6aa4e1c723cc55d4e147c16c203f2489a73268fcf8c251605ad5f13ae6025e8d",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/SDLMain.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "21491f99b748d1a034000010ce093cb27685c58ee5509e15f2b5628348fb3ee0",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/seen-context-type.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "f1ce0d93c924bce67cf63b0ada56af89135abf9383873e02750dda215b290122",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/shop-type.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "ba64ba0b4a56d9038734f72c17e48d240e819580a666399b8dd5bc44a8e002f5",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/shopping.cc",
+    "scope": "Shop headings, stock rows, action/footer keys, shopping list balance/entries, purchase and travel prompts; canonical prices, saved descriptions and English shop names retained.",
+    "sha256": "01c3ad125602d83991066534dcca91e914c6468260ce98a7006a08df76db9ed9",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/shopping.h",
+    "scope": "Optional display result for shop_name; canonical string return retained.",
+    "sha256": "688e4a43db72a9742d938997b14670fe372b2ca2acbe068e94749263ec55c48a",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/shout.cc",
+    "scope": "Ally commands and shout UI, preserving order keys and mechanics.",
+    "sha256": "ae5e3dba691e118b166a232abbc20ea061c12903cdb69c8280bf89f5b6b44dd1",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/shout.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "243a08b845c56f416e8d6722ead3ad41ef8cba753a691f10032cc55db5f55750",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/show.cc",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "e64cc9cb09c4d9427d40d22ae96c783ee87f68c0cf1ec4da9238d10d2c82d41c",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/show.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "121318e72eef37b554990e29c072d494c73e9cd14092acbcd64242ce2c727f90",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/showsymb.cc",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "fa471b37adf93df8eff8e6cc4d57ff5b25b6f27b3fb24493db872fd111a48dd7",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/showsymb.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "535e4f8bd54cded251586a39dea1ba4df0363b4ddbf564a5468579dbea80255a",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/size-part-type.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "859a0e240490d6b00b6b9f18b3d61d58125ef0abf6ca986bdae1ccb92109b0ee",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/size-type.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "044e924bfc581721cef6ca0caaeee40f131cf4caf55d981d8f0cd92b8525955e",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/skill-focus-mode.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "4e1d4f32df366580659a4ca90142d509cc545a36891119a9392c1266d1ad9589",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/skill-menu-state.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "f5ffd0f0cd38c25678bf291e55df13ad95d6c92de2f5be645a2e292b94850e0a",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/skill-menu.cc",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "5dbb91b6bdeb05990e08ac2b31d4e92ef0e4f3b18fe996adef74a81fe030aa9e",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/skill-menu.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "8809640dd54a3f5e18a116f2a9991428a039fb4b9e2ea7fb8fc8c972eb65b40a",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/skill-type.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "cfd28b9eb3317983de67625a7b295a0de4fa31b32bf70ec3ab20dfce1c61c5b6",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/skills.cc",
+    "scope": "Skill gain/mastery, targets, manuals and confirmation messages.",
+    "sha256": "af1c80d077e62a1b5818f1583b9ca2a6822689eb4095451bcb5bcbe921150809",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/skills.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "00a589bfee157015d0909d6cd1cc784280c761876efa1a401c3e1e4df6a86b09",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/slot-select-mode.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "ddeba446881c08e9ef6695b09bda5b1771a43b713d7e13551020516b44f652e9",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/sound.cc",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "4e2362721cdc67db7a49d56fc8d8e5fafd01cc27fc2299b8153e3f4636723bf0",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/sound.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "7936f72503505bbd5eb839acdeeb48c5538fee74176f7556f7f5ae13c3064de8",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/species-data.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/species-def.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "44f1afbf848912b620919bd2a84f375463fcb48b99c82479d7b0d3fd8a761b1e",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/species-groups.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "9fdd38924ee6df512ca3c79b592fc22eaa8c12c6570c8b36c25594c2ba0104fb",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/species-type.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "6d46182ed2135789961d69c3720ddc6d3621c7bdc9081fb7755c5a7b8155b3ef",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/species.cc",
+    "scope": "Species display feedback; canonical identifiers unchanged.",
+    "sha256": "9db2c9a3cfedf48d3ef5e628dfd1390e07c6ba93bd84605bcf56faf7e54f24a6",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/species.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "348743337ea6eb539b0125ac8c88c225334be54db07ca9cbcc039320e38a1fcf",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spell-type.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "41d420723789d7f0e6ac516efa260bea692898d32828e352dd5d0e306cbdc732",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-book.cc",
+    "scope": "Spell casting, targeting, damage, status, summoning or movement messages using typed display arguments; canonical APIs and mechanics retained.",
+    "sha256": "8c760ec70a6b44f8d7faea4f52188a82ad791384ca02620c8512d5bb89bb93f9",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-book.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "d76e8bea069093165f7d9132b422efaafe9e093d5f08a0513dda1943457babb6",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-cast.cc",
+    "scope": "Spell casting, targeting, damage, status, summoning or movement messages using typed display arguments; canonical APIs and mechanics retained.",
+    "sha256": "e526f03ca36c630d1291a0cb20ed9e606272f3a8e660e382a8c615f47f18cf69",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-cast.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "1e5303d6d1d192cec01b79960b416e049df227c01914fbb6e4746b5aa92c5cc3",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-clouds.cc",
+    "scope": "Spell casting, targeting, damage, status, summoning or movement messages using typed display arguments; canonical APIs and mechanics retained.",
+    "sha256": "3b1c9a7088c0d98fd717503def578846c68cde2324e5fd292e56e34a70828d52",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-clouds.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "64570bcc2e377dfade238b583985ea80c7d500b2ca51fa3c7539f4fc30a22cd0",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-damage.cc",
+    "scope": "Spell casting, targeting, damage, status, summoning or movement messages using typed display arguments; canonical APIs and mechanics retained.",
+    "sha256": "642a4768896c535da0ffb60dcf73c823e40f0b8422c052e32c310ba06cb21a1e",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-damage.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "042a9fdbec81e071aec1717273288a487b598bfcb19b5e11fd7f9d1a1cadaa54",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-data.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "efadd85f5e4f5f6d0e8ebe3727fc4a32800e09aac972aba2d00bc47d794f3f28",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-goditem.cc",
+    "scope": "Spell casting, targeting, damage, status, summoning or movement messages using typed display arguments; canonical APIs and mechanics retained.",
+    "sha256": "cf7075c27475d9209ad449711b911b01359c2ed8b9717bae9543ef97127a9290",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-goditem.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "5336ad94e51f67be09d695b11ef9bbe230abc916bd2effcfa3495480a7e3577d",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-miscast.cc",
+    "scope": "Spell casting, targeting, damage, status, summoning or movement messages using typed display arguments; canonical APIs and mechanics retained.",
+    "sha256": "539eeb7d5ee95fe42a55937a28f0ed0843f6b7d3e212ab03385d5fe36b459ad6",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-miscast.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "2fde05b75de16494ce2f31afe683c0af5b6805f0d756bed55c39d44b59662b56",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-monench.cc",
+    "scope": "Spell casting, targeting, damage, status, summoning or movement messages using typed display arguments; canonical APIs and mechanics retained.",
+    "sha256": "60b910224c436a40d632789b0885e41dc5e9a946f9758accec51f1d3ca6c38d1",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-monench.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "96d1b65704a308ce96b70fc399bf1e540e968db2b007f8ee74a82c60adf8ddef",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-other.cc",
+    "scope": "Spell casting, targeting, damage, status, summoning or movement messages using typed display arguments; canonical APIs and mechanics retained.",
+    "sha256": "3bf586d193730b03433e118fe141261fe11e3b14158be233bf2ffb58916dc210",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-other.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "20abac09e9eb92418ee5970d919833d8bcfed15bf9592009a8fb04f21f625289",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-selfench.cc",
+    "scope": "Spell casting, targeting, damage, status, summoning or movement messages using typed display arguments; canonical APIs and mechanics retained.",
+    "sha256": "879bd8dbb68c3969847ae88919dad20d926c9552692d9213ef9a94472f3a7804",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-selfench.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "5c14d982b0bb6ea294154458dac9597616632cae91d1805b67acf80112a7e218",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-summoning.cc",
+    "scope": "Spell casting, targeting, damage, status, summoning or movement messages using typed display arguments; canonical APIs and mechanics retained.",
+    "sha256": "87cbd454cad7bc74f6d91394d9918a75641317d00e975e0ac62e0f94b4493184",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-summoning.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "06f395a96d2ab8c34524a79b9f995ebbed964f10e77773449ff972ed1bfb4bc1",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-transloc.cc",
+    "scope": "Spell casting, targeting, damage, status, summoning or movement messages using typed display arguments; canonical APIs and mechanics retained.",
+    "sha256": "27b7cc1609e9ff54bb10f10cadcfb6c58b17121c30396d5b0ff6cb7f6dfcc7d4",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-transloc.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "c90ee3ece10360e90352eb630e004cf11606bc33b565d1bac530d0d3b2135d0a",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-util.cc",
+    "scope": "Spell casting, targeting, damage, status, summoning or movement messages using typed display arguments; canonical APIs and mechanics retained.",
+    "sha256": "fa690a8215f4b38cf1d6fb03b403a176289cafec6a5423078fc27a2644493c82",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-util.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "2258a04be558e6438dab6d0ecd4f0783783183189f49f479681f5b28ffd2fc36",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-vortex.cc",
+    "scope": "Spell casting, targeting, damage, status, summoning or movement messages using typed display arguments; canonical APIs and mechanics retained.",
+    "sha256": "5f21b5f53354371e3dc05f3f3dc3e495bfcf1529379021a03241c1beef8fbcf9",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-zap.cc",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "674a61b6a527702c899f3aa7085a1dab9338856654b16edf9ef5bb677c34192a",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/spl-zap.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "539708dbf0c4acd9abf949b9da35f3aeae6046c6ad48d1d2b39662a1813b642f",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/sprint.cc",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "f566fc8132236c478be65ceccecfe14320ed19096a84819ef54f3ef2591923ed",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/sprint.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "f5badb633483392b2f8a4f6884174b639be80655aef61e7e1578e053ae231a86",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/sqldbm.cc",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "40b5822847a7584e878e6e3b7ae29aa0b7c00c8c9e12e68e7e9a361811ec0d36",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/sqldbm.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "5bd5efa415cd7821d749b19fb18728f8aee729c13a867f156914e18d1f4fc1d6",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/stairs.cc",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "755d9630147731000a19ade6eb597a5cbf87cfd8f6da1c476ceef789417bf311",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/stairs.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "857f8dc9009665e50b1e08cc817497c0e3ec0a8a5483445339f568680670a65e",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/startup.cc",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "77c705c0e554d40d13b8e8e6b2a5fe19a1f42ebb06ff22b4ea0e18bb634d5a96",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/startup.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "ad338dcf864c2b8aaad2ed1156fc958ccc564f9f30a36f3bff4bddb81e3d67ba",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/stash.cc",
+    "scope": "Item/feature/shop/inventory result rows and search UI; canonical search/sort/dedup/dump data retained.",
+    "sha256": "464e2bf4064c0b06b5a29c366461f40ecaeb60701648629c79547fb3177daba5",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/stash.h",
+    "scope": "Ephemeral translated result fields; serialization unchanged.",
+    "sha256": "ad0c8aa3feab2e9590524eb1f584250ff4b0e5f2116f60af5d36dbed9e86be35",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/stat-type.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "426c8445b099d04d4e66130c31c20b84984fe1d81bca2f61d2fec6dd0118dca5",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/state.cc",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "2786105a194f846ac6123bcb4b4609f1d851768ac4c2fd310ec7d6bd3face5e5",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/state.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "6ea495868263928e2af9891d3bce5a729f9eac2eaba5158331fd45ab9c32cb76",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/status.cc",
+    "scope": "Static duration labels and typed numeric/status prose, with canonical fill_status_info and single animation-frame evaluation.",
+    "sha256": "1fa471847cdc0fb34ae0c30c573d9f3377f15a2dcf7eb4d4312960bcccced4e8",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/status.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "cf93ebddbaabd01129e23d67b20b0d020d45dab4682e331984db075eb0644921",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/stepdown.cc",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "43d55b520f13923e5706b869ca999bd02c4498159835bd293ba51a7f6f87154e",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/stepdown.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "10ac96786c8417816e5ae60a087485181df9a3aa3fb9cdc8142143bca423c10b",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/store.cc",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "eeba9220172df8312edb977610f51675138959097c8702d52224f1e0fcf13925",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/store.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "591cfb9925c4e92afc3c08ed675af586c9382ce9ed5b91717918426bde620e69",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/stringutil.cc",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "3204a03a2d3261699de3df64a71ec45ed09cc583fc49490ebb2b1baab272f491",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/stringutil.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "c53e88b859ef31c530e4915abd4fccf4cba7b6dd1404d304a5391296abce823c",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/syscalls.cc",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "ce79e63454f8bcac2a5e4e8fcd8f1ff9cad1000d5eb2949882916282ffd52b59",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/syscalls.h",
+    "scope": "Existing adapters/catalogue retained; declarations, identifiers, technical diagnostics or algorithmic code reviewed.",
+    "sha256": "1b1686ef1c17baeecd8b8dab7ce2093473005522fa3ed76353d5562113dd8f33",
+    "changed": false,
+    "new": false
+  }
+]

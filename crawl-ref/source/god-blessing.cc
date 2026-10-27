@@ -4,10 +4,12 @@
  **/
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "god-blessing.h"
 
 #include "env.h"
+#include "mon-util.h"
 #include "message.h"
 #include "mon-place.h"
 #include "religion.h"
@@ -156,9 +158,14 @@ static void _display_god_blessing(monster* follower, god_type god,
     string whom = you.can_see(*follower) ? follower->name(DESC_THE)
     : "a follower";
 
+    const god_type speaker = you.religion;
+    const ui_arg target = you.can_see(*follower) ? ui_actor_arg(*follower)
+        : ui_text_arg("g.blessing", "a follower");
     simple_god_message(make_stringf(" blesses %s with %s.",
                                     whom.c_str(), blessing.c_str()).c_str(),
-                       god);
+                       god, speaker, ui_render("g.blessing", "%s blesses %s with %s.", "",
+                           {ui_text_arg("display.god", god_name(speaker)), target,
+                            ui_text_arg("g.blessing", blessing)}));
 }
 
 /**

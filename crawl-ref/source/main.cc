@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "m-display.h"
+#include "i18n.h"
 
 #include <algorithm>
 #include <cerrno>
@@ -48,6 +50,7 @@
 #include "corpse.h"
 #include "crash.h"
 #include "database.h"
+#include "misc-display.h"
 #include "dbg-scan.h"
 #include "dbg-util.h"
 #include "delay.h"
@@ -82,6 +85,7 @@
 #include "items.h"
 #include "item-use.h"
 #include "jobs.h"
+#include "newgame.h"
 #include "known-items.h"
 #include "level-state-type.h"
 #include "libutil.h"
@@ -437,7 +441,12 @@ NORETURN static void _launch_game()
 
     if (!crawl_state.game_is_tutorial())
     {
-        msg::stream << "<yellow>Welcome" << (game_start? "" : " back") << ", "
+        const string welcome = character_welcome_display(game_start, you.your_name,
+                                                          you.species, you.char_class);
+        if (!welcome.empty())
+            msg::stream << welcome;
+        else
+            msg::stream << "<yellow>Welcome" << (game_start? "" : " back") << ", "
                     << you.your_name << " the "
                     << species::name(you.species)
                     << " " << get_job_name(you.char_class) << ".</yellow>";
@@ -464,7 +473,8 @@ NORETURN static void _launch_game()
     _god_greeting_message(game_start);
 
     if (!crawl_state.game_is_tutorial())
-        mpr("Press <w>?</w> for a list of commands and other information.");
+        mpr(ui_translate("startup.commands",
+            "Press <w>?</w> for a list of commands and other information."));
 
     _prep_input();
 
@@ -644,6 +654,29 @@ static string _get_equip_str()
     return "";
 }
 
+static ui_arg m_start_items()
+{
+    vector<ui_arg> parts;
+    for (const auto &item : you.inv)
+        if (item.defined()) parts.push_back(ui_item_arg(item));
+    return m_sentence_arg("the following items: %s", {m_join_args(parts)});
+}
+
+static ui_arg m_spell_list(const vector<spell_type> &spells)
+{
+    vector<ui_arg> parts;
+    for (auto spell : spells)
+        if (spell != SPELL_NO_SPELL)
+            parts.push_back(ui_text_arg("display.spell", spell_title(spell)));
+    return m_join_args(parts);
+}
+
+static ui_arg m_known_spells()
+{
+    vector<spell_type> spells(begin(you.spells), end(you.spells));
+    return m_spell_list(spells);
+}
+
 static void _djinn_announce_spells()
 {
     const string equip_str =_get_equip_str();
@@ -654,7 +687,14 @@ static void _djinn_announce_spells()
         return;
 
     const string spacer = spell_str.empty() || equip_str.empty() ? "" : "; and ";
-    mprf("You begin with %s%s%s.", equip_str.c_str(), spacer.c_str(), spell_str.c_str());
+    mprf("%s", ([&]() -> string {
+                const string _m0 = equip_str;
+                const string _m1 = spacer;
+                const string _m2 = spell_str;
+                const string _original = make_stringf("You begin with %s%s%s.", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.000", "You begin with %s%s%s.")) return _original;
+                return ui_render("m.log.000", "You begin with %s%s%s.", _original, {equip_str.empty() ? ui_arg{"", true} : m_start_items(), {_m1.empty() ? "" : "；", true}, spell_str.empty() ? ui_arg{"", true} : m_sentence_arg("the following spells memorised: %s", {m_known_spells()})});
+            })().c_str());
 
     take_note(Note(NOTE_MESSAGE, 0, 0, you.your_name + " set off with " +
                                        equip_str + spacer + spell_str + "."));
@@ -688,8 +728,14 @@ static void _wanderer_note_equipment()
 
     // Announce the starting equipment and spells, because it is otherwise
     // not obvious if the player has any spells.
-    mprf("You begin with %s%s%s.", equip_str.c_str(),
-         spell_str.c_str(), library_str.c_str());
+    mprf("%s", ([&]() -> string {
+                const string _m0 = equip_str;
+                const string _m1 = spell_str;
+                const string _m2 = library_str;
+                const string _original = make_stringf("You begin with %s%s%s.", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.001", "You begin with %s%s%s.")) return _original;
+                return ui_render("m.log.001", "You begin with %s%s%s.", _original, {m_join_args({equip_str.empty() ? ui_arg{"", true} : m_start_items(), spell_str.empty() ? ui_arg{"", true} : m_sentence_arg("the following spells memorised: %s", {m_known_spells()}), library_str.empty() ? ui_arg{"", true} : m_sentence_arg("the following spells available to memorise: %s", {m_spell_list(library)})}, "；"), {"", true}, {"", true}});
+            })().c_str());
 
     const string combined_str = you.your_name + " set off with "
                                 + equip_str + spell_str + library_str + ".";
@@ -718,7 +764,7 @@ static void _announce_goal_message()
 {
     const string type = _welcome_spam_suffix();
     mprf(MSGCH_PLAIN, "<yellow>%s</yellow>",
-         getMiscString("welcome_spam" + type).c_str());
+         getPairedMiscString("welcome_spam" + type).text().c_str());
 }
 
 static void _god_greeting_message(bool game_start)
@@ -746,11 +792,7 @@ static void _god_greeting_message(bool game_start)
 static void _take_starting_note()
 {
     ostringstream notestr;
-    notestr << you.your_name << " the "
-            << species::name(you.species) << " "
-            << get_job_name(you.char_class)
-            << " began the quest for the Orb.";
-    take_note(Note(NOTE_MESSAGE, 0, 0, notestr.str()));
+    take_note(make_starting_note(you.your_name, you.species, you.char_class));
     mark_milestone("begin", "began the quest for the Orb.");
 
     notestr.str("");
@@ -772,11 +814,8 @@ static void _take_starting_note()
     else if (you.char_class == JOB_WANDERER)
         _wanderer_note_equipment();
 
-    notestr << "HP: " << you.hp << "/" << you.hp_max
-            << " MP: " << you.magic_points << "/" << you.max_magic_points;
-
-    take_note(Note(NOTE_XP_LEVEL_CHANGE, you.experience_level, 0,
-                   notestr.str().c_str()));
+    take_note(make_xp_level_note(you.experience_level, you.hp, you.hp_max,
+                                you.magic_points, you.max_magic_points));
 }
 
 static void _startup_hints_mode()
@@ -837,7 +876,7 @@ static bool _cmd_is_repeatable(command_type cmd, bool is_again = false)
     case CMD_READ_MESSAGES:
     case CMD_SEARCH_STASHES:
     case CMD_LOOKUP_HELP:
-        mpr("You can't repeat informational commands.");
+        mpr(ui_translate("m.ui", "You can't repeat informational commands."));
         return false;
 
     // Multi-turn commands
@@ -858,7 +897,7 @@ static bool _cmd_is_repeatable(command_type cmd, bool is_again = false)
     case CMD_REMOVE_ARMOUR:
     case CMD_EQUIP:
     case CMD_WEAR_ARMOUR:
-        mpr("You can't repeat multi-turn commands.");
+        mpr(ui_translate("m.ui", "You can't repeat multi-turn commands."));
         return false;
 
     // Miscellaneous non-repeatable commands.
@@ -883,20 +922,20 @@ static bool _cmd_is_repeatable(command_type cmd, bool is_again = false)
     case CMD_EDIT_PLAYER_TILE:
 #endif
     case CMD_LUA_CONSOLE:
-        mpr("You can't repeat that command.");
+        mpr(ui_translate("m.ui", "You can't repeat that command."));
         return false;
 
     case CMD_DISPLAY_MAP:
-        mpr("You can't repeat map commands.");
+        mpr(ui_translate("m.ui", "You can't repeat map commands."));
         return false;
 
     case CMD_MOUSE_MOVE:
     case CMD_MOUSE_CLICK:
-        mpr("You can't repeat mouse clicks or movements.");
+        mpr(ui_translate("m.ui", "You can't repeat mouse clicks or movements."));
         return false;
 
     case CMD_REPEAT_CMD:
-        mpr("You can't repeat the repeat command!");
+        mpr(ui_translate("m.ui", "You can't repeat the repeat command!"));
         return false;
 
     case CMD_RUN_LEFT:
@@ -907,14 +946,14 @@ static bool _cmd_is_repeatable(command_type cmd, bool is_again = false)
     case CMD_RUN_DOWN_LEFT:
     case CMD_RUN_UP_RIGHT:
     case CMD_RUN_DOWN_RIGHT:
-        mpr("Why would you want to repeat a run command?");
+        mpr(ui_translate("m.ui", "Why would you want to repeat a run command?"));
         return false;
 
     case CMD_PREV_CMD_AGAIN:
         ASSERT(!is_again);
         if (crawl_state.prev_cmd == CMD_NO_CMD)
         {
-            mpr("No previous command to repeat.");
+            mpr(ui_translate("m.ui", "No previous command to repeat."));
             return false;
         }
 
@@ -942,15 +981,14 @@ static bool _cmd_is_repeatable(command_type cmd, bool is_again = false)
     case CMD_MOVE_DOWN_RIGHT:
         if (!i_feel_safe())
         {
-            return yesno("Really repeat movement command while danger "
-                         "is nearby?", false, 'n');
+            return yesno(ui_translate("m.ui", "Really repeat movement command while danger is nearby?"), false, 'n');
         }
 
         return true;
 
     case CMD_NO_CMD:
     case CMD_NO_CMD_DEFAULT:
-        mpr("Unknown command, not repeating.");
+        mpr(ui_translate("m.ui", "Unknown command, not repeating."));
         return false;
 
     default:
@@ -1352,8 +1390,12 @@ static bool _can_take_stairs(dungeon_feature_type ftype, bool down,
     {
         if (crawl_state.doing_prev_cmd_again)
         {
-            mprf("You can't repeat %s actions.",
-                ftype == DNGN_ENTER_SHOP ? "shop" : "altar");
+            mprf("%s", ([&]() -> string {
+                const string _m0 = ftype == DNGN_ENTER_SHOP ? "shop" : "altar";
+                const string _original = make_stringf("You can't repeat %s actions.", _m0.c_str());
+                if (!m_display_active("m.log.003", "You can't repeat %s actions.")) return _original;
+                return ui_render("m.log.003", "You can't repeat %s actions.", _original, {m_clause_arg(_m0)});
+            })().c_str());
             crawl_state.cancel_cmd_all();
         }
         else if (you.berserk())
@@ -1382,7 +1424,7 @@ static bool _can_take_stairs(dungeon_feature_type ftype, bool down,
         return true;
     else if (you.duration[DUR_VAINGLORY])
     {
-        mpr("It simply wouldn't do to leave so soon after announcing yourself.");
+        mpr(ui_translate("m.ui", "It simply wouldn't do to leave so soon after announcing yourself."));
         return false;
     }
 
@@ -1390,8 +1432,12 @@ static bool _can_take_stairs(dungeon_feature_type ftype, bool down,
     if (you.beheld() && !you.confused())
     {
         const monster* beholder = you.get_any_beholder();
-        mprf("You cannot move away from %s!",
-             beholder->name(DESC_THE, true).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = beholder->name(DESC_THE, true);
+                const string _original = make_stringf("You cannot move away from %s!", _m0.c_str());
+                if (!m_display_active("m.log.004", "You cannot move away from %s!")) return _original;
+                return ui_render("m.log.004", "You cannot move away from %s!", _original, {m_actor_arg(*beholder)});
+            })().c_str());
         return false;
     }
 
@@ -1406,18 +1452,18 @@ static bool _can_take_stairs(dungeon_feature_type ftype, bool down,
             && (!down || !known_shaft))
         {
             if (ftype == DNGN_STONE_ARCH)
-                mpr("There is nothing on the other side of the stone arch.");
+                mpr(ui_translate("m.ui", "There is nothing on the other side of the stone arch."));
             else if (ftype == DNGN_ABANDONED_SHOP)
-                mpr("This shop appears to be closed.");
+                mpr(ui_translate("m.ui", "This shop appears to be closed."));
             else if (ftype == DNGN_SEALED_STAIRS_UP
                      || ftype == DNGN_SEALED_STAIRS_DOWN )
             {
-                mpr("A magical barricade bars your way!");
+                mpr(ui_translate("m.ui", "A magical barricade bars your way!"));
             }
             else if (down)
-                mpr("You can't go down here!");
+                mpr(ui_translate("m.ui", "You can't go down here!"));
             else
-                mpr("You can't go up here!");
+                mpr(ui_translate("m.ui", "You can't go up here!"));
             return false;
         }
     }
@@ -1428,14 +1474,14 @@ static bool _can_take_stairs(dungeon_feature_type ftype, bool down,
     case DNGN_EXIT_VAULTS:
         if (runes_in_pack() < 1)
         {
-            mpr("You need a rune to leave the Vaults.");
+            mpr(ui_translate("m.ui", "You need a rune to leave the Vaults."));
             return false;
         }
         break;
     case DNGN_ENTER_ZOT:
         if (runes_in_pack() < ZOT_ENTRY_RUNES && !crawl_state.game_is_descent())
         {
-            mprf("You need at least %d runes to enter the Realm of Zot.",
+            mprf(ui_translate("m.ui", "You need at least %d runes to enter the Realm of Zot."),
                  ZOT_ENTRY_RUNES);
             return false;
         }
@@ -1447,7 +1493,7 @@ static bool _can_take_stairs(dungeon_feature_type ftype, bool down,
     if (player_in_branch(BRANCH_SLIME) && !down && you.depth > 1
             && !you_worship(GOD_JIYVA) && !you.royal_jelly_dead)
     {
-        mpr("The stairs are too slimy for you to climb back up!");
+        mpr(ui_translate("m.ui", "The stairs are too slimy for you to climb back up!"));
         return false;
     }
 
@@ -1471,9 +1517,9 @@ static bool _prompt_unique_pan_rune(dungeon_feature_type ygrd)
     item_def* rune = find_floor_item(OBJ_RUNES);
     if (rune && item_is_unique_rune(*rune))
     {
-        return confirm_prompt("yes", "A rune of Zot still resides in this realm, "
+        return confirm_prompt("yes",ui_translate("m.ui", "A rune of Zot still resides in this realm, "
                                      "and once you leave you can never return. "
-                                     "Are you sure you want to leave?");
+                                     "Are you sure you want to leave?"));
     }
     return true;
 }
@@ -1502,8 +1548,8 @@ static bool _prompt_stairs(dungeon_feature_type ygrd, bool down, bool shaft)
     // Prompt for entering excluded transporters.
     if (ygrd == DNGN_TRANSPORTER && is_exclude_root(you.pos()))
     {
-        mprf(MSGCH_WARN, "This transporter is marked as excluded!");
-        if (!yesno("Enter transporter anyway?", true, 'n', true, false))
+        mprf(MSGCH_WARN, "%s", ui_translate("m.ui", "This transporter is marked as excluded!"));
+        if (!yesno(ui_translate("m.ui", "Enter transporter anyway?"), true, 'n', true, false))
         {
             canned_msg(MSG_OK);
             return false;
@@ -1520,7 +1566,7 @@ static bool _prompt_stairs(dungeon_feature_type ygrd, bool down, bool shaft)
     {
         // "unsafe", as often you bail at single-digit hp and a wasted turn to
         // an overeager prompt cancellation might be nasty.
-        if (!yesno("Are you sure you want to leave this ziggurat?", false, 'n'))
+        if (!yesno(ui_translate("m.ui", "Are you sure you want to leave this ziggurat?"), false, 'n'))
         {
             canned_msg(MSG_OK);
             return false;
@@ -1531,7 +1577,7 @@ static bool _prompt_stairs(dungeon_feature_type ygrd, bool down, bool shaft)
     if (ygrd == DNGN_EXIT_TROVE
         && you.depth == brdepth[BRANCH_TROVE])
     {
-        if (!yesno("Are you sure you want to leave this trove?", false, 'n'))
+        if (!yesno(ui_translate("m.ui", "Are you sure you want to leave this trove?"), false, 'n'))
         {
             canned_msg(MSG_OK);
             return false;
@@ -1543,7 +1589,7 @@ static bool _prompt_stairs(dungeon_feature_type ygrd, bool down, bool shaft)
         && you.depth == brdepth[BRANCH_ZIGGURAT]
         && find_floor_item(OBJ_MISCELLANY, MISC_ZIGGURAT))
     {
-        if (!yesno("Really leave the ziggurat figurine behind?", false, 'n'))
+        if (!yesno(ui_translate("m.ui", "Really leave the ziggurat figurine behind?"), false, 'n'))
         {
             canned_msg(MSG_OK);
             return false;
@@ -1561,7 +1607,7 @@ static bool _prompt_stairs(dungeon_feature_type ygrd, bool down, bool shaft)
         && you.depth == brdepth[BRANCH_ZOT]
         && you.chapter == CHAPTER_ANGERED_PANDEMONIUM)
     {
-        if (!yesno("Really leave the Orb behind?", false, 'n'))
+        if (!yesno(ui_translate("m.ui", "Really leave the Orb behind?"), false, 'n'))
         {
             canned_msg(MSG_OK);
             return false;
@@ -1575,9 +1621,12 @@ static bool _prompt_stairs(dungeon_feature_type ygrd, bool down, bool shaft)
                                      branches[root_branch].longname,
                                      crawl_state.game_is_tutorial() ? "" :
                                      " This will make you lose the game!");
+        prompt = ui_render("m.ui", "Are you sure you want to leave %s?%s", prompt,
+            {ui_text_arg("b.branch.name", branches[root_branch].longname),
+             crawl_state.game_is_tutorial() ? ui_arg{"", true} : m_clause_arg(" This will make you lose the game!")});
         if (!yesno(prompt.c_str(), false, 'n'))
         {
-            mpr("Alright, then stay!");
+            mpr(ui_translate("m.ui", "Alright, then stay!"));
             return false;
         }
     }
@@ -1592,7 +1641,7 @@ static bool _prompt_stairs(dungeon_feature_type ygrd, bool down, bool shaft)
     {
         if (feat_is_escape_hatch(ygrd))
         {
-            if (!yesno("Really go through this one-way escape hatch?", true, 'n'))
+            if (!yesno(ui_translate("m.ui", "Really go through this one-way escape hatch?"), true, 'n'))
             {
                 canned_msg(MSG_OK);
                 return false;
@@ -1601,7 +1650,7 @@ static bool _prompt_stairs(dungeon_feature_type ygrd, bool down, bool shaft)
 
         if (down && shaft) // voluntary shaft usage
         {
-            if (!yesno("Really dive through this shaft in the floor?", true, 'n'))
+            if (!yesno(ui_translate("m.ui", "Really dive through this shaft in the floor?"), true, 'n'))
             {
                 canned_msg(MSG_OK);
                 return false;
@@ -1611,9 +1660,9 @@ static bool _prompt_stairs(dungeon_feature_type ygrd, bool down, bool shaft)
 
     if (down && ygrd == DNGN_ENTER_VAULTS && !runes_in_pack())
     {
-        if (!confirm_prompt("yes", "You cannot leave the Vaults without holding a Rune of "
+        if (!confirm_prompt("yes",ui_translate("m.ui", "You cannot leave the Vaults without holding a Rune of "
                                    "Zot, and the runes within are jealously guarded."
-                                   " Continue?"))
+                                   " Continue?")))
         {
             canned_msg(MSG_OK);
             return false;
@@ -1624,8 +1673,7 @@ static bool _prompt_stairs(dungeon_feature_type ygrd, bool down, bool shaft)
     if (down && player_in_branch(BRANCH_SLIME) && you.depth == 1
         && !you.royal_jelly_dead && !you_worship(GOD_JIYVA))
     {
-        if (!yesno("You will be unable to climb back up again until you either destroy or join "
-                   "the power ruling this place. Continue?", true, 'n'))
+        if (!yesno(ui_translate("m.ui", "You will be unable to climb back up again until you either destroy or join the power ruling this place. Continue?"), true, 'n'))
         {
             canned_msg(MSG_OK);
             return false;
@@ -1644,7 +1692,7 @@ static void _take_transporter()
 
     if (dest == INVALID_COORD || !you.is_habitable(dest))
     {
-        mpr("The transporter is blocked on the other side!");
+        mpr(ui_translate("m.ui", "The transporter is blocked on the other side!"));
         return;
     }
 
@@ -1657,7 +1705,7 @@ static void _take_transporter()
         // monsters. -gammafunk
         if (!mon->find_home_near_place(dest))
         {
-            mpr("The transporter is blocked by a creature on the other side!");
+            mpr(ui_translate("m.ui", "The transporter is blocked by a creature on the other side!"));
             return;
         }
         // Trigger any traps thatmight be at the displaced monster's destination.
@@ -1677,7 +1725,7 @@ static void _take_transporter()
             li->update_transporter(old_pos, you.pos());
             explored_tracked_feature(DNGN_TRANSPORTER);
         }
-        mpr("You enter the transporter and appear at another place.");
+        mpr(ui_translate("m.ui", "You enter the transporter and appear at another place."));
         you.finalise_movement();
     }
 }
@@ -1738,21 +1786,25 @@ static void _take_stairs(bool down)
 
 static void _experience_check()
 {
-    mprf("You are a level %d %s %s.",
-         you.experience_level,
-         species::name(you.species).c_str(),
-         get_job_name(you.char_class));
+    mprf("%s", ([&]() -> string {
+                const auto _m0 = you.experience_level;
+                const string _m1 = species::name(you.species);
+                const string _m2 = get_job_name(you.char_class);
+                const string _original = make_stringf("You are a level %d %s %s.", _m0, _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.005", "You are a level %s %s %s.")) return _original;
+                return ui_render("m.log.005", "You are a level %s %s %s.", _original, {ui_literal_arg(to_string(_m0)), ui_text_arg("display.creation", species::name(you.species)), ui_text_arg("display.creation", get_job_name(you.char_class))});
+            })().c_str());
     int perc = get_exp_progress();
 
     if (you.experience_level < you.get_max_xl())
     {
-        mprf("You are %d%% of the way to level %d.", perc,
+        mprf(ui_translate("m.ui", "You are %d%% of the way to level %d."), perc,
               you.experience_level + 1);
     }
     else
     {
-        mprf("I'm sorry, level %d is as high as you can go.", you.get_max_xl());
-        mpr("With the way you've been playing, I'm surprised you got this far.");
+        mprf(ui_translate("m.ui", "I'm sorry, level %d is as high as you can go."), you.get_max_xl());
+        mpr(ui_translate("m.ui", "With the way you've been playing, I'm surprised you got this far."));
     }
 
     if (you.has_mutation(MUT_MULTILIVED))
@@ -1770,27 +1822,28 @@ static void _experience_check()
              / (exp_needed(xl + 1) - exp_needed(xl));
         perc = (nl - xl) * 100 - perc;
         you.lives < 2 ?
-             mprf("You'll get an extra life in %d.%02d levels' worth of XP.", perc / 100, perc % 100) :
-             mprf("If you died right now, you'd get an extra life in %d.%02d levels' worth of XP.",
+             mprf(ui_translate("m.ui", "You'll get an extra life in %d.%02d levels' worth of XP."), perc / 100, perc % 100) :
+             mprf(ui_translate("m.ui", "If you died right now, you'd get an extra life in %d.%02d levels' worth of XP."),
              perc / 100 , perc % 100);
     }
 
     handle_real_time();
-    msg::stream << "Play time: " << make_time_string(you.real_time())
-                << " (" << you.num_turns << " turns)."
-                << endl;
+    msg::stream << m_play_time_display(make_time_string(you.real_time()),
+                                      you.num_turns) << endl;
 
     if (!crawl_state.game_is_sprint())
     {
         if (zot_immune())
-            msg::stream << "You are forever immune to Zot's power.";
+            msg::stream << ui_translate("m.ui", "You are forever immune to Zot's power.");
         else if (player_in_branch(BRANCH_ABYSS))
-            msg::stream << "You have unlimited time to explore this branch.";
+            msg::stream << ui_translate("m.ui", "You have unlimited time to explore this branch.");
         else
         {
-            msg::stream << "Zot will find you in " << turns_until_zot()
-                        << " turns if you stay in this branch and explore no"
-                        << " new floors.";
+            const int turns = turns_until_zot();
+            const string original = "Zot will find you in " + std::to_string(turns)
+                + " turns if you stay in this branch and explore no new floors.";
+            msg::stream << ui_render("m.ui", "Zot will find you in %s turns if you stay in this branch and explore no new floors.",
+                                     original, {{std::to_string(turns), true}});
         }
         msg::stream << endl << gem_status();
     }
@@ -1812,7 +1865,7 @@ static void _do_rest()
     }
 #endif
 
-    if (should_fear_zot() && !yesno("Really rest while Zot is near?", false, 'n'))
+    if (should_fear_zot() && !yesno(ui_translate("m.ui", "Really rest while Zot is near?"), false, 'n'))
     {
         canned_msg(MSG_OK);
         return;
@@ -1822,12 +1875,12 @@ static void _do_rest()
     {
         if (you.is_sufficiently_rested(true) && ancestor_full_hp())
         {
-            mpr("You start waiting.");
+            mpr(ui_translate("m.ui", "You start waiting."));
             _start_running(RDIR_REST, RMODE_WAIT_DURATION);
             return;
         }
         else
-            mpr("You start resting.");
+            mpr(ui_translate("m.ui", "You start resting."));
     }
     // intentional fallthrough for else case! Messaging is handled in
     // _start_running, update the corresponding conditional there if you
@@ -1844,8 +1897,7 @@ static void _do_display_map()
 #ifdef USE_TILE_LOCAL
     // Since there's no actual overview map, but the functionality
     // exists, give a message to explain what's going on.
-    mpr("Move the cursor to view the level map, or type <w>?</w> for "
-        "a list of commands.");
+    mpr(ui_translate("m.ui", "Move the cursor to view the level map, or type <w>?</w> for a list of commands."));
     flush_prev_message();
 #endif
 
@@ -1853,7 +1905,7 @@ static void _do_display_map()
     const bool travel = show_map(pos, true, true);
 
 #ifdef USE_TILE_LOCAL
-    mpr("Returning to the game...");
+    mpr(ui_translate("m.ui", "Returning to the game..."));
 #endif
     if (travel)
         start_translevel_travel(pos);
@@ -1874,10 +1926,14 @@ static void _do_cycle_quiver(int dir)
         // the menu. This messaging still excludes stuff that requires
         // force-quivering, e.g. zigfigs
         const bool others = !valid && quiver::anything_to_quiver();
-        mprf("No %squiver actions available for cycling.%s",
-            valid ? "other " : "",
-            others ? " Use [<white>Q</white>] to select from all actions."
-                   : "");
+        mprf("%s", ([&]() -> string {
+                const string _m0 = valid ? "other " : "";
+                const string _m1 = others ? " Use [<white>Q</white>] to select from all actions."
+                   : "";
+                const string _original = make_stringf("No %squiver actions available for cycling.%s", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.006", "No %squiver actions available for cycling.%s")) return _original;
+                return ui_render("m.log.006", "No %squiver actions available for cycling.%s", _original, {m_clause_arg(_m0), m_clause_arg(_m1)});
+            })().c_str());
     }
 }
 
@@ -1885,10 +1941,22 @@ static void _do_list_gold()
 {
     if (shopping_list.empty())
     {
-        mprf("You have %d gold piece%s.", you.gold, you.gold != 1 ? "s" : "");
+        mprf("%s", ([&]() -> string {
+                const auto _m0 = you.gold;
+                const string _m1 = you.gold != 1 ? "s" : "";
+                const string _original = make_stringf("You have %d gold piece%s.", _m0, _m1.c_str());
+                if (!m_display_active("m.log.007", "You have %s gold piece%s.")) return _original;
+                return ui_render("m.log.007", "You have %s gold piece%s.", _original, {{std::to_string(_m0), true}, {"", true}});
+            })().c_str());
         int vouchers = you.attribute[ATTR_VOUCHER];
         if (vouchers > 0)
-            mprf("You also have %d voucher%s.", vouchers, vouchers > 1 ? "s" : "");
+            mprf("%s", ([&]() -> string {
+                const auto _m0 = vouchers;
+                const string _m1 = vouchers > 1 ? "s" : "";
+                const string _original = make_stringf("You also have %d voucher%s.", _m0, _m1.c_str());
+                if (!m_display_active("m.log.008", "You also have %s voucher%s.")) return _original;
+                return ui_render("m.log.008", "You also have %s voucher%s.", _original, {{std::to_string(_m0), true}, {"", true}});
+            })().c_str());
     }
     else
         shopping_list.display();
@@ -1904,7 +1972,7 @@ static bool _check_recklessness(command_type prev_cmd)
             || prev_cmd == CMD_AUTOFIGHT_NOMOVE
             || prev_cmd == CMD_AUTOFIRE))
     {
-        mprf(MSGCH_DANGER, "You should not fight recklessly!");
+        mprf(MSGCH_DANGER, "%s", ui_translate("m.ui", "You should not fight recklessly!"));
         return true;
     }
     return false;
@@ -1937,7 +2005,7 @@ static void _handle_autofight(command_type cmd, command_type prev_cmd)
         auto a = quiver::get_secondary_action();
         if (!a || !a->is_valid())
         {
-            mpr("Nothing quivered!"); // Can this happen?
+            mpr(ui_translate("m.ui", "Nothing quivered!")); // Can this happen?
             return;
         }
 
@@ -2044,39 +2112,39 @@ public:
     {
         clear();
         add_entry(new CmdMenuEntry("", MEL_SUBTITLE));
-        add_entry(new CmdMenuEntry("Return to game", MEL_ITEM, CK_ESCAPE,
+        add_entry(new CmdMenuEntry(ui_translate("game_menu.return", "Return to game"), MEL_ITEM, CK_ESCAPE,
             CMD_NO_CMD, false));
         items[1]->add_tile(tileidx_command(CMD_GAME_MENU));
         // n.b. CMD_SAVE_GAME_NOW crashes on returning to the main menu if we
         // don't exit out of this popup now, not sure why
         add_entry(new CmdMenuEntry(
             (crawl_should_restart(game_exit::save)
-                            ? "Save and return to main menu"
-                            : "Save and exit"),
+                            ? ui_translate("game_menu.save_menu", "Save and return to main menu")
+                            : ui_translate("game_menu.save_exit", "Save and exit")),
             MEL_ITEM, 'S', CMD_SAVE_GAME_NOW, false));
-        add_entry(new CmdMenuEntry("Generate and view character dump",
+        add_entry(new CmdMenuEntry(ui_translate("game_menu.dump", "Generate and view character dump"),
             MEL_ITEM, '#', CMD_SHOW_CHARACTER_DUMP));
 #ifdef USE_TILE_LOCAL
-        add_entry(new CmdMenuEntry("Edit player tile",
+        add_entry(new CmdMenuEntry(ui_translate("game_menu.tile", "Edit player tile"),
             MEL_ITEM, '-', CMD_EDIT_PLAYER_TILE));
 #endif
-        add_entry(new CmdMenuEntry("Edit macros",
+        add_entry(new CmdMenuEntry(ui_translate("game_menu.macros", "Edit macros"),
             MEL_ITEM, '~', CMD_MACRO_MENU));
-        add_entry(new CmdMenuEntry("Help and manual",
+        add_entry(new CmdMenuEntry(ui_translate("game_menu.help", "Help and manual"),
             MEL_ITEM, '?', CMD_DISPLAY_COMMANDS));
-        add_entry(new CmdMenuEntry("Lookup info",
+        add_entry(new CmdMenuEntry(ui_translate("game_menu.lookup", "Lookup info"),
             MEL_ITEM, '/', CMD_LOOKUP_HELP));
 #ifdef TARGET_OS_MACOSX
-        add_entry(new CmdMenuEntry("Show options file in finder",
+        add_entry(new CmdMenuEntry(ui_translate("m.ui", "Show options file in finder"),
             MEL_ITEM, 'O', CMD_REVEAL_OPTIONS));
 #endif
 #ifdef __ANDROID__
-        add_entry(new CmdMenuEntry("Toggle on-screen keyboard",
+        add_entry(new CmdMenuEntry(ui_translate("m.ui", "Toggle on-screen keyboard"),
             MEL_ITEM, CK_F12, CMD_TOGGLE_KEYBOARD));
 #endif
         add_entry(new CmdMenuEntry("", MEL_SUBTITLE));
         add_entry(new CmdMenuEntry(
-                            "Quit and <lightred>abandon character</lightred>",
+                            ui_translate("m.ui", "Quit and <lightred>abandon character</lightred>"),
             MEL_ITEM, 'Q', CMD_QUIT, false));
     }
 
@@ -2188,13 +2256,23 @@ void process_command(command_type cmd, command_type prev_cmd)
             Options.autopickup_on = 1;
         else
             Options.autopickup_on = 0;
-        mprf("Autopickup is now %s.", Options.autopickup_on > 0 ? "on" : "off");
+        mprf("%s", ([&]() -> string {
+                const string _m0 = Options.autopickup_on > 0 ? "on" : "off";
+                const string _original = make_stringf("Autopickup is now %s.", _m0.c_str());
+                if (!m_display_active("m.log.009", "Autopickup is now %s.")) return _original;
+                return ui_render("m.log.009", "Autopickup is now %s.", _original, {m_clause_arg(_m0)});
+            })().c_str());
         break;
 
 #ifdef USE_SOUND
     case CMD_TOGGLE_SOUND:
         Options.sounds_on = !Options.sounds_on;
-        mprf("Sound effects are now %s.", Options.sounds_on ? "on" : "off");
+        mprf("%s", ([&]() -> string {
+                const string _m0 = Options.sounds_on ? "on" : "off";
+                const string _original = make_stringf("Sound effects are now %s.", _m0.c_str());
+                if (!m_display_active("m.log.010", "Sound effects are now %s.")) return _original;
+                return ui_render("m.log.010", "Sound effects are now %s.", _original, {m_clause_arg(_m0)});
+            })().c_str());
         break;
 #endif
 
@@ -2355,7 +2433,7 @@ void process_command(command_type cmd, command_type prev_cmd)
     case CMD_SHOW_CHARACTER_DUMP:
     case CMD_CHARACTER_DUMP:
         if (!dump_char(you.your_name))
-            mpr("Char dump unsuccessful! Sorry about that.");
+            mpr(ui_translate("m.ui", "Char dump unsuccessful! Sorry about that."));
 #ifdef USE_TILE_WEB
         else
             tiles.send_dump_info("command", you.your_name);
@@ -2444,7 +2522,7 @@ void process_command(command_type cmd, command_type prev_cmd)
               : "Save game and exit?";
         explicit_keymap map;
         map['S'] = 'y';
-        if (yesno(prompt, true, 'n', true, true, false, &map))
+        if (yesno(ui_translate("m.ui", prompt), true, 'n', true, true, false, &map))
             save_game(true);
         else
             canned_msg(MSG_OK);
@@ -2452,7 +2530,7 @@ void process_command(command_type cmd, command_type prev_cmd)
     }
 
     case CMD_SAVE_GAME_NOW:
-        mpr("Saving game... please wait.");
+        mpr(ui_translate("m.ui", "Saving game... please wait."));
         save_game(true);
         break;
 
@@ -2460,11 +2538,13 @@ void process_command(command_type cmd, command_type prev_cmd)
     {
         // TODO: msg whether this will start a new game? not very important
         if (crawl_state.disables[DIS_CONFIRMATIONS]
-            || confirm_prompt("quit", "Are you sure you want to abandon this character%s?",
-                Options.newgame_after_quit ? "" : // hard to predict this case
-                (crawl_should_restart(game_exit::quit)
-                                            ? " and return to the main menu"
-                                            : " and quit the game")))
+            || confirm_prompt("quit", "%s", ([&]() -> string {
+                const string suffix = Options.newgame_after_quit ? "" :
+                    crawl_should_restart(game_exit::quit) ? " and return to the main menu" : " and quit the game";
+                return ui_render("m.ui", "Are you sure you want to abandon this character%s?",
+                    make_stringf("Are you sure you want to abandon this character%s?", suffix.c_str()),
+                    {m_clause_arg(suffix)});
+            })().c_str()))
         {
             ouch(INSTANT_DEATH, KILLED_BY_QUITTING);
         }
@@ -2491,15 +2571,15 @@ void process_command(command_type cmd, command_type prev_cmd)
     default:
         // The backslash in ?\? is there so it doesn't start a trigraph.
         if (crawl_state.game_is_hints())
-            mpr("Unknown command. (For a list of commands type <w>?\?</w>.)");
+            mpr(ui_translate("m.ui", "Unknown command. (For a list of commands type <w>?\\?</w>.)"));
         else // well, not examine, but...
-            mprf(MSGCH_EXAMINE_FILTER, "Unknown command.");
+            mprf(MSGCH_EXAMINE_FILTER, "%s", ui_translate("m.ui", "Unknown command."));
 
         if (feat_is_altar(env.grid(you.pos())))
         {
-            string msg = "Press <w>%</w> or <w>%</w> to pray at altars.";
+            string msg = ui_translate("m.ui", "Press <w>%</w> or <w>%</w> to pray at altars.");
             insert_commands(msg, { CMD_GO_UPSTAIRS, CMD_GO_DOWNSTAIRS });
-            mpr(msg);
+            mpr(ui_translate("m.ui", string(msg).c_str()));
         }
 
         break;
@@ -2535,9 +2615,9 @@ static void _prep_input()
     {
         ASSERT(have_passive(passive_t::detect_portals));
         if (you.seen_portals == 1)
-            mprf(MSGCH_GOD, "You have a vision of a gate.");
+            mprf(MSGCH_GOD, "%s", ui_translate("m.ui", "You have a vision of a gate."));
         else
-            mprf(MSGCH_GOD, "You have a vision of multiple gates.");
+            mprf(MSGCH_GOD, "%s", ui_translate("m.ui", "You have a vision of multiple gates."));
 
         you.seen_portals = 0;
     }
@@ -2572,9 +2652,9 @@ static void _update_golubria_traps(int dur)
             if (trap->ammo_qty <= 0)
             {
                 if (you.see_cell(c))
-                    mpr("Your passage of Golubria closes with a snap!");
+                    mpr(ui_translate("m.ui", "Your passage of Golubria closes with a snap!"));
                 else
-                    mprf(MSGCH_SOUND, "You hear a snapping sound.");
+                    mprf(MSGCH_SOUND, "%s", ui_translate("m.ui", "You hear a snapping sound."));
                 trap->destroy();
                 noisy(spell_effect_noise(SPELL_GOLUBRIAS_PASSAGE), c);
             }
@@ -2665,9 +2745,8 @@ void world_reacts()
         // a gigabyte of bzipped ttyrec.
         // We could extend the counters to 64 bits, but in the light of the
         // above, it's an useless exercise.
-        mpr("Outside, the world ends.");
-        mpr("Sorry, but your quest for the Orb is now rather pointless. "
-            "You quit...");
+        mpr(ui_translate("m.ui", "Outside, the world ends."));
+        mpr(ui_translate("m.ui", "Sorry, but your quest for the Orb is now rather pointless. You quit..."));
         // Please do not give it a custom ktyp or make it cool in any way
         // whatsoever, because players are insane. Usually, not being dragged
         // down by sanity is good, but this is not the case here.
@@ -2859,13 +2938,13 @@ static void _do_berserk_no_combat_penalty()
         switch (you.berserk_penalty)
         {
         case 2:
-            mprf(MSGCH_DURATION, "You feel a strong urge to attack something.");
+            mprf(MSGCH_DURATION, "%s", ui_translate("m.ui", "You feel a strong urge to attack something."));
             break;
         case 4:
-            mprf(MSGCH_DURATION, "You feel your anger nearly subside.");
+            mprf(MSGCH_DURATION, "%s", ui_translate("m.ui", "You feel your anger nearly subside."));
             break;
         case 6:
-            mprf(MSGCH_DURATION, "Your blood rage is quickly leaving you.");
+            mprf(MSGCH_DURATION, "%s", ui_translate("m.ui", "Your blood rage is quickly leaving you."));
             break;
         }
 
@@ -2990,7 +3069,7 @@ static void _do_cmd_repeat()
 
     if (strlen(buf) == 0)
     {
-        mpr("You must enter the number of times for the command to repeat.");
+        mpr(ui_translate("m.ui", "You must enter the number of times for the command to repeat."));
         _cancel_cmd_repeat();
         return;
     }
@@ -3008,7 +3087,7 @@ static void _do_cmd_repeat()
     c_input_reset(true);
     if (ch == ' ' || ch == CK_ENTER)
     {
-        mprf(MSGCH_PROMPT, "Enter command to be repeated: ");
+        mprf(MSGCH_PROMPT, "%s", ui_translate("m.ui", "Enter command to be repeated: "));
         // Enable the cursor to read input.
         cursor_control con(true);
 
@@ -3084,7 +3163,7 @@ static void _do_prev_cmd_again()
 {
     if (is_processing_macro())
     {
-        mpr("Can't re-do previous command from within a macro.");
+        mpr(ui_translate("m.ui", "Can't re-do previous command from within a macro."));
         flush_input_buffer(FLUSH_ABORT_MACRO);
         crawl_state.cancel_cmd_again();
         crawl_state.cancel_cmd_repeat();

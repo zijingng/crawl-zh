@@ -4,6 +4,7 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "religion.h"
 
@@ -53,6 +54,7 @@
 #include "message.h"
 #include "mon-death.h"
 #include "mon-gear.h" // give_shield
+#include "mon-info.h"
 #include "mon-pick.h"
 #include "mon-place.h"
 #include "mon-tentacle.h"
@@ -497,10 +499,18 @@ void god_power::display(bool gaining, const char* fmt) const
     if (str[0] == '\0')
         return;
 
+    god_speaks(you.religion, display_text(gaining, fmt).c_str());
+}
+
+string god_power::display_text(bool gaining, const char *fmt) const
+{
+    const char *str = gaining ? gain : loss;
+    if (!*str)
+        return "";
     if (isupper(str[0]))
-        god_speaks(you.religion, str);
-    else
-        god_speaks(you.religion, make_stringf(fmt, str).c_str());
+        return ui_translate("r.power", str);
+    return ui_render("r.power.wrapper", fmt, make_stringf(fmt, str),
+                     {ui_text_arg("d.god.power", str)});
 }
 
 static void _place_delayed_monsters();
@@ -691,7 +701,9 @@ void dec_penance(god_type god, int val)
             simple_god_message(
                 make_stringf(" seems mollified%s.",
                              dead_jiyva ? ", and vanishes" : "").c_str(),
-                false, god);
+                false, god, ui_render("r.log", "%s seems mollified%s.",
+                    "",
+                    {ui_text_arg("display.god", god_name(god)), dead_jiyva ? ui_text_arg("r.clause", ", and vanishes") : ui_literal_arg("")}));
 
             if (dead_jiyva)
                 add_daction(DACT_JIYVA_DEAD);
@@ -709,17 +721,17 @@ void dec_penance(god_type god, int val)
             // TSO's halo is once more available.
             if (!had_halo && have_passive(passive_t::halo))
             {
-                mprf(MSGCH_GOD, "Your divine halo returns!");
+                mprf(MSGCH_GOD, "%s", ui_translate("r.ui", "Your divine halo returns!"));
                 invalidate_agrid(true);
             }
             if (!had_umbra && have_passive(passive_t::umbra))
             {
-                mprf(MSGCH_GOD, "Your aura of darkness returns!");
+                mprf(MSGCH_GOD, "%s", ui_translate("r.ui", "Your aura of darkness returns!"));
                 invalidate_agrid(true);
             }
             if (have_passive(passive_t::sinv))
             {
-                mprf(MSGCH_GOD, "Your vision regains its divine sight.");
+                mprf(MSGCH_GOD, "%s", ui_translate("r.ui", "Your vision regains its divine sight."));
                 autotoggle_autopickup(false);
             }
             if (have_passive(passive_t::stat_boost))
@@ -731,7 +743,7 @@ void dec_penance(god_type god, int val)
             }
             if (have_passive(passive_t::storm_shield))
             {
-                mprf(MSGCH_GOD, "A storm instantly forms around you!");
+                mprf(MSGCH_GOD, "%s", ui_translate("r.ui", "A storm instantly forms around you!"));
                 you.redraw_armour_class = true; // also handles shields
             }
             // When you've worked through all your penance, you get
@@ -755,7 +767,7 @@ void dec_penance(god_type god, int val)
         else if (god == GOD_HEPLIAKLQANA)
         {
             calc_hp(); // frailty ends
-            mprf(MSGCH_GOD, god, "Your full life essence returns.");
+            mprf(MSGCH_GOD, god, "%s", ui_translate("r.ui", "Your full life essence returns."));
         }
     }
     else
@@ -797,7 +809,7 @@ static bool _need_water_walking()
 
 static void _grant_temporary_waterwalk()
 {
-    mpr("Your water-walking will last only until you reach solid ground.");
+    mpr(ui_translate("r.ui", "Your water-walking will last only until you reach solid ground."));
     you.props[TEMP_WATERWALK_KEY] = true;
 }
 
@@ -882,12 +894,12 @@ static void _inc_penance(god_type god, int val)
 
         if (had_halo && !have_passive(passive_t::halo))
         {
-            mprf(MSGCH_GOD, god, "Your divine halo fades away.");
+            mprf(MSGCH_GOD, god, "%s", ui_translate("r.ui", "Your divine halo fades away."));
             invalidate_agrid();
         }
         if (had_umbra && !have_passive(passive_t::umbra))
         {
-            mprf(MSGCH_GOD, god, "Your aura of darkness fades away.");
+            mprf(MSGCH_GOD, god, "%s", ui_translate("r.ui", "Your aura of darkness fades away."));
             invalidate_agrid();
         }
 
@@ -947,29 +959,27 @@ static void _inc_penance(god_type god, int val)
             // just gained penance.
             if (you.piety() >= piety_breakpoint(0))
             {
-                mprf(MSGCH_GOD, god, "The storm surrounding you dissipates.");
+                mprf(MSGCH_GOD, god, "%s", ui_translate("r.ui", "The storm surrounding you dissipates."));
                 you.redraw_armour_class = true;
             }
             if (you.duration[DUR_QAZLAL_FIRE_RES])
             {
-                mprf(MSGCH_DURATION, "Your resistance to fire fades away.");
+                mprf(MSGCH_DURATION, "%s", ui_translate("r.ui", "Your resistance to fire fades away."));
                 you.duration[DUR_QAZLAL_FIRE_RES] = 0;
             }
             if (you.duration[DUR_QAZLAL_COLD_RES])
             {
-                mprf(MSGCH_DURATION, "Your resistance to cold fades away.");
+                mprf(MSGCH_DURATION, "%s", ui_translate("r.ui", "Your resistance to cold fades away."));
                 you.duration[DUR_QAZLAL_COLD_RES] = 0;
             }
             if (you.duration[DUR_QAZLAL_ELEC_RES])
             {
-                mprf(MSGCH_DURATION,
-                     "Your resistance to electricity fades away.");
+                mprf(MSGCH_DURATION, "%s", ui_translate("r.ui", "Your resistance to electricity fades away."));
                 you.duration[DUR_QAZLAL_ELEC_RES] = 0;
             }
             if (you.duration[DUR_QAZLAL_AC])
             {
-                mprf(MSGCH_DURATION,
-                     "Your resistance to physical damage fades away.");
+                mprf(MSGCH_DURATION, "%s", ui_translate("r.ui", "Your resistance to physical damage fades away."));
                 you.duration[DUR_QAZLAL_AC] = 0;
                 you.redraw_armour_class = true;
             }
@@ -1163,7 +1173,9 @@ static bool _give_nemelex_gift(bool forced = false)
     if (gift_cards())
     {
         simple_god_message(" deals you some cards!");
-        mprf(MSGCH_GOD, "You now have %s.", deck_summary().c_str());
+        ui_arg cards;
+        const string original = "You now have " + deck_summary(&cards) + ".";
+        mprf(MSGCH_GOD, "%s", ui_render("d.cards", "You now have %s.", original, {cards}).c_str());
     }
     _inc_gift_timeout(5 + random2avg(9, 2));
     you.num_current_gifts[you.religion]++;
@@ -1392,7 +1404,7 @@ static bool _give_trog_oka_gift(bool forced)
                 false, you.pos()) != NON_ITEM;
     if (!success)
     {
-        mpr("...but nothing appears.");
+        mpr(ui_translate("r.ui", "...but nothing appears."));
         return false;
     }
     switch (gift_type)
@@ -1427,7 +1439,7 @@ static bool _gift_jiyva_gift(bool forced)
             return true;
         }
         else
-            mpr("You feel as though nothing has changed.");
+            mpr(ui_translate("r.ui", "You feel as though nothing has changed."));
     }
     return false;
 }
@@ -1619,7 +1631,20 @@ static bool _handle_veh_gift(bool forced)
             you.num_current_gifts[you.religion]++;
             you.num_total_gifts[you.religion]++;
 
-            simple_god_message(prompt.c_str());
+            ui_arg names{"", true};
+            for (spell_type spell : offers)
+            {
+                const ui_arg name = ui_text_arg("display.spell", spell_title(spell));
+                names.available = names.available && name.available;
+                if (!names.text.empty())
+                    names.text += "、";
+                names.text += name.text;
+            }
+            const ui_arg duration = gifts >= NUM_VEHUMET_GIFTS - 1
+                ? ui_text_arg("r.clause", " These spells will remain available as long as you worship Vehumet.")
+                : ui_literal_arg("");
+            simple_god_message(prompt.c_str(), false, you.religion,
+                ui_render("r.log", "%s offers you knowledge of %s.%s", "", {ui_text_arg("display.god", god_name(you.religion)), names, duration}));
             // included in default force_more_message
 
             success = true;
@@ -1792,13 +1817,23 @@ mgen_data hepliaklqana_ancestor_gen_data()
     return mg;
 }
 
-/// Print a message for an ancestor's *something* being gained.
-static void _regain_memory(const monster &ancestor, string memory)
+// Memory notifications deliberately use name(..., true) even off level.
+// Match that knowledge boundary instead of the combat visibility adapter.
+static ui_arg _ancestor_memory_name(const monster &ancestor)
 {
-    mprf("%s regains the memory of %s %s.",
+    ui_arg name;
+    name.available = monster_info(&ancestor, MILEV_NAME).try_display_name(name.text);
+    return name;
+}
+
+/// Print a message for an ancestor's *something* being gained.
+static void _regain_memory(const monster &ancestor, string memory,
+                           const ui_arg &display_memory)
+{
+    const string original = make_stringf("%s regains the memory of %s %s.",
          ancestor.name(DESC_YOUR, true).c_str(),
-         ancestor.pronoun(PRONOUN_POSSESSIVE, true).c_str(),
-         memory.c_str());
+         ancestor.pronoun(PRONOUN_POSSESSIVE, true).c_str(), memory.c_str());
+    mpr(ui_render("r.log", "%s regains the memory of their %s.", original, {_ancestor_memory_name(ancestor), display_memory}));
 }
 
 static string _item_ego_name(object_class_type base_type, int brand)
@@ -1830,7 +1865,7 @@ static void _regain_item_memory(const monster &ancestor,
     const string base_name = item_base_name(base_type, sub_type);
     if (!brand)
     {
-        _regain_memory(ancestor, base_name);
+        _regain_memory(ancestor, base_name, ui_text_arg("display.item", base_name));
         return;
     }
 
@@ -1839,7 +1874,13 @@ static void _regain_item_memory(const monster &ancestor,
         = make_stringf("%s of %s",
                        item_base_name(base_type, sub_type).c_str(),
                        ego_name.c_str());
-    _regain_memory(ancestor, item_name);
+    const ui_arg base = ui_text_arg("display.item", base_name);
+    const ui_arg ego = ui_text_arg("r.brand", ego_name);
+    ui_translation_group group({{"r.memory.item", "brand %s on %s"}});
+    const ui_arg display_item{
+        ui_render("r.memory.item", "brand %s on %s", item_name, {ego, base}),
+        group.available() && base.available && ego.available};
+    _regain_memory(ancestor, item_name, display_item);
 }
 
 /**
@@ -1876,9 +1917,10 @@ void upgrade_hepliaklqana_ancestor(bool quiet_force)
 
     if (!quiet_force)
     {
-        mprf("%s remembers more of %s old skill.",
+        const string original = make_stringf("%s remembers more of %s old skill.",
              ancestor->name(DESC_YOUR, true).c_str(),
              ancestor->pronoun(PRONOUN_POSSESSIVE, true).c_str());
+        mpr(ui_render("r.log", "%s remembers more of their old skill.", original, {_ancestor_memory_name(*ancestor)}));
     }
 
     set_ancestor_spells(*ancestor, !quiet_force);
@@ -1904,11 +1946,14 @@ void upgrade_hepliaklqana_ancestor(bool quiet_force)
         else if (brand != _hepliaklqana_weapon_brand(ancestor->type, old_hd)
                  && !quiet_force)
         {
-            mprf("%s remembers %s %s %s.",
+            const string original = make_stringf("%s remembers %s %s %s.",
                  ancestor->name(DESC_YOUR, true).c_str(),
                  ancestor->pronoun(PRONOUN_POSSESSIVE, true).c_str(),
                  apostrophise(item_base_name(OBJ_WEAPONS, wpn)).c_str(),
                  brand_type_name(brand, brand != SPWPN_DRAINING));
+            mpr(ui_render("r.log", "%s remembers their %s of %s.",
+                original,
+                {_ancestor_memory_name(*ancestor), ui_text_arg("display.item", item_base_name(OBJ_WEAPONS, wpn)), ui_text_arg("r.brand", brand_type_name(brand, brand != SPWPN_DRAINING))}));
         }
     }
     // but shields can't be lost, and *can* be gained (knight at hd 5)
@@ -2294,11 +2339,9 @@ void dock_piety(int piety_loss, int penance, bool no_lecture)
         if (last_piety_lecture != you.num_turns)
         {
             // output guilt message:
-            mprf("You feel%sguilty.",
-                 (piety_loss == 1) ? " a little " :
-                 (piety_loss <  5) ? " " :
-                 (piety_loss < 10) ? " very "
-                                   : " extremely ");
+            const char *degree = (piety_loss == 1) ? " a little " :
+                 (piety_loss < 5) ? " " : (piety_loss < 10) ? " very " : " extremely ";
+            mpr(ui_render("r.log", "You feel%sguilty.", make_stringf("You feel%sguilty.", degree), {ui_text_arg("r.guilt", degree)}));
         }
 
         last_piety_lecture = you.num_turns;
@@ -2312,8 +2355,9 @@ void dock_piety(int piety_loss, int penance, bool no_lecture)
         if (last_penance_lecture != you.num_turns && !no_lecture)
         {
             god_speaks(you.religion,
-                       you.religion == GOD_JIYVA ? "Furious gurgling surrounds you!"
-                       : "\"You will pay for your transgression, mortal!\"");
+                       ui_translate("r.ui", you.religion == GOD_JIYVA
+                           ? "Furious gurgling surrounds you!"
+                           : "\"You will pay for your transgression, mortal!\""));
             last_penance_lecture = you.num_turns;
         }
 
@@ -2386,7 +2430,10 @@ static void _handle_piety_gain(int old_piety)
                 delayed_monster(mg);
                 simple_god_message(make_stringf(" forms a fragment of your life essence"
                                                 " into the memory of your ancestor, %s!",
-                                                mg.mname.c_str()).c_str());
+                                                mg.mname.c_str()).c_str(), false, you.religion,
+                    ui_render("r.log", "%s forms a fragment of your life essence into the memory of your ancestor, %s!",
+                        "",
+                        {ui_text_arg("display.god", god_name(you.religion)), ui_literal_arg(mg.mname)}));
             }
 
             for (const auto& power : get_god_powers(you.religion))
@@ -2405,9 +2452,9 @@ static void _handle_piety_gain(int old_piety)
                 }
             }
             if (rank == rank_for_passive(passive_t::halo))
-                mprf(MSGCH_GOD, "A divine halo surrounds you!");
+                mprf(MSGCH_GOD, "%s", ui_translate("r.ui", "A divine halo surrounds you!"));
             if (rank == rank_for_passive(passive_t::umbra))
-                mprf(MSGCH_GOD, "You are shrouded in an aura of darkness!");
+                mprf(MSGCH_GOD, "%s", ui_translate("r.ui", "You are shrouded in an aura of darkness!"));
             if (rank == rank_for_passive(passive_t::jelly_regen))
             {
                 simple_god_message(" begins accelerating your health and magic "
@@ -2445,8 +2492,7 @@ static void _handle_piety_gain(int old_piety)
             if (you_worship(GOD_HEPLIAKLQANA)
                 && rank == 2 && !you.props.exists(HEPLIAKLQANA_ALLY_TYPE_KEY))
             {
-            god_speaks(you.religion,
-                        "You may now remember your ancestor's life.");
+            god_speaks(you.religion, ui_translate("r.ui", "You may now remember your ancestor's life."));
             }
             // Qualify for an immediate apostle challenge upon hitting 3* the first time
             if (you_worship(GOD_BEOGH)
@@ -2833,7 +2879,7 @@ static void _ash_uncurse()
             continue;
         if (!uncursed)
         {
-            mprf(MSGCH_GOD, GOD_ASHENZARI, "Your curses shatter.");
+            mprf(MSGCH_GOD, GOD_ASHENZARI, "%s", ui_translate("r.ui", "Your curses shatter."));
             uncursed = true;
         }
         unequip_item(entry.get_item());
@@ -2921,7 +2967,7 @@ void excommunication(bool voluntary, god_type new_god)
     you.wield_change = true;
     quiver::set_needs_redraw();
 
-    mpr("You have lost your religion!");
+    mpr(ui_translate("r.ui", "You have lost your religion!"));
     // included in default force_more_message
 
     if (old_god == GOD_BEOGH)
@@ -2945,12 +2991,12 @@ void excommunication(bool voluntary, god_type new_god)
 
     if (had_halo)
     {
-        mprf(MSGCH_GOD, old_god, "Your divine halo fades away.");
+        mprf(MSGCH_GOD, old_god, "%s", ui_translate("r.ui", "Your divine halo fades away."));
         invalidate_agrid(true);
     }
     if (had_umbra)
     {
-        mprf(MSGCH_GOD, old_god, "Your aura of darkness fades away.");
+        mprf(MSGCH_GOD, old_god, "%s", ui_translate("r.ui", "Your aura of darkness fades away."));
         invalidate_agrid(true);
     }
     // You might have lost water walking at a bad time...
@@ -2966,7 +3012,7 @@ void excommunication(bool voluntary, god_type new_god)
     switch (old_god)
     {
     case GOD_KIKUBAAQUDGHA:
-        mprf(MSGCH_GOD, old_god, "You sense decay."); // in the state of Denmark
+        mprf(MSGCH_GOD, old_god, "%s", ui_translate("r.ui", "You sense decay.")); // in the state of Denmark
         add_daction(DACT_ROT_CORPSES);
         break;
 
@@ -3004,7 +3050,7 @@ void excommunication(bool voluntary, god_type new_god)
 
     case GOD_BEOGH:
         simple_god_message(" voice booms out: Traitor to your kin!", true, old_god);
-        mprf(MSGCH_MONSTER_ENCHANT, "All of your followers decide to abandon you.");
+        mprf(MSGCH_MONSTER_ENCHANT, "%s", ui_translate("r.ui", "All of your followers decide to abandon you."));
 
         add_daction(DACT_ALLY_BEOGH);
         remove_all_companions(GOD_BEOGH);
@@ -3031,8 +3077,9 @@ void excommunication(bool voluntary, god_type new_god)
 
     case GOD_NEMELEX_XOBEH:
         reset_cards();
-        mprf(MSGCH_GOD, old_god, "Your access to %s's decks is revoked.",
-             god_name(old_god).c_str());
+        mprf(MSGCH_GOD, old_god, "%s", ui_render("r.log", "Your access to %s's decks is revoked.",
+            make_stringf("Your access to %s's decks is revoked.", god_name(old_god).c_str()),
+            {ui_text_arg("display.god", god_name(old_god))}).c_str());
         break;
 
     case GOD_SHINING_ONE:
@@ -3065,7 +3112,7 @@ void excommunication(bool voluntary, god_type new_god)
 
         if (query_daction_counter(DACT_ALLY_SLIME))
         {
-            mprf(MSGCH_MONSTER_ENCHANT, "All of your fellow slimes turn on you.");
+            mprf(MSGCH_MONSTER_ENCHANT, "%s", ui_translate("r.ui", "All of your fellow slimes turn on you."));
             add_daction(DACT_ALLY_SLIME);
         }
 
@@ -3075,7 +3122,7 @@ void excommunication(bool voluntary, god_type new_god)
     case GOD_FEDHAS:
         if (query_daction_counter(DACT_ALLY_PLANT))
         {
-            mprf(MSGCH_MONSTER_ENCHANT, "The plants of the dungeon turn on you.");
+            mprf(MSGCH_MONSTER_ENCHANT, "%s", ui_translate("r.ui", "The plants of the dungeon turn on you."));
             add_daction(DACT_ALLY_PLANT);
         }
         break;
@@ -3092,8 +3139,7 @@ void excommunication(bool voluntary, god_type new_god)
     case GOD_GOZAG:
         if (you.attribute[ATTR_GOZAG_SHOPS_CURRENT])
         {
-            mprf(MSGCH_GOD, old_god, "Your funded stores close, unable to pay "
-                                     "their debts without your funds.");
+            mprf(MSGCH_GOD, old_god, "%s", ui_translate("r.ui", "Your funded stores close, unable to pay their debts without your funds."));
             you.attribute[ATTR_GOZAG_SHOPS_CURRENT] = 0;
         }
         you.duration[DUR_GOZAG_GOLD_AURA] = 0;
@@ -3109,29 +3155,27 @@ void excommunication(bool voluntary, god_type new_god)
     case GOD_QAZLAL:
         if (old_piety >= piety_breakpoint(0))
         {
-            mprf(MSGCH_GOD, old_god, "Your storm instantly dissipates.");
+            mprf(MSGCH_GOD, old_god, "%s", ui_translate("r.ui", "Your storm instantly dissipates."));
             you.redraw_armour_class = true;
         }
         if (you.duration[DUR_QAZLAL_FIRE_RES])
         {
-            mprf(MSGCH_DURATION, "Your resistance to fire fades away.");
+            mprf(MSGCH_DURATION, "%s", ui_translate("r.ui", "Your resistance to fire fades away."));
             you.duration[DUR_QAZLAL_FIRE_RES] = 0;
         }
         if (you.duration[DUR_QAZLAL_COLD_RES])
         {
-            mprf(MSGCH_DURATION, "Your resistance to cold fades away.");
+            mprf(MSGCH_DURATION, "%s", ui_translate("r.ui", "Your resistance to cold fades away."));
             you.duration[DUR_QAZLAL_COLD_RES] = 0;
         }
         if (you.duration[DUR_QAZLAL_ELEC_RES])
         {
-            mprf(MSGCH_DURATION,
-                 "Your resistance to electricity fades away.");
+            mprf(MSGCH_DURATION, "%s", ui_translate("r.ui", "Your resistance to electricity fades away."));
             you.duration[DUR_QAZLAL_ELEC_RES] = 0;
         }
         if (you.duration[DUR_QAZLAL_AC])
         {
-            mprf(MSGCH_DURATION,
-                 "Your resistance to physical damage fades away.");
+            mprf(MSGCH_DURATION, "%s", ui_translate("r.ui", "Your resistance to physical damage fades away."));
             you.duration[DUR_QAZLAL_AC] = 0;
             you.redraw_armour_class = true;
         }
@@ -3178,13 +3222,13 @@ void excommunication(bool voluntary, god_type new_god)
         if (you.duration[DUR_FIERY_ARMOUR])
         {
             you.duration[DUR_FIERY_ARMOUR] = 0;
-            mpr("Your cloak of flame burns out.");
+            mpr(ui_translate("r.ui", "Your cloak of flame burns out."));
             you.redraw_armour_class = true;
         }
         if (you.duration[DUR_RISING_FLAME])
         {
             you.duration[DUR_RISING_FLAME] = 0;
-            mpr("Your rising flame fizzles out.");
+            mpr(ui_translate("r.ui", "Your rising flame fizzles out."));
         }
         break;
 
@@ -3237,7 +3281,7 @@ void nemelex_death_message()
         "<white>Your body glows with a rainbow of weird colours and disappears.</white>",
     };
 
-    mpr((you.backlit() ? glowing_messages : messages)[rank]);
+    mpr(ui_translate("r.ui", (you.backlit() ? glowing_messages : messages)[rank]));
 }
 
 bool god_hates_attacking_friend(god_type god, const monster& fr)
@@ -3350,7 +3394,7 @@ static void _god_welcome_handle_gear()
     if (!you.has_mutation(MUT_FAITH) && ignore_faith_reason().empty()
         && you.wearing_jewellery(AMU_FAITH))
     {
-        mprf(MSGCH_GOD, "Your amulet flashes!");
+        mprf(MSGCH_GOD, "%s", ui_translate("r.ui", "Your amulet flashes!"));
         flash_view_delay(UA_PLAYER, god_colour(you.religion), 300);
     }
 
@@ -3366,9 +3410,9 @@ static void _god_welcome_handle_gear()
     {
         if (god_hates_item(*item))
         {
-            mprf(MSGCH_GOD, "%s warns you to remove %s.",
-                 uppercase_first(god_name(you.religion)).c_str(),
-                 item->name(DESC_YOUR, false, false, false).c_str());
+            mprf(MSGCH_GOD, "%s", ui_render("r.log", "%s warns you to remove %s.",
+                make_stringf("%s warns you to remove %s.", uppercase_first(god_name(you.religion)).c_str(), item->name(DESC_YOUR, false, false, false).c_str()),
+                {ui_text_arg("display.god", god_name(you.religion)), ui_item_arg(*item)}).c_str());
         }
     }
 
@@ -3377,9 +3421,9 @@ static void _god_welcome_handle_gear()
         item_def wpn = you.props[PARAGON_WEAPON_KEY].get_item();
         if (god_hates_item(wpn))
         {
-            mprf(MSGCH_GOD, "%s removes the imprint of %s from your paragon.",
-                 god_name(you.religion).c_str(),
-                 wpn.name(DESC_THE).c_str());
+            mprf(MSGCH_GOD, "%s", ui_render("r.log", "%s removes the imprint of %s from your paragon.",
+                make_stringf("%s removes the imprint of %s from your paragon.", god_name(you.religion).c_str(), wpn.name(DESC_THE).c_str()),
+                {ui_text_arg("display.god", god_name(you.religion)), ui_item_arg(wpn)}).c_str());
             you.props.erase(PARAGON_WEAPON_KEY);
         }
     }
@@ -3504,7 +3548,9 @@ static void _transfer_good_god_piety()
                                                "become a bug"),
                                         god_name(you.religion).c_str()).c_str(),
 
-                           false, old_god);
+                           false, old_god, ui_render("r.log", "%s says: Farewell. Go and %s with %s.",
+                               "",
+                               {ui_text_arg("display.god", god_name(old_god)), ui_text_arg("r.farewell", lookup(farewell_messages, you.religion, "become a bug")), ui_text_arg("display.god", god_name(you.religion))}));
     }
 
     // Give a piety bonus when switching between good gods, or back to the
@@ -3556,7 +3602,8 @@ static void _check_good_god_wrath(god_type old_god)
         const string wrath_message
             = make_stringf(" says: %s!",
                            _good_god_wrath_message(good_god).c_str());
-        simple_god_message(wrath_message.c_str(), false, good_god);
+        simple_god_message(wrath_message.c_str(), false, good_god,
+            ui_render("r.log", "%s says: %s!", "", {ui_text_arg("display.god", god_name(good_god)), ui_text_arg("r.wrath", _good_god_wrath_message(good_god))}));
         set_penance_xp_timeout();
     }
 }
@@ -3653,7 +3700,7 @@ static void _join_gozag()
     if (fee > 0)
     {
         ASSERT(you.gold >= fee);
-        mprf(MSGCH_GOD, "You pay a service fee of %d gold.", fee);
+        mprf(MSGCH_GOD, ui_translate("r.ui", "You pay a service fee of %d gold."), fee);
         you.gold -= fee;
         you.attribute[ATTR_GOZAG_GOLD_USED] += fee;
     }
@@ -3698,7 +3745,7 @@ static void _join_okawaru()
         }
     }
     if (needs_message)
-        mpr("Your summoned allies are dismissed!");
+        mpr(ui_translate("r.ui", "Your summoned allies are dismissed!"));
 }
 
 /// Setup when joining the sacred cult of Ru.
@@ -3739,7 +3786,7 @@ static void _join_zin()
 
     if (you.props.exists(ORCIFICATION_LEVEL_KEY))
     {
-        mprf(MSGCH_GOD, "Zin cleanses your body of Beogh's taint.");
+        mprf(MSGCH_GOD, "%s", ui_translate("r.ui", "Zin cleanses your body of Beogh's taint."));
         you.props.erase(ORCIFICATION_LEVEL_KEY);
     }
 }
@@ -3756,7 +3803,9 @@ static void _join_makhleb()
 {
     // Re-active our Mark, if we gained one, then abandoned and rejoined.
     if (!makhleb_mark_name().empty())
-        mprf("Your %s burns with power once more.", makhleb_mark_name().c_str());
+        mpr(ui_render("r.log", "Your %s burns with power once more.",
+            make_stringf("Your %s burns with power once more.", makhleb_mark_name().c_str()),
+            {ui_text_arg("a.mutation.name", makhleb_mark_name())}));
 
     makhleb_initialize_marks();
 }
@@ -3799,8 +3848,7 @@ static const map<god_type, function<void ()>> on_join = {
     { GOD_BEOGH, update_player_symbol },
     { GOD_CHEIBRIADOS, _join_cheibriados },
     { GOD_FEDHAS, []() {
-        mprf(MSGCH_MONSTER_ENCHANT, "The plants of the dungeon cease their "
-             "hostilities.");
+        mprf(MSGCH_MONSTER_ENCHANT, "%s", ui_translate("r.ui", "The plants of the dungeon cease their hostilities."));
         if (env.forest_awoken_until)
             for (monster_iterator mi; mi; ++mi)
                 mi->del_ench(ENCH_AWAKEN_FOREST);
@@ -3830,13 +3878,15 @@ static void _print_good_god_brand_changes(item_def *weapon, bool joining_good)
     }
     if (joining_good)
     {
-        mprf("%s goes dull and lifeless in your grasp.",
-             weapon->name(DESC_YOUR).c_str());
+        mpr(ui_render("r.log", "%s goes dull and lifeless in your grasp.",
+            make_stringf("%s goes dull and lifeless in your grasp.", weapon->name(DESC_YOUR).c_str()),
+            {ui_item_arg(*weapon)}));
     }
     else
     {
-        mprf("%s glows horrifically with a foul blackness!",
-             uppercase_first(weapon->name(DESC_YOUR)).c_str());
+        mpr(ui_render("r.log", "%s glows horrifically with a foul blackness!",
+            make_stringf("%s glows horrifically with a foul blackness!", uppercase_first(weapon->name(DESC_YOUR)).c_str()),
+            {ui_item_arg(*weapon)}));
     }
 }
 
@@ -3939,12 +3989,12 @@ void join_religion(god_type which_god)
 void god_pitch(god_type which_god)
 {
     if (which_god == GOD_BEOGH && env.grid(you.pos()) != DNGN_ALTAR_BEOGH)
-        mpr("You bow before the missionary of Beogh.");
+        mpr(ui_translate("r.ui", "You bow before the missionary of Beogh."));
     else
     {
-        mprf("You %s the altar of %s.",
-             get_form()->player_prayer_action().c_str(),
-             god_name(which_god).c_str());
+        mpr(ui_render("r.log", "You pray at the altar of %s by %s.",
+            make_stringf("You %s the altar of %s.", get_form()->player_prayer_action().c_str(), god_name(which_god).c_str()),
+            {ui_text_arg("display.god", god_name(which_god)), ui_text_arg("r.prayer", get_form()->player_prayer_action())}));
     }
     // these are included in default force_more_message
 
@@ -3987,13 +4037,11 @@ void print_god_rejection(god_type which_god)
         const int fee = gozag_service_fee();
         if (you.gold == 0)
         {
-            mprf("The service fee for joining is currently %d gold; you have"
-                 " none.", fee);
+            mprf(ui_translate("r.ui", "The service fee for joining is currently %d gold; you have none."), fee);
         }
         else
         {
-            mprf("The service fee for joining is currently %d gold; you only"
-                 " have %d.", fee, you.gold);
+            mprf(ui_translate("r.ui", "The service fee for joining is currently %d gold; you only have %d."), fee, you.gold);
         }
         return;
     }
@@ -4036,7 +4084,14 @@ god_type choose_god(god_type def_god)
 
     string help = def_god == NUM_GODS ? "by name"
                                       : "default " + god_name(def_god);
-    string prompt = make_stringf("Which god (%s)? ", help.c_str());
+    const string original = make_stringf("Which god (%s)? ", help.c_str());
+    const ui_arg display_help = def_god == NUM_GODS
+        ? ui_text_arg("r.ui", "by name")
+        : ui_arg{ui_render("r.log", "default %s", help, {ui_text_arg("display.god", god_name(def_god))}), false};
+    ui_translation_group default_group({{"r.log", "default %s"}});
+    const bool default_available = def_god != NUM_GODS && default_group.available()
+        && ui_text_arg("display.god", god_name(def_god)).available;
+    string prompt = ui_render("r.log", "Which god (%s)? ", original, {ui_arg{display_help.text, display_help.available || default_available}});
 
     if (msgwin_get_line(prompt, specs, sizeof(specs)) != 0)
         return NUM_GODS; // FIXME: distinguish cancellation from no match
@@ -4989,26 +5044,26 @@ void ostracise_player(int amount)
 {
     if (you.religion == GOD_NO_GOD)
     {
-        mpr("You feel a momentary loss of self-confidence.");
+        mpr(ui_translate("r.ui", "You feel a momentary loss of self-confidence."));
         return;
     }
     else if (you.religion == GOD_GOZAG)
     {
-        mpr("...but the rich have no need for faith.");
+        mpr(ui_translate("r.ui", "...but the rich have no need for faith."));
         return;
     }
     else if (you.religion == GOD_XOM)
     {
-        mpr("...but you know Xom will still be watching.");
+        mpr(ui_translate("r.ui", "...but you know Xom will still be watching."));
         return;
     }
     else if (you.attribute[ATTR_OSTRACISM] == MAX_OSTRACISM)
     {
-        mpr("...but the divine are already as distant as possible.");
+        mpr(ui_translate("r.ui", "...but the divine are already as distant as possible."));
         return;
     }
 
-    mpr("You feel the divine grow more distant.");
+    mpr(ui_translate("r.ui", "You feel the divine grow more distant."));
 
     // Give a bonus to ostracism first gained, so that we quickly skip past the
     // 'invisible' piety above 6 stars.
@@ -5033,7 +5088,7 @@ void player_change_ostracism(int amount)
     {
         _handle_piety_gain(old_piety);
         if (you.attribute[ATTR_OSTRACISM] == 0)
-            mprf(MSGCH_RECOVERY, "You feel the divine notice you fully once more.");
+            mprf(MSGCH_RECOVERY, "%s", ui_translate("r.ui", "You feel the divine notice you fully once more."));
     }
 
     // Redraw piety stars, which may have changed.

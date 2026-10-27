@@ -1,0 +1,1086 @@
+{
+  "glossary_hits": [
+    {
+      "Term": "conjuration",
+      "Translation": "塑能",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Conjurations",
+      "Translation": "塑能系魔法/魔法",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。\n【语境补充 2026-10-21】学派或技能用塑能系魔法。泛指施展的魔法时可用魔法，不把普通复数名词强制改成技能标签。"
+    },
+    {
+      "Term": "conjurer statue",
+      "Translation": "塑能师雕像",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "dungeon",
+      "Translation": "地下城",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "hexer",
+      "Translation": "妖术师",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Hexes",
+      "Translation": "妖术系魔法/妖术强化",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】区分敌对魔法学派与物品诅咒，也与 hexer（妖术师）统一。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。\n【装备语境】学派名称用妖术系魔法；装备的 Hexes 标签表示该学派法术强度增强，用妖术强化。"
+    },
+    {
+      "Term": "Lair",
+      "Translation": "野兽巢穴",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Necromancy",
+      "Translation": "死灵系魔法",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+    },
+    {
+      "Term": "necromantic",
+      "Translation": "死灵的",
+      "Part of Speech": "adj",
+      "Variants": "",
+      "Note": "【0.34.1 修订】形容词指向 Necromancy（死灵系魔法），不泛译巫术。 来源：dat/descript/spells.txt。"
+    },
+    {
+      "Term": "oklob plant summoner",
+      "Translation": "奥克罗布植物召唤师",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "scroll of summoning",
+      "Translation": "召唤卷轴",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Summonings",
+      "Translation": "召唤系魔法",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+    },
+    {
+      "Term": "translocational energy cloud",
+      "Translation": "位移能量云",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Translocations",
+      "Translation": "位移系魔法",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+    },
+    {
+      "Term": "Conjurer",
+      "Translation": "塑能师",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/conjurer.yaml。"
+    },
+    {
+      "Term": "Hexslinger",
+      "Translation": "妖术射手",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/hexslinger.yaml。"
+    },
+    {
+      "Term": "Necromancer",
+      "Translation": "死灵法师",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/necromancer.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Summoner",
+      "Translation": "召唤师",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/summoner.yaml。"
+    },
+    {
+      "Term": "Forgecraft",
+      "Translation": "锻造术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+    },
+    {
+      "Term": "Alchemy",
+      "Translation": "炼金术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+    },
+    {
+      "Term": "Dungeon Sprint",
+      "Translation": "地下城冲刺",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/模式】独立挑战模式；原表 meat/部分怪物名可能来自此模式。 来源：newgame.cc。"
+    },
+    {
+      "Term": "Summon Small Mammal",
+      "Translation": "召唤小型哺乳动物",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Horrible Things",
+      "Translation": "召唤恐怖之物",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Ice Beast",
+      "Translation": "召唤冰兽",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Demon",
+      "Translation": "召唤恶魔",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Greater Demon",
+      "Translation": "召唤高等恶魔",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Dragon",
+      "Translation": "召唤巨龙",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Conjure Ball Lightning",
+      "Translation": "造出球状闪电",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Ufetubus",
+      "Translation": "召唤乌费图布斯",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【怪物与卡牌名称校对】法术名中的实体名称与对应怪物显示名统一。"
+    },
+    {
+      "Term": "Summon Sin Beast",
+      "Translation": "召唤罪兽",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Undead",
+      "Translation": "召唤亡灵",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Drakes",
+      "Translation": "召唤亚龙",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Mushrooms",
+      "Translation": "召唤蘑菇",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Water Elementals",
+      "Translation": "召唤水元素",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Eyeballs",
+      "Translation": "召唤眼球",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Earth Elementals",
+      "Translation": "召唤土元素",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Air Elementals",
+      "Translation": "召唤气元素",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Fire Elementals",
+      "Translation": "召唤火元素",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Mara Summon",
+      "Translation": "玛拉召唤术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Illusion",
+      "Translation": "召唤幻象",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Mortal Champion",
+      "Translation": "召唤凡人勇士",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Holies",
+      "Translation": "召唤神圣生物",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Hydra",
+      "Translation": "召唤海德拉",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Minor Demon",
+      "Translation": "召唤低等恶魔",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Awaken Vines",
+      "Translation": "唤醒藤蔓",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Vermin",
+      "Translation": "召唤害兽",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Forest",
+      "Translation": "召唤森林",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Mana Viper",
+      "Translation": "召唤法力蝰蛇",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【怪物与卡牌名称校对】法术名中的实体名称与对应怪物显示名统一。"
+    },
+    {
+      "Term": "Summon Emperor Scorpions",
+      "Translation": "召唤帝王蝎",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Scarabs",
+      "Translation": "召唤圣甲虫",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Executioners",
+      "Translation": "召唤刽子手",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Fastroot",
+      "Translation": "急生根须",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Grasping Roots",
+      "Translation": "攫握根须",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Tzitzimitl",
+      "Translation": "召唤兹兹米特尔",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Hell Sentinel",
+      "Translation": "召唤地狱哨卫",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【怪物与卡牌名称校对】法术名中的实体名称与对应怪物显示名统一。"
+    },
+    {
+      "Term": "Conjure Living Spells",
+      "Translation": "造出活体法术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Cactus Giant",
+      "Translation": "召唤仙人掌巨人",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Spiders",
+      "Translation": "召唤蜘蛛",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Scorpions",
+      "Translation": "召唤蝎子",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Seismosaurus Egg",
+      "Translation": "召唤震龙蛋",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Rakshasa Summon",
+      "Translation": "罗刹召唤术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Iron Elementals",
+      "Translation": "召唤铁元素",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Butterflies",
+      "Translation": "召唤蝴蝶",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Elemental",
+      "Translation": "召唤元素",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Rakshasa",
+      "Translation": "召唤罗刹",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Twister",
+      "Translation": "召唤龙卷风",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Vampire Summon",
+      "Translation": "吸血鬼召唤术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon swarm",
+      "Translation": "召唤虫群",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Conjure Flame",
+      "Translation": "造出火焰",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Divine Warrior",
+      "Translation": "召唤神圣战士",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+    },
+    {
+      "Term": "Draw Summoning",
+      "Translation": "抽取召唤牌",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+    },
+    {
+      "Term": "Ancestor Life: Hexer",
+      "Translation": "先祖生平：妖术师",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+    },
+    {
+      "Term": "robe of Vines",
+      "Translation": "藤蔓长袍",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+    },
+    {
+      "Term": "the Dungeon",
+      "Translation": "地下城",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Lair of Beasts",
+      "Translation": "野兽巢穴",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Lair（规范缩写 Lair）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "translocational energy",
+      "Translation": "位移能量",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_TLOC_ENERGY；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+    },
+    {
+      "Term": "tengu conjurer",
+      "Translation": "天狗塑能师",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "no conjurations magic",
+      "Translation": "无法使用塑能系魔法",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法使用塑能系魔法。"
+    },
+    {
+      "Term": "no hexes magic",
+      "Translation": "无法使用妖术系魔法",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法使用妖术系魔法。"
+    },
+    {
+      "Term": "no necromancy magic",
+      "Translation": "无法使用死灵系魔法",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法使用死灵系魔法。"
+    },
+    {
+      "Term": "no alchemy magic",
+      "Translation": "无法使用炼金术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法使用炼金术。"
+    },
+    {
+      "Term": "no forgecraft magic",
+      "Translation": "无法使用锻造术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法使用锻造术。"
+    },
+    {
+      "Term": "no summoning magic",
+      "Translation": "无法使用召唤系魔法",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法使用召唤系魔法。"
+    },
+    {
+      "Term": "no translocations magic",
+      "Translation": "无法使用位移系魔法",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无法使用位移系魔法。"
+    },
+    {
+      "Term": "hex mastery",
+      "Translation": "妖术精通",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：妖术精通。"
+    }
+  ],
+  "existing_translation_references": [
+    {
+      "context": "display.skill",
+      "english": "Fighting"
+    },
+    {
+      "context": "display.skill",
+      "english": "Short Blades"
+    },
+    {
+      "context": "display.skill",
+      "english": "Long Blades"
+    },
+    {
+      "context": "display.skill",
+      "english": "Axes"
+    },
+    {
+      "context": "display.skill",
+      "english": "Maces & Flails"
+    },
+    {
+      "context": "display.skill",
+      "english": "Polearms"
+    },
+    {
+      "context": "display.skill",
+      "english": "Staves"
+    },
+    {
+      "context": "display.skill",
+      "english": "Ranged Weapons"
+    },
+    {
+      "context": "display.skill",
+      "english": "Throwing"
+    },
+    {
+      "context": "display.skill",
+      "english": "Armour"
+    },
+    {
+      "context": "display.skill",
+      "english": "Dodging"
+    },
+    {
+      "context": "display.skill",
+      "english": "Stealth"
+    },
+    {
+      "context": "display.skill",
+      "english": "Shields"
+    },
+    {
+      "context": "display.skill",
+      "english": "Unarmed Combat"
+    },
+    {
+      "context": "display.skill",
+      "english": "Spellcasting"
+    },
+    {
+      "context": "display.skill",
+      "english": "Conjurations"
+    },
+    {
+      "context": "display.skill",
+      "english": "Hexes"
+    },
+    {
+      "context": "display.skill",
+      "english": "Summonings"
+    },
+    {
+      "context": "display.skill",
+      "english": "Forgecraft"
+    },
+    {
+      "context": "display.skill",
+      "english": "Necromancy"
+    },
+    {
+      "context": "display.skill",
+      "english": "Translocations"
+    },
+    {
+      "context": "display.skill",
+      "english": "Alchemy"
+    },
+    {
+      "context": "display.skill",
+      "english": "Fire Magic"
+    },
+    {
+      "context": "display.skill",
+      "english": "Ice Magic"
+    },
+    {
+      "context": "display.skill",
+      "english": "Air Magic"
+    },
+    {
+      "context": "display.skill",
+      "english": "Earth Magic"
+    },
+    {
+      "context": "display.skill",
+      "english": "Invocations"
+    },
+    {
+      "context": "display.skill",
+      "english": "Evocations"
+    },
+    {
+      "context": "display.skill",
+      "english": "Shapeshifting"
+    },
+    {
+      "context": "a.actor",
+      "english": "%s %s free of %s!"
+    },
+    {
+      "context": "a.actor",
+      "english": "%s %s its grip on %s."
+    },
+    {
+      "context": "a.actor",
+      "english": "%s constricts %s%s%s"
+    },
+    {
+      "context": "a.actor",
+      "english": "%s is constricted%s%s"
+    },
+    {
+      "context": "a.actor",
+      "english": "%s collides with %s%s"
+    },
+    {
+      "context": "a.actor",
+      "english": "%s slams into %s%s"
+    },
+    {
+      "context": "a.actor",
+      "english": "%s violently stops moving%s"
+    },
+    {
+      "context": "a.actor",
+      "english": "%s is knocked back%s."
+    },
+    {
+      "context": "a.actor",
+      "english": "%s sends you backwards."
+    },
+    {
+      "context": "a.actor",
+      "english": "%s is knocked back by %s."
+    },
+    {
+      "context": "a.actor.state",
+      "english": ", but do no damage."
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Dungeon"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "the Dungeon"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Temple"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "the Ecumenical Temple"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Orcish Mines"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "the Orcish Mines"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Elven Halls"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "the Elven Halls"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Dwarven Hall"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "the Dwarven Hall"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Lair"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "the Lair of Beasts"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Swamp"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "the Swamp"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Shoals"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "the Shoals"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Snake Pit"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "the Snake Pit"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Spider Nest"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "the Spider Nest"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Slime Pits"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "the Pits of Slime"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Vaults"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "the Vaults"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Hall of Blades"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "the Hall of Blades"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Crypt"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "the Crypt"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Tomb"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "the Tomb of the Ancients"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Depths"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "the Depths"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Hell"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "the Vestibule of Hell"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Dis"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "the Iron City of Dis"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Gehenna"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Cocytus"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Tartarus"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Zot"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "the Realm of Zot"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Forest"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "the Enchanted Forest"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Abyss"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "the Abyss"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Pandemonium"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Ziggurat"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "a ziggurat"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Labyrinth"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "a Labyrinth"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Bazaar"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "a bazaar"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Trove"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "a treasure trove"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Sewer"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "a sewer"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Ossuary"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "an ossuary"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Bailey"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "a bailey"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Gauntlet"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "a Gauntlet"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Ice Cave"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "an ice cave"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Volcano"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "a volcano"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Wizlab"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "a wizard's laboratory"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Desolation"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "the Desolation of Salt"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Arena"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "the Arena"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Crucible"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "the Crucible of Flesh"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "Necropolis"
+    },
+    {
+      "context": "b.branch.name",
+      "english": "the Necropolis"
+    },
+    {
+      "context": "log.attack.punctuation",
+      "english": "."
+    },
+    {
+      "context": "log.attack.punctuation",
+      "english": "!"
+    }
+  ],
+  "compact_school_reference": {
+    "Conj": "塑能",
+    "Hex": "妖术",
+    "Fire": "火系",
+    "Ice": "冰系",
+    "Necr": "死灵",
+    "Summ": "召唤",
+    "Frge": "锻造",
+    "Tloc": "位移",
+    "Alch": "炼金",
+    "Erth": "土系",
+    "Air": "气系"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "monsters": 672,
+  "canonical_monster_names": 667,
+  "missing_monster_names": [],
+  "cards": 21,
+  "card_glossary_aliases": 21,
+  "glossary_terms": 2268,
+  "added_terms": 513,
+  "reviewed_changes": 64,
+  "checked": "PO, glossary, generated UI catalogue and changed generated TextDB entries",
+  "glossary_sha256": "32e8fa0c6ef1afbeedab054fdbc40300480be1e77efeaadba578f17ac88775f7"
+}

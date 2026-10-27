@@ -1,0 +1,162 @@
+[
+  {
+    "file": "bane-data.h",
+    "modified": false,
+    "reviewed_catalogue_entries": 30,
+    "rng_call_sequence_unchanged": true,
+    "classification": "display boundary adapted; canonical source data, parser/protocol keys, debug and developer diagnostics retain English"
+  },
+  {
+    "file": "bane-type.h",
+    "modified": false,
+    "reviewed_catalogue_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "classification": "reviewed: enum/declaration/algorithm/generated metadata, no new player prose"
+  },
+  {
+    "file": "beam-type.h",
+    "modified": false,
+    "reviewed_catalogue_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "classification": "reviewed: enum/declaration/algorithm/generated metadata, no new player prose"
+  },
+  {
+    "file": "beam.cc",
+    "modified": true,
+    "reviewed_catalogue_entries": 268,
+    "rng_call_sequence_unchanged": true,
+    "classification": "display boundary adapted; canonical source data, parser/protocol keys, debug and developer diagnostics retain English"
+  },
+  {
+    "file": "beam.h",
+    "modified": false,
+    "reviewed_catalogue_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "classification": "reviewed: enum/declaration/algorithm/generated metadata, no new player prose"
+  },
+  {
+    "file": "beh-type.h",
+    "modified": false,
+    "reviewed_catalogue_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "classification": "reviewed: enum/declaration/algorithm/generated metadata, no new player prose"
+  },
+  {
+    "file": "behold.cc",
+    "modified": true,
+    "reviewed_catalogue_entries": 5,
+    "rng_call_sequence_unchanged": true,
+    "classification": "display boundary adapted; canonical source data, parser/protocol keys, debug and developer diagnostics retain English"
+  },
+  {
+    "file": "bitary.cc",
+    "modified": false,
+    "reviewed_catalogue_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "classification": "reviewed: enum/declaration/algorithm/generated metadata, no new player prose"
+  },
+  {
+    "file": "bitary.h",
+    "modified": false,
+    "reviewed_catalogue_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "classification": "reviewed: enum/declaration/algorithm/generated metadata, no new player prose"
+  },
+  {
+    "file": "bloodspatter.cc",
+    "modified": false,
+    "reviewed_catalogue_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "classification": "reviewed: enum/declaration/algorithm/generated metadata, no new player prose"
+  },
+  {
+    "file": "bloodspatter.h",
+    "modified": false,
+    "reviewed_catalogue_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "classification": "reviewed: enum/declaration/algorithm/generated metadata, no new player prose"
+  },
+  {
+    "file": "book-data.h",
+    "modified": false,
+    "reviewed_catalogue_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "classification": "reviewed: enum/declaration/algorithm/generated metadata, no new player prose"
+  },
+  {
+    "file": "book-type.h",
+    "modified": false,
+    "reviewed_catalogue_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "classification": "reviewed: enum/declaration/algorithm/generated metadata, no new player prose"
+  },
+  {
+    "file": "branch-data-json.cc",
+    "modified": false,
+    "reviewed_catalogue_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "classification": "reviewed: enum/declaration/algorithm/generated metadata, no new player prose"
+  },
+  {
+    "file": "branch-data-json.h",
+    "modified": false,
+    "reviewed_catalogue_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "classification": "reviewed: enum/declaration/algorithm/generated metadata, no new player prose"
+  },
+  {
+    "file": "branch-data.h",
+    "modified": false,
+    "reviewed_catalogue_entries": 100,
+    "rng_call_sequence_unchanged": true,
+    "classification": "display boundary adapted; canonical source data, parser/protocol keys, debug and developer diagnostics retain English"
+  },
+  {
+    "file": "branch-type.h",
+    "modified": false,
+    "reviewed_catalogue_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "classification": "reviewed: enum/declaration/algorithm/generated metadata, no new player prose"
+  },
+  {
+    "file": "branch.cc",
+    "modified": true,
+    "reviewed_catalogue_entries": 3,
+    "rng_call_sequence_unchanged": true,
+    "classification": "display boundary adapted; canonical source data, parser/protocol keys, debug and developer diagnostics retain English"
+  },
+  {
+    "file": "branch.h",
+    "modified": true,
+    "reviewed_catalogue_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "classification": "display boundary adapted; canonical source data, parser/protocol keys, debug and developer diagnostics retain English"
+  },
+  {
+    "file": "build.h",
+    "modified": false,
+    "reviewed_catalogue_entries": 0,
+    "rng_call_sequence_unchanged": true,
+    "classification": "reviewed: enum/declaration/algorithm/generated metadata, no new player prose"
+  },
+  {
+    "file": "webserver/webtiles/bans.py",
+    "modified": false,
+    "classification": "reviewed: server configuration validation or developer test diagnostics; preserve executable identifiers and technical English"
+  },
+  {
+    "file": "test/bounce.lua",
+    "modified": false,
+    "classification": "reviewed: server configuration validation or developer test diagnostics; preserve executable identifiers and technical English"
+  },
+  {
+    "file": "test/bounce2.lua",
+    "modified": false,
+    "classification": "reviewed: server configuration validation or developer test diagnostics; preserve executable identifiers and technical English"
+  },
+  {
+    "file": "test/bstair-gen.lua",
+    "modified": false,
+    "classification": "reviewed: server configuration validation or developer test diagnostics; preserve executable identifiers and technical English"
+  }
+]

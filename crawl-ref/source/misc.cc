@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "m-display.h"
+#include "i18n.h"
 
 #include "misc.h"
 #include "mpr.h"
@@ -38,21 +40,26 @@ void transpose_with_monster(monster* mon_to_swap)
 
     if (you.stasis())
     {
-        mpr("Your stasis prevents you from teleporting.");
+        mpr(ui_translate("m.ui", "Your stasis prevents you from teleporting."));
         return;
     }
 
     // Be nice: no swapping into uninhabitable environments.
     if (!you.is_habitable(newpos) || !mon.is_habitable(you.pos()))
     {
-        mpr("You spin around.");
+        mpr(ui_translate("m.ui", "You spin around."));
         return;
     }
 
     const caught_type mon_caught = mon.caught_by();
     const caught_type you_caught = you.caught_by();
 
-    mprf("You swap places with %s.", mon.name(DESC_THE).c_str());
+    mprf("%s", ([&]() -> string {
+                const string _m0 = mon.name(DESC_THE);
+                const string _original = make_stringf("You swap places with %s.", _m0.c_str());
+                if (!m_display_active("m.log.075", "You swap places with %s.")) return _original;
+                return ui_render("m.log.075", "You swap places with %s.", _original, {m_actor_arg(mon)});
+            })().c_str());
 
     // Must remove nets first (with no drop) so that we don't clone nets during
     // this swap.

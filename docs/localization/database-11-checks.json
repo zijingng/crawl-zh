@@ -1,0 +1,32 @@
+{
+  "reviewed_keys_this_batch": 1,
+  "candidates": 71,
+  "cumulative_reviewed": 65,
+  "source_keys": 65,
+  "generated_keys": 65,
+  "remaining_legacy_keys": [],
+  "unselected_64_entries_content_unchanged": true,
+  "trailing_blank_lines": "normalized by official exporter",
+  "english_source_unchanged": true,
+  "po_consistency": "passed",
+  "weights_references_bracket_order": "passed",
+  "reference_dependencies": 52,
+  "changed_child_cascade_test": "passed",
+  "cascade_rejected_keys": [
+    "_scream_",
+    "_screams_",
+    "_speaking_high_tension_",
+    "_weapon_noises_low-high_tension_",
+    "singing sword high_tension",
+    "singing sword low_tension",
+    "singing sword scream"
+  ],
+  "lua_candidates_still_english": 2,
+  "eel_unexpanded_bracket_candidate_still_english": 1,
+  "native_tests": 151,
+  "native_assertions": 417092,
+  "python_tests": 29,
+  "tiles_build": "passed",
+  "visual_test": "not_run",
+  "executable_sha256": "2292bc38ce00489f88ebffe52a782a7891e324fc0a9d2ad80187f4b7325b7af2"
+}

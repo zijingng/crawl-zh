@@ -1,0 +1,1246 @@
+{
+  "batch": "missile-terms-01",
+  "glossary_before_sha256": "9e60ee9a1e553fe630745f45296700cd386fc81a9ea4f31a880ab8f172e3c910",
+  "queries": [
+    "ammo",
+    "ammunition",
+    "deflect missiles",
+    "magic dart",
+    "missile",
+    "missiles",
+    "portal projectile",
+    "projectile",
+    "projectiles",
+    "repel missiles",
+    "rmsl"
+  ],
+  "hits": [
+    {
+      "Term": "Magic Dart",
+      "Translation": "魔法飞弹",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Deflect Missiles",
+      "Translation": "偏转飞射物",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Portal Projectile",
+      "Translation": "传送飞射物",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "RMsl",
+      "Translation": "偏转飞弹",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+    }
+  ],
+  "changes": [
+    {
+      "file": "ui",
+      "context": "log.beam",
+      "english": "Your projectile teleports!",
+      "before": "你的飞射物传送了！",
+      "after": "你的投射物传送了！"
+    },
+    {
+      "file": "ui",
+      "context": "log.monster",
+      "english": "%s begins deflecting missiles!",
+      "before": "%s开始偏转飞射物！",
+      "after": "%s开始偏转投射物！"
+    },
+    {
+      "file": "ui",
+      "context": "display.spell",
+      "english": "Deflect Missiles",
+      "before": "偏转飞射物",
+      "after": "偏转投射物"
+    },
+    {
+      "file": "ui",
+      "context": "display.spell",
+      "english": "Portal Projectile",
+      "before": "传送飞射物",
+      "after": "传送投射物"
+    },
+    {
+      "file": "ui",
+      "context": "display.spell",
+      "english": "Old Deflect Missiles",
+      "before": "旧版偏转飞射物",
+      "after": "旧版偏转投射物"
+    },
+    {
+      "file": "ui",
+      "context": "help.document",
+      "english": "\nNote: If you are experiencing significant slowdown and lags with the Tiles\nversion of Dungeon Crawl Stone Soup, scroll down to the end of this file.\n\n\nTiles specific commands\n-----------------------\n\nThere are several different ways to interact with your environment, both\nby typing the command keys, and by using the mouse.\n\nOf notable interest is the clickable tab area to the right of the screen\nthat allows easy access to e.g. inventory, spells, or common commands.\n\nDepending on your screen resolution, one of more of these panels may be\nopen at any time, though you can temporarily exchange the inventory view\nwith another type of tiled panel by clicking on the tab icons.\n\nYou can customize the priority of the control panels by modifying the\ntile_layout_priority option in init.txt in the settings directory.\n\n\nMovement\n--------\n\nYou can move by using the arrow keys, the vi-keys, or the number pad.\n(For the latter try both Numlock on and off.)\n\nNumpad:   7 8 9     vi-keys:   y k u\n           \\|/                  \\|/\n          4-.-6                h-.-l\n           /|\\                  /|\\\n          1 2 3                b j n\n\n\nTo run several steps into the same direction, press Shift along with these\nkeys.\n\nYou can also move by clicking somewhere on the map or minimap with your\nmouse. If the square is reachable from your current position and there are\nno hostile monsters in sight, you will automatically travel there. If there\nare hostile monsters in sight, you will only take a single step at a time.\n\nFor automatic exploration, you can either type the 'o' command or you can\nclick on the corresponding tile in the command panel to the right of your\nscreen. Like mouseclick travel, these will refuse to work if there are\nhostile monsters in sight.\n\n\nGetting information\n-------------------\n\nDoing a right-click with your mouse on any feature, monster or item on the\nmain map or in the tiled control panels will display the description of\nsaid feature, monster or item on a separate screen.\n\nA simple mouseover will usually display the same description, or as much of\nit as can fit, in the message area.\n\nSimilarly, letting your mouse rest for a while on a feature, monster or\nitem will usually display a \"tool tip\" of applicable commands.\n\n\nAttacking monsters\n------------------\n\nYou can attack a monster in melee by moving into it with the movement keys\nor by clicking on it with your mouse.\n\nFor ranged attacks (including spells and wands), mouse over the monsters\nand wait for the tool tip to appear. Alternatively, you can cast spells by\nclicking on the spell tiles in the spell panel, or fire ammunition or\nevoke wands by clicking on them in the inventory panel.\n\nIn the command panel, you'll also find a tile described as \"Autofight\",\nwhich, if clicked, will attack an adjacent monster in melee, or if there is\nno adjacent monster, take one step in the direction of the closest monster.\n\n\nItem usage\n----------\n\nThe easiest way to use items is by clicking on them in the inventory panel.\nThe mouseover tool tip will tell you what a mouseclick will do, and also\nthe corresponding command key to execute the same action.\nAs an alternative, you can also use an item by selecting it in the inventory\n('i' command) and then pressing the appropriate key in the action prompt.\n\nTo pick up items on the ground, you can either click on them one by one in\nthe floor section of the inventory panel, or you can click on the player\ntile and pull up a menu of selectable items instead. In the latter case,\n'Enter' will confirm your selection and start pick up.\n\nDropping items works similarly, either by clicking on single items in the\ninventory panel, or by typing the 'd' command and then selecting items\nfrom a menu.\n\n\nInteracting with the dungeon\n----------------------------\n\nAgain, doing a mouseover on features (such as staircases or doors) in the\nmain map will tell you how to interact with them.\n\n\nCharacter status\n----------------\n\nDoing a right-click on the player tile will display a character overview\nscreen listing equipment, resistances and stats.\n\nMore detailed screens on specific aspects of your characters can be\naccessed by clicking on the corresponding tiles in the command panel.\n\n\nCharacter appearance\n--------------------\n\nYou can change your character's appearance with the Doll Editor, accessed with\nthe '-' command. Use 'm' to switch between modes: Equip, where your appearance\ndynamically updates based on the items you equip; Default, a sprite based on\nyour character’s race and background; and Custom, which allows you to fully\ncustomize each part of your character's look. Use the number keys to switch\nbetween custom doll slots and the arrow keys to modify the different parts of\neach custom sprite. Save your changes and selection with 'Ctrl-S'.\n\n\n\nIf you are experiencing significant slowdown and lags...\n--------------------------------------------------------\n\nCrawl renders its graphics using OpenGL and SDL. However, it needs hardware\nacceleration to not run slowly. If you are on Windows, make sure to update\nyour graphics card driver. If you are on Linux, be sure that you are using\nDRI.\n\nIt has been tested successfully with cards as old as the i865. Unfortunately,\nit has been known to be slow on the i810 and there is little to be done in\nthat case but to run the console version instead or switch to a different\nmachine.\n\nYou can try tweaking a number of options in init.txt in the settings\ndirectory to see whether performance improves:\n\ntravel_delay = -1\n    This setting suppresses redrawing until travelling is finished or\n    interrupted.\n\ntile_update_rate = 1000\n    By default, the screen gets redrawn at least every 1000 milliseconds,\n    more often if you take actions that change the display. You could try\n    cranking up this value, though this may lead to updating taking too long.\n\ntile_runrest_rate = 17\n    While running and resting the screen is redrawn every 17 milliseconds.\n    If Crawl is slow while running or resting, increase this number.\n\ntile_tooltip_ms = 0\n    Deactivating the tooltips means there's less stuff to draw every time.\n\nclear_map = false\n    Not having to redraw remembered monsters outside your line of sight\n    takes some load off the redrawing routines.\n\ntile_window_width   = 1024\ntile_window_height  = 768\n    The larger the map area the more cells there are to redraw each turn.\n    If you've got a large display showing way more than the necessary 17x17\n    grids of the map, you could try specifying a lower resolution.",
+      "before": "\n注意：若图形版 Dungeon Crawl Stone Soup 明显变慢或卡顿，请阅读文末的性能说明。\n\n\n\n图形版专用操作\n--------------\n\n你可以用键盘命令或鼠标与周围环境交互。\n\n屏幕右侧可点击的标签页能方便地打开物品栏、法术或常用命令面板。\n\n根据屏幕分辨率，可能同时显示一个或多个面板。点击标签图标，可以暂时把物品栏面板\n切换为其他图形面板。\n\n修改 settings 目录中 init.txt 的 tile_layout_priority 选项，可以调整控制面板\n的优先顺序。\n\n\n移动\n----\n\n可用方向键、vi 按键或数字小键盘移动。小键盘可尝试开启或关闭 Numlock。\n\n小键盘：  7 8 9     vi 按键： y k u\n           \\|/                \\|/\n          4-.-6              h-.-l\n           /|\\                /|\\\n          1 2 3              b j n\n\n按住 Shift 再按方向键，可以向同一方向连续行走。\n\n也可以用鼠标点击地图或小地图上的位置。如果该位置可以到达，且视野内没有敌对怪\n物，就会自动前往。如果视野内有敌对怪物，则每次只会迈出一步。\n\n按 o 或点击右侧命令面板中的自动探索图标，即可自动探索。与点击地图旅行一样，\n视野内有敌对怪物时不能使用。\n\n\n获取信息\n--------\n\n右键点击主地图或控制面板上的地形设施、怪物或物品，会打开其说明界面。\n\n将鼠标移到相应位置，通常也会在消息区显示相同说明，或显示消息区容得下的部分。\n\n将鼠标在地形设施、怪物或物品上停留片刻，通常会出现列出适用命令的提示框。\n\n\n攻击怪物\n--------\n\n使用方向键朝怪物移动，或用鼠标点击怪物，即可进行近战攻击。\n\n进行远程攻击（包括法术和魔杖）时，可把鼠标移到怪物上并等待提示框出现。也可以\n点击法术面板的法术图标施法，或点击物品栏面板中的弹药、魔杖进行发射或发动。\n\n命令面板中还有名为 Autofight（自动战斗）的图标。点击它会近战攻击相邻怪物；若\n没有相邻怪物，则向最近的怪物迈出一步。\n\n\n使用物品\n--------\n\n最方便的方法是在物品栏面板中点击物品。悬停提示会说明点击的效果，以及执行相同动\n作的键盘命令。\n\n也可以按 i 打开物品栏，选择物品，再按操作提示中相应的按键。\n\n拾取地上物品时，可以在物品栏面板的地面区域逐个点击，也可以点击角色图标，打开物\n品选择菜单。后者按 Enter 确认选择并开始拾取。\n\n丢弃物品的方式类似：在物品栏面板中点击单件物品，或按 d 后在菜单中选择物品。\n\n\n与地下城交互\n----------\n\n将鼠标移到主地图上的楼梯、门等地形设施，同样会显示如何与其交互。\n\n\n角色状态\n--------\n\n右键点击角色图标，可以打开角色概览，查看装备、抗性和属性数值。\n\n点击命令面板中的相应图标，可以查看角色各方面的详细信息。\n\n\n角色外观\n--------\n\n按 - 打开角色外观编辑器。按 m 切换模式：Equip（装备）会根据穿戴物品动态更新\n外观；Default（默认）使用由种族和背景决定的图像；Custom（自定义）允许逐个调\n整外观部件。\n\n用数字键切换自定义外观槽位，用方向键修改各个部件。按 Ctrl-S 保存修改和当前选\n择。\n\n\n若游戏明显变慢或卡顿……\n--------------------------\n\nCrawl 使用 OpenGL 和 SDL 绘图，需要硬件加速才能流畅运行。Windows 用户应更新\n显卡驱动；Linux 用户应确认正在使用 DRI。\n\n游戏曾在 i865 等较老显卡上成功运行；但已知 i810 的运行速度较慢。这种情况下，\n通常只能改用字符版或换一台机器。\n\n可尝试调整 settings 目录中的 init.txt，观察下列选项能否改善性能：\n\ntravel_delay = -1\n    旅行结束或中断之前不重绘画面。\n\ntile_update_rate = 1000\n    默认至少每 1000 毫秒重绘一次；执行改变画面的动作时会更频繁。\n    可以尝试增大此值，但可能导致画面更新不够及时。\n\ntile_runrest_rate = 17\n    连续行走或休息时，每 17 毫秒重绘一次。\n    若行走或休息时卡顿，可增大此值。\n\ntile_tooltip_ms = 0\n    关闭悬停提示，减少每次需要绘制的内容。\n\nclear_map = false\n    不重绘视野外记忆中的怪物，可减少重绘负担。\n\ntile_window_width   = 1024\ntile_window_height  = 768\n    地图区域越大，每回合需要重绘的格子越多。\n    若大屏显示的地图远大于所需的 17x17 格，可以尝试降低分辨率。",
+      "after": "\n注意：若图形版 Dungeon Crawl Stone Soup 明显变慢或卡顿，请阅读文末的性能说明。\n\n\n\n图形版专用操作\n--------------\n\n你可以用键盘命令或鼠标与周围环境交互。\n\n屏幕右侧可点击的标签页能方便地打开物品栏、法术或常用命令面板。\n\n根据屏幕分辨率，可能同时显示一个或多个面板。点击标签图标，可以暂时把物品栏面板\n切换为其他图形面板。\n\n修改 settings 目录中 init.txt 的 tile_layout_priority 选项，可以调整控制面板\n的优先顺序。\n\n\n移动\n----\n\n可用方向键、vi 按键或数字小键盘移动。小键盘可尝试开启或关闭 Numlock。\n\n小键盘：  7 8 9     vi 按键： y k u\n           \\|/                \\|/\n          4-.-6              h-.-l\n           /|\\                /|\\\n          1 2 3              b j n\n\n按住 Shift 再按方向键，可以向同一方向连续行走。\n\n也可以用鼠标点击地图或小地图上的位置。如果该位置可以到达，且视野内没有敌对怪\n物，就会自动前往。如果视野内有敌对怪物，则每次只会迈出一步。\n\n按 o 或点击右侧命令面板中的自动探索图标，即可自动探索。与点击地图旅行一样，\n视野内有敌对怪物时不能使用。\n\n\n获取信息\n--------\n\n右键点击主地图或控制面板上的地形设施、怪物或物品，会打开其说明界面。\n\n将鼠标移到相应位置，通常也会在消息区显示相同说明，或显示消息区容得下的部分。\n\n将鼠标在地形设施、怪物或物品上停留片刻，通常会出现列出适用命令的提示框。\n\n\n攻击怪物\n--------\n\n使用方向键朝怪物移动，或用鼠标点击怪物，即可进行近战攻击。\n\n进行远程攻击（包括法术和魔杖）时，可把鼠标移到怪物上并等待提示框出现。也可以\n点击法术面板的法术图标施法，或点击物品栏面板中的投掷物、魔杖进行发射或发动。\n\n命令面板中还有名为 Autofight（自动战斗）的图标。点击它会近战攻击相邻怪物；若\n没有相邻怪物，则向最近的怪物迈出一步。\n\n\n使用物品\n--------\n\n最方便的方法是在物品栏面板中点击物品。悬停提示会说明点击的效果，以及执行相同动\n作的键盘命令。\n\n也可以按 i 打开物品栏，选择物品，再按操作提示中相应的按键。\n\n拾取地上物品时，可以在物品栏面板的地面区域逐个点击，也可以点击角色图标，打开物\n品选择菜单。后者按 Enter 确认选择并开始拾取。\n\n丢弃物品的方式类似：在物品栏面板中点击单件物品，或按 d 后在菜单中选择物品。\n\n\n与地下城交互\n----------\n\n将鼠标移到主地图上的楼梯、门等地形设施，同样会显示如何与其交互。\n\n\n角色状态\n--------\n\n右键点击角色图标，可以打开角色概览，查看装备、抗性和属性数值。\n\n点击命令面板中的相应图标，可以查看角色各方面的详细信息。\n\n\n角色外观\n--------\n\n按 - 打开角色外观编辑器。按 m 切换模式：Equip（装备）会根据穿戴物品动态更新\n外观；Default（默认）使用由种族和背景决定的图像；Custom（自定义）允许逐个调\n整外观部件。\n\n用数字键切换自定义外观槽位，用方向键修改各个部件。按 Ctrl-S 保存修改和当前选\n择。\n\n\n若游戏明显变慢或卡顿……\n--------------------------\n\nCrawl 使用 OpenGL 和 SDL 绘图，需要硬件加速才能流畅运行。Windows 用户应更新\n显卡驱动；Linux 用户应确认正在使用 DRI。\n\n游戏曾在 i865 等较老显卡上成功运行；但已知 i810 的运行速度较慢。这种情况下，\n通常只能改用字符版或换一台机器。\n\n可尝试调整 settings 目录中的 init.txt，观察下列选项能否改善性能：\n\ntravel_delay = -1\n    旅行结束或中断之前不重绘画面。\n\ntile_update_rate = 1000\n    默认至少每 1000 毫秒重绘一次；执行改变画面的动作时会更频繁。\n    可以尝试增大此值，但可能导致画面更新不够及时。\n\ntile_runrest_rate = 17\n    连续行走或休息时，每 17 毫秒重绘一次。\n    若行走或休息时卡顿，可增大此值。\n\ntile_tooltip_ms = 0\n    关闭悬停提示，减少每次需要绘制的内容。\n\nclear_map = false\n    不重绘视野外记忆中的怪物，可减少重绘负担。\n\ntile_window_width   = 1024\ntile_window_height  = 768\n    地图区域越大，每回合需要重绘的格子越多。\n    若大屏显示的地图远大于所需的 17x17 格，可以尝试降低分辨率。"
+    },
+    {
+      "file": "ui",
+      "context": "help.interface",
+      "english": "<brown>(</brown> : missiles (<w>%</w>uiver, <w>%</w>ire, <w>%</w>/<w>%</w> cycle)",
+      "before": "<brown>(</brown> : 弹药（<w>%</w> 备选、<w>%</w> 发射，\n    <w>%</w>/<w>%</w> 切换）",
+      "after": "<brown>(</brown> : 投掷物（<w>%</w> 备选、<w>%</w> 发射，\n    <w>%</w>/<w>%</w> 切换）"
+    },
+    {
+      "file": "ui",
+      "context": "help.interface",
+      "english": "<w>%</w> to throw/fire missiles",
+      "before": "<w>%</w> 投掷／发射弹药",
+      "after": "<w>%</w> 投掷／发射投掷物"
+    },
+    {
+      "file": "ui",
+      "context": "help.interface",
+      "english": "<console><brown>(</brown> : </console>missiles (<w>%</w>uiver, <w>%</w>ire, <w>%</w>/<w>%</w> cycle)",
+      "before": "<console><brown>(</brown> : </console>弹药（<w>%</w> 备选、<w>%</w> 发射，\n    <w>%</w>/<w>%</w> 切换）",
+      "after": "<console><brown>(</brown> : </console>投掷物（<w>%</w> 备选、<w>%</w> 发射，\n    <w>%</w>/<w>%</w> 切换）"
+    },
+    {
+      "file": "ui",
+      "context": "help.document",
+      "english": "Crawl Quick-Start Guide\n=======================\n\nCopyright 1999 Linley Henzell\n\n\nSo, you want to start playing Crawl straight away without bothering with the\nmanual? Read this, the guide to starting Crawl with a minimum of preparation.\n\nI suggest printing it out and following its instructions while playing your\nfirst few games (you can also press `?` twice while playing for a list of\ncommands). You should also try the tutorial mode; it only takes a few\nminutes.\n\nWhen you get some more time, you can read `crawl_manual.txt` in the docs/\ndirectory for more detailed information.\n\nINTRODUCTION TO CRAWL\n---------------------\n\nCrawl is a large and very random game of subterranean exploration in a fantasy\nworld of magic and frequent violence. Your quest is to travel into the depths\nof the Dungeon (which is different each time you play) and retrieve the Orb of\nZot.\n\nCrawl is an RPG of the `rogue-like` type, one of the descendants of Rogue. Its\ngraphics are simple but highly informative, designed to be understood at a\nglance, and control is exercised largely through one-keystroke commands.\n\nSTARTING OUT\n------------\n\nAfter starting the program you will be greeted with a message asking for your\nname. Don't spend too much time over this, as your first character will **not**\nlast very long (sorry, but it's true).\n\nNext you are given menus of species and backgrounds from which to choose.\nA mountain dwarf, minotaur or troll Fighter is a good bet. Elves are quite\nfragile, humans are pretty average at everything, and the weirder species are\nmostly too tricky for beginning players. Finally, you may be given a choice of\nweapons. I suggest an axe (axes are fun).\n\nNow you are in the game. The game screen has three parts:\n\n - the Map takes up the upper left part of the screen. In its very centre is\n   the `@` sign (or player doll tile) which represents You. The bright parts of\n   the Map are the parts you can see, while places which you have visited\n   before but cannot currently see are darkened.\n - the Message box is the large part of the screen below the map. It describes\n   events as they happen and asks you questions from time to time.\n - the Stats area (to the right of the Map) contains various indicators of\n   your health and abilities.\n\nEXPLORING\n---------\n\nTry walking around, using either the numeric keypad (try numlock off and on) or\nthe Rogue (`hjklyubn`) keys. Pressing `o` will activate auto-explore, which will\nmove until an enemy is seen, or some other notable event (e.g. finding a set of\nstairs) occurs.\n\nIf you want to know what a certain character on the screen represents, you can\nuse the `x` (examine) command to get a short description, and then `v` to get\nmore information. You use the `O`, `C` commands to open or close doors, and the\n`<` (up) and `>` (down) commands to climb staircases.\n\nThe Dungeon gets more dangerous (but more interesting!) as you go down. If you\nget lost you can access a map of the whole level you are on with the `X`\ncommand, which uses the whole screen.\n\nITEMS\n-----\n\nAfter walking around for a while, you will no doubt come across some items\nlying around (you may come across some monsters as well; for help in dealing\nwith them skip to the Monsters section). You can pick up items with the `g`\n(get) or `,` commands and drop them again with `d` (drop), and the `i`\n(inventory) command shows you what you're carrying. While examining your\ninventory, press any item's key to see more information about it, and to list\navailable commands.\n\nThere are several different types of items:\n\n - **Weapons**, represented by the `)` sign. Wield them with the `w` (wield)\n   command.\n - **Armour** (`[`). Wear it, or take it off, with the `W` (Wear) command.\n   Heavier armours give more protection, but may hamper your ability to dodge,\n   cast spells, or fire ranged weapons.\n - **Ammunition** (which has the `(` sign). Throw it with `f` and `F` (fire).\n - **Wands** (`/`), **Scrolls** (`?`) and **Potions** (`!`) can be very\n   valuable, but have limited uses (scrolls and potions can only be used once\n   each, wands contain only a certain number of charges). Wands are e`V`oked,\n   scrolls are `r`ead and potions are `q`uaffed. Unfortunately, you won't at\n   first know what a scroll or potion does; it will only be described by its\n   physical appearance. But once you have used, for example, a potion of curing,\n   you will in the future recognise all potions of curing.\n - **Rings** (`=`) and **Amulets** (`\"`) provide various mostly-helpful effects.\n   They are put on with `P` (put on) and can be removed with `R`.\n - **Money** (`$`) can be used to buy stuff in shops.\n\nThere are a few other types of items, but you will discover these as you play.\n\nMONSTERS\n--------\n\nYou will also run into monsters (most of which are represented by letters of\nthe alphabet). You can attack a monster by trying to move into the square it\nis occupying. Pressing Tab will automatically move toward & attack nearby\nmonsters.\n\nWhen you are wounded you lose hit points (displayed near the top of the stats\nlist); these return gradually over time through the natural process of\nhealing. If you lose all of your hp you die.\n\nTo survive, you will need to develop a few basic tactics:\n\n - Rest between encounters. The `s`, `.`, delete or keypad-5 commands make you\n   rest for one turn, while pressing `5` or Shift-and-keypad-5 make you rest\n   for a longer time (you will stop resting when fully healed).\n - Never fight more than one monster if you can help it. Always back into a\n   corridor so that they must fight you one-on-one.\n - Consumable items like scrolls and potions won't do you any good when you're\n   dead, and most are more effective when used at the start of a tough fight\n   than when you're near death. Try identifying some ahead of time by 'wasting'\n   one from a stack while in a safe spot.\n - Remember to use projectiles before engaging monsters in close combat.\n - Learn when to run away from things you can't handle - this is important!\n   It is often wise to skip a dangerous level. But don't overdo this.\n\nDEATH\n-----\n\nBefore long, you'll probably end up dead.\n\nDeath in Crawl is permanent; you cannot just reload a saved game and start\nagain where you left off. The `S` (save) command exists only to let you leave\na game part-way through and come back to it later. Quitting (`Ctrl-Q`) lets\nyou abandon a character if you can't even be bothered to help them escape alive.\n\nWell, that's it for the quick-start guide. This should help you through your\nfirst few games, but Crawl is extremely (some would say excessively) complex\nand cannot be adequately described in so short a document. So when you feel\nready to start playing with magic, skills, and religions, browse the manual.\n\nHappy Crawling!",
+      "before": "Crawl 快速入门\n================\n\nCopyright 1999 Linley Henzell\n\n\n不想先读手册，想直接开始玩 Crawl？这份指南会帮你以最少的准备开始冒险。\n\n建议把它打印出来，在最初几局游戏中边玩边参考。游戏中连续按两次 `?`，\n也能查看命令列表。还应试试教程模式，只需几分钟。\n\n有空时，可以阅读 docs/ 目录中的 `crawl_manual.txt`，了解更详细的信息。\n\nCRAWL 简介\n------------\n\nCrawl 是一款规模庞大、随机性很强的地下探索游戏。这个奇幻世界充满魔法，\n也时常充斥暴力。你的任务是深入每局都不相同的地下城，取回佐特宝珠。\n\nCrawl 是 `rogue-like` 类型的角色扮演游戏，是 Rogue 的后继者之一。\n画面虽然简单，却信息丰富，力求一目了然；操作大多只需按一个键。\n\n开始游戏\n----------\n\n启动程序后，会先询问你的名字。不必花太多时间，因为你的第一个角色\n**不会**活得很久（抱歉，但这是事实）。\n\n接下来从菜单选择种族和背景。山地矮人、牛头人或巨魔战士都不错。\n精灵比较脆弱，人类各方面都很平均，更奇异的种族则大多不适合新手。\n最后，可能还需要选择武器。推荐斧头，因为斧头很好玩。\n\n现在你进入游戏了。游戏画面分为三个部分：\n\n - 地图位于屏幕左上方。正中央的 `@`（或角色图标）代表你。\n   明亮部分是当前能看到的区域；曾去过、现在看不到的地方则会变暗。\n - 消息区位于地图下方，占据较大空间。它会叙述事件，并不时询问你。\n - 状态区位于地图右侧，显示生命、能力等各种指标。\n\n探索\n------\n\n试着用数字键盘（可尝试开关 Numlock），或 Rogue 的 `hjklyubn` 键移动。\n按 `o` 会启动自动探索，持续移动，直到看见敌人或发生其他值得注意的事件，\n例如发现楼梯。\n\n想知道屏幕上某个字符代表什么，可以按 `x` 查看简述，再按 `v` 阅读详情。\n用 `O`、`C` 开门或关门，用 `<` 上楼、`>` 下楼。\n\n地下城越深，越危险，也越有趣！迷路时可按 `X` 打开占满屏幕的楼层地图。\n\n物品\n------\n\n走一会儿，你一定会发现地上的物品，也可能遇见怪物；应对怪物的方法见后文。\n用 `g` 或 `,` 拾取，用 `d` 丢弃，用 `i` 查看携带物品。\n在物品栏中按物品对应的键，可以查看详情和可用操作。\n\n物品主要分为以下几类：\n\n - **武器**以 `)` 表示。按 `w` 持用。\n - **防具**以 `[` 表示。按 `W` 穿上或脱下。\n   越重的防具通常防护越好，但可能妨碍闪避、施法或远程武器射击。\n - **弹药**以 `(` 表示。用 `f` 和 `F` 投射。\n - **魔杖**（`/`）、**卷轴**（`?`）和**药水**（`!`）可能非常有价值，\n   但使用次数有限：卷轴和药水各只能使用一次，魔杖则只有一定次数的充能。\n   按 `V` 唤发魔杖，按 `r` 阅读卷轴，按 `q` 喝药水。\n   最初你不知道卷轴或药水的效果，只能看到外观描述。\n   例如使用过一瓶治疗药水后，以后就能认出所有治疗药水。\n - **戒指**（`=`）和**护身符**（`\"`）提供各种效果，大多有益。\n   用 `P` 戴上，用 `R` 摘下。\n - **金币**（`$`）可以在商店购物。\n\n还有一些其他物品类型，你会在游戏中逐渐发现。\n\n怪物\n------\n\n你也会遇见怪物，大多用字母表示。朝怪物所在方格移动，就会攻击它。\n按 Tab 会自动靠近并攻击附近怪物。\n\n受伤时，你会损失生命值，显示在状态列表上方附近。\n生命值会随时间自然恢复；生命耗尽，你就会死亡。\n\n要活下去，你需要掌握一些基本战术：\n\n - 战斗之间要休息。`s`、`.`、Delete 或数字键盘 5 可休息一回合；\n   按 `5` 或 Shift 加数字键盘 5 可长时间休息，完全恢复后会停止。\n - 尽量不要同时与多只怪物作战。退入走廊，让它们只能逐一与你交战。\n - 死后，卷轴和药水等消耗品就帮不上忙了。多数消耗品在艰难战斗开始时\n   使用，比濒死时才用更有效。可以在安全处“浪费”同一叠中的一个来提前鉴定。\n - 与怪物近战前，记得先用投射物攻击。\n - 学会在无法应付时逃跑，这一点很重要！跳过危险楼层往往是明智之举，\n   但也别过分依赖这种做法。\n\n死亡\n------\n\n过不了多久，你大概就会死去。\n\nCrawl 中的死亡是永久的，不能重新载入存档，从原处再来。\n`S` 保存命令只是为了让你中途离开，以后继续同一局游戏。\n如果连帮角色逃生都不想费心了，可以用 `Ctrl-Q` 放弃角色。\n\n快速入门到此结束。它应该能帮你度过最初几局，但 Crawl 极其复杂，\n有人甚至觉得复杂过头，无法用这么短的文档说清楚。\n准备开始尝试魔法、技能和信仰时，请翻阅手册。\n\n祝你冒险愉快！",
+      "after": "Crawl 快速入门\n================\n\nCopyright 1999 Linley Henzell\n\n\n不想先读手册，想直接开始玩 Crawl？这份指南会帮你以最少的准备开始冒险。\n\n建议把它打印出来，在最初几局游戏中边玩边参考。游戏中连续按两次 `?`，\n也能查看命令列表。还应试试教程模式，只需几分钟。\n\n有空时，可以阅读 docs/ 目录中的 `crawl_manual.txt`，了解更详细的信息。\n\nCRAWL 简介\n------------\n\nCrawl 是一款规模庞大、随机性很强的地下探索游戏。这个奇幻世界充满魔法，\n也时常充斥暴力。你的任务是深入每局都不相同的地下城，取回佐特宝珠。\n\nCrawl 是 `rogue-like` 类型的角色扮演游戏，是 Rogue 的后继者之一。\n画面虽然简单，却信息丰富，力求一目了然；操作大多只需按一个键。\n\n开始游戏\n----------\n\n启动程序后，会先询问你的名字。不必花太多时间，因为你的第一个角色\n**不会**活得很久（抱歉，但这是事实）。\n\n接下来从菜单选择种族和背景。山地矮人、牛头人或巨魔战士都不错。\n精灵比较脆弱，人类各方面都很平均，更奇异的种族则大多不适合新手。\n最后，可能还需要选择武器。推荐斧头，因为斧头很好玩。\n\n现在你进入游戏了。游戏画面分为三个部分：\n\n - 地图位于屏幕左上方。正中央的 `@`（或角色图标）代表你。\n   明亮部分是当前能看到的区域；曾去过、现在看不到的地方则会变暗。\n - 消息区位于地图下方，占据较大空间。它会叙述事件，并不时询问你。\n - 状态区位于地图右侧，显示生命、能力等各种指标。\n\n探索\n------\n\n试着用数字键盘（可尝试开关 Numlock），或 Rogue 的 `hjklyubn` 键移动。\n按 `o` 会启动自动探索，持续移动，直到看见敌人或发生其他值得注意的事件，\n例如发现楼梯。\n\n想知道屏幕上某个字符代表什么，可以按 `x` 查看简述，再按 `v` 阅读详情。\n用 `O`、`C` 开门或关门，用 `<` 上楼、`>` 下楼。\n\n地下城越深，越危险，也越有趣！迷路时可按 `X` 打开占满屏幕的楼层地图。\n\n物品\n------\n\n走一会儿，你一定会发现地上的物品，也可能遇见怪物；应对怪物的方法见后文。\n用 `g` 或 `,` 拾取，用 `d` 丢弃，用 `i` 查看携带物品。\n在物品栏中按物品对应的键，可以查看详情和可用操作。\n\n物品主要分为以下几类：\n\n - **武器**以 `)` 表示。按 `w` 持用。\n - **防具**以 `[` 表示。按 `W` 穿上或脱下。\n   越重的防具通常防护越好，但可能妨碍闪避、施法或远程武器射击。\n - **投掷物**以 `(` 表示。用 `f` 和 `F` 投射。\n - **魔杖**（`/`）、**卷轴**（`?`）和**药水**（`!`）可能非常有价值，\n   但使用次数有限：卷轴和药水各只能使用一次，魔杖则只有一定次数的充能。\n   按 `V` 唤发魔杖，按 `r` 阅读卷轴，按 `q` 喝药水。\n   最初你不知道卷轴或药水的效果，只能看到外观描述。\n   例如使用过一瓶治疗药水后，以后就能认出所有治疗药水。\n - **戒指**（`=`）和**护身符**（`\"`）提供各种效果，大多有益。\n   用 `P` 戴上，用 `R` 摘下。\n - **金币**（`$`）可以在商店购物。\n\n还有一些其他物品类型，你会在游戏中逐渐发现。\n\n怪物\n------\n\n你也会遇见怪物，大多用字母表示。朝怪物所在方格移动，就会攻击它。\n按 Tab 会自动靠近并攻击附近怪物。\n\n受伤时，你会损失生命值，显示在状态列表上方附近。\n生命值会随时间自然恢复；生命耗尽，你就会死亡。\n\n要活下去，你需要掌握一些基本战术：\n\n - 战斗之间要休息。`s`、`.`、Delete 或数字键盘 5 可休息一回合；\n   按 `5` 或 Shift 加数字键盘 5 可长时间休息，完全恢复后会停止。\n - 尽量不要同时与多只怪物作战。退入走廊，让它们只能逐一与你交战。\n - 死后，卷轴和药水等消耗品就帮不上忙了。多数消耗品在艰难战斗开始时\n   使用，比濒死时才用更有效。可以在安全处“浪费”同一叠中的一个来提前鉴定。\n - 与怪物近战前，记得先用投射物攻击。\n - 学会在无法应付时逃跑，这一点很重要！跳过危险楼层往往是明智之举，\n   但也别过分依赖这种做法。\n\n死亡\n------\n\n过不了多久，你大概就会死去。\n\nCrawl 中的死亡是永久的，不能重新载入存档，从原处再来。\n`S` 保存命令只是为了让你中途离开，以后继续同一局游戏。\n如果连帮角色逃生都不想费心了，可以用 `Ctrl-Q` 放弃角色。\n\n快速入门到此结束。它应该能帮你度过最初几局，但 Crawl 极其复杂，\n有人甚至觉得复杂过头，无法用这么短的文档说清楚。\n准备开始尝试魔法、技能和信仰时，请翻阅手册。\n\n祝你冒险愉快！"
+    },
+    {
+      "file": "ui",
+      "context": "inventory.category",
+      "english": "Missiles",
+      "before": "投射物",
+      "after": "投掷物"
+    },
+    {
+      "file": "ui",
+      "context": "log.projectile.name",
+      "english": "missile",
+      "before": "飞射物",
+      "after": "投射物"
+    },
+    {
+      "file": "ui",
+      "context": "d.property",
+      "english": "It protects you from missiles.",
+      "before": "它保护你免受飞射物攻击。",
+      "after": "它保护你免受投射物攻击。"
+    },
+    {
+      "file": "ui",
+      "context": "d.describe",
+      "english": "It reflects blocked missile attacks.",
+      "before": "它会反射被格挡的飞射物攻击。",
+      "after": "它会反射被格挡的投射物攻击。"
+    },
+    {
+      "file": "ui",
+      "context": "d.duration",
+      "english": "You are teleporting projectiles at a target.",
+      "before": "你正在将飞射物传送至目标。",
+      "after": "你正在将投射物传送至目标。"
+    },
+    {
+      "file": "ui",
+      "context": "d.god.power",
+      "english": "The storm surrounding you is powerful enough to repel missiles.",
+      "before": "环绕你的风暴足够强大，能够排斥飞射物。",
+      "after": "环绕你的风暴足够强大，能够排斥投射物。"
+    },
+    {
+      "file": "ui",
+      "context": "d.monster.state",
+      "english": "deflecting missiles",
+      "before": "偏转飞射物",
+      "after": "偏转投射物"
+    },
+    {
+      "file": "ui",
+      "context": "d.monster.state",
+      "english": "reflecting blocked projectiles",
+      "before": "反射被格挡的飞射物",
+      "after": "反射被格挡的投射物"
+    },
+    {
+      "file": "ui",
+      "context": "d.monster.prose",
+      "english": "Projectile damage: %dd%d\n",
+      "before": "飞射物伤害：%dd%d\n",
+      "after": "投射物伤害：%dd%d\n"
+    },
+    {
+      "file": "ui",
+      "context": "l.lookup.name",
+      "english": "repel missiles passive",
+      "before": "偏斥飞弹",
+      "after": "偏斥投射物"
+    },
+    {
+      "file": "ui",
+      "context": "log.monster",
+      "english": "%s is no longer deflecting missiles.",
+      "before": "%s不再偏斥飞弹。",
+      "after": "%s不再偏斥投射物。"
+    },
+    {
+      "file": "ui",
+      "context": "m.mutation",
+      "english": "You are surrounded by a strong repulsion field. (EV +4, RMsl)",
+      "before": "你周围有一层强大的排斥力场。(闪避值+4，偏斥飞弹)",
+      "after": "你周围有一层强大的排斥力场。(闪避值+4，偏斥投射物)"
+    },
+    {
+      "file": "ui",
+      "context": "m.moncondition",
+      "english": "deflects missiles",
+      "before": "偏转飞射物",
+      "after": "偏转投射物"
+    },
+    {
+      "file": "ui",
+      "context": "m.moncondition",
+      "english": "deflect missiles",
+      "before": "偏转飞射物",
+      "after": "偏转投射物"
+    },
+    {
+      "file": "ui",
+      "context": "m.moncondition",
+      "english": "reflecting",
+      "before": "反射被格挡的飞射物",
+      "after": "反射被格挡的投射物"
+    },
+    {
+      "file": "ui",
+      "context": "o.passive",
+      "english": "repel missiles",
+      "before": "偏斥飞弹",
+      "after": "偏斥投射物"
+    },
+    {
+      "file": "ui",
+      "context": "r.power",
+      "english": "The storm surrounding you is now powerful enough to repel missiles.",
+      "before": "你周围的风暴现在已足以排斥飞射物。",
+      "after": "你周围的风暴现在已足以排斥投射物。"
+    },
+    {
+      "file": "ui",
+      "context": "r.power",
+      "english": "The storm surrounding you is now too weak to repel missiles.",
+      "before": "你周围的风暴现在太弱，无法排斥飞射物。",
+      "after": "你周围的风暴现在太弱，无法排斥投射物。"
+    },
+    {
+      "file": "ui",
+      "context": "r.power",
+      "english": "The storm surrounding you is powerful enough to repel missiles.",
+      "before": "环绕你的风暴足够强大，能够排斥飞射物。",
+      "after": "环绕你的风暴足够强大，能够排斥投射物。"
+    },
+    {
+      "file": "ui",
+      "context": "d.duration",
+      "english": "You are teleporting projectiles at a target. (expiring)",
+      "before": "你正在将飞射物传送至目标。（即将结束）",
+      "after": "你正在将投射物传送至目标。（即将结束）"
+    },
+    {
+      "file": "ui",
+      "context": "d.duration",
+      "english": "Expiring: You are teleporting projectiles at a target.",
+      "before": "即将结束：你正在将飞射物传送至目标。",
+      "after": "即将结束：你正在将投射物传送至目标。"
+    },
+    {
+      "file": "ui",
+      "context": "equipment.property",
+      "english": "RMsl",
+      "before": "偏转飞弹",
+      "after": "偏转投射物"
+    },
+    {
+      "file": "ui",
+      "context": "equipment.ego",
+      "english": "RMsl",
+      "before": "偏转飞弹",
+      "after": "偏转投射物"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:descript/egos.txt:repulsion (repulsion) armour ego",
+      "english": "It helps you evade both magical and non-magical projectiles (EV +15).\n",
+      "before": "它帮助你躲避魔法和非魔法飞射物（闪避值+15）。\n",
+      "after": "它帮助你躲避魔法和非魔法投射物（闪避值+15）。\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:descript/egos.txt:reflection (reflect) armour ego",
+      "english": "It reflects blocked missile attacks.\n",
+      "before": "它反射被格挡的飞弹攻击。\n",
+      "after": "它反射被格挡的投射物攻击。\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:descript/egos.txt:silver (silver) missile ego",
+      "english": "It deals increased damage compared to normal missiles and substantially\nincreased damage to chaotic and magically transformed beings. It also inflicts\nextra damage against mutated beings, depending on how mutated they are.\n",
+      "before": "它比普通弹药造成更多伤害，对混沌生物和被魔法变形的生物造成的增伤尤为显著。它也会对变异生物造成额外伤害，具体取决于变异程度。\n",
+      "after": "它比普通投掷物造成更多伤害，对混沌生物和被魔法变形的生物造成的增伤尤为显著。它也会对变异生物造成额外伤害，具体取决于变异程度。\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:descript/monstatus.txt:damage-immune at range monstatus",
+      "english": "This creature takes no damage by any means unless the original source of that\ndamage is adjacent to them. Non-damaging side-effects happen normally.\n\n(The source of damage from clouds and projectile-like monsters, such as foxfires,\nis always considered whatever creature first created them.)\n",
+      "before": "除非伤害的最初来源与这个生物相邻，否则任何手段都无法对它造成伤害。非伤害性的附带效果仍正常生效。\n\n（云雾，以及狐火等类似飞射物的怪物，其伤害来源始终视为最初创造它们的生物。）\n",
+      "after": "除非伤害的最初来源与这个生物相邻，否则任何手段都无法对它造成伤害。非伤害性的附带效果仍正常生效。\n\n（云雾，以及狐火等类似投射物的怪物，其伤害来源始终视为最初创造它们的生物。）\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:descript/monstatus.txt:reflecting blocked projectiles monstatus",
+      "english": "This creature reflects any projectile it blocks back to their original source.\n",
+      "before": "这个生物会将格挡住的飞射物反射回原来的来源。\n",
+      "after": "这个生物会将格挡住的投射物反射回原来的来源。\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:descript/monstatus.txt:repelling missiles monstatus",
+      "english": "This creature has +15 EV when dodging projectiles, whether physical or magical.\n",
+      "before": "躲避物理或魔法飞射物时，这个生物的闪避值增加 15。\n",
+      "after": "躲避物理或魔法投射物时，这个生物的闪避值增加 15。\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:descript/monstatus.txt:targeted by your dimensional bullseye monstatus",
+      "english": "Whenever you perform a ranged attack aimed at a different creature, a copy of\nthe projectile will be teleported to this creature at the end of its flight.\n",
+      "before": "每当你对其他生物发动远程攻击，飞射物飞行结束时，都会有一份复制品被传送到这个生物身上。\n",
+      "after": "每当你对其他生物发动远程攻击，投射物飞行结束时，都会有一份复制品被传送到这个生物身上。\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:descript/passives.txt:repel missiles passive",
+      "english": "You repel missiles, improving your chance to evade them.\n",
+      "before": "你能偏转飞弹，提高躲开飞弹的几率。\n",
+      "after": "你能偏转投射物，提高躲开投射物的几率。\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:descript/hints.txt:death random 0",
+      "english": "Always consider using projectiles, wands or spells before engaging monsters in\nclose combat.\n",
+      "before": "近身迎战怪物前，始终先考虑使用弹药、魔杖或法术。\n",
+      "after": "近身迎战怪物前，始终先考虑使用投射物、魔杖或法术。\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:descript/hints.txt:hint_seen_missiles",
+      "english": "This is the first stack of missiles<console> ('<w>$item[missile]</w>')</console>\nyou've picked up. Missiles like boomerangs and throwing nets can be thrown by\nhand, and become more effective as you train the Throwing skill.\n<localtiles><w>Right-click</w> on</localtiles><nomouse>Select</nomouse>\nthe item in your <w>$cmd[CMD_DISPLAY_INVENTORY]</w>nventory to see more\ninformation.\n\n{{\n    if crawl.hints_type() == \"ranger\" then\n        return \"As you're already trained in Ranged Weapons, you don't really \"\n               .. \"need another type of ranged attack.\"\n    elseif crawl.hints_type() == \"magic\" then\n        return \"However, as a spellslinger, you don't really need another type\"\n               .. \" of ranged attack.\"\n    else\n        return \"\"\n    end\n}}\n",
+      "before": "这是你捡到的第一堆弹药<console>（“<w>$item[missile]</w>”）</console>。回旋镖、投网等弹药可以徒手投掷，训练投掷技能会提高效果。在背包（<w>$cmd[CMD_DISPLAY_INVENTORY]</w>）中<localtiles><w>右键点击</w></localtiles><nomouse>选择</nomouse>物品，可查看更多信息。\n\n{{\n    if crawl.hints_type() == \"ranger\" then\n        return \"既然你已经训练远程武器，\"\n               .. \"就不太需要另一类远程攻击了。\"\n    elseif crawl.hints_type() == \"magic\" then\n        return \"不过，作为施法者，你也不太需要\"\n               .. \"另一类远程攻击。\"\n    else\n        return \"\"\n    end\n}}\n",
+      "after": "这是你捡到的第一堆投掷物<console>（“<w>$item[missile]</w>”）</console>。回旋镖、投网等投掷物可以徒手投掷，训练投掷技能会提高效果。在背包（<w>$cmd[CMD_DISPLAY_INVENTORY]</w>）中<localtiles><w>右键点击</w></localtiles><nomouse>选择</nomouse>物品，可查看更多信息。\n\n{{\n    if crawl.hints_type() == \"ranger\" then\n        return \"既然你已经训练远程武器，\"\n               .. \"就不太需要另一类远程攻击了。\"\n    elseif crawl.hints_type() == \"magic\" then\n        return \"不过，作为施法者，你也不太需要\"\n               .. \"另一类远程攻击。\"\n    else\n        return \"\"\n    end\n}}\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:descript/monsters.txt:polyphemus",
+      "english": "A cyclops shepherd, he is very protective of his charges, whom he watches with\nan undying fervor through his single massive eye. Nevertheless, he won't\nhesitate to use them as projectiles in a pinch; after all, the best defence is\na good offence.\n",
+      "before": "这个独眼巨人牧羊人，非常爱惜自己的牲畜，\n他用那只透露着永恒热情的巨大的眼睛注视着它们。\n尽管如此，在紧要关头，他还是会毫不犹豫地将它们用作弹丸；\n毕竟，最好的防守就是好的进攻。\n",
+      "after": "这个独眼巨人牧羊人，非常爱惜自己的牲畜，\n他用那只透露着永恒热情的巨大的眼睛注视着它们。\n尽管如此，在紧要关头，他还是会毫不犹豫地将它们当作投射物；\n毕竟，最好的防守就是好的进攻。\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:descript/monsters.txt:ancestor",
+      "english": "A humanoid construct of insubstantial memory, floating through the air. Though\nperhaps somewhat changed in shape and bearing few discernable features, still\nthey seem somehow to resemble a warrior from the distantly remembered past.\nThe memory and the memorialist fight in concert, each able to fire past the\nother.\n",
+      "before": "一个由无实体记忆构成的人形造物，漂浮在空中。虽然外形或许有些改变，且少有可辨特征，仍依稀像一位来自遥远记忆的战士。记忆与追忆者并肩作战，双方都能让飞射物穿过彼此。\n",
+      "after": "一个由无实体记忆构成的人形造物，漂浮在空中。虽然外形或许有些改变，且少有可辨特征，仍依稀像一位来自遥远记忆的战士。记忆与追忆者并肩作战，双方都能让投射物穿过彼此。\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:descript/monsters.txt:briar patch",
+      "english": "A tangled cluster of thorny briars, sharp enough to pierce thick hide and\narmour. Although stationary, its branches are possessed with a will of their\nown. They move to allow magic and missiles fired by those friendly to this\nplant to pass through unaffected.\n",
+      "before": "一丛缠绕的带刺荆棘，锋利得足以刺穿厚皮和防具。\n它尽管静止不动，但却有着自己的意志。\n他们会进行摆动，让那些对这种植物友好的人所发射的魔法和飞弹不受影响地穿过。\n",
+      "after": "一丛缠绕的带刺荆棘，锋利得足以刺穿厚皮和防具。\n它尽管静止不动，但却有着自己的意志。\n他们会进行摆动，让那些对这种植物友好的人所发射的魔法和投射物不受影响地穿过。\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:descript/monsters.txt:bush",
+      "english": "A woody plant. It looks dry enough to be easily set on fire, and its foliage is\nnot very dense, permitting both magic and missiles to pass through unaffected.\nHowever, it is firmly rooted, and requires significant effort to destroy.\n",
+      "before": "一株木本植物。它看起来并不潮湿，可以轻易被火点燃，它的枝叶也并不茂密，\n魔法和飞弹也能不受影响地穿过。但它的根基却非常扎实，破坏它可得费一番力气。\n",
+      "after": "一株木本植物。它看起来并不潮湿，可以轻易被火点燃，它的枝叶也并不茂密，\n魔法和投射物也能不受影响地穿过。但它的根基却非常扎实，破坏它可得费一番力气。\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:descript/monsters.txt:polterguardian",
+      "english": "Many poltergeists are fiercely territorial over the domains they choose to\nhaunt, but these have extended that protection even to the people who share\ntheir domain with them. Some say they must be the lingering souls of those who\nguarded the Vaults in life; others suggest the Ironbound Order simply recruited\nthem in common cause. Whichever is true, their very presence shelters other\ncreatures from missiles, causing sling and spell alike to veer off-course at the\nlast moment.\n",
+      "before": "许多骚灵会凶猛捍卫自己选择作祟的领地，而这些骚灵则把保护范围扩展到与自己共居的人。有的说，它们是生前守卫宝库者留下的灵魂；也有人说，铁缚会只是因共同目标将它们招募。不论真相如何，它们仅仅在场，就能保护其他生物免受飞弹侵袭，使投石和法术都在最后一刻偏离方向。\n",
+      "after": "许多骚灵会凶猛捍卫自己选择作祟的领地，而这些骚灵则把保护范围扩展到与自己共居的人。有的说，它们是生前守卫宝库者留下的灵魂；也有人说，铁缚会只是因共同目标将它们招募。不论真相如何，它们仅仅在场，就能保护其他生物免受投射物侵袭，使投石和法术都在最后一刻偏离方向。\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:descript/monsters.txt:splinterfrost barricade",
+      "english": "A durable barricade made of ice reinforced with forgecraft magic. A lattice of\nprecise hairline cracks are visible just beneath its surface which allow it to\nfracture into a barrage of razor-sharp projectiles whenever it sustains critical\ndamage.\n",
+      "before": "一道以锻造术加固的耐久冰障。表面下可见精密的发丝裂纹网，使其遭受重创时能碎裂为一轮剃刀般锋利的飞射物。\n",
+      "after": "一道以锻造术加固的耐久冰障。表面下可见精密的发丝裂纹网，使其遭受重创时能碎裂为一轮剃刀般锋利的投射物。\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:descript/quotes.txt:poison arrow spell",
+      "english": "“I saw in a hall an arrow pointing the way and I thought that this inoffensive\n symbol had once been a thing of iron, an inescapable and fatal projectile that\n pierced the flesh of men and lions and clouded the sun at Thermopylae and gave\n Harald Sigurdarson six feet of English earth forever.”\n    -Jorge Luis Borges, _Mutations_. 1960.\n     trans. Mildred Boyle\n",
+      "before": "“我在大厅看见指路的箭头，想到这个无害符号曾是铁器，是不可逃脱、夺人性命的飞射物：刺穿人与狮的血肉，在温泉关遮蔽太阳，又永远赐予哈拉尔·西居尔松六英尺英格兰土地。”\n    -Jorge Luis Borges, _Mutations_. 1960.\n     trans. Mildred Boyle\n",
+      "after": "“我在大厅看见指路的箭头，想到这个无害符号曾是铁器，是不可逃脱、夺人性命的投射物：刺穿人与狮的血肉，在温泉关遮蔽太阳，又永远赐予哈拉尔·西居尔松六英尺英格兰土地。”\n    -Jorge Luis Borges, _Mutations_. 1960.\n     trans. Mildred Boyle\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:descript/tutorial.txt:tutorial4 spellquivering",
+      "english": "Spells, like ammo, are shown in the quiver slot, so you can use\n<input>$cmd[CMD_QUIVER_ITEM]</input> to ready a spell in the quiver. Use\n<input>$cmd[CMD_FIRE]</input> or <input>shift-tab</input> to fire the currently\nquivered spell.\n\nOnce you are out of magic points, retreat and rest to regain them with\n<input>$cmd[CMD_REST]</input><localtiles> or by <input>clicking</input> the\nrest icon in the command panel</localtiles>.\n",
+      "before": "法术与弹药一样，会显示在备投栏中，因此可以用 <input>$cmd[CMD_QUIVER_ITEM]</input> 将法术设为备投。按 <input>$cmd[CMD_FIRE]</input> 或 <input>shift-tab</input> 施放当前备投法术。\n\n魔力耗尽后，请撤退并按 <input>$cmd[CMD_REST]</input><localtiles>，或<input>点击</input>命令面板的休息图标</localtiles>，通过休息恢复魔力。\n",
+      "after": "法术与投掷物一样，会显示在备投栏中，因此可以用 <input>$cmd[CMD_QUIVER_ITEM]</input> 将法术设为备投。按 <input>$cmd[CMD_FIRE]</input> 或 <input>shift-tab</input> 施放当前备投法术。\n\n魔力耗尽后，请撤退并按 <input>$cmd[CMD_REST]</input><localtiles>，或<input>点击</input>命令面板的休息图标</localtiles>，通过休息恢复魔力。\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:descript/mutations.txt:repulsion field mutation",
+      "english": "You are surrounded by a repulsion field, providing a small amount of evasion.\nEach level of this mutation provides more EV. The third level of this mutation\nalso repels missiles, greatly increasing your EV against such attacks.\n",
+      "before": "排斥力场环绕着你，提供少量闪避。此变异每级都会提高闪避值；第三级还能偏转飞射物，大幅提高你对这类攻击的闪避值。\n",
+      "after": "排斥力场环绕着你，提供少量闪避。此变异每级都会提高闪避值；第三级还能偏转投射物，大幅提高你对这类攻击的闪避值。\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:descript/mutations.txt:jelly absorbing missiles mutation",
+      "english": "When struck by a missile (such as an arrow or crossbow bolt), a jelly on your\nbody may eat it, healing you somewhat.\n",
+      "before": "被箭矢、弩矢等飞射物击中时，你身上的胶怪可能会将其吞下，为你恢复一些生命值。\n",
+      "after": "被箭矢、弩矢等投射物击中时，你身上的胶怪可能会将其吞下，为你恢复一些生命值。\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:descript/mutations.txt:steam response mutation",
+      "english": "Whenever you take fire damage from a projectile, you have a chance (increasing\nwith the damage suffered) to spread steam clouds around yourself.\n",
+      "before": "受到飞射物造成的火焰伤害时，你有概率在周围产生蒸汽云，受到的伤害越大，概率越高。\n",
+      "after": "受到投射物造成的火焰伤害时，你有概率在周围产生蒸汽云，受到的伤害越大，概率越高。\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:descript/spells.txt:deflect missiles spell",
+      "english": "Envelops the caster in a repulsion field, greatly increasing their evasion\nagainst all types of projectile - even while otherwise incapacitated.\n",
+      "before": "以排斥力场包裹施法者，大幅提高针对所有类型飞射物的闪避值，即使施法者因其他原因无法行动也能生效。\n",
+      "after": "以排斥力场包裹施法者，大幅提高针对所有类型投射物的闪避值，即使施法者因其他原因无法行动也能生效。\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:descript/spells.txt:orb of destruction spell",
+      "english": "Conjures an orb made of pure destructive magic. Compared to most other\nprojectiles, these orbs travel at a relatively slow pace. The orbs home onto\ntheir targets, yet because of their huge inertia, especially agile opponents\nmay be able to outmanoeuvre them. The orbs need some time to stabilise, and a\nnascent orb will deal reduced damage.\n\nResidents of the dungeon are able to maintain the orb until it impacts a\ntarget, but when cast by you the orb will dissipate upon leaving your line of\nsight.\n",
+      "before": "造出一颗由纯粹毁灭魔法构成的球体。与大多数飞射物相比，它的移动速度较慢。球体会追踪目标，但惯性极大，格外敏捷的对手或许能绕开它。球体需要一些时间稳定，新生球体的伤害较低。\n\n地下城居民能维持球体直到命中目标，而你施放的球体一旦离开自己的视线便会消散。\n",
+      "after": "造出一颗由纯粹毁灭魔法构成的球体。与大多数投射物相比，它的移动速度较慢。球体会追踪目标，但惯性极大，格外敏捷的对手或许能绕开它。球体需要一些时间稳定，新生球体的伤害较低。\n\n地下城居民能维持球体直到命中目标，而你施放的球体一旦离开自己的视线便会消散。\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:descript/spells.txt:splinterfrost shell spell",
+      "english": "Constructs a frangible shell of reinforced ice in a half-circle around the\ncaster, pushing creatures out of the way to make space for it, if possible.\n\nThis barricade is durable, and whenever a segment of it is destroyed, will\nfracture into a salvo of icy projectiles launched at whatever destroyed it.\n\nIf the caster strays too far away from their barrier, it will melt rapidly.\n",
+      "before": "在施法者周围构造半圆形的强化冰壳，若条件允许，会将生物推开以腾出空间。\n\n这道屏障相当坚固，每当一段被摧毁，就会碎裂成一轮寒冰飞射物，射向摧毁它的目标。\n\n如果施法者离屏障太远，冰壳便会迅速融化。\n",
+      "after": "在施法者周围构造半圆形的强化冰壳，若条件允许，会将生物推开以腾出空间。\n\n这道屏障相当坚固，每当一段被摧毁，就会碎裂成一轮寒冰投射物，射向摧毁它的目标。\n\n如果施法者离屏障太远，冰壳便会迅速融化。\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:descript/spells.txt:wall of brambles spell",
+      "english": "Causes brambles to rapidly grow nearby. They have almost no structural\nstrength, but the wicked thorns they bear make their removal difficult. Such\nbrambles are sparse enough that almost any missile can pass through unhindered.\n",
+      "before": "使荆棘在附近迅速生长。它们几乎没有结构强度，但携带的恶毒尖刺让清除工作十分困难。荆棘相当稀疏，几乎任何飞射物都能不受阻碍地穿过。\n",
+      "after": "使荆棘在附近迅速生长。它们几乎没有结构强度，但携带的恶毒尖刺让清除工作十分困难。荆棘相当稀疏，几乎任何投射物都能不受阻碍地穿过。\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:database/help.txt:known-menu",
+      "english": "                   <h>Known items menu</h>\n\n<h>Navigation and selecting items</h>\nUse the usual navigation keys (<w>arrow</w> keys, <w>pgdn</w>/<w>pgup</w>, <w>home</w>, <w>end</w>) to select\nitems, and <w>Space</w>/<w>.</w> to toggle the autopickup mode for the selected item type.\nPressing an item type's letter key will also toggle its autopickup state.\n\n<h>Selecting item types</h>\nItem types displayed in grey use the default autopickup options set in your\nconfiguration file. (Items that are useless to your character are displayed\nin <darkgrey>dark grey</darkgrey>.) Selecting a type of item overrides those options\n(indicated by <w>white</w> text), and toggles the item between the states:\n <w>+</w>  Items of this type will be picked up automatically.\n <w>-</w>  Items of this type will not be picked up automatically.\nAutopickup can also be toggled for all unknown items of a given category.\n\n<h>Category shortcuts</h>\nYou can quickly select all item types in a given category by pressing:\n<w>!</w>   potions      <w>?</w>   scrolls      <w>(</w>   ammunition        <w>\"</w>   amulets\n<w>=</w>   rings        <w>/</w>   wands        <w>|</w>   magical staves\nGlobal selects:  <w>*</w>   invert all   <w>^</w>   reset all to default\n\n<h>Viewing unknown and known items</h>\n<w>\\</w> and <w>-</w> toggle between the known and unknown items menus. Note\nthat none of the above features are available from the unknown items menu.\n\n<h>Restoring autopickup defaults</h>\nPressing <w>Ctrl-D</w> followed by an item letter or a category shortcut\ncancels the override and restores the selected item or items to their default\nsettings.\n\n<h>Regular expressions</h>\nYou can press <w>Ctrl-F</w> to enter a word (or a regular expression).\nAll matching items will be selected.\n\n",
+      "before": "                   <h>已知物品菜单</h>\n\n<h>浏览与选择物品</h>\n用常见浏览键（<w>方向</w>键、<w>pgdn</w>/<w>pgup</w>、<w>home</w>、<w>end</w>）选择物品，\n用 <w>Space</w>/<w>.</w> 切换所选物品类型的自动拾取方式。\n按物品类型对应的字母键也能切换其自动拾取状态。\n\n<h>选择物品类型</h>\n灰色显示的物品类型使用配置文件中的默认自动拾取选项。\n对当前角色无用的物品显示为<darkgrey>深灰色</darkgrey>。\n选择一种物品会覆盖默认选项（以<w>白色</w>文字表示），并在以下状态之间切换：\n <w>+</w> 自动拾取此类物品。\n <w>-</w> 不自动拾取此类物品。\n也可为某一类别中所有尚未鉴定的物品切换自动拾取。\n\n<h>类别快捷键</h>\n按以下键可快速选择整个类别的物品类型：\n<w>!</w> 药水    <w>?</w> 卷轴    <w>(</w> 弹药    <w>\"</w> 护身符\n<w>=</w> 戒指    <w>/</w> 魔杖    <w>|</w> 魔法杖\n全局选择：<w>*</w> 全部反选    <w>^</w> 全部恢复默认\n\n<h>查看未知与已知物品</h>\n<w>\\</w> 和 <w>-</w> 在已知与未知物品菜单之间切换。\n注意，上述功能均无法在未知物品菜单中使用。\n\n<h>恢复默认自动拾取设置</h>\n按 <w>Ctrl-D</w>，再按物品字母或类别快捷键，\n即可取消覆盖，使选定物品恢复默认设置。\n\n<h>正则表达式</h>\n按 <w>Ctrl-F</w> 输入词语或正则表达式，所有匹配的物品都会被选中。\n\n",
+      "after": "                   <h>已知物品菜单</h>\n\n<h>浏览与选择物品</h>\n用常见浏览键（<w>方向</w>键、<w>pgdn</w>/<w>pgup</w>、<w>home</w>、<w>end</w>）选择物品，\n用 <w>Space</w>/<w>.</w> 切换所选物品类型的自动拾取方式。\n按物品类型对应的字母键也能切换其自动拾取状态。\n\n<h>选择物品类型</h>\n灰色显示的物品类型使用配置文件中的默认自动拾取选项。\n对当前角色无用的物品显示为<darkgrey>深灰色</darkgrey>。\n选择一种物品会覆盖默认选项（以<w>白色</w>文字表示），并在以下状态之间切换：\n <w>+</w> 自动拾取此类物品。\n <w>-</w> 不自动拾取此类物品。\n也可为某一类别中所有尚未鉴定的物品切换自动拾取。\n\n<h>类别快捷键</h>\n按以下键可快速选择整个类别的物品类型：\n<w>!</w> 药水    <w>?</w> 卷轴    <w>(</w> 投掷物    <w>\"</w> 护身符\n<w>=</w> 戒指    <w>/</w> 魔杖    <w>|</w> 魔法杖\n全局选择：<w>*</w> 全部反选    <w>^</w> 全部恢复默认\n\n<h>查看未知与已知物品</h>\n<w>\\</w> 和 <w>-</w> 在已知与未知物品菜单之间切换。\n注意，上述功能均无法在未知物品菜单中使用。\n\n<h>恢复默认自动拾取设置</h>\n按 <w>Ctrl-D</w>，再按物品字母或类别快捷键，\n即可取消覆盖，使选定物品恢复默认设置。\n\n<h>正则表达式</h>\n按 <w>Ctrl-F</w> 输入词语或正则表达式，所有匹配的物品都会被选中。\n\n"
+    },
+    {
+      "file": "textdb",
+      "context": "textdb:database/help.txt:pick-up",
+      "english": "                   <h>Picking up and dropping items</h>\n\n<h>Navigation and selecting items</h>\nUse the usual navigation keys (<w>arrow</w> keys, <w>pgdn</w>/<w>pgup</w>, <w>home</w>, <w>end</w>) to select\nitems, and <w>Space</w>/<w>.</w> to toggle whether the selected item will be picked up or\ndropped. Pressing an item's letter key will also toggle its pickup/drop state.\nGear, potions, scrolls, and evocable items are on separate pages which can be\nswitched between by <w>left arrow</w> and <w>right arrow</w>.\nPress <w>Return</w> to accept the current set of items.\n\nEntering a number before selecting by letter will toggle just that quantity of\na stack of items.\n\n<h>Regular expressions</h>\nYou can press <w>Ctrl-F</w> to enter a word (or a regular expression). All matching\nitems will be selected.\n\n<h>Category shortcuts</h>\nYou can quickly select items by type by pressing:\n<w>!</w>   potions      <w>(</w>   weapons        <w>)</w>   ammunition      <w>[</w>   armour\n<w>/</w>   wands        <w>|</w>   magical staves <w>?</w>   scrolls         <w>:</w>   books\n<w>\"</w>   amulets      <w>=</w>   rings          <w>}</w>   miscellaneous\nGlobal selects:  <w>,</w>   select all     <w>*</w>   invert all      <w>-</w>   deselect all\n                 <w>;</w>   select last unequipped\nNote that for dropping, the <w>,</w> command uses the <w>drop_filter</w> option, which\nnarrows the range of items to be (de)selected. The default is all useless items.\n",
+      "before": "                   <h>拾取和丢弃物品</h>\n\n<h>浏览与选择物品</h>\n用常见浏览键（<w>方向</w>键、<w>pgdn</w>/<w>pgup</w>、<w>home</w>、<w>end</w>）选择物品，\n用 <w>Space</w>/<w>.</w> 切换选中物品的拾取或丢弃状态。\n按物品对应的字母键也能切换其拾取或丢弃状态。\n装备、药水、卷轴和可发动的物品分在不同页面，可用<w>左方向键</w>和<w>右方向键</w>切换。\n按 <w>Return</w> 确认当前选中的物品。\n\n先输入数量，再按字母选择，就只会切换一叠物品中相应数量的选择状态。\n\n<h>正则表达式</h>\n按 <w>Ctrl-F</w> 输入词语或正则表达式，所有匹配的物品都会被选中。\n\n<h>类别快捷键</h>\n按以下键可按类型快速选择物品：\n<w>!</w> 药水    <w>(</w> 武器    <w>)</w> 弹药    <w>[</w> 防具\n<w>/</w> 魔杖    <w>|</w> 魔法杖  <w>?</w> 卷轴    <w>:</w> 书籍\n<w>\"</w> 护身符  <w>=</w> 戒指    <w>}</w> 杂项\n全局选择：<w>,</w> 全选    <w>*</w> 全部反选    <w>-</w> 全部取消\n          <w>;</w> 选择上次卸下的装备\n注意，丢弃物品时，<w>,</w> 命令受 <w>drop_filter</w> 选项影响，\n该选项限制可被选择或取消选择的物品范围，默认只包括无用物品。\n",
+      "after": "                   <h>拾取和丢弃物品</h>\n\n<h>浏览与选择物品</h>\n用常见浏览键（<w>方向</w>键、<w>pgdn</w>/<w>pgup</w>、<w>home</w>、<w>end</w>）选择物品，\n用 <w>Space</w>/<w>.</w> 切换选中物品的拾取或丢弃状态。\n按物品对应的字母键也能切换其拾取或丢弃状态。\n装备、药水、卷轴和可发动的物品分在不同页面，可用<w>左方向键</w>和<w>右方向键</w>切换。\n按 <w>Return</w> 确认当前选中的物品。\n\n先输入数量，再按字母选择，就只会切换一叠物品中相应数量的选择状态。\n\n<h>正则表达式</h>\n按 <w>Ctrl-F</w> 输入词语或正则表达式，所有匹配的物品都会被选中。\n\n<h>类别快捷键</h>\n按以下键可按类型快速选择物品：\n<w>!</w> 药水    <w>(</w> 武器    <w>)</w> 投掷物    <w>[</w> 防具\n<w>/</w> 魔杖    <w>|</w> 魔法杖  <w>?</w> 卷轴    <w>:</w> 书籍\n<w>\"</w> 护身符  <w>=</w> 戒指    <w>}</w> 杂项\n全局选择：<w>,</w> 全选    <w>*</w> 全部反选    <w>-</w> 全部取消\n          <w>;</w> 选择上次卸下的装备\n注意，丢弃物品时，<w>,</w> 命令受 <w>drop_filter</w> 选项影响，\n该选项限制可被选择或取消选择的物品范围，默认只包括无用物品。\n"
+    }
+  ],
+  "glossary_changes": [
+    {
+      "term": "Deflect Missiles",
+      "before": "偏转飞射物",
+      "after": "偏转投射物"
+    },
+    {
+      "term": "Portal Projectile",
+      "before": "传送飞射物",
+      "after": "传送投射物"
+    },
+    {
+      "term": "Old Deflect Missiles",
+      "before": "旧版偏转飞射物",
+      "after": "旧版偏转投射物"
+    },
+    {
+      "term": "repel missiles passive",
+      "before": "偏斥飞弹",
+      "after": "偏斥投射物"
+    },
+    {
+      "term": "RMsl",
+      "before": "偏转飞弹",
+      "after": "偏转投射物"
+    }
+  ],
+  "new_terms": [
+    [
+      "missile",
+      "投射物/投掷物/弹药",
+      "noun",
+      "missiles",
+      "【语境统一】飞行中的物理或魔法攻击载体用投射物；当前物品大类及石块、飞镖、标枪、回旋镖、投网等用投掷物；明确指武器配套消耗物资时用弹药。魔法飞弹等固定专名保留，具体箭矢、弩矢、弹丸按实体命名。"
+    ],
+    [
+      "projectile",
+      "投射物",
+      "noun",
+      "projectiles",
+      "【语境统一】泛指发射或投出的攻击载体，可包含物理与魔法攻击；具体实体使用箭矢、弩矢、弹丸等名称。投掷物品是动作短语，投掷物是物品分类；不将 projectile 通称译为弹药或弹丸。"
+    ],
+    [
+      "Missiles",
+      "投掷物",
+      "noun",
+      "",
+      "【语境统一/物品分类】当前版本背包、拾取、帮助及巫师物品分类用投掷物；规范 OBJ_MISSILES、数据库键及配置值保留英文。"
+    ],
+    [
+      "ammunition",
+      "弹药",
+      "noun",
+      "ammo",
+      "【语境统一】明确指武器配套消耗物资或原文中的 ammunition 时使用；当前投掷物分类和泛称投射物不使用此译法。"
+    ]
+  ],
+  "glossary_after_sha256": "e27d670d144b276ffcf772eb70ab2dc94da5ce157dc9910e83d5b4b00b37da5a",
+  "changed_exports": [
+    "crawl-ref/source/dat/database/zh/help.txt",
+    "crawl-ref/source/dat/descript/zh/egos.txt",
+    "crawl-ref/source/dat/descript/zh/hints.txt",
+    "crawl-ref/source/dat/descript/zh/monstatus.txt",
+    "crawl-ref/source/dat/descript/zh/monsters.txt",
+    "crawl-ref/source/dat/descript/zh/mutations.txt",
+    "crawl-ref/source/dat/descript/zh/passives.txt",
+    "crawl-ref/source/dat/descript/zh/quotes.txt",
+    "crawl-ref/source/dat/descript/zh/spells.txt",
+    "crawl-ref/source/dat/descript/zh/tutorial.txt"
+  ],
+  "textdb_dependency_rechecks": [],
+  "ui_dependency_rechecks": [
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "display.item.appearance",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "display.item.appearance",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "display.item.appearance",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "display.item.appearance",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "display.item.appearance",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "display.item.appearance",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "display.item.appearance",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "display.item.appearance",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "display.item.appearance",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "display.item.appearance",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "display.item.appearance",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "display.item.appearance",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.pace",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.pace",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.pace",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.pace",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.distance",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.distance",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.distance",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.distance",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.sound",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.sound",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.sound",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.sound",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.sound",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.sound",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.sound",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.sound",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.sound",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.sound",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.entity",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.entity",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.entity",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.entity",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.entity",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.entity",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.entity",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.entity",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.entity",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.entity",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.entity",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.entity",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.entity",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.entity",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.entity",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.map",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.map",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.map",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.map",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.map",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.map",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.map",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.map",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.map",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.map",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    },
+    {
+      "context": "lua.ui",
+      "source": "crawl-ref/source/dat/descript/zh/mutations.txt",
+      "before": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+      "after": "f9a79375381ac80c12d7448848da436d0bafae64b079732f79db82aa1c030bf8"
+    }
+  ],
+  "protected_magic_dart_entries": 5,
+  "retained_contexts": [
+    "Magic Dart / magic missile: 魔法飞弹",
+    "slug / metal shot / bullet: 弹丸",
+    "throwing items: 投掷物品（动作）",
+    "Actual/legacy weapon ammunition: 弹药",
+    "quiver slot wording is a separate terminology topic"
+  ]
+}

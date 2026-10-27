@@ -1,4 +1,5 @@
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "god-prayer.h"
 
@@ -61,9 +62,20 @@ static bool _prompt_ecu_worship(const vector<god_type> &gods)
                                                   god_name_list.end(), " or ");
     // This should be a proper menu, but I absolutely cannot be bothered with
     // webtiles menu code.
-    mprf(MSGCH_PROMPT, "This altar belongs to %s, but you can't tell which.\n"
-         "Press the corresponding letter to learn more about a god, "
-         "or press enter to convert or escape to cancel.", god_names.c_str());
+    vector<string> display_names;
+    bool available = true;
+    for (size_t i = 0; i < gods.size(); ++i)
+    {
+        const ui_arg name = ui_text_arg("display.god", god_name(gods[i]));
+        available &= name.available;
+        display_names.push_back(make_stringf("(%c) %s", char('a' + i), name.text.c_str()));
+    }
+    const char *pattern = "This altar belongs to %s, but you can't tell which.\n"
+        "Press the corresponding letter to learn more about a god, "
+        "or press enter to convert or escape to cancel.";
+    mprf(MSGCH_PROMPT, "%s", ui_render("g.prayer", pattern,
+        make_stringf(pattern, god_names.c_str()),
+        {{join_strings(display_names.begin(), display_names.end(), "、"), available}}).c_str());
     while (true) {
         flush_prev_message();
         int ch = getch_ck();
@@ -96,8 +108,9 @@ static bool _pray_ecumenical_altar()
         return false;
     }
     if (!you_worship(GOD_NO_GOD)
-        && !yesno(make_stringf("Really abandon %s for an unknown god?",
-                               god_name(you.religion).c_str()).c_str(),
+        && !yesno(ui_render("g.prayer", "Really abandon %s for an unknown god?",
+                make_stringf("Really abandon %s for an unknown god?", god_name(you.religion).c_str()),
+                {ui_text_arg("display.god", god_name(you.religion))}).c_str(),
                                false, 'n'))
     {
         canned_msg(MSG_OK);
@@ -118,8 +131,7 @@ static bool _pray_ecumenical_altar()
             return true;
         }
 
-        mprf(MSGCH_GOD, "%s accepts your prayer!",
-                        god_name(altar_god).c_str());
+        mprf(MSGCH_GOD, "%s", ui_render("g.message", "%s accepts your prayer!", make_stringf("%s accepts your prayer!", god_name(altar_god).c_str()), {ui_text_arg("display.god", god_name(altar_god))}).c_str());
         if (you_worship(altar_god))
             return true;
         join_religion(altar_god);
@@ -149,7 +161,7 @@ void try_god_conversion(god_type god)
 
     if (you.has_mutation(MUT_FORLORN))
     {
-        mpr("A being of your status worships no god.");
+        mpr(ui_translate("g.message", "A being of your status worships no god."));
         return;
     }
 
@@ -170,9 +182,11 @@ void try_god_conversion(god_type god)
     else
     {
         // Already worshipping this god - just print a message.
-        mprf(MSGCH_GOD, "You offer a %sprayer to %s.",
-             you.cannot_speak() ? "silent " : "",
-             god_name(god).c_str());
+        mprf(MSGCH_GOD, "%s", ui_render("g.prayer",
+            you.cannot_speak() ? "You offer a silent prayer to %s." : "You offer a prayer to %s.",
+            make_stringf("You offer a %sprayer to %s.", you.cannot_speak() ? "silent " : "",
+                         god_name(god).c_str()),
+            {ui_text_arg("display.god", god_name(god))}).c_str());
     }
 }
 
@@ -200,7 +214,7 @@ int zin_tithe(const item_def& item, int quant, bool converting)
         }
         taken = tithe;
         you.attribute[ATTR_DONATIONS] += tithe;
-        mprf("You pay a tithe of %d gold.", tithe);
+        mprf(ui_translate("g.message", "You pay a tithe of %d gold."), tithe);
 
         if (item.tithe_state == TS_NO_PIETY) // seen before worshipping Zin
         {

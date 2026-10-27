@@ -4,6 +4,8 @@
 **/
 #pragma once
 
+#include "i18n.h"
+
 #include <cstdio>
 #include <map>
 #include <string>
@@ -177,7 +179,9 @@ private:
         string name;
         Z thing;
 
-        named_thing(const string &n, Z t) : name(n), thing(t) { }
+        ui_arg display{"", false};
+        named_thing(const string &n, Z t, ui_arg d = {"", false})
+            : name(n), thing(t), display(d) { }
         operator string () const { return name; }
 
         bool operator == (const named_thing<Z> &other) const
@@ -200,9 +204,14 @@ private:
 
     vector<string> marker_msgs;
     vector<string> marked_feats;
+    vector<ui_arg> marked_display;
 
 private:
-    template <class C> void say_any(const C &coll, const char *category) const;
+    template <class C> void say_any(const C &coll, const char *category,
+                                    ui_arg display = {"", false}) const;
+    template <class Z> ui_arg display_list(const vector<named_thing<Z>> &v) const;
+    ui_arg display_discovery(const named_thing<int> &thing) const;
+    ui_arg display_discovery(const named_thing<item_def> &thing) const;
     template <class citer> bool has_duplicates(citer, citer) const;
 
     string cleaned_feature_description(const coord_def &) const;

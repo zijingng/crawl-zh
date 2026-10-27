@@ -1,4 +1,5 @@
 #include "AppHdr.h"
+#include "t-display.h"
 
 #ifdef USE_TILE_LOCAL
 
@@ -47,6 +48,8 @@ void AbilityRegion::draw_tag()
     const string failure = failure_rate_to_string(get_talent(ability).fail);
     string desc = make_stringf("%s    (%s)",
                                ability_name(ability).c_str(), failure.c_str());
+    desc = ui_render("t.tiles.row", "%s    (%s)", desc,
+        {ui_text_arg("display.ability", ability_name(ability)), ui_literal_arg(failure)});
     draw_desc(desc.c_str());
 }
 
@@ -85,8 +88,8 @@ bool AbilityRegion::update_tab_tip_text(string &tip, bool active)
     const char *prefix2 = active ? "" : "          ";
 
     tip = make_stringf("%s%s\n%s%s",
-                       prefix1, "Display abilities",
-                       prefix2, "Use abilities");
+                       prefix1, ui_translate("t.tiles", "Display abilities"),
+                       prefix2, ui_translate("t.tiles", "Use abilities"));
 
     return true;
 }
@@ -111,6 +114,8 @@ bool AbilityRegion::update_tip_text(string& tip)
     }
 
     tip += "\n[R-Click] Describe";
+    // Translate the complete tooltip before expanding command placeholders.
+    tip = ui_translate("t.tiles.tooltip", tip.c_str());
     insert_commands(tip, cmd);
 
     return true;

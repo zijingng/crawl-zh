@@ -64,46 +64,23 @@ TextRegion::~TextRegion()
 
 void TextRegion::addstr(const char *buffer)
 {
-    char32_t buf2[1024], c;
-
-    int j = 0;
-
+    char32_t c;
     int clen;
-    do
+    while ((clen = utf8towc(&c, buffer)))
     {
-        buffer += clen = utf8towc(&c, buffer);
-        bool newline = false;
-
+        buffer += clen;
         if (c == '\r')
             continue;
-
         if (c == '\n')
         {
-            c = 0;
-            newline = true;
+            print_x = cx_ofs;
+            print_y++;
+            if (print_y - cy_ofs == my)
+                scroll();
         }
-        // TODO: use wcwidth() to handle widths!=1:
-        // *  2 for CJK chars -- add a zero-width blank?
-        // *  0 for combining characters -- would need extra support
-        // * -1 for non-printable stuff -- assert or ignore
-        buf2[j] = c;
-        j++;
-
-        if (c == 0 || j == ARRAYSZ(buf2))
-        {
-            if (j-1 != 0)
-                addstr_aux(buf2, j - 1); // draw it
-            if (newline)
-            {
-                print_x = cx_ofs;
-                print_y++;
-                j = 0;
-
-                if (print_y - cy_ofs == my)
-                    scroll();
-            }
-        }
-    } while (clen);
+        else
+            addstr_aux(&c, 1);
+    }
     if (cursor_flag)
         cgotoxy(print_x+1, print_y+1);
 }
@@ -116,12 +93,40 @@ void TextRegion::addstr_aux(const char32_t *buffer, int len)
 
     ASSERT(y < my);
 
-    for (int i = 0; i < len && x + i < mx; i++)
+    for (int i = 0; i < len; i++)
     {
-        cbuf[adrs+x+i] = buffer[i];
-        abuf[adrs+x+i] = text_col;
+        const int cells = wcwidth(buffer[i]);
+        // A grapheme buffer is needed to draw combining marks; for now do
+        // not give them (or control characters) a spurious terminal column.
+        if (cells <= 0)
+            continue;
+        if (x >= 0 && x < mx)
+        {
+            // Overwriting either half of a wide glyph clears its neighbour.
+            if (x > 0 && cbuf[adrs+x] == 0)
+            {
+                cbuf[adrs+x-1] = ' ';
+                abuf[adrs+x-1] = text_col;
+            }
+            for (int j = x; j < min(mx, x + cells); ++j)
+                if (wcwidth(cbuf[adrs+j]) == 2 && j + 1 < mx)
+                {
+                    cbuf[adrs+j+1] = ' ';
+                    abuf[adrs+j+1] = text_col;
+                }
+
+            // Never leave half a CJK glyph at the right edge.
+            cbuf[adrs+x] = x + cells <= mx ? buffer[i] : U' ';
+            abuf[adrs+x] = text_col;
+            if (cells == 2 && x + 1 < mx)
+            {
+                cbuf[adrs+x+1] = 0;
+                abuf[adrs+x+1] = text_col;
+            }
+        }
+        x += cells;
+        print_x += cells;
     }
-    print_x += len;
 }
 
 void TextRegion::clear_to_end_of_line()
@@ -132,6 +137,13 @@ void TextRegion::clear_to_end_of_line()
     int adrs = cy * mx;
 
     ASSERT(adrs + mx - 1 < mx * my);
+    if (cx >= mx)
+        return;
+    if (cx > 0 && cbuf[adrs+cx] == 0)
+    {
+        cbuf[adrs+cx-1] = ' ';
+        abuf[adrs+cx-1] = col;
+    }
     for (int i = cx; i < mx; i++)
     {
         cbuf[adrs+i] = ' ';

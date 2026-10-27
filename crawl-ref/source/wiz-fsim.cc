@@ -4,6 +4,7 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "wiz-fsim.h"
 
@@ -298,7 +299,7 @@ static monster* _init_fsim()
         if (mtype == MONS_PROGRAM_BUG)
         {
             char specs[100];
-            mprf(MSGCH_PROMPT, "Enter monster name (or MONS spec): ");
+            mprf(MSGCH_PROMPT,"%s", ui_translate("w.ui", "Enter monster name (or MONS spec): "));
             if (cancellable_get_line_autohist(specs, sizeof specs) || !*specs)
             {
                 canned_msg(MSG_OK);
@@ -318,7 +319,7 @@ static monster* _init_fsim()
         mon = create_monster(temp);
         if (!mon)
         {
-            mpr("Failed to create monster.");
+            mpr(ui_translate("w.ui", "Failed to create monster."));
             return nullptr;
         }
     }
@@ -336,7 +337,7 @@ static monster* _init_fsim()
     if (!adjacent(mon->pos(), you.pos()))
     {
         monster_die(*mon, KILL_RESET, NON_MONSTER);
-        mpr("Could not put monster adjacent to player.");
+        mpr(ui_translate("w.ui", "Could not put monster adjacent to player."));
         return 0;
     }
 
@@ -649,7 +650,7 @@ static void _fsim_simple_scale(FILE * o, monster* mon, bool defense)
         // kill the loop if the user hits escape
         if (kbhit() && getch_ck() == 27)
         {
-            mpr("Cancelling simulation.\n");
+            mpr(ui_translate("w.ui", "Cancelling simulation.\n"));
             fprintf(o, "Simulation cancelled!\n\n");
             break;
         }
@@ -714,7 +715,7 @@ static void _fsim_double_scale(FILE * o, monster* mon, bool defense)
             // kill the loop if the user hits escape
             if (kbhit() && getch_ck() == 27)
             {
-                mpr("Cancelling simulation.\n");
+                mpr(ui_translate("w.ui", "Cancelling simulation.\n"));
                 fprintf(o, "\nSimulation cancelled!\n\n");
                 return;
             }
@@ -750,7 +751,7 @@ void wizard_fight_sim(bool double_scale)
     }
     else
     {
-        mprf(MSGCH_PROMPT, "(A)ttack or (D)efence?");
+        mprf(MSGCH_PROMPT,"%s", ui_translate("w.ui", "(A)ttack or (D)efence?"));
 
         switch (toalower(getch_ck()))
         {
@@ -821,7 +822,7 @@ void wizard_fight_sim(bool double_scale)
         set_xl(xl, false);
 
     _uninit_fsim(mon);
-    mpr("Done.");
+    mpr(ui_translate("w.ui", "Done."));
 }
 
 #endif

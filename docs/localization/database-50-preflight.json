@@ -1,0 +1,425 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "selected": [
+    {
+      "source": "database/randname.txt",
+      "key": "weapon",
+      "english": "of @_power_or_anger_@\n\nof @_battle_or_war_@\n\nw:1\nof @player_doom@\n\nw:8\nof @death_or_doom@\n\nw:1\nof @_verbing_@ @death_or_doom@\n\nw:6\nof @_adjective_@ @_strategy_or_justice_@\n\nof @_strategy_or_justice_@\n\nw:3\nof the @_verbing_@ @_people_name_@\n\nw:3\nof the @_people_name_@\n\nw:2\nof the @_verbing_@ @_diviner_name_@\n\nw:5\nof the @_verbing_@ @_weapon_animal_@\n\nw:5\nof the @_weapon_animal_@\n\nw:2\nof the @_plant_name_@\n\nw:7\nof @_evil_stuff_@\n\nw:5\nof @_catastrophe_name_@\n\nw:8\nof @_chaos_name_@\n\nw:8\nof @_balance_or_order_@\n\nof @_economics_or_politics_@\n\nw:8\nof @branch_name@\n\nw:7\nof @_place_name_@\n\nw:5\nof @_discomfort_weapon_@\n\nw:4\nof the @_item_name_@\n\nw:1\nof @_magic_name_@\n\nw:5\nof @_substance_name_@\n\nw:7\nof @_science_name_@\n\nw:5\nof @other_weapon_name@\n\nw:30\n\"@_plain_weapon_name_@\"\n\nw:5\nof @_time_name_@\n\nw:5\nof @_sky_or_light_@\n\nw:18\nof @_virtue_or_vice_@\n\nof @_number_or_qualifier_@ @_thing_names_@\n\nw:5\nof @_destiny_name_@\n\nw:9\nof @god_name_possessive@ @divine_esteem@\n\nw:4\nof the @_verbing_@ Gods\n\nw:4\nof the @_adjective_@ God\n\nw:2\nof @god_name@, @_verbing_@\n\nw:1\nof @god_name@\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "plant",
+          "Translation": "植物",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Light",
+          "Translation": "轻盈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "chaos",
+          "Translation": "混沌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "talisman",
+      "english": "@armour@\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        }
+      ]
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "armour",
+      "english": "of @_armour_name_shielding_@\n\nw:8\nof @_armour_property_name_@\n\nw:20\nof @_wacky_armour_name_@\n\nof the @_profession_name_@\n\nw:5\nof the @_adjective_@ @_profession_name_@\nof @_politics_name_armour_@\n\nw:3\nof @_weather_name_@\n\nw:9\nof @_good_or_divine_@\n\nw:9\nof @_adjective_@ @_good_or_divine_@\n\nw:5\nof the @_celestial_bodies_@\n\nw:5\nof @_instrument_name_@\n\nw:20\nof the @_armour_animal_@\n\nw:1\nof the @_adjective_@ @_armour_animal_@\n\nw:3\nof @_flower_name_@\n\nw:1\nof the @_fruit_name_@\n\nw:2\nof the @_critter_name_@\n\nw:1\nof the @_adjective_@ @_critter_name_@\n\nw:5\nof @_evil_being_@\n\nof @_discomfort_and_inaction_@\n\nof @_game_name_@\n\nw:15\nof @_other_armour_name_@\n\nw:2\n\"@_plain_armour_name_@\"\n\nw:25\nof @_philosophy_or_science_@\n\nw:15\nof @_place_name_@\n\nof @_time_name_@\n\nw:8\nof @_sky_or_light_@\n\nw:30\nof @_virtue_or_vice_@\n\nw:6\nof @_number_or_qualifier_@ @_verbing_@ @_thing_names_@\n\nof @_number_or_qualifier_@ @_thing_names_@\n\nw:20\nof @god_name_possessive@ @divine_esteem@\n\nw:4\nof the @_verbing_@ Gods\n\nw:4\nof the @_adjective_@ God\n\nw:2\nof @god_name@, @_verbing_@\n\nw:1\nof @god_name@\n\nw:15\nof @branch_name@\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Light",
+          "Translation": "轻盈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "jewellery",
+      "english": "w:3\nof the @_jewellery_animal_@\n\nof @_jewellery_special_name_@\n\nof @_suspicion_name_@\n\nof the @_people_name_@\n\nw:5\nof the @_verbing_@ @_people_name_@\n\nw:17\nof @_balance_or_order_@\n\nw:14\nof @_philosophy_name_@\n\nof @other_weapon_name@\n\nw:20\nof the @_armour_animal_@\n\nw:3\nof @_flower_name_@\n\nw:3\nof the @_adjective_@ @_fruit_name_@\n\nw:5\nof @_evil_being_@\n\nw:20\nof @_good_or_divine_@\n\nw:12\nof @_politics_name_armour_@\n\nw:2\n\"@_plain_armour_name_@\"\n\nw:13\nof @_time_name_@\n\nof @_sky_or_light_@\n\nw:20\nof @god_name_possessive@ @divine_esteem@\n\nw:4\nof the @_verbing_@ Gods\n\nw:4\nof the @_adjective_@ God\n\nw:2\nof @god_name@, @_verbing_@\n\nof Xom's @_xom_esteem_@\n\nw:7\nof @_virtue_name_@\n\nw:13\nof @_vice_name_@\n\nof @_number_or_qualifier_@ @_thing_names_@\n\nof @_number_or_qualifier_@ @_verbing_@ @_thing_names_@\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Light",
+          "Translation": "轻盈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "trog weapon",
+      "english": "w:20\nof @_power_or_anger_@\n\nw:5\nof @_adjective_@ @_power_or_anger_@\n\nw:20\nof @_battle_or_war_@\n\nw:5\nof the @_verbing_@ @_battle_or_war_@\n\nw:20\nof @death_or_doom@\n\nw:5\nof @_adjective_@ @death_or_doom@\n\nw:7\nof @_strategy_name_@\n\nw:15\nof @_justice_name_@\n\nw:30\nof @_virtue_or_vice_@\n\nw:1\nof Trog\n\nw:20\nof Trog's @divine_esteem@\n\nof Trog's @_anger_quality_@\n\nw:15\nof the @_weapon_animal_@\n\nw:15\nof @_evil_stuff_@\n\nof @_catastrophe_name_@\n\nw:15\nof @_chaos_name_@\n\nw:20\nof @_balance_or_order_@\n\nw:20\nof @_economics_or_politics_@\n\nw:15\nof @branch_name@\n\nw:15\nof @_place_name_@\n\nw:15\nof @_time_name_@\n\nof @_sky_or_light_@\n\nw:20\nof @_number_or_qualifier_@ @_thing_names_@\n\nof @_discomfort_weapon_@\n\nof the @_item_name_@\n\nw:15\nof @_philosophy_name_@\n\nof @_science_name_@\n\nof @other_weapon_name@\n\nof @_monster_name_@@killer_name@\n\nw:30\n\"@_plain_weapon_name_@\"\n\n\"@_adjective_@ @_plain_weapon_name_@\"\n",
+      "hits": [
+        {
+          "Term": "Trog",
+          "Translation": "特洛戈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Light",
+          "Translation": "轻盈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "chaos",
+          "Translation": "混沌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "okawaru weapon",
+      "english": "w:400\n@weapon@\n\nw:2\nof @player_name_possessive@ @_valour_name_@\n\nw:3\nof Okawaru's @divine_esteem@\n\nw:1\nof Okawaru, @_verbing_@\n\nof @_strategy_or_justice_@\n\nw:5\nof @_philosophy_name_@\n\nw:3\nof @_balance_or_order_@\n\nw:5\nof @_power_name_@\n\nw:2\nof @_virtue_name_@\n\nw:1\nof the @_diviner_name_@\n\nw:5\nof the @_weapon_animal_@\n\nw:5\nof @_place_name_@\n\nw:2\nof @_item_name_@\n",
+      "hits": [
+        {
+          "Term": "Okawaru",
+          "Translation": "奥格瓦如",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "valour",
+          "Translation": "英勇",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "okawaru robe",
+      "english": "@Okawaru armour@\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "Okawaru",
+          "Translation": "奥格瓦如",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "okawaru body armour",
+      "english": "@Okawaru armour@\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "Okawaru",
+          "Translation": "奥格瓦如",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "okawaru armour",
+      "english": "w:400\n@armour@\n\nw:2\nof @player_name_possessive@ @_valour_name_@\n\nw:2\nof Okawaru's @divine_esteem@\n\nw:2\nof the @_armour_animal_@\n\nw:1\nof @_good_or_divine_@\n\nw:2\nof @_armour_name_shielding_@\n\nw:1\nof @_armour_property_name_@\n\nw:1\nof @_wacky_armour_name_@\n\nw:2\nof @_politics_name_armour_@\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "Okawaru",
+          "Translation": "奥格瓦如",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "valour",
+          "Translation": "英勇",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "xom weapon",
+      "english": "w:5\nof @_chaos_name_@\n\nw:5\nof Xom's @_xom_esteem_@\n\nw:2\nof Xom's @divine_esteem@\n\nw:2\n\"Xom, @_verbing_@ and @_verbing_@\"\n\nw:2\nof the @_verbing_@ @_fruit_name_@\n\nw:1\nof @xom_name@\n\nw:1\nof @_game_name_@\n\nw:400\n@weapon@\n\n@jewellery@\n\n@armour@\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "chaos",
+          "Translation": "混沌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "xom robe",
+      "english": "@Xom armour@\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "xom body armour",
+      "english": "@Xom armour@\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "xom armour",
+      "english": "w:5\nof @_chaos_name_@\n\nw:5\nof Xom's @_xom_esteem_@\n\nw:2\nof Xom's @divine_esteem@\n\nw:2\n\"@_adjective_@ Xom\"\n\nw:1\nof @xom_name@\n\nw:1\nof @_game_name_@\n\nw:1\nof @player_death@\n\nw:400\n@armour@\n\n@jewellery@\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "chaos",
+          "Translation": "混沌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "xom jewellery",
+      "english": "w:5\nof @_chaos_name_@\n\nw:5\nof Xom's @_xom_esteem_@\n\nw:2\nof Xom's @divine_esteem@\n\nw:2\nof @_verbing_@ Xom\n\nw:1\nof @xom_name@\n\nw:1\nof @_game_name_@\n\nw:1\nof @player_death@\n\nw:1\nof @player_doom@\n\nw:300\n@jewellery@\n\n@armour@\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "chaos",
+          "Translation": "混沌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    }
+  ]
+}

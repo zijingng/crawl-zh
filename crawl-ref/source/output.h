@@ -5,6 +5,9 @@
 
 #pragma once
 
+#include <vector>
+struct monster_info;
+
 #ifdef DGL_SIMPLE_MESSAGING
 void update_message_status();
 #endif
@@ -24,6 +27,7 @@ void smallterm_warning();
 void redraw_screen(bool show_updates = true);
 
 string mpr_monster_list(bool past = false);
+string monster_list_description(const std::vector<monster_info>& mons, bool past = false);
 int update_monster_pane();
 
 int equip_slot_by_name(const char *s);

@@ -1,0 +1,122 @@
+[
+  {
+    "file": "crawl-ref/source/fearmonger.cc",
+    "scope": "fear_status_messages; typed_monster_display",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/feature-data.h",
+    "scope": "canonical_feature_table; existing_d.feature.name_adapter_verified_by_native_test",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/feature.cc",
+    "scope": "declarations_containers_enums_flags_or_algorithms; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/feature.h",
+    "scope": "declarations_containers_enums_flags_or_algorithms; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/fight.cc",
+    "scope": "combat_confirmation_boundaries; canonical_verbs_and_grammar_preserved",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/fight.h",
+    "scope": "declarations_containers_enums_flags_or_algorithms; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/files.cc",
+    "scope": "normal_save_load_level_ui; technical_errors_and_storage_metadata_preserved",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/files.h",
+    "scope": "declarations_containers_enums_flags_or_algorithms; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/filter-enum.h",
+    "scope": "declarations_containers_enums_flags_or_algorithms; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/fineff.cc",
+    "scope": "owned_combat_messages; externally_preformatted_payloads_preserved",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/fineff.h",
+    "scope": "declarations_containers_enums_flags_or_algorithms; no_owned_gameplay_prose",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/fixedarray.h",
+    "scope": "declarations_containers_enums_flags_or_algorithms; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/fixedp.h",
+    "scope": "declarations_containers_enums_flags_or_algorithms; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/fixedvector.h",
+    "scope": "declarations_containers_enums_flags_or_algorithms; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/flang-t.h",
+    "scope": "declarations_containers_enums_flags_or_algorithms; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/flood-find.h",
+    "scope": "declarations_containers_enums_flags_or_algorithms; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/flush-reason-type.h",
+    "scope": "declarations_containers_enums_flags_or_algorithms; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/fontwrapper-ft.cc",
+    "scope": "font_runtime_and_technical_diagnostics_preserved",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/fontwrapper-ft.h",
+    "scope": "declarations_containers_enums_flags_or_algorithms; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/form-data.h",
+    "scope": "canonical_generated_form_table; display_status_traits_and_damage_labels_added",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/format.cc",
+    "scope": "format_parser_and_markup; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/format.h",
+    "scope": "declarations_containers_enums_flags_or_algorithms; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/fprop.cc",
+    "scope": "declarations_containers_enums_flags_or_algorithms; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/fprop.h",
+    "scope": "declarations_containers_enums_flags_or_algorithms; no_owned_gameplay_prose",
+    "changed": false
+  }
+]

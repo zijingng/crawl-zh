@@ -1,0 +1,521 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "selected": [
+    {
+      "source": "database/rand_all.txt",
+      "key": "_suspicion_name_",
+      "english": "@_suspicion_no_conflict_name_@\n\nw:2\n@_conflict_name_@\n",
+      "hits": []
+    },
+    {
+      "source": "database/rand_all.txt",
+      "key": "divine_esteem",
+      "english": "Approval\n\nBenevolence\n\nDelight\n\nEsteem\n\nFavour\n\nw:5\nFelicitations\n\nGenerosity\n\nGrace\n\nHope\n\nInspiration\n\nPride\n\nRegard\n\nw:5\nRespect\n\nSupremacy\n\nWhim\n\nCastigation\n\nCondemnation\n\nDispleasure\n\nEnvy\n\nReproof\n\nw:70\n@_anger_quality_@\n",
+      "hits": []
+    },
+    {
+      "source": "database/rand_all.txt",
+      "key": "_xom_esteem_",
+      "english": "w:40\n@divine_esteem@\n\nAbsentmindedness\n\nAmusement\n\nAttic\n\nBemusement\n\nBest Wishes\n\nCapriciousness\n\nEntertainment\n\nFacetiousness\n\nFair Game\n\nFlight of Fancy\n\nFull Attention\n\nMalicious Joy\n\nPassing Interest\n\nRecklessness\n\nRinging Laughter\n\nSleight of Hands\n\nTaradiddle\n\nTemerity\n\nWantonness\n\nWhimsicality\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Flight",
+          "Translation": "飞行术/飞行/一群",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】完整法术标题用飞行术。移动能力或状态用飞行。a flight of butterflies 指一群蝴蝶。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_all.txt",
+      "key": "_sky_or_light_",
+      "english": "Darkness\n\nDim Light\n\nLight\n\nStarshine\n\nSunlight\n\nthe Endless Expanse\n\nthe Gloaming\n\nthe Heavens\n\nthe Moon\n\nthe Shining Light\n\nthe Skies Above\n\nthe Sky\n\nthe Sun\n\nthe @_sky_colour_name_@ Skies\n",
+      "hits": [
+        {
+          "Term": "Darkness",
+          "Translation": "黑暗术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Light",
+          "Translation": "轻盈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_all.txt",
+      "key": "_virtue_or_vice_",
+      "english": "w:5\n@_virtue_name_@\n\n@_valour_name_@\n\n@_vice_name_@\n",
+      "hits": [
+        {
+          "Term": "valour",
+          "Translation": "英勇",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_power_or_anger_",
+      "english": "@_power_name_@\n\nw:7\n@_conflict_name_@\n\nw:7\n@_anger_name_@\n",
+      "hits": []
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_power_name_",
+      "english": "Big Damage\n\nDominance\n\nDomination\n\nFriendship\n\nGlory\n\nGrandeur\n\nHubris\n\nIntimidation\n\nInvincibility\n\nMagnificence\n\nMastery\n\nMight\n\nSuccess\n\nSuperiority\n\nTriumph\n\nVictory\n\nWondrous Power\n\n",
+      "hits": [
+        {
+          "Term": "Might",
+          "Translation": "强力术/可能/力量",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术或能力标题保留强力术。情态动词 might 表示可能。名词 might 表示力量或威力。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_conflict_name_",
+      "english": "Brawling\n\nConflict\n\nContention\n\nDiscord\n\nDissent\n\nDivision\n\nDoubt\n\nInternal Strife\n\nMelee\n\nResumed Hostilities\n\nTension\n\n",
+      "hits": [
+        {
+          "Term": "Discord",
+          "Translation": "不和之音/Discord",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用不和之音。社区软件 Discord 保留产品名。"
+        },
+        {
+          "Term": "Melee",
+          "Translation": "近战",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_anger_name_",
+      "english": "@_anger_quality_@\n\nw:3\n@_anger_possessive_@\n\n",
+      "hits": []
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_anger_quality_",
+      "english": "Anger\n\nBrutal Revenge\n\nDisproportionate Response\n\nFury\n\nHatred\n\nIndignation\n\nOutrage\n\nRighteous Anger\n\nRighteous Fury\n\nScorn\n\nVengeance\n\nWrath\n\n",
+      "hits": [
+        {
+          "Term": "Wrath",
+          "Translation": "神怒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_anger_possessive_",
+      "english": "the Extremely Mad\n\nthe Absolute Madman\n\nthe Incandescent\n\nthe Furious\n\nthe Howling One\n\nthe Gibberer\n\nthe Hated\n\nthe Scorned\n\nthe Abhorred\n",
+      "hits": []
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_battle_or_war_",
+      "english": "Crusades\n\nEternal War\n\nIconoclasm\n\nPlunder\n\nRavage\n\nRegicide\n\nSkirmishing\n\nWar\n\nthe Doomed Warrior\n\nthe Endless March\n\nthe Eternal Warrior\n\nthe Onslaught\n\nthe Pyrrhic Victory\n\nthe Warrior\n\nBlood\n\nBlood-Lust\n\nCallousness\n\nDiet Blood\n\nFear\n\nJoyful Slaughter\n\nMassacring\n\nWounding\n\n\nAgony\n\nHacking and Slashing\n\nInsufficient Pleasure\n\nTrauma\n\n\nDullness\n\nPrecise Incision\n\nLaceration\n\nSeverance\n\nTruncation\n\nDeath's Door\n\nMourning\n\nthe Grave\n",
+      "hits": [
+        {
+          "Term": "Warrior",
+          "Translation": "勇士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Death's Door",
+          "Translation": "死亡之门",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Agony",
+          "Translation": "剧痛术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "death_or_doom",
+      "english": "Bloody Death\n\nCertain Death\n\nDeath\n\nExquisite Death\n\nImminent Death\n\nInstant Death\n\nPain and Death\n\nPainful Death\n\nQuick Death\n\nSlow Death\n\nSudden Death\n\nUncertain Death\n\nUntimely Demise\n\nDestruction\n\nDisembowelment\n\nDoom\n\nEvisceration\n\nExecution\n\nExtermination\n\nExtinguishment\n\nPeril\n\nPremature Burial\n\n\nAnguish\n\nDismemberment\n\nExcruciating Pain\n\nExquisite Torment\n\nInfinite Pain\n\nMisery\n\nTerror\n\nWoe\n\n",
+      "hits": [
+        {
+          "Term": "torment",
+          "Translation": "折磨",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Slow",
+          "Translation": "缓慢术/减速/缓慢/迟缓",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用缓慢术。施加状态用减速。普通动作或反应用缓慢、迟缓。"
+        },
+        {
+          "Term": "Pain",
+          "Translation": "痛苦术/痛苦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用痛苦术。卡牌、武器印记或普通感受用痛苦，完整物品专名优先。\n【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Anguish",
+          "Translation": "痛楚术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_strategy_or_justice_",
+      "english": "w:2\n@_strategy_name_@\n\nw:4\n@_valour_name_@\n\nw:3\n@_justice_name_@\n",
+      "hits": [
+        {
+          "Term": "valour",
+          "Translation": "英勇",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_strategy_name_",
+      "english": "Defence\n\nDefence by Offence\n\nExpedience\n\nGuile\n\nOffence\n\nOptimality\n\nOverwhelming Force\n\nReinforcement\n\nStrategic Superiority\n\nSubterfuge\n\n",
+      "hits": [
+        {
+          "Term": "Guile",
+          "Translation": "狡诈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_valour_name_",
+      "english": "Action\n\nConatus\n\nConscience\n\nCourage\n\nDaring\n\nDefiance\n\nDuty\n\nEternal Vigilance\n\nFortitude\n\nGallantry\n\nHonour\n\nIndomitability\n\nIntegrity\n\nPrudence\n\nPurpose\n\nResourcefulness\n\nResponsibility\n\nTenacity\n\nTrue Grit\n\nValiance\n\nWatchfulness\n\n",
+      "hits": [
+        {
+          "Term": "valour",
+          "Translation": "英勇",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_justice_name_",
+      "english": "Absolution\n\nAccidental Termination\n\nBlind Justice\n\nCapital Punishment\n\nCorporal Punishment\n\nCruel Justice\n\nExoneration\n\nExtenuating Circumstances\n\nFalse Accusations\n\nForgiveness\n\nGuilt\n\nInnocence\n\nJudgement\n\nPunishment\n\nTender Mercy\n\nTortfeasance\n\nTrial by Ordeal\n\nWrongful Imprisonment\n\n",
+      "hits": []
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_diviner_name_",
+      "english": "Augurer\n\nFortune-Teller\n\nOracle\n\nSeeker\n\nSeer\n\nSoothsayer\n\nSybil\n\nVisionary\n\nWater Diviner\n\n",
+      "hits": []
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_evil_stuff_",
+      "english": "Abomination\n\nAbuse\n\nAncient Evil\n\nCorruption\n\nDebasement\n\nDefilement\n\nDeformation\n\nDemonkind\n\nEvil\n\nHell's Wrath\n\nInfection\n\nMutilation\n\nNightmares\n\nPerversion\n\nPutrescence\n\nShrieking Terror\n\nVitiation\n\nthe Beast\n\nthe Crawling Thing\n\nthe Dead\n\nthe Evil Eye\n\nthe Ghost\n\nthe Living Dead\n\nthe Lurker\n\nthe Reaper\n\nthe Spectre\n\nthe Thing\n\nthe Undead\n\nthe Unliving\n\nthe Unspeakable One\n\nthe Wraith\n\n",
+      "hits": [
+        {
+          "Term": "ghost",
+          "Translation": "鬼魂",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Hell",
+          "Translation": "地狱",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "The Unspeakable",
+          "Translation": "无以名状",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "undead",
+          "Translation": "亡灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】指不死生物类别，并不表示无法被杀死。 来源：mon-util.cc。"
+        },
+        {
+          "Term": "reaper",
+          "Translation": "收割者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "spectre",
+          "Translation": "幽灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "wraith",
+          "Translation": "怨灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Wrath",
+          "Translation": "神怒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "the Wraith",
+          "Translation": "怨灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_catastrophe_name_",
+      "english": "Earthquakes\n\nCataclysm\n\nDrought\n\nFloods\n\nRuination\n\nthe Inferno\n\n\nAnnihilation\n\nArmageddon\n\nFimbulwinter\n\nRagnarok\n\nWorld Downfall\n\nWorld's End\n\nthe Apocalypse\n\nthe End of Times\n\nFamine\n\nPestilence\n\nPlague\n\nWar\n",
+      "hits": [
+        {
+          "Term": "Apocalypse",
+          "Translation": "启示录",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_chaos_name_",
+      "english": "Ambiguity\n\nArbitration\n\nCalamity\n\nChance\n\nChange\n\nConfusion\n\nConstant Reorganisation\n\nContradiction\n\nDisarray\n\nDisaster\n\nDisharmony\n\nDisintegration\n\nDisorder\n\nDissolution\n\nDistraction\n\nExtremism\n\nGoblin Mode\n\nHavoc\n\nImbalance\n\nImpermanence\n\nIncongruity\n\nMayhem\n\nRevolt\n\nTrue Chaos\n\nTumult\n\nTurmoil\n\nUpheaval\n\nthe Extremes\n\nthe Farrago\n\nthe Fray\n\nthe Hodge-Podge\n\nthe Mish-Mash\n",
+      "hits": [
+        {
+          "Term": "confusion",
+          "Translation": "混乱",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/状态】状态名，区别动词 confuse。 来源：duration-data.h。"
+        },
+        {
+          "Term": "Upheaval",
+          "Translation": "剧变术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Dissolution",
+          "Translation": "溶解者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "goblin",
+          "Translation": "地精",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Mayhem",
+          "Translation": "混战",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "chaos",
+          "Translation": "混沌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_balance_or_order_",
+      "english": "Accord\n\nArrival\n\nAscent\n\nBalance\n\nBodily Harmony\n\nCircularity\n\nConformity\n\nDeparture\n\nDescent\n\nDue Proportion\n\nEquilibrium\n\nEquivalence\n\nEternal Harmony\n\nFragile Peace\n\nHarmony\n\nLaw\n\nLinearity\n\nModeration\n\nPeace\n\nPropriety\n\nSymmetry\n\nthe Establishment\n\nthe Final Decision\n\nthe Median\n\nthe Middle\n\n",
+      "hits": []
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_economics_or_politics_",
+      "english": "Amortisation\n\nAnimal Spirits\n\nBankruptcy\n\nCollusion\n\nCompound Interest\n\nCurrency\n\nDebt\n\nDeflation\n\nDemand\n\nDividends\n\nExchange\n\nGrowth\n\nIncome\n\nInflation\n\nLuxury\n\nProfit\n\nRisk Management\n\nSupply\n\nTaxation\n\nValuable Assets\n\nWelfare\n\nAttainder\n\nBreach\n\nChecks and Balances\n\nConservatism\n\nDefenestration\n\nFee Simple\n\nFreehold\n\nFundamental Breach\n\nGovernance\n\nGreatest Utility\n\nImpeachment\n\nMandamus\n\nPopular Demand\n\nPoverty\n\nRadicalism\n\nReapportionment\n\nRoyalism\n\nSequestration\n\nTermination\n\nWealth\n\nthe Common Good\n\nthe Dark Horse\n\nthe Demagogue\n\nthe Imperium\n\nthe Lame Duck\n\nthe Lesser Evil\n\nthe Little People\n\nthe People\n\nthe Revolution\n\nthe Silent Majority\n\n\nActus Reus\n\nAd Valorem\n\nAdverse Possession\n\nCorpus Delicti\n\nEminent Domain\n\nIn Flagrante Delicto\n\nIpse Dixit\n\nLocus Delicti\n\nMalum In Se\n\nMalum Prohibitum\n\nMens Rea\n\nNolo Contendere\n\nNon Obstante Veredicto\n\nObiter Dictum\n\nRes Ipsa Loquitur\n\nRes Judicata\n\n",
+      "hits": []
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_place_name_",
+      "english": "Beyond\n\nDistant Shores\n\nDistant Worlds\n\nParts Unknown\n\nProximity\n\nSomewhere Else\n\nthe Blessed Realm\n\nthe Desert\n\nthe Equator\n\nthe Eternal Void\n\nthe Forest\n\nthe Hidden Vale\n\nthe Hills\n\nthe Known World\n\nthe Land of Plenty\n\nthe Maze\n\nthe New World\n\nthe Old World\n\nthe Other Side\n\nthe Pit\n\nthe Poles\n\nthe Sea\n\nthe Shore\n\nthe Spheres\n\nthe Trees\n\nthe Tundras\n\nthe Unseen Realm\n\nthe Valley\n\nthe Valley of Death\n\nthe Volcano\n\nthe Wasteland\n\nthe Wilderness\n\nthe World\n\n",
+      "hits": [
+        {
+          "Term": "volcano",
+          "Translation": "火山",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Forest",
+          "Translation": "魔法森林",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Forest（规范缩写 Forest）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_discomfort_weapon_",
+      "english": "Annoyance\n\nAnxiety\n\nAwkwardness\n\nChagrin\n\nDesperation\n\nDiscomfort\n\nDisgust\n\nDismay\n\nDissatisfaction\n\nEmbarrassment\n\nFlawed Execution\n\nFoul Odours\n\nFrustration\n\nGloom\n\nInconvenience\n\nIrritation\n\nMalaise\n\nShame\n\nStickiness\n\nUncomfortable Rashes\n\nUnpleasantness\n\nUrgency\n\n",
+      "hits": [
+        {
+          "Term": "Gloom",
+          "Translation": "幽暗/愁苦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】暗处或对应魔法用幽暗。花朵枯死等情绪修辞可用愁苦。\n【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_GLOOM；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_philosophy_name_",
+      "english": "Absolutism\n\nAbstinence\n\nActivism\n\nAgnosticism\n\nAltruism\n\nAnarchy\n\nAsceticism\n\nAtheism\n\nAutotheism\n\nCynicism\n\nDisestablishmentarianism\n\nDogma\n\nEgalitarianism\n\nElitism\n\nEthics\n\nExistentialism\n\nFallacy\n\nFanaticism\n\nFree Expression\n\nFree Will\n\nHedonism\n\nHenotheism\n\nHeresy\n\nIdealism\n\nKathenotheism\n\nLevity\n\nLiberalism\n\nLimitation\n\nMaltheism\n\nMonotheism\n\nMorality\n\nMutualism\n\nMysticism\n\nNihilism\n\nOptimism\n\nOrthodoxy\n\nPanentheism\n\nPantheism\n\nPessimism\n\nPolytheism\n\nPragmatism\n\nRationality\n\nRelativism\n\nSerendipity\n\nSkepticism\n\nSophism\n\nStoicism\n\nSyndicalism\n\nTheistic Finitism\n\nthe Ego\n",
+      "hits": [
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_science_name_",
+      "english": "Analysis\n\nArticulation\n\nCalculation\n\nCircular Logic\n\nClassification\n\nContext\n\nEvolution\n\nExperimentation\n\nFocus\n\nGravity\n\nInference\n\nInfinity\n\nInquiry\n\nInstinct\n\nIntuition\n\nObjectivity\n\nPatterns\n\nQuantum Leap\n\nReason\n\nRotation\n\nSubjectivity\n\nTheory\n\nUnreason\n\nthe Beginning\n\nthe Big Bang\n\nthe Boiling Point\n\nthe End\n\nthe Mind\n\nthe Nexus\n\n",
+      "hits": [
+        {
+          "Term": "evolution",
+          "Translation": "进化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：进化。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_magic_name_",
+      "english": "the Hierophant\n\nthe Magi\n\nthe Sage\n\nthe Warrior-Mage\n",
+      "hits": [
+        {
+          "Term": "Warrior",
+          "Translation": "勇士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "source": "database/rand_wpn.txt",
+      "key": "_substance_name_",
+      "english": "Ash\n\nBile\n\nBloodstone\n\nBodily Humours\n\nBread\n\nCheese\n\nCobwebs\n\nCrystal\n\nDried Tears\n\nDung\n\nIchor\n\nOintment\n\nOozing Pus\n\nPaper\n\nRubbish\n\nSalt\n\nSaltpetre\n\nSharkskin\n\nSlime\n\nSulphur\n\nTerra Cotta\n\nDust\n\nMana\n\nSpores\n\nYeast\n\n",
+      "hits": [
+        {
+          "Term": "ichor",
+          "Translation": "灵液",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "salt",
+          "Translation": "盐尘",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_SALT；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1006 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "selected": [
+    {
+      "key": "majin-bo greeting",
+      "source_sha256": "5aeb71416f82790f6e6b1e384adf9671b23775c1e5f88cc56295afb7aceac600",
+      "legacy_present": true,
+      "hits": [
+        {
+          "Term": "Hell",
+          "Translation": "地狱",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Majin-Bo",
+          "Translation": "魔神棒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "majin-bo cast",
+      "source_sha256": "2602b4708d8924fd834b7e36466f8ede078f3930249c771d811e95d63f2c6dd2",
+      "legacy_present": true,
+      "hits": [
+        {
+          "Term": "damnation",
+          "Translation": "天谴/诅咒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【语境补充 2026-10-21】无视抗性的伤害机制用天谴。place of damnation 等宗教或叙事修辞可用诅咒。Hurl Damnation 等完整历史专名以专条为准。"
+        },
+        {
+          "Term": "Hell",
+          "Translation": "地狱",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Majin-Bo",
+          "Translation": "魔神棒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Darkness",
+          "Translation": "黑暗术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "majin-bo cast weak",
+      "source_sha256": "90038a193b918241f72fa471b96c3d8c254ab99cec3f08cbafe9a320e374447b",
+      "legacy_present": true,
+      "hits": [
+        {
+          "Term": "Hell",
+          "Translation": "地狱",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Majin-Bo",
+          "Translation": "魔神棒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "weak",
+          "Translation": "虚弱",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：虚弱。"
+        }
+      ]
+    },
+    {
+      "key": "zonguldrok greeting",
+      "source_sha256": "d28ff424f5f462c767da2d583b1e21a74304137e80b298c1b5dc3c641ab005ac",
+      "legacy_present": false,
+      "hits": []
+    },
+    {
+      "key": "zonguldrok reprise",
+      "source_sha256": "56421747be7fa40c1d7ecb20ee071797bba11a05251b8dbee442945a4c816339",
+      "legacy_present": false,
+      "hits": [
+        {
+          "Term": "clumsy",
+          "Translation": "笨拙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：笨拙。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "zonguldrok farewell",
+      "source_sha256": "3571f31a3f65fe9ade5ec670ae03a54a4eb027bfcff507baed80670657d0b9d6",
+      "legacy_present": false,
+      "hits": [
+        {
+          "Term": "Shield",
+          "Translation": "格挡值/盾牌/保护",
+          "Part of Speech": "noun",
+          "Variants": "SH",
+          "Note": "【0.34.1 修订】原表备注明确是属性；官方手册也以 Shield 为 SH 标题。此处保留该语境；普通物品 shield 仍译盾牌，必须按上下文区分。 来源：docs/crawl_manual.rst。\n【语境补充 2026-10-21】SH 属性用格挡值。装备名词 shield 用盾牌。shield 作动词用保护，不改写物品种类。"
+        }
+      ]
+    },
+    {
+      "key": "zonguldrok hat good",
+      "source_sha256": "7882d9a8e098c2b1361c00249b923bab7431668a14fa3e1508745e0f3c0c7940",
+      "legacy_present": false,
+      "hits": [
+        {
+          "Term": "hat",
+          "Translation": "帽子",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "zonguldrok hat okay",
+      "source_sha256": "964d8516fda649802df81557175f1440b3252179856d1cbe5beb94dfae8f77b4",
+      "legacy_present": false,
+      "hits": [
+        {
+          "Term": "hat",
+          "Translation": "帽子",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "zonguldrok hat bad",
+      "source_sha256": "e517a39f24cb8a86707747bae816f9d5e7c207157c3199ce0a7b3722518845c6",
+      "legacy_present": false,
+      "hits": [
+        {
+          "Term": "hat",
+          "Translation": "帽子",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "zonguldrok hat crown of Dyrovepreva",
+      "source_sha256": "1fb999f5ceea6ef50782c91c1589b0c5e68c2eb9088f803ebef6639b24120da2",
+      "legacy_present": false,
+      "hits": [
+        {
+          "Term": "hat",
+          "Translation": "帽子",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "titan",
+          "Translation": "泰坦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "crown of Dyrovepreva",
+          "Translation": "迪罗维普雷瓦之冠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "zonguldrok hat hat of the Bear Spirit",
+      "source_sha256": "e6fe30556812a8e491ddc1eebae022428fb81193a1e65737027962a83bc4ab80",
+      "legacy_present": false,
+      "hits": [
+        {
+          "Term": "hat",
+          "Translation": "帽子",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Strength",
+          "Translation": "力量/强度/威力",
+          "Part of Speech": "noun",
+          "Variants": "Str",
+          "Note": "三大基础属性之一\n【语境补充 2026-10-21】Str 属性用力量。法术、效果或攻击的 strength 按语境用强度或威力。"
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "hat of the Bear Spirit",
+          "Translation": "熊灵帽",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+        },
+        {
+          "Term": "bear",
+          "Translation": "熊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Spirit",
+          "Translation": "灵魂护盾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "Light",
+          "Translation": "轻盈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "zonguldrok hat hood of the Assassin",
+      "source_sha256": "a58917c925964b06f047a265acbde9f97bc2e8b9c5f7af6d5809f459ba6f24c9",
+      "legacy_present": false,
+      "hits": [
+        {
+          "Term": "hat",
+          "Translation": "帽子",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "hood of the Assassin",
+          "Translation": "刺客兜帽",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "zonguldrok hat mask of the Dragon",
+      "source_sha256": "110f5819b9595c7b5bc873652eab97e62281733e67d6bf975681ac7a6643b8d4",
+      "legacy_present": false,
+      "hits": [
+        {
+          "Term": "hat",
+          "Translation": "帽子",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "mask of the Dragon",
+          "Translation": "巨龙面具",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+        },
+        {
+          "Term": "dragon",
+          "Translation": "龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "strong",
+          "Translation": "强壮",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：强壮。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "zonguldrok hat hat of the Alchemist",
+      "source_sha256": "699e0be36a12c83068ddf225dd5395c8306da117c8fb526bac6630869c95349c",
+      "legacy_present": false,
+      "hits": [
+        {
+          "Term": "hat",
+          "Translation": "帽子",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Alchemist",
+          "Translation": "炼金术士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/alchemist.yaml。"
+        },
+        {
+          "Term": "Alchemy",
+          "Translation": "炼金术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "hat of the Alchemist",
+          "Translation": "炼金术士帽",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+        },
+        {
+          "Term": "the Elixir",
+          "Translation": "灵药",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Harm",
+          "Translation": "伤害",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "zonguldrok hat hat of Pondering",
+      "source_sha256": "c56e5bdbc4d78ffe9a7c59da86d458388ee8c14a9103d8130d5e8bf784dcca15",
+      "legacy_present": false,
+      "hits": [
+        {
+          "Term": "hat",
+          "Translation": "帽子",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "hat of Pondering",
+          "Translation": "思想帽",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "zonguldrok hat crown of vainglory",
+      "source_sha256": "ab192ad553ac1b02958d3122ded182941f66db82ee3f8bfe78de685607b8ebda",
+      "legacy_present": false,
+      "hits": [
+        {
+          "Term": "hat",
+          "Translation": "帽子",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "Darkness",
+          "Translation": "黑暗术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "crown of vainglory",
+          "Translation": "虚荣之冠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+        },
+        {
+          "Term": "Light",
+          "Translation": "轻盈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "fungus thoughts",
+      "source_sha256": "fd2804e5b7456778e3bf51bf0f776e0581ec8c493050b9f14ac7b2f128b91d0b",
+      "legacy_present": false,
+      "hits": [
+        {
+          "Term": "fungus",
+          "Translation": "真菌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Sporulate",
+          "Translation": "孢子繁殖",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：孢子繁殖。"
+        }
+      ]
+    },
+    {
+      "key": "eel hand actions",
+      "source_sha256": "9e7f2460193091046e48f01ffc461aac18c36ece5bd0fc63894a13f9535be66e",
+      "legacy_present": false,
+      "hits": [
+        {
+          "Term": "Inventory",
+          "Translation": "物品栏",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Air",
+          "Translation": "空气强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "eel hand solo actions",
+      "source_sha256": "cb7af91e9fd215bf222a450d33728cfde67614bb899331fa152ed34b7102301b",
+      "legacy_present": false,
+      "hits": [
+        {
+          "Term": "Air",
+          "Translation": "空气强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    }
+  ],
+  "legacy_structure_audit": [
+    {
+      "key": "_miscreants_",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "_singing_no_tension_",
+      "structure": "structure_valid",
+      "source_choices": [
+        3,
+        3,
+        2,
+        3
+      ],
+      "legacy_choices": [
+        3,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "key": "singing sword high_tension",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "_real_song_no_tension_",
+      "structure": "Changed random-text weights or choice boundaries",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "_common_speaking_no_tension_",
+      "structure": "structure_valid",
+      "source_choices": [
+        2,
+        4,
+        3,
+        3,
+        3,
+        5
+      ],
+      "legacy_choices": [
+        2,
+        4,
+        3,
+        3,
+        3,
+        5
+      ]
+    },
+    {
+      "key": "singing sword silenced",
+      "structure": "structure_valid",
+      "source_choices": [
+        4
+      ],
+      "legacy_choices": [
+        4
+      ]
+    },
+    {
+      "key": "_song_theme_",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "_singing_no-low_tension_",
+      "structure": "structure_valid",
+      "source_choices": [
+        2,
+        2,
+        2,
+        8,
+        2,
+        2,
+        2,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        4,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "legacy_choices": [
+        2,
+        2,
+        2,
+        8,
+        2,
+        2,
+        2,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        4,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "key": "_kind_of_scales_",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "_real_song_low-high_tension_",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "_beastly_adjective_",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "_weapon_chatter_",
+      "structure": "structure_valid",
+      "source_choices": [
+        3,
+        2,
+        2,
+        2
+      ],
+      "legacy_choices": [
+        3,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "key": "_screams_how_",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "_instrumental_noises_",
+      "structure": "Changed random-text weights or choice boundaries",
+      "source_choices": [
+        2,
+        2
+      ],
+      "legacy_choices": [
+        2,
+        2
+      ]
+    },
+    {
+      "key": "_body_part_",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "_glorious_",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "_beast_",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "_speaking_no_tension_",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "_rhyme_word_",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "_rare_chatter_",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "majin-bo cast",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "singing sword scream",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "frozen axe \"frostbite\"",
+      "structure": "structure_valid",
+      "source_choices": [
+        4,
+        3,
+        4,
+        2,
+        3,
+        2
+      ],
+      "legacy_choices": [
+        3,
+        4,
+        4,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "key": "_scream_",
+      "structure": "Changed random-text weights or choice boundaries",
+      "source_choices": [
+        3,
+        7,
+        4,
+        2,
+        7,
+        8,
+        2,
+        11,
+        16
+      ],
+      "legacy_choices": [
+        7,
+        3,
+        4,
+        2,
+        7,
+        8,
+        2,
+        16,
+        11
+      ]
+    },
+    {
+      "key": "_godless_sorter_",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "_real_song_high_tension_",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "_exasperated_",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "trishula \"condemnation\"",
+      "structure": "structure_valid",
+      "source_choices": [
+        4,
+        5,
+        4,
+        3,
+        3,
+        4,
+        3,
+        3,
+        3,
+        3,
+        2
+      ],
+      "legacy_choices": [
+        4,
+        5,
+        3,
+        4,
+        3,
+        4,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "key": "_crimson_",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "noisy weapon",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "_speaking_high_tension_",
+      "structure": "Changed random-text weights or choice boundaries",
+      "source_choices": [
+        2
+      ],
+      "legacy_choices": [
+        2
+      ]
+    },
+    {
+      "key": "weapon_noises",
+      "structure": "structure_valid",
+      "source_choices": [
+        8,
+        3,
+        3,
+        5,
+        2,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "legacy_choices": [
+        8,
+        3,
+        3,
+        2,
+        5,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "key": "_corpses_",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "_screams_",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "_musical_topic_",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "_speaking_low_tension_",
+      "structure": "Changed protected Lua literal (e.g. species key)",
+      "source_choices": [
+        2,
+        6
+      ],
+      "legacy_choices": [
+        2,
+        6
+      ]
+    },
+    {
+      "key": "_speaking_low-high_tension_",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "shield of the gong",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "_loudly_",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "singing sword no_tension",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "singing sword low_tension",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "_weapon_noises_low-high_tension_",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "_rare_speaking_no_tension_",
+      "structure": "structure_valid",
+      "source_choices": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "legacy_choices": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "key": "majin-bo greeting",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "_pets_",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "_real_song_low_tension_",
+      "structure": "structure_valid",
+      "source_choices": [
+        2,
+        4
+      ],
+      "legacy_choices": [
+        2,
+        4
+      ]
+    },
+    {
+      "key": "weapon_noise",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "_strikes_up_what_",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    },
+    {
+      "key": "majin-bo cast weak",
+      "structure": "structure_valid",
+      "source_choices": [],
+      "legacy_choices": []
+    }
+  ],
+  "source_keys": 65,
+  "legacy_matching_keys": 49,
+  "additional_name_queries": [
+    "skull of Zonguldrok",
+    "sword of Zonguldrok",
+    "fungal fisticloak"
+  ],
+  "additional_name_hits": [
+    {
+      "Term": "fungal fisticloak",
+      "Translation": "真菌拳击斗篷",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+    }
+  ]
+}

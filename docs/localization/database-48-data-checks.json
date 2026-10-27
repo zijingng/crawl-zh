@@ -1,0 +1,49 @@
+{
+  "reviewed_keys": 58,
+  "reviewed_candidates": 404,
+  "corrected_keys": 10,
+  "changes": {
+    "_writing_adj_": {
+      "before": "棱角分明\n\n方方正正\n\n粗体\n\n弯曲\n\n流畅\n\n锯齿状\n\n脉动\n\n变幻\n\n蜿蜒\n\n倾斜\n\n蜘蛛腿般纤细\n\n旋转\n\n搏动\n\n抽动\n\n扭动\n",
+      "after": "棱角分明\n\n方方正正\n\n粗重\n\n弯曲\n\n流畅\n\n参差不齐\n\n脉动\n\n变幻\n\n蜿蜒\n\n倾斜\n\n蛛腿般纤细\n\n旋转\n\n搏动\n\n抽动\n\n扭动\n"
+    },
+    "_graffiti_advertisement_": {
+      "before": "宣传一场@_graffiti_mass_meeting_ordinary_@的聚会\n\n宣传一场@_graffiti_mass_meeting_religious_@的聚会\n\n为地牢中一家出售[廉价|独家|昂贵|优质|稀有|实用]商品的商店做广告\n\nw:2\n宣传@_graffiti_class_any_@\n\nw:1\n宣传与@_graffiti_author_any_@见面学习地牢求生之道的活动\n\nw:1\n宣传与@_graffiti_author_any_@相聚共度美好时光的活动\n\nw:1\n为画这幅涂鸦所用的颜料做广告\n",
+      "after": "宣传一场@_graffiti_mass_meeting_ordinary_@的聚会\n\n宣传一场@_graffiti_mass_meeting_religious_@的聚会\n\n为地下城中一家出售[廉价|独家|昂贵|优质|稀有|实用]商品的商店做广告\n\nw:2\n宣传@_graffiti_class_any_@\n\nw:1\n宣传与@_graffiti_author_any_@见面学习地下城求生之道的活动\n\nw:1\n宣传与@_graffiti_author_any_@相聚共度美好时光的活动\n\nw:1\n为画这幅涂鸦所用的颜料做广告\n"
+    },
+    "_graffiti_changed_or_compared_religions_": {
+      "before": "@_graffiti_author_any_@已抛弃@random_god@\n\n@_graffiti_author_any_@已不再信奉@random_god@\n\n@_graffiti_author_any_@已改信@random_god@\n\n@_graffiti_author_any_@与@_graffiti_author_any_@相比，@_graffiti_religion_better_or_worse_@\n\n@_graffiti_author_any_@暗地里是个无神论者\n\n@_graffiti_author_any_@暗地里并非无神论者\n\n@_graffiti_author_any_@其实就是@random_god@\n\n@_graffiti_author_any_@暗中信奉辛\n\n@_graffiti_author_any_@暗中信奉辛，而非@random_god_chaotic@\n\n@_graffiti_author_any_@暗中信奉@random_god_chaotic@\n\n@_graffiti_author_any_@暗中信奉@random_god_chaotic@，而非辛\n\n@_graffiti_author_any_@暗中信奉@random_god_good@\n\n@_graffiti_author_any_@暗中信奉@random_god_good@，而非@random_god_evil@\n\n@_graffiti_author_any_@暗中信奉@random_god_evil@\n\n@_graffiti_author_any_@暗中信奉@random_god_evil@，而非@random_god_good@\n\nw:1\n@_graffiti_author_any_@其实就是@_graffiti_hailed_god_@\n\nw:1\n@_graffiti_author_any_@暗中信奉@_graffiti_hailed_god_@\n",
+      "after": "@_graffiti_author_any_@已背弃@random_god@\n\n@_graffiti_author_any_@已不再信奉@random_god@\n\n@_graffiti_author_any_@已改信@random_god@\n\n@_graffiti_author_any_@与@_graffiti_author_any_@相比，@_graffiti_religion_better_or_worse_@\n\n@_graffiti_author_any_@暗地里是个无神论者\n\n@_graffiti_author_any_@暗地里并非无神论者\n\n@_graffiti_author_any_@其实就是@random_god@\n\n@_graffiti_author_any_@暗中信奉辛\n\n@_graffiti_author_any_@暗中信奉辛，而非@random_god_chaotic@\n\n@_graffiti_author_any_@暗中信奉@random_god_chaotic@\n\n@_graffiti_author_any_@暗中信奉@random_god_chaotic@，而非辛\n\n@_graffiti_author_any_@暗中信奉@random_god_good@\n\n@_graffiti_author_any_@暗中信奉@random_god_good@，而非@random_god_evil@\n\n@_graffiti_author_any_@暗中信奉@random_god_evil@\n\n@_graffiti_author_any_@暗中信奉@random_god_evil@，而非@random_god_good@\n\nw:1\n@_graffiti_author_any_@其实就是@_graffiti_hailed_god_@\n\nw:1\n@_graffiti_author_any_@暗中信奉@_graffiti_hailed_god_@\n"
+    },
+    "_graffiti_fight_": {
+      "before": "描绘@_graffiti_author_any_@与@_graffiti_author_any_@的争论\n\n描绘@_graffiti_author_any_@、@_graffiti_author_any_@与@_graffiti_author_any_@的三方争论\n\nw:2\n描绘[狂战士|特洛戈信徒]与猩红怨体患者为血怒的真谛而打斗\n\nw:2\n描绘[“艺术家”|艺术家|迪斯姆诺信徒]与[死亡骑士|死亡法师|伊莱德莱姆努尔信徒|死灵法师]为某物究竟是影还是阴影怨魂而打斗\n",
+      "after": "描绘@_graffiti_author_any_@与@_graffiti_author_any_@的争论\n\n描绘@_graffiti_author_any_@、@_graffiti_author_any_@与@_graffiti_author_any_@的三方争论\n\nw:2\n描绘[狂战士|特洛戈信徒]与猩红怨体患者为狂暴的真谛而打斗\n\nw:2\n描绘[“艺术家”|艺术家|迪斯姆诺信徒]与[死亡骑士|死亡法师|伊莱德莱姆努尔信徒|死灵法师]为某物究竟是影子还是暗影幽灵而打斗\n"
+    },
+    "_graffiti_mass_meeting_ordinary_": {
+      "before": "一个体育俱乐部玩[纸牌|飞镖|链球|标枪|打岩鱼]\n\n一个修补匠俱乐部[测试|摆弄][装置|唤发物品|魔棒]\n\n一个为地表战争老兵提供互助的团体\n\n一群[面包师|水果商|肉贩|店主]在地牢里兜售商品\n\n一群[养蜂人|蜂巢护符使用者]讨论蜜蜂的[滑稽举动|情绪状态|健康状况]\n\n一群富人讨论如何赚更多的钱\n\n一群[骑士|老兵|军阀|勇士]练习几乎不加克制的战斗\n\n一群[骑士|老兵|军阀|勇士]练习单打独斗\n\n一群[法师|术士|施法者|巫师]练习[兼收并蓄的|深奥的]魔法\n\n一群[法师|术士|施法者|巫师]练习[灾变性|破坏性]魔法\n\n一群[死亡法师|死灵法师]练习[死灵系魔法|将事物变为亡灵]\n\n一群哲学家讨论[完美|时间的本质]，不知已讨论了多久\n\n一群[受虐狂|施虐狂]举行忍痛比赛\n\n一群园丁炫耀园艺本领\n\n一群[吟游诗人|历史学家|传说守护者]分享先祖的光辉事迹\n\n一群狂欢者举办狂野的舞会\n\n一群[“艺术家”表演“皮影戏”|艺术家表演皮影戏]\n\n一群武僧练习武术[招式|身法]\n\n一群药剂师练习为他人疗伤\n\n一群苦行者鄙弃肉体、讨论牺牲\n\n一群[圣战士|道德家][讨论|反对]世间邪恶\n\n一群形形色色的人讨论在深渊中的经历\n",
+      "after": "一个体育俱乐部玩[纸牌|飞镖|链球|标枪|打岩鱼]\n\n一个修补匠俱乐部[测试|摆弄][装置|可唤发物品|魔杖]\n\n一个为地表战争老兵提供互助的团体\n\n一群[面包师|水果商|肉贩|店主]在地牢里兜售商品\n\n一群[养蜂人|蜂巢护符使用者]讨论蜜蜂的[滑稽举动|情绪状态|健康状况]\n\n一群富人讨论如何赚更多的钱\n\n一群[骑士|老兵|军阀|勇士]练习几乎不加克制的战斗\n\n一群[骑士|老兵|军阀|勇士]练习单打独斗\n\n一群[法师|术士|施法者|巫师]练习[兼收并蓄的|深奥的]魔法\n\n一群[法师|术士|施法者|巫师]练习[灾变性|破坏性]魔法\n\n一群[死亡法师|死灵法师]练习[死灵系魔法|将事物变为亡灵]\n\n一群哲学家讨论[完美|时间的本质]，不知已讨论了多久\n\n一群[受虐狂|施虐狂]举行忍痛比赛\n\n一群园丁炫耀园艺本领\n\n一群[吟游诗人|历史学家|传说守护者]分享先祖的光辉事迹\n\n一群狂欢者举办狂野的舞会\n\n一群[“艺术家”表演“皮影戏”|艺术家表演皮影戏]\n\n一群武僧练习武术[招式|身法]\n\n一群药水制作者练习为他人疗伤\n\n一群苦行者鄙弃肉体、讨论牺牲\n\n一群[圣战士|道德家][讨论|反对]世间邪恶\n\n一群形形色色的人讨论在深渊中的经历\n"
+    },
+    "_graffiti_mass_meeting_religious_": {
+      "before": "一个[老千俱乐部|尼姆雷斯・索布信徒团体]按尼姆雷斯・索布的旨意打牌\n\n一群辛的信徒拥护法则公理\n\n一群[混沌骑士|佐姆信徒]沉思神圣疯狂\n\n一群[死亡骑士|伊莱德莱姆努尔信徒]拥抱无可抗拒之握\n\n一群哥萨戈信徒讨论如何赚更多的钱\n\n一群[狂战士|特洛戈信徒]练习几乎不加克制的战斗\n\n一群奥格瓦如信徒练习单打独斗\n\n一群席夫·穆纳信徒练习[兼收并蓄的|深奥的]魔法\n\n一群维胡梅特信徒练习[灾变性|破坏性]魔法\n\n一群奇库巴库哈信徒练习[死灵系魔法|将事物变为亡灵]\n\n一群切布理亚多信徒讨论[完美|时间的本质]，不知已讨论了多久\n\n一群马科列布信徒举行忍痛比赛\n\n一群费德哈信徒炫耀园艺本领\n\n一群惠普利亚卡纳信徒分享先祖的光辉事迹\n\n一群阿斯卡亚信徒举办狂野的舞会\n\n一群迪斯姆诺信徒表演[“皮影戏”|皮影戏]\n\n一群武剑会信徒练习武术[招式|身法]\n\n一群卡兹拉尔信徒在室内改变天气\n\n一群艾利维隆信徒练习为他人疗伤\n\n一群艾申扎利信徒练习占视事物\n\n一群入的信徒鄙弃肉体、讨论牺牲\n\n一群光明神信徒[讨论|反对]世间邪恶\n\n一群[卢戈努信徒|卢戈努的疯狂侍僧]讨论在深渊中的经历\n\n一群兽人宣扬比欧弗的教诲\n",
+      "after": "一个[老千俱乐部|尼姆雷斯・索布信徒团体]按尼姆雷斯・索布的旨意打牌\n\n一群辛的信徒拥护法则公理\n\n一群[混沌骑士|佐姆信徒]沉思神圣疯狂\n\n一群[死亡骑士|伊莱德莱姆努尔信徒]拥抱无可抗拒之握\n\n一群哥萨戈信徒讨论如何赚更多的钱\n\n一群[狂战士|特洛戈信徒]练习几乎不加克制的战斗\n\n一群奥格瓦如信徒练习单打独斗\n\n一群席夫·穆纳信徒练习[兼收并蓄的|深奥的]魔法\n\n一群维胡梅特信徒练习[灾变性|破坏性]魔法\n\n一群奇库巴库哈信徒练习[死灵系魔法|将事物变为亡灵]\n\n一群切布理亚多信徒讨论[完美|时间的本质]，不知已讨论了多久\n\n一群马科列布信徒举行忍痛比赛\n\n一群费德哈信徒炫耀园艺本领\n\n一群惠普利亚卡纳信徒分享先祖的光辉事迹\n\n一群阿斯卡亚信徒举办热闹奔放的舞会\n\n一群迪斯姆诺信徒表演[“皮影戏”|皮影戏]\n\n一群武剑会信徒练习武术[招式|身法]\n\n一群卡兹拉尔信徒在室内改变天气\n\n一群艾利维隆信徒练习为他人疗伤\n\n一群艾申扎利信徒练习占视事物\n\n一群入的信徒鄙弃肉体、讨论牺牲\n\n一群光明神信徒[讨论|反对]世间邪恶\n\n一群[卢戈努信徒|卢戈努的疯狂侍僧]讨论在深渊中的经历\n\n一群兽人宣扬比欧弗的教诲\n"
+    },
+    "_graffiti_religion_not_non-orc_or_orc_": {
+      "before": "[赞颂|亵渎]众神\n\n赞颂@random_god@，并亵渎@random_god@\n\n\n崇敬佐姆与万事万物的随机性\n\n赞美尼姆雷斯・索布，并期待下一副牌带来的一切\n\n颂扬伊莱德莱姆努尔及一切不洁之物\n\n称颂哥萨戈，并宣称只要金币够多，什么都能买到\n\n赞美特洛戈，并宣称血怒能扫清一切障碍\n\n敬爱奥格瓦如，并宣称勇士只需要奥格瓦如这一个盟友\n\n赞颂席夫·穆纳，并宣称只要足够努力，就能掌握一切魔法\n\n敬奉维胡梅特，并宣称将魔法化作武器是胜利的关键\n\n奉承奇库巴库哈，并宣称死灵系魔法能将一切血肉变成有用的工具\n\n称赞切布理亚多，并宣称缓慢而稳健就能征服一切\n\n向马科列布致敬，并谈论马科列布赐予的种种地狱之力\n\n赞颂费德哈与大自然经久不衰的力量\n\n尊崇惠普利亚卡纳，并宣称活在他人记忆中的人永不会真正死去\n\n向阿斯卡亚献上忠诚，并谈论生命本身这支复杂的舞蹈\n\n倾慕迪斯姆诺，并谈论[阴影|黑夜]的种种妙用\n\n感谢武剑会，并宣称严明的纪律是成就伟业的关键\n\n赞颂卡兹拉尔，并宣称元素能为你效力\n\n宣扬艾利维隆，并宣称为世界带来和平至关重要\n\n敬慕艾申扎利，并宣称只要能带来知识，诅咒与束缚便是祝福\n\n向入致敬，并宣称现实的一切都与你的认知不同\n\n赞颂光明神，并宣称以光明磊落的方式扫除世间邪恶至关重要\n\n奉承卢戈努，并宣称卢戈努与深渊之力即将统治一切\n\nw:1\n赞颂一位未知神祇\n\nw:1\n不只是向@_graffiti_hailed_god_@致意，更将其大加颂扬\n",
+      "after": "[赞颂|亵渎]众神\n\n赞颂@random_god@，并亵渎@random_god@\n\n\n崇敬佐姆与万事万物的随机性\n\n赞美尼姆雷斯・索布，并期待下一副牌带来的一切\n\n颂扬伊莱德莱姆努尔及一切不洁之物\n\n称颂哥萨戈，并宣称只要金币够多，什么都能买到\n\n赞美特洛戈，并宣称狂暴能扫清一切障碍\n\n敬爱奥格瓦如，并宣称勇士只需要奥格瓦如这一个盟友\n\n赞颂席夫·穆纳，并宣称只要足够努力，就能掌握一切魔法\n\n敬奉维胡梅特，并宣称将魔法化作武器是胜利的关键\n\n奉承奇库巴库哈，并宣称死灵系魔法能将一切血肉变成有用的工具\n\n称赞切布理亚多，并宣称缓慢而稳健就能征服一切\n\n向马科列布致敬，并谈论马科列布赐予的种种地狱之力\n\n赞颂费德哈与大自然经久不衰的力量\n\n尊崇惠普利亚卡纳，并宣称活在他人记忆中的人永不会真正死去\n\n向阿斯卡亚献上忠诚，并谈论生命本身这支复杂的舞蹈\n\n倾慕迪斯姆诺，并谈论[阴影|黑夜]的种种妙用\n\n感谢武剑会，并宣称严明的纪律是成就伟业的关键\n\n赞颂卡兹拉尔，并宣称元素之力能为你效力\n\n宣扬艾利维隆，并宣称为世界带来和平至关重要\n\n敬慕艾申扎利，并宣称只要能带来知识，诅咒与束缚便是祝福\n\n向入致敬，并宣称现实的一切都与你的认知不同\n\n赞颂光明神，并宣称以光明磊落的方式扫除世间邪恶至关重要\n\n奉承卢戈努，并宣称卢戈努与深渊之力即将统治一切\n\nw:1\n赞颂一位未知神祇\n\nw:1\n不只是向@_graffiti_hailed_god_@致意，更将其大加颂扬\n"
+    },
+    "_graffiti_unique_comment_": {
+      "before": "说卡珊德拉不该再这么消极\n\n说疯子尤夫不该再说得这么[不着边际|有道理]\n\n说唐纳德该闭嘴，别再抱怨\n\n说西格蒙德该放下镰刀\n\n说埃德蒙该别再自命不凡\n\n说斯普罗兹试图用机械蜜蜂取代真正蜜蜂的做法太过分了\n\n纳闷罗宾怎么能把东西扔得那么有力\n\n纳闷特伦斯为何想在地牢里度过退休生活\n\n猜想多万与杜维莎是否其实是三胞胎，还有另一个兄弟姐妹\n\n纳闷伊吉布除了魔棒还能造什么\n\n猜测耶利米主人的真实本质\n",
+      "after": "说卡珊德拉不该再这么消极\n\n说疯子尤夫不该再说得这么[不着边际|有道理]\n\n说唐纳德该闭嘴，别再抱怨\n\n说西格蒙德该放下镰刀\n\n说埃德蒙不该再自命不凡\n\n说斯普罗兹试图用机械蜜蜂取代真正蜜蜂的做法太过分了\n\n纳闷罗宾怎么能把东西扔得那么有力\n\n纳闷特伦斯为何想在地牢里度过退休生活\n\n猜想多万与杜维莎是否其实是三胞胎，还有另一个兄弟姐妹\n\n纳闷伊吉布除了魔杖还能造什么\n\n猜测耶利米主人的真实本质\n"
+    },
+    "_graffiti_vengeance_reason_": {
+      "before": "抛弃了@_graffiti_author_any_@\n\n抛弃了自己\n\n背叛了@_graffiti_author_any_@\n\n背叛了自己\n\n杀死了@_graffiti_author_any_@\n\n杀死了自己\n\n偷了@_graffiti_author_any_@的东西\n\n偷了自己的东西\n\n伤害了@_graffiti_author_any_@\n\n伤害了自己\n",
+      "after": "抛弃了@_graffiti_author_any_@\n\n抛弃了那人\n\n背叛了@_graffiti_author_any_@\n\n背叛了那人\n\n杀死了@_graffiti_author_any_@\n\n杀死了那人\n\n偷了@_graffiti_author_any_@的东西\n\n偷了那人的东西\n\n伤害了@_graffiti_author_any_@\n\n伤害了那人\n"
+    },
+    "_graffiti_wares_quality_": {
+      "before": "劣等\n\n高品质\n\n低品质\n\n平庸\n\n上等\n",
+      "after": "劣等\n\n高品质\n\n低品质\n\n品质一般的\n\n上等\n"
+    }
+  },
+  "exported_keys": 58,
+  "english_source_unchanged": true
+}

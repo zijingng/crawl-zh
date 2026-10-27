@@ -5,6 +5,9 @@
 **/
 
 #include "AppHdr.h"
+#include "p-display.h"
+#include "s-display.h"
+#include "i18n.h"
 
 
 #include "spl-damage.h"
@@ -118,14 +121,14 @@ spret cast_fire_storm(int pow, bolt &beam, bool fail)
 {
     if (grid_distance(beam.target, beam.source) > beam.range)
     {
-        mpr("That is beyond the maximum range.");
+        mpr(ui_translate("log.spl-damage", "That is beyond the maximum range."));
         return spret::abort;
     }
 
     if (cell_is_solid(beam.target))
     {
         const char *feat = feat_type_name(env.grid(beam.target));
-        mprf("You can't place the storm on %s.", article_a(feat).c_str());
+        mprf("%s", ui_render("s.log", "You can't place the storm on %s.", make_stringf("You can't place the storm on %s.", article_a(feat).c_str()), {s_feature_arg(env.grid(beam.target))}).c_str());
         return spret::abort;
     }
 
@@ -175,7 +178,7 @@ bool cast_smitey_damnation(int pow, bolt &beam)
     if (cancel_beam_prompt(beam, tracer))
         return false;
 
-    mpr("You call forth a pillar of damnation!");
+    mpr(ui_translate("log.spl-damage", "You call forth a pillar of damnation!"));
 
     beam.in_explosion_phase = false;
     beam.explode(true);
@@ -308,9 +311,8 @@ spret cast_chain_lightning(int pow, const actor &caster, bool fail)
 
     if (you.can_see(caster))
     {
-        mprf("Lightning arcs from %s %s!",
-             apostrophise(caster.name(DESC_PLAIN)).c_str(),
-             caster.hand_name(true).c_str());
+        const string lightning_hands = caster.hand_name(true);
+        mprf("%s", ui_render("s.log", "Lightning arcs from %s %s!", make_stringf("Lightning arcs from %s %s!", apostrophise(caster.name(DESC_PLAIN)).c_str(), lightning_hands.c_str()), {ui_actor_arg(caster), caster.is_player() ? p_hand_arg() : s_anatomy_arg(lightning_hands)}).c_str());
     }
 
     vector<arc_victim> victims;
@@ -448,7 +450,7 @@ spret cast_chain_spell(spell_type spell_cast, int pow,
         if (target.x == -1)
         {
             if (see_source)
-                mprf("The %s grounds out.", beam.name.c_str());
+                mprf("%s", ui_render("s.log", "The %s grounds out.", make_stringf("The %s grounds out.", beam.name.c_str()), {s_clause_arg(beam.name)}).c_str());
 
             break;
         }
@@ -456,13 +458,13 @@ spret cast_chain_spell(spell_type spell_cast, int pow,
         // Trying to limit message spamming here so we'll only mention
         // the chaos at the start or when it's out of LoS.
         if (first && see_source)
-            mpr("A swirling arc of seething chaos appears!");
+            mpr(ui_translate("log.spl-damage", "A swirling arc of seething chaos appears!"));
         first = false;
 
         if (see_source && !see_targ)
-            mprf("The %s arcs out of your line of sight!", beam.name.c_str());
+            mprf("%s", ui_render("s.log", "The %s arcs out of your line of sight!", make_stringf("The %s arcs out of your line of sight!", beam.name.c_str()), {s_clause_arg(beam.name)}).c_str());
         else if (!see_source && see_targ)
-            mprf("The %s suddenly appears!", beam.name.c_str());
+            mprf("%s", ui_render("s.log", "The %s suddenly appears!", make_stringf("The %s suddenly appears!", beam.name.c_str()), {s_clause_arg(beam.name)}).c_str());
 
         beam.source = source;
         beam.target = target;
@@ -766,17 +768,17 @@ static spret _cast_los_attack_spell(spell_type spell, int pow,
                 fail_check();
             }
 
-            mpr(player_msg);
+            mpr(ui_translate("s.los", player_msg));
             flash_view_delay(UA_PLAYER, beam.colour, 300, &hitfunc);
         }
         else
         {
             if (!agent)
-                mpr(global_msg);
+                mpr(ui_translate("s.los", global_msg));
             else if (you.can_see(*agent))
                 simple_monster_message(*mons, mons_vis_msg);
             else if (you.see_cell(agent->pos()))
-                mpr(mons_invis_msg);
+                mpr(ui_translate("s.los", mons_invis_msg));
 
             if (!agent || you.see_cell(agent->pos()))
                 flash_view_delay(UA_MONSTER, beam.colour, 300);
@@ -895,10 +897,7 @@ spret cast_freeze(int pow, monster* mons, bool fail)
     const int orig_hurted = beam.damage.roll();
     // calculate the resist adjustment to punctuate
     int hurted = mons_adjust_flavoured(mons, beam, orig_hurted, false);
-    mprf("You freeze %s%s%s",
-         mons->name(DESC_THE).c_str(),
-         hurted ? "" : " but do no damage",
-         attack_strength_punctuation(hurted).c_str());
+    mprf("%s", ui_render("s.log", "You freeze %s%s%s", make_stringf("You freeze %s%s%s", mons->name(DESC_THE).c_str(), hurted ? "" : " but do no damage", attack_strength_punctuation(hurted).c_str()), {ui_actor_arg(*mons), s_clause_arg(hurted ? "" : " but do no damage"), ui_attack_punctuation(attack_strength_punctuation(hurted))}).c_str());
 
     // print the resist message and expose to the cold
     mons_adjust_flavoured(mons, beam, orig_hurted);
@@ -997,11 +996,11 @@ spret cast_airstrike(int pow, coord_def target, bool fail)
 #endif
     hurted = mons->apply_ac(mons->beam_resists(pbeam, hurted, false));
     dprf("preac: %d, postac: %d", preac, hurted);
-    mprf("%s and strikes %s%s%s",
-         airstrike_intensity_display(empty_space, tile).c_str(),
-         mons->name(DESC_THE).c_str(),
-         hurted ? "" : " but does no damage",
-         attack_strength_punctuation(hurted).c_str());
+    const string intensity = airstrike_intensity_display(empty_space, tile);
+    const string original = make_stringf("%s and strikes %s%s%s", intensity.c_str(),
+        mons->name(DESC_THE).c_str(), hurted ? "" : " but does no damage",
+        attack_strength_punctuation(hurted).c_str());
+    mpr(ui_render("s.log", "%s and strikes %s%s%s", original, {s_clause_arg(intensity), ui_actor_arg(*mons), s_clause_arg(hurted ? "" : " but does no damage"), ui_attack_punctuation(attack_strength_punctuation(hurted))}));
 
     flash_tile(mons->pos(), WHITE, 60, tile);
     _player_hurt_monster(*mons, hurted, pbeam.flavour);
@@ -1058,15 +1057,14 @@ spret cast_momentum_strike(int pow, coord_def target, bool fail)
     if (!beam.foes_hurt && !beam.friends_hurt) // miss!
     {
         if (!mons || !you.can_see(*mons))
-            mpr("The momentum dissipates harmlessly.");
+            mpr(ui_translate("log.spl-damage", "The momentum dissipates harmlessly."));
         return spret::success;
     }
 
     const int dur = random_range(5, 8);
     if (you.duration[DUR_NO_MOMENTUM] < dur)
     {
-        you.set_duration(DUR_NO_MOMENTUM, dur, dur,
-                         "You are unable to move.");
+        you.set_duration(DUR_NO_MOMENTUM, dur, dur, ui_translate("s.duration.start", "You are unable to move."));
     }
 
     return spret::success;
@@ -1183,7 +1181,7 @@ spret cast_permafrost_eruption(actor &caster, int pow, bool fail)
 
 
     const coord_def targ = *random_iterator(maybe_targets);
-    mpr("Bitter cold erupts, blasting rock from the ceiling!");
+    mpr(ui_translate("log.spl-damage", "Bitter cold erupts, blasting rock from the ceiling!"));
 
     _fire_permafrost_at(caster, pow, targ, false);
 
@@ -1464,7 +1462,7 @@ bool setup_fragmentation_beam(bolt &beam, int pow, const actor *caster,
     {
         // Couldn't find a monster or wall to shatter - abort casting!
         if (caster->is_player() && !quiet)
-            mpr("You can't deconstruct that!");
+            mpr(ui_translate("log.spl-damage", "You can't deconstruct that!"));
         return false;
     }
 
@@ -1538,12 +1536,12 @@ spret cast_fragmentation(int pow, const actor *caster,
     if (what != nullptr) // Terrain explodes.
     {
         if (you.see_cell(target))
-            mprf("The %s shatters!", what);
+            mprf("%s", ui_render("s.log", "The %s shatters!", make_stringf("The %s shatters!", what), {s_clause_arg(what)}).c_str());
     }
     else if (target == you.pos()) // You explode.
     {
         const int dam = beam.damage.roll();
-        mprf("You shatter%s", attack_strength_punctuation(dam).c_str());
+        mprf("%s", ui_render("s.log", "You shatter%s", make_stringf("You shatter%s", attack_strength_punctuation(dam).c_str()), {ui_attack_punctuation(attack_strength_punctuation(dam))}).c_str());
 
         ouch(dam, KILLED_BY_BEAM, caster->mid,
              "by Lee's Rapid Deconstruction", true,
@@ -1560,8 +1558,7 @@ spret cast_fragmentation(int pow, const actor *caster,
         const int dam = beam.damage.roll();
         if (you.see_cell(target))
         {
-            mprf("%s shatters%s", mon->name(DESC_THE).c_str(),
-                 attack_strength_punctuation(dam).c_str());
+            mprf("%s", ui_render("s.log", "%s shatters%s", make_stringf("%s shatters%s", mon->name(DESC_THE).c_str(), attack_strength_punctuation(dam).c_str()), {ui_actor_arg(*mon), ui_attack_punctuation(attack_strength_punctuation(dam))}).c_str());
         }
 
         if (caster->is_player())
@@ -1680,9 +1677,9 @@ static int _shatter_walls(coord_def where, actor *agent)
     {
         const dungeon_feature_type feat = env.grid(where);
         if (feat_is_door(feat))
-            mpr("A door shatters!");
+            mpr(ui_translate("log.spl-damage", "A door shatters!"));
         else if (feat == DNGN_GRATE)
-            mpr("An iron grate is ripped into pieces!");
+            mpr(ui_translate("log.spl-damage", "An iron grate is ripped into pieces!"));
     }
 
     noisy(spell_effect_noise(SPELL_SHATTER), where);
@@ -1718,11 +1715,11 @@ spret cast_shatter(int pow, bool fail)
     const bool silence = silenced(you.pos());
 
     if (silence)
-        mpr("The dungeon shakes!");
+        mpr(ui_translate("log.spl-damage", "The dungeon shakes!"));
     else
     {
         noisy(spell_effect_noise(SPELL_SHATTER), you.pos());
-        mprf(MSGCH_SOUND, "The dungeon rumbles!");
+        mprf(MSGCH_SOUND, "%s", ui_translate("log.spl-damage", "The dungeon rumbles!"));
     }
 
     run_animation(ANIMATION_SHAKE_VIEWPORT, UA_PLAYER);
@@ -1739,7 +1736,7 @@ spret cast_shatter(int pow, bool fail)
     }
 
     if (dest && !silence)
-        mprf(MSGCH_SOUND, "Ka-crash!");
+        mprf(MSGCH_SOUND, "%s", ui_translate("s.ui", "Ka-crash!"));
 
     return spret::success;
 }
@@ -1755,8 +1752,8 @@ static int _shatter_player(int pow, actor *wielder, bool devastator = false)
 
     if (damage > 0)
     {
-        mprf(damage > 15 ? "You shudder from the earth-shattering force%s"
-                        : "You shudder%s",
+        mprf(ui_translate("s.log", damage > 15 ? "You shudder from the earth-shattering force%s"
+                        : "You shudder%s"),
              attack_strength_punctuation(damage).c_str());
         if (devastator)
             ouch(damage, KILLED_BY_MONSTER, wielder->mid);
@@ -1776,14 +1773,12 @@ bool mons_shatter(monster* caster, bool actual)
     {
         if (silence)
         {
-            mprf("The dungeon shakes around %s!",
-                 caster->name(DESC_THE).c_str());
+            mprf("%s", ui_render("s.log", "The dungeon shakes around %s!", make_stringf("The dungeon shakes around %s!", caster->name(DESC_THE).c_str()), {ui_actor_arg(*caster)}).c_str());
         }
         else
         {
             noisy(spell_effect_noise(SPELL_SHATTER), caster->pos(), caster->mid);
-            mprf(MSGCH_SOUND, "The dungeon rumbles around %s!",
-                 caster->name(DESC_THE).c_str());
+            mprf(MSGCH_SOUND, "%s", ui_render("s.log", "The dungeon rumbles around %s!", make_stringf("The dungeon rumbles around %s!", caster->name(DESC_THE).c_str()), {ui_actor_arg(*caster)}).c_str());
         }
     }
 
@@ -1817,7 +1812,7 @@ bool mons_shatter(monster* caster, bool actual)
     }
 
     if (dest && !silence)
-        mprf(MSGCH_SOUND, "Ka-crash!");
+        mprf(MSGCH_SOUND, "%s", ui_translate("s.ui", "Ka-crash!"));
 
     if (actual)
         run_animation(ANIMATION_SHAKE_VIEWPORT, UA_MONSTER);
@@ -1872,7 +1867,7 @@ void shillelagh(actor *wielder, coord_def where, int pow)
         if (strwidth(message) < get_number_of_cols() - 2)
             mpr(message);
         else
-            mpr("There is a shattering impact!");
+            mpr(ui_translate("log.spl-damage", "There is a shattering impact!"));
     }
 
     // need to do this again to do the actual damage
@@ -1914,8 +1909,7 @@ spret cast_scorch(const actor& agent, int pow, bool fail)
     const int base_dam = scorch_damage(pow, true).roll();
     const int post_ac_dam = max(0, targ->apply_ac(base_dam));
 
-    mprf("Flames lash %s%s.", targ->name(DESC_THE).c_str(),
-         post_ac_dam ? "" : " but do no damage");
+    mprf("%s", ui_render("s.log", "Flames lash %s%s.", make_stringf("Flames lash %s%s.", targ->name(DESC_THE).c_str(), post_ac_dam ? "" : " but do no damage"), {ui_actor_arg(*targ), s_clause_arg(post_ac_dam ? "" : " but do no damage")}).c_str());
     const coord_def p = targ->pos();
     noisy(spell_effect_noise(SPELL_SCORCH), p);
 
@@ -1953,14 +1947,13 @@ spret cast_scorch(const actor& agent, int pow, bool fail)
             monster* mon = targ->as_monster();
             if (you.can_see(*mon) && !mon->has_ench(ENCH_FIRE_VULN))
             {
-                mprf("%s fire resistance burns away.",
-                    mon->name(DESC_ITS).c_str());
+                mprf("%s", ui_render("s.log", "%s fire resistance burns away.", make_stringf("%s fire resistance burns away.", mon->name(DESC_ITS).c_str()), {ui_actor_arg(*mon)}).c_str());
             }
             mon->add_ench(mon_enchant(ENCH_FIRE_VULN, &agent, dur * BASELINE_DELAY));
         }
         else
         {
-            mprf(MSGCH_DANGER, "Your fire resistance burns away!");
+            mprf(MSGCH_DANGER, "%s", ui_translate("log.spl-damage", "Your fire resistance burns away!"));
             you.duration[DUR_FIRE_VULN] += dur * 3 / 2;
         }
     }
@@ -2015,10 +2008,7 @@ static int _irradiate_cell(coord_def where, int pow, const actor &agent)
 
     if (you.see_cell(act->pos()))
     {
-        mprf("%s %s blasted with magical radiation%s",
-             act->name(DESC_THE).c_str(),
-             conjugate_verb("are", hitting_player).c_str(),
-             attack_strength_punctuation(dam).c_str());
+        mprf("%s", ui_render("s.log", "%s is blasted with magical radiation%s", make_stringf("%s %s blasted with magical radiation%s", act->name(DESC_THE).c_str(), conjugate_verb("are", hitting_player).c_str(), attack_strength_punctuation(dam).c_str()), {ui_actor_arg(*act), ui_attack_punctuation(attack_strength_punctuation(dam))}).c_str());
     }
 
     if (agent.is_player())
@@ -2061,7 +2051,7 @@ spret cast_irradiate(int powc, actor &caster, bool fail)
     fail_check();
 
     if (caster.is_player())
-        mpr("You erupt in a fountain of uncontrolled magic!");
+        mpr(ui_translate("log.spl-damage", "You erupt in a fountain of uncontrolled magic!"));
     else
     {
         simple_monster_message(*caster.as_monster(),
@@ -2253,9 +2243,7 @@ static int _ignite_poison_monsters(coord_def where, int pow, actor *agent)
     flash_tile(where, RED, 0, TILE_BOLT_IGNITE_POISON_TARGET);
     if (you.see_cell(mon->pos()))
     {
-        mprf("%s seems to burn from within%s",
-             mon->name(DESC_THE).c_str(),
-             attack_strength_punctuation(damage).c_str());
+        mprf("%s", ui_render("s.log", "%s seems to burn from within%s", make_stringf("%s seems to burn from within%s", mon->name(DESC_THE).c_str(), attack_strength_punctuation(damage).c_str()), {ui_actor_arg(*mon), ui_attack_punctuation(attack_strength_punctuation(damage))}).c_str());
     }
 
     dprf("Dice: %dd%d; Damage: %d", dam_dice.num, dam_dice.size, damage);
@@ -2313,11 +2301,11 @@ static int _ignite_poison_player(coord_def where, int pow, actor *agent)
     flash_tile(where, RED, 0, TILE_BOLT_IGNITE_POISON_TARGET);
     const int resist = player_res_fire();
     if (resist > 0)
-        mpr("You feel like your blood is boiling!");
+        mpr(ui_translate("log.spl-damage", "You feel like your blood is boiling!"));
     else if (resist < 0)
-        mpr("The poison in your system burns terribly!");
+        mpr(ui_translate("log.spl-damage", "The poison in your system burns terribly!"));
     else
-        mpr("The poison in your system burns!");
+        mpr(ui_translate("log.spl-damage", "The poison in your system burns!"));
 
     ouch(damage, KILLED_BY_BEAM, agent->mid,
          "by burning poison", you.can_see(*agent),
@@ -2325,7 +2313,7 @@ static int _ignite_poison_player(coord_def where, int pow, actor *agent)
     if (damage > 0)
         you.expose_to_element(BEAM_FIRE, 2);
 
-    mprf(MSGCH_RECOVERY, "You are no longer poisoned.");
+    mprf(MSGCH_RECOVERY, "%s", ui_translate("log.spl-damage", "You are no longer poisoned."));
     you.duration[DUR_POISONING] = 0;
 
     return damage ? 1 : 0;
@@ -2386,6 +2374,7 @@ static bool maybe_abort_ignite()
             prompt += "in a cloud of ";
             prompt += cloud->cloud_name(true);
             prompt += "! Ignite poison anyway?";
+            prompt = ui_render("s.log", "You are standing in a cloud of %s! Ignite poison anyway?", prompt, {ui_text_arg("c.cloud.name", cloud->cloud_name(true))});
             if (!yesno(prompt.c_str(), false, 'n'))
                 return true;
         }
@@ -2393,7 +2382,7 @@ static bool maybe_abort_ignite()
 
     if (apply_area_visible(_ignite_ally_harm, you.pos()) > 0)
     {
-        return !yesno("You might harm nearby allies! Ignite poison anyway?",
+        return !yesno(ui_translate("s.ui", "You might harm nearby allies! Ignite poison anyway?"),
                       false, 'n');
     }
 
@@ -2474,9 +2463,7 @@ spret cast_ignite_poison(actor* agent, int pow, bool fail, bool tracer)
 
     targeter_radius hitfunc(agent, LOS_NO_TRANS);
 
-    mprf("%s %s the poison in %s surroundings!", agent->name(DESC_THE).c_str(),
-         agent->conj_verb("ignite").c_str(),
-         agent->pronoun(PRONOUN_POSSESSIVE).c_str());
+    mprf("%s", ui_render("s.log", "%s ignites the poison in their surroundings!", make_stringf("%s %s the poison in %s surroundings!", agent->name(DESC_THE).c_str(), agent->conj_verb("ignite").c_str(), agent->pronoun(PRONOUN_POSSESSIVE).c_str()), {ui_actor_arg(*agent)}).c_str());
 
     // this could conceivably cause crashes if the player dies midway through
     // maybe split it up...?
@@ -2561,7 +2548,7 @@ spret cast_ignition(const actor *agent, int pow, bool fail)
         return spret::success;
     }
 
-        mpr("The air bursts into flame!");
+        mpr(ui_translate("log.spl-damage", "The air bursts into flame!"));
 
     vector<coord_def> blast_adjacents;
 
@@ -2667,8 +2654,7 @@ static int _discharge_monsters(const coord_def &where, int pow,
             dprf("You: static discharge damage: %d", damage);
             damage = check_your_resists(damage, BEAM_ELECTRICITY,
                                         "static discharge");
-            mprf("You are struck by an arc of lightning%s",
-                attack_strength_punctuation(damage).c_str());
+            mprf("%s", ui_render("s.log", "You are struck by an arc of lightning%s", make_stringf("You are struck by an arc of lightning%s", attack_strength_punctuation(damage).c_str()), {ui_attack_punctuation(attack_strength_punctuation(damage))}).c_str());
             ouch(damage, KILLED_BY_BEAM, agent.mid, "by static electricity", true,
                 agent.is_player() ? "you" : agent.name(DESC_A).c_str());
             if (damage > 0)
@@ -2685,9 +2671,7 @@ static int _discharge_monsters(const coord_def &where, int pow,
 
             dprf("%s: static discharge damage: %d",
                 mons->name(DESC_PLAIN, true).c_str(), damage);
-            mprf("%s is struck by an arc of lightning%s",
-                    mons->name(DESC_THE).c_str(),
-                    attack_strength_punctuation(damage).c_str());
+            mprf("%s", ui_render("s.log", "%s is struck by an arc of lightning%s", make_stringf("%s is struck by an arc of lightning%s", mons->name(DESC_THE).c_str(), attack_strength_punctuation(damage).c_str()), {ui_actor_arg(*mons), ui_attack_punctuation(attack_strength_punctuation(damage))}).c_str());
             damage = mons_adjust_flavoured(mons, beam, damage);
 
             if (agent.is_player())
@@ -2709,7 +2693,7 @@ static int _discharge_monsters(const coord_def &where, int pow,
     {
         // Only printed if we did damage, so that the messages in
         // cast_discharge() are clean. -- bwr
-        mpr("The lightning grounds out.");
+        mpr(ui_translate("log.spl-damage", "The lightning grounds out."));
     }
 
     return damage;
@@ -2780,14 +2764,11 @@ static void _discharge_message(int dam)
     else
     {
         if (coinflip())
-            mpr("The air crackles with electrical energy.");
+            mpr(ui_translate("log.spl-damage", "The air crackles with electrical energy."));
         else
         {
             const bool plural = coinflip();
-            mprf("%s blue arc%s ground%s harmlessly.",
-                plural ? "Some" : "A",
-                plural ? "s" : "",
-                plural ? " themselves" : "s itself");
+            mprf("%s", ui_render("s.log", "%s blue arcs ground harmlessly.", make_stringf("%s blue arc%s ground%s harmlessly.", plural ? "Some" : "A", plural ? "s" : "", plural ? " themselves" : "s itself"), {s_clause_arg(plural ? "Some" : "A")}).c_str());
         }
     }
 }
@@ -2910,14 +2891,11 @@ static void _do_chain_jolt(const actor& agent, vector<coord_def>& targets, dice_
 
         if (act->is_player())
         {
-            mprf("You are struck by an electric surge%s",
-                attack_strength_punctuation(post_resist_dam).c_str());
+            mprf("%s", ui_render("s.log", "You are struck by an electric surge%s", make_stringf("You are struck by an electric surge%s", attack_strength_punctuation(post_resist_dam).c_str()), {ui_attack_punctuation(attack_strength_punctuation(post_resist_dam))}).c_str());
         }
         else
         {
-            mprf("%s is struck by an electric surge%s",
-                    mon->name(DESC_THE).c_str(),
-                    attack_strength_punctuation(post_resist_dam).c_str());
+            mprf("%s", ui_render("s.log", "%s is struck by an electric surge%s", make_stringf("%s is struck by an electric surge%s", mon->name(DESC_THE).c_str(), attack_strength_punctuation(post_resist_dam).c_str()), {ui_actor_arg(*mon), ui_attack_punctuation(attack_strength_punctuation(post_resist_dam))}).c_str());
         }
 
         if (post_resist_dam)
@@ -2968,7 +2946,7 @@ spret cast_arcjolt(int pow, const actor &agent, bool fail)
     fail_check();
 
     if (agent.is_player())
-        mpr("Electricity surges outward!");
+        mpr(ui_translate("log.spl-damage", "Electricity surges outward!"));
     else
     {
         simple_monster_message(*agent.as_monster(),
@@ -3000,7 +2978,7 @@ void do_eel_melee_jolt(coord_def pos)
 
 void do_eel_arcjolt()
 {
-    mprf("Your %s violently discharge electricity!", you.hand_name(true).c_str());
+    mprf("%s", ui_render("s.log", "Your %s violently discharge electricity!", make_stringf("Your %s violently discharge electricity!", you.hand_name(true).c_str()), {p_hand_arg()}).c_str());
 
     vector<coord_def> to_check;
     to_check.push_back(you.pos());
@@ -3188,7 +3166,7 @@ spret cast_plasma_beam(int pow, const actor &agent, bool fail)
 
 spret cast_watery_grave()
 {
-    mpr("You reach out to the water around you and turn it against your foes!");
+    mpr(ui_translate("log.spl-damage", "You reach out to the water around you and turn it against your foes!"));
 
     bolt strike;
     zappy(ZAP_WATERY_GRAVE, get_form()->get_level(8), false, strike);
@@ -3238,7 +3216,7 @@ spret cast_golden_breath(bolt& beam, int power, bool fail)
 
     fail_check();
 
-    mpr("You exhale a blast of multi-hued devastation!");
+    mpr(ui_translate("log.spl-damage", "You exhale a blast of multi-hued devastation!"));
 
     bolt fire_beam = beam;
     fire_beam.set_agent(&you);
@@ -3408,7 +3386,7 @@ void forest_message(const coord_def pos, const string &msg, msg_channel_type ch)
         if (feat_is_tree(env.grid(*ri))
             && cell_see_cell(you.pos(), *ri, LOS_DEFAULT))
         {
-            mprf(ch, "%s", msg.c_str());
+            mprf(ch, "%s", ui_translate("s.forest", msg.c_str()));
             return;
         }
 }
@@ -3467,12 +3445,14 @@ void forest_damage(const actor *mon)
                         behaviour_event(foe->as_monster(), ME_WHACK);
                 }
 
+                const string source_template = msg;
                 msg = replace_all(replace_all(msg,
                     "@foe@", foe->name(DESC_THE)),
                     "@is@", foe->conj_verb("be"))
                     + attack_strength_punctuation(dmg);
                 if (you.see_cell(foe->pos()))
-                    mpr(msg);
+                    mpr(ui_render("s.forest.hit", (replace_all(replace_all(source_template, "@foe@", "%s"), "@is@", "is") + "%s").c_str(), msg,
+                        {ui_actor_arg(*foe), ui_attack_punctuation(attack_strength_punctuation(dmg))}));
 
                 if (dmg <= 0)
                     break;
@@ -3518,9 +3498,9 @@ spret cast_toxic_radiance(actor *agent, int pow, bool fail, bool tracer)
         fail_check();
 
         if (!you.duration[DUR_TOXIC_RADIANCE])
-            mpr("You begin to radiate toxic energy.");
+            mpr(ui_translate("log.spl-damage", "You begin to radiate toxic energy."));
         else
-            mpr("Your toxic radiance grows in intensity.");
+            mpr(ui_translate("log.spl-damage", "Your toxic radiance grows in intensity."));
 
         you.increase_duration(DUR_TOXIC_RADIANCE,
                               2 + random2(1 + div_rand_round(pow, 25)), 15);
@@ -3652,7 +3632,7 @@ spret cast_unravelling(coord_def target, int pow, bool fail)
 
     const actor* victim = actor_at(target);
     if ((!victim || !you.can_see(*victim))
-        && !yesno("You can't see anything there. Cast anyway?", false, 'n'))
+        && !yesno(ui_translate("s.ui", "You can't see anything there. Cast anyway?"), false, 'n'))
     {
         canned_msg(MSG_OK);
         return spret::abort;
@@ -3662,9 +3642,7 @@ spret cast_unravelling(coord_def target, int pow, bool fail)
                    || victim->is_monster() && you.can_see(*victim)
                       && !monster_can_be_unravelled(*victim->as_monster())))
     {
-        mprf("%s %s no magical effects to unravel.",
-             victim->name(DESC_THE).c_str(),
-             victim->conj_verb("have").c_str());
+        mprf("%s", ui_render("s.log", "%s has no magical effects to unravel.", make_stringf("%s %s no magical effects to unravel.", victim->name(DESC_THE).c_str(), victim->conj_verb("have").c_str()), {ui_actor_arg(*victim)}).c_str());
         return spret::abort;
     }
 
@@ -3672,7 +3650,7 @@ spret cast_unravelling(coord_def target, int pow, bool fail)
     hitfunc.set_aim(target);
 
     if (hitfunc.is_affected(you.pos()) >= AFF_MAYBE
-        && !yesno("The unravelling is likely to hit you. Continue anyway?",
+        && !yesno(ui_translate("s.ui", "The unravelling is likely to hit you. Continue anyway?"),
                   false, 'n'))
     {
         canned_msg(MSG_OK);
@@ -3730,7 +3708,12 @@ spret cast_inner_flame(coord_def target, int pow, bool fail)
     const string immune_reason = mons_inner_flame_immune_reason(mons);
     if (!immune_reason.empty())
     {
-        mpr(immune_reason);
+        if (!mons || !you.can_see(*mons))
+            mpr(ui_translate("s.reason", "You can't see anything there."));
+        else
+            mpr(ui_render("s.log", mons->has_ench(ENCH_INNER_FLAME)
+                ? "%s is already burning with an inner flame!" : "%s has infinite will and cannot be affected.",
+                immune_reason, {ui_actor_arg(*mons)}));
         return spret::abort;
     }
 
@@ -3767,9 +3750,9 @@ spret cast_poisonous_vapours(const actor& agent, int pow, const coord_def target
     fail_check();
 
     if (act && you.can_see(*act))
-        mprf("Poisonous fumes billow around %s!", act->name(DESC_THE).c_str());
+        mprf("%s", ui_render("s.log", "Poisonous fumes billow around %s!", make_stringf("Poisonous fumes billow around %s!", act->name(DESC_THE).c_str()), {ui_actor_arg(*act)}).c_str());
     else
-        mpr("Poisonous fumes billow in the air!");
+        mpr(ui_translate("log.spl-damage", "Poisonous fumes billow in the air!"));
 
     if (!act || act->res_poison() > 0 || !could_harm(&agent, act, true, true))
         return spret::success;
@@ -3849,7 +3832,7 @@ void handle_flame_wave(int lvl)
 
     if (lvl >= spell_range(SPELL_FLAME_WAVE, &you))
     {
-        mpr("Your wave of flame reaches its maximum intensity and dissipates.");
+        mpr(ui_translate("log.spl-damage", "Your wave of flame reaches its maximum intensity and dissipates."));
         stop_channelling_spells(true);
     }
 }
@@ -3882,7 +3865,7 @@ spret cast_searing_ray(actor& agent, int pow, bolt &beam, bool fail)
 
     // Announce lock-on, if this causes one.
     if (targ && !beam.aimed_at_spot && agent.is_player())
-        mprf("You focus your ray upon %s.", targ->name(DESC_THE).c_str());
+        mprf("%s", ui_render("s.log", "You focus your ray upon %s.", make_stringf("You focus your ray upon %s.", targ->name(DESC_THE).c_str()), {ui_actor_arg(*targ)}).c_str());
 
     if (agent.is_player())
         start_channelling_spell(SPELL_SEARING_RAY, "maintain the ray");
@@ -3955,7 +3938,7 @@ bool handle_searing_ray(actor& agent, int turn)
 
         if (turn > 3)
         {
-            mpr("You finish channelling your searing ray.");
+            mpr(ui_translate("log.spl-damage", "You finish channelling your searing ray."));
             stop_channelling_spells(true);
         }
     }
@@ -4022,9 +4005,7 @@ spret cast_glaciate(actor *caster, int pow, coord_def aim)
 
     if (you.can_see(*caster) || caster->is_player())
     {
-        mprf("%s %s a mighty blast of ice!",
-             caster->name(DESC_THE).c_str(),
-             caster->conj_verb("conjure").c_str());
+        mprf("%s", ui_render("s.log", "%s conjures a mighty blast of ice!", make_stringf("%s %s a mighty blast of ice!", caster->name(DESC_THE).c_str(), caster->conj_verb("conjure").c_str()), {ui_actor_arg(*caster)}).c_str());
     }
 
     beam.glyph = 0;
@@ -4123,7 +4104,7 @@ dice_def jinxbite_damage(int pow, bool random)
     return dice_def(2, random ? 2 + div_rand_round(pow, 25) : 2 + pow / 25);
 }
 
-static string _get_jinxsprite_message(const monster& victim)
+static string _get_jinxsprite_message(const monster& victim, string *display)
 {
     string msg;
 
@@ -4132,27 +4113,29 @@ static string _get_jinxsprite_message(const monster& victim)
 
     if (get_mon_shape(victim.type) == MON_SHAPE_SNAKE && coinflip())
     {
-        msg = make_stringf("ties %s tail in a knot.",
-                        victim.name(DESC_ITS).c_str());
+                const string original = make_stringf("ties %s tail in a knot.", victim.name(DESC_ITS).c_str());
+                if (display) *display = ui_render("s.jinx", "A giggling sprite leaps out and ties %s tail in a knot.", "", {ui_actor_arg(victim)});
+                msg = original;
     }
     else if (mon_shape_is_humanoid(get_mon_shape(victim.type)) && coinflip())
     {
         if (victim.inv[MSLOT_WEAPON] != NON_ITEM && coinflip())
         {
-            return make_stringf("bonks %s with %s %s.",
-                                victim.name(DESC_THE).c_str(),
-                                victim.pronoun(PRONOUN_POSSESSIVE).c_str(),
-                                env.item[victim.inv[MSLOT_WEAPON]].name(DESC_PLAIN).c_str());
+                const string original = make_stringf("bonks %s with %s %s.", victim.name(DESC_THE).c_str(), victim.pronoun(PRONOUN_POSSESSIVE).c_str(), env.item[victim.inv[MSLOT_WEAPON]].name(DESC_PLAIN).c_str());
+                if (display) *display = ui_render("s.jinx", "A giggling sprite leaps out and bonks %s with their %s.", "", {ui_actor_arg(victim), ui_item_arg(env.item[victim.inv[MSLOT_WEAPON]])});
+                return original;
         }
         else if (one_chance_in(3))
         {
-            return make_stringf("insults %s ancestors.",
-                                victim.name(DESC_ITS).c_str());
+                const string original = make_stringf("insults %s ancestors.", victim.name(DESC_ITS).c_str());
+                if (display) *display = ui_render("s.jinx", "A giggling sprite leaps out and insults %s ancestors.", "", {ui_actor_arg(victim)});
+                return original;
         }
         else
         {
-            return make_stringf("doodles on %s face.",
-                                victim.name(DESC_ITS).c_str());
+                const string original = make_stringf("doodles on %s face.", victim.name(DESC_ITS).c_str());
+                if (display) *display = ui_render("s.jinx", "A giggling sprite leaps out and doodles on %s face.", "", {ui_actor_arg(victim)});
+                return original;
         }
     }
     else
@@ -4160,20 +4143,27 @@ static string _get_jinxsprite_message(const monster& victim)
         switch (random2(2))
         {
             case 0:
-            return make_stringf("makes %s trip over %s own %s.",
-                                victim.name(DESC_THE).c_str(),
-                                victim.pronoun(PRONOUN_POSSESSIVE).c_str(),
-                                victim.foot_name(true).c_str());
+            {
+                const string jinx_body = victim.foot_name(true);
+                const string original = make_stringf("makes %s trip over %s own %s.", victim.name(DESC_THE).c_str(), victim.pronoun(PRONOUN_POSSESSIVE).c_str(), jinx_body.c_str());
+                if (display) *display = ui_render("s.jinx", "A giggling sprite leaps out and makes %s trip over their own %s.", "", {ui_actor_arg(victim), s_anatomy_arg(jinx_body)});
+                return original;
 
+            }
             case 1:
-            return make_stringf("smacks %s with %s own %s.",
-                                victim.name(DESC_THE).c_str(),
-                                victim.pronoun(PRONOUN_POSSESSIVE).c_str(),
-                                victim.hand_name(false).c_str());
+            {
+                const string jinx_body = victim.hand_name(false);
+                const string original = make_stringf("smacks %s with %s own %s.", victim.name(DESC_THE).c_str(), victim.pronoun(PRONOUN_POSSESSIVE).c_str(), jinx_body.c_str());
+                if (display) *display = ui_render("s.jinx", "A giggling sprite leaps out and smacks %s with their own %s.", "", {ui_actor_arg(victim), s_anatomy_arg(jinx_body)});
+                return original;
 
+            }
             case 2:
-            return make_stringf("does a pirouette on top of %s.",
-                                victim.name(DESC_THE).c_str());
+            {
+                const string original = make_stringf("does a pirouette on top of %s.", victim.name(DESC_THE).c_str());
+                if (display) *display = ui_render("s.jinx", "A giggling sprite leaps out and does a pirouette on top of %s.", "", {ui_actor_arg(victim)});
+                return original;
+            }
         }
     }
 
@@ -4203,8 +4193,9 @@ void attempt_jinxbite_hit(actor& victim)
 
     if (you.can_see(victim))
     {
-        mprf("A giggling sprite leaps out and %s",
-                _get_jinxsprite_message(*mons).c_str());
+        string display;
+        const string original = "A giggling sprite leaps out and " + _get_jinxsprite_message(*mons, &display);
+        mpr(display.empty() ? original : display);
     }
 
     _player_hurt_monster(*mons, dmg, BEAM_MAGIC);
@@ -4324,7 +4315,7 @@ spret cast_hailstorm(int pow, bool fail, bool tracer)
 
     fail_check();
 
-    mpr("A cannonade of hail descends around you!");
+    mpr(ui_translate("log.spl-damage", "A cannonade of hail descends around you!"));
 
     for (radius_iterator ri(you.pos(), range, C_SQUARE, LOS_NO_TRANS, true);
          ri; ++ri)
@@ -4373,7 +4364,7 @@ spret cast_imb(int pow, bool fail)
 
     fail_check();
 
-    mpr("You erupt in a blast of force!");
+    mpr(ui_translate("log.spl-damage", "You erupt in a blast of force!"));
 
     vector<actor *> act_list;
     // knock back into dispersal could move the player, so save the current pos
@@ -4448,15 +4439,12 @@ void actor_apply_toxic_bog(actor * act)
 
     if (player && final_damage > 0)
     {
-        mprf("You fester in the toxic bog%s",
-                attack_strength_punctuation(final_damage).c_str());
+        mprf("%s", ui_render("s.log", "You fester in the toxic bog%s", make_stringf("You fester in the toxic bog%s", attack_strength_punctuation(final_damage).c_str()), {ui_attack_punctuation(attack_strength_punctuation(final_damage))}).c_str());
     }
     else if (final_damage > 0)
     {
         behaviour_event(mons, ME_DISTURB, 0, act->pos());
-        mprf("%s festers in the toxic bog%s",
-                mons->name(DESC_THE).c_str(),
-                attack_strength_punctuation(final_damage).c_str());
+        mprf("%s", ui_render("s.log", "%s festers in the toxic bog%s", make_stringf("%s festers in the toxic bog%s", mons->name(DESC_THE).c_str(), attack_strength_punctuation(final_damage).c_str()), {ui_actor_arg(*mons), ui_attack_punctuation(attack_strength_punctuation(final_damage))}).c_str());
     }
 
     if (final_damage > 0 && resist > 0)
@@ -4516,7 +4504,7 @@ spret cast_frozen_ramparts(int pow, bool fail)
 
     if (wall_locs.empty())
     {
-        mpr("There are no walls around you to affect.");
+        mpr(ui_translate("log.spl-damage", "There are no walls around you to affect."));
         return spret::abort;
     }
 
@@ -4533,7 +4521,7 @@ spret cast_frozen_ramparts(int pow, bool fail)
     you.props[FROZEN_RAMPARTS_KEY] = you.pos();
     you.props[FROZEN_RAMPARTS_POWER_KEY].get_int() = pow;
 
-    mpr("The walls around you are covered in ice.");
+    mpr(ui_translate("log.spl-damage", "The walls around you are covered in ice."));
     you.duration[DUR_FROZEN_RAMPARTS] = random_range(40 + pow,
                                                      80 + pow * 3 / 2);
     return spret::success;
@@ -4615,7 +4603,7 @@ spret cast_maxwells_coupling(int pow, bool fail, bool tracer)
     if (!mon || !you.can_see(*mon))
     {
         if (!tracer)
-            mpr("You can't see anything to vaporise!");
+            mpr(ui_translate("log.spl-damage", "You can't see anything to vaporise!"));
         return spret::abort;
     }
 
@@ -4625,7 +4613,7 @@ spret cast_maxwells_coupling(int pow, bool fail, bool tracer)
 
     fail_check();
 
-    mpr("You begin accumulating electric charge.");
+    mpr(ui_translate("log.spl-damage", "You begin accumulating electric charge."));
 
     you.props[COUPLING_TIME_KEY] =
        you.elapsed_time + (30 + div_rand_round(random2((200 - pow) * 40), 200));
@@ -4641,7 +4629,7 @@ static void _discharge_maxwells_coupling()
 
     if (!mon)
     {
-        mpr("Your charge dissipates without a target.");
+        mpr(ui_translate("log.spl-damage", "Your charge dissipates without a target."));
         return;
     }
 
@@ -4656,12 +4644,12 @@ static void _discharge_maxwells_coupling()
     if (mon->type == MONS_ROYAL_JELLY && !mon->is_summoned())
     {
         // need to do this here, because react_to_damage is never called
-        mprf("A cloud of jellies burst out of %s as the current"
-             " ripples through it%s", mon->name(DESC_THE).c_str(), attack_punctuation.c_str());
+        mprf("%s", ui_render("s.log", "A cloud of jellies burst out of %s as the current ripples through it%s", make_stringf("A cloud of jellies burst out of %s as the current"
+             " ripples through it%s", mon->name(DESC_THE).c_str(), attack_punctuation.c_str()), {ui_actor_arg(*mon), ui_attack_punctuation(attack_punctuation)}).c_str());
         schedule_trj_spawn_fineff(&you, mon, mon->pos(), mon->hit_points);
     }
     else
-        mprf("The electricity discharges through %s%s", mon->name(DESC_THE).c_str(), attack_punctuation.c_str());
+        mprf("%s", ui_render("s.log", "The electricity discharges through %s%s", make_stringf("The electricity discharges through %s%s", mon->name(DESC_THE).c_str(), attack_punctuation.c_str()), {ui_actor_arg(*mon), ui_attack_punctuation(attack_punctuation)}).c_str());
 
     // XX the messaging and corpse logic here would be better handled in
     // monster_die, so that various special cases (e.g. dancing weapons in
@@ -4697,7 +4685,7 @@ void handle_maxwells_coupling()
         return;
     }
 
-    mpr("You feel charge building up...");
+    mpr(ui_translate("log.spl-damage", "You feel charge building up..."));
 }
 
 vector<coord_def> find_bog_locations(const coord_def &center)
@@ -4731,7 +4719,7 @@ spret cast_noxious_bog(int pow, bool fail)
     vector <coord_def> bog_locs = find_bog_locations(you.pos());
     if (bog_locs.empty())
     {
-        mpr("There are no places for you to create a bog.");
+        mpr(ui_translate("log.spl-damage", "There are no places for you to create a bog."));
         return spret::abort;
     }
 
@@ -4747,7 +4735,7 @@ spret cast_noxious_bog(int pow, bool fail)
     }
 
     flash_view_delay(UA_PLAYER, LIGHTGREEN, 100);
-    mpr("You spew toxic sludge!");
+    mpr(ui_translate("log.spl-damage", "You spew toxic sludge!"));
 
     return spret::success;
 }
@@ -4778,10 +4766,7 @@ void do_boulder_impact(monster& boulder, actor& victim, bool quiet)
     {
         if (!quiet)
         {
-            mprf("%s barrels into %s%s",
-                    boulder.name(DESC_THE).c_str(),
-                    victim.name(DESC_THE).c_str(),
-                    attack_strength_punctuation(dam).c_str());
+            mprf("%s", ui_render("s.log", "%s barrels into %s%s", make_stringf("%s barrels into %s%s", boulder.name(DESC_THE).c_str(), victim.name(DESC_THE).c_str(), attack_strength_punctuation(dam).c_str()), {ui_actor_arg(boulder), ui_actor_arg(victim), ui_attack_punctuation(attack_strength_punctuation(dam))}).c_str());
         }
     }
 
@@ -4871,12 +4856,12 @@ spret cast_magnavolt(coord_def target, int pow, bool fail)
     monster* mon = monster_at(target);
 
     if (!mon->has_ench(ENCH_MAGNETISED))
-        mprf("Magnetic shrapnel attaches itself to %s.", mon->name(DESC_THE).c_str());
+        mprf("%s", ui_render("s.log", "Magnetic shrapnel attaches itself to %s.", make_stringf("Magnetic shrapnel attaches itself to %s.", mon->name(DESC_THE).c_str()), {ui_actor_arg(*mon)}).c_str());
 
     mon->add_ench(mon_enchant(ENCH_MAGNETISED, &you, random_range(5, 8) * BASELINE_DELAY));
 
     // Then zap all magnetized enemies.
-    mpr("Electricity arcs towards the magnetite!");
+    mpr(ui_translate("log.spl-damage", "Electricity arcs towards the magnetite!"));
     for (unsigned int i = 0; i < targets.size(); ++i)
     {
         bolt volt;
@@ -4900,7 +4885,7 @@ spret cast_fulsome_fusillade(int pow, bool fail)
 
     fail_check();
 
-    mpr("You conjure up an array of volatile reagents!");
+    mpr(ui_translate("log.spl-damage", "You conjure up an array of volatile reagents!"));
 
     you.duration[DUR_FUSILLADE] = 5;
     you.props[FUSILLADE_POWER_KEY] = pow;
@@ -5056,7 +5041,7 @@ void fire_fusillade()
     {
         if (!enough_mp(2, true))
         {
-            mpr("Your magical reserves are too exhausted to conjure more reagents.");
+            mpr(ui_translate("log.spl-damage", "Your magical reserves are too exhausted to conjure more reagents."));
             you.duration[DUR_FUSILLADE] = 0;
             return;
         }
@@ -5064,7 +5049,7 @@ void fire_fusillade()
         finalize_mp_cost();
     }
 
-    mpr("Flasks of reagents rain from above!");
+    mpr(ui_translate("log.spl-damage", "Flasks of reagents rain from above!"));
 
     int pow = you.props[FUSILLADE_POWER_KEY].get_int();
 
@@ -5137,7 +5122,7 @@ void fire_fusillade()
     you.duration[DUR_FUSILLADE] -= 1;
 
     if (!you.duration[DUR_FUSILLADE])
-        mprf(MSGCH_DURATION, "Your rain of reagents ends.");
+        mprf(MSGCH_DURATION, "%s", ui_translate("log.spl-damage", "Your rain of reagents ends."));
 }
 
 spret cast_grave_claw(actor& caster, coord_def targ, int pow, bool fail)
@@ -5154,7 +5139,7 @@ spret cast_grave_claw(actor& caster, coord_def targ, int pow, bool fail)
 
     if (caster.is_player())
     {
-        mpr("You unleash the spiteful dead!");
+        mpr(ui_translate("log.spl-damage", "You unleash the spiteful dead!"));
         you.props[GRAVE_CLAW_CHARGES_KEY].get_int()--;
     }
 
@@ -5173,7 +5158,7 @@ spret cast_grave_claw(actor& caster, coord_def targ, int pow, bool fail)
     if (caster.is_player())
     {
         if (you.props[GRAVE_CLAW_CHARGES_KEY].get_int() == 0)
-            mprf(MSGCH_DURATION, "The last of your harvested death is exhausted.");
+            mprf(MSGCH_DURATION, "%s", ui_translate("log.spl-damage", "The last of your harvested death is exhausted."));
     }
 
     return spret::success;
@@ -5198,13 +5183,13 @@ void gain_grave_claw_soul(bool silent, bool wizard)
 
         if (charges == GRAVE_CLAW_MAX_CHARGES)
         {
-            mprf(MSGCH_DURATION, "You have harvested as much death for "
-                                 "Grave Claw as you can hold at once.");
+            mprf(MSGCH_DURATION, "%s", ui_translate("log.spl-damage", "You have harvested as much death for "
+                                 "Grave Claw as you can hold at once."));
         }
         else
         {
-            mprf(MSGCH_DURATION, "You have harvested enough death to cast "
-                                 "Grave Claw an additional time.");
+            mprf(MSGCH_DURATION, "%s", ui_translate("log.spl-damage", "You have harvested enough death to cast "
+                                 "Grave Claw an additional time."));
         }
     }
 }
@@ -5217,7 +5202,7 @@ spret cast_fortress_blast(actor& caster, int pow, bool fail)
     {
         const int delay = 70 - div_rand_round(pow * 10, 25);
         you.duration[DUR_FORTRESS_BLAST_TIMER] = delay;
-        mprf("You steady yourself in place and focus your resilience into a mighty blast.");
+        mprf("%s", ui_translate("log.spl-damage", "You steady yourself in place and focus your resilience into a mighty blast."));
     }
     // Todo: Add monster implementation here
 
@@ -5242,7 +5227,7 @@ void unleash_fortress_blast(actor& caster)
             desc = "a very strong";
         else if (power > 80)
             desc = "a strong";
-        mprf(MSGCH_DURATION, "You unleash %s concussive blast!", desc.c_str());
+        mprf(MSGCH_DURATION, "%s", ui_render("s.log", "You unleash %s concussive blast!", make_stringf("You unleash %s concussive blast!", desc.c_str()), {s_clause_arg(desc)}).c_str());
     }
 
     bolt blast;

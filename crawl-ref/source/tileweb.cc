@@ -1,4 +1,5 @@
 #include "AppHdr.h"
+#include "t-display.h"
 
 #ifdef USE_TILE_WEB
 
@@ -522,7 +523,7 @@ wint_t TilesFramework::_handle_control_message(sockaddr_un addr, string data)
     {
         JsonWrapper content = json_find_member(obj.node, "content");
         content.check(JSON_STRING);
-        string m = "<red>Serverwide announcement:</red> ";
+        string m = ui_translate("t.tiles", "<red>Serverwide announcement:</red> ");
         m += content->string_;
 
         mprf(MSGCH_DGL_MESSAGE, "%s", m.c_str());
@@ -1061,7 +1062,7 @@ static bool _update_statuses(player_info& c)
     status_info inf;
     for (unsigned int status = 0; status <= STATUS_LAST_STATUS; ++status)
     {
-        if (!fill_status_info(status, inf)) // this will reset inf itself
+        if (!fill_status_display_info(status, inf)) // this will reset inf itself
             continue;
 
         if (!inf.light_text.empty() || !inf.short_text.empty())
@@ -1280,7 +1281,7 @@ void TilesFramework::_send_player(bool force_full)
                 if (status.short_text.find(" (expiring)") != std::string::npos)
                     dbdesc += " (expiring)";
 
-                json_write_string("desc", dbdesc.size() ? dbdesc : "No description found");
+                json_write_string("desc", dbdesc.size() ? dbdesc : ui_translate("t.tiles", "No description found"));
             }
             if (!status.short_text.empty())
                 json_write_string("text", status.short_text);

@@ -13,7 +13,10 @@ enum FSFlag {
     FS_START_AT_END = 0x01,
     FS_PREWRAPPED_TEXT = 0x02,
     FS_EASY_EXIT = 0x04,
+    FS_LINEWISE_TEXT = 0x08,
 };
+
+formatted_string scroller_linewise_text(const formatted_string &text);
 
 class formatted_scroller
 {

@@ -1,0 +1,2141 @@
+{
+  "glossary_sha256": "52a49cacc2a408942ddf87655c491c1631c5ad7f7286553126fd959e04f66ee0",
+  "files": [
+    {
+      "file": "i18n-catalogue.h",
+      "sha256": "39522e9326af4924a3ee2a01766829d4aaf7b52e54a304b17539d23c992c7ae5",
+      "hits": []
+    },
+    {
+      "file": "i18n.cc",
+      "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95",
+      "hits": [
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "Melee",
+          "translation": "近战"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "i18n.h",
+      "sha256": "f0f92a73a7f1b30f9a689ef54f2275ef1b28476d5885614c60bd5bf5f8e2c315",
+      "hits": []
+    },
+    {
+      "file": "initfile.cc",
+      "sha256": "1217130f2cf88bf89c227a9441ed0af679649bc2067eb75cda02abe4547708ab",
+      "hits": [
+        {
+          "term": "ability",
+          "translation": "能力"
+        },
+        {
+          "term": "altar",
+          "translation": "祭坛"
+        },
+        {
+          "term": "animate",
+          "translation": "活化/活的"
+        },
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "background",
+          "translation": "背景"
+        },
+        {
+          "term": "banishment",
+          "translation": "放逐"
+        },
+        {
+          "term": "boomerang",
+          "translation": "回旋镖"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "Console",
+          "translation": "字符版/控制台/终端"
+        },
+        {
+          "term": "dart",
+          "translation": "飞镖"
+        },
+        {
+          "term": "Depths",
+          "translation": "地底/深处"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "Evocable",
+          "translation": "可唤发物品"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "ghost",
+          "translation": "鬼魂"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "minor",
+          "translation": "较小的"
+        },
+        {
+          "term": "miscast",
+          "translation": "施法失误"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "mutations",
+          "translation": "变异"
+        },
+        {
+          "term": "portal",
+          "translation": "传送门"
+        },
+        {
+          "term": "rC",
+          "translation": "冰抗"
+        },
+        {
+          "term": "Ru",
+          "translation": "入"
+        },
+        {
+          "term": "Shield",
+          "translation": "格挡值/盾牌/保护"
+        },
+        {
+          "term": "shop",
+          "translation": "商店"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "staff",
+          "translation": "法杖/工作人员"
+        },
+        {
+          "term": "stats",
+          "translation": "属性"
+        },
+        {
+          "term": "Staves",
+          "translation": "棍杖"
+        },
+        {
+          "term": "throw",
+          "translation": "投掷"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "transporter",
+          "translation": "转移装置"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "undead",
+          "translation": "亡灵"
+        },
+        {
+          "term": "Vaults",
+          "translation": "宝库/密室/跃起"
+        },
+        {
+          "term": "weird",
+          "translation": "奇怪的"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特"
+        },
+        {
+          "term": "Human",
+          "translation": "人类"
+        },
+        {
+          "term": "Throwing",
+          "translation": "投掷"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "Slow",
+          "translation": "缓慢术/减速/缓慢/迟缓"
+        },
+        {
+          "term": "Pain",
+          "translation": "痛苦术/痛苦"
+        },
+        {
+          "term": "Dispel Undead",
+          "translation": "驱散亡灵"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Arena",
+          "translation": "奥格瓦如竞技场/竞技场"
+        },
+        {
+          "term": "dwarf",
+          "translation": "矮人"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "Wrath",
+          "translation": "神怒"
+        }
+      ]
+    },
+    {
+      "file": "initfile.h",
+      "sha256": "ac1e29f0639818b1c6b4fff4ac36a5f4f2c85a3d8ccf7848bc2ce007d74f98ca",
+      "hits": []
+    },
+    {
+      "file": "invent.cc",
+      "sha256": "b592a077b9a9e307dfce1e3608ce2364d7f4e5e70e1e7ed44f0753a9009de335",
+      "hits": [
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "boots",
+          "translation": "靴子"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "carrion",
+          "translation": "腐肉"
+        },
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "cloak",
+          "translation": "披风"
+        },
+        {
+          "term": "Evocable",
+          "translation": "可唤发物品"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "gloves",
+          "translation": "手套"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "Orb of Zot",
+          "translation": "佐特宝珠"
+        },
+        {
+          "term": "pieces",
+          "translation": "碎片"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "staff",
+          "translation": "法杖/工作人员"
+        },
+        {
+          "term": "Staves",
+          "translation": "棍杖"
+        },
+        {
+          "term": "throw",
+          "translation": "投掷"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "penance",
+          "translation": "赎罪"
+        },
+        {
+          "term": "evoke",
+          "translation": "唤发/发动/使用"
+        },
+        {
+          "term": "barding",
+          "translation": "身甲"
+        },
+        {
+          "term": "confusion",
+          "translation": "混乱"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Melee",
+          "translation": "近战"
+        },
+        {
+          "term": "body armour",
+          "translation": "躯干防具"
+        },
+        {
+          "term": "Jump",
+          "translation": "跃击"
+        },
+        {
+          "term": "elemental",
+          "translation": "元素生物"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "invent.h",
+      "sha256": "012144993b791400dc1d4ab2620bf8409bff890225285aa3d89ea5ffef184344",
+      "hits": [
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "penance",
+          "translation": "赎罪"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "item-def.h",
+      "sha256": "73e8debd4d29d41a2f26b42ed407ee1db26d1686e71c63c975e5a811cefe1f62",
+      "hits": [
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "Console",
+          "translation": "字符版/控制台/终端"
+        },
+        {
+          "term": "corpse",
+          "translation": "尸体"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "manual",
+          "translation": "手册/手动"
+        },
+        {
+          "term": "randart",
+          "translation": "随机神器"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "staff",
+          "translation": "法杖/工作人员"
+        },
+        {
+          "term": "wand",
+          "translation": "魔杖"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "item-name.cc",
+      "sha256": "9bd476e959bfdaa48f2f7310912f6b9bbca7a463ad8ef63a2e524c63fb044b17",
+      "hits": [
+        {
+          "term": "Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "AC",
+          "translation": "护甲值"
+        },
+        {
+          "term": "amulet of",
+          "translation": "护身符"
+        },
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "book",
+          "translation": "魔法书/书/手册"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "broad axe",
+          "translation": "阔斧"
+        },
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "Cocytus",
+          "translation": "悲叹河"
+        },
+        {
+          "term": "confuse",
+          "translation": "混乱"
+        },
+        {
+          "term": "Conjurations",
+          "translation": "塑能系魔法/魔法"
+        },
+        {
+          "term": "corpse",
+          "translation": "尸体"
+        },
+        {
+          "term": "deck",
+          "translation": "套牌"
+        },
+        {
+          "term": "Dexterity",
+          "translation": "敏捷/灵巧"
+        },
+        {
+          "term": "drain",
+          "translation": "吸能/吸取/消耗"
+        },
+        {
+          "term": "draining",
+          "translation": "吸能/汲取/耗损"
+        },
+        {
+          "term": "Enchant",
+          "translation": "附魔"
+        },
+        {
+          "term": "evasion",
+          "translation": "闪避值"
+        },
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开"
+        },
+        {
+          "term": "experience",
+          "translation": "经验值"
+        },
+        {
+          "term": "Fighting",
+          "translation": "战斗/作战/格斗"
+        },
+        {
+          "term": "figurine of a ziggurat",
+          "translation": "神塔小雕像"
+        },
+        {
+          "term": "Gehenna",
+          "translation": "欣嫩谷"
+        },
+        {
+          "term": "Geryon",
+          "translation": "革律翁"
+        },
+        {
+          "term": "ghost",
+          "translation": "鬼魂"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "gold piece",
+          "translation": "金币"
+        },
+        {
+          "term": "grand grimoire",
+          "translation": "大魔导书"
+        },
+        {
+          "term": "Hexes",
+          "translation": "妖术系魔法"
+        },
+        {
+          "term": "horn of Geryon",
+          "translation": "革律翁号角"
+        },
+        {
+          "term": "Hunter",
+          "translation": "猎手"
+        },
+        {
+          "term": "Intelligence",
+          "translation": "智力/智慧/心智"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "Jiyva",
+          "translation": "吉瓦"
+        },
+        {
+          "term": "manual",
+          "translation": "手册/手动"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "minor",
+          "translation": "较小的"
+        },
+        {
+          "term": "mummy",
+          "translation": "木乃伊"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "mutations",
+          "translation": "变异"
+        },
+        {
+          "term": "Necromancy",
+          "translation": "死灵系魔法"
+        },
+        {
+          "term": "necronomicon",
+          "translation": "死灵之书"
+        },
+        {
+          "term": "Orb of Zot",
+          "translation": "佐特宝珠"
+        },
+        {
+          "term": "Pandemonium",
+          "translation": "魔窟"
+        },
+        {
+          "term": "phantom",
+          "translation": "幻影"
+        },
+        {
+          "term": "phantom mirror",
+          "translation": "幻影镜"
+        },
+        {
+          "term": "phial of floods",
+          "translation": "洪水小瓶"
+        },
+        {
+          "term": "potion",
+          "translation": "药水"
+        },
+        {
+          "term": "randart",
+          "translation": "随机神器"
+        },
+        {
+          "term": "rC",
+          "translation": "冰抗"
+        },
+        {
+          "term": "Realm of Zot",
+          "translation": "佐特领域"
+        },
+        {
+          "term": "rF",
+          "translation": "火抗"
+        },
+        {
+          "term": "rPois",
+          "translation": "毒抗"
+        },
+        {
+          "term": "Shield",
+          "translation": "格挡值/盾牌/保护"
+        },
+        {
+          "term": "shop",
+          "translation": "商店"
+        },
+        {
+          "term": "SInv",
+          "translation": "看破隐形"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "spellbook",
+          "translation": "魔法书"
+        },
+        {
+          "term": "staff",
+          "translation": "法杖/工作人员"
+        },
+        {
+          "term": "stasis",
+          "translation": "稳态"
+        },
+        {
+          "term": "stealth",
+          "translation": "潜行"
+        },
+        {
+          "term": "Strength",
+          "translation": "力量/强度/威力"
+        },
+        {
+          "term": "throw",
+          "translation": "投掷"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "torment",
+          "translation": "折磨"
+        },
+        {
+          "term": "Translocations",
+          "translation": "位移系魔法"
+        },
+        {
+          "term": "Trog",
+          "translation": "特洛戈"
+        },
+        {
+          "term": "wand",
+          "translation": "魔杖"
+        },
+        {
+          "term": "weird",
+          "translation": "奇怪的"
+        },
+        {
+          "term": "Ziggurat",
+          "translation": "神塔"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特"
+        },
+        {
+          "term": "SH",
+          "translation": "格挡值"
+        },
+        {
+          "term": "willpower",
+          "translation": "意志"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "rN",
+          "translation": "负能量抗性"
+        },
+        {
+          "term": "rCorr",
+          "translation": "腐蚀抗性"
+        },
+        {
+          "term": "aut",
+          "translation": "时间单位"
+        },
+        {
+          "term": "noise",
+          "translation": "噪音/声音/巨响"
+        },
+        {
+          "term": "slaying",
+          "translation": "杀戮"
+        },
+        {
+          "term": "evoke",
+          "translation": "唤发/发动/使用"
+        },
+        {
+          "term": "evoker",
+          "translation": "唤发器"
+        },
+        {
+          "term": "talisman",
+          "translation": "变形护符"
+        },
+        {
+          "term": "confusion",
+          "translation": "混乱"
+        },
+        {
+          "term": "paralysis",
+          "translation": "麻痹"
+        },
+        {
+          "term": "poison",
+          "translation": "毒"
+        },
+        {
+          "term": "corrosion",
+          "translation": "腐蚀"
+        },
+        {
+          "term": "berserk",
+          "translation": "狂暴"
+        },
+        {
+          "term": "haste",
+          "translation": "疾速"
+        },
+        {
+          "term": "silence",
+          "translation": "沉默"
+        },
+        {
+          "term": "invisibility",
+          "translation": "隐形"
+        },
+        {
+          "term": "Polymorph",
+          "translation": "变形术"
+        },
+        {
+          "term": "Disjunction",
+          "translation": "离散术"
+        },
+        {
+          "term": "Pain",
+          "translation": "痛苦术/痛苦"
+        },
+        {
+          "term": "Freeze",
+          "translation": "冰冻术/冰冻/冻结/冻伤"
+        },
+        {
+          "term": "Mindburst",
+          "translation": "心灵爆破"
+        },
+        {
+          "term": "Dispersal",
+          "translation": "分散术/分散"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Iceblast",
+          "translation": "冰爆术/冰爆"
+        },
+        {
+          "term": "Flight",
+          "translation": "飞行术/飞行/一群"
+        },
+        {
+          "term": "Infusion",
+          "translation": "灌注术/灌注/补充"
+        },
+        {
+          "term": "Melee",
+          "translation": "近战"
+        },
+        {
+          "term": "Regeneration",
+          "translation": "再生术/再生/恢复"
+        },
+        {
+          "term": "See Invisible",
+          "translation": "看破隐形"
+        },
+        {
+          "term": "Holy word",
+          "translation": "神圣真言"
+        },
+        {
+          "term": "Heal Wounds",
+          "translation": "治疗伤口"
+        },
+        {
+          "term": "the Realm of Zot",
+          "translation": "佐特领域"
+        },
+        {
+          "term": "a ziggurat",
+          "translation": "神塔"
+        },
+        {
+          "term": "Arena",
+          "translation": "奥格瓦如竞技场/竞技场"
+        },
+        {
+          "term": "flame",
+          "translation": "火焰"
+        },
+        {
+          "term": "Donald",
+          "translation": "唐纳德"
+        },
+        {
+          "term": "Vv",
+          "translation": "薇薇"
+        },
+        {
+          "term": "dragon",
+          "translation": "龙"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "Wrath",
+          "translation": "神怒"
+        },
+        {
+          "term": "the Orb",
+          "translation": "宝珠"
+        }
+      ]
+    },
+    {
+      "file": "item-name.h",
+      "sha256": "b578bbcb8690236e9f1d96b640e08ee44eaec0815e54714c0d9f6907944aca46",
+      "hits": [
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "corpse",
+          "translation": "尸体"
+        },
+        {
+          "term": "Jiyva",
+          "translation": "吉瓦"
+        },
+        {
+          "term": "potion",
+          "translation": "药水"
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        }
+      ]
+    },
+    {
+      "file": "item-prop-enum.h",
+      "sha256": "b06e3c51f848b838fb324ab5520d00c9093fdca1a0c22fd98884b176c999532f",
+      "hits": [
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "Axes",
+          "translation": "斧"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "dart",
+          "translation": "飞镖"
+        },
+        {
+          "term": "Shields",
+          "translation": "盾牌/保护"
+        },
+        {
+          "term": "stats",
+          "translation": "属性"
+        },
+        {
+          "term": "Staves",
+          "translation": "棍杖"
+        },
+        {
+          "term": "Confusing Touch",
+          "translation": "混乱之触"
+        },
+        {
+          "term": "Melee",
+          "translation": "近战"
+        },
+        {
+          "term": "Royal Jelly",
+          "translation": "皇家胶怪"
+        },
+        {
+          "term": "jelly",
+          "translation": "胶怪"
+        },
+        {
+          "term": "tentacle",
+          "translation": "触手"
+        }
+      ]
+    },
+    {
+      "file": "item-prop.cc",
+      "sha256": "e8282a459b77d7050dcb206713b941dfe2d1fa304256f9c42f0ef0966f0617a0",
+      "hits": [
+        {
+          "term": "AC",
+          "translation": "护甲值"
+        },
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "arrow",
+          "translation": "箭"
+        },
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "Axes",
+          "translation": "斧"
+        },
+        {
+          "term": "bardiche",
+          "translation": "长柄大斧"
+        },
+        {
+          "term": "battleaxe",
+          "translation": "大型战斧"
+        },
+        {
+          "term": "blink",
+          "translation": "闪烁/闪现/眨眼"
+        },
+        {
+          "term": "boomerang",
+          "translation": "回旋镖"
+        },
+        {
+          "term": "boots",
+          "translation": "靴子"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "broad axe",
+          "translation": "阔斧"
+        },
+        {
+          "term": "buckler",
+          "translation": "小盾"
+        },
+        {
+          "term": "carrion",
+          "translation": "腐肉"
+        },
+        {
+          "term": "centaur",
+          "translation": "半人马"
+        },
+        {
+          "term": "centaur barding",
+          "translation": "半人马甲"
+        },
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "cloak",
+          "translation": "披风"
+        },
+        {
+          "term": "conjuration",
+          "translation": "塑能"
+        },
+        {
+          "term": "corpse",
+          "translation": "尸体"
+        },
+        {
+          "term": "crystal plate armour",
+          "translation": "水晶板甲"
+        },
+        {
+          "term": "dagger",
+          "translation": "匕首"
+        },
+        {
+          "term": "damnation",
+          "translation": "天谴/诅咒"
+        },
+        {
+          "term": "dart",
+          "translation": "飞镖"
+        },
+        {
+          "term": "demon trident",
+          "translation": "恶魔三叉戟"
+        },
+        {
+          "term": "double sword",
+          "translation": "双重剑"
+        },
+        {
+          "term": "Enchant",
+          "translation": "附魔"
+        },
+        {
+          "term": "eveningstar",
+          "translation": "昏星锤"
+        },
+        {
+          "term": "Evocable",
+          "translation": "可唤发物品"
+        },
+        {
+          "term": "Evocations",
+          "translation": "唤发"
+        },
+        {
+          "term": "Geryon",
+          "translation": "革律翁"
+        },
+        {
+          "term": "gloves",
+          "translation": "手套"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "hat",
+          "translation": "帽子"
+        },
+        {
+          "term": "horn of Geryon",
+          "translation": "革律翁号角"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "Long Blades",
+          "translation": "长刃"
+        },
+        {
+          "term": "mace",
+          "translation": "钉头锤"
+        },
+        {
+          "term": "Maces & Flails",
+          "translation": "锤与连枷"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "minor",
+          "translation": "较小的"
+        },
+        {
+          "term": "morningstar",
+          "translation": "晨星锤"
+        },
+        {
+          "term": "mutations",
+          "translation": "变异"
+        },
+        {
+          "term": "Necromancy",
+          "translation": "死灵系魔法"
+        },
+        {
+          "term": "plate armour",
+          "translation": "板甲"
+        },
+        {
+          "term": "Polearms",
+          "translation": "长柄武器"
+        },
+        {
+          "term": "potion",
+          "translation": "药水"
+        },
+        {
+          "term": "randart",
+          "translation": "随机神器"
+        },
+        {
+          "term": "rapier",
+          "translation": "西洋剑"
+        },
+        {
+          "term": "ration",
+          "translation": "口粮"
+        },
+        {
+          "term": "rF",
+          "translation": "火抗"
+        },
+        {
+          "term": "robe",
+          "translation": "长袍"
+        },
+        {
+          "term": "scarf",
+          "translation": "围巾"
+        },
+        {
+          "term": "scourge",
+          "translation": "灾厄巨蛇"
+        },
+        {
+          "term": "shadow",
+          "translation": "影"
+        },
+        {
+          "term": "Shield",
+          "translation": "格挡值/盾牌/保护"
+        },
+        {
+          "term": "Shields",
+          "translation": "盾牌/保护"
+        },
+        {
+          "term": "shop",
+          "translation": "商店"
+        },
+        {
+          "term": "Short Blades",
+          "translation": "短刃"
+        },
+        {
+          "term": "short sword",
+          "translation": "短剑"
+        },
+        {
+          "term": "shortbow",
+          "translation": "短弓"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "sling",
+          "translation": "投石索"
+        },
+        {
+          "term": "slug",
+          "translation": "鼻涕虫/弹丸"
+        },
+        {
+          "term": "spear",
+          "translation": "矛"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "staff",
+          "translation": "法杖/工作人员"
+        },
+        {
+          "term": "stats",
+          "translation": "属性"
+        },
+        {
+          "term": "Staves",
+          "translation": "棍杖"
+        },
+        {
+          "term": "stealth",
+          "translation": "潜行"
+        },
+        {
+          "term": "Swamp",
+          "translation": "沼泽"
+        },
+        {
+          "term": "throwing net",
+          "translation": "投掷网"
+        },
+        {
+          "term": "trident",
+          "translation": "三叉戟"
+        },
+        {
+          "term": "troll",
+          "translation": "巨魔"
+        },
+        {
+          "term": "wand",
+          "translation": "魔杖"
+        },
+        {
+          "term": "war axe",
+          "translation": "战斧"
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        },
+        {
+          "term": "Ziggurat",
+          "translation": "神塔"
+        },
+        {
+          "term": "Ranged Weapons",
+          "translation": "远程武器"
+        },
+        {
+          "term": "Throwing",
+          "translation": "投掷"
+        },
+        {
+          "term": "Alchemy",
+          "translation": "炼金术"
+        },
+        {
+          "term": "SH",
+          "translation": "格挡值"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "aut",
+          "translation": "时间单位"
+        },
+        {
+          "term": "evoke",
+          "translation": "唤发/发动/使用"
+        },
+        {
+          "term": "evoker",
+          "translation": "唤发器"
+        },
+        {
+          "term": "talisman",
+          "translation": "变形护符"
+        },
+        {
+          "term": "barding",
+          "translation": "身甲"
+        },
+        {
+          "term": "kite shield",
+          "translation": "鸢盾"
+        },
+        {
+          "term": "tower shield",
+          "translation": "塔盾"
+        },
+        {
+          "term": "sacred scourge",
+          "translation": "神圣重鞭"
+        },
+        {
+          "term": "blade talisman",
+          "translation": "刃手护符"
+        },
+        {
+          "term": "dragon-coil talisman",
+          "translation": "盘龙护符"
+        },
+        {
+          "term": "eel talisman",
+          "translation": "鳗鱼护符"
+        },
+        {
+          "term": "fortress talisman",
+          "translation": "堡垒护符"
+        },
+        {
+          "term": "granite talisman",
+          "translation": "花岗岩护符"
+        },
+        {
+          "term": "hive talisman",
+          "translation": "蜂巢护符"
+        },
+        {
+          "term": "inkwell talisman",
+          "translation": "墨池护符"
+        },
+        {
+          "term": "lupine talisman",
+          "translation": "狼形护符"
+        },
+        {
+          "term": "maw talisman",
+          "translation": "巨口护符"
+        },
+        {
+          "term": "medusa talisman",
+          "translation": "美杜莎护符"
+        },
+        {
+          "term": "protean talisman",
+          "translation": "万变护符"
+        },
+        {
+          "term": "quill talisman",
+          "translation": "棘刺护符"
+        },
+        {
+          "term": "riddle talisman",
+          "translation": "谜语护符"
+        },
+        {
+          "term": "rimehorn talisman",
+          "translation": "霜角护符"
+        },
+        {
+          "term": "sanguine talisman",
+          "translation": "鲜血护符"
+        },
+        {
+          "term": "scarab talisman",
+          "translation": "圣甲虫护符"
+        },
+        {
+          "term": "serpent talisman",
+          "translation": "巨蛇护符"
+        },
+        {
+          "term": "spider talisman",
+          "translation": "蜘蛛护符"
+        },
+        {
+          "term": "spore talisman",
+          "translation": "孢子护符"
+        },
+        {
+          "term": "storm talisman",
+          "translation": "风暴护符"
+        },
+        {
+          "term": "talisman of death",
+          "translation": "死亡护符"
+        },
+        {
+          "term": "wellspring talisman",
+          "translation": "涌泉护符"
+        },
+        {
+          "term": "Pain",
+          "translation": "痛苦术/痛苦"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Melee",
+          "translation": "近战"
+        },
+        {
+          "term": "body armour",
+          "translation": "躯干防具"
+        },
+        {
+          "term": "Lear's hauberk",
+          "translation": "李尔锁子甲"
+        },
+        {
+          "term": "Lochaber axe",
+          "translation": "洛哈伯斧"
+        },
+        {
+          "term": "steam",
+          "translation": "蒸汽"
+        },
+        {
+          "term": "Executioner",
+          "translation": "刽子手"
+        },
+        {
+          "term": "dragon",
+          "translation": "龙"
+        },
+        {
+          "term": "elemental",
+          "translation": "元素生物"
+        },
+        {
+          "term": "giant",
+          "translation": "巨人"
+        },
+        {
+          "term": "jelly",
+          "translation": "胶怪"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "spider",
+          "translation": "蜘蛛"
+        },
+        {
+          "term": "Wrath",
+          "translation": "神怒"
+        }
+      ]
+    },
+    {
+      "file": "item-prop.h",
+      "sha256": "89f4d9b69de4f31fb3867d55a0e44bc09bbf03a7fa237a27f0dada02ec906691",
+      "hits": [
+        {
+          "term": "AC",
+          "translation": "护甲值"
+        },
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "potion",
+          "translation": "药水"
+        },
+        {
+          "term": "Shield",
+          "translation": "格挡值/盾牌/保护"
+        },
+        {
+          "term": "staff",
+          "translation": "法杖/工作人员"
+        },
+        {
+          "term": "evoker",
+          "translation": "唤发器"
+        }
+      ]
+    },
+    {
+      "file": "item-status-flag-type.h",
+      "sha256": "b8c0260fd285c6787fd475aeaded7ac11e8e73c63e3799d8126eab7afd1795cb",
+      "hits": [
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "randart",
+          "translation": "随机神器"
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "item-type-id-state-type.h",
+      "sha256": "dc0ad917ece2824b9b98df41ef7237e43cbc6a29d06f13044cd5cfdbc0c7d265",
+      "hits": []
+    },
+    {
+      "file": "item-use.cc",
+      "sha256": "404164c2629cf75d788f6f4f2be7c05fb5c20b47661c4b6a74e0bb7acc933fbb",
+      "hits": [
+        {
+          "term": "ability",
+          "translation": "能力"
+        },
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "book",
+          "translation": "魔法书/书/手册"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "Console",
+          "translation": "字符版/控制台/终端"
+        },
+        {
+          "term": "corpse",
+          "translation": "尸体"
+        },
+        {
+          "term": "drain",
+          "translation": "吸能/吸取/消耗"
+        },
+        {
+          "term": "Enchant",
+          "translation": "附魔"
+        },
+        {
+          "term": "evasion",
+          "translation": "闪避值"
+        },
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "gloves",
+          "translation": "手套"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "hostile",
+          "translation": "敌对"
+        },
+        {
+          "term": "inner flame",
+          "translation": "心火术/心火"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "Okawaru",
+          "translation": "奥格瓦如"
+        },
+        {
+          "term": "Pain card",
+          "translation": "痛苦牌"
+        },
+        {
+          "term": "potion",
+          "translation": "药水"
+        },
+        {
+          "term": "robe",
+          "translation": "长袍"
+        },
+        {
+          "term": "robust",
+          "translation": "强健"
+        },
+        {
+          "term": "scroll of amnesia",
+          "translation": "遗忘卷轴"
+        },
+        {
+          "term": "scroll of brand weapon",
+          "translation": "印记卷轴"
+        },
+        {
+          "term": "scroll of enchant armour",
+          "translation": "防具附魔卷轴"
+        },
+        {
+          "term": "scroll of enchant weapon",
+          "translation": "武器附魔卷轴"
+        },
+        {
+          "term": "shadow",
+          "translation": "影"
+        },
+        {
+          "term": "Shield",
+          "translation": "格挡值/盾牌/保护"
+        },
+        {
+          "term": "SInv",
+          "translation": "看破隐形"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "stats",
+          "translation": "属性"
+        },
+        {
+          "term": "throw",
+          "translation": "投掷"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "torment",
+          "translation": "折磨"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        },
+        {
+          "term": "Shapeshifting",
+          "translation": "变形术"
+        },
+        {
+          "term": "willpower",
+          "translation": "意志"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "penance",
+          "translation": "赎罪"
+        },
+        {
+          "term": "aut",
+          "translation": "时间单位"
+        },
+        {
+          "term": "noise",
+          "translation": "噪音/声音/巨响"
+        },
+        {
+          "term": "evoke",
+          "translation": "唤发/发动/使用"
+        },
+        {
+          "term": "talisman",
+          "translation": "变形护符"
+        },
+        {
+          "term": "poison",
+          "translation": "毒"
+        },
+        {
+          "term": "berserk",
+          "translation": "狂暴"
+        },
+        {
+          "term": "scroll of acquirement",
+          "translation": "获取卷轴"
+        },
+        {
+          "term": "scroll of identify",
+          "translation": "鉴定卷轴"
+        },
+        {
+          "term": "Slow",
+          "translation": "缓慢术/减速/缓慢/迟缓"
+        },
+        {
+          "term": "Pain",
+          "translation": "痛苦术/痛苦"
+        },
+        {
+          "term": "Shadow Creatures",
+          "translation": "暗影生物"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Flight",
+          "translation": "飞行术/飞行/一群"
+        },
+        {
+          "term": "Melee",
+          "translation": "近战"
+        },
+        {
+          "term": "See Invisible",
+          "translation": "看破隐形"
+        },
+        {
+          "term": "Recite",
+          "translation": "诵经"
+        },
+        {
+          "term": "Delatra's gloves",
+          "translation": "德拉特拉手套"
+        },
+        {
+          "term": "flame",
+          "translation": "火焰"
+        },
+        {
+          "term": "butterfly",
+          "translation": "蝴蝶"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "item-use.h",
+      "sha256": "801639a8892ae2efa25eebe707bde4e6df81270f1631a913c26b1d6bebf7614a",
+      "hits": [
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "potion",
+          "translation": "药水"
+        },
+        {
+          "term": "talisman",
+          "translation": "变形护符"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "items.cc",
+      "sha256": "9d8ddbe08b9bb54fc3ebe12ce1458d2ac53ed4bd29661df7f956401548b37e9f",
+      "hits": [
+        {
+          "term": "Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "arrow",
+          "translation": "箭"
+        },
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "book",
+          "translation": "魔法书/书/手册"
+        },
+        {
+          "term": "boots",
+          "translation": "靴子"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "Console",
+          "translation": "字符版/控制台/终端"
+        },
+        {
+          "term": "corpse",
+          "translation": "尸体"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "Evocable",
+          "translation": "可唤发物品"
+        },
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "ghost",
+          "translation": "鬼魂"
+        },
+        {
+          "term": "gloves",
+          "translation": "手套"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "gold piece",
+          "translation": "金币"
+        },
+        {
+          "term": "Gozag",
+          "translation": "哥萨戈"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "manual",
+          "translation": "手册/手动"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "Orb of Zot",
+          "translation": "佐特宝珠"
+        },
+        {
+          "term": "Pandemonium",
+          "translation": "魔窟"
+        },
+        {
+          "term": "potion",
+          "translation": "药水"
+        },
+        {
+          "term": "randart",
+          "translation": "随机神器"
+        },
+        {
+          "term": "Realm of Zot",
+          "translation": "佐特领域"
+        },
+        {
+          "term": "shop",
+          "translation": "商店"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "throw",
+          "translation": "投掷"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "wand",
+          "translation": "魔杖"
+        },
+        {
+          "term": "weird",
+          "translation": "奇怪的"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特"
+        },
+        {
+          "term": "Merfolk",
+          "translation": "人鱼"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "noise",
+          "translation": "噪音/声音/巨响"
+        },
+        {
+          "term": "talisman",
+          "translation": "变形护符"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Jump",
+          "translation": "跃击"
+        },
+        {
+          "term": "the Dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "the Realm of Zot",
+          "translation": "佐特领域"
+        },
+        {
+          "term": "the Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "Arena",
+          "translation": "奥格瓦如竞技场/竞技场"
+        },
+        {
+          "term": "pandemonium lord",
+          "translation": "魔窟领主"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "player ghost",
+          "translation": "玩家幽灵"
+        },
+        {
+          "term": "the Orb",
+          "translation": "宝珠"
+        }
+      ]
+    },
+    {
+      "file": "items.h",
+      "sha256": "d29e63c6330229f9f6673028da536c05397cbf97e2f83c060b820a02278f6333",
+      "hits": [
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        }
+      ]
+    }
+  ],
+  "shared_baselines": [
+    {
+      "file": "Makefile",
+      "sha256": "dcb08098c266daa3caaef6bddeff6a847d11ef5f8d3fd94bde0fb17a442f3908"
+    },
+    {
+      "file": "nearby-danger.cc",
+      "sha256": "abfec78b7da657d015413e96773d30ac99c0c0d1c8bf72081277af6d7b3564b0"
+    },
+    {
+      "file": "nearby-danger.h",
+      "sha256": "e0946e79bb517371d4a4c8dcf5620d2644b4c3b62971eaae713ce5f8043678f3"
+    }
+  ]
+}

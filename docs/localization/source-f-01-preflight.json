@@ -1,0 +1,1803 @@
+{
+  "glossary_sha256": "52a49cacc2a408942ddf87655c491c1631c5ad7f7286553126fd959e04f66ee0",
+  "files": [
+    {
+      "file": "fearmonger.cc",
+      "sha256": "fc4f9d91a8f8dc221cc93419353544b2d013f34c2da8fa555acd5683314e4657",
+      "hits": [
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "feature-data.h",
+      "sha256": "e2ee3b3a5a35d0e3faa24ebc5fb0de19b8b1db17bf0bb08c1a47f7c506a16978",
+      "hits": [
+        {
+          "term": "Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "alarm trap",
+          "translation": "警报陷阱"
+        },
+        {
+          "term": "altar",
+          "translation": "祭坛"
+        },
+        {
+          "term": "Ashenzari",
+          "translation": "艾申扎利"
+        },
+        {
+          "term": "Bazaar",
+          "translation": "市集"
+        },
+        {
+          "term": "Beogh",
+          "translation": "比欧弗"
+        },
+        {
+          "term": "bolt trap",
+          "translation": "弩箭陷阱"
+        },
+        {
+          "term": "Cheibriados",
+          "translation": "切布理亚多"
+        },
+        {
+          "term": "Cocytus",
+          "translation": "悲叹河"
+        },
+        {
+          "term": "Crypt",
+          "translation": "墓室"
+        },
+        {
+          "term": "crystal wall",
+          "translation": "水晶墙壁"
+        },
+        {
+          "term": "dark tunnel",
+          "translation": "黑暗的隧道"
+        },
+        {
+          "term": "Depths",
+          "translation": "地底/深处"
+        },
+        {
+          "term": "detected shop or portal",
+          "translation": "探知到的商店或传送门"
+        },
+        {
+          "term": "Dis",
+          "translation": "冥府"
+        },
+        {
+          "term": "dispersal trap",
+          "translation": "空间移位陷阱"
+        },
+        {
+          "term": "Dithmenos",
+          "translation": "迪斯姆诺"
+        },
+        {
+          "term": "drain",
+          "translation": "吸能/吸取/消耗"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "Elyvilon",
+          "translation": "艾利维隆"
+        },
+        {
+          "term": "empty arch of ancient stone",
+          "translation": "远古石拱"
+        },
+        {
+          "term": "endless expanse of salt",
+          "translation": "无尽的盐域"
+        },
+        {
+          "term": "entrance",
+          "translation": "入口"
+        },
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开"
+        },
+        {
+          "term": "exit through the horrors of the Abyss",
+          "translation": "穿过深渊的恐惧的出口"
+        },
+        {
+          "term": "Fedhas",
+          "translation": "费德哈"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "fountain of blood",
+          "translation": "血喷泉"
+        },
+        {
+          "term": "fountain of clear blue water",
+          "translation": "清水喷泉"
+        },
+        {
+          "term": "fountain of sparkling water",
+          "translation": "气泡水喷泉"
+        },
+        {
+          "term": "frozen archway",
+          "translation": "冰冻的拱门"
+        },
+        {
+          "term": "gate",
+          "translation": "门"
+        },
+        {
+          "term": "gate to the Realm of Zot",
+          "translation": "通往佐特领域的门"
+        },
+        {
+          "term": "gate to the Vaults",
+          "translation": "宝库的门"
+        },
+        {
+          "term": "gateway",
+          "translation": "入口/传送门/出口"
+        },
+        {
+          "term": "gateway leading deeper into the Abyss",
+          "translation": "通往深渊更深处的入口"
+        },
+        {
+          "term": "gateway to a bazaar",
+          "translation": "市集的入口"
+        },
+        {
+          "term": "gateway to a ziggurat",
+          "translation": "通往神塔的入口"
+        },
+        {
+          "term": "gateway to the ashen valley of Gehenna",
+          "translation": "灰烬欣嫩谷的入口"
+        },
+        {
+          "term": "gateway to the decaying netherworld of Tartarus",
+          "translation": "通往塔尔塔罗斯腐朽冥界的入口"
+        },
+        {
+          "term": "gateway to the freezing wastes of Cocytus",
+          "translation": "冰封废墟悲叹河的入口"
+        },
+        {
+          "term": "gateway to the Iron City of Dis",
+          "translation": "钢铁都市冥府的入口"
+        },
+        {
+          "term": "Gauntlet",
+          "translation": "竞技场"
+        },
+        {
+          "term": "Gehenna",
+          "translation": "欣嫩谷"
+        },
+        {
+          "term": "glowing drain",
+          "translation": "发光的下水道"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Gozag",
+          "translation": "哥萨戈"
+        },
+        {
+          "term": "hazy altar of Hepliaklqana",
+          "translation": "朦胧的惠普利亚卡纳祭坛"
+        },
+        {
+          "term": "Hell",
+          "translation": "地狱"
+        },
+        {
+          "term": "Hepliaklqana",
+          "translation": "惠普利亚卡纳"
+        },
+        {
+          "term": "hide-covered altar of Uskayaw",
+          "translation": "皮革覆盖的阿斯卡亚祭坛"
+        },
+        {
+          "term": "hole to the Spider Nest",
+          "translation": "蜘蛛巢的洞口"
+        },
+        {
+          "term": "ice covered gate leading back out of this place",
+          "translation": "冰封的离开此地的出口"
+        },
+        {
+          "term": "Jiyva",
+          "translation": "吉瓦"
+        },
+        {
+          "term": "Kikubaaqudgha",
+          "translation": "奇库巴库哈"
+        },
+        {
+          "term": "Lair",
+          "translation": "野兽巢穴"
+        },
+        {
+          "term": "magical portal",
+          "translation": "魔法传送门"
+        },
+        {
+          "term": "Makhleb",
+          "translation": "马科列布"
+        },
+        {
+          "term": "metal wall",
+          "translation": "金属墙壁"
+        },
+        {
+          "term": "Nemelex Xobeh",
+          "translation": "尼姆雷斯・索布"
+        },
+        {
+          "term": "net trap",
+          "translation": "网陷阱"
+        },
+        {
+          "term": "Okawaru",
+          "translation": "奥格瓦如"
+        },
+        {
+          "term": "one-way gate leading to the halls of Pandemonium",
+          "translation": "通往魔窟大厅的单向门"
+        },
+        {
+          "term": "one-way gate to the infinite horrors of the Abyss",
+          "translation": "通往深渊的无尽恐惧的单向门"
+        },
+        {
+          "term": "Orcish Mines",
+          "translation": "兽人矿井"
+        },
+        {
+          "term": "Pakellas",
+          "translation": "帕克拉斯"
+        },
+        {
+          "term": "Pandemonium",
+          "translation": "魔窟"
+        },
+        {
+          "term": "passage",
+          "translation": "通道/穿行/流逝"
+        },
+        {
+          "term": "Passage of Golubria",
+          "translation": "格鲁布里亚通道"
+        },
+        {
+          "term": "permanent teleport trap",
+          "translation": "永久传送陷阱"
+        },
+        {
+          "term": "portal",
+          "translation": "传送门"
+        },
+        {
+          "term": "portal to a secret trove of treasure",
+          "translation": "通往秘密藏宝处的传送门"
+        },
+        {
+          "term": "pressure plate",
+          "translation": "压力板"
+        },
+        {
+          "term": "Qazlal",
+          "translation": "卡兹拉尔"
+        },
+        {
+          "term": "Realm of Zot",
+          "translation": "佐特领域"
+        },
+        {
+          "term": "rocky tunnel leading out of this place",
+          "translation": "通往出口的岩石隧道"
+        },
+        {
+          "term": "Ru",
+          "translation": "入"
+        },
+        {
+          "term": "sacrificial altar of Ru",
+          "translation": "献祭的入祭坛"
+        },
+        {
+          "term": "sand-covered staircase",
+          "translation": "沙子覆盖的楼梯"
+        },
+        {
+          "term": "sealed passage leading down",
+          "translation": "封印的向下通道"
+        },
+        {
+          "term": "sealed passage leading up",
+          "translation": "封印的向上通道"
+        },
+        {
+          "term": "shadow",
+          "translation": "影"
+        },
+        {
+          "term": "shimmering blue altar of Sif Muna",
+          "translation": "闪光的蓝色的席夫·穆纳祭坛"
+        },
+        {
+          "term": "Shoals",
+          "translation": "海滩"
+        },
+        {
+          "term": "shop",
+          "translation": "商店"
+        },
+        {
+          "term": "Sif Muna",
+          "translation": "席夫·穆纳"
+        },
+        {
+          "term": "Slime Pits",
+          "translation": "史莱姆巢穴"
+        },
+        {
+          "term": "Snake Pit",
+          "translation": "蛇穴"
+        },
+        {
+          "term": "spear",
+          "translation": "矛"
+        },
+        {
+          "term": "Spider Nest",
+          "translation": "蜘蛛巢"
+        },
+        {
+          "term": "staircase",
+          "translation": "楼梯"
+        },
+        {
+          "term": "statue",
+          "translation": "雕像"
+        },
+        {
+          "term": "Swamp",
+          "translation": "沼泽"
+        },
+        {
+          "term": "Tartarus",
+          "translation": "塔尔塔罗斯"
+        },
+        {
+          "term": "teleport trap",
+          "translation": "传送陷阱"
+        },
+        {
+          "term": "Temple",
+          "translation": "众神殿/神庙/庙宇"
+        },
+        {
+          "term": "the Shining One",
+          "translation": "光明神"
+        },
+        {
+          "term": "Tomb",
+          "translation": "灵庙"
+        },
+        {
+          "term": "transporter",
+          "translation": "转移装置"
+        },
+        {
+          "term": "transporter landing site",
+          "translation": "转移装置落点"
+        },
+        {
+          "term": "Trog",
+          "translation": "特洛戈"
+        },
+        {
+          "term": "Trove",
+          "translation": "秘藏"
+        },
+        {
+          "term": "tyrant",
+          "translation": "暴君"
+        },
+        {
+          "term": "Uskayaw",
+          "translation": "阿斯卡亚"
+        },
+        {
+          "term": "Vaults",
+          "translation": "宝库/密室/跃起"
+        },
+        {
+          "term": "Vehumet",
+          "translation": "维胡梅特"
+        },
+        {
+          "term": "Wu Jian",
+          "translation": "武剑会"
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        },
+        {
+          "term": "Yredelemnul",
+          "translation": "伊莱德莱姆努尔"
+        },
+        {
+          "term": "Ziggurat",
+          "translation": "神塔"
+        },
+        {
+          "term": "Zin",
+          "translation": "辛"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特"
+        },
+        {
+          "term": "Zot trap",
+          "translation": "佐特陷阱"
+        },
+        {
+          "term": "Lugonu",
+          "translation": "卢戈努"
+        },
+        {
+          "term": "Ignis",
+          "translation": "伊格尼斯"
+        },
+        {
+          "term": "Elven Halls",
+          "translation": "精灵大厅"
+        },
+        {
+          "term": "petrified",
+          "translation": "已石化"
+        },
+        {
+          "term": "Dispersal",
+          "translation": "分散术/分散"
+        },
+        {
+          "term": "the Dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "the Ecumenical Temple",
+          "translation": "众神殿"
+        },
+        {
+          "term": "the Orcish Mines",
+          "translation": "兽人矿井"
+        },
+        {
+          "term": "the Elven Halls",
+          "translation": "精灵大厅"
+        },
+        {
+          "term": "Dwarven Hall",
+          "translation": "矮人大厅"
+        },
+        {
+          "term": "the Dwarven Hall",
+          "translation": "矮人大厅"
+        },
+        {
+          "term": "the Swamp",
+          "translation": "沼泽"
+        },
+        {
+          "term": "the Shoals",
+          "translation": "海滩"
+        },
+        {
+          "term": "the Snake Pit",
+          "translation": "蛇穴"
+        },
+        {
+          "term": "the Spider Nest",
+          "translation": "蜘蛛巢"
+        },
+        {
+          "term": "the Vaults",
+          "translation": "宝库"
+        },
+        {
+          "term": "Hall of Blades",
+          "translation": "刀刃大厅"
+        },
+        {
+          "term": "the Hall of Blades",
+          "translation": "刀刃大厅"
+        },
+        {
+          "term": "the Crypt",
+          "translation": "墓室"
+        },
+        {
+          "term": "the Depths",
+          "translation": "地底/深处"
+        },
+        {
+          "term": "the Iron City of Dis",
+          "translation": "冥府铁城"
+        },
+        {
+          "term": "the Realm of Zot",
+          "translation": "佐特领域"
+        },
+        {
+          "term": "Forest",
+          "translation": "魔法森林"
+        },
+        {
+          "term": "the Enchanted Forest",
+          "translation": "魔法森林"
+        },
+        {
+          "term": "the Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "a ziggurat",
+          "translation": "神塔"
+        },
+        {
+          "term": "Labyrinth",
+          "translation": "迷宫"
+        },
+        {
+          "term": "a bazaar",
+          "translation": "市集"
+        },
+        {
+          "term": "a Gauntlet",
+          "translation": "竞技场"
+        },
+        {
+          "term": "Arena",
+          "translation": "奥格瓦如竞技场/竞技场"
+        },
+        {
+          "term": "Crucible",
+          "translation": "血肉熔炉"
+        },
+        {
+          "term": "the Crucible of Flesh",
+          "translation": "血肉熔炉"
+        },
+        {
+          "term": "salt",
+          "translation": "盐尘"
+        },
+        {
+          "term": "snake",
+          "translation": "蛇"
+        },
+        {
+          "term": "spider",
+          "translation": "蜘蛛"
+        },
+        {
+          "term": "the Tomb",
+          "translation": "陵墓"
+        },
+        {
+          "term": "the Orb",
+          "translation": "宝珠"
+        }
+      ]
+    },
+    {
+      "file": "feature.cc",
+      "sha256": "a6d8d6de14021928338a0f89845fdef60079707d6134bf3090bd064d47c85ce7",
+      "hits": [
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "feature.h",
+      "sha256": "5bc676b95a70da54c9ccb8df00cb18320ed4328e15cf9ccb7aa0e47fe0482683",
+      "hits": [
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        }
+      ]
+    },
+    {
+      "file": "fight.cc",
+      "sha256": "fe0d52334aa2813e9fd857bb3d39a135671e954908a2ef59e4e7c2fe0ee442cf",
+      "hits": [
+        {
+          "term": "ability",
+          "translation": "能力"
+        },
+        {
+          "term": "AC",
+          "translation": "护甲值"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "confuse",
+          "translation": "混乱"
+        },
+        {
+          "term": "Crossbows",
+          "translation": "弩"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "Fighter",
+          "translation": "战士"
+        },
+        {
+          "term": "Fighting",
+          "translation": "战斗/作战/格斗"
+        },
+        {
+          "term": "fungus",
+          "translation": "真菌"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "hostile",
+          "translation": "敌对"
+        },
+        {
+          "term": "Long Blades",
+          "translation": "长刃"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "Qazlal",
+          "translation": "卡兹拉尔"
+        },
+        {
+          "term": "rF",
+          "translation": "火抗"
+        },
+        {
+          "term": "rPois",
+          "translation": "毒抗"
+        },
+        {
+          "term": "shadow",
+          "translation": "影"
+        },
+        {
+          "term": "Shield",
+          "translation": "格挡值/盾牌/保护"
+        },
+        {
+          "term": "Short Blades",
+          "translation": "短刃"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "smite",
+          "translation": "神罚"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "Strength",
+          "translation": "力量/强度/威力"
+        },
+        {
+          "term": "throw",
+          "translation": "投掷"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "weird",
+          "translation": "奇怪的"
+        },
+        {
+          "term": "Summoner",
+          "translation": "召唤师"
+        },
+        {
+          "term": "Ranged Weapons",
+          "translation": "远程武器"
+        },
+        {
+          "term": "SH",
+          "translation": "格挡值"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "rN",
+          "translation": "负能量抗性"
+        },
+        {
+          "term": "rElec",
+          "translation": "电抗"
+        },
+        {
+          "term": "penance",
+          "translation": "赎罪"
+        },
+        {
+          "term": "aut",
+          "translation": "时间单位"
+        },
+        {
+          "term": "slaying",
+          "translation": "杀戮"
+        },
+        {
+          "term": "confusion",
+          "translation": "混乱"
+        },
+        {
+          "term": "poison",
+          "translation": "毒"
+        },
+        {
+          "term": "berserk",
+          "translation": "狂暴"
+        },
+        {
+          "term": "invisibility",
+          "translation": "隐形"
+        },
+        {
+          "term": "petrifying",
+          "translation": "正在石化"
+        },
+        {
+          "term": "petrified",
+          "translation": "已石化"
+        },
+        {
+          "term": "Polar Vortex",
+          "translation": "极地涡流"
+        },
+        {
+          "term": "Charm",
+          "translation": "魅惑术/护符/符印"
+        },
+        {
+          "term": "Sting",
+          "translation": "毒刺"
+        },
+        {
+          "term": "Confusing Touch",
+          "translation": "混乱之触"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Cleansing Flame",
+          "translation": "净化之焰"
+        },
+        {
+          "term": "Roll",
+          "translation": "翻滚"
+        },
+        {
+          "term": "Tremorstone",
+          "translation": "震石术"
+        },
+        {
+          "term": "Detonation Catalyst",
+          "translation": "引爆催化"
+        },
+        {
+          "term": "Flight",
+          "translation": "飞行术/飞行/一群"
+        },
+        {
+          "term": "Melee",
+          "translation": "近战"
+        },
+        {
+          "term": "Spectral Weapon",
+          "translation": "幽魂武器"
+        },
+        {
+          "term": "Vortex",
+          "translation": "涡流"
+        },
+        {
+          "term": "autumn katana",
+          "translation": "秋之武士刀"
+        },
+        {
+          "term": "flame",
+          "translation": "火焰"
+        },
+        {
+          "term": "steam",
+          "translation": "蒸汽"
+        },
+        {
+          "term": "Blorkula the orcula",
+          "translation": "兽人吸血鬼布洛库拉"
+        },
+        {
+          "term": "Royal Jelly",
+          "translation": "皇家胶怪"
+        },
+        {
+          "term": "elemental",
+          "translation": "元素生物"
+        },
+        {
+          "term": "inugami",
+          "translation": "犬神"
+        },
+        {
+          "term": "jelly",
+          "translation": "胶怪"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "rat",
+          "translation": "老鼠"
+        }
+      ]
+    },
+    {
+      "file": "fight.h",
+      "sha256": "09eaba8b6db91efbba5b82c947fdbfb9bcc82916f2d4582fd6e3c19fe8522c3e",
+      "hits": [
+        {
+          "term": "AC",
+          "translation": "护甲值"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "Melee",
+          "translation": "近战"
+        }
+      ]
+    },
+    {
+      "file": "files.cc",
+      "sha256": "e4a194baaf71540e993489ddb287c16d7af78c8658ec768715ee6bcc841311e0",
+      "hits": [
+        {
+          "term": "Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "Bazaar",
+          "translation": "市集"
+        },
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "Depths",
+          "translation": "地底/深处"
+        },
+        {
+          "term": "downstairs",
+          "translation": "下楼楼梯"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "entrance",
+          "translation": "入口"
+        },
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "ghost",
+          "translation": "鬼魂"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Hell",
+          "translation": "地狱"
+        },
+        {
+          "term": "hostile",
+          "translation": "敌对"
+        },
+        {
+          "term": "Lair",
+          "translation": "野兽巢穴"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "minor",
+          "translation": "较小的"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "Pandemonium",
+          "translation": "魔窟"
+        },
+        {
+          "term": "portal",
+          "translation": "传送门"
+        },
+        {
+          "term": "rot",
+          "translation": "腐烂"
+        },
+        {
+          "term": "shopping list",
+          "translation": "购物清单"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "staircase",
+          "translation": "楼梯"
+        },
+        {
+          "term": "Temple",
+          "translation": "众神殿/神庙/庙宇"
+        },
+        {
+          "term": "The Vestibule of Hell",
+          "translation": "地狱前庭"
+        },
+        {
+          "term": "throw",
+          "translation": "投掷"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "transporter",
+          "translation": "转移装置"
+        },
+        {
+          "term": "Trove",
+          "translation": "秘藏"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "undead",
+          "translation": "亡灵"
+        },
+        {
+          "term": "upstairs",
+          "translation": "上楼楼梯"
+        },
+        {
+          "term": "vampire",
+          "translation": "吸血鬼"
+        },
+        {
+          "term": "weird",
+          "translation": "奇怪的"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特"
+        },
+        {
+          "term": "Human",
+          "translation": "人类"
+        },
+        {
+          "term": "Mountain Dwarf",
+          "translation": "山地矮人"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "Slow",
+          "translation": "缓慢术/减速/缓慢/迟缓"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Corrupt",
+          "translation": "腐化术"
+        },
+        {
+          "term": "Duel",
+          "translation": "决斗"
+        },
+        {
+          "term": "Bribe Branch",
+          "translation": "贿赂分支"
+        },
+        {
+          "term": "Rising Flame",
+          "translation": "升腾之焰"
+        },
+        {
+          "term": "the Dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "the Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "Arena",
+          "translation": "奥格瓦如竞技场/竞技场"
+        },
+        {
+          "term": "the Arena",
+          "translation": "奥格瓦如竞技场/竞技场"
+        },
+        {
+          "term": "Necropolis",
+          "translation": "亡者之城"
+        },
+        {
+          "term": "flame",
+          "translation": "火焰"
+        },
+        {
+          "term": "Cerebov",
+          "translation": "瑟雷波夫"
+        },
+        {
+          "term": "Dowan",
+          "translation": "多万"
+        },
+        {
+          "term": "Duvessa",
+          "translation": "杜维莎"
+        },
+        {
+          "term": "dwarf",
+          "translation": "矮人"
+        },
+        {
+          "term": "orc",
+          "translation": "兽人"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "files.h",
+      "sha256": "6d7a0acb72d842dabbc38a91cc0048205e1a315ed0dfb5e0440bff3dfd7d6f56",
+      "hits": []
+    },
+    {
+      "file": "filter-enum.h",
+      "sha256": "9f40d98d036facd7fe384443c2ee9d10af7f0175df51b29e4a88fdabe90d47a7",
+      "hits": [
+        {
+          "term": "max",
+          "translation": "最大值"
+        }
+      ]
+    },
+    {
+      "file": "fineff.cc",
+      "sha256": "0d98bef9f0e89d6d274350a2a580273eac8660d87dfc2c13764f194b41938864",
+      "hits": [
+        {
+          "term": "Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "ballistomycete",
+          "translation": "弹道真菌"
+        },
+        {
+          "term": "ballistomycete spore",
+          "translation": "弹道真菌孢子"
+        },
+        {
+          "term": "bennu",
+          "translation": "贝努"
+        },
+        {
+          "term": "blink",
+          "translation": "闪烁/闪现/眨眼"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "hit points",
+          "translation": "生命值"
+        },
+        {
+          "term": "hostile",
+          "translation": "敌对"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "mummy",
+          "translation": "木乃伊"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "starcursed",
+          "translation": "星咒"
+        },
+        {
+          "term": "undead",
+          "translation": "亡灵"
+        },
+        {
+          "term": "weird",
+          "translation": "奇怪的"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特"
+        },
+        {
+          "term": "Zot trap",
+          "translation": "佐特陷阱"
+        },
+        {
+          "term": "evoke",
+          "translation": "唤发/发动/使用"
+        },
+        {
+          "term": "starcursed mass",
+          "translation": "星咒聚合体"
+        },
+        {
+          "term": "Shock",
+          "translation": "电击术/电击"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Anguish",
+          "translation": "痛楚术"
+        },
+        {
+          "term": "Melee",
+          "translation": "近战"
+        },
+        {
+          "term": "Spectral Weapon",
+          "translation": "幽魂武器"
+        },
+        {
+          "term": "Duel",
+          "translation": "决斗"
+        },
+        {
+          "term": "the Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "flame",
+          "translation": "火焰"
+        },
+        {
+          "term": "sparks",
+          "translation": "电火花"
+        },
+        {
+          "term": "Royal Jelly",
+          "translation": "皇家胶怪"
+        },
+        {
+          "term": "ball lightning",
+          "translation": "球状闪电"
+        },
+        {
+          "term": "jelly",
+          "translation": "胶怪"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "rakshasa",
+          "translation": "罗刹"
+        },
+        {
+          "term": "shock serpent",
+          "translation": "电击蛇"
+        },
+        {
+          "term": "star jelly",
+          "translation": "星胶怪"
+        },
+        {
+          "term": "tentacle",
+          "translation": "触手"
+        },
+        {
+          "term": "Wrath",
+          "translation": "神怒"
+        }
+      ]
+    },
+    {
+      "file": "fineff.h",
+      "sha256": "ee0ac6782557211b4e2756e9c1141211be2780962195eeeeaa2278fa23a8b735",
+      "hits": [
+        {
+          "term": "bennu",
+          "translation": "贝努"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        }
+      ]
+    },
+    {
+      "file": "fixedarray.h",
+      "sha256": "d4b8d5d40669e78fc330fa9793f49b97c6cbb401f8beecbb0b92823080fe9e0a",
+      "hits": []
+    },
+    {
+      "file": "fixedp.h",
+      "sha256": "f11823a010a8713a20c985e96375b5a16c1f7ad2837f2eb60e4c83c20d24d35d",
+      "hits": [
+        {
+          "term": "AC",
+          "translation": "护甲值"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "gargoyle",
+          "translation": "石像鬼"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        }
+      ]
+    },
+    {
+      "file": "fixedvector.h",
+      "sha256": "c48bc1400c73cb45cba1c3d7962824806381c0f243071433bb963726bb62a22f",
+      "hits": []
+    },
+    {
+      "file": "flang-t.h",
+      "sha256": "4fbd33deb370ce12cfd7075b6c8091d8e6baaf087e4816deadae4cd059088195",
+      "hits": []
+    },
+    {
+      "file": "flood-find.h",
+      "sha256": "9c799395431d00a72f1bc5cf81f31207e8002264ab264be61e2c78505191d23f",
+      "hits": [
+        {
+          "term": "Vaults",
+          "translation": "宝库/密室/跃起"
+        }
+      ]
+    },
+    {
+      "file": "flush-reason-type.h",
+      "sha256": "c207340fabf58051b1ef7803e67f9b032db959e3aac4a99e06fc5babee659856",
+      "hits": [
+        {
+          "term": "ability",
+          "translation": "能力"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        }
+      ]
+    },
+    {
+      "file": "fontwrapper-ft.cc",
+      "sha256": "b09fbf433650fae9d394c1f5352b4b0a30d39b86bcd57cbbfcb39cc1fdc15350",
+      "hits": [
+        {
+          "term": "background",
+          "translation": "背景"
+        },
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        }
+      ]
+    },
+    {
+      "file": "fontwrapper-ft.h",
+      "sha256": "a6c1740b024b220f63a93da74560af11fbb4f570692aa95ee1491e5fdccfe07d",
+      "hits": [
+        {
+          "term": "background",
+          "translation": "背景"
+        }
+      ]
+    },
+    {
+      "file": "form-data.h",
+      "sha256": "f317725c358c95ab0c0040ab0f37f6d206726d8a33fda6d59fdba3c3b812c16c",
+      "hits": [
+        {
+          "term": "AC",
+          "translation": "护甲值"
+        },
+        {
+          "term": "accursed",
+          "translation": "被诅咒者"
+        },
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "bat",
+          "translation": "蝙蝠"
+        },
+        {
+          "term": "blink",
+          "translation": "闪烁/闪现/眨眼"
+        },
+        {
+          "term": "confuse",
+          "translation": "混乱"
+        },
+        {
+          "term": "drain",
+          "translation": "吸能/吸取/消耗"
+        },
+        {
+          "term": "evasion",
+          "translation": "闪避值"
+        },
+        {
+          "term": "fire magic",
+          "translation": "火系魔法"
+        },
+        {
+          "term": "fungus",
+          "translation": "真菌"
+        },
+        {
+          "term": "hat",
+          "translation": "帽子"
+        },
+        {
+          "term": "Hexes",
+          "translation": "妖术系魔法"
+        },
+        {
+          "term": "hydra",
+          "translation": "海德拉"
+        },
+        {
+          "term": "ice magic",
+          "translation": "冰系魔法"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "rC",
+          "translation": "冰抗"
+        },
+        {
+          "term": "rF",
+          "translation": "火抗"
+        },
+        {
+          "term": "rPois",
+          "translation": "毒抗"
+        },
+        {
+          "term": "sanctuary",
+          "translation": "庇护所"
+        },
+        {
+          "term": "shadow",
+          "translation": "影"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "sphinx",
+          "translation": "斯芬克斯"
+        },
+        {
+          "term": "statue",
+          "translation": "雕像"
+        },
+        {
+          "term": "stealth",
+          "translation": "潜行"
+        },
+        {
+          "term": "Strength",
+          "translation": "力量/强度/威力"
+        },
+        {
+          "term": "torment",
+          "translation": "折磨"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "vampire",
+          "translation": "吸血鬼"
+        },
+        {
+          "term": "vile",
+          "translation": "噩"
+        },
+        {
+          "term": "SH",
+          "translation": "格挡值"
+        },
+        {
+          "term": "willpower",
+          "translation": "意志"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "rN",
+          "translation": "负能量抗性"
+        },
+        {
+          "term": "rElec",
+          "translation": "电抗"
+        },
+        {
+          "term": "rCorr",
+          "translation": "腐蚀抗性"
+        },
+        {
+          "term": "slaying",
+          "translation": "杀戮"
+        },
+        {
+          "term": "talisman",
+          "translation": "变形护符"
+        },
+        {
+          "term": "poison",
+          "translation": "毒"
+        },
+        {
+          "term": "petrified",
+          "translation": "已石化"
+        },
+        {
+          "term": "Blinkbolt",
+          "translation": "闪现雷击"
+        },
+        {
+          "term": "Slow",
+          "translation": "缓慢术/减速/缓慢/迟缓"
+        },
+        {
+          "term": "Petrify",
+          "translation": "石化术/石化"
+        },
+        {
+          "term": "Pain",
+          "translation": "痛苦术/痛苦"
+        },
+        {
+          "term": "Freeze",
+          "translation": "冰冻术/冰冻/冻结/冻伤"
+        },
+        {
+          "term": "Siphon Essence",
+          "translation": "汲取精华"
+        },
+        {
+          "term": "Airstrike",
+          "translation": "空气打击"
+        },
+        {
+          "term": "Sporulate",
+          "translation": "孢子繁殖"
+        },
+        {
+          "term": "Rust Breath",
+          "translation": "锈蚀吐息"
+        },
+        {
+          "term": "Flight",
+          "translation": "飞行术/飞行/一群"
+        },
+        {
+          "term": "Melee",
+          "translation": "近战"
+        },
+        {
+          "term": "Regeneration",
+          "translation": "再生术/再生/恢复"
+        },
+        {
+          "term": "body armour",
+          "translation": "躯干防具"
+        },
+        {
+          "term": "Bat Swarm",
+          "translation": "蝙蝠群"
+        },
+        {
+          "term": "Watery Grave",
+          "translation": "水葬"
+        },
+        {
+          "term": "Bestial Takedown",
+          "translation": "野兽扑杀"
+        },
+        {
+          "term": "Crucible",
+          "translation": "血肉熔炉"
+        },
+        {
+          "term": "steam",
+          "translation": "蒸汽"
+        },
+        {
+          "term": "bats",
+          "translation": "蝙蝠群"
+        },
+        {
+          "term": "rust",
+          "translation": "锈尘"
+        },
+        {
+          "term": "burstshroom",
+          "translation": "爆裂蘑菇"
+        },
+        {
+          "term": "crab",
+          "translation": "蟹"
+        },
+        {
+          "term": "dragon",
+          "translation": "龙"
+        },
+        {
+          "term": "giant",
+          "translation": "巨人"
+        },
+        {
+          "term": "jelly",
+          "translation": "胶怪"
+        },
+        {
+          "term": "solar ember",
+          "translation": "太阳余烬"
+        },
+        {
+          "term": "spider",
+          "translation": "蜘蛛"
+        },
+        {
+          "term": "yak",
+          "translation": "牦牛"
+        }
+      ]
+    },
+    {
+      "file": "format.cc",
+      "sha256": "621c94ef36f821fee67a1497d69f32e6814018cf0349a612b6e6062761e9b9a8",
+      "hits": [
+        {
+          "term": "background",
+          "translation": "背景"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        }
+      ]
+    },
+    {
+      "file": "format.h",
+      "sha256": "71a2c61adb8dcf858cd4a8d3e816120a7f5492e917b4dba37c2d3734f793cf06",
+      "hits": []
+    },
+    {
+      "file": "fprop.cc",
+      "sha256": "6b4a5f47a43063f7289425b5ec82a9ae6562a538f3996afd34a7af173bb12e5a",
+      "hits": []
+    },
+    {
+      "file": "fprop.h",
+      "sha256": "4aa5fe0d7ad87e63abd633ee61bc1cc0020e739f44835bfc40a348dd11bc9b5e",
+      "hits": [
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "sanctuary",
+          "translation": "庇护所"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        }
+      ]
+    }
+  ]
+}

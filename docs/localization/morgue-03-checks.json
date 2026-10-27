@@ -1,0 +1,107 @@
+{
+  "batch": "morgue-03",
+  "build": {
+    "windows_tiles": "passed",
+    "exe_bytes": 27767521,
+    "exe_sha256": "854a9e5e83e11ae52e4f8ddc896b50f7dfdc299455302a54e09f714568dc3d7a"
+  },
+  "native": {
+    "cases": 10,
+    "assertions": 521,
+    "passed": true
+  },
+  "python": {
+    "cases": 33,
+    "passed": true
+  },
+  "new_reviewed_templates": 21,
+  "canonical_previous_fixtures": {
+    "native-bilingual.txt": {
+      "before": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+      "after": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+      "unchanged": true
+    },
+    "native-explicit-english.txt": {
+      "before": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+      "after": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+      "unchanged": true
+    },
+    "native-language-english.txt": {
+      "before": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+      "after": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+      "unchanged": true
+    }
+  },
+  "actual_death_files": {
+    "native-death-beam.lst": {
+      "bytes": 28,
+      "sha256": "cd8cee2c8d82ec681507a850e4fdb07e79cade6ce24d58f3446f3c4e0947808b"
+    },
+    "native-death-beam.txt": {
+      "bytes": 438,
+      "sha256": "073e586ddb8531c98993706602a26871e09b420591be5c68b06bb10d980ce306"
+    },
+    "native-death-beam.zh.txt": {
+      "bytes": 503,
+      "sha256": "c65f55468f32839b0a4c9016b73923e6d058c2c04d09f538da13b56d44f72c2c"
+    },
+    "native-death-cloud.lst": {
+      "bytes": 28,
+      "sha256": "cd8cee2c8d82ec681507a850e4fdb07e79cade6ce24d58f3446f3c4e0947808b"
+    },
+    "native-death-cloud.txt": {
+      "bytes": 401,
+      "sha256": "cc000fae6c882fd2afefbb5fd0289909d1da414212a52b4b4f1958a0070fdf1b"
+    },
+    "native-death-cloud.zh.txt": {
+      "bytes": 425,
+      "sha256": "5f5e85592719bbf349461094a27a554f40f9f7fc8e812b2074ccb6ec2c2b476a"
+    },
+    "native-death-constriction.lst": {
+      "bytes": 28,
+      "sha256": "cd8cee2c8d82ec681507a850e4fdb07e79cade6ce24d58f3446f3c4e0947808b"
+    },
+    "native-death-constriction.txt": {
+      "bytes": 419,
+      "sha256": "f462583a979b44f8d3487d41a193cac0f7a4ad1b54d596bcfad56184b3f91f08"
+    },
+    "native-death-constriction.zh.txt": {
+      "bytes": 425,
+      "sha256": "624e3616e173cb67fa33ce56969e3e68a2d670049175fdf2acc75db74330a096"
+    },
+    "native-death-melee.lst": {
+      "bytes": 28,
+      "sha256": "cd8cee2c8d82ec681507a850e4fdb07e79cade6ce24d58f3446f3c4e0947808b"
+    },
+    "native-death-melee.txt": {
+      "bytes": 434,
+      "sha256": "ac286fd18187e6c65ca7f32b53ffed5a54e8d615a5e4c7b4e769005670ebedbb"
+    },
+    "native-death-melee.zh.txt": {
+      "bytes": 473,
+      "sha256": "d5a6801f08f1d9cbddd36f5230da8e1e38c5e3ade5f5ebe06e8713d509057362"
+    },
+    "native-death-poison.lst": {
+      "bytes": 28,
+      "sha256": "cd8cee2c8d82ec681507a850e4fdb07e79cade6ce24d58f3446f3c4e0947808b"
+    },
+    "native-death-poison.txt": {
+      "bytes": 394,
+      "sha256": "669d088e222617ced13bbdad3825676a21d9941d848cb741665b3d3805813d3b"
+    },
+    "native-death-poison.zh.txt": {
+      "bytes": 420,
+      "sha256": "14b6ab867bf82e6d682df9d33d405b6d3d9a9106d8afa8f22b0d16e778d726b4"
+    }
+  },
+  "verified": [
+    "English default and explicit language path",
+    "Chinese companion file preference and missing-file English fallback",
+    "1600 distinct Chinese characters, intact long lines and linewise rendering operations",
+    "Literal markup, empty lines and final line without newline",
+    "Death notes save/load round trip and unchanged canonical notes",
+    "Unknown killer, weapon, beam, attribution and disabling-status whole English fallback",
+    "Canonical scores, English fixtures and RNG unchanged"
+  ],
+  "limitation": "No live GPU/UI scrolling verification; existing morgue files are not rewritten."
+}

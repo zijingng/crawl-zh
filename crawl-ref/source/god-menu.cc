@@ -5,6 +5,7 @@
  */
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "god-menu.h"
 
@@ -36,6 +37,16 @@ GodMenuEntry::GodMenuEntry(god_type god_, bool long_name) :
         const tileidx_t idx = tileidx_feature_base(feat);
         add_tile(tile_def(pick_dngn_tile(idx, ui_random(INT_MAX))));
     }
+}
+
+string GodMenuEntry::get_text() const
+{
+    // Keep text/data and ASCII hotkeys canonical for selection and scripts.
+    const string canonical = god_name(god);
+    const string display = ui_translate("display.god", canonical.c_str());
+    if (display == canonical)
+        return MenuEntry::get_text();
+    return _get_text_preface() + display + " (" + text + ")";
 }
 
 string GodMenuEntry::_get_text_preface() const

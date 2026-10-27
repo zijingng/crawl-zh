@@ -1,0 +1,21 @@
+{
+  "batch": "source-v-01",
+  "date": "2026-10-24",
+  "reviewed_top_level_files": 10,
+  "unchanged_files": 7,
+  "changed_files": 3,
+  "reviewed_literal_tokens": 249,
+  "reviewed_messages": 11,
+  "catalogue_matches": 11,
+  "generated_catalogue_matches": true,
+  "stale_dependencies": [],
+  "windows_tiles_build": true,
+  "native_cases": 103,
+  "native_assertions": 189790,
+  "python_tests": 28,
+  "limitations": [
+    "No in-game visual smoke test. Console/WebTiles were not separately built; both layer-menu templates are covered by the native localization tests.",
+    "Compilation diagnostics, copyright/build identifiers and persisted version history remain canonical English.",
+    "Map names fall back as a complete row when the branch name or template is unavailable."
+  ]
+}

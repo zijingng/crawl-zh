@@ -1,0 +1,39 @@
+{
+  "baseline": "0.34.1",
+  "batch_entries_verified": 4198,
+  "by_context": {
+    "display.monster": 672,
+    "display.item": 305,
+    "display.item.artifact": 248,
+    "display.item.appearance": 2875,
+    "display.item.template": 6,
+    "display.item.state": 5,
+    "display.monster.template": 22,
+    "display.monster.modifier": 32,
+    "display.shop": 2,
+    "display.acquire": 1,
+    "display.item.rarity": 5,
+    "display.item.category": 24,
+    "display.monster.state": 1
+  },
+  "glossary_and_source_hashes": "pass",
+  "unchanged_original_english_functions": [
+    "string item_def::name(",
+    "string item_def::name_aux(",
+    "string monster_info::_core_name(",
+    "string monster_info::common_name(",
+    "string monster_info::proper_name(",
+    "string monster_info::full_name(",
+    "string monster_info::pluralised_name("
+  ],
+  "cpp_tests": {
+    "assertions": 9089,
+    "cases": 14,
+    "result": "pass"
+  },
+  "windows_tiles_build": "pass",
+  "gui": {
+    "observed": "独立角色 Names7ZH 的 HUD 显示 +0 战斧，中文字形正常。",
+    "further_checks": "检测到窗口人工输入后停止；未完成中英文同屏对照。"
+  }
+}

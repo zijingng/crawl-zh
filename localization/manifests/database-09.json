@@ -1,0 +1,69 @@
+{
+  "baseline": "0.34.1",
+  "source": "crawl-ref/source/dat/database/wpnnoise.txt",
+  "entries": [
+    {
+      "key": "_speaking_low_tension_",
+      "context": "textdb:database/wpnnoise.txt:_speaking_low_tension_",
+      "source_sha256": "2f882a32f45f32d3cdcf7c2e22dc1c78d09f072636cca6b81dba04a7d2040976",
+      "translation_sha256": "549f2ae45b794a31edb334d3ec8ff5b9fcf6b91fe476412175cfb83230771eb9",
+      "review_status": "reviewed",
+      "candidates": 15
+    },
+    {
+      "key": "_speaking_high_tension_",
+      "context": "textdb:database/wpnnoise.txt:_speaking_high_tension_",
+      "source_sha256": "654010af3e9849f15eb9eee8c45f64a7679dba6336bafe6d4ee06923da2ad95e",
+      "translation_sha256": "e22bf80b14d8c65e1eae0c7c49128bc4750832d3d7195a2cb4d09a1367295953",
+      "review_status": "reviewed",
+      "candidates": 32
+    },
+    {
+      "key": "_godless_sorter_",
+      "context": "textdb:database/wpnnoise.txt:_godless_sorter_",
+      "source_sha256": "6e09a7f9fb5dd970521d180cb4e1b5e50eb0d86d4a55d4cd48ebff1155c7efee",
+      "translation_sha256": "9ca3e57afaf30cd3e4041913f25728c5d5bd57b91fe063e495318b6e7542cade",
+      "review_status": "reviewed",
+      "candidates": 6
+    }
+  ],
+  "reviewed_this_batch": 3,
+  "candidates": 53,
+  "cumulative_reviewed": 56,
+  "legacy_unreviewed_keys": [
+    "_real_song_high_tension_",
+    "_real_song_low-high_tension_",
+    "_real_song_low_tension_",
+    "_real_song_no_tension_",
+    "_scream_",
+    "singing sword high_tension",
+    "singing sword low_tension",
+    "singing sword no_tension",
+    "singing sword scream"
+  ],
+  "english_source_unchanged": true,
+  "unselected_entries_unchanged": true,
+  "runtime_adapter": "strict paired item_noise; unreviewed or missing components use whole canonical English",
+  "source_dependencies": [
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "sha256": "44b09fc986a05a3ce51fd3b87e9d1df55ccbe97c4cc992b6c9a5499c6d19f943"
+    },
+    {
+      "source": "crawl-ref/source/art-func.h",
+      "sha256": "1f1ba35edebffe93f042e26071999b9c4958321e88e7d69c6107517af57666b5"
+    },
+    {
+      "source": "crawl-ref/source/item-name.cc",
+      "sha256": "65eb258d7a4e68a9680a3f0bed7dc2667da057e8d8adc1559349c51a2db24c5e"
+    },
+    {
+      "source": "crawl-ref/source/item-noise-display.h",
+      "sha256": "0c673b48c959eda7e6f05f15b923d76c863faf743d77e7bc7c19d571f0d84fc0"
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "sha256": "64083d02f53e7d92891f442b9fb58adf1812bae030e1b2b143e960b056f8dc9e"
+    }
+  ]
+}

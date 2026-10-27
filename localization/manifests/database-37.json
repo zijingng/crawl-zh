@@ -1,0 +1,140 @@
+{
+  "source": "database/monspeak.txt",
+  "lua_results": [
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "velvet-covered",
+      "keys": [
+        "_suck_up_adj2_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "pearl-beaked",
+      "keys": [
+        "_suck_up_adj2_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "well-preserved",
+      "keys": [
+        "_suck_up_adj2_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "marble-toed",
+      "keys": [
+        "_suck_up_adj2_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "opal-scaled",
+      "keys": [
+        "_suck_up_adj2_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "pillow-pawed",
+      "keys": [
+        "_suck_up_adj2_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "soft-tentacled",
+      "keys": [
+        "_suck_up_adj2_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "massive-mandibled",
+      "keys": [
+        "_suck_up_adj2_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "high-spirited",
+      "keys": [
+        "_suck_up_adj2_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "ivory-boned",
+      "keys": [
+        "_suck_up_adj2_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "rosy-lipped",
+      "keys": [
+        "_suck_up_adj2_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "paws",
+      "keys": [
+        "_player_arms_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "tentacles",
+      "keys": [
+        "_player_arms_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "limbs",
+      "keys": [
+        "_player_arms_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "arms",
+      "keys": [
+        "_player_arms_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    }
+  ]
+}

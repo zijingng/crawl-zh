@@ -1,0 +1,209 @@
+{
+  "batch": "reported-footer-feature-bane-01",
+  "new_footer_translations": 6,
+  "changed_translations": 14,
+  "new_bane_glossary_terms": 14,
+  "generic_Bane_glossary_note_extended": true,
+  "native_tests": 7,
+  "native_assertions": 538,
+  "python_tests": 33,
+  "native_log": "Filters: \"Reported description*\",\"Reported lookup*\",\"Bane display*\",\"Lookup*\",\"Look mode*\",\"Help document*\"\nRNG seed: 3545196735\n0.002 s: Look mode square descriptions translate terrain while canonical feature grammar stays English\n0.011 s: Help documents require the complete English source and preserve fallback pointers\n0.001 s: Bane display data does not change canonical names and descriptions\n0.009 s: Help document display keeps Chinese UTF8 lines separate for the Tiles atlas\n0.000 s: Reported description page footers translate every active page and retain English controls\n0.001 s: Reported lookup feature titles translate independently of canonical feature descriptions\n0.002 s: Reported lookup bane labels share complete display names and preserve database keys\nNo test cases matched '\"Lookup*\"'\nAll tests passed (538 assertions in 7 test cases)\n\n\n",
+  "build": "Windows Tiles crawl.exe succeeded",
+  "preserved_other_bane_meanings": [
+    "Wyrmbane/Bloodbane/Deathbane names",
+    "Jinx and Jinxbite",
+    "Bane of Scribes title",
+    "toadstool fly-bane quotation"
+  ],
+  "source_dependencies": {
+    "describe.cc": "fa3ebb328ef7738a69e69b16c7776688a589673eaba157d0694fc5afaee40f38",
+    "describe.h": "0f2f8053800ebd73531f30b6f96070f1d230d29bea43b4d17208942618ef800c",
+    "lookup-help.cc": "baa2257e49855e633bcd5bf3ebbbd331606e3a600c88088631c6e58750dfe532"
+  },
+  "changes": {
+    "translations": [
+      {
+        "file": "ui.po",
+        "context": "phase3.skill-menu",
+        "english": "the Bane of the Dilettante",
+        "before": "浅尝辄止之厄",
+        "after": "浅学者灾厄"
+      },
+      {
+        "file": "ui.po",
+        "context": "b.bane",
+        "english": "Bane of %s",
+        "before": "%s厄咒",
+        "after": "%s灾厄"
+      },
+      {
+        "file": "ui.po",
+        "context": "d.bane",
+        "english": "This bane usually lasts a very long time.",
+        "before": "这项厄咒通常会持续极长时间。",
+        "after": "这项灾厄通常会持续极长时间。"
+      },
+      {
+        "file": "ui.po",
+        "context": "d.bane",
+        "english": "This bane usually lasts a long time.",
+        "before": "这项厄咒通常会持续较长时间。",
+        "after": "这项灾厄通常会持续较长时间。"
+      },
+      {
+        "file": "ui.po",
+        "context": "d.bane",
+        "english": "This bane usually lasts a moderate length of time.",
+        "before": "这项厄咒通常会持续中等长度的时间。",
+        "after": "这项灾厄通常会持续中等长度的时间。"
+      },
+      {
+        "file": "ui.po",
+        "context": "d.bane",
+        "english": "This bane usually lasts a short length of time.",
+        "before": "这项厄咒通常只会持续较短时间。",
+        "after": "这项灾厄通常只会持续较短时间。"
+      },
+      {
+        "file": "ui.po",
+        "context": "d.bane",
+        "english": "\n<lightmagenta>This bane will be lifted from you when you gain another %s XLs worth of experience.</lightmagenta>",
+        "before": "\n<lightmagenta>再获得相当于%s个经验等级的经验后，你就能摆脱这项厄咒。</lightmagenta>",
+        "after": "\n<lightmagenta>再获得相当于%s个经验等级的经验后，你就能摆脱这项灾厄。</lightmagenta>"
+      },
+      {
+        "file": "ui.po",
+        "context": "f.form.trait",
+        "english": "You recover more slowly from Doom and Banes.",
+        "before": "你从厄运和厄咒中恢复得更慢。",
+        "after": "你从厄运和灾厄中恢复得更慢。"
+      },
+      {
+        "file": "ui.po",
+        "context": "m.mutation",
+        "english": "You recover more slowly from Doom and Banes.",
+        "before": "你从厄运和厄咒中恢复得更慢。",
+        "after": "你从厄运和灾厄中恢复得更慢。"
+      },
+      {
+        "file": "ui.po",
+        "context": "n.note",
+        "english": "Gained bane: %s%s",
+        "before": "受到厄咒：%s%s",
+        "after": "受到灾厄：%s%s"
+      },
+      {
+        "file": "ui.po",
+        "context": "n.note",
+        "english": "Lost bane: %s",
+        "before": "解除厄咒：%s",
+        "after": "解除灾厄：%s"
+      },
+      {
+        "file": "textdb.po",
+        "context": "textdb:descript/mutations.txt:accursed mutation",
+        "english": "Your accursed nature makes it harder to dispel malignant energies from your\nbeing, reducing the rate at which you can recover from Doom and Banes.\n",
+        "before": "你的诅咒本质让恶性力量更难从身上驱散，使你从厄运和厄咒中恢复得更慢。\n",
+        "after": "你的诅咒本质让恶性力量更难从身上驱散，使你从厄运和灾厄中恢复得更慢。\n"
+      },
+      {
+        "file": "textdb.po",
+        "context": "textdb:descript/mutations.txt:dilettante bane",
+        "english": "Your skill with your highest weapon skill (at the time of becoming afflicted by\nthis bane) is reduced by 50% and your skill with your two highest skills among\nmagical schools, Invocations, and Evocations are reduced by 25%.\n",
+        "before": "在受到此厄咒时，你等级最高的武器技能会降低50%；在魔法学派、祈祷和唤发之中，等级最高的两项技能会降低25%。\n",
+        "after": "在受到此灾厄时，你等级最高的武器技能会降低50%；在魔法学派、祈祷和唤发之中，等级最高的两项技能会降低25%。\n"
+      },
+      {
+        "file": "textdb.po",
+        "context": "textdb:descript/mutations.txt:mortality bane",
+        "english": "When you are badly injured and alone, a reaper may come to claim you. These reapers\nwill be immune to all damage from non-adjacent sources and, if your XL is less\nthan 14, will additionally be slow. At higher XL, multiple reapers may appear at\nonce.\n\nWhen this bane is lifted, all reapers summoned this way will immediately vanish.\n",
+        "before": "当你身受重伤又孤身一人时，收割者可能会前来索命。这些收割者免疫不与其相邻的来源造成的所有伤害；若你的经验等级低于14，它们的还会行动缓慢。经验等级较高时，可能同时出现多名收割者。\n\n此厄咒解除时，以这种方式召来的所有收割者都会立即消失。\n",
+        "after": "当你身受重伤又孤身一人时，收割者可能会前来索命。这些收割者免疫不与其相邻的来源造成的所有伤害；若你的经验等级低于14，它们的还会行动缓慢。经验等级较高时，可能同时出现多名收割者。\n\n此灾厄解除时，以这种方式召来的所有收割者都会立即消失。\n"
+      }
+    ],
+    "new_footers": [
+      {
+        "english": "[<w>!</w>]: <w>Description</w>",
+        "chinese": "[<w>!</w>]: <w>说明</w>"
+      },
+      {
+        "english": "[<w>!</w>]: <w>Description</w>|Statuses",
+        "chinese": "[<w>!</w>]: <w>说明</w>|状态"
+      },
+      {
+        "english": "[<w>!</w>]: Description|<w>Statuses</w>",
+        "chinese": "[<w>!</w>]: 说明|<w>状态</w>"
+      },
+      {
+        "english": "[<w>!</w>]: <w>Description</w>|Statuses|Quote",
+        "chinese": "[<w>!</w>]: <w>说明</w>|状态|引文"
+      },
+      {
+        "english": "[<w>!</w>]: Description|<w>Statuses</w>|Quote",
+        "chinese": "[<w>!</w>]: 说明|<w>状态</w>|引文"
+      },
+      {
+        "english": "[<w>!</w>]: Description|Statuses|<w>Quote</w>",
+        "chinese": "[<w>!</w>]: 说明|状态|<w>引文</w>"
+      }
+    ],
+    "new_bane_terms": [
+      [
+        "Bane of Lethargy",
+        "迟缓灾厄"
+      ],
+      [
+        "Bane of Heatstroke",
+        "中暑灾厄"
+      ],
+      [
+        "Bane of Snow-blindness",
+        "雪盲灾厄"
+      ],
+      [
+        "Bane of Electrospasm",
+        "电痉挛灾厄"
+      ],
+      [
+        "Bane of Claustrophobia",
+        "幽闭恐惧灾厄"
+      ],
+      [
+        "Bane of Stumbling",
+        "踉跄灾厄"
+      ],
+      [
+        "Bane of the Removed",
+        "已移除者灾厄"
+      ],
+      [
+        "Bane of Succour",
+        "援敌灾厄"
+      ],
+      [
+        "Bane of Multiplicity",
+        "增殖灾厄"
+      ],
+      [
+        "Bane of the Dilettante",
+        "浅学者灾厄"
+      ],
+      [
+        "Bane of Paradox",
+        "悖论灾厄"
+      ],
+      [
+        "Bane of Warding",
+        "护持灾厄"
+      ],
+      [
+        "Bane of the Hunted",
+        "被猎者灾厄"
+      ],
+      [
+        "Bane of Mortality",
+        "必死灾厄"
+      ]
+    ]
+  }
+}

@@ -4,6 +4,7 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "item-prop.h"
 
@@ -3334,10 +3335,14 @@ void seen_item(item_def &item)
                 && you.inv[i].sub_type == item.sub_type)
             {
                 held = &you.inv[i];
-                mprf("You learned that %s %s actually %s.",
-                        held->name(DESC_YOUR).c_str(),
-                        held->quantity > 1 ? "are" : "is",
-                        held->name(DESC_A, false, true).c_str());
+                const ui_arg appearance = ui_item_arg(*held);
+                item_def identified = *held;
+                identified.flags |= ISFLAG_IDENTIFIED;
+                mpr(ui_render("i.identify", "You learned that %s is actually %s.",
+                    make_stringf("You learned that %s %s actually %s.",
+                        held->name(DESC_YOUR).c_str(), held->quantity > 1 ? "are" : "is",
+                        held->name(DESC_A, false, true).c_str()),
+                    {appearance, ui_item_arg(identified)}));
                 break;
             }
         }
@@ -3467,8 +3472,14 @@ static string _xp_evoker_recharge_msg(const item_def &evoker, int gained, bool s
 
 void print_xp_evoker_recharge(const item_def &evoker, int gained, bool silenced)
 {
-    mprf(_xp_evoker_recharge_msg(evoker, gained, silenced).c_str(),
-         evoker.name(DESC_YOUR).c_str());
+    const string source = _xp_evoker_recharge_msg(evoker, gained, silenced);
+    const string original = make_stringf(source.c_str(), evoker.name(DESC_YOUR).c_str());
+    const auto *data = map_find(xp_evoker_data, static_cast<misc_item_type>(evoker.sub_type));
+    const string fixed = silenced ? data->recharge_msg.silent : data->recharge_msg.noisy;
+    mpr(!fixed.empty() || data->max_charges == 1
+        ? ui_render("i.evoker", source.c_str(), original, {ui_item_arg(evoker)})
+        : ui_render("i.evoker", "%s has regained %s charges.", original,
+            {ui_item_arg(evoker), ui_literal_arg(to_string(gained))}));
 }
 
 /// witchcraft. copied from mon-util.h's get_resist

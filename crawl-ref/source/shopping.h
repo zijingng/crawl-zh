@@ -34,7 +34,8 @@ shop_struct *shop_at(const coord_def& where, bool force_lookup = false);
 
 void destroy_shop_at(coord_def p);
 
-string shop_name(const shop_struct& shop);
+struct ui_arg;
+string shop_name(const shop_struct& shop, ui_arg *display = nullptr);
 string shop_type_name(shop_type type);
 
 bool shoptype_identifies_stock(shop_type type);

@@ -1,0 +1,391 @@
+{
+  "glossary_sha256": "52a49cacc2a408942ddf87655c491c1631c5ad7f7286553126fd959e04f66ee0",
+  "files": [
+    {
+      "file": "KeymapContext.h",
+      "sha256": "37e58e8379d5a697daf1c1a3370f69d03835201b1e105c5d7e4a23be4e77f1b5",
+      "hits": [
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格",
+          "note": "【语境补充 2026-10-21】与 Console 对举的客户端模式用图形版。资源图像用图块。地图位置的 tiles 用方格。条件标签保留英文。"
+        }
+      ]
+    },
+    {
+      "file": "kill-category.h",
+      "sha256": "eb17928ee282e7d7a8503f82c7a50f156d0e67a94aa515652a6a5000565ff7af",
+      "hits": [
+        {
+          "term": "Enchant",
+          "translation": "附魔",
+          "note": "【0.34.1 修订】保留术语；当前武器附魔提高武器附魔值，防具附魔提高防具附魔值。与给武器赋予 brand（印记）区分。 来源：dat/descript/items.txt。"
+        }
+      ]
+    },
+    {
+      "file": "kill-dump-options-type.h",
+      "sha256": "f239e7aed0cdbd34f48f1b03d7aa6e7f01e1e0aca5f29f021a99507271155355",
+      "hits": []
+    },
+    {
+      "file": "kill-method-type.h",
+      "sha256": "caa2726c4a183c2014da614f37e2110d1487bc56c79bce314db35845763d8a70",
+      "hits": [
+        {
+          "term": "Beogh",
+          "translation": "比欧弗",
+          "note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "term": "draining",
+          "translation": "吸能/汲取/耗损",
+          "note": "【0.34.1 修订】与 drain 统一；作为武器印记或负能量效果时按场景表达，不机械译为流失。 来源：dat/descript/egos.txt。\n【语境补充 2026-10-21】印记、攻击效果或状态用吸能。叙述生命获取用汲取。使用物品付出生命代价用耗损。"
+        },
+        {
+          "term": "gate",
+          "translation": "门",
+          "note": ""
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆",
+          "note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特",
+          "note": ""
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会",
+          "note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "term": "poison",
+          "translation": "毒",
+          "note": "【0.34.1 补充/伤害/状态】poisoned 表中毒，poison resistance 表毒抗。 来源：duration-data.h。"
+        },
+        {
+          "term": "Smiting",
+          "translation": "神罚",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "term": "Wrath",
+          "translation": "神怒",
+          "note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        }
+      ]
+    },
+    {
+      "file": "killer-type.h",
+      "sha256": "da76b7fe5d476f47bcf73e9c1ae703c91714124fa1fdd8b3d10ecb0eb4f1fbc8",
+      "hits": [
+        {
+          "term": "dart",
+          "translation": "飞镖",
+          "note": ""
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城",
+          "note": ""
+        },
+        {
+          "term": "god",
+          "translation": "神",
+          "note": ""
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏",
+          "note": ""
+        },
+        {
+          "term": "miscast",
+          "translation": "施法失误",
+          "note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+        },
+        {
+          "term": "spell",
+          "translation": "法术",
+          "note": ""
+        },
+        {
+          "term": "the Dungeon",
+          "translation": "地下城",
+          "note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "term": "player",
+          "translation": "玩家",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "tentacle",
+          "translation": "触手",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "tentacle segment",
+          "translation": "触手节段",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "file": "kills.cc",
+      "sha256": "088df399db49dd7836f7d2d214406f4280f61ffb08e1d31e822fc34769f6cb27",
+      "hits": [
+        {
+          "term": "Brand",
+          "translation": "印记/烙印",
+          "note": "【0.34.1 修订】武器特殊效果类别；不等同附魔数值。旧备注列举的来源并非当前版本的完整有效清单。 来源：dat/descript/egos.txt。\n【版本/语境】完整印记名需按当前 egos 和物品名称核对，不能机械把所有品牌字义用于武器。 来源：dat/descript/egos.txt。\n【语境补充 2026-10-21】武器魔法属性统一用印记。烙在实体上的标记或动作按语境用烙印。"
+        },
+        {
+          "term": "ghost",
+          "translation": "鬼魂",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "minor",
+          "translation": "较小的",
+          "note": ""
+        },
+        {
+          "term": "Pandemonium",
+          "translation": "魔窟",
+          "note": ""
+        },
+        {
+          "term": "simulacrum",
+          "translation": "冰骸",
+          "note": "【0.34.1 修订】该怪物是以冰雪构成的遗骸复制体，不是普通幻象。 来源：dat/descript/monsters.txt。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "skill",
+          "translation": "技能",
+          "note": ""
+        },
+        {
+          "term": "species",
+          "translation": "种族",
+          "note": ""
+        },
+        {
+          "term": "undead",
+          "translation": "亡灵",
+          "note": "【0.34.1 修订】指不死生物类别，并不表示无法被杀死。 来源：mon-util.cc。"
+        },
+        {
+          "term": "zombie",
+          "translation": "丧尸",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "Shapeshifter",
+          "translation": "变形者",
+          "note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/shapeshifter.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "silence",
+          "translation": "沉默",
+          "note": "【0.34.1 补充/状态】与噪音属性区分。 来源：duration-data.h。\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "term": "Boris",
+          "translation": "鲍里斯",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "draugr",
+          "translation": "尸鬼",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "pandemonium lord",
+          "translation": "魔窟领主",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "plant",
+          "translation": "植物",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "player",
+          "translation": "玩家",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "spectre",
+          "translation": "幽灵",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "file": "kills.h",
+      "sha256": "e2d7f7497ab039506701acd85e2996c45b37bc11ec8e3237501ff74099de3be0",
+      "hits": [
+        {
+          "term": "experience",
+          "translation": "经验值",
+          "note": ""
+        },
+        {
+          "term": "ghost",
+          "translation": "鬼魂",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "Pandemonium",
+          "translation": "魔窟",
+          "note": ""
+        },
+        {
+          "term": "simulacrum",
+          "translation": "冰骸",
+          "note": "【0.34.1 修订】该怪物是以冰雪构成的遗骸复制体，不是普通幻象。 来源：dat/descript/monsters.txt。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "zombie",
+          "translation": "丧尸",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "Shapeshifter",
+          "translation": "变形者",
+          "note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/shapeshifter.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "slaying",
+          "translation": "杀戮",
+          "note": "【0.34.1 补充/装备属性】属性加成，具体命中和伤害适用范围以机制为准。 来源：item-name.cc。"
+        },
+        {
+          "term": "draugr",
+          "translation": "尸鬼",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "player",
+          "translation": "玩家",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "spectre",
+          "translation": "幽灵",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "file": "known-items.cc",
+      "sha256": "83a2cab37fc4b4f6dbb2b268522fea0d210a716e4cf05cae670a45859e55c5a0",
+      "hits": [
+        {
+          "term": "arrow",
+          "translation": "箭",
+          "note": ""
+        },
+        {
+          "term": "book",
+          "translation": "魔法书/书/手册",
+          "note": "【使用约束】book of 是组合前缀，不是完整法术书名；不得把所有 book 都补成魔法书。\n【语境补充 2026-10-21】含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+        },
+        {
+          "term": "deck",
+          "translation": "套牌",
+          "note": ""
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城",
+          "note": ""
+        },
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开",
+          "note": "【0.34.1 修订】名词用出口；命令动词用退出，按上下文处理，不把两者拼成一条输出。 来源：feature-data.h。\n【语境补充 2026-10-21】地点或设施用出口。菜单命令用退出。离开区域的动作用离开。"
+        },
+        {
+          "term": "Geryon",
+          "translation": "革律翁",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "manual",
+          "translation": "手册/手动",
+          "note": "【版本/语境】训练技能用手册，非游戏操作帮助。 来源：dat/descript/items.txt。\n【语境补充 2026-10-21】可学习技能的物品用手册。技能训练模式等形容词用手动。"
+        },
+        {
+          "term": "max",
+          "translation": "最大值",
+          "note": "【0.34.1 修订】通用上限词，不限于 HP/MP；reserves 表储备，不是 maximum 同义词。 来源：player.cc。"
+        },
+        {
+          "term": "shop",
+          "translation": "商店",
+          "note": ""
+        },
+        {
+          "term": "sling",
+          "translation": "投石索",
+          "note": ""
+        },
+        {
+          "term": "slug",
+          "translation": "鼻涕虫/弹丸",
+          "note": "【语境补充 2026-10-21】生物用鼻涕虫。手铳等射出的金属 slug 用弹丸。"
+        },
+        {
+          "term": "wand",
+          "translation": "魔杖",
+          "note": "【使用约束】wand of 是组合前缀；先确定完整物品名再处理中文词序。"
+        },
+        {
+          "term": "Ziggurat",
+          "translation": "神塔",
+          "note": "【0.34.1 一致性建议】与原表 figurine of a ziggurat（神塔小雕像）统一；它是特殊挑战区域，不泛称金字塔。 来源：dat/descript/branches.txt。"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特",
+          "note": ""
+        },
+        {
+          "term": "efreet",
+          "translation": "伊弗利特",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "player",
+          "translation": "玩家",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "file": "known-items.h",
+      "sha256": "5a9bbaadf79e0c5be40c87124079e6f27e3255c0f8a79ec1b5379924212fce51",
+      "hits": []
+    }
+  ],
+  "shared_baselines": [
+    {
+      "file": "chardump.cc",
+      "sha256": "f26645ec0d011b5764c52e57ce84a0ebeeefa0befdfdcb4231d8164049b61df2"
+    },
+    {
+      "file": "kills.lua",
+      "sha256": "5e098ce5709e0eafb94e86896db4bbf6ef065df96287235fc7837f71d1774faf"
+    },
+    {
+      "file": "Makefile",
+      "sha256": "590ea070a67a9ab8c3a356eb2f6553787a533a972c78d1f8d55a860606d75358"
+    }
+  ]
+}

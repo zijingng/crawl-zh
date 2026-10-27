@@ -4,6 +4,7 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "hints.h"
 
@@ -22,6 +23,7 @@
 #include "fprop.h"
 #include "invent.h"
 #include "item-prop.h"
+#include "item-name.h"
 #include "item-status-flag-type.h"
 #include "items.h"
 #include "jobs.h"
@@ -50,6 +52,8 @@
 #include "ui.h"
 
 using namespace ui;
+
+#include "hints-display.h"
 
 static species_type _get_hints_species(unsigned int type);
 static job_type     _get_hints_job(unsigned int type);
@@ -153,9 +157,14 @@ static string _print_hints_menu(hints_types type)
         break;
     }
 
-    return make_stringf("%c - %s %s %s",
+    const string original = make_stringf("%c - %s %s %s",
             letter, species::name(_get_hints_species(type)).c_str(),
                     get_job_name(_get_hints_job(type)), desc);
+    return ui_render("h.hints.menu", "%s - %s %s: %s", original,
+        {ui_literal_arg(string(1, letter)),
+         ui_text_arg("display.creation", species::name(_get_hints_species(type))),
+         ui_text_arg("display.creation", get_job_name(_get_hints_job(type))),
+         ui_text_arg("h.hints", desc)});
 }
 
 static void _fill_newgame_choice_for_hints(newgame_def& choice, hints_types type)
@@ -170,9 +179,9 @@ static void _fill_newgame_choice_for_hints(newgame_def& choice, hints_types type
 // Hints mode selection screen and choice.
 void pick_hints(newgame_def& choice)
 {
-    string prompt = "<white>Welcome!</white>"
+    string prompt = ui_translate("h.hints", "<white>Welcome!</white>"
         "\n\n"
-        "<cyan>You can be:</cyan>";
+        "<cyan>You can be:</cyan>");
     auto prompt_ui = make_shared<Text>(formatted_string::parse_string(prompt));
 
     auto vbox = make_shared<Box>(Box::VERT);
@@ -239,7 +248,7 @@ void pick_hints(newgame_def& choice)
     sub_items->linked_menus[0] = main_items;
 
     {
-        auto label = make_shared<Text>(formatted_string("Esc - Quit", BROWN));
+        auto label = make_shared<Text>(formatted_string(ui_translate("h.hints", "Esc - Quit"), BROWN));
         auto btn = make_shared<MenuButton>();
         btn->set_child(std::move(label));
         btn->hotkey = CK_ESCAPE;
@@ -247,7 +256,7 @@ void pick_hints(newgame_def& choice)
         sub_items->add_button(btn, 0, 0);
     }
     {
-        auto label = make_shared<Text>(formatted_string("  * - Random hints mode character", BROWN));
+        auto label = make_shared<Text>(formatted_string(ui_translate("h.hints", "  * - Random hints mode character"), BROWN));
         auto btn = make_shared<MenuButton>();
         btn->set_child(std::move(label));
         btn->hotkey = '*';
@@ -477,16 +486,22 @@ void hints_new_turn()
  * @param arg1 A string that can be inserted into the hint message.
  * @param arg2 Another string that can be inserted into the hint message.
  */
-static string _get_hint(string key, const string& arg1 = "", const string& arg2 = "")
+static string _get_hint(string key, const string& arg1 = "", const string& arg2 = "",
+                        const ui_arg *display1 = nullptr,
+                        const ui_arg *display2 = nullptr)
 {
-    string text = getHintString(key);
+    const bool typed_display = Options.language == lang_t::ZH;
+    const bool display_available = !typed_display
+        || ((!display1 || display1->available) && (!display2 || display2->available));
+    bool translated = false;
+    string text = getHintString(key, !display_available, &translated);
     if (text.empty())
         mprf(MSGCH_ERROR, "Error, no hint for '%s'.", key.c_str());
 
     _replace_static_tags(text);
     text = untag_tiles_console(text);
-    text = replace_all(text, "$1", arg1);
-    text = replace_all(text, "$2", arg2);
+    text = replace_all(text, "$1", translated && typed_display && display1 ? display1->text : arg1);
+    text = replace_all(text, "$2", translated && typed_display && display2 ? display2->text : arg2);
 
     // split into paragraphs by "\n\n"
     text = replace_all(text, "\n\n", "\n");
@@ -508,6 +523,19 @@ void print_hint(string key, const string& arg1, const string& arg2)
     for (const string &chunk : split_string("\n", text))
         mprf(MSGCH_TUTORIAL, "%s", chunk.c_str());
 
+    stop_running();
+}
+
+// Resolve the TextDB parent once; never insert Chinese names in an
+// English fallback parent, or canonical English grammar in a Chinese parent.
+static void _print_entity_hint(const string &key, const string &english,
+                               const ui_arg &display, bool second = false,
+                               const string &glyph = "")
+{
+    const string text = second ? _get_hint(key, glyph, english, nullptr, &display)
+                               : _get_hint(key, english, "", &display);
+    for (const string &chunk : split_string("\n", text))
+        mprf(MSGCH_TUTORIAL, "%s", chunk.c_str());
     stop_running();
 }
 
@@ -572,7 +600,7 @@ void hints_death_screen()
     mprf(MSGCH_TUTORIAL, "%s", untag_tiles_console(text).c_str());
     more();
 
-    mprf(MSGCH_TUTORIAL, "See you next game!");
+    mprf(MSGCH_TUTORIAL, "%s", ui_translate("h.hints", "See you next game!"));
 
     Hints.hints_events.init(false);
 }
@@ -638,6 +666,11 @@ void hints_healing_check()
 // Occasionally remind injured characters of resting.
 static void _hints_healing_reminder()
 {
+    ui_translation_group display({
+        {"h.hints", "Remember to rest between fights and to enter unexplored terrain with full health and magic. Ideally you should retreat into areas you've already explored and cleared of monsters; resting on the edge of the explored terrain increases the chances of your rest being interrupted by wandering monsters. To rest, press <w>5</w> or <w>Shift-numpad 5</w><tiles>, or <w>click the rest button</w></tiles>."},
+        {"h.hints", "\nAlso, berserking might help you not to lose so much health in the first place. To use your abilities press <w>a</w>."}
+    });
+
     if (!crawl_state.game_is_hints())
         return;
 
@@ -662,7 +695,7 @@ static void _hints_healing_reminder()
             Hints.hints_just_triggered = true;
 
             string text;
-            text =  "Remember to rest between fights and to enter unexplored "
+            text =  display.get("h.hints", "Remember to rest between fights and to enter unexplored "
                     "terrain with full health and magic. Ideally you "
                     "should retreat into areas you've already explored and "
                     "cleared of monsters; resting on the edge of the explored "
@@ -670,14 +703,14 @@ static void _hints_healing_reminder()
                     "interrupted by wandering monsters. To rest, press "
                     "<w>5</w> or <w>Shift-numpad 5</w>"
                     "<tiles>, or <w>click the rest button</w></tiles>"
-                    ".";
+                    ".");
 
             if (you.hp < you.hp_max && you_worship(GOD_TROG)
                 && you.can_go_berserk())
             {
-                text += "\nAlso, berserking might help you not to lose so much "
+                text += display.get("h.hints", "\nAlso, berserking might help you not to lose so much "
                         "health in the first place. To use your abilities "
-                        "press <w>a</w>.";
+                        "press <w>a</w>.");
             }
             mprf(MSGCH_TUTORIAL, "%s", untag_tiles_console(text).c_str());
 
@@ -804,6 +837,21 @@ static bool _advise_use_wand()
 
 void hints_monster_seen(const monster& mon)
 {
+    ui_translation_group display({
+        {"h.hints", "Your console settings allowing, you'll always see a list of monsters somewhere on the screen.\n"},
+        {"h.hints", "You can gain information about it by pressing <w>x</w> and moving the cursor over the monster, and read the monster description by then pressing <w>v</w>. "},
+        {"h.hints", "\nTo attack this monster with your wielded weapon, just move into it. "},
+        {"h.hints", "Note that as long as there's a non-friendly monster in view you won't be able to automatically move to distant squares, to avoid death by misclicking."},
+        {"h.hints", "However, as a hunter you will want to deal with it using your bow. If you have a look at your shortbow from your <w>i</w>nventory, you'll find an explanation of how to do this. "},
+        {"h.hints", "First <w>w</w>ield it, then follow the instructions.<tiles>\nAs a short-cut you can also <w>right-click</w> on your shortbow to read its description, and <w>left-click</w> to wield it.</tiles>"},
+        {"h.hints", "<tiles>Clicking with your <w>right mouse button</w> on your shortbow will also let you read its description.</tiles>"},
+        {"h.hints", "However, as a conjurer you will want to deal with it using magic. If you look at the help entry for the <w>M</w>emorisation screen you'll find an explanation of how to do this."},
+        {"h.hints.first", "That monster is %s. You can learn about any monster by hovering your mouse over it, and read its description by <w>right-clicking</w> on it."},
+        {"h.hints.first", "That %s is a monster, usually depicted by a letter. Some typical early monsters look like <brown>r</brown>, <green>l</green>, <brown>K</brown> or <lightgrey>g</lightgrey>. "}
+    });
+    if (is_tiles() && display.available() && !ui_actor_arg(mon).available)
+        display.require("h.unavailable", "missing typed monster name");
+
     if (mon.is_firewood())
     {
         if (Hints.hints_events[HINT_SEEN_ZERO_EXP_MON])
@@ -856,64 +904,67 @@ void hints_monster_seen(const monster& mon)
     tiles.add_text_tag(TAG_TUTORIAL, mi);
 #endif
 
-    string text = "That ";
+    string text;
 
     if (is_tiles())
     {
-        text +=
-            "monster is " + mon.name(DESC_A) +
-            ". You can learn about any monster by hovering your mouse over it,"
-            " and read its description by <w>right-clicking</w> on it.";
+        const string original = "That monster is " + mon.name(DESC_A)
+            + ". You can learn about any monster by hovering your mouse over it,"
+              " and read its description by <w>right-clicking</w> on it.";
+        text = display.available() ? ui_render("h.hints.first", "That monster is %s. You can learn about any monster by hovering your mouse over it, and read its description by <w>right-clicking</w> on it.",
+                         original, {ui_actor_arg(mon)}) : original;
     }
     else
     {
-        text +=
-            glyph_to_tagstr(get_mons_glyph(mi)) +
-            " is a monster, usually depicted by a letter. Some typical "
-            "early monsters look like <brown>r</brown>, <green>l</green>, "
-            "<brown>K</brown> or <lightgrey>g</lightgrey>. ";
+        const string glyph = glyph_to_tagstr(get_mons_glyph(mi));
+        const string original = "That " + glyph
+            + " is a monster, usually depicted by a letter. Some typical "
+              "early monsters look like <brown>r</brown>, <green>l</green>, "
+              "<brown>K</brown> or <lightgrey>g</lightgrey>. ";
+        text = display.available() ? ui_render("h.hints.first", "That %s is a monster, usually depicted by a letter. Some typical early monsters look like <brown>r</brown>, <green>l</green>, <brown>K</brown> or <lightgrey>g</lightgrey>. ",
+                         original, {ui_literal_arg(glyph)}) : original;
         if (crawl_view.mlistsz.y > 0)
         {
-            text += "Your console settings allowing, you'll always see a "
-                    "list of monsters somewhere on the screen.\n";
+            text += display.get("h.hints", "Your console settings allowing, you'll always see a "
+                    "list of monsters somewhere on the screen.\n");
         }
-        text += "You can gain information about it by pressing <w>x</w> and "
+        text += display.get("h.hints", "You can gain information about it by pressing <w>x</w> and "
                 "moving the cursor over the monster, and read the monster "
-                "description by then pressing <w>v</w>. ";
+                "description by then pressing <w>v</w>. ");
     }
 
-    text += "\nTo attack this monster with your wielded weapon, just move "
-            "into it. ";
+    text += display.get("h.hints", "\nTo attack this monster with your wielded weapon, just move "
+            "into it. ");
     if (is_tiles())
     {
         text +=
-            "Note that as long as there's a non-friendly monster in view you "
+            display.get("h.hints", "Note that as long as there's a non-friendly monster in view you "
             "won't be able to automatically move to distant squares, to avoid "
-            "death by misclicking.";
+            "death by misclicking.");
     }
 
     mprf(MSGCH_TUTORIAL, "%s", text.c_str());
 
     if (Hints.hints_type == HINT_RANGER_CHAR)
     {
-        text =  "However, as a hunter you will want to deal with it using your "
+        text =  display.get("h.hints", "However, as a hunter you will want to deal with it using your "
                 "bow. If you have a look at your shortbow from your "
                 "<w>i</w>nventory, you'll find an explanation of how to do "
-                "this. ";
+                "this. ");
 
         if (!you.weapon()
             || you.weapon()->base_type != OBJ_WEAPONS
             || you.weapon()->sub_type != WPN_SHORTBOW)
         {
-            text += "First <w>w</w>ield it, then follow the instructions."
+            text += display.get("h.hints", "First <w>w</w>ield it, then follow the instructions."
                 "<tiles>\nAs a short-cut you can also <w>right-click</w> on your "
                 "shortbow to read its description, and <w>left-click</w> to wield "
-                "it.</tiles>";
+                "it.</tiles>");
         }
         else
         {
-            text += "<tiles>Clicking with your <w>right mouse button</w> on your "
-                    "shortbow will also let you read its description.</tiles>";
+            text += display.get("h.hints", "<tiles>Clicking with your <w>right mouse button</w> on your "
+                    "shortbow will also let you read its description.</tiles>");
         }
 
         mprf(MSGCH_TUTORIAL, "%s", untag_tiles_console(text).c_str());
@@ -921,10 +972,10 @@ void hints_monster_seen(const monster& mon)
     }
     else if (Hints.hints_type == HINT_MAGIC_CHAR)
     {
-        text =  "However, as a conjurer you will want to deal with it using "
+        text =  display.get("h.hints", "However, as a conjurer you will want to deal with it using "
                 "magic. If you look at the help entry for the "
                 "<w>M</w>emorisation screen you'll find an explanation of how "
-                "to do this.";
+                "to do this.");
         mprf(MSGCH_TUTORIAL, "%s", untag_tiles_console(text).c_str());
 
     }
@@ -955,7 +1006,9 @@ void hints_first_item(const item_def &item)
 #ifdef USE_TILE
     const coord_def gc = item.pos;
     tiles.place_cursor(CURSOR_TUTORIAL, gc);
-    tiles.add_text_tag(TAG_TUTORIAL, item.name(DESC_A), gc);
+    string display;
+    tiles.add_text_tag(TAG_TUTORIAL,
+        try_item_display_name(item, display) ? display : item.name(DESC_A), gc);
 #endif
 
     print_hint("HINT_SEEN_FIRST_OBJECT",
@@ -1080,6 +1133,7 @@ void learned_something_new(hints_event_type seen_what, coord_def gc)
     }
 
     ostringstream text;
+    ui_arg display_text = {"", false};
     vector<command_type> cmd;
 
     Hints.hints_just_triggered    = true;
@@ -1143,7 +1197,7 @@ void learned_something_new(hints_event_type seen_what, coord_def gc)
             DELAY_EVENT;
 #else
         tiles.place_cursor(CURSOR_TUTORIAL, gc);
-        tiles.add_text_tag(TAG_TUTORIAL, "Stairs", gc);
+        tiles.add_text_tag(TAG_TUTORIAL, ui_translate("h.hints", "Stairs"), gc);
 #endif
         print_hint("HINT_SEEN_STAIRS", glyph_to_tagstr(get_cell_glyph(gc)));
         break;
@@ -1158,7 +1212,7 @@ void learned_something_new(hints_event_type seen_what, coord_def gc)
 
 #ifdef USE_TILE
         tiles.place_cursor(CURSOR_TUTORIAL, gc);
-        tiles.add_text_tag(TAG_TUTORIAL, "Escape hatch", gc);
+        tiles.add_text_tag(TAG_TUTORIAL, ui_translate("h.hints", "Escape hatch"), gc);
 #endif
         print_hint("HINT_SEEN_ESCAPE_HATCH",
                    glyph_to_tagstr(get_cell_glyph(gc)));
@@ -1171,7 +1225,7 @@ void learned_something_new(hints_event_type seen_what, coord_def gc)
             DELAY_EVENT;
 #else
         tiles.place_cursor(CURSOR_TUTORIAL, gc);
-        tiles.add_text_tag(TAG_TUTORIAL, "Branch stairs", gc);
+        tiles.add_text_tag(TAG_TUTORIAL, ui_translate("h.hints", "Branch stairs"), gc);
 #endif
         print_hint("HINT_SEEN_BRANCH", glyph_to_tagstr(get_cell_glyph(gc)));
         break;
@@ -1190,7 +1244,7 @@ void learned_something_new(hints_event_type seen_what, coord_def gc)
             DELAY_EVENT;
 #else
         tiles.place_cursor(CURSOR_TUTORIAL, gc);
-        tiles.add_text_tag(TAG_TUTORIAL, "Portal", gc);
+        tiles.add_text_tag(TAG_TUTORIAL, ui_translate("h.hints", "Portal"), gc);
 #endif
         text << _describe_portal(gc);
         break;
@@ -1238,6 +1292,9 @@ void learned_something_new(hints_event_type seen_what, coord_def gc)
             tiles.place_cursor(CURSOR_TUTORIAL, gc);
             string altar = "An altar to ";
             altar += god_name(feat_altar_god(env.grid(gc)));
+            const god_type god = feat_altar_god(env.grid(gc));
+            altar = ui_render("h.hints.label", "An altar to %s", altar,
+                {ui_text_arg("display.god", god_name(god))});
             tiles.add_text_tag(TAG_TUTORIAL, altar, gc);
         }
 #endif
@@ -1262,7 +1319,7 @@ void learned_something_new(hints_event_type seen_what, coord_def gc)
 
 #ifdef USE_TILE
         tiles.place_cursor(CURSOR_TUTORIAL, gc);
-        tiles.add_text_tag(TAG_TUTORIAL, "Closed door", gc);
+        tiles.add_text_tag(TAG_TUTORIAL, ui_translate("h.hints", "Closed door"), gc);
 #endif
         print_hint("HINT_SEEN_DOOR", glyph_to_tagstr(get_cell_glyph(gc)));
         break;
@@ -1270,7 +1327,7 @@ void learned_something_new(hints_event_type seen_what, coord_def gc)
     case HINT_SEEN_RUNED_DOOR:
 #ifdef USE_TILE
         tiles.place_cursor(CURSOR_TUTORIAL, gc);
-        tiles.add_text_tag(TAG_TUTORIAL, "Runed door", gc);
+        tiles.add_text_tag(TAG_TUTORIAL, ui_translate("h.hints", "Runed door"), gc);
 #endif
         print_hint("HINT_SEEN_RUNED_DOOR", glyph_to_tagstr(get_cell_glyph(gc)));
         break;
@@ -1477,7 +1534,8 @@ void learned_something_new(hints_event_type seen_what, coord_def gc)
         break;
 
     case HINT_GOD_DISPLEASED:
-        print_hint("HINT_GOD_DISPLEASED", god_name(you.religion));
+        _print_entity_hint("HINT_GOD_DISPLEASED", god_name(you.religion),
+            ui_text_arg("display.god", god_name(you.religion)));
         break;
 
     case HINT_EXCOMMUNICATE:
@@ -1495,6 +1553,8 @@ void learned_something_new(hints_event_type seen_what, coord_def gc)
 
         const string old_god_name  = god_name(old_god);
         const string new_god_name  = god_name(new_god);
+        if (Options.language == lang_t::ZH)
+            display_text = _hint_excommunicate_display(old_god, new_god, old_piety);
 
         if (new_god == GOD_NO_GOD)
         {
@@ -1594,7 +1654,11 @@ void learned_something_new(hints_event_type seen_what, coord_def gc)
 #ifdef USE_TILE
         tiles.place_cursor(CURSOR_TUTORIAL, gc);
         if (const monster* m = monster_at(gc))
-            tiles.add_text_tag(TAG_TUTORIAL, m->name(DESC_A), gc);
+            {
+                string display;
+                tiles.add_text_tag(TAG_TUTORIAL,
+                    try_ui_actor_name(*m, display) ? display : m->name(DESC_A), gc);
+            }
 #endif
         print_hint("HINT_MONSTER_UNUSUAL");
         break;
@@ -1608,7 +1672,11 @@ void learned_something_new(hints_event_type seen_what, coord_def gc)
 
 #ifdef USE_TILE
         tiles.place_cursor(CURSOR_TUTORIAL, gc);
-        tiles.add_text_tag(TAG_TUTORIAL, m->name(DESC_A), gc);
+        {
+                string display;
+                tiles.add_text_tag(TAG_TUTORIAL,
+                    try_ui_actor_name(*m, display) ? display : m->name(DESC_A), gc);
+            }
 #endif
         print_hint("HINT_MONSTER_FRIENDLY");
 
@@ -1639,7 +1707,11 @@ void learned_something_new(hints_event_type seen_what, coord_def gc)
         if (vis)
         {
             tiles.place_cursor(CURSOR_TUTORIAL, gc);
-            tiles.add_text_tag(TAG_TUTORIAL, m->name(DESC_A), gc);
+            {
+                string display;
+                tiles.add_text_tag(TAG_TUTORIAL,
+                    try_ui_actor_name(*m, display) ? display : m->name(DESC_A), gc);
+            }
         }
 #endif
         if (!vis)
@@ -1659,7 +1731,7 @@ void learned_something_new(hints_event_type seen_what, coord_def gc)
             DELAY_EVENT;
 
         string mon_name = m->name(DESC_THE, true);
-        print_hint("HINT_MONSTER_LEFT_LOS", mon_name);
+        _print_entity_hint("HINT_MONSTER_LEFT_LOS", mon_name, ui_actor_arg(*m));
         break;
     }
 
@@ -1675,9 +1747,10 @@ void learned_something_new(hints_event_type seen_what, coord_def gc)
         if (!mi)
             DELAY_EVENT;
 
-        print_hint("HINT_SEEN_ZERO_EXP_MON",
-                   glyph_to_tagstr(get_mons_glyph(*mi)),
-                   mi->proper_name(DESC_A));
+        string display_name;
+        const bool available = mi->try_display_name(display_name);
+        _print_entity_hint("HINT_SEEN_ZERO_EXP_MON", mi->proper_name(DESC_A),
+            {display_name, available}, true, glyph_to_tagstr(get_mons_glyph(*mi)));
         break;
     }
 
@@ -1731,6 +1804,8 @@ void learned_something_new(hints_event_type seen_what, coord_def gc)
 
     case HINT_LOAD_SAVED_GAME:
     {
+        if (Options.language == lang_t::ZH)
+            display_text = _hint_load_display();
         text << "Welcome back! If it's been a while, you may want to refresh "
                 "your memory.\nYour <w>%</w>nventory, ";
         cmd.push_back(CMD_DISPLAY_INVENTORY);
@@ -1790,6 +1865,8 @@ void learned_something_new(hints_event_type seen_what, coord_def gc)
             insert_commands(output, cmd);
         else
             output = untag_tiles_console(output); // also in insert_commands
+        if (display_text.available)
+            output = display_text.text;
         mprf(MSGCH_TUTORIAL, "%s", output.c_str());
 
         stop_running();
@@ -1800,11 +1877,11 @@ formatted_string hints_abilities_info()
 {
     ostringstream text;
     text << "<" << colour_to_str(channel_to_colour(MSGCH_TUTORIAL)) << ">";
-    string broken = "This screen shows your character's set of talents. "
+    string broken = ui_translate("h.hints", "This screen shows your character's set of talents. "
         "You can gain new abilities via certain items, through religion or by "
         "way of mutations. Activation of an ability usually comes at a cost, "
         "e.g. Magic power. Press '<w>!</w>' or '<w>?</w>' to "
-        "toggle between ability selection and description.";
+        "toggle between ability selection and description.");
     linebreak_string(broken, _get_hints_cols());
     text << broken;
 
@@ -1819,14 +1896,14 @@ string hints_skills_info()
 {
     ostringstream text;
     text << "<" << colour_to_str(channel_to_colour(MSGCH_TUTORIAL)) << ">";
-    string broken = "This screen shows the skill set of your character. "
+    string broken = ui_translate("h.hints", "This screen shows the skill set of your character. "
         "The number next to the skill is your current level, the higher the "
         "better. <w>Training</w> displays training percentages. "
         "<w>Costs</w> displays relative training costs. "
         "<w>Targets</w> displays skill training targets. "
         "You can toggle which skills to train by "
         "pressing their slot letters. A <darkgrey>grey</darkgrey> skill "
-        "will not be trained and ease the training of others.";
+        "will not be trained and ease the training of others.");
     text << broken;
     text << "</" << colour_to_str(channel_to_colour(MSGCH_TUTORIAL)) << ">";
 
@@ -1837,11 +1914,11 @@ string hints_skill_training_info()
 {
     ostringstream text;
     text << "<" << colour_to_str(channel_to_colour(MSGCH_TUTORIAL)) << ">";
-    string broken = "The training percentage (in <brown>brown</brown>) "
+    string broken = ui_translate("h.hints", "The training percentage (in <brown>brown</brown>) "
         "shows the relative amount of the experience gained which will be "
         "used to train each skill. It is automatically set depending on "
         "which skills you have used recently. Disabling a skill sets the "
-        "training rate to 0.";
+        "training rate to 0.");
     text << broken;
     text << "</" << colour_to_str(channel_to_colour(MSGCH_TUTORIAL)) << ">";
 
@@ -1852,10 +1929,10 @@ string hints_skill_costs_info()
 {
     ostringstream text;
     text << "<" << colour_to_str(channel_to_colour(MSGCH_TUTORIAL)) << ">";
-    string broken = "The training cost (in <cyan>cyan</cyan>) "
+    string broken = ui_translate("h.hints", "The training cost (in <cyan>cyan</cyan>) "
         "shows the experience cost to raise the given skill one level, "
         "relative to the cost of raising an aptitude zero skill from level "
-        "zero to level one.";
+        "zero to level one.");
     text << broken;
     text << "</" << colour_to_str(channel_to_colour(MSGCH_TUTORIAL)) << ">";
 
@@ -1866,9 +1943,9 @@ string hints_skill_targets_info()
 {
     ostringstream text;
     text << "<" << colour_to_str(channel_to_colour(MSGCH_TUTORIAL)) << ">";
-    string broken = "Press the letter of a skill to set a training target. "
+    string broken = ui_translate("h.hints", "Press the letter of a skill to set a training target. "
         "When the target is reached a message will appear and "
-        "the training of the skill will be disabled.";
+        "the training of the skill will be disabled.");
     text << broken;
     text << "</" << colour_to_str(channel_to_colour(MSGCH_TUTORIAL)) << ">";
 
@@ -1879,9 +1956,9 @@ string hints_skills_description_info()
 {
     ostringstream text;
     text << "<" << colour_to_str(channel_to_colour(MSGCH_TUTORIAL)) << ">";
-    string broken = "This screen shows the skill set of your character. "
+    string broken = ui_translate("h.hints", "This screen shows the skill set of your character. "
                     "Press the letter of a skill to read its description, or "
-                    "press <w>?</w> again to return to the skill selection.";
+                    "press <w>?</w> again to return to the skill selection.");
 
     linebreak_string(broken, _get_hints_cols());
     text << broken;
@@ -1968,6 +2045,15 @@ string hints_memorise_info()
     linebreak_string(m, _get_hints_cols());
     if (!cmd.empty())
         insert_commands(m, cmd);
+    if (Options.language == lang_t::ZH)
+    {
+        const ui_arg display = _hint_memorise_display();
+        if (display.available)
+        {
+            m = display.text;
+            linebreak_string(m, _get_hints_cols());
+        }
+    }
     text << m;
 
     return text.str();
@@ -2399,6 +2485,15 @@ string hints_describe_item(const item_def &item)
     string broken = ostr.str();
     if (!cmd.empty())
         insert_commands(broken, cmd);
+    if (Options.language == lang_t::ZH)
+    {
+        const ui_arg display = _hint_item_display(item);
+        if (display.available)
+        {
+            const string colour = colour_to_str(channel_to_colour(MSGCH_TUTORIAL));
+            return "<" + colour + ">" + display.text + "</" + colour + ">";
+        }
+    }
     return broken;
 }
 
@@ -2431,8 +2526,19 @@ string hints_describe_pos(int x, int y)
     _hints_describe_feature(x, y, ostr);
     if (ostr.str().empty())
         return "";
+    string body = ostr.str();
+    if (Options.language == lang_t::ZH)
+    {
+        const cloud_struct *cloud = cloud_at(coord_def(x, y));
+        const ui_arg cloud_text = cloud ? _hint_cloud_display(*cloud)
+                                        : ui_literal_arg("");
+        const ui_arg feature = _hint_feature_display(coord_def(x, y));
+        if (cloud_text.available && feature.available)
+            body = cloud_text.text + (cloud_text.text.empty()
+                || feature.text.empty() ? "" : "\n\n") + feature.text;
+    }
     return "\n<" + colour_to_str(channel_to_colour(MSGCH_TUTORIAL)) + ">"
-            + ostr.str()
+            + body
             + "</" + colour_to_str(channel_to_colour(MSGCH_TUTORIAL)) + ">";
 }
 
@@ -2700,20 +2806,35 @@ bool hints_monster_interesting(const monster* mons)
 
 string hints_describe_monster(const monster_info& mi, bool has_stat_desc)
 {
+    ui_translation_group display({
+        {"h.hints", "Did you think you were the only adventurer in the dungeon? Well, you thought wrong! These unique adversaries often possess skills that normal monsters wouldn't, so be careful.\n\n"},
+        {"h.hints", "The ghost of a deceased adventurer, it would like nothing better than to send you the same way.\n\n"},
+        {"h.hints", "This monster appears to be really dangerous!\n"},
+        {"h.hints", "This monster appears to be quite dangerous.\n"},
+        {"h.hints", "A berserking monster is bloodthirsty and fighting madly. Such a blood rage makes it particularly dangerous!\n\n"},
+        {"h.hints", "Friendly monsters will follow you around and attempt to aid you in battle. You can order nearby allies by <w>t</w>alking to them."},
+        {"h.hints", "\n\nHowever, it is only <w>temporarily</w> friendly, and will become dangerous again when this friendliness wears off."},
+        {"h.hints", "You can easily mark its square as dangerous to avoid accidentally entering into its field of view when using auto-explore or auto-travel. To do so, enter targeting mode with <w>x</w> and then press <w>e</w> when your cursor is hovering over the monster's grid. Doing so will mark this grid and all surrounding ones within a radius of 8 as \"excluded\" ones that explore or travel modes won't enter."},
+        {"h.hints", "This might be a good time to run away or apply your Berserk <w>a</w>bility."},
+        {"h.hints", "This might be a good time to run away."},
+        {"h.hints", "Apparently it has not noticed you - yet. Note that you do not have to engage every monster you meet. Sometimes, discretion is the better part of valour."},
+        {"h.hints", "Apparently it has been distracted by something. You could use this opportunity to sneak up on this monster - or to sneak away."},
+        {"h.hints", "\nThis monster doesn't appear to have any resistances or susceptibilities. It cannot fly and is of average speed. Examining other, possibly more high-level monsters can give important clues as to how to deal with them."}
+    });
     ostringstream ostr;
     bool dangerous = false;
     if (mons_is_unique(mi.type))
     {
-        ostr << "Did you think you were the only adventurer in the dungeon? "
+        ostr << display.get("h.hints", "Did you think you were the only adventurer in the dungeon? "
                 "Well, you thought wrong! These unique adversaries often "
                 "possess skills that normal monsters wouldn't, so be "
-                "careful.\n\n";
+                "careful.\n\n");
         dangerous = true;
     }
     else if (mi.type == MONS_PLAYER_GHOST)
     {
-        ostr << "The ghost of a deceased adventurer, it would like nothing "
-                "better than to send you the same way.\n\n";
+        ostr << display.get("h.hints", "The ghost of a deceased adventurer, it would like nothing "
+                "better than to send you the same way.\n\n");
         dangerous = true;
     }
     // Don't call friendly monsters dangerous.
@@ -2721,79 +2842,79 @@ string hints_describe_monster(const monster_info& mi, bool has_stat_desc)
     {
         if (mi.threat == MTHRT_NASTY)
         {
-            ostr << "This monster appears to be really dangerous!\n";
+            ostr << display.get("h.hints", "This monster appears to be really dangerous!\n");
             dangerous = true;
         }
         else if (mi.threat == MTHRT_TOUGH)
         {
-            ostr << "This monster appears to be quite dangerous.\n";
+            ostr << display.get("h.hints", "This monster appears to be quite dangerous.\n");
             dangerous = true;
         }
     }
 
     if (mi.is(MB_BERSERK))
     {
-        ostr << "A berserking monster is bloodthirsty and fighting madly. "
-                "Such a blood rage makes it particularly dangerous!\n\n";
+        ostr << display.get("h.hints", "A berserking monster is bloodthirsty and fighting madly. "
+                "Such a blood rage makes it particularly dangerous!\n\n");
         dangerous = true;
     }
 
     // Monster is highlighted.
     if (mi.attitude == ATT_FRIENDLY)
     {
-        ostr << "Friendly monsters will follow you around and attempt to aid "
+        ostr << display.get("h.hints", "Friendly monsters will follow you around and attempt to aid "
                 "you in battle. You can order nearby allies by <w>t</w>alking "
-                "to them.";
+                "to them.");
 
         if (!mons_att_wont_attack(mi.attitude))
         {
-            ostr << "\n\nHowever, it is only <w>temporarily</w> friendly, "
+            ostr << display.get("h.hints", "\n\nHowever, it is only <w>temporarily</w> friendly, "
                     "and will become dangerous again when this friendliness "
-                    "wears off.";
+                    "wears off.");
         }
     }
     else if (dangerous)
     {
         if (!Hints.hints_explored && (mi.is(MB_WANDERING) || mi.is(MB_UNAWARE)))
         {
-            ostr << "You can easily mark its square as dangerous to avoid "
+            ostr << display.get("h.hints", "You can easily mark its square as dangerous to avoid "
                     "accidentally entering into its field of view when using "
                     "auto-explore or auto-travel. To do so, enter targeting "
                     "mode with <w>x</w> and then press <w>e</w> when your "
                     "cursor is hovering over the monster's grid. Doing so will "
                     "mark this grid and all surrounding ones within a radius "
                     "of 8 as \"excluded\" ones that explore or travel modes "
-                    "won't enter.";
+                    "won't enter.");
         }
         else
         {
-            ostr << "This might be a good time to run away";
-
             if (you_worship(GOD_TROG) && you.can_go_berserk())
-                ostr << " or apply your Berserk <w>a</w>bility";
-            ostr << ".";
+                ostr << display.get("h.hints",
+                    "This might be a good time to run away or apply your Berserk <w>a</w>bility.");
+            else
+                ostr << display.get("h.hints", "This might be a good time to run away.");
         }
     }
     else if (mi.asleep() || mi.is(MB_UNAWARE) || mi.is(MB_WANDERING))
     {
-        ostr << "Apparently it has not noticed you - yet. Note that you do "
+        ostr << display.get("h.hints", "Apparently it has not noticed you - yet. Note that you do "
                 "not have to engage every monster you meet. Sometimes, "
-                "discretion is the better part of valour.";
+                "discretion is the better part of valour.");
     }
     else if (Options.may_stab_highlight != CHATTR_NORMAL
              && mi.is(MB_DISTRACTED))
     {
-        ostr << "Apparently it has been distracted by something. You could "
+        ostr << display.get("h.hints", "Apparently it has been distracted by something. You could "
                 "use this opportunity to sneak up on this monster - or to "
-                "sneak away.";
+                "sneak away.");
     }
 
     if (!dangerous && !has_stat_desc)
     {
-        ostr << "\nThis monster doesn't appear to have any resistances or "
+        ostr << display.get("h.hints", "\nThis monster doesn't appear to have any resistances or "
                 "susceptibilities. It cannot fly and is of average speed. "
                 "Examining other, possibly more high-level monsters can give "
-                "important clues as to how to deal with them.";
+                "important clues as to how to deal with them.");
     }
 
     if (ostr.str().empty())

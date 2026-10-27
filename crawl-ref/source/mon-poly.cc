@@ -4,6 +4,7 @@
 **/
 
 #include "AppHdr.h"
+#include "m-display.h"
 
 #include "mon-poly.h"
 
@@ -118,7 +119,8 @@ void monster_drop_things(monster* mons,
             {
                 string msg = make_stringf("%s dazzles you with the glint of coin.",
                     god_name(GOD_GOZAG).c_str());
-                mprf(MSGCH_GOD, GOD_GOZAG, "%s", msg.c_str());
+                mprf(MSGCH_GOD, GOD_GOZAG, "%s", ui_render("m.clause", "%s dazzles you with the glint of coin.", msg,
+            {ui_text_arg("display.god", god_name(GOD_GOZAG))}).c_str());
                 blind_player(10 + random2(8), ETC_GOLD);
             }
             mons->inv[i] = NON_ITEM;
@@ -622,6 +624,7 @@ bool monster_polymorph(monster* mons, monster_type targetc,
     bool need_note = could_see && mons_is_notable(*mons);
     string old_name_a = mons->full_name(DESC_A);
     string old_name_the = mons->full_name(DESC_THE);
+    const ui_arg old_display = m_actor_arg(*mons);
     monster_type oldc = mons->type;
 
     if (power != PPT_SLIME && !_valid_morph(mons, targetc))
@@ -651,10 +654,22 @@ bool monster_polymorph(monster* mons, monster_type targetc,
         else
             verb = "evaporates and reforms as ";
 
-        mprf("%s %s%s!", old_name_the.c_str(), verb.c_str(), obj.c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = old_name_the;
+                const string _m1 = verb;
+                const string _m2 = obj;
+                const string _original = make_stringf("%s %s%s!", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.218", "%s %s%s!")) return _original;
+                return ui_render("m.log.218", "%s %s%s!", _original, {old_display, m_clause_arg(_m1), obj.empty() ? ui_arg{"", true} : can_see ? m_monster_type_arg(targetc) : m_clause_arg("something you cannot see")});
+            })().c_str());
     }
     else if (can_see)
-        mprf("%s appears out of thin air!", mons->name(DESC_A).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = mons->name(DESC_A);
+                const string _original = make_stringf("%s appears out of thin air!", _m0.c_str());
+                if (!m_display_active("m.log.219", "%s appears out of thin air!")) return _original;
+                return ui_render("m.log.219", "%s appears out of thin air!", _original, {m_actor_arg(*mons)});
+            })().c_str());
     else
         player_messaged = false;
 

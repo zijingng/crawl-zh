@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "m-display.h"
+#include "i18n.h"
 
 #include "mon-behv.h"
 
@@ -1024,6 +1026,8 @@ void behaviour_event(monster* mon, mon_event_type event, const actor *src,
     bool breakCharm       = false;
     bool was_unaware      = mon->asleep() || mon->foe == MHITNOT;
     string msg;
+    textdb_speech flee_speech;
+    bool paired_flee = false;
     int src_idx           = src ? src->mindex() : MHITNOT; // AXE ME
 
     // Monsters know to blame you for reflecting things at them.
@@ -1118,10 +1122,14 @@ void behaviour_event(monster* mon, mon_event_type event, const actor *src,
 
             if (you.can_see(*mon))
             {
-                mprf("%s attack snaps %s out of %s fear.",
-                        src ? src->name(DESC_ITS).c_str() : "the",
-                        mon->name(DESC_THE).c_str(),
-                        mon->pronoun(PRONOUN_POSSESSIVE).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = src ? src->name(DESC_ITS).c_str() : "the";
+                const string _m1 = mon->name(DESC_THE);
+                const string _m2 = mon->pronoun(PRONOUN_POSSESSIVE);
+                const string _original = make_stringf("%s attack snaps %s out of %s fear.", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.112", "%s attack snaps %s out of %s fear.")) return _original;
+                return ui_render("m.log.112", "%s attack snaps %s out of %s fear.", _original, {src ? m_actor_arg(*src) : ui_arg{"", true}, m_actor_arg(*mon), {"", true}});
+            })().c_str());
             }
             mon->del_ench(ENCH_FEAR, true);
         }
@@ -1181,9 +1189,13 @@ void behaviour_event(monster* mon, mon_event_type event, const actor *src,
             {
                 if (you.can_see(*mon))
                 {
-                    mprf("%s snaps out of %s daze.",
-                            mon->name(DESC_THE).c_str(),
-                            mon->pronoun(PRONOUN_POSSESSIVE).c_str());
+                    mprf("%s", ([&]() -> string {
+                const string _m0 = mon->name(DESC_THE);
+                const string _m1 = mon->pronoun(PRONOUN_POSSESSIVE);
+                const string _original = make_stringf("%s snaps out of %s daze.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.113", "%s snaps out of %s daze.")) return _original;
+                return ui_render("m.log.113", "%s snaps out of %s daze.", _original, {m_actor_arg(*mon), ui_literal_arg("")});
+            })().c_str());
                 }
                 mon->del_ench(ENCH_DAZED, true);
             }
@@ -1283,7 +1295,14 @@ void behaviour_event(monster* mon, mon_event_type event, const actor *src,
             break;
         }
 
-        msg = getSpeakString(mon->name(DESC_PLAIN) + " flee");
+        if (mon->name(DESC_PLAIN) == "dream sheep")
+        {
+            flee_speech = getPairedCastString("dream sheep flee");
+            msg = flee_speech.english;
+            paired_flee = true;
+        }
+        else
+            msg = getSpeakString(mon->name(DESC_PLAIN) + " flee");
 
         // Assume monsters know where to run from, even if player is
         // invisible.
@@ -1397,7 +1416,8 @@ void behaviour_event(monster* mon, mon_event_type event, const actor *src,
 
     // mons_speaks_msg already handles the LOS check.
     if (!msg.empty() && mon->visible_to(&you))
-        mons_speaks_msg(mon, msg, MSGCH_TALK, silenced(mon->pos()));
+        mons_speaks_msg(mon, msg, MSGCH_TALK, silenced(mon->pos()), "",
+                       paired_flee ? &flee_speech : nullptr);
 
     if (one_chance_in(10) && mons_offers_beogh_conversion_now(*mon))
         mons_speaks_msg(mon, getSpeakString("orc_priest_preaching"), MSGCH_TALK);
@@ -1463,23 +1483,21 @@ static void _mons_indicate_level_exit(const monster* mon)
     else if (feat_is_travelable_stair(feat))
     {
         command_type dir = feat_stair_direction(feat);
-        simple_monster_message(*mon,
-            make_stringf(" %s the %s.",
+        m_monster_event(*mon, make_stringf(" %s the %s.",
                 dir == CMD_GO_UPSTAIRS     ? "goes up" :
                 dir == CMD_GO_DOWNSTAIRS   ? "goes down"
                                            : "takes",
                 feat_is_escape_hatch(feat) ? "escape hatch"
-                                           : "stairs").c_str());
+                                           : "stairs").c_str(), "%s %s the %s.", {m_actor_arg(*mon), m_clause_arg(dir == CMD_GO_UPSTAIRS ? "goes up" : dir == CMD_GO_DOWNSTAIRS ? "goes down" : "takes"), m_clause_arg(feat_is_escape_hatch(feat) ? "escape hatch" : "stairs")});
     }
     else if (is_shaft)
     {
-        simple_monster_message(*mon,
-            make_stringf(" %s the shaft.",
+        m_monster_event(*mon, make_stringf(" %s the shaft.",
                 mon->airborne() ? "goes down"
-                                : "jumps into").c_str());
+                                : "jumps into").c_str(), "%s %s the shaft.", {m_actor_arg(*mon), m_clause_arg(mon->airborne() ? "goes down" : "jumps into")});
 
         // Shafts are one-time-use.
-        mpr("The shaft crumbles and collapses.");
+        mpr(ui_translate("m.ui", "The shaft crumbles and collapses."));
         maybe_destroy_shaft(mon->pos());
     }
 }
@@ -1496,9 +1514,8 @@ void make_mons_leave_level(monster* mon)
         {
             if (you.can_see(*mon))
             {
-                simple_monster_message(*mon,
-                    make_stringf(" donates %s equipment to the cause.",
-                        mon->pronoun(PRONOUN_POSSESSIVE).c_str()).c_str());
+                m_monster_event(*mon, make_stringf(" donates %s equipment to the cause.",
+                        mon->pronoun(PRONOUN_POSSESSIVE).c_str()).c_str(), "%s donates %s equipment to the cause.", {m_actor_arg(*mon), ui_arg{"", true}});
             }
             monster_drop_things(mon);
         }

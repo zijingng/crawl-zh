@@ -14,6 +14,8 @@
 
 using std::vector;
 
+struct ui_arg;
+
 #define CORPSE_NAME_KEY      "corpse_name_key"
 #define CORPSE_NAME_TYPE_KEY "corpse_name_type_key"
 #define IDENTIFIED_ALL_KEY   "identified_all_key"
@@ -24,6 +26,12 @@ struct item_kind
     uint8_t           sub_type;
     int8_t            plus, plus2;
 };
+
+// Presentation only. False leaves output untouched; callers keep their original
+// English name expression. Never use this for keys, scripts, sorting or saves.
+bool try_item_display_name(const item_def &item, string &output,
+                           bool inventory_letter = false,
+                           bool equipment_annotations = true);
 
 // [dshaligram] If you edit potion colours/descriptions, also update
 // item-name.cc.
@@ -148,7 +156,7 @@ bool identify_item_type(object_class_type basetype, int subtype);
 
 string item_prefix(const item_def &item, bool temp = true);
 string menu_colour_item_name(const item_def &item,
-                                   description_level_type desc);
+                                   description_level_type desc, ui_arg *display = nullptr);
 
 void            init_item_name_cache();
 item_kind item_kind_by_name(const string &name);

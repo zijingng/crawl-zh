@@ -1,0 +1,497 @@
+{
+  "entries": [
+    {
+      "key": "_people_name_",
+      "context": "textdb:database/rand_wpn.txt:_people_name_",
+      "source_sha256": "3b905dc98222230532352fd20bbbe304f814d90f96952bdc157b5d7c5fa46b73",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": [
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_diviner_name_",
+          "source_sha256": "c906aef473ce2fd857f18d4fd2eb01d8833e0e565126ac765e4a9394ea9159a6",
+          "translation_sha256": "a087d04ea3fe655a235f4744364bef243189793a49526b2add372fd805b84c1d"
+        }
+      ]
+    },
+    {
+      "key": "_weapon_animal_",
+      "context": "textdb:database/rand_wpn.txt:_weapon_animal_",
+      "source_sha256": "fec0a77cdc1be1406b57cbb9d387322c203852230d078f09b011d6691747ee3b",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": [
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_amphibian_name_",
+          "source_sha256": "aee2760928926a3f21aa2f019711c9ccc8c742a8577901dbf84be0e8e9836b05",
+          "translation_sha256": "7be47b54e03db91eae75fae79d6f9b0d9aca78206d602ec7e288083549c2d421"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_arachnid_name_",
+          "source_sha256": "3a1a5cbdd1e40468f6ee13a9179f27db70cfd43d7b8e43fdc3a545a4ecc23d02",
+          "translation_sha256": "aa5829a6ed290b05d8a58e8193e84c8f9880bc06e8c18a4a47ec144a70bc775e"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_bird_name_",
+          "source_sha256": "38007054a3c08a88a5b247232c5c40eebdb91ff7c5b7999675b68ccab534606b",
+          "translation_sha256": "f2f5cb6cceb014485e79468a49f438ae09d8a1d98464f36060b1f5bc616214c5"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_crustacean_name_",
+          "source_sha256": "23ab4e31ba55e4621702fc5ba440bf4a90644fa59405c39ba10ab67d4b131c1f",
+          "translation_sha256": "2ed27da34ff3420937570524751d529997b2d611a9ed9fcb4553eb56fad9cd32"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_fish_name_",
+          "source_sha256": "c5131f2f44283145a8aaec5682ea2ee5e8ced3ff26733078ac26d6d053005978",
+          "translation_sha256": "df2f45afdeb80808ac64d25484c4e26354d9a65153072e8e2536e215ce8f449b"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_mammal_name_",
+          "source_sha256": "cb7f6bb2a354def2fe725e3b4aa0b13af7374853899fd0a92f363c2a82ffb201",
+          "translation_sha256": "c5502ef84e861952e9f88cb457cabf006850402bd15fb58be3e5404951df715f"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_reptile_name_",
+          "source_sha256": "0fd0a8073f0f50c527d2cf533f4048123e1ddf13fb3426448e979385c8de69f8",
+          "translation_sha256": "8d04ab4e544f73b946a8aa8604ea2968ce979a337fe388cd900fdd8b4b9c9bdc"
+        }
+      ]
+    },
+    {
+      "key": "_crustacean_name_",
+      "context": "textdb:database/rand_wpn.txt:_crustacean_name_",
+      "source_sha256": "23ab4e31ba55e4621702fc5ba440bf4a90644fa59405c39ba10ab67d4b131c1f",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_arachnid_name_",
+      "context": "textdb:database/rand_wpn.txt:_arachnid_name_",
+      "source_sha256": "3a1a5cbdd1e40468f6ee13a9179f27db70cfd43d7b8e43fdc3a545a4ecc23d02",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_amphibian_name_",
+      "context": "textdb:database/rand_wpn.txt:_amphibian_name_",
+      "source_sha256": "aee2760928926a3f21aa2f019711c9ccc8c742a8577901dbf84be0e8e9836b05",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_reptile_name_",
+      "context": "textdb:database/rand_wpn.txt:_reptile_name_",
+      "source_sha256": "0fd0a8073f0f50c527d2cf533f4048123e1ddf13fb3426448e979385c8de69f8",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_fish_name_",
+      "context": "textdb:database/rand_wpn.txt:_fish_name_",
+      "source_sha256": "c5131f2f44283145a8aaec5682ea2ee5e8ced3ff26733078ac26d6d053005978",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_bird_name_",
+      "context": "textdb:database/rand_wpn.txt:_bird_name_",
+      "source_sha256": "38007054a3c08a88a5b247232c5c40eebdb91ff7c5b7999675b68ccab534606b",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_mammal_name_",
+      "context": "textdb:database/rand_wpn.txt:_mammal_name_",
+      "source_sha256": "cb7f6bb2a354def2fe725e3b4aa0b13af7374853899fd0a92f363c2a82ffb201",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_plant_name_",
+      "context": "textdb:database/rand_wpn.txt:_plant_name_",
+      "source_sha256": "0a2bed5ea876bff01e6a3ceb494a02e562608037557bbfc033c1b682df2e88ab",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_philosophy_or_science_",
+      "context": "textdb:database/rand_wpn.txt:_philosophy_or_science_",
+      "source_sha256": "dac7011dbb23a2aac6d286c719753b985084e2096d3782aea72cdf3b51c4c1eb",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": [
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_philosophy_name_",
+          "source_sha256": "ff04d39fcfe8fc99012fe8242e7919035864eb9e598508a9dfa6108500f605f1",
+          "translation_sha256": "8147ac793c3430b071fef099d03431a567f96d21a5bcbb11387b1ee2b71a5aa3"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_science_name_",
+          "source_sha256": "8adcd539df61bb2357fa487c7549fc402a35e3ad32120a21d8a45acb08e56cb1",
+          "translation_sha256": "6eb55b7a90c60431c4a31f75a71fc5ef044dfa061c320d4ab515433471f8d312"
+        }
+      ]
+    },
+    {
+      "key": "_item_name_",
+      "context": "textdb:database/rand_wpn.txt:_item_name_",
+      "source_sha256": "74e84245be1d746d4646c97f39c07ee0fcc752810d305d9bc0971221b3891a0a",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "other_weapon_name",
+      "context": "textdb:database/rand_wpn.txt:other_weapon_name",
+      "source_sha256": "768263dfc295057b851b0ea7c878e4ae01890fc19ca9b493871b1ecbe910046b",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "short_monster_name_",
+      "context": "textdb:database/rand_wpn.txt:short_monster_name_",
+      "source_sha256": "ce39dd7268793deb4ea52ba36e46d73439f061b0f047a490a716be263f8ea165",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_monster_name_",
+      "context": "textdb:database/rand_wpn.txt:_monster_name_",
+      "source_sha256": "aa251cdac65a84f04ea584a2923f9e2084a3d59ae14ea9482f33b77cd9966685",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": [
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "short_monster_name_",
+          "source_sha256": "ce39dd7268793deb4ea52ba36e46d73439f061b0f047a490a716be263f8ea165",
+          "translation_sha256": "d83e206cba19c2874812eea638a19fceecb9a22494bc661c5e4f46d53bd884dc"
+        }
+      ]
+    },
+    {
+      "key": "_short_killer_name_",
+      "context": "textdb:database/rand_wpn.txt:_short_killer_name_",
+      "source_sha256": "be1ca9812ea77d18b5dafa307733cf34466878b9f9eaf091cb36b7b08f6daaa2",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "killer_name",
+      "context": "textdb:database/rand_wpn.txt:killer_name",
+      "source_sha256": "4136e6183e35ff7005c5501aa37de7e2653b5e2949106b6214896764614dbfe2",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_long_killer_name_",
+      "context": "textdb:database/rand_wpn.txt:_long_killer_name_",
+      "source_sha256": "cd5cd12fd9c37890c093aacd10c46913dc4abf52525f489da628bdd3bf0c3ca7",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_real_weapon_name_",
+      "context": "textdb:database/rand_wpn.txt:_real_weapon_name_",
+      "source_sha256": "46c4d970d502d37237102b8a26f7764e9daee137330d02436ccb7e00f7544a6d",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": [
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_anger_quality_",
+          "source_sha256": "edca7776e9c73ba6b8ea422a8fcc8da231eede5a500cb2a72983fae41976b545",
+          "translation_sha256": "b5bef192153559119ff7820c28429505987da187177044727bd2a2903eb102aa"
+        }
+      ]
+    },
+    {
+      "key": "_joke_weapon_name_",
+      "context": "textdb:database/rand_wpn.txt:_joke_weapon_name_",
+      "source_sha256": "1d70c4d8b3e0ba21b2979885377658c1e803d9fa093befe77b4647c92a548953",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": [
+        {
+          "source": "database/rand_all.txt",
+          "key": "_xom_esteem_",
+          "source_sha256": "89619cedd701ca378ca1ff10f922f379c5c2ade17ccf2017b41a296ea672cf84",
+          "translation_sha256": "ffc72eedfbff084a6954532b8b6ad85c0a27844afe2acc7c4522f2d6f3610b99"
+        }
+      ]
+    },
+    {
+      "key": "_plain_weapon_name_",
+      "context": "textdb:database/rand_wpn.txt:_plain_weapon_name_",
+      "source_sha256": "4c35ea957878d04495bd461ac87c2568e32db3189bfeef4f0c10d5c4078a3139",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": [
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_joke_weapon_name_",
+          "source_sha256": "1d70c4d8b3e0ba21b2979885377658c1e803d9fa093befe77b4647c92a548953",
+          "translation_sha256": "634d2aa87917fb2c5185055adfc0d5fc154431458b077e3bea13676874bf5331"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_long_killer_name_",
+          "source_sha256": "cd5cd12fd9c37890c093aacd10c46913dc4abf52525f489da628bdd3bf0c3ca7",
+          "translation_sha256": "b8a6ec94a520a26cdee627b5b5eaa0c6737d499b651c74a8f66884d49363fd8a"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_monster_name_",
+          "source_sha256": "aa251cdac65a84f04ea584a2923f9e2084a3d59ae14ea9482f33b77cd9966685",
+          "translation_sha256": "73b5b9aa2a0ddcf39213711a1243f7e6b36f0631e990d1b62d601ab5dc5b81c6"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_real_weapon_name_",
+          "source_sha256": "46c4d970d502d37237102b8a26f7764e9daee137330d02436ccb7e00f7544a6d",
+          "translation_sha256": "42ce74779f907a46efaf11e1b52e89136d95dc3670bd79fc4c459953ba7b35fb"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_short_killer_name_",
+          "source_sha256": "be1ca9812ea77d18b5dafa307733cf34466878b9f9eaf091cb36b7b08f6daaa2",
+          "translation_sha256": "20df9e9c134489d8bc669dbb4a23e09fe556a774a5e7fef6e0abdba4ee24f4ae"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "killer_name",
+          "source_sha256": "4136e6183e35ff7005c5501aa37de7e2653b5e2949106b6214896764614dbfe2",
+          "translation_sha256": "708073d2d4dab29034cd98774b03a7fc5b905610184167fcae35cd8204ec708f"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "short_monster_name_",
+          "source_sha256": "ce39dd7268793deb4ea52ba36e46d73439f061b0f047a490a716be263f8ea165",
+          "translation_sha256": "d83e206cba19c2874812eea638a19fceecb9a22494bc661c5e4f46d53bd884dc"
+        }
+      ]
+    },
+    {
+      "key": "_flower_name_",
+      "context": "textdb:database/rand_arm.txt:_flower_name_",
+      "source_sha256": "345a2c8d5bc9fb5954bdd7b7186a78aa449f21996984e57f073da9962e42398f",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_critter_name_",
+      "context": "textdb:database/rand_arm.txt:_critter_name_",
+      "source_sha256": "ad5188034de0abdb191e9c95dce2f725e2b4529fc6284724b7bc18f379be4532",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_discomfort_and_inaction_",
+      "context": "textdb:database/rand_arm.txt:_discomfort_and_inaction_",
+      "source_sha256": "08fea3482ce691b62bd78fdec029b6c0e29a9c619aea8aa0e3147e680f498990",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_good_or_divine_",
+      "context": "textdb:database/rand_arm.txt:_good_or_divine_",
+      "source_sha256": "f0d977c00aef2d957b9a24c1a29bbab3e835be17706433e97f8d9242f14766e9",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_armour_name_shielding_",
+      "context": "textdb:database/rand_arm.txt:_armour_name_shielding_",
+      "source_sha256": "ebde7d81f2052f45a6a329c50b5a017890fb0a658a5806830232a61c8ad166fe",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_armour_property_name_",
+      "context": "textdb:database/rand_arm.txt:_armour_property_name_",
+      "source_sha256": "84205eeec049220dab10568647340c4e5e299266f3419e264dfd3bd77b03eee1",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_wacky_armour_name_",
+      "context": "textdb:database/rand_arm.txt:_wacky_armour_name_",
+      "source_sha256": "6485e764474a148d43d79d4a4bf30fdb84273e694859da883bb132829615118a",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_celestial_bodies_",
+      "context": "textdb:database/rand_arm.txt:_celestial_bodies_",
+      "source_sha256": "72d1d8ea2cf5c71a5e7f77979e2660003f508b1c01dbfa42b87264c9089bf6b9",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_instrument_name_",
+      "context": "textdb:database/rand_arm.txt:_instrument_name_",
+      "source_sha256": "ee7d39db9cf05426573af1a274f6161ffaeb4e38a56dbf18fef74ea820475450",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_evil_being_",
+      "context": "textdb:database/rand_arm.txt:_evil_being_",
+      "source_sha256": "e31f0542bc805c2878cd07919051b5056a54523ceb238c98112253d85c102427",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_weather_name_",
+      "context": "textdb:database/rand_arm.txt:_weather_name_",
+      "source_sha256": "f9650ec17c71f4eb946ce20aabcdce5e5a280651bdd3e74dfca12136bd8f5074",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_profession_name_",
+      "context": "textdb:database/rand_arm.txt:_profession_name_",
+      "source_sha256": "5ac9522b135e5bae7e9ac3c9906ee9ab4684840bcb13d246e701703b01cda5b5",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_game_name_",
+      "context": "textdb:database/rand_arm.txt:_game_name_",
+      "source_sha256": "f87df275184687bb62fd6017a5d0431353370f35174519aa1a865b91e0d21dfb",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_politics_name_armour_",
+      "context": "textdb:database/rand_arm.txt:_politics_name_armour_",
+      "source_sha256": "85e1aac2afdf6c4ab5fc240f4e828f4360707e37031e02362bb6cf9b7da1d295",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_card_",
+      "context": "textdb:database/rand_arm.txt:_card_",
+      "source_sha256": "10e368e6b41c9564c05ad981019bdaf18c2cb9c9e460888e22edc0c5e10efdb2",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_suit_",
+      "context": "textdb:database/rand_arm.txt:_suit_",
+      "source_sha256": "2cf8b6dcc31e9ab11b0517a77eb22001391a7574671d9abeffa29524fb57698b",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_plain_armour_name_",
+      "context": "textdb:database/rand_arm.txt:_plain_armour_name_",
+      "source_sha256": "79583964310845660615b7a451da263db6f85e30c8f15f93e8bc6ee2fa04617b",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": []
+    },
+    {
+      "key": "_other_armour_name_",
+      "context": "textdb:database/rand_arm.txt:_other_armour_name_",
+      "source_sha256": "19c778e3b82ae4d64bb5614bcafcc92ce4130dd3ab9324b8677149373ac2e879",
+      "review_status": "reviewed",
+      "review_batch": "database-45",
+      "dependencies": [
+        {
+          "source": "database/rand_arm.txt",
+          "key": "_card_",
+          "source_sha256": "10e368e6b41c9564c05ad981019bdaf18c2cb9c9e460888e22edc0c5e10efdb2",
+          "translation_sha256": "b482c98b9eec30cd32fb208420033d1d9b51ad853fc696cd0e65338b180d7484"
+        },
+        {
+          "source": "database/rand_arm.txt",
+          "key": "_suit_",
+          "source_sha256": "2cf8b6dcc31e9ab11b0517a77eb22001391a7574671d9abeffa29524fb57698b",
+          "translation_sha256": "bdb95407c8f1a230e50bdf68be5dce4f083a9018f7b2e1bd49e6fa946861ecf0"
+        }
+      ]
+    }
+  ],
+  "candidates": {
+    "_people_name_": 19,
+    "_weapon_animal_": 7,
+    "_crustacean_name_": 31,
+    "_arachnid_name_": 4,
+    "_amphibian_name_": 9,
+    "_reptile_name_": 15,
+    "_fish_name_": 5,
+    "_bird_name_": 39,
+    "_mammal_name_": 12,
+    "_plant_name_": 14,
+    "_philosophy_or_science_": 2,
+    "_item_name_": 32,
+    "other_weapon_name": 36,
+    "short_monster_name_": 15,
+    "_monster_name_": 5,
+    "_short_killer_name_": 2,
+    "killer_name": 7,
+    "_long_killer_name_": 6,
+    "_real_weapon_name_": 28,
+    "_joke_weapon_name_": 36,
+    "_plain_weapon_name_": 6,
+    "_flower_name_": 13,
+    "_critter_name_": 8,
+    "_discomfort_and_inaction_": 22,
+    "_good_or_divine_": 33,
+    "_armour_name_shielding_": 18,
+    "_armour_property_name_": 15,
+    "_wacky_armour_name_": 46,
+    "_celestial_bodies_": 14,
+    "_instrument_name_": 15,
+    "_evil_being_": 20,
+    "_weather_name_": 16,
+    "_profession_name_": 50,
+    "_game_name_": 22,
+    "_politics_name_armour_": 33,
+    "_card_": 14,
+    "_suit_": 4,
+    "_plain_armour_name_": 6,
+    "_other_armour_name_": 51
+  }
+}

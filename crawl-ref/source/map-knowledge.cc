@@ -1,4 +1,5 @@
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "map-knowledge.h"
 
@@ -83,12 +84,12 @@ void clear_map_or_travel_trail()
 {
     if (Options.show_travel_trail && env.travel_trail.size())
     {
-        mpr("Clearing travel trail.");
+        mpr(ui_translate("m.ui", "Clearing travel trail."));
         clear_travel_trail();
     }
     else
     {
-        mpr("Clearing monster memory.");
+        mpr(ui_translate("m.ui", "Clearing monster memory."));
         /* Items (other than corpses) cannot in general be moved or destroyed
          * once they have been seen, so there is no need to clear them.
          */
@@ -136,8 +137,7 @@ void set_terrain_seen(const coord_def pos)
             && (!env.map_forgotten
                 || ~(*env.map_forgotten)(pos).flags & MAP_SEEN_FLAG))
         {
-            string desc = feature_description_at(pos, false, DESC_A) + ".";
-            take_note(Note(NOTE_SEEN_FEAT, 0, 0, desc));
+            take_note(make_feature_note(pos));
         }
     }
 
@@ -563,7 +563,7 @@ bool magic_mapping(int map_radius, int proportion, bool suppress_msg,
     if (!suppress_msg)
     {
         if (did_map)
-            mpr("You feel aware of your surroundings.");
+            mpr(ui_translate("m.ui", "You feel aware of your surroundings."));
         else
             canned_msg(MSG_DISORIENTED);
 
@@ -583,7 +583,18 @@ bool magic_mapping(int map_radius, int proportion, bool suppress_msg,
         }
 
         if (!sensed.empty())
-            mpr_comma_separated_list("You sensed ", sensed);
+        {
+            ui_translation_group group({{"m.mapping", "You sensed "},
+                {"m.mapping", "%d altars"}, {"m.mapping", "%d shops/portals"}});
+            if (group.available())
+            {
+                vector<string> shown;
+                if (num_altars > 0) shown.push_back(make_stringf(group.get("m.mapping", "%d altars"), num_altars));
+                if (num_shops_portals > 0) shown.push_back(make_stringf(group.get("m.mapping", "%d shops/portals"), num_shops_portals));
+                mpr_comma_separated_list(group.get("m.mapping", "You sensed "), shown, "和", "、");
+            }
+            else mpr_comma_separated_list("You sensed ", sensed);
+        }
     }
 
     return did_map;

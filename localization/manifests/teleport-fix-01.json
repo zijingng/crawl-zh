@@ -1,0 +1,137 @@
+{
+  "batch": "teleport-fix-01",
+  "messages": [
+    {
+      "context": "log.monster",
+      "english": "%s leaps!",
+      "translation": "%s跃起！",
+      "module": "teleport.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "teleport-fix-01",
+      "source_sha256": "2b5b25a4ae04d8c85bdc435f091b3c78d9f7253672e3d346c844a8b1f2ecf201",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/teleport.cc",
+          "sha256": "063a86a0ec485fe0e9bdfa28184641ca4600d2c32c3228332624a19752cece0a"
+        },
+        {
+          "source": "crawl-ref/source/message.cc",
+          "sha256": "0372d4daf4bf44ad02ed5f7004ab994e444e95a952f7988f6941844bc755b67e"
+        },
+        {
+          "source": "crawl-ref/source/message.h",
+          "sha256": "712be76880b9435425bac32eb1d663f9c97d3b99b75758e81066eced91f81e08"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "806e70a3b652c2b7afaca769a49236ad535ebb70b3a2c99f5b46eb234f654a2f"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "85b8ee16a6afa1d46d89105624b32c6833f25a090b2dba1b96553f5ce74d4585"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.h",
+          "sha256": "e55a25debbef756edcd4abdafa093a3440588697aa92b3e67277ad14f09995dd"
+        },
+        {
+          "source": "crawl-ref/source/mon-data.h",
+          "sha256": "3160f2f72b25a1e0702cfad6031092a6688aff8b8ab928acb781165875670f2b"
+        }
+      ]
+    },
+    {
+      "context": "log.monster",
+      "english": "%s hops!",
+      "translation": "%s蹦跳起来！",
+      "module": "teleport.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "teleport-fix-01",
+      "source_sha256": "26df3f0a73bb342487181d02a049faebd80b2bae4138acb8c411a11b654ea368",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/teleport.cc",
+          "sha256": "063a86a0ec485fe0e9bdfa28184641ca4600d2c32c3228332624a19752cece0a"
+        },
+        {
+          "source": "crawl-ref/source/message.cc",
+          "sha256": "0372d4daf4bf44ad02ed5f7004ab994e444e95a952f7988f6941844bc755b67e"
+        },
+        {
+          "source": "crawl-ref/source/message.h",
+          "sha256": "712be76880b9435425bac32eb1d663f9c97d3b99b75758e81066eced91f81e08"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "806e70a3b652c2b7afaca769a49236ad535ebb70b3a2c99f5b46eb234f654a2f"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "85b8ee16a6afa1d46d89105624b32c6833f25a090b2dba1b96553f5ce74d4585"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.h",
+          "sha256": "e55a25debbef756edcd4abdafa093a3440588697aa92b3e67277ad14f09995dd"
+        },
+        {
+          "source": "crawl-ref/source/mon-data.h",
+          "sha256": "3160f2f72b25a1e0702cfad6031092a6688aff8b8ab928acb781165875670f2b"
+        }
+      ]
+    },
+    {
+      "context": "log.monster",
+      "english": "%s blinks!",
+      "translation": "%s闪烁了一下！",
+      "module": "teleport.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "teleport-fix-01",
+      "source_sha256": "bccebc782fef8894984f638e45118c5091f9a6b3c8761f93b6463ff73fd42a0b",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/teleport.cc",
+          "sha256": "063a86a0ec485fe0e9bdfa28184641ca4600d2c32c3228332624a19752cece0a"
+        },
+        {
+          "source": "crawl-ref/source/message.cc",
+          "sha256": "0372d4daf4bf44ad02ed5f7004ab994e444e95a952f7988f6941844bc755b67e"
+        },
+        {
+          "source": "crawl-ref/source/message.h",
+          "sha256": "712be76880b9435425bac32eb1d663f9c97d3b99b75758e81066eced91f81e08"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "806e70a3b652c2b7afaca769a49236ad535ebb70b3a2c99f5b46eb234f654a2f"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.cc",
+          "sha256": "85b8ee16a6afa1d46d89105624b32c6833f25a090b2dba1b96553f5ce74d4585"
+        },
+        {
+          "source": "crawl-ref/source/mon-info.h",
+          "sha256": "e55a25debbef756edcd4abdafa093a3440588697aa92b3e67277ad14f09995dd"
+        },
+        {
+          "source": "crawl-ref/source/mon-data.h",
+          "sha256": "3160f2f72b25a1e0702cfad6031092a6688aff8b8ab928acb781165875670f2b"
+        }
+      ]
+    }
+  ]
+}

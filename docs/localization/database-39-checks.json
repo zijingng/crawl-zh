@@ -1,0 +1,23 @@
+{
+  "files": {
+    "godspeak.txt": {
+      "prior_rows_unchanged": 193,
+      "added": 3
+    },
+    "wpnnoise.txt": {
+      "prior_rows_unchanged": 65,
+      "added": 2
+    }
+  },
+  "english_lua_unchanged": true,
+  "cpp_runtime_unchanged": false,
+  "modified_runtime": [
+    "shout.cc"
+  ],
+  "python_tests": 32,
+  "native_tests": 161,
+  "assertions": 1250822,
+  "isolated_tests": 2,
+  "isolated_assertions": 165198,
+  "tiles_build_success": true
+}

@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
+#include "i18n-item.h"
 
 #include "invent.h"
 
@@ -24,6 +26,7 @@
 #include "god-passive.h"
 #include "initfile.h"
 #include "item-prop.h"
+#include "item-name.h"
 #include "items.h"
 #include "item-use.h"
 #include "item-prop.h"
@@ -100,7 +103,15 @@ InvEntry::InvEntry(const item_def &i)
 
 int InvEntry::highlight_colour(bool temp) const
 {
-    return menu_colour(get_text(), item_prefix(*item, temp), tag, false);
+    return menu_colour(MenuEntry::get_text(), item_prefix(*item, temp), tag, false);
+}
+
+string InvEntry::get_text() const
+{
+    string display;
+    if (try_item_display_name(*item, display))
+        return _get_text_preface() + display;
+    return MenuEntry::get_text();
 }
 
 const string &InvEntry::get_basename() const
@@ -176,7 +187,15 @@ void InvEntry::select(int qty)
 
 string InvEntry::get_filter_text() const
 {
-    return item_prefix(*item, false) + " " + get_text();
+    const string original = MenuEntry::get_text();
+    const string display = get_text();
+    string localized;
+    if (display != original && try_item_display_name(*item, localized)
+        && display == _get_text_preface() + localized)
+        return item_prefix(*item, false) + " " + original + " " + display;
+    // Derived menus may provide their own text (prices, rarity, location).
+    // In English/fallback, preserve their original filter expression exactly.
+    return item_prefix(*item, false) + " " + display;
 }
 
 string InvEntry::_get_text_preface() const
@@ -325,7 +344,7 @@ void InvMenu::set_preselect(const vector<SelItem> *pre)
 
 string slot_description()
 {
-    return make_stringf("%d/%d gear slots", inv_count(INVENT_GEAR), MAX_GEAR);
+    return make_stringf(ui_translate("inventory.slots", "%d/%d gear slots"), inv_count(INVENT_GEAR), MAX_GEAR);
 }
 
 void InvMenu::set_title(const string &s)
@@ -335,17 +354,17 @@ void InvMenu::set_title(const string &s)
         string str;
         switch (cur_osel)
         {
-            case 0: str = "Gear: " + slot_description(); break;
-            case 1: str = "Potions: "; break;
-            case 2: str = "Scrolls: "; break;
-            case 3: str = "Evocable Items: "; break;
+            case 0: str = ui_translate("phase3.invent", "Gear: ") + slot_description(); break;
+            case 1: str = ui_translate("phase3.invent", "Potions: "); break;
+            case 2: str = ui_translate("phase3.invent", "Scrolls: "); break;
+            case 3: str = ui_translate("phase3.invent", "Evocable Items: "); break;
         }
-        str += "    (Left/Right to switch category)";
+        str += ui_translate("phase3.invent", "    (Left/Right to switch category)");
         set_title(new InvTitle(this, str, title_annotate));
         return;
     }
 
-    set_title(new InvTitle(this, s.empty() ? "Inventory: " + slot_description()
+    set_title(new InvTitle(this, s.empty() ? ui_translate("phase3.invent", "Inventory: ") + slot_description()
                                            : s,
                            title_annotate));
 }
@@ -501,8 +520,9 @@ string InvMenu::get_select_count_string(int) const
         if (all_sel.empty())
             return "";
 
-        return make_stringf(" %d item%s", (int)all_sel.size(),
-                                          all_sel.size() > 1 ? "s" : "");
+        return ui_render("i.ui", " %s items",
+            make_stringf(" %d item%s", (int)all_sel.size(), all_sel.size() > 1 ? "s" : ""),
+            {ui_literal_arg(to_string(all_sel.size()))});
     }
 
     return Menu::get_select_count_string(0);
@@ -640,7 +660,7 @@ void InvMenu::load_inv_items(int item_selector, int excluded_slot,
     load_items(tobeshown, procfn, 'a', true, true);
 
     if (!item_count())
-        set_title(no_selectables_message(item_selector));
+        set_title(ui_translate("i.inventory.empty", no_selectables_message(item_selector).c_str()));
     else
         set_title("");
 }
@@ -1005,7 +1025,7 @@ menu_letter InvMenu::load_items(const vector<const item_def*> &mitems,
         if (!inv_class[i])
             continue;
 
-        string subtitle = item_class_name(i);
+        string subtitle = ui_translate("inventory.category", item_class_name(i));
 
         if (subkeys)
         {
@@ -1015,9 +1035,16 @@ menu_letter InvMenu::load_items(const vector<const item_def*> &mitems,
             {
                 // longest string
                 const string str = "Magical Staves ";
-                subtitle += string(strwidth(str) - strwidth(subtitle),
+                subtitle += string(max(0, strwidth(str) - strwidth(subtitle)),
                                    ' ');
-                subtitle += "("+select_all+" with <w>";
+                const ui_translation_group shortcut({
+                    {"inventory.shortcut", "(%s with <w>"},
+                    {"phase3.invent", select_all.c_str()}
+                });
+                subtitle += shortcut.available()
+                    ? make_stringf(shortcut.get("inventory.shortcut", "(%s with <w>"),
+                                   shortcut.get("phase3.invent", select_all.c_str()))
+                    : "(" + select_all + " with <w>";
                 for (char gly : glyphs)
                     subtitle += gly;
                 subtitle += "</w><blue>)";
@@ -1489,7 +1516,7 @@ void display_inventory()
 
 static string _drop_menu_titlefn(const Menu*, const string &)
 {
-    return "Drop what? (Left/Right to switch category) " + slot_description() + " (_ for help)";
+    return ui_translate("phase3.invent", "Drop what? (Left/Right to switch category) ") + slot_description() + ui_translate("phase3.invent", " (_ for help)");
 }
 
 /**
@@ -1630,6 +1657,14 @@ bool maybe_warn_about_removing(const item_def& item)
     prompt += "?";
     if (penance)
         prompt += " This could place you under penance!";
+    const char *operation = item.base_type == OBJ_WEAPONS || item.base_type == OBJ_STAVES
+        ? "unwield" : item.base_type == OBJ_ARMOUR ? "take off" : "remove";
+    prompt = ui_render("i.warning", "Really %s%s%s?%s", prompt,
+        {ui_text_arg("i.operation", operation),
+         item.cursed() ? ui_text_arg("i.warning.part", "and destroy ") : ui_literal_arg(""),
+         ui_inventory_item_arg(item), penance
+            ? ui_text_arg("i.warning.part", " This could place you under penance!")
+            : ui_literal_arg("")});
     return yesno(prompt.c_str(), false, 'n');
 }
 
@@ -1757,6 +1792,20 @@ bool check_warning_inscriptions(const item_def& item,
             prompt += " You'd be excommunicated if you did!";
         else if (penance)
             prompt += " This could place you under penance!";
+        const ui_arg name = in_inventory(item) ? ui_inventory_item_arg(item) : ui_item_arg(item);
+        const ui_arg teleport = needs_notele_warning(item, oper)
+            ? ui_text_arg("i.warning.part", " while about to teleport") : ui_literal_arg("");
+        const ui_arg consequence = god_despises_item(item, you.religion)
+            ? ui_text_arg("i.warning.part", " You'd be excommunicated if you did!")
+            : penance ? ui_text_arg("i.warning.part", " This could place you under penance!")
+                      : ui_literal_arg("");
+        if (oper == OPER_MEMORISE || oper == OPER_QUIVER)
+            prompt = ui_render("i.warning", oper == OPER_MEMORISE
+                ? "Really memorise from %s%s?%s" : "Really quiver %s%s?%s", prompt,
+                {name, teleport, consequence});
+        else
+            prompt = ui_render("i.warning", "Really %s %s%s?%s", prompt,
+                {ui_text_arg("i.operation", _operation_verb(oper)), name, teleport, consequence});
         return yesno(prompt.c_str(), false, 'n');
     }
 
@@ -1803,7 +1852,7 @@ int prompt_invent_item(const char *prompt,
         && type_expect != OSEL_QUIVER_ACTION)
     {
         mprf(MSGCH_PROMPT, "%s",
-             no_selectables_message(type_expect).c_str());
+             ui_translate("i.inventory.empty", no_selectables_message(type_expect).c_str()));
         return PROMPT_NOTHING;
     }
 
@@ -1831,7 +1880,8 @@ int prompt_invent_item(const char *prompt,
         }
 
         if (need_prompt)
-            mprf(MSGCH_PROMPT, "%s (<w>?</w> for menu, <w>Esc</w> to quit)", prompt);
+            mprf(MSGCH_PROMPT, "%s %s", ui_translate("i.ui", prompt),
+                ui_translate("i.ui", "(<w>?</w> for menu, <w>Esc</w> to quit)"));
         else
             flush_prev_message();
 
@@ -1945,9 +1995,9 @@ int prompt_invent_item(const char *prompt,
                 ret = letter_to_index(keyin);
 
             if (must_exist && !you.inv[ret].defined())
-                mpr("You don't have any such object.");
+                mpr(ui_translate("i.ui", "You don't have any such object."));
             else if (must_exist && !item_is_selected(you.inv[ret], type_expect))
-                mpr("That's the wrong kind of item!");
+                mpr(ui_translate("i.ui", "That's the wrong kind of item!"));
             else if (!do_warning || check_warning_inscriptions(you.inv[ret], oper))
                 break;
         }

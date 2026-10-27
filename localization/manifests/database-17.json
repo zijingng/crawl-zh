@@ -1,0 +1,1859 @@
+{
+  "baseline": "0.34.1",
+  "files": {
+    "godspeak.txt": [
+      {
+        "key": "Xom general effect",
+        "context": "textdb:database/godspeak.txt:xom general effect",
+        "source_sha256": "2d98306d985994760dd6b28e89a71d087299da811bc8fd4b7d85428676993744",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom general gift",
+        "context": "textdb:database/godspeak.txt:xom general gift",
+        "source_sha256": "78c86e3923375e0f272c46bb9bd1d1ec070f31da9f6e33ec7f7364dcd5a5cf9a",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom orb gift",
+        "context": "textdb:database/godspeak.txt:xom orb gift",
+        "source_sha256": "53c479d7c854c37c2249bfe7ca0c7ee75c34556d27306440c590812dd26c81e9",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom single summon",
+        "context": "textdb:database/godspeak.txt:xom single summon",
+        "source_sha256": "383a40d5c9699b650dd15625e3abc9218cdef9d0ed94cffce92f00b3eea77f7d",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom multiple summons",
+        "context": "textdb:database/godspeak.txt:xom multiple summons",
+        "source_sha256": "00e5f7862e0672d62a70be457ca1d49d9a8b962487bc9c6da38e25126a98ae46",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom animate monster weapon",
+        "context": "textdb:database/godspeak.txt:xom animate monster weapon",
+        "source_sha256": "624ad9ebf637640b6fc3cdcb4e4882aeefb4b7f7b2b958c14dda44235e2ad1b5",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom flora ring",
+        "context": "textdb:database/godspeak.txt:xom flora ring",
+        "source_sha256": "e4e624c8911bcd7cc4e359adf0d39dc0de0c1065bf803cba7bb98ba64136d09f",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom scenery generic",
+        "context": "textdb:database/godspeak.txt:xom scenery generic",
+        "source_sha256": "5baaf625bdfa1039fe9816c326e933df42bcaaf6f060658cbbcc960cb77d4913",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom scenery open_door",
+        "context": "textdb:database/godspeak.txt:xom scenery open_door",
+        "source_sha256": "277ac103362c4c315ab31af75f1868952b336fc60cc0f23fe883d8ac4f09c59f",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "xom scenery generic",
+            "source_sha256": "5baaf625bdfa1039fe9816c326e933df42bcaaf6f060658cbbcc960cb77d4913",
+            "translation_sha256": "c73e9c253f0c6ef37182bfb1328c162712de00b030eab161277879376d343f61"
+          }
+        ]
+      },
+      {
+        "key": "Xom scenery closed_door",
+        "context": "textdb:database/godspeak.txt:xom scenery closed_door",
+        "source_sha256": "277ac103362c4c315ab31af75f1868952b336fc60cc0f23fe883d8ac4f09c59f",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "xom scenery generic",
+            "source_sha256": "5baaf625bdfa1039fe9816c326e933df42bcaaf6f060658cbbcc960cb77d4913",
+            "translation_sha256": "c73e9c253f0c6ef37182bfb1328c162712de00b030eab161277879376d343f61"
+          }
+        ]
+      },
+      {
+        "key": "Xom scenery altar_xom",
+        "context": "textdb:database/godspeak.txt:xom scenery altar_xom",
+        "source_sha256": "806f9e3ef65bf31b2c4d0810a4c78229cffc3f6b54ad027d5166ccd48c6acdfe",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "xom scenery generic",
+            "source_sha256": "5baaf625bdfa1039fe9816c326e933df42bcaaf6f060658cbbcc960cb77d4913",
+            "translation_sha256": "c73e9c253f0c6ef37182bfb1328c162712de00b030eab161277879376d343f61"
+          }
+        ]
+      },
+      {
+        "key": "Xom scenery cache_of_fruit",
+        "context": "textdb:database/godspeak.txt:xom scenery cache_of_fruit",
+        "source_sha256": "3ecbc7fd0d4a09f014c59ca53bb00a007ae35ad65c0c3f07ace801c9be68a876",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom scenery cache_of_meat",
+        "context": "textdb:database/godspeak.txt:xom scenery cache_of_meat",
+        "source_sha256": "9704b2eb1ca0f3b1f8bd3693ba99e82a2c16bb0100d64c2beb279750cabf4f03",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom scenery cache_of_baked_goods",
+        "context": "textdb:database/godspeak.txt:xom scenery cache_of_baked_goods",
+        "source_sha256": "b31b99c9a2d8b75c30f16720202ae83e8141cf6048567717093a93c7dc91ba48",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom scenery enter_abyss",
+        "context": "textdb:database/godspeak.txt:xom scenery enter_abyss",
+        "source_sha256": "285c87b0cb2c618e91e4b5e016b1e98a7dbb6ddcd86ea634671d9d3ca8ccfdfd",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom scenery trap_teleport",
+        "context": "textdb:database/godspeak.txt:xom scenery trap_teleport",
+        "source_sha256": "4926683d75a72d6b126d3c2ca3a1eb3cb05b31848e18cce2f10519088d39c55d",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "xom scenery enter_abyss",
+            "source_sha256": "285c87b0cb2c618e91e4b5e016b1e98a7dbb6ddcd86ea634671d9d3ca8ccfdfd",
+            "translation_sha256": "a38b06087a89db9ecd0724777f502b8f971aec45f9b04d108e860029197ecb47"
+          }
+        ]
+      },
+      {
+        "key": "Xom kind door ring",
+        "context": "textdb:database/godspeak.txt:xom kind door ring",
+        "source_sha256": "22eb63e7b327495184ef4989108b84b537840629651ea73a3aab3fe8577be852",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom mean door ring",
+        "context": "textdb:database/godspeak.txt:xom mean door ring",
+        "source_sha256": "89c2c923efe60c8da76305f257f5195360d85d7d6a54153c327f94a38c826015",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom bazaar trip",
+        "context": "textdb:database/godspeak.txt:xom bazaar trip",
+        "source_sha256": "11437168bbccc01faed32a27f32da16b0b3c18abe0b9674a393379cb7802813f",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom zero miscast effect",
+        "context": "textdb:database/godspeak.txt:xom zero miscast effect",
+        "source_sha256": "1bd8103e58066ce31a8ac1dc62bc38924f67cbca56cda46fc4385adf3dc0864b",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "_xom_number_",
+        "context": "textdb:database/godspeak.txt:_xom_number_",
+        "source_sha256": "a840ee90f2013e5a7b024c9cbf902949d2051c0b508b16b1448ef4debc0a5e67",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom feature lava",
+        "context": "textdb:database/godspeak.txt:xom feature lava",
+        "source_sha256": "37622d7e739e551a7267b9d3cfb84896980987fc47e0e738b2a881a9a54bba34",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom feature shallow water",
+        "context": "textdb:database/godspeak.txt:xom feature shallow water",
+        "source_sha256": "e964ff36b2f2cb6b05eedb77d42e362a2a956178b0d85dcdaaae25ad5d17f3e1",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/colourname.txt",
+            "key": "any_colour",
+            "source_sha256": "767c6fe96e4d8cc8f2424a243c7f22a5de6978c9881aa57f8ae93623fa08e95b",
+            "translation_sha256": "767c6fe96e4d8cc8f2424a243c7f22a5de6978c9881aa57f8ae93623fa08e95b"
+          },
+          {
+            "source": "database/colourname.txt",
+            "key": "any_glowing_colour",
+            "source_sha256": "9b94ad4a75905e8903edf42a7f682d1796e43cfa32dd9a4ba3fea9d3d2f0928a",
+            "translation_sha256": "d457fe226b1936169257a340abd53af8bb080f6cf778d91b863e40327af6a28c"
+          }
+        ]
+      },
+      {
+        "key": "Xom feature deep water",
+        "context": "textdb:database/godspeak.txt:xom feature deep water",
+        "source_sha256": "c52cfa42244849956d72e1f63561fb206df1315825bf5810dfa8e08fd60d38c3",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "xom feature shallow water",
+            "source_sha256": "e964ff36b2f2cb6b05eedb77d42e362a2a956178b0d85dcdaaae25ad5d17f3e1",
+            "translation_sha256": "cdc745996af27744bf1e9505bef376cd684e3b1ce1eb51a510cd8e1d6a9043cf"
+          }
+        ]
+      },
+      {
+        "key": "Xom feature blood",
+        "context": "textdb:database/godspeak.txt:xom feature blood",
+        "source_sha256": "d3e42b1d523e632a3e90c0866cd46fe1b1d2f9e8eb12e07778e8875c0620fe69",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "xom feature shallow water",
+            "source_sha256": "e964ff36b2f2cb6b05eedb77d42e362a2a956178b0d85dcdaaae25ad5d17f3e1",
+            "translation_sha256": "cdc745996af27744bf1e9505bef376cd684e3b1ce1eb51a510cd8e1d6a9043cf"
+          }
+        ]
+      },
+      {
+        "key": "Xom feature eyes",
+        "context": "textdb:database/godspeak.txt:xom feature eyes",
+        "source_sha256": "8c6053ae5de2d6be23da3e34c4864e1573547c490c6d9980f25e4afc328e7eaf",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom feature dry",
+        "context": "textdb:database/godspeak.txt:xom feature dry",
+        "source_sha256": "49e2fad61d996d9251fc91c112ae42d3a63e9923e042001d6600b5fbe202fb46",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom feature statuelike",
+        "context": "textdb:database/godspeak.txt:xom feature statuelike",
+        "source_sha256": "b8856db8666e01ddd0c40ee8bc79dff180556ad64d006cd89496c00351dddb9e",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom feature tree",
+        "context": "textdb:database/godspeak.txt:xom feature tree",
+        "source_sha256": "24fde3ba274b2e9b8571bfc4fd4853081ca29d969520b1cf4c21f13335faf204",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom feature translucent wall",
+        "context": "textdb:database/godspeak.txt:xom feature translucent wall",
+        "source_sha256": "5e0aa1d2d59e551a83ad14bdf8e41fd742fca4ad9430eb8bf28ed70523808ac8",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/colourname.txt",
+            "key": "any_colour",
+            "source_sha256": "767c6fe96e4d8cc8f2424a243c7f22a5de6978c9881aa57f8ae93623fa08e95b",
+            "translation_sha256": "767c6fe96e4d8cc8f2424a243c7f22a5de6978c9881aa57f8ae93623fa08e95b"
+          },
+          {
+            "source": "database/colourname.txt",
+            "key": "any_colour_pattern",
+            "source_sha256": "7f7011de3ba32bdb34e00dce90d6fdf1ba8206bca8487fa29976fbe5c441fbaf",
+            "translation_sha256": "d2694763eb0960c54ec8e1195da767fab83e035d9b9a9b6507a14426ee81b57a"
+          },
+          {
+            "source": "database/colourname.txt",
+            "key": "any_glowing_colour_pattern",
+            "source_sha256": "d81d0efb2c3a6236f1924f9c58fec6693df1b80906282bfc8df6eaa56aefc84b",
+            "translation_sha256": "70f43756ddd109414b9fea7afca8cfd4eba2b56771ff9465ac0187359ddd5d76"
+          },
+          {
+            "source": "database/graffiti.txt",
+            "key": "any_graffiti",
+            "source_sha256": "faf948cd865c477f64c102ece7a3392467bd241af87b6a93ee8b852f7ae73a0c",
+            "translation_sha256": "092db522b515ee377dc0932c33741cc30f053135f9f89029fc9dc206c5776bfa"
+          }
+        ]
+      },
+      {
+        "key": "Xom feature metal wall",
+        "context": "textdb:database/godspeak.txt:xom feature metal wall",
+        "source_sha256": "f9e3e82a07a70bd32c7cdbec0e3e0fb57aa0f604353ea1df557a61a4ff50d06c",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom feature stone arch",
+        "context": "textdb:database/godspeak.txt:xom feature stone arch",
+        "source_sha256": "580647f81323d957c6334d85a809058be55c6b727754a099705e935ffc0e55b0",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/colourname.txt",
+            "key": "any_colour_pattern",
+            "source_sha256": "7f7011de3ba32bdb34e00dce90d6fdf1ba8206bca8487fa29976fbe5c441fbaf",
+            "translation_sha256": "d2694763eb0960c54ec8e1195da767fab83e035d9b9a9b6507a14426ee81b57a"
+          },
+          {
+            "source": "database/colourname.txt",
+            "key": "any_glowing_colour_pattern",
+            "source_sha256": "d81d0efb2c3a6236f1924f9c58fec6693df1b80906282bfc8df6eaa56aefc84b",
+            "translation_sha256": "70f43756ddd109414b9fea7afca8cfd4eba2b56771ff9465ac0187359ddd5d76"
+          },
+          {
+            "source": "database/graffiti.txt",
+            "key": "any_graffiti",
+            "source_sha256": "faf948cd865c477f64c102ece7a3392467bd241af87b6a93ee8b852f7ae73a0c",
+            "translation_sha256": "092db522b515ee377dc0932c33741cc30f053135f9f89029fc9dc206c5776bfa"
+          },
+          {
+            "source": "database/colourname.txt",
+            "key": "glowing_adj",
+            "source_sha256": "174e0ee05e812b2e78f661b94638fd43a22a6819d79e7066dd0a359bda2b5a2b",
+            "translation_sha256": "600f784062cbb999e69354e0a04240db0155612b153de9f91b7b09315c450ba1"
+          }
+        ]
+      },
+      {
+        "key": "Xom underfoot general",
+        "context": "textdb:database/godspeak.txt:xom underfoot general",
+        "source_sha256": "1f21b6c584a87f5f92df50297ba5d2eb5e39dbfc3524ae0607d0e88a7cf811ab",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom underfoot water",
+        "context": "textdb:database/godspeak.txt:xom underfoot water",
+        "source_sha256": "d94021fd9e91a81a054bc98b61154c7e009c168f2e1a351fc1e4e609b04f7de5",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom underfoot airborne general",
+        "context": "textdb:database/godspeak.txt:xom underfoot airborne general",
+        "source_sha256": "9bebe8161a42de59d10699ef3da402fd46b932e5b98cb7da079aaa4509469ddf",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom underfoot airborne water",
+        "context": "textdb:database/godspeak.txt:xom underfoot airborne water",
+        "source_sha256": "4fcd4aa2cbabe0d7aedfc1e8a01c575129da698678f2686ee20a69a5043b5cff",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "xom underfoot airborne general",
+            "source_sha256": "9bebe8161a42de59d10699ef3da402fd46b932e5b98cb7da079aaa4509469ddf",
+            "translation_sha256": "f1ecf23b3db6f30ae257b1f6276658a40b57c4bbbb56a77c2da1f33d57928f46"
+          }
+        ]
+      },
+      {
+        "key": "Xom inventory singular",
+        "context": "textdb:database/godspeak.txt:xom inventory singular",
+        "source_sha256": "dd741f457f8ed528803527801ce9a77e4c62b3d48d9db5987ca6e26e1d4e10df",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/colourname.txt",
+            "key": "any_colour",
+            "source_sha256": "767c6fe96e4d8cc8f2424a243c7f22a5de6978c9881aa57f8ae93623fa08e95b",
+            "translation_sha256": "767c6fe96e4d8cc8f2424a243c7f22a5de6978c9881aa57f8ae93623fa08e95b"
+          },
+          {
+            "source": "database/colourname.txt",
+            "key": "any_glowing_colour",
+            "source_sha256": "9b94ad4a75905e8903edf42a7f682d1796e43cfa32dd9a4ba3fea9d3d2f0928a",
+            "translation_sha256": "d457fe226b1936169257a340abd53af8bb080f6cf778d91b863e40327af6a28c"
+          }
+        ]
+      },
+      {
+        "key": "Xom inventory plural",
+        "context": "textdb:database/godspeak.txt:xom inventory plural",
+        "source_sha256": "c6dc3822400125ee794387a42d136d17a1b4e46e4fca037275b299dbb97d03a7",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/colourname.txt",
+            "key": "any_colour",
+            "source_sha256": "767c6fe96e4d8cc8f2424a243c7f22a5de6978c9881aa57f8ae93623fa08e95b",
+            "translation_sha256": "767c6fe96e4d8cc8f2424a243c7f22a5de6978c9881aa57f8ae93623fa08e95b"
+          },
+          {
+            "source": "database/colourname.txt",
+            "key": "any_glowing_colour",
+            "source_sha256": "9b94ad4a75905e8903edf42a7f682d1796e43cfa32dd9a4ba3fea9d3d2f0928a",
+            "translation_sha256": "d457fe226b1936169257a340abd53af8bb080f6cf778d91b863e40327af6a28c"
+          }
+        ]
+      },
+      {
+        "key": "Xom floor inventory singular",
+        "context": "textdb:database/godspeak.txt:xom floor inventory singular",
+        "source_sha256": "7bacd5d95578f4a838e6d773132e877083f57205993064cf11d276c5bb6974b3",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "xom inventory singular",
+            "source_sha256": "dd741f457f8ed528803527801ce9a77e4c62b3d48d9db5987ca6e26e1d4e10df",
+            "translation_sha256": "5034134ceae44479ee9046504b0959f417de7f4d95efc8ea27e39f91a73920ea"
+          }
+        ]
+      },
+      {
+        "key": "Xom floor inventory plural",
+        "context": "textdb:database/godspeak.txt:xom floor inventory plural",
+        "source_sha256": "2fa4a6124c2cda210db1f04da3111e96ffa4de7e708fe70b2cc9584b4b968b9d",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "xom inventory plural",
+            "source_sha256": "c6dc3822400125ee794387a42d136d17a1b4e46e4fca037275b299dbb97d03a7",
+            "translation_sha256": "2d71999601fee196025ac2f927035f5b4fea3ee6a3fa8b1446b10ca44076481a"
+          }
+        ]
+      },
+      {
+        "key": "Xom bandages",
+        "context": "textdb:database/godspeak.txt:xom bandages",
+        "source_sha256": "a45e6a207d71ff568fc133118ba7af4e76bf941bc57c1bf2960bd4a29f361edc",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom floor bandages",
+        "context": "textdb:database/godspeak.txt:xom floor bandages",
+        "source_sha256": "094401f0356f34962ffc6a57f90208672d5ba7f11db77d0a3a8d1a604a8cde76",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "xom bandages",
+            "source_sha256": "a45e6a207d71ff568fc133118ba7af4e76bf941bc57c1bf2960bd4a29f361edc",
+            "translation_sha256": "d979ab58c183f053b326b68f0625a594e870c218672dc5ebe8dd4220bee543fa"
+          }
+        ]
+      },
+      {
+        "key": "Xom one eye",
+        "context": "textdb:database/godspeak.txt:xom one eye",
+        "source_sha256": "cdecb8734fdbd20245e79ff9726ed72aae0444cd8a728a9bac7d579463a51308",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/colourname.txt",
+            "key": "any_colour",
+            "source_sha256": "767c6fe96e4d8cc8f2424a243c7f22a5de6978c9881aa57f8ae93623fa08e95b",
+            "translation_sha256": "767c6fe96e4d8cc8f2424a243c7f22a5de6978c9881aa57f8ae93623fa08e95b"
+          }
+        ]
+      },
+      {
+        "key": "Xom eyes",
+        "context": "textdb:database/godspeak.txt:xom eyes",
+        "source_sha256": "64557c80cf4d144b963ef8c0241751ac0a839f5d22968dd665124dd44608bee2",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/colourname.txt",
+            "key": "any_colour",
+            "source_sha256": "767c6fe96e4d8cc8f2424a243c7f22a5de6978c9881aa57f8ae93623fa08e95b",
+            "translation_sha256": "767c6fe96e4d8cc8f2424a243c7f22a5de6978c9881aa57f8ae93623fa08e95b"
+          }
+        ]
+      },
+      {
+        "key": "Xom ears",
+        "context": "textdb:database/godspeak.txt:xom ears",
+        "source_sha256": "cb041ac6b5e978ab7b57efcd26a3196b4f378b5e3160d44cc533c4b98dd846ef",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom mouth",
+        "context": "textdb:database/godspeak.txt:xom mouth",
+        "source_sha256": "262cd32a08f257d1e35f5408490ce206471fb4c6e5acceca8be471d49abe2887",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom hair",
+        "context": "textdb:database/godspeak.txt:xom hair",
+        "source_sha256": "d88b6df61adb6d6a46562d8c8d7d5c033e25fab1ed846667a876cc95bac2cdea",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom impromptu dance",
+        "context": "textdb:database/godspeak.txt:xom impromptu dance",
+        "source_sha256": "be65c332cd3dc881c9c733ecdd27ecdf2ee10925c3969746b2d9a5528d71fd09",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "_xom_number_",
+            "source_sha256": "a840ee90f2013e5a7b024c9cbf902949d2051c0b508b16b1448ef4debc0a5e67",
+            "translation_sha256": "d61c876d1be63a98f84bc962cab8309b0590baa82496f1570f88b626a0f3edb4"
+          },
+          {
+            "source": "database/godspeak.txt",
+            "key": "acrobatic_move_name",
+            "source_sha256": "2fc7c6a26b72f3137174d6d388b5fe5f31fc4d53f60905edc604e81c3c555b89",
+            "translation_sha256": "d6d8d967983f15f8e0820ecb78a488f4b1f5d1fafd12eb6fda4b1ffd2bf6adb9"
+          },
+          {
+            "source": "database/godspeak.txt",
+            "key": "dance_name",
+            "source_sha256": "048d52f7015b8e0cf410a5fa2329f12df82c5d7aa69b33b6431e5c9d48988779",
+            "translation_sha256": "67810e7f4595805b3decfb3bf1826b043a9c62a0343ca9e0cc789a902d8c5fa1"
+          }
+        ]
+      },
+      {
+        "key": "dance_name",
+        "context": "textdb:database/godspeak.txt:dance_name",
+        "source_sha256": "048d52f7015b8e0cf410a5fa2329f12df82c5d7aa69b33b6431e5c9d48988779",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "acrobatic_move_name",
+        "context": "textdb:database/godspeak.txt:acrobatic_move_name",
+        "source_sha256": "2fc7c6a26b72f3137174d6d388b5fe5f31fc4d53f60905edc604e81c3c555b89",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom tail",
+        "context": "textdb:database/godspeak.txt:xom tail",
+        "source_sha256": "53ee17577d87b7c901db06f51639eabe58537d1b2168caa0279f2c4681b87bed",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom random body part singular",
+        "context": "textdb:database/godspeak.txt:xom random body part singular",
+        "source_sha256": "8d4a052d7b06450fb1f9209ccbe1ace1b14768b88988c9fdcd0aa49435bbc64a",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom random body part plural",
+        "context": "textdb:database/godspeak.txt:xom random body part plural",
+        "source_sha256": "a737671471cd7d0d40cecb6abc4b159f4fa6e7234b1b97599fb1bb31bd8f4981",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom unarmed one hand",
+        "context": "textdb:database/godspeak.txt:xom unarmed one hand",
+        "source_sha256": "718b07c2d0d1503548e01d81bb70dc5675d3673efcacdcd367a74be32ef73cd5",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom unarmed two hands",
+        "context": "textdb:database/godspeak.txt:xom unarmed two hands",
+        "source_sha256": "1e573a7f935a42bc73f96cdb6281d651a28ce428347c17e7a191a36601ffac1c",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "_xom_number_",
+            "source_sha256": "a840ee90f2013e5a7b024c9cbf902949d2051c0b508b16b1448ef4debc0a5e67",
+            "translation_sha256": "d61c876d1be63a98f84bc962cab8309b0590baa82496f1570f88b626a0f3edb4"
+          },
+          {
+            "source": "database/godspeak.txt",
+            "key": "xom unarmed one hand",
+            "source_sha256": "718b07c2d0d1503548e01d81bb70dc5675d3673efcacdcd367a74be32ef73cd5",
+            "translation_sha256": "b8e09e5f69e58692305649b7959398357a496b7f240e19168dfbada7721b90a6"
+          }
+        ]
+      },
+      {
+        "key": "Xom cloak slot",
+        "context": "textdb:database/godspeak.txt:xom cloak slot",
+        "source_sha256": "e4a44f0cd85b930504757abf377a20997a1833dcd15b517f5ef99cb47cc3b394",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/colourname.txt",
+            "key": "any_glowing_colour_pattern",
+            "source_sha256": "d81d0efb2c3a6236f1924f9c58fec6693df1b80906282bfc8df6eaa56aefc84b",
+            "translation_sha256": "70f43756ddd109414b9fea7afca8cfd4eba2b56771ff9465ac0187359ddd5d76"
+          }
+        ]
+      },
+      {
+        "key": "Xom helmet slot",
+        "context": "textdb:database/godspeak.txt:xom helmet slot",
+        "source_sha256": "2e848365015422f4ec3b742c3639e411c48914da84b16bebabaf9f640ade298a",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom offhand slot",
+        "context": "textdb:database/godspeak.txt:xom offhand slot",
+        "source_sha256": "6ed651b6b30244021b8843c325929487014e1315a2cc390dca613dd3aeb26aad",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/colourname.txt",
+            "key": "any_glowing_colour",
+            "source_sha256": "9b94ad4a75905e8903edf42a7f682d1796e43cfa32dd9a4ba3fea9d3d2f0928a",
+            "translation_sha256": "d457fe226b1936169257a340abd53af8bb080f6cf778d91b863e40327af6a28c"
+          }
+        ]
+      },
+      {
+        "key": "Xom gloves slot",
+        "context": "textdb:database/godspeak.txt:xom gloves slot",
+        "source_sha256": "a865fcca5845cfdda67d3c9e5c4dd496684f141159587a0064d5f94b7c8b0f4f",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "_xom_number_",
+            "source_sha256": "a840ee90f2013e5a7b024c9cbf902949d2051c0b508b16b1448ef4debc0a5e67",
+            "translation_sha256": "d61c876d1be63a98f84bc962cab8309b0590baa82496f1570f88b626a0f3edb4"
+          }
+        ]
+      },
+      {
+        "key": "Xom boots slot",
+        "context": "textdb:database/godspeak.txt:xom boots slot",
+        "source_sha256": "677a056624afbf87a5a7becb23f9d724affc3a25f659b1918d6d961ad68abd3e",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom amulet slot",
+        "context": "textdb:database/godspeak.txt:xom amulet slot",
+        "source_sha256": "11c26325543bcc66e9a03565bd030f17a39475960a1af32ee97daafc82b3b6ab",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/colourname.txt",
+            "key": "any_glowing_colour",
+            "source_sha256": "9b94ad4a75905e8903edf42a7f682d1796e43cfa32dd9a4ba3fea9d3d2f0928a",
+            "translation_sha256": "d457fe226b1936169257a340abd53af8bb080f6cf778d91b863e40327af6a28c"
+          }
+        ]
+      },
+      {
+        "key": "Xom gizmo slot",
+        "context": "textdb:database/godspeak.txt:xom gizmo slot",
+        "source_sha256": "6e82f234f63e58abc271c970ebeb285d9a1b7ccfb293327d3e65c1a23f2ab952",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/colourname.txt",
+            "key": "rainbow_colour",
+            "source_sha256": "832fbdb911738f6f01f1a6a1b817a55f9336ffaec51805ddf09b05c5c68d1bc0",
+            "translation_sha256": "e02c243199d41b502cc9b5f204f077bff6a38d5a21c8788739f052d3b778b105"
+          }
+        ]
+      },
+      {
+        "key": "Xom ring slot",
+        "context": "textdb:database/godspeak.txt:xom ring slot",
+        "source_sha256": "ff4896bacb278ae2b3e2b9c6959b36c8de2e49e5949cc01922d3fa265441baa1",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom dragon armour",
+        "context": "textdb:database/godspeak.txt:xom dragon armour",
+        "source_sha256": "447b15724dc6a1aad0f02c283d56a8c807b69d155596a2b5e48e4b4d170425f1",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom animal skin",
+        "context": "textdb:database/godspeak.txt:xom animal skin",
+        "source_sha256": "99ee4ee7488ab6d19a0e249a5e9030fb2e0e980e47f5841cea798c664a0eda21",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom leather armour",
+        "context": "textdb:database/godspeak.txt:xom leather armour",
+        "source_sha256": "cfcd3271dba683f269999171bd4a18bb9e56947fa7708d02fb44a5bfc798c0fa",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom robe",
+        "context": "textdb:database/godspeak.txt:xom robe",
+        "source_sha256": "99663d02779cca7acae10a79d2d2ab150e0b7cab4d877188c2e3de25145f4bd1",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom metal armour",
+        "context": "textdb:database/godspeak.txt:xom metal armour",
+        "source_sha256": "ce143a09d17f4c3273a111606112c33d87c333f16499120685e7b404f8297707",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom rearrange the pieces",
+        "context": "textdb:database/godspeak.txt:xom rearrange the pieces",
+        "source_sha256": "26abf2a0519ffa9356bf6b79a86c728ba4603ced19cf58f9a892f798d803b6e8",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom teleportation journey",
+        "context": "textdb:database/godspeak.txt:xom teleportation journey",
+        "source_sha256": "03e521d2df6bc8443cf75cda63bcf64458734c5fd6f1165d07d66596d19cafc2",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom confusion",
+        "context": "textdb:database/godspeak.txt:xom confusion",
+        "source_sha256": "81791e395f4d672590bd8021e65b4d1ae72f217b371590ee67b7449086c0e529",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom drinkless confusion",
+        "context": "textdb:database/godspeak.txt:xom drinkless confusion",
+        "source_sha256": "85244a9b99aa51ddbfff9d033cfcee041fbec35a1729aa28f481da0ed16bdc52",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom suffering",
+        "context": "textdb:database/godspeak.txt:xom suffering",
+        "source_sha256": "3a3d88e54dd6afb4b4ee7b5359351d13357e07a424191b0955f5ebeaa62249db",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom torment all",
+        "context": "textdb:database/godspeak.txt:xom torment all",
+        "source_sha256": "e6ce4699149e540a9a67ae11007884d616b2655c772bb6a0cb41c86e87f277aa",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom hostile monster",
+        "context": "textdb:database/godspeak.txt:xom hostile monster",
+        "source_sha256": "c2ea0b98bde010c88305bfb11a359479d63717019622a4ee2beccd5c9fb5318e",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom send in the clones",
+        "context": "textdb:database/godspeak.txt:xom send in the clones",
+        "source_sha256": "779033f0f3245ad24f8b5e9dfac667bfd107f84f36e5b8fc485406696f371697",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom brain drain",
+        "context": "textdb:database/godspeak.txt:xom brain drain",
+        "source_sha256": "09330441c12ef07bf451e69f27675d69a860a0bb423e99953c62679964707cac",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom drained brain",
+        "context": "textdb:database/godspeak.txt:xom drained brain",
+        "source_sha256": "84067dd39270fe080c999f6d7c669a1966af0998b21397083376b953c5e166f2",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom banishment",
+        "context": "textdb:database/godspeak.txt:xom banishment",
+        "source_sha256": "83e9968cd4a6266f4c6001f36bfbf4c45523d313488e38cc8ac0645ffe007347",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom revert own banishment",
+        "context": "textdb:database/godspeak.txt:xom revert own banishment",
+        "source_sha256": "8c6da5fe830d0cb385ef2192d84e2a5f262e75f46253b0ce9dd8b8ec9796e637",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom revert other banishment",
+        "context": "textdb:database/godspeak.txt:xom revert other banishment",
+        "source_sha256": "dc3c3185a174efbaa277437d08663b78ded9a2177e0c05a6ab56363e4c333e1d",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom chaos upgrade",
+        "context": "textdb:database/godspeak.txt:xom chaos upgrade",
+        "source_sha256": "c9660a1fbcd6b4ce978524a5a5303b64c4c781ad65f4c345a24867a1b6c53472",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom noise",
+        "context": "textdb:database/godspeak.txt:xom noise",
+        "source_sha256": "0d91424aba2c167812108bd0f9764cdfccefc29cadad696a267da5b4fa3e68ec",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/wpnnoise.txt",
+            "key": "weapon_noise",
+            "source_sha256": "8c1a641c9ac783a7ed3d351c7897aa307a95ca23c4d55240763a48672379b395",
+            "translation_sha256": "af3cdd01b4a5e6d2fc057d4d4815b7b6eeababa9ef20381e02ada5ae003b0690"
+          }
+        ]
+      },
+      {
+        "key": "Xom fake shatter",
+        "context": "textdb:database/godspeak.txt:xom fake shatter",
+        "source_sha256": "7f8403405cfdd140da29b4538fa347c1ce90dcb6f0330f2fce19c23940da57b1",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom blink monsters",
+        "context": "textdb:database/godspeak.txt:xom blink monsters",
+        "source_sha256": "adc670e459f4b411dbf485f4709a401d984638c19fe32c84904ed631c53dfffd",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom fast forward",
+        "context": "textdb:database/godspeak.txt:xom fast forward",
+        "source_sha256": "2baee2ed0e60a2aeef7b2ed7f955b9e5af66e23f97ad12abb2a2202e827156a1",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom slow motion",
+        "context": "textdb:database/godspeak.txt:xom slow motion",
+        "source_sha256": "f014ec58d2122e7624d2f0a011716b7d1236a91c3cfad4e13a54ee4f8d7dd11d",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom pause",
+        "context": "textdb:database/godspeak.txt:xom pause",
+        "source_sha256": "eb9f633c3f3e7623f0f9332ebe6b6e8e1a7bdf3678bf01146d44d054897bcec8",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom grant word of recall",
+        "context": "textdb:database/godspeak.txt:xom grant word of recall",
+        "source_sha256": "1bb0c875975297473ebb98ba1e263acee288667d53a6955774c6840406ac2b13",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom grant voiceless word of recall",
+        "context": "textdb:database/godspeak.txt:xom grant voiceless word of recall",
+        "source_sha256": "167d55917899cf1cbbddda1e1bc7de839b3ebca15dd7cd1df3d18887c9a4f6ca",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom potion effect",
+        "context": "textdb:database/godspeak.txt:xom potion effect",
+        "source_sha256": "1f5ca32c7c720166e338afa9a1519e824875532e899e17c57c9a1235d791d222",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom cleaving",
+        "context": "textdb:database/godspeak.txt:xom cleaving",
+        "source_sha256": "946f0168c2ef84476fdb893f250e2a42d265fea3312462e2941e19df6fc747f2",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "xom potion effect",
+            "source_sha256": "1f5ca32c7c720166e338afa9a1519e824875532e899e17c57c9a1235d791d222",
+            "translation_sha256": "ec25b3e9d7fa34643a08a232abb7fa673134dc8c4451e88ceb3c8b9102d8c734"
+          }
+        ]
+      },
+      {
+        "key": "Xom divination",
+        "context": "textdb:database/godspeak.txt:xom divination",
+        "source_sha256": "4e8ce375ed2ce775c2d1247ae6135e755425da354d8d1aaf6f767279c680de55",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom spell effect",
+        "context": "textdb:database/godspeak.txt:xom spell effect",
+        "source_sha256": "738d499d79f2c9c4f61647f706affbe7dbf7c769f7ccdea575950c5fbcc43629",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom cloud trail",
+        "context": "textdb:database/godspeak.txt:xom cloud trail",
+        "source_sha256": "56065743e8365acfbc7f57b38e3be31994ebf445d6a42837f0098aea0d8f6e73",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom good monster polymorph",
+        "context": "textdb:database/godspeak.txt:xom good monster polymorph",
+        "source_sha256": "24b1871889a421eb5f936b520b701d675b0e9f6f7fbfa5595776ca23073df98c",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom bad monster polymorph",
+        "context": "textdb:database/godspeak.txt:xom bad monster polymorph",
+        "source_sha256": "a82e17a2e83821660a24222bd105e4db0f0511c7b7a78d48676758bf22d6dee9",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "xom good monster polymorph",
+            "source_sha256": "24b1871889a421eb5f936b520b701d675b0e9f6f7fbfa5595776ca23073df98c",
+            "translation_sha256": "7c2b5697d367bcca9be0c1b06f7c8915068c69ebd5279ffbea96376301e3e677"
+          }
+        ]
+      },
+      {
+        "key": "Xom wave of despair",
+        "context": "textdb:database/godspeak.txt:xom wave of despair",
+        "source_sha256": "d7e39391c291f981b84dd47c3da19e7bf2c861e471f8c5b4d5b329a258d1d350",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom good mutations",
+        "context": "textdb:database/godspeak.txt:xom good mutations",
+        "source_sha256": "416c98762bb91d63d5cd9254d724390eb9139cb4afad254db1e20f4251adec4b",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/colourname.txt",
+            "key": "misc_colour",
+            "source_sha256": "f0ce39152cfe11a50957fb4ebe6647e9ff351e2c92ea8d81603818c02470cbb1",
+            "translation_sha256": "437c972b52ac747af13ec557cf922b7aa9dc08cc1ab1948dc7b56fe40e39b682"
+          },
+          {
+            "source": "database/colourname.txt",
+            "key": "rainbow_colour",
+            "source_sha256": "832fbdb911738f6f01f1a6a1b817a55f9336ffaec51805ddf09b05c5c68d1bc0",
+            "translation_sha256": "e02c243199d41b502cc9b5f204f077bff6a38d5a21c8788739f052d3b778b105"
+          }
+        ]
+      },
+      {
+        "key": "Xom random mutations",
+        "context": "textdb:database/godspeak.txt:xom random mutations",
+        "source_sha256": "7e267db1f0a8c2650bf0a11ee987497870968a5e95cc19ffe93ce6f692eab66f",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/colourname.txt",
+            "key": "misc_colour",
+            "source_sha256": "f0ce39152cfe11a50957fb4ebe6647e9ff351e2c92ea8d81603818c02470cbb1",
+            "translation_sha256": "437c972b52ac747af13ec557cf922b7aa9dc08cc1ab1948dc7b56fe40e39b682"
+          },
+          {
+            "source": "database/colourname.txt",
+            "key": "rainbow_colour",
+            "source_sha256": "832fbdb911738f6f01f1a6a1b817a55f9336ffaec51805ddf09b05c5c68d1bc0",
+            "translation_sha256": "e02c243199d41b502cc9b5f204f077bff6a38d5a21c8788739f052d3b778b105"
+          }
+        ]
+      },
+      {
+        "key": "Xom divine lightning",
+        "context": "textdb:database/godspeak.txt:xom divine lightning",
+        "source_sha256": "13eb5936e17270c1bc47aa88f0ac19e7ac0b43bc23213040c6312d48b49424b6",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom snakes to sticks",
+        "context": "textdb:database/godspeak.txt:xom snakes to sticks",
+        "source_sha256": "22173e6ffafbb50c8c2fe37e0531b66bd007d06bb492b9ff5f4e15e2cfbfac46",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "xom good monster polymorph",
+            "source_sha256": "24b1871889a421eb5f936b520b701d675b0e9f6f7fbfa5595776ca23073df98c",
+            "translation_sha256": "7c2b5697d367bcca9be0c1b06f7c8915068c69ebd5279ffbea96376301e3e677"
+          }
+        ]
+      },
+      {
+        "key": "Xom lights up webs",
+        "context": "textdb:database/godspeak.txt:xom lights up webs",
+        "source_sha256": "78824551f02f33226c4761d23720f3964e7cfa3685c070a31fd7731651d9acd6",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "xom fake destruction",
+            "source_sha256": "7cd925cd01d5620931a02779f36dc883f8fafb5c05ecb4849b9fe4438d14eead",
+            "translation_sha256": "06c311989291ba575241bc276461178da4d32457075785e3711a5b9bbcb64a79"
+          }
+        ]
+      },
+      {
+        "key": "Xom destruction",
+        "context": "textdb:database/godspeak.txt:xom destruction",
+        "source_sha256": "1cd89055bdf9ac0757e03a438229825b1eadcef13938b0bac07e868acc7b456e",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "xom fake destruction",
+            "source_sha256": "7cd925cd01d5620931a02779f36dc883f8fafb5c05ecb4849b9fe4438d14eead",
+            "translation_sha256": "06c311989291ba575241bc276461178da4d32457075785e3711a5b9bbcb64a79"
+          }
+        ]
+      },
+      {
+        "key": "Xom fake destruction",
+        "context": "textdb:database/godspeak.txt:xom fake destruction",
+        "source_sha256": "7cd925cd01d5620931a02779f36dc883f8fafb5c05ecb4849b9fe4438d14eead",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom force lance fleet",
+        "context": "textdb:database/godspeak.txt:xom force lance fleet",
+        "source_sha256": "959ab51c55cece7d0a311df87440d59292333d7236a3f7083b2e89d783407af4",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom accidental homicide",
+        "context": "textdb:database/godspeak.txt:xom accidental homicide",
+        "source_sha256": "1931bd3d0ac9f1888213998233a4e297e16e8a45a2f4e438e7fdd215113ce407",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom weird death",
+        "context": "textdb:database/godspeak.txt:xom weird death",
+        "source_sha256": "2313b897fc17acc9211c9ab1641f3c802dc8affbe9de6d3451fb9c0255e0f8ec",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom resurrection",
+        "context": "textdb:database/godspeak.txt:xom resurrection",
+        "source_sha256": "017c0f403b8ceafa532b4ca94fe3a5cc898eeaf4ed69df6ef871e00f53813514",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/colourname.txt",
+            "key": "mono_colour",
+            "source_sha256": "390b6f03392564cd7afb0d462a8b330bb9c030b7e514d5bf82aa178804779223",
+            "translation_sha256": "136f278dfa856977b0de6fecd0cec114b8293b90906062ad0a502981d0a2bc5f"
+          }
+        ]
+      },
+      {
+        "key": "Xom repel stairs",
+        "context": "textdb:database/godspeak.txt:xom repel stairs",
+        "source_sha256": "68d9a306161310ca4397819d70b3e4003491592a5b16f181e83c28b7cbb88cd1",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom good enchant monster",
+        "context": "textdb:database/godspeak.txt:xom good enchant monster",
+        "source_sha256": "a82e17a2e83821660a24222bd105e4db0f0511c7b7a78d48676758bf22d6dee9",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "xom good monster polymorph",
+            "source_sha256": "24b1871889a421eb5f936b520b701d675b0e9f6f7fbfa5595776ca23073df98c",
+            "translation_sha256": "7c2b5697d367bcca9be0c1b06f7c8915068c69ebd5279ffbea96376301e3e677"
+          }
+        ]
+      },
+      {
+        "key": "Xom bad enchant monster",
+        "context": "textdb:database/godspeak.txt:xom bad enchant monster",
+        "source_sha256": "1df0d76773cf0e05a50fb4965bb1d5121c2cc04517f26eaba653825fbac29425",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "xom good enchant monster",
+            "source_sha256": "a82e17a2e83821660a24222bd105e4db0f0511c7b7a78d48676758bf22d6dee9",
+            "translation_sha256": "a82e17a2e83821660a24222bd105e4db0f0511c7b7a78d48676758bf22d6dee9"
+          }
+        ]
+      },
+      {
+        "key": "Xom good hyper enchant monster",
+        "context": "textdb:database/godspeak.txt:xom good hyper enchant monster",
+        "source_sha256": "630384579e18bbe92cb1caede8739902a17660df5d32090f04e6025076c1b42d",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom mass charm",
+        "context": "textdb:database/godspeak.txt:xom mass charm",
+        "source_sha256": "1bd166ce929a1b7a0ec1f4d7bac22cda61bac2637614992c61e3ff68a394971d",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "_trout_species_",
+            "source_sha256": "143ae8568a14d715cd10b169b6f2e1c7403fc67a9681a70e1379ca19b78c6bb3",
+            "translation_sha256": "bc89b38c85644b4b32ef5e8eb302d90c5ce73b122b05a8beabaececf31bdf4cb"
+          }
+        ]
+      },
+      {
+        "key": "Xom stealth player",
+        "context": "textdb:database/godspeak.txt:xom stealth player",
+        "source_sha256": "e2e76bb6d6965923da73310ae6915b94045a1e51be06d8743c437ce35cc5b796",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom cloud",
+        "context": "textdb:database/godspeak.txt:xom cloud",
+        "source_sha256": "83578862597c60396ad2686a8b7a1aaa8585a7e850a241d33e689e6f70e19b71",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom life saving general",
+        "context": "textdb:database/godspeak.txt:xom life saving general",
+        "source_sha256": "e0a6c5362bec8648cff7fac061d8619b30d4889717ac943cccc51a96d76b0f61",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "_xom_plaything_",
+            "source_sha256": "fd55561e3c76757e0ba70dfd966a6ee15117320a06cf7c75ebbbc6443d28bd59",
+            "translation_sha256": "fd55561e3c76757e0ba70dfd966a6ee15117320a06cf7c75ebbbc6443d28bd59"
+          }
+        ]
+      },
+      {
+        "key": "Xom life saving actor",
+        "context": "textdb:database/godspeak.txt:xom life saving actor",
+        "source_sha256": "0ed514a3d28aa8d783521fc358cdff5011bff26191157f542c245f9e3a793c79",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "_xom_plaything_",
+            "source_sha256": "fd55561e3c76757e0ba70dfd966a6ee15117320a06cf7c75ebbbc6443d28bd59",
+            "translation_sha256": "fd55561e3c76757e0ba70dfd966a6ee15117320a06cf7c75ebbbc6443d28bd59"
+          },
+          {
+            "source": "database/godspeak.txt",
+            "key": "xom life saving general",
+            "source_sha256": "e0a6c5362bec8648cff7fac061d8619b30d4889717ac943cccc51a96d76b0f61",
+            "translation_sha256": "b4fffc6dda70fb174e5440c6a310283a319e270b3a04fbec1c9f9efc51a4d8eb"
+          }
+        ]
+      },
+      {
+        "key": "Xom boring death",
+        "context": "textdb:database/godspeak.txt:xom boring death",
+        "source_sha256": "2522df8017ae0635553221ad205c0f5d38428670067b6aa2434a737b23f5e554",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom laughter",
+        "context": "textdb:database/godspeak.txt:xom laughter",
+        "source_sha256": "944993b5bb6f9c5177e4699422ffd06b158a75bb38ac2965ad44d7493a11dec9",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "_xom_plaything_",
+        "context": "textdb:database/godspeak.txt:_xom_plaything_",
+        "source_sha256": "fd55561e3c76757e0ba70dfd966a6ee15117320a06cf7c75ebbbc6443d28bd59",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "recite_closure",
+        "context": "textdb:database/godspeak.txt:recite_closure",
+        "source_sha256": "bf00b36de6b97ef594a114c9bb479e8afe9d0bd72c1ceb7821959f2965c928d7",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Ignis elemental wrath",
+        "context": "textdb:database/godspeak.txt:ignis elemental wrath",
+        "source_sha256": "a2669fcbfda122440dab9c22fc5a75934544a832da8d8012160da308f81e8692",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Makhleb executioner chatter",
+        "context": "textdb:database/godspeak.txt:makhleb executioner chatter",
+        "source_sha256": "e5b3afae9a4dc94ffd8aa52201d712a22960d1fa079bffec8eab18e6e42bb0e1",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Ashenzari welcome",
+        "context": "textdb:database/godspeak.txt:ashenzari welcome",
+        "source_sha256": "671ab4660bb8d2e8f06b4ff4c4763e5bc3a39d1e0f92dbf13d2601ad88024e11",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Beogh penance",
+        "context": "textdb:database/godspeak.txt:beogh penance",
+        "source_sha256": "e853cee9e39314ce4832520c4e908e25fa3007c74ca587bdf5626740149e2ce9",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Beogh welcome",
+        "context": "textdb:database/godspeak.txt:beogh welcome",
+        "source_sha256": "1527b6bce91556a42c6a9e8b2411875513c7de5c39a870a2307c5c257c0f1ed3",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Beogh apostle challenge",
+        "context": "textdb:database/godspeak.txt:beogh apostle challenge",
+        "source_sha256": "d2874ee3080058f6652d316768d9dbed95f1170df9f1a3476defbadf2cc05e15",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Cheibriados penance",
+        "context": "textdb:database/godspeak.txt:cheibriados penance",
+        "source_sha256": "77f4d229f0fc0ecc5eaaac2df375b7fca800597e2d58933dfd75ccbc29c83b7c",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Cheibriados welcome",
+        "context": "textdb:database/godspeak.txt:cheibriados welcome",
+        "source_sha256": "3af39f3e08a0378ffa31d561e2968f8e142429a50d7d2f5cd3f0e8d2a749a469",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Cheibriados death",
+        "context": "textdb:database/godspeak.txt:cheibriados death",
+        "source_sha256": "2d5af6507263ccbcc7b356bb6003d37191f201083c158495369ab749d657d262",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Dithmenos welcome",
+        "context": "textdb:database/godspeak.txt:dithmenos welcome",
+        "source_sha256": "ae6f839e1af1ecdf50b3c435bdf654ff9adc0c789407006afd8aced11211fe6b",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Elyvilon penance",
+        "context": "textdb:database/godspeak.txt:elyvilon penance",
+        "source_sha256": "d6ed5ea1891a1b79ca411f15c7204006ad8a10d8fb45ffda2d903de9e8ab6b7c",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Elyvilon welcome",
+        "context": "textdb:database/godspeak.txt:elyvilon welcome",
+        "source_sha256": "faa2c7bd9b9c1ebf3df13744f07395418283affff94d48411ff870adf66d1b24",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Fedhas penance",
+        "context": "textdb:database/godspeak.txt:fedhas penance",
+        "source_sha256": "266a05080594e96bcc5aec8a71dc2a91541231283ad3bb50b5efb51095a60aa7",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Fedhas welcome",
+        "context": "textdb:database/godspeak.txt:fedhas welcome",
+        "source_sha256": "41ed6f8b5e9b489c9d2fa060ee35b0c2f543c95b9b115923429db7e55d5c7cc3",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Fedhas death",
+        "context": "textdb:database/godspeak.txt:fedhas death",
+        "source_sha256": "c25c7351550bf73c72e5a305c5606dc3b7c8b5dba090d38f0570c3851aa0d068",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Gozag welcome",
+        "context": "textdb:database/godspeak.txt:gozag welcome",
+        "source_sha256": "e173d165a159e52f09899dcd76b06b69933a9bdc5ed3f9872603505e56b3225b",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Hepliaklqana welcome",
+        "context": "textdb:database/godspeak.txt:hepliaklqana welcome",
+        "source_sha256": "88f5d91e5c9078a6f91f0fde1fb3613c77088a4c51cc51747546708c1aa078e9",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Hepliaklqana death",
+        "context": "textdb:database/godspeak.txt:hepliaklqana death",
+        "source_sha256": "05ee6732e5f18a1552091c827239b65d5fef132174c37129ac50b0b5b9f6aacf",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Ignis welcome",
+        "context": "textdb:database/godspeak.txt:ignis welcome",
+        "source_sha256": "4af6203b95b76fdc7b48b113913a432d99078f3e38f1f2bce7c567b7f8643dea",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Ignis death",
+        "context": "textdb:database/godspeak.txt:ignis death",
+        "source_sha256": "1bfb6e6431f8917b0f4b96b8d977b204554c8ad560f4f4f417951c2a19d80de8",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Jiyva welcome",
+        "context": "textdb:database/godspeak.txt:jiyva welcome",
+        "source_sha256": "aa41ea5b65cb4b351cf3da49a8501a38c4c6419ffceffb5175d6d5ca335f0484",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Jiyva death corpse",
+        "context": "textdb:database/godspeak.txt:jiyva death corpse",
+        "source_sha256": "71991e9468d4e3071af2569565c17601809f619740530a90a0ec593e222023e5",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Jiyva death corpse undead",
+        "context": "textdb:database/godspeak.txt:jiyva death corpse undead",
+        "source_sha256": "661bdd991e228d6a6255c89f13722abc4832eb7227a2724edced4c3d3628c8c6",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "jiyva death corpse",
+            "source_sha256": "71991e9468d4e3071af2569565c17601809f619740530a90a0ec593e222023e5",
+            "translation_sha256": "0ee53094639eff84eb0c45c17f2fa100fe60b25285409a8044d80f7395706130"
+          }
+        ]
+      },
+      {
+        "key": "Jiyva death corpse nonliving",
+        "context": "textdb:database/godspeak.txt:jiyva death corpse nonliving",
+        "source_sha256": "2206dedabeb671d669b271075bb289b02dfa551d9c25e6bf78f8b52366b015ee",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Kikubaaqudgha welcome",
+        "context": "textdb:database/godspeak.txt:kikubaaqudgha welcome",
+        "source_sha256": "facaf197be4bd6ceac935ba9189a8a64a416ceeb5fb9483ae0ab9302f64714c3",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Kikubaaqudgha death",
+        "context": "textdb:database/godspeak.txt:kikubaaqudgha death",
+        "source_sha256": "9229cf01293df121e6d42dbc4b5470cbb03df3fd3c40c6ee7ba57172f10f5dff",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Kikubaaqudgha death corpse undead",
+        "context": "textdb:database/godspeak.txt:kikubaaqudgha death corpse undead",
+        "source_sha256": "457824216299ace40f958ad7c97768f7ba2bf851c7a535e56a0b865ee00a1ef4",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Kikubaaqudgha death corpse nonliving",
+        "context": "textdb:database/godspeak.txt:kikubaaqudgha death corpse nonliving",
+        "source_sha256": "b8e92fdfb2dc037864ba4cd13e19c110448eca4fc44263dd039c5db2f74f324e",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "kikubaaqudgha death corpse undead",
+            "source_sha256": "457824216299ace40f958ad7c97768f7ba2bf851c7a535e56a0b865ee00a1ef4",
+            "translation_sha256": "fb1be2e8eedde8ab18424c72593bb4ad151f918ab24738d5218717d048b1681a"
+          }
+        ]
+      },
+      {
+        "key": "Kikubaaqudgha death undead",
+        "context": "textdb:database/godspeak.txt:kikubaaqudgha death undead",
+        "source_sha256": "b8e92fdfb2dc037864ba4cd13e19c110448eca4fc44263dd039c5db2f74f324e",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "kikubaaqudgha death corpse undead",
+            "source_sha256": "457824216299ace40f958ad7c97768f7ba2bf851c7a535e56a0b865ee00a1ef4",
+            "translation_sha256": "fb1be2e8eedde8ab18424c72593bb4ad151f918ab24738d5218717d048b1681a"
+          }
+        ]
+      },
+      {
+        "key": "Kikubaaqudgha death nonliving",
+        "context": "textdb:database/godspeak.txt:kikubaaqudgha death nonliving",
+        "source_sha256": "b8e92fdfb2dc037864ba4cd13e19c110448eca4fc44263dd039c5db2f74f324e",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "kikubaaqudgha death corpse undead",
+            "source_sha256": "457824216299ace40f958ad7c97768f7ba2bf851c7a535e56a0b865ee00a1ef4",
+            "translation_sha256": "fb1be2e8eedde8ab18424c72593bb4ad151f918ab24738d5218717d048b1681a"
+          }
+        ]
+      },
+      {
+        "key": "Lugonu welcome",
+        "context": "textdb:database/godspeak.txt:lugonu welcome",
+        "source_sha256": "f67937b29ed832a46149b7c3fece3d875eb9e06d35c756d189ce5880088d96ec",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Lugonu newgame",
+        "context": "textdb:database/godspeak.txt:lugonu newgame",
+        "source_sha256": "6acfa9551a13f8a666ae8979077d7a75fddd0684135e2e766c63629836ff9fe9",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Makhleb welcome",
+        "context": "textdb:database/godspeak.txt:makhleb welcome",
+        "source_sha256": "bd0cb104bb6b68cf50c1fb9aa0dac00173eb756046357f2a2d96066cd2b4e886",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Nemelex Xobeh welcome",
+        "context": "textdb:database/godspeak.txt:nemelex xobeh welcome",
+        "source_sha256": "87e169fcf947e9f98aafc5bdba60dd67b6533c4424949cf7f7516c10591496d8",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Okawaru penance",
+        "context": "textdb:database/godspeak.txt:okawaru penance",
+        "source_sha256": "61bf20dcb97b26352d32e313bb6554840f35d88338f7ebcc61780ca1e696a65d",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Okawaru welcome",
+        "context": "textdb:database/godspeak.txt:okawaru welcome",
+        "source_sha256": "c4f1915269669b9d54928a8fdc52e5cc8e0e3549547873ca144f596250efc0d4",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Pakellas penance",
+        "context": "textdb:database/godspeak.txt:pakellas penance",
+        "source_sha256": "07421d3ebf1f8951963b740eaee621b9320a1cecdbe216b3a14b8e2889566abe",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Pakellas welcome",
+        "context": "textdb:database/godspeak.txt:pakellas welcome",
+        "source_sha256": "d1347669e94f26bf8b94a45238d36ec45ec8d10f9f23560a6179bb51e492e057",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Pakellas death",
+        "context": "textdb:database/godspeak.txt:pakellas death",
+        "source_sha256": "aaa8fe7bb6f19dfb8aac5761915247cb62c98826fed2fbb4e4e3c42cc2dd41a1",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Qazlal penance",
+        "context": "textdb:database/godspeak.txt:qazlal penance",
+        "source_sha256": "f0bdcd60fa9921837807e4148c85dba899b1c520f0446e386ec960f5b94d0b3c",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Qazlal welcome",
+        "context": "textdb:database/godspeak.txt:qazlal welcome",
+        "source_sha256": "6856eae4f84647da766316932e456c4cf43d1cc5770bf213c43019e78affe0b6",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Ru welcome",
+        "context": "textdb:database/godspeak.txt:ru welcome",
+        "source_sha256": "ea9f8b812495c56b32a442356443a2afeb320ddba995000987538b40e5190549",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Ru death",
+        "context": "textdb:database/godspeak.txt:ru death",
+        "source_sha256": "8dc80c0f22ba1b13d33a044608a380c31cf2966b85d5adc138aa51223153eaf7",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Sif Muna penance",
+        "context": "textdb:database/godspeak.txt:sif muna penance",
+        "source_sha256": "82531c2491d7a4db0a9cba93c67c1e33c05bd5f7924f73a1ac56502a7ba9336e",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Sif Muna welcome",
+        "context": "textdb:database/godspeak.txt:sif muna welcome",
+        "source_sha256": "93f581766c8c0d70115cba9bd57ad16919768e8b21507266b5b1937e686cd5fc",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "the Shining One penance",
+        "context": "textdb:database/godspeak.txt:the shining one penance",
+        "source_sha256": "51a7aba0968168991c34fb715d74c28e1b324671a84684f47a226fdbb13153ae",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "the Shining One welcome",
+        "context": "textdb:database/godspeak.txt:the shining one welcome",
+        "source_sha256": "77c14c4202eb169b45419d3a5a40429e4c71b5979981c86a2177f612742bba97",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Trog penance",
+        "context": "textdb:database/godspeak.txt:trog penance",
+        "source_sha256": "e43a84ed0234948df10e13ecd00f1d0ea1348a643d67f9f7199cbee35272bbbd",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Trog welcome",
+        "context": "textdb:database/godspeak.txt:trog welcome",
+        "source_sha256": "5bdde0e78f8db02cb6664e95ffa69d834a54fce40d9db62397bd364c1a536a77",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Uskayaw welcome",
+        "context": "textdb:database/godspeak.txt:uskayaw welcome",
+        "source_sha256": "682f790d7203647a1ac5f4cf9afcd43edf783aff250c31c90075261d0e9ed89f",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Uskayaw death corpse",
+        "context": "textdb:database/godspeak.txt:uskayaw death corpse",
+        "source_sha256": "2ba61f734051a9a50c8ec82cd4e3830c45e6207d2d78698084568c174bf01746",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Uskayaw death corpse undead",
+        "context": "textdb:database/godspeak.txt:uskayaw death corpse undead",
+        "source_sha256": "f990a27ba2fb922c08475cd1ca4991021306be3e26fa24d5edc2085dace1d721",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "uskayaw death corpse",
+            "source_sha256": "2ba61f734051a9a50c8ec82cd4e3830c45e6207d2d78698084568c174bf01746",
+            "translation_sha256": "0a38b2163ce0ecc008196f2a3d9aa380dad7b06d38cfb5a01be048b9c5898920"
+          }
+        ]
+      },
+      {
+        "key": "Uskayaw death corpse nonliving",
+        "context": "textdb:database/godspeak.txt:uskayaw death corpse nonliving",
+        "source_sha256": "f990a27ba2fb922c08475cd1ca4991021306be3e26fa24d5edc2085dace1d721",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "uskayaw death corpse",
+            "source_sha256": "2ba61f734051a9a50c8ec82cd4e3830c45e6207d2d78698084568c174bf01746",
+            "translation_sha256": "0a38b2163ce0ecc008196f2a3d9aa380dad7b06d38cfb5a01be048b9c5898920"
+          }
+        ]
+      },
+      {
+        "key": "Vehumet welcome",
+        "context": "textdb:database/godspeak.txt:vehumet welcome",
+        "source_sha256": "951e2182138ede62b836cb431907607a493810b8a7ca002c3e7d8d87cc608777",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Wu Jian welcome",
+        "context": "textdb:database/godspeak.txt:wu jian welcome",
+        "source_sha256": "6fb4ac0873bb07091dc452de670111982f5c09c142b801c3689f51bc982d98b3",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom bored",
+        "context": "textdb:database/godspeak.txt:xom bored",
+        "source_sha256": "6ff8e0369d47e3818bb5c7348c1b0b38de0a8dcc41dae1f9e86e8e16edfb735a",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "xom welcome",
+            "source_sha256": "5b310e04ca8fb7dd92a102c4edf2f2e7671c875bd23841b7975b7205091b1e2a",
+            "translation_sha256": "4010d2b48e7ed73da6b1abb92528bf1200a6f947434f3559d84a76dfcc024398"
+          }
+        ]
+      },
+      {
+        "key": "Xom newgame",
+        "context": "textdb:database/godspeak.txt:xom newgame",
+        "source_sha256": "ec1c292b10fceb1f30e8b3edf69a14f24fd238d27d5a8fbfb7539f8ffc58703a",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Xom welcome",
+        "context": "textdb:database/godspeak.txt:xom welcome",
+        "source_sha256": "5b310e04ca8fb7dd92a102c4edf2f2e7671c875bd23841b7975b7205091b1e2a",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "_xom_welcome_rare_",
+            "source_sha256": "fa4e362f529262e6c8ad8a6575ea52d40ca252fb3bc9a9cbeb99739891225b1f",
+            "translation_sha256": "a02c67ca71581ea8d49106e057385c87da9e5829ab8bd8a41c5d65ca800ffc40"
+          }
+        ]
+      },
+      {
+        "key": "_xom_welcome_rare_",
+        "context": "textdb:database/godspeak.txt:_xom_welcome_rare_",
+        "source_sha256": "fa4e362f529262e6c8ad8a6575ea52d40ca252fb3bc9a9cbeb99739891225b1f",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "_trout_species_",
+            "source_sha256": "143ae8568a14d715cd10b169b6f2e1c7403fc67a9681a70e1379ca19b78c6bb3",
+            "translation_sha256": "bc89b38c85644b4b32ef5e8eb302d90c5ce73b122b05a8beabaececf31bdf4cb"
+          },
+          {
+            "source": "database/godspeak.txt",
+            "key": "_xom_child_",
+            "source_sha256": "0053fc826927fc03cb6df10beb41c2b78cf9425b2833bb2afe5eaec43c3867f2",
+            "translation_sha256": "d6988575484830251389b640be7c2245044bcc6254c8c62cee7e1d9cfd572eb8"
+          }
+        ]
+      },
+      {
+        "key": "_xom_child_",
+        "context": "textdb:database/godspeak.txt:_xom_child_",
+        "source_sha256": "0053fc826927fc03cb6df10beb41c2b78cf9425b2833bb2afe5eaec43c3867f2",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "_trout_species_",
+        "context": "textdb:database/godspeak.txt:_trout_species_",
+        "source_sha256": "143ae8568a14d715cd10b169b6f2e1c7403fc67a9681a70e1379ca19b78c6bb3",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "_trout_species_rare_",
+            "source_sha256": "46fecbde065d4b44f3e8bed796c72fc9cf148cc043b99656a6ccc8dbb1ed6c25",
+            "translation_sha256": "f18c0440f27612c368276057aa15dad1bf1a804bbfadfebbf3010c9f727fce52"
+          }
+        ]
+      },
+      {
+        "key": "_trout_species_rare_",
+        "context": "textdb:database/godspeak.txt:_trout_species_rare_",
+        "source_sha256": "46fecbde065d4b44f3e8bed796c72fc9cf148cc043b99656a6ccc8dbb1ed6c25",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Yredelemnul penance",
+        "context": "textdb:database/godspeak.txt:yredelemnul penance",
+        "source_sha256": "f51b90f4f63f8e87cc7345d26f3b8ba150f5f8b949d24b73977dbe167c373232",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Yredelemnul welcome",
+        "context": "textdb:database/godspeak.txt:yredelemnul welcome",
+        "source_sha256": "fdb21ec265c2a0bf379cebf786bb557e30085e2bec48b79d3197a861bbf6ac6b",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Yredelemnul death corpse",
+        "context": "textdb:database/godspeak.txt:yredelemnul death corpse",
+        "source_sha256": "8e1725b07996451a7e6d5cf6fe940b2c45c2c3a6d41fe203f2e81a5e8978f63e",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Yredelemnul death corpse undead",
+        "context": "textdb:database/godspeak.txt:yredelemnul death corpse undead",
+        "source_sha256": "c61b4fffe75b9f8d21c2eea9f9ac13dd53fe2f417612caa71be016ce6bbf44c7",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Yredelemnul death corpse nonliving",
+        "context": "textdb:database/godspeak.txt:yredelemnul death corpse nonliving",
+        "source_sha256": "e19e93db2e4dd12088d6e5d6869f49668dd14dc9bb356d5f9bf90a09f5ebb6e0",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Yredelemnul death undead",
+        "context": "textdb:database/godspeak.txt:yredelemnul death undead",
+        "source_sha256": "345ab88d5076f2f278716bd7689310268ee160cc127a75638038997ba32b0ce9",
+        "review_status": "reviewed",
+        "review_batch": "database-17",
+        "dependencies": [
+          {
+            "source": "database/godspeak.txt",
+            "key": "yredelemnul death corpse undead",
+            "source_sha256": "c61b4fffe75b9f8d21c2eea9f9ac13dd53fe2f417612caa71be016ce6bbf44c7",
+            "translation_sha256": "95165349e91ec76a9a037decc9e9147e2a3712aa6f51ffa4163806eed462ec5a"
+          }
+        ]
+      },
+      {
+        "key": "Zin penance",
+        "context": "textdb:database/godspeak.txt:zin penance",
+        "source_sha256": "89b805cf74db03d50d02b0b77fb9538b2a139ff7e1d0cac90e304aa72bcd1e61",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Zin welcome",
+        "context": "textdb:database/godspeak.txt:zin welcome",
+        "source_sha256": "0aa00fa5ab73f63b2f404b5f4fea0775e3447c1a4bd7526fb1a4fe7dc68dae66",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      },
+      {
+        "key": "Zot death",
+        "context": "textdb:database/godspeak.txt:zot death",
+        "source_sha256": "61f4e2c9c7ff577106015933ea4d42428b6832e0ca3eb8d8a8e5bd0fee668dbd",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      }
+    ],
+    "monflee.txt": [
+      {
+        "key": "dream sheep flee",
+        "context": "textdb:database/monflee.txt:dream sheep flee",
+        "source_sha256": "b1d2fe51908b6d86d70cfc56e87b63d0d9d71c6feaf41442a6c81cff7b7ece43",
+        "review_status": "reviewed",
+        "review_batch": "database-17"
+      }
+    ]
+  },
+  "ui_only_shared_keys": [
+    "_important_subject_",
+    "_axioms_of_law_"
+  ]
+}

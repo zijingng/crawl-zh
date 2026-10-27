@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "target-display.h"
+#include "i18n.h"
 
 #include "ability.h"
 
@@ -300,7 +302,7 @@ struct ability_def
         return pips;
     }
 
-    string piety_desc() const
+    string piety_desc(bool localised = false) const
     {
         if (ability == ABIL_IGNIS_FIERY_ARMOUR
             || ability == ABIL_IGNIS_FOXFIRE)
@@ -311,11 +313,11 @@ struct ability_def
         }
 
         if (avg_piety_cost() <= 1)
-            return " (less than 1% of your maximum possible piety)";
+            return (localised ? ui_translate("a.ability.cost", " (less than 1% of your maximum possible piety)") : " (less than 1% of your maximum possible piety)");
 
         // Round up
         const int perc = max((avg_piety_cost() * 100 + 199) / 200, 0);
-        return make_stringf(" (about %d%% of your maximum possible piety)", perc);
+        return make_stringf((localised ? ui_translate("a.ability.cost", " (about %d%% of your maximum possible piety)") : " (about %d%% of your maximum possible piety)"), perc);
     }
 };
 
@@ -903,13 +905,13 @@ string print_abilities()
     const vector<talent> talents = your_talents();
 
     if (talents.empty())
-        text += "no special abilities";
+        text += ui_translate("a.ability", "no special abilities");
     else
     {
         for (unsigned int i = 0; i < talents.size(); ++i)
         {
             text += make_stringf("%s%s (%s)", i ? ", " : "",
-                        ability_name(talents[i].which).c_str(),
+                        ability_display_name(talents[i].which).c_str(),
                         failure_rate_to_string(talents[i].fail).c_str());
         }
     }
@@ -937,9 +939,11 @@ string nemelex_card_text(ability_type ability)
     int cards = deck_cards(ability_deck(ability));
 
     if (ability == ABIL_NEMELEX_DRAW_STACK)
-        return make_stringf("(next: %s)", stack_top().c_str());
+        return ui_render("a.ability", "(next: %s)",
+            make_stringf("(next: %s)", stack_top().c_str()),
+            {ui_text_arg("a.card.name", stack_top())});
     else
-        return make_stringf("(%d in deck)", cards);
+        return make_stringf(ui_translate("a.ability", "(%d in deck)"), cards);
 }
 
 static string _ashenzari_curse_text()
@@ -951,203 +955,348 @@ static string _ashenzari_curse_text()
            + ")";
 }
 
-const string make_cost_description(ability_type ability)
+static bool _try_ability_cost_extra(ability_type ability, string &output)
 {
+    const ability_def &abil = get_ability_def(ability);
+    ui_translation_group group;
+    if (!group.available())
+        return false;
+    string result;
+    if (abil.flags & abflag::sacrifice)
+    {
+        const string name = ability_name(ability, true);
+        group.require("display.ability", name.c_str());
+        if (!group.available())
+            return false;
+        result = group.get("display.ability", name.c_str());
+        const string key = ru_sacrifice_vector(ability);
+        if (!key.empty())
+        {
+            if (!you.props.exists(key))
+                return false;
+            vector<string> mutations;
+            for (const auto &mut : you.props[key].get_vector())
+            {
+                const char *name_en = mutation_name(static_cast<mutation_type>(mut.get_int()));
+                if (!name_en)
+                    return false;
+                const ui_arg name_zh = ui_text_arg("a.mutation.name", name_en);
+                if (!name_zh.available)
+                    return false;
+                mutations.push_back(name_zh.text);
+            }
+            result += " (" + join_strings(mutations.begin(), mutations.end(), "/") + ")";
+        }
+    }
+    else if (ability == ABIL_ASHENZARI_CURSE
+             && you.props.exists(CURSE_KNOWLEDGE_KEY)
+             && !you.props[CURSE_KNOWLEDGE_KEY].get_vector().empty())
+    {
+        group.require("a.ability", "(Boost: %s)");
+        vector<string> boosts;
+        for (const auto &curse : you.props[CURSE_KNOWLEDGE_KEY].get_vector())
+        {
+            const ui_arg boost = ui_text_arg("a.curse.abbr", curse_abbr(curse));
+            if (!boost.available)
+                return false;
+            boosts.push_back(boost.text);
+        }
+        if (!group.available())
+            return false;
+        result = make_stringf(group.get("a.ability", "(Boost: %s)"),
+                              join_strings(boosts.begin(), boosts.end(), "/").c_str());
+    }
+    else if (abil.flags & abflag::card)
+    {
+        const char *pattern = ability == ABIL_NEMELEX_DRAW_STACK
+                                ? "(next: %s)" : "(%d in deck)";
+        group.require("a.ability", pattern);
+        if (!group.available())
+            return false;
+        if (ability == ABIL_NEMELEX_DRAW_STACK)
+        {
+            const ui_arg card = ui_text_arg("a.card.name", stack_top());
+            if (!card.available)
+                return false;
+            result = make_stringf(group.get("a.ability", pattern), card.text.c_str());
+        }
+        else
+            result = make_stringf(group.get("a.ability", pattern), deck_cards(ability_deck(ability)));
+    }
+    output = result;
+    return true;
+}
+
+static const string _make_cost_description(ability_type ability, bool &translated_ok,
+                                           bool translate = true)
+{
+    ui_translation_group translated({{"a.ability.cost", ", %d MP"},
+        {"a.ability.cost", ", MP"},
+        {"a.ability.cost", ", Permanent MP (%d left)"},
+        {"a.ability.cost", ", Noise"},
+        {"a.ability.cost", ", %d HP"},
+        {"a.ability.cost", ", Piety%s"},
+        {"a.ability.cost", ", Breath"},
+        {"a.ability.cost", ", %d/%d uses available"},
+        {"a.ability.cost", ", Delay"},
+        {"a.ability.cost", ", Torment"},
+        {"a.ability.cost", ", Injury"},
+        {"a.ability.cost", ", Exhaustion"},
+        {"a.ability.cost", ", Instant"},
+        {"a.ability.cost", ", Drain"},
+        {"a.ability.cost", ", Cursed item"},
+        {"a.ability.cost", ", %d Gold"},
+        {"a.ability.cost", ", Free"},
+        {"a.ability.cost", ", Gold"},
+        {"a.ability.cost", "A Card "},
+        {"a.ability.cost", ", Torchlight"},
+        {"a.ability.cost", "None"},
+        {"a.ability.cost", " (less than 1% of your maximum possible piety)"},
+        {"a.ability.cost", " (about %d%% of your maximum possible piety)"}});
+    string translated_extra;
+    const bool localised = translate && translated.available()
+        && _try_ability_cost_extra(ability, translated_extra);
+    translated_ok = localised;
+    const auto text = [&](const char *english) {
+        return localised ? translated.get("a.ability.cost", english) : english;
+    };
+
     const ability_def& abil = get_ability_def(ability);
     string ret;
     if (abil.get_mp_cost())
-        ret += make_stringf(", %d MP", abil.get_mp_cost());
+        ret += make_stringf(text(", %d MP"), abil.get_mp_cost());
 
     if (abil.flags & abflag::variable_mp)
-        ret += ", MP";
+        ret += text(", MP");
 
 #if TAG_MAJOR_VERSION == 34
     if (ability == ABIL_HEAL_WOUNDS)
-        ret += make_stringf(", Permanent MP (%d left)", get_real_mp(false));
+        ret += make_stringf(text(", Permanent MP (%d left)"), get_real_mp(false));
 #endif
 
     if (ability == ABIL_CACOPHONY)
-        ret += ", Noise";
+        ret += text(", Noise");
 
     if (ability == ABIL_ASHENZARI_CURSE
         && !you.props[CURSE_KNOWLEDGE_KEY].get_vector().empty())
     {
         ret += ", ";
-        ret += _ashenzari_curse_text();
+        ret += localised ? translated_extra : _ashenzari_curse_text();
     }
 
     const int hp_cost = abil.get_hp_cost();
     if (hp_cost)
-        ret += make_stringf(", %d HP", hp_cost);
+        ret += make_stringf(text(", %d HP"), hp_cost);
 
     if (abil.piety_cost)
-        ret += make_stringf(", Piety%s", abil.piety_pips().c_str());
+        ret += make_stringf(text(", Piety%s"), abil.piety_pips().c_str());
 
     if (abil.flags & abflag::breath)
-        ret += ", Breath";
+        ret += text(", Breath");
 
     if (abil.flags & abflag::drac_charges)
     {
-        ret += make_stringf(", %d/%d uses available",
+        ret += make_stringf(text(", %d/%d uses available"),
                     draconian_breath_uses_available(),
                     MAX_DRACONIAN_BREATH);
     }
 
     if (abil.flags & abflag::delay)
-        ret += ", Delay";
+        ret += text(", Delay");
 
     if (abil.flags & abflag::torment)
-        ret += ", Torment";
+        ret += text(", Torment");
 
     if (abil.flags & abflag::injury)
-        ret += ", Injury";
+        ret += text(", Injury");
 
     if (abil.flags & abflag::exhaustion)
-        ret += ", Exhaustion";
+        ret += text(", Exhaustion");
 
     if (abil.flags & abflag::instant)
-        ret += ", Instant"; // not really a cost, more of a bonus - bwr
+        ret += text(", Instant"); // not really a cost, more of a bonus - bwr
 
     if (abil.flags & abflag::max_hp_drain
         && (ability != ABIL_EVOKE_TURN_INVISIBLE || _invis_causes_drain()))
     {
-        ret += ", Drain";
+        ret += text(", Drain");
     }
 
     if (abil.flags & abflag::curse)
-        ret += ", Cursed item";
+        ret += text(", Cursed item");
 
     if (abil.flags & abflag::gold)
     {
         const int amount = get_gold_cost(ability);
         if (amount)
-            ret += make_stringf(", %d Gold", amount);
+            ret += make_stringf(text(", %d Gold"), amount);
         else if (ability == ABIL_GOZAG_POTION_PETITION)
-            ret += ", Free";
+            ret += text(", Free");
         else
-            ret += ", Gold";
+            ret += text(", Gold");
     }
 
     if (abil.flags & abflag::sacrifice)
     {
         ret += ", ";
         const string prefix = "Sacrifice ";
-        ret += string(ability_name(ability)).substr(prefix.size());
-        ret += ru_sac_text(ability);
+        if (localised)
+            ret += translated_extra;
+        else
+        {
+            ret += string(ability_name(ability)).substr(prefix.size());
+            ret += ru_sac_text(ability);
+        }
     }
 
     if (abil.flags & abflag::card)
     {
         ret += ", ";
-        ret += "A Card ";
-        ret += nemelex_card_text(ability);
+        ret += text("A Card ");
+        ret += localised ? translated_extra : nemelex_card_text(ability);
     }
 
     if (abil.flags & abflag::torchlight)
-        ret += ", Torchlight";
+        ret += text(", Torchlight");
 
     // If we haven't output anything so far, then the effect has no cost
     if (ret.empty())
-        return "None";
+        return text("None");
 
     ret.erase(0, 2);
     return ret;
 }
 
+const string make_cost_description(ability_type ability)
+{
+    bool translated;
+    return _make_cost_description(ability, translated);
+}
+
 static const string _detailed_cost_description(ability_type ability)
 {
+    ui_translation_group translated({{"a.ability.cost", "This ability costs: "},
+        {"a.ability.cost", "\nMP     : "},
+        {"a.ability.cost", "\nHP     : "},
+        {"a.ability.cost", "\nPiety  : "},
+        {"a.ability.cost", "\nGold   : "},
+        {"a.ability.cost", "free"},
+        {"a.ability.cost", "variable"},
+        {"a.ability.cost", "\nOne cursed item"},
+        {"a.ability.cost", "\nTorchlight"},
+        {"a.ability.cost", "nothing."},
+        {"a.ability.cost", "\nYou must catch your breath between uses of this ability."},
+        {"a.ability.cost", "\nThis ability takes some time before being effective."},
+        {"a.ability.cost", "\nUsing this ability will hurt you for a large fraction of your current HP."},
+        {"a.ability.cost", "\nUsing this ability invokes torment."},
+        {"a.ability.cost", "\nThis ability causes exhaustion, and cannot be used when exhausted."},
+        {"a.ability.cost", "\nThis ability is instantaneous."},
+        {"a.ability.cost", "\nYou can use this ability even if confused."},
+        {"a.ability.cost", "\nThis ability will temporarily drain your maximum health when used"},
+        {"a.ability.cost", ", even unsuccessfully"},
+        {"a.ability.cost", "\nGaining experience will replenish charges of this ability."},
+        {"a.ability.cost", "This ability has a chance of reducing your maximum magic capacity when used."},
+        {"a.ability.cost", " (less than 1% of your maximum possible piety)"},
+        {"a.ability.cost", " (about %d%% of your maximum possible piety)"}});
+    string translated_extra;
+    const bool localised = translated.available()
+        && _try_ability_cost_extra(ability, translated_extra);
+    const auto text = [&](const char *english) {
+        return localised ? translated.get("a.ability.cost", english) : english;
+    };
+
     const ability_def& abil = get_ability_def(ability);
     ostringstream ret;
 
     bool have_cost = false;
-    ret << "This ability costs: ";
+    ret << text("This ability costs: ");
 
     if (abil.get_mp_cost())
     {
         have_cost = true;
-        ret << "\nMP     : ";
+        ret << text("\nMP     : ");
         ret << abil.get_mp_cost();
     }
     if (abil.get_hp_cost())
     {
         have_cost = true;
-        ret << "\nHP     : ";
+        ret << text("\nHP     : ");
         ret << abil.get_hp_cost();
     }
 
     if (abil.piety_cost)
     {
         have_cost = true;
-        ret << "\nPiety  : ";
-        ret << abil.piety_pips() << abil.piety_desc();
+        ret << text("\nPiety  : ");
+        ret << abil.piety_pips() << abil.piety_desc(localised);
     }
 
     if (abil.flags & abflag::gold)
     {
         have_cost = true;
-        ret << "\nGold   : ";
+        ret << text("\nGold   : ");
         int gold_amount = get_gold_cost(ability);
         if (gold_amount)
             ret << gold_amount;
         else if (ability == ABIL_GOZAG_POTION_PETITION)
-            ret << "free";
+            ret << text("free");
         else
-            ret << "variable";
+            ret << text("variable");
     }
 
     if (abil.flags & abflag::curse)
     {
         have_cost = true;
-        ret << "\nOne cursed item";
+        ret << text("\nOne cursed item");
     }
 
     if (abil.flags & abflag::torchlight)
     {
         have_cost = true;
-        ret << "\nTorchlight";
+        ret << text("\nTorchlight");
     }
     if (!have_cost)
-        ret << "nothing.";
+        ret << text("nothing.");
 
     if (abil.flags & abflag::breath)
-        ret << "\nYou must catch your breath between uses of this ability.";
+        ret << text("\nYou must catch your breath between uses of this ability.");
 
     if (abil.flags & abflag::delay)
-        ret << "\nThis ability takes some time before being effective.";
+        ret << text("\nThis ability takes some time before being effective.");
 
     if (abil.flags & abflag::injury)
-        ret << "\nUsing this ability will hurt you for a large fraction of your current HP.";
+        ret << text("\nUsing this ability will hurt you for a large fraction of your current HP.");
 
     if (abil.flags & abflag::torment)
-        ret << "\nUsing this ability invokes torment.";
+        ret << text("\nUsing this ability invokes torment.");
 
     if (abil.flags & abflag::exhaustion)
-        ret << "\nThis ability causes exhaustion, and cannot be used when exhausted.";
+        ret << text("\nThis ability causes exhaustion, and cannot be used when exhausted.");
 
     if (abil.flags & abflag::instant)
-        ret << "\nThis ability is instantaneous.";
+        ret << text("\nThis ability is instantaneous.");
 
     if (abil.flags & abflag::conf_ok)
-        ret << "\nYou can use this ability even if confused.";
+        ret << text("\nYou can use this ability even if confused.");
 
     if (abil.flags & abflag::max_hp_drain
         && (ability != ABIL_EVOKE_TURN_INVISIBLE || _invis_causes_drain()))
     {
-        ret << "\nThis ability will temporarily drain your maximum health when used";
+        ret << text("\nThis ability will temporarily drain your maximum health when used");
         if (ability == ABIL_EVOKE_TURN_INVISIBLE)
-            ret << ", even unsuccessfully";
+            ret << text(", even unsuccessfully");
         ret << ".";
     }
 
     if (abil.flags & abflag::drac_charges)
-        ret << "\nGaining experience will replenish charges of this ability.";
+        ret << text("\nGaining experience will replenish charges of this ability.");
 
 #if TAG_MAJOR_VERSION == 34
     if (abil.ability == ABIL_HEAL_WOUNDS)
     {
         ASSERT(!have_cost); // validate just in case this ever changes
-        return "This ability has a chance of reducing your maximum magic "
-               "capacity when used.";
+        return text("This ability has a chance of reducing your maximum magic "
+               "capacity when used.");
     }
 #endif
 
@@ -1371,6 +1520,61 @@ string ability_name(ability_type ability, bool dbname)
     }
 }
 
+bool try_ability_display_name(ability_type ability, string &output)
+{
+    ui_translation_group group;
+    if (!group.available())
+        return false;
+    const char *pattern = nullptr;
+    string component;
+    if (ability == ABIL_BEOGH_RECRUIT_APOSTLE)
+    {
+        pattern = "Recruit %s";
+        if (!try_apostle_display_name(0, false, component))
+            return false;
+    }
+    else if (ability >= ABIL_BEOGH_DISMISS_APOSTLE_1
+             && ability <= ABIL_BEOGH_DISMISS_APOSTLE_3)
+    {
+        pattern = "Dismiss %s";
+        if (!try_apostle_display_name(ability - ABIL_BEOGH_DISMISS_APOSTLE_1 + 1,
+                                     true, component))
+            return false;
+    }
+    else if (ability >= ABIL_MAKHLEB_BRAND_SELF_1
+             && ability <= ABIL_MAKHLEB_BRAND_SELF_3)
+    {
+        pattern = "Accept %s";
+        const char *mutation_name_en = mutation_name(makhleb_ability_to_mutation(ability));
+        if (!mutation_name_en)
+            return false;
+        const ui_arg mutation = ui_text_arg("a.mutation.name", mutation_name_en);
+        if (!mutation.available)
+            return false;
+        component = mutation.text;
+    }
+    else
+    {
+        const string name = ability_name(ability, true);
+        group.require("display.ability", name.c_str());
+        if (!group.available())
+            return false;
+        output = group.get("display.ability", name.c_str());
+        return true;
+    }
+    group.require("a.ability", pattern);
+    if (!group.available())
+        return false;
+    output = make_stringf(group.get("a.ability", pattern), component.c_str());
+    return true;
+}
+
+string ability_display_name(ability_type ability)
+{
+    string result;
+    return try_ability_display_name(ability, result) ? result : ability_name(ability);
+}
+
 vector<string> get_ability_names()
 {
     vector<string> result;
@@ -1389,10 +1593,35 @@ static string _curse_desc()
     if (curses.empty())
         return "";
 
-    return "\nIf you bind an item with this curse Ashenzari will enhance "
+    const string original = "\nIf you bind an item with this curse Ashenzari will enhance "
            "the following skills:\n"
            + comma_separated_fn(curses.begin(), curses.end(), desc_curse_skills,
                                 ".\n", ".\n") + ".";
+    ui_translation_group group({{"a.ability",
+        "\nIf you bind an item with this curse Ashenzari will enhance the following skills:\n%s"}});
+    if (!group.available())
+        return original;
+    vector<string> lines;
+    for (const auto &curse : curses)
+    {
+        const ui_arg name = ui_text_arg("a.curse.name", curse_name(curse));
+        if (!name.available)
+            return original;
+        vector<string> skills;
+        for (const auto skill : curse_skills(curse))
+        {
+            if (!you.can_currently_train[skill])
+                continue;
+            const ui_arg shown = ui_text_arg("display.skill", skill_name(skill));
+            if (!shown.available)
+                return original;
+            skills.push_back(shown.text);
+        }
+        lines.push_back(name.text + "：" + join_strings(skills.begin(), skills.end(), "、"));
+    }
+    return make_stringf(group.get("a.ability",
+        "\nIf you bind an item with this curse Ashenzari will enhance the following skills:\n%s"),
+        join_strings(lines.begin(), lines.end(), "。\n").c_str()) + "。";
 }
 
 static string _desc_sac_mut(const CrawlStoreValue &mut_store)
@@ -1407,22 +1636,44 @@ static string _sacrifice_desc(const ability_type ability)
         "will become stronger in proportion to the value of the "
         "sacrifice, and you may gain new powers as well.\n\n"
         "Sacrifices cannot be taken back.\n";
-    const string piety_info = ru_sacrifice_description(ability);
+    string piety_display;
+    const string piety_info = ru_sacrifice_description(ability, &piety_display);
     const string desc = boilerplate + piety_info;
 
+    ui_translation_group group({{"a.ability", boilerplate.c_str()}});
+    const bool piety_available = piety_info.empty() || !piety_display.empty();
+    const string display_desc = group.available() && piety_available
+        ? string(group.get("a.ability", boilerplate.c_str())) + piety_display : desc;
     if (!you_worship(GOD_RU))
-        return desc;
+        return display_desc;
 
     const string sac_vec_key = ru_sacrifice_vector(ability);
     if (sac_vec_key.empty())
-        return desc;
+        return display_desc;
 
     ASSERT(you.props.exists(sac_vec_key));
     const CrawlVector &sacrifice_muts = you.props[sac_vec_key].get_vector();
-    return "\nAfter this sacrifice, you will find that "
+    const string original = "\nAfter this sacrifice, you will find that "
             + comma_separated_fn(sacrifice_muts.begin(), sacrifice_muts.end(),
                                  _desc_sac_mut)
             + ".\n" + desc;
+    group.require("a.ability", "\nAfter this sacrifice, you will find that %s.\n");
+    if (!group.available() || !piety_available)
+        return original;
+    vector<string> effects;
+    for (const auto &mut : sacrifice_muts)
+    {
+        const mutation_type type = static_cast<mutation_type>(mut.get_int());
+        const int level = you.mutation[type] + 1;
+        // Complete definition sentence, before English case/punctuation edits.
+        const ui_arg effect = ui_text_arg("a.mutation.summary", mutation_desc(type, level));
+        if (!effect.available)
+            return original;
+        effects.push_back(effect.text);
+    }
+    return make_stringf(group.get("a.ability",
+        "\nAfter this sacrifice, you will find that %s.\n"),
+        join_strings(effects.begin(), effects.end(), "；").c_str()) + display_desc;
 }
 
 static string _nemelex_desc(ability_type ability)
@@ -1433,7 +1684,8 @@ static string _nemelex_desc(ability_type ability)
     desc << "Draw a card from " << (deck == DECK_STACK ? "your " : "the ");
     desc << deck_name(deck) << "; " << lowercase_first(deck_description(deck));
 
-    return desc.str();
+    string display;
+    return try_deck_ability_display(deck, display) ? display : desc.str();
 }
 
 static int _tso_cleansing_flame_power(bool allow_random = true)
@@ -1461,8 +1713,24 @@ static int _orb_of_dispater_power();
 
 // XXX This is a mess, caused by abilities doing damage via various
 // different in-house and outsourced methods.
+static ui_translation_group _ability_damage_texts()
+{
+    return ui_translation_group({{"a.ability.damage", "%dd3 / 2 (against normal-speed enemies)"},
+        {"a.ability.damage", "1d8/foxfire"},
+        {"a.ability.damage", "%dd%d/upheaval"},
+        {"a.ability.damage", "%dd%d + 1/6 of current HP"},
+        {"a.ability.damage", "death"},
+        {"a.ability.damage", "Damage: %s\n "},
+        {"a.ability.damage", "Range: %s\n"}});
+}
+
 static string _ability_damage_string(ability_type ability)
 {
+    const auto translated = _ability_damage_texts();
+    const auto text = [&](const char *source) {
+        return translated.get("a.ability.damage", source);
+    };
+
     // TODO The following abilities have effects that would be nice to show
     //      but which don't fit neatly into the "Damage: dice" format.
     // Chei: temporal distortion, step from time
@@ -1497,16 +1765,16 @@ static string _ability_damage_string(ability_type ability)
         case ABIL_TSO_CLEANSING_FLAME:
             return make_stringf("2d%d*", _tso_cleansing_flame_power(false));
         case ABIL_CHEIBRIADOS_SLOUCH:
-            return make_stringf("%dd3 / 2 (against normal-speed enemies)",
+            return make_stringf(text("%dd3 / 2 (against normal-speed enemies)"),
                                 slouch_damage_for_speed());
         case ABIL_IGNIS_FOXFIRE:
-            return "1d8/foxfire"; // constant
+            return text("1d8/foxfire"); // constant
         case ABIL_QAZLAL_UPHEAVAL:
             dam = qazlal_upheaval_damage(false);
             break;
         case ABIL_QAZLAL_DISASTER_AREA:
             dam = qazlal_upheaval_damage(false);
-            return make_stringf("%dd%d/upheaval", dam.num, dam.size);
+            return make_stringf(text("%dd%d/upheaval"), dam.num, dam.size);
         case ABIL_RU_POWER_LEAP:
             dam = ru_power_leap_damage(false);
             break;
@@ -1518,10 +1786,10 @@ static string _ability_damage_string(ability_type ability)
             return "2d(3-24)";
         case ABIL_USKAYAW_STOMP:
             dam = uskayaw_stomp_extra_damage(false);
-            return make_stringf("%dd%d + 1/6 of current HP",
+            return make_stringf(text("%dd%d + 1/6 of current HP"),
                                 dam.num, dam.size);
         case ABIL_USKAYAW_GRAND_FINALE: // infinity
-            return Options.char_set == CSET_ASCII ? "death" : "\u221e";
+            return Options.char_set == CSET_ASCII ? text("death") : "\u221e";
         case ABIL_DAMNATION:
             return spell_damage_string(SPELL_HURL_DAMNATION, false,
                                        _hurl_damnation_power());
@@ -1569,7 +1837,7 @@ string get_ability_desc(const ability_type ability, bool need_title)
         lookup = getLongDescription(name + " ability");
 
     if (lookup.empty()) // Nothing found?
-        lookup = "No description found.\n";
+        lookup = ui_translate("a.ability", "No description found.\n");
 
     switch (ability)
     {
@@ -1582,7 +1850,7 @@ string get_ability_desc(const ability_type ability, bool need_title)
         case ABIL_BEOGH_DISMISS_APOSTLE_3:
         {
             const int index = ability - ABIL_BEOGH_DISMISS_APOSTLE_1 + 1;
-            lookup += "\n" + apostle_short_description(index) + "\n";
+            lookup += "\n" + apostle_short_description(index, true) + "\n";
         }
         break;
 
@@ -1591,7 +1859,7 @@ string get_ability_desc(const ability_type ability, bool need_title)
         case ABIL_MAKHLEB_BRAND_SELF_3:
         {
             const mutation_type mut = makhleb_ability_to_mutation(ability);
-            lookup += "\n" + get_mutation_desc(mut);
+            lookup += "\n" + get_mutation_desc(mut, true);
         }
         break;
 
@@ -1608,13 +1876,17 @@ string get_ability_desc(const ability_type ability, bool need_title)
 
     lookup += "\n";
 
+    const auto damage_texts = _ability_damage_texts();
     if (damage_str != "")
-        lookup += make_stringf("Damage: %s\n ", damage_str.c_str());
-    lookup += make_stringf("Range: %s\n", range_str.c_str());
+        lookup += make_stringf(damage_texts.get("a.ability.damage", "Damage: %s\n "), damage_str.c_str());
+    const ui_arg range = range_str == "N/A" ? ui_text_arg("a.range", range_str)
+                                           : ui_literal_arg(range_str);
+    lookup += ui_render("a.ability.damage", "Range: %s\n",
+                        make_stringf("Range: %s\n", range_str.c_str()), {range});
 
     ostringstream res;
     if (need_title)
-        res << name << "\n\n";
+        res << ui_translate("display.ability", name.c_str()) << "\n\n";
     res << lookup << "\n" << _detailed_cost_description(ability);
 
     const string quote = getQuoteString(name + " ability");
@@ -1631,7 +1903,7 @@ static void _print_talent_description(const talent& tal)
 
 void no_ability_msg()
 {
-    mpr("Sorry, you're not good enough to have a special ability.");
+    mpr(ui_translate("phase3.ability", "Sorry, you're not good enough to have a special ability."));
 }
 
 // Prompts the user for an ability to use, first checking the lua hook
@@ -1689,7 +1961,7 @@ bool activate_ability()
     {
         while (selected < 0)
         {
-            msg::streams(MSGCH_PROMPT) << "Use which ability? (? or * to list) "
+            msg::streams(MSGCH_PROMPT) << ui_translate("phase3.ability", "Use which ability? (? or * to list) ")
                                        << endl;
 
             const int keyin = get_ch();
@@ -1726,7 +1998,7 @@ bool activate_ability()
                 // If we can't, cancel out.
                 if (selected < 0)
                 {
-                    mpr("You can't do that.");
+                    mpr(ui_translate("a.ability", "You can't do that."));
                     crawl_state.zero_turns_taken();
                     return false;
                 }
@@ -1736,13 +2008,58 @@ bool activate_ability()
     return activate_talent(talents[selected]);
 }
 
+static string _ability_blink_reason(const string &original)
+{
+    ui_translation_group group({{"a.ability.reason", "You cannot blink because %s."},
+        {"a.ability.reason", "locked down by a dimension anchor"},
+        {"a.ability.reason", "held in place by your roots"},
+        {"a.ability.reason", "wielding %s"},
+        {"a.ability.reason", "wearing %s"},
+        {"a.ability.reason", "wearing %s artefacts preventing teleportation"}});
+    if (!group.available())
+        return original;
+    if (you.stasis())
+        return ui_translate("a.ability.reason", original.c_str());
+    vector<string> problems;
+    if (you.duration[DUR_DIMENSION_ANCHOR])
+        problems.push_back(group.get("a.ability.reason", "locked down by a dimension anchor"));
+    if (you.form == transformation::tree)
+        problems.push_back(group.get("a.ability.reason", "held in place by your roots"));
+    vector<const item_def *> items;
+    if (you.has_notele_item(&items))
+    {
+        vector<string> worn;
+        for (const auto item : items)
+        {
+            const ui_arg name = ui_item_arg(*item);
+            if (!name.available)
+                return original;
+            if (item->base_type == OBJ_WEAPONS)
+                problems.push_back(make_stringf(group.get("a.ability.reason", "wielding %s"),
+                                                name.text.c_str()));
+            else
+                worn.push_back(name.text);
+        }
+        if (worn.size() > static_cast<size_t>(problems.empty() ? 3 : 1))
+            problems.push_back(make_stringf(group.get("a.ability.reason",
+                "wearing %s artefacts preventing teleportation"), to_string(worn.size()).c_str()));
+        else if (!worn.empty())
+            problems.push_back(make_stringf(group.get("a.ability.reason", "wearing %s"),
+                join_strings(worn.begin(), worn.end(), "、").c_str()));
+    }
+    if (problems.empty())
+        return original;
+    return make_stringf(group.get("a.ability.reason", "You cannot blink because %s."),
+        join_strings(problems.begin(), problems.end(), "，且").c_str());
+}
+
 static bool _can_movement_ability(bool quiet)
 {
     const string reason = movement_impossible_reason();
     if (reason.empty())
         return true;
     if (!quiet)
-        mpr(reason);
+        mpr(ui_translate("a.ability.reason", reason.c_str()));
     return false;
 }
 
@@ -1751,7 +2068,7 @@ static bool _can_hop(bool quiet)
     if (you.duration[DUR_NO_HOP])
     {
         if (!quiet)
-            mpr("Your legs are too worn out to hop.");
+            mpr(ui_translate("a.ability", "Your legs are too worn out to hop."));
         return false;
     }
     return _can_movement_ability(quiet);
@@ -1774,7 +2091,7 @@ static bool _can_rising_flame(bool quiet)
     if (you.duration[DUR_RISING_FLAME])
     {
         if (!quiet)
-            mpr("You're already rising!");
+            mpr(ui_translate("a.ability", "You're already rising!"));
         return false;
     }
     if (you.where_are_you == BRANCH_DUNGEON && you.depth == 1)
@@ -1784,14 +2101,14 @@ static bool _can_rising_flame(bool quiet)
         else
         {
             if (!quiet)
-                mpr("You can't rise from this level without the Orb!");
+                mpr(ui_translate("a.ability", "You can't rise from this level without the Orb!"));
             return false;
         }
     }
     if (!level_above().is_valid())
     {
         if (!quiet)
-            mpr("You can't rise from this level!");
+            mpr(ui_translate("a.ability", "You can't rise from this level!"));
         return false;
     }
     return true;
@@ -1841,15 +2158,19 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         {
             if (!quiet)
             {
-                mprf("You cannot call out to %s while %s.",
-                     god_name(you.religion).c_str(), player_silenced_reason());
+                mprf("%s", ui_render("a.ability", "You cannot call out to %s while %s.",
+                make_stringf("You cannot call out to %s while %s.",
+                     god_name(you.religion).c_str(), player_silenced_reason()),
+                {ui_text_arg("display.god", god_name(you.religion)), ui_text_arg("a.state", player_silenced_reason())}).c_str());
             }
             return false;
         }
         if (abil.ability == ABIL_WORD_OF_CHAOS)
         {
             if (!quiet)
-                mprf("You cannot speak a word of chaos while %s.", player_silenced_reason());
+                mprf("%s", ui_render("a.ability", "You cannot speak a word of chaos while %s.",
+                make_stringf("You cannot speak a word of chaos while %s.", player_silenced_reason()),
+                {ui_text_arg("a.state", player_silenced_reason())}).c_str());
             return false;
         }
     }
@@ -1865,7 +2186,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
     if (testbits(abil.flags, abflag::card) && !deck_cards(ability_deck(abil.ability)))
     {
         if (!quiet)
-            mpr("That deck is empty!");
+            mpr(ui_translate("a.ability", "That deck is empty!"));
         return false;
     }
 
@@ -1880,6 +2201,10 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
                 if (action.matches(name))
                 {
                     string prompt = "Really use " + name + "?";
+                    string shown;
+                    const bool available = try_ability_display_name(abil.ability, shown);
+                    prompt = ui_render("a.ability", "Really use %s?", prompt,
+                                       {{shown, available}});
                     if (!yesno(prompt.c_str(), false, 'n'))
                     {
                         canned_msg(MSG_OK);
@@ -1914,9 +2239,9 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
             if (!quiet)
             {
                 if (result == 0)
-                    mpr("There's no appreciative audience!");
+                    mpr(ui_translate("a.ability", "There's no appreciative audience!"));
                 else if (result == -1)
-                    mpr("You are not zealous enough to affect this audience!");
+                    mpr(ui_translate("a.ability", "You are not zealous enough to affect this audience!"));
             }
             return false;
         }
@@ -1927,7 +2252,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (env.sanctuary_time)
         {
             if (!quiet)
-                mpr("There's already a sanctuary in place on this level.");
+                mpr(ui_translate("a.ability", "There's already a sanctuary in place on this level."));
             return false;
         }
         return true;
@@ -1936,7 +2261,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (!you.gold)
         {
             if (!quiet)
-                mpr("You have nothing to donate!");
+                mpr(ui_translate("a.ability", "You have nothing to donate!"));
             return false;
         }
         return true;
@@ -1945,7 +2270,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (okawaru_duel_active() || player_in_branch(BRANCH_ARENA))
         {
             if (!quiet)
-                mpr("You are already engaged in single combat!");
+                mpr(ui_translate("a.ability", "You are already engaged in single combat!"));
             return false;
         }
         return true;
@@ -1955,7 +2280,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (feat_eliminates_items(env.grid(you.pos())))
         {
             if (!quiet)
-                mpr("Any gift you received here would fall and be lost!");
+                mpr(ui_translate("a.ability", "Any gift you received here would fall and be lost!"));
             return false;
         }
         return true;
@@ -1970,7 +2295,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (you.duration[DUR_DEATHS_DOOR])
         {
             if (!quiet)
-                mpr("You can't heal while in death's door.");
+                mpr(ui_translate("a.ability", "You can't heal while in death's door."));
             return false;
         }
         return true;
@@ -1984,7 +2309,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
             && !you.duration[DUR_WEAK])
         {
             if (!quiet)
-                mpr("Nothing ails you!");
+                mpr(ui_translate("a.ability", "Nothing ails you!"));
             return false;
         }
         return true;
@@ -1993,7 +2318,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (you.duration[DUR_DIVINE_VIGOUR])
         {
             if (!quiet)
-                mpr("You have already been granted divine vigour!");
+                mpr(ui_translate("a.ability", "You have already been granted divine vigour!"));
             return false;
         }
         return true;
@@ -2002,7 +2327,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (you.duration[DUR_OOZEMANCY])
         {
             if (!quiet)
-                mpr("You are already calling forth ooze!");
+                mpr(ui_translate("a.ability", "You are already calling forth ooze!"));
             return false;
         }
         return true;
@@ -2011,7 +2336,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (!player_in_branch(BRANCH_ABYSS))
         {
             if (!quiet)
-                mpr("You aren't in the Abyss!");
+                mpr(ui_translate("a.ability", "You aren't in the Abyss!"));
             return false;
         }
         return true;
@@ -2023,7 +2348,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (player_in_branch(BRANCH_ABYSS))
         {
             if (!quiet)
-                mpr("You're already here!");
+                mpr(ui_translate("a.ability", "You're already here!"));
             return false;
         }
         return true;
@@ -2046,7 +2371,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (spaces.empty())
         {
             if (!quiet)
-                mpr("There isn't enough space to grow briars here.");
+                mpr(ui_translate("a.ability", "There isn't enough space to grow briars here."));
             return false;
         }
         return true;
@@ -2056,7 +2381,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (you.duration[DUR_EXHAUSTED])
         {
             if (!quiet)
-                mpr("You're too exhausted to draw out your power.");
+                mpr(ui_translate("a.ability", "You're too exhausted to draw out your power."));
             return false;
         }
         if (you.hp == you.hp_max && you.magic_points == you.max_magic_points
@@ -2069,7 +2394,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
             && !you.is_constricted())
         {
             if (!quiet)
-                mpr("You have no need to draw out power.");
+                mpr(ui_translate("a.ability", "You have no need to draw out power."));
             return false;
         }
         return true;
@@ -2078,7 +2403,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (you.duration[DUR_EXHAUSTED])
         {
             if (!quiet)
-                mpr("You're too exhausted to power leap.");
+                mpr(ui_translate("a.ability", "You're too exhausted to power leap."));
             return false;
         }
         return true;
@@ -2087,7 +2412,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (you.duration[DUR_EXHAUSTED])
         {
             if (!quiet)
-                mpr("You're too exhausted to unleash your apocalyptic power.");
+                mpr(ui_translate("a.ability", "You're too exhausted to unleash your apocalyptic power."));
             return false;
         }
         return true;
@@ -2098,7 +2423,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (clouds.empty())
         {
             if (!quiet)
-                mpr("You can't see any clouds you can empower.");
+                mpr(ui_translate("a.ability", "You can't see any clouds you can empower."));
             return false;
         }
         return true;
@@ -2116,7 +2441,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (draconian_breath_uses_available() <= 0)
         {
             if (!quiet)
-                mpr("You have exhausted your breath weapon. Slay more foes!");
+                mpr(ui_translate("a.ability", "You have exhausted your breath weapon. Slay more foes!"));
             return false;
         }
         return true;
@@ -2142,13 +2467,13 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (you.duration[DUR_DEATHS_DOOR])
         {
             if (!quiet)
-                mpr("You can't heal while in death's door.");
+                mpr(ui_translate("a.ability", "You can't heal while in death's door."));
             return false;
         }
         if (get_real_mp(false) < 1)
         {
             if (!quiet)
-                mpr("You don't have enough innate magic capacity.");
+                mpr(ui_translate("a.ability", "You don't have enough innate magic capacity."));
             return false;
         }
         return true;
@@ -2166,8 +2491,8 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         {
             if (!quiet)
             {
-                mprf("In %d experience levels, you will have learned enough to "
-                     "assemble a masterpiece.", (COGLIN_GIZMO_XL - you.experience_level));
+                mprf(ui_translate("a.ability", "In %d experience levels, you will have learned enough to "
+                     "assemble a masterpiece."), (COGLIN_GIZMO_XL - you.experience_level));
             }
             return false;
         }
@@ -2181,19 +2506,19 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (you.duration[DUR_CACOPHONY])
         {
             if (!quiet)
-                mpr("You are already making a cacophony!");
+                mpr(ui_translate("a.ability", "You are already making a cacophony!"));
             return false;
         }
         else if (you.props.exists(CACOPHONY_XP_KEY))
         {
             if (!quiet)
-                mpr("You must recover your energy before unleashing another cacophony.");
+                mpr(ui_translate("a.ability", "You must recover your energy before unleashing another cacophony."));
             return false;
         }
         else if (!you.equipment.get_first_slot_item(SLOT_HAUNTED_AUX))
         {
             if (!quiet)
-                mpr("You aren't haunting any armour at the moment!");
+                mpr(ui_translate("a.ability", "You aren't haunting any armour at the moment!"));
             return false;
         }
 
@@ -2204,14 +2529,14 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (you.props.exists(BATFORM_XP_KEY))
         {
             if (!quiet)
-                mpr("You must recover your energy before scattering into bats again.");
+                mpr(ui_translate("a.ability", "You must recover your energy before scattering into bats again."));
             return false;
         }
         const string reason = cant_transform_reason(transformation::bat_swarm);
         if (!reason.empty())
         {
             if (!quiet)
-                mpr(reason);
+                mpr(ui_translate("a.ability.reason", reason.c_str()));
             return false;
         }
         return true;
@@ -2222,14 +2547,14 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (you.duration[DUR_ENKINDLED])
         {
             if (!quiet)
-                mpr("You are already burning your memories away!");
+                mpr(ui_translate("a.ability", "You are already burning your memories away!"));
 
             return false;
         }
         else if (you.props[ENKINDLE_CHARGES_KEY].get_int() == 0)
         {
             if (!quiet)
-                mpr("You don't have any memories left to burn.");
+                mpr(ui_translate("a.ability", "You don't have any memories left to burn."));
 
             return false;
         }
@@ -2271,7 +2596,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
             return true;
 
         if (!quiet)
-             mpr(no_tele_reason);
+             mpr(_ability_blink_reason(no_tele_reason));
         return false;
     }
 
@@ -2279,7 +2604,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (you.props.exists(WATERY_GRAVE_XP_KEY))
         {
             if (!quiet)
-                mpr("You must recover your energy before doing this again.");
+                mpr(ui_translate("a.ability", "You must recover your energy before doing this again."));
             return false;
         }
         for (radius_iterator ri(you.pos(), 4, C_SQUARE, LOS_NO_TRANS, false); ri; ++ri)
@@ -2289,7 +2614,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         }
 
         if (!quiet)
-            mpr("There is no water in range!");
+            mpr(ui_translate("a.ability", "There is no water in range!"));
 
         return false;
 
@@ -2301,7 +2626,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (you.duration[DUR_INVIS])
         {
             if (!quiet)
-                mpr("You are already invisible!");
+                mpr(ui_translate("a.ability", "You are already invisible!"));
             return false;
         }
         return true;
@@ -2319,7 +2644,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (you.experience_level <= RU_SAC_XP_LEVELS)
         {
             if (!quiet)
-                mpr("You don't have enough experience to sacrifice.");
+                mpr(ui_translate("a.ability", "You don't have enough experience to sacrifice."));
             return false;
         }
         return true;
@@ -2332,8 +2657,10 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         {
             if (!quiet)
             {
-                mprf("%s is still trapped in memory!",
-                     hepliaklqana_ally_name().c_str());
+                mprf("%s", ui_render("a.ability", "%s is still trapped in memory!",
+                make_stringf("%s is still trapped in memory!",
+                     hepliaklqana_ally_name().c_str()),
+                {ui_literal_arg(hepliaklqana_ally_name())}).c_str());
             }
             return false;
         }
@@ -2343,13 +2670,13 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (you.attribute[ATTR_SERPENTS_LASH])
         {
             if (!quiet)
-                mpr("You are already lashing out.");
+                mpr(ui_translate("a.ability", "You are already lashing out."));
             return false;
         }
         if (you.duration[DUR_EXHAUSTED])
         {
             if (!quiet)
-                mpr("You are too exhausted to lash out.");
+                mpr(ui_translate("a.ability", "You are too exhausted to lash out."));
             return false;
         }
         return true;
@@ -2358,7 +2685,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (you.props.exists(WU_JIAN_HEAVENLY_STORM_KEY))
         {
             if (!quiet)
-                mpr("You are already engulfed in a heavenly storm!");
+                mpr(ui_translate("a.ability", "You are already engulfed in a heavenly storm!"));
             return false;
         }
         return true;
@@ -2369,15 +2696,17 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (you.is_nervous())
         {
             if (!quiet)
-                mpr("You are too terrified to wall jump!");
+                mpr(ui_translate("a.ability", "You are too terrified to wall jump!"));
             return false;
         }
         if (you.attribute[ATTR_HELD])
         {
             if (!quiet)
             {
-                mprf("You cannot wall jump while caught in a %s.",
-                     you.caught_by() == CAUGHT_WEB ? "web" : "net");
+                mprf("%s", ui_render("a.ability", "You cannot wall jump while caught in a %s.",
+                make_stringf("You cannot wall jump while caught in a %s.",
+                     you.caught_by() == CAUGHT_WEB ? "web" : "net"),
+                {ui_text_arg("a.noun", you.caught_by() == CAUGHT_WEB ? "web" : "net")}).c_str());
             }
             return false;
         }
@@ -2393,7 +2722,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (!has_targets)
         {
             if (!quiet)
-                mpr("There is nothing to wall jump against here.");
+                mpr(ui_translate("a.ability", "There is nothing to wall jump against here."));
             return false;
         }
         return true;
@@ -2419,14 +2748,14 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (yred_torch_is_raised())
         {
             if (!quiet)
-                mpr("The black torch is already ablaze!");
+                mpr(ui_translate("a.ability", "The black torch is already ablaze!"));
             return false;
         }
         const string reason = yred_cannot_light_torch_reason();
         if (!reason.empty())
         {
             if (!quiet)
-                mpr(reason.c_str());
+                mpr(ui_translate("a.ability.reason", reason.c_str()));
             return false;
         }
         return true;
@@ -2436,13 +2765,13 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (!yred_torch_is_raised())
         {
             if (!quiet)
-                mpr("The black torch is unlit!");
+                mpr(ui_translate("a.ability", "The black torch is unlit!"));
             return false;
         }
         if (yred_get_torch_power() < 1)
         {
             if (!quiet)
-                mpr("You must stoke the torch's fire more first.");
+                mpr(ui_translate("a.ability", "You must stoke the torch's fire more first."));
             return false;
         }
         return true;
@@ -2451,7 +2780,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (you.duration[DUR_FATHOMLESS_SHACKLES])
         {
             if (!quiet)
-                mpr("You are already invoking Yredulemnul's grip!");
+                mpr(ui_translate("a.ability", "You are already invoking Yredulemnul's grip!"));
             return false;
         }
         return true;
@@ -2460,7 +2789,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (get_num_apostles() == 3)
         {
             if (!quiet)
-                mpr("You already have the maximum number of followers. Dismiss one first.");
+                mpr(ui_translate("a.ability", "You already have the maximum number of followers. Dismiss one first."));
             return false;
         }
         return true;
@@ -2469,19 +2798,19 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (you.duration[DUR_BLOOD_FOR_BLOOD])
         {
             if (!quiet)
-                mpr("You have already called for blood!");
+                mpr(ui_translate("a.ability", "You have already called for blood!"));
             return false;
         }
         else if (!you.props.exists(BEOGH_RES_PIETY_NEEDED_KEY))
         {
             if (!quiet)
-                mpr("Your apostles are all alive!");
+                mpr(ui_translate("a.ability", "Your apostles are all alive!"));
             return false;
         }
         else if (!tile_has_valid_bfb_corpse(you.pos()))
         {
             if (!quiet)
-                mpr("You must be standing atop the corpse of a fallen apostle!");
+                mpr(ui_translate("a.ability", "You must be standing atop the corpse of a fallen apostle!"));
             return false;
         }
         return true;
@@ -2492,7 +2821,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (!reason.empty())
         {
             if (!quiet)
-                mpr(reason.c_str());
+                mpr(ui_translate("a.ability.reason", reason.c_str()));
             return false;
         }
         return true;
@@ -2504,7 +2833,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (!reason.empty())
         {
             if (!quiet)
-                mpr(reason.c_str());
+                mpr(ui_translate("a.ability.reason", reason.c_str()));
             return false;
         }
         return true;
@@ -2514,7 +2843,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (you.duration[DUR_PRIMORDIAL_NIGHTFALL])
         {
             if (!quiet)
-                mpr("Night has already fallen.");
+                mpr(ui_translate("a.ability", "Night has already fallen."));
             return false;
         }
         return true;
@@ -2523,13 +2852,13 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         if (player_in_branch(BRANCH_CRUCIBLE))
         {
             if (!quiet)
-                mpr("Makhleb denies you. Endure the Crucible first!");
+                mpr(ui_translate("a.ability", "Makhleb denies you. Endure the Crucible first!"));
             return false;
         }
         else if (you.form == transformation::slaughter)
         {
             if (!quiet)
-                mpr("You are already a vessel of slaughter!");
+                mpr(ui_translate("a.ability", "You are already a vessel of slaughter!"));
             return false;
         }
         return true;
@@ -2565,16 +2894,16 @@ static vector<string> _desc_slouch_damage(const monster_info& mi)
     if (!monster_at(mi.pos) || !you.can_see(*monster_at(mi.pos)))
         return vector<string>{};
     else if (!is_slouchable(mi.pos))
-        return vector<string>{make_stringf("not susceptible")};
+        return vector<string>{string(target_description_text("a.ability", "not susceptible"))};
     else
-        return vector<string>{make_stringf("damage: %dd3 / 2", slouch_damage(monster_at(mi.pos)))};
+        return vector<string>{target_description_format("a.ability", "damage: %dd3 / 2", slouch_damage(monster_at(mi.pos)))};
 }
 
 static vector<string> _desc_bind_soul_hp(const monster_info& mi)
 {
     if (!monster_at(mi.pos) || !yred_can_bind_soul(monster_at(mi.pos)))
         return vector<string>{};
-    return vector<string>{make_stringf("hp as a bound soul: ~%d", yred_get_bound_soul_hp(mi.type, true))};
+    return vector<string>{target_description_format("a.ability", "hp as a bound soul: ~%d", yred_get_bound_soul_hp(mi.type, true))};
 }
 
 static vector<string> _desc_marionette_spells(const monster_info& mi)
@@ -2586,7 +2915,7 @@ static vector<string> _desc_marionette_spells(const monster_info& mi)
     int num_spells = spells.size();
     int num_usable_spells = monster_at(mi.pos)->props[DITHMENOS_MARIONETTE_SPELLS_KEY].get_int();
 
-    return vector<string>{make_stringf("%d/%d spells usable", num_usable_spells, num_spells)};
+    return vector<string>{target_description_format("a.ability", "%d/%d spells usable", num_usable_spells, num_spells)};
 }
 
 static vector<coord_def> _find_shadowslip_affected()
@@ -2796,7 +3125,7 @@ static bool _invoke_dragons()
     if (create_monster(mg))
         {
             made_mons = true;
-            mpr("A dragon answers your prayer!");
+            mpr(ui_translate("a.ability", "A dragon answers your prayer!"));
         }
     return made_mons;
 }
@@ -2859,6 +3188,16 @@ bool activate_talent(const talent& tal, dist *target)
         args.top_prompt = make_stringf("%s: <w>%s</w>",
                                        is_targeted ? "Aiming" : "Activating",
                                        ability_name(abil.ability).c_str());
+        string shown_ability;
+        const bool shown_available = try_ability_display_name(abil.ability, shown_ability);
+        const char *target_pattern = is_targeted ? "Aiming: <w>%s</w>"
+                                                 : "Activating: <w>%s</w>";
+        ui_translation_group target_text({{"a.ability", target_pattern}});
+        if (abil.failure.base_chance)
+            target_text.require("a.ability", " <lightgrey>(%s risk of failure)</lightgrey>");
+        const bool target_translated = shown_available && target_text.available();
+        args.top_prompt = ui_render("a.ability", target_pattern,
+            args.top_prompt, {{shown_ability, target_translated}});
         targeter_beam* beamfunc = dynamic_cast<targeter_beam*>(hitfunc.get());
         if (beamfunc && beamfunc->beam.hit > 0 && !beamfunc->beam.is_explosion)
             args.get_desc_func = bind(desc_beam_hit_chance, placeholders::_1, hitfunc.get());
@@ -2878,7 +3217,9 @@ bool activate_talent(const talent& tal, dist *target)
         if (abil.failure.base_chance)
         {
             args.top_prompt +=
-                make_stringf(" <lightgrey>(%s risk of failure)</lightgrey>",
+                make_stringf(target_translated
+                    ? target_text.get("a.ability", " <lightgrey>(%s risk of failure)</lightgrey>")
+                    : " <lightgrey>(%s risk of failure)</lightgrey>",
                              failure_rate_to_string(tal.fail).c_str());
         }
         args.behaviour = &beh;
@@ -2962,7 +3303,7 @@ bool activate_talent(const talent& tal, dist *target)
         }
         case spret::fail:
             if (!testbits(abil.flags, abflag::quiet_fail))
-                mpr("You fail to use your ability.");
+                mpr(ui_translate("a.ability", "You fail to use your ability."));
             you.turn_is_over = true;
             if (mp_cost)
                 refund_mp(mp_cost);
@@ -3009,7 +3350,7 @@ static bool _evoke_orb_of_dispater(dist *target)
     {
         return false;
     }
-    mpr("You feel the orb feeding on your energy!");
+    mpr(ui_translate("a.ability", "You feel the orb feeding on your energy!"));
     return true;
 }
 
@@ -3044,7 +3385,7 @@ static vector<monster*> _get_siphon_victims(bool known)
 static spret _siphon_essence(bool fail)
 {
     if (_get_siphon_victims(true).empty()
-        && !yesno("There are no victims visible. Siphon anyway?", true, 'n'))
+        && !yesno(ui_translate("a.ability", "There are no victims visible. Siphon anyway?"), true, 'n'))
     {
         canned_msg(MSG_OK);
         return spret::abort;
@@ -3076,9 +3417,9 @@ static spret _siphon_essence(bool fail)
     }
 
     if (seen)
-        mpr("You feel stolen life flooding into you!");
+        mpr(ui_translate("a.ability", "You feel stolen life flooding into you!"));
     else
-        mpr("You feel stolen life flooding into you from an unseen source!");
+        mpr(ui_translate("a.ability", "You feel stolen life flooding into you from an unseen source!"));
 
     if (you.hp == you.hp_max)
         return spret::success;
@@ -3185,7 +3526,7 @@ static spret _do_cacophony()
 
     you.duration[DUR_CACOPHONY] = random_range(300, 400);
     you.props[CACOPHONY_XP_KEY] = 150;
-    mpr("You send your armour flying and begin to make an unholy cacophony!");
+    mpr(ui_translate("a.ability", "You send your armour flying and begin to make an unholy cacophony!"));
 
     return spret::success;
 }
@@ -3225,7 +3566,7 @@ static spret _do_ability(const ability_def& abil, bool fail, dist *target,
         fail_check();
         if (one_chance_in(4))
         {
-            mpr("Your magical essence is drained by the effort!");
+            mpr(ui_translate("a.ability", "Your magical essence is drained by the effort!"));
             rot_mp(1);
         }
         potionlike_effect(POT_HEAL_WOUNDS, 40);
@@ -3236,12 +3577,12 @@ static spret _do_ability(const ability_def& abil, bool fail, dist *target,
         if (!you.digging)
         {
             you.digging = true;
-            mpr("You extend your mandibles.");
+            mpr(ui_translate("a.ability", "You extend your mandibles."));
         }
         else
         {
             you.digging = false;
-            mpr("You retract your mandibles.");
+            mpr(ui_translate("a.ability", "You retract your mandibles."));
         }
         break;
 
@@ -3254,7 +3595,7 @@ static spret _do_ability(const ability_def& abil, bool fail, dist *target,
             if (beogh_cancel_leaving_floor())
                 return spret::abort;
 
-            if (yesno("Are you sure you want to shaft yourself?", true, 'n'))
+            if (yesno(ui_translate("a.ability", "Are you sure you want to shaft yourself?"), true, 'n'))
                 start_delay<ShaftSelfDelay>(1);
             else
             {
@@ -3305,7 +3646,7 @@ static spret _do_ability(const ability_def& abil, bool fail, dist *target,
         {
             item_def *wpn = nullptr;
             auto success = use_an_item_menu(wpn, OPER_ANY, OSEL_ARTEFACT_WEAPON,
-                                "Select an artefact weapon to imprint upon your Paragon.",
+                                ui_translate("a.ability", "Select an artefact weapon to imprint upon your Paragon."),
                                 [=](){return true;});
 
             if (success == OPER_NONE)
@@ -3313,8 +3654,10 @@ static spret _do_ability(const ability_def& abil, bool fail, dist *target,
 
             if (god_hates_item(*wpn))
             {
-                mprf(MSGCH_WARN, "%s forbids using such a weapon!",
-                     god_name(you.religion).c_str());
+                mprf(MSGCH_WARN, "%s", ui_render("a.ability", "%s forbids using such a weapon!",
+                make_stringf("%s forbids using such a weapon!",
+                     god_name(you.religion).c_str()),
+                {ui_text_arg("display.god", god_name(you.religion))}).c_str());
                 return spret::abort;
             }
 
@@ -3348,7 +3691,7 @@ static spret _do_ability(const ability_def& abil, bool fail, dist *target,
 
         result = zapping(ability_to_zap(abil.ability),
                          _ability_zap_pow(abil.ability), beam, true,
-                         "You exhale a blast of poison gas.", fail);
+                         ui_translate("a.ability", "You exhale a blast of poison gas."), fail);
 
         if (result == spret::success)
             you.increase_duration(DUR_BREATH_WEAPON, cooldown);
@@ -3392,7 +3735,7 @@ static spret _do_ability(const ability_def& abil, bool fail, dist *target,
     case ABIL_EVOKE_TURN_INVISIBLE:     // cloaks, randarts
         if (!invis_allowed())
             return spret::abort;
-        if (Options.show_invis_targeter && !invisibility_target_check("Confirm evoke"))
+        if (Options.show_invis_targeter && !invisibility_target_check(ui_translate("a.ability", "Confirm evoke")))
             return spret::abort;
         if (_invis_causes_drain())
             drain_player(40, false, true); // yes, before the fail check!
@@ -3417,7 +3760,7 @@ static spret _do_ability(const ability_def& abil, bool fail, dist *target,
     case ABIL_BAT_SWARM:
     {
         you.props[BATFORM_XP_KEY] = div_rand_round(11000, get_form()->get_effect_size());
-        mpr("You scatter into a swarm of vampire bats!");
+        mpr(ui_translate("a.ability", "You scatter into a swarm of vampire bats!"));
         transform(random_range(12, 20), transformation::bat_swarm);
         big_cloud(CLOUD_BATS, &you, you.pos(), 15, 15, 1);
         break;
@@ -3426,7 +3769,7 @@ static spret _do_ability(const ability_def& abil, bool fail, dist *target,
     case ABIL_ENKINDLE:
     {
         draw_ring_animation(you.pos(), 3, LIGHTCYAN, CYAN, true);
-        mprf(MSGCH_DURATION, "Your flames flare with remembrance!");
+        mprf(MSGCH_DURATION, "%s", ui_translate("a.ability", "Your flames flare with remembrance!"));
         you.duration[DUR_ENKINDLED] = (random_range(12, 20)
                                        + (you.props[ENKINDLE_CHARGES_KEY].get_int() * 3))
                                             * BASELINE_DELAY;
@@ -3444,7 +3787,7 @@ static spret _do_ability(const ability_def& abil, bool fail, dist *target,
                 (recite_type) random2(NUM_RECITE_TYPES); // This is just flavor
             you.attribute[ATTR_RECITE_SEED] = random2(2187); // 3^7
             you.duration[DUR_RECITE] = 3 * BASELINE_DELAY;
-            mpr("You clear your throat and prepare to recite.");
+            mpr(ui_translate("a.ability", "You clear your throat and prepare to recite."));
         }
         else
         {
@@ -3510,7 +3853,7 @@ static spret _do_ability(const ability_def& abil, bool fail, dist *target,
 
     case ABIL_KIKU_SIGN_OF_RUIN:
         fail_check();
-        mpr("You invoke the name of Kikubaaqudgha!");
+        mpr(ui_translate("a.ability", "You invoke the name of Kikubaaqudgha!"));
         cast_sign_of_ruin(you, beam.target,
                           (4 + you.skill_rdiv(SK_NECROMANCY, 4, 7)) * BASELINE_DELAY);
         break;
@@ -3550,7 +3893,7 @@ static spret _do_ability(const ability_def& abil, bool fail, dist *target,
 
     case ABIL_YRED_FATHOMLESS_SHACKLES:
         fail_check();
-        mprf(MSGCH_DURATION, "You call down Yredelemnul's inexorable grip.");
+        mprf(MSGCH_DURATION, "%s", ui_translate("a.ability", "You call down Yredelemnul's inexorable grip."));
         // XXX: Some invo formula
         you.duration[DUR_FATHOMLESS_SHACKLES] = random_range(15, 25) * BASELINE_DELAY;
         yred_make_blasphemy();
@@ -3564,9 +3907,11 @@ static spret _do_ability(const ability_def& abil, bool fail, dist *target,
         if (mons && you.can_see(*mons) && mons->is_illusion())
         {
             fail_check();
-            mprf("You attempt to bind %s soul, but %s is merely a clone!",
+            mprf("%s", ui_render("a.ability", "You attempt to bind the soul of %s, but it is merely a clone!",
+                make_stringf("You attempt to bind %s soul, but %s is merely a clone!",
                  mons->name(DESC_ITS).c_str(),
-                 mons->pronoun(PRONOUN_SUBJECTIVE).c_str());
+                 mons->pronoun(PRONOUN_SUBJECTIVE).c_str()),
+                {ui_actor_arg(*mons)}).c_str());
             // Still costs a turn to gain the information.
             return spret::success;
         }
@@ -3576,16 +3921,18 @@ static spret _do_ability(const ability_def& abil, bool fail, dist *target,
         int pain = you.hp / 3;
         dec_hp(pain, false);
         mons->add_ench(mon_enchant(ENCH_SOUL_RIPE, &you, INFINITE_DURATION, pain));
-        mprf("You wrap your dark will around %s soul!",
-              mons->name(DESC_ITS).c_str());
+        mprf("%s", ui_render("a.ability", "You wrap your dark will around the soul of %s!",
+                make_stringf("You wrap your dark will around %s soul!",
+              mons->name(DESC_ITS).c_str()),
+                {ui_actor_arg(*mons)}).c_str());
         break;
     }
 
     case ABIL_OKAWARU_HEROISM:
         fail_check();
-        mprf(MSGCH_DURATION, you.duration[DUR_HEROISM]
-             ? "You feel more confident with your borrowed prowess."
-             : "You gain the combat prowess of a mighty hero.");
+        mprf(MSGCH_DURATION, "%s", you.duration[DUR_HEROISM]
+             ? ui_translate("a.ability", "You feel more confident with your borrowed prowess.")
+             : ui_translate("a.ability", "You gain the combat prowess of a mighty hero."));
 
         you.increase_duration(DUR_HEROISM,
                               10 + random2avg(you.skill(SK_INVOCATIONS, 6), 2),
@@ -3600,10 +3947,12 @@ static spret _do_ability(const ability_def& abil, bool fail, dist *target,
         {
             // "Your [hand(s)] get{s} new energy."
             mprf(MSGCH_DURATION, "%s",
-                 you.hands_act("get", "new energy.").c_str());
+                 ui_render("a.ability", "Your %s get new energy.",
+                    you.hands_act("get", "new energy."),
+                    {ui_text_arg("a.bodypart", you.hand_name(true))}).c_str());
         }
         else
-            mprf(MSGCH_DURATION, "You can now deal lightning-fast blows.");
+            mprf(MSGCH_DURATION, "%s", ui_translate("a.ability", "You can now deal lightning-fast blows."));
 
         you.increase_duration(DUR_FINESSE,
                               10 + random2avg(you.skill(SK_INVOCATIONS, 6), 2),
@@ -3636,7 +3985,7 @@ static spret _do_ability(const ability_def& abil, bool fail, dist *target,
         if (you.has_mutation(MUT_MAKHLEB_MARK_CARNAGE)
             && get_dist_to_nearest_monster() > you.current_vision)
         {
-            mprf("You can't see any nearby targets.");
+            mprf("%s", ui_translate("a.ability", "You can't see any nearby targets."));
             return spret::abort;
         }
 
@@ -3698,7 +4047,7 @@ static spret _do_ability(const ability_def& abil, bool fail, dist *target,
 
     case ABIL_SIF_MUNA_CHANNEL_ENERGY:
         fail_check();
-        mpr("You channel some magical energy.");
+        mpr(ui_translate("a.ability", "You channel some magical energy."));
         you.increase_duration(DUR_CHANNEL_ENERGY,
             4 + random2avg(you.skill_rdiv(SK_INVOCATIONS, 2, 3), 2), 100);
         break;
@@ -3711,7 +4060,7 @@ static spret _do_ability(const ability_def& abil, bool fail, dist *target,
         fail_check();
         const int pow = min(50, 10 + you.skill_rdiv(SK_INVOCATIONS, 1, 3));
         const int healed = pow + roll_dice(2, pow) - 2;
-        mpr("You are healed.");
+        mpr(ui_translate("a.ability", "You are healed."));
         inc_hp(healed);
         break;
     }
@@ -3755,7 +4104,7 @@ static spret _do_ability(const ability_def& abil, bool fail, dist *target,
 
         if (beam.target == you.pos())
         {
-            mpr("You cannot banish yourself!");
+            mpr(ui_translate("a.ability", "You cannot banish yourself!"));
             return spret::abort;
         }
 
@@ -3871,7 +4220,9 @@ static spret _do_ability(const ability_def& abil, bool fail, dist *target,
         const item_def* const weapon = you.weapon();
         const string msg = weapon ? weapon->name(DESC_YOUR)
                                   : ("your " + you.hand_name(true));
-        mprf(MSGCH_DURATION, "A thick mucus forms on %s.", msg.c_str());
+        mprf(MSGCH_DURATION, "%s", ui_render("a.ability", "A thick mucus forms on your %s.",
+                make_stringf("A thick mucus forms on %s.", msg.c_str()),
+                {(weapon ? ui_item_arg(*weapon) : ui_text_arg("a.bodypart", you.hand_name(true)))}).c_str());
         you.increase_duration(DUR_SLIMIFY,
                               random2avg(you.piety() / 4, 2) + 3, 100);
         break;
@@ -4025,7 +4376,7 @@ static spret _do_ability(const ability_def& abil, bool fail, dist *target,
         break;
 
     case ABIL_WU_JIAN_SERPENTS_LASH:
-        mprf(MSGCH_GOD, "Your muscles tense, ready for explosive movement...");
+        mprf(MSGCH_GOD, "%s", ui_translate("a.ability", "Your muscles tense, ready for explosive movement..."));
         you.attribute[ATTR_SERPENTS_LASH] = 2;
         you.redraw_status_lights = true;
         return spret::success;
@@ -4048,16 +4399,16 @@ static spret _do_ability(const ability_def& abil, bool fail, dist *target,
     case ABIL_IGNIS_RISING_FLAME:
         if (!_can_rising_flame(false))
             return spret::abort;
-        mpr("You begin to rise into the air.");
+        mpr(ui_translate("a.ability", "You begin to rise into the air."));
         // slightly faster than teleport
         you.set_duration(DUR_RISING_FLAME, 2 + random2(3));
         you.one_time_ability_used.set(GOD_IGNIS);
         return spret::success;
 
     case ABIL_RENOUNCE_RELIGION:
-        if (yesno("Really renounce your faith, foregoing its fabulous benefits?",
+        if (yesno(ui_translate("a.ability", "Really renounce your faith, foregoing its fabulous benefits?"),
                   false, 'n')
-            && yesno("Are you sure?", false, 'n'))
+            && yesno(ui_translate("a.ability", "Are you sure?"), false, 'n'))
         {
             excommunication(true);
         }
@@ -4098,12 +4449,12 @@ static spret _do_ability(const ability_def& abil, bool fail, dist *target,
         if (feat == DNGN_UNSEEN)
             return spret::abort;
         you.props[WIZ_LAST_FEATURE_TYPE_PROP] = static_cast<int>(feat);
-        mprf("Now building '%s'", dungeon_feature_name(feat));
+        mprf(ui_translate("a.ability", "Now building '%s'"), dungeon_feature_name(feat));
         break;
     }
 #endif
     case ABIL_NON_ABILITY:
-        mpr("Sorry, you can't do that.");
+        mpr(ui_translate("a.ability", "Sorry, you can't do that."));
         break;
 
     default:
@@ -4160,20 +4511,20 @@ int choose_ability_menu(const vector<talent>& talents)
     {
         // Hack like the one in spl-cast.cc:list_spells() to align the title.
         ToggleableMenuEntry* me =
-            new ToggleableMenuEntry("Ability - do what?                  "
-                                    "Cost                            Failure",
-                                    "Ability - describe what?            "
-                                    "Cost                            Failure",
+            new ToggleableMenuEntry(ui_translate("phase3.ability", "Ability - do what?                  "
+                                    "Cost                            Failure"),
+                                    ui_translate("phase3.ability", "Ability - describe what?            "
+                                    "Cost                            Failure"),
                                     MEL_ITEM);
         me->colour = BLUE;
         abil_menu.set_title(me, true, true);
     }
 #else
     abil_menu.set_title(
-        new ToggleableMenuEntry("Ability - do what?                  "
-                                "Cost                            Failure",
-                                "Ability - describe what?            "
-                                "Cost                            Failure",
+        new ToggleableMenuEntry(ui_translate("phase3.ability", "Ability - do what?                  "
+                                "Cost                            Failure"),
+                                ui_translate("phase3.ability", "Ability - describe what?            "
+                                "Cost                            Failure"),
                                 MEL_TITLE), true, true);
 #endif
     abil_menu.set_tag("ability");
@@ -4192,8 +4543,8 @@ int choose_ability_menu(const vector<talent>& talents)
     else
     {
         abil_menu.set_more(formatted_string::parse_string(
-            menu_keyhelp_cmd(CMD_MENU_HELP) + " toggle "
-                       "between ability selection and description."));
+            menu_keyhelp_cmd(CMD_MENU_HELP) + ui_translate("phase3.ability", " toggle "
+                       "between ability selection and description.")));
     }
 
     int numbers[52];
@@ -4227,11 +4578,11 @@ int choose_ability_menu(const vector<talent>& talents)
     if (found_invocations)
     {
 #ifdef USE_TILE_LOCAL
-        MenuEntry* subtitle = new MenuEntry(" Invocations -    ", MEL_ITEM);
+        MenuEntry* subtitle = new MenuEntry(ui_translate("phase3.ability", " Invocations -    "), MEL_ITEM);
         subtitle->colour = BLUE;
         abil_menu.add_entry(subtitle);
 #else
-        abil_menu.add_entry(new MenuEntry(" Invocations -    ", MEL_SUBTITLE));
+        abil_menu.add_entry(new MenuEntry(ui_translate("phase3.ability", " Invocations -    "), MEL_SUBTITLE));
 #endif
         for (unsigned int i = 0; i < talents.size(); ++i)
         {
@@ -4284,10 +4635,16 @@ string describe_talent(const talent& tal)
 
     const string failure = failure_rate_to_string(tal.fail);
 
+    string name;
+    const bool name_ok = try_ability_display_name(tal.which, name);
+    bool cost_ok;
+    const string cost = _make_cost_description(tal.which, cost_ok, name_ok);
+    if (!name_ok || !cost_ok)
+        name = ability_name(tal.which);
     ostringstream desc;
     desc << left
-         << chop_string(ability_name(tal.which), 32)
-         << chop_string(make_cost_description(tal.which), 32)
+         << chop_string(name, 32)
+         << chop_string(cost, 32)
          << chop_string(failure, 12);
     return trimmed_string(desc.str());
 }
@@ -4798,7 +5155,7 @@ void swap_ability_slots(int index1, int index2, bool silent)
     if (!silent)
     {
         mprf_nocap("%c - %s", index_to_letter(index2),
-                   ability_name(you.ability_letter_table[index2]).c_str());
+                   ability_display_name(you.ability_letter_table[index2]).c_str());
     }
 
 }

@@ -1,0 +1,170 @@
+{
+  "hits": [
+    {
+      "Term": "black draconian",
+      "Translation": "黑龙人",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/draconian-black.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "draconian stormcaller",
+      "Translation": "龙人风暴使",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "green draconian",
+      "Translation": "绿龙人",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/draconian-green.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "grey draconian",
+      "Translation": "灰龙人",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/draconian-grey.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "pale draconian",
+      "Translation": "苍白龙人",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/draconian-pale.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "purple draconian",
+      "Translation": "紫龙人",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/draconian-purple.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "red draconian",
+      "Translation": "红龙人",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/draconian-red.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "white draconian",
+      "Translation": "白龙人",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/draconian-white.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "yellow draconian",
+      "Translation": "黄龙人",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/draconian-yellow.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Draconian",
+      "Translation": "龙人",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/draconian-base.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Summoner",
+      "Translation": "召唤师",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/summoner.yaml。"
+    },
+    {
+      "Term": "Draconian Breath",
+      "Translation": "龙人吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "draconian annihilator",
+      "Translation": "龙人歼灭者",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "draconian knight",
+      "Translation": "龙人骑士",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "draconian monk",
+      "Translation": "龙人武僧",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "draconian scorcher",
+      "Translation": "龙人焚烧者",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "draconian shifter",
+      "Translation": "龙人移位者",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    }
+  ],
+  "history": [
+    [
+      "display.creation",
+      "Red Draconian",
+      "红龙人"
+    ],
+    [
+      "display.creation",
+      "White Draconian",
+      "白龙人"
+    ],
+    [
+      "display.creation",
+      "Green Draconian",
+      "绿龙人"
+    ],
+    [
+      "display.creation",
+      "Yellow Draconian",
+      "黄龙人"
+    ],
+    [
+      "display.creation",
+      "Grey Draconian",
+      "灰龙人"
+    ],
+    [
+      "display.creation",
+      "Black Draconian",
+      "黑龙人"
+    ],
+    [
+      "display.creation",
+      "Purple Draconian",
+      "紫龙人"
+    ],
+    [
+      "display.creation",
+      "Pale Draconian",
+      "苍白龙人"
+    ],
+    [
+      "o.monster.attitude",
+      "%s %s",
+      "%s的%s"
+    ]
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "batch": 48,
+  "reviewed_keys": 58,
+  "reviewed_candidates": 404,
+  "corrected_keys": 10,
+  "new_keys": 0,
+  "english_source_unchanged": true,
+  "weights_references_and_candidate_order": "preserved",
+  "python_tests_passed": 32,
+  "native_unique_cases_passed_after_focused_rerun": 5,
+  "initial_cases_passed": 4,
+  "initial_obsolete_sampling_assertion": "replaced with deterministic unresolved-reference check",
+  "final_rerun_cases": 2,
+  "final_rerun_assertions": 39746,
+  "final_rerun_seconds": 9.736,
+  "windows_tiles_build": "passed",
+  "gui_visual_test": false
+}

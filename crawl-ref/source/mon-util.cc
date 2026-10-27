@@ -4,6 +4,9 @@
 **/
 
 #include "AppHdr.h"
+#include "m-display.h"
+#include "i18n.h"
+#include "decor-display.h"
 
 #include "mon-util.h"
 
@@ -50,6 +53,7 @@
 #include "mon-cast.h"
 #include "mon-death.h"
 #include "mon-explode.h"
+#include "mon-info.h"
 #include "mon-place.h"
 #include "mon-poly.h"
 #include "mon-tentacle.h"
@@ -959,7 +963,7 @@ bool mons_is_statue(monster_type mc)
  * @param pos       The mimic's location.
  * @param name      The mimic's name.
  */
-static void _mimic_vanish(const coord_def& pos, const string& name)
+static void _mimic_vanish(const coord_def& pos, const string& name, const ui_arg &mimic_display)
 {
     const bool can_place_smoke = !cloud_at(pos);
     if (can_place_smoke)
@@ -970,10 +974,16 @@ static void _mimic_vanish(const coord_def& pos, const string& name)
     const char* const smoke_str = can_place_smoke ? " in a puff of smoke" : "";
 
     const bool can_cackle = !silenced(pos) && !silenced(you.pos());
-    const string cackle = can_cackle ? getSpeakString("_laughs_") + " and " : "";
+    const string cackle = can_cackle ? getSpeakString("_laughs_", true) + " and " : "";
 
-    mprf("The %s mimic %svanishes%s!",
-         name.c_str(), cackle.c_str(), smoke_str);
+    mprf("%s", ([&]() -> string {
+                const string _m0 = name;
+                const string _m1 = cackle;
+                const string _m2 = smoke_str;
+                const string _original = make_stringf("The %s mimic %svanishes%s!", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.230", "The %s mimic %svanishes%s!")) return _original;
+                return ui_render("m.log.230", "The %s mimic %svanishes%s!", _original, {mimic_display, m_clause_arg(_m1), m_clause_arg(_m2)});
+            })().c_str());
     interrupt_activity(activity_interrupt::mimic);
 }
 
@@ -1021,9 +1031,16 @@ void discover_mimic(const coord_def& pos)
                                       : item->name(DESC_THE, false, false,
                                                              false, true);
     const bool plural = feature_mimic ? false : item->quantity > 1;
+    const ui_arg mimic_display = feature_mimic ? m_feature_type_arg(feat) : ui_item_arg(*item);
 
     if (you.see_cell(pos))
-        mprf("%s %s a mimic!", name.c_str(), plural ? "are" : "is");
+        mprf("%s", ([&]() -> string {
+                const string _m0 = name;
+                const string _m1 = plural ? "are" : "is";
+                const string _original = make_stringf("%s %s a mimic!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.231", "%s %s a mimic!")) return _original;
+                return ui_render("m.log.231", "%s %s a mimic!", _original, {mimic_display, {"", true}});
+            })().c_str());
 
     const string shortname = feature_mimic ? feat_type_name(feat)
                                            : item->name(DESC_BASENAME);
@@ -1031,7 +1048,7 @@ void discover_mimic(const coord_def& pos)
         destroy_item(item->index(), true);
     else
         _destroy_mimic_feature(pos);
-    _mimic_vanish(pos, shortname);
+    _mimic_vanish(pos, shortname, mimic_display);
 
     // Just in case there's another one.
     if (mimic_at(pos))
@@ -3469,9 +3486,8 @@ void mons_pacify(monster& mon, mon_attitude_type att, bool no_xp)
 
     if (mon.type == MONS_GERYON)
     {
-        simple_monster_message(mon,
-            make_stringf(" discards %s horn.",
-                         mon.pronoun(PRONOUN_POSSESSIVE).c_str()).c_str());
+        m_monster_event(mon, make_stringf(" discards %s horn.",
+                         mon.pronoun(PRONOUN_POSSESSIVE).c_str()).c_str(), "%s discards its horn.", {m_actor_arg(mon)});
         monster_drop_things(&mon, false, item_is_horn_of_geryon);
     }
 
@@ -4171,10 +4187,17 @@ string random_body_part_name(bool plural, int part_class)
     return body_parts[which_part];
 }
 
-static string _get_species_insult(const string &species, const string &type)
+static string _get_species_insult(const string &species, const string &type,
+                                 textdb_speech *speech = nullptr)
 {
     string insult;
     string lookup;
+    const auto fetch = [&](const string &key) {
+        if (!speech)
+            return getSpeakString(key, true);
+        *speech = getPairedCastString(key);
+        return speech->english;
+    };
 
     // Get species genus.
     if (!species.empty())
@@ -4184,7 +4207,7 @@ static string _get_species_insult(const string &species, const string &type)
         lookup += " ";
         lookup += type;
 
-        insult  = getSpeakString(lowercase(lookup));
+        insult  = fetch(lowercase(lookup));
     }
 
     if (insult.empty()) // Species too specific?
@@ -4192,7 +4215,7 @@ static string _get_species_insult(const string &species, const string &type)
         lookup  = "insult general ";
         lookup += type;
 
-        insult  = getSpeakString(lookup);
+        insult  = fetch(lookup);
     }
 
     return insult;
@@ -4245,7 +4268,7 @@ static string _replace_speech_tag(string msg, string from, const string &to)
 // Replaces the "@foo@" strings in monster shout and monster speak
 // definitions.
 string do_mon_str_replacements(const string& in_msg, const monster& mons,
-                               int s_type)
+                               int s_type, textdb_speech *speech)
 {
     string msg = in_msg;
 
@@ -4256,7 +4279,24 @@ string do_mon_str_replacements(const string& in_msg, const monster& mons,
     if (s_type < 0 || s_type >= NUM_LOUDNESS || s_type == NUM_SHOUTS)
         s_type = mons_shouts(mons.type);
 
-    msg = maybe_pick_random_substring(msg);
+    if (speech)
+    {
+        // Keep this at the canonical choice point, after mons_shouts().
+        speech->english = msg;
+        speech->pick_substrings();
+        msg = speech->english;
+    }
+    else
+        msg = maybe_pick_random_substring(msg);
+
+    const auto display_marker = [&](const char *marker, const ui_arg &arg)
+    {
+        if (speech && speech->translated.find(marker) != string::npos)
+        {
+            speech->complete = speech->complete && arg.available;
+            speech->translated = replace_all(speech->translated, marker, arg.text);
+        }
+    };
 
     // FIXME: Handle player_genus in case it was not generalised to foe_genus.
     msg = replace_all(msg, "@a_player_genus@",
@@ -4469,6 +4509,7 @@ string do_mon_str_replacements(const string& in_msg, const monster& mons,
         part_str = mons.hand_name(true);
 
     msg = replace_all(msg, "@hands@", part_str);
+    display_marker("@hands@", ui_text_arg("mon.cast.body", part_str));
     msg = replace_all(msg, "@Hands@", uppercase_first(part_str));
 
     can_plural = false;
@@ -4484,6 +4525,8 @@ string do_mon_str_replacements(const string& in_msg, const monster& mons,
 
     msg = replace_all(msg, "@arms@", part_str);
     msg = replace_all(msg, "@Arms@", uppercase_first(part_str));
+    if (speech && speech->translated.find("@arms@") != string::npos)
+        display_marker("@arms@", ui_text_arg("mon.cast.body", part_str));
 
     can_plural = false;
     part_str   = mons.foot_name(false, &can_plural);
@@ -4513,6 +4556,15 @@ string do_mon_str_replacements(const string& in_msg, const monster& mons,
                           _replace_god_name(god, false, false));
         msg = replace_all(msg, "@Foe_god@",
                           _replace_god_name(god, false, true));
+        // Mirror the canonical atheist/nameless-god choices without touching
+        // the English replacement or consuming another random choice.
+        const ui_arg display_god = god == GOD_NO_GOD
+            ? ui_text_arg("log.actor", "you")
+            : god == GOD_NAMELESS
+                ? ui_text_arg("mon.cast.grammar", "your god")
+                : ui_text_arg("display.god", god_name(god, false));
+        display_marker("@foe_god@", display_god);
+        display_marker("@Foe_god@", display_god);
     }
 
     // The monster's god, not the player's. Atheists get
@@ -4560,14 +4612,16 @@ string do_mon_str_replacements(const string& in_msg, const monster& mons,
 
     if (msg.find("@random_god") != string::npos)
     {
-        msg = replace_all(msg, "@random_god@",
-                          _random_class_of_god_name(_is_any_god));
-        msg = replace_all(msg, "@random_god_chaotic@",
-                          _random_class_of_god_name(is_chaotic_god));
-        msg = replace_all(msg, "@random_god_evil@",
-                          _random_class_of_god_name(is_evil_god));
-        msg = replace_all(msg, "@random_god_good@",
-                          _random_class_of_god_name(is_good_god));
+        const auto replace_god = [&](const char *marker, bool (*filter)(god_type)) {
+            const string name = _random_class_of_god_name(filter);
+            msg = replace_all(msg, marker, name);
+            display_marker(marker, ui_text_arg("display.god", name));
+        };
+        // Preserve all four upstream draws, including absent marker classes.
+        replace_god("@random_god@", _is_any_god);
+        replace_god("@random_god_chaotic@", is_chaotic_god);
+        replace_god("@random_god_evil@", is_evil_god);
+        replace_god("@random_god_good@", is_good_god);
     }
 
     if (msg.find("@random_skill") != string::npos)
@@ -4599,12 +4653,19 @@ string do_mon_str_replacements(const string& in_msg, const monster& mons,
     // Replace with species specific insults.
     if (msg.find("@species_insult_") != string::npos)
     {
-        msg = replace_all(msg, "@species_insult_adj1@",
-                               _get_species_insult(foe_genus, "adj1"));
-        msg = replace_all(msg, "@species_insult_adj2@",
-                               _get_species_insult(foe_genus, "adj2"));
-        msg = replace_all(msg, "@species_insult_noun@",
-                               _get_species_insult(foe_genus, "noun"));
+        const auto replace_insult = [&](const char *marker, const char *type) {
+            textdb_speech selected;
+            const string original = _get_species_insult(foe_genus, type,
+                                                       speech ? &selected : nullptr);
+            msg = replace_all(msg, marker, original);
+            display_marker(marker, {selected.translated, selected.complete
+                && selected.translated.find('@') == string::npos});
+        };
+        // All three lookups were unconditional inside this branch upstream.
+        // Preserve their order and random draws even for an absent marker.
+        replace_insult("@species_insult_adj1@", "adj1");
+        replace_insult("@species_insult_adj2@", "adj2");
+        replace_insult("@species_insult_noun@", "noun");
     }
 
     static const char * sound_list[] =
@@ -4651,9 +4712,91 @@ string do_mon_str_replacements(const string& in_msg, const monster& mons,
         msg = replace_all(msg, "@says@", "buggily says");
     }
     else
+    {
         msg = replace_all(msg, "@says@", sound_list[s_type]);
+        display_marker("@says@", ui_text_arg("mon.speech.verb", sound_list[s_type]));
+    }
 
     msg = maybe_capitalise_substring(msg);
+
+    if (speech)
+    {
+        const ui_arg caster = ui_actor_arg(mons);
+        for (const char *marker : {"@The_monster@", "@the_monster@", "@monster@",
+                                  "@The_something@", "@something@"})
+            display_marker(marker, caster);
+        for (const char *marker : {"@The_monster_possessive@", "@the_monster_possessive@"})
+            display_marker(marker, {caster.text + "的", caster.available});
+        display_marker("@possessive@", ui_text_arg("mon.cast.grammar", "possessive"));
+        display_marker("@subjective@", ui_text_arg("mon.cast.grammar", "subjective"));
+        display_marker("@Subjective@", ui_text_arg("mon.cast.grammar", "subjective"));
+        display_marker("@objective@", ui_text_arg("mon.speech.objective",
+            mons.pronoun(PRONOUN_OBJECTIVE)));
+        display_marker("@reflexive@", ui_text_arg("mon.cast.grammar", "reflexive"));
+        display_marker("@player_name@", ui_literal_arg(you.your_name));
+        ui_arg player_genus = ui_text_arg("display.creation",
+            species::name(you.species, species::SPNAME_GENUS));
+        if (!player_genus.available)
+            player_genus = ui_text_arg("d.god.title.component",
+                species::name(you.species, species::SPNAME_GENUS));
+        display_marker("@player_genus@", player_genus);
+        display_marker("@player_genus_plural@", player_genus);
+        display_marker("@player_only@", {"", foe && foe->is_player()});
+        if (speech->translated.find("@surface@") != string::npos
+            && you.see_cell(mons.pos()) && mons.mid != MID_NOBODY)
+        {
+            const dungeon_feature_type feat = env.grid(mons.pos());
+            if (!feat_is_solid(feat) && feat < NUM_FEATURES)
+                display_marker("@surface@", ui_text_arg("mon.speech.surface",
+                    feat == DNGN_LAVA ? "lava" : feat_is_water(feat) ? "water"
+                    : feat_is_altar(feat) ? "altar" : "ground"));
+        }
+        if (foe)
+        {
+            const ui_arg foe_name = ui_actor_arg(*foe);
+            display_marker("@foe@", foe_name);
+            // @foe,@ is an upstream address/comma marker, not a broken key.
+            // Chinese templates supply their own punctuation around it.
+            display_marker("@foe,@", foe_name);
+            display_marker("@to_foe@", foe_name);
+            display_marker("@at_foe@", foe_name);
+            // Upstream uses the alternative for a player foe, and the actor
+            // name for a monster foe. No foe leaves the marker unresolved.
+            display_marker("@at_foe/around@", foe->is_player()
+                ? ui_text_arg("t.preposition", "around") : foe_name);
+            display_marker("@foe_possessive@", {foe_name.text + "的", foe_name.available});
+            if (foe->is_player())
+            {
+                display_marker("@foe_name@", ui_literal_arg(you.your_name));
+                display_marker("@foe_genus@", player_genus);
+                display_marker("@Foe_genus@", player_genus);
+            }
+            else
+            {
+                const monster &other = *foe->as_monster();
+                if (other.is_named())
+                    display_marker("@foe_name@", foe_name);
+                string genus;
+                const bool available = try_monster_type_display_name(
+                    mons_genus(other.type), genus);
+                display_marker("@foe_genus@", {genus, available});
+                display_marker("@Foe_genus@", {genus, available});
+            }
+        }
+        const ui_arg god = mons.god == GOD_NO_GOD
+            ? ui_text_arg("mon.cast.grammar", "NO GOD")
+            : mons.god == GOD_NAMELESS
+                ? ui_text_arg("mon.cast.grammar", "a god")
+                : ui_text_arg("display.god", god_name(mons.god));
+        for (const char *marker : {"@My_God@", "@my_God@", "@a_God@", "@possessive_God@"})
+        {
+            const ui_arg named = mons.god != GOD_NAMELESS ? god
+                : ui_text_arg("mon.cast.grammar", (string(marker) == "@My_God@" || string(marker) == "@my_God@")
+                    ? "my God" : string(marker) == "@possessive_God@" ? "its god" : "a god");
+            display_marker(marker, named);
+        }
+        speech->english = msg;
+    }
 
     return msg;
 }
@@ -4689,6 +4832,56 @@ string do_mon_name_replacements(const string& in_name)
     }
 
     return name;
+}
+
+// Display adapter: keep the original replacement order, including draws for
+// markers absent from the line. do_mon_name_replacements remains the oracle.
+void do_decor_name_replacements(textdb_speech &speech)
+{
+    // Generate each personal name once, in canonical order. Repeat occurrences
+    // get independent names just as in do_mon_name_replacements.
+    const string name_marker = "@RANDGEN@";
+    const auto count_names = [&](const string &text) {
+        size_t count = 0, pos = 0;
+        while ((pos = text.find(name_marker, pos)) != string::npos)
+        { ++count; pos += name_marker.size(); }
+        return count;
+    };
+    if (count_names(speech.english) != count_names(speech.translated))
+        speech.complete = false;
+    string name = speech.english;
+    size_t original_pos = 0, display_pos = 0;
+    while ((original_pos = name.find(name_marker, original_pos)) != string::npos)
+    {
+        const string chosen = make_name_randgen();
+        name.replace(original_pos, name_marker.size(), chosen);
+        original_pos += chosen.size();
+        const size_t pos = speech.translated.find(name_marker, display_pos);
+        if (pos != string::npos)
+        {
+            speech.translated.replace(pos, name_marker.size(), chosen);
+            display_pos = pos + chosen.size();
+        }
+    }
+    auto replace = [&](const char *marker, const string &chosen, const char *context) {
+        name = replace_all(name, marker, chosen);
+        const auto shown = ui_text_arg(context, chosen);
+        speech.replace(marker, chosen, shown.text, shown.available);
+    };
+    if (name.find("@random_god") != string::npos)
+    {
+        replace("@random_god@", _random_class_of_god_name(_is_any_god), "display.god");
+        replace("@random_god_chaotic@", _random_class_of_god_name(is_chaotic_god), "display.god");
+        replace("@random_god_evil@", _random_class_of_god_name(is_evil_god), "display.god");
+        replace("@random_god_good@", _random_class_of_god_name(is_good_god), "display.god");
+    }
+    if (name.find("@random_skill") != string::npos)
+    {
+        replace("@random_skill@", _random_class_of_skill_name(_is_any_skill), "display.skill");
+        replace("@random_skill_magic@", _random_class_of_skill_name(is_magic_skill), "display.skill");
+        replace("@random_skill_mundane@", _random_class_of_skill_name(is_mundane_skill), "display.skill");
+    }
+    speech.english = name;
 }
 
 /**
@@ -5575,9 +5768,13 @@ void throw_monster_bits(const monster& mon)
 
         int damage = 1 + random2(mon.get_hit_dice());
 
-        mprf("%s is hit by a flying piece of %s!",
-                target->name(DESC_THE, false).c_str(),
-                mon.name(DESC_THE, false).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = target->name(DESC_THE, false);
+                const string _m1 = mon.name(DESC_THE, false);
+                const string _original = make_stringf("%s is hit by a flying piece of %s!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.232", "%s is hit by a flying piece of %s!")) return _original;
+                return ui_render("m.log.232", "%s is hit by a flying piece of %s!", _original, {m_actor_arg(*target), m_actor_arg(mon)});
+            })().c_str());
 
         // Because someone will get a kick out of this some day.
         if (mons_class_flag(mons_base_type(mon), M_ACID_SPLASH))
@@ -5645,10 +5842,14 @@ void set_ancestor_spells(monster &ancestor, bool notify)
         if (find(old_spells.begin(), old_spells.end(), spellslot.spell)
             == old_spells.end())
         {
-            mprf("%s regains %s memory of %s.",
-                 ancestor.name(DESC_YOUR, true).c_str(),
-                 ancestor.pronoun(PRONOUN_POSSESSIVE, true).c_str(),
-                 spell_title(spellslot.spell));
+            mprf("%s", ([&]() -> string {
+                const string _m0 = ancestor.name(DESC_YOUR, true);
+                const string _m1 = ancestor.pronoun(PRONOUN_POSSESSIVE, true);
+                const string _m2 = spell_title(spellslot.spell);
+                const string _original = make_stringf("%s regains %s memory of %s.", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.233", "%s regains %s memory of %s.")) return _original;
+                return ui_render("m.log.233", "%s regains %s memory of %s.", _original, {m_actor_arg(ancestor), ui_literal_arg(""), ui_text_arg("display.spell", spell_title(spellslot.spell))});
+            })().c_str());
         }
     }
 }
@@ -5748,7 +5949,12 @@ bool shoot_through_actor(const actor* agent, const actor* target, bool announce)
             // TODO: this message does not work very well for all sorts of attacks
             // should this be a god message?
             if (announce && you.can_see(*target))
-                mprf("%s avoids your attack.", target->name(DESC_THE).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = target->name(DESC_THE);
+                const string _original = make_stringf("%s avoids your attack.", _m0.c_str());
+                if (!m_display_active("m.log.234", "%s avoids your attack.")) return _original;
+                return ui_render("m.log.234", "%s avoids your attack.", _original, {m_actor_arg(*target)});
+            })().c_str());
             return true;
         }
 
@@ -5762,7 +5968,7 @@ bool shoot_through_actor(const actor* agent, const actor* target, bool announce)
         if (agent->is_player() && testbits(mon->flags, MF_DEMONIC_GUARDIAN))
         {
             if (announce && you.can_see(*mon))
-                mpr("Your demonic guardian avoids your attack.");
+                mpr(ui_translate("m.ui", "Your demonic guardian avoids your attack."));
             return true;
         }
 
@@ -5816,7 +6022,7 @@ bool could_harm(const actor* agent, const actor* target, bool announce_important
         {
             string msg = make_stringf("The Sanctuary denies your attempt to harm %s.",
                                         target->name(DESC_THE).c_str());
-            god_speaks(GOD_ZIN, msg.c_str());
+            god_speaks(GOD_ZIN, ui_render("m.clause", "The Sanctuary denies your attempt to harm %s.", msg, {m_actor_arg(*target)}).c_str());
         }
         return false;
     }
@@ -5828,7 +6034,7 @@ bool could_harm(const actor* agent, const actor* target, bool announce_important
         {
             string msg = make_stringf("The Sanctuary protects %s from harm.",
                                         target->name(DESC_THE).c_str());
-            god_speaks(GOD_ZIN, msg.c_str());
+            god_speaks(GOD_ZIN, ui_render("m.clause", "The Sanctuary protects %s from harm.", msg, {m_actor_arg(*target)}).c_str());
         }
         return false;
     }

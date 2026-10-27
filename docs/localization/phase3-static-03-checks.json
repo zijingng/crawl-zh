@@ -1,0 +1,16 @@
+{
+  "batch": "phase3-static-03",
+  "ledger_entries_checked": 595,
+  "deterministic_textdb_export": true,
+  "glossary_unchanged": true,
+  "python_catalogue_tests": 8,
+  "python_textdb_tests": 4,
+  "lua_branches": 11,
+  "spell_names": 63,
+  "god_names": 27,
+  "gui_checked": false,
+  "cpp_localization_tests": 6,
+  "cpp_assertions": 588,
+  "windows_tiles_build_passed": true,
+  "binary_sha256": "a8d0842d3cbd1f73c307bc3ef9b670dc53bdaba7bc40c798d7eb78d8b16b8896"
+}

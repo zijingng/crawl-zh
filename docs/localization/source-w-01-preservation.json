@@ -1,0 +1,225 @@
+{
+  "batch": "source-w-01",
+  "canonical_functions": [
+    {
+      "file": "wiz-you.cc",
+      "function": "find_job_from_string",
+      "sha256": "61455ffe218730896ab9d48e2363d88fad23741acde3a56ee20e3f72f4f1d885",
+      "unchanged": true
+    },
+    {
+      "file": "wiz-you.cc",
+      "function": "_find_xom_event_from_string",
+      "sha256": "daeda544d54c08b5b0dac0469bfcc81b9139f2a8c25977fe3e69b99d77f7c402",
+      "unchanged": true
+    },
+    {
+      "file": "wiz-you.cc",
+      "function": "wizard_change_job_to",
+      "sha256": "0a3374a83cacf23300190cad19a07b8dd64b3c0e1c6ddd063047ff786c59ef16",
+      "unchanged": true
+    },
+    {
+      "file": "wiz-you.cc",
+      "function": "reset_ds_muts_from_schedule",
+      "sha256": "17bd6087de0f5e57d0fb5b54912528cd27db9455652c2cc390ee7414781ef8b2",
+      "unchanged": true
+    },
+    {
+      "file": "wiz-you.cc",
+      "function": "debug_uptick_xl",
+      "sha256": "f863e648cdd1081cf465b222da4c4f8e622cff9986b5f720e85cb886c318d5e0",
+      "unchanged": true
+    },
+    {
+      "file": "wiz-you.cc",
+      "function": "debug_downtick_xl",
+      "sha256": "d343e0f0ecc46f4197e1670c56e70d3b875aaae53b6f1adfc0f52a4a772e4241",
+      "unchanged": true
+    },
+    {
+      "file": "wiz-dump.cc",
+      "function": "_jewellery_type_from_artefact_prop",
+      "sha256": "47dc5d685c6402eea6dc0449487a535b8246daf2e5add20bcdbb287c7aee2126",
+      "unchanged": true
+    },
+    {
+      "file": "wiz-dump.cc",
+      "function": "_find_real_item_kind",
+      "sha256": "220996749e0d7a9c3412a2fa277d1d61111725b70fda8b3535c59270e213ce43",
+      "unchanged": true
+    },
+    {
+      "file": "wiz-dump.cc",
+      "function": "_apply_randart_properties",
+      "sha256": "6545e73ac4974022a19d5d78332c39b5536d399dbea5fd138f7d3aebabb3b055",
+      "unchanged": true
+    },
+    {
+      "file": "wiz-dump.cc",
+      "function": "_find_ego_type",
+      "sha256": "cd56c0ac635b16b75bc084ac0e105fea04bc9a58f7786ac1fce6322d4e71f3fd",
+      "unchanged": true
+    },
+    {
+      "file": "wiz-dump.cc",
+      "function": "_item_from_string",
+      "sha256": "cbf8eddd0348331c1203dfd56dd1bd4ac7711de6a245b5c748be4a722ac28207",
+      "unchanged": true
+    },
+    {
+      "file": "wiz-dump.cc",
+      "function": "chardump_parser::_check_skill",
+      "sha256": "b8bff14feedfb1d7280c082e337c7ee68c80243a5893704df52602d395b39e76",
+      "unchanged": true
+    },
+    {
+      "file": "wiz-dump.cc",
+      "function": "chardump_parser::_check_stats1",
+      "sha256": "67bdad6e39a01011e265930d13ad9d4aef118dc877fba7e5bdf32cc8ac0174ad",
+      "unchanged": true
+    },
+    {
+      "file": "wiz-dump.cc",
+      "function": "chardump_parser::_check_stats2",
+      "sha256": "6b0ddd2d818e9ebf58f476d188ba1a0b74bcbc89150e22841744600812aab66e",
+      "unchanged": true
+    },
+    {
+      "file": "wiz-dump.cc",
+      "function": "chardump_parser::_check_stats3",
+      "sha256": "0b1e0e35ebae1962de321448620ed716c5f235e1404e0c1287d97cef8e57b570",
+      "unchanged": true
+    },
+    {
+      "file": "wiz-dump.cc",
+      "function": "chardump_parser::_check_char",
+      "sha256": "e1fb00dd2d132cacddbf25b5803cf2565b7cc2798cf1394d739d50fa6c7dae20",
+      "unchanged": true
+    },
+    {
+      "file": "wiz-dump.cc",
+      "function": "chardump_parser::_check_equipment",
+      "sha256": "6ebf39540ad0693edb91b26fea8929465fc44ec9acad9d6c1da7661c8542ee7a",
+      "unchanged": true
+    },
+    {
+      "file": "wiz-dump.cc",
+      "function": "chardump_parser::_modify_character",
+      "sha256": "3cbb25e8280998c7aec6ce21d8dcc89fa8fb3d25914daecc3a55dc85ed97d2c2",
+      "unchanged": true
+    },
+    {
+      "file": "wiz-mon.cc",
+      "function": "_sort_monster_list",
+      "sha256": "36cb15dbd5eba61d0ce543d70ed8651479b7d3bb63d580d4adbcd2f4ac928caa",
+      "unchanged": true
+    },
+    {
+      "file": "wiz-mon.cc",
+      "function": "debug_list_monsters",
+      "sha256": "58881a7e1c3d6f3962585a448adeebd4cf28a60234165f1bfce9413eab7d4f05",
+      "unchanged": true
+    },
+    {
+      "file": "wiz-item.cc",
+      "function": "_subtype_index",
+      "sha256": "2a8817bfc6ebfdb1703209b45356fd65a803a9f8fbc3646d8709812aa5a6a016",
+      "unchanged": true
+    },
+    {
+      "file": "wiz-item.cc",
+      "function": "_fill_item_from_subtype",
+      "sha256": "de84d92ed846f04861a0bcadf1d43ef448979a1b3d32bc29de00a3bf8a920263",
+      "unchanged": true
+    },
+    {
+      "file": "wiz-item.cc",
+      "function": "_median",
+      "sha256": "22e047d5ff3100e01580fb4f8ca503f16c958d11a104fdd1b2c9810c12fa5e5d",
+      "unchanged": true
+    },
+    {
+      "file": "prompt.cc",
+      "function": "WizardMenu::run",
+      "sha256": "fbbb84058b6a0852f966b7b6190df6a826612fd3bc3d710faec25f3f8f4f6aab",
+      "unchanged": true
+    },
+    {
+      "file": "prompt.cc",
+      "function": "WizardMenu::run_aux",
+      "sha256": "b2be3daf428e64196563febf53884e6ef491449c4bc11f56a5ff15ea785cd05d",
+      "unchanged": true
+    },
+    {
+      "file": "prompt.cc",
+      "function": "WizardMenu::index_to_symbol",
+      "sha256": "2a626ec2592225a956632f4724edc35beaff4e31f0839a769e708f634d02c8da",
+      "unchanged": true
+    },
+    {
+      "file": "prompt.cc",
+      "function": "WizardMenu::next_unused_symbol",
+      "sha256": "15c66761957b583bfbca720e75046d4d46a5f04128a30294104c6f4e6482ca4b",
+      "unchanged": true
+    },
+    {
+      "file": "prompt.cc",
+      "function": "WizardMenu::skip_process_command",
+      "sha256": "8722f73bf998410e7116a8bffbbd81fa7102c87711a84319bcdfd12880030b23",
+      "unchanged": true
+    }
+  ],
+  "random_and_effect_calls": [
+    {
+      "file": "wiz-fsim.cc",
+      "calls": 2,
+      "expressions_and_order_unchanged": true
+    },
+    {
+      "file": "wiz-item.cc",
+      "calls": 4,
+      "expressions_and_order_unchanged": true
+    },
+    {
+      "file": "wiz-you.cc",
+      "calls": 3,
+      "expressions_and_order_unchanged": true
+    }
+  ],
+  "raw_reports": [
+    {
+      "file": "wiz-fsim.cc",
+      "file_output_calls": 20,
+      "expressions_unchanged": true
+    },
+    {
+      "file": "wiz-item.cc",
+      "file_output_calls": 38,
+      "expressions_unchanged": true
+    }
+  ],
+  "unchanged_w_files": [
+    "wcwidth.cc",
+    "windowmanager-sdl.cc",
+    "windowmanager-sdl.h",
+    "windowmanager.h",
+    "wiz-dgn.h",
+    "wiz-dump.h",
+    "wiz-fsim.h",
+    "wiz-item.h",
+    "wiz-mon.h",
+    "wiz-you.h",
+    "wizard-option-type.h",
+    "worley.cc",
+    "worley.h",
+    "wu-jian-attack-type.h"
+  ],
+  "notes": [
+    "WizardMenu localizes only a rendering copy. Original option text, sorting, hotkeys, output IDs, parser input and history keys stay canonical.",
+    "English mode returns the exact original option, including lowercase form slugs. Missing title or name translation returns the original row.",
+    "Character dump grammar, item/species/job/spell/god input parsers and raw simulation/acquirement/randart report formats are retained.",
+    "SDL errors, raw debug fields, saved notes and wizard action reasons retain their existing canonical values.",
+    "All help build variants retain literal key bindings and markup."
+  ]
+}

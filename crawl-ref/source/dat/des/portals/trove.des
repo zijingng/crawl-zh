@@ -206,8 +206,9 @@ end
 
 function trove_milestone (e, trove_desc)
     crawl.mark_milestone("br.enter", "entered " .. trove_desc .. ".", "parent")
-    crawl.take_note("Entered " .. trove_desc)
-    crawl.mpr("You've discovered " .. trove_desc .. "!")
+    crawl.take_note("Entered " .. trove_desc, "portal", trove_desc)
+    crawl.mpr(crawl.ui_format("lua.portal.arrival", "You've discovered %s!",
+        "You've discovered " .. trove_desc .. "!", crawl.ui_name("lua.portal.name", trove_desc)))
 end
 
 function trove_setup(e)

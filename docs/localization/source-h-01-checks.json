@@ -1,0 +1,21 @@
+{
+  "batch": "source-h-01",
+  "date": "2026-10-23",
+  "reviewed_messages": 216,
+  "catalogue_matches": 216,
+  "missing_messages": [],
+  "stale_dependencies": [],
+  "original_top_level_h_files": 7,
+  "current_top_level_h_files": 8,
+  "windows_tiles_build": true,
+  "native_cases": 62,
+  "native_assertions": 174410,
+  "python_tests": 27,
+  "limitations": [
+    "Historical killer, weapon, spell, summon-chain and custom map-description fields contain rendered canonical English. Their complete death/location paragraphs remain English instead of reverse-parsing or dropping attribution.",
+    "Missing typed names, clauses or source fingerprints cause complete sentence/paragraph English fallback.",
+    "Technical diagnostics, save/config/Lua keys and score identifiers remain English.",
+    "Other TextDB entries retain their existing language mechanism.",
+    "No in-game visual smoke test; Windows Tiles only."
+  ]
+}

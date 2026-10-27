@@ -4,6 +4,7 @@
  **/
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "describe-spells.h"
 
@@ -22,6 +23,7 @@
 #include "mon-project.h" // iood_damage
 #include "religion.h"
 #include "shopping.h"
+#include "skills.h"
 #include "spl-book.h"
 #include "spl-damage.h"
 #include "spl-summoning.h" // mons_ball_lightning_hd
@@ -155,6 +157,22 @@ static string _booktype_header(mon_spell_slot_flag type, bool pronoun_plural)
  *                          (E.g. MON_SPELL_MAGICAL, MON_SPELL_WIZARD...)
  * @param[out] all_books    An output vector of "spellbooks".
  */
+static string _spellbook_heading(mon_spell_slot_flag type, const string &original)
+{
+    const char *source = nullptr;
+    switch (type)
+    {
+    case MON_SPELL_EVOKE: source = "It possesses the following wand spells:"; break;
+    case MON_SPELL_WIZARD: source = "It has mastered the following spells, which are affected by silence and antimagic:"; break;
+    case MON_SPELL_PRIEST: source = "It possesses the following divine abilities, which are affected by silence:"; break;
+    case MON_SPELL_MAGICAL: source = "It possesses the following magical abilities, which are affected by antimagic (but not silence):"; break;
+    case MON_SPELL_VOCAL: source = "It possesses the following natural abilities, which are affected by silence:"; break;
+    case MON_SPELL_NATURAL: source = "It possesses the following natural abilities:"; break;
+    default: return original;
+    }
+    return ui_render("d.spells", source, original, {});
+}
+
 static void _monster_spellbooks(const monster_info &mi,
                                 mon_spell_slot_flag type,
                                 spellset &all_books)
@@ -166,9 +184,10 @@ static void _monster_spellbooks(const monster_info &mi,
 
     spellbook_contents output_book;
 
-    output_book.label += make_stringf("\n%s %s",
-        uppercase_first(mi.pronoun(PRONOUN_SUBJECTIVE)).c_str(),
-        _booktype_header(type, mi.pronoun_plurality()).c_str());
+    output_book.label += "\n" + _spellbook_heading(type,
+        make_stringf("%s %s",
+            uppercase_first(mi.pronoun(PRONOUN_SUBJECTIVE)).c_str(),
+            _booktype_header(type, mi.pronoun_plurality()).c_str()));
 
     // Does the monster have a spell that allows them to cast Abjuration?
     bool mons_abjure = false;
@@ -205,9 +224,10 @@ static void _monster_wand_spellbook(const monster_info &mi,
 
     spellbook_contents book;
 
-    book.label += make_stringf("\n%s %s",
-        uppercase_first(mi.pronoun(PRONOUN_SUBJECTIVE)).c_str(),
-        _booktype_header(MON_SPELL_EVOKE, mi.pronoun_plurality()).c_str());
+    book.label += "\n" + _spellbook_heading(MON_SPELL_EVOKE,
+        make_stringf("%s %s",
+            uppercase_first(mi.pronoun(PRONOUN_SUBJECTIVE)).c_str(),
+            _booktype_header(MON_SPELL_EVOKE, mi.pronoun_plurality()).c_str()));
 
     book.is_wand = true;
     book.spells.emplace_back(wand_spell);
@@ -335,6 +355,32 @@ static string _spell_schools(spell_type spell)
     }
 
     return schools;
+}
+
+// School keys remain canonical for the WebTiles protocol. The local table
+// and item prose use a display copy selected from the original school flags.
+static ui_arg _spell_school_arg(spell_type spell)
+{
+    ui_translation_group group;
+    if (!group.available()) return {"", false};
+    string result;
+    for (const auto school : spschools_type::range())
+    {
+        if (!spell_typematch(spell, school)) continue;
+        const skill_type skill = spell_type2skill(school);
+        if (skill == SK_NONE) return {"", false};
+        const ui_arg name = ui_text_arg("display.skill", skill_name(skill));
+        if (!name.available) return {"", false};
+        if (!result.empty()) result += "/";
+        result += name.text;
+    }
+    return {result, true};
+}
+
+static string _spell_display_schools(spell_type spell)
+{
+    const ui_arg schools = _spell_school_arg(spell);
+    return schools.available ? schools.text : _spell_schools(spell);
 }
 
 /**
@@ -528,7 +574,7 @@ static string _effect_string(spell_type spell, const monster_info *mon_owner,
             return "";
         }
         if (you.immune_to_hex(spell))
-            return "(immune)";
+            return ui_translate("d.spells", "(immune)");
 
         const string hex_str = make_stringf("%d%%", hex_chance(spell, mon_owner, is_wand));
 
@@ -545,7 +591,7 @@ static string _effect_string(spell_type spell, const monster_info *mon_owner,
         return "4-8*"; // >_>
 
     if (spell == SPELL_ANTIMAGIC_GAZE)
-        return make_stringf("0-%d MP", pow / 8); // >_> >_>
+        return make_stringf(ui_translate("d.spells", "0-%d MP"), pow / 8); // >_> >_>
 
     if (spell == SPELL_WIND_BLAST)
         return make_stringf("2d%d*", default_collision_damage(pow, false).size);
@@ -571,9 +617,9 @@ static string _effect_string(spell_type spell, const monster_info *mon_owner,
         return "";
 
     if (spell == SPELL_AIRSTRIKE)
-        return make_stringf("%dd%d+(2/space)", dam.num, dam.size);
+        return make_stringf(ui_translate("d.spells", "%dd%d+(2/space)"), dam.num, dam.size);
     if (spell == SPELL_SLEETSTRIKE)
-        return make_stringf("%dd%d+(3/space)", dam.num, dam.size);
+        return make_stringf(ui_translate("d.spells", "%dd%d+(3/space)"), dam.num, dam.size);
     if (spell == SPELL_RESONANCE_STRIKE)
         return describe_resonance_strike_dam(dam);
 
@@ -596,7 +642,7 @@ static string _effect_string(spell_type spell, const monster_info *mon_owner,
     else if (spell == SPELL_ELECTROLUNGE)
         mult = "+";
     const char* suffix = spell == SPELL_LRD ? "*"
-                       : spell == SPELL_PYRE_ARROW || spell == SPELL_STICKY_FLAME ? "/turn"
+                       : spell == SPELL_PYRE_ARROW || spell == SPELL_STICKY_FLAME ? ui_translate("d.spells", "/turn")
                        : "";
     return make_stringf("(%s%dd%d%s)", mult.c_str(), dam.num, dam.size, suffix);
 }
@@ -626,10 +672,10 @@ static void _describe_book(const spellbook_contents &book,
     // only display header for book spells
     if (source_item)
     {
-        description.cprintf(
-            "\n Spells                              Type                    Level");
+        description.cprintf("%s",
+            ui_translate("d.spells", "\n Spells                              Type                    Level"));
         if (crawl_state.need_save)
-            description.cprintf("       Known");
+            description.cprintf("%s", ui_translate("d.spells", "       Known"));
     }
     description.cprintf("\n");
 
@@ -666,7 +712,7 @@ static void _describe_book(const spellbook_contents &book,
                                           ? "<lightmagenta>*</lightmagenta>" : ""
                                         : "";
 
-        const int effect_len = effect_str.length();
+        const int effect_len = strwidth(effect_str);
         const int range_len = range_str.empty() ? 0 : 3;
         const int effect_range_space = effect_len && range_len ? 1 : 0;
         const int chop_len = 32 - effect_len - range_len - effect_range_space
@@ -675,9 +721,10 @@ static void _describe_book(const spellbook_contents &book,
         if (effect_len && !testbits(get_spell_flags(spell), spflag::WL_check))
             effect_str = colourize_str(effect_str, _spell_colour(spell));
 
-        string spell_name = spell_title(spell);
+        string spell_name = spell_display_title(spell);
         if (spell == SPELL_LEHUDIBS_CRYSTAL_SPEAR
-            && chop_len < (int)spell_name.length())
+            && chop_len < strwidth(spell_name)
+            && spell_name == spell_title(spell))
         {
             // looks nicer than Lehudib's Crystal S
             spell_name = "Crystal Spear";
@@ -704,14 +751,14 @@ static void _describe_book(const spellbook_contents &book,
 
         string schools =
 #if TAG_MAJOR_VERSION == 34
-            source_item->base_type == OBJ_RODS ? "Evocations"
+            source_item->base_type == OBJ_RODS ? ui_translate("display.skill", "Evocations")
                                                :
 #endif
-                         _spell_schools(spell);
+                         _spell_display_schools(spell);
 
         string known = "";
         if (!mon_owner && crawl_state.need_save)
-            known = you.spell_library[spell] ? "         yes" : "          no";
+            known = you.spell_library[spell] ? ui_translate("d.spells", "         yes") : ui_translate("d.spells", "          no");
 
         description.cprintf("%s%d%s\n",
                             chop_string(schools, 28).c_str(),
@@ -768,7 +815,7 @@ static void _write_book(const spellbook_contents &book,
                                           ? "<lightmagenta>*</lightmagenta>" : ""
                                         : "";
 
-        tiles.json_write_string("title", dith_marker + spell_title(spell));
+        tiles.json_write_string("title", dith_marker + spell_display_title(spell));
         tiles.json_write_int("colour", _spell_colour(spell, source_item));
         tiles.json_write_name("tile");
         tiles.write_tileidx(tileidx_spell(spell));
@@ -838,14 +885,22 @@ string describe_item_spells(const item_def &item)
 string terse_spell_list(const item_def &item)
 {
     vector<string> spell_descs;
+    vector<string> display_descs;
+    bool complete = true;
     for (auto spell : spells_in_book(item))
     {
         spell_descs.push_back(make_stringf("%s (L%d %s)",
                                            spell_title(spell),
                                            spell_difficulty(spell),
                                            _spell_schools(spell).c_str()));
+        const string display = ui_render("d.spells", "%s (L%s %s)", "",
+            {ui_text_arg("display.spell", spell_title(spell)),
+             ui_literal_arg(to_string(spell_difficulty(spell))), _spell_school_arg(spell)});
+        complete = complete && !display.empty();
+        display_descs.push_back(display);
     }
     // could use comma_separated_fn and skip the intervening vec?
-    return "Spells: " + comma_separated_line(spell_descs.begin(),
-                                             spell_descs.end());
+    return ui_render("d.spells", "Spells: %s",
+        "Spells: " + comma_separated_line(spell_descs.begin(), spell_descs.end()),
+        {{join_strings(display_descs.begin(), display_descs.end(), "、"), complete}});
 }

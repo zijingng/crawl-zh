@@ -1,0 +1,123 @@
+{
+  "glossary_hits": [
+    {
+      "Term": "Armour",
+      "Translation": "防具/护身",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+    },
+    {
+      "Term": "hat",
+      "Translation": "帽子",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "hydra",
+      "Translation": "海德拉",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Inventory",
+      "Translation": "物品栏",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "staff",
+      "Translation": "法杖/工作人员",
+      "Part of Speech": "noun",
+      "Variants": "staff of",
+      "Note": "【使用约束】魔法装备上下文使用法杖，普通木棍和 Staves 技能要分开处理。\n【语境补充 2026-10-21】武器用法杖。maintenance staff 等人员集合用工作人员。"
+    },
+    {
+      "Term": "Merfolk",
+      "Translation": "人鱼",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/merfolk.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Purification",
+      "Translation": "净化",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+    },
+    {
+      "Term": "Donald",
+      "Translation": "唐纳德",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "elemental",
+      "Translation": "元素生物",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Fire",
+      "Translation": "火焰强化",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+    },
+    {
+      "Term": "Mayhem",
+      "Translation": "混战",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+    }
+  ],
+  "reviewed_history": [
+    "display.monster",
+    "b.branch.name",
+    "s.shop.type",
+    "s.shop.suffix",
+    "display.item rune of Zot",
+    "s.rune"
+  ],
+  "literal_special_shop_components": 204,
+  "new_reviewed_entries": 200,
+  "aligned_rune_labels": [
+    [
+      "s.rune",
+      "iron",
+      "铁质"
+    ],
+    [
+      "s.rune",
+      "icy",
+      "冰"
+    ],
+    [
+      "s.rune",
+      "bone",
+      "骨质"
+    ],
+    [
+      "s.rune",
+      "decaying",
+      "腐朽"
+    ],
+    [
+      "s.rune",
+      "glowing",
+      "辉光"
+    ],
+    [
+      "s.rune",
+      "fiery",
+      "炽焰"
+    ]
+  ]
+}

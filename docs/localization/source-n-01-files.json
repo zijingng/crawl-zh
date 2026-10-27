@@ -1,0 +1,142 @@
+[
+  {
+    "file": "crawl-ref/source/nearby-danger.cc",
+    "scope": "Nearby monster/hazard announcements, canonical danger reasons, revival messages and safety interfaces",
+    "sha256": "f3041a9fa34b0b5cf0cf8adfaf1e51a783c376f43733f1664fed07d708ecff9c",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/nearby-danger.h",
+    "scope": "Nearby monster/hazard announcements, canonical danger reasons, revival messages and safety interfaces",
+    "sha256": "b098a6a479274268a00a7c4669066c926b3bedcb6564f8bb8f1d8a57d1dd7363",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/newgame-def.h",
+    "scope": "Character creation, seed controls, map labels, previous choices; canonical choice values and parsing retained",
+    "sha256": "008a1f884a0c67cb7bc21dd28519302d4411ef3f342792d175a90af1b136fade",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/newgame.cc",
+    "scope": "Character creation, seed controls, map labels, previous choices; canonical choice values and parsing retained",
+    "sha256": "f4895b064fa3a8d6b9e5e5aa7d76ed6c0f4cacb9ded75f181c81b2b02428242f",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/newgame.h",
+    "scope": "Character creation, seed controls, map labels, previous choices; canonical choice values and parsing retained",
+    "sha256": "73c27a6a1032770c3626df8e1caf0e443f2d5a547b4248dd77acddc864f0edb7",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/ng-init-branches.cc",
+    "scope": "Initial branch entry selection; debug diagnostics retained",
+    "sha256": "18e3e347b1ced86c28554914f10c8c06100b04f2ee2e6f66408e1db8ae788760",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/ng-init-branches.h",
+    "scope": "Initial branch entry selection; debug diagnostics retained",
+    "sha256": "f74fa318d8e7538acb9bb5d75925a29c57b4fe1ee71d359f590ea4a909664c9c",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/ng-init.cc",
+    "scope": "Temple generation; map keys, technical generator failures and diagnostics retained",
+    "sha256": "b34e9da86d4b3ba9df93683f6c216860b070e8fc54951cc826f724421490dc5f",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/ng-init.h",
+    "scope": "Temple generation; map keys, technical generator failures and diagnostics retained",
+    "sha256": "e213a8f6cc53ff972295ef6fe4f557af2801c61ee8ca44b0c9e189e3ae435ba2",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/ng-input.cc",
+    "scope": "Opening banner and options-file status; player-name validation and protected filenames retained",
+    "sha256": "fe416ba1e028dde4ca80f3e0b11bb22b10d002d76d6b3c19985524c88e207997",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/ng-input.h",
+    "scope": "Opening banner and options-file status; player-name validation and protected filenames retained",
+    "sha256": "e9cbf1ca4336afc71392ba42e58237b4a6fd8862ab1bee3f7f6bea06d210914f",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/ng-restr.cc",
+    "scope": "Species/background restrictions and declarations; no display prose",
+    "sha256": "79b8c6855e286a67a27e331c19a0fb7034dfdf064b4e373f73c914eba3755e75",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/ng-restr.h",
+    "scope": "Species/background restrictions and declarations; no display prose",
+    "sha256": "2bfc5aadabd7d03d89a7c2101a10887eeb6eca9ded471a0992f7fd80b92223c2",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/ng-setup.cc",
+    "scope": "New-game initialization, loadout setup and declarations; internal Lua/property keys and technical failures retained",
+    "sha256": "a7c9c03f91482d486aee7fff407150c1af5dfd033459ac97fa3969aea2f6399c",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/ng-setup.h",
+    "scope": "New-game initialization, loadout setup and declarations; internal Lua/property keys and technical failures retained",
+    "sha256": "acb6507c54b983de73d699c35df448d9b4677523c1f37f71df49248c06263832",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/ng-wanderer.cc",
+    "scope": "Wanderer skill/loadout generation; no display prose",
+    "sha256": "586067a7d3de18ec82eacfd57d9d64fa8618222be81926f4561d4f465e34ddda",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/ng-wanderer.h",
+    "scope": "Wanderer skill/loadout generation; no display prose",
+    "sha256": "f511fd2ae0654c581ad740b5d8023e8a9c23cfb13dd703bbd7408397ab730fdf",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/noise.h",
+    "scope": "Noise generation and propagation interfaces; no display prose",
+    "sha256": "bcb704433a9c468c8dc950f977aed6c5bdeda1b12685aa23de4dd76e9707091a",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/notes.cc",
+    "scope": "Typed display descriptions and note-entry prompt; original describe, serialized fields, milestones, user/script prose retained",
+    "sha256": "c215f793ab9c29af490ce432de57f5baedabc231963b0be7ccd5ab85d04c9242",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/notes.h",
+    "scope": "Typed display descriptions and note-entry prompt; original describe, serialized fields, milestones, user/script prose retained",
+    "sha256": "738ac93e685d767832eb401e546498c086e1dbf441ecac40d4ddc0973273b133",
+    "new": false,
+    "changed": true
+  }
+]

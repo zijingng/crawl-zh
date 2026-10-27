@@ -1,0 +1,18 @@
+{
+  "batch": "ability-review-01",
+  "reviewed": 154,
+  "actions": {
+    "new_translation": 127,
+    "corrected": 6,
+    "retained_after_review": 21
+  },
+  "additional_reference_spell": 1,
+  "all_ability_entries_exported": true,
+  "all_sources_and_targets_match": true,
+  "all_reference_dependencies_current": true,
+  "glossary_unchanged": true,
+  "lua_blocks": 5,
+  "lua_condition_scenarios": 22,
+  "python_tests": 22,
+  "gui_playtest": false
+}

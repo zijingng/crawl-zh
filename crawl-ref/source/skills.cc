@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "s-display.h"
+#include "i18n.h"
 
 #include "skills.h"
 
@@ -329,22 +331,15 @@ static void _change_skill_level(skill_type exsk, int n)
     // are you drained/crosstrained/ash'd in the relevant skill?
     const bool specify_base = you.skill(exsk, 1) != you.skill(exsk, 1, true);
     if (you.skills[exsk] == MAX_SKILL_LEVEL)
-        mprf(MSGCH_INTRINSIC_GAIN, "You have mastered %s!", skill_name(exsk));
+        mprf(MSGCH_INTRINSIC_GAIN, "%s", ui_render("s.log", "You have mastered %s!", make_stringf("You have mastered %s!", skill_name(exsk)), {ui_text_arg("display.skill", skill_name(exsk))}).c_str());
     else if (abs(n) == 1 && you.num_turns)
     {
-        mprf(MSGCH_INTRINSIC_GAIN, "Your %s%s skill %s to level %d!",
-             specify_base ? "base " : "",
-             skill_name(exsk), (n > 0) ? "increases" : "decreases",
-             you.skills[exsk]);
+        mprf(MSGCH_INTRINSIC_GAIN, "%s", ui_render("s.log", "Your %s%s skill %s to level %s!", make_stringf("Your %s%s skill %s to level %d!", specify_base ? "base " : "", skill_name(exsk), (n > 0) ? "increases" : "decreases", you.skills[exsk]), {s_clause_arg(specify_base ? "base " : ""), ui_text_arg("display.skill", skill_name(exsk)), s_clause_arg(n > 0 ? "increases" : "decreases"), ui_literal_arg(to_string(you.skills[exsk]))}).c_str());
     }
     else if (you.num_turns)
     {
-        mprf(MSGCH_INTRINSIC_GAIN, "Your %s%s skill %s %d levels and is now "
-             "at level %d!",
-             specify_base ? "base " : "",
-             skill_name(exsk),
-             (n > 0) ? "gained" : "lost",
-             abs(n), you.skills[exsk]);
+        mprf(MSGCH_INTRINSIC_GAIN, "%s", ui_render("s.log", "Your %s%s skill %s %s levels and is now at level %s!", make_stringf("Your %s%s skill %s %d levels and is now "
+             "at level %d!", specify_base ? "base " : "", skill_name(exsk), (n > 0) ? "gained" : "lost", abs(n), you.skills[exsk]), {s_clause_arg(specify_base ? "base " : ""), ui_text_arg("display.skill", skill_name(exsk)), s_clause_arg(n > 0 ? "gained" : "lost"), ui_literal_arg(to_string(abs(n))), ui_literal_arg(to_string(you.skills[exsk]))}).c_str());
     }
 
     if (you.skills[exsk] == n && n > 0)
@@ -798,7 +793,7 @@ bool check_selected_skills()
         if (!you.received_noskill_warning)
         {
             you.received_noskill_warning = true;
-            mpr("You cannot train any new skills!");
+            mpr(ui_translate("s.ui", "You cannot train any new skills!"));
         }
         // It's possible to have no selectable skills, if they are all
         // untrainable or level 27, so we don't assert.
@@ -821,7 +816,7 @@ bool check_selected_skills()
         return false;
     }
 
-    mpr("You need to enable at least one skill for training.");
+    mpr(ui_translate("s.ui", "You need to enable at least one skill for training."));
     // Training will be fixed up on load if this ASSERT triggers.
     ASSERT(!you.has_mutation(MUT_DISTRIBUTED_TRAINING));
     more();
@@ -1392,8 +1387,7 @@ bool check_training_target(skill_type sk)
             set_magic_training(TRAINING_DISABLED);
         else
             you.train_alt[sk] = you.train[sk] = TRAINING_DISABLED;
-        mprf("%sraining target %d.%d for %s reached!",
-            base ? "Base t" : "T", targ / 10, targ % 10, skill_name(sk));
+        mprf("%s", ui_render("s.log", "%sTraining target %s for %s reached!", make_stringf("%sraining target %d.%d for %s reached!", base ? "Base t" : "T", targ / 10, targ % 10, skill_name(sk)), {s_clause_arg(base ? "base " : ""), ui_literal_arg(make_stringf("%d.%d", targ / 10, targ % 10)), ui_text_arg("display.skill", skill_name(sk))}).c_str());
         return true;
     }
     return false;
@@ -1573,9 +1567,7 @@ static int _train(skill_type exsk, int &max_exp, bool simu, bool check_targets)
         you.skill_manual_points[exsk] -= bonus;
         if (!you.skill_manual_points[exsk] && !simu && !crawl_state.simulating_xp_gain)
         {
-            mprf("You have finished your manual of %s and %stoss it away.",
-                 skill_name(exsk),
-                 exsk == SK_THROWING ? "skilfully " : "");
+            mprf("%s", ui_render("s.log", "You have finished your manual of %s and %stoss it away.", make_stringf("You have finished your manual of %s and %stoss it away.", skill_name(exsk), exsk == SK_THROWING ? "skilfully " : ""), {ui_text_arg("display.skill", skill_name(exsk)), s_clause_arg(exsk == SK_THROWING ? "skilfully " : "")}).c_str());
         }
     }
 
@@ -1836,20 +1828,19 @@ bool player::set_training_target(const skill_type sk, const int target, bool ann
 {
     if (target > 270) // if target is above 270, reject with an error
     {
-        mpr("Your training target must be 27 or below!");
+        mpr(ui_translate("s.ui", "Your training target must be 27 or below!"));
         return false;
     }
     const int ranged_target = min(max((int) target, 0), 270);
     if (announce && ranged_target != (int) training_targets[sk])
     {
         if (you.has_mutation(MUT_DISTRIBUTED_TRAINING))
-            mpr("You can't set training targets!");
+            mpr(ui_translate("s.ui", "You can't set training targets!"));
         else if (ranged_target == 0)
-            mprf("Clearing the skill training target for %s.", skill_name(sk));
+            mprf("%s", ui_render("s.log", "Clearing the skill training target for %s.", make_stringf("Clearing the skill training target for %s.", skill_name(sk)), {ui_text_arg("display.skill", skill_name(sk))}).c_str());
         else
         {
-            mprf("Setting a skill training target for %s at %d.%d.", skill_name(sk),
-                                    ranged_target / 10, ranged_target % 10);
+            mprf("%s", ui_render("s.log", "Setting a skill training target for %s at %s.", make_stringf("Setting a skill training target for %s at %d.%d.", skill_name(sk), ranged_target / 10, ranged_target % 10), {ui_text_arg("display.skill", skill_name(sk)), ui_literal_arg(make_stringf("%d.%d", ranged_target / 10, ranged_target % 10))}).c_str());
         }
     }
     if (!can_enable_skill(sk)) // checks for gnolls
@@ -2016,17 +2007,31 @@ string special_conduct_title(skill_type best_skill, uint8_t skill_rank)
  */
 string skill_title_by_rank(skill_type best_skill, uint8_t skill_rank,
                            species_type species, int dex, int str, int intel,
-                           god_type god, int piety, bool conducts)
+                           god_type god, int piety, bool conducts, ui_arg* display)
 {
 
     // paranoia
     if (is_invalid_skill(best_skill))
+    {
+        if (display) *display = ui_text_arg("d.skill.title", "Adventurer");
         return "Adventurer";
+    }
 
     // Increment rank by one to "skip" skill name in array {dlb}:
     ++skill_rank;
 
     string result;
+    ui_arg divine_title{"", false};
+    const auto title_for_god = [&](god_type who, int favour)
+    {
+        const string canonical = god_title(who, species, favour);
+        if (display)
+        {
+            const string text = god_display_title(who, species, favour);
+            divine_title = {text, text != canonical};
+        }
+        return canonical;
+    };
 
     if (best_skill < NUM_SKILLS)
     {
@@ -2138,7 +2143,7 @@ string skill_title_by_rank(skill_type best_skill, uint8_t skill_rank,
             else if (species == SP_VINE_STALKER && skill_rank == 5)
                 result = "Corpseflower";
             else if (god == GOD_KIKUBAAQUDGHA)
-                result = god_title(god, species, piety);
+                result = title_for_god(god, piety);
             break;
 
         case SK_FORGECRAFT:
@@ -2247,7 +2252,7 @@ string skill_title_by_rank(skill_type best_skill, uint8_t skill_rank,
             else if (species == SP_OCTOPODE && skill_rank == 5 && is_evil_god(god))
                 result = "Leviathan";
             else if (god != GOD_NO_GOD)
-                result = god_title(god, species, piety);
+                result = title_for_god(god, piety);
             else if (species == SP_BARACHI)
             {
                 // C.f. the barachi species lore, true believers!
@@ -2258,7 +2263,7 @@ string skill_title_by_rank(skill_type best_skill, uint8_t skill_rank,
 #if TAG_MAJOR_VERSION == 34
         case SK_EVOCATIONS:
             if (god == GOD_PAKELLAS)
-                result = god_title(god, species, piety);
+                result = title_for_god(god, piety);
             break;
 #endif
 
@@ -2270,7 +2275,7 @@ string skill_title_by_rank(skill_type best_skill, uint8_t skill_rank,
         {
             god_type betrayed_god = static_cast<god_type>(
                 you.attribute[ATTR_TRAITOR]);
-            result = god_title(betrayed_god, species, 0);
+            result = title_for_god(betrayed_god, 0);
         }
 
         if (conducts)
@@ -2295,6 +2300,36 @@ string skill_title_by_rank(skill_type best_skill, uint8_t skill_rank,
         { "Weight", _stk_weight(species) },
     };
 
+    if (display)
+    {
+        const ui_arg source = ui_text_arg("d.skill.title", result);
+        if (!source.available)
+            *display = divine_title;
+        else
+        {
+            const auto component = [](const string &text) {
+                return ui_text_arg("d.god.title.component", text);
+            };
+            const map<string, ui_arg> values = {
+                {"Adj", component(replacements.at("Adj"))},
+                {"Genus", component(replacements.at("Genus"))},
+                {"genus", component(replacements.at("Genus"))},
+                {"Genus_Short", species == SP_DEMIGOD ? ui_text_arg("d.god.title.component", "God")
+                    : component(replacements.at("Genus_Short"))},
+                {"Walker", ui_text_arg("d.skill.title.walker", species::walking_title(species))},
+                {"Weight", ui_text_arg("d.skill.title.weight", replacements.at("Weight"))},
+            };
+            bool available = true;
+            map<string, string> translated;
+            for (const auto &entry : values)
+            {
+                if (result.find("@" + entry.first + "@") != string::npos)
+                    available &= entry.second.available;
+                translated[entry.first] = entry.second.text;
+            }
+            *display = {replace_keys(source.text, translated), available};
+        }
+    }
     return replace_keys(result, replacements);
 }
 
@@ -2613,7 +2648,7 @@ int get_crosstrain_points(skill_type sk)
 
 }
 
-void dump_skills(string &text)
+void dump_skills(string &text, bool display)
 {
     for (uint8_t i = 0; i < NUM_SKILLS; i++)
     {
@@ -2621,6 +2656,7 @@ void dump_skills(string &text)
         int cur  = you.skill((skill_type)i, 10);
         if (real > 0 || (!you.auto_training && you.train[i] > 0))
         {
+            const size_t display_start = text.size();
             text += make_stringf(" %c Level %.*f%s %s\n",
                                  real == 270       ? 'O' :
                                  !you.can_currently_train[i] ? ' ' :
@@ -2635,6 +2671,17 @@ void dump_skills(string &text)
                                            cur * 0.1).c_str()
                                      : "",
                                  skill_name(static_cast<skill_type>(i)));
+            if (display)
+            {
+                const char marker = real == 270 ? 'O' : !you.can_currently_train[i] ? ' '
+                    : you.train[i] == 2 ? '*' : you.train[i] ? '+' : '-';
+                const string level = make_stringf("%.*f", real == 270 ? 0 : 1, real * 0.1)
+                    + (real != cur ? make_stringf("(%.*f)", cur == 270 ? 0 : 1, cur * 0.1) : "");
+                text.replace(display_start, string::npos,
+                    ui_render("c.dump", " %s Level %s %s\n", text.substr(display_start),
+                        {ui_literal_arg(string(1, marker)), ui_literal_arg(level),
+                         ui_text_arg("display.skill", skill_name(static_cast<skill_type>(i)))}));
+            }
         }
     }
 }

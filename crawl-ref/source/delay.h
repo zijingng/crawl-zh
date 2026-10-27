@@ -237,11 +237,7 @@ class EquipOnDelay : public Delay
 
     void start() override;
 
-    void tick() override
-    {
-        mprf(MSGCH_MULTITURN_ACTION, "You continue %s %s.",
-             get_verb(), equip.name(DESC_YOUR).c_str());
-    }
+    void tick() override;
 
     bool invalidated() override;
 
@@ -273,11 +269,7 @@ class EquipOffDelay : public Delay
 
     void start() override;
 
-    void tick() override
-    {
-        mprf(MSGCH_MULTITURN_ACTION, "You continue %s %s.",
-             get_verb(), equip.name(DESC_YOUR).c_str());
-    }
+    void tick() override;
 
     bool invalidated() override;
 
@@ -306,10 +298,7 @@ class MemoriseDelay : public Delay
 {
     void start() override;
 
-    void tick() override
-    {
-        mprf(MSGCH_MULTITURN_ACTION, "You continue memorising.");
-    }
+    void tick() override;
 
     void finish() override;
 public:
@@ -332,10 +321,7 @@ class PasswallDelay : public Delay
     coord_def dest;
     void start() override;
 
-    void tick() override
-    {
-        mprf(MSGCH_MULTITURN_ACTION, "You continue meditating on the rock.");
-    }
+    void tick() override;
 
     void finish() override;
 public:
@@ -614,10 +600,7 @@ class ShaftSelfDelay : public Delay
 {
     void start() override;
 
-    void tick() override
-    {
-        mprf(MSGCH_MULTITURN_ACTION, "You continue digging a shaft.");
-    }
+    void tick() override;
 
     void finish() override;
 public:
@@ -667,10 +650,7 @@ class ImbueDelay : public Delay
 
     void start() override;
 
-    void tick() override
-    {
-        mprf(MSGCH_MULTITURN_ACTION, "You continue imbuing your servitor.");
-    }
+    void tick() override;
 
     void finish() override;
 public:
@@ -692,10 +672,7 @@ class ImprintDelay : public Delay
 {
     void start() override;
 
-    void tick() override
-    {
-        mprf(MSGCH_MULTITURN_ACTION, "You continue imprinting.");
-    }
+    void tick() override;
 
     void finish() override;
 public:

@@ -1,0 +1,1204 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "selected": [
+    {
+      "source": "database/randbook.txt",
+      "key": "random_book_title",
+      "english": "w:15\nthe @_book_plant_animal_@\n\nw:20\n@_number_or_qualifier_@ @_thing_names_@\n\nw:4\nthe @_profession_name_@\n\nw:13\n@_philosophy_or_science_@\n\nw:8\n@_wacky_armour_name_@\n\nw:2\n@_destiny_name_@\n\nw:6\n@_place_name_@\n\nw:1\n@_magic_name_@\n\nw:4\n@_substance_name_@\n\nw:2\n@_power_name_@\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "book",
+          "Translation": "魔法书/书/手册",
+          "Part of Speech": "noun",
+          "Variants": "book of",
+          "Note": "【使用约束】book of 是组合前缀，不是完整法术书名；不得把所有 book 都补成魔法书。\n【语境补充 2026-10-21】含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+        },
+        {
+          "Term": "plant",
+          "Translation": "植物",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "_book_plant_animal_",
+      "english": "w:1\n@_jewellery_animal_@\n\nw:1\n@_critter_name_@\n\nw:1\n@_plant_name_@\n\nw:6\n@_weapon_animal_@\n\n@_armour_animal_@\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "book",
+          "Translation": "魔法书/书/手册",
+          "Part of Speech": "noun",
+          "Variants": "book of",
+          "Note": "【使用约束】book of 是组合前缀，不是完整法术书名；不得把所有 book 都补成魔法书。\n【语境补充 2026-10-21】含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+        },
+        {
+          "Term": "plant",
+          "Translation": "植物",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "xom_book_title",
+      "english": "w:30\n@random_book_title@\n\n@_chaos_name_@\n\nw:1\n@_game_name_@\n\nw:2\n@player_death@\n\nw:8\n@_wacky_armour_name_@\n\nw:1\n@_politics_name_armour_@\n\nw:5\n@_power_name_@\n\nw:3\n@_discomfort_and_inaction_@\n\nw:3\n@_discomfort_weapon_@\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "book",
+          "Translation": "魔法书/书/手册",
+          "Part of Speech": "noun",
+          "Variants": "book of",
+          "Note": "【使用约束】book of 是组合前缀，不是完整法术书名；不得把所有 book 都补成魔法书。\n【语境补充 2026-10-21】含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "chaos",
+          "Translation": "混沌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "_the_book_magic_",
+      "english": "the @_occult_adjective_@ Arts\n\nthe @_occult_adjective_@ Practices\n\nthe @_occult_adjective_@ Rites\n\nthe @_occult_adjective_@ Traditions\n\nthe @_occult_adjective_@ Truths\n\nthe Hermit's Heritage\n\nthe Histories of Mysteries\n\nthe Magician's Craft\n\nthe Mind of the Magus\n\nthe Power of Words\n\nthe Rites and Rhymes\n\nthe Sigils and Symbols\n\nthe Wisdom of the Ancients\n\nthe Wizard's Wisdom\n\nthe Words of Power\n\nw:300\n@_book_magic_@\n",
+      "hits": [
+        {
+          "Term": "book",
+          "Translation": "魔法书/书/手册",
+          "Part of Speech": "noun",
+          "Variants": "book of",
+          "Note": "【使用约束】book of 是组合前缀，不是完整法术书名；不得把所有 book 都补成魔法书。\n【语境补充 2026-10-21】含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+        },
+        {
+          "Term": "wizard",
+          "Translation": "巫师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "_book_magic_",
+      "english": "@_occult_adjective_@ Insight\n\n@_occult_adjective_@ Knowledge\n\n@_occult_adjective_@ Power\n\n@_occult_adjective_@ Understanding\n\n@_occult_adjective_@ Wisdom\n\nCasting\n\nGnosis\n\nHermeneutics\n\nHermetics\n\nw:2\nHocus-Pocus\n\nIncantation\n\nMagic\n\nMagical Power\n\nMysticism\n\nOccultism\n\nSorcery\n\nSortilege\n\nSpellcasting\n\nSpellcraft\n\nSpellweaving\n\nSpellwork\n\nThaumaturgy\n\nTheurgy\n\nWillworking\n\nWitchcraft\n\nWitchery\n\nWizarding\n\nWizardry\n",
+      "hits": [
+        {
+          "Term": "book",
+          "Translation": "魔法书/书/手册",
+          "Part of Speech": "noun",
+          "Variants": "book of",
+          "Note": "【使用约束】book of 是组合前缀，不是完整法术书名；不得把所有 book 都补成魔法书。\n【语境补充 2026-10-21】含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+        },
+        {
+          "Term": "Spellcasting",
+          "Translation": "施法",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "_occult_adjective_",
+      "english": "Abstruse\n\nAcroamatic\n\nArcane\n\nAwakened\n\nConcealed\n\nCryptic\n\nDeep\n\nEsoteric\n\nForbidden\n\nGnostic\n\nHermetic\n\nHidden\n\nLost\n\nMagical\n\nMysterious\n\nMystic\n\nMystical\n\nOccult\n\nOrphic\n\nRecondite\n\nRevealed\n\nRitual\n\nSealed\n\nSecret\n\nSibylline\n\nTransmundane\n\nVeiled\n",
+      "hits": []
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "_beginners_",
+      "english": "Beginners\n\nInitiates\n\nApprentices\n\nLearners\n\nNeophytes\n\nNovices\n\nw:5\nAmateurs\n\nw:5\nRookies\n\nw:5\nAbsolute Beginners\n\nw:1\nEx-Berserkers\n\nw:1\nDummies\n",
+      "hits": [
+        {
+          "Term": "Berserker",
+          "Translation": "狂战士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/berserker.yaml。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "starting level book",
+      "english": "w:2\n@_the_book_magic_@ 101\n\n@_the_book_magic_@ for @_beginners_@\n\n@_the_book_magic_@, Part @level@\n\n@_the_book_magic_@, Volume @level@\n\nA @book_name@ Starting Spells\n\nA Beginning Course on @_the_book_magic_@\n\nA Prolegomenon to @_the_book_magic_@\n\nA Tutorial on @_the_book_magic_@\n\nAn Exordium to @_the_book_magic_@\n\nAn Initiation into @_the_book_magic_@\n\nAn Induction into @_the_book_magic_@\n\nAn Introduction to @_the_book_magic_@\n\nw:2\nAnyone Can Learn @_the_book_magic_@\n\nBeginning @_the_book_magic_@\n\nCommencing @_the_book_magic_@\n\nDabbling in @_the_book_magic_@\n\nElementary @_book_magic_@\n\nw:2\nEven @_beginners_@ Can Learn @_the_book_magic_@!\n\nFirst Steps in @_the_book_magic_@\n\nPracticing @_the_book_magic_@\n\nPreliminaries of @_the_book_magic_@\n\nSimple @_book_magic_@\n\nw:2\nSo You Want to Learn @_the_book_magic_@\n\nStarting @_the_book_magic_@\n\nThe Basics of @_the_book_magic_@\n",
+      "hits": [
+        {
+          "Term": "book",
+          "Translation": "魔法书/书/手册",
+          "Part of Speech": "noun",
+          "Variants": "book of",
+          "Note": "【使用约束】book of 是组合前缀，不是完整法术书名；不得把所有 book 都补成魔法书。\n【语境补充 2026-10-21】含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+        },
+        {
+          "Term": "spell",
+          "Translation": "法术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "easy level book",
+      "english": "@_book_magic_@ and How To Use It\n\n@_the_book_magic_@ and You\n\n@_the_book_magic_@ Continued\n\n@_the_book_magic_@ in Simple Steps\n\n@_the_book_magic_@, Part @level@\n\n@_the_book_magic_@, Volume @level@\n\nA @book_name@ Supplementary Spells\n\nA Primer on @_the_book_magic_@\n\nAn Early Guide to @_the_book_magic_@\n\nContinuing @_the_book_magic_@\n\nEasy @_book_magic_@\n\nEveryday @_book_magic_@\n\nMore @_book_magic_@\n\nMore Studies in @_the_book_magic_@\n\nPerforming Successful @_book_magic_@\n\nQuotidian @_book_magic_@\n\nw:2\nThe Antepenultimate Guide to @_the_book_magic_@\n\nThe Foundations of @_the_book_magic_@\n\nThe Fundamentals of @_the_book_magic_@\n\nw:2\nThe Joy of @_book_magic_@\n\nThe Keys to @_the_book_magic_@\n",
+      "hits": [
+        {
+          "Term": "book",
+          "Translation": "魔法书/书/手册",
+          "Part of Speech": "noun",
+          "Variants": "book of",
+          "Note": "【使用约束】book of 是组合前缀，不是完整法术书名；不得把所有 book 都补成魔法书。\n【语境补充 2026-10-21】含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+        },
+        {
+          "Term": "spell",
+          "Translation": "法术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "moderate level book",
+      "english": "@_the_book_magic_@, Part @level@\n\n@_the_book_magic_@, Volume @level@\n\nA @book_name@ Spells\n\nAdvanced @_book_magic_@\n\nAdvanced Steps in @_the_book_magic_@\n\nEven More @_book_magic_@\n\nExperienced @_book_magic_@\n\nFurther Progress in @_the_book_magic_@\n\nFurther Steps in @_the_book_magic_@\n\nImproving Your @_book_magic_@\n\nPractical @_book_magic_@\n\nProgressing With @_book_magic_@\n\nSophisticated @_book_magic_@\n\nThe Advanced Guide to @_the_book_magic_@\n\nThe Path to @_the_book_magic_@\n\nw:2\nThe Penultimate Guide to @_the_book_magic_@\n\nThe Second Course in @_book_magic_@\n\nUseful @_book_magic_@\n\nw:2\nYet Another @book_noun@ About @_the_book_magic_@\n",
+      "hits": [
+        {
+          "Term": "book",
+          "Translation": "魔法书/书/手册",
+          "Part of Speech": "noun",
+          "Variants": "book of",
+          "Note": "【使用约束】book of 是组合前缀，不是完整法术书名；不得把所有 book 都补成魔法书。\n【语境补充 2026-10-21】含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+        },
+        {
+          "Term": "spell",
+          "Translation": "法术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "_powerful_caster_",
+      "english": "Archmage\n\nArchmaster\n\nHierophant\n\nLuminary\n\nMystagogue\n\nProphet\n\nSage\n\nWarlock\n\nw:5\nDeep Elf Lorekeeper\n\nw:5\nGenius of the Arcane\n\nw:5\nHigh Council\n\nw:5\nLorekeeper\n\nw:5\nLoreminder\n\nw:1\nBlind Seer\n\nw:1\nConsilium Hierarch\n\nw:1\nGrand Magus\n\nw:1\nGreatest Mummy\n\nw:1\nPrimeval Lich\n\nw:1\nSorcerer Supreme\n\nw:1\nUltimate Wizard\n\nw:1\nWeird Sisters\n\nw:1\nWizard of Zot\n",
+      "hits": [
+        {
+          "Term": "lich",
+          "Translation": "巫妖",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "mummy",
+          "Translation": "木乃伊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/mummy.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "weird",
+          "Translation": "奇怪的",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "wizard",
+          "Translation": "巫师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Zot",
+          "Translation": "佐特",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Deep Elf",
+          "Translation": "地底精灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/deep-elf.yaml。"
+        },
+        {
+          "Term": "elf",
+          "Translation": "精灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "_the_powerful_caster_",
+      "english": "w:100\nthe @_powerful_caster_@\n\nw:30\nBoris\n\nSif Muna\n\nw:1\nFaust\n\nw:1\nGeber\n\nw:1\nHermes Trismegistus\n\nw:1\nJabir\n\nw:1\nMerlin\n\nw:1\nMorgana le Fay\n\nw:1\nNicolae\n\nw:1\nOstanes\n\nw:1\nParacelsus\n\nw:1\nProspero\n\nw:1\nSolomon\n",
+      "hits": [
+        {
+          "Term": "Sif Muna",
+          "Translation": "席夫·穆纳",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Boris",
+          "Translation": "鲍里斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "_last_or_lost_",
+      "english": "Last\n\nLost\n",
+      "hits": []
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "_testament_noun_",
+      "english": "Archive\n\nChronicle\n\nHistory\n\nJournal\n\nMemoir\n\nRecord\n\nTestament\n\nTestimony\n\nWisdom\n\nWritings\n",
+      "hits": []
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "_difficult level book owner_",
+      "english": "@_the_book_magic_@, Part @level@\n\n@_the_book_magic_@, Volume @level@\n\nA @book_name@ Superlative Spells\n\nA Thorough Guide to @_the_book_magic_@\n\nMastering @_the_book_magic_@\n\nMastery of @_the_book_magic_@\n\nThe Final @book_noun@ of @_the_book_magic_@\n\nThe Final @_book_noun_on_@ on @_the_book_magic_@\n\nThe @_last_or_lost_@ Secrets of @_the_book_magic_@\n\nThe @book_noun@ of Greatest Risks and Utility\n\nThe Arcane Secrets of @_book_magic_@\n\nThe Highest Levels of @_the_book_magic_@\n\nThe Intricacies of @_the_book_magic_@\n\nThe Ultimate Guide to @_the_book_magic_@\n\nTotal Understanding of @_the_book_magic_@\n",
+      "hits": [
+        {
+          "Term": "book",
+          "Translation": "魔法书/书/手册",
+          "Part of Speech": "noun",
+          "Variants": "book of",
+          "Note": "【使用约束】book of 是组合前缀，不是完整法术书名；不得把所有 book 都补成魔法书。\n【语境补充 2026-10-21】含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+        },
+        {
+          "Term": "spell",
+          "Translation": "法术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "difficult level book",
+      "english": "w:50\n@_difficult level book owner_@\n\nThe @_last_or_lost_@ @book_noun@ of @_the_powerful_caster_@\n\nw:5\n@_the_book_magic_@ of @_the_powerful_caster_@\n\nw:5\nThe @_last_or_lost_@ @_testament_noun_@ of @_the_powerful_caster_@\n\nw:5\nThe @_occult_adjective_@ @_testament_noun_@ of @_the_powerful_caster_@\n\nw:1\nA @book_noun@ from @_the_powerful_caster_@ to @player_name@\n",
+      "hits": [
+        {
+          "Term": "book",
+          "Translation": "魔法书/书/手册",
+          "Part of Speech": "noun",
+          "Variants": "book of",
+          "Note": "【使用约束】book of 是组合前缀，不是完整法术书名；不得把所有 book 都补成魔法书。\n【语境补充 2026-10-21】含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "air adj",
+      "english": "Aerial\n\nAirborne\n\nAiry\n\nAtmospheric\n\nBlustery\n\nBreezy\n\nBrumous\n\nCharged\n\nCloudy\n\nElectric\n\nFeathery\n\nFloating\n\nFlying\n\nFoggy\n\nFulgurant\n\nFulgurous\n\nFuming\n\nGalvanic\n\nGaseous\n\nGusty\n\nHazy\n\nInclement\n\nLofty\n\nMeteoric\n\nMisty\n\nNebulous\n\nOvercast\n\nOverhead\n\nPneumatic\n\nShocking\n\nStormy\n\nTempestuous\n\nTurbulent\n\nVapourous\n\nVoltaic\n\nWeathered\n\nWindswept\n\nWindy\n\nWispy\n",
+      "hits": [
+        {
+          "Term": "Air",
+          "Translation": "空气强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "conjuration adj",
+      "english": "Actinic\n\nBeaming\n\nBlasted\n\nBright\n\nBrilliant\n\nCombative\n\nConjured\n\nCoruscating\n\nDamaging\n\nDestructive\n\nDynamic\n\nEffulgent\n\nEnergetic\n\nExcruciating\n\nFlashy\n\nForceful\n\nFulgent\n\nGlowing\n\nHarmful\n\nHurtful\n\nInjurious\n\nIntense\n\nLethal\n\nLimned\n\nLucent\n\nLuminous\n\nKinetic\n\nMighty\n\nNocuous\n\nPotent\n\nPowerful\n\nProfulgent\n\nPuissant\n\nRadiant\n\nRefulgent\n\nResplendent\n\nRuinous\n\nScintillating\n\nShining\n\nVehement\n\nVibrant\n\nViolent\n\nVivid\n\nWild\n",
+      "hits": [
+        {
+          "Term": "conjuration",
+          "Translation": "塑能",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "earth adj",
+      "english": "Arenous\n\nAshen\n\nChthonic\n\nCoarse\n\nCrystalline\n\nDense\n\nDusty\n\nEarthen\n\nFelsic\n\nFlinty\n\nGeological\n\nGrey\n\nGritty\n\nGrounded\n\nHeavy\n\nIndurated\n\nIron\n\nIronbound\n\nLapidarian\n\nLapidary\n\nLeaden\n\nLithic\n\nMetallic\n\nPetrified\n\nPetrous\n\nPlutonic\n\nRocky\n\nRough\n\nSandy\n\nSeismic\n\nSolid\n\nSubterranean\n\nStony\n\nTectonic\n\nTelluric\n\nTerrestrial\n\nUnderground\n\nVolcanic\n",
+      "hits": [
+        {
+          "Term": "petrified",
+          "Translation": "已石化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/状态】完成后的状态。 来源：duration-data.h。"
+        },
+        {
+          "Term": "Earth",
+          "Translation": "大地强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "heavy",
+          "Translation": "沉重",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "fire adj",
+      "english": "Blazing\n\nBlistering\n\nBurning\n\nBurnt\n\nCalescent\n\nCalid\n\nCalorific\n\nCharred\n\nCombustive\n\nComburant\n\nConflagrant\n\nDecalescent\n\nExothermic\n\nFiery\n\nFlaming\n\nFlammable\n\nFlamy\n\nGlowing\n\nHeated\n\nHot\n\nIgneous\n\nIncandescent\n\nIncendiary\n\nIncinerated\n\nInflammable\n\nKindled\n\nMolten\n\nRed\n\nRed-hot\n\nRoasted\n\nSearing\n\nScalding\n\nScorched\n\nScorching\n\nSinged\n\nSizzling\n\nSmoking\n\nSmouldering\n\nw:2\nSpicy\n\nSulphurous\n\nSweltering\n\nTorrefying\n\nTorrid\n\nTropical\n\nVolatile\n\nw:2\nWell-done\n",
+      "hits": [
+        {
+          "Term": "Fire",
+          "Translation": "火焰强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "hexes adj",
+      "english": "Alluring\n\nBaleful\n\nBecharmed\n\nBecharming\n\nBeguiled\n\nBeguiling\n\nBewitched\n\nBewitching\n\nBound\n\nCaptivating\n\nCharmed\n\nCharming\n\nCunning\n\nCursed\n\nDestined\n\nDire\n\nDoomed\n\nEnchanted\n\nEnchanting\n\nEnsnaring\n\nEnthralled\n\nEnthralling\n\nEntranced\n\nEntrancing\n\nFascinating\n\nFateful\n\nFetching\n\nFettered\n\nFey\n\nGlamourous\n\nHapless\n\nHexed\n\nHexing\n\nHindering\n\nHopeless\n\nIll-boding\n\nIll-fated\n\nIll-omened\n\nIll-starred\n\nInauspicious\n\nJinxed\n\nLost\n\nMaledictive\n\nPortentous\n\nPredestined\n\nSpellbinding\n\nStar-crossed\n\nTragic\n\nTwinkling\n\nUnfortunate\n\nUnlucky\n\nVexatious\n\nVexing\n\nWeird\n",
+      "hits": [
+        {
+          "Term": "Hexes",
+          "Translation": "妖术系魔法/妖术强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】区分敌对魔法学派与物品诅咒，也与 hexer（妖术师）统一。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。\n【装备语境】学派名称用妖术系魔法；装备的 Hexes 标签表示该学派法术强度增强，用妖术强化。"
+        },
+        {
+          "Term": "weird",
+          "Translation": "奇怪的",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "ice adj",
+      "english": "Algid\n\nAlpine\n\nArctic\n\nAzure\n\nBitter\n\nBleak\n\nBoreal\n\nBrumal\n\nChilled\n\nChilling\n\nChilly\n\nCold\n\nCongealing\n\nCrystallised\n\nFreezing\n\nFrigid\n\nFrigorific\n\nFrore\n\nFrostbitten\n\nFrostbound\n\nFrosty\n\nFrozen\n\nGelid\n\nGlacial\n\nHiemal\n\nHyperborean\n\nHypothermic\n\nIcebound\n\nIced\n\nIcy\n\nNival\n\nNiveous\n\nNumb\n\nPolar\n\nShivering\n\nSnowing\n\nSnowy\n\nSnow-white\n\nSubzero\n\nWhite\n\nWintry\n",
+      "hits": [
+        {
+          "Term": "Ice",
+          "Translation": "寒冰强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "necromancy adj",
+      "english": "Bloodied\n\nBloody\n\nCaliginous\n\nCharnel\n\nCreeping\n\nw:2\nCreepy\n\nCruentate\n\nDark\n\nDead\n\nDeathly\n\nDecaying\n\nDismal\n\nDoomed\n\nEvil\n\nFatal\n\nFunereal\n\nGhastly\n\nGhoulish\n\nGloomy\n\nGrave\n\nGrim\n\nGrisly\n\nHorrible\n\nHorrid\n\nImbrued\n\nLethal\n\nLifeless\n\nLoathsome\n\nMacabre\n\nMalignant\n\nMorbid\n\nMortal\n\nMortuary\n\nNecrotic\n\nPosthumous\n\nPostmortem\n\nRotting\n\nQuickened\n\nSanguinary\n\nSanguinolent\n\nSaturnine\n\nSepulchral\n\nShadowy\n\nSinister\n\nSomber\n\nw:2\nSpooky\n\nSpectral\n\nStygian\n\nTenebrous\n\nTwisted\n\nUndead\n\nUnholy\n\nVile\n\nWicked\n",
+      "hits": [
+        {
+          "Term": "Necromancy",
+          "Translation": "死灵系魔法",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "undead",
+          "Translation": "亡灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】指不死生物类别，并不表示无法被杀死。 来源：mon-util.cc。"
+        },
+        {
+          "Term": "vile",
+          "Translation": "噩",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "alchemy adj",
+      "english": "Alchemical\n\nAltered\n\nAmorphous\n\nArsenical\n\nBaneful\n\nCaustic\n\nChanged\n\nChanging\n\nChemical\n\nContaminated\n\nDifferential\n\nFeculent\n\nFetid\n\nFluctuating\n\nGlowing\n\nGreen\n\nHyletic\n\nHylic\n\nImpure\n\nIotic\n\nLeucotic\n\nMagnum\n\nMelanotic\n\nMercurial\n\nMetamorphic\n\nMutable\n\nMutagenic\n\nMutated\n\nNocuous\n\nNoxious\n\nPoisonous\n\nPolluted\n\nPrime\n\nPromethean\n\nProtean\n\nReconfigured\n\nRefined\n\nReshaped\n\nSeptic\n\nSpagyric\n\nSynthesised\n\nToxic\n\nTransformed\n\nTransforming\n\nTransmuted\n\nUnrefined\n\nUnstable\n\nVariable\n\nVenomous\n\nViperous\n\nViridian\n\nVirous\n\nVirulent\n\nVitriolic\n\nXanthotic\n",
+      "hits": [
+        {
+          "Term": "Alchemy",
+          "Translation": "炼金术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "summoning adj",
+      "english": "Aggregated\n\nAllied\n\nAmalgamated\n\nAmassed\n\nAssembled\n\nAssociated\n\nAssistive\n\nCalled\n\nCollected\n\nCollective\n\nCombined\n\nConcerted\n\nCongregated\n\nConsolidated\n\nCooperative\n\nCreated\n\nCreative\n\nFamiliar\n\nFriendly\n\nGathered\n\nGenerated\n\nGenerative\n\nHelpful\n\nIllusory\n\nMarshalled\n\nMassed\n\nMustered\n\nMutual\n\nPhantasmal\n\nProductive\n\nRallied\n\nShared\n\nSpawned\n\nSummoned\n\nSupportive\n\nSympathetic\n\nSyndicated\n\nUnified\n\nUnited\n",
+      "hits": []
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "translocation adj",
+      "english": "Akashic\n\nAngular\n\nBlinking\n\nCorresponding\n\nDeviated\n\nDimensional\n\nDiscontinuous\n\nDisjunct\n\nDislocated\n\nDisplaced\n\nDistorted\n\nElliptic\n\nGeometric\n\nHyperbolic\n\nIsometric\n\nLiminal\n\nLinear\n\nManifold\n\nMoving\n\nNon-Euclidean\n\nNon-linear\n\nParabolic\n\nParallel\n\nPlanar\n\nProjective\n\nQuantum\n\nRelocated\n\nShifting\n\nSpatial\n\nTopological\n\nTranslocated\n\nTranslocational\n\nTransposed\n\nTwisted\n\nUnstable\n\nWarped\n",
+      "hits": [
+        {
+          "Term": "disjunct",
+          "Translation": "离散",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "forgecraft adj",
+      "english": "Alloyed\n\nArtificial\n\nArtisanal\n\nAssembled\n\nAutomatic\n\nBuilt\n\nBuzzing\n\nCalibrated\n\nClacking\n\nClanging\n\nClanking\n\nClattering\n\nClicking\n\nClinking\n\nClockwork\n\nCompleted\n\nConcrete\n\nConstructed\n\nCrafted\n\nCreaking\n\nDesigned\n\nEngineered\n\nFabricated\n\nFashioned\n\nFine-tuned\n\nForgecrafted\n\nForged\n\nForgewrought\n\nFormed\n\nHammered\n\nHissing\n\nIndustrial\n\nIngenious\n\nInnovative\n\nInstantiated\n\nInvented\n\nJangling\n\nJingling\n\nMachined\n\nManufactured\n\nMechanical\n\nMechanised\n\nMetallic\n\nMetallurgical\n\nModelled\n\nPhysical\n\nRattling\n\nRealised\n\nReified\n\nSchematic\n\nShaped\n\nSpellcrafted\n\nSpellforged\n\nSpellsmithed\n\nSteel\n\nStructural\n\nSynthetic\n\nTechnological\n\nTempered\n\nThrumming\n\nTicking\n\nTooled\n\nVibrating\n\nWell-oiled\n\nWell-tempered\n\nWhirring\n\nWhizzing\n\nWind-up\n\nWorked\n\nWrought\n",
+      "hits": [
+        {
+          "Term": "Forgecraft",
+          "Translation": "锻造术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "highlevel conjuration earth owner",
+      "english": "Dispater\n\n@Conjuration Earth owner@\n",
+      "hits": [
+        {
+          "Term": "conjuration",
+          "Translation": "塑能",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Dispater",
+          "Translation": "迪斯帕特",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Earth",
+          "Translation": "大地强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "conjuration earth owner",
+      "english": "Lehudib\n\n__NONE\n",
+      "hits": [
+        {
+          "Term": "conjuration",
+          "Translation": "塑能",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Earth",
+          "Translation": "大地强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "highlevel conjuration fire owner",
+      "english": "Asmodeus\n\nCerebov\n\n__NONE\n",
+      "hits": [
+        {
+          "Term": "conjuration",
+          "Translation": "塑能",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Asmodeus",
+          "Translation": "阿斯蒙蒂斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Cerebov",
+          "Translation": "瑟雷波夫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Fire",
+          "Translation": "火焰强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "highlevel conjuration necromancy owner",
+      "english": "Ereshkigal\n\n__NONE\n",
+      "hits": [
+        {
+          "Term": "conjuration",
+          "Translation": "塑能",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Necromancy",
+          "Translation": "死灵系魔法",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "Ereshkigal",
+          "Translation": "埃列什基伽勒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "highlevel conjuration summoning owner",
+      "english": "Asmodeus\n\nDispater\n\n__NONE\n",
+      "hits": [
+        {
+          "Term": "conjuration",
+          "Translation": "塑能",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Dispater",
+          "Translation": "迪斯帕特",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Asmodeus",
+          "Translation": "阿斯蒙蒂斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "alchemy earth owner",
+      "english": "Roxanne\n\n__NONE\n",
+      "hits": [
+        {
+          "Term": "Alchemy",
+          "Translation": "炼金术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "Roxanne",
+          "Translation": "罗克珊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Earth",
+          "Translation": "大地强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "highlevel earth summoning owner",
+      "english": "Dispater\n\n__NONE\n",
+      "hits": [
+        {
+          "Term": "Dispater",
+          "Translation": "迪斯帕特",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Earth",
+          "Translation": "大地强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "highlevel fire summoning owner",
+      "english": "Asmodeus\n\n__NONE\n",
+      "hits": [
+        {
+          "Term": "Asmodeus",
+          "Translation": "阿斯蒙蒂斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Fire",
+          "Translation": "火焰强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "fire ice owner",
+      "english": "Vv\n\n__NONE\n",
+      "hits": [
+        {
+          "Term": "Vv",
+          "Translation": "薇薇",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Fire",
+          "Translation": "火焰强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "Ice",
+          "Translation": "寒冰强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "highlevel alchemy necromancy owner",
+      "english": "Gloorx Vloq\n\n__NONE\n",
+      "hits": [
+        {
+          "Term": "Necromancy",
+          "Translation": "死灵系魔法",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "Alchemy",
+          "Translation": "炼金术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "Gloorx Vloq",
+          "Translation": "格洛克斯·弗洛克",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "alchemy necromancy owner",
+      "english": "Cigotuvi\n\n__NONE\n",
+      "hits": [
+        {
+          "Term": "Necromancy",
+          "Translation": "死灵系魔法",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "Alchemy",
+          "Translation": "炼金术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "highlevel conjuration owner",
+      "english": "Asmodeus\n\nEreshkigal\n\nDispater\n\nCerebov\n\nLom Lobon\n\nw:5\nVehumet\n\nw:20\n@Conjuration owner@\n",
+      "hits": [
+        {
+          "Term": "conjuration",
+          "Translation": "塑能",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Dispater",
+          "Translation": "迪斯帕特",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Vehumet",
+          "Translation": "维胡梅特",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Asmodeus",
+          "Translation": "阿斯蒙蒂斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Cerebov",
+          "Translation": "瑟雷波夫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Ereshkigal",
+          "Translation": "埃列什基伽勒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Lom Lobon",
+          "Translation": "洛姆·洛邦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "conjuration owner",
+      "english": "Lehudib\n\nIskenderun\n\n__NONE\n",
+      "hits": [
+        {
+          "Term": "conjuration",
+          "Translation": "塑能",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Iskenderun",
+          "Translation": "伊斯肯德伦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "highlevel earth owner",
+      "english": "Dispater\n\nw:50\n@Earth owner@\n",
+      "hits": [
+        {
+          "Term": "Dispater",
+          "Translation": "迪斯帕特",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Earth",
+          "Translation": "大地强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "earth owner",
+      "english": "Jorgrun\n\nLehudib\n\nLee\n\nLeda\n\nRoxanne\n\n__NONE\n",
+      "hits": [
+        {
+          "Term": "Jorgrun",
+          "Translation": "乔格伦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Roxanne",
+          "Translation": "罗克珊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Earth",
+          "Translation": "大地强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "highlevel fire owner",
+      "english": "Asmodeus\n\nCerebov\n\n__NONE\n",
+      "hits": [
+        {
+          "Term": "Asmodeus",
+          "Translation": "阿斯蒙蒂斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Cerebov",
+          "Translation": "瑟雷波夫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Fire",
+          "Translation": "火焰强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "ice owner",
+      "english": "Ozocubu\n\n__NONE\n",
+      "hits": [
+        {
+          "Term": "Ice",
+          "Translation": "寒冰强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "air owner",
+      "english": "the Cloud Mage\n\nMaxwell\n\nNikola\n\n__NONE\n",
+      "hits": [
+        {
+          "Term": "Nikola",
+          "Translation": "尼古拉",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Cloud Mage",
+          "Translation": "云雾法师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "the Cloud",
+          "Translation": "云雾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Air",
+          "Translation": "空气强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "highlevel necromancy owner",
+      "english": "Ereshkigal\n\nGloorx Vloq\n\nw:5\nKikubaaqudgha\n\nw:40\n@Necromancy owner@\n",
+      "hits": [
+        {
+          "Term": "Kikubaaqudgha",
+          "Translation": "奇库巴库哈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Necromancy",
+          "Translation": "死灵系魔法",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "Ereshkigal",
+          "Translation": "埃列什基伽勒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Gloorx Vloq",
+          "Translation": "格洛克斯·弗洛克",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "necromancy owner",
+      "english": "Borgnjor\n\nCigotuvi\n\nKhufu\n\nZonguldrok\n\n__NONE\n",
+      "hits": [
+        {
+          "Term": "Khufu",
+          "Translation": "胡夫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Necromancy",
+          "Translation": "死灵系魔法",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "highlevel alchemy owner",
+      "english": "Gloorx Vloq\n\nw:30\n@Alchemy owner@\n",
+      "hits": [
+        {
+          "Term": "Alchemy",
+          "Translation": "炼金术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "Gloorx Vloq",
+          "Translation": "格洛克斯·弗洛克",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "alchemy owner",
+      "english": "Alistair\n\nCigotuvi\n\nOlgreb\n\nEringya\n\n__NONE\n",
+      "hits": [
+        {
+          "Term": "Alchemy",
+          "Translation": "炼金术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "highlevel summoning owner",
+      "english": "Asmodeus\n\nDispater\n\nMnoleg\n\n@Summoning owner@\n",
+      "hits": [
+        {
+          "Term": "Dispater",
+          "Translation": "迪斯帕特",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Asmodeus",
+          "Translation": "阿斯蒙蒂斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Mnoleg",
+          "Translation": "姆诺莱格",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "summoning owner",
+      "english": "Mara\n\n__NONE\n",
+      "hits": [
+        {
+          "Term": "Mara",
+          "Translation": "玛拉",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "highlevel translocation owner",
+      "english": "Lom Lobon\n\nw:20\n@Translocation owner@\n",
+      "hits": [
+        {
+          "Term": "Lom Lobon",
+          "Translation": "洛姆·洛邦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "translocation owner",
+      "english": "Gell\n\nGolubria\n\n__NONE\n",
+      "hits": []
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "hexes owner",
+      "english": "Yara\n\nw:5\nTerpsichore\n\nTukima\n\n__NONE\n",
+      "hits": [
+        {
+          "Term": "Hexes",
+          "Translation": "妖术系魔法/妖术强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】区分敌对魔法学派与物品诅咒，也与 hexer（妖术师）统一。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。\n【装备语境】学派名称用妖术系魔法；装备的 Hexes 标签表示该学派法术强度增强，用妖术强化。"
+        }
+      ]
+    }
+  ]
+}

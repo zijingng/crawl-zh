@@ -1,0 +1,43 @@
+{
+  "batch": "search-zh-01",
+  "scope": "Chinese locale only; retain original English prefix strings and append reviewed Chinese aliases",
+  "new_reviewed_ui_entries": 144,
+  "updated_textdb_help_context": "textdb:database/help.txt:stash-search.prompt",
+  "glossary_preflight": {
+    "glossary_hits": 258,
+    "existing_translations": 113
+  },
+  "additional_equipment_glossary_hits": 26,
+  "python_tests": 33,
+  "native_tests": 8,
+  "native_assertions": 180,
+  "native_log": "Filters: \"Chinese stash*\",\"Item origin display*\",\"Morgue*\"\nRNG seed: 4148979995\n0.001 s: Item origin display preserves stored place giver and English provenance\n0.041 s: Morgue sections isolate canonical English and localize live and dead records\n0.008 s: Morgue bilingual files keep original paths and execute Lua once per section\n0.003 s: Morgue reviewed conduct and place fields retain missing-input English fallback\n0.007 s: Chinese stash aliases preserve canonical annotations and unknown item boundaries\n0.000 s: Chinese stash matching evaluates bilingual boolean expressions once and scopes UTF8 regex\n0.003 s: Chinese stash ground shop and feature searches retain canonical result identities\n0.001 s: Chinese stash description appends aliases while shared Lua annotations stay English\nAll tests passed (180 assertions in 8 test cases)\n\n\n",
+  "source_dependencies": {
+    "crawl-ref/source/stash.cc": "fa217078f077552cc7c7170001f41ede244d2b3bbf25d6781f39aa2f22d24bd8",
+    "crawl-ref/source/stash.h": "ac2e6498dd6069141f9628f56191382dca2ce16764eef7fa3f2c2eef4783e5e9",
+    "crawl-ref/source/describe.cc": "1faf90c8596315058d8bfb4a88a4a75434c85e5da72377902d4f56ab25bd4bc6",
+    "crawl-ref/source/Makefile": "e8d9479182b0334ec045a0a8aba328819767de340f0427516a9842a54618989f",
+    "crawl-ref/source/contrib/Makefile": "d3fd2e6e1d324dd3050659d56e55bfe8a81c16c9031448e2edc6f73ff1816833"
+  },
+  "executable": {
+    "path": "crawl-ref/source/crawl.exe",
+    "bytes": 27750337
+  },
+  "verified": [
+    "Chinese names and tag aliases for ground items, inventory adapter, shops, terrain and branch places",
+    "English prefix strings stay contiguous before Chinese aliases in displayed descriptions",
+    "English and French configuration alias helpers disabled",
+    "Boolean expressions evaluated once across bilingual haystack",
+    "UTF-8 PCRE character classes and quantifiers, including boolean regex leaves",
+    "Unknown potion identity not revealed; spellbooks follow inherent identification rules",
+    "Unknown custom annotations retained without invented aliases",
+    "Lua annotation callback invoked once; shared default stash Lua annotations stay English",
+    "Canonical item descriptions and English morgue paths retain English",
+    "RNG and item flags unchanged",
+    "No whitespace errors in modified code and catalogues"
+  ],
+  "limitations": [
+    "Inventory and @ query dispatch reuse existing flow; dedicated tests exercise shared item alias adapter and stash matchers, without opening the game UI",
+    "POSIX regex backend retained; UTF-8 PCRE mode tested with bundled Windows PCRE"
+  ]
+}

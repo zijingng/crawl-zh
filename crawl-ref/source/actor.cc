@@ -1,4 +1,5 @@
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "actor.h"
 
@@ -466,18 +467,22 @@ void actor::end_constriction(mid_t whom, bool intentional, bool quiet,
         // blinking or similar
         if (!escape_verb.empty())
         {
-            mprf("%s %s free of %s!",
+            mprf("%s", ui_render("a.actor", "%s %s free of %s!",
+                make_stringf("%s %s free of %s!",
                  constrictee->name(DESC_THE).c_str(), escape_verb.c_str(),
-                 lowercase(attacker_desc).c_str());
+                 lowercase(attacker_desc).c_str()),
+                {ui_actor_arg(*constrictee), ui_text_arg("a.escape.verb", escape_verb), (ctype == CONSTRICT_BVC ? ui_text_arg("a.noun", "zombie hands") : ctype == CONSTRICT_ROOTS ? ui_text_arg("a.noun", "grasping roots") : ctype == CONSTRICT_ENTANGLE ? ui_text_arg("a.noun", "vines") : ui_actor_arg(*this))}).c_str());
         }
         else
         {
-            mprf("%s %s %s grip on %s.",
+            mprf("%s", ui_render("a.actor", "%s %s its grip on %s.",
+                make_stringf("%s %s %s grip on %s.",
                 attacker_desc.c_str(),
                 force_plural ? verb.c_str()
                             : conj_verb(verb).c_str(),
                 force_plural ? "their" : pronoun(PRONOUN_POSSESSIVE).c_str(),
-                constrictee->name(DESC_THE).c_str());
+                constrictee->name(DESC_THE).c_str()),
+                {(ctype == CONSTRICT_BVC ? ui_text_arg("a.noun", "zombie hands") : ctype == CONSTRICT_ROOTS ? ui_text_arg("a.noun", "grasping roots") : ctype == CONSTRICT_ENTANGLE ? ui_text_arg("a.noun", "vines") : ui_actor_arg(*this)), ui_text_arg("a.actor.verb", verb), ui_actor_arg(*constrictee)}).c_str());
         }
     }
 }
@@ -733,6 +738,16 @@ bool actor::can_constrict(const actor &defender, constrict_type typ) const
  *
  * @param defender The defender being constricted.
  */
+static string _ui_constriction_damage(int damage)
+{
+#ifdef DEBUG_DIAGNOSTICS
+    return make_stringf(" (%d)", damage);
+#else
+    static_cast<void>(damage);
+    return "";
+#endif
+}
+
 void actor::constriction_damage_defender(actor &defender)
 {
     const auto typ = defender.constricted_type;
@@ -776,7 +791,8 @@ void actor::constriction_damage_defender(actor &defender)
             break;
         }
 
-        mprf("%s %s %s%s%s", attacker_desc.c_str(),
+        mprf("%s", ui_render("a.actor", "%s constricts %s%s%s",
+                make_stringf("%s %s %s%s%s", attacker_desc.c_str(),
              force_plural ? "constrict"
                           : conj_verb("constrict").c_str(),
              defender.name(DESC_THE).c_str(),
@@ -785,11 +801,13 @@ void actor::constriction_damage_defender(actor &defender)
 #else
              "",
 #endif
-             exclamations.c_str());
+             exclamations.c_str()),
+                {(typ == CONSTRICT_BVC ? ui_text_arg("a.noun", "zombie hands") : typ == CONSTRICT_ROOTS ? ui_text_arg("a.noun", "grasping roots") : typ == CONSTRICT_ENTANGLE ? ui_text_arg("a.noun", "vines") : ui_actor_arg(*this)), ui_actor_arg(defender), ui_literal_arg(_ui_constriction_damage(damage)), (damage <= 0 && is_player() && you.can_see(defender) ? ui_text_arg("a.actor.state", ", but do no damage.") : ui_attack_punctuation(exclamations))}).c_str());
     }
     else if (you.can_see(defender) || defender.is_player())
     {
-        mprf("%s %s constricted%s%s",
+        mprf("%s", ui_render("a.actor", "%s is constricted%s%s",
+                make_stringf("%s %s constricted%s%s",
              defender.name(DESC_THE).c_str(),
              defender.conj_verb("are").c_str(),
 #ifdef DEBUG_DIAGNOSTICS
@@ -797,7 +815,8 @@ void actor::constriction_damage_defender(actor &defender)
 #else
              "",
 #endif
-             exclamations.c_str());
+             exclamations.c_str()),
+                {ui_actor_arg(defender), ui_literal_arg(_ui_constriction_damage(damage)), ui_attack_punctuation(exclamations)}).c_str());
     }
 
     damage = defender.hurt(this, damage, BEAM_MISSILE, KILLED_BY_CONSTRICTION, "",
@@ -952,11 +971,13 @@ void actor::collide(coord_def newpos, const actor *agent, int damage)
         const int damother = other->apply_ac(damage);
         if (you.can_see(*this) || you.can_see(*other))
         {
-            mprf("%s %s with %s%s",
+            mprf("%s", ui_render("a.actor", "%s collides with %s%s",
+                make_stringf("%s %s with %s%s",
                  name(DESC_THE).c_str(),
                  conj_verb("collide").c_str(),
                  other->name(DESC_THE).c_str(),
-                 attack_strength_punctuation((dam + damother) / 2).c_str());
+                 attack_strength_punctuation((dam + damother) / 2).c_str()),
+                {ui_actor_arg(*this), ui_actor_arg(*other), ui_attack_punctuation(attack_strength_punctuation((dam + damother) / 2))}).c_str());
             // OK, now do the messaging for protected monsters.
             if (immune)
                 could_harm(agent, this, true, true);
@@ -990,19 +1011,23 @@ void actor::collide(coord_def newpos, const actor *agent, int damage)
     {
         if (!can_pass_through_feat(env.grid(newpos)))
         {
-            mprf("%s %s into %s%s",
+            mprf("%s", ui_render("a.actor", "%s slams into %s%s",
+                make_stringf("%s %s into %s%s",
                  name(DESC_THE).c_str(), conj_verb("slam").c_str(),
                  env.map_knowledge(newpos).known()
                  ? feature_description_at(newpos, false, DESC_THE)
                        .c_str()
                  : "something",
-                 attack_strength_punctuation(dam).c_str());
+                 attack_strength_punctuation(dam).c_str()),
+                {ui_actor_arg(*this), ui_text_arg("a.feature", env.map_knowledge(newpos).known() ? feature_description_at(newpos, false, DESC_PLAIN) : "something"), ui_attack_punctuation(attack_strength_punctuation(dam))}).c_str());
         }
         else
         {
-            mprf("%s violently %s moving%s",
+            mprf("%s", ui_render("a.actor", "%s violently stops moving%s",
+                make_stringf("%s violently %s moving%s",
                  name(DESC_THE).c_str(), conj_verb("stop").c_str(),
-                 attack_strength_punctuation(dam).c_str());
+                 attack_strength_punctuation(dam).c_str()),
+                {ui_actor_arg(*this), ui_attack_punctuation(attack_strength_punctuation(dam))}).c_str());
         }
 
         if (immune)
@@ -1070,11 +1095,13 @@ bool actor::knockback(const actor &cause, int dist, int dmg, string source_name,
 
     if (you.can_see(*this))
     {
-        mprf("%s %s knocked back%s%s.",
+        mprf("%s", ui_render("a.actor", "%s is knocked back%s.",
+                make_stringf("%s %s knocked back%s%s.",
              name(DESC_THE).c_str(),
              conj_verb("are").c_str(),
              !source_name.empty() ? " by the " : "",
-             source_name.c_str());
+             source_name.c_str()),
+                {ui_actor_arg(*this), ui_knockback_cause_arg(source_name)}).c_str());
     }
 
     if (dmg > 0 && pos() != newpos)
@@ -1129,9 +1156,13 @@ bool actor::stumble_away_from(coord_def targ, string src)
     }
 
     if (is_player() && !src.empty())
-        mprf("%s sends you backwards.", uppercase_first(src).c_str());
+        mprf("%s", ui_render("a.actor", "%s sends you backwards.",
+                make_stringf("%s sends you backwards.", uppercase_first(src).c_str()),
+                {ui_text_arg("a.knockback.source", src)}).c_str());
     else if (you.can_see(*this) && !src.empty())
-        mprf("%s is knocked back by %s.", name(DESC_THE).c_str(), src.c_str());
+        mprf("%s", ui_render("a.actor", "%s is knocked back by %s.",
+                make_stringf("%s is knocked back by %s.", name(DESC_THE).c_str(), src.c_str()),
+                {ui_actor_arg(*this), ui_text_arg("a.knockback.source", src)}).c_str());
 
     move_to(newpos);
 

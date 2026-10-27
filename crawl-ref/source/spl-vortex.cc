@@ -1,4 +1,7 @@
 #include "AppHdr.h"
+#include "stringutil.h"
+#include "s-display.h"
+#include "i18n.h"
 
 #include "spl-damage.h"
 
@@ -129,9 +132,8 @@ spret cast_polar_vortex(int powc, bool fail, bool no_prompt)
 
     fail_check();
 
-    mprf("A great freezing vortex %s.",
-         (you.airborne() || get_form()->forbids_flight()) ?
-         "appears around you" : "appears and lifts you up");
+    mprf("%s", ui_render("s.log", "A great freezing vortex %s.", make_stringf("A great freezing vortex %s.", (you.airborne() || get_form()->forbids_flight()) ?
+         "appears around you" : "appears and lifts you up"), {s_clause_arg((you.airborne() || get_form()->forbids_flight()) ? "appears around you" : "appears and lifts you up")}).c_str());
 
     if (you.fishtail)
         merfolk_stop_swimming();
@@ -315,7 +317,7 @@ void polar_vortex_damage(actor *caster, int dur)
             {
                 destroy_wall(*dam_i);
                 if (you.see_cell(*dam_i))
-                    mpr("A tree falls to the furious winds!");
+                    mpr(ui_translate("s.ui", "A tree falls to the furious winds!"));
             }
 
             if (!winds.has_wind(*dam_i))
@@ -363,7 +365,7 @@ void polar_vortex_damage(actor *caster, int dur)
                     {
                         bool standing = !you.airborne();
                         if (standing)
-                            mpr("The freezing vortex lifts you up.");
+                            mpr(ui_translate("s.ui", "The freezing vortex lifts you up."));
                         you.duration[DUR_FLIGHT]
                             = max(you.duration[DUR_FLIGHT], 20);
                         if (standing)
@@ -468,9 +470,8 @@ void polar_vortex_damage(actor *caster, int dur)
             && !need_expiration_warning(old_player_pos)
             && need_expiration_warning(new_player_pos))
         {
-            mprf(MSGCH_DANGER, "Careful! You are now flying above %s.",
-                 feature_description_at(new_player_pos, false, DESC_PLAIN)
-                     .c_str());
+            mprf(MSGCH_DANGER, "%s", ui_render("s.log", "Careful! You are now flying above %s.", make_stringf("Careful! You are now flying above %s.", feature_description_at(new_player_pos, false, DESC_PLAIN)
+                     .c_str()), {s_feature_at_arg(new_player_pos)}).c_str());
         }
     }
 

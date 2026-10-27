@@ -5,6 +5,8 @@
 **/
 
 #include "AppHdr.h"
+#include "s-display.h"
+#include "i18n.h"
 
 #include "spl-monench.h"
 
@@ -82,7 +84,7 @@ int englaciate(coord_def where, int pow, actor *agent)
 spret cast_englaciation(int pow, bool fail)
 {
     fail_check();
-    mpr("You radiate an aura of cold.");
+    mpr(ui_translate("s.ui", "You radiate an aura of cold."));
     apply_area_visible([pow] (coord_def where) {
         return englaciate(where, pow, &you);
     }, you.pos());
@@ -214,7 +216,7 @@ bool enfeeble_player(actor *source, int pow)
     if (res_margin > 0)
         canned_msg(MSG_YOU_PARTIALLY_RESIST);
 
-    mpr("You are enfeebled!");
+    mpr(ui_translate("s.ui", "You are enfeebled!"));
     return true;
 }
 
@@ -242,6 +244,9 @@ bool start_ranged_constriction(actor& caster, actor& target, int duration,
         else if (type == CONSTRICT_BVC)
             msg = make_stringf("Zombie hands grab %s from below!", target.name(DESC_THE).c_str());
 
+        const char *source = type == CONSTRICT_ROOTS ? "The roots grab %s!" : "Zombie hands grab %s from below!";
+        if (type == CONSTRICT_ROOTS || type == CONSTRICT_BVC)
+            msg = ui_render("s.log", source, msg, {ui_actor_arg(target)});
         mprf(target.is_player() ? MSGCH_WARN : MSGCH_PLAIN, "%s", msg.c_str());
     }
 
@@ -330,7 +335,7 @@ void tick_rimeblight(monster& victim)
     if ((ticks == 4 || ticks > 4 && x_chance_in_y(ticks, ticks + 16))
         && you.see_cell_no_trans(victim.pos()))
     {
-        mprf("Shards of ice erupt from %s body!", apostrophise(victim.name(DESC_THE)).c_str());
+        mprf("%s", ui_render("s.log", "Shards of ice erupt from %s body!", make_stringf("Shards of ice erupt from %s body!", apostrophise(victim.name(DESC_THE)).c_str()), {ui_actor_arg(victim)}).c_str());
         do_rimeblight_explosion(victim.pos(), pow, 1);
     }
 
@@ -384,13 +389,13 @@ spret cast_sign_of_ruin(actor& caster, coord_def target, int duration, bool chec
     {
         if (act->is_player())
         {
-            mprf(MSGCH_WARN, "The sign of ruin forms upon you!");
+            mprf(MSGCH_WARN, "%s", ui_translate("s.ui", "The sign of ruin forms upon you!"));
             you.duration[DUR_SIGN_OF_RUIN] = random_range(duration, duration * 3 / 2);
         }
         else
         {
             if (you.can_see(*act))
-                mprf("The sign of ruin forms upon %s!", act->name(DESC_THE).c_str());
+                mprf("%s", ui_render("s.log", "The sign of ruin forms upon %s!", make_stringf("The sign of ruin forms upon %s!", act->name(DESC_THE).c_str()), {ui_actor_arg(*act)}).c_str());
 
             act->as_monster()->add_ench(mon_enchant(ENCH_SIGN_OF_RUIN, &caster,
                                                     random_range(duration, duration * 3 / 2)));
@@ -407,8 +412,7 @@ spret cast_percussive_tempering(const actor& caster, monster& target, int power,
 
     if (you.can_see(target))
     {
-        mprf("A magical hammer augments %s in a flurry of sparks and slag.",
-             target.name(DESC_THE).c_str());
+        mprf("%s", ui_render("s.log", "A magical hammer augments %s in a flurry of sparks and slag.", make_stringf("A magical hammer augments %s in a flurry of sparks and slag.", target.name(DESC_THE).c_str()), {ui_actor_arg(target)}).c_str());
     }
 
     flash_tile(target.pos(), WHITE, 0, TILE_BOLT_PERCUSSIVE_TEMPERING);
@@ -498,16 +502,12 @@ void do_vexed_attack(actor& attacker, bool always_hit_ally)
     if (x_chance_in_y(empty_space.size(), total_weight))
     {
         coord_def pos = empty_space[random2(empty_space.size())];
-        string targ_desc = (attacker.airborne() && feat_has_solid_floor(env.grid(pos))
-                            && coinflip()) ? "the ceiling"
-                            : feature_description_at(pos, false, DESC_THE);
+        const bool ceiling = attacker.airborne() && feat_has_solid_floor(env.grid(pos)) && coinflip();
+        string targ_desc = ceiling ? "the ceiling" : feature_description_at(pos, false, DESC_THE);
         if (you.can_see(attacker))
         {
-            mprf("%s %s %s!",
-                    attacker.name(DESC_THE).c_str(),
-                    has_attacks ? attacker.is_monster() ? "attacks" : "attack"
-                                : "glares at",
-                    targ_desc.c_str());
+            mprf("%s", ui_render("s.log", "%s %s %s!", make_stringf("%s %s %s!", attacker.name(DESC_THE).c_str(), has_attacks ? attacker.is_monster() ? "attacks" : "attack"
+                                : "glares at", targ_desc.c_str()), {ui_actor_arg(attacker), s_clause_arg(has_attacks ? "attacks" : "glares at"), ceiling ? s_clause_arg("the ceiling") : s_feature_at_arg(pos)}).c_str());
         }
 
         if (attacker.is_monster())
@@ -528,9 +528,7 @@ void do_vexed_attack(actor& attacker, bool always_hit_ally)
         {
             if (you.can_see(attacker))
             {
-                mprf("%s glares at %s!",
-                        attacker.name(DESC_THE).c_str(),
-                        victim->name(DESC_THE).c_str());
+                mprf("%s", ui_render("s.log", "%s glares at %s!", make_stringf("%s glares at %s!", attacker.name(DESC_THE).c_str(), victim->name(DESC_THE).c_str()), {ui_actor_arg(attacker), ui_actor_arg(*victim)}).c_str());
             }
             attacker.as_monster()->lose_energy(EUT_ATTACK);
         }

@@ -1,0 +1,259 @@
+{
+  "batch": "phase3-static-02",
+  "textdb_entries": 541,
+  "ledger_entries_checked": 541,
+  "item_families": {
+    "amulet of": 10,
+    "potion of": 18,
+    "ring of": 16,
+    "scroll of": 19,
+    "wand of": 12
+  },
+  "starting_spells": [
+    {
+      "id": "SPELL_AIRSTRIKE",
+      "key": "Airstrike"
+    },
+    {
+      "id": "SPELL_ANIMATE_DEAD",
+      "key": "Animate Dead"
+    },
+    {
+      "id": "SPELL_BECKONING",
+      "key": "Lesser Beckoning"
+    },
+    {
+      "id": "SPELL_BLASTMOTE",
+      "key": "Volatile Blastmotes"
+    },
+    {
+      "id": "SPELL_BLINK",
+      "key": "Blink"
+    },
+    {
+      "id": "SPELL_BOULDER",
+      "key": "Brom's Barrelling Boulder"
+    },
+    {
+      "id": "SPELL_CALL_CANINE_FAMILIAR",
+      "key": "Call Canine Familiar"
+    },
+    {
+      "id": "SPELL_CALL_IMP",
+      "key": "Call Imp"
+    },
+    {
+      "id": "SPELL_CAUSE_FEAR",
+      "key": "Cause Fear"
+    },
+    {
+      "id": "SPELL_CLOCKWORK_BEE",
+      "key": "Launch Clockwork Bee"
+    },
+    {
+      "id": "SPELL_CONFUSING_TOUCH",
+      "key": "Confusing Touch"
+    },
+    {
+      "id": "SPELL_CURSE_OF_AGONY",
+      "key": "Curse of Agony"
+    },
+    {
+      "id": "SPELL_DIMENSIONAL_BULLSEYE",
+      "key": "Dimensional Bullseye"
+    },
+    {
+      "id": "SPELL_DISCHARGE",
+      "key": "Static Discharge"
+    },
+    {
+      "id": "SPELL_ELECTRIC_CHARGE",
+      "key": "Vhi's Electric Charge"
+    },
+    {
+      "id": "SPELL_FLAME_WAVE",
+      "key": "Flame Wave"
+    },
+    {
+      "id": "SPELL_FORGE_BLAZEHEART_GOLEM",
+      "key": "Forge Blazeheart Golem"
+    },
+    {
+      "id": "SPELL_FORGE_LIGHTNING_SPIRE",
+      "key": "Forge Lightning Spire"
+    },
+    {
+      "id": "SPELL_FOXFIRE",
+      "key": "Foxfire"
+    },
+    {
+      "id": "SPELL_FREEZE",
+      "key": "Freeze"
+    },
+    {
+      "id": "SPELL_FROZEN_RAMPARTS",
+      "key": "Frozen Ramparts"
+    },
+    {
+      "id": "SPELL_FULMINANT_PRISM",
+      "key": "Fulminant Prism"
+    },
+    {
+      "id": "SPELL_GLOOM",
+      "key": "Gloom"
+    },
+    {
+      "id": "SPELL_GRAVE_CLAW",
+      "key": "Grave Claw"
+    },
+    {
+      "id": "SPELL_HAILSTORM",
+      "key": "Hailstorm"
+    },
+    {
+      "id": "SPELL_HIBERNATION",
+      "key": "Ensorcelled Hibernation"
+    },
+    {
+      "id": "SPELL_INNER_FLAME",
+      "key": "Inner Flame"
+    },
+    {
+      "id": "SPELL_ISKENDERUNS_MYSTIC_BLAST",
+      "key": "Iskenderun's Mystic Blast"
+    },
+    {
+      "id": "SPELL_JINXBITE",
+      "key": "Jinxbite"
+    },
+    {
+      "id": "SPELL_KINETIC_GRAPNEL",
+      "key": "Kinetic Grapnel"
+    },
+    {
+      "id": "SPELL_KISS_OF_DEATH",
+      "key": "Kiss of Death"
+    },
+    {
+      "id": "SPELL_MAGIC_DART",
+      "key": "Magic Dart"
+    },
+    {
+      "id": "SPELL_MEPHITIC_CLOUD",
+      "key": "Mephitic Cloud"
+    },
+    {
+      "id": "SPELL_MERCURY_ARROW",
+      "key": "Mercury Arrow"
+    },
+    {
+      "id": "SPELL_MOMENTUM_STRIKE",
+      "key": "Momentum Strike"
+    },
+    {
+      "id": "SPELL_OLGREBS_TOXIC_RADIANCE",
+      "key": "Olgreb's Toxic Radiance"
+    },
+    {
+      "id": "SPELL_OZOCUBUS_ARMOUR",
+      "key": "Ozocubu's Armour"
+    },
+    {
+      "id": "SPELL_PASSWALL",
+      "key": "Passwall"
+    },
+    {
+      "id": "SPELL_PETRIFY",
+      "key": "Petrify"
+    },
+    {
+      "id": "SPELL_PILEDRIVER",
+      "key": "Maxwell's Portable Piledriver"
+    },
+    {
+      "id": "SPELL_POISONOUS_VAPOURS",
+      "key": "Poisonous Vapours"
+    },
+    {
+      "id": "SPELL_RENDING_BLADE",
+      "key": "Rending Blade"
+    },
+    {
+      "id": "SPELL_SANDBLAST",
+      "key": "Sandblast"
+    },
+    {
+      "id": "SPELL_SCORCH",
+      "key": "Scorch"
+    },
+    {
+      "id": "SPELL_SEARING_RAY",
+      "key": "Searing Ray"
+    },
+    {
+      "id": "SPELL_SHOCK",
+      "key": "Shock"
+    },
+    {
+      "id": "SPELL_SIGIL_OF_BINDING",
+      "key": "Sigil of Binding"
+    },
+    {
+      "id": "SPELL_SOUL_SPLINTER",
+      "key": "Soul Splinter"
+    },
+    {
+      "id": "SPELL_SPIKE_LAUNCHER",
+      "key": "Construct Spike Launcher"
+    },
+    {
+      "id": "SPELL_STICKY_FLAME",
+      "key": "Sticky Flame"
+    },
+    {
+      "id": "SPELL_STONE_ARROW",
+      "key": "Stone Arrow"
+    },
+    {
+      "id": "SPELL_SUMMON_ICE_BEAST",
+      "key": "Summon Ice Beast"
+    },
+    {
+      "id": "SPELL_SUMMON_SEISMOSAURUS_EGG",
+      "key": "Summon Seismosaurus Egg"
+    },
+    {
+      "id": "SPELL_SUMMON_SMALL_MAMMAL",
+      "key": "Summon Small Mammal"
+    },
+    {
+      "id": "SPELL_SURPRISING_CROCODILE",
+      "key": "Eringya's Surprising Crocodile"
+    },
+    {
+      "id": "SPELL_SWIFTNESS",
+      "key": "Swiftness"
+    },
+    {
+      "id": "SPELL_TELEPORT_OTHER",
+      "key": "Teleport Other"
+    },
+    {
+      "id": "SPELL_TUKIMAS_DANCE",
+      "key": "Tukima's Dance"
+    },
+    {
+      "id": "SPELL_VAMPIRIC_DRAINING",
+      "key": "Vampiric Draining"
+    }
+  ],
+  "starting_library_sources": {
+    "job-data.h": "113671198ea1f88baffcfd1163c43d1cf262e4d87d82785a50c60ea925968d37",
+    "spl-data.h": "efadd85f5e4f5f6d0e8ebe3727fc4a32800e09aac972aba2d00bc47d794f3f28"
+  },
+  "deterministic_export": true,
+  "python_textdb_tests": 4,
+  "lua_branches": 11,
+  "binary_rebuilt": false,
+  "gui_test_this_batch": false
+}

@@ -1,0 +1,111 @@
+{
+  "baseline": "0.34.1",
+  "source": "crawl-ref/source/dat/database/wpnnoise.txt",
+  "entries": [
+    {
+      "key": "noisy weapon",
+      "context": "textdb:database/wpnnoise.txt:noisy weapon",
+      "source_sha256": "597d6ed1cd6e887a04f283c9c791e17fec836b45d5dfea04e13d0285429065c5",
+      "translation_sha256": "4b13f7df947e4ef68b5e4ac843758e40ddef9331093eec816a344a1114ea18ed",
+      "review_status": "reviewed",
+      "candidates": 4
+    },
+    {
+      "key": "_weapon_chatter_",
+      "context": "textdb:database/wpnnoise.txt:_weapon_chatter_",
+      "source_sha256": "5a4fb6ecab449bff80b43dc264ad2a2c703fe14525820572e4bd926644d1fe33",
+      "translation_sha256": "2502862e100885e706f7bffc5e303d5828711007a4554468b7961510376cd904",
+      "review_status": "reviewed",
+      "candidates": 23
+    },
+    {
+      "key": "_rare_chatter_",
+      "context": "textdb:database/wpnnoise.txt:_rare_chatter_",
+      "source_sha256": "82f8c6cb0d4f46c94f07d4b1f3b4431bc05d4135c7b099084914ac986597bdbc",
+      "translation_sha256": "ef8bd5412499314d452bea303cb16e8ec27ff979a6d23f415b1831e280e9b868",
+      "review_status": "reviewed",
+      "candidates": 13
+    },
+    {
+      "key": "weapon_noises",
+      "context": "textdb:database/wpnnoise.txt:weapon_noises",
+      "source_sha256": "58f747016ebdcace1fc71ab3cad83866ce67d3ee6a66ea0cd8f493eade804677",
+      "translation_sha256": "882884881297c193ad66f32043ce698b1a8db5680448443910955a45848bf1f3",
+      "review_status": "reviewed",
+      "candidates": 24
+    },
+    {
+      "key": "_instrumental_noises_",
+      "context": "textdb:database/wpnnoise.txt:_instrumental_noises_",
+      "source_sha256": "d11fae9364a8bfb878cec74e27dea144d64cb1fcbdfd9e253e5ab48ac5701ebe",
+      "translation_sha256": "e542aa93811957558335bde852300e3e4834ca05bbccbae3c300b5b8c9f3b182",
+      "review_status": "reviewed",
+      "candidates": 13
+    },
+    {
+      "key": "weapon_noise",
+      "context": "textdb:database/wpnnoise.txt:weapon_noise",
+      "source_sha256": "8c1a641c9ac783a7ed3d351c7897aa307a95ca23c4d55240763a48672379b395",
+      "translation_sha256": "66273f6ae48a5398f2d524dde65779d93bd0d3921d800ecbeea63ea8c8482900",
+      "review_status": "reviewed",
+      "candidates": 39
+    },
+    {
+      "key": "singing sword silenced",
+      "context": "textdb:database/wpnnoise.txt:singing sword silenced",
+      "source_sha256": "92b7cb50b53b8c28cf89b18b2057e1a87e3329e122f6ec09ce8a9c88a4314b76",
+      "translation_sha256": "2a8ff78d595b1afc4b67acc5d986663f5e0f8c0819b5f74babcd71123a3e5a5c",
+      "review_status": "reviewed",
+      "candidates": 6
+    }
+  ],
+  "reviewed_this_batch": 7,
+  "candidates": 122,
+  "cumulative_reviewed": 46,
+  "legacy_unreviewed_keys": [
+    "_common_speaking_no_tension_",
+    "_godless_sorter_",
+    "_rare_speaking_no_tension_",
+    "_real_song_high_tension_",
+    "_real_song_low-high_tension_",
+    "_real_song_low_tension_",
+    "_real_song_no_tension_",
+    "_scream_",
+    "_singing_no-low_tension_",
+    "_singing_no_tension_",
+    "_speaking_high_tension_",
+    "_speaking_low-high_tension_",
+    "_speaking_low_tension_",
+    "_speaking_no_tension_",
+    "_weapon_noises_low-high_tension_",
+    "singing sword high_tension",
+    "singing sword low_tension",
+    "singing sword no_tension",
+    "singing sword scream"
+  ],
+  "english_source_unchanged": true,
+  "unselected_entries_unchanged": true,
+  "runtime_adapter": "strict paired item_noise; unreviewed or missing components use whole canonical English",
+  "source_dependencies": [
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "sha256": "44b09fc986a05a3ce51fd3b87e9d1df55ccbe97c4cc992b6c9a5499c6d19f943"
+    },
+    {
+      "source": "crawl-ref/source/art-func.h",
+      "sha256": "1f1ba35edebffe93f042e26071999b9c4958321e88e7d69c6107517af57666b5"
+    },
+    {
+      "source": "crawl-ref/source/item-name.cc",
+      "sha256": "65eb258d7a4e68a9680a3f0bed7dc2667da057e8d8adc1559349c51a2db24c5e"
+    },
+    {
+      "source": "crawl-ref/source/item-noise-display.h",
+      "sha256": "0c673b48c959eda7e6f05f15b923d76c863faf743d77e7bc7c19d571f0d84fc0"
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "sha256": "64083d02f53e7d92891f442b9fb58adf1812bae030e1b2b143e960b056f8dc9e"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "batch": "unrand-review-02",
+  "reviewed": 140,
+  "corrected": 41,
+  "retained": 99,
+  "canonical_item_names": 140,
+  "state_names": 2,
+  "glossary_added": 113,
+  "glossary_terms": 1665,
+  "previous_glossary_rows_preserved": true,
+  "all_names_match_glossary_and_generated_ui": true,
+  "all_textdb_entries_exported": true,
+  "source_and_translation_hashes_match": true,
+  "gui_playtest": false,
+  "windows_tiles_build": true,
+  "cpp_test_cases": 25,
+  "cpp_assertions": 13619,
+  "python_tests": 22,
+  "lua_condition_cases": 4
+}

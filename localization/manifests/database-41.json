@@ -1,0 +1,47 @@
+{
+  "source": "database/gizmo.txt",
+  "entries": [
+    {
+      "key": "gizmo_adjective",
+      "context": "textdb:database/gizmo.txt:gizmo_adjective",
+      "source_sha256": "4549ea4eddcaa8acfdddab503457092daa7a66a620a0f41ce925fe7b0043f1eb",
+      "review_status": "reviewed",
+      "review_batch": "database-41",
+      "dependencies": [
+        {
+          "source": "database/gizmo.txt",
+          "key": "gizmo_modifier",
+          "source_sha256": "76a3f9ecb6a8df7859998218529bf1ca626234ad0e77f2e6ba3b0709f5ff7a4c",
+          "translation_sha256": "8ae1ecd6455519424d0da1fa94fe7603b1de7333eee59dc9222c2882eed7e293"
+        }
+      ]
+    },
+    {
+      "key": "gizmo_noun",
+      "context": "textdb:database/gizmo.txt:gizmo_noun",
+      "source_sha256": "07f4c6efe5e00d3ce7231aac0b8020d4cc39a28510c47d28f38cd6e096ddebb7",
+      "review_status": "reviewed",
+      "review_batch": "database-41",
+      "dependencies": [
+        {
+          "source": "database/gizmo.txt",
+          "key": "gizmo_modifier",
+          "source_sha256": "76a3f9ecb6a8df7859998218529bf1ca626234ad0e77f2e6ba3b0709f5ff7a4c",
+          "translation_sha256": "8ae1ecd6455519424d0da1fa94fe7603b1de7333eee59dc9222c2882eed7e293"
+        }
+      ]
+    },
+    {
+      "key": "gizmo_modifier",
+      "context": "textdb:database/gizmo.txt:gizmo_modifier",
+      "source_sha256": "76a3f9ecb6a8df7859998218529bf1ca626234ad0e77f2e6ba3b0709f5ff7a4c",
+      "review_status": "reviewed",
+      "review_batch": "database-41"
+    }
+  ],
+  "candidates": {
+    "gizmo_adjective": 167,
+    "gizmo_noun": 170,
+    "gizmo_modifier": 202
+  }
+}

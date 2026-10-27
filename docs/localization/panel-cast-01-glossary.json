@@ -1,0 +1,39 @@
+{
+  "before_sha256": "5ea382702e0d86c7e1fcad03e64a1c7d079f42a2a2f6af24949e155eae9dc885",
+  "after_sha256": "95cc9538a701536b1581f31834203bbbb3160668ec622f7862f43921be96fdb1",
+  "changed": [
+    {
+      "term": "rC",
+      "before": "冰抗",
+      "after": "冰抗/寒冷抗性"
+    },
+    {
+      "term": "rF",
+      "before": "火抗",
+      "after": "火抗/火焰抗性"
+    },
+    {
+      "term": "rPois",
+      "before": "毒抗",
+      "after": "毒抗/毒素抗性"
+    },
+    {
+      "term": "rN",
+      "before": "负能量抗性",
+      "after": "负能抗性/负能量抗性"
+    },
+    {
+      "term": "rElec",
+      "before": "电抗",
+      "after": "电抗/电击抗性"
+    }
+  ],
+  "added": [
+    "rNeg",
+    "负能抗性/负能量抗性",
+    "noun",
+    "",
+    "【2026-10-25 面板统一】斜杠依次表示简称/全称；角色抗性面板与怪物描述面板使用全称，物品紧凑属性、配置及规范英文键保持不变。 与物品属性 rN 表示同类负能量抗性；来源：output.cc、describe.cc。"
+  ],
+  "unrelated_rows_unchanged": true
+}

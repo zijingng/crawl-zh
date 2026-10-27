@@ -1,0 +1,200 @@
+{
+  "baseline": "0.34.1",
+  "source": "crawl-ref/source/dat/database/wpnnoise.txt",
+  "entries": [
+    {
+      "key": "_screams_",
+      "context": "textdb:database/wpnnoise.txt:_screams_",
+      "source_sha256": "44df95b3806af8e7b229a492c2ee83310fbb8ed45139578f0a656df6fa1a3013",
+      "translation_sha256": "d980eb03955d289a042a3fe6c93ef268e04c7d6de6429c3b4cc1e81cc3eda614",
+      "review_status": "reviewed",
+      "candidates": 12
+    },
+    {
+      "key": "_screams_how_",
+      "context": "textdb:database/wpnnoise.txt:_screams_how_",
+      "source_sha256": "038c6ae409777c8e939baeff5bb379c2c07073d25f8117f1bd0cf289eab47a8a",
+      "translation_sha256": "98f963688c653d1c7288bc2e1db25b58eb9db6044789b3e243683b4268cf457b",
+      "review_status": "reviewed",
+      "candidates": 4
+    },
+    {
+      "key": "_loudly_",
+      "context": "textdb:database/wpnnoise.txt:_loudly_",
+      "source_sha256": "2e81ec3c12e24db362c1154f88aae48244e00de479807d9244fef122f0557980",
+      "translation_sha256": "a42ca5a047ded4a8fd793e899c86ec9b09c18bd5f1a2a8a40cf37603e87dcc2f",
+      "review_status": "reviewed",
+      "candidates": 4
+    },
+    {
+      "key": "_beastly_adjective_",
+      "context": "textdb:database/wpnnoise.txt:_beastly_adjective_",
+      "source_sha256": "78a73d731166e02a323985125611c8425f9fb7fe3fb0d46523a897c69dfd295c",
+      "translation_sha256": "4c729e94d7e3e41bbf060f9a1fec5d83bff645ca733129fff56467f046e9e871",
+      "review_status": "reviewed",
+      "candidates": 5
+    },
+    {
+      "key": "_beast_",
+      "context": "textdb:database/wpnnoise.txt:_beast_",
+      "source_sha256": "fca986e6c3d5068022e440eb9895611e85ff8392612ae6e6d7dbf27d7399fb2e",
+      "translation_sha256": "a1fe620a18298de9f1e97d489ad3831ad02ffd26e24e1b91efc88ac098710f04",
+      "review_status": "reviewed",
+      "candidates": 8
+    },
+    {
+      "key": "_strikes_up_what_",
+      "context": "textdb:database/wpnnoise.txt:_strikes_up_what_",
+      "source_sha256": "08c9b68d3292edb33d78c7ec4321f086ae32006b19f6276012d22aa6a185dcb8",
+      "translation_sha256": "8132fa45677e1ef8b44da8098f4e48e9cd0aa79af1fe60787278b721599b51b3",
+      "review_status": "reviewed",
+      "candidates": 4
+    },
+    {
+      "key": "_kind_of_scales_",
+      "context": "textdb:database/wpnnoise.txt:_kind_of_scales_",
+      "source_sha256": "bbb45f36b019d9775fb212a51e551e87ab0b685515ed0e5632caa3ded20e73c8",
+      "translation_sha256": "3fcd3ea07a21ecfab672988f595305b64bfd6310d23fd71538c95249b47fff33",
+      "review_status": "reviewed",
+      "candidates": 3
+    },
+    {
+      "key": "_rhyme_word_",
+      "context": "textdb:database/wpnnoise.txt:_rhyme_word_",
+      "source_sha256": "a48aa30b140c1faf673af4a065f18383087927e64628cc8932aee43cfa713f90",
+      "translation_sha256": "6d36222113b5cc3a4beeb07c454836053580361bba6daa0fd8db8f1c92d89a95",
+      "review_status": "reviewed",
+      "candidates": 3
+    },
+    {
+      "key": "_song_theme_",
+      "context": "textdb:database/wpnnoise.txt:_song_theme_",
+      "source_sha256": "e6b9c54a220b917beb2fcbfdadc170f6301d933d01f5047d4a3f95190b3c09aa",
+      "translation_sha256": "c45aec5393daa2a4e384e9fc7d28e3c6bbfcdc5ac5577a8d7a37518d2b1188bd",
+      "review_status": "reviewed",
+      "candidates": 3
+    },
+    {
+      "key": "_musical_topic_",
+      "context": "textdb:database/wpnnoise.txt:_musical_topic_",
+      "source_sha256": "75058a8b516dcfc0451c04c8ab1dd153435b10d55c8cf9ef63eb4e8c45195328",
+      "translation_sha256": "e782c85ba3d50d247f2a8f11f3169718ff09a52287d6d5de890896d331313f52",
+      "review_status": "reviewed",
+      "candidates": 9
+    },
+    {
+      "key": "_exasperated_",
+      "context": "textdb:database/wpnnoise.txt:_exasperated_",
+      "source_sha256": "711b274aad01fcfebe895a88f5408c2ff8bc9ae038a4f18b1f4def9dd401bfde",
+      "translation_sha256": "06997819e4883e6b9fdfef4598162dfa2e91ffc2e00f18459f2da6d39101961e",
+      "review_status": "reviewed",
+      "candidates": 9
+    },
+    {
+      "key": "_crimson_",
+      "context": "textdb:database/wpnnoise.txt:_crimson_",
+      "source_sha256": "ee9974cc579baeee740cd990a2a90f11735cbe16cd6ba6983b5b3ee565d027c5",
+      "translation_sha256": "e56cff37cf2b1b304cecae0c9063c70ba822605e1e5265b48675b97828315741",
+      "review_status": "reviewed",
+      "candidates": 5
+    },
+    {
+      "key": "_MISCREANTS_",
+      "context": "textdb:database/wpnnoise.txt:_miscreants_",
+      "source_sha256": "2ee4bd0d2024e48984d27233938f0ba6fbddc3090236bde443df3e8978da6f45",
+      "translation_sha256": "ccdf46e61169460ac72d6d5ddbbc66e92df1c9c4171ebf85a6656dcbae7ffdcb",
+      "review_status": "reviewed",
+      "candidates": 4
+    },
+    {
+      "key": "_PETS_",
+      "context": "textdb:database/wpnnoise.txt:_pets_",
+      "source_sha256": "3dfa541e25bea86a6b689049634b2cc8737e1ca83ed7891b7f2f13c042273bfc",
+      "translation_sha256": "eca2f81590265477405f9f972badc7a2dc508d492bc73ea921c3b6347e907c78",
+      "review_status": "reviewed",
+      "candidates": 5
+    },
+    {
+      "key": "_corpses_",
+      "context": "textdb:database/wpnnoise.txt:_corpses_",
+      "source_sha256": "9b84c9edd5a1bb3e30571663775f24d22a2f005713d965a311b24e3b182d5e44",
+      "translation_sha256": "ad0bb72a55be01e9e436279e13582e7ba6f549d2a3f9a32dbdea907784e96ee7",
+      "review_status": "reviewed",
+      "candidates": 3
+    },
+    {
+      "key": "_body_part_",
+      "context": "textdb:database/wpnnoise.txt:_body_part_",
+      "source_sha256": "fa1b37035b1522a0f7ed99663d687d65741d44c0f2f203494b7f2dbf2b8d19f6",
+      "translation_sha256": "ea63f581d28c632048c4006b93d490e292d615128d533d75bcd1521176ab7b96",
+      "review_status": "reviewed",
+      "candidates": 4
+    },
+    {
+      "key": "_glorious_",
+      "context": "textdb:database/wpnnoise.txt:_glorious_",
+      "source_sha256": "4ae36f3e196a1b68476de6890d6201fe64d7eba4439f0d5c3076cb4ed5bac891",
+      "translation_sha256": "061f733552dbede46cdd644a12433748e61edecea90fad51d10e241e07f43587",
+      "review_status": "reviewed",
+      "candidates": 7
+    },
+    {
+      "key": "shield of the gong",
+      "context": "textdb:database/wpnnoise.txt:shield of the gong",
+      "source_sha256": "6f05d5f1c27da32f8b5c9d43b841958c3c0fce13a8b0f26e83e0c87037da7875",
+      "translation_sha256": "226d635f649c9265fb1fa46ca0a5e0da6a52d8c1e6aa99bb1b9134b97f863fdd",
+      "review_status": "reviewed",
+      "candidates": 6
+    },
+    {
+      "key": "frozen axe \"frostbite\"",
+      "context": "textdb:database/wpnnoise.txt:frozen axe \"frostbite\"",
+      "source_sha256": "5856121717163dbb37a19606dd7f50f755c8efac717503427f0863e90d61a1db",
+      "translation_sha256": "a7c178e0751a7e7af226f5661616207a558dd36fdacc998b9f0907ca9d12593e",
+      "review_status": "reviewed",
+      "candidates": 4
+    },
+    {
+      "key": "trishula \"Condemnation\"",
+      "context": "textdb:database/wpnnoise.txt:trishula \"condemnation\"",
+      "source_sha256": "617cac46a2802130c6ed7df575bf105e24adc492a654b016c4ce6e602ea15fab",
+      "translation_sha256": "087cadd90ee9e6d5209fa33f94ad163a1ff21bc5e0564eac262b28512adf1fa7",
+      "review_status": "reviewed",
+      "candidates": 6
+    }
+  ],
+  "reviewed_this_batch": 20,
+  "candidates": 108,
+  "cumulative_reviewed": 39,
+  "legacy_unreviewed_keys": [
+    "_common_speaking_no_tension_",
+    "_godless_sorter_",
+    "_instrumental_noises_",
+    "_rare_chatter_",
+    "_rare_speaking_no_tension_",
+    "_real_song_high_tension_",
+    "_real_song_low-high_tension_",
+    "_real_song_low_tension_",
+    "_real_song_no_tension_",
+    "_scream_",
+    "_singing_no-low_tension_",
+    "_singing_no_tension_",
+    "_speaking_high_tension_",
+    "_speaking_low-high_tension_",
+    "_speaking_low_tension_",
+    "_speaking_no_tension_",
+    "_weapon_chatter_",
+    "_weapon_noises_low-high_tension_",
+    "noisy weapon",
+    "singing sword high_tension",
+    "singing sword low_tension",
+    "singing sword no_tension",
+    "singing sword scream",
+    "singing sword silenced",
+    "weapon_noise",
+    "weapon_noises"
+  ],
+  "english_source_unchanged": true,
+  "unselected_entries_unchanged": true,
+  "runtime_adapter": "pending: item_noise; this batch reviews data only"
+}

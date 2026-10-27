@@ -1,0 +1,62 @@
+[
+  {
+    "file": "crawl-ref/source/version.cc",
+    "scope": "版本、编译诊断和保存的版本历史；保持规范英文，不解析旧存档文字。",
+    "sha256": "9189d6041023608d8d40b3e57e7c7c8d0c8f4a4fc377ca078adf17993111012a",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/version.h",
+    "scope": "版本接口、构建名称、版权及错误报告地址；保留规范标识和许可证文字。",
+    "sha256": "94249708cd01065b86fe40181567504c23b9d247208a5c25a40f3eee70237043",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/view.cc",
+    "scope": "显示图层选择、恢复提示；原快捷键、颜色参数、图层状态及动画保留。",
+    "sha256": "3dbf5cbf0d318494471205799372762c3d28154ae78d5ff078cf4674cbec3e02",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/view.h",
+    "scope": "视图接口；无新增待译文案。",
+    "sha256": "172ae3339e7da9cd7543e19371b16a5b0259d4bb67e468ba5650d3de62315d99",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/viewchar.cc",
+    "scope": "字符／图形映射和配置名称；不可翻译内部 glyph 标识。",
+    "sha256": "a476f84be1756919ab353b574bfaf713fe8a4b1aa81d68062fd32f860aabf1f0",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/viewchar.h",
+    "scope": "字符显示映射接口，无独立文案。",
+    "sha256": "67b9cf8c9e6d8f37cf17e451707c693f5d91f997007548d844cd6186436a06b7",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/viewgeom.cc",
+    "scope": "视图几何及编译器诊断控制，无独立文案。",
+    "sha256": "96c88e9f508716caa438d6bde603d0654d8e79e1a45a7e88cfabb6beb6fd3ed0",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/viewgeom.h",
+    "scope": "视图坐标、尺寸与几何，无独立文案。",
+    "sha256": "c06506e161c5e5e9e6f8afb3ded97eebbd22bb11902fd0e3fcb17060b423f3ef",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/viewmap.cc",
+    "scope": "地图帮助、清除／恢复／注释反馈、中文地图标题；规范层名、地图操作和路径选择保留。",
+    "sha256": "297be188e13ce77b590f121e3fc617eda50f42b6f03e3730f4f72135f54f8bfb",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/viewmap.h",
+    "scope": "新增地图标题显示接口；原地图状态与操作接口保留。",
+    "sha256": "5e99cabf30359cf3e0b88240aa6b2c6b8f2070f73d463a98a535c45a0b17d4f0",
+    "changed": true
+  }
+]

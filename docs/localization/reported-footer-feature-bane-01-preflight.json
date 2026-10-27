@@ -1,0 +1,2398 @@
+{
+  "glossary_hits": [
+    {
+      "Term": "-Potion status",
+      "Translation": "禁饮药水/禁饮药水状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】前置减号表示无法使用或限制，不应直接拼成“-药水”。 来源：dat/descript/status.txt。\n【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：禁饮药水。"
+    },
+    {
+      "Term": "-Scroll status",
+      "Translation": "禁读卷轴/禁读卷轴状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】前置减号表示无法阅读或限制。 来源：dat/descript/status.txt。\n【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：禁读卷轴。"
+    },
+    {
+      "Term": "-Wiz status",
+      "Translation": "施法控制削弱状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】历史说明为施法控制被削弱，不是巫师职业或巫师模式。 来源：paratranz/2022_07_29_17_00_18_e12bad/utf8/dat/descript/status.txt.csv。\n【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
+    },
+    {
+      "Term": "Abj status",
+      "Translation": "召唤驱散状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】历史英文说明为缩短附近敌对召唤物持续时间，不等同 banishment（放逐到深渊）。 来源：paratranz/2022_07_29_17_00_18_e12bad/utf8/dat/descript/status.txt.csv。\n【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
+    },
+    {
+      "Term": "Alive status",
+      "Translation": "充血/充血状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】0.34.1 英文说明为充满鲜血并快速再生，对应旧吸血鬼血量状态；历史导出此条英文曾写禁饮，来源已发生变化，不能仅按同键沿用。 来源：dat/descript/status.txt。\n【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：充血。"
+    },
+    {
+      "Term": "Ambros status",
+      "Translation": "神酒/琼浆状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：神酒。"
+    },
+    {
+      "Term": "App status",
+      "Translation": "附肢/附肢状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：附肢。"
+    },
+    {
+      "Term": "Aug status",
+      "Translation": "生命增幅/生命增幅状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】增益随当前健康程度变化，不是通用强化。 来源：dat/descript/status.txt。\n【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：生命增幅。"
+    },
+    {
+      "Term": "Bat status",
+      "Translation": "蝙蝠/蝙蝠状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：蝙蝠。"
+    },
+    {
+      "Term": "Beogh status",
+      "Translation": "比欧弗/比欧弗状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：比欧弗。"
+    },
+    {
+      "Term": "Blade status",
+      "Translation": "刀刃/刃手状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】Blade Hands 的变身标签，不是武器类别。 来源：dat/descript/status.txt。\n【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：刀刃。"
+    },
+    {
+      "Term": "Blood status",
+      "Translation": "鲜血护甲/凝血护甲状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】描述身体表面凝血形成护甲，不是泛指血量。 来源：dat/descript/status.txt。\n【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：鲜血护甲。"
+    },
+    {
+      "Term": "Bloodless status",
+      "Translation": "无血/无血状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：无血。"
+    },
+    {
+      "Term": "Bribe status",
+      "Translation": "贿赂/贿赂状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：贿赂。"
+    },
+    {
+      "Term": "Channel status",
+      "Translation": "魔力引导/引导魔力状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】正在引导魔法能量，不是空间通道。 来源：dat/descript/status.txt。\n【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：魔力引导。"
+    },
+    {
+      "Term": "Cleave status",
+      "Translation": "劈斩/顺劈状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：劈斩。"
+    },
+    {
+      "Term": "Cloud status",
+      "Translation": "云雾/云状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：云雾。"
+    },
+    {
+      "Term": "Clouds status",
+      "Translation": "禁云状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】旧表键疑漏前置减号；历史导出实际是 -Clouds，指静风使云雾无法形成，不是云雾免疫。保留此旧键供追溯，新增正确键。 来源：status.cc。\n【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。"
+    },
+    {
+      "Term": "DChan status",
+      "Translation": "死亡通道/死亡通道状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：死亡通道。"
+    },
+    {
+      "Term": "DDoor status",
+      "Translation": "死亡之门/死亡之门状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：死亡之门。"
+    },
+    {
+      "Term": "Dig status",
+      "Translation": "挖掘/挖掘状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：挖掘。"
+    },
+    {
+      "Term": "Disjoin status",
+      "Translation": "空间分离/分离状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：空间分离。"
+    },
+    {
+      "Term": "Dragon status",
+      "Translation": "龙/龙状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：龙。"
+    },
+    {
+      "Term": "Dragoncall status",
+      "Translation": "召唤龙群/唤龙状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】保留术语，指 Dragon's Call，不是普通龙形态。 来源：dat/descript/status.txt。\n【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：召唤龙群。"
+    },
+    {
+      "Term": "Elixir status",
+      "Translation": "灵药/灵药状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：灵药。"
+    },
+    {
+      "Term": "Engulf status",
+      "Translation": "吞没状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
+    },
+    {
+      "Term": "Fast+Slow status",
+      "Translation": "疾速与缓慢/快速＋缓慢状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：疾速与缓慢。"
+    },
+    {
+      "Term": "Flay status",
+      "Translation": "剥皮/剥皮状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：剥皮。"
+    },
+    {
+      "Term": "Forest status",
+      "Translation": "召唤森林/森林状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：召唤森林。"
+    },
+    {
+      "Term": "Fungus status",
+      "Translation": "真菌/真菌状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：真菌。"
+    },
+    {
+      "Term": "Hevn status",
+      "Translation": "天界风暴状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】旧缩写指 Heavenly Storm，不是“宇”；当前灯号使用 Heavenly。 来源：status.cc; dat/descript/ability.txt。\n【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
+    },
+    {
+      "Term": "Hop status",
+      "Translation": "跳跃冷却状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】旧表 -Hop 的负号丢失风险；跳跃能力与其冷却需根据真正英文灯号区分，本旧键不用于运行时映射。 来源：duration-data.h。\n【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。"
+    },
+    {
+      "Term": "Horr status",
+      "Translation": "惊骇/恐惧状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：惊骇。"
+    },
+    {
+      "Term": "Howl status",
+      "Translation": "遗忘之嚎/嚎叫状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：遗忘之嚎。"
+    },
+    {
+      "Term": "Hydra status",
+      "Translation": "海德拉状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
+    },
+    {
+      "Term": "Ice status",
+      "Translation": "冰兽形态状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】旧 Ice Form 变身标签，不泛称冰属性状态。 来源：docs/changelog.txt。\n【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
+    },
+    {
+      "Term": "Infus status",
+      "Translation": "灌输状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
+    },
+    {
+      "Term": "Lash status",
+      "Translation": "腾蛇鞭/腾蛇鞭状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】对应 Serpent's Lash 的高速移动能力，不是受到鞭打。 来源：status.cc; dat/descript/ability.txt。\n【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：腾蛇鞭。"
+    },
+    {
+      "Term": "Lava status",
+      "Translation": "岩浆/岩浆状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：岩浆。"
+    },
+    {
+      "Term": "Lich status",
+      "Translation": "巫妖形态状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】旧变身标签；不是当前物种名称。 来源：dat/descript/status.txt。\n【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
+    },
+    {
+      "Term": "Liquid status",
+      "Translation": "液化/地面液化状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】描述周围地面液化，不是身体化为液体。 来源：dat/descript/status.txt。\n【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：液化。"
+    },
+    {
+      "Term": "Mirror status",
+      "Translation": "镜状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
+    },
+    {
+      "Term": "MR/2 status",
+      "Translation": "魔抗减半状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】旧标签；当前对应意志降低时使用 Will/2，应补充现行条目。 来源：duration-data.h。\n【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
+    },
+    {
+      "Term": "Near Bloodless status",
+      "Translation": "接近无血状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
+    },
+    {
+      "Term": "Orb status",
+      "Translation": "佐特宝珠/宝珠状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：佐特宝珠。"
+    },
+    {
+      "Term": "Petr status",
+      "Translation": "石化中/正在石化状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】DUR_PETRIFYING；与 Stone（已经石化）区分。 来源：duration-data.h。\n【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：石化中。"
+    },
+    {
+      "Term": "Pig status",
+      "Translation": "猪/猪状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：猪。"
+    },
+    {
+      "Term": "PProj status",
+      "Translation": "传送弹药状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
+    },
+    {
+      "Term": "Prot status",
+      "Translation": "神圣庇护状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】历史说明为请求 Elyvilon 阻止致命一击；不要与泛指保护的 Protected 混用。 来源：paratranz/2022_07_29_17_00_18_e12bad/utf8/dat/descript/status.txt.csv。\n【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
+    },
+    {
+      "Term": "Quad status",
+      "Translation": "四倍伤害/四倍状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：四倍伤害。"
+    },
+    {
+      "Term": "Ray status",
+      "Translation": "灼热射线/射线状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：灼热射线。"
+    },
+    {
+      "Term": "rC+ status",
+      "Translation": "寒冷防护/冰抗+状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：寒冷防护。"
+    },
+    {
+      "Term": "Recall status",
+      "Translation": "召回/召回状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：召回。"
+    },
+    {
+      "Term": "Recite status",
+      "Translation": "诵经/吟诵状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：诵经。"
+    },
+    {
+      "Term": "rElec+ status",
+      "Translation": "电击防护/电抗+状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：电击防护。"
+    },
+    {
+      "Term": "Resist status",
+      "Translation": "抗性/抗性状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：抗性。"
+    },
+    {
+      "Term": "rF+ status",
+      "Translation": "火焰防护/火抗+状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：火焰防护。"
+    },
+    {
+      "Term": "rF- status",
+      "Translation": "火焰易伤/火抗-状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：火焰易伤。"
+    },
+    {
+      "Term": "RoF status",
+      "Translation": "火焰环状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
+    },
+    {
+      "Term": "Scry status",
+      "Translation": "透视状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
+    },
+    {
+      "Term": "Shadow status",
+      "Translation": "暗影/影状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：暗影。"
+    },
+    {
+      "Term": "Shroud status",
+      "Translation": "黏液帷幕修复中/护罩状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：黏液帷幕修复中。"
+    },
+    {
+      "Term": "Sil status",
+      "Translation": "沉默/沉默状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：沉默。"
+    },
+    {
+      "Term": "Slay status",
+      "Translation": "嗜血/杀戮状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：嗜血。"
+    },
+    {
+      "Term": "Slime status",
+      "Translation": "黏液化/黏液状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：黏液化。"
+    },
+    {
+      "Term": "SlowM status",
+      "Translation": "移动减缓/移动减缓状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：移动减缓。"
+    },
+    {
+      "Term": "Spider status",
+      "Translation": "蜘蛛/蜘蛛状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：蜘蛛。"
+    },
+    {
+      "Term": "Statue status",
+      "Translation": "雕像/雕像状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：雕像。"
+    },
+    {
+      "Term": "Stealth status",
+      "Translation": "潜行/潜行状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：潜行。"
+    },
+    {
+      "Term": "Stone status",
+      "Translation": "石化/已石化状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】DUR_PETRIFIED；不是普通石头或岩石形态。 来源：duration-data.h。\n【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：石化。"
+    },
+    {
+      "Term": "Surge status",
+      "Translation": "激涌/激涌状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：激涌。"
+    },
+    {
+      "Term": "Tornado status",
+      "Translation": "龙卷风状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
+    },
+    {
+      "Term": "Toxic status",
+      "Translation": "剧毒光环/毒性辐射状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】DUR_TOXIC_RADIANCE 表示向外释放毒能，不是 Pois 中毒状态。 来源：duration-data.h。\n【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：剧毒光环。"
+    },
+    {
+      "Term": "Tree status",
+      "Translation": "树木/树状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：树木。"
+    },
+    {
+      "Term": "Very Thirsty status",
+      "Translation": "极渴状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
+    },
+    {
+      "Term": "Vit status",
+      "Translation": "神赐活力/活力状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：神赐活力。"
+    },
+    {
+      "Term": "Water status",
+      "Translation": "水域/水状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：水域。"
+    },
+    {
+      "Term": "Wisp status",
+      "Translation": "幽火/气团形态状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】历史说明明确是 wisp of gas（无实体气团），不译成气系魔法或火焰鬼火。 来源：paratranz/2022_07_29_17_00_18_e12bad/utf8/dat/descript/status.txt.csv。\n【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：幽火。"
+    },
+    {
+      "Term": "-Clouds status",
+      "Translation": "无法制造云雾/禁云状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态灯号】静风阻止云雾形成；与原表漏负号的 Clouds status 关联。 来源：status.cc。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：无法制造云雾。"
+    },
+    {
+      "Term": "-Hop status",
+      "Translation": "跳跃冷却/跳跃冷却状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态灯号】真实英文标签含前置减号；不能写作普通跳跃能力。 来源：duration-data.h。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：跳跃冷却。"
+    },
+    {
+      "Term": "Heavenly status",
+      "Translation": "天界风暴/天界风暴状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态灯号】当前动态灯号 Heavenly (数值)，旧表 Hevn 仅作历史关联。 来源：status.cc。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：天界风暴。"
+    },
+    {
+      "Term": "Fast status",
+      "Translation": "疾速/疾速状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：疾速。"
+    },
+    {
+      "Term": "Invis status",
+      "Translation": "隐形/隐形状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：隐形。"
+    },
+    {
+      "Term": "Tele status",
+      "Translation": "即将传送/即将传送状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：即将传送。"
+    },
+    {
+      "Term": "Fly status",
+      "Translation": "飞行/飞行状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：飞行。"
+    },
+    {
+      "Term": "Brill status",
+      "Translation": "聪慧/聪慧状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：聪慧。"
+    },
+    {
+      "Term": "Might status",
+      "Translation": "强力术/强力状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：强力术。"
+    },
+    {
+      "Term": "Regen status",
+      "Translation": "生命再生/生命再生状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：生命再生。"
+    },
+    {
+      "Term": "MPRegen status",
+      "Translation": "魔力再生/魔力再生状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：魔力再生。"
+    },
+    {
+      "Term": "Berserk status",
+      "Translation": "狂暴/狂暴状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：狂暴。"
+    },
+    {
+      "Term": "Pois status",
+      "Translation": "中毒/中毒状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：中毒。"
+    },
+    {
+      "Term": "Conf status",
+      "Translation": "混乱/混乱状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：混乱。"
+    },
+    {
+      "Term": "Contam status",
+      "Translation": "魔法污染/魔法污染状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：魔法污染。"
+    },
+    {
+      "Term": "Drain status",
+      "Translation": "吸能/吸能状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：吸能。"
+    },
+    {
+      "Term": "Slow status",
+      "Translation": "缓慢/缓慢状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：缓慢。"
+    },
+    {
+      "Term": "Para status",
+      "Translation": "麻痹/麻痹状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：麻痹。"
+    },
+    {
+      "Term": "Sleep status",
+      "Translation": "睡眠/睡眠状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：睡眠。"
+    },
+    {
+      "Term": "Held status",
+      "Translation": "受困/受困状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：受困。"
+    },
+    {
+      "Term": "Constr status",
+      "Translation": "缠绕/缠绕状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：缠绕。"
+    },
+    {
+      "Term": "Mesm status",
+      "Translation": "魅惑牵引/魅惑牵引状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：魅惑牵引。"
+    },
+    {
+      "Term": "Fear status",
+      "Translation": "恐惧/恐惧状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：恐惧。"
+    },
+    {
+      "Term": "Mark status",
+      "Translation": "哨兵印记/标记状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：哨兵印记。"
+    },
+    {
+      "Term": "Fire status",
+      "Translation": "着火/着火状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：着火。"
+    },
+    {
+      "Term": "Barbs status",
+      "Translation": "倒刺/倒刺状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：倒刺。"
+    },
+    {
+      "Term": "Vertigo status",
+      "Translation": "眩晕/眩晕状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：眩晕。"
+    },
+    {
+      "Term": "Corr status",
+      "Translation": "腐蚀/腐蚀状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：腐蚀。"
+    },
+    {
+      "Term": "Weak status",
+      "Translation": "虚弱/虚弱状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：虚弱。"
+    },
+    {
+      "Term": "Will/2 status",
+      "Translation": "意志减半/意志减半状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：意志减半。"
+    },
+    {
+      "Term": "Hero status",
+      "Translation": "英雄气概/英雄气概状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：英雄气概。"
+    },
+    {
+      "Term": "Finesse status",
+      "Translation": "精湛技艺/精妙技艺状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：精湛技艺。"
+    },
+    {
+      "Term": "demon blade \"Bloodbane\"",
+      "Translation": "恶魔之刃「血祸」",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+    },
+    {
+      "Term": "lance \"Wyrmbane\"",
+      "Translation": "骑枪「龙祸」",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+    },
+    {
+      "Term": "!Tele! status",
+      "Translation": "传送至敌群",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：传送至敌群。"
+    },
+    {
+      "Term": "Agi status",
+      "Translation": "敏捷",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：敏捷。"
+    },
+    {
+      "Term": "-Regen status",
+      "Translation": "无法再生",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：无法再生。"
+    },
+    {
+      "Term": "Touch status",
+      "Translation": "混乱之触",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：混乱之触。"
+    },
+    {
+      "Term": "Will++ status",
+      "Translation": "意志增强++",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：意志增强++。"
+    },
+    {
+      "Term": "Regen Will++ status",
+      "Translation": "再生时意志增强++",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：再生时意志增强++。"
+    },
+    {
+      "Term": "-Berserk status",
+      "Translation": "狂暴冷却",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：狂暴冷却。"
+    },
+    {
+      "Term": "Bearserk status",
+      "Translation": "熊之狂暴",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：熊之狂暴。"
+    },
+    {
+      "Term": "-Breath status",
+      "Translation": "吐息冷却",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：吐息冷却。"
+    },
+    {
+      "Term": "Breath status",
+      "Translation": "吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：吐息。"
+    },
+    {
+      "Term": "Breath+ status",
+      "Translation": "吐息+",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：吐息+。"
+    },
+    {
+      "Term": "Breath++ status",
+      "Translation": "吐息++",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：吐息++。"
+    },
+    {
+      "Term": "Exh status",
+      "Translation": "疲惫",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：疲惫。"
+    },
+    {
+      "Term": "-Tele status",
+      "Translation": "次元锚定",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：次元锚定。"
+    },
+    {
+      "Term": "-Move status",
+      "Translation": "无法移动",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：无法移动。"
+    },
+    {
+      "Term": "Fire+ status",
+      "Translation": "着火+",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：着火+。"
+    },
+    {
+      "Term": "Fire++ status",
+      "Translation": "着火++",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：着火++。"
+    },
+    {
+      "Term": "Corona status",
+      "Translation": "光晕术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：光晕术。"
+    },
+    {
+      "Term": "Sick status",
+      "Translation": "疾病",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：疾病。"
+    },
+    {
+      "Term": "Frozen status",
+      "Translation": "冻结",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：冻结。"
+    },
+    {
+      "Term": "Sap status",
+      "Translation": "魔力枯竭",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：魔力枯竭。"
+    },
+    {
+      "Term": "-Cast status",
+      "Translation": "无法施法",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：无法施法。"
+    },
+    {
+      "Term": "Crippled status",
+      "Translation": "属性归零",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：属性归零。"
+    },
+    {
+      "Term": "Swift status",
+      "Translation": "迅捷",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：迅捷。"
+    },
+    {
+      "Term": "-Swift status",
+      "Translation": "迅捷后迟缓",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：迅捷后迟缓。"
+    },
+    {
+      "Term": "-DDoor status",
+      "Translation": "死亡之门冷却",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：死亡之门冷却。"
+    },
+    {
+      "Term": "Flooded status",
+      "Translation": "肺部积水",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：肺部积水。"
+    },
+    {
+      "Term": "Vortex status",
+      "Translation": "极地涡流",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：极地涡流。"
+    },
+    {
+      "Term": "-Vortex status",
+      "Translation": "涡流冷却",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：涡流冷却。"
+    },
+    {
+      "Term": "Duel status",
+      "Translation": "决斗",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：决斗。"
+    },
+    {
+      "Term": "Fugue status",
+      "Translation": "阵亡者赋格",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：阵亡者赋格。"
+    },
+    {
+      "Term": "Debt status",
+      "Translation": "生命欠债",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：生命欠债。"
+    },
+    {
+      "Term": "-Recite status",
+      "Translation": "诵经冷却",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：诵经冷却。"
+    },
+    {
+      "Term": "rP- status",
+      "Translation": "毒素易伤",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：毒素易伤。"
+    },
+    {
+      "Term": "Bullseye status",
+      "Translation": "空间靶心",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：空间靶心。"
+    },
+    {
+      "Term": "-Dragoncall status",
+      "Translation": "龙群冷却",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：龙群冷却。"
+    },
+    {
+      "Term": "Beast status",
+      "Translation": "野兽形态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：野兽形态。"
+    },
+    {
+      "Term": "Flux status",
+      "Translation": "流变",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：流变。"
+    },
+    {
+      "Term": "Serpent status",
+      "Translation": "双头蛇",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：双头蛇。"
+    },
+    {
+      "Term": "Maw status",
+      "Translation": "巨口",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：巨口。"
+    },
+    {
+      "Term": "Storm status",
+      "Translation": "风暴",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：风暴。"
+    },
+    {
+      "Term": "Death status",
+      "Translation": "死亡",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：死亡。"
+    },
+    {
+      "Term": "Orb? status",
+      "Translation": "骗子宝球",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：骗子宝球。"
+    },
+    {
+      "Term": "Ray+ status",
+      "Translation": "灼热射线+",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：灼热射线+。"
+    },
+    {
+      "Term": "Ray++ status",
+      "Translation": "灼热射线++",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：灼热射线++。"
+    },
+    {
+      "Term": "Attr status",
+      "Translation": "吸引",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：吸引。"
+    },
+    {
+      "Term": "Zot status",
+      "Translation": "佐特时钟",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：佐特时钟。"
+    },
+    {
+      "Term": "Zot count status",
+      "Translation": "佐特剩余时间",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：佐特剩余时间。"
+    },
+    {
+      "Term": "Gem status",
+      "Translation": "宝石",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：宝石。"
+    },
+    {
+      "Term": "Gem (*) status",
+      "Translation": "宝石（本分支仍完整）",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：宝石（本分支仍完整）。"
+    },
+    {
+      "Term": "rF0 status",
+      "Translation": "火抗归零",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：火抗归零。"
+    },
+    {
+      "Term": "-Blink status",
+      "Translation": "闪现冷却",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：闪现冷却。"
+    },
+    {
+      "Term": "-Bbolt status",
+      "Translation": "闪现雷击冷却",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：闪现雷击冷却。"
+    },
+    {
+      "Term": "Charge- status",
+      "Translation": "蓄电-",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：蓄电-。"
+    },
+    {
+      "Term": "Charge/ status",
+      "Translation": "蓄电",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：蓄电/。 界面末尾的 / 是蓄电进度标记；Translation 使用名称“蓄电”，不把进度字符当作多义分隔符。"
+    },
+    {
+      "Term": "Charge\\ status",
+      "Translation": "蓄电\\",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：蓄电\\。"
+    },
+    {
+      "Term": "Charge| status",
+      "Translation": "蓄电|",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：蓄电|。"
+    },
+    {
+      "Term": "Wave status",
+      "Translation": "火焰波",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：火焰波。"
+    },
+    {
+      "Term": "Wave+ status",
+      "Translation": "火焰波+",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：火焰波+。"
+    },
+    {
+      "Term": "Ramparts status",
+      "Translation": "冰霜壁垒",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：冰霜壁垒。"
+    },
+    {
+      "Term": "Bog status",
+      "Translation": "毒沼",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：毒沼。"
+    },
+    {
+      "Term": "Enlightened status",
+      "Translation": "启明",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：启明。"
+    },
+    {
+      "Term": "Will+ status",
+      "Translation": "意志增强",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：意志增强。"
+    },
+    {
+      "Term": "Reap status",
+      "Translation": "活化死者",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：活化死者。"
+    },
+    {
+      "Term": "Peek status",
+      "Translation": "窥探楼层",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：窥探楼层。"
+    },
+    {
+      "Term": "Fragile status",
+      "Translation": "脆弱",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：脆弱。"
+    },
+    {
+      "Term": "Ooze status",
+      "Translation": "唤泥",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：唤泥。"
+    },
+    {
+      "Term": "Dog status",
+      "Translation": "犬类使魔",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：犬类使魔。"
+    },
+    {
+      "Term": "-Dog status",
+      "Translation": "魔宠冷却",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：魔宠冷却。"
+    },
+    {
+      "Term": "-Siphon status",
+      "Translation": "虹吸冷却",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：虹吸冷却。"
+    },
+    {
+      "Term": "-Word status",
+      "Translation": "混沌真言冷却",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：混沌真言冷却。"
+    },
+    {
+      "Term": "Jinx status",
+      "Translation": "厄咒之啮",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：厄咒之啮。"
+    },
+    {
+      "Term": "Rise status",
+      "Translation": "上升",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：上升。"
+    },
+    {
+      "Term": "Challenge status",
+      "Translation": "使徒挑战",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：使徒挑战。"
+    },
+    {
+      "Term": "Vengeance status",
+      "Translation": "复仇",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：复仇。"
+    },
+    {
+      "Term": "Pray status",
+      "Translation": "以血还血",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：以血还血。"
+    },
+    {
+      "Term": "Recruit status",
+      "Translation": "可招募",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：可招募。"
+    },
+    {
+      "Term": "Torch status",
+      "Translation": "黑炬",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：黑炬。"
+    },
+    {
+      "Term": "Shackles status",
+      "Translation": "无底镣铐",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：无底镣铐。"
+    },
+    {
+      "Term": "Rev status",
+      "Translation": "热身",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：热身。"
+    },
+    {
+      "Term": "Rev+ status",
+      "Translation": "热身+",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：热身+。"
+    },
+    {
+      "Term": "Rev* status",
+      "Translation": "热身*",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：热身*。"
+    },
+    {
+      "Term": "-Gavotte status",
+      "Translation": "加沃特冷却",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：加沃特冷却。"
+    },
+    {
+      "Term": "Fusillade status",
+      "Translation": "炼金弹幕",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：炼金弹幕。"
+    },
+    {
+      "Term": "Nightfall status",
+      "Translation": "夜幕",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：夜幕。"
+    },
+    {
+      "Term": "Blind status",
+      "Translation": "致盲",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：致盲。"
+    },
+    {
+      "Term": "Ruin status",
+      "Translation": "毁灭征兆",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：毁灭征兆。"
+    },
+    {
+      "Term": "-GClaw status",
+      "Translation": "坟墓之爪尚未充能",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：坟墓之爪尚未充能。"
+    },
+    {
+      "Term": "Legion status",
+      "Translation": "地狱军团",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：地狱军团。"
+    },
+    {
+      "Term": "-Bloodrite status",
+      "Translation": "血仪冷却",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：血仪冷却。"
+    },
+    {
+      "Term": "Execution status",
+      "Translation": "行刑",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：行刑。"
+    },
+    {
+      "Term": "Destr status",
+      "Translation": "毁灭增长",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：毁灭增长。"
+    },
+    {
+      "Term": "Destr+ status",
+      "Translation": "毁灭增长+",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：毁灭增长+。"
+    },
+    {
+      "Term": "Destr++ status",
+      "Translation": "毁灭增长++",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：毁灭增长++。"
+    },
+    {
+      "Term": "Destr+++ status",
+      "Translation": "毁灭增长+++",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：毁灭增长+++。"
+    },
+    {
+      "Term": "Slaughter status",
+      "Translation": "屠戮",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：屠戮。"
+    },
+    {
+      "Term": "Pact status",
+      "Translation": "契约",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：契约。"
+    },
+    {
+      "Term": "Escape! status",
+      "Translation": "逃脱！",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：逃脱！。"
+    },
+    {
+      "Term": "Shield status",
+      "Translation": "神圣护盾",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：神圣护盾。"
+    },
+    {
+      "Term": "Blast status",
+      "Translation": "动能冲击蓄力",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：动能冲击蓄力。"
+    },
+    {
+      "Term": "Blast. status",
+      "Translation": "动能冲击蓄力.",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：动能冲击蓄力.。"
+    },
+    {
+      "Term": "Blast.. status",
+      "Translation": "动能冲击蓄力..",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：动能冲击蓄力..。"
+    },
+    {
+      "Term": "Blast... status",
+      "Translation": "动能冲击蓄力...",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：动能冲击蓄力...。"
+    },
+    {
+      "Term": "Winding status",
+      "Translation": "上发条",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：上发条。"
+    },
+    {
+      "Term": "Winding. status",
+      "Translation": "上发条.",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：上发条.。"
+    },
+    {
+      "Term": "Winding.. status",
+      "Translation": "上发条..",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：上发条..。"
+    },
+    {
+      "Term": "Winding... status",
+      "Translation": "上发条...",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：上发条...。"
+    },
+    {
+      "Term": "Unstable status",
+      "Translation": "不稳定闪现",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：不稳定闪现。"
+    },
+    {
+      "Term": "Vainglory status",
+      "Translation": "虚荣",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：虚荣。"
+    },
+    {
+      "Term": "Protected status",
+      "Translation": "受到保护",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：受到保护。"
+    },
+    {
+      "Term": "Vexed status",
+      "Translation": "恼咒",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：恼咒。"
+    },
+    {
+      "Term": "Drowsy status",
+      "Translation": "困倦",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：困倦。"
+    },
+    {
+      "Term": "Vampire status",
+      "Translation": "吸血鬼",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：吸血鬼。"
+    },
+    {
+      "Term": "Swarm status",
+      "Translation": "蝙蝠群",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：蝙蝠群。"
+    },
+    {
+      "Term": "Memories status",
+      "Translation": "法术记忆",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：法术记忆。"
+    },
+    {
+      "Term": "Enkindled status",
+      "Translation": "燃忆",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：燃忆。"
+    },
+    {
+      "Term": "Cacophony status",
+      "Translation": "不谐狂响",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：不谐狂响。"
+    },
+    {
+      "Term": "Catalyst status",
+      "Translation": "催化",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：催化。"
+    },
+    {
+      "Term": "Yak status",
+      "Translation": "牦牛",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：牦牛。"
+    },
+    {
+      "Term": "Quill status",
+      "Translation": "棘刺",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：棘刺。"
+    },
+    {
+      "Term": "Hive status",
+      "Translation": "蜂巢",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：蜂巢。"
+    },
+    {
+      "Term": "-Swarm status",
+      "Translation": "虫群冷却",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：虫群冷却。"
+    },
+    {
+      "Term": "Aqua status",
+      "Translation": "水体",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：水体。"
+    },
+    {
+      "Term": "Sphinx status",
+      "Translation": "斯芬克斯",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：斯芬克斯。"
+    },
+    {
+      "Term": "Werewolf status",
+      "Translation": "狼人",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：狼人。"
+    },
+    {
+      "Term": "Scroll status",
+      "Translation": "卷轴",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：卷轴。"
+    },
+    {
+      "Term": "Crab status",
+      "Translation": "蟹",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：蟹。"
+    },
+    {
+      "Term": "Scarab status",
+      "Translation": "圣甲虫",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：圣甲虫。"
+    },
+    {
+      "Term": "Medusa status",
+      "Translation": "水母",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：水母。"
+    },
+    {
+      "Term": "-Lithotox status",
+      "Translation": "石毒冷却",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：石毒冷却。"
+    },
+    {
+      "Term": "Doom status",
+      "Translation": "厄运",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：厄运。"
+    },
+    {
+      "Term": "Ostracised status",
+      "Translation": "放逐术影响",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：放逐术影响。"
+    },
+    {
+      "Term": "Tesseract status",
+      "Translation": "超立方体",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：超立方体。"
+    },
+    {
+      "Term": "-Star status",
+      "Translation": "星尘冷却",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：星尘冷却。"
+    },
+    {
+      "Term": "-Mesm status",
+      "Translation": "魅惑冷却",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：魅惑冷却。"
+    },
+    {
+      "Term": "Phobia status",
+      "Translation": "恐惧症",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：恐惧症。"
+    },
+    {
+      "Term": "Dim status",
+      "Translation": "法术削弱",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：法术削弱。"
+    },
+    {
+      "Term": "Sunder status",
+      "Translation": "破敌一击",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：破敌一击。"
+    },
+    {
+      "Term": "Devious status",
+      "Translation": "诡诈",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：诡诈。"
+    },
+    {
+      "Term": "Slimifying status",
+      "Translation": "黏液化中",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：黏液化中。"
+    },
+    {
+      "Term": "Jelly status",
+      "Translation": "胶怪",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：胶怪。"
+    },
+    {
+      "Term": "OozeRegen status",
+      "Translation": "再生黏液",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：再生黏液。"
+    },
+    {
+      "Term": "-Hellfire status",
+      "Translation": "地狱火迫击炮冷却",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：地狱火迫击炮冷却。"
+    },
+    {
+      "Term": "Engorged status",
+      "Translation": "饱食",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：饱食。"
+    },
+    {
+      "Term": "Eel status",
+      "Translation": "电鳗",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：电鳗。"
+    },
+    {
+      "Term": "Spore status",
+      "Translation": "孢子",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：孢子。"
+    },
+    {
+      "Term": "lethargy",
+      "Translation": "迟缓",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：迟缓。"
+    },
+    {
+      "Term": "dilettante",
+      "Translation": "浅学者",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：浅学者。"
+    },
+    {
+      "Term": "mortality",
+      "Translation": "必死",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：必死。"
+    },
+    {
+      "Term": "Bane",
+      "Translation": "灾厄",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+    }
+  ],
+  "translation_references": [
+    {
+      "msgctxt": "display.spell",
+      "msgid": "Jinxbite",
+      "msgstr": "厄咒之啮",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "display.item.artifact",
+      "msgid": "demon blade \"bloodbane\"",
+      "msgstr": "恶魔之刃「血祸」",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "display.item.artifact",
+      "msgid": "lance \"wyrmbane\"",
+      "msgstr": "骑枪「龙祸」",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "display.item.artifact",
+      "msgid": "demon blade \"Bloodbane\"",
+      "msgstr": "恶魔之刃「血祸」",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "display.item.appearance",
+      "msgid": "demon blade \"Bloodbane\"",
+      "msgstr": "恶魔之刃「血祸」",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "display.item.appearance",
+      "msgid": "pair of demon blade \"Bloodbane\"",
+      "msgstr": "恶魔之刃「血祸」",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "display.item.appearance",
+      "msgid": "cursed demon blade \"Bloodbane\"",
+      "msgstr": "受诅咒的恶魔之刃「血祸」",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "display.item.appearance",
+      "msgid": "cursed pair of demon blade \"Bloodbane\"",
+      "msgstr": "受诅咒的恶魔之刃「血祸」",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "display.item.artifact",
+      "msgid": "lance \"Wyrmbane\"",
+      "msgstr": "骑枪「龙祸」",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "display.item.appearance",
+      "msgid": "lance \"Wyrmbane\"",
+      "msgstr": "骑枪「龙祸」",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "display.item.appearance",
+      "msgid": "pair of lance \"Wyrmbane\"",
+      "msgstr": "骑枪「龙祸」",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "display.item.appearance",
+      "msgid": "cursed lance \"Wyrmbane\"",
+      "msgstr": "受诅咒的骑枪「龙祸」",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "display.item.appearance",
+      "msgid": "cursed pair of lance \"Wyrmbane\"",
+      "msgstr": "受诅咒的骑枪「龙祸」",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "lookup.category",
+      "msgid": "Bane",
+      "msgstr": "灾厄",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "phase3.describe",
+      "msgid": "[<w>!</w>]: <w>Description</w>|Quote",
+      "msgstr": "[<w>!</w>]: <w>说明</w>|引文",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "phase3.describe",
+      "msgid": "[<w>!</w>]: Description|<w>Quote</w>",
+      "msgstr": "[<w>!</w>]: 说明|<w>引文</w>",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "phase3.describe",
+      "msgid": "\nDamage rating: ",
+      "msgstr": "\n伤害评级：",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "phase3.describe",
+      "msgid": "Base armour rating: ",
+      "msgstr": "基础护甲值：",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "phase3.describe",
+      "msgid": "\nDamage: ",
+      "msgstr": "\n伤害：",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "phase3.skill-menu",
+      "msgid": "the Bane of the Dilettante",
+      "msgstr": "浅尝辄止之厄",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "phase3.describe",
+      "msgid": "\n\nIt cannot be enchanted further.",
+      "msgstr": "\n\n它无法进一步附魔。",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "phase3.describe",
+      "msgid": "Base shield rating: ",
+      "msgstr": "基础格挡值：",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "phase3.describe",
+      "msgid": "     Encumbrance rating: ",
+      "msgstr": "     累赘值：",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "phase3.describe",
+      "msgid": "     Max blocks/turn: ",
+      "msgstr": "     每回合最多格挡：",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "phase3.describe",
+      "msgid": "       Encumbrance rating: ",
+      "msgstr": "       累赘值：",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "phase3.describe",
+      "msgid": "       Evasion: ",
+      "msgstr": "       闪避值：",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "phase3.describe",
+      "msgid": "Stash search prefixes: ",
+      "msgstr": "物品搜索前缀：",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "phase3.describe",
+      "msgid": "\nMenu/colouring prefixes: ",
+      "msgstr": "\n菜单/配色前缀：",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "phase3.describe",
+      "msgid": "Replace inscription with what? ",
+      "msgstr": "将铭文改为什么？",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "phase3.describe",
+      "msgid": "Inscribe with what? ",
+      "msgstr": "刻下什么铭文？",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "a.art-data",
+      "msgid": "deathbane,",
+      "msgstr": "亡灵克星,",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "a.art-data",
+      "msgid": "Deathbane: It inflicts significantly more damage against the undead.",
+      "msgstr": "亡灵克星: 对亡灵造成显著增加的伤害。",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "b.bane",
+      "msgid": "Bane of %s",
+      "msgstr": "%s厄咒",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "b.bane",
+      "msgid": "Your skill with %s, %s, and %s is reduced.",
+      "msgstr": "你的%s、%s和%s技能降低。",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "b.bane.name",
+      "msgid": "Lethargy",
+      "msgstr": "迟缓",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "b.bane.name",
+      "msgid": "Heatstroke",
+      "msgstr": "中暑",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "b.bane.name",
+      "msgid": "Snow-blindness",
+      "msgstr": "雪盲",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "b.bane.name",
+      "msgid": "Electrospasm",
+      "msgstr": "电痉挛",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "b.bane.name",
+      "msgid": "Claustrophobia",
+      "msgstr": "幽闭恐惧",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "b.bane.name",
+      "msgid": "Stumbling",
+      "msgstr": "踉跄",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "b.bane.name",
+      "msgid": "the Removed",
+      "msgstr": "已移除者",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "b.bane.name",
+      "msgid": "Succour",
+      "msgstr": "援敌",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "b.bane.name",
+      "msgid": "Multiplicity",
+      "msgstr": "增殖",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "b.bane.name",
+      "msgid": "the Dilettante",
+      "msgstr": "浅学者",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "b.bane.name",
+      "msgid": "Paradox",
+      "msgstr": "悖论",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "b.bane.name",
+      "msgid": "Warding",
+      "msgstr": "护持",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "b.bane.name",
+      "msgid": "the Hunted",
+      "msgstr": "被猎者",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "b.bane.name",
+      "msgid": "Mortality",
+      "msgstr": "必死",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "d.property",
+      "msgid": "It inflicts you with a random bane when you equip it.",
+      "msgstr": "装备它会使你受到一种随机灾厄。",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "d.duration",
+      "msgid": "You are surrounded by jinxing sprites.",
+      "msgstr": "厄咒精灵环绕着你。",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "d.duration",
+      "msgid": "The jinxing sprites lose interest in you.",
+      "msgstr": "厄咒精灵对你失去了兴趣。",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "d.god.title",
+      "msgid": "Bane of Scribes",
+      "msgstr": "文士克星",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "d.duration",
+      "msgid": "Jinx",
+      "msgstr": "厄咒之啮",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "d.duration",
+      "msgid": "jinxed",
+      "msgstr": "厄咒之啮",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "d.duration",
+      "msgid": "jinxbite",
+      "msgstr": "厄咒之啮",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "d.duration",
+      "msgid": "jinxed (expiring)",
+      "msgstr": "厄咒之啮（即将结束）",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "d.duration",
+      "msgid": "Expiring: You are surrounded by jinxing sprites.",
+      "msgstr": "即将结束：厄咒精灵环绕着你。",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "d.bane",
+      "msgid": "\nYour %s, %s, and %s are currently affected.\n",
+      "msgstr": "\n你的%s、%s和%s目前受到影响。\n",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "d.bane",
+      "msgid": "This bane usually lasts a very long time.",
+      "msgstr": "这项厄咒通常会持续极长时间。",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "d.bane",
+      "msgid": "This bane usually lasts a long time.",
+      "msgstr": "这项厄咒通常会持续较长时间。",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "d.bane",
+      "msgid": "This bane usually lasts a moderate length of time.",
+      "msgstr": "这项厄咒通常会持续中等长度的时间。",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "d.bane",
+      "msgid": "This bane usually lasts a short length of time.",
+      "msgstr": "这项厄咒通常只会持续较短时间。",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "d.bane",
+      "msgid": "\n<lightmagenta>This bane will be lifted from you when you gain another %s XLs worth of experience.</lightmagenta>",
+      "msgstr": "\n<lightmagenta>再获得相当于%s个经验等级的经验后，你就能摆脱这项厄咒。</lightmagenta>",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "f.form.trait",
+      "msgid": "You recover more slowly from Doom and Banes.",
+      "msgstr": "你从厄运和厄咒中恢复得更慢。",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "l.lookup.type",
+      "msgid": "bane",
+      "msgstr": "灾厄",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "l.lookup.name",
+      "msgid": "jinx status",
+      "msgstr": "厄咒之啮",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "m.mutation",
+      "msgid": "You recover more slowly from Doom and Banes.",
+      "msgstr": "你从厄运和厄咒中恢复得更慢。",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "n.note",
+      "msgid": "Gained bane: %s%s",
+      "msgstr": "受到厄咒：%s%s",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "n.note",
+      "msgid": "Lost bane: %s",
+      "msgstr": "解除厄咒：%s",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "p.ui",
+      "msgid": "<green>Wyrmbane glows as a worthy foe approaches.</green>",
+      "msgstr": "<green>劲敌接近，龙祸泛起光芒。</green>",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "d.duration",
+      "msgid": "You are surrounded by jinxing sprites. (expiring)",
+      "msgstr": "厄咒精灵环绕着你。（即将结束）",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "d.duration",
+      "msgid": "The jinxing sprites lose interest in you. (expiring)",
+      "msgstr": "厄咒精灵对你失去了兴趣。（即将结束）",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "d.duration",
+      "msgid": "Expiring: The jinxing sprites lose interest in you.",
+      "msgstr": "即将结束：厄咒精灵对你失去了兴趣。",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "d.duration",
+      "msgid": "Jinx (expiring)",
+      "msgstr": "厄咒之啮（即将结束）",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "d.duration",
+      "msgid": "Expiring: Jinx",
+      "msgstr": "即将结束：厄咒之啮",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "d.duration",
+      "msgid": "Expiring: jinxed",
+      "msgstr": "即将结束：厄咒之啮",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "d.duration",
+      "msgid": "jinxbite (expiring)",
+      "msgstr": "厄咒之啮（即将结束）",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "d.duration",
+      "msgid": "Expiring: jinxbite",
+      "msgstr": "即将结束：厄咒之啮",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "w.ui",
+      "msgid": "Which bane? ",
+      "msgstr": "选择哪个灾厄（输入英文名）？ ",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "w.ui",
+      "msgid": "No matching bane names.",
+      "msgstr": "没有匹配的灾厄名。",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "w.ui",
+      "msgid": "Failure to toggle bane.",
+      "msgstr": "切换灾厄失败。",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "w.raw",
+      "msgid": "No exact match for bane '%s', possible matches are: ",
+      "msgstr": "没有灾厄“%s”的精确匹配；可输入的英文候选为： ",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "equipment.property",
+      "msgid": "Bane",
+      "msgstr": "灾厄",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "equipment.ego",
+      "msgid": "Bane",
+      "msgstr": "灾厄",
+      "file": "ui.po"
+    },
+    {
+      "msgctxt": "textdb:descript/quotes.txt:toadstool",
+      "msgid": "“But the Seneschal gathered the toadstool fly-bane.”\n    -Adam Mickiewicz, _Pan Tadeusz_, III. 1834.\n     trans. G.R. Noyes, 1917.\n",
+      "msgstr": "“而总管采集的是毒蝇伞。”\n    -Adam Mickiewicz, _Pan Tadeusz_, III. 1834.\n     trans. G.R. Noyes, 1917.\n",
+      "file": "textdb.po"
+    },
+    {
+      "msgctxt": "textdb:descript/mutations.txt:accursed mutation",
+      "msgid": "Your accursed nature makes it harder to dispel malignant energies from your\nbeing, reducing the rate at which you can recover from Doom and Banes.\n",
+      "msgstr": "你的诅咒本质让恶性力量更难从身上驱散，使你从厄运和厄咒中恢复得更慢。\n",
+      "file": "textdb.po"
+    },
+    {
+      "msgctxt": "textdb:descript/mutations.txt:dilettante bane",
+      "msgid": "Your skill with your highest weapon skill (at the time of becoming afflicted by\nthis bane) is reduced by 50% and your skill with your two highest skills among\nmagical schools, Invocations, and Evocations are reduced by 25%.\n",
+      "msgstr": "在受到此厄咒时，你等级最高的武器技能会降低50%；在魔法学派、祈祷和唤发之中，等级最高的两项技能会降低25%。\n",
+      "file": "textdb.po"
+    },
+    {
+      "msgctxt": "textdb:descript/mutations.txt:mortality bane",
+      "msgid": "When you are badly injured and alone, a reaper may come to claim you. These reapers\nwill be immune to all damage from non-adjacent sources and, if your XL is less\nthan 14, will additionally be slow. At higher XL, multiple reapers may appear at\nonce.\n\nWhen this bane is lifted, all reapers summoned this way will immediately vanish.\n",
+      "msgstr": "当你身受重伤又孤身一人时，收割者可能会前来索命。这些收割者免疫不与其相邻的来源造成的所有伤害；若你的经验等级低于14，它们的还会行动缓慢。经验等级较高时，可能同时出现多名收割者。\n\n此厄咒解除时，以这种方式召来的所有收割者都会立即消失。\n",
+      "file": "textdb.po"
+    },
+    {
+      "msgctxt": "textdb:descript/status.txt:jinx status",
+      "msgid": "Jinxing spirits encircle you. When you attack foes, those who fail a Will check\nare jinxed, taking damage and becoming drained. The spirits depart quickly when\nno foes are in sight.\n",
+      "msgstr": "施加厄咒的灵体环绕着你。你攻击敌人时，未通过意志检定的目标会受到厄咒，承受伤害并受到吸能。视野内没有敌人时，这些灵体会迅速离去。\n",
+      "file": "textdb.po"
+    },
+    {
+      "msgctxt": "textdb:database/rand_wpn.txt:_short_killer_name_",
+      "msgid": "bane\n\nslayer\n",
+      "msgstr": "之灾厄\n\n终结者\n",
+      "file": "textdb.po"
+    },
+    {
+      "msgctxt": "textdb:database/rand_wpn.txt:killer_name",
+      "msgid": "'s Bane\n\n's Curse\n\n's Death\n\n's Doom\n\n's Foe\n\n's Peril\n\n's Regret\n",
+      "msgstr": "之灾厄\n\n之诅咒\n\n之死\n\n之厄运\n\n之敌\n\n之危\n\n之悔\n",
+      "file": "textdb.po"
+    },
+    {
+      "msgctxt": "textdb:database/randbook.txt:hexes",
+      "msgid": "Ambsace\n\nAnathema\n\nBad Luck\n\nBeguiling\n\nBewitchment\n\nCharms\n\nCurses\n\nDestiny\n\nDoom\n\nEnchantment\n\nEnsorcelling\n\nExecration\n\nFascination\n\nFate\n\nGlamour\n\nGuile\n\nHexes\n\nHexing\n\nIll Luck\n\nImprecation\n\nInterference\n\nJinxing\n\nMalediction\n\nMaleficia\n\nMalisons\n\nMischance\n\nMisfortune\n\nObstruction\n\nOmens\n\nPortents\n\nSigns\n\nSpellbinding\n\nthe Curse\n\nthe Evil Eye\n\nthe Faeries\n\nthe Fairies\n\nthe Fair Folk\n\nthe Jinx\n\nthe Maleficium\n\nthe Oath\n\nthe Sphinx\n\nw:2\nthe Whammy\n\nthe Wyrd\n",
+      "msgstr": "双骰一点\n\n咒诅\n\n坏运\n\n迷惑\n\n妖魅\n\n增益系魔法\n\n诅咒\n\n天命\n\n厄运\n\n附魔\n\n妖咒\n\n咒骂\n\n迷醉\n\n命运\n\n幻魅\n\n狡诈\n\n妖术系魔法\n\n施妖术\n\n恶运\n\n诅咒祈求\n\n干扰\n\n厄咒\n\n恶咒\n\n邪术\n\n咒怨\n\n厄机\n\n不幸\n\n阻挠\n\n预兆\n\n凶兆\n\n征兆\n\n迷魂\n\n诅咒之力\n\n邪眼\n\n妖精\n\n仙灵\n\n精类\n\n厄咒之力\n\n恶术\n\n誓言\n\n斯芬克斯\n\nw:2\n强力诅咒\n\n命数\n",
+      "file": "textdb.po"
+    },
+    {
+      "msgctxt": "textdb:database/randbook.txt:hexes adj",
+      "msgid": "Alluring\n\nBaleful\n\nBecharmed\n\nBecharming\n\nBeguiled\n\nBeguiling\n\nBewitched\n\nBewitching\n\nBound\n\nCaptivating\n\nCharmed\n\nCharming\n\nCunning\n\nCursed\n\nDestined\n\nDire\n\nDoomed\n\nEnchanted\n\nEnchanting\n\nEnsnaring\n\nEnthralled\n\nEnthralling\n\nEntranced\n\nEntrancing\n\nFascinating\n\nFateful\n\nFetching\n\nFettered\n\nFey\n\nGlamourous\n\nHapless\n\nHexed\n\nHexing\n\nHindering\n\nHopeless\n\nIll-boding\n\nIll-fated\n\nIll-omened\n\nIll-starred\n\nInauspicious\n\nJinxed\n\nLost\n\nMaledictive\n\nPortentous\n\nPredestined\n\nSpellbinding\n\nStar-crossed\n\nTragic\n\nTwinkling\n\nUnfortunate\n\nUnlucky\n\nVexatious\n\nVexing\n\nWeird\n",
+      "msgstr": "诱人的\n\n凶煞的\n\n受魅惑的\n\n迷人的\n\n受迷惑的\n\n蛊惑的\n\n受妖术的\n\n施妖术的\n\n束缚的\n\n摄魂的\n\n受魅咒的\n\n魅惑的\n\n狡猾的\n\n受诅咒的\n\n命定的\n\n凶险的\n\n劫数难逃的\n\n受附魔的\n\n附魔的\n\n诱捕的\n\n受奴役的\n\n令人臣服的\n\n入迷的\n\n令人入迷的\n\n令人着迷的\n\n宿命的\n\n动人的\n\n受桎梏的\n\n妖精的\n\n幻魅的\n\n倒霉的\n\n受妖咒的\n\n施妖咒的\n\n妨碍的\n\n无望的\n\n不祥的\n\n命途多舛的\n\n凶兆的\n\n凶星照命的\n\n不吉的\n\n受厄咒的\n\n迷失的\n\n恶咒的\n\n预兆的\n\n预定的\n\n迷魂的\n\n命运乖违的\n\n悲剧的\n\n闪光的\n\n不幸的\n\n不走运的\n\n烦人的\n\n困扰的\n\n奇怪的\n",
+      "file": "textdb.po"
+    }
+  ]
+}

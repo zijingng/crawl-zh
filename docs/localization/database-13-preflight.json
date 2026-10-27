@@ -1,0 +1,993 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "source_keys": 132,
+  "selected": [
+    {
+      "key": "fruit cache",
+      "source": "You reach down and sample @_fruit_and_reaction_@\n",
+      "hits": []
+    },
+    {
+      "key": "meat cache",
+      "source": "You reach down and sample @_meat_and_reaction_@\n",
+      "hits": []
+    },
+    {
+      "key": "baked goods cache",
+      "source": "You reach down and sample @_baked_good_and_reaction_@\n",
+      "hits": []
+    },
+    {
+      "key": "_fruit_and_reaction_",
+      "source": "an apple. Crisp.\n\nan apricot. Delicious.\n\na banana. Delicious.\n\na choko. Bland.\n\nsome grapes. Delicious.\n\nsome lychee. Delicately sweet.\n\nan orange. Delicious.\n\nsome rambutans. Delicious.\n\nsome strawberries. Delicious.\n\na snozzcumber. Putrid!\n\n\na tomato. Savoury.\n\na cherimoya. Tangy!\n\na mango. Yummy.\n\na tamarind. Juicy!\n",
+      "hits": []
+    },
+    {
+      "key": "_meat_and_reaction_",
+      "source": "a smoked eel. Savoury!\n\na yak sausage. Delicious.\n\na cured ham hock. Salty.\n\nsome adder jerky. Delicious.\n\na slice of magically-preserved pepperoni pizza. Delicious.\n\nw:6\nsome smoked snail. Delicious.\n\nw:6\nsome death yak haggis. Delicious.\n\nw:6\nsome alligator jerky. Delicious.\n\nw:6\nsome cured dream mutton. Ephemeral.\n\nw:6\na slice of magically-preserved Pandemonium pizza. Delectable.\n\nw:2\na candy-coated scorpion. Crunchy.\n\nw:2\na pickled kraken tentacle. Astonishing!\n\nw:2\na cured hell ham hock. Spicy!\n\nw:2\nsome shrike confit. Tangy!\n\nw:2\na century hydra egg. An acquired taste.\n\n",
+      "hits": [
+        {
+          "Term": "Hell",
+          "Translation": "地狱",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "hydra",
+          "Translation": "海德拉",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "kraken",
+          "Translation": "海妖",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Pandemonium",
+          "Translation": "魔窟",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "adder",
+          "Translation": "蝰蛇",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "alligator",
+          "Translation": "短吻鳄",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "death yak",
+          "Translation": "死亡牦牛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "scorpion",
+          "Translation": "蝎子",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "tentacle",
+          "Translation": "触手",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "yak",
+          "Translation": "牦牛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "_baked_good_and_reaction_",
+      "source": "w:24\nsome spriggan [bread loaf|tarts|rock buns|scones|biscuits|hardtack]. Delicious.\n\nw:14\nan orcish [pirog|pastel de nata|bizcocho]. Tasty.\n\nw:14\nsome elven [shortbread|rye rolls]. Refined.\n\nsome merfolk [baklava|tsoureki]. Decadent.\n\na stuffed naga paratha. Phenomenal.\n\na draconian baguette. Hearty and warming.\n\nw:6\nsome [dwarven|kobold|kobold] pretzels. Scrumptious.\n\nw:6\nsome choko cake. Less bland than expected!\n\nw:2\nsome [trollish|giant|giant] [wittenberger|grovbrød]. Savoury.\n\nw:2\nsome tengu anpan. Delightful.\n\nw:2\nsome ghoulish sourdough. A strange taste.\n\nw:2\nsome vault guards' spare rations. Filling.\n\nw:2\na strangely fresh circus pie. Mirthful.\n\nw:2\nsome starflower jam biscuits. A disquieting taste.\n",
+      "hits": [
+        {
+          "Term": "kobold",
+          "Translation": "狗头人",
+          "Part of Speech": "noun",
+          "Variants": "kobolds",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/kobold.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "tengu",
+          "Translation": "天狗",
+          "Part of Speech": "noun",
+          "Variants": "Te",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/tengu.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Draconian",
+          "Translation": "龙人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/draconian-base.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Merfolk",
+          "Translation": "人鱼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/merfolk.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Naga",
+          "Translation": "娜迦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/naga.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Spriggan",
+          "Translation": "斯普利根",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/spriggan.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "giant",
+          "Translation": "巨人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "starflower",
+          "Translation": "星之花",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "carnivore fruit cache",
+      "source": "You peruse the fruit pile and shrug.\n",
+      "hits": []
+    },
+    {
+      "key": "carnivore baked goods cache",
+      "source": "You peruse the pile and make a meat sandwich with @_baked_good_and_reaction_@\n",
+      "hits": []
+    },
+    {
+      "key": "short fruit cache",
+      "source": "You root around and sample @_fruit_and_reaction_@\n",
+      "hits": []
+    },
+    {
+      "key": "short meat cache",
+      "source": "You root around and sample @_meat_and_reaction_@\n",
+      "hits": []
+    },
+    {
+      "key": "short baked goods cache",
+      "source": "You root around and sample @_baked_good_and_reaction_@\n",
+      "hits": []
+    },
+    {
+      "key": "stone fruit cache",
+      "source": "You pestle and swallow @_fruit_and_reaction_@\n",
+      "hits": []
+    },
+    {
+      "key": "stone meat cache",
+      "source": "You pestle and swallow @_meat_and_reaction_@\n",
+      "hits": []
+    },
+    {
+      "key": "stone baked goods cache",
+      "source": "You mill down and swallow @_baked_good_and_reaction_@\n",
+      "hits": []
+    },
+    {
+      "key": "inediate fruit cache",
+      "source": "You briefly stare at the fruit pile and sigh.\n",
+      "hits": []
+    },
+    {
+      "key": "inediate meat cache",
+      "source": "You briefly stare at the meat pile and sigh.\n",
+      "hits": []
+    },
+    {
+      "key": "inediate baked goods cache",
+      "source": "You briefly stare at the breadstuffs pile and sigh.\n",
+      "hits": []
+    },
+    {
+      "key": "draconian fruit cache",
+      "source": "You reach down and sample @_fruit_and_reaction_@\n\nw:1\nYou reach down and sample a dragonfruit. You feel vaguely uncomfortable.\n",
+      "hits": [
+        {
+          "Term": "Draconian",
+          "Translation": "龙人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/draconian-base.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "felid fruit cache",
+      "source": "You dice up an apple and nibble upon it. Bland.\n\nYou dice up a banana and nibble upon it. Bland.\n\nYou pick out some berries and nibble upon them. Bland.\n",
+      "hits": [
+        {
+          "Term": "Felid",
+          "Translation": "猫族",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/felid.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "felid meat cache",
+      "source": "You nibble upon @_meat_and_reaction_@\n",
+      "hits": [
+        {
+          "Term": "Felid",
+          "Translation": "猫族",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/felid.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "felid baked goods cache",
+      "source": "You nibble upon @_baked_good_and_reaction_@\n",
+      "hits": [
+        {
+          "Term": "Felid",
+          "Translation": "猫族",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/felid.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "gargoyle fruit cache",
+      "source": "@stone fruit cache@\n",
+      "hits": [
+        {
+          "Term": "gargoyle",
+          "Translation": "石像鬼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/gargoyle.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "gargoyle meat cache",
+      "source": "@stone meat cache@\n",
+      "hits": [
+        {
+          "Term": "gargoyle",
+          "Translation": "石像鬼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/gargoyle.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "gargoyle baked goods cache",
+      "source": "@stone baked goods cache@\n",
+      "hits": [
+        {
+          "Term": "gargoyle",
+          "Translation": "石像鬼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/gargoyle.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "kobold fruit cache",
+      "source": "@carnivore fruit cache@\n",
+      "hits": [
+        {
+          "Term": "kobold",
+          "Translation": "狗头人",
+          "Part of Speech": "noun",
+          "Variants": "kobolds",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/kobold.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "kobold meat cache",
+      "source": "@short meat cache@\n",
+      "hits": [
+        {
+          "Term": "kobold",
+          "Translation": "狗头人",
+          "Part of Speech": "noun",
+          "Variants": "kobolds",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/kobold.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "kobold baked goods cache",
+      "source": "@carnivore baked goods cache@\n",
+      "hits": [
+        {
+          "Term": "kobold",
+          "Translation": "狗头人",
+          "Part of Speech": "noun",
+          "Variants": "kobolds",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/kobold.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "mummy fruit cache",
+      "source": "@inediate fruit cache@\n",
+      "hits": [
+        {
+          "Term": "mummy",
+          "Translation": "木乃伊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/mummy.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "mummy meat cache",
+      "source": "@inediate meat cache@\n",
+      "hits": [
+        {
+          "Term": "mummy",
+          "Translation": "木乃伊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/mummy.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "mummy baked goods cache",
+      "source": "@inediate baked goods cache@\n",
+      "hits": [
+        {
+          "Term": "mummy",
+          "Translation": "木乃伊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/mummy.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "oni fruit cache",
+      "source": "You reach down and grab @_fruit_and_reaction_@ You go for seconds.\n",
+      "hits": [
+        {
+          "Term": "Oni",
+          "Translation": "鬼人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/oni.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "oni baked goods cache",
+      "source": "You reach down and grab @_baked_good_and_reaction_@ You go for seconds.\n",
+      "hits": [
+        {
+          "Term": "Oni",
+          "Translation": "鬼人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/oni.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "poltergeist fruit cache",
+      "source": "@inediate fruit cache@\n",
+      "hits": [
+        {
+          "Term": "Poltergeist",
+          "Translation": "骚灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/poltergeist.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "poltergeist meat cache",
+      "source": "@inediate meat cache@\n",
+      "hits": [
+        {
+          "Term": "Poltergeist",
+          "Translation": "骚灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/poltergeist.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "poltergeist baked goods cache",
+      "source": "@inediate baked goods cache@\n",
+      "hits": [
+        {
+          "Term": "Poltergeist",
+          "Translation": "骚灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/poltergeist.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "revenant fruit cache",
+      "source": "@inediate fruit cache@\n",
+      "hits": [
+        {
+          "Term": "revenant",
+          "Translation": "还魂者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】当前同时是可选种族与怪物名；原“鬼火骷髅”仅描述形象，统一为可用于种族界面的名称。 来源：dat/species/revenant.yaml; dat/descript/monsters.txt。\n【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/revenant.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "revenant meat cache",
+      "source": "@inediate meat cache@\n",
+      "hits": [
+        {
+          "Term": "revenant",
+          "Translation": "还魂者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】当前同时是可选种族与怪物名；原“鬼火骷髅”仅描述形象，统一为可用于种族界面的名称。 来源：dat/species/revenant.yaml; dat/descript/monsters.txt。\n【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/revenant.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "revenant baked goods cache",
+      "source": "@inediate baked goods cache@\n",
+      "hits": [
+        {
+          "Term": "revenant",
+          "Translation": "还魂者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】当前同时是可选种族与怪物名；原“鬼火骷髅”仅描述形象，统一为可用于种族界面的名称。 来源：dat/species/revenant.yaml; dat/descript/monsters.txt。\n【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/revenant.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "spriggan fruit cache",
+      "source": "@short fruit cache@\n",
+      "hits": [
+        {
+          "Term": "Spriggan",
+          "Translation": "斯普利根",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/spriggan.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "spriggan meat cache",
+      "source": "You root around, looking for pizza, but fail to find any.\n\nw:4\nYou find a slice of magically-preserved pizza, and pick the meat off. Delicious!\n",
+      "hits": [
+        {
+          "Term": "Spriggan",
+          "Translation": "斯普利根",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/spriggan.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "spriggan baked goods cache",
+      "source": "You root around and eagerly enjoy @_baked_good_and_reaction_@\n",
+      "hits": [
+        {
+          "Term": "Spriggan",
+          "Translation": "斯普利根",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/spriggan.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "tengu baked goods cache",
+      "source": "You reach down and peck at @_baked_good_and_reaction_@\n",
+      "hits": [
+        {
+          "Term": "tengu",
+          "Translation": "天狗",
+          "Part of Speech": "noun",
+          "Variants": "Te",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/tengu.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "troll fruit cache",
+      "source": "@oni fruit cache@\n",
+      "hits": [
+        {
+          "Term": "troll",
+          "Translation": "巨魔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/troll.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Oni",
+          "Translation": "鬼人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/oni.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "troll baked goods cache",
+      "source": "@oni baked goods cache@\n",
+      "hits": [
+        {
+          "Term": "troll",
+          "Translation": "巨魔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/troll.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Oni",
+          "Translation": "鬼人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/oni.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "amphisbaena fruit cache",
+      "source": "You distend one of your jaws to swallow @_fruit_and_reaction_@\n",
+      "hits": []
+    },
+    {
+      "key": "amphisbaena meat cache",
+      "source": "You distend one of your jaws to swallow @_meat_and_reaction_@\n",
+      "hits": []
+    },
+    {
+      "key": "amphisbaena baked goods cache",
+      "source": "You distend one of your jaws to swallow @_baked_good_and_reaction_@\n",
+      "hits": []
+    },
+    {
+      "key": "bat fruit cache",
+      "source": "You slurp up @_fruit_and_reaction_@\n",
+      "hits": [
+        {
+          "Term": "bat",
+          "Translation": "蝙蝠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "bat baked goods cache",
+      "source": "You swoop down and nibble at @_baked_good_and_reaction_@\n",
+      "hits": [
+        {
+          "Term": "bat",
+          "Translation": "蝙蝠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "blade fruit cache",
+      "source": "You try to grab some fruit with your blades, but fail!\n\nw:4\nYou use your hands like chopsticks to delicately eat @_fruit_and_reaction_@\n",
+      "hits": []
+    },
+    {
+      "key": "blade meat cache",
+      "source": "You try to grab some meat with your blades, but fail!\n\nYou skewer and sample @_meat_and_reaction_@\n",
+      "hits": []
+    },
+    {
+      "key": "death fruit cache",
+      "source": "@inediate fruit cache@\n",
+      "hits": [
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "death meat cache",
+      "source": "@inediate meat cache@\n",
+      "hits": [
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "death baked goods cache",
+      "source": "@inediate baked goods cache@\n",
+      "hits": [
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "dragon fruit cache",
+      "source": "You devour @_fruit_and_reaction_@\n\nw:1\nYou devour a dragonfruit. You feel vaguely uncomfortable.\n",
+      "hits": [
+        {
+          "Term": "dragon",
+          "Translation": "龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "maw fruit cache",
+      "source": "You devour half the fruit pile! It's not enough.\n",
+      "hits": []
+    },
+    {
+      "key": "maw meat cache",
+      "source": "You devour half the meat pile! It's not enough.\n",
+      "hits": []
+    },
+    {
+      "key": "maw baked goods cache",
+      "source": "You devour half the baked goods pile! It's not enough.\n",
+      "hits": []
+    },
+    {
+      "key": "pig fruit cache",
+      "source": "@short fruit cache@\n",
+      "hits": []
+    },
+    {
+      "key": "pig meat cache",
+      "source": "@short meat cache@\n",
+      "hits": []
+    },
+    {
+      "key": "pig baked goods cache",
+      "source": "@short baked goods cache@\n",
+      "hits": []
+    },
+    {
+      "key": "statue fruit cache",
+      "source": "@stone fruit cache@\n",
+      "hits": [
+        {
+          "Term": "statue",
+          "Translation": "雕像",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "statue meat cache",
+      "source": "@stone meat cache@\n",
+      "hits": [
+        {
+          "Term": "statue",
+          "Translation": "雕像",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "statue baked goods cache",
+      "source": "@stone baked goods cache@\n",
+      "hits": [
+        {
+          "Term": "statue",
+          "Translation": "雕像",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "storm fruit cache",
+      "source": "You reach down and electrolyse @_fruit_and_reaction_@\n",
+      "hits": []
+    },
+    {
+      "key": "storm meat cache",
+      "source": "You reach down and electrolyse @_meat_and_reaction_@\n",
+      "hits": []
+    },
+    {
+      "key": "tree fruit cache",
+      "source": "@short fruit cache@\n",
+      "hits": []
+    },
+    {
+      "key": "tree meat cache",
+      "source": "@short meat cache@\n",
+      "hits": []
+    },
+    {
+      "key": "tree baked goods cache",
+      "source": "@short baked goods cache@\n",
+      "hits": []
+    },
+    {
+      "key": "vampire fruit cache",
+      "source": "You root around, looking for a blood orange, but fail to find any.\n\nw:4\nYou reach down and find a blood orange. Delicious.\n",
+      "hits": [
+        {
+          "Term": "vampire",
+          "Translation": "吸血鬼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【版本/语境】怪物译名保留；玩家种族已废弃。 来源：dat/species/deprecated-vampire.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "vampire baked goods cache",
+      "source": "You reach down and sample @_baked_good_and_reaction_@ Not filling, though, alas.\n",
+      "hits": [
+        {
+          "Term": "vampire",
+          "Translation": "吸血鬼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【版本/语境】怪物译名保留；玩家种族已废弃。 来源：dat/species/deprecated-vampire.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    }
+  ],
+  "compound_queries": [
+    "death yak",
+    "dream sheep",
+    "hell hog",
+    "alligator",
+    "scorpion",
+    "kraken",
+    "hydra",
+    "shrike",
+    "orc",
+    "elf",
+    "spriggan",
+    "kobold",
+    "dwarf",
+    "troll",
+    "giant",
+    "naga",
+    "draconian",
+    "merfolk",
+    "ghoul",
+    "vault guard",
+    "tengu",
+    "starflower",
+    "choko",
+    "banana",
+    "apple",
+    "lychee",
+    "rambutan",
+    "snozzcumber"
+  ],
+  "compound_hits": [
+    {
+      "Term": "ghoul",
+      "Translation": "食尸鬼",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【版本/语境】怪物译名保留；玩家种族已废弃，不据此加入现行角色创建列表。 来源：dat/species/deprecated-ghoul.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "hydra",
+      "Translation": "海德拉",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "kobold",
+      "Translation": "狗头人",
+      "Part of Speech": "noun",
+      "Variants": "kobolds",
+      "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/kobold.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "kraken",
+      "Translation": "海妖",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "tengu",
+      "Translation": "天狗",
+      "Part of Speech": "noun",
+      "Variants": "Te",
+      "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/tengu.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "troll",
+      "Translation": "巨魔",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/troll.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Draconian",
+      "Translation": "龙人",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/draconian-base.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Merfolk",
+      "Translation": "人鱼",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/merfolk.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Naga",
+      "Translation": "娜迦",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/naga.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Spriggan",
+      "Translation": "斯普利根",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/spriggan.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "alligator",
+      "Translation": "短吻鳄",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "death yak",
+      "Translation": "死亡牦牛",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "dream sheep",
+      "Translation": "梦羊",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "dwarf",
+      "Translation": "矮人",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "elf",
+      "Translation": "精灵",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "giant",
+      "Translation": "巨人",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "hell hog",
+      "Translation": "地狱猪",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "orc",
+      "Translation": "兽人",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "scorpion",
+      "Translation": "蝎子",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "starflower",
+      "Translation": "星之花",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "vault guard",
+      "Translation": "宝库守卫",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    }
+  ]
+}

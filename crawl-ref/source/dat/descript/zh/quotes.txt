@@ -1,33 +1,3301 @@
+# Generated from localization/zh_CN/textdb.po; do not edit.
+%%%%
+An opulent altar of Gozag
+
+“母亲，我跪在黄金面前，
+他是我的情人，也是我的挚爱；
+知道我如此崇拜他，
+他便泛出忧郁的黄色。
+因为不论金币还是尘土，
+他都随每个欲望而行，
+金钱先生，
+真是一位强大的骑士。”
+    -Francisco de Quevedo, _Poderoso caballero es don Dinero_. 1603.
+     trans. Christopher Johnson, 2009.
+%%%%
+A broken pillar
+
+“押沙龙活着的时候，在王谷为自己立了一根柱子，因为他说：我没有儿子，可以使我的名字流传……”
+    -KJV Bible, 2 Samuel 18:18.
+%%%%
+calcifying dust cloud
+
+“这红岩下有阴影，
+（来，到这红岩的阴影下），
+我要给你看的，既不是
+清晨在你身后阔步的影子，
+也不是黄昏起身迎你的影子；
+我要让你看见，一把尘土里的恐惧。”
+    -T.S. Eliot, “The Waste Land”. 1922
+%%%%
+A crumbling gateway
+
+<Desolation>
+%%%%
+A faded altar of an unknown god
+
+“保罗站在亚略巴古当中，说：雅典人哪，我看你们凡事很敬畏鬼神。我经过时，看见你们所敬拜的，甚至有一座坛，上面写着：献给未知之神。”
+    -KJV Bible, Acts 17:22-23.
+%%%%
+A flagged portal
+
+“我们出征；
+遇见大军，将其镇压；
+攻破坚固阵地，
+杀死守卫的人。
+……
+凶猛战士向我们冲来；
+我们迎战，将他们击溃。
+他们拼命想打败我们；
+我们却征服他们，将他们杀死。”
+    -Thomas Love Peacock, “The War Song of Dinas Vawr”. 1829.
+%%%%
+A gateway back into the Dungeon
+
+“天国的后裔啊！苍穹的宝座！
+深深的沉默与疑虑控制我们，
+虽未使我们惊惶，却也合乎情理。
+从地狱走向光明，道路漫长而艰难。”
+    -John Milton, _Paradise Lost_. 1674 (2nd Ed.).
+%%%%
+A gateway leading deeper into the Abyss.
+
+<Abyss>
 %%%%
 A gateway to Hell
 
-“由我进入愁苦之城，
- 由我进入永劫之苦，
- 由我进入万劫不复的人群之中。
- 正义推动了崇高的造物主，
- 神圣的力量，最高的智慧，本原的爱，
- 创造了我。在我以前未有造物，
- 除了永久存在的以外，
- 而我也将永世长存。
- 进来的人们，你们必须把一切希望抛开。”
-    -阿利盖利·但丁，_神曲_，“地狱篇”，第三章，约1315年。
-约翰·西亚迪于1954年翻译。
+“由我进入痛苦之城，
+由我进入被遗弃的人群，
+由我进入永恒的悲伤。
+
+神圣正义感动了我的建筑者。
+神之全能、原初之爱与至高智慧，
+共同将我建立在此。
+
+在我之前，只有时间无法磨损之物，
+而我立于时间之外。
+进来的人们，抛弃一切希望。”
+    -Dante Alighieri, _The Divine Comedy_, “Inferno”, Canto III. ca. 1315.
+     trans. John Ciardi, 1954.
+%%%%
+A gateway to a ziggurat
+
+“舰长：让所有‘zig’出击！！
+舰长：为了伟大的正义。”
+    -_Zero Wing_. 1990.
+%%%%
+A gateway to the decaying netherworld of Tartarus
+
+<Tartarus>
 %%%%
 A granite statue
 
-“客自海外归，曾见沙漠王国
- 有石像半毁，唯余巨腿
- 蹲立沙砾间。像头旁落，
- 半遭沙埋，但人面依然可畏，
- 那冷笑，那发号施令的高傲，
- 足见雕匠看透了主人的心，
- 才把那石头刻得神情唯肖，
- 而刻像的手和像主的心
- 早成灰烬。像座上大字在目：
- ’吾乃万王之王是也，
- 盖世功业，敢叫天公折服！’
- 此外无一物，但见废墟周围，
- 寂寞平沙空莽莽，
- 伸向荒凉的四方。”
-    -珀西·比希·雪莱，”奥西曼提斯“。1818。
+“我遇见来自古老国度的旅人，
+他说：两条没有躯干的巨大石腿
+立在沙漠中。附近的沙上，
+半埋着一张破碎面孔；紧锁的眉，
+皱起的唇，冷酷发令的讥笑，
+表明雕刻者深谙那些激情，
+将其刻在无生命之物上，使它们
+胜过摹刻的手与滋养它们的心而留存。
+基座上刻着这些话：
+‘我名奥西曼迪亚斯，万王之王：
+强者啊，看我的功业，绝望吧！’
+除此之外，一无所存。巨像残骸四周，
+空旷而无边，孤寂平坦的沙漠
+一直伸向远方。”
+    -Percy Bysshe Shelley, “Ozymandias”. 1818.
 %%%%
+A one-way gate to the infinite horrors of the Abyss
+
+“当你长久凝视深渊，深渊也在凝视你。”
+    -Friedrich Nietzsche, _Beyond Good and Evil_ , Aphorism 146. 1886.
+
+“可是在我们那儿，”爱丽丝仍微微喘着气说，“像我们这样跑得很快、跑上很久，通常就会到别的地方去。”
+“多慢的国度！”王后说，“在这里，你得拼命跑，才能留在原地。想去别的地方，至少得跑得比这再快一倍！”
+    -Lewis Carroll, _Through the Looking-Glass, and What Alice Found There_,
+ch. 2 “The Garden of Live Flowers”. 1871.
+%%%%
+The open sea
+
+“我沉思鱼的奥秘：奇异而无心的美，天真地邪恶。它们互相捕食，吞掉弱小者，没有愤怒、叫喊或表情改变。在那片水域——对它们也是大地与空气——大鱼来回游动，变老却不显衰老，永恒生长却没有肥胖的松软。那是没有道德、没有选择的世界，只有进食、繁殖与长大。我羡慕大鱼，也羡慕别的小池塘中那些穿梭、闪动、泛着金光的小鱼。
+
+人们说‘人心中的野兽’与‘丛林法则’。我漫步在蓝白云天之下，颜色如天坛的琉璃与大理石，不禁想：他们何不说‘人心中的鱼’与‘海洋法则’？毕竟，据说我们来自大海……”
+    -Avram Davidson, “Dagon”, 1959.
+%%%%
+A portal to a secret trove of treasure
+
+“他看见一个大洞窟，拱顶约有成年人的身高，直接凿入岩石，光线从顶上岩面的通气孔和圆窗射入。他原以为盗窟只会一片漆黑，却惊见满屋各种货包，从地面到天花板堆满驼载的丝绸、锦缎、绣布，还有层层彩毯。他又看见数不清的金银钱币，有的堆在地上，有的装在皮袋中。面对如此丰富的货物与钱财，阿里巴巴断定，盗贼在此积存所得与赃物，绝非几年，而是已有许多代。”
+    -_The Arabian Nights_. trans. Sir Richard F. Burton, 1885.
+%%%%
+A portal to somewhere
+
+“洞口从高台延伸，直径已有约三米，但边缘像活物脉动般微微收缩膨胀。透过洞口，能看见形状不断随色彩和光线翻涌变换。紫树倒长在粉红天空中，变成黑花，花又变成巨大黄虫羽毛般的舌头，虫子爬过颤动爆裂的沙漠。仿佛世界尚未决定自己要成为什么样子。只看一瞬便令我头痛，长久凝视的人肯定会发疯。”
+    -Laurence Yep, _Dragon War_. 1992.
+%%%%
+A rock wall
+
+“我不知法律对不对，
+也不知法律错不错；
+我们这些身陷牢狱的人
+只知道墙壁很牢固；
+每一天仿佛一年，
+一年里的每天都漫长。”
+    -Oscar Wilde, “The Ballad of Reading Gaol”. 1898.
+%%%%
+A sacrificial altar of Ru
+
+“接着，我开始卸下双手，放进最上层抽屉。又卸下双脚，与腿一起放进壁橱。我将头装入盒子，把躯干挂在衣架上。然后走出公寓，爬上通往屋顶的楼梯。我推门走出，来到一片美丽的绿色草甸。”
+    -Celestial Navigations, “The Sniper”. 1995.
+%%%%
+A shaft
+
+“重力对基督徒不过是小小麻烦，对教皇、异教徒和绝望者却是恐怖。对鼠及更小动物而言，它几乎没有危险。把小鼠扔下一千码深的矿井，只要地面够软，它到底后稍稍一震，便能走开。大鼠会死，人会摔碎，马会溅开。”
+    -J.B.S. Haldane, “On Being The Right Size”. March 1926.
+%%%%
+A shimmering altar of Xom
+
+智者庄严地低下头，说：
+“好事跟坏事其实根本没差。
+你这白痴。你他妈的蠢货。”
+    -wint, @dril Twitter. June 1, 2014
+%%%%
+A staircase leading out of the dungeon
+
+“我们不会停止探索，
+而一切探索的终点，
+将是回到出发之处，
+第一次认识那个地方。”
+    -T.S. Eliot, “Little Gidding”, _Four Quartets_. 1943.
+%%%%
+A staircase to the Ecumenical Temple
+
+<Temple>
+%%%%
+A staircase to the Elven Halls
+
+<Elven Halls>
+%%%%
+A staircase to the Orcish Mines
+
+<Orcish Mines>
+%%%%
+A staircase to the Shoals
+
+<Shoals>
+%%%%
+A staircase to the Tomb
+
+“整个世界尚不足以满足他，如今一座坟墓便已足够。”
+    -Alexander the Great's epitaph.
+%%%%
+A stormy altar of Qazlal
+
+“风暴不可阻挡地将他推向背对的未来，而面前的废墟堆越积越高，直冲天空。我们称作进步的，正是这场风暴。”
+    -Walter Benjamin, “Theses on the Philosophy of History”. 1940.
+   trans. Harry Zohn, 1969.
+%%%%
+A tree
+
+“我喜欢树，因为比起其他东西，它们似乎更安于自己不得不过的生活。”
+    -Willa Cather, _O Pioneers!_. 1913.
+%%%%
+Abyss
+
+“在这些区域，你甚至不知道骨髓何时会预订异国假期，却忘了邀请你。在紫色内月下思考方正的念头，可能把你身体中每第三个细胞重新定义成动词。有吃脚的运动鞋、吃眼球的双焦眼镜、吃小肠的草莓酸奶。更远、更远的地方，还有某种光之祖先的波长，能爬进过去，吃掉你出生的那一天。
+
+这些事发生在那些不自然地长出枝杈、从容易遗忘的灰色中忽隐忽现的滑稽游客身上时，谁也不眨眼，不抖一下边缘。像她、蕨或木板迷宫输家这样的东西，对大多数存在不过是怪虫，最好也只是古怪奇观，通常则是不受欢迎的寄生物。现实有无限层，她却仍以最糟的方式觉得，自己从未离开家。”
+    -Jonathan Wojcik, _Awful Hospital_. 2021.
+%%%%
+Desolation
+
+“在盐矿里，
+我看见盐瓶里的盐。
+我知道你不信，
+但在那里，它歌唱。
+盐在歌唱，盐矿的皮肤
+用被尘土噎住的嘴歌唱。
+
+独自听见盐的声音时，
+我在空旷沙漠里颤抖。
+在安托法加斯塔附近，
+整片盐原
+用嘶裂的声音，
+喊出一首可怜的歌。”
+    -Pablo Neruda, “Ode to Salt”, 1957.
+     trans. Philip Levine, published 2013
+%%%%
+Elven Halls
+
+“精灵奇妙，令人生奇。
+精灵神奇，带来奇迹。
+精灵梦幻，制造幻梦。
+精灵魅惑，投射魅力。
+精灵迷人，编织迷咒。
+精灵可怖，生出恐惧。
+词语的意思会像蛇一样扭曲；要找蛇，就去那些变了意思的词后面找。
+从来没人说精灵友善。
+精灵很坏。”
+    -Terry Pratchett, _Lords and Ladies_. 1992.
+%%%%
+Orcish Mines
+
+“你装了十六吨，得到了什么？
+又老一天，债更深一层。
+圣彼得，别叫我，我走不了，
+我的灵魂还欠在公司商店。”
+    -Merle Travis, “Sixteen Tons”. 1946.
+%%%%
+Shoals
+
+“我常想到那个古老比喻：我们都是大海上的孤岛。尤其在如今，事情更困难，世界比我们曾想象的更严酷。
+
+哲人说，我们像岛屿。或许是真的。但我也记得更古老的话，一位早被遗忘的先知曾刻在某处洞壁：最终，大海将索取一切。
+
+古老话语如浪撞进脑海，将我从睡眠中唤醒，充满难解的感情。我们像岛屿。是说彼此相连？共享起源？还是只共享下沉的命运？”
+    -“The Sea Will Claim Everything”. 2012.
+%%%%
+Tartarus
+
+“地狱有一片阴郁孤独的地带，
+远离寻常的幽暗。
+那是平坦悲凉、阴影栖居的土地，
+其凄苦，我的诗永远无法尽述。”
+    -Edward Arlington Robinson, “Supremacy”. 1897.
+%%%%
+Temple
+
+“我听见从殿中有大声音向七位天使说：去吧，把盛着上帝愤怒的七碗倒在地上。”
+    -KJV Bible, Revelations 16:1.
+%%%%
+Tomb
+
+“每颗心的深处，都有坟墓与地牢，尽管上面的灯光、音乐与欢宴，使我们忘却它们，忘却其中的亡者与囚徒。但有时，尤其午夜，这些黑暗容器会大开。这样的时刻，心灵敏感却无力行动，想象像镜子，使一切念头鲜活，却无力选择或控制。此时便祈祷悲伤仍沉睡，悔恨的同胞别挣断锁链吧。”
+    -Nathaniel Hawthorne, “The Haunted Mind”. 1835.
+%%%%
+Agony spell
+
+<Curse of Agony spell>
+%%%%
+Alistair's Walking Alembic spell
+
+尽管外形笨重，这普遍被视为阿利斯泰尔最受欢迎的作品。地表图书馆能找到无数变体，按需求制备从地板蜡到蔬菜汤的一切。不过，在地牢深处，多数法师仍偏爱经典版本的战斗用途。
+%%%%
+Animate Dead spell
+
+“记住，我记录的不是疯人的幻象。太阳在天上照耀，也不比我此刻所说更确凿。也许是奇迹造成这一切，但发现的每个阶段都清楚而可信。经历不可思议的日夜劳作与疲惫后，我成功发现了生殖与生命的原因；不仅如此，我自己也能赋予无生命物质活力。”
+    -Mary Shelley, _Frankenstein, or the Modern Prometheus_,
+     Vol. I, Chapter 3. 1818 (1st Ed.)
+%%%%
+Awaken Armour spell
+
+“铁匠塑造钢铁之心，如同领袖塑造士兵之心。若我的护甲能说话，我知道它会说，我们为同一事业而战。”
+%%%%
+Awaken Forest spell
+
+• 赫尔：感染致死！她归我！
+— 索尔：那是她英勇地与榆树作战时扎进的木刺！
+• 赫尔：树是不动的植物，你这蠢货！
+— 索尔：勇气没有界限！
+    -Rich Burlew, _Order of the Stick_, #874.
+%%%%
+Banishment spell
+
+“遗忘的巨河，正将我们卷入无名深渊。”
+    -Ernest Renan, Souvenirs
+%%%%
+Bat Form ability
+
+“蝙蝠已离开钟楼，
+受害者的血已流尽。”
+    -Bauhaus, “Bela Lugosi's Dead”. 1979.
+%%%%
+Bend Time ability
+
+“令人惊叹，
+时间飞逝，
+疯狂索取代价。”
+    -Richard O'Brien, “Time Warp”. 1975.
+%%%%
+Brain Bite spell
+
+“李斯特：我知道你想要什么。粉红色，湿漉漉，就在我脑子里。它就待在那里，哪儿也不去。”
+    -Red Dwarf, _Psirens_. 1993.
+%%%%
+Call Canine Familiar spell
+
+“一切似乎笼罩奇异寂静。但仔细听，却仿佛从下方山谷传来群狼嚎叫。伯爵眼睛一亮，说：
+
+‘听啊，夜的孩子们。多美的音乐！’大概看见我脸上奇怪的神色，他又说：‘先生，你们城里人，无法领会猎手的感情。’”
+    -Bram Stoker, _Dracula_. 1897.
+%%%%
+Cause Fear spell
+
+“米兰达唱起歌时，
+人人转过身去。
+他们习惯了绞索，便服从。”
+    -The Mars Volta, “Miranda That Ghost Just Isn't Holy Anymore”. 2005.
+%%%%
+Chain Lightning spell
+
+“问题不在于傻瓜太多，而在于闪电分配得不对。”
+    -traditionally attributed to Samuel Clemens.
+%%%%
+Charm spell
+
+“他举起手，它们便都停下。我觉得他似乎在说：‘只要你跪下崇拜我，我就把这些生命赐给你，没错，还有更多更伟大的生命，绵延无数世代！’随后，一片血色红云仿佛遮住我的双眼。还不知自己在做什么，我已经打开窗扇，对他说：‘请进，主啊，我的主人！’”
+    -Bram Stoker, _Dracula_. 1897.
+%%%%
+Corrupt ability
+
+“我摸索到窗边，想感受世界，
+听我的疯狂坐在路缘石上歌唱。
+［一个失明、衰老、醉醺醺的人，唱着又低语，
+破靴跟沾过许多阴沟。］
+随着他的歌声，世界开始分崩离析……”
+    -T.S. Eliot, “Prufrock's Pervigilium”. 1912 (published 1996).
+%%%%
+Curse of Agony spell
+
+“难以忍受，是不是？陌生人的苦难，朋友的痛楚。乔伊，世界中心有一首秘密的歌，它的声音如剃刀划过血肉。”
+    -Pinhead, _Hellraiser 3: Hell on Earth_. 1992.
+%%%%
+Dragon's Call spell
+
+“龙去了这里。
+它们躺着……
+未死，也未睡。不是等待，因为等待意味着期待。
+也许我们寻找的词是……休眠。
+它们占据的空间虽不寻常，却仍挤得极紧。没有一立方英寸不填满爪、鳞或尾尖，像错视画：你的眼睛最终明白，每条龙之间的空隙，其实是另一条龙。
+若你认为沙丁鱼巨大、多鳞、高傲而自负，它们便会让你想到一罐沙丁鱼。
+想必在某处，还有开罐的钥匙。”
+    -Terry Pratchett, “Guards! Guards!”. 1990.
+%%%%
+Duel ability
+
+决斗，名词。两位敌人和解之前举行的正式仪式。要圆满遵行，需要极高技巧；若执行笨拙，有时会产生极为意外而可悲的后果。很久以前，有个人在决斗中丢了性命。
+    -Ambrose Bierce, _The Devil's Dictionary_, 1906.
+%%%%
+Ensorcelled Hibernation spell
+
+“甜梦就是这样织成；我又怎能反对？”
+    -Eurythmics, “Sweet Dreams (Are Made of This)”. 1983.
+%%%%
+Eringya's Surprising Crocodile spell
+
+流行传说称，艾琳吉亚首次演示此法术，是在一场关于湿地保护的激烈争论中，用作结束语。不过，多数现代学者认为这只是附会。
+%%%%
+Fire Storm spell
+
+“有人说毁灭没有精妙之处。你猜怎么着？他们死了。”
+    -Jaya Ballard, task mage (Magic: the Gathering).
+%%%%
+Frozen Ramparts spell
+
+“当你跨过那道圆环线，
+冰墙在身后吱嘎作响，
+你是一只奔逃的兔子。”
+    -Jethro Tull, “Skating Away (on the Thin Ice of a New Day)”.  1974.
+%%%%
+Irradiate spell
+
+“天空反光，警告你死期将至。
+风暴来临，快躲开原子潮。
+天空闪光，把房屋变成猪圈，
+把人变成泥土，辐射让心智腐烂。”
+    -Black Sabbath, “Electric Funeral”. 1970.
+%%%%
+Iskenderun's Battlesphere spell
+
+“箴言四：近距离空中支援能掩盖许多罪过。”
+    -Howard Tayler, _The Seventy Maxims of Maximally Effective Mercenaries_,
+     in _Schlock Mercenary_. 2008.
+%%%%
+Lee's Rapid Deconstruction spell
+
+“屋里挤满男女，非利士众首领也在那里。屋顶约有三千男女，看参孙表演。
+
+参孙求告耶和华说：主耶和华啊，求你记念我，再赐我这一次力量，使我向非利士人报双眼之仇。
+
+参孙抱住支撑房屋的两根中央柱子，一根用右手，一根用左手。
+
+他说：让我与非利士人同死吧！便尽力屈身，房屋倒在首领和众人身上。这样，他临死杀的人，比一生杀的还多。”
+    -KJV Bible, Judges 16:27-30.
+%%%%
+Magic Dart spell
+
+“Wie die Mächtigen es schon seit jeher wissen,
+ Es gibt immer einen Kniff;
+ Denn als Guter bist du niemals so gerissen,
+ Ein Zauberpfeil der immer trifft!”
+
+“正如强者早已知道，
+总有一个诀窍；
+因为做个好人，永远不够狡黠，
+一支永远命中的魔法箭！”
+    -ASP, "Verwandlungen I-III". 2008
+%%%%
+Mass Confusion spell
+
+“来吧，我们下去，搅乱他们的语言，使他们彼此听不懂。于是耶和华把他们从那里分散到全地，他们就停止建城。”
+    -KJV Bible, Genesis 11:7-8.
+%%%%
+Maxwell's Portable Piledriver spell
+
+虽然最初用于工业建造，富有进取心的仿制者很快发现，把一个物体以极快、极快的速度撞进另一个物体，还能解决许多其他问题。
+%%%%
+Mephitic Cloud spell
+
+“几年来，印度霍乱愈发倾向于扩散和迁移。它生于恒河三角洲温热沼泽，伴随那片繁茂却无用、人迹罕至、虎伏竹丛的原始岛屿荒野的瘴气升起，在整个印度持续而猛烈地肆虐。向东侵入中国，向西侵入阿富汗与波斯，沿商队主道，将恐怖带到阿斯特拉罕，甚至莫斯科。”
+    -Thomas Mann, _Der Tod in Venedig_, 1911.
+%%%%
+Mercury Arrow spell
+
+“论述中，每种元素都有机会夸耀自身的美德和对人类的用处。但轮到汞时，它宣称自己统领此前出现的一切。汞既是母亲也是父亲，赋予其他金属光泽，使它们有益于人类。没有汞，其他金属便没有使用价值。也许王座会把它限制在固定的统治位置：它统治，却必须流动。”
+    -Karen Pinkus, _Alchemical Mercury: A Theory of Ambivalance_, 2009
+%%%%
+Nazja's Percussive Tempering spell
+
+学者长期认为，锤子只是掩饰此法术所依赖的复杂结构强化魔法的表演。然而，每次尝试将它从咒语中移除，法术都会失效。其含义至今仍有激烈争论。
+%%%%
+Passwall spell
+
+“他说，最好的出路，永远是穿过去。”
+    -Robert Frost, _A Servant to Servants_. 1915.
+%%%%
+Petrify spell
+
+“任何姿势维持太久都会钙化。
+任何信念相信太久都会变成教条。
+任何表情维持太久都会硬成面具。
+而真正的我们是谁：
+那坚硬外壳，
+还是藏在下面柔软而不确定的自我？”
+    -Dorothy Gambrell, _Cat and Girl_, 2011.
+%%%%
+Poison Arrow spell
+
+“我在大厅看见指路的箭头，想到这个无害符号曾是铁器，是不可逃脱、夺人性命的投射物：刺穿人与狮的血肉，在温泉关遮蔽太阳，又永远赐予哈拉尔·西居尔松六英尺英格兰土地。”
+    -Jorge Luis Borges, _Mutations_. 1960.
+     trans. Mildred Boyle
+%%%%
+Sacrifice Love ability
+
+“其中记载着我受诅咒起源的一切，制造我的那一连串恶心情境尽在眼前。它细致描写我可憎的形体，语言刻画着你的恐惧，也使我的恐怖永远无法抹去。我读得反胃，痛苦地喊：‘可恨的获生之日！受诅咒的创造者！为何把我造得如此丑陋，连你也厌恶地离开？上帝怜悯人，照自己形象造得美丽动人；我却是你肮脏的仿本，越相似越可怕。撒旦还有恶魔同伴赞赏和鼓励，我却孤独而遭人憎恨。’”
+    -Mary Shelley, _Frankenstein, or the Modern Prometheus_,
+     Vol. II, Chapter 7. 1818 (1st Ed.)
+%%%%
+Shatter spell
+
+“祭司吹号，百姓呼喊。百姓听见号声，便大声呼喊，城墙就塌陷。众人各自径直上去，夺取了城。
+
+他们用刀，将城中男女老少，以及牛、羊、驴，尽行杀灭。”
+    -KJV Bible, Joshua 6:20-21.
+%%%%
+Slimify ability
+
+“鲁马克：起初只是微热和喉咙干。病毒侵入红细胞后，受害者头晕、出痒疹，接着毒素作用于中枢神经，肌肉剧烈痉挛，然后不可避免地流口水。
+［奥弗在鲁马克描述时逐一出现所有症状。］
+鲁马克：此时，整个消化系统崩溃，伴随无法控制的胀气。
+［奥弗开始不停放屁。］
+鲁马克：最后，可怜虫变成一块颤抖、衰弱的胶冻。”
+    -Airplane! 1980.
+%%%%
+Slouch ability
+
+“我记得跳过时空扭曲之舞，
+痛饮那些时刻，
+黑暗向我袭来，
+虚空正呼唤。”
+    -Richard O'Brien, “Time Warp”. 1975.
+%%%%
+Spellspark Servitor spell
+
+<spellspark servitor>
+%%%%
+Sticky Flame spell
+
+“给一个人火，他能暖和一天；把他点着，他余生都会暖和。”
+    -Terry Pratchett, “Jingo”. 1997.
+%%%%
+Step From Time ability
+
+“如此梦幻，
+哦，幻想让我自由，
+你便看不见我，
+一点也看不见，
+在另一个维度。”
+    -Richard O'Brien, “Time Warp”. 1975.
+%%%%
+Summon Demon spell
+
+“如今正是夜的巫术时分，
+墓园张口，地狱亲自吐出
+瘟疫，送入人间。”
+    -William Shakespeare, _The Tragedy of Hamlet, Prince of Denmark_, III, 2.
+%%%%
+Summon Illusion spell
+
+“我只是副本的副本的副本，
+我说的一切早已有人说过，
+拼成某物，某物，某物，
+如今我再也不能确定。
+
+我只是影子的影子的影子，
+总想追上我自己。
+我只是回声的回声的回声，
+听着某人的求救。
+
+看你引发了什么，
+为何忽然变心？
+你得演好角色，
+副本的副本的——”
+    -Nine Inch Nails, “Copy Of A”. 2013
+%%%%
+Summon Seismosaurus Egg spell
+
+动物学家曾一致认为这种动物已灭绝数百年，直到一位厌世隐士终于弄掉了不该得罪的贵族的头发，世人在其遗物中发现此法术的副本。
+
+发现之后，数支资金充裕的考察队相继出发。但尽管——也许正因为——博物学家之间的竞争有时激烈到暴力相向，蜥蜴巢地的位置至今仍然不明。
+%%%%
+Swiftness spell
+
+“直接走出去，
+你可以离开！！！
+工作、社交活动、电影、家、课堂、牙医、买衣服、
+太高档的大麻店、警察（只要你够快）、友谊。
+要是烂透了……就拔腿走人！！
+真正的赢家会退出。”［原文如此］
+   -Admin, @dasharez0ne Twitter. March 30, 2018
+%%%%
+Temporal Distortion ability
+
+“心思稍一翻转，
+你便滑入时间缝隙，
+一切再也不会相同。”
+    -Richard O'Brien, “Time Warp”. 1975.
+%%%%
+Waterstrike spell
+
+“水在溶解，
+水在移除，
+海洋底部有水。
+在水之下，搬运水，
+移除水，
+在海洋底部。”
+    -Talking Heads, “Once in a Lifetime”. 1980.
+%%%%
+acid dragon scales
+
+<steam dragon scales>
+%%%%
+amulet
+
+“格兰古瓦伸手去拿小袋，她却退开。‘别碰！这是护身符，你不是会破坏咒力，就是会被它伤害。’”
+    -Victor Marie Hugo, _Notre Dame de Paris_, Book II, chapter VII “A Wedding
+     Night”. 1831.
+%%%%
+amulet of faith
+
+<amulet>
+%%%%
+amulet of guardian spirit
+
+<amulet>
+%%%%
+amulet of magic regeneration
+
+<amulet>
+%%%%
+amulet of reflection
+
+<amulet>
+%%%%
+amulet of regeneration
+
+<amulet>
+%%%%
+amulet of the acrobat
+
+<amulet>
+%%%%
+amulet of nothing
+
+<amulet>
+%%%%
+animal skin
+
+“他杀了高贵的穆乔基维斯，
+用皮给自己做手套，
+把毛面朝里，皮面朝外。
+为了让暖和的一面在里，
+便把里面的皮面翻到外；
+为了让寒冷的一面在外，
+便把暖和的毛面放在里。
+所以毛面朝里，
+所以皮面朝外，
+所以他把内外翻过来。”
+    -Anonymous, in Wells' _A Parody Anthology_, p. 120. 1904.
+%%%%
+arbalest
+
+“（泰尔持弩入场）
+泰尔：我珍贵的宝物，我最重要的珍藏，
+我要为你指定一个目标，
+悲伤的呼声穿不过它，你却必须穿透。
+忠实的弓弦啊，你曾无数次
+在游戏中忠诚地为我效劳，
+别在这可怕的危急时刻抛弃我。
+只需这一次准确，我的好弦，
+你曾让锋利的箭飞出无数次；
+若此箭从我手中徒劳飞走，
+我再无第二箭可补。”
+    -Friedrich Schiller, _Wilhelm Tell_, IV, iii. 1804.
+     trans. Sir Theodore Martin, 1898.
+%%%%
+bardiche
+
+“共和国一直在边境维持七八千正规军，防备鞑靼人入侵。国王不供养这些军队，只支付海杜克、塞梅勒和禁卫军的费用。前者穿蓝衣，缀着大纽扣和锡片，头戴毡帽，装备火枪与长柄战斧；据说那是很好的武器。”
+    -John Pinkerton, _A General Collection of the Best and Most Interesting
+     Voyages and Travels in all parts of the World, many of which are now first
+     translated into English. Digested on a New Plan_. 1808.
+%%%%
+battleaxe
+
+“即使在年代相当晚的卡里亚钱币上，双刃斧竖立在柱状长柄上，垂着两条饰带，也很像一尊祭祀偶像。”
+    -Sir Arthur John Evans, “Mycenaean tree and pillar cult and its
+     Mediterranean relations,” _Journal of Hellenic Studies_ XXI, p. 109. 1901.
+%%%%
+book
+
+“在棕榈叶上，在莎草卷上，
+在可塑的泥土与皮革卷上，
+人写下思想，岁月流逝，
+看啊！印刷终于被发现！”
+    -John Greenleaf Whittier, _The Library_, st. 4.
+%%%%
+boomerang
+
+“武器从二三十码外掷出，以惊人速度在空中旋转，击中对手右臂，竟又弹出不少于七八十码，只留下一处可怕挫伤，激起众人赞叹。”
+    -The Sydney Gazette and New South Wales Advertiser, 23 December 1804
+%%%%
+broad axe
+
+“武器啊，匀称、裸露、苍白！
+斧头从母亲腹中抽出！
+木的血肉，金属的骨，只有一肢一唇！
+灰蓝叶片由赤热锻成，斧柄长自小小种子！
+歇在草间草上，
+可倚靠，也供人倚靠。”
+    -Walt Whitman, _Song of the Broad-Axe_, l. 1-6. 1867.
+%%%%
+buckler
+
+“任谁夸耀战场上的勇气，
+我的盾却给不了多少安全。
+该服从自然，而非荣誉的法则：
+所以我丢掉无用盾牌，
+以谨慎逃跑和机巧，
+从坟墓中救回勇气救不了的命。
+更好的盾很快能再得；
+又有谁能再得一条命？”
+    -Archilochos. 7th cent. B.C.
+     trans. William H. Goodwin, 1878.
+%%%%
+cloak of the Thief
+
+“再见了傻瓜们！我猛轰摩托油门，制造一大团烟。烟散后，我已经彻底死在路面上。”
+    -wint, @dril Twitter. July 26, 2016
+%%%%
+chain mail
+
+<leather armour>
+%%%%
+cloak
+
+“贝尔，我的妻，你为何责骂？
+如今是如今，从前是从前。
+遍寻世界，你也难分
+乡人和绅士。
+他们穿黑、绿、黄、蓝，
+远远越过自己的身份。
+我这辈子也要开开眼，
+给自己披一件新斗篷。”
+    -Anonymous, “The Old Cloak”. 16th Century.
+%%%%
+club
+
+“我一直喜欢西非谚语：‘说话温和，手持大棒，你便能走得远。’若没有大棒，组织就不会支持我；若像潘克赫斯特及其他不诚实的疯子所希望的那样叫嚣恫吓，我连十票也得不到。”
+    -Theodore Roosevelt, in a letter to Henry L. Sprague. January 26, 1900.
+%%%%
+dagger
+
+“他拔出匕首，锐利而趁手，
+刺入棕发新娘身体，
+她倒在他脚边死去。
+
+‘等我，亲爱的安妮特，
+等我，亲爱的！’他喊。
+然后将匕首刺进心脏，
+倒毙在她身旁。”
+    -English traditional ballad, “Lord Thomas and Fair Annet”, circa 1650.
+%%%%
+dark maul
+
+“这个口径应该合适。”
+    -prince Dajmiech, “Kajko and Kokosz: The Battle with Dajmiech”, Janusz
+Christa
+%%%%
+demon blade
+
+“Quemadmodum gladius neminem occidit: occidentis telum est.”
+“剑本身不杀人；它只是杀人者使用的武器。”
+    -Lucius Annaeus Seneca, _Epistulae Morales ad Lucilium_, Letter LXXXVII:
+     Some arguments in favor of the simple life, l. 30. ca. 65 A.D.
+     trans. Richard Mott Gummere, 1917.
+%%%%
+demon trident
+
+“听见这话，他跳起来，看见的不是索菲娅，也不是为苏丹后宫打扮得华丽优雅的切尔克斯少女。不，走来的是莫莉·西格里姆：没穿长裙，只着粗糙且不太干净的衬衣，沾着一日劳作留下的气味，手里还拿着干草叉。”
+    -Henry Fielding, _The History of Tom Jones, a Foundling_, Book V, ch. X.
+     1749.
+%%%%
+demon whip
+
+“炎魔可怕地叫喊着向前倒下，影子坠落消失。但倒下时，它仍甩出鞭子，鞭梢缠住巫师双膝，将他拖向边缘。他踉跄倒下，徒劳抓住石头，滑入深渊。”
+    -J.R.R. Tolkien, _The Fellowship of the Ring_. II, 5, “The Bridge of
+     Khazad-dûm”. 1954.
+%%%%
+dire flail
+
+“哈哈哈！”两名手下笑道，“看见勇武骑士的脑袋被我们勇敢同胞砸凹，那些诺曼恶棍该有多丢脸！”
+    -_Tales of Chivalry; or, Perils by Flood and Field_. 1830.
+%%%%
+dreamdust necklace
+
+<dreamshard necklace>
+%%%%
+dreamshard necklace
+
+“我从不知道，从未想过，
+这样的幸福能以神圣之爱充满我。
+我怕醒来发现一切只在脑海，
+这是个梦，还是你真的属于我？”
+    -Dick Powell, "Was It a Dream?". 1928.
+%%%%
+eudemon blade
+
+<demon blade>
+%%%%
+eveningstar
+
+“据说它是诺曼祭司钟爱的武器：反对流血的人，却毫不介意把脑浆砸出来。”
+    -T. M. Allison, “The Flail and Kindred Tools (from a historical and
+     literary standpoint)”, _Archaeologia Aeliana_, Third Series, vol. IV.
+     1908.
+%%%%
+eveningstar "Brilliance"
+
+“可是我害怕黑暗，乌尔扎。”
+
+“有道理，”乌尔鲁答道，“黑暗囚禁光，毁灭一切生命，觊觎所有能量。它是邪恶。”
+
+“什么是邪恶？”詹问。
+
+“邪恶并不存在，”乌尔扎说，“邪恶是存在之间的不和谐。现在，格尔弗林人，带着你的问题走吧。”
+    -A. C. H. Smith, _Jim Henson’s “The Dark Crystal”: The Novelization_. 1982.
+%%%%
+executioner's axe
+
+“她跳舞，被迫在黑夜中跳舞。鞋带她穿过荆棘，划得鲜血直流；她跳过荒原，来到孤零零的小屋。她知道刽子手住在那里，便叩窗呼喊：‘出来，出来！我进不去，我必须跳舞！’
+
+刽子手说：‘你大概不知道我是谁？我用斧头砍坏人的脑袋，听我的斧子多响！’
+
+‘别砍我的头，’卡伦说，‘否则我无法为罪悔改。但砍下穿红鞋的双脚吧？’
+
+她承认一切罪，刽子手砍下穿红鞋的脚；鞋却带着小脚跳过田野，进入深林。
+
+他又给她做木脚和拐杖，教一首罪犯常唱的圣歌。她亲吻持斧的手，穿过荒原离去。”
+    -Hans Christian Andersen, “The Red Shoes”, _Nye Eventyr. Første Bind.
+     Tredie Samling._. 1845.
+%%%%
+falchion
+
+“我也曾凭锋利的好刀，
+把他们赶得乱跳。如今老了，
+这些苦难把我毁了。”
+    -William Shakespeare, _King Lear_, V, iii. 1608.
+%%%%
+fire dragon scales
+
+<steam dragon scales>
+%%%%
+flail
+
+“德军付出巨大努力与伤亡，突破双重防线后仍处下风，因为铠甲不足以抗衡对手粗陋却可怕的武器。波希米亚人装备长铁连枷，挥舞时力大惊人，极少落空。命中时，连枷连铜盔、头骨一并砸穿。”
+    -James A. Wylie, _The History of Protestantism_, vol. I, book 3, ch. 15
+     “John Huss and the Hussite Wars”. 1878.
+%%%%
+frozen axe "Frostbite"
+
+“复仇这道菜，最好冷着吃。”
+    -Klingon proverb, _Star Trek II: The Wrath of Khan_. 1982
+%%%%
+giant club
+
+“巨人随即整装迎战，
+满怀轻蔑与狂怒，
+高举骇人的木棒，
+棒身遍布粗瘤与硬节，
+以为一交手便能将他杀死。”
+    -Edmund Spenser, _The Faerie Queene_, Book I, “The Legend of the Knight of
+     the Red Crosse”, Canto VIII, stanza vii, l. 55-9. 1590.
+%%%%
+giant spiked club
+
+oni-ni-kanabō
+“鬼持带刺铁棒。”
+    -Japanese proverb indicating overwhelming power
+%%%%
+glaive
+
+“要确定短杖、半长枪、钩镰、戟或大刀等长柄武器最适合的长度，应站直，用左手贴身竖持长柄，右手尽可能向上够，再加上作战时容纳双手的长度，使挥击、刺击和格挡都便利。这便是符合身高的长度。通常约八九英尺，即使不完全吻合，也适合各种身材，不妨碍战斗。因为双手可自由移动，随意缩短或延长武器的有效长度，后手后方多出一英尺也无妨。”
+    -George Silver,_Paradoxes of Defence_.1599.
+%%%%
+golden dragon scales
+
+<steam dragon scales>
+%%%%
+gold piece
+
+“萨姆奈使者见他在炉边煮芜菁，便赠黄金。他却让使者离去，说满足于这样晚餐的人不需要黄金；比起拥有黄金，他认为征服拥有黄金的人更光荣。”
+    -Plutarch, “Marcus Cato”, _Lives_. 75 AD.
+    trans. John Dryden, 1683.
+%%%%
+great mace
+
+“将有一人名费里敦兴起，
+继承你的王座，逆转你的命运，
+以牛头钉头锤将你击倒。”
+    -Firdausi, _Shahnameh_. ca. 1000 A.D.
+     trans. Helen Zimmern, 1883.
+%%%%
+great sword
+
+<demon blade>
+%%%%
+halberd
+
+“迪尔米德啊，他战死了，
+头被挑在高高长戟上；
+旗帜遭践踏，纵使主亲临，
+也再无生还希望！
+啊，悲哉！”
+    -James Clarence Mangan , _A Farewell to Patrick Sarsfield, Earl of Lucan_.
+     ca. 1840.
+%%%%
+hammer
+
+“约翰·亨利挥的锤，
+重过九磅。
+他折断左肋，
+内脏落到地上，
+内脏落到地上。”
+    -Onah L. Spencer, _John Henry_. Early 20th cent.
+%%%%
+hand axe
+
+“莉齐·博登拿起斧头，
+砍了母亲四十下。
+看清自己做了什么，
+又给父亲四十一下。”
+    -A popular skipping-rope rhyme, after 1893.
+%%%%
+hand cannon
+
+“我不用手瞄准；用手瞄准的人，已忘记父亲的面容。
+我用眼睛瞄准。
+我不用手射击；用手射击的人，已忘记父亲的面容。
+我用意念射击。
+我不用枪杀人；用枪杀人的人，已忘记父亲的面容。
+我用心杀人。”
+    —Stephen King, “The Dark Tower III: The Waste Lands”
+%%%%
+horn of Geryon
+
+“约书亚召集祭司，说：抬起主的约柜，派七位祭司走在前面，每人拿一支羊角号。
+
+百姓听见羊角号，便尽力呼喊。耶利哥城墙突然倒塌，以色列人直冲入城，将其夺取。他们用刀毁灭城中一切：男女老少、牛羊山羊和驴。”
+    -Joshua 6:6,20-21, New Living Translation
+%%%%
+ice dragon scales
+
+<steam dragon scales>
+%%%%
+iron giant
+
+“你由金属制成，却有感情，会思考，所以你有灵魂。而灵魂不会死。”
+    -_The Iron Giant_. 1999
+%%%%
+javelin
+
+“假如发现兄弟与你妻子同床，用一支标枪把两人一并贯穿，你是正当的。他们也会偿还罪过，被接纳进上帝之国。”
+    -Brigham Young, _Journal of Discourses_, 3:247. 1856.
+%%%%
+kite shield
+
+“……盾对于胜利，也许和剑或矛一样重要。”
+    -Charles Darwin, “The Origin of Species”. 1859.
+%%%%
+lajatang
+
+“它落下时静默，
+如雪片落在草地；
+却执行自由人的意志，
+如闪电执行上帝之意。”
+    -John Pierpont, “The Ballot”. ca. 1850.
+%%%%
+large rock
+
+“我奔向岩石，遮住脸，
+岩石喊：没有藏身处！
+这里没有藏身处。”
+    -Negro spiritual. 19th cent.
+%%%%
+tower shield
+
+<buckler>
+%%%%
+leather armour
+
+“没有什么比铁甲的束缚，
+更能使人类变形。”
+    -William Blake, “Auguries of Innocence”, 99-100. 1803.
+%%%%
+long sword
+
+“我们与大军及其可怕的黑曜石宽剑交战时，最强壮的一批敌人似乎决定捕获一匹马。他们猛烈进攻，抓住一匹受过良好训练、可供竞技与作战的母马。骑手佩德罗·德莫龙骑术精湛，与另外三骑奉命协同冲阵，互相支援；一些敌人抓住长枪使其无法使用，其他人以宽剑砍他，使其重伤。接着又砍马颈，头只剩皮连着。母马倒毙，若非骑兵同伴来救，莫龙恐怕也会被杀。”
+    -Bernal Díaz del Castillo, _The Conquest of New Spain_. 1623.
+     trans. J.M.Cohen, 1963.
+%%%%
+longbow
+
+“罗宾拉开一张好弓，
+随心抽出一箭；
+骄横郡长被他射中，
+躺在地上，再不动弹。”
+    -_A Gest of Robyn Hode_ Sixth Fytte, l. 120-123. ca. 1450.
+%%%%
+mace
+
+“我的计划并不是让争吵不休的殖民地代理人挤满大厅，逼得你每时每刻都得动用权杖来维持和平。”
+    -Edmund Burke, “On Conciliation with America”, speech in Parliament. 1775.
+%%%%
+manual
+
+“手册自有用途……但别把它们与生活混为一谈。”
+    -Robert Fulghum
+%%%%
+morningstar
+
+“阿兹特克人的华丽羽饰与金色骄傲，
+在淬炼之剑面前无济于事。
+羽冠鲜艳、刻着恐怖图像的头盔，
+也挡不住不列颠人手中的尖刺钉头锤，
+它穿透盔与头；或挥动铁制重块，
+摧枯拉朽，落处尽毁。”
+    -Robert Southey, _Madoc_. 1805.
+%%%%
+morningstar "Eos"
+
+“玫瑰色手指的晨曦一出现，人们便聚到光荣赫克托耳的柴堆旁。”
+    -Homer, _The Iliad_, XXIV, 776.
+     trans. A. T. Murray, 1857.
+%%%%
+pearl dragon scales
+
+<steam dragon scales>
+%%%%
+phantom mirror
+
+“走廊遥远尽头，镜子悬在那里，映着我们。我们发现——深夜总难免有这种发现——镜子有某种怪异可怕之处。于是比奥伊想起乌克巴尔一位异端首领的话：‘镜子与交配令人憎恶，因为它们增多了人类。’”
+    -Jorge Luis Borges, _Tlön, Uqbar, Orbis Tertius_. 1947
+      trans. Andrew Hurley, 1998.
+%%%%
+potion
+
+“我给她一剂依我技艺调制的安眠药，
+药力如预期，使她呈现死亡的形貌。
+同时写信给罗密欧，让他在这可怕夜晚前来，
+帮忙从暂借的坟墓将她取出，
+那也正是药力消退的时候。”
+    -William Shakespeare, _Romeo and Juliet_
+%%%%
+potion of curing
+
+“但若你说威士忌，指的是谈话的润滑剂、哲理之酒、好友相聚时共饮的佳酿，让心中有歌、唇边有笑、眼里有满足的暖光……那么，我当然支持它。”
+    -Noah S. Sweat, Jr. “If By Whiskey”. 1952
+%%%%
+potion of enlightenment
+
+“放下尘世的牵绊。进入虚空。放空自己，化为风。”
+    -_The Legend of Korra_. 2014
+%%%%
+potion of invisibility
+
+“我永远忘不了那个黎明，看见双手变得像浑浊玻璃时那种奇异恐惧。随着白昼推移，它们越来越透明、越来越稀薄，最终即使闭上透明眼皮，也能透过手看见病态凌乱的房间。四肢变得玻璃般透明，骨与动脉褪去、消失，细白神经最后消退。我咬紧牙关，坚持到底。最后只剩指甲死去的尖端，苍白惨淡，以及指上某种酸留下的褐色污渍。”
+    -H.G. Wells, _The Invisible Man_, Chapter 20. 1897
+%%%%
+potion of lignification
+
+“祈祷尚未结束，麻木便遍及全身。
+薄树皮包住柔软胸脯，
+头发化为摇动的叶，
+双臂变成挥舞的枝，
+敏捷双脚化为根，紧扣地面；
+面容隐入环绕的叶中。”
+    -Ovid, _Metamorphoses_, Book I:253-259, trans. Brookes More. 1922
+%%%%
+potion of moonshine
+
+“若你说威士忌，指的是魔鬼的酿物、毒害的祸源、玷污纯真、废黜理性、摧毁家庭、制造苦难与贫穷的血腥怪物，没错，甚至真把面包从小孩嘴里夺走……那么，我当然反对它。”
+    -Noah S. Sweat, Jr. “If By Whiskey”. 1952
+%%%%
+potion of resistance
+
+“啊哈，命运要捉弄我？元素要算计我？火、气和水要联手进攻？那就让它们看看意志坚定的人能做什么。我不屈服，一步也不后退，就看看究竟人还是自然占上风！”
+    -Jules Verne, _Journey into the Interior of the Earth_. 1864
+     trans. F.A. Malleson, 1877
+%%%%
+quarterstaff
+
+“罗宾解开腰带，放下长弓，
+拿起另一根橡木枝，坚韧而强壮。
+快活的罗宾说：‘开打之前，先量量，
+我的不能比你的长，免得算作弊。’
+勇敢的亚瑟回答：‘长度无妨，
+我的橡木杖足有八英尺半，
+能打倒小牛，也盼能打倒你。’
+罗宾再也忍不住，猛击一下，
+还没到十点钟，鲜血已流下来。
+他们绕着转，像追逐中的野猪，
+争着伤对方的腿、手臂或任何地方。
+一击还一击，打了两个多小时，
+下手如此狠，每声撞击都响彻树林。”
+    -Anonymous, “Robin Hood and the Tanner”.
+%%%%
+quick blade
+
+“祂已释放那可怕迅疾之剑的命运闪电……”
+    -Julia Ward Howe, “The Battle Hymn of the Republic”. 1861.
+%%%%
+rapier
+
+“最初是谁锻造致命刀刃？
+他野蛮的灵魂，必由粗钢铸成……”
+    -Albius Tibullus, _Elegies_ I, xi. ca. 25 B.C.
+     trans. James Grainger, 1822.
+%%%%
+ring
+
+“金戒指与乳白鸽，
+都是送你的好礼；
+再送你心上人一根麻绳，
+把他挂在树上。”
+    -Oscar Wilde, “Chanson”. 1881.
+%%%%
+ring of the Octopus King
+
+“一位爱唱歌的美人鱼，
+激起章鱼王的欲情。
+蜿蜒的追求者努力求爱，
+可她戴不下他所有戒指。”
+%%%%
+ring mail
+
+<leather armour>
+%%%%
+ring of dexterity
+
+<ring>
+%%%%
+ring of evasion
+
+<ring>
+%%%%
+ring of fire
+
+“爱是燃烧之物，
+围成烈火之环。”
+    -June Carter and Merle Kilgore, “Ring of Fire”. 1963.
+%%%%
+ring of flight
+
+“最令他惊讶的，是那对翅膀合乎逻辑。它们长在完全人类的身体上，显得那么自然，他反而不明白，为什么别人没有。”
+    -Gabriel Garcia Marquez, _A Very Old Man with Enormous Wings_. 1955.
+     trans. Gregory Rabassa. 1972
+%%%%
+ring of ice
+
+“有人说世界毁于火，
+有人说毁于冰。
+以我对欲望的体验，
+我赞同偏爱火的人。
+但若非得毁灭两次，
+我想我对仇恨已懂得够多，
+可以说，论毁灭，
+冰也很出色，
+而且足够。”
+    -Robert Frost, “Fire and Ice”. 1920.
+%%%%
+ring of intelligence
+
+“霍布斯：有效吗？
+卡尔文：我想是。
+我已经觉得更聪明了。”
+    -Bill Watterson, _Calvin and Hobbes_. November 19, 1993.
+%%%%
+ring of magical power
+
+<ring>
+%%%%
+ring of poison resistance
+
+“奶油花：想不到，一直以来有毒的其实是你的杯子。
+黑衣人：两杯都有毒。这几年，我一直在培养对艾奥卡因粉的免疫力。”
+    -_The Princess Bride_. 1987
+%%%%
+ring of positive energy
+
+<ring>
+%%%%
+ring of protection
+
+<ring>
+%%%%
+ring of protection from cold
+
+<ring>
+%%%%
+ring of protection from fire
+
+“沙得拉、米煞和亚伯尼歌三人，被捆着落入烈火窑。
+
+尼布甲尼撒王惊讶，急忙起身问谋士：我们不是捆住三个人扔进火里吗？他们回答：是，王啊。
+
+王说：看，我见四个人松了绑，在火中行走，毫发无伤；第四位的样子像神之子。
+
+王走近窑口，喊：至高神的仆人沙得拉、米煞、亚伯尼歌，出来，到这里来！三人便从火中出来。
+
+众首领、官员、军长和谋士聚来，看见火不能伤他们，头发未焦，衣服未变，连火的气味也没有。”
+    -KJV Bible, Daniel 3:23-27.
+%%%%
+ring of resist corrosion
+
+<ring>
+%%%%
+ring of see invisible
+
+“这是我的秘密，很简单：只有用心，才能看清。真正重要的东西，眼睛看不见。”
+    -Antoine de Saint Exupéry, _The Little Prince_. 1943.
+%%%%
+ring of slaying
+
+“人生太短，不值得把已被杀死的东西再杀一遍。”
+    -Thomas Huxley
+%%%%
+ring of stealth
+
+“作为游戏的一部分，
+她完全忘了自己藏在哪里，
+余下时光，
+都在寻找那些碎片。”
+    -Howard Jones, “Hide and Seek”. 1984.
+%%%%
+ring of strength
+
+“凡杀不死我们的，都使我们更强。”
+    -Friedrich Nietzsche
+%%%%
+ring of willpower
+
+“我的确是王，因为我知道如何统治自己。”
+    -Pietro Aretino, letter to Mr. Agostino Ricchi, May 10th, 1537. from
+      _The Works of Aretino, Translated into English from the original Italian_,
+      trans. Samuel Putnam. 1926
+%%%%
+ring of wizardry
+
+<ring>
+%%%%
+robe
+
+“克娄巴特拉：给我长袍，戴上王冠；
+我心中怀着不朽的渴望。”
+    -William Shakespeare, _Anthony & Cleopatra_, V, ii. ca. 1605.
+%%%%
+scale mail
+
+<leather armour>
+%%%%
+scimitar
+
+“陈列室和庞大图书馆占据整座底层。那里有争论不休、互不相容，却在某种意义上构成十九世纪历史的书；还有来自尼沙普尔的弯刀，在凝固的新月里，战场的风与暴力仿佛仍然活着。”
+    -Jorge Luis Borges, _The Form of the Sword_. 1953.
+     trans. Andrew Hurley.
+%%%%
+scroll
+
+“随每种激情漂流，直到灵魂
+变成任所有风弹奏的琵琶，
+难道为此，我才放弃
+古老智慧与严苛自制？
+我想，我的生命如二度书写的卷轴，
+在少年假日里被胡乱涂满。”
+    -Oscar Wilde, _Helas_. 1881.
+%%%%
+scroll of acquirement
+
+他已不再试着思考，只一遍遍重复祷词：
+“你看，我是畜生。我没有词语，他们没教我词语。我不知道怎样思考，那些混蛋不准我学。但如果你真是……全能……全知……你来弄明白！看看我的心，我知道你需要的一切都在那里，必须在那里。我没把灵魂卖给任何人！它是我的，是人的！你从我这里取出我想要的……我不可能想要坏东西！该死，我什么都想不出，只剩他的那句话……
+‘让人人幸福，免费，而且谁也不会不满意地离开！’”
+    -Arkady and Boris Strugatsky, “Roadside Picnic”. 1972.
+    trans. Antonina W. Bouis, 1977.
+%%%%
+scroll of amnesia
+
+“复仇空洞。我宁愿失忆。”
+    -Tera Lynn Childs
+%%%%
+scroll of blinking
+
+<scroll>
+%%%%
+scroll of brand weapon
+
+<scroll>
+%%%%
+scroll of butterflies
+
+“过去，人们以为改变世界的是大炸弹、疯狂政客、大地震或庞大人口迁移；如今才知道，这是完全脱离现代思想者的老派看法。按混沌理论，真正改变世界的是微小之事。一只蝴蝶在亚马孙丛林扇翼，随后，一场风暴蹂躏半个欧洲……”
+    -Neil Gaiman and Terry Pratchett, _Good Omens: The Nice And Accurate
+     Prophecies of Agnes Nutter, Witch_. 1990.
+%%%%
+scroll of enchant armour
+
+<scroll>
+%%%%
+scroll of enchant weapon
+
+<scroll>
+%%%%
+scroll of fear
+
+“我要为所受伤害复仇：既然不能唤起爱，我便制造恐惧。”
+    -Mary Shelley, _Frankenstein, or the Modern Prometheus_,
+     Vol. II, Chapter 9. 1818 (1st Ed.)
+%%%%
+scroll of fog
+
+“卡尔文：我以前讨厌作文，现在很喜欢。我明白了，写作的目的就是膨胀薄弱观点、掩盖糟糕推理、阻止清晰表达。稍加练习，文章就能变成令人畏惧、穿不透的浓雾！”
+    -Bill Watterson, _Calvin and Hobbes_. February 11th, 1993.
+%%%%
+scroll of identify
+
+“这东西依其本性，自己究竟是什么？实质是什么？材料或正当用途是什么？形式或直接原因是什么？在世上为何而存在，又将持续多久？面对一切事物，你都应如此审察。”
+    -Marcus Aurelius, _Marcus Aurelius Antoninus - His Meditations concerning
+     himselfe_, Book VIII, X. trans. Meric Casaubon, 1634.
+%%%%
+scroll of immolation
+
+<scroll>
+%%%%
+scroll of revelation
+
+“口袋地图真有用！”我说。
+“那也是我们向贵国学的，”先生说，“制图。但我们走得更远。你觉得最大多大的地图才实用？”
+“一英里画六英寸左右。”
+“才六英寸！我们很快便画到一英里六码，后来试一百码。再后来有了最伟大的主意：一英里画一英里，给全国做了地图！”
+“常用吗？”
+“还从未展开。农民反对，说会盖住全国，挡掉阳光！所以现在我们用国土本身作地图，我保证，效果几乎一样好。”
+    -Lewis Carroll, _Sylvie and Bruno Concluded_, Chapter XI. 1895
+%%%%
+scroll of noise
+
+“图书馆建立的地点，原是一座据说收留可怜畸形者的疗养院，这吸引了毫不渴望‘正常人际交流’的人。我记得一个人，言谈、推理、执业处处正常，只有一点例外：莫名需要在数千张大纸上写满似乎无意义的词、近似哀号的音节、连续的愤怒与痛苦叫喊、残句，以及不知向谁发出的恳求。”
+    -Giorgio de Maria, _The Twenty Days of Turin_, 1975.
+     trans. Ramon Glazov, 2016
+%%%%
+scroll of silence
+
+“在裸露灯光中，我看见
+一万人，也许更多。
+人们交谈却不说话，
+人们听见却不聆听；
+人们写下歌曲，
+却从未有人歌唱。
+谁也不敢
+扰乱那
+寂静之声。”
+    -Simon & Garfunkel, _The Sound of Silence_. 1964.
+%%%%
+scroll of summoning
+
+“你从天上荣耀地降临，显现在空中，从身边遣出召集众生的大天使，宣告你可畏的审判台。”
+    -John Milton, _Paradise Lost_, Book III, 1667.
+%%%%
+scroll of teleportation
+
+“Eiris sazun idisi
+sazun hera duoder
+suma hapt heptidun
+suma heri lezidun
+suma clubodun
+umbi cuoniouuidi
+insprinc haptbandun
+inuar uigandun
+
+［妇人曾坐在那里，
+她们坐在此处、彼处。
+有的系紧束缚，
+有的阻住军队，
+有的解开锁链：
+挣脱束缚，
+逃离敌人！］”
+    -First Merseburg incantation, trans. Patricia Giangrosso, 2001
+%%%%
+scroll of torment
+
+<scroll>
+%%%%
+scroll of vulnerability
+
+<scroll>
+%%%%
+scythe
+
+“那是本能，像闪电击中却不伤人一样不合逻辑。每天必须收割谷物。就是得割。为什么？没有为什么。他望着大手中的镰刀发笑，吹着口哨走向成熟、等候的田地，开始干活。他觉得自己有些疯。可那不过是一块再普通不过的麦田，真的，不是吗？”
+    -Ray Bradbury, _The Scythe_. 1943.
+%%%%
+shillelagh "Devastator"
+
+“‘万岁，伙计们！’我说，挥出了木棒。
+旁边几个戈尔韦人见我跛行，
+大喊万岁，加入混战。
+让路！清路！为通往都柏林的崎岖道路！”
+    -D.K. Gavan, _Rocky Road to Dublin_. 19th Century.
+%%%%
+shortbow
+
+“你们是弓，儿女是从你们身上射出的活箭。”
+    -Khalil Ghibran, _The Prophet_, “On Children”. 1923.
+%%%%
+short sword
+
+“最初是谁锻造致命刀刃？
+他野蛮的灵魂，必由粗钢铸成。”
+    -Albius Tibullus, _Elegies_ I, xi. ca. 25 B.C.
+     trans. James Grainger, 1822.
+%%%%
+sling
+
+“大卫伸手入袋，取石甩出，打中非利士人的额。石头陷入额中，那人便扑面倒地。”
+    -KJV Bible, 1 Samuel 17:49.
+%%%%
+greatsling "Punk"
+
+“梅曾提乌斯将呼啸的投石索
+绕头挥转三次，瞄准。
+熔铅嘶鸣着穿透太阳穴，
+勇敢青年倒毙尘土。”
+    -Virgil, Aeneid 9
+     trans. E. Fairfax Taylor
+%%%%
+giant club "Skullcrusher"
+
+“掘开逝去英雄高耸的坟冢，
+他长眠在孤独海岸远方。
+他倒下时，诸国哀悼，
+如今成千上万悲伤者无一再哭，
+也无尚武崇拜者守夜。
+史书说，半神曾现于此。
+从散乱骨堆取出那颗头骨：
+那是可让神居住的殿堂吗？
+如今连蛆虫也嫌弃这破屋！
+
+看破拱、毁墙、空室与污门。
+这里曾是野心的高堂，
+思想的圆顶，灵魂的宫殿。
+透过无光无眼的洞，
+看见智慧、机敏的欢乐居所，
+和从不服管束的激情。
+圣徒、贤者与智辩者所有著述，
+能重新住满孤塔、修复这间居所吗？”
+    -Lord Byron, _Childe Harold's Pilgrimage_, Canto the Second, Stanzas V-VI
+%%%%
+spear
+
+“战场上，戟不如枪。枪可抢先，戟则偏于防守。两人本领相同，持枪者会略占优势。”
+    -Miyamoto Musashi, _The Book of Five Rings_. 1645.
+%%%%
+staff
+
+芭蕉和尚示众云：“尔有拄杖子，我与尔拄杖子；尔无拄杖子，我夺尔拄杖子。”
+
+无门曰：“扶过断桥水，伴归无月村。若唤作拄杖，入地狱如箭。”
+    -无门慧开，《无门关》第四十四则“芭蕉拄杖”。1228年。
+%%%%
+staff of air
+
+<staff>
+%%%%
+staff of alchemy
+
+<staff>
+%%%%
+staff of cold
+
+<staff>
+%%%%
+staff of conjuration
+
+<staff>
+%%%%
+staff of necromancy
+
+“‘我是埃斯鲁阿德的阿德阿拜德，达努神族善良的巫术之神；鲁阿德罗费萨与埃奥凯德奥拉希尔，也是我的名字。’
+
+他背着儿子之一甜唇凯尔梅特，儿子曾在与爱尔兰至高王、基安之子卢的战斗中阵亡。达格达运用知识，在尸体周围放乳香、没药与草药，背起凯尔梅特，寻遍世界，来到东方大地。
+
+他遇见三个携父亲宝物赶路的人，问他们消息。他们说：‘我们是同父同母三兄弟，正在分父亲的宝物。’
+‘有什么？’
+‘衬衣、棍杖和斗篷。’
+‘有何功效？’
+‘你见到的巨杖，一端光滑，一端粗糙。一端杀死活人，另一端使死者复生。’”
+    -Osborn Bergin, “How the Dagda Got His Magic Staff”, _Medieval Studies in
+     Memory of Gertrude Schoepperle Loomis_. 1927.
+%%%%
+staff of earth
+
+<staff>
+%%%%
+staff of fire
+
+“巫师忽然想起神的话：世间所有生物中，只有火知道他儿子是幻影。这记忆起初安慰他，最终却折磨他。他怕儿子琢磨这异常特权，发现自己不过是幻象。不是人，而是他人梦的投影——何等无比的屈辱，何等疯狂！”
+    -Jorge Luis Borges, _The Circular Ruins_. 1940.
+    trans. Anthony Bonner, 1962.
+%%%%
+steam dragon scales
+
+“它以层层紧封的鳞甲为傲。一片挨着一片，空气也进不去。它们彼此相连、紧紧贴合，不能分离。”
+    -KJV Bible, Job 41:15-17.
+%%%%
+stone
+
+“小石头多幸福，
+独自在路上漫游，
+不关心功名，
+不害怕急难。
+路过的宇宙
+为它披上本色棕衣；
+像太阳般独立，
+结伴或独自发光。
+以随意的简朴，
+履行绝对的法令。”
+    -Emily Dickinson, “How happy is the little Stone”. ca. 1865.
+%%%%
+storm dragon scales
+
+<steam dragon scales>
+%%%%
+storm talisman
+
+“据说风暴形态带来
+狂风与骤雨。
+当心它的力量，当心它的力量。
+虽为诸神带来黑夜，
+却效命血红灵体。
+当心它的终局，当心它的终局。”
+    -Brandon Sanderson, “Words of Radiance”. 2014.
+%%%%
+swamp dragon scales
+
+<steam dragon scales>
+%%%%
+talisman of death
+
+“想活得久，就别唱歌，
+他们用不着你的歌。
+你死了，死了，死了，
+死了，离开这世界。
+
+你不会有第二次机会，
+每个动作提前筹划。
+继续死着，死着，死着，
+死着，离开这世界。”
+    -Norma Tanega, “You’re Dead”. 1966
+%%%%
+throwing net
+
+“那受惊之物，
+坐在网中的神情！”
+    -Edna St. Vincent Millay, “When the Year Grows Old”. 1917.
+%%%%
+tower shield of Ignorance
+
+“别想超越它，下面更好。
+生活从身边溜走，你永不会知道。
+一切简单时，真是妙不可言。
+别想超越它，在下面就好。”
+    -Daryl Hall & John Oates, “No Brain, No Pain”. 1979.
+%%%%
+trident
+
+“略过中间一两天的活动吧，无非射猎、追逐等寻常林间消遣，不足以耽搁读者。我们转向一种苏格兰特色活动，可称为猎鲑鱼：追逐鱼，用带倒钩的矛，或称作 waster 的长柄三叉戟刺击。这在埃斯克河口和苏格兰其他产鲑河流中颇流行。”
+    -Sir Walter Scott, _Guy Mannering_, ch. XXVI. 1815.
+%%%%
+triple crossbow
+
+“势如彍弩，节如发机。”
+    -孙武，《孙子兵法·兵势》
+%%%%
+triple sword
+
+<demon blade>
+%%%%
+troll leather armour
+
+“巨魔王：听着，佩尔王子，讲点道理！你生来适合当巨魔，举止已经很像！你也想变成巨魔，不是吗？
+佩尔·金特：当然。换个新娘和富足王国，我愿牺牲一些，但一切都有界限。我装了尾巴，可还能解开朋友打的结，把它卸掉；我脱了旧补丁裤，想穿仍能再穿。我想，巨魔生活方式也一样容易应付。我可以发誓母牛是少女，誓言不难吞下。但知道自己永不能自由，连死也不能以人类身份死，只能以山中巨魔终老，你又明说永不能回头——这我绝不接受。”
+    -Henrik Ibsen, _Peer Gynt_ . 1867.
+%%%%
+wand
+
+“选择原则便是魔法师的魔杖，使他能随心召来任何形态与模样的生命。”
+    -William Youatt, _Sheep: their breeds, management, and diseases; to which
+     is added the Mountain Shepherd's Manual_, ch. III. 1837.
+%%%%
+wand of acid
+
+<wand>
+%%%%
+wand of charming
+
+“这魅力不是表面的涂层，不是方便行事的黏液或油膏，而是能认出自己，并主动去迎接他人身上同样的魅力，不论在何处相遇。”
+    -Michael Hofmann, “Hell, he'll be frozen stiff!”, London Review of Books,
+     2022.
+
+“他举起手，它们便都停下。我觉得他似乎在说：‘只要你跪下崇拜我，我就把这些生命赐给你，没错，还有更多更伟大的生命，绵延无数世代！’随后，一片血色红云仿佛遮住我的双眼。还不知自己在做什么，我已经打开窗扇，对他说：‘请进，主啊，我的主人！’”
+    -Bram Stoker, _Dracula_. 1897.
+%%%%
+wand of digging
+
+“本该由地面孔隙承担的地方，暗中挖出了大洞；本应爬行的东西，学会了行走。”
+    -H.P. Lovecraft, “The Festival”. 1925
+%%%%
+wand of flame
+
+<wand>
+%%%%
+wand of iceblast
+
+<wand>
+%%%%
+wand of light
+
+<wand>
+%%%%
+wand of mindburst
+
+<wand>
+%%%%
+wand of paralysis
+
+<wand>
+%%%%
+wand of polymorph
+
+“一天清晨，格里高尔·萨姆沙从不安的梦中醒来，发现自己在床上变成了一只巨大的害虫。”
+    -Franz Kafka, _Die Verwandlung_. 1915
+%%%%
+wand of quicksilver
+
+<wand>
+%%%%
+wand of roots
+
+<wand>
+%%%%
+wand of warping
+
+<wand>
+%%%%
+war axe
+
+“马克斯说：愿上帝成全那个吻。
+凯蒂合紧祈祷的双掌，叹道：愿上帝成全那把斧！”
+    -Isabella Valancey Crawford, “Malcolm's Katie: A Love Story”, Part I, _Old
+     Spookses' Pass, Malcolm's Katie and Other Poems_. 1884.
+%%%%
+whip
+
+“心碎，不是被棍棒，
+也不是被石头。
+我见过小得看不见的鞭，
+抽打那神奇生灵，直到倒下。
+可那鞭子的名字，
+当时高贵得不能说。”
+    -Emily Dickinson, “Not with a Club, the Heart is broken”. ca. 1865.
+%%%%
+Aizul
+
+在怪物追上你以前，
+自由奔跑直到睡去，难道不美吗？
+    -Taylor Swift, _Innocent_, 2010.
+%%%%
+Asterion
+
+“事实上，我独一无二。人可以传授给他人的东西，我毫无兴趣；像那位哲人一样，我认为写作之术什么也传达不了。恼人而琐碎的细节，在我的精神里没有位置；我的精神只接纳宏伟之物。”
+  -Jorge Luis Borges, “The House of Asterion”. 1947.
+   trans. Antonios Sarhanis, 2008.
+%%%%
+Antaeus
+
+“那里由波塞冬之子安泰俄斯统治，他常强迫陌生人与自己摔跤并将其杀死。赫拉克勒斯被迫交手时，抱住他举向空中，将其折断、杀死；因为他每次触地，力量就会增长，所以有人说他是大地之子。”
+    -Pseudo-Apollodorus , _Library and Epitome_, 2.5.11. ca. 150 BC.
+    trans. Sir James George Frazer, 1913.
+
+“矿里的总工头叫安泰俄斯，是个肥胖巨人，留着浓黑胡须，仿佛真能从大地母亲汲取力量。”
+    -Primo Levi, “The Periodic Table”. 1975.
+%%%%
+Asmodeus
+
+“至于我，还有别的差事：安排荒唐婚姻，将白胡老人配给未成年人，主人配给仆役，有点嫁妆的姑娘配给一无所有的温柔情郎。奢华、放荡、赌博与化学，都是我引入人间。我写了第一本食谱，发明节庆、舞蹈、音乐、戏剧和最新时尚；一句话，我就是阿斯蒙蒂斯，别号双杖魔鬼。”
+    -Alain René Le Sage, _Asmodeus: Or, The Devil on Two Sticks_. 1707.
+%%%%
+Azrael
+
+“安拉说：
+既然你做了此事，阿兹拉尔，这职责便归你。
+人们时辰到了，你要替我收取男女灵魂，
+圣人与罪人，乞丐与王侯，老人或年轻人，
+无论何事发生；即使朋友哭泣，
+亲人失去所爱，心中悲痛哀伤。
+于是，阿兹拉尔成为死亡的使者。”
+    -J. E. Hanauer, _Folk-lore of the Holy Land, Moslem, Christian and Jewish_.
+1907.
+%%%%
+Crazy Yiuf
+
+“有位留胡子的老人说：
+果然如我所怕！
+两只猫头鹰、一只母鸡，
+四只云雀、一只鹪鹩，
+全在我的胡子里筑巢啦！”
+    -Edward Lear, _A Book of Nonsense [No. 1]_. 1846.
+%%%%
+Dispater
+
+“朱庇特更古老的名字更能表明这一点：从前称 Diovis 和 Diespiter，即‘白昼之父’；诸神、神圣以及天空等词由此得名，露天之说及 Dius Fidius 之名也与此有关。因此，他的殿顶开有孔，使人可看见 divum，也就是天空。有些人否认应该在屋顶下以此神起誓。埃利乌斯说，Dius Fidius 是 Diovis 之子，如希腊人的狄俄斯库里卡斯托尔；又认为他就是萨宾语的 Sancus 和希腊人的赫拉克勒斯。最下方的神又称 Dis Pater，与大地相连，万物从那里生，也在那里亡；因他是诞生的终点，又被称作 Orcus。”
+    -Marcus Terentius Varro, _De Lingua Latina_, Liber V, circa 40 BC.
+%%%%
+Dowan
+
+“技巧与优雅，这对孪生兄妹，正在你的指尖嬉戏起舞。”
+    -Rabindranath Tagore, _Chitra_, Act I, Scene iv. 1914.
+%%%%
+Duvessa
+
+“一对双胞胎，女孩平凡，
+兄弟却英俊而虚荣。
+父亲说：让他夸外貌，你且读书！
+最好的美，生在头脑中。”
+    -Aesop & Walter Crane, _The Baby's Own Aesop_, 36: “Brother & Sister”.
+1887.
+%%%%
+Edmund
+
+“但愿我的计谋成功，卑贱的埃德蒙
+将压过嫡子。我成长，我兴旺。
+诸神啊，现在站到私生子这一边！”
+    -William Shakespeare, _King Lear_, I, ii. 1606.
+
+“两军列阵时，埃德蒙提议单打独斗裁定王位；克努特却说，自己身材矮小，很难战胜高大健壮的埃德蒙，不如像他们父亲那样分治王国。”
+    -Thomas Keightley, _The History of England_. 1839.
+%%%%
+Frederick
+
+“我彻底反对决斗。我认为它不明智，知道它危险，而且有罪。若有人挑战我，我会亲切宽容地握住他的手，领到安静僻处，再杀了他。”
+    -Mark Twain, _Autobiography of Mark Twain_. 1924.
+%%%%
+Geryon
+
+“克律萨俄耳娶光荣俄刻阿诺斯之女卡利罗厄，生下三头革律翁。后来，赫拉克勒斯渡过俄刻阿诺斯河，在远方昏暗牧场杀死奥尔托斯与牧人欧律提翁，将宽额牛群赶往神圣提任斯；也在环海厄律忒亚，凭伟力将革律翁杀死在他踉跄行走的牛群旁。”
+    -Hesiod, _Theogony_, circa 700 BCE.
+%%%%
+Harold
+
+“一，锁定目标，
+二，放下诱饵，
+三，慢慢撒网，
+四，抓住那人。
+
+抓住那人，抓住那人。
+我寻找这人，要把他卖给别人，
+卖给别人，至少十倍价钱。”
+    —Front 242, “Headhunter”
+%%%%
+Ilsuiw
+
+“我们曾流连海的宫室，
+身旁海女缠着红褐海草，
+直到人声唤醒我们，而我们淹没。”
+    -T.S. Eliot, _The Love Song of J. Alfred Prufrock_. lines 129-131. 1915.
+%%%%
+Khufu
+
+“我越过苍白的沙线向远处看，见到一座黄金金字塔，胡夫建造的奇迹。它以黄金奇观向我致意，以黄金之物迎接我；我将永远记住这黄金奇迹。”
+    -Robert Hichens, _The Spell of Egypt_. 1910.
+%%%%
+Kirke
+
+“看，你的同伴在喀耳刻屋里，像猪一样关在紧闭的栏中。你来救他们？不，我告诉你，你也回不去，将和他们一起留下。”
+    -Homer, Odysseia
+%%%%
+Lernaean hydra
+
+“他的第二项功业是杀死勒尔那海德拉，一个躯干长出一百条脖子，每条都有蛇头。砍掉一头，断处便生出两个，所以它理所当然被视为不可战胜：每被制服一处，就有双倍支援代替。为应付这难缠怪物，赫拉克勒斯想出巧计，命伊奥拉俄斯以火把灼烧断口，止住血流。”
+    -Diodorus Siculus, _Bibliotheca Historica_. [4. 11. 5.]. c. 100.
+%%%%
+Lodul
+
+“猫：可是谁能说一件东西值多少？
+女孩：据说是自由市场。
+猫：那灵魂该标什么价？
+女孩：每小时 $7.25。”
+    -Dorothy Gambrell, _Cat and Girl_, 2010.
+%%%%
+Mara
+
+“今夜，幻象之主玛拉从你们中间经过，他在梦者中强大，作恶亦强大。他遇见另一位以不同方式操纵梦境者：达摩，能将做梦者驱出梦。他们争斗，玛拉不复存在。死神为何与幻术师争斗？你们说，神的道路无法理解。这不是答案。”
+    -Roger Zelazny, “Lord of Light”. 1967.
+
+“只追求享乐、感官不受约束、饮食无度、懒惰虚弱的人，必被魔罗摧倒，如风摧弱树。”
+    -The Buddha, _Dhammapada_, 1:7.
+     trans. F. Max Muller
+%%%%
+Maurice
+
+“捉贼！捉贼！”声音有种魔力。商人离开柜台，车夫离开货车；屠夫扔托盘，面包师扔篮子，送奶工扔桶，跑腿童扔包裹，学生扔弹珠，铺路工扔鹤嘴锄，孩子扔球拍。他们乱哄哄飞跑，撕扯、叫喊、尖叫，转角撞倒行人，惊起狗，吓坏鸡；街道、广场和庭院全回荡着这声音。
+    -Charles Dickens, _Oliver Twist_. 1838.
+%%%%
+Menkaure
+
+“埃及人啊，你们已听见王言！
+我去，不再回来。但伟大神祇意旨明确：
+把恶行恶念带到祂们脚下，
+热切满足祂们的喜悦，
+收获诸神赞赏——丰厚恩赐——
+以及长久岁月。”
+    -Matthew Arnold, _Mycerinus_
+%%%%
+Murray
+
+“看你身后！一只三头猴！”
+    -Guybrush Threepwood, _The Secret of Monkey Island_
+%%%%
+Natasha
+
+“猫同其他野兽一样，似乎有某种理性与语言，可以彼此理解。但说到这只老猫，我更认为它是女妖或巫婆，而非猫。女巫常以此形态行走，于是有了既真实又常见的谚语：猫有九命，也就是说，女巫可九次披上猫的身体。”
+    -William Baldwin, “Beware the Cat”, 1584
+%%%%
+Nikola
+
+“可以像但以理般确信地预言，娴熟的电气师将决定不久将来的战争。”
+    -Nikola Tesla, “The Transmission of Electrical Energy Without Wires As a
+Means for Furthering Peace”, _Electrical World and Engineer_. January 7, 1905.
+%%%%
+Norris
+
+“唯有死亡赋予生命意义，而这意义完全是否定的。”
+    -Georges Poulet
+%%%%
+Parghit
+
+“你拿那大棒要干什么？打我？最好打得有效，打得够疼，最好一击杀了我。”
+   -Mr. Baseball, @MisterBaseball5 Twitter. 2017
+%%%%
+Polyphemus
+
+“他忙完一切，又抓起我两个人当早餐。接着轻而易举滚开门口巨石，赶出羊群，又立即放回石头，像给满箭的箭筒盖上盖子一样轻松。”
+    -Homer, _The Odyssey_, Book IX.
+    trans. Samuel Butler, 1900.
+%%%%
+Prince Ribbit
+
+“公主，最小的公主，
+给我开门！
+你不记得昨天
+在清凉泉水旁对我说过什么？
+公主，最小的公主，
+给我开门！”
+    -Brothers Grimm (Margaret Hunt), _The Frog King, or Iron Henry_
+%%%%
+Sigmund
+
+“西格蒙德转身说：怎么了，孩子？
+我们难道永无快乐，劳苦永无终了？
+辛菲奥特利说：我看过了，看，杯中有死亡。
+
+歌与琴弦的叮咚升向屋梁，
+西格蒙德因酒与漫长岁月而恍惚；
+众人的欢乐喧闹如野林之声，
+厅中盛开的枝条仿佛林树摇动。
+他说：看得好，我的养子；就用嘴唇把它滤掉吧。”
+    -William Morris, _The Story of Sigurd the Volsung and the Fall of the
+Niblungs_. 1891.
+%%%%
+Tiamat
+
+“他说，母亲提亚玛特已憎恨我们，
+怒火冲天，用尽全力咆哮。
+所有神都转向她，
+你们造出的也站在她身旁。
+他们结盟，随提亚玛特前进，
+昼夜不停愤怒谋害，
+准备战斗，喷怒发狂，合军开战。
+塑造万物的提亚玛特，
+又造无敌武器，生出怪蛇，
+牙齿尖锐、獠牙无情，
+身体灌满毒液而非血。
+她给猛毒怪蛇披上恐惧，
+饰以辉光，使其高大。
+见者皆被恐怖制服，
+它们昂起身，无人能挡。”
+    -Enuma Elish, Third Tablet. circa 668 BCE.
+%%%%
+Urug
+
+“Urug：滚落，坍塌而落。如山坡泥土、堆叠石块等滑下；如瀑水坠落；用土填平凹地；在道路铺碎石或材料；山崩。
+
+Ururugan：似为 Urug 的复数。多人一起去工作；发动战争，以军队进攻；成群扑上，如大块物体坍落压下。”
+   -Jonathan Rigg, A dictionary of the Sunda language of Java. 1862.
+%%%%
+Vv
+
+“男人旁站着一位女人——某种意义上的女人。她模仿人类性别，只是表面礼节；宽松垂褶的衣服也不是布。她仅把自己坚硬物质的一部分塑成合意模样，迎合如今来往其中那些脆弱凡物的偏好。从远处看，确实像静立女人。
+
+她慢慢转向男人——食石者在地上很慢，除非它们并不慢——动作便让她从精致美丽变成全然不同之物。男人虽已习惯，仍不去看，不愿让厌恶毁掉此刻。”
+    -N.K. Jemisin, “The Fifth Season”. 2015.
+%%%%
+Cigotuvi's Monster
+
+“我看见那可怜虫——我创造的悲惨怪物。他掀起床帘，眼睛，如果那能叫眼睛，紧盯着我。双颚张开，喃喃发出不成言语的声音，笑容使面颊皱起。”
+    -Mary Shelley, _Frankenstein_. 1818.
+%%%%
+Cloud Mage
+
+“当他的宏伟计划展开，
+那里便摆着一份高价收购，
+要买下整个世界的天气系统。”
+    -Andrew Bird, “Banking on a Myth”. 2005.
+%%%%
+ghost-faced bat
+
+<bat>
+%%%%
+giga bat
+
+<bat>
+%%%%
+ice bat
+
+<bat>
+%%%%
+mad acolyte of Lugonu
+
+“当你长久凝视深渊，深渊也在凝视你。”
+    -Friedrich Nietzche, “Beyond Good and Evil”. 1886.
+%%%%
+microbat
+
+<bat>
+%%%%
+phase bat
+
+<bat>
+%%%%
+rotten bat
+
+<bat>
+%%%%
+skeletal bat
+
+<bat>
+%%%%
+spriggan baker
+
+“鲜血、汗水，还有茶，姐妹！要成就一切伟大而可怕之事，就得靠这些。”
+    -Emory R. Frie, _Wonderland_. 2016.
+%%%%
+witch
+
+“不可容女巫存活。”
+    -KJV Bible, Exodus 22:18.
+%%%%
+__c_suffix
+
+“佩琉斯从远处看见他被可怕伤口撕裂，喊道：亲爱的克兰托尔，年轻人中最亲爱的，至少接受这份祭死贡礼。他奋力把白蜡木矛掷向德摩勒翁，刺裂肋笼，颤抖着钉入骨中。半人马拔出矛杆，却没拔出矛头，后者卡在肺里。痛苦反而增强斗志，他负伤立起，以蹄击倒英雄。佩琉斯用盔盾接住轰击，护住双臂，稳住武器，一击穿过对方手臂，刺入那双形的胸膛。”
+    -Ovid, _Metamorphoses_, XII, 330. 8 AD.
+%%%%
+__d_suffix
+
+“特罗格多是个人！
+我是说，他是个龙人！
+或者……也许只是条龙。
+……
+特罗格多在夜间来临！”
+    -The Brothers Chaps, “Trogdor”. 2003.
+%%%%
+__q_suffix
+
+<__d_suffix>
+%%%%
+__r_suffix
+
+哈姆雷特［拔剑］：怎么！老鼠？赌一枚金币，它死定了！
+［隔着帷幔刺去。］
+    -William Shakespeare, _The Tragedy of Hamlet, Prince of Denmark_, III, 4.
+1603.
+%%%%
+__cap-D_suffix
+
+孔子去，谓弟子曰：“鸟，吾知其能飞；鱼，吾知其能游；兽，吾知其能走。走者可以为罔，游者可以为纶，飞者可以为矰。至于龙，吾不能知其乘风云而上天。吾今日见老子，其犹龙邪！”
+    -司马迁，《史记·老子韩非列传》
+
+“这龙有两只凶猛翅膀，
+一肩一只。
+尾刺长得像连枷，
+令它愈加大胆。
+爪长，口中有
+四十四颗铁牙，
+坚韧如厚皮的外皮，
+围护全身。”
+    -“An Excellent Ballad of a most dreadful Combat, fought between Moore of
+Moore-Hall, and the Dragon of Wantley”, retold by Ambrose Philips, _A
+Collection of Old Ballads. Corrected from the Best and Most Ancient Copies
+Extant. With Introductions Historical, Critical, Or Humorous_. 1723.
+%%%%
+__cap-K_suffix
+
+“北方地区常被这些精灵出没，尤其采矿之处。希腊人与德意志人称它们为 Cobali。”
+    -Thomas Heywood, _The Hierarchy of the Blessed Angels_, Book IX, l. 568.
+1635.
+%%%%
+__cap-S_suffix
+
+“他住在乡间，屋前橡树中有蛇窝。仆人杀了蛇，墨兰波斯却捡柴焚葬蛇身，养育幼蛇。幼蛇长大后，在他睡眠时各守一肩，以舌舔净双耳。他惊醒，却能听懂头上飞鸟的声音，并据所闻向人预言未来。”
+    -Pseudo-Apollodorus , _Library and Epitome_, 1.9.11. circa 150 BC.
+    trans. Sir James George Frazer, 1913.
+
+“一条斑纹罕见的蛇，
+打量着我屋子的地板；
+外貌似从前的蠕虫，
+却环绕着力量。”
+    -Emily Dickinson, “In Winter In My Room”. circa 1860.
+%%%%
+__cap-T_suffix
+
+“勇敢的巴克尚克与埃尔芬斯通，
+还有许多难以尽数的人，
+造了一艘坚固大船，
+打算驶向冰岛。
+
+船入大海，海如怒熊咆哮；
+船却沉向海底，
+一只可憎的巨魔，
+将它拖到那里。”
+    -George Borrow, _Lavengro: The Scholar, the Gypsy, the Priest_. 1851.
+%%%%
+adder
+
+蝰蛇，名词。一种蛇。其英文名 adder 源于它习惯在生活的其他开支上，再“加”一笔丧葬费。
+    -Ambrose Bierce, _The Devil's Dictionary_, 1906.
+%%%%
+alderking
+
+“父亲，父亲，他紧紧抓我，
+桤木之王终于把我重伤！
+
+父亲恐惧得近乎疯狂，策马狂奔，
+紧抱可怜颤抖的孩子；
+费尽力气、满怀惊惧抵达庭院，
+才发现怀中孩子一动不动，死了。”
+    -Johann Wolfgang von Goethe, _Erlkönig_, 1782.
+    trans. Edgar Alfred Bowring, 1853.
+%%%%
+alligator
+
+“短吻鳄会犯饮食错误。”
+    -Bennet Bowler, M.D., _Contributions to the Natural History of the
+     Alligator, (Crocodilus Mississipiensis), with a Microscopic Addendum_,
+     p. 17. 1846.
+%%%%
+apocalypse crab
+
+“我本该是一双参差的蟹爪，
+爬过寂静海洋的底部。”
+    -T.S. Eliot, _The Love Song of J. Alfred Prufrock_. 1915.
+%%%%
+arcanist
+
+<occultist>
+%%%%
+basilisk
+
+“愿你如帝王般的蛇怪，
+以看不见的伤口杀敌！
+凝视压迫，直到她惊惶
+从大地上消失。
+别怕，只管凝视；自由人因凝视敌人更强，
+奴隶却更弱。
+若希望、真理与正义有用，
+你必伟大——向你致敬！”
+    -Percy Bysshe Shelley, “Posthumous Poems”. 1824.
+%%%%
+bat
+
+“太阳已落，夜色迅速来临，
+露水落下，打湿四周；
+蝙蝠以皮翼在空中盘旋，
+沙哑猫头鹰唱起悲伤挽歌。”
+    -John Gay, Shepherd's Week, Wednesday; or, The Dumps.
+
+“在蝙蝠完成
+幽闭的飞行之前。”
+    -William Shakespeare, _Macbeth_, III, 2, line 40. 1605.
+%%%%
+battlesphere
+
+“我是你唯一的朋友，
+我不是你唯一的朋友，
+但我是个发光的小朋友，
+可实际上我并非你的朋友，
+但我又是。”
+    -They Might Be Giants, “Birdhouse in Your Soul”. 1989.
+%%%%
+bes kemwar
+
+“Bès Kěmwar，即‘蛆虫精灵’，是马来西亚 Jah Hut 人所知的众多 bès 疾病精灵之一。它形象多变，呈蛆或毛虫状，以毛、刺、翅膀等区别变体。它吃稻米、蔬菜及其他作物，引发骨、关节与肌肉疼痛。毛虫的毛落进水里，人喝了会咳嗽、喉咙出血。蛆虫精灵也住在腐树干中，以其为食。接近倒树者会被咬腿，发红、肿胀、发痒；脚趾甲全掉，肿胀则在两三个月后消退。”
+    - _A Book of Creatures_, 2020.
+%%%%
+boggart
+
+“他把每丛灌木都当成妖怪。”
+    -John Ray, _A Compleat Collection of English Proverbs_. 1768.
+
+“一只妖怪不知借何理由、凭何权力，闯入安分、无害、勤劳农夫的屋子。占据以后，它便蛮横无理地与合法凡人住客争夺居住权，尤其厌恶孩子。父母最无法忍受的，莫过于子女受虐；因此，父亲尤其善良妻子的心，日日夜夜都被这邪恶隐形妖怪的恶意折磨。”
+    -C.J.T., _Folk-lore and Legends: English_  1890.
+%%%%
+bullfrog
+
+“你好，宝贝，
+你好，甜心，
+你好，我的拉格泰姆姑娘。
+
+用电线送我一个吻，
+宝贝，我的心在燃烧。
+
+若拒绝我，
+亲爱的，你会失去我，
+只剩自己孤单。
+
+宝贝，打电话来，
+告诉我，我属于你。”
+    -Ida Emerson and Joseph E. Howard, “Hello My Baby!”
+%%%%
+bush
+
+“耶和华的使者从荆棘中火焰里向他显现。他观看，见荆棘被火烧着，却没有烧毁。”
+    -KJV Bible, Exodus 3:2.
+%%%%
+butterfly
+
+“幸福是蝴蝶，追逐时总在手边之外；若你安静坐下，它却可能落到你身上。”
+    -Nathaniel Hawthorne
+%%%%
+cacodemon
+
+“我们叫他邪魔，还有那只黑公猫、他的魅魔、魔鬼之种、弗勒革通之嗣；凭良心说，那肯定生自悲叹河的泡沫。”
+    -John Fletcher, _The Knight of Malta_. 1647.
+%%%%
+catoblepas
+
+“他带着阿纳克修斯两兄弟渡到岛上，发现那被遗弃的骑士穿着自己的号衣，黑得如悲伤在最黑镜中所见自身。装饰同样黑，却铸成张口等腐肉的乌鸦；缰绳则是相互盘绕的蛇，蛇头聚在嚼口两旁，仿佛咬马，马嚼衔时也像咬蛇，白沫仿佛来自这场战斗的毒怒。徽记是一只卡托布莱帕：它与月亮天然相感，月失光时便如死去。题辞意为，缺的并非月自身之光，而是可怜野兽所需的月光。”
+    -Sir Philip Sidney
+%%%%
+cherub
+
+“耶和华的荣耀从基路伯升起，停在殿门槛上，殿内充满云，院中满是荣耀的光。
+
+基路伯的翅声传到外院，如全能神说话的声音。”
+    -WEB Bible, Ezekiel 10:4-5
+%%%%
+chonchon
+
+“最简单的形态，是一只夜鸟、棕林鸮（Strix rufipes），夜间无声飞翔，宣告疾病、死亡或其他不幸。听见沙哑叫声时，宜向空中撒灰并祈祷，希望驱走邪恶。
+
+据说琼琼也是伪装的 calcu 邪术师，形如人头，巨大的翼状耳朵使其飞行。夜晚，术士的头脱离身体，四处作祟，多数人看不见，只有不祥的 tué、tué、tué 声预示厄运。它们拥有术士之力，也会吸饮熟睡者的血。”
+    - _A Book of Creatures_, 2015.
+%%%%
+crimson imp
+
+“魔鬼有时也偷人类孩子；出生六周内的婴儿常被带走，换上小恶魔。”
+    -Martin Luther
+%%%%
+crocodile
+
+“小鳄鱼多会打理
+自己闪亮的尾巴，
+把尼罗河水浇在
+每片金色鳞上！
+
+它笑得多快活，
+爪张得多漂亮，
+用温柔微笑的双颚，
+欢迎小鱼进来！”
+    -Lewis Carroll, _Alice's Adventures in Wonderland_, 1865.
+%%%%
+curse skull
+
+“好朋友，看在耶稣分上，
+别挖这里封存的尘土。
+留下这些石头者有福，
+挪动我骨头者受诅。”
+    -Epitaph on William Shakespeare's grave
+%%%%
+daeva
+
+“在两者之间，诸魔也未作正确选择；它们商议时受到迷妄，于是选择最恶之念。随后一同投向暴力，企图削弱人间世界。”
+    -the Avesta, Yasna XXX, 6, Ahunavaiti Gatha.
+    trans. Christian Bartholomae, 1951.
+%%%%
+demonspawn soul scholar
+
+“辛丘布：至少你承认我有灵魂。
+皮蒂：是，但它破损、扭曲，浸满无辜者的血。
+辛丘布：嗯……没错。
+皮蒂：等你不再为此高兴，我们就知道你进步了。”
+    -Howard Tayler, _Schlock Mercenary_. February 8, 2008.
+%%%%
+diamond obelisk
+
+“以形态内含的意义为例，考察称作石碑、方尖碑、立石或纪念柱的竖直石标。历史上，它们通常用来纪念受尊崇之事。人们想记住重要关系、事件或人物时，会指定地点，常竖起耐久、向上的形体。自然语言中，立石意味着我们在地上与上方理想之间的奋起连接，也意味着为受敬重之事骄傲地站立。标志象征性占据其所在地点；大小与工艺，是为记忆献出大量劳力和资源。耐久材料和留给后人的事实，还强烈暗示未来人也应尊崇所纪念之物。因此，使用这种竖直标记，其历史上的尊荣用途及自然语言意义，很可能传达：此地值得敬重；无论对我们的文化还是未来观察者，这里都关乎一种‘善’。”
+    -“Expert Judgment on Markers to Deter Inadvertent Human Intrusion into the
+      Waste Isolation Pilot Plant”, Sandia National Laboratories report. 1993
+%%%%
+oblivion hound
+
+“俯在雨果身上、撕扯其喉咙的是一个污秽怪物，一只巨大的黑兽，形似猎犬，却比凡人眼睛见过的任何猎犬都大。他们眼睁睁看着它扯出雨果·巴斯克维尔的喉咙……”
+    -Arthur Conan Doyle, _The Hound of the Baskervilles_. 1902.
+%%%%
+dream sheep
+
+“愚人睡得多安稳。”
+    -Philip K. Dick
+%%%%
+dryad
+
+• Roy Quixote：等等，我为什么又要跟清洁能源过不去？
+— Durkon Pansa：不知道，不过你愿意的话，我知道有片桃树林，老对本地人动手动脚。
+    -Rich Burlew, “Haleo and Julean”
+%%%%
+efreet
+
+“戴胜鸟回到所罗门那里报告消息，他答复示巴人：你们用钱财赠我？真主给我的，远胜给你们的，你们才为这种礼物欢喜。他又吩咐戴胜鸟：回去告诉他们，我们将带来他们无法想象的军队，屈辱地将他们驱逐。他问长老：他们归顺到来前，你们谁能把她的宫殿带来？精灵中的一位强者说：我能在你起身前带来，我有足够力量。”
+    -The Quran, Sura 27 Al-Naml
+%%%%
+eidolon
+
+“睡眠刚攫住他，清新睡雾消去悲伤——
+他曾猛烈追赶赫克托耳至风扫特洛伊城墙，
+强健躯体已疲惫入骨——
+死去帕特罗克洛斯的鬼魂便飘来。
+容貌、身高、俊眼、声音，
+乃至衣袍，都与生前无异。
+幻影悬在头边，说：
+‘睡着吗，阿喀琉斯？朋友，你忘了我。
+生前从未冷落我，死后却如此。
+快埋葬我，让我越过冥府之门。
+死去、烧尽、失去呼吸的魂灵把我远远挡住，
+不许渡河，不许与它们相聚。
+我只能被遗弃、迷失地游荡，
+在容纳一切的死亡宫门外。’”
+    -Homer, _The Iliad_, XXIII, 72-88.
+     trans. Robert Fagles, 1990.
+%%%%
+electric golem
+
+“我歌唱带电的身体。”
+    -Walt Whitman, “I Sing the Body Electric”, _Leaves of Grass_. 1867.
+%%%%
+elephant
+
+“王走到盲人面前问：如今知道大象像什么了吗？
+他们回答：当然，主啊。
+王又问：那说来听听。
+摸头的说像大圆罐；摸耳的说像簸箕；摸牙的说像犁铧；摸鼻的说像犁；摸身的说像粮仓；摸脚的说像柱；摸背的说像臼；摸尾的说像杵；摸尾毛的说像扫帚。
+他们挥拳互斗，喊道：大象就是这样，不是那样！
+比丘们，王看得十分欢喜。”
+    -_Udāna_, VI “Jaccandhavagga”. ca. 5th cent. B.C.
+     trans. Dawsonne Melanchthon Strong, 1902.
+%%%%
+emperor scorpion
+
+“预示韦斯帕芗末日将近的征兆已经出现：长久可见的彗星，以及奥古斯都陵墓自行打开。医生责备他患病仍维持日常起居、处理全部政务，他却答：皇帝应站着死。”
+    -Cassius Dio, _Roman History_, LXVI, xvii, 2. 222 A.D.
+     trans. Earnest Cary, 1925.
+%%%%
+endoplasm
+
+“海马在黏滑泥浆里挣扎，
+扬起头，将软泥甩向四周。”
+    -John Dryden. _All For Love_, I, i, 15-17. 1678.
+%%%%
+entropy weaver
+
+“看！经线已张，为战士倒下而织；
+织机纬线湿透鲜血。
+朋友快指下，灰布随战警而长，
+经线血红，纬线尸青。
+
+这布以人的肠子织成，
+经线坠着死者头颅；
+血溅长矛作纺锤，
+铁箍织机，箭作卷轴，
+剑作梭子，织这战争之布。
+我们，命运姐妹，织出制胜的布。
+
+赢战者前来轮织，
+挥剑者、迅击者、风暴相继迈步。
+梭子疾飞时，矛尖将闪耀，
+盾牌碎裂，啃盔之刃
+狠狠咬入甲胄！”
+    -_The Story of Burnt Njal_, trans. George Dasent. 1861
+%%%%
+ettin
+
+“他躲进去不久，可怕的双头巨人便回来了，一进门就喊：
+里里外外嗅一嗅，
+我闻到凡人的味。
+不论是生还是死，
+今晚拿他的心下饭。”
+    -Joseph Jacobs, _The Red Ettin_
+%%%%
+Executioner
+
+“看，那位最高刽子手大人，
+头衔与品级高贵；
+威严而强大的官员，
+职责尤其关乎性命！
+尊敬，尊敬，
+最高刽子手大人！
+向高贵大人，向高贵大人，
+向最高刽子手大人致敬！”
+    -Gilbert and Sullivan, “Behold the Lord High Executioner”,
+      _The Mikado_. 1885
+%%%%
+fenstrider witch
+
+“愿太阳从沼泽、湿地与滩涂
+吸起的一切瘟病，都落到普罗斯佩罗身上，
+一寸寸使他成为疾病！
+他的精灵听见我，我却仍非诅咒不可。”
+    -William Shakespeare, _The Tempest_, II, 2. 1611.
+%%%%
+fire crab
+
+“这星球生出闪耀宝石的爬行螃蟹，沃贡人用铁锤砸壳吃掉；又生出高耸、细长而色彩惊人的树，沃贡人砍下烧烤蟹肉；还有丝绸皮毛、湿润眼睛、优雅如羚羊的生物，沃贡人捉来坐在屁股下。”
+    -Douglas Adams, _The Hitch-hiker's Guide to the Galaxy_. 1979.
+%%%%
+flayed ghost
+
+“苦难者的慰藉，是有同伴分担悲痛。”
+    -Christopher Marlowe, _Doctor Faustus_. 1604
+%%%%
+formless jellyfish
+
+“故事清楚表明，水母从前也像龟，有壳有骨。但自龙王判决在水母祖先身上执行后，它的后代便都柔软无骨，正如如今被海浪冲上日本岸边的模样。”
+    -“The Jellyfish and the Monkey”, adapted by Yei Theodora Ozaki, _Young
+     Folk's Treasury_, vol. II. 1909.
+%%%%
+ghost moth
+
+“始终对准焦点，
+你感觉不到我的凝视。
+我拉近你的影像，
+你却不知我在那里。”
+    -Judas Priest, “Electric Eye”. 1982.
+%%%%
+ghoul
+
+“在沙漠里，我见一生物，赤裸、野蛮，
+蹲在地上，双手捧心，吃着它。
+我问：朋友，好吃吗？
+它答：苦，苦。
+但我喜欢，
+因为它苦，
+因为它是我的心。”
+    -Stephen Crane, _The Black Riders and Other Lines_. 1895.
+%%%%
+glass eye
+
+“你看见的眼睛，
+不是因为被你看见才是眼睛，
+而是因为它看着你。”
+    -Antonio Machado, Campos de Castilla. 1912-1917.
+%%%%
+gnoll
+
+“他轻轻下去，向纳思示意。但豺狼人已透过树干上狡猾的窥孔注视他。诡异寂静仿佛优雅退场，换成它们从背后抓起汤克时急促的惨叫，越来越快，最终不成声音。它们把他带去哪里，最好别问；对他做了什么，我不说。”
+    -Lord Dunsany, “How Nuth Would Have Practised His Art Upon the Gnoles”.
+1912.
+%%%%
+goblin
+
+“唰，啪！鞭子抽！
+敲打，殴打！哀叫，嘶嚎！
+干活，干活！谁敢偷懒，
+地精痛饮，地精大笑，
+在遥远地下转啊转，
+下面，小子！”
+    -J.R.R. Tolkien, _The Hobbit_
+%%%%
+golden dragon
+
+“你并非戏剧般带着巨龙而来，
+巨龙昂起，把我的生命夹在爪间，
+屠碎后摔在车旁。”
+    -Philip Larkin, “To Failure”. 1949.
+%%%%
+golden eye
+
+“你明亮的金色眼里，
+没有贪欲，也无嫉妒燃烧；
+它平静、天真地，
+望向天空下的一切。”
+    -Hannah Flagg Gould, _The Youth's Coronal_
+%%%%
+guardian golem
+
+“老人摇指说：听着，魔像先生，认真听，懂吗？
+‘懂……’
+‘想住这里，就照贡拜纳先生的话做。’
+‘照贡拜纳先生的话做……’
+‘这才像魔像说的话。玛尔卡，把包里的镜子拿来。看见自己的脸吗？额上写着什么？不听话，他就擦掉字，你便不再活。’
+‘不再活……’
+‘没错。门廊下有割草机，拿去割草，再回来。去。’”
+    -Avram Davidson, “The Golem”, 1955.
+%%%%
+guardian sphinx
+
+“再临！话刚出口，
+世界之灵中一个巨大影像便困扰视线：
+沙漠某处，狮身人首的形体，
+目光如太阳般空洞无情，
+缓慢移动大腿；四周，
+愤怒沙漠鸟的影子盘旋。”
+    -W. B. Yeats, "The Second Coming". 1920.
+%%%%
+harpy
+
+“它们鸟身少女面，粪便恶臭，双手是利爪，脸因永不满足的饥饿而憔悴。”
+    -Virgil, Aeneid 3
+
+“菲纽斯才举起第一口食物，它们便如旋风闪电般毫无预警地从云中降下，以嘶哑叫声宣告饥饿。年轻领主看见，急忙报警，却几乎尚未出声，鸟妖就已吃光整餐，再次飞向远海。只留下无法忍受的恶臭。”
+    -Apollonius Rhodius, Argonautica 2. 179 — 434
+%%%%
+hell hound
+
+“她腰间一圈地狱犬，
+以刻耳柏洛斯般的巨口不停狂吠，
+响成可怕钟声。有时，
+若有什么打断吠叫，它们便爬回子宫，
+在里面筑窝，却仍在看不见处
+狂吠、嚎叫。”
+    -John Milton, _Paradise Lost_, Book II, 1667.
+%%%%
+hell knight
+
+“好，复习一下：这回该由美丽少女，把龙从喷火的闪甲骑士手中救出来。”
+    -Exiern
+%%%%
+hobgoblin
+
+“愚蠢的一致性，是小心灵的妖怪，受渺小政客、哲人和神学家崇拜。”
+    -Ralph Waldo Emerson, _Essays: First Series_, Essay II: Self-Reliance.
+     1841.
+%%%%
+hog
+
+“芬慢慢走下楼，眼睛哭红了。走近椅子时，纸箱晃动，传来抓挠声。她看父亲，再揭开箱盖。里面，一只新生小猪抬头看她，白白的，晨光透过耳朵，染成粉红。阿拉布尔先生说：它归你了，从夭折中救回来。愿主原谅我这愚行。”
+    -E.B. White, _Charlotte's Web_
+%%%%
+hound
+
+“忠犬找到旅人，半埋雪中；
+冰冷手里仍紧握着
+那面写有奇异铭文的旗：
+更高！”
+    -Henry Wadsworth Longfellow, “Excelsior”
+%%%%
+human
+
+“你知道吗？
+我知道吗？
+所谓‘人’是什么？
+只有神知道人是什么！
+我只知道他的价钱。”
+    -Bertolt Brecht, “The Measures Taken”. 1930.
+%%%%
+iguana
+
+“从前梵授王统治波罗奈时，菩萨生为鬣蜥，长大后带着数百同类住在河岸大洞中。其子与一只变色龙亲密，常相拥。鬣蜥王听说后，召儿子告诫：这友谊不当，变色龙是低等生物，若继续亲近，灾难将临整个族群，令其不再来往。但儿子依然如故。”
+    -_Khuddaka Nikāya_, Jātaka 141 “Godha-jātaka”. ca. 4th cent. B.C.
+     trans. Robert Chalmers, 1895.
+%%%%
+jackal
+
+“豺狼随时准备利用有利机会，是个可悲寄生者，尾随大型食肉兽在乡野觅食，盼着分到被它们杀死或咬伤的猎物。”
+    -John George Wood, _The Illustrated Natural History: Mammalia_. 1865.
+%%%%
+jelly
+
+“当心胶怪！
+它爬，它跳，
+滑来又滑去，
+越过地板，穿过门，
+绕着墙，
+一团斑迹，一块污痕……”
+    -Burt Bacharach and Mack David, “Beware of the Blob”. 1958.
+%%%%
+Killer Klown
+
+“全世界都爱小丑。”
+    -Cole Porter, “Be a Clown”. 1948.
+%%%%
+kobold
+
+“狗头人无害。”
+    -Bearand the Bold, epitaph (Magic: the Gathering)
+%%%%
+komodo dragon
+
+“我们三人脸色惨白，像刚目睹邪恶凶杀。但若真是凶杀，凶手至少不会一边杀，一边毫无感情地直视我们。也许是冷漠而不动摇的傲慢使我们不安。不过，无论试图给蜥蜴附上何种恶意感情，我们知道那都不是它的感情，只是我们的。蜥蜴只以简单直接、蜥蜴式的方法做蜥蜴的事，不懂我们这些独有负罪与羞耻感的动物，想强加给它的恐怖、罪恶、羞耻与丑陋。因此一切反射回来，仿佛映在那只毫不动摇、漠不关心的眼睛里。”
+    -Douglas Adams, “Last Chance to See”. 1990.
+%%%%
+kraken
+
+“克拉肯，又称蟹鱼，据挪威领航员说并不算大：连头带尾，也不过厄兰岛那么宽，不到十六公里。它卧在海底，被无数小鱼包围，吃鱼，也反过来养鱼。据我记得蓬托皮丹所写，一餐不超过三个月，再用三个月消化；排泄物滋养小鱼大军，因此渔人测深寻找其栖处。它渐渐上浮，到水深十至十二噚时，船最好远离，因为它很快会像浮岛冲出水面，从可怕鼻孔喷水，激起延伸数英里的环浪。谁还能怀疑，这就是约伯的利维坦？”
+    -Jacob Wallenberg, “Min son på galejan”. 1781.
+%%%%
+large abomination
+
+<small abomination>
+%%%%
+lindwurm
+
+“若把龙想成长颈尽头接鹰、狮或海豚头，阔背生狮鹫或其他翅膀，盘尾带倒钩，喷火，爱上并掳走少女，随意变形，趴在辛苦积来的宝藏上，总之拥有传说赋予的一切特征的怪物，那么没有一个字能保证它存在，相信它便是疯狂。但若只指一种可怕、如今已从我们这片世界灭绝的巨兽，相信它便没有什么可笑。”
+    -Leopold Ziegelhauſer, _Schattenbilder der Vorzeit: Ein Kranz von
+     Geschichten, Sagen, Legenden, Märchen, Skizzen und Heldenmahlen, Aus allen
+     Gegenden Deutschlands und des österreichischen Kaiserstaates_. 1844.
+%%%%
+lost soul
+
+“她走在暮色里，脚步无声，
+露地上不留足迹。
+她轻轻招手，低唤你的名字，
+但随她去的人，再也不会相同。”
+    -Magic: the Gathering
+%%%%
+manticore
+
+“克忒西亚斯说，埃塞俄比亚有兽名蝎尾狮，牙有三排，合起时像梳齿彼此嵌入；人面人耳，红眼，血色，狮身，尾带蝎刺；声音如笛与号同响，行动极快，所有肉中最爱人肉。”
+    -Pliny the Elder, _Natural History_, Book 8, Chapter XXI
+%%%%
+meliai
+
+“天带着夜与爱欲到来，覆在地上。儿子从埋伏中伸左手，右手持巨大长锯齿镰，迅速割下父亲生殖器，抛到身后。它们并未徒然坠落：喷出的血滴全由大地承接。时序流转，大地生出强大的复仇女神、披亮甲持长枪的巨人，以及遍布无边大地、名为墨利埃的宁芙。”
+    -Hesiod, _Theogony_, 182-187, trans. H.G. Evelyn-White. 1920
+%%%%
+merfolk
+
+“心思终于再度苏醒，
+却发现我已不是原来的自己。
+海绿胡须开始生长，
+额头宽展，添了华饰；
+长发扫过波浪，
+阔肩劈开柔顺深水。
+我看见鱼尾、碧蓝双臂，
+每个部位都被神奇地改变。”
+    -Ovid, _Metamorphoses_, XIII, 546-7. 8 A.D.
+     trans. Garth, Dryden, et al.
+%%%%
+merfolk aquamancer
+
+“主啊，溺水何等痛苦！
+耳中可怕的水声，眼里丑恶的死亡！
+我仿佛看见千艘骇人沉船，
+万具被鱼啃食的人，
+金锭、巨锚、珍珠堆，
+无价石与宝玉散落海底。
+有的躺在死人头骨中，
+曾容双眼的孔穴里爬入反光宝石，
+仿佛嘲笑眼睛。”
+    -William Shakespeare, _King Richard III_, I, iv. 1597
+%%%%
+merfolk avatar
+
+“美人鱼浮上来，
+手拿梳子与镜子：
+敬你们一杯，快活年轻人，
+你们再也见不到陆地。”
+    -“Sir Patrick Spens”, Scottish folk song, version 58J in Francis James
+     Child, _The English and Scottish Popular Ballads_. 1898.
+%%%%
+merfolk impaler
+
+“该死的温斯洛！愿海神将你击毙！听啊，特里同，听！咆哮，唤我们的海王父亲从深处愤怒而起！黑浪满载盐沫，以刺鼻黏液堵住你的年轻嘴巴，呛死你，灌满内脏，让你因舱底污水与盐水变得青紫肿胀，再也无法叫喊。直到祂头戴贝壳冠，拖着滑溜触须尾、蒸腾胡须，举起带鳍恶臂，珊瑚尖三叉戟在风暴中如女妖尖叫，贯穿你的咽喉，将你刺爆！不再是鼓胀皮囊，只剩破碎血膜，任鸟妖和亡水手之魂啄抓吞吃，最后被可怕帝王无尽的海水舔食咽下。被所有人、所有时代遗忘，被神和魔遗忘，甚至被海遗忘，因为温斯洛的任何一部分，哪怕一丝灵魂，都不再是温斯洛，而是海本身！”
+    -Thomas Wake, _The Lighthouse_. 2019
+%%%%
+merfolk javelineer
+
+<merfolk>
+%%%%
+merfolk siren
+
+“我们划进歌声可及之处，
+塞壬无需我们的声音便已察觉，
+调起迷人的甜美歌调：
+来吧，值得世人赞颂、
+让希腊荣光升高的奥德修斯！
+停船，听这无过客能不侧耳的歌，
+人人离去都陶醉，并比从前更博学。
+因为我们知道广阔特洛伊的一切，
+希腊人与特洛伊人承受的，
+诸神安排的重大命运，
+以及整片大地能展示给知识的所有事物。”
+    -Homer, _The Odyssey_, XII, 268-82.
+     trans. George Chapman, 1857.
+%%%%
+molten gargoyle
+
+<war gargoyle>
+%%%%
+moth of wrath
+
+“狂战士一看见敌人，便使自己陷入狂乱，咬盾冲锋，丢掉防具，不顾一切危险。有时仅持一根木棒，却随之带来死亡与毁灭。”
+    -Paul Belloni Du Chaillu,_The Viking Age: the Early History, Manners, and
+     Customs of the Ancestors of the English Speaking Nations_. 1889.
+%%%%
+mummy
+
+“我看见埃及与埃及人，金字塔与方尖碑；
+看见刻在砂岩板或花岗岩块上的历史、歌与哲学；
+在孟菲斯看见木乃伊坑，防腐裹麻的死者已躺了许多世纪；
+看见倒下的底比斯人，圆大的眼，
+歪垂的颈，交叠胸前的手。”
+    -Walt Whitman, “Salut au Monde”
+%%%%
+naga
+
+“温雅的女士，在诸神、阿修罗与天仙之中，纳迦充满巨大能量，速度极快，又有美妙芳香。它们值得崇拜，能够赐福。我们也值得别人随侍。我告诉你，女士，人类无法看见我们。”
+    -Mahābhārata, Santi Parva, Mokshadharma Parva, section CCCLX. ca. 500 B.C.
+     trans. Kisari Mohan Ganguli, 1883.
+%%%%
+naga mage
+
+<naga>
+%%%%
+nagaraja
+
+“来自纳巴萨湖、毗舍离与怛叉迦的纳迦也来了，
+还有甘婆罗、阿湿波多罗、波耶迦及其亲属。
+从阎牟那河，来的是尊贵纳迦持国。
+伟大的伊罗婆那龙王，
+也来到森林集会。”
+    -Mahasamaya Sutta, _Dīgha Nikāya_, 20. ca. 500 B.C.
+     trans. Thanissaro Bhikkhu
+%%%%
+naga warrior
+
+<naga>
+%%%%
+nameless horror
+
+“于是，格得双臂之间那苍白的椭圆亮了起来。它不断扩大，在大地与黑夜的幽暗中裂开一道口子，撕开了世界的织物。可怕的光芒从中迸射。一个如同凝结黑影的东西从那明亮而扭曲的裂口爬出，迅疾而狰狞，径直扑向格得的脸。”
+    -Ursula K. Le Guin, _A Wizard Of Earthsea_. 1968.
+%%%%
+necromancer
+
+“直到此刻，仍能感到他那可怕力量的强烈威势，
+使身体衰弱，使心灵悲伤。
+他们终将成为空洞、无知觉的幽魂，
+意志与灵魂被剥夺殆尽。
+唯有对自由的渴望，
+使他们饥渴地寻求复仇……”
+    -Rush, “The Necromancer”. 1975.
+%%%%
+nekomata
+
+“人类，是吧？他们自以为是万物之主。我们猫可不同。我们_知道_自己就是。你见过猫喂养人吗？证明完毕。”
+    -Terry Pratchett, “The Amazing Maurice and His Educated Rodents”. 2001.
+%%%%
+neqoxec
+
+“倘若变异确实如此受到自然选择的影响，那就意味着，任何一种特定变异都必定朝着有利于相应物种的方向发展；事实上，化石动物中许多已知的变异实例，显然都源于这种改变所带来的益处。但我必须在此补充：大概并非所有古生物学意义上的变异都由自然选择造成，其中许多并不意味着实际的改善。”
+    -_Proceedings of the American Philosophical Society_, Volume XXV, no. 150.
+     1896.
+%%%%
+occultist
+
+“每个家族或部落都有一名巫师或施法的医生，我们始终未能确切弄清他们的职责。”
+    -Charles Darwin, _The Voyage of the Beagle_, ch. X. 1839.
+%%%%
+octopode
+
+“在短暂的相处中，斯洛思罗普觉得这只章鱼的精神不太正常，虽说他又有什么比较的依据呢？然而它的每个动作都透着疯狂的兴奋，仿佛那些无生命的东西，总在人对噪声和自己的笨拙格外敏感、极不愿它们掉下时，从桌上摔下来：砰！哈哈，听见了吗？再来一次，砰！他终于用尽全力，像掷铁饼那样把螃蟹甩向海里；章鱼迫不及待地扑水追去，哗啦咕噜一阵，很快便消失了，斯洛思罗普也乐得摆脱它。”
+    -Thomas Pynchon, _Gravity's Rainbow_. 1973.
+%%%%
+ogre
+
+“小公主睡在摇篮里，漂在水上，最终被冲上一片美丽国土的海岸。可是自从食人魔拉瓦焦和妻子图尔芒蒂娜搬来，这里就几乎没了居民——因为他们把大家都吃了。食人魔是可怕的家伙，一旦尝过生人肉，就几乎不肯再吃别的；而图尔芒蒂娜总有办法引人送上门，因为她有一半仙女血统。”
+    -Marie-Catherine Le Jumel de Barneville, Baronne d'Aulnoy, “'Orangier et
+l'Abeille”. 1697.
+
+“不。层次。洋葱有层次，食人魔也有层次。洋葱有层次。明白了吗？我们都有层次。”
+    -Shrek. 2001.
+%%%%
+ogre mage
+
+<ogre>
+%%%%
+oklob plant
+
+“碳酸是构成植物生长起点的三种物质之一，另外两种是水和硝酸。这种酸由一份碳与两份氧按化学比例结合而成。它是一种无色气体，气味和滋味都带酸性，能溶于水，比空气重一半，也能像液体那样从一个容器倾倒至另一个容器。一百份水能溶解一百零六份这种气体，而植物的根正是从这一来源取得所需的供应。”
+    -Henry Stuart, _The Culture of Farm Crops: A Manual of the Science of
+    Agriculture, and a Hand-book of Practice for American Farmers_, ch X. 1887.
+%%%%
+oklob sapling
+
+<oklob plant>
+%%%%
+oni incarcerator
+
+“鬼的传说如此流行而长寿，无疑部分缘于这类存在历代以来相对稳定的典型恶魔特征：它们是从佛教地狱深渊中现身、恐吓作恶凡人的可怕超自然存在；它们怪诞凶蛮的形貌和举止会立即激起恐惧；而鬼在日本社会历史与文化记载中的无所不在，则直接源于鬼故事所产生的道德、社会与宗教教化作用。”
+    -Noriko T. Reider, _Japanese Demon Lore: Oni from Ancient Times to the
+     Present_, ch. 1, 2010.
+%%%%
+ophan
+
+“我观看活物的时候，见四脸的活物旁边，地上各有一个轮子。轮子的形状和构造是这样：闪耀如贵橄榄石，四个轮子形状相同，仿佛轮中套轮。它们行走时，能向着活物面对的四方任意前进，并不随活物转弯。轮辋高大可畏，四个轮辋周围都布满了眼睛。”
+    -Ezekiel 1:15-18 (New International Version)
+%%%%
+orange demon
+
+“斯帕基尔葬着那位名人，
+他把方尖碑送进中央公园，
+威风凛凛的 H. H. Gorringe 指挥官，
+他的姓终于让‘orange’找到苦寻的韵脚。”
+    -Arthur Guiterman, “Local Note”. 1934.
+%%%%
+Orb Guardian
+
+“X 会给你送上门（什么）
+去他的等你自己来拿，X 会亲自送到。
+咚咚，开门，真家伙来了，
+不锈钢枪管不停砰砰响。
+[…]
+先让我们震起来，再让我们滚起来，
+然后让它炸响，来吧，放开来。
+X 会给你送上门，他会给你送上门。
+X 会给你送上门，他会给你送上门。”
+    -DMX, “X Gon' Give It To Ya”. 2002
+%%%%
+orb of fire
+
+“你所看见的星球，无论多么渺小，
+都在运行中如天使般歌唱，
+永远向着目光清澈的智天使齐声高歌。”
+    -William Shakespeare, _The Merchant of Venice_, V, i. 1597.
+%%%%
+pandemonium lord
+
+“与此同时，生翼的使者奉至高权威之命，
+以庄严仪式和号角之声向全军宣布：
+即刻在万魔殿——
+撒旦与其同僚的巍峨都城——
+召开肃穆的议会……”
+    -John Milton, _Paradise Lost_, Book I, 1667.
+%%%%
+phantom
+
+“它常使我们预见关乎自身福祉的奇事，以及种种诡异的幻影。”
+    -Spenser, _The Faerie Queene_ II. xii. 47
+%%%%
+pillar of salt
+
+“当时，耶和华将硫磺与火从天上降在所多玛和蛾摩拉，倾覆了那些城、全平原、城中一切居民，以及地上生长的万物。罗得的妻子从他后面回头一看，便变成了一根盐柱。”
+    -KJV Bible, Genesis 19:24-26.
+%%%%
+player ghost
+
+“认识你自己。”
+    -Inscription in the pronaos of the Temple of Apollo at Delphi
+%%%%
+polar bear
+
+“北极熊是力量惊人、性情凶猛的动物。巴伦支在寻找通往中国的东北航道时，就在新地岛见识了它们的凶残：它们袭击水手，将人叼在嘴里，轻而易举地拖走，当着同伴的面吞食。据说，它们甚至会在远离海岸的地方攻击武装船只，试图爬上甲板，有时人们费尽力气才将其击退。”
+    -George Shaw, _General Zoology, or, Systematic Natural History_, vol. I,
+     p. 2. 1800.
+%%%%
+profane servitor
+
+“咒语施下，天空转红，
+天使的心冻成了冰。
+阴沉的天际聚起乌云，
+尖叫打破了寂静。
+咒语施下，天空转红，
+天使的心冻成了冰。
+阴沉的天空里——死去天使躺卧的寂静之地。
+
+触摸积雪……抚慰无生命的雕像。
+死吧！！！”
+    -Dissection, “Where Dead Angels Lie”. 1996.
+%%%%
+program bug
+
+“如果建筑师盖房子的方式和程序员写程序一样，那么第一只飞来的啄木鸟就能摧毁文明。”
+    -Gerald Weinberg, Weinberg's Second Law
+%%%%
+protean progenitor
+
+“我呼唤普罗透斯，
+执掌钥匙的海洋之主，
+最初诞生者，曾展现万物自然的起源，
+将物质变成千姿百态。
+他受万众尊崇，充满智慧，
+知晓当下、过去与未来。
+万物尽在他的支配之下，
+他的变化远胜其他不朽者——
+那些居于白雪覆盖的奥林波斯，
+飞越天空、大地与海洋的神明。
+因为自然女神最先将一切置于普罗透斯之中。
+父亲啊，在神圣天意的陪伴下，
+请探访参加秘仪的人们，
+让勤劳而富足的一生得到美好的归宿。”
+    -_The Orphic Hymns_, XXV.
+     trans. Apostolos N. Athanassakis and Benjamin M. Wolkow, 2013.
+%%%%
+rakshasa
+
+“毗舍耶那说：离般度诸子熟睡之处不远，一棵娑罗树上住着名叫希丁婆的罗刹。他精力充沛，勇猛过人，是个残忍的食人者；尖长的牙齿让面容格外狰狞。他此刻饥肠辘辘，渴望人肉。他双腿修长，肚腹硕大，头发与胡须都是红色，肩膀宽阔如树干，耳朵如箭，面目可怖。”
+    -_Mahābhārata_, Adi Parva, Hidimva-vadha Parva, section CLIV. ca. 500 B.C.
+     trans. Kisari Mohan Ganguli, 1883.
+%%%%
+reaper
+
+“我们的时刻都已到来，
+方才还在，转眼消逝。
+四季不惧死神，
+风、太阳和雨也不惧怕。
+我们也能像它们一样。
+来吧，宝贝，别怕死神。”
+    -Buck Dharma, Blue Öyster Cult, “(Don't Fear) The Reaper”. 1976.
+%%%%
+ribbon worm
+
+“而天使们苍白憔悴，
+起身揭幕，齐声宣告：
+这出戏就是悲剧‘人’，
+它的主角，便是征服者蠕虫。”
+    -Edgar Allan Poe
+%%%%
+royal mummy
+
+<mummy>
+%%%%
+salamander
+
+“譬如蝾螈，其形如蜥蜴，遍身星点，只在大雨倾盆时出来现身，晴天则不见踪迹。它体质极寒，只需碰触火焰，就能如冰投入其中一般立刻将火熄灭。蝾螈口中吐出一种乳汁般的毒物，只要碰到男女身上任何裸露之处，毛发便会尽落，接触处的皮肤也会变成白斑病的颜色。”
+    -Gaius Plinius Secundus, _Naturalis Historia_, Book X, ch. LXVII. 79 A.D.
+     trans. Philemon Holland, 1601.
+%%%%
+scorpion
+
+“那毒野上，茂草蓊郁，
+黝黑的蝎子在其间聚集死亡。”
+    -Oliver Goldsmith, “The Deserted Village”, l. 351-2. 1770.
+%%%%
+seraph
+
+“乌西雅王崩的那年，我看见主坐在高高的宝座上，他的衣裳垂下，遮满圣殿。
+
+其上有撒拉弗侍立，各有六个翅膀：两个遮脸，两个遮脚，两个飞翔。
+
+彼此呼喊说：圣哉！圣哉！圣哉！万军之耶和华，他的荣光充满全地。”
+    -KJV Bible, Isaiah 6:1-3.
+%%%%
+shadowghast
+
+“在理念
+与现实之间，
+在动势
+与行动之间，
+阴影落下。
+    因为国度是你的。
+
+在构思
+与创造之间，
+在情感
+与回应之间，
+阴影落下。
+    生命很漫长。”
+    -T.S. Eliot, “The Hollow Men”. 1925.
+%%%%
+shadow demon
+
+“随着年岁增长，我们开始意识到死亡正在逼近；他的阴影横落在我们的路上……”
+    -Stefan Zweig, _Twenty-Four Hours in the Life of a Woman_. 1927.
+%%%%
+shadow dragon
+
+“Crux sacra sit mihi lux / Non draco sit mihi dux
+Vade retro satana / Numquam suade mihi vana
+Sunt mala quae libas / Ipse venena bibas
+
+[愿圣十字为我光明，莫让恶龙引我前行。
+撒旦退去，莫以虚妄诱我。
+你所献的皆是邪恶，那毒你自己喝下。]”
+    -Full text of initials on the Saint Benedict Medal, worn to ward off evil
+     spirits. Inscription from 11-15th century, formally approved by Pope
+     Benedict XIV in 18th century.
+%%%%
+shadow wraith
+
+“昨天在楼梯上，
+我遇到一个并不存在的人。
+今天他又不在那里，
+但愿，但愿他快走开……”
+    -Hughes Mearns ,_Antigonish_, 1-4. 1899.
+%%%%
+shambling mangrove
+
+“森林里起了骚动，
+树木之间出了纷争。
+枫树想要更多阳光，
+橡树却不理它们的恳求。”
+    -Rush, "The Trees". 1978.
+%%%%
+shapeshifter
+
+“于是老海神从深处爬出，
+找到肥美的海豹，巡视点数，
+丝毫未察觉我们的计谋，
+把我们五人也当成了海豹。
+他以睡眠抚慰疲惫的额头，
+我们却大喊一声，猛扑上去，
+奋力伸手将他紧紧抱住。
+老变化师随即开始变幻：
+先是鬃毛浓密的狮子，
+接着是龙，再是斑斓的豹，
+然后是巨大的野猪，又忽然尽化流水。
+最后他变成一棵树，
+树冠蜷曲，直冲云天。”
+    -Homer, _The Odyssey_, IV, 602-14.
+     trans. George Chapman, 1857.
+%%%%
+silent spectre
+
+“有一种寂静，在从无声音之处；
+有一种寂静，在声音无法存在之地——
+冰冷的坟墓里，深深的海底，
+或是没有生命的辽阔荒漠。”
+    -Thomas Hood, “Silence”. Early 19th cent.
+%%%%
+simulacrum
+
+“如今拟像所掩盖的，并非真相，而是真相根本不存在这一事实，也就是说，虚无的延续。”
+    -Jean Baudrillard, “Radical Thought”. 1994.
+     trans. François Debrix, 1995.
+%%%%
+sixfirhy
+
+“我看见一张嘲弄的嘴，熔化红铁般的笑容从上面掠过，笑声满是铁钉的碰撞。那是孩子梦中的一张嘴。
+一只拳头打在嘴上：炮铜般的指节，由电动的手腕和肩膀驱使。那是孩子梦中的一条胳膊。
+拳头一遍又一遍地击打那张嘴。嘴里流出熔铁般的血，仍发出铁钉碰撞般的笑声。
+我看见拳头打得越狠，那张嘴就笑得越响。拳头不停地打，那张嘴不停地回应。”
+    -Carl Sandburg, “Gargoyle”, _Cornhusker_. 1918.
+%%%%
+skeletal warrior
+
+“说话！说话！可怕的来客！
+你胸膛空洞，
+仍披粗陋甲胄，
+前来使我惊惧！
+你不裹东方香膏，
+却伸着没有血肉的双掌，
+仿佛乞讨施舍，
+为何要来纠缠我？”
+    -Henry Wadsworth Longfellow, “The Skeleton in Armor”. 1841.
+%%%%
+skeleton
+
+“愿上帝救我们脱离
+那坐在宴席上的骷髅！”
+    -James Jeffrey Roche, _The Skeleton at the Feast_. 1890.
+%%%%
+sky beast
+
+“她母亲晚年一直活在可怕的疑虑中，总怀疑看不见的电流正在屋内到处滴落。”
+    -James Thurber, _My Life and Hard Times_. 1934.
+%%%%
+slime creature
+
+“深海竟也腐烂：基督啊！
+怎么会有这样的事！
+是的，黏滑的东西生出腿脚，
+在黏滑的海上爬行。”
+    -Samuel Tayor Coleridge, “The Rime of the Ancient Mariner”. 1798.
+%%%%
+small abomination
+
+“不——根本不是那样。它无处不在——一团胶质——一滩黏液，却又有形状，有一千种超出一切记忆的恐怖形状。有眼睛——还有污斑。那是深渊——是大漩涡——是终极的憎恶。卡特，那是不可名状之物！”
+    -H.P. Lovecraft, _The Unnamable_. 1925.
+%%%%
+smoke demon
+
+“为什么从指间那支
+被遗忘的香烟上，
+轻轻浮起的灰色细缕，
+为什么它令我不安？”
+    -D.H. Lawrence, “Sorrow”. 1916.
+%%%%
+snapping turtle
+
+“过了一会儿，他们来到一个村庄。鳄龟说：‘朋友们，明天天一亮，我们就进攻。我会先去那里。’这位战队首领这样告诉他们。
+
+‘好，’其他小家伙说，‘该怎么做，都由你决定。’鳄龟说：‘那么，现在我要告诉你们，我将怎样行动。现在我就向村庄走去。等我杀死酋长的女儿时，恰好就是天亮之际，明日升起的方向也会同时映红天空。你们心里便会想：啊，我们的同伴杀死她了！到那时候，你们就大声喧哗，持续呐喊，然后进攻这个村庄。’他这样对手下的年轻人说。
+
+‘好！’其他小家伙回答。”
+    -“When Snapping Turtle went to War”, _Publications of the American
+     Ethnological Society, Volume IX: Kickapoo Tales_. 1915.
+     trans. Truman Michelson
+%%%%
+soul eater
+
+“否定是心灵的第一种自由。”
+    -E.M. Cioran, _The Temptation to Exist_. 1956.
+%%%%
+spatial vortex
+
+“那不过是来自太空的色彩——一位恐怖的使者，来自我们所知的一切自然之外、无垠而尚未成形的领域。那些领域的存在本身，就足以震慑头脑；它们在我们狂乱的眼前敞开宇宙之外漆黑的深渊，使我们麻木。”
+    -H.P. Lovecraft, “The Colour out of Space”. 1927.
+%%%%
+spatial maelstrom
+
+“在任何构成之中，实体都在讲述虚空造成的异常，或虚空穿过实体所引发的感染。虚空进入实体时，作用如盘曲缠绕的瘟疫、一场回旋翻涌的流行病，而非使事物归零的过程或消灭实体的媒介。在构成中，没有纯粹的实体，只有被玷污、患病而遭到摧残的实体。
+[…]
+实体若想启动其建筑与构成活动——生存、发展等过程——唯一的办法就是让虚空进入。只有当实体被虚空吞噬、扭曲并搅乱时，它的动态特征才能启动。实体别无选择。”
+    -Reza Negarestani, _Cyclonopedia: Complicity with Anonymous Materials_. 2008
+%%%%
+spectral thing
+
+“乘着饥渴的风，
+我的幽魂在你身后追随。”
+    -William Blake, “Broken Love”. ca. 1800.
+%%%%
+spellspark servitor
+
+“当你以为
+玩具已经发狂，
+那是一个幻象，
+你却无从逃避。”
+    -Siouxsie and the Banshees, “Spellbound”
+%%%%
+sphinx marauder
+
+“俄狄浦斯说：怯懦的罪名与耻辱离我很远，我的勇气不知卑怯的恐惧为何物……斯芬克斯以晦暗的韵律编织话语，我并未逃跑；我直面那凶恶女预言者的血口，以及遍地散骨的苍白。当她从高崖俯临猎物，张开羽翼，像猛狮般抽打尾巴，激起凶险的怒意时，我向她讨问谜题。随即一声可怕的响动传来：她双颚撞响，利爪急不可耐地渴求我的内脏，撕扯着岩石。我解开了那签辞般复杂、诡计纠缠的语句，解开了有翼野兽的恐怖谜题。”
+    -Seneca, _Oedipus_, 1st cent. A.D.
+     trans. Frank Justus Miller, 1917.
+%%%%
+star jelly
+
+“同事们或许把那些目击当成了闪烁蛙的卵壳，但今天我要证明，这些生物来自苍穹之外。让我们开始解剖吧。”
+        -Ardun Idrick, cryptozoologist, last words
+%%%%
+starcursed mass
+
+“你看见那颗星熄灭了吗？
+我看见它燃烧。
+
+那颗小星熄灭了，
+你的小眼睛熄灭了。
+
+我们烧焦的小小梦想，
+藏在星辰点亮的地方。”
+    -Thee Silver Mt. Zion, “I Built Myself a Metal Bird”. 2010.
+%%%%
+stone giant
+
+“我完全相信你说的话，骑士回答，因为我刚刚与巨人展开一场顽强而狂暴的搏斗，我想此生再不会有这样的战斗了：我反手一击，砰的一声，他的脑袋便落到地上，涌出大量鲜血，像一道道细流淌过田野。”
+    -Miguel de Cervantes Saavedra, _The Ingenious Gentleman Don Quixote of La
+     Mancha_, IV, 10. 1605.
+     trans. Carlos Fuentes, 1997.
+%%%%
+sun demon
+
+“看他沉入西方的天空，
+雾气升起，影子渐渐拉长。”
+    -John Dryden, “Absalom and Achitophel”, I, 268. 1681.
+
+“天空忧伤而美丽，像一座辽阔的祭坛。
+太阳淹没在自身渐渐凝结的血中。”
+    -Charles Baudelaire, _Flowers of Evil_, 43: Evening Harmony. 1857.
+     trans. Ruth White, 1969.
+%%%%
+swamp drake
+
+“沼泽与它的秘密何等甜美，
+直到我们遇见一条蛇；
+那时我们叹着气想念房屋，
+转身就走，
+
+以只有童年才懂的
+那种令人着迷的狂奔。
+蛇是夏日的背叛，
+它所到之处便有狡诈。”
+    -Emily Dickinson, “A Snake”. ca. 1865.
+%%%%
+swamp worm
+
+“我想，那悬崖边的愚人，
+俯伏在沼泽或湿地旁，
+最后也像我一样欢欣，
+因为死亡之声必是祂真正的声音。”
+    -Arthur Edward Waite, “At The End of Things”. 1906.
+%%%%
+tengu
+
+“一只鸟沿小径走来——
+它不知道我正看着——
+它把蚯蚓咬成两半，
+生吞了那家伙。”
+    -Emily Dickinson, “A Bird came down the Walk”. ca. 1865.
+%%%%
+tengu warrior
+
+“我能竖起羽毛，摆出真正凶狠的样子，
+做这片地盘的老大；
+我是一只昂首阔步、梳羽抖擞、四处找架打的矮脚公鸡。”
+    -Andrew Bird's Bowl of Fire, “Cock o' the Walk”. 1998.
+%%%%
+tentacled monstrosity
+
+“从那座巨石地穴张开的活板门里涌出的，是一头令人难以置信的巨大怪物；我只瞥了一眼，就毫不怀疑它的本体单凭外貌便足以杀人。直到现在，我也无法用自己掌握的任何词语稍加描绘。我或许能说它巨大——长着触手——有象鼻——有章鱼的眼睛——半无定形——柔软可塑——一部分覆鳞，一部分皱褶重重——呕！”
+    -H.P. Lovecraft and Hazel Heald, “Out of the Aeons”, _Weird Tales_, 25, No.
+     4, pp. 478-96. April 1935.
+%%%%
+titan
+
+“另一边，泰坦们急切地加固阵列，双方同时展现双手的作为与力量。无边的大海发出可怕的轰鸣，大地轰然作响；辽阔的天空震颤呻吟，不朽诸神的冲锋使巍峨的奥林波斯从根基摇晃，剧烈的震动传到幽暗的塔耳塔洛斯。恐怖的进攻中，脚步与坚硬的投射物发出沉重巨响。他们彼此射出惨痛的箭矢，两军的呐喊直达繁星满天的天穹，在震天战吼中撞在一起。”
+    -Hesiod, _Theogony_, 8th cent. B.C.
+     trans. H.G. Evelyn-White, 1914.
+%%%%
+toadstool
+
+“而总管采集的是毒蝇伞。”
+    -Adam Mickiewicz, _Pan Tadeusz_, III. 1834.
+     trans. G.R. Noyes, 1917.
+%%%%
+toenail golem
+
+“白天，柔软的袜子娇宠着它们，皮革缝制的鞋子护卫着它们，我的脚趾却几乎毫不在意。它们唯一感兴趣的，就是不断制造脚趾甲——半透明、柔韧的角质薄片，用来抵御——谁呢？”
+    -Jorge Luis Borges, “Toenails”. 1960.
+    trans. Andrew Hurley, 1998.
+%%%%
+tormentor
+
+“你于我是一种甜美的折磨。”
+    -Ralph Waldo Emerson, _Essays: First Series_, Essay VI: Friendship. 1841.
+%%%%
+torpor snail
+
+“蜗牛，蜗牛，慢吞吞，
+四只角儿伸给我；
+若不伸出四只角，
+我就把你扔出门，
+让沟里的乌鸦，
+拿你当黄油面包吃。”
+    -Silesian rhyme. Quoted by S.W. Singer in _Notes and Queries_, no. 69.
+     1851.
+%%%%
+training dummy
+
+“事物不过是人体模型，甚至宏大的世界历史事件也不过是戏服；在衣装之下，它们与虚无、卑下和平庸彼此交换眼色。”
+    -Walter Benjamin, _Protocols to the Experiments on Hashish, Opium and
+     Mescaline 1927-1934_, “Protocol II: Highlights of the Second Hashish
+     Impression”. 15 January 1928.
+     trans. Scott J. Thompson, 1997.
+%%%%
+two-headed ogre
+
+<ogre>
+%%%%
+tyrant leech
+
+斯卡莉：“它到底是从哪儿来的？”
+穆德：“我不知道，不过看来我还是得告诉斯金纳，他的嫌疑犯真是一条巨大的吸血蠕虫。”
+    -_The X-Files_, “The Host”. 1994
+%%%%
+ufetubus
+
+“我们获准以矮人与恶魔的语言尖叫。”
+    -Czesław Miłosz, “A Task”.
+%%%%
+ugly thing
+
+“美并非事物自身的性质：它只存在于凝视事物的心灵中，而每个心灵感受到的美都不相同。在一人眼中美丽的东西，另一人甚至可能觉得畸形；每个人都应安于自己的感受，不要妄图支配别人的感受。”
+    -David Hume
+%%%%
+unseen horror
+
+“某种不可见力量的可怖阴影，
+虽不可见，仍漂浮在我们之间。”
+    -Percy Bysshe Shelley, “Hymn to Intellectual Beauty”, I, 1-2. 1816.
+%%%%
+ushabti
+
+“使沙布提在死者国度代人劳作的咒文：
+分配给我的沙布提啊，若我被传唤，或被指派去完成死者国度中必须做的任何工作，若那里确实如履职者一般给你设下障碍，那么，每逢耕种田地、灌溉河岸或将沙子从东运往西，你都要代我应役；你应当说：‘我在这里。’”
+    -Spell 6, _Book of the Dead_, from _Ancient Egyptian Book of the Dead:
+     Journey through the afterlife_, edited by John H. Taylor. 2010
+%%%%
+vampire
+
+• 打扰一下，我朋友伯特说你是猎杀吸血鬼的，是吗？
+— 呃，对，是的。
+• 那你在这儿可找不到，伙计。根本没有吸血鬼。
+— 你不信吸血鬼？
+• 当然不信！
+• 可我相信有骗子，有那些爱惹麻烦的江湖术士！
+• 死人半夜爬起来吸血？你当我们有多蠢？
+• 我家闹着十六个鬼，它们全都说根本没有吸血鬼！
+    -Rich Morris, Yet Another Fantasy Gamer Comic
+%%%%
+vampire bat
+
+“总有什么不对劲，哪里出了差错，
+当长翅膀的老鼠竟能戴上人的面孔。”
+    -Theodore Roethke, “The Bat”. 1938.
+%%%%
+very ugly thing
+
+“我丑，我丑得像罪孽，
+可漂亮已过时，丑陋才流行。
+要是你和我一样丑，你可不孤单，
+我们有几百万人，全都这么丑。”
+    -_The Muppet Show_, “Ugly Song”. 1977
+%%%%
+vine stalker
+
+“那怪异的植物嫩芽……又以超自然的速度从法尔默的头上长了出来。一根恶心的浅绿色粗茎不断攀升，长到六七英寸高时，便开始像鹿角一样分杈。
+
+如果还有更可怕的事，那就是眼睛里也长出了同样的东西；那些茎秆竖直地爬过额头，已经完全挤掉了眼球。”
+    -Clark Ashton Smith, “The Seed from the Sepulcher”. 1933.
+%%%%
+wandering mushroom
+
+“特莉梅娜厌倦了长久的争吵，想出去呼吸新鲜空气，却又想找个伴。她从挂钩上取下一只小篮子，一边用红色开司米披巾裹住头，一边说：‘先生们，看来你们想留在屋里，可我要去采蘑菇了，愿意的就跟来吧！’她一只胳膊牵着内侍的小女儿，另一只手把裙摆提到脚踝。塔德乌什默默地赶紧跟上她——去找蘑菇！”
+    -Adam Mickiewicz, _Pan Tadeusz_, II. 1834.
+     trans. G.R. Noyes, 1917.
+%%%%
+war gargoyle
+
+“那些数不清的恶魔与龙的雕塑显出阴森的神情，摇曳的火光让它们仿佛动了起来。有些狮鹫似乎在笑，有些滴水兽仿佛在叫，有些蝾螈向火堆喷气，有些塔拉斯克在烟里打喷嚏。而在这些被火焰与喧声从石头睡眠中唤醒的怪物之间，有一个来回行走的身影，时不时掠过火堆灼亮的表面，像烛火前的一只蝙蝠。”
+    -Victor Hugo, _The Hunchback of Notre-Dame_, 10, ch. IV. 1831.
+     trans. Isabel F. Hapgood
+%%%%
+weeping skull
+
+“唉，可怜的约里克！我认识他，霍拉旭，一个有着无穷笑话、绝妙奇想的家伙。他背过我一千次，如今想来却多么令人厌恶！我的胃都要翻起来了。”
+    -William Shakespeare, _The Tragedy of Hamlet, Prince of Denmark_, V, 1. 1603
+%%%%
+wolf
+
+“老师：狗怎么嗅东西？
+学生：不知道。（西班牙语中与‘用鼻子’谐音。）
+老师：答对了！”
+    -Traditional Spanish joke.
+%%%%
+water nymph
+
+“喂，你可不能因为哪个水里的荡妇朝你扔了一把剑，就指望掌握至高无上的行政权。”
+    -Monty Python and the Holy Grail, 1975.
+%%%%
+wight
+
+“不幸的人啊，生来注定惨淡收场，
+竟把一生耗在如此漫长的侍候之中！”
+    -Edmund Spenser, “Mother Hubberds Tale”, _Complaints_. 1591.
+%%%%
+worm
+
+<ribbon worm>
+%%%%
+wraith
+
+“上帝啊，纵使此生不过幽影，
+纵使我们不懂手中所用，
+纵使我们以微弱信念摸索，
+请赐我一颗敢于战斗——也敢于失败的心。”
+    -Louis Untermeyer, “Prayer”. 1919.
+%%%%
+wretched star
+
+“凝望太阳，
+无论你流浪何方，
+感受它唤你归乡，
+哪怕危险日渐增长。
+凝望太阳，
+让它的火焰充满你；
+凡不能杀死你的，
+只会使你更加古怪。”
+    -The Sunbeams, “The Tug”. 2020
+%%%%
+wyrmhole
+
+“对于十九世纪末的那个问题——‘电动力学想告诉我们什么’——我的完整回答很简单：
+
+空旷空间中的场具有物理实在性，承载它们的介质却没有。
+
+既然如此消除了电动力学的神秘，让我立刻为量子力学做同样的事：
+
+关联具有物理实在性，被关联的事物却没有。”
+    -N. David Mermin, _What is quantum mechanics trying to tell us?_, 1998.
+%%%%
+ynoxinul
+
+“他盯着门，门缓缓打开，现出一个身形威严、面容阴沉的陌生人，严厉地问为何召唤他。颤抖的学生说：‘我没有召唤你。’陌生人怒气冲冲地上前说：‘你召唤了！恶魔可不能白白被召来。’学生无言以对。恶魔恼怒于一个未经传授的人竟敢仅凭狂妄就召唤自己，便扼住他的喉咙，将他掐死。
+
+几天后阿格里帕回来时，发现房子已被魔鬼包围。有些坐在烟囱顶上，朝空中踢腿；另一些就在矮墙边缘玩跳背游戏。他的书房挤满了魔鬼，以至于他很难走到自己的书桌旁。”
+    -Charles Mackay, _Memoirs of Extraordinary Popular Delusions_, Vol. III,
+     Part I. 1841.
+%%%%
+zombie
+
+“看来，僵尸虽然来自坟墓，却既不是幽灵，也不是像拉撒路那样死而复生的人。据说，僵尸是失去灵魂的人类尸体，仍然死着，却被从坟墓中取出，再由巫术赋予一种机械的生命假象——一具被迫像活物那样行走、行动、活动的尸体。拥有这种能力的人会去新坟，在尸体腐烂前将其挖出，驱使它动起来，然后把它变成仆役或奴隶。偶尔是为了犯罪，更多时候只是让它在住所或农场干苦活，给它安排枯燥繁重的工作；一旦懈怠，就像殴打不会说话的牲畜那样打它。”
+    -William Seabrook, _The Magic Island_. 1929.
+
+“它们不会害怕！不管我们做什么，不管杀死多少，它们永远、永远都不会害怕！”
+    -Max Brooks, _World War Z: An Oral History of the Zombie War_. 2006.

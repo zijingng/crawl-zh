@@ -1,0 +1,124 @@
+{
+  "glossary_sha256": "5ea382702e0d86c7e1fcad03e64a1c7d079f42a2a2f6af24949e155eae9dc885",
+  "looked_up": [
+    "boots",
+    "gloves",
+    "confused",
+    "confusion",
+    "Ostracised",
+    "Ostracised status",
+    "piety",
+    "Trove",
+    "bane",
+    "magic points",
+    "spell",
+    "web",
+    "net",
+    "demon weapon",
+    "rune of Zot",
+    "horn of Geryon",
+    "draining",
+    "damage",
+    "turn",
+    "time",
+    "portcullis",
+    "bell",
+    "wind",
+    "magical portal",
+    "funeral chant",
+    "drain"
+  ],
+  "hits": [
+    {
+      "Term": "boots",
+      "Translation": "靴子",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "drain",
+      "Translation": "吸能/吸取/消耗",
+      "Part of Speech": "verb",
+      "Variants": "",
+      "Note": "【0.34.1 修订】吸能状态与负能量、属性降低并非同一概念；具体消息区分吸取 HP、MP、最大 HP 等。 来源：dat/descript/status.txt; player.cc。\n【语境补充 2026-10-21】负能量或生命上限机制用吸能。吸血、汲取资源用吸取。维持法术耗费魔力用消耗。"
+    },
+    {
+      "Term": "draining",
+      "Translation": "吸能/汲取/耗损",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】与 drain 统一；作为武器印记或负能量效果时按场景表达，不机械译为流失。 来源：dat/descript/egos.txt。\n【语境补充 2026-10-21】印记、攻击效果或状态用吸能。叙述生命获取用汲取。使用物品付出生命代价用耗损。"
+    },
+    {
+      "Term": "gloves",
+      "Translation": "手套",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "horn of Geryon",
+      "Translation": "革律翁号角",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "magic points",
+      "Translation": "魔力值",
+      "Part of Speech": "noun",
+      "Variants": "MP",
+      "Note": "【0.34.1 修订】HP 对应生命值，MP 统一魔力值；删除过宽别名 Magic，保留 MP。 来源：player.cc。"
+    },
+    {
+      "Term": "magical portal",
+      "Translation": "魔法传送门",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "spell",
+      "Translation": "法术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Trove",
+      "Translation": "秘藏",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 一致性建议】与 Vaults（宝库）分支区分，指需满足条件才能进入的藏宝传送门。 来源：dat/descript/branches.txt。"
+    },
+    {
+      "Term": "turn",
+      "Translation": "回合/转向/变成/轮流",
+      "Part of Speech": "noun",
+      "Variants": "turns",
+      "Note": "【版本/语境】回合/动作叙述用语；不是固定时间单位 aut，动作耗时可不同。 来源：player-act.cc。\n【语境补充 2026-10-21】时间单位用回合。动词及 in turn、turn into 等短语按句意选择转向、变成、轮流等译法。"
+    },
+    {
+      "Term": "piety",
+      "Translation": "虔诚",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/神祇机制】神祇资源，不等同经验值。 来源：religion.cc。"
+    },
+    {
+      "Term": "confusion",
+      "Translation": "混乱",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态】状态名，区别动词 confuse。 来源：duration-data.h。"
+    },
+    {
+      "Term": "Ostracised status",
+      "Translation": "放逐术影响",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：放逐术影响。"
+    }
+  ]
+}

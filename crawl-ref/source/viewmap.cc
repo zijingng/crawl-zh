@@ -4,6 +4,7 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "viewmap.h"
 
@@ -435,11 +436,21 @@ public:
     }
 };
 
+string viewmap_display_level_name(const level_id &id)
+{
+    const string original = uppercase_first(id.describe(true, true));
+    const ui_arg branch = ui_text_arg("b.branch.name", branches[id.branch].longname);
+    if (brdepth[id.branch] == 1)
+        return branch.available ? branch.text : original;
+    return ui_render("v.map", "Level %s of %s", original,
+        {ui_literal_arg(to_string(id.depth)), branch});
+}
+
 #ifndef USE_TILE_LOCAL
 static void _draw_title(const coord_def& cpos, const feature_list& feats, const int columns)
 {
     const formatted_string help =
-        formatted_string::parse_string("(Press <w>?</w> for help)");
+        formatted_string::parse_string(ui_translate("v.ui", "(Press <w>?</w> for help)"));
     const int helplen = help.width();
 
     if (columns < helplen)
@@ -464,7 +475,7 @@ static void _draw_title(const coord_def& cpos, const feature_list& feats, const 
     textcolour(WHITE);
 
     cprintf("%s", chop_string(
-                    uppercase_first(level_id::current().describe(true, true))
+                    viewmap_display_level_name(level_id::current())
                       + pstr, columns - helplen).c_str());
 
     cgotoxy(max(1, (columns - titlelen) / 2), 1);
@@ -1045,7 +1056,7 @@ map_control_state process_map_command(command_type cmd, const map_control_state&
             // completely wipe out map
             _forget_map(true);
             env.map_forgotten.reset(old);
-            mpr("Level map wiped.");
+            mpr(ui_translate("v.ui", "Level map wiped."));
             break;
         }
 #endif
@@ -1058,7 +1069,7 @@ map_control_state process_map_command(command_type cmd, const map_control_state&
             MapKnowledge *old = new MapKnowledge(env.map_knowledge);
             _forget_map();
             env.map_forgotten.reset(old);
-            mpr("Level map cleared.");
+            mpr(ui_translate("v.ui", "Level map cleared."));
         }
         break;
 
@@ -1067,10 +1078,10 @@ map_control_state process_map_command(command_type cmd, const map_control_state&
         {
             _unforget_map();
             env.map_forgotten.reset();
-            mpr("Remembered map restored.");
+            mpr(ui_translate("v.ui", "Remembered map restored."));
         }
         else
-            mpr("No remembered map.");
+            mpr(ui_translate("v.ui", "No remembered map."));
         break;
 
     case CMD_MAP_ADD_WAYPOINT:
@@ -1328,7 +1339,7 @@ map_control_state process_map_command(command_type cmd, const map_control_state&
         state.excursion->go_to(state.lpos.id);
 
         if (!is_map_persistent())
-            mpr("You can't annotate this level.");
+            mpr(ui_translate("v.ui", "You can't annotate this level."));
         else
         {
 #ifdef USE_TILE_WEB

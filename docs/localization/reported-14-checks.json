@@ -1,0 +1,27 @@
+{
+  "batch": "reported-14",
+  "new_reviewed_ui_entries": 81,
+  "new_entries_present_in_generated_catalogue": true,
+  "hell_effect_groups_exported": [
+    "hell_effect_quiet",
+    "hell_effect_noisy"
+  ],
+  "native_tests": 7,
+  "native_assertions": 5446,
+  "python_tests": 33,
+  "checks": [
+    "English mode retains canonical messages",
+    "Unknown appearance and portal names fall back as complete English messages",
+    "128 canonical recollection selections retain RNG state",
+    "128 seeds for both hell-effect groups retain canonical selection and RNG",
+    "Unidentified staff and talisman appearance caches and identification flags stay unchanged",
+    "Lua arrival notes and milestones remain English",
+    "Known static terrain with Lua marker is translated without extra property calls",
+    "git diff --check"
+  ],
+  "windows_tiles_executable": {
+    "path": "crawl-ref/source/crawl.exe",
+    "sha256": "d47a1e85988e6bc248838aaa821514b693b6c1f1b96f860b318991f40a896a47",
+    "compiled": true
+  }
+}

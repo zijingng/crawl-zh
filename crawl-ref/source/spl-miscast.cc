@@ -4,8 +4,10 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "spl-miscast.h"
+#include "miscast-display.h"
 
 #include "attack.h"
 #include "beam-type.h"
@@ -44,32 +46,55 @@ static void _do_msg(actor& target, spschool which, int dam)
     else
         db_key += "unseen";
 
-    string msg = getSpeakString(db_key);
+    mpr(render_miscast_message(target, getPairedCastString(db_key), dam));
+}
+
+string render_miscast_message(actor &target, textdb_speech speech, int damage)
+{
+    string msg = speech.english;
 
     bool plural;
 
-    msg = replace_all(msg, "@hand@",  target.hand_name(false, &plural));
-    msg = replace_all(msg, "@hands@", target.hand_name(true));
-
-    if (plural)
-        msg = replace_all(msg, "@hand_conj@", "");
-    else
-        msg = replace_all(msg, "@hand_conj@", "s");
+    const string hand = target.hand_name(false, &plural);
+    const string hands = target.hand_name(true);
+    const auto replace_part = [&](const char *marker, const string &part)
+    {
+        const ui_arg shown = ui_text_arg("mon.cast.body", part);
+        speech.replace(marker, part, shown.text, shown.available);
+    };
+    replace_part("@hand@", hand);
+    replace_part("@hands@", hands);
+    speech.replace("@hand_conj@", plural ? "" : "s", "", true);
+    msg = speech.english;
 
     if (target.is_monster())
     {
-        msg = do_mon_str_replacements(msg, *target.as_monster(), S_SILENT);
+        msg = do_mon_str_replacements(msg, *target.as_monster(), S_SILENT, &speech);
         if (!mons_has_body(*target.as_monster()))
         {
             msg = replace_all(msg, "'s body", "");
             msg = replace_all(msg, "'s skin", "");
+            // English elides anatomy for bodiless monsters. Until an equivalent
+            // typed Chinese form is reviewed, retain the entire English message.
+            speech.complete = false;
         }
     }
     // For monsters this is done inside do_mon_str_replacements
     else
-        msg = maybe_pick_random_substring(msg);
+    {
+        speech.pick_substrings();
+        msg = speech.english;
+    }
 
-    mpr(msg + attack_strength_punctuation(dam));
+    speech.english = msg;
+    const string punctuation = attack_strength_punctuation(damage);
+    const ui_arg shown_punctuation = ui_attack_punctuation(punctuation);
+    if (speech.complete && shown_punctuation.available
+        && speech.text() == speech.translated)
+    {
+        return speech.translated + shown_punctuation.text;
+    }
+    return msg + punctuation;
 }
 
 static void _ouch(actor& target, actor * source, miscast_source_info mc_info, int dam, beam_type flavour, string cause)
@@ -234,8 +259,7 @@ static const map<spschool, miscast_datum> miscast_effects = {
                     // number arbitrarily chosen & needs more playtesting
                     const int dur = div_rand_round(dam, 2);
                     you.set_duration(DUR_DIMENSION_ANCHOR, dur, dur);
-                    you.set_duration(DUR_NO_MOMENTUM, dur, dur,
-                                     "You are magically locked in place.");
+                    you.set_duration(DUR_NO_MOMENTUM, dur, dur, ui_translate("s.duration.start", "You are magically locked in place."));
                 }
                 else
                 {

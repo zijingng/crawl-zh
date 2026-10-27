@@ -1,0 +1,89 @@
+{
+  "removed_ui_messages": 1545,
+  "removed_contexts": [
+    "fix.cast",
+    "fix.charge",
+    "fix.shout",
+    "misc.lua.reviewed",
+    "misc.lua.speech",
+    "mon.cast.speech",
+    "x.speech"
+  ],
+  "new_textdb_keys": [
+    [
+      "database/monspeak.txt",
+      "orb spider charge"
+    ],
+    [
+      "database/monspeak.txt",
+      "_important_subject_"
+    ],
+    [
+      "database/monspeak.txt",
+      "_axioms_of_law_"
+    ],
+    [
+      "database/monspeak.txt",
+      "confused cognitogaunt"
+    ],
+    [
+      "database/monspeak.txt",
+      "default profane servitor"
+    ],
+    [
+      "database/monspeak.txt",
+      "default 'cap-a'"
+    ],
+    [
+      "database/monspeak.txt",
+      "hell lord"
+    ]
+  ],
+  "lua_results": 19,
+  "matching_code_dependencies_refreshed": {
+    "mon-util.cc": 9638,
+    "mon-abil.cc": 2632,
+    "database.cc": 3814,
+    "database.h": 596
+  },
+  "database_exports": {
+    "database/help.txt": 13,
+    "database/FAQ.txt": 38,
+    "database/godname.txt": 23,
+    "database/monspell.txt": 262,
+    "database/miscast.txt": 33,
+    "database/montitle.txt": 86,
+    "database/colourname.txt": 9,
+    "database/shout.txt": 93,
+    "database/insult.txt": 33,
+    "database/miscname.txt": 10,
+    "database/wpnnoise.txt": 65,
+    "database/decorlines.txt": 132,
+    "database/graffiti.txt": 58,
+    "database/godspeak.txt": 193,
+    "database/monflee.txt": 1,
+    "database/monspeak.txt": 605
+  },
+  "previous_database_translations_unchanged": 1647,
+  "all_managed_database_rows_exported": true,
+  "export_time_dependency_rejections": {
+    "sigmund": "dependency_changed",
+    "_sigmund_common_": "dependency_changed",
+    "margery": "dependency_changed",
+    "_spell_colour_": "source_changed",
+    "_margery_common_": "dependency_changed"
+  },
+  "runtime_validation_metadata": false,
+  "ui_nonempty_body_overlaps": 0,
+  "python_tests": 32,
+  "native_tests": 160,
+  "native_assertions": 1141285,
+  "windows_tiles_build": "passed",
+  "executable": "crawl-ref/source/crawl.exe",
+  "executable_sha256": "7878db6d8af814f3f67f3c81715224145c182f5d44a078d18146054e4b523d73",
+  "visual_game_test": "not run",
+  "manual_runtime_review_lists": false,
+  "translated_database_source": "localization/zh_CN/textdb.po",
+  "review_stage": "export time only",
+  "reviewed_ui_only_entries_migrated": 7
+}

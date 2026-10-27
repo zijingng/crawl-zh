@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "s-display.h"
+#include "i18n.h"
 
 #include "stash.h"
 
@@ -13,6 +15,7 @@
 #include <sstream>
 
 #include "chardump.h"
+#include "branch.h"
 #include "clua.h"
 #include "cluautil.h"
 #include "command.h"
@@ -49,9 +52,192 @@
 #include "unicode.h"
 #include "unwind.h"
 #include "viewmap.h"
+#include "spl-util.h"
 
 // Global
 StashTracker StashTrack;
+
+static bool _stash_chinese_query(const string &query)
+{
+    return Options.language == lang_t::ZH
+        && any_of(query.begin(), query.end(), [](unsigned char c) { return c >= 128; });
+}
+
+static string _stash_tag_alias(const string &tag)
+{
+    for (const char *context : {"search.tag", "display.skill", "equipment.ego", "equipment.property"})
+    {
+        const ui_arg alias = ui_text_arg(context, tag);
+        if (alias.available)
+            return alias.text;
+    }
+    // Numeric property suffixes remain literal, e.g. rF++, Str+3, rC-.
+    const size_t sign = tag.find_first_of("+-", 1);
+    if (sign != string::npos)
+    {
+        const string tail = tag.substr(sign);
+        if (tail.find_first_not_of("+-0123456789") == string::npos)
+        {
+            const string stem = _stash_tag_alias(tag.substr(0, sign));
+            if (!stem.empty())
+                return stem + tail;
+        }
+    }
+    return "";
+}
+
+string stash_prefix_aliases(const string &annotations, bool menu)
+{
+    if (Options.language != lang_t::ZH)
+        return "";
+    vector<string> tags;
+    if (menu)
+        tags = split_string(" ", annotations);
+    else
+    {
+        size_t pos = 0;
+        while ((pos = annotations.find('{', pos)) != string::npos)
+        {
+            const size_t end = annotations.find('}', pos + 1);
+            if (end == string::npos)
+                break;
+            tags.push_back(annotations.substr(pos + 1, end - pos - 1));
+            pos = end + 1;
+        }
+    }
+    set<string> seen;
+    string result;
+    const auto append = [&](const string &alias) {
+        if (!alias.empty() && seen.insert(alias).second)
+            result += " {" + alias + "}";
+    };
+    for (const string &tag : tags)
+    {
+        const string whole = _stash_tag_alias(tag);
+        if (!whole.empty())
+        {
+            append(whole);
+            continue;
+        }
+        // Composite resistance tags are canonical metadata, not English prose.
+        // Unknown custom annotations are retained without guessing their meaning.
+        vector<string> parts;
+        bool complete = true;
+        for (const string &part : split_string(" ", tag))
+        {
+            const string alias = _stash_tag_alias(part);
+            complete = complete && !alias.empty();
+            parts.push_back(alias);
+        }
+        if (complete)
+            for (const string &part : parts)
+                append(part);
+    }
+    return result;
+}
+
+string stash_item_aliases(const item_def &item, const string &annotations)
+{
+    if (Options.language != lang_t::ZH)
+        return "";
+    string result = stash_prefix_aliases(annotations)
+                  + stash_prefix_aliases(item_prefix(item, false), true);
+    string name;
+    const bool named = try_item_display_name(item, name, false, true);
+    if (named)
+        result += "\n" + name;
+    // Read only known content; an unidentified wand/book must not reveal spells.
+    if (item.is_identified() && item.has_spells())
+        for (const auto &book : item_spellset(item))
+            for (spell_type spell : book.spells)
+            {
+                const ui_arg title = ui_text_arg("display.spell", spell_title(spell));
+                if (title.available)
+                    result += "\n" + title.text;
+            }
+    if (named && item.is_identified() && is_dumpable_artefact(item))
+        result += "\n" + get_item_description(item, IDM_DUMP, true);
+    return result;
+}
+
+string stash_search_haystack(const string &english, const string &aliases,
+                             const base_pattern &query)
+{
+    // Evaluate boolean expressions once over the same object's bilingual data.
+    // ASCII searches retain the exact upstream haystack, including regex anchors.
+    return _stash_chinese_query(query.tostring()) && !aliases.empty()
+        ? english + "\n" + aliases : english;
+}
+
+ui_arg stash_level_arg(const level_id &level)
+{
+    if (level.branch < BRANCH_DUNGEON || level.branch >= NUM_BRANCHES)
+        return {"", false};
+    ui_arg result = ui_text_arg("b.branch.name", branches[level.branch].shortname);
+    if (brdepth[level.branch] != 1)
+        result.text += ":" + (level.depth ? to_string(level.depth) : "$" );
+    return result;
+}
+
+static string _stash_place_alias(const string &prefix)
+{
+    if (Options.language != lang_t::ZH || prefix.size() < 3
+        || prefix.front() != '{' || prefix.back() != '}')
+    {
+        return "";
+    }
+    try
+    {
+        const level_id place = level_id::parse_level_id(prefix.substr(1, prefix.size() - 2));
+        const ui_arg branch = ui_text_arg("b.branch.name", branches[place.branch].shortname);
+        if (branch.available)
+        {
+            const string depth = to_string(place.depth);
+            return "{" + branch.text + ":" + depth + "} {"
+                 + ui_render("search.place", "%s:%s", "", {branch, ui_literal_arg(depth)}) + "}";
+        }
+    }
+    catch (const bad_level_id &)
+    {
+    }
+    return "";
+}
+
+string stash_search_pattern(const string &query, bool regex_leaf)
+{
+#ifdef REGEX_PCRE
+    if (!_stash_chinese_query(query))
+        return query;
+    if (regex_leaf)
+        return "(*UTF8)" + query;
+    const auto leaf = [](string part) {
+        const size_t first = part.find_first_not_of(" \t\r\n");
+        if (first != string::npos && _stash_chinese_query(part)
+            && part[first] != '=' && (part[first] == '/' || Options.regex_search))
+        {
+            part.insert(first + (part[first] == '/' ? 1 : 0), "(*UTF8)");
+        }
+        return part;
+    };
+    string result;
+    size_t start = 0;
+    for (size_t i = 0; i + 1 < query.size(); ++i)
+    {
+        const string token = query.substr(i, 2);
+        if (token == "&&" || token == "||" || token == "!!"
+            || token == "<<" || token == ">>" || token == "==" || token == "^^")
+        {
+            result += leaf(query.substr(start, i - start)) + token;
+            start = i + 2;
+            ++i;
+        }
+    }
+    return result + leaf(query.substr(start));
+#else
+    UNUSED(regex_leaf);
+    return query;
+#endif
+}
 
 string userdef_annotate_item(const char *s, const item_def *item)
 {
@@ -75,6 +261,9 @@ string stash_annotate_item(const char *s, const item_def *item)
 
     if (item->has_spells())
     {
+        // Search annotations are canonical metadata, not the translated UI.
+        unwind_var<lang_t> language(Options.language,
+            Options.language == lang_t::ZH ? lang_t::EN : Options.language);
         formatted_string fs;
         describe_spellset(item_spellset(*item), item, fs);
         text += "\n";
@@ -112,6 +301,22 @@ bool is_stash(const coord_def& c)
     return ls && ls->find_stash(c);
 }
 
+static ui_arg _s_stash_item_arg(const item_def &item)
+{
+    ui_arg name;
+    name.available = try_item_display_name(item, name.text, in_inventory(item), in_inventory(item));
+    if (!name.available) return name;
+    const char *source = in_inventory(item) ? "[carried] %s"
+        : !is_rottable(item) || item.stash_freshness > 0 ? nullptr
+        : mons_has_skeleton(item.mon_type) ? "%s (skeletalised by now)" : "%s (gone by now)";
+    if (source)
+    {
+        name.text = ui_render("s.stash.item", source, "", {name});
+        name.available = !name.text.empty();
+    }
+    return name;
+}
+
 string get_stash_desc(const coord_def& c)
 {
     LevelStashes *ls = StashTrack.find_current_level();
@@ -132,7 +337,14 @@ void describe_stash(const coord_def& c)
 {
     string desc = get_stash_desc(c);
     if (!desc.empty())
-        mprf(MSGCH_EXAMINE_FILTER, "%s", desc.c_str());
+    {
+        ui_arg item_name{"", false};
+        vector<item_def> items = item_list_in_stash(c);
+        if (!items.empty()) item_name = _s_stash_item_arg(items[0]);
+        const string tail = items.size() > 1 ? make_stringf(" (...%u)", (unsigned)(items.size() - 1)) : "";
+        mprf(MSGCH_EXAMINE_FILTER, "%s", ui_render("s.stash", "[Stash: %s%s]", desc,
+            {item_name, ui_literal_arg(tail)}).c_str());
+    }
 }
 
 vector<item_def> Stash::get_items() const
@@ -381,11 +593,17 @@ vector<stash_search_result> Stash::matches_search(
         string haystack = prefix + " " + ann + " " + s;
         if (is_dumpable_artefact(item))
             haystack += " " + chardump_desc(item);
+        if (_stash_chinese_query(search.tostring()))
+            haystack = stash_search_haystack(haystack,
+                _stash_place_alias(prefix) + stash_item_aliases(item, ann), search);
         if (search.matches(haystack))
         {
             stash_search_result res;
             res.match_type = MATCH_ITEM;
             res.match = s;
+            const ui_arg display = _s_stash_item_arg(item);
+            res.display_match = display.text;
+            res.display_available = display.available;
             res.primary_sort = item.name(DESC_QUALNAME);
             res.item = item;
             results.push_back(res);
@@ -395,11 +613,16 @@ vector<stash_search_result> Stash::matches_search(
     if (feat != DNGN_FLOOR)
     {
         const string fdesc = feature_description();
-        if (!fdesc.empty() && search.matches(prefix + " " + fdesc))
+        string alias;
+        if (_stash_chinese_query(search.tostring()))
+            try_feature_display_name(feat, trap, alias);
+        if (!fdesc.empty() && search.matches(stash_search_haystack(prefix + " " + fdesc,
+                _stash_place_alias(prefix) + " " + alias, search)))
         {
             stash_search_result res;
             res.match_type = MATCH_FEATURE;
             res.match = fdesc;
+            res.display_available = try_feature_display_name(feat, trap, res.display_match);
             res.primary_sort = fdesc;
             res.feat = feat;
             res.trap = trap;
@@ -618,18 +841,25 @@ vector<stash_search_result> ShopInfo::matches_search(
 
     no_notes nx;
 
-    const string shoptitle = shop_name(shop) + (shop.stock.empty() ? "*" : "");
-    if (search.matches(shoptitle + " " + prefix + " {shop}"))
+    ui_arg shop_display;
+    const string shoptitle = shop_name(shop, &shop_display) + (shop.stock.empty() ? "*" : "");
+    if (shop.stock.empty()) shop_display.text += "*";
+    const string shop_alias = _stash_place_alias(prefix) + " " + shop_display.text
+                            + stash_prefix_aliases("{shop}");
+    if (search.matches(stash_search_haystack(shoptitle + " " + prefix + " {shop}", shop_alias, search)))
     {
         stash_search_result res;
         res.match = shoptitle;
+        res.display_match = shop_display.text;
+        res.display_available = shop_display.available;
         res.primary_sort = shoptitle;
         res.match_type = MATCH_SHOP;
         res.shop = this;
         res.pos.pos = shop.pos;
         results.push_back(res);
         // if the player is just searching for shops, don't show contents
-        if (search.matches(prefix + " {shop}")
+        if (search.matches(stash_search_haystack(prefix + " {shop}",
+                _stash_place_alias(prefix) + stash_prefix_aliases("{shop}"), search))
             && search.tostring() != "." && search.tostring() != "..")
         {
             return results;
@@ -644,11 +874,19 @@ vector<stash_search_result> ShopInfo::matches_search(
 
         string text = prefix + " " + ann + " " + sname + " {" + shoptitle + "}"
                       + shop_item_desc(item);
+        if (_stash_chinese_query(search.tostring()))
+            text = stash_search_haystack(text, shop_alias + stash_item_aliases(item, ann), search);
         if (search.matches(text))
         {
             stash_search_result res;
             res.match_type = MATCH_ITEM;
             res.match = sname;
+            const ui_arg item_name = _s_stash_item_arg(item);
+            const string shown = ui_render("s.stash.shop", "%s%s (%s gold)", "",
+                {item_name, s_clause_arg(shop_item_unknown(item) ? " (unknown)" : ""),
+                 ui_literal_arg(to_string(item_price(item, shop)))});
+            res.display_match = shown;
+            res.display_available = !shown.empty();
             res.primary_sort = item.name(DESC_QUALNAME);
             res.item = item;
             res.pos.pos = shop.pos;
@@ -1103,7 +1341,12 @@ string StashTracker::stash_search_prompt()
     if (!prompt_qual.empty())
         prompt_qual = " [" + prompt_qual + "]";
 
-    return make_stringf("Search for what%s? ", prompt_qual.c_str());
+    const string original = make_stringf("Search for what%s? ", prompt_qual.c_str());
+    ui_arg history = lastsearch.empty() ? ui_literal_arg("") : ui_arg{
+        ui_render("s.search", "Enter for \"%s\"", "", {ui_literal_arg(replace_all(lastsearch, "<", "<<"))}), false};
+    history.available = lastsearch.empty() || !history.text.empty();
+    const ui_arg help = lastsearch == "." ? ui_literal_arg("") : ui_text_arg("s.search", "? for help");
+    return ui_render("s.search", "Search for what%s%s? ", original, {history, help});
 }
 
 void StashTracker::remove_shop(const level_pos &pos)
@@ -1256,10 +1499,15 @@ static vector<stash_search_result> _inventory_search(const base_pattern &search)
         string haystack = ann + " " + s;
         if (is_dumpable_artefact(item))
             haystack += " " + chardump_desc(item);
+        if (_stash_chinese_query(search.tostring()))
+            haystack = stash_search_haystack(haystack, stash_item_aliases(item, ann), search);
         if (search.matches(haystack))
         {
             stash_search_result res;
             res.match = s;
+            const ui_arg display = _s_stash_item_arg(item);
+            res.display_match = display.text;
+            res.display_available = display.available;
             res.primary_sort = s; // don't use DESC_QUALNAME for inventory items
             res.item = item;
             // Needs to not be equal to ITEM_IN_INVENTORY so the describe
@@ -1383,7 +1631,7 @@ void StashTracker::search_stashes(string search_term)
 
     base_pattern *search = nullptr;
 
-    lua_text_pattern ltpat(csearch);
+    lua_text_pattern ltpat(stash_search_pattern(csearch));
     text_pattern tpat(csearch, true);
     plaintext_pattern ptpat(csearch, true);
 
@@ -1395,7 +1643,7 @@ void StashTracker::search_stashes(string search_term)
     {
         if (csearch[0] == '/')
             csearch.erase(0, 1);
-        tpat = csearch;
+        tpat = stash_search_pattern(csearch, true);
         search = &tpat;
     }
     else
@@ -1408,7 +1656,7 @@ void StashTracker::search_stashes(string search_term)
 
     if (!search->valid() && csearch != "*")
     {
-        mprf(MSGCH_PLAIN, "Your search expression is invalid.");
+        mprf(MSGCH_PLAIN, "%s", ui_translate("s.ui", "Your search expression is invalid."));
         return ;
     }
 
@@ -1423,7 +1671,7 @@ void StashTracker::search_stashes(string search_term)
 
     if (results.empty())
     {
-        mprf(MSGCH_PLAIN, "Can't find anything matching that.");
+        mprf(MSGCH_PLAIN, "%s", ui_translate("s.ui", "Can't find anything matching that."));
         return;
     }
 
@@ -1432,7 +1680,7 @@ void StashTracker::search_stashes(string search_term)
 
     if (dedup_results.size() > SEARCH_SPAM_THRESHOLD)
     {
-        mprf(MSGCH_PLAIN, "Too many matches; use a more specific search.");
+        mprf(MSGCH_PLAIN, "%s", ui_translate("s.ui", "Too many matches; use a more specific search."));
         return;
     }
 
@@ -1577,27 +1825,26 @@ formatted_string StashSearchMenu::calc_title()
             num_matches, num_matches == 1 ? "" : "es"),
     };
     const bool f = num_matches != num_alt_matches;
-    fs.cprintf(prefixes[f]);
+    fs.cprintf("%s", ui_render("s.search", "%s matches", prefixes[f], {ui_literal_arg(to_string(f ? num_matches : num_alt_matches))}).c_str());
     if (num_matches == 0 && filtered)
     {
         // TODO: it might be better to just force filtered=false in the
         // display loop if only useless items are found.
         fs += formatted_string::parse_string(
-            "<lightgrey>"
-            ": only useless items found; press <w>=</w> to show."
-            "                    "
-            "</lightgrey>");
+            ui_translate("s.ui", "<lightgrey>: only useless items found; press <w>=</w> to show.                    </lightgrey>"));
     }
     else
     {
         fs += formatted_string::parse_string(make_stringf(
-            "<lightgrey>"
+"%s", ui_render("s.search", "<lightgrey>: <w>%s</w> [toggle: <w>!</w>], by <w>%s</w> [<w>/</w>], <w>%s</w> useless & duplicates [<w>=</w>]</lightgrey>",
+                make_stringf(            "<lightgrey>"
             ": <w>%s</w> [toggle: <w>!</w>],"
             " by <w>%s</w> [<w>/</w>],"
             " <w>%s</w> useless & duplicates [<w>=</w>]"
             "</lightgrey>",
             menu_action == ACT_EXECUTE ? "travel" : "view  ",
-            sort_style, filtered));
+            sort_style, filtered),
+                {s_clause_arg(menu_action == ACT_EXECUTE ? "travel" : "view  "), s_clause_arg(sort_style), s_clause_arg(filtered)}).c_str()));
     }
     fs.cprintf(string(max(0, strwidth(prefixes[!f])-strwidth(prefixes[f])),
                       ' '));
@@ -1718,7 +1965,7 @@ bool StashTracker::display_search_results(
         if (need_here_subtitle && (here || res.in_inventory))
         {
             // LIGHTCYAN for better contrast. XX change the default?
-            first_hdr = new StashMenuEntry("Results at your position",
+            first_hdr = new StashMenuEntry(ui_translate("s.search", "Results at your position"),
                                                     MEL_SUBTITLE, LIGHTCYAN);
             stashmenu.add_entry(first_hdr);
             // only show the `elsewhere` subtitle if there are any `here`
@@ -1730,9 +1977,9 @@ bool StashTracker::display_search_results(
 
         if (need_there_subtitle && !(here || res.in_inventory))
         {
-            const string cycle_keyhelp = " <lightgrey>([<w>,</w>] to cycle)</lightgrey>";
+            const string cycle_keyhelp = ui_translate("s.search", " <lightgrey>([<w>,</w>] to cycle)</lightgrey>");
             stashmenu.add_entry(new StashMenuEntry(
-                "Results elsewhere" + cycle_keyhelp, MEL_SUBTITLE, LIGHTCYAN));
+                string(ui_translate("s.search", "Results elsewhere")) + cycle_keyhelp, MEL_SUBTITLE, LIGHTCYAN));
             ASSERT(first_hdr);
             first_hdr->text += cycle_keyhelp;
             need_there_subtitle = false;
@@ -1775,7 +2022,31 @@ bool StashTracker::display_search_results(
                 colour = itemcol;
         }
 
-        StashMenuEntry *me = new StashMenuEntry(matchtitle.str(), MEL_ITEM,
+        ui_arg location = ui_literal_arg("");
+        if (!res.in_inventory)
+        {
+            if (here) location = ui_text_arg("s.search", "[right here] ");
+            else
+            {
+                location = stash_level_arg(res.pos.id);
+                location.text = "[" + location.text + "] ";
+            }
+            if (const uint8_t waypoint = travel_cache.is_waypoint(res.pos))
+                location.text = "(" + to_string(waypoint) + ") " + location.text;
+        }
+        ui_arg duplicates = ui_literal_arg("");
+        if (res.duplicates > 0)
+        {
+            const bool piles = res.duplicates != res.duplicate_piles && res.match_type == MATCH_ITEM;
+            const char *source = piles ? " (%s further duplicates in %s piles)" : " (%s further duplicates)";
+            duplicates.text = piles ? ui_render("s.search", source, "",
+                {ui_literal_arg(to_string(res.duplicates)), ui_literal_arg(to_string(res.duplicate_piles))})
+                : ui_render("s.search", source, "", {ui_literal_arg(to_string(res.duplicates))});
+            duplicates.available = !duplicates.text.empty();
+        }
+        const string shown_match = ui_render("s.search.row", "Result %s%s%s", matchtitle.str(),
+            {location, ui_arg{res.display_match, res.display_available}, duplicates});
+        StashMenuEntry *me = new StashMenuEntry(shown_match, MEL_ITEM,
                                             colour, 1, (int) hotkey, here);
         me->data = &res;
 

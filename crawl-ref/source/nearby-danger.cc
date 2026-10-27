@@ -4,6 +4,7 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "nearby-danger.h"
 
@@ -161,7 +162,11 @@ static string _seen_monsters_announcement(const vector<monster*> &visible,
 
 static void _announce_monsters(string announcement, vector<monster*> &visible)
 {
-    mprf(MSGCH_WARN, "%s!", announcement.c_str());
+    const ui_arg reason = visible.size() == 1
+        ? ui_arg{ui_render("i.danger", "%s is nearby", "", {ui_actor_arg(*visible[0])}), true}
+        : ui_text_arg("i.danger", announcement);
+    const ui_arg complete{reason.text, reason.available && !reason.text.empty()};
+    mprf(MSGCH_WARN, "%s", ui_render("n.warn", "%s!", announcement + "!", {complete}).c_str());
 
     if (Options.use_animations & UA_MONSTER_IN_SIGHT)
     {
@@ -226,19 +231,25 @@ vector<monster* > get_nearby_monsters(bool want_move,
     return mons;
 }
 
-#define UNSAFE_MSG(msg) {                           \
-    if (announce || reason)                         \
-    {                                               \
-        if (announce)                               \
-            mprf(MSGCH_WARN, "%s!", msg);           \
-        if (reason)                                 \
-            *reason = msg;                          \
-        return false;                               \
+#define UNSAFE_MSG(msg) {                                            \
+    if (announce || reason || display_reason)                        \
+    {                                                               \
+        const string original = msg;                                \
+        const ui_arg shown = typed_reason.available ? typed_reason  \
+            : ui_text_arg("i.danger", original);                     \
+        if (announce)                                               \
+            mprf(MSGCH_WARN, "%s", ui_render("n.warn", "%s!",        \
+                original + "!", {shown}).c_str());                   \
+        if (reason) *reason = original;                              \
+        if (display_reason) *display_reason = shown;                 \
+        return false;                                               \
     }}
 
 bool i_feel_safe(bool announce, bool want_move, bool just_monsters,
-                 bool check_dist, int range, string* reason)
+                 bool check_dist, int range, string* reason, ui_arg* display_reason)
 {
+    ui_arg typed_reason{"", false};
+    if (display_reason) *display_reason = typed_reason;
     if (!just_monsters)
     {
         // check clouds
@@ -251,7 +262,17 @@ bool i_feel_safe(bool announce, bool want_move, bool just_monsters,
             // Qazlal immunity will allow for it, however.
             bool your_fault = cloud_is_yours_at(you.pos());
             if (cloud_damages_over_time(type, want_move, your_fault))
+            {
+                if (display_reason || announce)
+                {
+                    string cloud_name;
+                    const bool available = try_cloud_display_name(type, true, cloud_name);
+                    const string text = ui_render("i.danger", "you are in a cloud of %s", "",
+                        {{cloud_name, available}});
+                    typed_reason = {text, !text.empty()};
+                }
                 UNSAFE_MSG(make_stringf("you are in a cloud of %s", cloud_type_name(type).c_str()).c_str());
+            }
         }
 
         if (poison_is_lethal())
@@ -294,6 +315,17 @@ bool i_feel_safe(bool announce, bool want_move, bool just_monsters,
         _announce_monsters(announcement, visible);
     if (reason)
         *reason = announcement;
+    if (display_reason)
+    {
+        if (visible.size() == 1)
+        {
+            const string text = ui_render("i.danger", "%s is nearby", "",
+                {ui_actor_arg(*visible.front())});
+            *display_reason = {text, !text.empty()};
+        }
+        else
+            *display_reason = ui_text_arg("i.danger", announcement);
+    }
 
     return false;
 }
@@ -492,12 +524,12 @@ void revive()
     if (you.hp_max <= 0)
     {
         you.lives = 0;
-        mpr("You are too frail to live.");
+        mpr(ui_translate("n.ui", "You are too frail to live."));
         // possible only with an extreme abuse of Borgnjor's
         // might be impossible now that felids don't level down on death?
         ouch(INSTANT_DEATH, KILLED_BY_DRAINING);
     }
 
-    mpr("You rejoin the land of the living...");
+    mpr(ui_translate("n.ui", "You rejoin the land of the living..."));
     // included in default force_more_message
 }

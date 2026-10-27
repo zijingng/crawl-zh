@@ -467,6 +467,21 @@ function util.expand_entity(entity, msg)
                      end)
 end
 
+function util.display_message(entity, msg)
+  if not msg then return msg end
+  local original = util.expand_entity(entity, msg)
+  local shown = crawl.ui_name("lua.map", msg)
+  if not shown then return original end
+  if string.find(msg, "$F", 1, true) then
+    local name = entity and crawl.ui_name("lua.entity", entity)
+    if not name then return original end
+    shown = string.gsub(shown, "$F%{(%w+)%}", function () return name end)
+    shown = string.gsub(shown, "$F", function () return name end)
+  end
+  if string.find(shown, "$F", 1, true) then return original end
+  return shown
+end
+
 function util.range(start, stop)
   local rt
   for i = start, stop do

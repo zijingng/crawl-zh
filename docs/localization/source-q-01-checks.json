@@ -1,0 +1,21 @@
+{
+  "batch": "source-q-01",
+  "date": "2026-10-24",
+  "reviewed_messages": 103,
+  "catalogue_matches": 103,
+  "missing_messages": [],
+  "stale_dependencies": [],
+  "original_top_level_q_files": 2,
+  "current_top_level_q_files": 2,
+  "windows_tiles_build": true,
+  "native_cases": 88,
+  "native_assertions": 184311,
+  "python_tests": 28,
+  "limitations": [
+    "Arbitrary Lua script messages and public Lua name/key results remain controlled by existing script semantics; no global translation interception.",
+    "Missing typed names, paragraphs or source fingerprints cause complete row/sentence English fallback.",
+    "Canonical anatomy, stat names, reasons, Lua hook input, save/props keys, kill causes, notes and RNG retain upstream semantics.",
+    "Technical Lua errors, wizard-only terrain build descriptions, save keys, inscriptions and command placeholders retain upstream data.",
+    "No in-game visual smoke test; Windows Tiles only."
+  ]
+}

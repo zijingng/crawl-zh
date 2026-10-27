@@ -4,6 +4,7 @@
  */
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "fight.h"
 
@@ -990,6 +991,23 @@ bool wielded_weapon_check(string attack_verb)
     if (penance)
         prompt += " This could place you under penance!";
 
+    vector<string> names;
+    bool available = true;
+    for (const item_def *item : {weapon, offhand})
+        if (item)
+        {
+            const ui_arg name = ui_item_arg(*item);
+            names.push_back(name.text);
+            available &= name.available;
+        }
+    ui_arg weapons = {join_strings(names.begin(), names.end(), "、"), available};
+    if (names.empty())
+        weapons = ui_text_arg("f.warning", "nothing");
+    prompt = ui_render("f.warning", "Really %s while wielding %s?%s", prompt,
+        {ui_text_arg("f.attack.action", attack_verb.empty() ? "attack" : attack_verb),
+         weapons, penance ? ui_text_arg("f.warning", " This could place you under penance!")
+                          : ui_literal_arg("")});
+
     const bool result = yesno(prompt.c_str(), true, 'n');
 
     if (!result)
@@ -1386,6 +1404,21 @@ bool bad_attack(const monster *mon, string& adj, string& suffix,
     return !adj.empty() || !suffix.empty();
 }
 
+// Display-only adapters. English adjective/suffix generation remains canonical.
+static ui_arg _warning_victim_display(const monster &mon)
+{
+    const ui_arg name = ui_actor_arg(mon);
+    const ui_arg kind = ui_text_arg("a.warning", mon.friendly() ? "ally"
+        : mon.neutral() ? "neutral" : "non-hostile");
+    return {kind.text + name.text, name.available && kind.available};
+}
+
+static ui_arg _warning_penance_display(bool penance)
+{
+    return penance ? ui_text_arg("a.warning", " This attack would place you under penance!")
+                   : ui_literal_arg("");
+}
+
 bool stop_attack_prompt(const monster* mon, bool beam_attack,
                         coord_def beam_target, bool *prompted,
                         coord_def attack_pos, bool check_only)
@@ -1434,9 +1467,17 @@ bool stop_attack_prompt(const monster* mon, bool beam_attack,
     else
         verb = "attack ";
 
-    const string prompt = make_stringf("Really %s%s%s?%s",
+    string prompt = make_stringf("Really %s%s%s?%s",
              verb.c_str(), mon_name.c_str(), suffix.c_str(),
              penance ? " This attack would place you under penance!" : "");
+    if (suffix.empty())
+    {
+        const char *pattern = !beam_attack ? "Really attack %s?%s"
+            : beam_target == mon->pos() ? "Really fire at %s?%s"
+            : "Really fire in %s's direction?%s";
+        prompt = ui_render("f.warning", pattern, prompt,
+            {_warning_victim_display(*mon), _warning_penance_display(penance)});
+    }
 
     if (prompted)
         *prompted = true;
@@ -1468,6 +1509,7 @@ bool stop_attack_prompt(targeter &hitfunc, const char* verb,
         return false;
 
     attacked_monster_list victims;
+    vector<const monster *> display_victims;
     bool defender_ok = true;
     for (distance_iterator di(hitfunc.origin, false, true, LOS_RADIUS); di; ++di)
     {
@@ -1486,6 +1528,7 @@ bool stop_attack_prompt(targeter &hitfunc, const char* verb,
         if (bad_attack(mon, adj, suffix, penance))
         {
             victims.add(*mon, std::move(adj), std::move(suffix), penance);
+            display_victims.push_back(mon);
 
             if (defender && defender == mon)
                 defender_ok = false;
@@ -1513,10 +1556,35 @@ bool stop_attack_prompt(targeter &hitfunc, const char* verb,
             mon_name = "yourself and " + mon_name;
     }
 
-    const string prompt = make_stringf("Really %s%s %s%s?%s",
+    string prompt = make_stringf("Really %s%s %s%s?%s",
              verb, defender_ok ? " near" : "", mon_name.c_str(),
              victims.suffix(),
              penance ? " This attack would place you under penance!" : "");
+
+    // Use the already collected victims. Unknown actions or any missing name
+    // leave the complete original English confirmation intact.
+    if (!*victims.suffix())
+    {
+        vector<string> names;
+        bool available = true;
+        if (hits_player)
+        {
+            const ui_arg self = ui_text_arg("a.warning", "yourself");
+            names.push_back(self.text);
+            available &= self.available;
+        }
+        for (const monster *mon : display_victims)
+        {
+            const ui_arg name = _warning_victim_display(*mon);
+            names.push_back(name.text);
+            available &= name.available;
+        }
+        prompt = ui_render("f.warning", defender_ok ? "Really %s near %s?%s"
+                                                  : "Really %s %s?%s", prompt,
+            {ui_text_arg("f.attack.action", verb),
+             {join_strings(names.begin(), names.end(), "、"), available},
+             _warning_penance_display(penance)});
+    }
 
     if (prompted)
         *prompted = true;
@@ -1588,11 +1656,23 @@ bool warn_about_bad_targets(const char* source_name, vector<coord_def> targets,
     const string and_more = bad_targets.size() > 1 ?
             make_stringf(" (and %zu other bad targets)",
                          bad_targets.size() - 1) : "";
-    const string prompt = make_stringf("%s might hit %s%s. %s",
+    string prompt = make_stringf("%s might hit %s%s. %s",
                                        source_name,
                                        ex_mon->name(DESC_THE).c_str(),
                                        and_more.c_str(),
                                        msg);
+    ui_arg source = ui_text_arg("display.spell", source_name);
+    if (!source.available)
+        source = ui_text_arg("f.warning", source_name);
+    ui_arg more = ui_literal_arg("");
+    if (bad_targets.size() > 1)
+    {
+        more.text = ui_render("f.warning", " (and %s other bad targets)", "",
+            {ui_literal_arg(to_string(bad_targets.size() - 1))});
+        more.available = !more.text.empty();
+    }
+    prompt = ui_render("f.warning", "%s might hit %s%s. %s", prompt,
+        {source, ui_actor_arg(*ex_mon), more, ui_text_arg("f.warning", msg)});
     if (!yesno(prompt.c_str(), false, 'n'))
     {
         canned_msg(MSG_OK);
@@ -1614,7 +1694,7 @@ bool warn_about_bad_targets(const char* source_name, vector<coord_def> targets,
  * @return          True if the player wants to abort.
  */
 bool stop_summoning_prompt(resists_t resists, monclass_flags_t flags,
-                           string verb)
+                           string verb, const monster *charm_target)
 {
     if (crawl_state.disables[DIS_CONFIRMATIONS]
         || crawl_state.which_god_acting() == GOD_XOM)
@@ -1628,6 +1708,13 @@ bool stop_summoning_prompt(resists_t resists, monclass_flags_t flags,
 
     string prompt = make_stringf("Really %s while %s?",
                                  verb.c_str(), noun.c_str());
+    if (!charm_target)
+        prompt = ui_render("f.warning", "Really %s while %s?", prompt,
+            {ui_text_arg("f.attack.action", verb), ui_text_arg("b.summoning.reason", noun)});
+    if (charm_target)
+        prompt = ui_render("b.beam", "Really charm %s while %s?", prompt,
+            {ui_actor_arg(*charm_target), ui_text_arg("b.summoning.reason", noun)});
+
 
     if (yesno(prompt.c_str(), false, 'n'))
         return false;

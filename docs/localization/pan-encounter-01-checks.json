@@ -1,0 +1,30 @@
+{
+  "batch": "pan-encounter-01",
+  "windows_tiles_build": "passed",
+  "exe": {
+    "bytes": 27828441,
+    "sha256": "06ae5a670a27c1d872ca1a40830cd9d9d87deb602fdfd55ab868276d059bc4ec"
+  },
+  "native": {
+    "cases": 5,
+    "assertions": 107,
+    "additional_lua_assertions": true,
+    "passed": true
+  },
+  "python": {
+    "cases": 33,
+    "passed": true
+  },
+  "new_display_entries": 25,
+  "duplicate_ui_title_entries_removed": 86,
+  "feature_names": 20,
+  "invariants": [
+    "Canonical English list preserved with line wrapping ignored in comparison",
+    "Original equipment and feature metadata retained",
+    "Random lord proper names remain literal",
+    "Same RNG state for English and Chinese encounter warnings under isolated seeds",
+    "Title TextDB selection occurs once",
+    "Unknown scripted monsters and features retain complete English fallback"
+  ],
+  "limitation": "No live game window interaction; existing morgue files are not rewritten"
+}

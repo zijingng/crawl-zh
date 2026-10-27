@@ -1,0 +1,27 @@
+{
+  "reviewed_this_batch": 12,
+  "candidates": 26,
+  "cumulative_reviewed": 132,
+  "source_keys": 132,
+  "lua_programs_unchanged": 5,
+  "lua_display_literals": 17,
+  "remaining_keys": [],
+  "matching_dependencies_refreshed": 4473,
+  "display_limitations": [
+    "unreviewed graffiti/colour reference branches",
+    "opaque weapon/anatomy components",
+    "Lua results with expanded placeholders without an exact complete translation"
+  ],
+  "english_source_unchanged": true,
+  "previous_120_entries_unchanged": true,
+  "po_consistency": "passed",
+  "weights_references_bracket_order": "passed",
+  "changed_child_alias_fallback": "passed",
+  "exact_program_approval_and_stale_hash_rejection": "passed",
+  "native_tests": 153,
+  "native_assertions": 546791,
+  "python_tests": 29,
+  "tiles_build": "passed",
+  "visual_test": "not_run",
+  "executable_sha256": "a95dc914cbc235a50bb559b655d18032686b411b0e2716eb7855c060bc4360b0"
+}

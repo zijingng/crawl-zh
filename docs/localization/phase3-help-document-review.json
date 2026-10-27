@@ -1,0 +1,1217 @@
+{
+  "baseline": "0.34.1",
+  "documents": [
+    {
+      "source": "crawl-ref/docs/quickstart.txt",
+      "context": "help.document",
+      "source_sha256": "ea3993556d98a6ac5542c9d24c469aad4ce80c8a09a82b4668d153d3425228d4",
+      "english_lines": [
+        {
+          "line": 1,
+          "text": "Crawl Quick-Start Guide"
+        },
+        {
+          "line": 2,
+          "text": "======================="
+        },
+        {
+          "line": 3,
+          "text": ""
+        },
+        {
+          "line": 4,
+          "text": "Copyright 1999 Linley Henzell"
+        },
+        {
+          "line": 5,
+          "text": ""
+        },
+        {
+          "line": 6,
+          "text": ""
+        },
+        {
+          "line": 7,
+          "text": "So, you want to start playing Crawl straight away without bothering with the"
+        },
+        {
+          "line": 8,
+          "text": "manual? Read this, the guide to starting Crawl with a minimum of preparation."
+        },
+        {
+          "line": 9,
+          "text": ""
+        },
+        {
+          "line": 10,
+          "text": "I suggest printing it out and following its instructions while playing your"
+        },
+        {
+          "line": 11,
+          "text": "first few games (you can also press `?` twice while playing for a list of"
+        },
+        {
+          "line": 12,
+          "text": "commands). You should also try the tutorial mode; it only takes a few"
+        },
+        {
+          "line": 13,
+          "text": "minutes."
+        },
+        {
+          "line": 14,
+          "text": ""
+        },
+        {
+          "line": 15,
+          "text": "When you get some more time, you can read `crawl_manual.txt` in the docs/"
+        },
+        {
+          "line": 16,
+          "text": "directory for more detailed information."
+        },
+        {
+          "line": 17,
+          "text": ""
+        },
+        {
+          "line": 18,
+          "text": "INTRODUCTION TO CRAWL"
+        },
+        {
+          "line": 19,
+          "text": "---------------------"
+        },
+        {
+          "line": 20,
+          "text": ""
+        },
+        {
+          "line": 21,
+          "text": "Crawl is a large and very random game of subterranean exploration in a fantasy"
+        },
+        {
+          "line": 22,
+          "text": "world of magic and frequent violence. Your quest is to travel into the depths"
+        },
+        {
+          "line": 23,
+          "text": "of the Dungeon (which is different each time you play) and retrieve the Orb of"
+        },
+        {
+          "line": 24,
+          "text": "Zot."
+        },
+        {
+          "line": 25,
+          "text": ""
+        },
+        {
+          "line": 26,
+          "text": "Crawl is an RPG of the `rogue-like` type, one of the descendants of Rogue. Its"
+        },
+        {
+          "line": 27,
+          "text": "graphics are simple but highly informative, designed to be understood at a"
+        },
+        {
+          "line": 28,
+          "text": "glance, and control is exercised largely through one-keystroke commands."
+        },
+        {
+          "line": 29,
+          "text": ""
+        },
+        {
+          "line": 30,
+          "text": "STARTING OUT"
+        },
+        {
+          "line": 31,
+          "text": "------------"
+        },
+        {
+          "line": 32,
+          "text": ""
+        },
+        {
+          "line": 33,
+          "text": "After starting the program you will be greeted with a message asking for your"
+        },
+        {
+          "line": 34,
+          "text": "name. Don't spend too much time over this, as your first character will **not**"
+        },
+        {
+          "line": 35,
+          "text": "last very long (sorry, but it's true)."
+        },
+        {
+          "line": 36,
+          "text": ""
+        },
+        {
+          "line": 37,
+          "text": "Next you are given menus of species and backgrounds from which to choose."
+        },
+        {
+          "line": 38,
+          "text": "A mountain dwarf, minotaur or troll Fighter is a good bet. Elves are quite"
+        },
+        {
+          "line": 39,
+          "text": "fragile, humans are pretty average at everything, and the weirder species are"
+        },
+        {
+          "line": 40,
+          "text": "mostly too tricky for beginning players. Finally, you may be given a choice of"
+        },
+        {
+          "line": 41,
+          "text": "weapons. I suggest an axe (axes are fun)."
+        },
+        {
+          "line": 42,
+          "text": ""
+        },
+        {
+          "line": 43,
+          "text": "Now you are in the game. The game screen has three parts:"
+        },
+        {
+          "line": 44,
+          "text": ""
+        },
+        {
+          "line": 45,
+          "text": " - the Map takes up the upper left part of the screen. In its very centre is"
+        },
+        {
+          "line": 46,
+          "text": "   the `@` sign (or player doll tile) which represents You. The bright parts of"
+        },
+        {
+          "line": 47,
+          "text": "   the Map are the parts you can see, while places which you have visited"
+        },
+        {
+          "line": 48,
+          "text": "   before but cannot currently see are darkened."
+        },
+        {
+          "line": 49,
+          "text": " - the Message box is the large part of the screen below the map. It describes"
+        },
+        {
+          "line": 50,
+          "text": "   events as they happen and asks you questions from time to time."
+        },
+        {
+          "line": 51,
+          "text": " - the Stats area (to the right of the Map) contains various indicators of"
+        },
+        {
+          "line": 52,
+          "text": "   your health and abilities."
+        },
+        {
+          "line": 53,
+          "text": ""
+        },
+        {
+          "line": 54,
+          "text": "EXPLORING"
+        },
+        {
+          "line": 55,
+          "text": "---------"
+        },
+        {
+          "line": 56,
+          "text": ""
+        },
+        {
+          "line": 57,
+          "text": "Try walking around, using either the numeric keypad (try numlock off and on) or"
+        },
+        {
+          "line": 58,
+          "text": "the Rogue (`hjklyubn`) keys. Pressing `o` will activate auto-explore, which will"
+        },
+        {
+          "line": 59,
+          "text": "move until an enemy is seen, or some other notable event (e.g. finding a set of"
+        },
+        {
+          "line": 60,
+          "text": "stairs) occurs."
+        },
+        {
+          "line": 61,
+          "text": ""
+        },
+        {
+          "line": 62,
+          "text": "If you want to know what a certain character on the screen represents, you can"
+        },
+        {
+          "line": 63,
+          "text": "use the `x` (examine) command to get a short description, and then `v` to get"
+        },
+        {
+          "line": 64,
+          "text": "more information. You use the `O`, `C` commands to open or close doors, and the"
+        },
+        {
+          "line": 65,
+          "text": "`<` (up) and `>` (down) commands to climb staircases."
+        },
+        {
+          "line": 66,
+          "text": ""
+        },
+        {
+          "line": 67,
+          "text": "The Dungeon gets more dangerous (but more interesting!) as you go down. If you"
+        },
+        {
+          "line": 68,
+          "text": "get lost you can access a map of the whole level you are on with the `X`"
+        },
+        {
+          "line": 69,
+          "text": "command, which uses the whole screen."
+        },
+        {
+          "line": 70,
+          "text": ""
+        },
+        {
+          "line": 71,
+          "text": "ITEMS"
+        },
+        {
+          "line": 72,
+          "text": "-----"
+        },
+        {
+          "line": 73,
+          "text": ""
+        },
+        {
+          "line": 74,
+          "text": "After walking around for a while, you will no doubt come across some items"
+        },
+        {
+          "line": 75,
+          "text": "lying around (you may come across some monsters as well; for help in dealing"
+        },
+        {
+          "line": 76,
+          "text": "with them skip to the Monsters section). You can pick up items with the `g`"
+        },
+        {
+          "line": 77,
+          "text": "(get) or `,` commands and drop them again with `d` (drop), and the `i`"
+        },
+        {
+          "line": 78,
+          "text": "(inventory) command shows you what you're carrying. While examining your"
+        },
+        {
+          "line": 79,
+          "text": "inventory, press any item's key to see more information about it, and to list"
+        },
+        {
+          "line": 80,
+          "text": "available commands."
+        },
+        {
+          "line": 81,
+          "text": ""
+        },
+        {
+          "line": 82,
+          "text": "There are several different types of items:"
+        },
+        {
+          "line": 83,
+          "text": ""
+        },
+        {
+          "line": 84,
+          "text": " - **Weapons**, represented by the `)` sign. Wield them with the `w` (wield)"
+        },
+        {
+          "line": 85,
+          "text": "   command."
+        },
+        {
+          "line": 86,
+          "text": " - **Armour** (`[`). Wear it, or take it off, with the `W` (Wear) command."
+        },
+        {
+          "line": 87,
+          "text": "   Heavier armours give more protection, but may hamper your ability to dodge,"
+        },
+        {
+          "line": 88,
+          "text": "   cast spells, or fire ranged weapons."
+        },
+        {
+          "line": 89,
+          "text": " - **Ammunition** (which has the `(` sign). Throw it with `f` and `F` (fire)."
+        },
+        {
+          "line": 90,
+          "text": " - **Wands** (`/`), **Scrolls** (`?`) and **Potions** (`!`) can be very"
+        },
+        {
+          "line": 91,
+          "text": "   valuable, but have limited uses (scrolls and potions can only be used once"
+        },
+        {
+          "line": 92,
+          "text": "   each, wands contain only a certain number of charges). Wands are e`V`oked,"
+        },
+        {
+          "line": 93,
+          "text": "   scrolls are `r`ead and potions are `q`uaffed. Unfortunately, you won't at"
+        },
+        {
+          "line": 94,
+          "text": "   first know what a scroll or potion does; it will only be described by its"
+        },
+        {
+          "line": 95,
+          "text": "   physical appearance. But once you have used, for example, a potion of curing,"
+        },
+        {
+          "line": 96,
+          "text": "   you will in the future recognise all potions of curing."
+        },
+        {
+          "line": 97,
+          "text": " - **Rings** (`=`) and **Amulets** (`\"`) provide various mostly-helpful effects."
+        },
+        {
+          "line": 98,
+          "text": "   They are put on with `P` (put on) and can be removed with `R`."
+        },
+        {
+          "line": 99,
+          "text": " - **Money** (`$`) can be used to buy stuff in shops."
+        },
+        {
+          "line": 100,
+          "text": ""
+        },
+        {
+          "line": 101,
+          "text": "There are a few other types of items, but you will discover these as you play."
+        },
+        {
+          "line": 102,
+          "text": ""
+        },
+        {
+          "line": 103,
+          "text": "MONSTERS"
+        },
+        {
+          "line": 104,
+          "text": "--------"
+        },
+        {
+          "line": 105,
+          "text": ""
+        },
+        {
+          "line": 106,
+          "text": "You will also run into monsters (most of which are represented by letters of"
+        },
+        {
+          "line": 107,
+          "text": "the alphabet). You can attack a monster by trying to move into the square it"
+        },
+        {
+          "line": 108,
+          "text": "is occupying. Pressing Tab will automatically move toward & attack nearby"
+        },
+        {
+          "line": 109,
+          "text": "monsters."
+        },
+        {
+          "line": 110,
+          "text": ""
+        },
+        {
+          "line": 111,
+          "text": "When you are wounded you lose hit points (displayed near the top of the stats"
+        },
+        {
+          "line": 112,
+          "text": "list); these return gradually over time through the natural process of"
+        },
+        {
+          "line": 113,
+          "text": "healing. If you lose all of your hp you die."
+        },
+        {
+          "line": 114,
+          "text": ""
+        },
+        {
+          "line": 115,
+          "text": "To survive, you will need to develop a few basic tactics:"
+        },
+        {
+          "line": 116,
+          "text": ""
+        },
+        {
+          "line": 117,
+          "text": " - Rest between encounters. The `s`, `.`, delete or keypad-5 commands make you"
+        },
+        {
+          "line": 118,
+          "text": "   rest for one turn, while pressing `5` or Shift-and-keypad-5 make you rest"
+        },
+        {
+          "line": 119,
+          "text": "   for a longer time (you will stop resting when fully healed)."
+        },
+        {
+          "line": 120,
+          "text": " - Never fight more than one monster if you can help it. Always back into a"
+        },
+        {
+          "line": 121,
+          "text": "   corridor so that they must fight you one-on-one."
+        },
+        {
+          "line": 122,
+          "text": " - Consumable items like scrolls and potions won't do you any good when you're"
+        },
+        {
+          "line": 123,
+          "text": "   dead, and most are more effective when used at the start of a tough fight"
+        },
+        {
+          "line": 124,
+          "text": "   than when you're near death. Try identifying some ahead of time by 'wasting'"
+        },
+        {
+          "line": 125,
+          "text": "   one from a stack while in a safe spot."
+        },
+        {
+          "line": 126,
+          "text": " - Remember to use projectiles before engaging monsters in close combat."
+        },
+        {
+          "line": 127,
+          "text": " - Learn when to run away from things you can't handle - this is important!"
+        },
+        {
+          "line": 128,
+          "text": "   It is often wise to skip a dangerous level. But don't overdo this."
+        },
+        {
+          "line": 129,
+          "text": ""
+        },
+        {
+          "line": 130,
+          "text": "DEATH"
+        },
+        {
+          "line": 131,
+          "text": "-----"
+        },
+        {
+          "line": 132,
+          "text": ""
+        },
+        {
+          "line": 133,
+          "text": "Before long, you'll probably end up dead."
+        },
+        {
+          "line": 134,
+          "text": ""
+        },
+        {
+          "line": 135,
+          "text": "Death in Crawl is permanent; you cannot just reload a saved game and start"
+        },
+        {
+          "line": 136,
+          "text": "again where you left off. The `S` (save) command exists only to let you leave"
+        },
+        {
+          "line": 137,
+          "text": "a game part-way through and come back to it later. Quitting (`Ctrl-Q`) lets"
+        },
+        {
+          "line": 138,
+          "text": "you abandon a character if you can't even be bothered to help them escape alive."
+        },
+        {
+          "line": 139,
+          "text": ""
+        },
+        {
+          "line": 140,
+          "text": "Well, that's it for the quick-start guide. This should help you through your"
+        },
+        {
+          "line": 141,
+          "text": "first few games, but Crawl is extremely (some would say excessively) complex"
+        },
+        {
+          "line": 142,
+          "text": "and cannot be adequately described in so short a document. So when you feel"
+        },
+        {
+          "line": 143,
+          "text": "ready to start playing with magic, skills, and religions, browse the manual."
+        },
+        {
+          "line": 144,
+          "text": ""
+        },
+        {
+          "line": 145,
+          "text": "Happy Crawling!"
+        }
+      ],
+      "reviewed_chinese": "Crawl 快速入门\n================\n\nCopyright 1999 Linley Henzell\n\n\n不想先读手册，想直接开始玩 Crawl？这份指南会帮你以最少的准备开始冒险。\n\n建议把它打印出来，在最初几局游戏中边玩边参考。游戏中连续按两次 `?`，\n也能查看命令列表。还应试试教程模式，只需几分钟。\n\n有空时，可以阅读 docs/ 目录中的 `crawl_manual.txt`，了解更详细的信息。\n\nCRAWL 简介\n------------\n\nCrawl 是一款规模庞大、随机性很强的地下探索游戏。这个奇幻世界充满魔法，\n也时常充斥暴力。你的任务是深入每局都不相同的地下城，取回佐特宝珠。\n\nCrawl 是 `rogue-like` 类型的角色扮演游戏，是 Rogue 的后继者之一。\n画面虽然简单，却信息丰富，力求一目了然；操作大多只需按一个键。\n\n开始游戏\n----------\n\n启动程序后，会先询问你的名字。不必花太多时间，因为你的第一个角色\n**不会**活得很久（抱歉，但这是事实）。\n\n接下来从菜单选择种族和背景。山地矮人、弥诺陶洛斯或巨魔战士都不错。\n精灵比较脆弱，人类各方面都很平均，更奇异的种族则大多不适合新手。\n最后，可能还需要选择武器。推荐斧头，因为斧头很好玩。\n\n现在你进入游戏了。游戏画面分为三个部分：\n\n - 地图位于屏幕左上方。正中央的 `@`（或角色图标）代表你。\n   明亮部分是当前能看到的区域；曾去过、现在看不到的地方则会变暗。\n - 消息区位于地图下方，占据较大空间。它会叙述事件，并不时询问你。\n - 状态区位于地图右侧，显示生命、能力等各种指标。\n\n探索\n------\n\n试着用数字键盘（可尝试开关 Numlock），或 Rogue 的 `hjklyubn` 键移动。\n按 `o` 会启动自动探索，持续移动，直到看见敌人或发生其他值得注意的事件，\n例如发现楼梯。\n\n想知道屏幕上某个字符代表什么，可以按 `x` 查看简述，再按 `v` 阅读详情。\n用 `O`、`C` 开门或关门，用 `<` 上楼、`>` 下楼。\n\n地下城越深，越危险，也越有趣！迷路时可按 `X` 打开占满屏幕的楼层地图。\n\n物品\n------\n\n走一会儿，你一定会发现地上的物品，也可能遇见怪物；应对怪物的方法见后文。\n用 `g` 或 `,` 拾取，用 `d` 丢弃，用 `i` 查看携带物品。\n在背包中按物品对应的键，可以查看详情和可用操作。\n\n物品主要分为以下几类：\n\n - **武器**以 `)` 表示。按 `w` 持用。\n - **防具**以 `[` 表示。按 `W` 穿上或脱下。\n   越重的防具通常防护越好，但可能妨碍闪避、施法或远程武器射击。\n - **弹药**以 `(` 表示。用 `f` 和 `F` 投射。\n - **魔杖**（`/`）、**卷轴**（`?`）和**药水**（`!`）可能非常有价值，\n   但使用次数有限：卷轴和药水各只能使用一次，魔杖则只有一定次数的充能。\n   按 `V` 唤发魔杖，按 `r` 阅读卷轴，按 `q` 喝药水。\n   最初你不知道卷轴或药水的效果，只能看到外观描述。\n   例如使用过一瓶治疗药水后，以后就能认出所有治疗药水。\n - **戒指**（`=`）和**护身符**（`\"`）提供各种效果，大多有益。\n   用 `P` 戴上，用 `R` 摘下。\n - **金币**（`$`）可以在商店购物。\n\n还有一些其他物品类型，你会在游戏中逐渐发现。\n\n怪物\n------\n\n你也会遇见怪物，大多用字母表示。朝怪物所在方格移动，就会攻击它。\n按 Tab 会自动靠近并攻击附近怪物。\n\n受伤时，你会损失生命值，显示在状态列表上方附近。\n生命值会随时间自然恢复；生命耗尽，你就会死亡。\n\n要活下去，你需要掌握一些基本战术：\n\n - 战斗之间要休息。`s`、`.`、Delete 或数字键盘 5 可休息一回合；\n   按 `5` 或 Shift 加数字键盘 5 可长时间休息，完全恢复后会停止。\n - 尽量不要同时与多只怪物作战。退入走廊，让它们只能逐一与你交战。\n - 死后，卷轴和药水等消耗品就帮不上忙了。多数消耗品在艰难战斗开始时\n   使用，比濒死时才用更有效。可以在安全处“浪费”同一叠中的一个来提前鉴定。\n - 与怪物近战前，记得先用投射物攻击。\n - 学会在无法应付时逃跑，这一点很重要！跳过危险楼层往往是明智之举，\n   但也别过分依赖这种做法。\n\n死亡\n------\n\n过不了多久，你大概就会死去。\n\nCrawl 中的死亡是永久的，不能重新载入存档，从原处再来。\n`S` 保存命令只是为了让你中途离开，以后继续同一局游戏。\n如果连帮角色逃生都不想费心了，可以用 `Ctrl-Q` 放弃角色。\n\n快速入门到此结束。它应该能帮你度过最初几局，但 Crawl 极其复杂，\n有人甚至觉得复杂过头，无法用这么短的文档说清楚。\n准备开始尝试魔法、技能和信仰时，请翻阅手册。\n\n祝你冒险愉快！",
+      "checks": [
+        "依当前上游逐段翻译；保留版权与命令原样",
+        "宏配置与示例逐行核对",
+        "仅按完整英文全文匹配后在显示层替换"
+      ],
+      "upstream_notes": "上游快速入门仍包含旧按键与种族概括；本译文忠实保留，未将其改写为当前机制指南。"
+    },
+    {
+      "source": "crawl-ref/docs/macros_guide.txt",
+      "context": "help.document",
+      "source_sha256": "20e4729a10cb88a4860b683587fc453479114e25ae9dd5105a0d88d7b0114582",
+      "english_lines": [
+        {
+          "line": 1,
+          "text": "Macros and Keymaps"
+        },
+        {
+          "line": 2,
+          "text": "=================="
+        },
+        {
+          "line": 3,
+          "text": ""
+        },
+        {
+          "line": 4,
+          "text": "What are macros and keymaps? The simple explanation is:"
+        },
+        {
+          "line": 5,
+          "text": ""
+        },
+        {
+          "line": 6,
+          "text": "Command macros make keys into commands."
+        },
+        {
+          "line": 7,
+          "text": "Keymaps make keys into other keys."
+        },
+        {
+          "line": 8,
+          "text": ""
+        },
+        {
+          "line": 9,
+          "text": "Or a bit more verbose:"
+        },
+        {
+          "line": 10,
+          "text": ""
+        },
+        {
+          "line": 11,
+          "text": "For the most part, people will probably want command macros. They allow"
+        },
+        {
+          "line": 12,
+          "text": "for things like making a key run a sequence of commands (e.g."
+        },
+        {
+          "line": 13,
+          "text": "associating a key stroke to the casting of a certain spell) without"
+        },
+        {
+          "line": 14,
+          "text": "having to worry about messing up what that key does at prompts (e.g."
+        },
+        {
+          "line": 15,
+          "text": "you can macro a number or letter without worrying about it making the"
+        },
+        {
+          "line": 16,
+          "text": "substitution when you're trying to drop an item)."
+        },
+        {
+          "line": 17,
+          "text": ""
+        },
+        {
+          "line": 18,
+          "text": "Keymaps are for when you want to fix layout and behavioural problems on"
+        },
+        {
+          "line": 19,
+          "text": "your keyboard (i.e. unrecognised numpad sequences can by mapped into"
+        },
+        {
+          "line": 20,
+          "text": "their numbers, foreign keyboard layouts can be modified to be more"
+        },
+        {
+          "line": 21,
+          "text": "comfortable). There are also special sets of keymaps for the level map,"
+        },
+        {
+          "line": 22,
+          "text": "the targeting mode and confirmation prompts, which allow for mappings"
+        },
+        {
+          "line": 23,
+          "text": "that are restricted to just those situations."
+        },
+        {
+          "line": 24,
+          "text": ""
+        },
+        {
+          "line": 25,
+          "text": ""
+        },
+        {
+          "line": 26,
+          "text": "How to create macros and keymaps?"
+        },
+        {
+          "line": 27,
+          "text": "================================="
+        },
+        {
+          "line": 28,
+          "text": ""
+        },
+        {
+          "line": 29,
+          "text": "The simplest way is in-game: Press either the '~' key or Ctrl-D, select"
+        },
+        {
+          "line": 30,
+          "text": "'m' to define a macro, then choose a key to assign for your macro and"
+        },
+        {
+          "line": 31,
+          "text": "enter the command sequence. For some keys (or key combinations), Crawl"
+        },
+        {
+          "line": 32,
+          "text": "will display a strange number (for example \\{13} for the Return key)."
+        },
+        {
+          "line": 33,
+          "text": "These numbers are the key codes for certain non-alphanumeric keys and"
+        },
+        {
+          "line": 34,
+          "text": "can vary between different systems."
+        },
+        {
+          "line": 35,
+          "text": ""
+        },
+        {
+          "line": 36,
+          "text": "By default, most upper- and lowercase alphanumeric keys are already"
+        },
+        {
+          "line": 37,
+          "text": "assigned functions in Crawl. While you are free to remap those keys as"
+        },
+        {
+          "line": 38,
+          "text": "well, it might be best to start with some of the currently unused keys,"
+        },
+        {
+          "line": 39,
+          "text": "such as Ins or the function keys (F1 to F12), possibly combined with"
+        },
+        {
+          "line": 40,
+          "text": "Ctrl, Shift or both. On some systems, it may also be possible to"
+        },
+        {
+          "line": 41,
+          "text": "incorporate the Alt (Meta) key."
+        },
+        {
+          "line": 42,
+          "text": ""
+        },
+        {
+          "line": 43,
+          "text": "Defining keymaps works in exactly the same way. Just press 'k'"
+        },
+        {
+          "line": 44,
+          "text": "(default), 'x' (level-map), 't' (targeting) or 'c' (confirmation)"
+        },
+        {
+          "line": 45,
+          "text": "instead of 'm' after pressing '~'."
+        },
+        {
+          "line": 46,
+          "text": ""
+        },
+        {
+          "line": 47,
+          "text": "After defining such a macro or keymap, you should test it. If you are"
+        },
+        {
+          "line": 48,
+          "text": "comfortable with it, you should then save the macro. To save all macros"
+        },
+        {
+          "line": 49,
+          "text": "and keymaps, press '~' and then 's' to save macros at the tilde prompt)."
+        },
+        {
+          "line": 50,
+          "text": ""
+        },
+        {
+          "line": 51,
+          "text": ""
+        },
+        {
+          "line": 52,
+          "text": "The macro.txt file"
+        },
+        {
+          "line": 53,
+          "text": "=================="
+        },
+        {
+          "line": 54,
+          "text": ""
+        },
+        {
+          "line": 55,
+          "text": "Macros and keymaps are stored in a file called macro.txt in your"
+        },
+        {
+          "line": 56,
+          "text": "settings/ directory. You can change where the file is read from and"
+        },
+        {
+          "line": 57,
+          "text": "written to by specifying a different directory with the macro_dir"
+        },
+        {
+          "line": 58,
+          "text": "option in your init file (see options_guide.txt for details). The"
+        },
+        {
+          "line": 59,
+          "text": "macro.txt file is human readable and editable, but you might have to"
+        },
+        {
+          "line": 60,
+          "text": "figure out the key codes for non-alphanumeric keys through in-game"
+        },
+        {
+          "line": 61,
+          "text": "experimentation or external utilities."
+        },
+        {
+          "line": 62,
+          "text": ""
+        },
+        {
+          "line": 63,
+          "text": "Lines beginning with the '#' are comments and will be ignored. Note"
+        },
+        {
+          "line": 64,
+          "text": "that Crawl won't necessarily preserve your comments when saving macros"
+        },
+        {
+          "line": 65,
+          "text": "and keymaps to the macro.txt file."
+        },
+        {
+          "line": 66,
+          "text": ""
+        },
+        {
+          "line": 67,
+          "text": "Each macro definition consists of exactly two lines. The first one"
+        },
+        {
+          "line": 68,
+          "text": "describes the macro trigger key and consists of \"M:\" followed by the"
+        },
+        {
+          "line": 69,
+          "text": "character or keycode of that key (for example 'a', 'A' or \\{9} for"
+        },
+        {
+          "line": 70,
+          "text": "the A, Shift-A or Tab keys). The second one describes the macro action"
+        },
+        {
+          "line": 71,
+          "text": "and consists of \"A:\" followed by the command sequence to be associated"
+        },
+        {
+          "line": 72,
+          "text": "with the above key (for example \"zap\" for zapping the spell in slot a"
+        },
+        {
+          "line": 73,
+          "text": "at the previous target). Individual macro definitions should be"
+        },
+        {
+          "line": 74,
+          "text": "separated by empty lines."
+        },
+        {
+          "line": 75,
+          "text": ""
+        },
+        {
+          "line": 76,
+          "text": "For keymaps just replace the \"M:\" on the first line of the definition"
+        },
+        {
+          "line": 77,
+          "text": "with one of the following:"
+        },
+        {
+          "line": 78,
+          "text": "\"K:\"  default,"
+        },
+        {
+          "line": 79,
+          "text": "\"K1:\" level-map,"
+        },
+        {
+          "line": 80,
+          "text": "\"K2:\" targeting or"
+        },
+        {
+          "line": 81,
+          "text": "\"K3:\" confirmation."
+        },
+        {
+          "line": 82,
+          "text": ""
+        },
+        {
+          "line": 83,
+          "text": ""
+        },
+        {
+          "line": 84,
+          "text": "Examples"
+        },
+        {
+          "line": 85,
+          "text": "========"
+        },
+        {
+          "line": 86,
+          "text": ""
+        },
+        {
+          "line": 87,
+          "text": "This section contains some examples to give you an idea what macros and"
+        },
+        {
+          "line": 88,
+          "text": "keymaps can be used for. Note that for the sake of completeness, both"
+        },
+        {
+          "line": 89,
+          "text": "key line and command line are given, but that you should probably"
+        },
+        {
+          "line": 90,
+          "text": "substitute your own keys here as these may not always work for you."
+        },
+        {
+          "line": 91,
+          "text": ""
+        },
+        {
+          "line": 92,
+          "text": ""
+        },
+        {
+          "line": 93,
+          "text": "'@' is a character that may not work by default on some keyboard"
+        },
+        {
+          "line": 94,
+          "text": "layouts. The following should remedy that by mapping '@' to '@'."
+        },
+        {
+          "line": 95,
+          "text": ""
+        },
+        {
+          "line": 96,
+          "text": "# @: display character status"
+        },
+        {
+          "line": 97,
+          "text": "K:\\{17}"
+        },
+        {
+          "line": 98,
+          "text": "A:@"
+        },
+        {
+          "line": 99,
+          "text": ""
+        },
+        {
+          "line": 100,
+          "text": ""
+        },
+        {
+          "line": 101,
+          "text": "Playing a summoner can be annoying because you often need to cast the"
+        },
+        {
+          "line": 102,
+          "text": "same spells multiple times in a row, each casting requiring multiple"
+        },
+        {
+          "line": 103,
+          "text": "keystrokes. This macro allows casting the spell in slot 'a' with a"
+        },
+        {
+          "line": 104,
+          "text": "single keystroke. Note that you can redefine spell slots with the '='"
+        },
+        {
+          "line": 105,
+          "text": "key. We emphasise again that the F1 key may get a different code on"
+        },
+        {
+          "line": 106,
+          "text": "your system."
+        },
+        {
+          "line": 107,
+          "text": ""
+        },
+        {
+          "line": 108,
+          "text": "# F1: cast spell 'a'"
+        },
+        {
+          "line": 109,
+          "text": "M:\\{368}"
+        },
+        {
+          "line": 110,
+          "text": "A:za"
+        },
+        {
+          "line": 111,
+          "text": ""
+        },
+        {
+          "line": 112,
+          "text": ""
+        },
+        {
+          "line": 113,
+          "text": "Now that we've taken care of summoning, we still need to command our"
+        },
+        {
+          "line": 114,
+          "text": "summoned creatures. The following macro should make that easier as"
+        },
+        {
+          "line": 115,
+          "text": "well. Note that this macro assumes that the default_target option is"
+        },
+        {
+          "line": 116,
+          "text": "set to true (it is by default; see crawl_options.txt for details)."
+        },
+        {
+          "line": 117,
+          "text": ""
+        },
+        {
+          "line": 118,
+          "text": "# Tab: Order allies to attack your previous or the nearest target"
+        },
+        {
+          "line": 119,
+          "text": "M:\\{9}"
+        },
+        {
+          "line": 120,
+          "text": "A:ta."
+        },
+        {
+          "line": 121,
+          "text": ""
+        },
+        {
+          "line": 122,
+          "text": ""
+        },
+        {
+          "line": 123,
+          "text": "Conjurers need a slightly different macros for casting, such as this"
+        },
+        {
+          "line": 124,
+          "text": "one, as they need to press '.' or Return to confirm firing at a target."
+        },
+        {
+          "line": 125,
+          "text": "Again, this macro assumes that the default_target option is set to"
+        },
+        {
+          "line": 126,
+          "text": "true."
+        },
+        {
+          "line": 127,
+          "text": ""
+        },
+        {
+          "line": 128,
+          "text": "# F1: cast spell 'a' at your previous or the nearest target"
+        },
+        {
+          "line": 129,
+          "text": "M:\\{368}"
+        },
+        {
+          "line": 130,
+          "text": "A:za."
+        },
+        {
+          "line": 131,
+          "text": ""
+        },
+        {
+          "line": 132,
+          "text": ""
+        },
+        {
+          "line": 133,
+          "text": "However, even conjurers might not always want to fire at their previous"
+        },
+        {
+          "line": 134,
+          "text": "target, so the following set of macros allows them to cast the spell"
+        },
+        {
+          "line": 135,
+          "text": "in slot 'a' and then cycle through the available targets with the same"
+        },
+        {
+          "line": 136,
+          "text": "key and then confirming with the same key we used for firing in the"
+        },
+        {
+          "line": 137,
+          "text": "previous macro. This example also tries to illustrate how to take"
+        },
+        {
+          "line": 138,
+          "text": "advantage of the fact that keys can have different functions in the"
+        },
+        {
+          "line": 139,
+          "text": "different keymaps."
+        },
+        {
+          "line": 140,
+          "text": ""
+        },
+        {
+          "line": 141,
+          "text": "# Shift-F1: cast spell 'a'"
+        },
+        {
+          "line": 142,
+          "text": "M:\\{1392}"
+        },
+        {
+          "line": 143,
+          "text": "A:za"
+        },
+        {
+          "line": 144,
+          "text": ""
+        },
+        {
+          "line": 145,
+          "text": "# Shift-F1: cycle through targets when in targeting mode"
+        },
+        {
+          "line": 146,
+          "text": "K2:\\{1392}"
+        },
+        {
+          "line": 147,
+          "text": "A:+"
+        },
+        {
+          "line": 148,
+          "text": ""
+        },
+        {
+          "line": 149,
+          "text": "# F1: fire at target when in targeting mode"
+        },
+        {
+          "line": 150,
+          "text": "K2:\\{368}"
+        },
+        {
+          "line": 151,
+          "text": "A:."
+        }
+      ],
+      "reviewed_chinese": "宏与键位映射\n==============\n\n什么是宏和键位映射？简单来说：\n\n命令宏把按键变成一串命令。\n键位映射把按键变成其他按键。\n\n更详细地说：\n\n多数人需要的是命令宏。它可以让一个按键执行一串命令，例如施放某个法术，\n而不必担心改变这个按键在提示框中的含义。例如，你可以把数字或字母设为宏，\n却不必担心在丢弃物品时也发生替换。\n\n键位映射用于解决键盘布局和行为问题。例如，把无法识别的数字键盘序列\n映射为对应数字，或调整外语键盘布局，让操作更顺手。\n楼层地图、选目标模式和确认提示还各有专用映射集，可以只在特定情境下生效。\n\n\n如何创建宏与键位映射？\n========================\n\n最简单的办法是在游戏中操作：按 `~` 或 Ctrl-D，选择 `m` 定义宏，\n再选择触发按键，输入命令序列。有些按键或组合键会显示成奇怪的数字，\n例如 Return 键显示为 \\{13}。这些数字是某些非字母数字键的按键码，\n不同系统可能不同。\n\nCrawl 默认已经为多数大小写字母和数字键分配了功能。虽然也可以重新映射，\n但最好先用尚未占用的键，例如 Ins 或 F1 至 F12，也可以组合 Ctrl、Shift，\n或同时使用这两个修饰键。有些系统还支持 Alt（Meta）。\n\n定义键位映射的方法完全相同：按 `~` 后，不选 `m`，而是选 `k`（默认）、\n`x`（楼层地图）、`t`（选目标）或 `c`（确认提示）。\n\n定义后应先测试。如果用起来合适，就保存宏。要保存全部宏与键位映射，\n按 `~`，再在提示中按 `s` 保存。\n\n\nmacro.txt 文件\n================\n\n宏与键位映射保存在 settings/ 目录的 macro.txt 中。\n在初始化文件中设置 macro_dir，可以改变读写此文件的目录，\n详情见 options_guide.txt。macro.txt 可以直接阅读和编辑；\n但非字母数字键的按键码，可能需要在游戏中试验或借助外部工具确定。\n\n以 `#` 开头的行是注释，会被忽略。请注意，Crawl 将宏与键位映射写回\nmacro.txt 时，不一定保留你的注释。\n\n每个宏定义恰有两行。第一行定义触发键，由 \"M:\" 加该键的字符或按键码组成。\n例如，A、Shift-A 和 Tab 可分别写成 'a'、'A' 和 \\{9}。\n第二行定义宏动作，由 \"A:\" 加关联的命令序列组成，例如 \"zap\" 表示\n对上一个目标施放 a 栏位的法术。不同宏定义之间应以空行分隔。\n\n定义键位映射时，将第一行的 \"M:\" 替换为以下前缀之一：\n\"K:\"  默认映射，\n\"K1:\" 楼层地图，\n\"K2:\" 选目标，或\n\"K3:\" 确认提示。\n\n\n示例\n======\n\n下面的例子展示宏与键位映射的一些用途。为了完整，同时列出触发键行和\n命令行；这些按键不一定适用于你的系统，实际使用时可能需要换成自己的键。\n\n\n某些键盘布局默认无法正确输入 '@'。下面的映射把 '@' 映射到 '@'，\n应能解决这个问题。\n\n# @: display character status\nK:\\{17}\nA:@\n\n\n召唤师经常需要连续多次施放同一法术，每次又要按好几个键，可能有些烦人。\n下面的宏用一个按键施放 'a' 栏位的法术。按 '=' 可以重新指定法术栏位。\n再次提醒，F1 在你的系统上可能对应不同按键码。\n\n# F1: cast spell 'a'\nM:\\{368}\nA:za\n\n\n解决了召唤，还需要指挥召唤物。下面的宏也能简化这项操作。\n它假定 default_target 为 true；默认确实如此，详情见 crawl_options.txt。\n\n# Tab: Order allies to attack your previous or the nearest target\nM:\\{9}\nA:ta.\n\n\n塑能师的施法宏略有不同，因为需要用 '.' 或 Return 确认发射。\n这个宏同样假定 default_target 为 true。\n\n# F1: cast spell 'a' at your previous or the nearest target\nM:\\{368}\nA:za.\n\n\n不过，塑能师也并非总想攻击上一个目标。下面这组宏可以施放 'a' 栏位的法术，\n用同一个键循环选择目标，再用上例中发射法术的那个键确认。\n本例也展示如何利用同一按键在不同映射集中可以具有不同功能的特性。\n\n# Shift-F1: cast spell 'a'\nM:\\{1392}\nA:za\n\n# Shift-F1: cycle through targets when in targeting mode\nK2:\\{1392}\nA:+\n\n# F1: fire at target when in targeting mode\nK2:\\{368}\nA:.",
+      "checks": [
+        "依当前上游逐段翻译；保留版权与命令原样",
+        "宏配置与示例逐行核对",
+        "仅按完整英文全文匹配后在显示层替换"
+      ],
+      "upstream_notes": "保留原文的 crawl_options.txt 文件引用及旧宏说明，不擅自改动上游。"
+    }
+  ]
+}

@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "m-display.h"
+#include "i18n.h"
 
 #include "monster.h"
 
@@ -312,12 +314,16 @@ void monster::add_enchantment_effect(const mon_enchant &ench, bool quiet)
         {
             if (!quiet)
             {
-                mprf("You %sdetect the %s %s.",
-                     friendly() ? "" : "can no longer ",
-                     ench.ench == ENCH_HEXED ? "dominated" :
+                mprf("%s", ([&]() -> string {
+                const string _m0 = friendly() ? "" : "can no longer ";
+                const string _m1 = ench.ench == ENCH_HEXED ? "dominated" :
                      ench.ench == ENCH_CHARM ? "charmed"
-                                             : "bribed",
-                     name(DESC_PLAIN, true).c_str());
+                                             : "bribed";
+                const string _m2 = name(DESC_PLAIN, true);
+                const string _original = make_stringf("You %sdetect the %s %s.", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.188", "You %sdetect the %s %s.")) return _original;
+                return ui_render("m.log.188", "You %sdetect the %s %s.", _original, {m_clause_arg(_m0), m_clause_arg(_m1), m_actor_arg(*this)});
+            })().c_str());
             }
 
             autotoggle_autopickup(!friendly());
@@ -480,9 +486,13 @@ void monster::remove_enchantment_effect(const mon_enchant &me, bool quiet)
             if (alive())
                 simple_monster_message(*this, " becomes audible again.");
             else
-                mprf("As %s %s, the sound returns.",
-                     name(DESC_THE).c_str(),
-                     wounded_damaged(holiness()) ? "is destroyed" : "dies");
+                mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _m1 = wounded_damaged(holiness()) ? "is destroyed" : "dies";
+                const string _original = make_stringf("As %s %s, the sound returns.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.189", "As %s %s, the sound returns.")) return _original;
+                return ui_render("m.log.189", "As %s %s, the sound returns.", _original, {m_actor_arg(*this), m_clause_arg(_m1)});
+            })().c_str());
         }
         break;
 
@@ -539,7 +549,7 @@ void monster::remove_enchantment_effect(const mon_enchant &me, bool quiet)
         }
 
         if (!quiet)
-            simple_monster_message(*this, msg.c_str());
+            m_monster_event(*this, msg.c_str(), "%s seems to regain its courage.", {m_actor_arg(*this)});
 
         if (props.exists(FROZEN_IN_FEAR_KEY))
         {
@@ -573,7 +583,12 @@ void monster::remove_enchantment_effect(const mon_enchant &me, bool quiet)
                 break;
 
             if (!quiet)
-                mprf("%s appears from thin air!", name(DESC_A, true).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_A, true);
+                const string _original = make_stringf("%s appears from thin air!", _m0.c_str());
+                if (!m_display_active("m.log.190", "%s appears from thin air!")) return _original;
+                return ui_render("m.log.190", "%s appears from thin air!", _original, {m_actor_arg(*this)});
+            })().c_str());
 
             maybe_notice_monster(*this);
         }
@@ -588,14 +603,23 @@ void monster::remove_enchantment_effect(const mon_enchant &me, bool quiet)
         {
             if (!quiet)
             {
-                mprf("%s is no longer %s.", name(DESC_THE, true).c_str(),
-                        me.ench == ENCH_CHARM   ? "charmed"
+                mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE, true);
+                const string _m1 = me.ench == ENCH_CHARM   ? "charmed"
                         : me.ench == ENCH_HEXED ? "dominated"
-                                                : "bribed");
+                                                : "bribed";
+                const string _original = make_stringf("%s is no longer %s.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.191", "%s is no longer %s.")) return _original;
+                return ui_render("m.log.191", "%s is no longer %s.", _original, {m_actor_arg(*this), m_clause_arg(_m1)});
+            })().c_str());
 
-                mprf("You can %s detect %s.",
-                     friendly() ? "once again" : "no longer",
-                     name(DESC_THE, true).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = friendly() ? "once again" : "no longer";
+                const string _m1 = name(DESC_THE, true);
+                const string _original = make_stringf("You can %s detect %s.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.192", "You can %s detect %s.")) return _original;
+                return ui_render("m.log.192", "You can %s detect %s.", _original, {m_clause_arg(_m0), m_actor_arg(*this)});
+            })().c_str());
             }
 
             if (!friendly())
@@ -646,8 +670,12 @@ void monster::remove_enchantment_effect(const mon_enchant &me, bool quiet)
                 simple_monster_message(*this, " stops glowing.");
             else if (has_ench(ENCH_INVIS) && you.see_cell(pos()))
             {
-                mprf("%s stops glowing and disappears.",
-                     name(DESC_THE, true).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE, true);
+                const string _original = make_stringf("%s stops glowing and disappears.", _m0.c_str());
+                if (!m_display_active("m.log.193", "%s stops glowing and disappears.")) return _original;
+                return ui_render("m.log.193", "%s stops glowing and disappears.", _original, {m_actor_arg(*this)});
+            })().c_str());
             }
         }
         break;
@@ -677,7 +705,12 @@ void monster::remove_enchantment_effect(const mon_enchant &me, bool quiet)
     case ENCH_SOUL_RIPE:
         // Print message notifying the player, even if they cannot see us
         if (!quiet)
-            mprf("You lose your grip on %s soul.", name(DESC_ITS, true).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_ITS, true);
+                const string _original = make_stringf("You lose your grip on %s soul.", _m0.c_str());
+                if (!m_display_active("m.log.194", "You lose your grip on %s soul.")) return _original;
+                return ui_render("m.log.194", "You lose your grip on %s soul.", _original, {m_actor_arg(*this)});
+            })().c_str());
         break;
 
     case ENCH_AWAKEN_FOREST:
@@ -755,7 +788,7 @@ void monster::remove_enchantment_effect(const mon_enchant &me, bool quiet)
             const string msg = " seems to return to " +
                                pronoun(PRONOUN_POSSESSIVE, true) +
                                " normal shape.";
-            simple_monster_message(*this, msg.c_str());
+            m_monster_event(*this, msg.c_str(), "%s seems to return to its normal shape.", {m_actor_arg(*this)});
         }
         break;
 
@@ -779,7 +812,12 @@ void monster::remove_enchantment_effect(const mon_enchant &me, bool quiet)
 
     case ENCH_TOXIC_RADIANCE:
         if (!quiet && you.can_see(*this))
-            mprf("%s toxic aura wanes.", name(DESC_ITS).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_ITS);
+                const string _original = make_stringf("%s toxic aura wanes.", _m0.c_str());
+                if (!m_display_active("m.log.195", "%s toxic aura wanes.")) return _original;
+                return ui_render("m.log.195", "%s toxic aura wanes.", _original, {m_actor_arg(*this)});
+            })().c_str());
         break;
 
     case ENCH_FIRE_VULN:
@@ -848,7 +886,12 @@ void monster::remove_enchantment_effect(const mon_enchant &me, bool quiet)
 
     case ENCH_BOUND_SOUL:
         if (!quiet && you.can_see(*this))
-            mprf("%s soul is no longer bound.", name(DESC_ITS).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_ITS);
+                const string _original = make_stringf("%s soul is no longer bound.", _m0.c_str());
+                if (!m_display_active("m.log.196", "%s soul is no longer bound.")) return _original;
+                return ui_render("m.log.196", "%s soul is no longer bound.", _original, {m_actor_arg(*this)});
+            })().c_str());
         break;
 
     case ENCH_INFESTATION:
@@ -864,13 +907,21 @@ void monster::remove_enchantment_effect(const mon_enchant &me, bool quiet)
             {
                 if (constricted_type == CONSTRICT_BVC)
                 {
-                    mprf("The zombie hands holding %s return to the earth.",
-                         name(DESC_THE).c_str());
+                    mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _original = make_stringf("The zombie hands holding %s return to the earth.", _m0.c_str());
+                if (!m_display_active("m.log.197", "The zombie hands holding %s return to the earth.")) return _original;
+                return ui_render("m.log.197", "The zombie hands holding %s return to the earth.", _original, {m_actor_arg(*this)});
+            })().c_str());
                 }
                 else if (constricted_type == CONSTRICT_ROOTS)
                 {
-                    mprf("The roots around %s sink back into the ground.",
-                         name(DESC_THE).c_str());
+                    mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _original = make_stringf("The roots around %s sink back into the ground.", _m0.c_str());
+                if (!m_display_active("m.log.198", "The roots around %s sink back into the ground.")) return _original;
+                return ui_render("m.log.198", "The roots around %s sink back into the ground.", _original, {m_actor_arg(*this)});
+            })().c_str());
                 }
             }
             stop_being_constricted(true);
@@ -885,11 +936,15 @@ void monster::remove_enchantment_effect(const mon_enchant &me, bool quiet)
     case ENCH_FLOODED:
         if (!quiet && you.can_see(*this))
         {
-            mprf("%s finishes expelling the %s from %s %s.",
-                    name(DESC_THE).c_str(),
-                    props[WATER_HOLD_SUBSTANCE_KEY].get_string().c_str(),
-                    pronoun(PRONOUN_POSSESSIVE).c_str(),
-                    get_mon_shape(*this) >= MON_SHAPE_INSECT ? "airways" : "lungs");
+            mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _m1 = props[WATER_HOLD_SUBSTANCE_KEY].get_string();
+                const string _m2 = pronoun(PRONOUN_POSSESSIVE);
+                const string _m3 = get_mon_shape(*this) >= MON_SHAPE_INSECT ? "airways" : "lungs";
+                const string _original = make_stringf("%s finishes expelling the %s from %s %s.", _m0.c_str(), _m1.c_str(), _m2.c_str(), _m3.c_str());
+                if (!m_display_active("m.log.199", "%s finishes expelling the %s from %s %s.")) return _original;
+                return ui_render("m.log.199", "%s finishes expelling the %s from %s %s.", _original, {m_actor_arg(*this), m_clause_arg(_m1), {"", true}, m_clause_arg(_m3)});
+            })().c_str());
         }
         props.erase(WATER_HOLD_SUBSTANCE_KEY);
         break;
@@ -933,9 +988,13 @@ void monster::remove_enchantment_effect(const mon_enchant &me, bool quiet)
 
         if (you.can_see(*this))
         {
-            mprf(MSGCH_MONSTER_SPELL, "%s shapes itself into a furious %s!",
-                    name(DESC_THE).c_str(),
-                    mons_type_name(poly_target, DESC_PLAIN).c_str());
+            mprf(MSGCH_MONSTER_SPELL, "%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _m1 = mons_type_name(poly_target, DESC_PLAIN);
+                const string _original = make_stringf("%s shapes itself into a furious %s!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.200", "%s shapes itself into a furious %s!")) return _original;
+                return ui_render("m.log.200", "%s shapes itself into a furious %s!", _original, {m_actor_arg(*this), m_monster_type_arg(poly_target)});
+            })().c_str());
         }
 
         change_monster_type(this, poly_target, true);
@@ -952,8 +1011,13 @@ void monster::remove_enchantment_effect(const mon_enchant &me, bool quiet)
     case ENCH_CURSE_OF_AGONY:
         if (you.can_see(*this) && !quiet)
         {
-            mprf("%s is freed from %s curse.", name(DESC_THE).c_str(),
-                 pronoun(PRONOUN_POSSESSIVE).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _m1 = pronoun(PRONOUN_POSSESSIVE);
+                const string _original = make_stringf("%s is freed from %s curse.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.201", "%s is freed from %s curse.")) return _original;
+                return ui_render("m.log.201", "%s is freed from %s curse.", _original, {m_actor_arg(*this), ui_literal_arg("")});
+            })().c_str());
         }
         break;
 
@@ -985,9 +1049,13 @@ void monster::remove_enchantment_effect(const mon_enchant &me, bool quiet)
             if (can_see(you))
             {
                 target = you.pos();
-                mprf("%s turns %s attention back to you.",
-                        name(DESC_THE).c_str(),
-                        pronoun(PRONOUN_POSSESSIVE).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _m1 = pronoun(PRONOUN_POSSESSIVE);
+                const string _original = make_stringf("%s turns %s attention back to you.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.202", "%s turns %s attention back to you.")) return _original;
+                return ui_render("m.log.202", "%s turns %s attention back to you.", _original, {m_actor_arg(*this), ui_literal_arg("")});
+            })().c_str());
             }
         }
         break;
@@ -998,7 +1066,12 @@ void monster::remove_enchantment_effect(const mon_enchant &me, bool quiet)
 
     case ENCH_KINETIC_GRAPNEL:
         if (you.can_see(*this) && !quiet)
-            mprf("The grapnel comes loose from %s.", name(DESC_THE).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _original = make_stringf("The grapnel comes loose from %s.", _m0.c_str());
+                if (!m_display_active("m.log.203", "The grapnel comes loose from %s.")) return _original;
+                return ui_render("m.log.203", "The grapnel comes loose from %s.", _original, {m_actor_arg(*this)});
+            })().c_str());
         break;
 
     case ENCH_BLINKITIS:
@@ -1043,7 +1116,12 @@ void monster::remove_enchantment_effect(const mon_enchant &me, bool quiet)
 
     case ENCH_WARDING:
         if (!quiet && you.can_see(*this))
-            mprf("The ward upon %s fades away.", name(DESC_THE).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _original = make_stringf("The ward upon %s fades away.", _m0.c_str());
+                if (!m_display_active("m.log.204", "The ward upon %s fades away.")) return _original;
+                return ui_render("m.log.204", "The ward upon %s fades away.", _original, {m_actor_arg(*this)});
+            })().c_str());
         break;
 
     case ENCH_DIMINISHED_SPELLS:
@@ -1203,7 +1281,12 @@ static bool _merfolk_avatar_movement_effect(const monster* mons)
             return true;
     }
 
-    mprf("The pull of %s song draws you forwards.", mons->name(DESC_ITS).c_str());
+    mprf("%s", ([&]() -> string {
+                const string _m0 = mons->name(DESC_ITS);
+                const string _original = make_stringf("The pull of %s song draws you forwards.", _m0.c_str());
+                if (!m_display_active("m.log.205", "The pull of %s song draws you forwards.")) return _original;
+                return ui_render("m.log.205", "The pull of %s song draws you forwards.", _original, {m_actor_arg(*mons)});
+            })().c_str());
 
     if (swapping)
         player_displace_monster(mon, swapdest);
@@ -1252,7 +1335,7 @@ static void _merfolk_avatar_song(monster* mons)
             // during a song that has already summoned drowned souls (though is
             // technically possible if some existing ally gains HD instead)
             if (you.see_cell(mons->pos()))
-                mpr("The shadowy forms in the deep grow still as others approach.");
+                mpr(ui_translate("m.ui", "The shadowy forms in the deep grow still as others approach."));
             mons->props.erase(MERFOLK_AVATAR_CALL_KEY);
         }
 
@@ -1271,8 +1354,12 @@ static void _merfolk_avatar_song(monster* mons)
         {
             if (you.see_cell(mons->pos()))
             {
-                mprf("Shadowy forms rise from the deep at %s song!",
-                     mons->name(DESC_ITS).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = mons->name(DESC_ITS);
+                const string _original = make_stringf("Shadowy forms rise from the deep at %s song!", _m0.c_str());
+                if (!m_display_active("m.log.206", "Shadowy forms rise from the deep at %s song!")) return _original;
+                return ui_render("m.log.206", "Shadowy forms rise from the deep at %s song!", _original, {m_actor_arg(*mons)});
+            })().c_str());
             }
             mons->props[MERFOLK_AVATAR_CALL_KEY].get_bool() = true;
         }
@@ -1466,8 +1553,12 @@ void monster::apply_enchantment(const mon_enchant &me)
         {
             if (you.can_see(*this))
             {
-                mprf("The flames covering %s go out.",
-                     name(DESC_THE, false).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE, false);
+                const string _original = make_stringf("The flames covering %s go out.", _m0.c_str());
+                if (!m_display_active("m.log.207", "The flames covering %s go out.")) return _original;
+                return ui_render("m.log.207", "The flames covering %s go out.", _original, {m_actor_arg(*this)});
+            })().c_str());
             }
             del_ench(ENCH_STICKY_FLAME);
             break;
@@ -1522,7 +1613,12 @@ void monster::apply_enchantment(const mon_enchant &me)
             coord_def base_position = props[BASE_POSITION_KEY].get_coord();
             // Do a thing.
             if (you.see_cell(base_position))
-                mprf("The portal closes; %s is severed.", name(DESC_THE).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _original = make_stringf("The portal closes; %s is severed.", _m0.c_str());
+                if (!m_display_active("m.log.208", "The portal closes; %s is severed.")) return _original;
+                return ui_render("m.log.208", "The portal closes; %s is severed.", _original, {m_actor_arg(*this)});
+            })().c_str());
 
             if (env.grid(base_position) == DNGN_MALIGN_GATEWAY)
                 env.grid(base_position) = DNGN_FLOOR;
@@ -1555,7 +1651,7 @@ void monster::apply_enchantment(const mon_enchant &me)
                 if (you.can_see(*this))
                     simple_monster_message(*this, " suddenly becomes enraged!");
                 else
-                    mpr("You hear a distant and violent thrashing sound.");
+                    mpr(ui_translate("m.ui", "You hear a distant and violent thrashing sound."));
             }
 
             attitude = ATT_HOSTILE;
@@ -1617,8 +1713,12 @@ void monster::apply_enchantment(const mon_enchant &me)
             add_ench(ENCH_POLAR_VORTEX_COOLDOWN);
             if (you.can_see(*this))
             {
-                mprf("The winds around %s start to calm down.",
-                     name(DESC_THE).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _original = make_stringf("The winds around %s start to calm down.", _m0.c_str());
+                if (!m_display_active("m.log.209", "The winds around %s start to calm down.")) return _original;
+                return ui_render("m.log.209", "The winds around %s start to calm down.", _original, {m_actor_arg(*this)});
+            })().c_str());
             }
         }
         break;
@@ -1644,7 +1744,12 @@ void monster::apply_enchantment(const mon_enchant &me)
         {
             del_ench(en, true, false);
             if (you.can_see(*this))
-                mprf("%s chant is interrupted.", name(DESC_ITS).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_ITS);
+                const string _original = make_stringf("%s chant is interrupted.", _m0.c_str());
+                if (!m_display_active("m.log.210", "%s chant is interrupted.")) return _original;
+                return ui_render("m.log.210", "%s chant is interrupted.", _original, {m_actor_arg(*this)});
+            })().c_str());
             break;
         }
 
@@ -1665,8 +1770,13 @@ void monster::apply_enchantment(const mon_enchant &me)
             del_ench(en, true, false);
             if (you.can_see(*this))
             {
-                mprf("%s stops winding %s clockwork bee.", name(DESC_ITS).c_str(),
-                     pronoun(PRONOUN_POSSESSIVE).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_ITS);
+                const string _m1 = pronoun(PRONOUN_POSSESSIVE);
+                const string _original = make_stringf("%s stops winding %s clockwork bee.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.211", "%s stops winding %s clockwork bee.")) return _original;
+                return ui_render("m.log.211", "%s stops winding %s clockwork bee.", _original, {m_actor_arg(*this), ui_literal_arg("")});
+            })().c_str());
             }
             break;
         }
@@ -1675,9 +1785,13 @@ void monster::apply_enchantment(const mon_enchant &me)
             launch_clockwork_bee(*this);
         else if (you.can_see(*this))
         {
-            mprf("%s continues winding %s clockwork bee....",
-                    name(DESC_THE).c_str(),
-                    pronoun(PRONOUN_POSSESSIVE).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _m1 = pronoun(PRONOUN_POSSESSIVE);
+                const string _original = make_stringf("%s continues winding %s clockwork bee....", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.212", "%s continues winding %s clockwork bee....")) return _original;
+                return ui_render("m.log.212", "%s continues winding %s clockwork bee....", _original, {m_actor_arg(*this), ui_literal_arg("")});
+            })().c_str());
         }
         break;
 
@@ -1738,7 +1852,12 @@ void monster::apply_enchantment(const mon_enchant &me)
         {
             remove_vortex_clouds(mid);
             if (you.can_see(*this))
-                mprf("The winds around %s calm down.", name(DESC_THE).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_THE);
+                const string _original = make_stringf("The winds around %s calm down.", _m0.c_str());
+                if (!m_display_active("m.log.213", "The winds around %s calm down.")) return _original;
+                return ui_render("m.log.213", "The winds around %s calm down.", _original, {m_actor_arg(*this)});
+            })().c_str());
         }
         break;
 
@@ -1751,8 +1870,12 @@ void monster::apply_enchantment(const mon_enchant &me)
             del_ench(ENCH_MERFOLK_AVATAR_SONG, true, false);
             if (you.can_see(*this))
             {
-                mprf("%s song is interrupted.",
-                     name(DESC_ITS).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_ITS);
+                const string _original = make_stringf("%s song is interrupted.", _m0.c_str());
+                if (!m_display_active("m.log.214", "%s song is interrupted.")) return _original;
+                return ui_render("m.log.214", "%s song is interrupted.", _original, {m_actor_arg(*this)});
+            })().c_str());
             }
             break;
         }
@@ -1771,7 +1894,7 @@ void monster::apply_enchantment(const mon_enchant &me)
             const string msg = " is no longer sharing " +
                                pronoun(PRONOUN_POSSESSIVE, true) +
                                " pain.";
-            simple_monster_message(*this, msg.c_str());
+            m_monster_event(*this, msg.c_str(), "%s is no longer sharing its pain.", {m_actor_arg(*this)});
         }
         break;
 
@@ -1787,7 +1910,12 @@ void monster::apply_enchantment(const mon_enchant &me)
         {
             del_ench(en, true, false);
             if (you.can_see(*this))
-                mprf("%s searing ray is interrupted.", name(DESC_ITS).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_ITS);
+                const string _original = make_stringf("%s searing ray is interrupted.", _m0.c_str());
+                if (!m_display_active("m.log.215", "%s searing ray is interrupted.")) return _original;
+                return ui_render("m.log.215", "%s searing ray is interrupted.", _original, {m_actor_arg(*this)});
+            })().c_str());
         }
         break;
 
@@ -1821,8 +1949,12 @@ void monster::apply_enchantment(const mon_enchant &me)
                 if (!decay_enchantment(ENCH_SOUL_RIPE)
                     && me.duration <= 10)
                 {
-                    mprf("Your grip on %s soul is slipping...",
-                         name(DESC_ITS, true).c_str());
+                    mprf("%s", ([&]() -> string {
+                const string _m0 = name(DESC_ITS, true);
+                const string _original = make_stringf("Your grip on %s soul is slipping...", _m0.c_str());
+                if (!m_display_active("m.log.216", "Your grip on %s soul is slipping...")) return _original;
+                return ui_render("m.log.216", "Your grip on %s soul is slipping...", _original, {m_actor_arg(*this)});
+            })().c_str());
                 }
             }
 

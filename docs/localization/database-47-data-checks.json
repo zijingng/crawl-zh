@@ -1,0 +1,9 @@
+{
+  "source": "database/randbook.txt",
+  "new_keys": 54,
+  "new_candidates": 838,
+  "reviewed_keys": 72,
+  "source_keys": 72,
+  "all_candidates": 1596,
+  "english_fallback_keys": []
+}

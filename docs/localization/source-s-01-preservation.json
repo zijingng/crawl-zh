@@ -1,0 +1,368 @@
+{
+  "batch": "source-s-01",
+  "canonical_functions": [
+    {
+      "file": "spl-cast.cc",
+      "function": "spell_schools_string",
+      "overloads": 1,
+      "sha256": "286f8e6de7671515657e110592bf9f8467e2df9e675161be263e25d946395a8a",
+      "unchanged": true
+    },
+    {
+      "file": "spl-cast.cc",
+      "function": "spell_noise_string",
+      "overloads": 1,
+      "sha256": "59ed9fbd03f46f3e49705d812594485be2a23b8d4f61df081e5d4a26de3ddf70",
+      "unchanged": true
+    },
+    {
+      "file": "spl-cast.cc",
+      "function": "spell_power_string",
+      "overloads": 1,
+      "sha256": "717a687c1db649152656a7b7e234c499e0430d3dd0744bfa56a28f855562ad06",
+      "unchanged": true
+    },
+    {
+      "file": "spl-cast.cc",
+      "function": "spell_range_string",
+      "overloads": 1,
+      "sha256": "9956141d8966f5bbb09027a55e70e24ef4fb245401e60c476b665ef0dd504540",
+      "unchanged": true
+    },
+    {
+      "file": "spl-cast.cc",
+      "function": "spell_damage_string",
+      "overloads": 1,
+      "sha256": "63beb26065f643f89bae5336d7cdd41a514ceb054d35c7c87129ddc5b1492715",
+      "unchanged": true
+    },
+    {
+      "file": "spl-util.cc",
+      "function": "casting_uselessness_reason",
+      "overloads": 1,
+      "sha256": "b358cf47622b4c49b9027c86795a1188c4131de4d6f56396611472b7050ee62f",
+      "unchanged": true
+    },
+    {
+      "file": "spl-util.cc",
+      "function": "spell_is_useless",
+      "overloads": 1,
+      "sha256": "1a2cf1aaafbfa7d724b359354be68a956f9fd87ba7c51dcb5ba7b63da5454f6f",
+      "unchanged": true
+    },
+    {
+      "file": "spl-util.cc",
+      "function": "spell_title",
+      "overloads": 1,
+      "sha256": "3f9aadc7cf1bfcb5c853dba979a400cfee58fb00a12fd65c987756a7eab7ff3d",
+      "unchanged": true
+    },
+    {
+      "file": "spl-util.cc",
+      "function": "get_spell_disciplines",
+      "overloads": 1,
+      "sha256": "fc7ab92ba9673850fd7bee6827c0341770ada8ff8cef9c1d37b9970e3917c133",
+      "unchanged": true
+    },
+    {
+      "file": "spl-util.cc",
+      "function": "get_spell_target_prompt",
+      "overloads": 1,
+      "sha256": "0c5c5eb6e6c3241132c8b9239709cd3735aa46bbaa55e8694c7f3e5344b922c7",
+      "unchanged": true
+    },
+    {
+      "file": "spl-util.cc",
+      "function": "spell_uselessness_reason",
+      "overloads": 1,
+      "sha256": "ef4a84979d04614d350323c1d5a950c759ced56719fb1af3cd414b61d30426c4",
+      "unchanged": true
+    },
+    {
+      "file": "spl-goditem.cc",
+      "function": "unpacifiable_reason",
+      "overloads": 2,
+      "sha256": "03e2bbd5c204b35f6b44a097081d45175729be1624a3a02e11cee9f33b9b315e",
+      "unchanged": true
+    },
+    {
+      "file": "spl-damage.cc",
+      "function": "mons_inner_flame_immune_reason",
+      "overloads": 1,
+      "sha256": "b86df4edf44e2a9b09c29af032c619463733c73ee3248f20fe800e2361462a07",
+      "unchanged": true
+    },
+    {
+      "file": "status.cc",
+      "function": "fill_status_info",
+      "overloads": 1,
+      "sha256": "fd90a078e52b2968cf3217d3ec735c68c6d9e30632d5b20f2c28eb6eb63d882a",
+      "unchanged": true
+    },
+    {
+      "file": "stash.cc",
+      "function": "Stash::stash_item_name",
+      "overloads": 1,
+      "sha256": "b691c5452c5b66c9a6be1ebc69986c8cd6726053d3096b8f96c43a3559412ac3",
+      "unchanged": true
+    },
+    {
+      "file": "stash.cc",
+      "function": "Stash::description",
+      "overloads": 1,
+      "sha256": "12472b49d18ecf29313dfd0947a8c7b6537c9d26b26225a56f45c4fdc0712c0e",
+      "unchanged": true
+    },
+    {
+      "file": "stash.cc",
+      "function": "Stash::feature_description",
+      "overloads": 1,
+      "sha256": "982c5b14111b9bf7f32cedc3c3d486d504f705250802d992b913f21d7e7ed19c",
+      "unchanged": true
+    },
+    {
+      "file": "stash.cc",
+      "function": "get_stash_desc",
+      "overloads": 1,
+      "sha256": "07c1ee7224b52bc32624a39cf88051e96e6c18a67f06a2c1554d75060ea97422",
+      "unchanged": true
+    },
+    {
+      "file": "stash.cc",
+      "function": "ShopInfo::shop_item_name",
+      "overloads": 1,
+      "sha256": "d821a001625741c89155281fbd0c263c9c0db5e07e3eababe2caef8fae080908",
+      "unchanged": true
+    },
+    {
+      "file": "shopping.cc",
+      "function": "ShoppingList::name_thing",
+      "overloads": 1,
+      "sha256": "98eb24c799e9ff3110f3de0c9ee618bd8849725c57c046e6daa1657be286e470",
+      "unchanged": true
+    },
+    {
+      "file": "shopping.cc",
+      "function": "ShoppingList::describe_thing",
+      "overloads": 1,
+      "sha256": "95f50458c4c7f3155070d171f2ed267f233d8e5737f840293f68a9c1a820ff19",
+      "unchanged": true
+    },
+    {
+      "file": "shopping.cc",
+      "function": "ShoppingList::describe_thing_pos",
+      "overloads": 1,
+      "sha256": "a7d5ef61da20aeddba7cd2b55f51b3e66867da8cc2b547ae98652f5b1edb47da",
+      "unchanged": true
+    },
+    {
+      "file": "shopping.cc",
+      "function": "ShoppingList::item_name_simple",
+      "overloads": 1,
+      "sha256": "5624a05be03a8c4028c35d779810df64da41646c92d322f30d3f49004484c45a",
+      "unchanged": true
+    }
+  ],
+  "unmatched_candidates": [],
+  "random_calls": [
+    {
+      "file": "shout.cc",
+      "calls": 12,
+      "expressions_unchanged": true,
+      "lexical_order_unchanged": true
+    },
+    {
+      "file": "showsymb.cc",
+      "calls": 2,
+      "expressions_unchanged": true,
+      "lexical_order_unchanged": true
+    },
+    {
+      "file": "skills.cc",
+      "calls": 4,
+      "expressions_unchanged": true,
+      "lexical_order_unchanged": true
+    },
+    {
+      "file": "species.cc",
+      "calls": 3,
+      "expressions_unchanged": true,
+      "lexical_order_unchanged": true
+    },
+    {
+      "file": "spl-book.cc",
+      "calls": 1,
+      "expressions_unchanged": true,
+      "lexical_order_unchanged": true
+    },
+    {
+      "file": "spl-cast.cc",
+      "calls": 13,
+      "expressions_unchanged": true,
+      "lexical_order_unchanged": true
+    },
+    {
+      "file": "spl-clouds.cc",
+      "calls": 10,
+      "expressions_unchanged": true,
+      "lexical_order_unchanged": true
+    },
+    {
+      "file": "spl-damage.cc",
+      "calls": 93,
+      "expressions_unchanged": true,
+      "lexical_order_unchanged": true
+    },
+    {
+      "file": "spl-goditem.cc",
+      "calls": 19,
+      "expressions_unchanged": true,
+      "lexical_order_unchanged": true
+    },
+    {
+      "file": "spl-miscast.cc",
+      "calls": 7,
+      "expressions_unchanged": true,
+      "lexical_order_unchanged": true
+    },
+    {
+      "file": "spl-monench.cc",
+      "calls": 27,
+      "expressions_unchanged": true,
+      "lexical_order_unchanged": true
+    },
+    {
+      "file": "spl-other.cc",
+      "calls": 23,
+      "expressions_unchanged": true,
+      "lexical_order_unchanged": true
+    },
+    {
+      "file": "spl-selfench.cc",
+      "calls": 23,
+      "expressions_unchanged": true,
+      "lexical_order_unchanged": true
+    },
+    {
+      "file": "spl-summoning.cc",
+      "calls": 133,
+      "expressions_unchanged": true,
+      "lexical_order_unchanged": true
+    },
+    {
+      "file": "spl-transloc.cc",
+      "calls": 51,
+      "expressions_unchanged": true,
+      "lexical_order_unchanged": true
+    },
+    {
+      "file": "spl-util.cc",
+      "calls": 3,
+      "expressions_unchanged": true,
+      "lexical_order_unchanged": true
+    },
+    {
+      "file": "spl-vortex.cc",
+      "calls": 7,
+      "expressions_unchanged": true,
+      "lexical_order_unchanged": true
+    },
+    {
+      "file": "sprint.cc",
+      "calls": 1,
+      "expressions_unchanged": true,
+      "lexical_order_unchanged": true
+    },
+    {
+      "file": "stairs.cc",
+      "calls": 10,
+      "expressions_unchanged": true,
+      "lexical_order_unchanged": true
+    },
+    {
+      "file": "stringutil.cc",
+      "calls": 1,
+      "expressions_unchanged": true,
+      "lexical_order_unchanged": true
+    },
+    {
+      "file": "syscalls.cc",
+      "calls": 1,
+      "expressions_unchanged": true,
+      "lexical_order_unchanged": true
+    }
+  ],
+  "unchanged_s_files": [
+    "sacrifice-data.h",
+    "score-format-type.h",
+    "screen-mode.h",
+    "scroller.cc",
+    "scroller.h",
+    "SDLMain.h",
+    "seen-context-type.h",
+    "shop-type.h",
+    "shout.h",
+    "show.cc",
+    "show.h",
+    "showsymb.cc",
+    "showsymb.h",
+    "size-part-type.h",
+    "size-type.h",
+    "skill-focus-mode.h",
+    "skill-menu-state.h",
+    "skill-menu.h",
+    "skill-type.h",
+    "skills.h",
+    "slot-select-mode.h",
+    "sound.cc",
+    "sound.h",
+    "species-data.h",
+    "species-def.h",
+    "species-groups.h",
+    "species-type.h",
+    "species.h",
+    "spell-type.h",
+    "spl-book.h",
+    "spl-cast.h",
+    "spl-clouds.h",
+    "spl-damage.h",
+    "spl-data.h",
+    "spl-goditem.h",
+    "spl-miscast.h",
+    "spl-monench.h",
+    "spl-other.h",
+    "spl-selfench.h",
+    "spl-summoning.h",
+    "spl-transloc.h",
+    "spl-util.h",
+    "spl-zap.cc",
+    "spl-zap.h",
+    "sprint.cc",
+    "sprint.h",
+    "sqldbm.cc",
+    "sqldbm.h",
+    "stairs.h",
+    "startup.cc",
+    "startup.h",
+    "stat-type.h",
+    "state.cc",
+    "state.h",
+    "status.h",
+    "stepdown.cc",
+    "stepdown.h",
+    "store.cc",
+    "store.h",
+    "stringutil.cc",
+    "stringutil.h",
+    "syscalls.cc",
+    "syscalls.h"
+  ],
+  "manual_side_effect_review": [
+    "Jinxsprite selects the English branch once; hand/foot names are captured once, including chaos spawn RNG.",
+    "Chain lightning captures the original hand name once; airstrike intensity/animation is calculated once.",
+    "Polymorph threat candidates reuse the original single define_monster result.",
+    "Charge animation is advanced once by fill_status_info; translated finite labels reuse that frame.",
+    "Speech/TextDB Lua callbacks are not re-executed to obtain a translation.",
+    "Search match/primary_sort, saved descriptions and canonical names stay English; translated rows use ephemeral display fields."
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "selected": [
+    {
+      "key": "friendly hound",
+      "source": "VISUAL:@The_monster@ wags @possessive@ tail.\n\nVISUAL:@The_monster@ barks [happily|excitedly]!\n\nVISUAL:@The_monster@ runs in silly circles!\n\nVISUAL:@The_monster@ looks {{\n  if you.race() == \"Felid\" then\n      return \"down\"\n  else\n     return \"up\"\n  end\n}} at you expectantly.\n\nVISUAL:@The_monster@ scratches @possessive@ ear.\n\nVISUAL:@The_monster@ cocks @possessive@ head sideways at you.\n\nVISUAL:@The_monster@ scratches at a flea.\n\nw:1\nVISUAL:@The_monster@ gnaws at a bone — where's that from?\n\n@hound@\n",
+      "hits": [
+        {
+          "Term": "Felid",
+          "Translation": "猫族",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/felid.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "hound",
+          "Translation": "猎犬",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "friendly shoals hound",
+      "source": "w:50\n@friendly hound@\n\nVISUAL:@The_monster@ [plays|frolics] in the surf!\n\n{{\nif you.can_smell() then\n    return \"VISUAL:A distinct wet dog smell emanates from @the_monster@.\"\nelse\n    return \"VISUAL:@The_monster@ motions as if to dry @reflexive@ off on you.\"\nend\n}}\n\nw:1\nVISUAL:@The_monster@ hopefully picks up a piece of driftwood and looks at you.\n",
+      "hits": [
+        {
+          "Term": "Shoals",
+          "Translation": "海滩",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "hound",
+          "Translation": "猎犬",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_asterion_rare_",
+      "source": "@The_monster@ unleashes a bloodcurdling roar.\n\n@The_monster@ chants and is briefly shrouded in fire.\n\n@The_monster_possessive@ eyes glow.\nYou hear demonic laughter.\n\n@The_monster@ says, \"{{\n    if you.skill(\"Spellcasting\") >= 5 then\n      return \"Ah, a wizard! I'll enjoy hearing you beg for your life.\"\n    else\n      return \"You're no warrior. You fight like a peasant!\"\n    end }}\" @player_only@\n\n@The_monster@ says, \"{{\n    if you.god() == \"Makhleb\" then\n      return \"In the name of our god, lay down your life!\"\n    else\n      return \"Kneel before Makhleb, unbeliever!\"\n    end }}\" @player_only@\n\n@The_monster@ screams @at_foe@, \"What ORB?! I have an entire kingdom!\" @player_only@\n\n@The_monster@ screams @at_foe@, \"Bow down before your king! Bow! Bow!!\" @player_only@\n",
+      "hits": [
+        {
+          "Term": "Asterion",
+          "Translation": "阿斯忒里翁",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Makhleb",
+          "Translation": "马科列布",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "skill",
+          "Translation": "技能",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Spellcasting",
+          "Translation": "施法",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "Warrior",
+          "Translation": "勇士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "wizard",
+          "Translation": "巫师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Fire",
+          "Translation": "火焰强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "xak'krixis",
+      "source": "@The_monster@ ponders what role @player_genus_plural@ play in the local ecosystem.\n\n@The_monster@ says, \"I'll be sure to include this battle in my report!\"\n\n@The_monster@ says, \"We all must contribute to the advancement of science.\"\n\n@The_monster@ shouts @to_foe@, \"You're giving me such wonderful data!\"\n\nVISUAL:@The_monster@ furiously scribbles notes with a free limb.\n\nVISUAL:@The_monster_possessive@ mandibles click thoughtfully.\n\n@The_monster@ says, \"{{\n    if you.skill(\"Alchemy\") >= 10 then\n      return \"Ah, a fellow alchemist! Surely you'll appreciate what I've learned here.\"\n    else\n      return \"Allow me to demonstrate my discoveries.\"\n    end }}\" @player_only@\n\nw:20\n@_Xak'krixis_monster_thoughts_@\n\n",
+      "hits": [
+        {
+          "Term": "skill",
+          "Translation": "技能",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Alchemist",
+          "Translation": "炼金术士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/alchemist.yaml。"
+        },
+        {
+          "Term": "Alchemy",
+          "Translation": "炼金术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "Xak'krixis",
+          "Translation": "扎克克里克西斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    }
+  ],
+  "legacy_overlay_present": true
+}

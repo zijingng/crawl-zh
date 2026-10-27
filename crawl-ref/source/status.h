@@ -79,6 +79,8 @@ struct status_info
 // character state
 // returns true if the status has a description
 bool fill_status_info(int status, status_info& info);
+// Localized presentation copy; canonical status API remains unchanged.
+bool fill_status_display_info(int status, status_info &inf);
 
 const char *duration_name(duration_type dur);
 duration_type duration_by_name(const string &name);
@@ -89,9 +91,9 @@ bool duration_extended_by_attacks(duration_type dur);
 void init_duration_index();
 
 bool duration_decrements_normally(duration_type dur);
-const char *duration_end_message(duration_type dur);
+const char *duration_end_message(duration_type dur, bool display = true);
 void duration_end_effect(duration_type dur);
-const char *duration_expire_message(duration_type dur);
+const char *duration_expire_message(duration_type dur, bool display = true);
 int duration_expire_offset(duration_type dur);
 int duration_expire_point(duration_type dur);
 msg_channel_type duration_expire_chan(duration_type dur);

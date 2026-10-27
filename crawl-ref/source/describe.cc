@@ -4,11 +4,13 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "describe.h"
 
 #include <algorithm>
 #include <cstdio>
+#include <cstring>
 #include <cmath>
 #include <iomanip>
 #include <numeric>
@@ -46,6 +48,7 @@
 #include "hints.h"
 #include "invent.h"
 #include "item-prop.h"
+#include "item-name.h"
 #include "item-status-flag-type.h"
 #include "items.h"
 #include "item-use.h"
@@ -116,6 +119,32 @@ static const property_descriptor & _get_artp_desc_data(artefact_prop_type p);
 static string _describe_talisman(const item_def &item, bool verbose);
 static string _describe_talisman_form(transformation form_type);
 
+string description_page_footer(int page, bool statuses, bool quote)
+{
+    string original = page == 0 ? "[<w>!</w>]: <w>Description</w>"
+                                : "[<w>!</w>]: Description";
+    if (statuses)
+        original += page == 1 ? "|<w>Statuses</w>" : "|Statuses";
+    if (quote)
+        original += page == 2 ? "|<w>Quote</w>" : "|Quote";
+    // Translate the complete footer so active-page markup stays paired.
+    return ui_translate("phase3.describe", original.c_str());
+}
+
+string feature_type_display_title(dungeon_feature_type feat)
+{
+    const string original_name = feature_description(feat, NUM_TRAPS, "", DESC_A,
+                                                      NUM_BRANCHES);
+    string original = uppercase_first(original_name);
+    if (!ends_with(original, ".") && !ends_with(original, "!") && !ends_with(original, "?"))
+        original += ".";
+    // Lookup describes the feature type, independent of the current branch.
+    const string canonical = feature_description(feat, NUM_TRAPS, "", DESC_PLAIN,
+                                                  NUM_BRANCHES);
+    return ui_render("d.action", "%s.", original,
+        {ui_text_arg("d.feature.name", canonical)});
+}
+
 int show_description(const string &body, const tile_def *tile)
 {
     describe_info inf;
@@ -163,9 +192,9 @@ int show_description(const describe_info &inf, const tile_def *tile)
     };
 
     // TODO: maybe use CMD_MENU_CYCLE_MODE
-    const char* mores[2] = {
-        "[<w>!</w>]: <w>Description</w>|Quote",
-        "[<w>!</w>]: Description|<w>Quote</w>",
+    const string mores[2] = {
+        description_page_footer(0, false, true),
+        description_page_footer(2, false, true),
     };
 
     for (int i = 0; i < (inf.quote.empty() ? 1 : 2); i++)
@@ -488,23 +517,26 @@ static const vector<property_descriptor> & _get_all_artp_desc_data()
     return data;
 }
 
-static string _randart_prop_abbrev(artefact_prop_type prop, int val)
+static string _randart_prop_abbrev(artefact_prop_type prop, int val,
+                                    bool display = false)
 {
     const property_descriptor &ann = _get_artp_desc_data(prop);
+    const char *name = display ? ui_translate("equipment.property", artp_name(prop))
+                               : artp_name(prop);
     switch (ann.display_type)
     {
     case prop_note::numeral: // e.g. AC+4
-        return make_stringf("%s%+d", artp_name(prop), val);
+        return make_stringf("%s%+d", name, val);
     case prop_note::symbolic: // e.g. F++
     {
         const char symbol = val > 0 ? '+' : '-';
         if (val > 4)
-            return make_stringf("%s%c%d", artp_name(prop), symbol, abs(val));
+            return make_stringf("%s%c%d", name, symbol, abs(val));
         else
-            return make_stringf("%s%s", artp_name(prop), string(abs(val), symbol).c_str());
+            return make_stringf("%s%s", name, string(abs(val), symbol).c_str());
     }
     case prop_note::plain: // e.g. rPois or SInv
-        return artp_name(prop);
+        return name;
     }
     return "buggy";
 }
@@ -579,9 +611,20 @@ static const vector<artefact_prop_type> artprop_annotation_order =
 };
 
 static vector<string> _randart_propnames(const item_def& item,
-                                         bool no_comma = false)
+                                         bool no_comma = false,
+                                         bool display = false,
+                                         bool *complete = nullptr)
 {
     vector<string> propnames;
+    auto translated = [&](const string &key) -> string
+    {
+        if (!display || key.empty())
+            return key;
+        const ui_arg shown = ui_text_arg("equipment.ego", key);
+        if (!shown.available && complete)
+            *complete = false;
+        return shown.available ? shown.text : key;
+    };
 
     if (!item.is_identified())
         return propnames;
@@ -594,7 +637,7 @@ static vector<string> _randart_propnames(const item_def& item,
     {
         entry = get_unrand_entry(item.unrand_idx);
         if (testbits(item.flags, ISFLAG_CHAOTIC))
-            propnames.push_back("chaos,");
+            propnames.push_back(translated("chaos") + ",");
     }
     const bool skip_ego = is_unrandom_artefact(item)
                           && entry && entry->flags & UNRAND_FLAG_SKIP_EGO;
@@ -605,7 +648,7 @@ static vector<string> _randart_propnames(const item_def& item,
     {
         const char* type = jewellery_base_ability_string(item.sub_type);
         if (*type)
-            propnames.push_back(type);
+            propnames.push_back(translated(type));
     }
     else if (!skip_ego)
     {
@@ -618,6 +661,7 @@ static vector<string> _randart_propnames(const item_def& item,
             ego = gizmo_effect_name(item.brand);
         if (!ego.empty())
         {
+            ego = translated(ego);
             // XXX: Ugly hack for adding a comma if needed.
             bool extra_props = false;
             for (const artefact_prop_type &other_prop : artprop_annotation_order)
@@ -639,7 +683,8 @@ static vector<string> _randart_propnames(const item_def& item,
     }
 
     if (is_unrandom_artefact(item) && entry && entry->inscrip != nullptr)
-        propnames.push_back(entry->inscrip);
+        propnames.push_back(display ? ui_translate("a.art-data", entry->inscrip)
+                                    : entry->inscrip);
 
     for (const artefact_prop_type &prop : artprop_annotation_order)
     {
@@ -647,10 +692,38 @@ static vector<string> _randart_propnames(const item_def& item,
         if (val == 0)
             continue;
 
-        propnames.push_back(_randart_prop_abbrev(prop, val));
+        if (display && complete
+            && !ui_text_arg("equipment.property", artp_name(prop)).available)
+            *complete = false;
+        propnames.push_back(_randart_prop_abbrev(prop, val, display));
     }
 
     return propnames;
+}
+
+bool try_artefact_display_inscription(const item_def &item, string &output)
+{
+    ui_translation_group group;
+    if (!group.available())
+        return false;
+    if (item.is_identified() && is_unrandom_artefact(item))
+    {
+        const auto entry = get_unrand_entry(item.unrand_idx);
+        if (entry->inscrip)
+            group.require("a.art-data", entry->inscrip);
+    }
+    if (!group.available())
+        return false;
+    bool complete = true;
+    const vector<string> parts = item.base_type == OBJ_BOOKS
+        ? vector<string>() : _randart_propnames(item, false, true, &complete);
+    if (!complete)
+        return false;
+    string result = comma_separated_line(parts.begin(), parts.end(), " ", " ");
+    if (!result.empty() && result.back() == ',')
+        result.pop_back();
+    output = result;
+    return true;
 }
 
 string artefact_inscription(const item_def& item)
@@ -743,10 +816,14 @@ static const property_descriptor & _get_artp_desc_data(artefact_prop_type p)
 
 static const int MAX_ARTP_NAME_LEN = 10;
 
-static string _padded_artp_name(artefact_prop_type prop, int val)
+static string _padded_artp_name(artefact_prop_type prop, int val,
+                                bool display = false)
 {
     // XX it would be nice to use a dynamic pad, but annoyingly, the constant
     // is used separately for egos.
+    if (display)
+        return padded_str(_randart_prop_abbrev(prop, val, true) + "：",
+                          MAX_ARTP_NAME_LEN + 1);
     return make_stringf("%-*s", MAX_ARTP_NAME_LEN + 1,
         (_randart_prop_abbrev(prop, val) + ":").c_str());
 }
@@ -765,27 +842,49 @@ void desc_randart_props(const item_def &item, vector<string> &lines)
         if (stval == 0)
             continue;
 
+        const ui_arg label = ui_text_arg("equipment.property", artp_name(prop));
+
         // these two have some custom string replacement
         if (prop == ARTP_WILLPOWER)
         {
-            lines.push_back(make_stringf("%sIt %s%s your willpower.",
+            const string original = make_stringf("%sIt %s%s your willpower.",
                      _padded_artp_name(ARTP_WILLPOWER, stval).c_str(),
                      (stval < -1 || stval > 1) ? "greatly " : "",
-                     (stval < 0) ? "decreases" : "increases"));
+                     (stval < 0) ? "decreases" : "increases");
+            const char *source = stval < -1 ? "It greatly decreases your willpower."
+                : stval < 0 ? "It decreases your willpower."
+                : stval > 1 ? "It greatly increases your willpower."
+                            : "It increases your willpower.";
+            const string translated = ui_render("d.property", source, "", {});
+            lines.push_back(translated.empty() || !label.available ? original
+                : _format_prop_desc(_padded_artp_name(prop, stval, true), translated));
             continue;
         }
         else if (prop == ARTP_STEALTH)
         {
-            lines.push_back(make_stringf("%sIt makes you %s%s stealthy.",
+            const string original = make_stringf("%sIt makes you %s%s stealthy.",
                      _padded_artp_name(ARTP_STEALTH, stval).c_str(),
                      (stval < -1 || stval > 1) ? "much " : "",
-                     (stval < 0) ? "less" : "more"));
+                     (stval < 0) ? "less" : "more");
+            const char *source = stval < -1 ? "It makes you much less stealthy."
+                : stval < 0 ? "It makes you less stealthy."
+                : stval > 1 ? "It makes you much more stealthy."
+                            : "It makes you more stealthy.";
+            const string translated = ui_render("d.property", source, "", {});
+            lines.push_back(translated.empty() || !label.available ? original
+                : _format_prop_desc(_padded_artp_name(prop, stval, true), translated));
             continue;
         }
 
         // otherwise, we use desc.desc in some form
         const property_descriptor& desc = _get_artp_desc_data(prop);
+        string original_desc = desc.desc;
+        if (original_desc.find("%d") != string::npos)
+            original_desc = replace_all(original_desc, "%d", make_stringf("%+d", stval));
         string sdesc = desc.desc;
+        if (desc.display_type != prop_note::symbolic
+            || prop == ARTP_REGENERATION || prop == ARTP_MANA_REGENERATION)
+            sdesc = ui_translate("d.property", desc.desc);
 
         if (sdesc.find("%d") != string::npos)
             sdesc = replace_all(sdesc, "%d", make_stringf("%+d", stval));
@@ -809,9 +908,25 @@ void desc_randart_props(const item_def &item, vector<string> &lines)
                 "It renders you almost immune to "
             };
             sdesc = prefixes[idx] + sdesc + '.';
+            original_desc = prefixes[idx] + original_desc + '.';
+            const char *templates[] = {
+                "It makes you extremely vulnerable to %s.",
+                "It makes you very vulnerable to %s.",
+                "It makes you vulnerable to %s.",
+                "Buggy descriptor!",
+                "It protects you from %s.",
+                "It greatly protects you from %s.",
+                "It renders you almost immune to %s."
+            };
+            if (idx != 3)
+                sdesc = ui_render("d.property", templates[idx], sdesc,
+                                 {ui_text_arg("d.resist", desc.desc)});
         }
 
-        lines.push_back(_format_prop_desc(_padded_artp_name(desc.property, stval), sdesc.c_str()));
+        const bool translated = label.available && sdesc != original_desc;
+        lines.push_back(_format_prop_desc(
+            _padded_artp_name(desc.property, stval, translated),
+            translated ? sdesc : original_desc));
     }
 }
 
@@ -828,6 +943,10 @@ static string _desc_randart_jewel(const item_def &item)
         // DBRANDS in weird ways
         return string(desc);
     }
+    const ui_arg heading = ui_text_arg("equipment.ego", type);
+    const ui_arg body = ui_text_arg("d.describe", desc);
+    if (heading.available && body.available)
+        return _format_prop_desc(padded_str(heading.text + "：", MAX_ARTP_NAME_LEN + 1), body.text);
     return _format_prop_desc(make_stringf("%-*s", MAX_ARTP_NAME_LEN + 1,
                               (string(type) + ":").c_str()), desc);
 }
@@ -865,7 +984,8 @@ static string _format_dbrand(string dbrand)
         {
             ASSERT(brand.size() == 2);
             const string &desc = brand[1];
-            const int prefix_len = max(MAX_ARTP_NAME_LEN + 1, (int)brand[0].size() + 2);
+            const int prefix_len = max(MAX_ARTP_NAME_LEN + 1,
+                                       static_cast<int>(strwidth(brand[0])) + 2);
             const string pre = padded_str(brand[0] + ":", prefix_len);
             out.push_back(_format_prop_desc(pre, desc));
         }
@@ -890,12 +1010,13 @@ static string _artefact_descrip(const item_def &item)
             && item.base_type != OBJ_WEAPONS
             && item.base_type != OBJ_STAVES)
         {
-            out << _format_dbrand(entry->dbrand);
+            out << _format_dbrand(ui_translate("a.art-data", entry->dbrand));
             need_newline = true;
         }
         if (entry->descrip)
         {
-            out << (need_newline ? "\n" : "") << _format_dbrand(entry->descrip);
+            out << (need_newline ? "\n" : "")
+                << _format_dbrand(ui_translate("a.art-data", entry->descrip));
             need_newline = true;
         }
         if (!_randart_descrip(item).empty())
@@ -1119,9 +1240,14 @@ static string _describe_demon(const string& name, bool flying, colour_t colour)
     };
 
     ostringstream description;
+    const char *body = HRANDOM_ELEMENT(body_types, 2);
+    const char *head = nullptr;
+    const char *wings = nullptr;
+    const char *smell = nullptr;
+    const char *misc = nullptr;
     description << "One of the many lords of Pandemonium, " << name << " has ";
 
-    description << article_a(HRANDOM_ELEMENT(body_types, 2));
+    description << article_a(body);
     // ETC_RANDOM is also possible, handled later
     if (colour >= 0 && colour < NUM_TERM_COLOURS)
         description << " " << colour_to_str(colour, true);
@@ -1129,23 +1255,60 @@ static string _describe_demon(const string& name, bool flying, colour_t colour)
 
     if (flying)
     {
-        description << HRANDOM_ELEMENT(wing_names, 3);
+        wings = HRANDOM_ELEMENT(wing_names, 3);
+        description << wings;
         description << " ";
     }
 
     description << "and ";
-    description << HRANDOM_ELEMENT(head_names, 1) << ".";
+    head = HRANDOM_ELEMENT(head_names, 1);
+    description << head << ".";
 
     if (!hash_with_seed(5, seed, 4) && you.can_smell()) // 20%
-        description << HRANDOM_ELEMENT(smell_descs, 5);
+    {
+        smell = HRANDOM_ELEMENT(smell_descs, 5);
+        description << smell;
+    }
 
     if (hash_with_seed(2, seed, 6)) // 50%
-        description << HRANDOM_ELEMENT(misc_descs, 6);
+    {
+        misc = HRANDOM_ELEMENT(misc_descs, 6);
+        description << misc;
+    }
 
     if (colour == ETC_RANDOM)
         description << " It changes colour whenever you look at it.";
 
-    return description.str();
+    const ui_arg body_part = ui_text_arg("d.demon.part", body);
+    string body_text;
+    if (colour >= 0 && colour < NUM_TERM_COLOURS)
+        body_text = ui_render("d.demon", "%s %s body", "",
+            {body_part, ui_text_arg("d.demon.colour", colour_to_str(colour, true))});
+    else
+        body_text = ui_render("d.demon", "%s body", "", {body_part});
+    const ui_arg wing_part = wings ? ui_text_arg("d.demon.part", wings) : ui_literal_arg("");
+    string shown = ui_render("d.demon",
+        "One of the many lords of Pandemonium, %s has %s %s and %s.", "",
+        {ui_literal_arg(name), {body_text, !body_text.empty()}, wing_part,
+         ui_text_arg("d.demon.part", head)});
+    if (!wings)
+        shown = ui_render("d.demon", "One of the many lords of Pandemonium, %s has %s and %s.", "",
+            {ui_literal_arg(name), {body_text, !body_text.empty()}, ui_text_arg("d.demon.part", head)});
+    if (shown.empty()) return description.str();
+    for (const char *extra : {smell, misc})
+    {
+        if (!extra) continue;
+        const ui_arg text = ui_text_arg("d.demon.part", extra);
+        if (!text.available) return description.str();
+        shown += text.text;
+    }
+    if (colour == ETC_RANDOM)
+    {
+        const ui_arg text = ui_text_arg("d.demon.part", " It changes colour whenever you look at it.");
+        if (!text.available) return description.str();
+        shown += text.text;
+    }
+    return shown;
 }
 
 /**
@@ -1169,7 +1332,7 @@ static string _describe_mutant_beast_tier(int tier)
     COMPILE_CHECK(ARRAYSZ(tier_descs) == NUM_BEAST_TIERS);
 
     ASSERT_RANGE(tier, 0, NUM_BEAST_TIERS);
-    return tier_descs[tier];
+    return ui_translate("d.beast", tier_descs[tier].c_str());
 }
 
 
@@ -1197,13 +1360,24 @@ static string _describe_mutant_beast_facets(const CrawlVector &facets)
     if (facets.size() == 0)
         return "";
 
-    return "It" + comma_separated_fn(begin(facets), end(facets),
+    const string original = "It" + comma_separated_fn(begin(facets), end(facets),
                       [] (const CrawlStoreValue &sv) -> string {
                           const int facet = sv.get_int();
                           ASSERT_RANGE(facet, 0, NUM_BEAST_FACETS);
                           return facet_descs[facet];
                       }, ", and it", ", it")
            + ".";
+
+    string translated;
+    for (const auto &sv : facets)
+    {
+        const ui_arg clause = ui_text_arg("d.beast.facet", facet_descs[sv.get_int()]);
+        if (!clause.available) return original;
+        if (!translated.empty()) translated += "，";
+        translated += clause.text;
+    }
+    return ui_render("d.beast.facet", "It %s.", original,
+        {ui_literal_arg(translated)});
 
 }
 
@@ -1323,10 +1497,26 @@ static string _your_skill_desc(skill_type skill, bool show_target_button,
     int you_skill_temp = you.skill(skill, 10);
     int you_skill = you.skill(skill, 10, false, false);
 
-    return make_stringf("Your %sskill: %s%d.%d%s",
+    const string original = make_stringf("Your %sskill: %s%d.%d%s",
                             (you_skill_temp != you_skill ? "(base) " : ""),
                             padding.c_str(), you_skill / 10, you_skill % 10,
                             target_button_desc.c_str());
+    const string level = make_stringf("%s%d.%d", padding.c_str(),
+                                    you_skill / 10, you_skill % 10);
+    string shown = ui_render("d.training", you_skill_temp != you_skill
+        ? "Your (base) skill: %s" : "Your skill: %s", "", {ui_literal_arg(level)});
+    if (shown.empty()) return original;
+    if (!target_button_desc.empty())
+    {
+        const string button = ui_render("d.training",
+            "; use <white>(s)</white> to set %s as a target for %s.", "",
+            {ui_literal_arg(make_stringf("%d.%d", min_scaled_target / 10,
+                                        min_scaled_target % 10)),
+             ui_text_arg("display.skill", skill_name(skill))});
+        if (button.empty()) return original;
+        shown += button;
+    }
+    return shown;
 }
 
 /**
@@ -1369,6 +1559,21 @@ static string _skill_target_desc(skill_type skill, int scaled_target,
             (you.experience_level + (level_diff + 9) / 10) > 27
                                 ? "the equivalent of" : "about",
             level_diff / 10, level_diff % 10);
+    const bool equivalent = (you.experience_level + (level_diff + 9) / 10) > 27;
+    const char *key = max_training
+        ? (equivalent ? "At 100% training you reach %s in the equivalent of %s XLs."
+                      : "At 100% training you reach %s in about %s XLs.")
+        : !hypothetical
+        ? (equivalent ? "At current training (%s%%) you reach %s in the equivalent of %s XLs."
+                      : "At current training (%s%%) you reach %s in about %s XLs.")
+        : (equivalent ? "At a training level of %s%% you would reach %s in the equivalent of %s XLs."
+                      : "At a training level of %s%% you would reach %s in about %s XLs.");
+    const ui_arg target = ui_literal_arg(make_stringf("%d.%d", scaled_target / 10, scaled_target % 10));
+    const ui_arg levels = ui_literal_arg(make_stringf("%d.%d", level_diff / 10, level_diff % 10));
+    description = max_training
+        ? ui_render("d.training", key, description, {target, levels})
+        : ui_render("d.training", key, description,
+            {ui_literal_arg(to_string(hypothetical ? training : you.training[skill])), target, levels});
     if (you.wizard)
     {
         description += make_stringf("\n    (%d xp, %d skp)",
@@ -1406,7 +1611,7 @@ static string _desc_attack_delay(const item_def &item)
 
     const int cur_delay = you.attack_delay_with(&dummy).expected();
 
-    return make_stringf("\n    Current attack delay: %.1f.", (float)cur_delay / 10);
+    return make_stringf(ui_translate("d.describe", "\n    Current attack delay: %.1f."), (float)cur_delay / 10);
 }
 
 static string _describe_missile_dmg_brand(const item_def &item)
@@ -1429,14 +1634,19 @@ static string _describe_missile_dmg_brand(const item_def &item)
      return " + " + uppercase_first(brand_name);
 }
 
-string damage_rating(const item_def *item, int *rating_value)
+string damage_rating(const item_def *item, int *rating_value, string *display)
 {
+    if (display) display->clear();
     if (item && is_unrandom_artefact(*item, UNRAND_WOE))
     {
         if (rating_value)
             *rating_value = 666;
 
-        return "your enemies will bleed and die for Makhleb.";
+        const string original = "your enemies will bleed and die for Makhleb.";
+        if (display)
+            *display = ui_render("d.damage", "your enemies will bleed and die for %s.", "",
+                {ui_text_arg("display.god", god_name(GOD_MAKHLEB))});
+        return original;
     }
 
     const bool thrown = item && item->base_type == OBJ_MISSILES;
@@ -1504,7 +1714,7 @@ string damage_rating(const item_def *item, int *rating_value)
 
     const string dmg_brand_desc = thrown ? _describe_missile_dmg_brand(*item) : "";
 
-    return make_stringf(
+    const string original = make_stringf(
         "%d (Base %s x %d%% (%s) x %d%% (%s)%s)%s.",
         rating,
         base_dam_desc.c_str(),
@@ -1514,6 +1724,56 @@ string damage_rating(const item_def *item, int *rating_value)
         use_weapon_skill ? "Skill" : "Fight",
         plusses_desc.c_str(),
         dmg_brand_desc.c_str());
+    if (display)
+    {
+        ui_translation_group group({
+            {"d.damage", "%s (Base %s x %s%% (%s) x %s%% (%s)%s)%s."},
+        });
+        const char *stat_key = use_str ? "Str" : "Dex";
+        const char *skill_key = use_weapon_skill ? "Skill" : "Fight";
+        group.require("d.damage", stat_key);
+        group.require("d.damage", skill_key);
+        string base = to_string(base_dam);
+        if (thrown || !item || brand == SPWPN_HEAVY)
+        {
+            const char *key = thrown ? "Thrw" : !item ? "UC" : "Hvy";
+            group.require("d.damage", key);
+            base = make_stringf("[%d + %d (%s)]", base_dam, extra_base_dam,
+                                group.get("d.damage", key));
+        }
+        string extra;
+        if (plusses)
+        {
+            const char *key = slaying && ench ? "Ench + Slay" : ench ? "Ench" : "Slay";
+            group.require("d.damage", key);
+            extra = make_stringf(" %s %d (%s)", plusses < 0 ? "-" : "+",
+                                abs(plusses), group.get("d.damage", key));
+        }
+        string brand_text;
+        if (!dmg_brand_desc.empty())
+        {
+            const ui_arg name = ui_text_arg("display.item.modifier", missile_brand_name(*item, MBN_BRAND));
+            if (!name.available) return original;
+            brand_text = " + " + name.text;
+        }
+        if (group.available())
+            *display = make_stringf(group.get("d.damage",
+                "%s (Base %s x %s%% (%s) x %s%% (%s)%s)%s."),
+                to_string(rating).c_str(), base.c_str(), to_string(stat_mult).c_str(),
+                group.get("d.damage", stat_key), to_string(skill_mult).c_str(),
+                group.get("d.damage", skill_key), extra.c_str(), brand_text.c_str());
+    }
+    return original;
+
+}
+
+// Only the actual item UI requests a display copy. Lua keeps damage_rating's
+// canonical return value and the same numeric result in both languages.
+static string _damage_display_rating(const item_def *item)
+{
+    string shown;
+    const string original = damage_rating(item, nullptr, &shown);
+    return shown.empty() ? original : shown;
 }
 
 static string _weapon_ego_key(brand_type ego)
@@ -1557,31 +1817,33 @@ static void _append_weapon_stats(string &description, const item_def &item)
         && staff_skill(static_cast<stave_type>(item.sub_type)) != SK_NONE
         && is_useless_skill(staff_skill(static_cast<stave_type>(item.sub_type))))
     {
-        description += make_stringf(
-            "Your inability to study %s prevents you from drawing on the"
-            " full power of this staff in melee.\n\n",
-            skill_name(staff_skill(static_cast<stave_type>(item.sub_type))));
+        const skill_type skill = staff_skill(static_cast<stave_type>(item.sub_type));
+        description += ui_render("d.equipment",
+            "Your inability to study %s prevents you from drawing on the full power of this staff in melee.\n\n",
+            make_stringf("Your inability to study %s prevents you from drawing on the"
+                         " full power of this staff in melee.\n\n", skill_name(skill)),
+            {ui_text_arg("display.skill", skill_name(skill))});
     }
 
     if (is_unrandom_artefact(item, UNRAND_WOE))
     {
         const char *inf = Options.char_set == CSET_ASCII ? "inf" : "\u221e"; //"∞"
         description += make_stringf(
-            "Base accuracy: %s  Base damage: %s  ",
+            ui_translate("d.describe", "Base accuracy: %s  Base damage: %s  "),
             inf,
             inf);
     }
     else
     {
         description += make_stringf(
-            "Base accuracy: %+d  Base damage: %d  ",
+            ui_translate("d.describe", "Base accuracy: %+d  Base damage: %d  "),
             property(item, PWPN_HIT),
             base_dam);
     }
 
     description += make_stringf(
-        "Base attack delay: %.1f\n"
-        "This weapon's minimum attack delay (%.1f) is reached at skill level %d.",
+        ui_translate("d.describe", "Base attack delay: %.1f\n"
+        "This weapon's minimum attack delay (%.1f) is reached at skill level %d."),
             (float) property(item, PWPN_SPEED) / 10,
             (float) weapon_min_delay(item, item.is_identified()) / 10,
             mindelay_skill / 10);
@@ -1592,37 +1854,54 @@ static void _append_weapon_stats(string &description, const item_def &item)
     {
         const int penalty_scale = 100;
         const int armour_penalty = you.adjusted_body_armour_penalty(penalty_scale, true);
-        description += "\n";
+        string slowdown;
         if (armour_penalty)
         {
             const item_def *body_armour = you.body_armour();
-            description += (body_armour ? uppercase_first(
+            slowdown += (body_armour ? uppercase_first(
                                               body_armour->name(DESC_YOUR))
                                         : "Your heavy armour");
 
             const bool significant = armour_penalty >= penalty_scale;
             if (significant)
             {
-                description +=
+                slowdown +=
                     make_stringf(" slows your attacks with this weapon by %.1f",
                                  armour_penalty / (10.0f * penalty_scale));
             }
             else
-                description += " slightly slows your attacks with this weapon";
+                slowdown += " slightly slows your attacks with this weapon";
         }
         else
         {
-            description += "Wearing heavy armour would reduce your attack "
+            slowdown += "Wearing heavy armour would reduce your attack "
                            "speed with this weapon";
         }
-        description += ".";
+        slowdown += ".";
+        const item_def *armour = you.body_armour();
+        const string amount = make_stringf("%.1f", armour_penalty / (10.0f * penalty_scale));
+        const char *key = !armour_penalty
+            ? "Wearing heavy armour would reduce your attack speed with this weapon."
+            : armour_penalty >= penalty_scale
+            ? (armour ? "%s slows your attacks with this weapon by %s."
+                      : "Your heavy armour slows your attacks with this weapon by %s.")
+            : (armour ? "%s slightly slows your attacks with this weapon."
+                      : "Your heavy armour slightly slows your attacks with this weapon.");
+        string shown;
+        if (!armour_penalty) shown = ui_render("d.equipment", key, slowdown, {});
+        else if (armour_penalty >= penalty_scale)
+            shown = armour ? ui_render("d.equipment", key, slowdown, {ui_item_arg(*armour), ui_literal_arg(amount)})
+                           : ui_render("d.equipment", key, slowdown, {ui_literal_arg(amount)});
+        else shown = armour ? ui_render("d.equipment", key, slowdown, {ui_item_arg(*armour)})
+                            : ui_render("d.equipment", key, slowdown, {});
+        description += "\n" + shown;
     }
 
     const bool want_player_stats = !is_useless_item(item) && crawl_state.need_save;
     if (want_player_stats)
     {
         description += _desc_attack_delay(item);
-        description += "\nDamage rating: " + damage_rating(&item);
+        description += ui_translate("phase3.describe", "\nDamage rating: ") + _damage_display_rating(&item);
     }
 
     const string brand_desc = _describe_weapon_brand(item);
@@ -1630,11 +1909,11 @@ static void _append_weapon_stats(string &description, const item_def &item)
     {
         const brand_type brand = get_weapon_brand(item);
         string brand_name = uppercase_first(brand_type_name(brand, true));
+        const ui_arg display_brand = ui_text_arg("display.item.modifier", brand_type_name(brand, false));
+        if (display_brand.available) brand_name = display_brand.text;
         // Hack to match artefact prop formatting.
 
-        string fmt_name = make_stringf("\n\n%-*s",
-                                        MAX_ARTP_NAME_LEN + 1,
-                                        (brand_name + ":").c_str());
+        string fmt_name = "\n\n" + padded_str(brand_name + ":", MAX_ARTP_NAME_LEN + 1);
 
         description += _format_prop_desc(fmt_name, brand_desc);
     }
@@ -1645,14 +1924,14 @@ static void _append_weapon_stats(string &description, const item_def &item)
         {
             description += make_stringf("\n%s%s",
                 (brand_desc.empty() ? "\n" : ""),
-                _format_dbrand(entry->dbrand).c_str());
+                _format_dbrand(ui_translate("a.art-data", entry->dbrand)).c_str());
         }
         // XXX: Would be nice if this wasn't duplicated
         if (testbits(item.flags, ISFLAG_CHAOTIC))
         {
             string ego_key = _weapon_ego_key(SPWPN_CHAOS);
             string ego_desc = getEgoString(ego_key);
-            description += _format_prop_desc("\nChaotic:   ", ego_desc);
+            description += _format_prop_desc(ui_translate("d.equipment", "\nChaotic:   "), ego_desc);
         }
 
         // XX spacing following brand and dbrand for randarts/unrands is a bit
@@ -1663,13 +1942,13 @@ static void _append_weapon_stats(string &description, const item_def &item)
 static string _handedness_string(const item_def &item)
 {
     if (you.has_mutation(MUT_NO_GRASPING))
-        return "\nYou are unable to wield it.";
+        return ui_translate("d.describe", "\nYou are unable to wield it.");
 
     if (crawl_state.need_save
         && is_weapon_too_large(item, you.body_size(PSIZE_TORSO))
         && !you.has_mutation(MUT_QUADRUMANOUS))
     {
-        return "\nIt is too large for you to wield.";
+        return ui_translate("d.describe", "\nIt is too large for you to wield.");
     }
 
     const bool quad = you.has_mutation(MUT_QUADRUMANOUS);
@@ -1690,14 +1969,23 @@ static string _handedness_string(const item_def &item)
         break;
     }
 
+    string original;
     if (quad)
-        return make_stringf("It is a weapon for %s %s.", n.c_str(), handname.c_str());
+        original = make_stringf("It is a weapon for %s %s.", n.c_str(), handname.c_str());
     else
     {
-        return make_stringf("It is a %s-%s%s weapon.", n.c_str(),
+        original = make_stringf("It is a %s-%s%s weapon.", n.c_str(),
             handname.c_str(),
             ends_with(handname, "e") ? "d" : "ed");
     }
+
+    const char *key = quad
+        ? (you.hands_reqd(item) == HANDS_ONE ? "This weapon requires one pair of %s."
+                                            : "This weapon requires two pairs of %s.")
+        : (you.hands_reqd(item) == HANDS_ONE ? "This weapon requires one %s."
+                                            : "This weapon requires two %s.");
+    return ui_render("d.equipment", key, original,
+        {ui_text_arg("a.bodypart", species::hand_name(you.species))});
 
 }
 
@@ -1747,7 +2035,39 @@ static string _category_string(const item_def &item, bool monster)
         break;
     }
 
-    return description;
+    string shown = is_unrandom_artefact(item)
+        ? ui_render("d.equipment", "%s falls into the %s category. ", "",
+            {ui_item_arg(item), ui_text_arg("display.skill", skill_name(skill))})
+        : ui_render("d.equipment", "This weapon falls into the %s category. ", "",
+            {ui_text_arg("display.skill", skill_name(skill))});
+    if (shown.empty() || skill == SK_FIGHTING) return description;
+    const char *extra = nullptr;
+    switch (skill)
+    {
+    case SK_POLEARMS:
+        extra = monster ? "It has an extended reach. "
+                        : "It has an extended reach (target with [<white>v</white>]). ";
+        break;
+    case SK_AXES:
+        extra = is_unrandom_artefact(item, UNRAND_WOE)
+            ? "It hits all enemies adjacent to the wielder. "
+            : "It hits all enemies adjacent to the wielder, dealing less damage to those not targeted. ";
+        break;
+    case SK_SHORT_BLADES:
+        extra = item.sub_type == WPN_DAGGER
+            ? "It is extremely good for stabbing helpless or unaware enemies. "
+            : "It is good for stabbing helpless or unaware enemies. ";
+        break;
+    default: break;
+    }
+    if (extra)
+    {
+        const string more = ui_render("d.equipment", extra, "", {});
+        if (more.empty()) return description;
+        shown += more;
+    }
+    return shown;
+
 }
 
 static string _describe_weapon_brand(const item_def &item)
@@ -1787,7 +2107,7 @@ static string _describe_weapon_brand(const item_def &item)
     if (ego == SPWPN_VALOUR)
     {
         dice_def dmg = zap_damage(ZAP_VALOUR_BEAM, property(item, PWPN_DAMAGE), false, false);
-        ego_desc += make_stringf("The beam does %dd%d damage.", dmg.num, dmg.size);
+        ego_desc += make_stringf(ui_translate("d.describe", "The beam does %dd%d damage."), dmg.num, dmg.size);
     }
 
     return ego_desc;
@@ -1849,6 +2169,67 @@ static string _equipment_switchto_string(const item_def &item)
     // Not always the same verb used elsewhere, but "switch putting on" sounds weird
     else
         return "wearing";
+}
+
+// Display only: use the exact preview values already calculated below.
+static string _equipment_point_display(const char *field, int original, int changed)
+{
+    const ui_arg label = ui_text_arg("d.equipment.field", field);
+    if (original == changed)
+        return ui_render("d.equipment", "Your %s would remain unchanged.", "", {label});
+    original = original / 10 * 10;
+    changed = changed / 10 * 10;
+    const float difference = (changed - original) / 100.0f;
+    return ui_render("d.equipment", difference > 0
+        ? "Your %s would increase by %s (%s -> %s)."
+        : "Your %s would decrease by %s (%s -> %s).", "",
+        {label, ui_literal_arg(make_stringf("%.1f", abs(difference))),
+         ui_literal_arg(make_stringf("%.1f", original / 100.0f)),
+         ui_literal_arg(make_stringf("%.1f", changed / 100.0f))});
+}
+
+static string _equipment_preview_display(const item_def &item, bool remove,
+    int cur_ac, int cur_ev, int cur_sh, int new_ac, int new_ev, int new_sh,
+    int fail_change, int visible_fail_change)
+{
+    const char *key = remove ? "If you remove this %s:"
+        : item.base_type == OBJ_TALISMANS ? "If you transformed using this talisman:"
+        : item.base_type == OBJ_JEWELLERY && !jewellery_is_amulet(item)
+            ? "If you were wearing this ring:"
+        : item.base_type == OBJ_WEAPONS && you.has_mutation(MUT_WIELD_OFFHAND)
+            ? "If you switch to wielding this weapon in your main hand:"
+        : item.base_type == OBJ_WEAPONS || item.base_type == OBJ_STAVES
+            ? "If you switch to wielding this %s:"
+            : "If you switch to wearing this %s:";
+    const bool type_needed = strstr(key, "%s");
+    string shown = type_needed
+        ? ui_render("d.equipment", key, "", {ui_text_arg("d.equipment.type", _equip_type_name(item))})
+        : ui_render("d.equipment", key, "", {});
+    if (shown.empty()) return "";
+    vector<string> lines;
+    if ((item.base_type == OBJ_ARMOUR && get_armour_slot(item) != SLOT_OFFHAND) || cur_ac != new_ac)
+        lines.push_back(_equipment_point_display("AC", cur_ac, new_ac));
+    if ((item.base_type == OBJ_ARMOUR && item.sub_type != ARM_ORB) || cur_ev != new_ev)
+        lines.push_back(_equipment_point_display("EV", cur_ev, new_ev));
+    if (is_shield(item) || cur_sh != new_sh)
+        lines.push_back(_equipment_point_display("SH", cur_sh, new_sh));
+    if (fail_change)
+    {
+        const char *fail_key = !visible_fail_change
+            ? (fail_change > 0 ? "Your spell failure would worsen trivially."
+                               : "Your spell failure would improve trivially.")
+            : (fail_change > 0 ? "Your spell failure would worsen by up to %s%% (press '!' for details)."
+                               : "Your spell failure would improve by up to %s%% (press '!' for details).");
+        lines.push_back(visible_fail_change
+            ? ui_render("d.equipment", fail_key, "", {ui_literal_arg(to_string(abs(visible_fail_change)))})
+            : ui_render("d.equipment", fail_key, "", {}));
+    }
+    for (const auto &line : lines)
+    {
+        if (line.empty()) return "";
+        shown += "\n" + line;
+    }
+    return "\n\n" + shown;
 }
 
 /**
@@ -1966,7 +2347,9 @@ static string _equipment_property_change_description(const item_def &item,
         }
     }
 
-    return description;
+    const string shown = _equipment_preview_display(item, remove,
+        cur_ac, cur_ev, cur_sh, new_ac, new_ev, new_sh, fail_change, visible_fail_change);
+    return shown.empty() ? description : shown;
 }
 
 static string _spell_fail_change_description(const item_def &item,
@@ -2024,6 +2407,14 @@ static string _spell_fail_change_description(const item_def &item,
                         remove ? "removed" : "equipped",
                         fail_change < 0 ? "worsen" : "improve");
 
+    const char *header = remove
+        ? (fail_change < 0 ? "If you removed this item, your spell failure would worsen:\n"
+                           : "If you removed this item, your spell failure would improve:\n")
+        : (fail_change < 0 ? "If you equipped this item, your spell failure would worsen:\n"
+                           : "If you equipped this item, your spell failure would improve:\n");
+    string shown = ui_render("d.equipment", header, "", {});
+    bool complete = !shown.empty();
+
     // Sort spells by degree of change in their fail rates (and then by
     // absolute fail rate after that)
     vector<pair<int, int>> spell_sort;
@@ -2068,9 +2459,14 @@ static string _spell_fail_change_description(const item_def &item,
                 cur_fail[index], new_fail[index], colour.c_str());
 
         desc += entry;
+        const ui_arg spell = ui_text_arg("display.spell", spell_title(you.spells[index]));
+        if (!spell.available) complete = false;
+        else shown += make_stringf("<%s>%s%3d%%-> %3d%%</%s>\n",
+            colour.c_str(), chop_string(spell.text, 32).c_str(),
+            cur_fail[index], new_fail[index], colour.c_str());
     }
 
-    return desc;
+    return complete ? shown : desc;
 }
 
 static string _equipment_property_change(const item_def &item)
@@ -2120,11 +2516,11 @@ static string _describe_weapon(const item_def &item, bool verbose, bool monster)
     {
         if (is_enchantable_weapon(item))
         {
-            description += "\n\nIt can be maximally enchanted to +"
-                           + to_string(MAX_WPN_ENCHANT) + ".";
+            description += make_stringf(ui_translate("item.enchant.maximum",
+                ui_translate("d.describe", "\n\nIt can be maximally enchanted to +%d.")), MAX_WPN_ENCHANT);
         }
         else
-            description += "\n\nIt cannot be enchanted further.";
+            description += ui_translate("phase3.describe", ui_translate("d.describe", "\n\nIt cannot be enchanted further."));
     }
 
     return description;
@@ -2163,9 +2559,9 @@ static string _describe_ammo(const item_def &item)
         const int target_skill = _item_training_target(item);
 
         description += make_stringf(
-            "\n\nBase damage: %d  Base attack delay: %.1f"
+            ui_translate("d.describe", "\n\nBase damage: %d  Base attack delay: %.1f"
             "\nThis projectile's minimum attack delay (%.1f) "
-                "is reached at skill level %d.",
+                "is reached at skill level %d."),
             dam,
             (float) throw_delay / 10,
             (float) FASTEST_PLAYER_THROWING_SPEED / 10,
@@ -2178,16 +2574,16 @@ static string _describe_ammo(const item_def &item)
             description += _desc_attack_delay(item);
 
             if (property(item, PWPN_DAMAGE))
-                description += "\nDamage rating: " + damage_rating(&item);
+                description += ui_translate("phase3.describe", "\nDamage rating: ") + _damage_display_rating(&item);
         }
     }
 
     if (ammo_always_destroyed(item))
-        description += "\n\nIt is always destroyed on impact.";
+        description += ui_translate("d.describe", "\n\nIt is always destroyed on impact.");
     else if (!ammo_never_destroyed(item))
     {
         description += make_stringf(
-            "\n\nIt has a 1/%d chance to be destroyed on impact.",
+            ui_translate("d.describe", "\n\nIt has a 1/%d chance to be destroyed on impact."),
             ammo_destroy_chance(item)
         );
     }
@@ -2204,9 +2600,11 @@ static string _warlock_mirror_reflect_desc()
     const int reflect_chance_numer = (100 - (scaled_SH % 100)) * SH * omnireflect_chance_denom(SH+1) + (scaled_SH % 100) * (SH+1) * omnireflect_chance_denom(SH);
     const int reflect_chance_denom = omnireflect_chance_denom(SH) * omnireflect_chance_denom(SH+1);
     const int reflect_chance = reflect_chance_numer / reflect_chance_denom;
-    return "\n\nWith your current SH, it has a " + to_string(reflect_chance) +
+    const string original = "\n\nWith your current SH, it has a " + to_string(reflect_chance) +
            "% chance to reflect attacks against your willpower and other "
            "normally unblockable effects.";
+    return ui_render("d.equipment", "\n\nWith your current SH, it has a %s%% chance to reflect attacks against your willpower and other normally unblockable effects.", original,
+        {ui_literal_arg(to_string(reflect_chance))});
 }
 
 static string _armour_ego_key(special_armour_type ego)
@@ -2223,20 +2621,20 @@ static string _orb_ego_details(special_armour_type ego)
     switch (ego)
     {
         case SPARM_ENERGY:
-            return make_stringf("\n\nSpell refund chance: %d%% (max %d%%)",
+            return make_stringf(ui_translate("d.equipment", "\n\nSpell refund chance: %d%% (max %d%%)"),
                                 player_channelling_chance(), player_channelling_chance(true));
 
         case SPARM_GUILE:
-            return make_stringf("\n\nEnemy Willpower: -%d (max -%d)",
+            return make_stringf(ui_translate("d.equipment", "\n\nEnemy Willpower: -%d (max -%d)"),
                                 guile_will_reduction(), guile_will_reduction(true));
 
         case SPARM_GLASS:
-            return make_stringf("\n\nVitrify chance: %d%% (max %d%%)",
+            return make_stringf(ui_translate("d.equipment", "\n\nVitrify chance: %d%% (max %d%%)"),
                         (20 + you.skill(SK_EVOCATIONS, 5)) * 100 / 500,
                         (20 + 135) * 100 / 500);
 
         case SPARM_PYROMANIA:
-            return make_stringf("\n\nExplosion chance: %d%% (max %d%%)\nExplosion damage: %dd%d (max %dd%d)\n",
+            return make_stringf(ui_translate("d.equipment", "\n\nExplosion chance: %d%% (max %d%%)\nExplosion damage: %dd%d (max %dd%d)\n"),
                                 pyromania_trigger_chance(), pyromania_trigger_chance(true),
                                 pyromania_damage(false, false).num, pyromania_damage(false, false).size,
                                 pyromania_damage(false, true).num, pyromania_damage(false, true).size);
@@ -2272,22 +2670,28 @@ static string _describe_armour(const item_def &item, bool verbose, bool monster)
             const int evp = -property(item, PARM_EVASION);
             const char* cumber_desc = evp < 100 ? "slightly " :
                                       evp > 100 ? "greatly " : "";
-            description += make_stringf(
+            const string original = make_stringf(
                 "It is cumbersome to wear, and %simpedes the evasion, "
                 "spellcasting ability, and attack speed of the wearer. "
                 "These penalties are reduced by the wearer's Shields skill "
                 "and Strength; mastering Shields eliminates penalties.",
                 cumber_desc);
+            const char *key = evp < 100
+                ? "It is cumbersome to wear, and slightly impedes the evasion, spellcasting ability, and attack speed of the wearer. These penalties are reduced by the wearer's Shields skill and Strength; mastering Shields eliminates penalties."
+                : evp > 100
+                ? "It is cumbersome to wear, and greatly impedes the evasion, spellcasting ability, and attack speed of the wearer. These penalties are reduced by the wearer's Shields skill and Strength; mastering Shields eliminates penalties."
+                : "It is cumbersome to wear, and impedes the evasion, spellcasting ability, and attack speed of the wearer. These penalties are reduced by the wearer's Shields skill and Strength; mastering Shields eliminates penalties.";
+            description += ui_render("d.equipment", key, original, {});
         }
         if (!monster)
             description += "\n\n";
         if (is_shield(item))
         {
-            description += "Base shield rating: "
+            description += ui_translate("phase3.describe", "Base shield rating: ")
                         + to_string(property(item, PARM_AC));
-            description += "     Encumbrance rating: "
+            description += ui_translate("phase3.describe", "     Encumbrance rating: ")
                         + to_string(-property(item, PARM_EVASION) / 10);
-            description += "     Max blocks/turn: "
+            description += ui_translate("phase3.describe", "     Max blocks/turn: ")
                         + to_string(shield_block_limit(item));
             if (is_unrandom_artefact(item, UNRAND_WARLOCK_MIRROR))
                 description += _warlock_mirror_reflect_desc();
@@ -2295,18 +2699,18 @@ static string _describe_armour(const item_def &item, bool verbose, bool monster)
         else
         {
             const int evp = property(item, PARM_EVASION);
-            description += "Base armour rating: "
+            description += ui_translate("phase3.describe", "Base armour rating: ")
                         + to_string(property(item, PARM_AC));
             if (get_armour_slot(item) == SLOT_BODY_ARMOUR)
             {
-                description += "       Encumbrance rating: "
+                description += ui_translate("phase3.describe", "       Encumbrance rating: ")
                             + to_string(-evp / 10);
             }
             // Bardings reduce evasion by a fixed amount, and don't have any of
             // the other effects of encumbrance.
             else if (evp)
             {
-                description += "       Evasion: "
+                description += ui_translate("phase3.describe", "       Evasion: ")
                             + to_string(evp / 30);
             }
         }
@@ -2337,6 +2741,12 @@ static string _describe_armour(const item_def &item, bool verbose, bool monster)
         else
             ego_prefix = "'Of " + string(armour_ego_name(item, false)) + "': ";
 
+        const ui_arg display_ego = ui_text_arg("display.item.modifier", armour_ego_name(item, false));
+        if (display_ego.available)
+            ego_prefix = is_artefact(item)
+                ? padded_str(display_ego.text + ": ", MAX_ARTP_NAME_LEN + 1)
+                : "「" + display_ego.text + "」：";
+
         string ego_key = _armour_ego_key(ego);
         string ego_desc = getEgoString(ego_key);
         if (is_artefact(item))
@@ -2359,11 +2769,11 @@ static string _describe_armour(const item_def &item, bool verbose, bool monster)
     {
         if (is_enchantable_armour(item))
         {
-            description += "\n\nIt can be maximally enchanted to +"
-                           + to_string(armour_max_enchant(item)) + ".";
+            description += make_stringf(ui_translate("item.enchant.maximum",
+                ui_translate("d.describe", "\n\nIt can be maximally enchanted to +%d.")), armour_max_enchant(item));
         }
         else if (armour_is_enchantable(item))
-            description += "\n\nIt cannot be enchanted further.";
+            description += ui_translate("phase3.describe", ui_translate("d.describe", "\n\nIt cannot be enchanted further."));
     }
 
     if (verbose
@@ -2394,13 +2804,22 @@ static string _describe_armour(const item_def &item, bool verbose, bool monster)
     {
         // TODO: why doesn't this show shield effect? Reconcile with
         // _display_attack_delay
-        description += "\n\nYour current strength and Armour skill "
+        string original;
+        original += "\n\nYour current strength and Armour skill "
                        "slows attacks with missile weapons (like "
                         + you.weapon()->name(DESC_YOUR) + ") ";
         if (aevp >= DELAY_SCALE)
-            description += make_stringf("by %.1f.", aevp / (10.0f * DELAY_SCALE));
+            original += make_stringf("by %.1f.", aevp / (10.0f * DELAY_SCALE));
         else
-            description += "only slightly.";
+            original += "only slightly.";
+        const char *key = aevp >= DELAY_SCALE
+            ? "Your current strength and Armour skill slows attacks with missile weapons (like %s) by %s."
+            : "Your current strength and Armour skill slows attacks with missile weapons (like %s) only slightly.";
+        const string shown = aevp >= DELAY_SCALE
+            ? ui_render("d.equipment", key, "", {ui_item_arg(*you.weapon()),
+                ui_literal_arg(make_stringf("%.1f", aevp / (10.0f * DELAY_SCALE)))})
+            : ui_render("d.equipment", key, "", {ui_item_arg(*you.weapon())});
+        description += shown.empty() ? original : "\n\n" + shown;
     }
 
     return description;
@@ -2419,7 +2838,7 @@ static string _describe_lignify_ac()
     you.equipment.unmeld_all_equipment(true);
     you.equipment.meld_equipment(tree_form->blocked_slots, true);
 
-    return make_stringf("If you quaff this potion your AC would be %d.",
+    return make_stringf(ui_translate("d.describe", "If you quaff this potion your AC would be %d."),
                         you.armour_class_scaled(1));
 }
 
@@ -2456,7 +2875,7 @@ static string _describe_jewellery(const item_def &item, bool verbose)
         // Explicit description of ring or amulet power.
         if (item.sub_type == AMU_REFLECTION)
         {
-            description += make_stringf("\n\nIt affects your shielding (%+d).",
+            description += make_stringf(ui_translate("d.describe", "\n\nIt affects your shielding (%+d)."),
                                         AMU_REFLECT_SH / 2);
         }
         else if (item.plus != 0)
@@ -2464,33 +2883,33 @@ static string _describe_jewellery(const item_def &item, bool verbose)
             switch (item.sub_type)
             {
             case RING_PROTECTION:
-                description += make_stringf("\n\nIt affects your AC (%+d).",
+                description += make_stringf(ui_translate("d.describe", "\n\nIt affects your AC (%+d)."),
                                             item.plus);
                 break;
 
             case RING_EVASION:
-                description += make_stringf("\n\nIt affects your evasion (%+d).",
+                description += make_stringf(ui_translate("d.describe", "\n\nIt affects your evasion (%+d)."),
                                             item.plus);
                 break;
 
             case RING_STRENGTH:
-                description += make_stringf("\n\nIt affects your strength (%+d).",
+                description += make_stringf(ui_translate("d.describe", "\n\nIt affects your strength (%+d)."),
                                             item.plus);
                 break;
 
             case RING_INTELLIGENCE:
-                description += make_stringf("\n\nIt affects your intelligence (%+d).",
+                description += make_stringf(ui_translate("d.describe", "\n\nIt affects your intelligence (%+d)."),
                                             item.plus);
                 break;
 
             case RING_DEXTERITY:
-                description += make_stringf("\n\nIt affects your dexterity (%+d).",
+                description += make_stringf(ui_translate("d.describe", "\n\nIt affects your dexterity (%+d)."),
                                             item.plus);
                 break;
 
             case RING_SLAYING:
-                description += make_stringf("\n\nIt affects your accuracy and"
-                      " damage with ranged weapons and melee (%+d).",
+                description += make_stringf(ui_translate("d.describe", "\n\nIt affects your accuracy and"
+                      " damage with ranged weapons and melee (%+d)."),
                       item.plus);
                 break;
 
@@ -2523,12 +2942,12 @@ static string _describe_jewellery(const item_def &item, bool verbose)
 static string _describe_item_curse(const item_def &item)
 {
     if (!item.props.exists(CURSE_KNOWLEDGE_KEY))
-        return "\nIt has a curse placed upon it.";
+        return ui_translate("d.describe", "\nIt has a curse placed upon it.");
 
     const CrawlVector& curses = item.props[CURSE_KNOWLEDGE_KEY].get_vector();
 
     if (curses.empty())
-        return "\nIt has a curse placed upon it.";
+        return ui_translate("d.describe", "\nIt has a curse placed upon it.");
 
     ostringstream desc;
 
@@ -2536,7 +2955,25 @@ static string _describe_item_curse(const item_def &item)
     desc << comma_separated_fn(curses.begin(), curses.end(), desc_curse_skills,
                                ".\n", ".\n") << ".";
 
-    return desc.str();
+    vector<string> rows;
+    for (const auto &curse : curses)
+    {
+        vector<string> names;
+        for (const auto skill : curse_skills(curse))
+        {
+            if (!you.can_currently_train[skill]) continue;
+            const ui_arg name = ui_text_arg("display.skill", skill_name(skill));
+            if (!name.available) return desc.str();
+            names.push_back(name.text);
+        }
+        const string row = ui_render("d.equipment", "%s: %s", "",
+            {ui_text_arg("a.curse.name", curse_name(curse)),
+             ui_literal_arg(join_strings(names.begin(), names.end(), "、"))});
+        if (row.empty()) return desc.str();
+        rows.push_back(row);
+    }
+    return ui_render("d.equipment", "\nIt has a curse which improves the following skills:\n%s.", desc.str(),
+        {ui_literal_arg(join_strings(rows.begin(), rows.end(), "。\n"))});
 }
 
 static string _describe_gizmo(const item_def &item)
@@ -2545,30 +2982,30 @@ static string _describe_gizmo(const item_def &item)
 
     if (item.brand)
     {
-        const string name = string(gizmo_effect_name(item.brand)) + ":";
-        const string fname = make_stringf("%-*s", MAX_ARTP_NAME_LEN + 1, name.c_str());
+        const string name = string(ui_translate("display.item", gizmo_effect_name(item.brand))) + ":";
+        const string fname = padded_str(name, MAX_ARTP_NAME_LEN + 1);
         string desc;
         switch (item.brand)
         {
             case SPGIZMO_SPELLMOTOR:
-                desc = "Your spells cost less MP as you Rev up. Whenever you "
+                desc = ui_translate("d.describe", "Your spells cost less MP as you Rev up. Whenever you "
                        "cast a spell, you make a melee attack against a random "
-                       "enemy in range.";
+                       "enemy in range.");
                 break;
 
             case SPGIZMO_GADGETEER:
-                desc = "Your evocable items recharge 30% faster and wands have "
-                       "a 30% chance to not spend a charge.";
+                desc = ui_translate("d.describe", "Your evocable items recharge 30% faster and wands have "
+                       "a 30% chance to not spend a charge.");
                 break;
 
             case SPGIZMO_REVGUARD:
-                desc = "Your AC increases as you Rev (up to +5) and while "
-                       "fully Revved, your attacks may disarm enemies.";
+                desc = ui_translate("d.describe", "Your AC increases as you Rev (up to +5) and while "
+                       "fully Revved, your attacks may disarm enemies.");
                 break;
 
             case SPGIZMO_AUTODAZZLE:
-                desc  = "It sometimes fires a blinding ray at enemies whose attacks "
-                       "you dodge.";
+                desc  = ui_translate("d.describe", "It sometimes fires a blinding ray at enemies whose attacks "
+                       "you dodge.");
                 break;
 
             default:
@@ -2617,50 +3054,142 @@ static void _uselessness_desc(ostringstream &description, const item_def &item)
         return;
     if (is_useless_item(item, true))
     {
-        description << "\n\n"; // always needed for inv descriptions
+        ostringstream original;
         string r;
-        if (is_useless_item(item, false))
+        const char *head = nullptr;
+        bool category = false;
         {
-            description << "This " << base_type_string(item.base_type)
-                        << " is completely useless to you";
-            r = _cannot_use_reason(item, false);
-        }
-        else
-        {
-            switch (item.base_type)
+            unwind_var<lang_t> language(Options.language, lang_t::EN);
+            original << "\n\n"; // always needed for inv descriptions
+            if (is_useless_item(item, false))
             {
-            case OBJ_SCROLLS:
-                description << "Reading this right now";
-                // this is somewhat heuristic:
-                if (cannot_read_item_reason().size())
-                    description << " isn't possible";
-                else
-                    description << " will have no effect";
-                break;
-            case OBJ_POTIONS:
-                // XX code dup
-                description << "Drinking this right now";
-                if (cannot_drink_item_reason().size())
-                    description << " isn't possible";
-                else
-                    description << " will have no effect";
-                break;
-            case OBJ_MISCELLANY:
-            case OBJ_WANDS:
-                description << "You can't evoke this right now";
-                break;
-            default:
-                description << "This " << base_type_string(item.base_type)
-                            << " is useless to you right now";
-                break;
+                head = "This %s is completely useless to you";
+                category = true;
+                original << "This " << base_type_string(item.base_type)
+                            << " is completely useless to you";
+                r = _cannot_use_reason(item, false);
             }
-            r = _cannot_use_reason(item, true);
+            else
+            {
+                switch (item.base_type)
+                {
+                case OBJ_SCROLLS:
+                    original << "Reading this right now";
+                    // this is somewhat heuristic:
+                    if (cannot_read_item_reason().size())
+                    {
+                        head = "Reading this right now isn't possible";
+                        original << " isn't possible";
+                    }
+                    else
+                    {
+                        head = "Reading this right now will have no effect";
+                        original << " will have no effect";
+                    }
+                    break;
+                case OBJ_POTIONS:
+                    // XX code dup
+                    original << "Drinking this right now";
+                    if (cannot_drink_item_reason().size())
+                    {
+                        head = "Drinking this right now isn't possible";
+                        original << " isn't possible";
+                    }
+                    else
+                    {
+                        head = "Drinking this right now will have no effect";
+                        original << " will have no effect";
+                    }
+                    break;
+                case OBJ_MISCELLANY:
+                case OBJ_WANDS:
+                    head = "You can't evoke this right now";
+                    original << "You can't evoke this right now";
+                    break;
+                default:
+                    head = "This %s is useless to you right now";
+                    category = true;
+                    original << "This " << base_type_string(item.base_type)
+                                << " is useless to you right now";
+                    break;
+                }
+                r = _cannot_use_reason(item, true);
+            }
+            if (!r.empty())
+            {
+                string english_reason = r;
+                original << ": " << _trogsafe_lowercase(english_reason);
+            }
+            else
+                original << "."; // reasons always come with punctuation
         }
+        string shown = category
+            ? ui_render("d.item.useless", head, "", {ui_text_arg("d.item.kind", base_type_string(item.base_type))})
+            : ui_render("d.item.useless", head, "", {});
+        if (shown.empty()) { description << original.str(); return; }
         if (!r.empty())
-            description << ": " << _trogsafe_lowercase(r);
-        else
-            description << "."; // reasons always come with punctuation
+        {
+            ui_arg reason = ui_text_arg("d.item.reason", r);
+            if (!reason.available && is_xp_evoker(item)
+                && r == "The " + item.name(DESC_DBNAME) + " is presently inert.")
+            {
+                const string text = ui_render("d.item.reason", "The %s is presently inert.", "", {ui_item_arg(item)});
+                reason = {text, !text.empty()};
+            }
+            if (!reason.available) { description << original.str(); return; }
+            shown += "：" + reason.text;
+        }
+        else shown += "。";
+        description << "\n\n" << shown;
     }
+}
+
+// Derive place text from the raw branch/depth, never parse its English prose.
+static ui_arg _description_level_arg(const level_id &id)
+{
+    if (!id.is_valid() || id.branch < 0 || id.branch >= NUM_BRANCHES) return {"", false};
+    const ui_arg branch = ui_text_arg("b.branch.name", branches[id.branch].longname);
+    if (brdepth[id.branch] == 1) return branch;
+    const string text = ui_render("d.item.origin", "Level %s of %s", "",
+        {ui_literal_arg(to_string(id.depth)), branch});
+    return {text, !text.empty()};
+}
+
+string item_origin_description(const item_def &item)
+{
+    const string original = origin_desc(item) + ".";
+    const ui_arg place = _description_level_arg(item.orig_place);
+    const char *key = "You found it %s.";
+    if (item.orig_monnum < 0)
+    {
+        const int origin = -item.orig_monnum;
+        switch (origin)
+        {
+        case IT_SRC_SHOP: key = "You bought it in a shop %s."; break;
+        case AQ_SCROLL: key = "You acquired it %s."; break;
+        case AQ_INVENTED: key = "You invented it yourself %s."; break;
+#if TAG_MAJOR_VERSION == 34
+        case AQ_CARD_GENIE: key = "You drew the Genie %s."; break;
+#endif
+        default:
+            if (origin > GOD_NO_GOD && origin < NUM_GODS)
+                return ui_render("d.item.origin", "%s gifted it to you %s.", original,
+                    {ui_text_arg("display.god", god_name(static_cast<god_type>(origin))), place});
+            // Original-equipment bugs, wizard provenance and unknown origins
+            // keep their original diagnostic wording.
+            return original;
+        }
+    }
+    else if (item.orig_monnum == MONS_DANCING_WEAPON)
+        key = "You subdued it %s.";
+    else if (item.orig_monnum > 0)
+    {
+        if (item.orig_monnum >= NUM_MONSTERS) return original;
+        const auto monster = static_cast<monster_type>(item.orig_monnum);
+        return ui_render("d.item.origin", "You took it off %s %s.", original,
+            {ui_text_arg("display.monster", mons_type_name(monster, DESC_PLAIN)), place});
+    }
+    return ui_render("d.item.origin", key, original, {place});
 }
 
 /**
@@ -2671,8 +3200,10 @@ static void _uselessness_desc(ostringstream &description, const item_def &item)
  * @return a string with the name, db desc, and some other data.
  */
 string get_item_description(const item_def &item,
-                            item_description_mode mode)
+                            item_description_mode mode, bool display)
 {
+    // Lua and dumps retain canonical English. Native UI explicitly opts in.
+    unwind_var<lang_t> language(Options.language, display ? Options.language : lang_t::EN);
     ostringstream description;
     const bool verbose = mode == IDM_DEFAULT || mode == IDM_MONSTER;
 
@@ -2713,7 +3244,8 @@ string get_item_description(const item_def &item,
         if (mode == IDM_DUMP)
         {
             description << "["
-                        << item.name(DESC_DBNAME, true, false, false)
+                        << (display ? ui_translate("display.item", item.name(DESC_DBNAME, true, false, false).c_str())
+                                    : item.name(DESC_DBNAME, true, false, false))
                         << "]";
             need_base_desc = false;
         }
@@ -2733,13 +3265,13 @@ string get_item_description(const item_def &item,
         else if (is_artefact(item) && item.is_identified()
                  && item.base_type == OBJ_JEWELLERY)
         {
-            description << "It is an ancient artefact.";
+            description << ui_translate("d.describe", "It is an ancient artefact.");
             need_base_desc = false;
         }
         else if (item.base_type == OBJ_GIZMOS)
         {
-            description << "It is a fabulous contraption, custom-made by your "
-                           "own hands.";
+            description << ui_translate("d.describe", "It is a fabulous contraption, custom-made by your "
+                           "own hands.");
             need_base_desc = false;
         }
 
@@ -2751,7 +3283,7 @@ string get_item_description(const item_def &item,
             if (db_desc.empty())
             {
                 if (item_type_removed(item.base_type, item.sub_type))
-                    description << "This item has been removed.\n";
+                    description << ui_translate("d.describe", "This item has been removed.\n");
                 else if (item.is_identified())
                 {
                     description << "[ERROR: no desc for item name '" << db_name
@@ -2844,7 +3376,7 @@ string get_item_description(const item_def &item,
         }
         if (verbose)
         {
-            description << "\n\nIt falls into the 'Staves' category. ";
+            description << ui_translate("d.equipment", "\n\nIt falls into the 'Staves' category. ");
             description << _handedness_string(item);
         }
         break;
@@ -2853,12 +3385,15 @@ string get_item_description(const item_def &item,
         if (item.sub_type == MISC_ZIGGURAT && you.zigs_completed)
         {
             const int zigs = you.zigs_completed;
-            description << "\n\nIt is surrounded by a "
-                        << (zigs >= 27 ? "blinding " : // just plain silly
-                            zigs >=  9 ? "dazzling " :
-                            zigs >=  3 ? "bright " :
-                                         "gentle ")
-                        << "glow.";
+            const string original = "\n\nIt is surrounded by a "
+                + string(zigs >= 27 ? "blinding " : zigs >= 9 ? "dazzling "
+                         : zigs >= 3 ? "bright " : "gentle ") + "glow.";
+            const char *key = zigs >= 27 ? "It is surrounded by a blinding glow."
+                : zigs >= 9 ? "It is surrounded by a dazzling glow."
+                : zigs >= 3 ? "It is surrounded by a bright glow."
+                            : "It is surrounded by a gentle glow.";
+            const string shown = ui_render("d.equipment", key, "", {});
+            description << (shown.empty() ? original : "\n\n" + shown);
         }
 
         if (verbose)
@@ -2870,33 +3405,33 @@ string get_item_description(const item_def &item,
                 description << "\n\n";
                 // slightly redundant with uselessness desc..
                 const int charges = evoker_charges(item.sub_type);
-                if (charges > 1)
-                    description << "Charges: " << charges << ". Once all charges have been used";
-                else
-                    description << "Once activated";
-                description << ", this device is rendered temporarily inert. "
-                            << "However, it recharges as you gain experience.";
+                const string original = (charges > 1
+                    ? "Charges: " + to_string(charges) + ". Once all charges have been used"
+                    : "Once activated") + string(", this device is rendered temporarily inert. "
+                        "However, it recharges as you gain experience.");
+                description << (charges > 1
+                    ? ui_render("d.equipment", "Charges: %s. Once all charges have been used, this device is rendered temporarily inert. However, it recharges as you gain experience.", original,
+                        {ui_literal_arg(to_string(charges))})
+                    : ui_render("d.equipment", "Once activated, this device is rendered temporarily inert. However, it recharges as you gain experience.", original, {}));
 
                 if (evoker_plus(item.sub_type) < MAX_EVOKER_ENCHANT)
                 {
-                    description << "\n\nAdditional devices of the same type "
-                            << "can be combined with it to improve the rate at "
-                            << "which it recharges.";
+                    description << ui_translate("d.equipment", "\n\nAdditional devices of the same type can be combined with it to improve the rate at which it recharges.");
                 }
                 if (!is_useless_skill(SK_EVOCATIONS)
                        && you.skill(SK_EVOCATIONS) < MAX_SKILL_LEVEL)
                 {
-                    description << "\n\nIncreasing your evocations skill will "
-                                << "improve the rate at which it recharges.";
+                    description << ui_translate("d.equipment", "\n\nIncreasing your evocations skill will improve the rate at which it recharges.");
                 }
 
                 const string damage_str = evoke_damage_string(item);
                 if (damage_str != "")
-                    description << "\nDamage: " << damage_str;
+                    description << ui_translate("phase3.describe", "\nDamage: ") << damage_str;
 
                 const string noise_str = evoke_noise_string(item);
                 if (noise_str != "")
-                    description << "\nNoise: " << noise_str;
+                    description << "\n" << ui_translate("d.spell.stat", "Noise") << ": "
+                                << ui_translate("d.spell.noise", noise_str.c_str());
             }
         }
 
@@ -2917,13 +3452,16 @@ string get_item_description(const item_def &item,
                     description << "\n\n" + _describe_lignify_ac();
                 else if (item.sub_type == POT_CANCELLATION)
                 {
-                    description << "\n\nIf you drink this now, you will no longer be " <<
-                        describe_player_cancellation() << ".";
+                    ui_arg effects;
+                    const string original = "\n\nIf you drink this now, you will no longer be "
+                        + describe_player_cancellation(false, &effects) + ".";
+                    description << ui_render("d.cancel", "\n\nIf you drink this now, you will no longer be %s.",
+                        original, {effects});
                 }
             }
-            description << "\n\nIt is "
-                        << article_a(describe_item_rarity(item))
-                        << " potion.";
+            description << ui_render("d.equipment", "\n\nIt is a %s potion.",
+                "\n\nIt is " + article_a(describe_item_rarity(item)) + " potion.",
+                {ui_text_arg("display.item.rarity", describe_item_rarity(item))});
             need_extra_line = false;
         }
         break;
@@ -2935,11 +3473,12 @@ string get_item_description(const item_def &item,
 
             const string damage_str = evoke_damage_string(item);
             if (damage_str != "")
-                description << "\nDamage: " << damage_str;
+                description << ui_translate("phase3.describe", "\nDamage: ") << damage_str;
 
             const string noise_str = evoke_noise_string(item);
             if (noise_str != "")
-                description << "\nNoise: " << noise_str;
+                description << "\n" << ui_translate("d.spell.stat", "Noise") << ": "
+                                << ui_translate("d.spell.noise", noise_str.c_str());
 
             if (verbose)
                 _uselessness_desc(description, item);
@@ -2952,9 +3491,9 @@ string get_item_description(const item_def &item,
             if (verbose)
                 _uselessness_desc(description, item);
 
-            description << "\n\nIt is "
-                        << article_a(describe_item_rarity(item))
-                        << " scroll.";
+            description << ui_render("d.equipment", "\n\nIt is a %s scroll.",
+                "\n\nIt is " + article_a(describe_item_rarity(item)) + " scroll.",
+                {ui_text_arg("display.item.rarity", describe_item_rarity(item))});
             need_extra_line = false;
         }
         break;
@@ -3016,21 +3555,21 @@ string get_item_description(const item_def &item,
                 if (you.has_mutation(MUT_ARTEFACT_ENCHANTING))
                 {
                     if (!item.is_identified())
-                        description << "\nIt is an ancient artefact.";
+                        description << ui_translate("d.describe", "\nIt is an ancient artefact.");
                     else if (is_unrandom_artefact(item)
                              || (item.base_type == OBJ_ARMOUR
                                  && item.plus >= armour_max_enchant(item))
                              || (item.base_type == OBJ_WEAPONS
                                  && item.plus >= MAX_WPN_ENCHANT))
                     {
-                        description << "\nEnchanting this artefact any further "
-                            "is beyond even your skills.";
+                        description << ui_translate("d.describe", "\nEnchanting this artefact any further "
+                            "is beyond even your skills.");
                     }
                 }
                 else
                 {
-                    description << "\nThis ancient artefact cannot be changed "
-                        "by magic or mundane means.";
+                    description << ui_translate("d.describe", "\nThis ancient artefact cannot be changed "
+                        "by magic or mundane means.");
                 }
             }
             // Randart jewellery has already displayed this line.
@@ -3038,29 +3577,32 @@ string get_item_description(const item_def &item,
             else if (item.base_type != OBJ_JEWELLERY && item.base_type != OBJ_GIZMOS
                      || (item.is_identified() && is_unrandom_artefact(item)))
             {
-                description << "\nIt is an ancient artefact.";
+                description << ui_translate("d.describe", "\nIt is an ancient artefact.");
             }
         }
     }
 
     if (god_hates_item(item))
     {
-        description << "\n\n" << uppercase_first(god_name(you.religion))
-                    << " disapproves of the use of such an item.";
+        description << ui_render("d.equipment", "\n\n%s disapproves of the use of such an item.",
+            "\n\n" + uppercase_first(god_name(you.religion)) + " disapproves of the use of such an item.",
+            {ui_text_arg("display.god", god_name(you.religion))});
     }
 
     if (verbose && origin_describable(item))
-        description << "\n" << origin_desc(item) << ".";
+        description << "\n" << item_origin_description(item);
 
     // This information is obscure and differs per-item, so looking it up in
     // a docs file you don't know to exist is tedious.
     if (verbose && mode != IDM_MONSTER)
     {
-        description << "\n\n" << "Stash search prefixes: "
-                    << userdef_annotate_item(STASH_LUA_SEARCH_ANNOTATE, &item);
+        const string search_prefix = userdef_annotate_item(STASH_LUA_SEARCH_ANNOTATE, &item);
+        description << "\n\n" << ui_translate("phase3.describe", "Stash search prefixes: ")
+                    << search_prefix << stash_prefix_aliases(search_prefix);
         string menu_prefix = item_prefix(item, false);
         if (!menu_prefix.empty())
-            description << "\nMenu/colouring prefixes: " << menu_prefix;
+            description << ui_translate("phase3.describe", "\nMenu/colouring prefixes: ")
+                        << menu_prefix << stash_prefix_aliases(menu_prefix, true);
     }
 
     return description.str();
@@ -3075,7 +3617,9 @@ string get_cloud_desc(cloud_type cloud, bool include_title)
 
     string ret;
     if (include_title)
-        ret = "A cloud of " + cl_name + (cl_desc.empty() ? "." : ".\n\n");
+        ret = ui_render("c.cloud", "A cloud of %s.", "A cloud of " + cl_name + ".",
+            {ui_text_arg("c.cloud.name", cl_name)})
+            + (cl_desc.empty() ? "" : "\n\n");
     ret += cl_desc + extra_cloud_info(cloud);
     return ret;
 }
@@ -3094,7 +3638,7 @@ static vector<extra_feature_desc> _get_feature_extra_descs(const coord_def &pos)
     if (feat_is_tree(feat) && env.forest_awoken_until)
     {
         ret.push_back({
-            "Awoken.",
+            ui_translate("d.describe", "Awoken."),
             getLongDescription("awoken"),
             tile_def(TILE_AWOKEN_OVERLAY)
         });
@@ -3102,7 +3646,7 @@ static vector<extra_feature_desc> _get_feature_extra_descs(const coord_def &pos)
     if (feat_is_wall(feat) && env.map_knowledge(pos).flags & MAP_ICY)
     {
         ret.push_back({
-            "A covering of ice.",
+            ui_translate("d.describe", "A covering of ice."),
             getLongDescription("ice covered"),
             tile_def(TILE_FLOOR_ICY)
         });
@@ -3112,7 +3656,7 @@ static vector<extra_feature_desc> _get_feature_extra_descs(const coord_def &pos)
         if (haloed(pos) && !umbraed(pos))
         {
             ret.push_back({
-                "A halo.",
+                ui_translate("d.describe", "A halo."),
                 getLongDescription("haloed"),
                 tile_def(TILE_HALO_RANGE)
             });
@@ -3120,7 +3664,7 @@ static vector<extra_feature_desc> _get_feature_extra_descs(const coord_def &pos)
         if (umbraed(pos) && !haloed(pos))
         {
             ret.push_back({
-                "An umbra.",
+                ui_translate("d.describe", "An umbra."),
                 getLongDescription("umbraed"),
                 tile_def(TILE_UMBRA)
             });
@@ -3128,7 +3672,7 @@ static vector<extra_feature_desc> _get_feature_extra_descs(const coord_def &pos)
         if (liquefied(pos, true))
         {
             ret.push_back({
-                "Liquefied ground.",
+                ui_translate("d.describe", "Liquefied ground."),
                 getLongDescription("liquefied"),
                 tile_def(TILE_LIQUEFACTION)
             });
@@ -3136,7 +3680,7 @@ static vector<extra_feature_desc> _get_feature_extra_descs(const coord_def &pos)
         if (disjunction_haloed(pos))
         {
             ret.push_back({
-                "Translocational energy.",
+                ui_translate("d.describe", "Translocational energy."),
                 getLongDescription("disjunction haloed"),
                 tile_def(TILE_DISJUNCT)
             });
@@ -3145,12 +3689,33 @@ static vector<extra_feature_desc> _get_feature_extra_descs(const coord_def &pos)
     if (const auto cloud = env.map_knowledge(pos).cloudinfo())
     {
         ret.push_back({
-            "A cloud of " + cloud_type_name(cloud->type) + ".",
+            ui_render("c.cloud", "A cloud of %s.",
+                "A cloud of " + cloud_type_name(cloud->type) + ".",
+                {ui_text_arg("c.cloud.name", cloud_type_name(cloud->type))}),
             get_cloud_desc(cloud->type, false),
             tile_def(tileidx_cloud(*cloud)),
         });
     }
     return ret;
+}
+
+// Translate the whole action list, retaining the original English conjunctions
+// if any command label or the enclosing display template is unavailable.
+static string _action_list_display(const vector<string>& labels, ui_arg* display)
+{
+    const string original = comma_separated_line(labels.begin(), labels.end(), ", or ") + ".";
+    vector<string> shown;
+    bool available = true;
+    for (const auto &label : labels)
+    {
+        const ui_arg text = ui_text_arg("item.action", label);
+        available &= text.available;
+        shown.push_back(text.text);
+    }
+    const string text = ui_render("d.action", "%s.", original,
+        {{comma_separated_line(shown.begin(), shown.end(), "，或", "，"), available}});
+    if (display) *display = {text, text != original};
+    return original;
 }
 
 static string _feat_action_desc(const vector<command_type>& actions,
@@ -3166,7 +3731,7 @@ static string _feat_action_desc(const vector<command_type>& actions,
         { CMD_CLOSE_DOOR,       "(C)lose" },
 
     };
-    return comma_separated_fn(begin(actions), end(actions),
+    const auto label =
         [feat] (command_type cmd)
         {
             if (cmd == CMD_GO_DOWNSTAIRS && feat_is_altar(feat))
@@ -3184,8 +3749,12 @@ static string _feat_action_desc(const vector<command_type>& actions,
                 return string("(<)exit");
             else
                 return act_str.at(cmd);
-        },
-        ", or ") + ".";
+        };
+    vector<string> labels;
+    for (const auto cmd : actions) labels.push_back(label(cmd));
+    ui_arg display;
+    const string original = _action_list_display(labels, &display);
+    return display.available ? display.text : original;
 }
 
 static vector<command_type> _allowed_feat_actions(const coord_def &pos)
@@ -3238,6 +3807,9 @@ void get_feature_desc(const coord_def &pos, describe_info &inf, bool include_ext
 
     string desc      = feature_description_at(pos, false, DESC_A);
     string desc_the  = feature_description_at(pos, false, DESC_THE);
+    string display_name;
+    const bool display_available = try_feature_display_at(pos, false, display_name);
+    const ui_arg feature_arg = {display_name, display_available};
     // remove " leading down", " leading back out of this place", etc.
     // XX maybe just dataify a short form, rather than do this awkward fixup?
     const vector<string> to_trim = {
@@ -3291,22 +3863,22 @@ void get_feature_desc(const coord_def &pos, describe_info &inf, bool include_ext
         {
             // XX custom messages for other branch entrances/exits?
             long_desc += make_stringf(
-                    "\nWhile standing here, you can exit the dungeon "
-                    "with the <w>%s</w> key.",
+                    ui_translate("d.describe", "\nWhile standing here, you can exit the dungeon "
+                    "with the <w>%s</w> key."),
                     _esc_cmd_to_str(stair_dir).c_str());
         }
         else if (feat_is_staircase(feat) || feat_is_escape_hatch(feat))
         {
-            long_desc += make_stringf(
-                    "\nWhile standing here, you can traverse %s "
-                    "with the <w>%s</w> key.",
-                    desc_the.c_str(),
-                    _esc_cmd_to_str(stair_dir).c_str());
+            long_desc += ui_render("d.feature.help",
+                "\nWhile standing here, you can traverse %s with the <w>%s</w> key.",
+                make_stringf("\nWhile standing here, you can traverse %s with the <w>%s</w> key.",
+                    desc_the.c_str(), _esc_cmd_to_str(stair_dir).c_str()),
+                {feature_arg, ui_literal_arg(_esc_cmd_to_str(stair_dir))});
 
             if (is_unknown_stair(pos))
             {
-                long_desc += " You have not yet explored it and cannot tell "
-                             "where it leads.";
+                long_desc += ui_translate("d.describe", " You have not yet explored it and cannot tell "
+                             "where it leads.");
             }
             else
             {
@@ -3315,28 +3887,31 @@ void get_feature_desc(const coord_def &pos, describe_info &inf, bool include_ext
                                          ? CMD_MAP_PREV_LEVEL
                                          : CMD_MAP_NEXT_LEVEL;
                 long_desc +=
-                    make_stringf(" You can view the location it leads to by "
+                    make_stringf(ui_translate("d.describe", " You can view the location it leads to by "
                                  "examining it with <w>%s</w> and pressing "
-                                 "<w>%s</w>.",
+                                 "<w>%s</w>."),
                                  command_to_string(CMD_DISPLAY_MAP).c_str(),
                                  command_to_string(look_dir).c_str());
             }
         }
         else if (feat == DNGN_ENTER_ABYSS || feat == DNGN_EXIT_THROUGH_ABYSS)
         {
-            long_desc += make_stringf("\n(If you entered the Abyss now, you could be "
-                                          "pulled as deep as Abyss:%d.)",
-                                      abyss_default_depth(true));
+            long_desc += make_stringf(ui_translate("d.feature.help",
+                "\n(If you entered the Abyss now, you could be pulled as deep as Abyss:%d.)"),
+                abyss_default_depth(true));
         }
         else if (feat_is_portal(feat)
             || feat == DNGN_ENTER_ZIGGURAT) // augh this is technically a gate
         {
-            long_desc += make_stringf(
+            const string original = make_stringf(
                     "\nWhile standing here, you can %senter %s "
                     "with the <w>%s</w> key; it will vanish after you do so.",
                     feat == DNGN_ENTER_TROVE ? "try to " : "",
-                    desc_the.c_str(),
-                    _esc_cmd_to_str(stair_dir).c_str());
+                    desc_the.c_str(), _esc_cmd_to_str(stair_dir).c_str());
+            long_desc += ui_render("d.feature.help", feat == DNGN_ENTER_TROVE
+                ? "\nWhile standing here, you can try to enter %s with the <w>%s</w> key; it will vanish after you do so."
+                : "\nWhile standing here, you can enter %s with the <w>%s</w> key; it will vanish after you do so.",
+                original, {feature_arg, ui_literal_arg(_esc_cmd_to_str(stair_dir))});
         }
         else if (feat_is_gate(feat))
         {
@@ -3344,7 +3919,7 @@ void get_feature_desc(const coord_def &pos, describe_info &inf, bool include_ext
             const string how = feat == DNGN_ENTER_HELL
                 ? (stair_dir == CMD_GO_UPSTAIRS ? "to Hell" : "Hell")
                 : make_stringf("through %s", desc_the.c_str());
-            long_desc += make_stringf(
+            const string original = make_stringf(
                     "\nWhile standing here, you can %s %s "
                     "with the <w>%s</w> key%s.",
                     stair_dir == CMD_GO_DOWNSTAIRS ? "enter" : "exit",
@@ -3352,29 +3927,37 @@ void get_feature_desc(const coord_def &pos, describe_info &inf, bool include_ext
                     _esc_cmd_to_str(stair_dir).c_str(),
                     (feat == DNGN_ENTER_ZOT || feat == DNGN_EXIT_VAULTS)
                         ? " if you have enough runes" : "");
+            const bool runes = feat == DNGN_ENTER_ZOT || feat == DNGN_EXIT_VAULTS;
+            const char *key = stair_dir == CMD_GO_DOWNSTAIRS
+                ? (runes ? "\nWhile standing here, you can enter through %s with the <w>%s</w> key if you have enough runes."
+                         : "\nWhile standing here, you can enter through %s with the <w>%s</w> key.")
+                : (runes ? "\nWhile standing here, you can exit through %s with the <w>%s</w> key if you have enough runes."
+                         : "\nWhile standing here, you can exit through %s with the <w>%s</w> key.");
+            long_desc += ui_render("d.feature.help", key, original,
+                {feature_arg, ui_literal_arg(_esc_cmd_to_str(stair_dir))});
         }
     }
     else if (feat_is_altar(feat))
     {
         long_desc +=
-            make_stringf("\nPray here with <w>%s</w> to learn more.\n",
+            make_stringf(ui_translate("d.describe", "\nPray here with <w>%s</w> to learn more.\n"),
                          command_to_string(CMD_GO_DOWNSTAIRS).c_str());
     }
     else if (feat == DNGN_ENTER_SHOP)
     {
-        long_desc += make_stringf(
-                "\nWhile standing here, you can enter <w>%s</w> with "
-                "the <w>%s</w> key.",
-                desc.c_str(),
-                command_to_string(CMD_GO_DOWNSTAIRS).c_str());
+        long_desc += ui_render("d.feature.help",
+            "\nWhile standing here, you can enter <w>%s</w> with the <w>%s</w> key.",
+            make_stringf("\nWhile standing here, you can enter <w>%s</w> with the <w>%s</w> key.",
+                desc.c_str(), command_to_string(CMD_GO_DOWNSTAIRS).c_str()),
+            {feature_arg, ui_literal_arg(command_to_string(CMD_GO_DOWNSTAIRS))});
     }
     else if (feat == DNGN_TRANSPORTER)
     {
-        long_desc += make_stringf(
-                "\nWhile standing here, you can enter %s with "
-                "with the <w>%s</w> key.",
-                desc_the.c_str(),
-                command_to_string(CMD_GO_DOWNSTAIRS).c_str());
+        long_desc += ui_render("d.feature.help",
+            "\nWhile standing here, you can enter %s with with the <w>%s</w> key.",
+            make_stringf("\nWhile standing here, you can enter %s with with the <w>%s</w> key.",
+                desc_the.c_str(), command_to_string(CMD_GO_DOWNSTAIRS).c_str()),
+            {feature_arg, ui_literal_arg(command_to_string(CMD_GO_DOWNSTAIRS))});
     }
 
     // mention that permanent trees are usually flammable
@@ -3395,21 +3978,28 @@ void get_feature_desc(const coord_def &pos, describe_info &inf, bool include_ext
         const bool openable = feat_is_closed_door(feat);
         const bool sealed = feat_is_sealed(feat);
 
-        long_desc += make_stringf(
+        const string original = make_stringf(
             "\nWhile adjacent to it, you can %s%s it by pressing the "
             "<w>%s</w> key.",
             sealed ? "normally " : "",
             openable ? "open" : "close",
             command_to_string(openable ? CMD_OPEN_DOOR : CMD_CLOSE_DOOR).c_str());
+        const char *key = sealed
+            ? (openable ? "\nWhile adjacent to it, you can normally open it by pressing the <w>%s</w> key."
+                        : "\nWhile adjacent to it, you can normally close it by pressing the <w>%s</w> key.")
+            : (openable ? "\nWhile adjacent to it, you can open it by pressing the <w>%s</w> key."
+                        : "\nWhile adjacent to it, you can close it by pressing the <w>%s</w> key.");
+        long_desc += ui_render("d.feature.help", key, original,
+            {ui_literal_arg(command_to_string(openable ? CMD_OPEN_DOOR : CMD_CLOSE_DOOR))});
         if (sealed)
-            long_desc += " However, this will not work until the sealing runes wear off.";
+            long_desc += ui_translate("d.describe", " However, this will not work until the sealing runes wear off.");
     }
 
     // mention that diggable walls are
     if (feat_is_diggable(feat) && in_bounds(pos)
         && env.markers.property_at(pos, MAT_ANY, "veto_destroy") != "veto")
     {
-        long_desc += "\nIt can be dug through.";
+        long_desc += ui_translate("d.describe", "\nIt can be dug through.");
     }
 
     // Mention things which don't stop LOS_NO_TRANS or reaching weapons,
@@ -3418,13 +4008,13 @@ void get_feature_desc(const coord_def &pos, describe_info &inf, bool include_ext
         && !feat_is_closed_door(feat) && !feat_is_endless(feat))
     {
         if (feat_is_reachable_past(feat))
-            long_desc += "\nA suitable weapon or spell can reach past it.";
+            long_desc += ui_translate("d.describe", "\nA suitable weapon or spell can reach past it.");
         else
-            long_desc += "\nSome spells can be cast through it.";
+            long_desc += ui_translate("d.describe", "\nSome spells can be cast through it.");
     }
 
     if (pos == you.pos() && you.on_current_level)
-        long_desc += "\nYou are here.";
+        long_desc += ui_translate("d.describe", "\nYou are here.");
 
     inf.body << long_desc;
 
@@ -3436,6 +4026,7 @@ void get_feature_desc(const coord_def &pos, describe_info &inf, bool include_ext
     }
 
     inf.quote = getQuoteString(db_name);
+    if (display_available) inf.title = display_name + "。";
 }
 
 static bool _do_feat_action(const coord_def &pos, const command_type action)
@@ -3633,10 +4224,7 @@ void describe_feature_type(dungeon_feature_type feat)
     describe_info inf;
     string name = feature_description(feat, NUM_TRAPS, "", DESC_A,
                                       NUM_BRANCHES);
-    string title = uppercase_first(name);
-    if (!ends_with(title, ".") && !ends_with(title, "!") && !ends_with(title, "?"))
-        title += ".";
-    inf.title = title;
+    inf.title = feature_type_display_title(feat);
     inf.body << getLongDescription(name);
 #ifdef USE_TILE
     const tileidx_t idx = tileidx_feature_base(feat);
@@ -3654,9 +4242,12 @@ void get_item_desc(const item_def &item, describe_info &inf)
     const item_description_mode mode = item.has_spells() ? IDM_PLAIN
                                                          : IDM_DEFAULT;
     string name = item.name(DESC_INVENTORY_EQUIP) + ".";
+    string display;
+    if (try_item_display_name(item, display, true))
+        name = display + ".";
     if (!in_inventory(item))
         name = uppercase_first(name);
-    inf.body << name << get_item_description(item, mode);
+    inf.body << name << get_item_description(item, mode, true);
 }
 
 static vector<command_type> _allowed_actions(const item_def& item)
@@ -3753,7 +4344,7 @@ static vector<command_type> _allowed_actions(const item_def& item)
     return actions;
 }
 
-static string _actions_desc(const vector<command_type>& actions)
+static string _actions_desc(const vector<command_type>& actions, ui_arg* display = nullptr)
 {
     // XX code duplication
     static const map<command_type, string> act_str =
@@ -3776,7 +4367,7 @@ static string _actions_desc(const vector<command_type>& actions)
         { CMD_MAP_GOTO_TARGET, "(g)o to location" },
     };
     bool push_quiver = false;
-    return comma_separated_fn(begin(actions), end(actions),
+    const auto label =
                                 [&push_quiver] (command_type cmd)
                                 {
                                     if (cmd == CMD_QUAFF) // assumes quaff appears first
@@ -3784,8 +4375,10 @@ static string _actions_desc(const vector<command_type>& actions)
                                     else if (push_quiver && cmd == CMD_QUIVER_ITEM)
                                         return string("qui(v)er");
                                     return act_str.at(cmd);
-                                },
-                                ", or ") + ".";
+                                };
+    vector<string> labels;
+    for (const auto cmd : actions) labels.push_back(label(cmd));
+    return _action_list_display(labels, display);
 }
 
 // Take a key and a list of commands and return the command from the list
@@ -3975,6 +4568,9 @@ command_type describe_item_popup(const item_def &item,
     do_actions = do_actions && !(you.pending_revival || crawl_state.updating_scores);
 
     string name = item.name(DESC_INVENTORY_EQUIP) + ".";
+    string display;
+    if (try_item_display_name(item, display, true))
+        name = display + ".";
     if (!in_inventory(item))
         name = uppercase_first(name);
 
@@ -3983,11 +4579,12 @@ command_type describe_item_popup(const item_def &item,
     if (loc.is_valid() && loc != level_id::current())
     {
         // should be off-level stash search only
-        desc += make_stringf("It can be found on %s.\n\n",
-            loc.describe(true, true).c_str());
+        desc += ui_render("d.item.origin", "It can be found on %s.\n\n",
+            make_stringf("It can be found on %s.\n\n", loc.describe(true, true).c_str()),
+            {_description_level_arg(loc)});
     }
 
-    desc += get_item_description(item);
+    desc += get_item_description(item, IDM_DEFAULT, true);
 
     string quote;
     if (is_unrandom_artefact(item) && item.is_identified())
@@ -4058,9 +4655,12 @@ command_type describe_item_popup(const item_def &item,
     formatted_string footer_text("", CYAN);
     if (!actions.empty())
     {
-        if (!spells.empty())
-            footer_text.cprintf("Select a spell, or ");
-        footer_text += formatted_string(_actions_desc(actions));
+        ui_arg actions_display;
+        const string actions_english = _actions_desc(actions, &actions_display);
+        footer_text += formatted_string(!spells.empty()
+            ? ui_render("d.action", "Select a spell, or %s", "Select a spell, or " + actions_english,
+                {actions_display})
+            : (actions_display.available ? actions_display.text : actions_english));
         auto footer = make_shared<Text>();
         footer->set_text(footer_text);
         footer->set_margin_for_crt(1, 0, 0, 0);
@@ -4174,8 +4774,8 @@ void inscribe_item(item_def &item)
     mprf_nocap(MSGCH_EQUIPMENT, "%s", item.name(DESC_INVENTORY).c_str());
 
     const bool is_inscribed = !item.inscription.empty();
-    string prompt = is_inscribed ? "Replace inscription with what? "
-                                 : "Inscribe with what? ";
+    string prompt = is_inscribed ? ui_translate("phase3.describe", ui_translate("d.describe", "Replace inscription with what? "))
+                                 : ui_translate("phase3.describe", ui_translate("d.describe", "Inscribe with what? "));
 
     char buf[79];
     int ret = msgwin_get_line(prompt, buf, sizeof buf, nullptr,
@@ -4208,16 +4808,43 @@ void inscribe_item(item_def &item)
  *
  * @param spell     The spell in question.
  */
+static ui_arg _player_spell_school_arg(spell_type spell)
+{
+    ui_translation_group group;
+    if (!group.available()) return {"", false};
+    string result;
+    for (const auto school : spschools_type::range())
+    {
+        if (!spell_typematch(spell, school)) continue;
+        const skill_type skill = spell_type2skill(school);
+        if (skill == SK_NONE) return {"", false};
+        const ui_arg name = ui_text_arg("display.skill", skill_name(skill));
+        if (!name.available) return {"", false};
+        if (!result.empty()) result += "/";
+        result += name.text;
+    }
+    return {result, true};
+}
+
+// Width in terminal columns, preserving the original ASCII alignment.
+static string _spell_stat_label(const char* label, int padding)
+{
+    const string name = ui_translate("d.spell.stat", label);
+    return "\n" + string(max(0, padding - strwidth(name)), ' ') + name + ": ";
+}
+
 static string _player_spell_stats(const spell_type spell)
 {
     string description;
-    description += make_stringf("\nLevel: %d", spell_difficulty(spell));
+    const int level = spell_difficulty(spell);
+    description += ui_render("d.spell.stat", "\nLevel: %s",
+        make_stringf("\nLevel: %d", level), {ui_literal_arg(to_string(level))});
 
     const string schools = spell_schools_string(spell);
-    description +=
+    description += ui_render("d.spell.stat", "        Schools: %s",
         make_stringf("        School%s: %s",
                      schools.find("/") != string::npos ? "s" : "",
-                     schools.c_str());
+                     schools.c_str()), {_player_spell_school_arg(spell)});
 
     if (!crawl_state.need_save
         || (get_spell_flags(spell) & spflag::monster))
@@ -4239,37 +4866,41 @@ static string _player_spell_stats(const spell_type spell)
     }
     else
         failure = failure_rate_to_string(raw_spell_fail(spell));
-    description += make_stringf("        Fail: %s", failure.c_str());
+    description += ui_render("d.spell.stat", "        Fail: %s",
+        make_stringf("        Fail: %s", failure.c_str()), {ui_literal_arg(failure)});
 
     const string damage_string = spell_damage_string(spell);
     const string max_dam_string = spell_max_damage_string(spell);
     const int acc = spell_acc(spell);
     // TODO: generalize this pattern? It's very common in descriptions
     const int padding = (acc != -1) ? 8 : damage_string.size() ? 6 : 5;
-    description += make_stringf("\n\n%*s: ", padding, "Power");
-    description += spell_power_string(spell);
+    description += "\n" + _spell_stat_label("Power", padding);
+    const string power = spell_power_string(spell);
+    description += power == "N/A" ? ui_translate("d.spell.stat", "N/A") : power;
 
     if (damage_string != "")
     {
-        description += make_stringf("\n%*s: ", padding, "Damage");
+        description += _spell_stat_label("Damage", padding);
         description += damage_string;
 
         const string max_dam = spell_max_damage_string(spell);
         if (!max_dam.empty())
-            description += " (max " + max_dam + ")";
+            description += ui_render("d.spell.stat", " (max %s)",
+                " (max " + max_dam + ")", {ui_literal_arg(max_dam)});
     }
     if (acc != -1)
     {
         ostringstream acc_str;
         _print_bar(acc, 3, "", acc_str);
-        description += make_stringf("\n%*s: %s", padding, "Accuracy",
-                                                    acc_str.str().c_str());
+        description += _spell_stat_label("Accuracy", padding) + acc_str.str();
     }
 
-    description += make_stringf("\n%*s: ", padding, "Range");
-    description += spell_range_string(spell);
-    description += make_stringf("\n%*s: ", padding, "Noise");
-    description += spell_noise_string(spell);
+    description += _spell_stat_label("Range", padding);
+    const string range = spell_range_string(spell);
+    description += range == "N/A" ? ui_translate("d.spell.stat", "N/A") : range;
+    description += _spell_stat_label("Noise", padding);
+    const string noise = spell_noise_string(spell);
+    description += ui_translate("d.spell.noise", noise.c_str());
     description += "\n";
     return description;
 }
@@ -4300,22 +4931,26 @@ static string _get_skill_defense_change(skill_type skill)
 
     if (skill == SK_ARMOUR)
     {
-        return make_stringf("\nWith your current stats and equipment, %s "
+        const string original = make_stringf("\nWith your current stats and equipment, %s "
                             "this skill would increase your AC by %.1f and "
-                            "your EV by %.1f.",
-                            msg, ac_diff, ev_diff).c_str();
+                            "your EV by %.1f.", msg, ac_diff, ev_diff);
+        return ui_render("d.skill.prose", "\nWith your current stats and equipment, %s this skill would increase your AC by %s and your EV by %s.", original,
+            {ui_text_arg("d.skill.prose", msg), ui_literal_arg(make_stringf("%.1f", ac_diff)),
+             ui_literal_arg(make_stringf("%.1f", ev_diff))});
     }
     else if (skill == SK_DODGING)
     {
-        return make_stringf("\nWith your current stats and equipment, %s "
-                            "this skill would increase your EV by %.1f.",
-                            msg, ev_diff).c_str();
+        const string original = make_stringf("\nWith your current stats and equipment, %s "
+                            "this skill would increase your EV by %.1f.", msg, ev_diff);
+        return ui_render("d.skill.prose", "\nWith your current stats and equipment, %s this skill would increase your EV by %s.", original,
+            {ui_text_arg("d.skill.prose", msg), ui_literal_arg(make_stringf("%.1f", ev_diff))});
     }
     else if (skill == SK_SHIELDS)
     {
-        return make_stringf("\nWith your current stats and equipment, %s "
-                            "this skill would increase your SH by %.1f.",
-                            msg, sh_diff).c_str();
+        const string original = make_stringf("\nWith your current stats and equipment, %s "
+                            "this skill would increase your SH by %.1f.", msg, sh_diff);
+        return ui_render("d.skill.prose", "\nWith your current stats and equipment, %s this skill would increase your SH by %s.", original,
+            {ui_text_arg("d.skill.prose", msg), ui_literal_arg(make_stringf("%.1f", sh_diff))});
     }
 
     return "";
@@ -4328,7 +4963,7 @@ string get_skill_description(skill_type skill, bool need_title)
 
     if (need_title)
     {
-        result = lookup;
+        result = ui_translate("display.skill", lookup.c_str());
         result += "\n\n";
     }
 
@@ -4344,28 +4979,34 @@ string get_skill_description(skill_type skill, bool need_title)
         if (you.has_mutation(MUT_FORLORN))
         {
             result += "\n";
-            result += "How on earth did you manage to pick this up?";
+            result += ui_translate("d.skill.prose", "How on earth did you manage to pick this up?");
         }
         else if (invo_skill(you.religion) != SK_INVOCATIONS)
         {
             result += "\n";
-            result += uppercase_first(apostrophise(god_name(you.religion)))
-                      + " powers are not affected by the Invocations skill.";
+            result += ui_render("d.skill.prose", "%s's powers are not affected by the Invocations skill.",
+                uppercase_first(apostrophise(god_name(you.religion)))
+                    + " powers are not affected by the Invocations skill.",
+                {ui_text_arg("display.god", god_name(you.religion))});
         }
     }
     else if (skill == invo_skill(you.religion))
     {
         result += "\n";
-        result += uppercase_first(apostrophise(god_name(you.religion)))
-                  + " powers are based on " + skill_name(skill) + " instead"
-                    " of Invocations skill.";
+        result += ui_render("d.skill.prose", "%s's powers are based on %s instead of Invocations skill.",
+            uppercase_first(apostrophise(god_name(you.religion)))
+                + " powers are based on " + skill_name(skill) + " instead of Invocations skill.",
+            {ui_text_arg("display.god", god_name(you.religion)),
+             ui_text_arg("display.skill", skill_name(skill))});
     }
 
     if (is_harmful_skill(skill))
     {
         result += "\n";
-        result += uppercase_first(god_name(you.religion))
-                  + " strongly dislikes when you train this skill.";
+        result += ui_render("d.skill.prose", "%s strongly dislikes when you train this skill.",
+            uppercase_first(god_name(you.religion))
+                + " strongly dislikes when you train this skill.",
+            {ui_text_arg("display.god", god_name(you.religion))});
     }
 
     return result;
@@ -4405,7 +5046,7 @@ int hex_chance(const spell_type spell, const monster_info* mi, bool is_wand)
  *
  * @param spell
  */
-static string _miscast_damage_string(spell_type spell)
+static string _miscast_damage_string(spell_type spell, ui_arg* display = nullptr)
 {
     const map <spschool, string> damage_flavor = {
         { spschool::conjuration, "irresistible" },
@@ -4426,16 +5067,29 @@ static string _miscast_damage_string(spell_type spell)
 
     spschools_type disciplines = get_spell_disciplines(spell);
     vector <string> descs;
+    vector<string> shown;
+    bool available = Options.language == lang_t::ZH;
 
     for (const auto &flav : special_flavor)
         if (disciplines & flav.first)
+        {
             descs.push_back(flav.second);
+            const ui_arg text = ui_text_arg("d.spell.miscast", flav.second);
+            available &= text.available;
+            shown.push_back(text.text);
+        }
 
     int dam = max_miscast_damage(spell);
     vector <string> dam_flavors;
+    vector<string> damage_types;
     for (const auto &flav : damage_flavor)
         if (disciplines & flav.first)
+        {
             dam_flavors.push_back(flav.second);
+            const ui_arg text = ui_text_arg("d.spell.miscast", flav.second);
+            available &= text.available;
+            damage_types.push_back(text.text);
+        }
 
     if (!dam_flavors.empty())
     {
@@ -4443,8 +5097,15 @@ static string _miscast_damage_string(spell_type spell)
                                      comma_separated_line(dam_flavors.begin(),
                                                          dam_flavors.end(),
                                                          " or ").c_str()));
+        const string damage = ui_render("d.spell.miscast", "deals up to %s %s damage", "",
+            {ui_literal_arg(to_string(dam)),
+             {comma_separated_line(damage_types.begin(), damage_types.end(), "或", "、"), available}});
+        available &= !damage.empty();
+        shown.push_back(damage);
     }
 
+    if (display)
+        *display = {comma_separated_line(shown.begin(), shown.end(), "或", "；"), available};
     return (descs.size() > 1 ? "either " : "")
          + comma_separated_line(descs.begin(), descs.end(), " or ", "; ");
 }
@@ -4468,116 +5129,152 @@ static string _player_spell_desc(spell_type spell)
 
     ostringstream description;
 
-    description << "Miscasting this spell causes magic contamination"
-                << (fail_severity(spell) ?
-                    " and also " + _miscast_damage_string(spell) : "")
-                << ".\n";
+    const bool harmful_miscast = fail_severity(spell);
+    ui_arg miscast_display;
+    const string miscast = harmful_miscast ? _miscast_damage_string(spell, &miscast_display) : "";
+    const string original_miscast = "Miscasting this spell causes magic contamination"
+        + (harmful_miscast ? " and also " + miscast : "") + ".\n";
+    description << (harmful_miscast
+        ? ui_render("d.spell.prose", "Miscasting this spell causes magic contamination and also %s.\n",
+            original_miscast, {miscast_display})
+        : ui_translate("d.spell.prose", original_miscast.c_str()));
 
     if (spell == SPELL_BATTLESPHERE)
     {
         vector<spell_type> battlesphere_spells = player_battlesphere_spells();
-        description << "Your battlesphere";
         if (battlesphere_spells.empty())
-            description << " is not activated by any of your spells";
+            description << ui_translate("d.spell.prose", "Your battlesphere is not activated by any of your spells.\n");
         else
         {
-            description << " fires when you cast "
-                        << comma_separated_fn(battlesphere_spells.begin(),
-                                              battlesphere_spells.end(),
-                                              spell_title,
-                                              " or ");
+            string names;
+            bool available = true;
+            for (const spell_type trigger : battlesphere_spells)
+            {
+                const ui_arg name = ui_text_arg("display.spell", spell_title(trigger));
+                available &= name.available;
+                if (!names.empty()) names += "、";
+                names += name.text;
+            }
+            description << ui_render("d.spell.prose", "Your battlesphere fires when you cast %s.\n",
+                "Your battlesphere fires when you cast "
+                    + comma_separated_fn(battlesphere_spells.begin(), battlesphere_spells.end(), spell_title, " or ") + ".\n",
+                {{names, available}});
         }
-        description << ".\n";
     }
 
     if (spell == SPELL_SPELLSPARK_SERVITOR)
     {
         spell_type servitor_spell = player_servitor_spell();
-        description << "Your servitor";
         if (servitor_spell == SPELL_NO_SPELL)
-            description << " is unable to mimic any of your spells";
+            description << ui_translate("d.spell.prose", "Your servitor is unable to mimic any of your spells.\n");
         else
-            description << " casts " << spell_title(player_servitor_spell());
-        description << ".\n";
+            description << ui_render("d.spell.prose", "Your servitor casts %s.\n",
+                "Your servitor casts " + string(spell_title(servitor_spell)) + ".\n",
+                {ui_text_arg("display.spell", spell_title(servitor_spell))});
     }
     else if (spell == SPELL_PLATINUM_PARAGON)
     {
         if (you.props.exists(PARAGON_WEAPON_KEY))
         {
-            description << "Your paragon wields "
-                        << you.props[PARAGON_WEAPON_KEY].get_item()
-                           .name(DESC_A, true).c_str()
-                        << ".\n";
+            const item_def &weapon = you.props[PARAGON_WEAPON_KEY].get_item();
+            description << ui_render("d.spell.prose", "Your paragon wields %s.\n",
+                "Your paragon wields " + weapon.name(DESC_A, true) + ".\n", {ui_item_arg(weapon)});
         }
     }
     else if (you.has_spell(SPELL_SPELLSPARK_SERVITOR) && spell_servitorable(spell))
     {
         if (failure_rate_to_int(raw_spell_fail(spell)) <= 20)
-            description << "Your servitor can be imbued with this spell.\n";
+            description << ui_translate("d.describe", "Your servitor can be imbued with this spell.\n");
         else
         {
-            description << "Your servitor could be imbued with this spell if "
-                           "your spell success rate were higher.\n";
+            description << ui_translate("d.describe", "Your servitor could be imbued with this spell if "
+                           "your spell success rate were higher.\n");
         }
     }
 
     if (spell == SPELL_IRRADIATE)
-        description << "This inflicts up to 40% magical contamination when cast by you.\n";
+        description << ui_translate("d.describe", "This inflicts up to 40% magical contamination when cast by you.\n");
 
     // Report summon cap
     const int limit = summons_limit(spell, true);
     if (limit)
     {
-        description << "You can sustain at most " + number_in_words(limit)
+        ostringstream original;
+        original << "You can sustain at most " + number_in_words(limit)
                     // Attempt to clarify that flayed ghosts are NOT included in the cap
                     << (spell == SPELL_MARTYRS_KNELL ? " martyred shade" : " creature")
                     << (limit > 1 ? "s" : "")
                     << " summoned by this spell.\n";
+        description << ui_render("d.spell.prose", spell == SPELL_MARTYRS_KNELL
+            ? "You can sustain at most %s martyred shades summoned by this spell.\n"
+            : "You can sustain at most %s creatures summoned by this spell.\n",
+            original.str(), {ui_literal_arg(to_string(limit))});
     }
 
     if (god_hates_spell(spell, you.religion))
     {
-        description << uppercase_first(god_name(you.religion))
-                    << " frowns upon the use of this spell.\n";
+        description << ui_render("d.spell.prose", "%s frowns upon the use of this spell.\n",
+            uppercase_first(god_name(you.religion)) + " frowns upon the use of this spell.\n",
+            {ui_text_arg("display.god", god_name(you.religion))});
     }
     else if (god_likes_spell(spell, you.religion))
     {
-        description << uppercase_first(god_name(you.religion))
-                    << " supports the use of this spell.\n";
+        description << ui_render("d.spell.prose", "%s supports the use of this spell.\n",
+            uppercase_first(god_name(you.religion)) + " supports the use of this spell.\n",
+            {ui_text_arg("display.god", god_name(you.religion))});
     }
 
     if (you.has_mutation(MUT_MNEMOPHAGE) && spell_can_be_enkindled(spell))
-        description << "This spell is empowered while you are enkindled.\n";
+        description << ui_translate("d.describe", "This spell is empowered while you are enkindled.\n");
 
     if (!you_can_memorise(spell))
     {
-        description << "\nYou cannot "
-                    << (you.has_spell(spell) ? "cast" : "memorise")
-                    << " this spell because "
-                    << desc_cannot_memorise_reason(spell)
-                    << "\n";
+        const bool known = you.has_spell(spell);
+        string reason;
+        {
+            unwind_var<lang_t> language(Options.language, lang_t::EN);
+            reason = desc_cannot_memorise_reason(spell);
+        }
+        description << ui_render("d.spell.prose", known
+            ? "\nYou cannot cast this spell because %s\n"
+            : "\nYou cannot memorise this spell because %s\n",
+            string("\nYou cannot ") + (known ? "cast" : "memorise")
+                + " this spell because " + reason + "\n",
+            {ui_text_arg("d.spell.reason", reason)});
     }
     else if (casting_is_useless(spell, true))
     {
-        // this preempts the more general uselessness call below, for the sake
-        // of applying slightly different formatting.
-        description << "\n<red>"
-                    << uppercase_first(casting_uselessness_reason(spell, true))
+        string reason;
+        {
+            unwind_var<lang_t> language(Options.language, lang_t::EN);
+            reason = casting_uselessness_reason(spell, true);
+        }
+        const ui_arg text = ui_text_arg("d.spell.reason", reason);
+        description << "\n<red>" << (text.available ? text.text : uppercase_first(reason))
                     << "</red>\n";
     }
     else if (spell_is_useless(spell, true, false))
     {
-        description << "\nThis spell would have no effect right now because "
-                    << spell_uselessness_reason(spell, true, false)
-                    << "\n";
+        string reason;
+        {
+            unwind_var<lang_t> language(Options.language, lang_t::EN);
+            reason = spell_uselessness_reason(spell, true, false);
+        }
+        description << ui_render("d.spell.prose", "\nThis spell would have no effect right now because %s\n",
+            "\nThis spell would have no effect right now because " + reason + "\n",
+            {ui_text_arg("d.spell.reason", reason)});
     }
 
     if (spell == SPELL_GRAVE_CLAW && you.has_spell(SPELL_GRAVE_CLAW))
     {
-        description << "\nYou have harvested enough death to cast this spell "
+        ostringstream original;
+        original << "\nYou have harvested enough death to cast this spell "
                     << you.props[GRAVE_CLAW_CHARGES_KEY].get_int() << " time"
                     << (you.props[GRAVE_CLAW_CHARGES_KEY].get_int() == 1 ? "" : "s")
                     << ". (Maximum of " << GRAVE_CLAW_MAX_CHARGES << ".)";
+        description << ui_render("d.spell.prose", "\nYou have harvested enough death to cast this spell %s times. (Maximum of %s.)",
+            original.str(), {ui_literal_arg(to_string(you.props[GRAVE_CLAW_CHARGES_KEY].get_int())),
+                             ui_literal_arg(to_string(GRAVE_CLAW_MAX_CHARGES))});
     }
 
     return description.str();
@@ -4591,8 +5288,10 @@ static string _player_spell_desc(spell_type spell)
  * @return          Information about the spell; does not include the title or
  *                  db description, but does include level, range, etc.
  */
-string player_spell_desc(spell_type spell)
+string player_spell_desc(spell_type spell, bool display)
 {
+    unwind_var<lang_t> language(Options.language,
+        display ? Options.language : lang_t::EN);
     return _player_spell_stats(spell) + _player_spell_desc(spell);
 }
 
@@ -4633,21 +5332,26 @@ static void _get_spell_description(const spell_type spell,
         if (spell == SPELL_CONJURE_LIVING_SPELLS)
         {
             const spell_type living_spell = living_spell_type_for(mon_owner->type);
-            description += make_stringf("\n%s creates living %s spells.\n",
-                                        uppercase_first(mon_owner->full_name(DESC_A)).c_str(),
-                                        spell_title(living_spell));
+            string owner;
+            const bool available = mon_owner->try_display_name(owner);
+            description += ui_render("d.spell.prose", "\n%s creates living %s spells.\n",
+                make_stringf("\n%s creates living %s spells.\n",
+                    uppercase_first(mon_owner->full_name(DESC_A)).c_str(), spell_title(living_spell)),
+                {{owner, available}, ui_text_arg("display.spell", spell_title(living_spell))});
         }
         else if (spell == SPELL_QUICKSILVER_BOLT)
         {
             if (player_is_debuffable())
             {
-                description += make_stringf("\nIf you are struck by this,"
-                                            " you will no longer be %s.\n",
-                                            describe_player_cancellation(true).c_str());
+                ui_arg effects;
+                const string original = "\nIf you are struck by this, you will no longer be "
+                    + describe_player_cancellation(true, &effects) + ".\n";
+                description += ui_render("d.cancel", "\nIf you are struck by this, you will no longer be %s.\n",
+                    original, {effects});
             }
             else
-                description += "\nYou currently have no enchantments that could be"
-                               " removed by this.\n";
+                description += ui_translate("d.describe", "\nYou currently have no enchantments that could be"
+                               " removed by this.\n");
 
         }
 
@@ -4657,20 +5361,20 @@ static void _get_spell_description(const spell_type spell,
                                 || spell == SPELL_FLASHING_BALESTRA
                                 || spell == SPELL_BECKONING_GALE ? 3 : 0);
 
-        description += "\nRange : ";
+        description += ui_translate("d.spell.prose", "\nRange : ");
         description += range_string(range, -1, minrange);
 
         if (crawl_state.need_save && you_worship(GOD_DITHMENOS))
         {
             if (!valid_marionette_spell(spell))
             {
-                description += "\n\n<magenta>This spell cannot be performed via "
-                               "Aphotic Marionette.</magenta>\n";
+                description += ui_translate("d.spell.prose", "\n\n<magenta>This spell cannot be performed via "
+                               "Aphotic Marionette.</magenta>\n");
             }
             else if (spell_has_marionette_override(spell))
             {
-                description += "\n\n<magenta>When cast via Aphotic Marionette, "
-                               "this spell will affect the player instead.";
+                description += ui_translate("d.describe", "\n\n<magenta>When cast via Aphotic Marionette, "
+                               "this spell will affect the player instead.");
             }
         }
 
@@ -4680,11 +5384,13 @@ static void _get_spell_description(const spell_type spell,
         const int limit = summons_limit(spell, false);
         if (limit)
         {
-            description += make_stringf("%s can sustain at most %s creature%s "
-                               "summoned by this spell.\n",
-                               uppercase_first(mon_owner->full_name(DESC_THE)).c_str(),
-                               number_in_words(limit).c_str(),
-                               limit > 1 ? "s" : "");
+            string owner;
+            const bool available = mon_owner->try_display_name(owner);
+            description += ui_render("d.spell.prose", "%s can sustain at most %s creatures summoned by this spell.\n",
+                make_stringf("%s can sustain at most %s creature%s summoned by this spell.\n",
+                    uppercase_first(mon_owner->full_name(DESC_THE)).c_str(),
+                    number_in_words(limit).c_str(), limit > 1 ? "s" : ""),
+                {{owner, available}, ui_literal_arg(to_string(limit))});
         }
 
         // only display this if the player exists (not in the main menu)
@@ -4704,18 +5410,22 @@ static void _get_spell_description(const spell_type spell,
             if (you.wizard)
                 wiz_info += make_stringf(" (pow %d)", _mon_hex_pow(spell, mon_owner, is_wand));
 #endif
-            description += you.immune_to_hex(spell)
-                ? make_stringf("You cannot be affected by this "
-                               "spell right now. %s\n",
-                               wiz_info.c_str())
-                : make_stringf("Chance to defeat your Will: %d%%%s\n",
-                               hex_chance(spell, mon_owner, is_wand),
-                               wiz_info.c_str());
+            if (you.immune_to_hex(spell))
+                description += ui_render("d.spell.prose", "You cannot be affected by this spell right now. %s\n",
+                    make_stringf("You cannot be affected by this spell right now. %s\n", wiz_info.c_str()),
+                    {ui_literal_arg(wiz_info)});
+            else
+            {
+                const int chance = hex_chance(spell, mon_owner, is_wand);
+                description += ui_render("d.spell.prose", "Chance to defeat your Will: %s%%%s\n",
+                    make_stringf("Chance to defeat your Will: %d%%%s\n", chance, wiz_info.c_str()),
+                    {ui_literal_arg(to_string(chance)), ui_literal_arg(wiz_info)});
+            }
         }
 
     }
     else
-        description += player_spell_desc(spell);
+        description += player_spell_desc(spell, true);
 
     const string quote = getQuoteString(string(spell_title(spell)) + " spell");
     if (!quote.empty())
@@ -4766,7 +5476,7 @@ void describe_spell(spell_type spell, const monster_info *mon_owner,
     title_hbox->add_child(std::move(spell_icon));
 #endif
 
-    string spl_title = spell_title(spell);
+    string spl_title = spell_display_title(spell);
     trim_string(desc);
 
     auto title = make_shared<Text>();
@@ -4824,7 +5534,7 @@ void describe_spell(spell_type spell, const monster_info *mon_owner,
 void describe_ability(ability_type ability)
 {
     describe_info inf;
-    inf.title = ability_name(ability);
+    inf.title = ability_display_name(ability);
     inf.body << get_ability_desc(ability, false);
     tile_def tile = tile_def(tileidx_ability(ability));
     show_description(inf, &tile);
@@ -4842,7 +5552,15 @@ void describe_deck(deck_type deck)
     else
         inf.title = "The " + deck_name(deck);
 
-    inf.body << deck_description(deck);
+    string body;
+    const ui_arg name = ui_text_arg("a.deck.name", deck_name(deck));
+    if (name.available && try_deck_ability_display(deck, body, false))
+    {
+        inf.title = name.text;
+        inf.body << body;
+    }
+    else
+        inf.body << deck_description(deck);
 
     show_description(inf);
 }
@@ -4855,16 +5573,19 @@ void describe_mutation(mutation_type mut)
     describe_info inf;
     // TODO: mutation_name was not designed for use as a title, sometimes has
     // the wrong casing, is often cryptic
-    inf.title = uppercase_first(mutation_name(mut)).c_str();
+    inf.title = uppercase_first(ui_translate("a.mutation.name", mutation_name(mut))).c_str();
 
     const bool has_mutation = you.has_mutation(mut);
     if (has_mutation && mutation_max_levels(mut) > 1)
     {
-        inf.title += make_stringf(" (level %d/%d)",
-                                  you.get_mutation_level(mut),
-                                  mutation_max_levels(mut));
+        const string original = uppercase_first(mutation_name(mut))
+            + make_stringf(" (level %d/%d)", you.get_mutation_level(mut), mutation_max_levels(mut));
+        inf.title = ui_render("d.equipment", "%s (level %s/%s)", original,
+            {ui_text_arg("a.mutation.name", mutation_name(mut)),
+             ui_literal_arg(to_string(you.get_mutation_level(mut))),
+             ui_literal_arg(to_string(mutation_max_levels(mut)))});
     }
-    inf.body << get_mutation_desc(mut);
+    inf.body << get_mutation_desc(mut, true);
 
     const tileidx_t base_tile_idx = get_mutation_tile(mut);
     if (base_tile_idx)
@@ -4894,15 +5615,20 @@ string bane_long_description(bane_type bane, bool ignore_player)
         output << lookup;
     }
     else
-        output << bane_desc(bane) << "\n";
+        output << bane_display_desc(bane) << "\n";
 
     if (bane == BANE_DILETTANTE && player_has)
     {
         CrawlVector& vec = you.props[DILETTANTE_SKILL_KEY].get_vector();
-        output   << "\nYour " << skill_name(static_cast<skill_type>(vec[0].get_int()))
-                 << ", " << skill_name(static_cast<skill_type>(vec[1].get_int()))
-                 << ", and " << skill_name(static_cast<skill_type>(vec[2].get_int()))
-                 << " are currently affected.\n";
+        const skill_type first = static_cast<skill_type>(vec[0].get_int());
+        const skill_type second = static_cast<skill_type>(vec[1].get_int());
+        const skill_type third = static_cast<skill_type>(vec[2].get_int());
+        const string original = "\nYour " + string(skill_name(first)) + ", "
+            + skill_name(second) + ", and " + skill_name(third) + " are currently affected.\n";
+        output << ui_render("d.bane", "\nYour %s, %s, and %s are currently affected.\n", original,
+            {ui_text_arg("display.skill", skill_name(first)),
+             ui_text_arg("display.skill", skill_name(second)),
+             ui_text_arg("display.skill", skill_name(third))});
     }
 
     const int dur = bane_base_duration(bane);
@@ -4916,7 +5642,13 @@ string bane_long_description(bane_type bane, bool ignore_player)
     else
         dur_str = "short length of";
 
-    output << make_stringf("\nThis bane usually lasts a %s time.\n", dur_str.c_str());
+    const string original = make_stringf("\nThis bane usually lasts a %s time.\n", dur_str.c_str());
+    const char *duration_key = dur > BANE_DUR_LONG ? "This bane usually lasts a very long time."
+        : dur > BANE_DUR_MEDIUM ? "This bane usually lasts a long time."
+        : dur > BANE_DUR_SHORT ? "This bane usually lasts a moderate length of time."
+                              : "This bane usually lasts a short length of time.";
+    const string duration = ui_render("d.bane", duration_key, "", {});
+    output << (duration.empty() ? original : "\n" + duration + "\n");
 
     if (player_has)
     {
@@ -4926,7 +5658,8 @@ string bane_long_description(bane_type bane, bool ignore_player)
                                    "gain another %.1f XLs worth of experience."
                                    "</lightmagenta>",
                                     (float)needed_xl / 10.0f);
-        output << desc;
+        output << ui_render("d.bane", "\n<lightmagenta>This bane will be lifted from you when you gain another %s XLs worth of experience.</lightmagenta>", desc,
+            {ui_literal_arg(make_stringf("%.1f", needed_xl / 10.0f))});
     }
 
     return output.str();
@@ -4935,7 +5668,7 @@ string bane_long_description(bane_type bane, bool ignore_player)
 void describe_bane(bane_type bane)
 {
     describe_info inf;
-    inf.title = uppercase_first(bane_name(bane));
+    inf.title = uppercase_first(bane_display_name(bane));
     inf.body << bane_long_description(bane);
 
     show_description(inf);
@@ -4948,50 +5681,54 @@ static string _describe_draconian(const monster_info& mi)
 
     if (subsp != mi.type)
     {
+        const char *colour = nullptr;
         description += "It has ";
 
         switch (subsp)
         {
-        case MONS_BLACK_DRACONIAN:      description += "black ";   break;
-        case MONS_YELLOW_DRACONIAN:     description += "yellow ";  break;
-        case MONS_GREEN_DRACONIAN:      description += "green ";   break;
-        case MONS_PURPLE_DRACONIAN:     description += "purple ";  break;
-        case MONS_RED_DRACONIAN:        description += "red ";     break;
-        case MONS_WHITE_DRACONIAN:      description += "white ";   break;
-        case MONS_GREY_DRACONIAN:       description += "grey ";    break;
-        case MONS_PALE_DRACONIAN:       description += "pale ";    break;
+        case MONS_BLACK_DRACONIAN:      description += "black "; colour = "black";   break;
+        case MONS_YELLOW_DRACONIAN:     description += "yellow "; colour = "yellow";  break;
+        case MONS_GREEN_DRACONIAN:      description += "green "; colour = "green";   break;
+        case MONS_PURPLE_DRACONIAN:     description += "purple "; colour = "purple";  break;
+        case MONS_RED_DRACONIAN:        description += "red "; colour = "red";     break;
+        case MONS_WHITE_DRACONIAN:      description += "white "; colour = "white";   break;
+        case MONS_GREY_DRACONIAN:       description += "grey "; colour = "grey";    break;
+        case MONS_PALE_DRACONIAN:       description += "pale "; colour = "pale";    break;
         default:
             break;
         }
 
         description += "scales. ";
+        if (colour)
+            description = ui_render("d.draconian", "It has %s scales. ", description,
+                {ui_text_arg("display.monster.modifier", colour)});
     }
 
     switch (subsp)
     {
     case MONS_BLACK_DRACONIAN:
-        description += "Sparks flare out of its mouth and nostrils.";
+        description += ui_translate("d.describe", "Sparks flare out of its mouth and nostrils.");
         break;
     case MONS_YELLOW_DRACONIAN:
-        description += "Acidic fumes swirl around it.";
+        description += ui_translate("d.describe", "Acidic fumes swirl around it.");
         break;
     case MONS_GREEN_DRACONIAN:
-        description += "Venom drips from its jaws and stinger tail.";
+        description += ui_translate("d.describe", "Venom drips from its jaws and stinger tail.");
         break;
     case MONS_PURPLE_DRACONIAN:
-        description += "Its outline shimmers with magical energy.";
+        description += ui_translate("d.describe", "Its outline shimmers with magical energy.");
         break;
     case MONS_RED_DRACONIAN:
-        description += "Smoke pours from its nostrils.";
+        description += ui_translate("d.describe", "Smoke pours from its nostrils.");
         break;
     case MONS_WHITE_DRACONIAN:
-        description += "Frost pours from its nostrils.";
+        description += ui_translate("d.describe", "Frost pours from its nostrils.");
         break;
     case MONS_GREY_DRACONIAN:
-        description += "Its scales and tail are adapted to the water.";
+        description += ui_translate("d.describe", "Its scales and tail are adapted to the water.");
         break;
     case MONS_PALE_DRACONIAN:
-        description += "It is cloaked in a pall of superheated steam.";
+        description += ui_translate("d.describe", "It is cloaked in a pall of superheated steam.");
         break;
     default:
         break;
@@ -5034,10 +5771,10 @@ static const char* _get_threat_desc(mon_threat_level_type threat)
     switch (threat)
     {
     case MTHRT_UNDEF: // ?
-    case MTHRT_TRIVIAL: return "Minor";
-    case MTHRT_EASY:    return "Low";
-    case MTHRT_TOUGH:   return "High";
-    case MTHRT_NASTY:   return "Lethal";
+    case MTHRT_TRIVIAL: return ui_translate("d.threat", "Minor");
+    case MTHRT_EASY:    return ui_translate("d.threat", "Low");
+    case MTHRT_TOUGH:   return ui_translate("d.threat", "High");
+    case MTHRT_NASTY:   return ui_translate("d.threat", "Lethal");
     default:            return "Eggstreme";
     }
 }
@@ -5159,9 +5896,17 @@ static mon_attack_info _atk_info(const monster_info& mi, int i)
 
 // Return a string describing the maximum damage from a monster's weapon brand
 static string _brand_damage_string(const monster_info &mi, brand_type brand,
-                                   int dam, int wpn_base_dmg = 0)
+                                   int dam, int wpn_base_dmg = 0, ui_arg* display = nullptr)
 {
     const char * name = brand_type_name(brand, true);
+    if (display) *display = {"", true};
+    const auto set_display = [display](const char* format, initializer_list<ui_arg> args)
+    {
+        if (!display) return;
+        const string text = ui_render("d.attack.damage", format, "", args);
+        *display = {text, !text.empty()};
+    };
+    const ui_arg brand_name = ui_text_arg("display.item.modifier", brand_type_name(brand, false));
     int brand_dam;
     // Only include damaging brands
     // Heavy is included in base damage calculations instead
@@ -5199,15 +5944,18 @@ static string _brand_damage_string(const monster_info &mi, brand_type brand,
             brand_dam = 4;
             break;
         case SPWPN_SUNDERING:
+            set_display(" + %s per 4 attacks", {ui_literal_arg(to_string(dam * 3 / 2))});
             return make_stringf(" + %d per 4 attacks", dam * 3 / 2);
         case SPWPN_VENOM:
         case SPWPN_ANTIMAGIC:
         case SPWPN_CHAOS:
+            if (display) *display = {" + " + brand_name.text, brand_name.available};
             return make_stringf(" + %s", name);
         default:
             return "";
     }
 
+    set_display(" + %s (%s)", {ui_literal_arg(to_string(brand_dam)), brand_name});
     return make_stringf(" + %d (%s)", brand_dam, name);
 }
 
@@ -5219,7 +5967,7 @@ static int _staff_max_damage(stave_type staff, int staff_skill, int evo_skill)
 
 // Describe the damage from a monster's magical staff
 static string _monster_staff_damage_string(const monster_info &mi,
-                                           stave_type staff)
+                                           stave_type staff, ui_arg* display = nullptr)
 {
     // From monster::skill
     const int evo_skill = mi.hd;
@@ -5240,9 +5988,14 @@ static string _monster_staff_damage_string(const monster_info &mi,
                            : staff == STAFF_ALCHEMY       ? "poison"
                            /*staff == STAFF_CONJURATION*/ : "conj";
 
-    return make_stringf(" + %d (%s)",
-                        _staff_max_damage(staff, staff_skill, evo_skill),
-                        dam_type_string.c_str());
+    const int damage = _staff_max_damage(staff, staff_skill, evo_skill);
+    if (display)
+    {
+        const string text = ui_render("d.attack.damage", " + %s (%s)", "",
+            {ui_literal_arg(to_string(damage)), ui_text_arg("d.attack.damage.type", dam_type_string)});
+        *display = {text, !text.empty()};
+    }
+    return make_stringf(" + %d (%s)", damage, dam_type_string.c_str());
 }
 
 struct mon_attack_desc_info
@@ -5317,10 +6070,55 @@ static void _check_attack_counts_and_flavours(const monster_info &mi,
     }
 }
 
+static ui_arg _attack_flavour_display(attack_flavour flavour,
+    const mon_attack_def &attack, const mon_attack_desc_info &di,
+    int flav_dam, int real_dam, int attk_mult)
+{
+    const string base = _flavour_base_desc(flavour);
+    ui_arg text = base.empty() ? ui_arg{"", true} : ui_text_arg("d.attack.effect", base);
+    if (!text.available) return text;
+    const char *key = nullptr;
+    if (flav_dam && attack.flavour != AF_PURE_FIRE)
+    {
+        key = attk_mult > 1 ? "%s (max %s each)" : "%s (max %s)";
+        text.text = ui_render("d.attack", key, "", {text, ui_literal_arg(to_string(flav_dam))});
+        text.available = !text.text.empty();
+    }
+    else if (flavour == AF_DRAIN)
+    {
+        text.text = ui_render("d.attack", "%s (max %s damage)", "", {text, ui_literal_arg(to_string(real_dam / 2))});
+        text.available = !text.text.empty();
+    }
+    else if (flavour == AF_CRUSH)
+    {
+        text.text = ui_render("d.attack", "%s (%s-%s dam)", "", {text,
+            ui_literal_arg(to_string(attack.damage)), ui_literal_arg(to_string(attack.damage * 2))});
+        text.available = !text.text.empty();
+    }
+    if (di.flavour_without_dam && !text.text.empty()
+        && !flavour_triggers_damageless(attack.flavour)
+        && !flavour_has_mobility(attack.flavour)
+        && attack.flavour != AF_REACH_CLEAVE_UGLY)
+    {
+        text.text = ui_render("d.attack", "%s (if damage dealt)", "", {text});
+        text.available = !text.text.empty();
+    }
+    if (flavour_has_reach(attack.flavour))
+    {
+        const char *reach = flavour == AF_RIFT ? "Reaches very far"
+            : flavour == AF_REACH_CLEAVE_UGLY ? "Cleaves from afar" : "Reaches from afar";
+        const ui_arg range = ui_text_arg("d.attack", reach);
+        if (!range.available) return {"", false};
+        if (!text.text.empty()) text.text += "；";
+        text.text += range.text;
+    }
+    return text;
+}
+
 static void _add_attack_flavour_desc(string& desc, attack_flavour flavour,
                                      const mon_attack_def &attack,
                                      mon_attack_desc_info &di, int flav_dam, int real_dam,
-                                     int attk_mult)
+                                     int attk_mult, ui_arg *display = nullptr)
 {
     if (!desc.empty())
         desc += " + ";
@@ -5357,6 +6155,17 @@ static void _add_attack_flavour_desc(string& desc, attack_flavour flavour,
         desc += (flavour == AF_RIFT ? " very far"
                                     : " from afar");
     }
+    if (display && display->available)
+    {
+        const ui_arg effect = _attack_flavour_display(flavour, attack, di, flav_dam, real_dam, attk_mult);
+        display->available = effect.available;
+        if (!effect.text.empty())
+        {
+            if (!display->text.empty()) display->text += " + ";
+            display->text += effect.text;
+        }
+    }
+
 }
 
 // Get all the info required to form one row of the table of attacks.
@@ -5389,8 +6198,25 @@ static void _attacks_table_row(const monster_info &mi, mon_attack_desc_info &di,
         attk_desc = make_stringf("%dx %s%s", attk_mult, attk_name.c_str(),
                                     weapon_descriptor.c_str());
     }
+    const ui_arg attack_name = ui_text_arg("d.attack.name", attk_name);
+    ui_arg named = attack_name;
+    if (wpn)
+    {
+        named.text = ui_render("d.attack", "%s: %s", "", {attack_name, ui_item_arg(*wpn)});
+        named.available = !named.text.empty();
+    }
+    else if (di.special_flavour != SPWPN_NORMAL)
+    {
+        named.text = ui_render("d.attack", "%s: %s", "", {attack_name,
+            ui_text_arg("display.item.modifier", ghost_brand_name(di.special_flavour, mi.type))});
+        named.available = !named.text.empty();
+    }
+    const string shown_attack = attk_mult > 1
+        ? ui_render("d.attack", "%s x %s", "", {ui_literal_arg(to_string(attk_mult)), named})
+        : (named.available ? named.text : "");
+    if (!shown_attack.empty()) attk_desc = shown_attack;
     di.attack_descriptions.emplace_back(attk_desc);
-    di.attk_desc_width = max(di.attk_desc_width, attk_desc.length());
+    di.attk_desc_width = max(di.attk_desc_width, static_cast<size_t>(strwidth(attk_desc)));
 
     // Part 2: The "Max Damage" column
     // Display the max damage from the attack (including any weapon)
@@ -5447,58 +6273,78 @@ static void _attacks_table_row(const monster_info &mi, mon_attack_desc_info &di,
     if (attack.flavour == AF_PURE_FIRE)
         dam_str += " fire";
 
+    string shown_damage = dam != real_dam
+        ? ui_render("d.attack.damage", "%s (base %s)", "",
+            {ui_literal_arg(to_string(real_dam)), ui_literal_arg(to_string(dam))})
+        : to_string(dam);
+    if (attack.flavour == AF_PURE_FIRE)
+        shown_damage = ui_render("d.attack.damage", "%s fire", "",
+            {{shown_damage, !shown_damage.empty()}});
+    ui_arg brand_display{"", true};
     string brand_str;
     if (wpn)
     {
         if (wpn->base_type == OBJ_WEAPONS)
         {
             brand_str = _brand_damage_string(mi, get_weapon_brand(*wpn),
-                                             real_dam, property(*wpn, PWPN_DAMAGE));
+                                             real_dam, property(*wpn, PWPN_DAMAGE), &brand_display);
         }
         else if (wpn->base_type == OBJ_STAVES)
         {
             brand_str = _monster_staff_damage_string(mi,
-                            static_cast<stave_type>(wpn->sub_type));
+                            static_cast<stave_type>(wpn->sub_type), &brand_display);
         }
     }
     else if (di.special_flavour != SPWPN_NORMAL)
-        brand_str = _brand_damage_string(mi, di.special_flavour, real_dam);
+        brand_str = _brand_damage_string(mi, di.special_flavour, real_dam, 0, &brand_display);
 
     string final_dam_str = make_stringf("%s%s%s", dam_str.c_str(),
                                         brand_str.c_str(),
                                         attk_mult > 1 ? " each" : "");
+    if (Options.language == lang_t::ZH && !shown_damage.empty() && brand_display.available)
+    {
+        string text = shown_damage + brand_display.text;
+        if (attk_mult > 1)
+            text = ui_render("d.attack.damage", "%s each", "", {ui_literal_arg(text)});
+        if (!text.empty()) final_dam_str = text;
+    }
     di.damage_descriptions.emplace_back(final_dam_str);
-    di.damage_width = max(di.damage_width, final_dam_str.size());
+    di.damage_width = max(di.damage_width, static_cast<size_t>(strwidth(final_dam_str)));
 
     // Part 3: The "Bonus" column
     // Describe any additional effects from a monster's attack flavour
 
     string bonus_desc = "";
+    ui_arg bonus_display{"", true};
     // Attack flavours don't apply to ranged weapon attacks...
     if (!ranged)
     {
-        _add_attack_flavour_desc(bonus_desc, attack.flavour, attack, di, flav_dam, real_dam, attk_mult);
+        _add_attack_flavour_desc(bonus_desc, attack.flavour, attack, di, flav_dam, real_dam, attk_mult, &bonus_display);
 
         if (mi.is(MB_FIRE_CHAMPION))
         {
             _add_attack_flavour_desc(bonus_desc, AF_FIRE, attack, di,
-                                     flavour_damage(AF_FIRE, mi.hd, false), real_dam, attk_mult);
+                                     flavour_damage(AF_FIRE, mi.hd, false), real_dam, attk_mult, &bonus_display);
             di.has_any_flavour = true;
         }
 
         if (mi.is(MB_CHAOS_LACE))
         {
-            _add_attack_flavour_desc(bonus_desc, AF_CHAOTIC, attack, di, 0, real_dam, attk_mult);
+            _add_attack_flavour_desc(bonus_desc, AF_CHAOTIC, attack, di, 0, real_dam, attk_mult, &bonus_display);
             di.flavour_without_dam = !di.has_any_flavour;
             di.has_any_flavour = true;
         }
     }
     // ...except Nessos' ranged attacks apply venom as a special effect
     else if (mi.type == MONS_NESSOS)
+    {
         bonus_desc += make_stringf("Poison");
+        bonus_display = ui_text_arg("d.attack.effect", "poison");
+    }
+    if (bonus_display.available) bonus_desc = bonus_display.text;
 
     di.bonus_descriptions.emplace_back(bonus_desc);
-    di.bonus_width = max(di.bonus_width, bonus_desc.size());
+    di.bonus_width = max(di.bonus_width, static_cast<size_t>(strwidth(bonus_desc)));
 }
 
 // Get all the info required to form an attacks table row for the monster's
@@ -5516,8 +6362,9 @@ static void _attacks_table_row_throwing(const monster_info &mi,
     else
         throw_str += pluralise(quiv->name(DESC_PLAIN, false, false,
                                           true, false));
+    throw_str = ui_render("d.attack.damage", "Throw: %s", throw_str, {ui_item_arg(*quiv)});
     di.attack_descriptions.emplace_back(throw_str);
-    di.attk_desc_width = max(di.attk_desc_width, throw_str.size());
+    di.attk_desc_width = max(di.attk_desc_width, static_cast<size_t>(strwidth(throw_str)));
 
     string dam_desc = "0";
     string bonus_desc = "";
@@ -5565,15 +6412,18 @@ static void _attacks_table_row_throwing(const monster_info &mi,
             string dmg_msg;
             int silver_dam = max(dam / 3,
                                  silver_damages_victim(&you, dam, dmg_msg));
-            silver_str = make_stringf(" + %d (silver)", silver_dam);
+            silver_str = ui_render("d.attack.damage", " + %s (silver)",
+                make_stringf(" + %d (silver)", silver_dam), {ui_literal_arg(to_string(silver_dam))});
         }
         dam_desc = make_stringf("%d%s", dam, silver_str.c_str());
     }
 
+    if (dam_desc == "12 (curare)") dam_desc = ui_translate("d.attack.damage", "12 (curare)");
+    bonus_desc = ui_translate("d.attack.throw", bonus_desc.c_str());
     di.damage_descriptions.emplace_back(dam_desc);
     di.bonus_descriptions.emplace_back(bonus_desc);
-    di.damage_width = max(di.damage_width, dam_desc.size());
-    di.bonus_width = max(di.bonus_width, bonus_desc.size());
+    di.damage_width = max(di.damage_width, static_cast<size_t>(strwidth(dam_desc)));
+    di.bonus_width = max(di.bonus_width, static_cast<size_t>(strwidth(bonus_desc)));
 }
 
 // Build the table of attacks, for real
@@ -5586,7 +6436,7 @@ static void _build_table_of_attacks(mon_attack_desc_info &di,
 
     // Table lines can't be longer than 80 chars wide (incl 4 spaces)
     // so cut off the attack description if it's too long.
-    // Note: minimum 7 (length of "Attacks")
+    // Note: minimum 7 (length of ui_translate("d.attack.table", "Attacks"))
     di.attk_desc_width = min(di.attk_desc_width,
                              76 - di.damage_width - di.bonus_width);
 
@@ -5594,13 +6444,13 @@ static void _build_table_of_attacks(mon_attack_desc_info &di,
     // Note: columns are separated by (a minimum of) 2 spaces
 
     // First, the table header
-    result << padded_str(di.plural ? "Attacks" : "Attack",
+    result << padded_str(di.plural ? ui_translate("d.attack.table", "Attacks") : ui_translate("d.attack.table", "Attack"),
                          di.attk_desc_width + 2)
-           << padded_str("Max Damage", di.damage_width + 2);
+           << padded_str(ui_translate("d.attack.table", "Max Damage"), di.damage_width + 2);
     if (di.has_any_flavour)
     {
-        result << padded_str(di.flavour_without_dam ? "Bonus"
-                                                    : "After Damaging Hits",
+        result << padded_str(di.flavour_without_dam ? ui_translate("d.attack.table", "Bonus")
+                                                    : ui_translate("d.attack.table", "After Damaging Hits"),
                              di.bonus_width);
     }
     result << "\n";
@@ -5707,13 +6557,9 @@ static string _monster_spells_description(const monster_info& mi, bool mark_spel
     if (mark_spells)
         description += SPELL_LIST_END;
 
-    description.cprintf("\nTo read a description, press the key listed above. "
-        "(AdB) indicates damage (the sum of A B-sided dice), "
-        "(x%%) indicates the chance to defeat your Will, "
-        "and (y) indicates the spell range");
-    description.cprintf(crawl_state.need_save
-        ? "; shown in red if you are in range.\n"
-        : ".\n");
+    const string legend = "\nTo read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range"
+        + string(crawl_state.need_save ? "; shown in red if you are in range.\n" : ".\n");
+    description.cprintf("%s", ui_translate("d.monster.prose", legend.c_str()));
 
     return description.to_colour_string();
 }
@@ -5736,7 +6582,10 @@ static string _monster_notice_chance(const monster_info& mi)
 
     result << "% chance to notice you each turn.\n";
 
-    return result.str();
+    return ui_render("d.hit", "%s has a %s%% chance to notice you each turn.\n",
+        result.str(),
+        {ui_text_arg("d.monster.pronoun", mi.pronoun_plurality() ? "they" : "it"),
+         ui_literal_arg(to_string(stealth < perception ? 100 : perception * 100 / stealth))});
 }
 
 static void _describe_aux_hit_chance(ostringstream &result, vector<string>& auxes, int chance)
@@ -5770,9 +6619,38 @@ static void _describe_aux_hit_chance(ostringstream &result, vector<string>& auxe
  * @param distance          Distance from which the attack is being made. If not
  *                          provided, assume distance between player and the target.
  */
+// An optional display copy is built from the very same hit calculations.
+// Existing callers still receive only the unchanged canonical English stream.
+static string _player_hit_display(int chance, const item_def *weapon,
+    bool verbose, int distance, const vector<string> &auxes, int aux_chance)
+{
+    const ui_arg tool = weapon ? ui_item_arg(*weapon)
+                              : ui_text_arg("a.bodypart", you.hand_name(true));
+    const string basic = !verbose
+        ? ui_render("d.hit", you.duration[DUR_BLIND]
+            ? "%s%% to hit at this distance" : "%s%% to hit", "",
+            {ui_literal_arg(to_string(chance))})
+        : you.duration[DUR_BLIND]
+        ? ui_render("d.hit", "about %s%% to hit with %s (while you are blinded and from distance %s)", "",
+            {ui_literal_arg(to_string(chance)), tool, ui_literal_arg(to_string(distance))})
+        : ui_render("d.hit", "about %s%% to hit with %s", "",
+            {ui_literal_arg(to_string(chance)), tool});
+    if (basic.empty() || auxes.empty()) return basic;
+    ui_arg names = {"", true};
+    for (const string &key : auxes)
+    {
+        const ui_arg name = ui_text_arg("d.hit.aux", key);
+        names.available = names.available && name.available;
+        if (!names.text.empty()) names.text += "、";
+        names.text += name.text;
+    }
+    return ui_render("d.hit", "%s and %s%% to hit with your %s", "",
+        {{basic, true}, ui_literal_arg(to_string(aux_chance)), names});
+}
+
 void describe_to_hit(const monster_info &mi, ostringstream &result,
                      const item_def *weapon, bool verbose, attack *source,
-                     int distance)
+                     int distance, string *display)
 {
     if (weapon != nullptr
         && !(is_weapon(*weapon) || is_throwable(&you, *weapon)))
@@ -5797,14 +6675,20 @@ void describe_to_hit(const monster_info &mi, ostringstream &result,
                              distance_from);
 
         describe_hit_chance(acc_pct, result, weapon, verbose, distance_from);
+        const int main_chance = acc_pct;
+        int auxiliary_chance = -1;
 
         vector<string> aux_names = get_player_aux_names();
         if (!aux_names.empty())
         {
             acc_pct = to_hit_pct_aux(mi, attk);
             _describe_aux_hit_chance(result, aux_names, acc_pct);
+            auxiliary_chance = acc_pct;
         }
 
+        if (display)
+            *display = _player_hit_display(main_chance, weapon, verbose,
+                                          distance_from, aux_names, auxiliary_chance);
         return;
     }
     else
@@ -5815,6 +6699,8 @@ void describe_to_hit(const monster_info &mi, ostringstream &result,
     }
 
     describe_hit_chance(acc_pct, result, weapon, verbose, distance_from);
+    if (display)
+        *display = _player_hit_display(acc_pct, weapon, verbose, distance_from, {}, -1);
 }
 
 /**
@@ -5905,9 +6791,12 @@ static void _describe_mons_to_hit(const monster_info& mi, ostringstream &result)
     const int beat_sh_chance = mon_beat_sh_pct(shield_bypass, scaled_sh);
 
     const int hit_chance = beat_ev_chance * beat_sh_chance / 100;
-    result << uppercase_first(mi.pronoun(PRONOUN_SUBJECTIVE)) << " "
-           << conjugate_verb("have", mi.pronoun_plurality())
-           << " about " << hit_chance << "% to hit you.\n";
+    result << ui_render("d.hit", "%s has about %s%% to hit you.\n",
+        uppercase_first(mi.pronoun(PRONOUN_SUBJECTIVE)) + " "
+            + conjugate_verb("have", mi.pronoun_plurality())
+            + " about " + to_string(hit_chance) + "% to hit you.\n",
+        {ui_text_arg("d.monster.pronoun", mi.pronoun_plurality() ? "they" : "it"),
+         ui_literal_arg(to_string(hit_chance))});
 }
 
 /**
@@ -6018,13 +6907,16 @@ string _monster_habitat_description(const monster_info& mi)
     switch (mons_habitat_type(type, mi.base_type))
     {
     case HT_AMPHIBIOUS:
-        return uppercase_first(make_stringf("%s can %s water.\n",
-                               mi.pronoun(PRONOUN_SUBJECTIVE),
-                               mi.type == MONS_ORC_APOSTLE
-                                ? "walk on" : "travel through"));
+        return ui_render("d.monster.trait", mi.type == MONS_ORC_APOSTLE
+            ? "%s can walk on water.\n" : "%s can travel through water.\n",
+            uppercase_first(make_stringf("%s can %s water.\n",
+                mi.pronoun(PRONOUN_SUBJECTIVE),
+                mi.type == MONS_ORC_APOSTLE ? "walk on" : "travel through")),
+            {ui_text_arg("d.monster.pronoun", mi.pronoun_plurality() ? "they" : "it")});
     case HT_AMPHIBIOUS_LAVA:
-        return uppercase_first(make_stringf("%s can travel through lava.\n",
-                               mi.pronoun(PRONOUN_SUBJECTIVE)));
+        return ui_render("d.monster.trait", "%s can travel through lava.\n",
+            uppercase_first(make_stringf("%s can travel through lava.\n", mi.pronoun(PRONOUN_SUBJECTIVE))),
+            {ui_text_arg("d.monster.pronoun", mi.pronoun_plurality() ? "they" : "it")});
     default:
         return "";
     }
@@ -6062,6 +6954,15 @@ static string _monster_current_target_description(const monster_info &mi)
     const bool plural = mi.pronoun_plurality();
 
     ostringstream result;
+    string translated;
+    bool complete = true;
+    const ui_arg subject = ui_text_arg("d.monster.pronoun", plural ? "they" : "it");
+    auto append_display = [&](const char *source, initializer_list<ui_arg> args)
+    {
+        const string text = ui_render("d.monster.target", source, "", args);
+        complete = complete && !text.empty();
+        translated += text;
+    };
     if (mi.is(MB_ALLY_TARGET))
     {
         auto allies = find_allies_targeting(*m);
@@ -6071,14 +6972,23 @@ static string _monster_current_target_description(const monster_info &mi)
                    << conjugate_verb("are", plural)
                    << " currently targeted by "
                    << allies[0]->name(DESC_YOUR) << ".\n";
+            append_display("%s is currently targeted by %s.\n",
+                           {subject, ui_actor_arg(*allies[0])});
         }
         else
         {
             result << uppercase_first(pronoun) << " "
                    << conjugate_verb("are", plural)
                    << " currently targeted by:\n";
+            ui_arg names = {"", true};
             for (auto *a : allies)
+            {
                 result << "  " << a->name(DESC_YOUR) << "\n";
+                const ui_arg name = ui_actor_arg(*a);
+                names.available = names.available && name.available;
+                names.text += "  " + name.text + "\n";
+            }
+            append_display("%s is currently targeted by:\n%s", {subject, names});
         }
     }
 
@@ -6089,9 +6999,11 @@ static string _monster_current_target_description(const monster_info &mi)
                << conjugate_verb("are", plural)
                << " currently targeting "
                << m->get_foe()->name(DESC_THE) << ".\n";
+        append_display("%s is currently targeting %s.\n",
+                       {subject, ui_actor_arg(*m->get_foe())});
     }
 
-    return result.str();
+    return complete && !translated.empty() ? translated : result.str();
 }
 
 struct TableCell
@@ -6146,7 +7058,7 @@ public:
         {
             for (size_t col = 0; col < rows[row].size(); ++col)
             {
-                const int label_len = codepoints(rows[row][col].label);
+                const int label_len = strwidth(rows[row][col].label);
                 if (col == labels_lengths_by_col.size())
                     labels_lengths_by_col.push_back(label_len);
                 else
@@ -6168,11 +7080,13 @@ public:
                 }
 
                 const int label_len = labels_lengths_by_col[col];
-                const string label = padded_str(cell.label, label_len, true);
+                const string label = string(max(0, label_len - strwidth(cell.label)), ' ')
+                    + cell.label;
                 const string body = make_stringf("%s: %s",
                                                  label.c_str(),
                                                  cell.value.c_str());
-                result << colourize_str(padded_str(body, cell_len), cell.colour);
+                const string padded = body + string(max(0, cell_len - strwidth(body)), ' ');
+                result << colourize_str(padded, cell.colour);
             }
             result << "\n";
         }
@@ -6234,12 +7148,17 @@ static string _res_name(mon_resist_flags res)
 }
 
 static void _desc_mon_resist(TablePrinter &pr,
-                             resists_t resist_set, mon_resist_flags res)
+                             resists_t resist_set, mon_resist_flags res,
+                             bool display)
 {
     const int level = get_resist(resist_set, res);
     const int max = (res == MR_RES_POISON || res == MR_RES_ELEC) ? 1 : 3; // lies
     const string desc = desc_resist(level, max, level == 3, false);
-    pr.AddCell(_res_name(res), desc, level ? LIGHTGREY : DARKGREY);
+    const string canonical = _res_name(res);
+    const char *key = res == MR_RES_FIRE ? "rFire"
+        : res == MR_RES_COLD ? "rCold" : canonical.c_str();
+    pr.AddCell(display ? ui_translate("o.label", key) : canonical,
+               desc, level ? LIGHTGREY : DARKGREY);
 }
 
 static void _add_resist_desc(TablePrinter &pr, resists_t resist_set)
@@ -6255,8 +7174,10 @@ static void _add_resist_desc(TablePrinter &pr, resists_t resist_set)
         return;
 
     pr.AddRow();
+    const ui_translation_group labels({{"o.label", "rFire"}, {"o.label", "rCold"},
+        {"o.label", "rPois"}, {"o.label", "rNeg"}, {"o.label", "rElec"}});
     for (mon_resist_flags rflags : common_resists)
-        _desc_mon_resist(pr, resist_set, rflags);
+        _desc_mon_resist(pr, resist_set, rflags, labels.available());
 }
 
 static void _desc_mon_death_explosion(ostringstream &result,
@@ -6265,11 +7186,102 @@ static void _desc_mon_death_explosion(ostringstream &result,
     if (mi.type == MONS_LURKING_HORROR)
         return; // no damage number
     const dice_def dam = mon_explode_dam(mi.type, mi.hd);
-    result << "Explosion damage: " << dam.num << "d" << dam.size << "\n";
+    result << ui_render("d.monster.prose", "Explosion damage: %sd%s\n",
+        make_stringf("Explosion damage: %dd%d\n", dam.num, dam.size),
+        {ui_literal_arg(to_string(dam.num)), ui_literal_arg(to_string(dam.size))});
 }
 
 // Describe a monster's (intrinsic) resistances, speed and a few other
 // attributes.
+static ui_arg _monster_resistance_list(const vector<string> &names)
+{
+    ui_arg result = {"", true};
+    for (const string &name : names)
+    {
+        const ui_arg translated = ui_text_arg("d.resist", name);
+        result.available = result.available && translated.available;
+        if (!result.text.empty()) result.text += "、";
+        result.text += translated.text;
+    }
+    return result;
+}
+
+static string _monster_resistance_display(const monster_info &mi,
+    const vector<string> &immune, const vector<string> &high,
+    const vector<string> &base, const string &original)
+{
+    const vector<string> *lists[] = {&immune, &high, &base};
+    const char *sources[] = {"%s is immune to %s.\n",
+                            "%s is very resistant to %s.\n",
+                            "%s is resistant to %s.\n"};
+    const ui_arg subject = ui_text_arg("d.monster.pronoun",
+                                     mi.pronoun_plurality() ? "they" : "it");
+    string output;
+    for (int i = 0; i < 3; ++i)
+    {
+        if (lists[i]->empty()) continue;
+        const string line = ui_render("d.monster.trait", sources[i], "",
+                                     {subject, _monster_resistance_list(*lists[i])});
+        if (line.empty()) return original;
+        output += line;
+    }
+    return output;
+}
+
+// Mirror the canonical speed description's numerical rules, using only
+// raw speed/energy metadata. Unknown display components keep the whole row.
+static string _monster_speed_display(const monster_info &mi, const string &original)
+{
+    ui_translation_group group({{"d.monster.speed", "Speed: %s%%"},
+                                {"d.monster.speed", "%s: %s%%"}});
+    if (!group.available() || original.empty())
+        return original;
+    const int speed = mi.base_speed();
+    if (!speed) return original;
+    vector<pair<const char*, int>> actions;
+    auto add = [&](int energy, const char *key)
+    {
+        if (energy != 10)
+        {
+            if (!energy) { group.require("d.monster.speed", "invalid energy"); return; }
+            group.require("d.monster.speed.action", key);
+            actions.emplace_back(key, speed * 100 / energy);
+        }
+    };
+    add(mi.menergy.attack, "attack");
+    add(mi.menergy.missile, "shoot");
+    add(mi.menergy.move, "travel");
+    if (mi.menergy.swim != mi.menergy.move)
+        add(mi.menergy.swim, "swim");
+    add(mi.menergy.spell, mi.is_priest() ? "pray" : "magic");
+    const int difference = mons_class_flag(mi.type, M_STATIONARY) ? 0
+        : mi.menergy.move * 10 / speed - player_movement_speed(false, false);
+    const char *note = mi.type == MONS_SIXFIRHY || mi.type == MONS_JIANGSHI
+        ? " (but often pauses)" : difference > 0
+        ? " (normally travels slower than you)" : difference < 0
+        ? " (normally travels faster than you)" : nullptr;
+    if (note) group.require("d.monster.speed", note);
+    if (!group.available()) return original;
+    string output = ui_render("d.monster.speed", "Speed: %s%%", original,
+                              {ui_literal_arg(to_string(speed * 10))});
+    if (!actions.empty())
+    {
+        output += "（";
+        bool first = true;
+        for (const auto &action : actions)
+        {
+            if (!first) output += "，";
+            output += ui_render("d.monster.speed", "%s: %s%%", "",
+                {ui_text_arg("d.monster.speed.action", action.first),
+                 ui_literal_arg(to_string(action.second))});
+            first = false;
+        }
+        output += "）";
+    }
+    if (note) output += group.get("d.monster.speed", note);
+    return output;
+}
+
 static string _monster_stat_description(const monster_info& mi, bool mark_spells)
 {
     if (mons_is_sensed(mi.type) || mons_is_projectile(mi.type))
@@ -6280,12 +7292,12 @@ static string _monster_stat_description(const monster_info& mi, bool mark_spells
     TablePrinter pr;
 
     pr.AddRow();
-    pr.AddCell("Max HP", mi.get_max_hp_desc());
-    pr.AddCell("Will", _describe_monster_wl(mi));
-    pr.AddCell("AC", _build_bar(mi.ac, 5));
-    pr.AddCell("EV", _build_bar(mi.base_ev, 5));
+    pr.AddCell(ui_translate("d.monster.stat", "Max HP"), mi.get_max_hp_desc());
+    pr.AddCell(ui_translate("d.monster.stat", "Will"), _describe_monster_wl(mi));
+    pr.AddCell(ui_translate("d.monster.stat", "AC"), _build_bar(mi.ac, 5));
+    pr.AddCell(ui_translate("d.monster.stat", "EV"), _build_bar(mi.base_ev, 5));
     if (mi.sh / 2 > 0)  // rescale to match player SH
-        pr.AddCell("SH", _build_bar(mi.sh / 2, 5));
+        pr.AddCell(ui_translate("d.monster.stat", "SH"), _build_bar(mi.sh / 2, 5));
     else
         pr.AddCell(); // ensure alignment
 
@@ -6300,31 +7312,38 @@ static string _monster_stat_description(const monster_info& mi, bool mark_spells
                                                  : single_holiness_description(holiness);
     pr.AddRow();
     if (mi.threat != MTHRT_UNDEF && !mons_class_is_peripheral(mi.type))
-        pr.AddCell("Threat", _get_threat_desc(mi.threat));
+        pr.AddCell(ui_translate("d.monster.stat", "Threat"), _get_threat_desc(mi.threat));
     else // ?/m
         pr.AddCell(); // ensure alignment
-    pr.AddCell("Class", uppercase_first(holi).c_str());
-    pr.AddCell("Size", size_desc.c_str());
-    pr.AddCell("Int", intelligence_description(mi.intel()));
+    pr.AddCell(ui_translate("d.monster.stat", "Class"), ui_translate("d.monster.field", uppercase_first(holi).c_str()));
+    pr.AddCell(ui_translate("d.monster.stat", "Size"), ui_translate("d.monster.field", size_desc.c_str()));
+    pr.AddCell(ui_translate("d.monster.stat", "Int"), ui_translate("d.monster.field", intelligence_description(mi.intel())));
     if (mi.is(MB_SICK) || mi.is(MB_NO_REGEN))
-        pr.AddCell("Regen", "None");
+        pr.AddCell(ui_translate("d.monster.stat", "Regen"), ui_translate("d.monster.field", "None"));
     else if (mons_class_fast_regen(mi.type) || mi.is(MB_REGENERATION))
-        pr.AddCell("Regen", make_stringf("%d/turn", mi.regen_rate(1)));
+        pr.AddCell(ui_translate("d.monster.stat", "Regen"), make_stringf(ui_translate("d.monster.field", "%d/turn"), mi.regen_rate(1)));
                                         // (Wait, what's a 'turn'?)
 
     pr.Print(result);
 
-    result << mi.speed_description() << "\n\n";
+    result << _monster_speed_display(mi, mi.speed_description()) << "\n\n";
 
     if (crawl_state.game_started)
     {
-        result << "You have ";
-        describe_to_hit(mi, result, you.weapon(), true);
+        ostringstream original;
+        string display;
+        original << "You have ";
+        describe_to_hit(mi, original, you.weapon(), true, nullptr, 0, &display);
         if (mi.incapacitated()) // Affects ev and sh
-            result << " (while incapacitated)";
+            original << " (while incapacitated)";
         else if (mi.base_ev != mi.ev)
-            result << " (at present)";
-        result << ".\n";
+            original << " (at present)";
+        original << ".\n";
+        const char *source = mi.incapacitated()
+            ? "You have %s (while incapacitated).\n" : mi.base_ev != mi.ev
+            ? "You have %s (at present).\n" : "You have %s.\n";
+        result << ui_render("d.hit", source, original.str(),
+                            {{display, !display.empty()}});
     }
     result << _monster_attacks_description(mi);
     if (crawl_state.game_started)
@@ -6426,69 +7445,74 @@ static string _monster_stat_description(const monster_info& mi, bool mark_spells
 
     if (!resist_descriptions.empty())
     {
-        result << uppercase_first(pronoun) << " "
-               << conjugate_verb("are", plural) << " "
-               << comma_separated_line(resist_descriptions.begin(),
-                                       resist_descriptions.end(),
-                                       "; and ", "; ")
-               << ".\n";
+        result << _monster_resistance_display(mi, extreme_resists, high_resists, base_resists,
+            uppercase_first(pronoun) + " " + conjugate_verb("are", plural) + " "
+                + comma_separated_line(resist_descriptions.begin(), resist_descriptions.end(),
+                                      "; and ", "; ") + ".\n");
     }
 
     // Is monster susceptible to anything? (On a new line.)
     if (!suscept.empty())
     {
-        result << uppercase_first(pronoun) << " "
-               << conjugate_verb("are", plural) << " susceptible to "
-               << comma_separated_line(suscept.begin(), suscept.end())
-               << ".\n";
+        result << ui_render("d.monster.trait", "%s is susceptible to %s.\n",
+            uppercase_first(pronoun) + " " + conjugate_verb("are", plural) + " susceptible to "
+                + comma_separated_line(suscept.begin(), suscept.end()) + ".\n",
+            {ui_text_arg("d.monster.pronoun", plural ? "they" : "it"),
+             _monster_resistance_list(suscept)});
     }
 
     if (mi.is(MB_CHAOTIC))
     {
-        result << uppercase_first(pronoun) << " "
-               << conjugate_verb("are", plural)
-               << " vulnerable to silver and hated by Zin.\n";
+        result << ui_render("d.monster.trait", "%s is vulnerable to silver and hated by Zin.\n",
+            uppercase_first(pronoun) + " " + conjugate_verb("are", plural) + " vulnerable to silver and hated by Zin.\n",
+            {ui_text_arg("d.monster.pronoun", plural ? "they" : "it")});
     }
 
     if (mons_class_flag(mi.type, M_STATIONARY)
         && !mons_is_tentacle_or_tentacle_segment(mi.type))
     {
-        result << uppercase_first(pronoun) << " cannot move.\n";
+        result << ui_render("d.monster.trait", "%s cannot move.\n",
+            uppercase_first(pronoun) + " cannot move.\n",
+            {ui_text_arg("d.monster.pronoun", plural ? "they" : "it")});
     }
 
     if (mons_class_flag(mi.type, M_COLD_BLOOD)
         && get_resist(resist, MR_RES_COLD) <= 0)
     {
-        result << uppercase_first(pronoun)
-               << " " << conjugate_verb("are", plural)
-               << " cold-blooded and may be slowed by cold attacks.\n";
+        result << ui_render("d.monster.trait", "%s is cold-blooded and may be slowed by cold attacks.\n",
+            uppercase_first(pronoun) + " " + conjugate_verb("are", plural) + " cold-blooded and may be slowed by cold attacks.\n",
+            {ui_text_arg("d.monster.pronoun", plural ? "they" : "it")});
     }
 
     if (mi.can_see_invisible())
-        result << uppercase_first(pronoun) << " can see invisible.\n";
+        result << ui_render("d.monster.trait", "%s can see invisible.\n",
+            uppercase_first(pronoun) + " can see invisible.\n",
+            {ui_text_arg("d.monster.pronoun", plural ? "they" : "it")});
 
     if (mons_class_flag(mi.type, M_BURROWS))
-        result << uppercase_first(pronoun) << " can burrow through diggable terrain.\n";
+        result << ui_render("d.monster.trait", "%s can burrow through diggable terrain.\n",
+            uppercase_first(pronoun) + " can burrow through diggable terrain.\n",
+            {ui_text_arg("d.monster.pronoun", plural ? "they" : "it")});
 
     if (mons_class_flag(mi.type, M_ACID_SPLASH))
     {
-        result << uppercase_first(pronoun) << " "
-               << conjugate_verb("inflict", plural)
-               << " 1d5 acid damage when struck in melee.\n";
+        result << ui_render("d.monster.trait", "%s inflicts 1d5 acid damage when struck in melee.\n",
+            uppercase_first(pronoun) + " " + conjugate_verb("inflict", plural) + " 1d5 acid damage when struck in melee.\n",
+            {ui_text_arg("d.monster.pronoun", plural ? "they" : "it")});
     }
 
     // Insubstantialness should take priority.
     if (mons_class_flag(mi.type, M_INSUBSTANTIAL))
     {
-        result << uppercase_first(pronoun) << " "
-               << conjugate_verb("are", plural)
-               << " insubstantial and immune to ensnarement.\n";
+        result << ui_render("d.monster.trait", "%s is insubstantial and immune to ensnarement.\n",
+            uppercase_first(pronoun) + " " + conjugate_verb("are", plural) + " insubstantial and immune to ensnarement.\n",
+            {ui_text_arg("d.monster.pronoun", plural ? "they" : "it")});
     }
     else if (mons_class_flag(mi.type, M_AMORPHOUS))
     {
-        result << uppercase_first(pronoun) << " "
-               << conjugate_verb("are", plural)
-               << " amorphous and immune to ensnarement.\n";
+        result << ui_render("d.monster.trait", "%s is amorphous and immune to ensnarement.\n",
+            uppercase_first(pronoun) + " " + conjugate_verb("are", plural) + " amorphous and immune to ensnarement.\n",
+            {ui_text_arg("d.monster.pronoun", plural ? "they" : "it")});
     }
 
     // XXX: could mention "immune to dazzling" here, but that's spammy, since
@@ -6499,26 +7523,30 @@ static string _monster_stat_description(const monster_info& mi, bool mark_spells
     if (mi.type == MONS_SHADOWGHAST)
     {
         // Cf. monster::action_energy() in monster.cc.
-        result << uppercase_first(pronoun) << " "
-               << conjugate_verb("cover", plural)
-               << " ground more quickly when invisible.\n";
+        result << ui_render("d.monster.trait", "%s covers ground more quickly when invisible.\n",
+            uppercase_first(pronoun) + " " + conjugate_verb("cover", plural) + " ground more quickly when invisible.\n",
+            {ui_text_arg("d.monster.pronoun", plural ? "they" : "it")});
     }
 
     if (mi.type == MONS_ROYAL_JELLY)
     {
-        result << "It will release varied jellies when damaged or killed, with"
-            " the number of jellies proportional to the amount of damage.\n";
-        result << "It will release all of its jellies when polymorphed.\n";
+        result << ui_translate("d.describe", "It will release varied jellies when damaged or killed, with"
+            " the number of jellies proportional to the amount of damage.\n");
+        result << ui_translate("d.describe", "It will release all of its jellies when polymorphed.\n");
     }
 
     if (mi.type == MONS_STAR_JELLY)
     {
         dice_def dmg = zap_damage(ZAP_SHOOTING_STAR, 150, true, false);
-        result << "Shooting star damage: " << dmg.num << "d" << dmg.size << " (x3)\n";
+        result << ui_render("d.monster.prose", "Shooting star damage: %sd%s (x3)\n",
+            make_stringf("Shooting star damage: %dd%d (x3)\n", dmg.num, dmg.size),
+            {ui_literal_arg(to_string(dmg.num)), ui_literal_arg(to_string(dmg.size))});
     }
 
     if (mi.airborne())
-        result << uppercase_first(pronoun) << " can fly.\n";
+        result << ui_render("d.monster.trait", "%s can fly.\n",
+            uppercase_first(pronoun) + " can fly.\n",
+            {ui_text_arg("d.monster.pronoun", plural ? "they" : "it")});
 
     if (in_good_standing(GOD_ZIN, 0) && !mi.pos.origin() && monster_at(mi.pos))
     {
@@ -6527,19 +7555,21 @@ static string _monster_stat_description(const monster_info& mi, bool mark_spells
         auto eligibility = zin_check_recite_to_single_monster(m, retval);
         if (eligibility == RE_INELIGIBLE)
         {
-            result << uppercase_first(pronoun) <<
-                    " cannot be affected by reciting Zin's laws.";
+            result << ui_render("d.monster.trait", "%s cannot be affected by reciting Zin's laws.",
+            uppercase_first(pronoun) + " cannot be affected by reciting Zin's laws.",
+            {ui_text_arg("d.monster.pronoun", plural ? "they" : "it")});
         }
         else if (eligibility == RE_TOO_STRONG)
         {
-            result << uppercase_first(pronoun) << " "
-                   << conjugate_verb("are", plural)
-                   << " too strong to be affected by reciting Zin's laws.";
+            result << ui_render("d.monster.trait", "%s is too strong to be affected by reciting Zin's laws.",
+            uppercase_first(pronoun) + " " + conjugate_verb("are", plural) + " too strong to be affected by reciting Zin's laws.",
+            {ui_text_arg("d.monster.pronoun", plural ? "they" : "it")});
         }
         else // RE_ELIGIBLE || RE_RECITE_TIMER
         {
-            result << uppercase_first(pronoun) <<
-                            " can be affected by reciting Zin's laws.";
+            result << ui_render("d.monster.trait", "%s can be affected by reciting Zin's laws.",
+            uppercase_first(pronoun) + " can be affected by reciting Zin's laws.",
+            {ui_text_arg("d.monster.pronoun", plural ? "they" : "it")});
         }
 
         if (you.wizard)
@@ -6556,7 +7586,7 @@ static string _monster_stat_description(const monster_info& mi, bool mark_spells
     if (mi.type == MONS_BATTLESPHERE)
     {
         const dice_def dam = battlesphere_damage_from_hd(mi.hd);
-        result << "Projectile damage: " << dam.num << "d" << dam.size << "\n";
+        result << make_stringf(ui_translate("d.monster.prose", "Projectile damage: %dd%d\n"), dam.num, dam.size);
     }
 
     // Flying monsters can't be forced to fall into liquids these days.
@@ -6568,17 +7598,25 @@ static string _monster_stat_description(const monster_info& mi, bool mark_spells
         !mons_class_is_stationary(mi.type))
     {
         if (mon_shape_is_humanoid(get_mon_shape(mi.type)))
-            result << uppercase_first(pronoun) << " can open doors.\n";
+            result << ui_render("d.monster.trait", "%s can open doors.\n",
+            uppercase_first(pronoun) + " can open doors.\n",
+            {ui_text_arg("d.monster.pronoun", plural ? "they" : "it")});
         else
         {
-            result << "Despite " << mi.pronoun(PRONOUN_POSSESSIVE)
-                   << " appearance, " << pronoun << " can open doors.\n";
+            result << ui_render("d.monster.trait", "Despite appearances, %s can open doors.\n",
+                string("Despite ") + mi.pronoun(PRONOUN_POSSESSIVE)
+                    + " appearance, " + pronoun + " can open doors.\n",
+                {ui_text_arg("d.monster.pronoun", plural ? "they" : "it")});
         }
     }
     else if (mons_class_flag(mi.type, M_CRASH_DOORS))
-        result << uppercase_first(pronoun) << " can crash through doors.\n";
+        result << ui_render("d.monster.trait", "%s can crash through doors.\n",
+            uppercase_first(pronoun) + " can crash through doors.\n",
+            {ui_text_arg("d.monster.pronoun", plural ? "they" : "it")});
     else if (mons_class_flag(mi.type, M_EAT_DOORS))
-        result << uppercase_first(pronoun) << " can eat doors.\n";
+        result << ui_render("d.monster.trait", "%s can eat doors.\n",
+            uppercase_first(pronoun) + " can eat doors.\n",
+            {ui_text_arg("d.monster.pronoun", plural ? "they" : "it")});
 
     result << _monster_spells_description(mi, mark_spells);
 
@@ -6628,7 +7666,10 @@ void get_monster_db_desc(const monster_info& mi, describe_info &inf,
     if (inf.title.empty())
         inf.title = getMiscString(mi.common_name(DESC_DBNAME) + " title");
     if (inf.title.empty())
-        inf.title = uppercase_first(mi.full_name(DESC_A)) + ".";
+    {
+        string displayed;
+        inf.title = mi.try_display_name(displayed) ? displayed : uppercase_first(mi.full_name(DESC_A)) + ".";
+    }
 
     string db_name;
 
@@ -6697,14 +7738,24 @@ void get_monster_db_desc(const monster_info& mi, describe_info &inf,
     }
 
     case MONS_PLAYER_GHOST:
-        inf.body << "The apparition of " << get_ghost_description(mi) << ".\n";
+    {
+        string ghost;
+        const bool available = try_ghost_description_display(mi, ghost);
+        inf.body << ui_render("d.ghost", "The apparition of %s.\n",
+            "The apparition of " + get_ghost_description(mi) + ".\n", {{ghost, available}});
         if (mi.props.exists(MIRRORED_GHOST_KEY))
-            inf.body << "It looks just like you...spooky!\n";
+            inf.body << ui_translate("d.describe", "It looks just like you...spooky!\n");
         break;
+    }
 
     case MONS_PLAYER_ILLUSION:
-        inf.body << "An illusion of " << get_ghost_description(mi) << ".\n";
+    {
+        string ghost;
+        const bool available = try_ghost_description_display(mi, ghost);
+        inf.body << ui_render("d.ghost", "An illusion of %s.\n",
+            "An illusion of " + get_ghost_description(mi) + ".\n", {{ghost, available}});
         break;
+    }
 
     case MONS_PANDEMONIUM_LORD:
         inf.body << _describe_demon(mi.mname, mi.airborne(), mi.ghost_colour) << "\n";
@@ -6718,23 +7769,31 @@ void get_monster_db_desc(const monster_info& mi, describe_info &inf,
 
     case MONS_BLOCK_OF_ICE:
         if (mi.is(MB_SLOWLY_DYING))
-            inf.body << "\nIt is quickly melting away.\n";
+            inf.body << ui_translate("d.describe", "\nIt is quickly melting away.\n");
         break;
 
     case MONS_BRIAR_PATCH: // death msg uses "crumbling"
     case MONS_PILLAR_OF_SALT:
         // XX why are these "quick" here but "slow" elsewhere??
         if (mi.is(MB_SLOWLY_DYING))
-            inf.body << "\nIt is quickly crumbling away.\n";
+            inf.body << ui_translate("d.describe", "\nIt is quickly crumbling away.\n");
         break;
 
     case MONS_FOXFIRE:
-        inf.body << "\nIt deals " << _desc_foxfire_dam(mi) << " fire damage.\n";
+    {
+        const string damage = _desc_foxfire_dam(mi);
+        inf.body << ui_render("d.monster.prose", "\nIt deals %s fire damage.\n",
+            "\nIt deals " + damage + " fire damage.\n", {ui_literal_arg(damage)});
         break;
+    }
 
     case MONS_SHOOTING_STAR:
-        inf.body << "\nIt deals " << _desc_shooting_star_dam(mi) << " damage.\n";
+    {
+        const string damage = _desc_shooting_star_dam(mi);
+        inf.body << ui_render("d.monster.prose", "\nIt deals %s damage.\n",
+            "\nIt deals " + damage + " damage.\n", {ui_literal_arg(damage)});
         break;
+    }
 
     case MONS_PROGRAM_BUG:
         inf.body << "If this monster is a \"program bug\", then it's "
@@ -6750,13 +7809,13 @@ void get_monster_db_desc(const monster_info& mi, describe_info &inf,
     if (mons_class_is_fragile(mi.type))
     {
         if (mi.is(MB_CRUMBLING))
-            inf.body << "\nIt is quickly crumbling away.\n";
+            inf.body << ui_translate("d.describe", "\nIt is quickly crumbling away.\n");
         else if (mi.is(MB_WITHERING))
-            inf.body << "\nIt is quickly withering away.\n";
+            inf.body << ui_translate("d.describe", "\nIt is quickly withering away.\n");
         else if (mi.holi & (MH_NONLIVING))
-            inf.body << "\nIf struck, it will crumble away soon after.\n";
+            inf.body << ui_translate("d.describe", "\nIf struck, it will crumble away soon after.\n");
         else
-            inf.body << "\nIf struck, it will die soon after.\n";
+            inf.body << ui_translate("d.describe", "\nIf struck, it will die soon after.\n");
     }
 
     if (!mons_is_unique(mi.type))
@@ -6775,11 +7834,15 @@ void get_monster_db_desc(const monster_info& mi, describe_info &inf,
     const int curse_power = mummy_curse_power(mi.type);
     if (curse_power && !mi.is(MB_SUMMONED))
     {
-        inf.body << "\n" << It << " will inflict a ";
+        ostringstream original;
+        original << "\n" << It << " will inflict a ";
         if (curse_power > 10)
-            inf.body << "powerful ";
-        inf.body << "necromantic curse on "
+            original << "powerful ";
+        original << "necromantic curse on "
                  << mi.pronoun(PRONOUN_POSSESSIVE) << " foe when destroyed.\n";
+        inf.body << ui_render("d.monster.prose", curse_power > 10
+            ? "\nIt will inflict a powerful necromantic curse on its foe when destroyed.\n"
+            : "\nIt will inflict a necromantic curse on its foe when destroyed.\n", original.str(), {});
     }
 
     // Get information on resistances, speed, etc.
@@ -6793,7 +7856,9 @@ void get_monster_db_desc(const monster_info& mi, describe_info &inf,
     bool did_stair_use = false;
     if (!mons_class_can_use_stairs(mi.type))
     {
-        inf.body << It << " " << is << " incapable of using stairs.\n";
+        inf.body << ui_render("d.monster.prose", "%s is incapable of using stairs.\n",
+            It + " " + is + " incapable of using stairs.\n",
+            {ui_text_arg("d.monster.pronoun", mi.pronoun_plurality() ? "they" : "it")});
         did_stair_use = true;
     }
 
@@ -6803,42 +7868,58 @@ void get_monster_db_desc(const monster_info& mi, describe_info &inf,
 
     if (mi.is(MB_SUMMONED))
     {
-        inf.body << "\nThis monster has been ";
+        ostringstream original;
+        original << "\nThis monster has been ";
 
         // XXX: Expand this for better descriptions of some other types of
         //      non-abjurable summons?
         if (mi.is(MB_ABJURABLE))
-            inf.body << "temporarily summoned to this location. ";
+            original << "temporarily summoned to this location. ";
         else if (mi.is(MB_MINION))
-            inf.body << "created by magic and is temporary. ";
+            original << "created by magic and is temporary. ";
 
         // TODO: hacks; convert angered_by_attacks to a monster_info check
         // (but on the other hand, it is really limiting to not have access
         // to the monster...)
-        if (!mi.pos.origin() && monster_at(mi.pos)
-                                && monster_at(mi.pos)->angered_by_attacks()
-                                && mi.attitude == ATT_FRIENDLY)
+        const bool angered = !mi.pos.origin() && monster_at(mi.pos)
+            && monster_at(mi.pos)->angered_by_attacks() && mi.attitude == ATT_FRIENDLY;
+        if (angered)
         {
-            inf.body << "If angered " << it
+            original << "If angered " << it
                                       << " will immediately vanish, yielding ";
         }
         else
-            inf.body << "Killing " << it_o << " yields ";
-        inf.body << "no experience or items";
+            original << "Killing " << it_o << " yields ";
+        original << "no experience or items";
 
         if (!did_stair_use)
-            inf.body << "; " << it << " " << is << " incapable of using stairs";
+            original << "; " << it << " " << is << " incapable of using stairs";
 
-        inf.body << ".\n";
+        original << ".\n";
+        const char *kind = mi.is(MB_ABJURABLE) ? "This monster has been temporarily summoned to this location."
+            : mi.is(MB_MINION) ? "This monster has been created by magic and is temporary."
+                              : "This monster has been summoned.";
+        const char *reward = angered ? "If angered it will immediately vanish, yielding no experience or items."
+                                    : "Killing it yields no experience or items.";
+        ui_translation_group group({{"d.monster.prose", kind}, {"d.monster.prose", reward}});
+        if (!did_stair_use) group.require("d.monster.prose", "It is incapable of using stairs.");
+        if (!group.available()) inf.body << original.str();
+        else
+        {
+            inf.body << "\n" << group.get("d.monster.prose", kind)
+                     << group.get("d.monster.prose", reward);
+            if (!did_stair_use) inf.body << group.get("d.monster.prose", "It is incapable of using stairs.");
+            inf.body << "\n";
+        }
     }
     else if (mi.is(MB_NO_REWARD))
-        inf.body << "\nKilling this monster yields no experience or items.";
+        inf.body << ui_translate("d.describe", "\nKilling this monster yields no experience or items.");
     else if (mons_class_leaves_hide(mi.type))
     {
-        inf.body << "\nIf " << it << " " << is <<
-                    " slain, it may be possible to recover "
-                 << mi.pronoun(PRONOUN_POSSESSIVE)
-                 << " hide, which can be used as armour.\n";
+        const string original = "\nIf " + it + " " + is
+            + " slain, it may be possible to recover " + mi.pronoun(PRONOUN_POSSESSIVE)
+            + " hide, which can be used as armour.\n";
+        inf.body << ui_render("d.monster.prose", "\nIf it is slain, it may be possible to recover its hide, which can be used as armour.\n", original, {});
     }
 
     if (!inf.quote.empty())
@@ -6962,7 +8043,7 @@ static formatted_string _get_monster_status_descriptions(const monster_info& mi)
         if (lookup.empty())
             continue;
 
-        out << "<w>" << uppercase_first(tag) << ":</w>\n";
+        out << "<w>" << uppercase_first(ui_translate("d.monster.state", tag.c_str())) << ":</w>\n";
 
         // Wordwrap and indent slightly.
         linebreak_string(lookup, 77);
@@ -7035,13 +8116,6 @@ int describe_monster(const monster_info &mi, const string& /*footer*/)
     desc_sw->current() = 0;
     more_sw->current() = 0;
 
-    const string mores[3] =
-    {
-        "[<w>!</w>]: <w>Description</w>",
-        "[<w>!</w>]: Description",
-        "[<w>!</w>]: Description",
-    };
-
     const formatted_string *content[3] = { &desc, &status_desc, &quote };
     const int num_modes = 1 + !status_desc.empty() + !inf.quote.empty();
 
@@ -7059,13 +8133,7 @@ int describe_monster(const monster_info &mi, const string& /*footer*/)
         scroller->set_child(text);
         desc_sw->add_child(std::move(scroller));
 
-        string more = make_stringf("%s%s%s", mores[i].c_str(),
-            !status_desc.empty()
-                ? i == 1 ? "|<w>Statuses</w>" : "|Statuses"
-                : "",
-            !inf.quote.empty()
-                ? i == 2 ? "|<w>Quote</w>" : "|Quote"
-                : "");
+        const string more = description_page_footer(i, !status_desc.empty(), !inf.quote.empty());
 
         more_sw->add_child(make_shared<Text>(
                 formatted_string::parse_string(more)));
@@ -7277,10 +8345,37 @@ string get_ghost_description(const monster_info &mi, bool concise)
     return gstr.str();
 }
 
+bool try_ghost_description_display(const monster_info &mi, string &output)
+{
+    if (Options.language != lang_t::ZH || mi.i_ghost.xl_rank < 0
+        || mi.i_ghost.xl_rank >= static_cast<int>(ARRAYSZ(xl_rank_names))
+        || mi.i_ghost.best_skill_rank < 0 || mi.i_ghost.best_skill_rank >= 5)
+        return false;
+    const auto &ghost = mi.i_ghost;
+    const species_def &sp = get_species_def(ghost.species);
+    ui_arg title{"", false};
+    const string reconstructed = skill_title_by_rank(ghost.best_skill, ghost.best_skill_rank,
+        ghost.species, sp.d, sp.s, sp.i, ghost.religion, 10 + ghost.xl_rank * 27, false, &title);
+    if (!ghost.title.empty() && ghost.title != reconstructed)
+        title = ui_text_arg("d.skill.title", ghost.title);
+    const ui_arg rank = ui_text_arg("d.ghost.rank", xl_rank_names[ghost.xl_rank]);
+    const ui_arg species = ui_text_arg("d.god.title.component", species::name(ghost.species));
+    const ui_arg job = ui_text_arg("display.creation", get_job_name(ghost.job));
+    const string text = ghost.religion == GOD_NO_GOD
+        ? ui_render("d.ghost", "%s the %s, a %s %s %s", "",
+            {ui_literal_arg(mi.mname), title, rank, species, job})
+        : ui_render("d.ghost", "%s the %s, a %s %s %s of %s", "",
+            {ui_literal_arg(mi.mname), title, rank, species, job,
+             ui_text_arg("display.god", god_name(ghost.religion))});
+    if (text.empty()) return false;
+    output = text;
+    return true;
+}
+
 void describe_skill(skill_type skill)
 {
     describe_info inf;
-    inf.title = skill_name(skill);
+    inf.title = ui_translate("display.skill", skill_name(skill));
     inf.body << get_skill_description(skill, false);
     tile_def tile = tile_def(tileidx_skill(skill, TRAINING_ENABLED));
     show_description(inf, &tile);
@@ -7353,7 +8448,7 @@ static void _maybe_note_armour_modifier(vector<vector<string>>& items,
         change[i] = base_ac * mult[i] / 100;
 
     vector<string> labels;
-    labels.push_back("Body Armour AC");
+    labels.push_back(ui_translate("d.describe", "Body Armour AC"));
 
     for (int i = 0; i < 3; ++i)
     {
@@ -7403,7 +8498,7 @@ static void _maybe_note_airstrike_damage(vector<vector<string>>& items,
     }
 
     vector<string> labels;
-    labels.push_back("Airstrike Dmg");
+    labels.push_back(ui_translate("d.describe", "Airstrike Dmg"));
     labels.push_back(make_stringf("(%d-%d)d%d", data[0][0].num, data[0][1].num, data[0][0].size));
     labels.push_back(make_stringf("(%d-%d)d%d", data[1][0].num, data[1][1].num, data[1][0].size));
     labels.push_back(make_stringf("(%d-%d)d%d", data[2][0].num, data[2][1].num, data[2][0].size));
@@ -7482,62 +8577,62 @@ static string _describe_talisman_form(transformation form_type)
     const int skill[3] = {form->min_skill, form->max_skill, -1};
     vector<vector<string>> items;
 
-    items.push_back({" ", "Min", "Max", "Cur"});
+    items.push_back({" ", ui_translate("d.form", "Min"), ui_translate("d.form", "Max"), ui_translate("d.form", "Cur")});
 
     const int shapeshifting = you.skill(SK_SHAPESHIFTING, 10);
     const string skill_string = make_stringf("%d.%d", shapeshifting / 10, shapeshifting % 10);
     const string cur_skill = (shapeshifting < 10*form->min_skill ? make_stringf("<red>%s</red>", skill_string.c_str())
                              : (shapeshifting >= 10*form->max_skill ? make_stringf("[%d]", form->max_skill)
                              : skill_string));
-    items.push_back({"Skill", to_string(skill[0]), to_string(skill[1]), cur_skill});
+    items.push_back({ui_translate("d.form", "Skill"), to_string(skill[0]), to_string(skill[1]), cur_skill});
 
-    _maybe_populate_form_table(items, bind(&Form::mult_hp, form, 100, true, placeholders::_1), "HP", skill, -100, true, true, 1);
-    _maybe_populate_form_table(items, bind(&Form::get_base_unarmed_damage, form, false, placeholders::_1), "UC Base Dmg", skill, -3);
-    _maybe_populate_form_table(items, bind(&Form::get_ac_bonus, form, placeholders::_1), "AC", skill, 0, false, true, 100, 1);
-    _maybe_populate_form_table(items, bind(&Form::ev_bonus, form, placeholders::_1), "EV", skill, 0, false, true, 100, 1);
-    _maybe_populate_form_table(items, bind(&Form::max_mp_bonus, form, placeholders::_1), "MP", skill);
-    _maybe_populate_form_table(items, bind(&Form::slay_bonus, form, false, placeholders::_1), "Slay", skill);
-    _maybe_populate_form_table(items, bind(&Form::regen_bonus, form, placeholders::_1), "Regen", skill, 0, false, true, 100, 2);
-    _maybe_populate_form_table(items, bind(&Form::mp_regen_bonus, form, placeholders::_1), "MP Regen", skill, 0, false, true, 100, 2);
-    _maybe_populate_form_table(items, bind(&Form::get_web_chance, form, placeholders::_1), "Ensnare Chance", skill, 0, true, false);
+    _maybe_populate_form_table(items, bind(&Form::mult_hp, form, 100, true, placeholders::_1), ui_translate("d.form", "HP"), skill, -100, true, true, 1);
+    _maybe_populate_form_table(items, bind(&Form::get_base_unarmed_damage, form, false, placeholders::_1), ui_translate("d.describe", "UC Base Dmg"), skill, -3);
+    _maybe_populate_form_table(items, bind(&Form::get_ac_bonus, form, placeholders::_1), ui_translate("d.form", "AC"), skill, 0, false, true, 100, 1);
+    _maybe_populate_form_table(items, bind(&Form::ev_bonus, form, placeholders::_1), ui_translate("d.form", "EV"), skill, 0, false, true, 100, 1);
+    _maybe_populate_form_table(items, bind(&Form::max_mp_bonus, form, placeholders::_1), ui_translate("d.form", "MP"), skill);
+    _maybe_populate_form_table(items, bind(&Form::slay_bonus, form, false, placeholders::_1), ui_translate("d.form", "Slay"), skill);
+    _maybe_populate_form_table(items, bind(&Form::regen_bonus, form, placeholders::_1), ui_translate("d.form", "Regen"), skill, 0, false, true, 100, 2);
+    _maybe_populate_form_table(items, bind(&Form::mp_regen_bonus, form, placeholders::_1), ui_translate("d.describe", "MP Regen"), skill, 0, false, true, 100, 2);
+    _maybe_populate_form_table(items, bind(&Form::get_web_chance, form, placeholders::_1), ui_translate("d.describe", "Ensnare Chance"), skill, 0, true, false);
     _maybe_note_armour_modifier(items, *form, skill);
 
-    _maybe_note_form_dice(items, bind(&Form::get_special_damage, form, false, placeholders::_1), form->special_dice_name, skill,
+    _maybe_note_form_dice(items, bind(&Form::get_special_damage, form, false, placeholders::_1), ui_translate("f.form.label", form->special_dice_name.c_str()), skill,
                           form_type == transformation::dragon && !species::is_draconian(you.species) ? " (x2)" : "");
 
     if (form_type == transformation::maw)
     {
-        _maybe_populate_form_table(items, bind(&Form::get_aux_damage, form, false, placeholders::_1), "Bite Dmg", skill, 0, false, false);
-        _maybe_populate_form_table(items, bind(&Form::get_effect_size, form, placeholders::_1), "Devour Regen", skill, 0, false, true, 100, 2);
+        _maybe_populate_form_table(items, bind(&Form::get_aux_damage, form, false, placeholders::_1), ui_translate("d.describe", "Bite Dmg"), skill, 0, false, false);
+        _maybe_populate_form_table(items, bind(&Form::get_effect_size, form, placeholders::_1), ui_translate("d.describe", "Devour Regen"), skill, 0, false, true, 100, 2);
     }
     if (form_type == transformation::blade)
     {
-        _maybe_populate_form_table(items, bind(&Form::get_aux_damage, form, false, placeholders::_1), "Blade Dmg", skill, 0, false, false);
-        _maybe_populate_form_table(items, bind(&Form::get_effect_size, form, placeholders::_1), "Parry SH", skill, 0, false, false);
+        _maybe_populate_form_table(items, bind(&Form::get_aux_damage, form, false, placeholders::_1), ui_translate("d.describe", "Blade Dmg"), skill, 0, false, false);
+        _maybe_populate_form_table(items, bind(&Form::get_effect_size, form, placeholders::_1), ui_translate("d.describe", "Parry SH"), skill, 0, false, false);
     }
     if (form_type == transformation::hive)
-        _maybe_populate_form_table(items, bind(&Form::get_effect_size, form, placeholders::_1), "# of Bees", skill, 0, false, false, 10, 1);
+        _maybe_populate_form_table(items, bind(&Form::get_effect_size, form, placeholders::_1), ui_translate("d.describe", "# of Bees"), skill, 0, false, false, 10, 1);
     if (form_type == transformation::sphinx)
         _maybe_note_airstrike_damage(items, skill);
     if (form_type == transformation::werewolf)
     {
-        _maybe_populate_form_table(items, bind(&Form::get_werefury_kill_bonus, form, placeholders::_1), "+Slay/Kill", skill, 0, false, false, 10, 1);
-        _maybe_populate_form_table(items, bind(&Form::get_takedown_multiplier, form, placeholders::_1), "Takedown Dmg", skill, 0, true, true);
-        _maybe_populate_form_table(items, bind(&Form::get_howl_power, form, placeholders::_1), "Howl Power", skill, 0, false, false);
+        _maybe_populate_form_table(items, bind(&Form::get_werefury_kill_bonus, form, placeholders::_1), ui_translate("d.describe", "+Slay/Kill"), skill, 0, false, false, 10, 1);
+        _maybe_populate_form_table(items, bind(&Form::get_takedown_multiplier, form, placeholders::_1), ui_translate("d.describe", "Takedown Dmg"), skill, 0, true, true);
+        _maybe_populate_form_table(items, bind(&Form::get_howl_power, form, placeholders::_1), ui_translate("d.describe", "Howl Power"), skill, 0, false, false);
     }
     if (form_type == transformation::walking_scroll)
-        _maybe_populate_form_table(items, bind(walking_scroll_skill_bonus, 10, placeholders::_1), "Spell Skill Boost", skill, 0, false, true, 10, 1);
+        _maybe_populate_form_table(items, bind(walking_scroll_skill_bonus, 10, placeholders::_1), ui_translate("d.describe", "Spell Skill Boost"), skill, 0, false, true, 10, 1);
     if (form_type == transformation::fortress_crab)
-        _maybe_populate_form_table(items, bind(&Form::get_effect_size, form, placeholders::_1), "Rust Breath Size", skill, 0, false, false);
+        _maybe_populate_form_table(items, bind(&Form::get_effect_size, form, placeholders::_1), ui_translate("d.describe", "Rust Breath Size"), skill, 0, false, false);
     if (form_type == transformation::medusa)
     {
-        _maybe_populate_form_table(items, bind(&Form::get_effect_size, form, placeholders::_1), "Tendril targets", skill, 0, false, false, 10, 1);
-        _maybe_populate_form_table(items, bind(&Form::get_effect_chance, form, placeholders::_1), "Petrify chance", skill, 0, true, false);
+        _maybe_populate_form_table(items, bind(&Form::get_effect_size, form, placeholders::_1), ui_translate("d.describe", "Tendril targets"), skill, 0, false, false, 10, 1);
+        _maybe_populate_form_table(items, bind(&Form::get_effect_chance, form, placeholders::_1), ui_translate("d.describe", "Petrify chance"), skill, 0, true, false);
     }
     if (form_type == transformation::vampire)
     {
-        _maybe_populate_form_table(items, bind(&Form::get_effect_size, form, placeholders::_1), "Bat Swarm Recharge", skill, 0, true, false);
-        _maybe_populate_form_table(items, bind(&Form::get_effect_chance, form, placeholders::_1), "Daze Power", skill, 0, false, false);
+        _maybe_populate_form_table(items, bind(&Form::get_effect_size, form, placeholders::_1), ui_translate("d.describe", "Bat Swarm Recharge"), skill, 0, true, false);
+        _maybe_populate_form_table(items, bind(&Form::get_effect_chance, form, placeholders::_1), ui_translate("d.describe", "Daze Power"), skill, 0, false, false);
     }
 
     vector<int> column_width;
@@ -7579,17 +8674,17 @@ static string _describe_talisman_form(transformation form_type)
     description << "<white>" << lines[3].to_colour_string() << "<lightgrey>\n";
 
     if (form->holiness)
-        description << "\nClass: " << uppercase_first(holiness_description(form->holiness));
+        description << ui_translate("d.form", "\nClass: ") << uppercase_first(holiness_description(form->holiness));
 
     // Now add various one-off bits of (generally non-scaling) data after that
     TablePrinter pr(4, 80);
     pr.AddRow();
 
     if (form->size != SIZE_CHARACTER)
-        pr.AddCell("Size", uppercase_first(get_size_adj(form->size)));
+        pr.AddCell(ui_translate("d.form", "Size"), uppercase_first(get_size_adj(form->size)));
 
-    _desc_form_val(pr, "Str", form->str_mod);
-    _desc_form_val(pr, "Dex", form->dex_mod);
+    _desc_form_val(pr, ui_translate("d.form", "Str"), form->str_mod);
+    _desc_form_val(pr, ui_translate("d.form", "Dex"), form->dex_mod);
 
     _desc_form_resist(pr, MR_RES_FIRE, form->res_fire());
     _desc_form_resist(pr, MR_RES_COLD, form->res_cold());
@@ -7608,42 +8703,42 @@ static string _describe_talisman_form(transformation form_type)
     // Various ad hoc properties of individual forms
     if (form_type == transformation::statue)
     {
-        pr.AddCell("Melee dmg", "+50%");
-        pr.AddCell("EV", "-20%", RED);
+        pr.AddCell(ui_translate("d.describe", "Melee dmg"), "+50%");
+        pr.AddCell(ui_translate("d.form", "EV"), "-20%", RED);
     }
     else if (form_type == transformation::maw)
-        pr.AddCell("Bite speed", "15 aut");
+        pr.AddCell(ui_translate("d.describe", "Bite speed"), "15 aut");
     else if (form_type == transformation::eel_hands)
-        pr.AddCell("Elec chance", "50%");
+        pr.AddCell(ui_translate("d.describe", "Elec chance"), "50%");
     else if (form_type == transformation::blade)
-        pr.AddCell("Aux chance", "60% (x2)");
+        pr.AddCell(ui_translate("d.describe", "Aux chance"), "60% (x2)");
     else if (form_type == transformation::death)
-        pr.AddCell("Will", "+");
+        pr.AddCell(ui_translate("d.form", "Will"), "+");
     else if (form_type == transformation::vampire)
-        pr.AddCell("Stealth", "++");
+        pr.AddCell(ui_translate("d.form", "Stealth"), "++");
     else if (form_type == transformation::spider)
-        pr.AddCell("Stealth", "+");
+        pr.AddCell(ui_translate("d.form", "Stealth"), "+");
     else if (form_type == transformation::aqua)
-        pr.AddCell("Reach", "+2");
+        pr.AddCell(ui_translate("d.form", "Reach"), "+2");
     else if (form_type == transformation::sphinx)
     {
         if (!you.has_mutation(MUT_NO_ARMOUR))
-            pr.AddCell("Barding", "Yes");
-        pr.AddCell("Will", "+");
+            pr.AddCell(ui_translate("d.form", "Barding"), ui_translate("d.form", "Yes"));
+        pr.AddCell(ui_translate("d.form", "Will"), "+");
     }
     else if (form_type == transformation::werewolf)
     {
-        pr.AddCell("Will", "-", RED);
-        pr.AddCell("Claws", "3");
+        pr.AddCell(ui_translate("d.form", "Will"), "-", RED);
+        pr.AddCell(ui_translate("d.form", "Claws"), "3");
     }
     else if (form_type == transformation::walking_scroll
              || form_type == transformation::flux)
     {
-        pr.AddCell("Melee damage", "-50%", RED);
+        pr.AddCell(ui_translate("d.describe", "Melee damage"), "-50%", RED);
     }
 
     if (form_type == transformation::vampire || form_type == transformation::sphinx)
-        pr.AddCell("SInv", "+");
+        pr.AddCell(ui_translate("d.form", "SInv"), "+");
 
     // Don't output extra blank lines if there's no content.
     if (pr.NumCells() > 0)
@@ -7653,26 +8748,26 @@ static string _describe_talisman_form(transformation form_type)
     }
 
     // Melding info
-    string meld_desc = form->melding_description(true);
+    string meld_desc = form->display_melding_description(true);
     if (!meld_desc.empty())
-        description << "\nMelds: " << meld_desc << "\n";
+        description << ui_translate("d.form", "\nMelds: ") << meld_desc << "\n";
 
     // Mutation suppression info
     vector<string> changes;
     if (form->changes_anatomy)
-        changes.emplace_back("Anatomy");
+        changes.emplace_back(ui_translate("d.form", "Anatomy"));
     if (form->changes_substance)
-        changes.emplace_back("Substance");
+        changes.emplace_back(ui_translate("d.form", "Substance"));
     if (form->has_blood == FC_FORBID)
-        changes.emplace_back("Blood");
+        changes.emplace_back(ui_translate("d.form", "Blood"));
     if (form->has_bones == FC_FORBID)
-        changes.emplace_back("Bones");
+        changes.emplace_back(ui_translate("d.form", "Bones"));
     if (form_type == transformation::eel_hands)
-        changes.emplace_back("Hands");
+        changes.emplace_back(ui_translate("d.form", "Hands"));
 
     if (!changes.empty())
     {
-        description << "\nMutations Suppressed: "
+        description << ui_translate("d.form", "\nMutations Suppressed: ")
                     << comma_separated_line(changes.begin(), changes.end(), ", ")
                     << "\n";
     }
@@ -7731,7 +8826,18 @@ string extra_cloud_info(cloud_type cloud_type)
         = make_stringf("\nClouds of this kind an adventurer makes will vanish"
                        " %s once outside their sight.\n",
                        opaque ? "quickly" : "almost instantly");
-    return opacity_info + vanish_info;
+    const string original = opacity_info + vanish_info;
+    const char *vanish = opaque
+        ? "\nClouds of this kind an adventurer makes will vanish quickly once outside their sight.\n"
+        : "\nClouds of this kind an adventurer makes will vanish almost instantly once outside their sight.\n";
+    ui_translation_group group({{"c.cloud.info", vanish}});
+    if (opaque)
+        group.require("c.cloud.info", "\nThis cloud is opaque; one tile will not block vision, but multiple will.\n");
+    if (!group.available())
+        return original;
+    return (opaque ? string(group.get("c.cloud.info",
+        "\nThis cloud is opaque; one tile will not block vision, but multiple will.\n")) : "")
+        + group.get("c.cloud.info", vanish);
 }
 
 string player_species_name()

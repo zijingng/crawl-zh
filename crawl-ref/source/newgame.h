@@ -16,8 +16,16 @@ using std::vector;
 class UINewGameMenu;
 struct menu_letter;
 struct newgame_def;
+struct player_save_info;
 
 string newgame_char_description(const newgame_def& ng);
+string newgame_char_display_description(const newgame_def& ng);
+struct ui_arg;
+ui_arg newgame_char_display_arg(const newgame_def& ng);
+string save_character_display(const player_save_info &save, bool short_form = false,
+                               bool use_qualifier = true);
+string character_welcome_display(bool game_start, const string &name,
+                                  species_type species, job_type job);
 
 void choose_tutorial_character(newgame_def& ng_choice);
 

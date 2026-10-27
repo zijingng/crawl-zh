@@ -1,4 +1,6 @@
 #include "AppHdr.h"
+#include "t-display.h"
+#include "i18n.h"
 
 #ifdef USE_TILE_LOCAL
 
@@ -368,18 +370,24 @@ bool TilesFramework::initialise()
     calculate_default_options();
 
     m_crt_font    = load_font(Options.tile_font_crt_file.c_str(),
-                              Options.tile_font_crt_size, true);
+                              Options.tile_font_crt_size, true, true,
+                              Options.tile_font_crt_fallback_file);
     m_msg_font    = load_font(Options.tile_font_msg_file.c_str(),
-                              Options.tile_font_msg_size, true);
+                              Options.tile_font_msg_size, true, true,
+                              Options.tile_font_msg_fallback_file);
     m_stat_font   = load_font(Options.tile_font_stat_file.c_str(),
-                              Options.tile_font_stat_size, true);
+                              Options.tile_font_stat_size, true, true,
+                              Options.tile_font_stat_fallback_file);
     m_tip_font    = load_font(Options.tile_font_tip_file.c_str(),
-                              Options.tile_font_tip_size, true);
+                              Options.tile_font_tip_size, true, true,
+                              Options.tile_font_tip_fallback_file);
     m_lbl_font    = load_font(Options.tile_font_lbl_file.c_str(),
-                              Options.tile_font_lbl_size, true);
+                              Options.tile_font_lbl_size, true, true,
+                              Options.tile_font_lbl_fallback_file);
     // XX separate option?
     m_glyph_font  = load_font(Options.tile_font_crt_file.c_str(),
-                              Options.tile_font_crt_size, true, false);
+                              Options.tile_font_crt_size, true, false,
+                              Options.tile_font_crt_fallback_file);
 
     if (!fonts_initialized())
         return false;
@@ -399,11 +407,11 @@ bool TilesFramework::initialise()
                                       ARRAYSZ(ct_action_commands));
     m_region_cmd_meta = new CommandRegion(m_init, ct_system_commands,
                                           ARRAYSZ(ct_system_commands),
-                                          "System Commands",
-                                          "Execute system commands");
+                                          ui_translate("t.tiles", "System Commands"),
+                                          ui_translate("t.tiles", "Execute system commands"));
     m_region_cmd_map = new CommandRegion(m_init, ct_map_commands,
                                          ARRAYSZ(ct_map_commands),
-                                         "Navigation", "Navigate around map");
+                                         ui_translate("t.tiles", "Navigation"), ui_translate("t.tiles", "Navigate around map"));
 
     TAB_ITEM    = m_region_tab->push_tab_region(m_region_inv, TILEG_TAB_ITEM);
     TAB_SPELL   = m_region_tab->push_tab_region(m_region_spl, TILEG_TAB_SPELL);
@@ -444,13 +452,15 @@ void TilesFramework::reconfigure_fonts()
 }
 
 FontWrapper* TilesFramework::load_font(const char *font_file, int font_size,
-                              bool default_on_fail, bool use_cached)
+                              bool default_on_fail, bool use_cached,
+                              const string &fallback_file)
 {
     if (use_cached)
         for (unsigned int i = 0; i < m_fonts.size(); i++)
         {
             font_info &finfo = m_fonts[i];
-            if (finfo.name == font_file && finfo.size == font_size)
+            if (finfo.name == font_file && finfo.size == font_size
+                && finfo.fallback_name == fallback_file)
                 return finfo.font;
         }
 
@@ -472,9 +482,13 @@ FontWrapper* TilesFramework::load_font(const char *font_file, int font_size,
             return nullptr;
     }
 
+    if (!fallback_file.empty())
+        font->load_fallback(fallback_file.c_str());
+
     font_info finfo;
     finfo.font = font;
     finfo.name = font_file;
+    finfo.fallback_name = fallback_file;
     finfo.size = font_size;
     m_fonts.push_back(finfo);
 
@@ -1042,7 +1056,7 @@ void TilesFramework::zoom_dungeon(bool in)
     do_layout(); // recalculate the viewport setup
     redraw_screen(false);
     if (current_scale != orig)
-        mprf(MSGCH_PROMPT, "Zooming to %.2f", (float) current_scale);
+        mprf(MSGCH_PROMPT, ui_translate("t.ui", "Zooming to %.2f"), (float) current_scale);
     update_screen();
 #endif
 }
@@ -1474,14 +1488,7 @@ void TilesFramework::add_text_tag(text_tag_type /*type*/, const monster_info& mo
 
     const coord_def &gc = mon.pos;
 
-    if (mons_is_pghost(mon.type))
-    {
-        // Beautification hack. "Foo's ghost" is a little bit
-        // verbose as a tag. "Foo" on its own should be sufficient.
-        tiles.add_text_tag(TAG_NAMED_MONSTER, mon.mname, gc);
-    }
-    else
-        tiles.add_text_tag(TAG_NAMED_MONSTER, mon.proper_name(DESC_PLAIN), gc);
+    tiles.add_text_tag(TAG_NAMED_MONSTER, mon.display_name_tag(), gc);
 }
 
 const coord_def &TilesFramework::get_cursor() const

@@ -1,4 +1,6 @@
 #include "AppHdr.h"
+#include "t-display.h"
+#include "mon-info.h"
 
 #include "target.h"
 
@@ -31,7 +33,29 @@
 #include "stringutil.h"
 #include "terrain.h"
 
-#define notify_fail(x) (why_not = (x), false)
+#define notify_fail(x) fail(x)
+
+bool targeter::fail(const string &original, const string &display)
+{
+    why_not = original;
+    display_failure_source = original;
+    display_failure = display;
+    return false;
+}
+
+string targeter::display_why_not() const
+{
+    if (ui_text_arg("t.target", "Out of range.").available
+        && why_not == display_failure_source && !display_failure.empty())
+        return display_failure;
+    for (const char *context : {"t.target", "s.reason", "s.ui", "p.clause", "d.target"})
+    {
+        const ui_arg text = ui_text_arg(context, why_not);
+        if (text.available)
+            return text.text;
+    }
+    return why_not;
+}
 
 static string _wallmsg(coord_def c)
 {
@@ -438,7 +462,7 @@ bool targeter_smite::valid_aim(coord_def a)
     if ((origin - a).rdist() > range)
         return notify_fail("Out of range.");
     if (!can_affect_walls() && cell_is_solid(a) && !anyone_there(a))
-        return notify_fail(_wallmsg(a));
+        return fail(_wallmsg(a), ui_render("t.target", "There is %s there.", "", {s_feature_arg(env.grid(a))}));
     if (!can_target_monsters && monster_at(a) && you.can_see(*monster_at(a))
         // XXX: To let Paragon Tempest be cast without moving the Paragon.
         && monster_at(a) != agent)
@@ -521,7 +545,11 @@ targeter_walljump::targeter_walljump() :
 
 bool targeter_walljump::valid_aim(coord_def a)
 {
-    return wu_jian_can_wall_jump(a, why_not);
+    string display;
+    const bool valid = wu_jian_can_wall_jump(a, why_not, &display);
+    if (!valid)
+        fail(why_not, display);
+    return valid;
 }
 
 aff_type targeter_walljump::is_affected(coord_def loc)
@@ -693,8 +721,8 @@ bool targeter_transference::valid_aim(coord_def a)
     {
         if (mons_is_hepliaklqana_ancestor(victim->type))
         {
-            return notify_fail("You can't transfer your ancestor with "
-                               + victim->pronoun(PRONOUN_REFLEXIVE) + ".");
+            return fail("You can't transfer your ancestor with "
+                               + victim->pronoun(PRONOUN_REFLEXIVE) + ".", ui_translate("t.target", "You cannot transfer your ancestor with themself."));
         }
         if (mons_is_tentacle_or_tentacle_segment(victim->type)
             || victim->is_stationary())
@@ -747,8 +775,19 @@ bool targeter_inner_flame::valid_aim(coord_def a)
     if (!targeter_smite::valid_aim(a))
         return false;
 
-    if (!mons_inner_flame_immune_reason(monster_at(a)).empty())
-        return notify_fail(mons_inner_flame_immune_reason(monster_at(a)));
+    const monster *mon = monster_at(a);
+    const string reason = mons_inner_flame_immune_reason(mon);
+    if (!reason.empty())
+    {
+        if (mon && you.can_see(*mon))
+        {
+            const char *key = mon->has_ench(ENCH_INNER_FLAME)
+                ? "%s is already burning with an inner flame!"
+                : "%s has infinite will and cannot be affected.";
+            return fail(reason, ui_render("t.target", key, "", {ui_actor_arg(*mon)}));
+        }
+        return notify_fail(reason);
+    }
 
     return true;
 }
@@ -798,14 +837,14 @@ bool targeter_unravelling::valid_aim(coord_def a)
     const monster* mons = monster_at(a);
     if (mons && you.can_see(*mons) && !_unravelling_explodes_at(a))
     {
-        return notify_fail(mons->name(DESC_THE) + " has no magical effects to "
-                           "unravel.");
+        return fail(mons->name(DESC_THE) + " has no magical effects to "
+                           "unravel.", ui_render("t.target", "%s has no magical effects to unravel.", "", {ui_actor_arg(*mons)}));
     }
 
     if (mons && you.can_see(*mons) && _unravelling_explodes_at(a)
         && !could_harm(&you, mons))
     {
-        return notify_fail("You cannot do harm to " + mons->name(DESC_THE));
+        return fail("You cannot do harm to " + mons->name(DESC_THE), ui_render("t.target", "You cannot do harm to %s", "", {ui_actor_arg(*mons)}));
     }
 
     return true;
@@ -1084,7 +1123,7 @@ bool targeter_cloud::valid_aim(coord_def a)
         return notify_fail("You cannot see that place.");
     }
     if (cell_is_solid(a))
-        return notify_fail(_wallmsg(a));
+        return fail(_wallmsg(a), ui_render("t.target", "There is %s there.", "", {s_feature_arg(env.grid(a))}));
     if (agent)
     {
         const cloud_struct *cloud = cloud_at(a);
@@ -1988,8 +2027,8 @@ bool targeter_poisonous_vapours::valid_aim(coord_def a)
     const monster_info *mon = env.map_knowledge(a).monsterinfo();
     if (mon && !affects_monster(*mon))
     {
-        return notify_fail(mon->full_name(DESC_THE) + " cannot be affected by "
-                           "poisonous vapours.");
+        return fail(mon->full_name(DESC_THE) + " cannot be affected by "
+                           "poisonous vapours.", ui_render("t.target", "%s cannot be affected by poisonous vapours.", "", {t_monster_info_arg(*mon)}));
     }
 
     return true;

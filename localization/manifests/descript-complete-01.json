@@ -1,0 +1,3050 @@
+{
+  "baseline": "0.34.1",
+  "entries": [
+    {
+      "source": "descript/items.txt",
+      "key": "book of air",
+      "source_sha256": "e1c0d81676f66e83f3366dc7f3d52f8055b6f8d5e9189a1f672a63113ad45e9e",
+      "translation_sha256": "d79759f00ce511127ef3b4d3838438595e9739ee9d70238412c98acb3fae1b1a",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of armaments",
+      "source_sha256": "8785fe73410c5b807f142859a653a5b4cf37bfe8690c531a87b151f31806d045",
+      "translation_sha256": "8e228ec005d4a341e32966de2667b0e0ca377e602d905533d3ce7e180a01f3a5",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of battle",
+      "source_sha256": "d507de338d73d77c98f7d812ac2a2f3163ab58586daef2f6b952e43cdb8270b6",
+      "translation_sha256": "8f2955f3c24d04de269ca313595f55e3400e63bea9518b811d3f6181abd1c2ba",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of blasting",
+      "source_sha256": "007444134518bdcb80efaa4492f99700fe15b3cdb8fd8fc2f32a9349c5abe7d7",
+      "translation_sha256": "6d02eefc0154bb410ce11c4f2e000df395a208de3975cfcae009af0b70d99ae5",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of blood",
+      "source_sha256": "b4bde863705c787df4467b0afc2c1b317bea952b6ede7f21b213992cebeb30f2",
+      "translation_sha256": "ea731cd7adb4877c5f8e5fc0977294a793a3a60e9a6ed67e115a60b447a78f11",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of cantrips",
+      "source_sha256": "9c87031fa4ba1d0021d24cf32b23886b820588cc25a7d48f07794e7f299fb4e2",
+      "translation_sha256": "6e5465f6f1f90325ec5a1f72275561084e3a986e7701915ff18af9b37f48129e",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of chaos",
+      "source_sha256": "b7c552e939e7c312d0828d9d61c05521a1a4d48478355e614048fdb720d7b37b",
+      "translation_sha256": "15f837ac7a6947bd0f5215bb29edbd0d1ca840ba17b162a030ca4084ed0b432c",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of contraptions",
+      "source_sha256": "97a34ed47c7cf03c42928a2f2a5cce161befbce2ae0856c71c45c35a784efd45",
+      "translation_sha256": "e4de0dbcb54168b1d41430586a4b99f958c09a8db807fd68ec804cd6c474407e",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of cryoformation",
+      "source_sha256": "600a7894dac2e0db47a3f96f6764d47acf5acbe0130b0ad267a1be1896009b6b",
+      "translation_sha256": "8e054c67663d5dc55bfc35e3dde456aab88223a4d663ea4cee008565f158d806",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of debilitation",
+      "source_sha256": "e7e75d0f4412831ae4f86d467f5f6d795681f5719db0cce02138d1785d85fad0",
+      "translation_sha256": "584a24e4744e7edd454659be9e38dec93611a7c5974263f1e6cd696e63820689",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of decay",
+      "source_sha256": "1e8d71165cae37932d13d6e57b952dfd44680bf741473affbfc9160d9dd01963",
+      "translation_sha256": "c8dbf788132db4c447cae341f07d0e3f1f07a1af9a2f383e9d232af44311bd2a",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of duality",
+      "source_sha256": "cab54399c64205a113e1ffb1f3ae777329b26a640560b5b24eb75a60c97d9b48",
+      "translation_sha256": "670237c79f3b38718a4177d36e2ea0ee43e45018438b7e85da48f3ebd1ff25e9",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of frost",
+      "source_sha256": "fe39cbad4672253ca49a98c2bee4f1e9165f6ef27c3b627a0df11ef2ed8785f1",
+      "translation_sha256": "48637ae8a4ccf1114cd709a29503a1e3774498a50e1d372c2ef2e4fb39ed7319",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of maladies",
+      "source_sha256": "007363ef86d331217f84c7c5ca09a7b49c9bed7805a4a6302ea7e0217610cf56",
+      "translation_sha256": "3266d95e7329d33ef8d759f98415830faeb0cb0e32581ff04acd02de6884f757",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of metalworking",
+      "source_sha256": "5a4601b73b12a7ebd03bf99768db8b8ffc4863df19a399dabe38d4ce0af7a4d1",
+      "translation_sha256": "03e11e8e49e00375dda93cf65e4305f69240c157e4855f6d2c8a082130872f8e",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of misfortune",
+      "source_sha256": "9f860524333d48f257f386477d6a0bf5aa4b3f0e116b9b1bce1c2c9a9b3c034e",
+      "translation_sha256": "d12cfd1deaef4d2bfe2d8f89cfd196fa9997ec8b0a488a6f3a34bee79a8674bd",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of movement",
+      "source_sha256": "5398571203c65834a9a15e058157fe339992f92f5d97287d97406032caddc1eb",
+      "translation_sha256": "4803738a7ad343f12ab79c35dfcbaacea92db5156e2acd4f19e4d61a7c0cbd46",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of party tricks",
+      "source_sha256": "a7636ca15326581fa9593d927845406c47619b244e11ea433e598478c30d9d8e",
+      "translation_sha256": "bd52efd55fe2745f0fba1b33579abdd8b6854b7cfdd228cdfbc00b0e33f76cac",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of scorching",
+      "source_sha256": "878240fcba4e78d65c34dd401fcf51e9b69d47c63d6da364a4b47e18306c4dc6",
+      "translation_sha256": "f1fdb88982af26230780d8e2ebfbe62fb951dc589e8f00e09d52b15b5b9fb0b8",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of spontaneous combustion",
+      "source_sha256": "7fb56e5338cf1d02503890d15c6cb5edc7b8761941404bed9ef68b5111dfd11f",
+      "translation_sha256": "f7b3a347717e24e9699fabd9fe5dcf7492f6789fc0e250cdec30a6ec1907aad5",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of storms",
+      "source_sha256": "ed531c4c6f556f34378a5a2d6d676be0b548ef92978eaf1452f23fcac1e81e56",
+      "translation_sha256": "b13359ed47cfbb58d0bfc36f53b48470104657ae8e57d5bed500dfb63c11f369",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of the earth",
+      "source_sha256": "3636c40f710ce3ff37830f8ea614b9ae3c9d248572e885af62dc3f538e123e41",
+      "translation_sha256": "957090d6cf1a62eee947d878fe360e91666171ef6ae5961273c4aa848d06e719",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of the fortress",
+      "source_sha256": "6647a7b5693e53b41c0764ad2a41a98d9f5fded4d8688c4c8f2d550b425978f5",
+      "translation_sha256": "80ffe6914ed5fc5bbf1150e0e6e46556b5cc5b75324dda254c9ba8ee63469850",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of the grave",
+      "source_sha256": "018a59cfe7cdad3e8674c5007428a2c5c02bcb7d83e149ff7176e95ffaf4b59a",
+      "translation_sha256": "13ac9dd2ec598f33923052f8ea33f554d3778f19e988541e87568f1d7879fca5",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of the hunter",
+      "source_sha256": "a3cb796658bb72abc3d0bef6c9617895a77c6ac3ee96911fc8e47c03b87f8864",
+      "translation_sha256": "54f2f7480679c24b501b31ad41eb6faee81e63a5b75f7ffac11f375bc2d42aa5",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of the moon",
+      "source_sha256": "9db2c45c29666599b3f77cc21a036225dcfff596366efcad9caf36da5d4c6aa6",
+      "translation_sha256": "fc75fcf8e8dbfc79b1d0eac40bd7ec31f3db3e94533710f0721b5b528fd13f45",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of the senses",
+      "source_sha256": "e670eeafd2a0f5f5c16c2fb0852efe93dc3ab51d05d8ba64b5b3335d7bf46bd9",
+      "translation_sha256": "f97dff059e1c67f8bfc92257d090d9c25fd83390d40b2c49ec4dbf0bf3942390",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of the spheres",
+      "source_sha256": "e977e10bb860ca2822970f6c646754128bfa61c24107dc250da25d17430ce22d",
+      "translation_sha256": "4508594ed4a733bb3a0f8ba2f857f01553532ea8eac722f79fc7b31f8fc13706",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of the tundra",
+      "source_sha256": "683de79fe8ce32f2bda9b1352d3f4292330265a569272e164340fc81db8a3b61",
+      "translation_sha256": "8a5aa3dfba28b1fe94db6e4b48397f29faebb224bb03f79cf33842b44ac20456",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of the warp",
+      "source_sha256": "acbcf2b2007a6b6d7ed7f8651f264031f3abc5318218e8cd7cebc4ffad935a04",
+      "translation_sha256": "41fb2fa6d3295aa67ecf898b55b34b516f37ea5160ae5ac24ea751532eaa86db",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of the wilderness",
+      "source_sha256": "d2782862d8c1aafe9020a9859ee832c0c06a603f33691874aa8820fbb0f6ec14",
+      "translation_sha256": "089aaebf30ba5af8fbf24b65363361043ecfbb416114a7de1e3314101384e5ce",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of touch",
+      "source_sha256": "8ab1f501ade874d550cd8d58399f52660db9483759fd56c86db8f451ec333b86",
+      "translation_sha256": "e0bd522fa36a77f9410921cc373edc19ed8aee75627db0e1cd1c74a05494990b",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of transmutation",
+      "source_sha256": "f28e1e461ed48fa6f01364c3b316055776dd9ec1b87ca2f4f9b14705aade5faf",
+      "translation_sha256": "4998981cd31d655a5c2669097114d58b3b969748255f15940446374e9e1e12f3",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of vapours",
+      "source_sha256": "eb4d4fa0dea1ef9027fde0c50ed4d5245c13d6ccbeeca730a8a577a8266b0f2f",
+      "translation_sha256": "56fd43f7eb0659fe560fc30b3da75b08390cbff1507ae7e87cef38bba6fcbefd",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of weapons",
+      "source_sha256": "1b866dfb97055aaf669119b1e56de52bef1919abb32bc50382557bd6cc952286",
+      "translation_sha256": "b9dfd5cb8e24e405223d4e97f8de32118207a3acd3c84338a4c4fd1a7016fe17",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of wicked creation",
+      "source_sha256": "1f66d4dbd05b583b7347ac7244417379d0e5ebcdeb88bd7eb1bd635d3cec663f",
+      "translation_sha256": "27a1ae187598dc1d8dfc06aed3677d75c85444bc6063c94d8545b0df7cdf623c",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of winter",
+      "source_sha256": "cee359f7486926120c2ed9a3d9c2302d8e672eebe88ce90387ad27ffe4532a32",
+      "translation_sha256": "683d4fb52ded50fee7c3b75b402b14b9d2e8a4bb947b60cc321f4799e4a9d4c3",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "box of beasts",
+      "source_sha256": "7ad01b51cc59bd024527853ac22d604e0e7a670b13f24f43c3bd79add20a82e2",
+      "translation_sha256": "b303a5d9a866711d85930b32355f389b930e6b32984a0b29013a55a2f307e8fe",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "club",
+      "source_sha256": "b183c17f49d7458a75853a99c96c462805aaa905d67b14a1db7782ef46caae56",
+      "translation_sha256": "f9edcee362c9958d2d95f5d776370ce6535982e305c6e905534182f1946b98d5",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "codex of conductivity",
+      "source_sha256": "32502ddd6b44e67b4cdfa2977a9871e97605808a404a6848248b304cf1193717",
+      "translation_sha256": "107d0f2ebc0f06b15ae3d77367e20f811c1bcbf3e120aad33ed1516436ad8abe",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "compendium of siegecraft",
+      "source_sha256": "ec081a24771f7031dad1b3a62e17020ab79e7d33847feeeb9fb2f528139615e8",
+      "translation_sha256": "f2c64ec57c44c7af61aeae0f72c457b1d13ea5ad63f930ed4441e40271b9f5e8",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "condenser vane",
+      "source_sha256": "599f7251912755d6b285859d1f9935bab526d46ac8067c13f1eff60c5e5f2825",
+      "translation_sha256": "966808ed67628db6b4d680ae51342cb19bb9c918e332dd768ff5e0ea437735e0",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "dragon-coil talisman",
+      "source_sha256": "7c9da873ef2bd0072ce0221ac911e8d1994f218ec6221b173fae618936a8bde2",
+      "translation_sha256": "8129c1dfe2b98ec46c5195a2a0b204b538569613f62d12a845360faf242907c6",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "earthy gem",
+      "source_sha256": "3f53e41c1b8792d04db0e2f8b6684d3f8951add89baff579bad6b98bce66676f",
+      "translation_sha256": "e150512feb6ec1027fef0e56f02105aa6aab745b937c26414a7dfc7a50e5eb13",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "eel talisman",
+      "source_sha256": "8d9e662a2659b3bb43921ec0d49d86c6b66202797885f8c95503cb981ce58e37",
+      "translation_sha256": "c82d53776e2f1c6138d5fb250e98ca4ce2df2c454cbc91aff2b71213088c8a96",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "everburning encyclopedia",
+      "source_sha256": "c8391d63f13b9f880a79dc90770227c03cb7d573a63e84193965b6e39f4964f6",
+      "translation_sha256": "e61bf22f9cff373649c352c67d2fca4fe5850c4aec5d38f5ed1f1017acff3228",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "figurine of a ziggurat",
+      "source_sha256": "a87566c4d1285be6fb1c5141d4b55053eaf59dbf0f3c11f3d624f050f065bad4",
+      "translation_sha256": "84fd8beae8de1bb6708177b37084823fb53f4a2c63d32dfee23dddaa9646a6d3",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "flux bauble",
+      "source_sha256": "e1e926e615f9bb87e08e98fe7597840c700a3e842c6eacc426f1516976f03dcc",
+      "translation_sha256": "9a1aa95d73c16a9bb1807c741bce155f01d04b4be9dac89acc4a2b556bc563ed",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "gell's gravitambourine",
+      "source_sha256": "5d2315d4486c8a27c25f183eb0e6df1424bcf13a67c50d56644850e256969af6",
+      "translation_sha256": "6acf47d8e1b28b1f06da4e22e254af430943ed90de6521cea1b503c176389d4d",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "grand grimoire",
+      "source_sha256": "dcd7e40a3bd4847c08423e8f5ae71e3cdb477d5072cd512188d719f272dcfe27",
+      "translation_sha256": "cfb213f442c6196103ddc54096a67b1b8cfcc7f5dc8a62aec0c4126955fa3590",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "great wizards, vol. ii",
+      "source_sha256": "9392eec628bcf5ea2d363ae5b37f211a81115d5e790b4f17af8358f014431aea",
+      "translation_sha256": "17a46d78a19c0183ecf40c05f3315789596fc1847aac03b0ee14c6797ab41d7b",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "great wizards, vol. vii",
+      "source_sha256": "567d682120e9036f0794ac9a85842ab5a99797ca9f55ff277b6db78ce66eea40",
+      "translation_sha256": "28d519cad3b8903f90a3bb24d0ff7e97ad120ede923c848d4687400de55f57b9",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "hand cannon",
+      "source_sha256": "68ac07a374c503f4eeeab54ea3b6c559fbff9fc4413bda8e0bda04327b47c137",
+      "translation_sha256": "cdd133545be572e97798ac57d622d9f65211ab61444b41a963773c4d2c846f32",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "horn of Geryon",
+      "source_sha256": "8ce446ea3523dc1b948b2a2fbaa95f717238e04d61a2901fb0747568b92cc170",
+      "translation_sha256": "da2f2c754a6875a5a0330044dbe371a436518d9bc4f77642069050dda0d14eaa",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "ivory gem",
+      "source_sha256": "de1192eb59b65768cad77603aae71fde901c9f9101b277b1eab9cf1804a234e8",
+      "translation_sha256": "041e370812176887c130db81df9addff058a7321b0d04233ccbd19ce9ddfff38",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "jade gem",
+      "source_sha256": "ea8e299f1cdc3a8e849f2b74f0cb21f2748566416886d1a3fec2f40b270ba2a8",
+      "translation_sha256": "f2b8f2cbc3d4bc331d39773aa83a15584e849270a5be003bbee63b527f06d77f",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "large rock",
+      "source_sha256": "9b6a6e31704e1c6dda745dda65cbd94bd9ba8483b8da8502f3ddd9a4c61e64fd",
+      "translation_sha256": "0328b780e94e34ed1d253dfd2c46136e995e1cf5939ff05fc7076e3e6eedb1e7",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "lightning rod",
+      "source_sha256": "9c9e796b0fdb26ad4a6d875263b65e78a4fac5849eb97610f638ca2b5bd3595f",
+      "translation_sha256": "a33a3d6912d8d8aba5a74aaef8d4b768e12736e09867637fca2d2d649fa1b1b2",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "maxwell's memoranda",
+      "source_sha256": "0581976758ef2dc8e1744515cffe3a77e8bfd5263de16c5c843037887c563921",
+      "translation_sha256": "781f0a82bb152cf06f72319d4f7b55cb64381235ab5b4bf1f0a2c65b4a0143a6",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "midnight gem",
+      "source_sha256": "f04bef7b43f2ed8d451448f347ac41285cfc6945f64c1c9c680613a4c666c8e6",
+      "translation_sha256": "dae631d6cf3569ddbe8c2e25fe04e3a5e30a96e7ef99f4fdc46f6b9713d6011a",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "milky-white gem",
+      "source_sha256": "72d13054250eb467018ec71e9719f1e037d68d564ba680cee2625127e9ed653f",
+      "translation_sha256": "73f98f4cd9224a83965dbf2d76a7d93dd7b5d611dccb678353e3c4d23ba94f78",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "mossy gem",
+      "source_sha256": "8f073409276a67018a141fa3dc75151b2a6f9d67a46292e5cff0a9f515574b30",
+      "translation_sha256": "2daa38a47572f3a240ae0e87b62ee115542ca681b3731d9bdb3777188232f503",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "my sojourn through swampland",
+      "source_sha256": "016a716c195bccf2bc6ee2b7fcfdc0215cde0519cf1ca176e8843678c04e9962",
+      "translation_sha256": "a8b0ff4e3658ae76951ae2612af22c496e2d5d101f62bad4471122fd1dcc2f1b",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "necronomicon",
+      "source_sha256": "02a72efa831f4efb13962ab9e7033069f993ba89bb9eabae33764800f366cc15",
+      "translation_sha256": "54e4c52e840a12887c1dde93d6024295d5b848a481d4a59263e82fa843c4a331",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "orcbow",
+      "source_sha256": "96db7d295818ccc42f1faf0e5f87a58235372c6ecda16ff361252e3d14cb6bae",
+      "translation_sha256": "b53778b55a3aca8326b1cdfc675297e2b6e312f0f3f769adbec402a772d11671",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "phantom mirror",
+      "source_sha256": "df0f0079479724076c10c54c053e71a1f614a2083b68f2b25c9c951496ad53be",
+      "translation_sha256": "feb83fd17e67dc10beaf1042fcd7f3ae121da0f8b842455e26506cf3b481ad36",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "phial of floods",
+      "source_sha256": "47928f3972fd55101fdea0bd33395acb0c7834a497a4fa78bde3709200980511",
+      "translation_sha256": "105038c782be5cf97cc618fa289aeb502c6c5b4e7ed39c8d6029d6ed66ea10b7",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "quad damage",
+      "source_sha256": "63574c9bd1cacb6f9cda23ce697c17530cec76b88563278c1167a79611b970c7",
+      "translation_sha256": "3c36e30d8b05a6f3ca254360cb81ec5060a5b5251d7caa8b6be1c45fd1488f7f",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "quick blade",
+      "source_sha256": "f6dcf0b29fd424b5f961f237dda601e177ccba8a8ec031c748bfd824c41694c5",
+      "translation_sha256": "2413030cc791711376627677605477b46719d67c9c04a045e9b782427b47a21c",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "riddle talisman",
+      "source_sha256": "0a22dae7f266f8b1b0dcfa0743f5d6435b4bd0ac965d6ea2116c94f3f79cbb8d",
+      "translation_sha256": "6009d791dad70fb0f466e8937e7fa88c3039f2690241e2eae03195b3b7c9848a",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "rimehorn talisman",
+      "source_sha256": "2105b022299e7a47a7231d1265a0527ede9542b724f43673c832c065dbb67af1",
+      "translation_sha256": "aab3d224879bb2c3699a754733cf64cbd200332caefbe2d43c42b21057f092ee",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "sanguine gem",
+      "source_sha256": "8a449d1772c1c6e1c06b7ab5a0a413bf8a85bcd9774600710778178071b8f9c8",
+      "translation_sha256": "7b2fc3532f6130feb0c775ec906f48074ee8d5d6b84f94396145d40b6fe3c808",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "shimmering gem",
+      "source_sha256": "dad67e3b8c49f2353ab3f2dbb3624cf6a96ed7903c604c17678c311f2472f260",
+      "translation_sha256": "39e50891447b3160930fc64f1684ffe82d22b128b58285c246523ced2baf943f",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "shining gem",
+      "source_sha256": "76093527f010189fab009bebabd3617e50cd1798b26482b3c0e9e130a2ac1087",
+      "translation_sha256": "b03928eef9cc7c2a48000944ca5ed1ffe1d26995a6fb4a340d39d51414c754c0",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "shop voucher",
+      "source_sha256": "eb8d02daceebf3acf65e93bbb626a0eab545d6a7317f657e24ca7bf5e1bcaa70",
+      "translation_sha256": "190492a22b1aa363c7cee4b63f0e53d0779ee5f61e006948405b79722c105394",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "smoky gem",
+      "source_sha256": "157900432492d636cc77f010cf78543e23cf43ffbba0a37cfbe38be2f1315f7a",
+      "translation_sha256": "f97a290b721bd3e7ea654cb8e254abf61c1ad4a16baced48d5d8406bb14e1e0b",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "staff of air",
+      "source_sha256": "fcc25107f7b55402425d98e6b49cef54e46e21eafe049a1a29ceabdd4b6aaecf",
+      "translation_sha256": "cdcb9434ca8172cd8badae0435c1faf73ba0d81fd8b210c655e2384710fbd941",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "staff of alchemy",
+      "source_sha256": "a765f8955bee7e05f4531dc8454e7172988faf3a860fe665787f423a6b5db79d",
+      "translation_sha256": "81040cc4a3e54a1205761a67c649c8506339475bfa59502eb546e12e411c2cbe",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "staff of cold",
+      "source_sha256": "9c7acfdcf675ea65c9297a56ce8acd2aebeb5e63de8b01468b7a4cc13be42a01",
+      "translation_sha256": "5f55f40ef3edd9ebfc369076d93b369748f8c85c299bcb269543143250832ec0",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "staff of conjuration",
+      "source_sha256": "a029c05279af98285196d513b3a1170a8b055deaf60cce8e502693b93c75dd97",
+      "translation_sha256": "12ade55aeff6d363bc3676ca7397c269c83efa14b33d973521cac6c4ed8bac14",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "staff of earth",
+      "source_sha256": "1ba8418a03d1cc1d25031fbd89d343fd14e782375191b93d41982c632f79769c",
+      "translation_sha256": "5379b425532ef5279574fa78bfae8544988ec01d3ab087b76183e65996f9ec35",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "staff of fire",
+      "source_sha256": "7733078dc01a9a5eb5978a01a2625139c09e99506f705cf437c40dbb2835a8fa",
+      "translation_sha256": "904fdec14f9ae7d1be4168e26268ef329bfbed485f8ece80eb09af885f7baf1f",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "staff of necromancy",
+      "source_sha256": "151257b4612cc8535eeb7ad24aa0f80b9fc86129c82b8ca28ce1b51a9d5dd730",
+      "translation_sha256": "3a4f069a511a53e5fd34b4298ddc599ee9f5e0cb22fa26617a366a0246316468",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "steam dragon scales",
+      "source_sha256": "34b391aae1192836b07dd068c9319ac3eb241100ebec890eb1f4336b5edd103c",
+      "translation_sha256": "a877b3a9353943fec6e80e99e6519690f66adba5875d3cb0ce1de49385393092",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "the unrestrained analects",
+      "source_sha256": "4d3712f31da4076bb53de093c6e366e33860b034fd91aafc2851f4c715a7d161",
+      "translation_sha256": "39dc7d29ba23fd3c3d2b41ad5d8da555fd13cf6146ce4b2fe61c06656677e24b",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "there-and-back book",
+      "source_sha256": "bff8697d10744de920fb2589a870f40251293c4025069e24e142ffbc6c862a9f",
+      "translation_sha256": "053775bf381a95e169d66781bd19450211fc81f569f4ff7ce9865fb8936e62f2",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "tin of tremorstones",
+      "source_sha256": "2f886f337c226a3fd084ac0faa287e61230c4fdc41af0950c6f8899656778825",
+      "translation_sha256": "934723ffdb258ac2829f858fe6f3eba5686440465963bde89451f2758aa83813",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "treatise on traps",
+      "source_sha256": "2a4c58a9fa7126a4de9cca23fdd67eb899e606cadfb709c4d0c2599906008865",
+      "translation_sha256": "40dccad42f10a30c699553e9022f776af9121e23141d40cba99fcc0b06cd6ade",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "triple crossbow",
+      "source_sha256": "173539e486a6e89b1372159a369808cab1fdc4e7b4b91ff41abbfa2b0a074796",
+      "translation_sha256": "39f1f24883123096376ba2f2d162cb0c83ba50cbc2f1daf77ed09d427d5e94d3",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "trishula",
+      "source_sha256": "11da8731d27315216b1ab56683b562566e76fccf20c4f563cd2870747f35ead4",
+      "translation_sha256": "9d937057b489d5b618cbdecd840813d53fc5f7ed8db676b481efa3cb5812075b",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "trismegistus codex",
+      "source_sha256": "42b98b6f9e0a921d53214d5c89981e2e27263defa60753b3fb81b982690c2784",
+      "translation_sha256": "8e3037e6dd71977c22614f4e3bb618585e6bbea00b9362ff782e69e561adb976",
+      "reference_only": false
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "whip",
+      "source_sha256": "881e7664398a3c94b651fb67c2a244f010e026d868a88b9481e10da3a93c9a8b",
+      "translation_sha256": "67bd2a8b2d5c4c0d9c6bd24ad7f4cbcbdfed7141f9bdb70fcd1eb7a5924fa58a",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Alistair's Walking Alembic spell",
+      "source_sha256": "a58b312ea652cb9aa71aa1e47c630a0049d724becb32ac9d892368f7a31ca323",
+      "translation_sha256": "7d58e66996320a45abb6d432072cfe1b9df64492cc09dd624487110338391e2c",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Antimagic Gaze spell",
+      "source_sha256": "63bc4e31648ae354e3409cbe8b2f07694e376c0377b5f9355d2304152c62619a",
+      "translation_sha256": "4aa509da4e4593ecc9fec817c10eb47cdc2978cf2bf3d07c96c51dcda5fffb0c",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Arcjolt spell",
+      "source_sha256": "f8275e45d9c252fe5a3fa35e76a55be726607cadeed28efaa76491fb543434ca",
+      "translation_sha256": "cc96931b13c7942b0fad522a5f94d573faebcbd41d748fdcd1bbb398c7f99a92",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Avatar Song spell",
+      "source_sha256": "69ec9ed0efeb01484d80eb4a113c4e38e0462ca6eb4173007ad9643f465ad8c1",
+      "translation_sha256": "b92330610491c2bc1899982213ac1d8c392fc66fc159ca1af3018d2ff35e6dc3",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Awaken Armour spell",
+      "source_sha256": "4963b71e5912590a9d687f171ae39bc50155270a06c548bdca5fe6d06f0bc61d",
+      "translation_sha256": "594231cfd055641afcda1e4646f9445dd28555e194309abb27a14042c398376e",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Awaken Flesh spell",
+      "source_sha256": "e938bea3ff5c961d618bfe8e13ce2d513e79262e3175978bed63cba9e5fb0798",
+      "translation_sha256": "871b6578f83add38cf80fb630a5b5e2e7e5e75ba6bdf61b2657aa8900c5fe7e1",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Awaken Forest spell",
+      "source_sha256": "fa8940047d5bf99d23fa5c41352876cfcc34dd8aea8d8488d23998680d7c3b68",
+      "translation_sha256": "564628f70f609b38dc39d54b97ac216164506d611b1f748e2da2c59cabe6282f",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Awaken Vines spell",
+      "source_sha256": "f953b8b8636800fe7529dce27feae76f870f17e50283bb1deecd97f379097c7c",
+      "translation_sha256": "55bfc4e59a07736783d18183f1f87e9de84f7d417574bfcf249988107875fd1f",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Battlecry spell",
+      "source_sha256": "f27a495fa4426756a8d7bdb62c22ce8497e2c959d67c5abf74fae59c37f638ed",
+      "translation_sha256": "f88086e3b705e46a5826cfdc1679b578ce233c14cba57df079bf46d7e1df68b5",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Beckoning Gale spell",
+      "source_sha256": "0e6a1f98555b46cd62004a94ea103a92a28e30b85e618fc295bee054d1c998e7",
+      "translation_sha256": "3c455826118a6cb49da30ef2ee19fc9fce680dca816941e59f9533a0497d4871",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Berserk Other spell",
+      "source_sha256": "2b99e53b65b3118a1f5f0e5520475eaa904323c3c5c8469b5cb8bc721b894b76",
+      "translation_sha256": "fb6fce70934c9d502b4af3ee4db760830a63ba671944db48e9c6c3a5172df67e",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Bestow Arms spell",
+      "source_sha256": "952ee6f41c709f9f9e41a061041b3c1975c50531fca39b2bc7d799710ad7c275",
+      "translation_sha256": "6a7a57076baa40d373889b08705bfbf3d43f5f51cbe9b67f15a9a41282e01a5b",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Bind Souls spell",
+      "source_sha256": "8f8999a57825d9b5782eb5020a0456cb17de7a74d24f2acb869c2a9b558c99f8",
+      "translation_sha256": "05b31cfcfda181fecf2e6a9d76b4b79524c417a4a82f6ef35a47fac8ec4f5f2d",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Blink Other Close spell",
+      "source_sha256": "cadc3406a1f3b5480d21aed8a2a8a4a8d7243b33a13235ab9cbd41ab101299e2",
+      "translation_sha256": "1ffd4a9848da551c0408204c16d5d63d55eaa079d8b3a336a1ecfe44e208fb54",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Blink Range spell",
+      "source_sha256": "f147f17533bc9bdc244458e1bc377daf659ff476405eb5bd3f4807cde26844b3",
+      "translation_sha256": "52437eb016da0b3782c42ddb0b9a0a1fae639c09d89929fa694dc6a7ebf2ade0",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Bolt of Flesh spell",
+      "source_sha256": "585b15174fa8de376d5794e7cf7f592d1e0f579f9e870c58274cf4348fa7669c",
+      "translation_sha256": "af5cc37c7197c55b2be38406fb1f2d360ef61c328e0a41f57c7874c97b13acbe",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Bolt of Light spell",
+      "source_sha256": "592706294395f6a9d8ed96e4dd9dbd6aa00828a123e739276328148302e9e795",
+      "translation_sha256": "15a2c04e82ba1a411706ed6bbe7659c951936906fc5ec16d2711812772f745a8",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Bombard spell",
+      "source_sha256": "142abf773d46c00be16f60d216afab34ba04d10e28332a7e364bca72e90d5731",
+      "translation_sha256": "30e12b7328224469f57c280bb6cfa2ba54be49292d9540c08e163b537b86a14a",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Borgnjor's Vile Clutch spell",
+      "source_sha256": "80e4a65ff4137109a2a6c53202e991b0c069efbbd1cf180bfa5f9db24e2312ff",
+      "translation_sha256": "8342dd59f76ee1eaee950d649f1f874d41a10693fb24caac7b46fdad535c4cb2",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Brain Bite spell",
+      "source_sha256": "14e481c40a503c1673e608efe31209861d077df22afe651818da2b9b9b7d7133",
+      "translation_sha256": "547653d95de39838402c7debed1d89c23b8e0ba48696181d2c62a9da5020ca5a",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Brothers in Arms spell",
+      "source_sha256": "2ad954db5e278b282910135654e406546009a7bd1a3723848d5e5ca680042405",
+      "translation_sha256": "2ad954db5e278b282910135654e406546009a7bd1a3723848d5e5ca680042405",
+      "reference_only": true
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Call Down Damnation spell",
+      "source_sha256": "6bb5ea8db42c6874da01b9f822a0e57059deb334745c5e7c60394cf5dffb0a63",
+      "translation_sha256": "af0464700ec9b9b885db505cc578897c5233f69d6ed53090235d9fa92aa4aefb",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Call Down Lightning spell",
+      "source_sha256": "0b5b30b91fa3dc44b982a1128bc47f59b20cf558afd7422a04a4cff9ab5c6bef",
+      "translation_sha256": "2def801bcc0022385301f7629ca96d9c5c1c972a0fea377e5f26056d2ca4cabf",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Call Lost Souls spell",
+      "source_sha256": "504e642eea8680c487c556e5470e88393be1eed88aab97432b6d05222d472e9a",
+      "translation_sha256": "dbd256590337ad60d386e09967f54b2c504803ab6f42a8896055f0d59457888f",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Call of Chaos spell",
+      "source_sha256": "b592fa874b1e6328de7e05c952192c313d0179abb7f3e3bb7b9a63a49867c213",
+      "translation_sha256": "69c49b95556d6cf8a460dfd457a76547c3566c45efa1f69bb9cc7e0c9f706953",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Call Tide spell",
+      "source_sha256": "dbd752ef57a9aa6ec94e5f21e9bea3f407c643d993512dd9a0ad1d67d94902e1",
+      "translation_sha256": "b1680ff5d0d2a7b30eed88a1d6a5e367c8e712f7f6bc81e3fdcac419527e6e20",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Cantrip spell",
+      "source_sha256": "af0408782016b6839a90d27ecfaa0e63b1f8f7c136ce647297627cda9f6f85b2",
+      "translation_sha256": "4a3078d834040f4a55083ee4a5f0328ce35ad3180a9731dcb01e1d061bae2785",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Caustic Breath spell",
+      "source_sha256": "b8aecb7c3f42218f25fea33a8b0d83f10d87b12c892d10bc133f75158c14b1ca",
+      "translation_sha256": "b8aecb7c3f42218f25fea33a8b0d83f10d87b12c892d10bc133f75158c14b1ca",
+      "reference_only": true
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Chain Lightning spell",
+      "source_sha256": "96592b2bf79867511bcf1cbb52e866af18335b8e3921819d596e87117b509398",
+      "translation_sha256": "87c6577ff7d40479579ccdae8806f2515f2d7818be1ce50054fe2682cfbe0dd5",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Chain of Chaos spell",
+      "source_sha256": "f323e6ddab6e5a66f02cad0aedcfa6841894e27a68c93589f71bfc617c30827d",
+      "translation_sha256": "6774b49e3afb3fb2792d59253427979a37a4144aea239899bf52767adb35c5a4",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Charm spell",
+      "source_sha256": "4ba9bcbaf3d5c940ae05867fd615feb24b76f68b0717efab747586752d7c9b74",
+      "translation_sha256": "a47815d7f9550103972814a48670dbf92071cbd9c7af84d1f7ad50a60332211a",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Cigotuvi's Putrefaction spell",
+      "source_sha256": "3d8c5b438783c7ac45845cc2f09bf784506adcbc803f5bfdec06e312cff1e98c",
+      "translation_sha256": "746022db0bf789de7baeab13b0c85c0f04b8105fa01350cf21f066c7685b126f",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Cleansing Flame spell",
+      "source_sha256": "c8627d5dd3c54c0381d965215d7ef7eed2cb1b383709d83b7a20599d269af55a",
+      "translation_sha256": "ef0a289b8fd184f7bb87945c694c82cec2ead61fa8537ae22bb788c7e63156b6",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Combustion Breath spell",
+      "source_sha256": "2a01f0ec624f29a816744d943718edfda973939fff37089229cefbb01ddc4a5e",
+      "translation_sha256": "2a01f0ec624f29a816744d943718edfda973939fff37089229cefbb01ddc4a5e",
+      "reference_only": true
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Concentrate Venom spell",
+      "source_sha256": "7c5c6247ced01315d9a215b11c710f754bd21f91a375424e09edee87c703dea4",
+      "translation_sha256": "da42cf62d86e46a2277a2466661a423e518446139f281e19f9954e63f6af09ba",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Confusion Gaze spell",
+      "source_sha256": "0ef7958cbf59181f480f5e82da875c6bb1c785f4bb64ccd663993a6865d33c4b",
+      "translation_sha256": "9f6b6ac4d021a145e3873ab60e47ef0c16f85346736876840ee0eb1d9aaada83",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Conjure Ball Lightning spell",
+      "source_sha256": "cdd8e06d00514c77b9623ab4c4f010136b2f1fbf3015210d81dc7510ddf778af",
+      "translation_sha256": "fb5449c4ada72c426bcb20d7ef44c1f63f0589563a7488f3c5ccca6aa21764d9",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Conjure Living Spells spell",
+      "source_sha256": "d692420140810cd265d53f4fd216be144ab7dc3e8209081898e84f2b2b189a03",
+      "translation_sha256": "8f49208b2f67f4985aea5425148ed04d3c8cd224de2aa8a0ab8eb6ed80ed65c3",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Corona spell",
+      "source_sha256": "f036f0d172ccc7e32fabcc9bab5aa9e986264f24dd62b681fa29093c7afc98d7",
+      "translation_sha256": "5fe38a06a9ed45146c7bcad5be54d32910326df352db39f739ffd85df0edad4d",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Corrupt spell",
+      "source_sha256": "f09f04377a3e8975f3c4b3a603d63e07fe3aa25977c0f4577583f7e96a7d8120",
+      "translation_sha256": "372b4db888b945dd713fa24a8b6e9fef9f616b986830cf7fc0e8e0f4a7320fe3",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Corrupting Pulse spell",
+      "source_sha256": "c89efd93a6769a7b931df5bf68f3616c4bbbdca4bbcecf5515b896a676074f72",
+      "translation_sha256": "0c2a9961b2eb68db3031ddc70cccbfc2da8d1d8f1c590bb4929977af64e05ccf",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Creeping Frost spell",
+      "source_sha256": "f3cd1ad2705bfe99282336e5273a80b299a468b059d683d76357f408b809a95c",
+      "translation_sha256": "0621ba06f1074e905745ed92ef45cd30e79c4c3ecbc042c47d00e0daeb8710e0",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Creeping Shadow spell",
+      "source_sha256": "d3062d766f14d33a2c098b5eac1b4c8349eaac506cb9b131337ed82e9b4f48e5",
+      "translation_sha256": "795771316757acf858392467364eb02bcaa66a83485a6a8238fd5dae091cdae4",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Crystallising Shot spell",
+      "source_sha256": "556a32ebc1bea8628dbb61ab722d48a67c9fc91afefed9a13807d20580de2db9",
+      "translation_sha256": "e5bc4bf78dd092fca8ebcd0082f98e44d1c4384b46da0153625e026dc16ca83f",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Deflect Missiles spell",
+      "source_sha256": "9013ac189965e51e94183ea876e45b82be3b6e7bed27adfd65115db774899ef5",
+      "translation_sha256": "cbfd3acb67a0dfcbe32e37db7d8ed9736c6c969dc014bd960baaae95bd5e31c1",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Detonation Catalyst spell",
+      "source_sha256": "5f83dcaedae0bb0ef30830cc258a644ab4497b4b2a12175dc6ea3bc7c281c01d",
+      "translation_sha256": "8039d272645ca057885340778c2466c9cd7d02e78113c8a7323d8937b90582e9",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Diamond Sawblades spell",
+      "source_sha256": "8768c1d281094f32cfb777ebed15234446ad528e2c8dafc3b3e1e4b3971a4a06",
+      "translation_sha256": "0b3568292d279cbb61dfb3ed13b65a05de98402e547b784ed820956b9dfc28cb",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Dimension Anchor spell",
+      "source_sha256": "e5d7d450945fea72b3c081955673b4ecea1c31053c363a6c4bd27fb2f0396d83",
+      "translation_sha256": "833b484c7e7ed935773a78f7d3cf7be8a945682460c7eee8380090b74f7c199b",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Discord spell",
+      "source_sha256": "125115ee527ec3570f12e1661ff30f5099da8d485b31e31b63b675307d8f96a4",
+      "translation_sha256": "5cbe5d67fc1cba0e05593b0e4336ccdfff528295d1fad5538b9806c3b77ad6e6",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Disjunction spell",
+      "source_sha256": "b0f19fa0abe68855f1453affb6d69b410ccb284f0f67b1bf2537e4da82a64140",
+      "translation_sha256": "7d4001f61f40b2c80694a61fbb4f10222ed1f78cb835f255d2876381b61946c4",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Dispersal spell",
+      "source_sha256": "f7a53ee93675fd3353d8d3853859a3bf279efa104d87534398db2a9655f87418",
+      "translation_sha256": "e5470363c24ecc67666b744f5a47d6b90d15b99b204d7b2489f2b00b9d4b2b8b",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Divine Armament spell",
+      "source_sha256": "24700f3737dde2922b6f8743f7876e6bdf110993df6d6f6a3655315e020c7a8d",
+      "translation_sha256": "43e81145b7b140424b82b114186bfdb54aec45f7e72bb60bc78d9025c5af324e",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Dominate Undead spell",
+      "source_sha256": "0b375f4f40ed526459d34a73363c9b9144756e1ec7496e12ac5558a4e45fe830",
+      "translation_sha256": "248d9b817d9ad6c5cedbef67e48e372ed6f0dcc3d782e259892bfcec3fee687a",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Doomsaying spell",
+      "source_sha256": "cfb3675c06331ea0f502220866d17e721013eeafa478563a2974ab36b3295a74",
+      "translation_sha256": "d80b88729664037419bb498faf3ced639457620af38b9da416dacb2766fc651f",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Drain Life spell",
+      "source_sha256": "1f01af24a2f5a4238fac8a6c62d4e82ede67f48d973b4063d2624854f857bf26",
+      "translation_sha256": "d0f40488a556190139b2ea2222bd3abf4d136aec1ed056f38a5a6432b1a89fdb",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Drain Magic spell",
+      "source_sha256": "b48595b3ed209408d50e756801f095f0e06fe103317da7b06b27f229df18ae20",
+      "translation_sha256": "270c42444ec69d11e9601716a4633f6424a55712c25bf69a59fa7b8d42587ab7",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Draining Gaze spell",
+      "source_sha256": "1fcd6d6d92349b4132506e992694d450135b29d5931d5ae931ed19fc8ad6dd34",
+      "translation_sha256": "5e5ec360e8746c8e4ef73c1d8a41244b222d152b793a42ea9c93bff1746d0399",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Dream Dust spell",
+      "source_sha256": "b8de402ce83e3ce793ee1163d987493b3901bfbd6f5397270ddb6733e0bd92a0",
+      "translation_sha256": "b5ab9bce7a8f7fff0aadf9c25e37aa35e92289ef9277cfc78390e1f7aafae7ee",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Enfeeble spell",
+      "source_sha256": "b6d84aeee170a406737c978057a9eb459d4e99ac28b30a08c53e1164e2450a04",
+      "translation_sha256": "992fe77cf8db68131b4629e143e0d1a4d8cf7c5901c383f06e3c3c7dbfbaac1b",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Eringya's Noxious Bog spell",
+      "source_sha256": "80318ff58d9b0db65231c2e6db21d8308bce3df9122f2c8f1b9a7705cf3fbe0c",
+      "translation_sha256": "3c4555b81ad646e355d64f241a9a0b8c7a058ee801e5175c8bc03b849bd0775f",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Fastroot spell",
+      "source_sha256": "7c646bdc6498ee3e2330533bfcaf5518ad26b17089377f249b12256c775b0978",
+      "translation_sha256": "d9e54b3ceffdf3c70d658070782ba92f04f7dbbc64ccaa274986a293b727a39d",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Flash Freeze spell",
+      "source_sha256": "0cb134eb9a8cb08f65d86615dbe2a93f31d4e7562c663148c4473698f5bd7f48",
+      "translation_sha256": "0bf6bd3ab1e526bb707f4208fc2364ceeb9cddb49a5b8ef74fe13fb814ecebba",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Flashing Balestra spell",
+      "source_sha256": "232b8b0bb212729daf3dfa3b8f35daa67e5c85e10f7fe3d39f07045b637405b6",
+      "translation_sha256": "04adbf1e375b6a93eec7e38578e4c5695f231d28cbf4c5962b9f466d5b0e5cd7",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Flay spell",
+      "source_sha256": "eea183df87734727d85ad0e2e3249f98be4768d0cd97dff3883324acc2f3d33c",
+      "translation_sha256": "e98108a872fb672d02b31681b07bd84ae9b13475996df5fef0fa0bd5038ffa2e",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Force Lance spell",
+      "source_sha256": "b4fb353e7161a78b91c6d0d653eadfef07ee4424dd2e94b3282f9462e009c3dd",
+      "translation_sha256": "9e75ce79a2f18ba04285556564f4baaf64b40835df017599e331d64d279fbf1f",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Forceful Invitation spell",
+      "source_sha256": "d7b6cdb1e891b8878bfdb82a14f5e58ce21148ac4da45f9ca4d3a935621519ef",
+      "translation_sha256": "dcaaabc522ae8dbcde558ba2957fe6835d564d5807d4d8b849ada9240b7ed911",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Forge Monarch Bomb spell",
+      "source_sha256": "9ed6928c019d1c42df6a8edf4334735da64da57f7aec35cba2aa87c90dcc93fb",
+      "translation_sha256": "ddbcfebdd5440d9b72ff2ecdb160ae565b799f0fe5f7a653070099e57297c0f0",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Forge Phalanx Beetle spell",
+      "source_sha256": "5bf0959df6dc3e40f35d5a5645fd1af6b408e4b55a0abfdb34e2747db4c47ada",
+      "translation_sha256": "88d84345ab245b4b2769b480a44eca9e63151416633c229e0b0db95af17cca74",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Fortress Blast spell",
+      "source_sha256": "c7a77c5660f27cea20163a3560be4a8116a3ac77280dcf9f3ea4a7769feabda7",
+      "translation_sha256": "1495785b1e5b4b903d582b1a72c8cbbcac61d6e367d870120aa6184eb1a29293",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Freezing Gust spell",
+      "source_sha256": "35515e5fbde2de888055586ad4081f40b6cc90126f4c8a7310b78382934fa171",
+      "translation_sha256": "afdef3a377f160ad50ee817975bc8475f16a191ec4a80c64e0b58619425d9072",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Fugue of the Fallen spell",
+      "source_sha256": "b54e63f0267fb7e9c858fe44ba82add268a4f824076dea809f35e321b216bb4a",
+      "translation_sha256": "429a8a3533cceadad7c1821959175f4426cc9b35187dc5bc7f448a11b65bba95",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Fulsome Fusillade spell",
+      "source_sha256": "e9189c21027ec7fb825e17093136ac4744087fc9f8c51c0bec57e9745b63f116",
+      "translation_sha256": "90ca7adb0adbf8090871cddc6eccd02dcdf08b4ab71c14d30c23a61379c19f05",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Funeral Dirge spell",
+      "source_sha256": "157489adfd782e8d6d426c6d3cd1c3bfd4884b042a6048bca0244343ca637876",
+      "translation_sha256": "c28f3bbe70ea5bc0a78e60e1f901f715da32d6e2a9b218f26f6567722f64dab6",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Galvanic Breath spell",
+      "source_sha256": "07d53871f20d159135c48e8824212df23b8ed6d9e3e4878982ab74214dc0bae4",
+      "translation_sha256": "07d53871f20d159135c48e8824212df23b8ed6d9e3e4878982ab74214dc0bae4",
+      "reference_only": true
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Gell's Gavotte spell",
+      "source_sha256": "dcc67d9ee9ce38cbe6d7e7e13b92a0f92ef855e137dc929e7aaa4c6d3a515d49",
+      "translation_sha256": "fd8bb9ed6d989a02eba3a1e45a4b746d436f15d42f6e3be967b0c67ddab12e14",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Ghostly Sacrifice spell",
+      "source_sha256": "e0be2c7214d94c046b19a474b3109521290726621d8b21694f198f0bd7a88898",
+      "translation_sha256": "70584e0d239225c96fcf3562ccc39eaa75703493ce220afb070ef033f1f26548",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Glacial Breath spell",
+      "source_sha256": "7b7b47de5990b11e23da40d24fc8b1f141a647b78a221a093473875d3a961c17",
+      "translation_sha256": "7b7b47de5990b11e23da40d24fc8b1f141a647b78a221a093473875d3a961c17",
+      "reference_only": true
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Glaciate spell",
+      "source_sha256": "7d2b5e420f12f82b816886f9f72887a62a93aea23e3bcd0c1abcf2900b4f5df1",
+      "translation_sha256": "008a89b7b9bb720583c4b0f40a9fd2574db132c9dfcf1bdcbcf45032bd619c12",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Grasping Roots spell",
+      "source_sha256": "2d2f29a8cc8a1647e3bbdf5e7fa7abfa2c3224f1eaf791ef559e567edc6a52d6",
+      "translation_sha256": "27c804acc2dd1707fec62468ef3f6692b9ccd3e6921c736ee1a3fe0c35882b2f",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Greater Ensnare spell",
+      "source_sha256": "5a528a526aeca0c36cc9d9f4622bf1f1aa9edf881a8a11855dfe26adda5244c6",
+      "translation_sha256": "5fb95727b280c81e33cc0121bc5b7846fa4ca9b8fc2a3de97cd4034ed4c567bd",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Harpoon Shot spell",
+      "source_sha256": "41d716f4317335946ebb4673929af5b440e1b6e502ec0f06b00ee0afc7e75993",
+      "translation_sha256": "21859e82b443dcfec0966b524e722c8c85b379076f587349de118e451b479e07",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Haunt spell",
+      "source_sha256": "1baf2c2078126bea6632c9ca3f88e0e0eece5082bff534ac9681616306e341ba",
+      "translation_sha256": "77269ac232f348d0110e33e53a2e588e60c4503f29f27da21bb819c3dd6d843d",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Hellfire Mortar spell",
+      "source_sha256": "034855506878b18a8d69269355afd1d0bb26f4d07a40be2fe422ccbb0104e95f",
+      "translation_sha256": "5f4402d274b35d3cee9a222863fb5543b95530d5cadbdce537193b3228a59bf6",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Hoarfrost Bullet spell",
+      "source_sha256": "2a6bc5c02a149f5c056914eb7fab8b67c504d4fdc3aac81392bfe975cdc4db87",
+      "translation_sha256": "fbcf24f7b5fde69d1dea2aced7c9c29bac6a56999dba084cfae5b879a71dd1bd",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Hoarfrost Cannonade spell",
+      "source_sha256": "18105503f0c2ab6c581f807a621c95605b643bd1d2545d00bfa58b032ab3850e",
+      "translation_sha256": "939a29b17e22efdf65b5f8161027636d77329d3901c2a14d371ab05480d3a2f2",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Holy Breath spell",
+      "source_sha256": "0f397778c5471d380e4cc1c7ac29d7e06b72e6717b71323622b06094dc6149f6",
+      "translation_sha256": "2ba80e121f422da1eacb9404932f32b9ba3ce38dc2e708422358b67d99e321a5",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Holy Flames spell",
+      "source_sha256": "9f09cc22018144e4754bd61675791275539ab0230cdcc14f127afa77931298d0",
+      "translation_sha256": "ab7bdb84b846d6f866f19d37baeb0a03354a49a6a085008cc84f2e4d1ce81c19",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Hurl Damnation spell",
+      "source_sha256": "1c9e745dfee38ac110133c10bba5f425095360e4696b0d29b65677efbcebb386",
+      "translation_sha256": "1c9e745dfee38ac110133c10bba5f425095360e4696b0d29b65677efbcebb386",
+      "reference_only": true
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Hurl Sludge spell",
+      "source_sha256": "38390a51c8187e01f65a4a174b83aab5d111ddcf85ef11259cc66a76741f9964",
+      "translation_sha256": "771b909c59fd835388e97b71226aee3bc81c988978b37902dbefab8530e10941",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Hurl Torchlight spell",
+      "source_sha256": "9ee406d2a8c6f931849862c91c6ffcf2e94ef79a4be4a0b2f6e90b1d9fbdcd19",
+      "translation_sha256": "bad75ed65f26f054e8b908d70dbe5d502edce756eeedcd8fb9c53c80b6c7d582",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Iceblast spell",
+      "source_sha256": "87caaec12498bacfd891523365f2fe846a63a12a8726dc745b2a53eda3adaecd",
+      "translation_sha256": "93171d77c1864ff922c4fdef5c4da565091f216a1481f708051317c9b7b603d4",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Ill Omen spell",
+      "source_sha256": "dc12badcf23fcedb81d2ee64449e1ff378defced552ca4477b6a38f4db15b49e",
+      "translation_sha256": "489965096cb0717399eaea4adc448bd05f380663fd750e25e8ebb5c032474ad7",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Injury Bond spell",
+      "source_sha256": "b726680e9b28817425ec7f848fa1321bcda33213173c9894f7d9c562abc394b1",
+      "translation_sha256": "25bf1c59c707429feafde467490e525617a89d39072e838cd23e16eef88660bb",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Injury Mirror spell",
+      "source_sha256": "b22832e9d2c60938c713e7c4a6080c87d0c1dd89e3457c53ad8cb909f64d2375",
+      "translation_sha256": "cd14a0e766014dd3a4cadf00d9d2e3a3ffef796cba5955d5dc4e41a6d13b1426",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Iskenderun's Battlesphere spell",
+      "source_sha256": "de8fca411e51aadd9dc26d85f5d3517eb67f7318eb2f1ee39356723193392ac3",
+      "translation_sha256": "4be271b4220f8ca0c2248c9b8d426d640888501b39a448947d34633e8d725e14",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Landbreaker spell",
+      "source_sha256": "9cf85704c2cad39a359185902e3459af1f9a8089f86adc408eaf5ec39bb17221",
+      "translation_sha256": "1806d367f978467d0309f69986686a816d3599d5719ead3f5a1f4ef13f42e1ad",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Launch Bomblet spell",
+      "source_sha256": "a35d24ba59e1e3e1a53407303ba1644e01480b0f689b1c59edae26e3442fc8a1",
+      "translation_sha256": "cefe57b75194516abbc27620d6f2942cbd46dbe51df91d762797eef3c6e3a138",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Launch Sporangium spell",
+      "source_sha256": "c33f80b2a1e9054da3ecedeed7a1b25b9f4020288fc542627ebf6eb35e80e901",
+      "translation_sha256": "c7cf1303293f58d809d343058fff3f5e18d216f98362a1650f60ef7df4e2f287",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Leda's Liquefaction spell",
+      "source_sha256": "42c97d7d391e663e2429d3e2a1d7c04b7149c919e7cd71b22e56ca440769ab5f",
+      "translation_sha256": "e9f560b9253b9dc916a9dddc274c70c0fd17eb805a41d9927e93bc1731b0f650",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Legendary Destruction spell",
+      "source_sha256": "857f6a004f320322ef300d0f1cc09818cfc40414c3d685cab83b40ee9b4add0d",
+      "translation_sha256": "b16fbd859baf8965131af33c0c65baeccb552a0b3b4edcde6928320ae6d3d227",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Lightning Bolt spell",
+      "source_sha256": "ca0d6100493dd8224775b5d8b8ee9f40e0b2830b24932cbac7cfcc8690bbf83b",
+      "translation_sha256": "e4fd0e61a48c20135f1d97c10038c8c93a28ad1b963bfdc72d16c59c88ce847f",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Magma Barrage spell",
+      "source_sha256": "658cb2e7a2712fb21509038edb7d4bcf55330fe8120dc98e25b427cfc0f5719b",
+      "translation_sha256": "5ebc771b04159bd8d1ce3d2b08e12bc121a2d9449dafb61e629d2ad0ded715ef",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Magnavolt spell",
+      "source_sha256": "fc3fd12455c7b1a03c5956b8c1a65d728b0148741d977fc47a55ab99086b2979",
+      "translation_sha256": "5fc2da3751ae0d5220331290d08bb2c81c003f837013aefa121ca286cf24547c",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Malmutate spell",
+      "source_sha256": "8de0be718c97f2037f11276a498b13dab4b0b7de3224379ded5f31a10428f502",
+      "translation_sha256": "98d62c0042138e8d48afef51102dea8f761ef81fa89e8a5272a2c2f13d318c45",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Mara Summon spell",
+      "source_sha256": "c580dbf75c38664b2089c1f159432fe1217f77319ef678243d4d4aceb2e59d24",
+      "translation_sha256": "ef3da8e60e80a552d2ba1668a160c8f842d1426be6df4b2c1dcd5f89f520fed2",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "March of Sorrows spell",
+      "source_sha256": "effd6e93778ec3e279e8b042a9fbad6897719eec270898d1b11348e65b099930",
+      "translation_sha256": "debe30ef8e9cfc3acee97a8dd227550a02bd0bcb7fb16a12ef013d1ccc58388d",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Marshlight spell",
+      "source_sha256": "347abee680ae5c62205df1e918b4a0e83c36c71de7c0f33fd944958e8b0f39ca",
+      "translation_sha256": "c4bee961aec1236f0044a962f3aa9f1a14554a9bd5362b79e3a30c3a25b76572",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Martyr's Knell spell",
+      "source_sha256": "60ce1774e7a673bce055c4c3834eb2d0abc55b246d4f236fe4a63ee5ca06f2da",
+      "translation_sha256": "29741235bd5f0a4c55bed15505c3296b4ec7f2c212171f664ec4aab68d5602be",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Mass Regeneration spell",
+      "source_sha256": "baa79a83a273b7393858a7e0e1bb4205ffd6d7ebbc0d7714fbee859c9681730b",
+      "translation_sha256": "c9760042f875f6c1376d70957f364cc43000a60174be2e8f2ee75b452b3c4d69",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Mesmerise spell",
+      "source_sha256": "35369cc6267b93f5a88b69c762e99f62ddb4be0b0037a69a586153bf244afd3c",
+      "translation_sha256": "5da9b64e18242acb3bc39301bfe47b7e568f329c85b1274844ff775664fd6427",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Metabolic Englaciation spell",
+      "source_sha256": "2e7844aeed2e4991a9aa7d02ad41167ccb6e3d2894327ecce2e6f47bb8c9bb98",
+      "translation_sha256": "89d290abd023da4dd9f6f4dd9348edb5c781b03b8105948bcaf7c541af525b5d",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Miasma Breath spell",
+      "source_sha256": "396830cfab45d8885c99f5e3cfe65d851f71d56c28f4113d02d83329835f20fd",
+      "translation_sha256": "31a41a42224f30014a8b4e03b4eaef177be06121e56c3459eb7f617e571a0828",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Mindburst spell",
+      "source_sha256": "0531685fae23b343cf5bde38747727771ee9ac5cf4b7d6acda39052479edcd50",
+      "translation_sha256": "62f07761c240efcb816ba78b20a960def143393d209ad1bcc06d2701724881c6",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Monstrous Menagerie spell",
+      "source_sha256": "0f54442f0f7eaee4e1b2d51118eb7fc7a88678bf340639415f808f3411946ab2",
+      "translation_sha256": "4c8febb2968036a64d04889338dba585188d5c7b96428d8a247bd2ba77fd5458",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Mourning Wail spell",
+      "source_sha256": "d50e14824e3dcb6ba83a97fc0dc228603879b8ad784a25f0c265919fc9dcaadc",
+      "translation_sha256": "242be2291f48bdecc1a5ea58f97fde209532251069d8065af3f7d86c1bf54806",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Mud Breath spell",
+      "source_sha256": "8eed5d57676d49efe22689646230a3af12a67d9c8a0cea71d622758aa1085df4",
+      "translation_sha256": "8eed5d57676d49efe22689646230a3af12a67d9c8a0cea71d622758aa1085df4",
+      "reference_only": true
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Mutagenic Gaze spell",
+      "source_sha256": "9b39827504953034daf24e30a6a45e16de145a41b80831ade211ac371326a86a",
+      "translation_sha256": "c1f36d54338a9ebd4e05d360b55380565b0f6d9796876b20fcfd5eade1d10500",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Nazja's All-Purpose Tempering spell",
+      "source_sha256": "9110fa4332608476dfebe7d005bd092f095aa33c8891ea878627f5a0ac4564fc",
+      "translation_sha256": "753f33a021a6bcd08244b78cfab57d56d1dd99099b82c8af9461e624fb46263c",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Nazja's Percussive Tempering spell",
+      "source_sha256": "fc34f68dfb94b4cdd01a02f2c880f6db230a1710cd9459d05f0a3dd9afdbace6",
+      "translation_sha256": "564b83d62416fa8bd3bb642e44fce8de4cf30c15040066a647cf2313d4c060a3",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Noxious Breath spell",
+      "source_sha256": "e134aa52fc409d933f760bfe7357e914c87a8c23e197fa096275432e4eb2b104",
+      "translation_sha256": "e134aa52fc409d933f760bfe7357e914c87a8c23e197fa096275432e4eb2b104",
+      "reference_only": true
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Nullifying Breath spell",
+      "source_sha256": "f1c1f3efd35507b3262db018bebde73d013a89a127c7c8b7dd7b53f2e96d35ff",
+      "translation_sha256": "f1c1f3efd35507b3262db018bebde73d013a89a127c7c8b7dd7b53f2e96d35ff",
+      "reference_only": true
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Oblivion Howl spell",
+      "source_sha256": "aff5247cc7ff5a783e37967fdf3588b217bcc83d01fdc9ebcdc8d1a156a38d21",
+      "translation_sha256": "754ac99bd21bbad9df0ec5f2faee6822865b9ea0a749f20ecb092b5d030b7739",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Orb of Destruction spell",
+      "source_sha256": "9660aeff0f20a0d7ede470de6c24395774836957ed8e574c63a5381a7a8de483",
+      "translation_sha256": "d0c1d0a074a561dc562926d5e365f12647a13727ab2a0a5a3f95fa6efc2e42e8",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Orb of Electricity spell",
+      "source_sha256": "f9002b474ebbac55fa23bf9ca86e6516bb0d25de3c5e33036ecef01cd7143b0a",
+      "translation_sha256": "b39fc966a6c10a17910fdec56a25f8359d752fad5879ae7542d49678a4ee4325",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Ostracise spell",
+      "source_sha256": "cbbef951c6ac6f30e1b5d9de0bdac4cd7e5cc07f400776211367f3af7dacb263",
+      "translation_sha256": "fa17ca2d02cdd8743224eae0e3aa4eddd3267e56e6eda699cf0a2d03df234f8c",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Paralysis Gaze spell",
+      "source_sha256": "1fa93144c865d4900c6416fc69273b8fd1104e577eb19e0577b48252b9ba59d8",
+      "translation_sha256": "3fc667e41288347d2945780fabe1623e81e327ad03a2d303b1ae4d9e585d4812",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Passage of Golubria spell",
+      "source_sha256": "24dbc973874f9b881250c87829d61829610f4261f0b649719c8f65504118d66b",
+      "translation_sha256": "048a179ee7ef9a65d5dd395d08c68389743929c43cee2889050353c0a1483a63",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Permafrost Eruption spell",
+      "source_sha256": "abb0bc7941bfd1f8dfb991aefea68ddf243d7b19a13b00a5b05d5329517d3d0d",
+      "translation_sha256": "c2b1473651efde242cfe7a416d5cfd8a5d5e3604a68e4f027c46ec5feaa5f287",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Phantom Blitz spell",
+      "source_sha256": "fa9848fbf0267ea6f0e8a3cf5649a53414d1f1f46dfaacd7f75c45ff714fb879",
+      "translation_sha256": "ef94860b34cfd8aa4bff3e43cf6ec139cb9effb59a9456d81c4bdab4d7e7ec36",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Phantom Mirror spell",
+      "source_sha256": "0e9c3f5a644a68f546fd45c8ac6d35e058b4509b1fce3f92c0414887ad32abe5",
+      "translation_sha256": "ab1ce48e4650bfea3c8c38cbad3f922728ad9aacf37335931b55136323e1956d",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Planar Overlay spell",
+      "source_sha256": "e26dcdc17159c00e7682eae9a23496711e1cb7fe3d7e62a5f16fa867165b72c6",
+      "translation_sha256": "dc25caf025bae420e0996be6bf547b08fbd9a01d197a5a99da8430f031d33ee2",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Plane Rend spell",
+      "source_sha256": "5850d21ef6aa8d68ce7ee35d01e425af524d81a454fcd84ea50f8aab3e41cc8a",
+      "translation_sha256": "ce5f9a337da832b44a6d1b1f7a579c13239681893ac482d50517648d3ab0b99f",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Plasma Beam spell",
+      "source_sha256": "3cf8c2f4c07b265e665f2e7e3b842b02bf7ab927cfd98bc046a9ab3111832815",
+      "translation_sha256": "bb6ac084889e87d5ee6441e8a5349494ddab3cf3cf083513d3b4ab3a50fd9e2e",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Platinum Paragon spell",
+      "source_sha256": "24c2724d8727fd1c0eaacb2821686f5b4c51fac470885f3cdd672a672b41ee7b",
+      "translation_sha256": "78237823dbb1cbcbeaa69d35b35ebedf65039c7a12b9a4a0a861a8586959b314",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Poison Arrow spell",
+      "source_sha256": "8a5b24d18d32cee906f2bb9ec7b9631248ae442b018bf06f5c4129a8a41652d8",
+      "translation_sha256": "ef8daad418dc958f50fa6f4e0f48c5bfc4bb44a49fa5419f1d3ac666dfcd757e",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Porkalator spell",
+      "source_sha256": "539af4133b3323a23064ee59b7f7caa932eebf64895cd30b203da180224968ae",
+      "translation_sha256": "89bcf6a7ab0676130d60e3115ea255a3524f5f3f65416f95ce647d5d8675a38e",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Prayer of Brilliance spell",
+      "source_sha256": "fdc376843757aee74dcbd8381fbc228f60d6a7dbcf935159b1ef5493c784f781",
+      "translation_sha256": "ecf7e60cfb3e03a375e128f31fea57938c9b08553fac0a227d93fae380676137",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Primal Wave spell",
+      "source_sha256": "2c0be47bf1ef20fd1d8d6828919e84200168d4fc56c9981afee63152480ac82a",
+      "translation_sha256": "4eda228eea9560dd6e7708b1a3883621d1f50b03bdd3f3c94c297dc556342931",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Pyre Arrow spell",
+      "source_sha256": "d1ad6cee780bc36aa901e4e07a42c0d4a7e5579dc5e9f363d88569717efc7283",
+      "translation_sha256": "e815ae7801b982a50023a580dc499359c3a0c5f34e0e1a1cc7a71507d1a54248",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Pyroclastic Surge spell",
+      "source_sha256": "c0977b6c4f168d445f7cdad7e3ca75a0107feeb703d6ea53a3645468a4f08cd6",
+      "translation_sha256": "67f882de0f28f1ee5f4a420265233093bdd656f794e1266ddfc950ccd6abed1e",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Pyrrhic Recollection spell",
+      "source_sha256": "a64bc1e6a37f225b64a38a3629376ec7356b53fecacdc0c1e3df00fe293113b4",
+      "translation_sha256": "c993abfad10ab778dcaed7e2928f92a287d3872ea79e03a063af33478d18b595",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Quicksilver Bolt spell",
+      "source_sha256": "ffe27ae2631a1c3fda69f0749dec100abd10649c23824554af214ef1845890b1",
+      "translation_sha256": "4abd4d85849dbe691fe55c676098ed4ed702c0a249211c405ff4c873c4ec21cb",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Ravenous Swarm spell",
+      "source_sha256": "65345ef3e0443c8b1f597df2ac841a79f93440b4a0aa516b7b234a3c6aaab478",
+      "translation_sha256": "0dc8a6be97a2200cb90c2ae9fe590bb4c53c7816260bd0193cf5a4f4ec5b7f1a",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Rebounding Blaze spell",
+      "source_sha256": "0772e123af0b189175af20d0f3c0a6f254236d855a7791e22d49f44e4403c442",
+      "translation_sha256": "ab62c3193251ac67c20ba86c861e86e3c55374f4859bc83f2220b2b0e462ecb7",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Rebounding Chill spell",
+      "source_sha256": "274f1e34d6236ed20bf8203c02d6562dcf1487b50592598a90023a791c143e9e",
+      "translation_sha256": "14ba04235d5f4421fbdf5d59d0e7b6d7f102f38e899d320382f52df57111c72d",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Regenerate Other spell",
+      "source_sha256": "7b304f242d8835a9e798ba75973da241a45a3fb47a16d35a6d20f084459eb113",
+      "translation_sha256": "14296ad3fcb21d3227641faafdda659080a03cb90409bb6e16d31c8bb9cec1ec",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Resonance Strike spell",
+      "source_sha256": "a09269d9571b9abd6c6c71ab2475b6eef4214b301a5a84fcae2f631b3216601a",
+      "translation_sha256": "e39fd24c62acd256f5fa70958c8bcd53f2f491f27c9f1175217c65b375808f19",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Rimeblight spell",
+      "source_sha256": "e6c82ac32f55a5424f818cfdb523c8704e281efd2bd58c423cf7400deb759643",
+      "translation_sha256": "d3de06ba98aa0fc32cfd8b25832f907b86a86f24b1fe1281b4d56807df7241c3",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Roll spell",
+      "source_sha256": "8d3247b8948449d81b618647c68775cc7b28db59db3d926544c80b5c40e72a40",
+      "translation_sha256": "a2cc7583d9964fe28bc96a234335c5402d1207ee1f9b62bd2a0838d386ef64fa",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Sap Magic spell",
+      "source_sha256": "3d28778d91e66d73563fd06f52cbaf10e868d13cca771296ad6106e646a6cbce",
+      "translation_sha256": "478804095afcadd03e84fc0ad2693c2917d6d79e025e96a7631f305e571ca2fc",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Sculpt Simulacrum spell",
+      "source_sha256": "67c380492bb993a68e511d337de17234594ac5ecf3e8304d72b89f0268fcb7a4",
+      "translation_sha256": "5d59c93b6cc026672de403a964f2065c54b0704f6223c966dd885d72934314e6",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Seal Doors spell",
+      "source_sha256": "5b80fb385574321f53856d5d948683ff58506477a91920edc1a46390021614c0",
+      "translation_sha256": "cc9d9c8db6f24deb2bfcb7222fe773dc987f3811f588a390b6cc45f2817a6ad6",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Searing Breath spell",
+      "source_sha256": "dd9bbb401102716a120a4c84e08f80a2c388bd38b7eedf1e0e6923f313fe977c",
+      "translation_sha256": "773c1fb3799522df7536260e4f8f1068251844dcef16e91f5010da60c9ac5735",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Seismic Stomp spell",
+      "source_sha256": "5c9e36c05a60a83582dcfdee8929efc807ab0005f616c87bb7db6eec48c0f8b2",
+      "translation_sha256": "fd38341b685c7ba10a1c1393dcf073d144ce1e3315d79bc0c034b30d37ab2a4c",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Sentinel's Mark spell",
+      "source_sha256": "2b47b767f771f0dd554760cbd16f7ce9e9f668d77cc8e98f490011ef1b15d5ff",
+      "translation_sha256": "81400c8bdd92e0c133b0d20d8055fb2e4d5cf63adadddd750bb5e3264ce01687",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Seracfall spell",
+      "source_sha256": "ab72c74bc3c0390ac5d163b7e0411106bd49c2e3a32d0697b055a38255444b83",
+      "translation_sha256": "ce93227da760139fa58df714f986a00f56a6cbad1e3840647a36b14816328d6d",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Shadow Bind spell",
+      "source_sha256": "11f8918583712da7620fa28a3ba4d5e980be5c284dbee943229c5597a71db929",
+      "translation_sha256": "3eded4ed115499259f6dc7f3f9049079ef6e47710175ac40e17abdefd408f766",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Shadow Creatures spell",
+      "source_sha256": "b47a4afed61386a1f282adac6903a83700179b3a0436a319fbdced1636d6e2e8",
+      "translation_sha256": "e5b5ca221ef93df7f82ddf7601f6ad3efb55ff76639c7255aadd78ae95bb6876",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Shadow Draining spell",
+      "source_sha256": "1d659d2c7607dbdddecd3432b1ea7e8ec5a633d735c23c67b358f56d4fc4076f",
+      "translation_sha256": "d7dc95708aa716ceb13cde9c297fe15d9bf8c6e9f0d849ed3b42f3cf24fd92a2",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Shadow Prism spell",
+      "source_sha256": "036d5d66dc6a3decac32fc9b1ba88c4c2fb46fe0175a1f2f333ce410a1ec6d5f",
+      "translation_sha256": "3347bd13f3bb070e7ff83273be609afdb4a11367dffa0dc1852aa34ab7360dc6",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Shadow Puppet spell",
+      "source_sha256": "dbd333ca85a70d4aa859c2b7500f83b83aaeda6b402f70586c9041fa034a18cc",
+      "translation_sha256": "1452e660d1804d27a53a3ddee0bda5ce2bd29d72633652340e625b51f555bce5",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Shadow Tempest spell",
+      "source_sha256": "7586204f7c4a95fe5946a6130a3db4bb1354706fe7cd0a12f80faae22dc4c36f",
+      "translation_sha256": "ee1e0ee0002ebd12ef22c3c401f1bbc3bc525c02ab9d6594f24356e36e7efddf",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Shadow Torpor spell",
+      "source_sha256": "450ea66bfff1d21af222966502e8f451e003c5e3145cb71de738be6c061a0ca8",
+      "translation_sha256": "aada880e5aeb53ecf37f183465fac40107d1bdfc871a6e6962e79db796807d1e",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Sheza's Dance spell",
+      "source_sha256": "1e0aeccbeba1ab6d47a938d677caa21d42619a5529c57c9e512323bf2d17822e",
+      "translation_sha256": "7b0c79421102fb7d001783549cf6b2c595215a237627db6d70f9c16d4770db71",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Silence spell",
+      "source_sha256": "e4ea9aa194196ac96c5aee0d2293d19ccc1705323d88828a70952f26d12942dc",
+      "translation_sha256": "fbac876efdf5f4ea7b945865ed4b135f3619b51f44bfeff44731fdb2c5d2c489",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Siphon Essence spell",
+      "source_sha256": "b6b3199dce55b05de2cbbe6fa6f3dca4e592cd1d3a4b68eb35d2377700a8dee2",
+      "translation_sha256": "f9ae44c905023ab4183c2e4983481849bedfbeaa143781c741394b9f02b44ec7",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Siren Song spell",
+      "source_sha256": "3dffb9c5e5ff9de994123ced79afdf7bb5bc13c54d9aee62fd53c9162e91ed29",
+      "translation_sha256": "2db2520db86e5ab227b7ea45677ed853a792ab30254a3e4c1029f69fe82e5b4c",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Sleep spell",
+      "source_sha256": "d3ebf78c171c42350cbe6af54eabb98719727749e63ebe842f0ab9f5f35a8bde",
+      "translation_sha256": "9b39773a76f7550ac51658d0da3f37b95cf4aa2ec82751bba739c66a7669aa67",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Sleetstrike spell",
+      "source_sha256": "2b0501f8ce26e3fa78754c328b4cbc1af818cfd56b0f3f7b4007a597c3c94e53",
+      "translation_sha256": "0b5e342e8e75af2b7fe5e2951a2ca270d4f48f7b3318e2b89a2b2b7e42c6e036",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Sojourning Bolt spell",
+      "source_sha256": "f660819cbb6502a85d8799b610b64e60eccff27ae314e41cb6d04c2fd03c3f9d",
+      "translation_sha256": "3f5b6a68e551e4d4e77dbf1107f3af6b6436fb3aaa21e14e5ac02e8fb5cf5600",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Spectral Cloud spell",
+      "source_sha256": "d4d5fd3f99ba0c8a40a5028a0a3c24c3ea1b449984930f3ddbfb4205a66169bd",
+      "translation_sha256": "4e4b80baab1bd85f632e8940d2569a3cdd273e4c2ed2d399908776057482a5a3",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Spellspark Servitor spell",
+      "source_sha256": "d5e16378feab2bdc6fca3b5d98f90702c9a4fbd7f74fc71a01c6ab2881ecde8d",
+      "translation_sha256": "73d564837165206a5bc8aa318e2eee519ebcc14f21774a7d94968118f71a0cfa",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Sphinx Sisters spell",
+      "source_sha256": "a8ff32eb027419989d899b7a84fda61262c34daca84933fb9fe082eed9c0e520",
+      "translation_sha256": "52a6ddb482357dbdb760ac2ac21458700f4c534017f574739b59350763f45693",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Spit Poison spell",
+      "source_sha256": "6df07352541c24394ee326bd86d0d52848958e387448e99e5419bd0a2a90a64d",
+      "translation_sha256": "6df07352541c24394ee326bd86d0d52848958e387448e99e5419bd0a2a90a64d",
+      "reference_only": true
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Splinterfrost Shell spell",
+      "source_sha256": "237ed8d7fa15e68e3b4659444dee63581cc30950516f88f3e6c6b0566cad7b8b",
+      "translation_sha256": "2f2ea7667641836fcea38716f79f7c17180473a36572b0f0d00d56b62533fd9a",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Sporulate spell",
+      "source_sha256": "2aac603aa74ac3ac05ebaff32290ae246c32db3b3cd3fd23ee0e04295acae64e",
+      "translation_sha256": "dc67514f54bc152d9b9265de372ff3934b673c883d42ff3619d7f6751f46cda6",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Steam Breath spell",
+      "source_sha256": "fc171af8e895e4d706631cacd5f3d9022565218c55138fc64266a8b850c80b0a",
+      "translation_sha256": "fc171af8e895e4d706631cacd5f3d9022565218c55138fc64266a8b850c80b0a",
+      "reference_only": true
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Still Winds spell",
+      "source_sha256": "75fb1713c6cf770298354b12ad22eb81682f6131bbcb2b1744934865fa6302cb",
+      "translation_sha256": "2e3d762cd14ca6d66e5db9e9bfa4bfdcec22069646c8297c1652e6b427a37599",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Stunning Burst spell",
+      "source_sha256": "a73a927e74c764c866324a556828bcd772c26a51b6e3165bfb20f786191ac457",
+      "translation_sha256": "91165e0e333340f5bd99142c0bd7f26d4db1cbddb9efa1c70687c60db59952e8",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Sublimation of Blood spell",
+      "source_sha256": "9a0b7993c2660d726b6615b1a1fa6df274a61deaa1e69126d97d18de6fb7ecb2",
+      "translation_sha256": "b72f4ac7c69c658b98aa52096488e1c3bef7ba4713ff249b0d599cc2a9c41d8d",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Cactus Giant spell",
+      "source_sha256": "9952815237f25391510f8ee9e731681a3f61ae30348a6f9ba1a2f6cc56bca1e7",
+      "translation_sha256": "a9d04e671be4afb97d94f2876c3f31c2f417d2619460d80fef5d328ccd89f0a6",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Demon spell",
+      "source_sha256": "3f1b4abd6c058645d4046b923542921c9f28ef3fd409541e4c39245c951e5f8d",
+      "translation_sha256": "52436135482470586f19fb1a6d7711578aa82c263f81765db2ffe222345dd619",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Dragon spell",
+      "source_sha256": "5daf0ac5ae08e999b602e42117bd4fd5ab509402649e3b3faf5c1618da97d3ab",
+      "translation_sha256": "bbb98fd24efd556efb448bde86c6e3623b6638a0fe6359163f4dfd555a1d5651",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Eyeballs spell",
+      "source_sha256": "c4fae122523f55240a949e9dc60205653518626cbe33c7fd9853c2adbbcda53f",
+      "translation_sha256": "3d4e0b09ec5bcac2d531c550a085c668b73eb85c6cfcf6a420dc851d3d73a576",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Forest spell",
+      "source_sha256": "a36767472f80b360927a1f7d10a1c23d7045abc80e7e43a278e44f054997fb09",
+      "translation_sha256": "fe179f7f389766fee2c1fab79f6d54a0721f62866443d57a25960403cae3e627",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Hydra spell",
+      "source_sha256": "c0fa761ef9a2c349a8d5678647b9caeec2f05fd2caca409fe782cc4921c04091",
+      "translation_sha256": "8e650d2b80827a28b80d6b4dae25a4ac9ec2aa2f4ee76dc33718177c57c5564a",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Illusion spell",
+      "source_sha256": "7c0cc687d94b2c4d2c7043e12c8003bb3f56d4b82dad2ff8c8fdc3825ad0f1ab",
+      "translation_sha256": "1569f14e1948a15ef2fcf24b360688e5dc73d9139b50e1aece33738351a2a096",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Mana Viper spell",
+      "source_sha256": "d2780f4c84ac3fc5f462628bfe79fa4da82597fe0a6c509ef5baf161c42fbd19",
+      "translation_sha256": "0d071ae2548eae1e68f054f5e8053616828bfc07511c06fb446f95790e9bdb7a",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Mortal Champion spell",
+      "source_sha256": "c74f5fb5d368cf81a7aeb4678fde09595545ef95db7788037a2299d2ebc286f6",
+      "translation_sha256": "5ea11126c3e7592aabd56fd3fe9244ca29ea4aad89b902307a5065544a8a2c61",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Symbol of Torment spell",
+      "source_sha256": "db384ab313e5081899c80fcde8084282ce814cf77dc9f70e6b7601bcbf70724b",
+      "translation_sha256": "46065f1e4d36666fd981e2ae2dfbf8ab0e6b00ec00a590b08ea806d1ae1602b8",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Throw Ally spell",
+      "source_sha256": "03d7b9e474edae75a24b1b79cb733a719692baef85920c2fa30c66b5a66d5fcf",
+      "translation_sha256": "1953f2f355741ead7a670e56d0c642e74b46731450ea6ae3e68e8d35cb956de3",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Throw Bolas spell",
+      "source_sha256": "2cf7d9f3704f225c37f6433cfa187117ed2fd749eead5e4504f494be49ba494e",
+      "translation_sha256": "71e696a485092a8a81e37ba3b047fcd286e17e20c6dc7699b44f46a75ef3f4b5",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Throw Icicle spell",
+      "source_sha256": "36dc8c0b2937f5abcb4c447415ad9f6e36f1a89b9c4a9862f7038408e3c0c8fd",
+      "translation_sha256": "f9fdb22bc0d7e74279473c102e8ac3b8c27fe941310e76f6fa85468231eec7b8",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Throw Klown Pie spell",
+      "source_sha256": "69b0e74ff3af786aa23a564b07c5f0cc91b7887441b00ee9657160de8697541d",
+      "translation_sha256": "95610210a09603687f8169bbf5aa5f070ef498a95c8ef6b64c24b770d9cc9b11",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Trog's Hand spell",
+      "source_sha256": "b397ed09d8a8f8d52d5f0d25a8f11ee097cbfdbd69ed1759e670fe65cee62d35",
+      "translation_sha256": "b397ed09d8a8f8d52d5f0d25a8f11ee097cbfdbd69ed1759e670fe65cee62d35",
+      "reference_only": true
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Upheaval spell",
+      "source_sha256": "f4f255bf0e411bfd8aa291ac23b75963f22e0a9d82f455e65e9474c9137b2f79",
+      "translation_sha256": "aa2fe3512e2697e01bd7ccf978a5a6e356959e5c5c02a1c1701b9124b105177c",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Vanquished Vanguard spell",
+      "source_sha256": "66439f1cb484ee49c525112a36bd7a6dea69ef1dce364dfe3a0dbefc9f173e96",
+      "translation_sha256": "a8dbd77a3ac6bb88e9d853976b777d279377fea2f55157f79e8096a9b1e4bcee",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Vex spell",
+      "source_sha256": "5aae88c9ea6ea5abe7df480931dc4e52e501593b32a0d7b9938e269d1e645ae0",
+      "translation_sha256": "b743a8fea7b1ae4f42627b9e1df16d6fd3a44e8c6f295156ef2eb9eb4e79881c",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Vhi's Electrolunge spell",
+      "source_sha256": "d4023390f78b39b978609ac282aec830fe555a395ddc5a6bb7e9dd24a7c6c1e5",
+      "translation_sha256": "c29b9f5cf964961ce059603d2bc68684fecd937adafcf84e841c8b9f76cff0f0",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Vitrify spell",
+      "source_sha256": "d744da0e1100a4d022e034709932798065fbe0b9ab406f5d1694598639e81c9f",
+      "translation_sha256": "f1ff667e7ef60a0fc85513d4f12baa5b689be2a6a0333f352351cf216b228566",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Vitrifying Gaze spell",
+      "source_sha256": "9e9acb10ef94016accf7e59e58dab9571cc8ff9cb03a07630dbc69b84797030a",
+      "translation_sha256": "26e59c467ade7528081d38584b1f70668c65daaef2f566648b21eed250ccc4e4",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Wall of Brambles spell",
+      "source_sha256": "d5e9aa4ec6e811ec8f96409df8860307c4cf8ae8457b8bbf5a86cece5b05928d",
+      "translation_sha256": "1d1b37de64760f4b6034d87d1ee88921569d5b0b83587297fac4d9b4fc5f498c",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Warp Body spell",
+      "source_sha256": "d2436a09620eebc72fc481789f8c96a9ee6610627681bd7df4eba5535012d9b7",
+      "translation_sha256": "a9d0388d994a4de1c5e837bbd1865e00a50e3c60fa913a416b3584d25968ee48",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Warp Space spell",
+      "source_sha256": "909fc4efaae511824395981e5d6a3affa9836e0c7ec235c5a9f4511be1c4c3b3",
+      "translation_sha256": "cb8b5d5c59f5dd98124c3f40f72eb82909d15f72a74c42a21e4bcba58cc49659",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Waterstrike spell",
+      "source_sha256": "b64220853816d3615da1cf1edf1834c8f5ecb09169049542bda90bc1af4948af",
+      "translation_sha256": "896cc1a841db2dc72955b86b59d8f8adcc2e37a01e6f0b299726e89330e874bc",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Weakening Gaze spell",
+      "source_sha256": "5580b9b305c8a71ff8ccdca8db328fd09bfae52ea728d3460e71218309d2665f",
+      "translation_sha256": "7cbe8af2d43a37be82d929c773451cbd75e676a3e807008d2341258ed971d62b",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Wind Blast spell",
+      "source_sha256": "0d4def12f35897da181cc799fd953d16dc427e47f431716e13aa5a98725f0b97",
+      "translation_sha256": "39a0ddca70488c405bacb555791d75935e7d8b9a9077e484425e2091dfc40a1a",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Woodweal spell",
+      "source_sha256": "df2c0a3b437d3bb82204b19b9425d270a8b38796d72af2e723fad87b3e8a7167",
+      "translation_sha256": "1dfb2a531316f977dd9e7c1a81e2e5248b9266f853ae348710b554159547b6b1",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Word of Recall spell",
+      "source_sha256": "adf68a930c15cbe961dd7cf767473d41dbb108006304c0c9a7bbf50fc581ebf7",
+      "translation_sha256": "56e3050c1ef1e16975c444598ad99a1ae250e540a429cb010903826d75124452",
+      "reference_only": false
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Yara's Violent Unravelling spell",
+      "source_sha256": "aa0318ae3683b99ff6aa5c2fd8bfb79c2d3dc36e17792bdbed52cf85fe06638f",
+      "translation_sha256": "88bb7d5cb7692f94460853ee9359ecd03e31f0db33ae1f12df09511b5c49dbaa",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "-Bbolt status",
+      "source_sha256": "749d1d898bc93c66a69401d07c7bae7c397101236c4a7248f20c4ec6e0b50cba",
+      "translation_sha256": "dfeffb43d0d049a51a07501ce6063de56c25e7f197fb02d1a8a1ffbad33a2dca",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "-Bloodrite status",
+      "source_sha256": "989ab82ccf8d2939920735b47e712b8ecc74dab4c30d86104583191ea7d3faaa",
+      "translation_sha256": "a63c10a49558cd2149b8f3101e65736bdc17df9fe0a37f451ce215bafff2e297",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "-Clouds status",
+      "source_sha256": "6d12d008a9f5b90f85a1323b0616a81c037b054c1367f5dacec0802dc6d46c5b",
+      "translation_sha256": "b6a7bf77e544f4a63313730f1b173be199b695daae37d7cf551531ac36bc9939",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "-Dog status",
+      "source_sha256": "19431af9f758c253305878b412ac167c536a950aaabe03026f6fa7a9332a8f7b",
+      "translation_sha256": "edc6beca6e8ab8cfc4857ab83a932c0d5b840dd80f839550033e9415508d4804",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "-Gavotte status",
+      "source_sha256": "d9a7eba17f2f9cd84c5fe39aa3ddd6592dc02ab583fa655f67b3cc08792a83aa",
+      "translation_sha256": "3c0958b1d7ee29e01674b18352c7ae6c3323edd478cf3f762dcdbd06891cc9db",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "-GClaw status",
+      "source_sha256": "1c0e0cc1e83b68765e1c2bf32b53d4d78d9997b8a5bd5efbeb6dcb6a57d9efba",
+      "translation_sha256": "dd0289798c2956227833287fde07a745b9dbc6721e99c487a9dbdc1baac51770",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "-Hellfire status",
+      "source_sha256": "4b7c8c4d5f3c1e3988e5ed02eb8fa6b24f56e2ac714e03f2060ec07d6fa7cdd5",
+      "translation_sha256": "87ba864111f72ff2d69ac0d7a8a5665722746bab52f7119e27cb2eac94483147",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "-Lithotox status",
+      "source_sha256": "82dbcee0b2cf72b917fcc53eaf5010865cdbe955c32d0bafcee21c9c884637c2",
+      "translation_sha256": "224caab4484e113a771f733f129e9ef8e48f4ecb9ae6761379857635bcb41c3f",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "-Mesm status",
+      "source_sha256": "5d62f1b7187eba079bd37a2ad1c7cd0299fe1f27ab3273dfaaee7549890abada",
+      "translation_sha256": "da10ce71558d2b25d48c0ae58174048b85081049469185ef132e9e7e0e108c3e",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "-Siphon status",
+      "source_sha256": "ee3cd24b8ab4659e275b23662e1245b1df444d3b9efc2ba2b527658108879cc4",
+      "translation_sha256": "15939c927c515072a8c88b1bb77f7dd55c21e05a86fc757901a0df9d7d2c91f5",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "-Star status",
+      "source_sha256": "6257cc4611b6e083f529ffe3085c0ecee9f912d7a195e23653b0215659b989e2",
+      "translation_sha256": "4b0c26bba17b222ecee7bc22fee4e518f535683df034aa0a2bc5dff727c81212",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "-Swarm status",
+      "source_sha256": "a2c479b6a4d1a89645b1a8c237d027878eaa3373ced77e98bb77676e3a65cf46",
+      "translation_sha256": "c02465bb727ad46d7e4683a397304fec0ae708d3155e9d42b248bfabbd04d31a",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "-Word status",
+      "source_sha256": "7dfe9837d5e5904dc896d2728edfbd32e9bc7e76a43b8b9f97efbc888dbf4ca9",
+      "translation_sha256": "6b21210b6da01f4df49a2f66a65018355ea150a03ba7ca7f54b42981924619e5",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Alive status",
+      "source_sha256": "92994d60fc932251fcdea3125a55694ead181e14bccb5f322f8ef5a39f83d642",
+      "translation_sha256": "cbd78591496d81a684043f51708819bc8809536ddb023d36e50ebe957d4379ad",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Aqua status",
+      "source_sha256": "7ae865b756935fc12fc25d7812236c449c9bac2471d51901e23a6b63bb077c39",
+      "translation_sha256": "651354e7cf70aba6dd9e0cf9af61a435b15cb58f47de77dbdd73272d4f1b7c1e",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Attr status",
+      "source_sha256": "4592622bd8a70e2976e39e17bdaee9b06c74f698b86276f1a2af3df2008bbee6",
+      "translation_sha256": "489ad364d4a563a59003b6abec70d6ae4a03ab765c89fee15eb0eda201a80518",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Aug status",
+      "source_sha256": "ac6d13cc40b46d5938a91504d185a2a026a138d99d1e251145112079db5745dc",
+      "translation_sha256": "3a75774fabada44c56da2a0a79d3585d1456c876ae3807f18e9ed4532d54caa4",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Bat status",
+      "source_sha256": "ad31be8482b19326534ce1ae4cd8a1771396f8b6b5a412acdefada7bb397cb24",
+      "translation_sha256": "dd9f30eaf0b2552511052de0e2cdd2f792de5c75b1a6fc9b29c7482b962b0364",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Beast status",
+      "source_sha256": "f45535173d02601a2ee2b9d01ba4fe07438b30bc7d81132db19cc22baf782d5b",
+      "translation_sha256": "86d06e4b4409d5fd3795898e64a51b1f0a8d41e3c1cf6d01641494a00d5f0cc0",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Beogh status",
+      "source_sha256": "0d7ba42041405be6121402aaef1ab4e8a7a841ca643096a3fc590c3f09064a4b",
+      "translation_sha256": "5a573adf794ac9d2bbe64e6db64f189783fdafdf1019bbcc2e19233791e73413",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Blade status",
+      "source_sha256": "5bf66c8030cc54d149ab898202e813c65a95d7d0b143252901780e856e24e5f5",
+      "translation_sha256": "4fa9b20332f3af5a47bb7fb765e9d9534da03d6689ca0a306adff1bf1b981715",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Blast status",
+      "source_sha256": "7e8cb146e1b97a354e3d7a8e5d6d6d90174d4daba718e02a694ebdc805a01ecb",
+      "translation_sha256": "32a51c75609d895fcb0bb5d455a34c4de3294d247043b6b88de5337525a97e31",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Blast. status",
+      "source_sha256": "6cb94c6d3f693dc973677633bc5b560582bf325c05c70f9f991c78b41b3e9cd8",
+      "translation_sha256": "6cb94c6d3f693dc973677633bc5b560582bf325c05c70f9f991c78b41b3e9cd8",
+      "reference_only": true
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Blast.. status",
+      "source_sha256": "6cb94c6d3f693dc973677633bc5b560582bf325c05c70f9f991c78b41b3e9cd8",
+      "translation_sha256": "6cb94c6d3f693dc973677633bc5b560582bf325c05c70f9f991c78b41b3e9cd8",
+      "reference_only": true
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Blast... status",
+      "source_sha256": "6cb94c6d3f693dc973677633bc5b560582bf325c05c70f9f991c78b41b3e9cd8",
+      "translation_sha256": "6cb94c6d3f693dc973677633bc5b560582bf325c05c70f9f991c78b41b3e9cd8",
+      "reference_only": true
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Bloodless status",
+      "source_sha256": "347b645f53f34ba1dcda8b89bf9dd8a70472492a70ba97ba2bb57267ab97d21e",
+      "translation_sha256": "fe523a7e002d33f609bff9b132d6b71874adfdee6aab6e9627244cfe88835964",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Bog status",
+      "source_sha256": "abed1988cbd90ac1bbbf8313201c969161c6382b6ab1ae89ab7d060d9687cc59",
+      "translation_sha256": "50f0629adf7eda7f6c130f0a341e59fe4b6c665ea97f30e5f103ba983f24729b",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Bribe status",
+      "source_sha256": "ccd5adffa2da3bef7f4a2c013e19e9037747f1fcd43f9bd4409b0e1cabdf11af",
+      "translation_sha256": "7fa12f555d69ca74bb2cfbb6054e46824309a9e694a14f520b07e27dd77b3c23",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Cacophony status",
+      "source_sha256": "85faf2872d14ed9ad1efc7524832077f8823d05b2a16f62c665a73644306946b",
+      "translation_sha256": "17aacc0a91dfec1829f8efe783a297d06575c09fbe9d3b217c666cc700726500",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Catalyst status",
+      "source_sha256": "1cf6ef43226c079fdad91b78c8542ba4dab1503407a2fa35682cb541a5637f7c",
+      "translation_sha256": "4448e563c63d468524ecb2fd9ac1c2b0af50914db0c5c46ab82bc7f34812c44a",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Challenge status",
+      "source_sha256": "8f5ac1d22346d300fa7cf37f110cca65176bd32d1cd20c49019be56f316ec9a9",
+      "translation_sha256": "1bd0a0114d225c2b77590b8d3a61443fedd2a10e1c54a53a6e191b524ca1220b",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Charge- status",
+      "source_sha256": "7cb8a51274f30acc42ea65fe67adb87729dc75081dd0f8e90707b5dd22c56215",
+      "translation_sha256": "46af943a9d45290bdbc62fad8561207f33b3094330debacb07e32c3f46822e6a",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Charge/ status",
+      "source_sha256": "9dc32893f883a21dad52b37a4fd05e2cacfb693c88707c7c8afc94c80b452d04",
+      "translation_sha256": "9dc32893f883a21dad52b37a4fd05e2cacfb693c88707c7c8afc94c80b452d04",
+      "reference_only": true
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Charge\\ status",
+      "source_sha256": "9dc32893f883a21dad52b37a4fd05e2cacfb693c88707c7c8afc94c80b452d04",
+      "translation_sha256": "9dc32893f883a21dad52b37a4fd05e2cacfb693c88707c7c8afc94c80b452d04",
+      "reference_only": true
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Charge| status",
+      "source_sha256": "9dc32893f883a21dad52b37a4fd05e2cacfb693c88707c7c8afc94c80b452d04",
+      "translation_sha256": "9dc32893f883a21dad52b37a4fd05e2cacfb693c88707c7c8afc94c80b452d04",
+      "reference_only": true
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Cloud status",
+      "source_sha256": "5ef66d06471a52833f0905c3b80f9391c97d8f8f1a8df7fc7e05261a5c23ce19",
+      "translation_sha256": "afe6b821d86575f33db0593a1b99be04eaf73db9bd9dd3a4169a8a7ac0331d2f",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Crab status",
+      "source_sha256": "fc08ea664c72d9ee25eb005c88df6cd7a555463f4329a5c82ba365f2d2a92c2d",
+      "translation_sha256": "8f613a1fbce2b6c3dd913810b6b97bb5958019136c805529173dcc498320f048",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Death status",
+      "source_sha256": "bf66686fada7cb4ed3d257616d959b0fc264046a62c63ddd9045e41ed09bcf82",
+      "translation_sha256": "891acf093a2ed7e5ed82376060fad9e7c7b32aa15379fd3592f8d91cc9a479d9",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Destr status",
+      "source_sha256": "c29c39e4db59514c5f001cdbd312cefbd10b8443971e27e9f630359d86ca3741",
+      "translation_sha256": "3e8d687b185016fdd8c7ff44f1a885eb1d869bf48dde91922361c8514c13093b",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Destr+ status",
+      "source_sha256": "78591076be39dd1afcbd15b4e768738f6e00a06095d244d15b8ac67b60745775",
+      "translation_sha256": "78591076be39dd1afcbd15b4e768738f6e00a06095d244d15b8ac67b60745775",
+      "reference_only": true
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Destr++ status",
+      "source_sha256": "78591076be39dd1afcbd15b4e768738f6e00a06095d244d15b8ac67b60745775",
+      "translation_sha256": "78591076be39dd1afcbd15b4e768738f6e00a06095d244d15b8ac67b60745775",
+      "reference_only": true
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Destr+++ status",
+      "source_sha256": "9ae77159c35aebb110a526c288f9ce43185a6431f568ebdd5d68f4e1146ec87c",
+      "translation_sha256": "7752877441f0d8f004c5bcf673ece38ffe4297ac4311bd46741d00ce8c53b4b3",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Devious status",
+      "source_sha256": "d107a8c7e507a07623d881d8c7865872e3c627cde3d318452e099679fd290dac",
+      "translation_sha256": "7fd81c45c20ef8db584f3764e3fc51eba3da445bee9a9d4a98792184662cf730",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Dim status",
+      "source_sha256": "9b4163cf0784d928eb5cd069c541d070b40ed5d87c34dfda9d9f59f08321cb0c",
+      "translation_sha256": "b2a6bab9d25ba7b0707eaf529db90ba6e002692294c5b5bdc8c5c98f7daffbf6",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Dog status",
+      "source_sha256": "d63b7ccb6ef0f872f5fcf4509200e074d55379410e0275e74a8699cd1d41615d",
+      "translation_sha256": "6dd6996f769c7d314466d931a3056d7d0d8c288a8021b4acfdebef3229008060",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Dragon status",
+      "source_sha256": "ee673e600e3b4ccee5f2a184963ca6926e28a0d8a1564fe7e33d98cb337a1b3f",
+      "translation_sha256": "c0bccd07351718eabe807fe067c670a38ac58d89096c5c881381debbcaeb3a65",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Eel status",
+      "source_sha256": "589fdbff773a2aa8891e39c252c19dc028e3216fadd51e2f0d5612dbb1e13089",
+      "translation_sha256": "82c5da77680ad06f4999f841b49fa7bbd797a0bd3b5d58cb1d49ed2af981ad67",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Elixir status",
+      "source_sha256": "04b77cad94e3f45471a5969b275f2e39545cb2dee8ca6130e80c35b08ba556df",
+      "translation_sha256": "c7a30e84162b8b7ca56f8941bf0ae547342345fbfa3f2d8a5f5e32c88ba80c17",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Engorged status",
+      "source_sha256": "5df7a045a903941fd22e02807685a5f6032bf00d99b73344eea2ff5b86c5f9ad",
+      "translation_sha256": "8ca9d7e39712afc60495a3c3e7caf62f7a0f611a6147fb08cadeac0f6c5e69ff",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Enkindled status",
+      "source_sha256": "eadfc51f3ce392b36c92e544f277c76e8509be2aba89938db79ae31558acd22f",
+      "translation_sha256": "d1da5ddb319ae8f1eda8ac34a49fd00e0589e747cd361f24ae29eb8eaef227db",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Enlightened status",
+      "source_sha256": "da5b02b5050a8f1bd23c64c225f5de359c15f07fa2e9e5559bc2c58f6a70563f",
+      "translation_sha256": "3b2bbc44a63dd32ded32bbd2afc372b017c06ea8763b0026fcf2d13137d69c17",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Escape! status",
+      "source_sha256": "81edbbfb12057a7e3cca43b605bdc7ab6515d0877be6826a7e352686de01a7cd",
+      "translation_sha256": "791ce2b5b29af1a2ad3c2769846f5197c323473634651e189925e2d41773fa25",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Execution status",
+      "source_sha256": "9bc98dd2fa77fdc3e7db02a40f3e50c91461403a2cc4e6e49d01ed6f3b94dc37",
+      "translation_sha256": "79339687883fd0994c5468eb30c705f5106d697142084abf86157cd66bf393bf",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Fast+Slow status",
+      "source_sha256": "c3851ce964295009c0cf76a4bef41157fec5f978fd8184b3ecb64103caf5ecb0",
+      "translation_sha256": "11c7ccaaef80cf950ac6843b8d7dc9bf8df84c206a3c01375cb65cc80b542651",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Flux status",
+      "source_sha256": "6d07d98ff69fc4676d6d11247be467bde0074ffc842c05e402465fca3a651539",
+      "translation_sha256": "a2039c79efaced5db1e1e8b0647cfd8b9f0fe7dd2ebaff73b7ffc40a0ed2d41b",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Fragile status",
+      "source_sha256": "6b6b4e103e3e56e9e3c4f086034819e86b30e31b2f6341c3e56a07c175cb69c1",
+      "translation_sha256": "02f4fc86bbddf720f25cda1fd494f50260132c89574ef5e5168fdb1772b69647",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Fungus status",
+      "source_sha256": "55eaa6c955066c332bd70d6a5092b60fcf4ef760ce8802636d23089a6c5236f1",
+      "translation_sha256": "fbaa10ae523a9bb94ae1ca464b839efab8425837aaf4698dc70ca38c2100d0af",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Fusillade status",
+      "source_sha256": "fdc19fb7d6633b39a2e282b42e4bd323e1a1fbc53cf5fa78a50c4b70d6325f40",
+      "translation_sha256": "4d7e035f4345427b74faa05f9a56e08c19fcc74ddfde7856184de56ead80fbdd",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Gem (*) status",
+      "source_sha256": "c1d18c43ff31d88fdedd58aa5cad7a5e07789b2017efbc4736869f0453e9665e",
+      "translation_sha256": "36b3d16356d157f4c0a2765a191ed28d2000e56e424180179c413e3caefab69a",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Gem status",
+      "source_sha256": "7cd2de686ac222ce977d397765d3cbc4b609fb67f064dce16cbd8e7691f1e5be",
+      "translation_sha256": "acb451a9ef0c7f31ec5e4580f0f24bf3d14719f0aec3981c7164ceb832072900",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Heavenly status",
+      "source_sha256": "e94dfc568ae1847f3298d910a7080e3cd3f8d5a017967ee6a054df0b3f8bb2b9",
+      "translation_sha256": "1e505d1a3577aa0c1215478eb9e6422ec04266205c10998d2b904b2a005124a9",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Hive status",
+      "source_sha256": "363a811c5271427d651a02b321eaa64806b2a43fea2b6a3ad498bfeadbb3b881",
+      "translation_sha256": "0b9ff5065c842ec93877e474625c6471e820ea93061eedd74cce13072d812df1",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Jelly status",
+      "source_sha256": "a8b6f1eda6684405623685a978b0316c9d22eaac638229135d30842cde21ef21",
+      "translation_sha256": "a9d18dabf2bd81362bb889c5b42ce71fb76b1db0886ce499220cacd0ec12163a",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Jinx status",
+      "source_sha256": "ecd217bd0f98e5b7d0a22ab3c9bdaca35b728360a446d816ae278a371a6da031",
+      "translation_sha256": "737fd951794a4d6f6df671638e09bab65ae4be6d9ca4cc8ed37bbb09a28ea4a9",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Lash status",
+      "source_sha256": "d47e30885cd0acfe419dfa39d79227475212a2d4d0f7fcfffacf5a89bbdd4799",
+      "translation_sha256": "218df51e21e41e9a1f2022e7400e5b1787068e20c7a07ac0d771f3209a98c56f",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Lava status",
+      "source_sha256": "e449d91762690da9d0ae77df2b7a90e9858fd4dd573b7a9c2079b78b3202dafb",
+      "translation_sha256": "82099baf6a4e3cd4722c7a39d4746134f1d53ca6fc680fdb1269f4e1d88bd721",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Legion status",
+      "source_sha256": "75f1999006035d3d53b44af3161e4ee44e4635b2c4bf9c6d758a8c4d9ff7e677",
+      "translation_sha256": "7395b7b8f21baede53e95bddc08ea67bddb055d001f9ee71326a83e40fa52325",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Maw status",
+      "source_sha256": "9434d9f8d1f8657ae87ca6b9ef004937716e34019c8280ef2c719688c65ebba9",
+      "translation_sha256": "4aa9b9f77678b3d1af3b6c453389b164a3c2aa111ecbd10f778bd894883655e5",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Medusa status",
+      "source_sha256": "4cc174d41951516e6e22fb5b37fc5e6608fa3b4a6aaddecee8eaf6edff1eb0f9",
+      "translation_sha256": "37dcd44ddb71692660502313d6ce4bdb24b3a5f836e266b657d06f11aa26ee37",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Memories status",
+      "source_sha256": "5be6fbd1cbae3c9909ed7dd44b28e806e423d489bdbb772d9c55a9aaa63bd59e",
+      "translation_sha256": "dcd3d7342c53e02d533e016744ebd385fe0809571a23372b402ae28119a852fa",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Nightfall status",
+      "source_sha256": "d8145f19da8454e9bf8219daeb007c608a121a7b9ccfe2fbdba98c9b3779dd16",
+      "translation_sha256": "54fbac2c43f96eecafeeb357a48fc82fae174f63d72fc043c0d50b80592058d1",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Ooze status",
+      "source_sha256": "977372da3bb19ce186bb32c63c8b8974bb2772c8aa4cad84f57c8184de4133f5",
+      "translation_sha256": "0999812b9c9f12efa5db1c3006e14f0f5b1b91a9d769fbee39be6592b55ab5cf",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "OozeRegen status",
+      "source_sha256": "c5e3b6d91e2c7c7e341331d8d6fd8659422cc637561fb1ef432fdcb415cdc5fe",
+      "translation_sha256": "555a41d6601235decf133f31041e250a5327660c7f9fe8f3ea4a01e224f14186",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Orb status",
+      "source_sha256": "b0036ac2c3c1b87b2deeff32068eacfb98fcebc22d72816299a2768a1f64e2b8",
+      "translation_sha256": "7bf4ec959aafa28f70ce2b78586dbc0e32a662a07023b66dae078ead8159a999",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Orb? status",
+      "source_sha256": "17c4d274fa73ec1e17b21296004b314fe683d075222fd7b9427b86186ef1a035",
+      "translation_sha256": "41c1577a7e184f46b496c01eb21cc1744f576f851fb0a98600a36c7b3732d970",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Pact status",
+      "source_sha256": "68c71def7fdcf790ffac345588caafcb7abfb2d429e5fa85cb7d1894c99d9e4c",
+      "translation_sha256": "05ac0ee41cd585d3bc38d6a92f049c3dc16430a47fab1d620aefe6b0f2ccdac1",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Peek status",
+      "source_sha256": "6d582b6da9a07bd80986c7d0f55c54502a30ba0c8985ff1b630284f37f063df9",
+      "translation_sha256": "a9593e57e77fcbb5d7e3217b9698dd83b41675073994d7272d75cb03429e3c46",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Phobia status",
+      "source_sha256": "7dd661a55d7d9f8a47fadf1ee98290747aa72682b0e8d3200659caf8e844f1c6",
+      "translation_sha256": "e6e8fed624f8e98029f26f653ade0d01c2a2d9b953e721caa7288d9ef937d9b6",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Pig status",
+      "source_sha256": "2e1aa261d988f9fea46a889404100e00a92572a9d658af7c178820cf43901011",
+      "translation_sha256": "ebeeea1497a087805448e8c18eb4bca7a8d0fe4c0347c202ddcb4aaa4777e111",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Pray status",
+      "source_sha256": "e9602db49fd88812e09f44a3099013748d093f35b92451b58978219ad7fa9552",
+      "translation_sha256": "dbf02fb3df5d875bb519820c8f2bced8c61819ee636aeb7428c4694bed0c8f0f",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Protected status",
+      "source_sha256": "0ac67c489835920c3f4d588752950712c5d3800ecf9c5cb71e6891ddb3a6041b",
+      "translation_sha256": "dddc7d2954916a2a1a52eceda8d0ca993216f441c78f2017f4dd0b30335f1600",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Quill status",
+      "source_sha256": "f0a3ca49e612f7d1ca7331b0d79306dab10973431cc95e15fe5e74a69df0d5df",
+      "translation_sha256": "8ac96cd617a5e8e06217e14827944000ae5b120bafd3ab515ead33e6b35cf849",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Ramparts status",
+      "source_sha256": "4ea37a3d482fe775f10a4fa68d76a01932596162f69a4ee7d1df76e4824a23ea",
+      "translation_sha256": "ac3a7469bb3c378c84a618b28e422fbf4004cd32315f57a5a249c972c295e298",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Ray status",
+      "source_sha256": "138e42310b680721619ec9cda337a905c70ec048df530b0aba7d50c67a25375f",
+      "translation_sha256": "373a61e505a54e90cbef5ea489ebd3d1a889f767c2fb271fd284972a658e47b3",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Ray+ status",
+      "source_sha256": "b6453a01fd7376953c6d42cfadba9ca35e46ab07acc4137c8bbaab7b9d1a3dca",
+      "translation_sha256": "b6453a01fd7376953c6d42cfadba9ca35e46ab07acc4137c8bbaab7b9d1a3dca",
+      "reference_only": true
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Ray++ status",
+      "source_sha256": "b6453a01fd7376953c6d42cfadba9ca35e46ab07acc4137c8bbaab7b9d1a3dca",
+      "translation_sha256": "b6453a01fd7376953c6d42cfadba9ca35e46ab07acc4137c8bbaab7b9d1a3dca",
+      "reference_only": true
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Reap status",
+      "source_sha256": "d27bd10b47246043e5154f9afe90efb11b2ed8a7ca98445f8b1615e4005445e7",
+      "translation_sha256": "ba49b0ef080708f05af1b3c1acaf6790f01b9f1561155ce6889ec825c0eb3bc6",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Recruit status",
+      "source_sha256": "89640d2326a8b192ed8928c9346022a7c7796d7606998a51537c7e890b43f2e2",
+      "translation_sha256": "db31be0e56ecb86e682a0550c17d371e334e3d16109297a28fe0443666830e10",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Rev status",
+      "source_sha256": "deb2e3d2b1b4e84e05543a09784c9754234966d4c76b4de3cbb9bdea526f2d67",
+      "translation_sha256": "84c27a1200016809427554ad9a45f1693550af5553ad727b78943e93e6a8e17d",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Rev* status",
+      "source_sha256": "42ff7460f616a541101f385ce3700554dfff644d442cdc0ca638d4811f6a3cf2",
+      "translation_sha256": "851eb65ea895142b3f3cda66c6912a357598a29658ce48c6c51055d5c0adbc2e",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Rev+ status",
+      "source_sha256": "10614753ae522d968ac8233e3558531e503a62aa8ecfe37c8ec4c974275a7c6c",
+      "translation_sha256": "d958028671d18f0b9c75cf2f8df9d71a2a8daaf438578cc6b5c5e7ae3c0632c6",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "rF0 status",
+      "source_sha256": "fd1a842acb311b45749d0e6725759bcdd6cb741d7f39a9b3720f6eb356e37a76",
+      "translation_sha256": "99460292386a59d43fe905d48b14013d97c12fbcca72dfcb5dabb4769cca857c",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Rise status",
+      "source_sha256": "811acd0e752a5a8a8d6fb9c05e8294608e0ee85d7c0177d1234a1ae9c651b6d9",
+      "translation_sha256": "3d9cf33a3e0137d2c60d4dc9adeb78a5b0091024f9a05a0a797b3c77e1b087e3",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Ruin status",
+      "source_sha256": "123552b663c088f73b19ca2eab329c9098543b68a1a198ef73224d449ce6fd37",
+      "translation_sha256": "854b1bebdbcccacfecb6c70e916ac5751fb730e8da92860518e2b0a253d215b0",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Scarab status",
+      "source_sha256": "ac08be3bc507844f79c733507a88f8c08cea43905a9f0e08681f61868204b262",
+      "translation_sha256": "d1b14acaa814e509a6bc0121b78f82c2a7f9a9dab431dfaa82fc0d39be0ad96e",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Scroll status",
+      "source_sha256": "077989042c8b0a9bd671d55d10ba5d710cbb5866cbd24561254b68007f0835fb",
+      "translation_sha256": "d91ff4c9611a5120c542a0a7579b3196220c7ef0a0e75e24fb640d7ad502d0f6",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Serpent status",
+      "source_sha256": "2ff06b555f4c64cb093f9e4452f0c9b5d5e7d21aeaf9a9a13f07d791396ec280",
+      "translation_sha256": "8f5d000fca4cf99c77bb5c1fae45cef0f87b7559eae5c09ea2821a6ba9ee049a",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Shackles status",
+      "source_sha256": "52ea1f3557a2f0166df7d5c04d501dad816c5d1e2d3c881381f5811eafff88b1",
+      "translation_sha256": "30e0f6a67d132889b805ba66b73a40759744128d457aeb63a9228b178b82cc3d",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Shadow status",
+      "source_sha256": "851a198052d77c7b628ad9e8a3e85179c6c9630406926767ec87748ebe8d16f6",
+      "translation_sha256": "9124b9205752825d367207b6f62c205fe9cd2d4fd240f3927f7dee2ded459942",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Shield status",
+      "source_sha256": "8fb60e154d26f240a7703e911224c6676a57ee4782d307cb2505cba4efd22dcb",
+      "translation_sha256": "738b33ae2f4dfb4f8040c5f5ff21082c6f978fe10d0196f225739a636bbc97bd",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Shroud status",
+      "source_sha256": "f2a4c5cd9ce384c3c5f9b46d84834577f2df2d8ff37effdec18a4480cbc47d06",
+      "translation_sha256": "ea4b21fba219fcb18e13740d95b723e51185aa836d83f802d7e94ef0f4cb8988",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Slaughter status",
+      "source_sha256": "a2868c344ec72aacd92f6e251b831b6d50d0a3486b5a7d0be010770e9c54792a",
+      "translation_sha256": "cb377530b256ae186d88aa151d6c370bd8852914220cbaf284c2ca645d54e3db",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Slay status",
+      "source_sha256": "ec21d07f94872d9ed088dd792ddd50dc8ac6e03d9c7442e1720fb10b148fb849",
+      "translation_sha256": "6024a87fde4d90a68bfb9f40d33710297847999d875c93e39faf1861f4d01894",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Slimifying status",
+      "source_sha256": "b693c27a4b522affd656da67265db3376e9fbda7f37595439210794daf7aa256",
+      "translation_sha256": "a3506a01b9d314b8df9a90e0c064d73e0fb6ecffdd3aab02647485c634e0435c",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "SlowM status",
+      "source_sha256": "fc66f29bd1c8b026ddf2dd38e2e89140b698a4a6ee0e9e654b465cd7bfdd3f15",
+      "translation_sha256": "4ab4ab5472a45ef7606f582e39de8e25c315118682072a22053e3b8d531832dd",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Sphinx status",
+      "source_sha256": "b5e69cfae1dfb18a94bc421c09d251c9a0e4b55a300ff6df9396c9a956e3f4d7",
+      "translation_sha256": "ef491112fb65056aef2af5c2a162fcfdc297cfe2802bacb1056f0d8f61f116ca",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Spider status",
+      "source_sha256": "0b0a9032b0bbb9f371b16be91d66f972c18c262442269370e71a4cf03622df26",
+      "translation_sha256": "c2219fbadda6984053e7235bd984b43947f4ba69a740a25d289f7b2cf407acc2",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Spore status",
+      "source_sha256": "d6d374a91a10ba26e47dc10c5e9c6cfcbef9a3e4c7d021463e0c667eab91218e",
+      "translation_sha256": "6230fd7ca304031b71ce2ad88e541de490b9aa9a726db94b8f486f76a829f671",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Statue status",
+      "source_sha256": "02336ab316a0fc77a56a09dec94b43807ebe99458034b0a703d2c5123b4debbf",
+      "translation_sha256": "0d7ef5a1a85d44a7c4e23577eec4c384479739adec0033666e652d00e61b8ab1",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Storm status",
+      "source_sha256": "00946099fc460e6353e3d408218b39d7ee3102cc80a86dde9eacd43302b4c0f0",
+      "translation_sha256": "3cbd091a1b58ef63d83798d9b9a1228eea7abb119d9bb584502ecfa95e01ffff",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Sunder status",
+      "source_sha256": "182af32b830539db44c21ec1d90bee5b426ba76454cc87f3d6faeb46677e5d0b",
+      "translation_sha256": "ee9466eae26b583444f357a1b7f09d651ccb3a53c1189a25e3533e884789d6a8",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Swarm status",
+      "source_sha256": "82b6ee9e30a39c02d2e389dec8cfd8dc992d2a5bbbb2d3ecc97b7fdf3b9a6150",
+      "translation_sha256": "5929b49c240be56a87ce710cf444fe59f66072ff02fa02c1ae4c88be25e99e73",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Tesseract status",
+      "source_sha256": "2ca47b9efd504b6b34a079b802ad54f61f4553cf750f1258f36fa072684e6c62",
+      "translation_sha256": "c78a57fa98530afaf88abe7ca6f5b8c61f48fcc655c5cca14b5e364ba523f349",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Torch status",
+      "source_sha256": "3ab2bb9ee501ec666bf87f6978351a667b65df21ffbb28465ac53722a3e53a64",
+      "translation_sha256": "c15785c36cdbc6cd197a688918f07a652e8b445714f03e56848056b381dcb924",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Tree status",
+      "source_sha256": "ffe48121465d2a1af6a56d11a46336ee563cd13204654628d34621646f52a950",
+      "translation_sha256": "05cd01ce39527bfb22bf29ccf7f560866d6dc1532b794d8a06730083a84ed28b",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Unstable status",
+      "source_sha256": "1038ece87f72000023c629b22bd46130c17e584adf11671657a6edec71fc9bba",
+      "translation_sha256": "7b48e9dc6d6f25fb6a54f5880f2119599d674565ab18c2b93e505edfc1cb8e8e",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Vainglory status",
+      "source_sha256": "d3d610524d059503d1b1624e3196589985b2b074c2569b8d66e1b020e9fb0bd3",
+      "translation_sha256": "5b3be8a9a4c13d68f7c3b6b0f585493da9dea9619d1a535aa0c493955930f2b1",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Vampire status",
+      "source_sha256": "db6f6c37d815708ab8d74a9e42457a2bdf8b2d0dbadcbf636f7505476fafe4ec",
+      "translation_sha256": "bd51707cb79cfa30ee95c034d70a973351f89b2aa6e440896ab45b35f4153712",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Vengeance status",
+      "source_sha256": "5959d0239a20ea9b7698d842597b4151a002f89692ba18eb3cb15eab43ed1737",
+      "translation_sha256": "7f84cd482e53a0c146b44000c3a8f39cd51222d5dd1c77d2a702faaafe32789e",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Vexed status",
+      "source_sha256": "d1a6b9176a5b82633f9c50f78e6556765049e17fd8aefc3ba961901248f3997b",
+      "translation_sha256": "0019ae4762fcc20854aceaea7924abd489be00f4e121ce3d1b71f3f89d7f3355",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Water status",
+      "source_sha256": "73d59eff1bd81e5d9fadbfcc3d7c1b2a0283c884987edc0e5be4dba0e6ce7d1d",
+      "translation_sha256": "3935343e58b4b6a1ecb5087f44fc18d00569f6098bb93e2b9c3cdfd9291289c0",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Wave status",
+      "source_sha256": "0d6ef0a6baea209bad9e3f3a00af42605b43e89d8a17014e13b43302986beeea",
+      "translation_sha256": "b27b9256deb3991fc51eb9a072bdd7af37e5aef0b782d4ae6db8ead2a47ba928",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Wave+ status",
+      "source_sha256": "4fb3cb0defad9057550dd2fa198c53d9df610980112840b1e6bf0fd2f5214a85",
+      "translation_sha256": "4fb3cb0defad9057550dd2fa198c53d9df610980112840b1e6bf0fd2f5214a85",
+      "reference_only": true
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Werewolf status",
+      "source_sha256": "14209b6a9a7d33642dd3354c78f8020ea94d93d6e170b8022f6df0770ac545ee",
+      "translation_sha256": "df75556fceb03709136156309dc7dca7dc641dda8464f72dfa29faf0a419dbb0",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Will+ status",
+      "source_sha256": "5646c5f509f4b1a863cfd07bf626564b76ee7081cd6a86d350b45b61925080ac",
+      "translation_sha256": "5646c5f509f4b1a863cfd07bf626564b76ee7081cd6a86d350b45b61925080ac",
+      "reference_only": true
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Winding status",
+      "source_sha256": "7b484f9e8fbd7d5420b288be68751a58d17b056072b1f3cebfb0db5e7391b2bd",
+      "translation_sha256": "781ab629a82dd37111eeadfbe15f33b1fb18123c50d66b4ddb4ae75201bd3c4f",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Winding. status",
+      "source_sha256": "c44df4cfdf137f884a498ea82210379813225900b30eb47c4593812be3bda374",
+      "translation_sha256": "c44df4cfdf137f884a498ea82210379813225900b30eb47c4593812be3bda374",
+      "reference_only": true
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Winding.. status",
+      "source_sha256": "c44df4cfdf137f884a498ea82210379813225900b30eb47c4593812be3bda374",
+      "translation_sha256": "c44df4cfdf137f884a498ea82210379813225900b30eb47c4593812be3bda374",
+      "reference_only": true
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Winding... status",
+      "source_sha256": "c44df4cfdf137f884a498ea82210379813225900b30eb47c4593812be3bda374",
+      "translation_sha256": "c44df4cfdf137f884a498ea82210379813225900b30eb47c4593812be3bda374",
+      "reference_only": true
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Wisp status",
+      "source_sha256": "9c6f1f7af784b784de1c541b8bc361a44123d9140cb615782a0ce31e75fe0385",
+      "translation_sha256": "8084efc82c051ec5938d6f333207d8c6ed586ca90b07a35139de9a06f417c337",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Yak status",
+      "source_sha256": "7b33470626b21f95584a284b9f65321f7fc63d30b1d226647a5b77a996c377d1",
+      "translation_sha256": "3a16606f6a81310414cd997e412260c59ad004c150a3f68e3ee03cad153917c6",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Zot count status",
+      "source_sha256": "984b956495ffaafa392aeb328d2579f69bdb4d0f5aafad27aacee2ef0569ceab",
+      "translation_sha256": "0958a81f88d38ee7834d4b999e94b2d85033a5b9fb6346eed06ad247b412a878",
+      "reference_only": false
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Zot status",
+      "source_sha256": "f7dd6cdc71d97e516bbcd7b94cf115e7584e35ac9b95f856682645e4d46c948b",
+      "translation_sha256": "996198f386978f8d6c35d44cc720ae149bedeb3efce40571c63b6421f39edee9",
+      "reference_only": false
+    }
+  ]
+}

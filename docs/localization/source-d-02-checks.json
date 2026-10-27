@@ -1,0 +1,13 @@
+{
+  "review_batch": "source-d-02",
+  "new_messages": 192,
+  "compiled_matches": 192,
+  "cumulative_d_messages": 1897,
+  "native_cases": 39,
+  "native_assertions": 17727,
+  "python_cases": 27,
+  "scope_complete": false,
+  "glossary_preflight_files": 56,
+  "glossary_terms": 2268,
+  "stale_dependencies": []
+}

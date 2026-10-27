@@ -1,4 +1,5 @@
 #include "AppHdr.h"
+#include "t-display.h"
 
 #ifdef USE_TILE_LOCAL
 
@@ -81,7 +82,7 @@ bool CommandRegion::update_tab_tip_text(string &tip, bool active)
 {
     const char *prefix = active ? "" : "[L-Click] ";
 
-    tip = make_stringf("%s%s", prefix, m_help.c_str());
+    tip = make_stringf("%s%s", prefix, ui_translate("t.tiles", m_help.c_str()));
     return true;
 }
 

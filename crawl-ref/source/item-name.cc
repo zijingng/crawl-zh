@@ -4,8 +4,11 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "item-name.h"
+#include "item-noise-display.h"
+#include "misc-display.h"
 
 #include <cctype>
 #include <cstring>
@@ -36,6 +39,7 @@
 #include "libutil.h"
 #include "makeitem.h"
 #include "mutation.h"
+#include "mon-info.h"
 #include "notes.h"
 #include "options.h"
 #include "orb-type.h"
@@ -63,6 +67,7 @@ static bool _is_consonant(char let);
 static char _random_vowel();
 static char _random_cons();
 static string _random_consonant_set(size_t seed);
+static string _plus_prefix(const item_def &weap);
 
 static void _maybe_identify_pack_item()
 {
@@ -100,7 +105,8 @@ static const char* _interesting_origin(const item_def &item)
 /**
  * What inscription should be appended to the given item's name?
  */
-static string _item_inscription(const item_def &item)
+static string _item_inscription(const item_def &item, bool display = false,
+                                bool *complete = nullptr)
 {
     vector<string> insparts;
 
@@ -116,7 +122,18 @@ static string _item_inscription(const item_def &item)
 
     if (is_artefact(item) && item.is_identified())
     {
-        const string part = artefact_inscription(item);
+        string part;
+        if (display)
+        {
+            if (!try_artefact_display_inscription(item, part))
+            {
+                if (complete)
+                    *complete = false;
+                return "";
+            }
+        }
+        else
+            part = artefact_inscription(item);
         if (!part.empty())
             insparts.push_back(part);
     }
@@ -131,6 +148,302 @@ static string _item_inscription(const item_def &item)
                         comma_separated_line(begin(insparts),
                                              end(insparts),
                                              ", ").c_str());
+}
+
+// The saved randart name includes the exact base prefix added by
+// make_artefact_name, unlike a bare proper name. Read this cached naming record,
+// never an inventory/log string; do not regenerate a name or modify its identity.
+static bool _randart_display_title(const item_def &item, string &title)
+{
+    if (!item.props.exists(ARTEFACT_NAME_KEY))
+        return false;
+    const string cached = item.props[ARTEFACT_NAME_KEY].get_string();
+    const string prefix = get_artefact_base_name(item) + " ";
+    if (!starts_with(cached, prefix))
+        return false; // opaque scripted naming needs its own display adapter
+    string proper = cached.substr(prefix.size());
+    if (starts_with(proper, "of "))
+        proper.erase(0, 3);
+    else if (proper.size() >= 2 && proper.front() == '"' && proper.back() == '"')
+        proper = proper.substr(1, proper.size() - 2);
+    else if (proper.find('"') != string::npos)
+        return false; // unrecognised quote grammar: retain the full English name
+    if (proper.empty() || proper.find_first_of("\r\n") != string::npos)
+        return false;
+    string translated;
+    title = try_randart_title(proper, translated, you.your_name) ? translated : proper;
+    return true;
+}
+
+static bool _try_item_display_name(const item_def &item, string &output,
+                           bool inventory_letter, bool equipment_annotations,
+                           bool with_inscription)
+{
+    ui_translation_group text;
+    if (!text.available() || !item.defined())
+        return false;
+    const bool identified = item.is_identified();
+    const bool appearance = !identified;
+    auto tr = [&](const char *context, const string &key) -> string
+    {
+        text.require(context, key.c_str());
+        return text.available() ? text.get(context, key.c_str()) : "";
+    };
+    string name;
+    if (!identified)
+    {
+        // Translate only the original visible appearance. Never consult a
+        // subtype, brand, spell or true artefact name behind this boundary.
+        if (is_random_artefact(item) && !item.props.exists(ARTEFACT_APPEAR_KEY))
+            return false; // naming an uncached randart could consume RNG
+        if (item.base_type == OBJ_SCROLLS)
+        {
+            const string pattern = tr("display.item.template", "scroll labelled %s");
+            if (text.available())
+                name = make_stringf(pattern.c_str(), make_name(item.subtype_rnd, MNAME_SCROLL).c_str());
+        }
+        else if (is_random_artefact(item))
+        {
+            const string cached=item.props[ARTEFACT_APPEAR_KEY].get_string();
+            const string cached_base=get_artefact_base_name(item);
+            // Staff appearances cache only an adjective and a trailing space;
+            // name_aux appends the visible noun without exposing the subtype.
+            const string base=item.base_type==OBJ_STAVES ? "staff" : cached_base;
+            const string suffix=" "+cached_base;
+            string adjective, key="general appearance";
+            if (item.base_type==OBJ_WEAPONS || item.base_type==OBJ_STAVES)
+                key="weapon appearance";
+            else if (item.base_type==OBJ_TALISMANS) key="armour appearance";
+            else if (item.base_type==OBJ_ARMOUR)
+                key=item.sub_type==ARM_ROBE ? "robe appearance"
+                    : get_armour_slot(item)==SLOT_BODY_ARMOUR ? "body armour appearance"
+                    : "armour appearance";
+            else if (item.base_type==OBJ_JEWELLERY)
+                key=jewellery_is_amulet(item) ? "amulet appearance" : "ring appearance";
+            else if (item.base_type==OBJ_BOOKS) key="book appearance";
+            if (ends_with(cached,suffix)
+                && try_randart_appearance(key,cached.substr(0,cached.size()-suffix.size()),adjective))
+                name=adjective+tr("display.item",base);
+            else
+                name=tr("display.item.appearance",cached);
+        }
+        else
+        {
+            item_def visible = item;
+            visible.quantity = 1;
+            name = tr("display.item.appearance", visible.name(DESC_PLAIN, false, false, false));
+        }
+    }
+    else if (is_unrandom_artefact(item))
+    {
+        name = tr("display.item.artifact", get_artefact_name(item));
+        if (item.base_type == OBJ_STAVES)
+        {
+            const string base = tr("display.item", item.name(DESC_DBNAME, true, false, false));
+            const string pattern = tr("display.item.template", "%s named %s");
+            if (text.available())
+                name = make_stringf(pattern.c_str(), base.c_str(), name.c_str());
+        }
+    }
+    else if (item.base_type == OBJ_GIZMOS && item.props.exists(ARTEFACT_NAME_KEY))
+    {
+        string title;
+        if (!try_gizmo_display_name(item.props[ARTEFACT_NAME_KEY].get_string(), title))
+            return false;
+        const string base = tr("display.item", "gizmo");
+        const string pattern = tr("display.item.template", "%s named %s");
+        if (text.available())
+            name = make_stringf(pattern.c_str(), base.c_str(), title.c_str());
+    }
+    else if (item.base_type==OBJ_BOOKS && is_random_artefact(item))
+    {
+        if (!item.props.exists(ARTEFACT_NAME_KEY)
+            || !try_randbook_title(item.props[ARTEFACT_NAME_KEY].get_string(),name,you.your_name,
+                item.props.exists(BOOK_TITLED_KEY) && item.props[BOOK_TITLED_KEY].get_bool()))
+            return false;
+    }
+    else if (is_random_artefact(item))
+    {
+        string title;
+        if (!_randart_display_title(item, title))
+            return false; // preserve the original naming/RNG path
+        const string base = tr("display.item", item.name(DESC_DBNAME, true, false, false));
+        const string pattern = tr("display.item.template", "%s named %s");
+        if (text.available())
+            name = make_stringf(pattern.c_str(), base.c_str(), title.c_str());
+    }
+    else if (item.base_type == OBJ_BOOKS && item.sub_type == BOOK_MANUAL)
+    {
+        if (item.plus < 0 || item.plus >= NUM_SKILLS)
+            return false;
+        const string skill = tr("display.skill", skill_name(static_cast<skill_type>(item.plus)));
+        const string pattern = tr("display.item.template", "manual of %s");
+        if (text.available())
+            name = make_stringf(pattern.c_str(), skill.c_str());
+    }
+    else if (item.base_type == OBJ_BOOKS && item.sub_type == BOOK_PARCHMENT && item.plus)
+    {
+        if (item.plus < 0 || item.plus >= NUM_SPELLS || !is_valid_spell(static_cast<spell_type>(item.plus)))
+            return false;
+        const string spell = tr("display.spell", spell_title(static_cast<spell_type>(item.plus)));
+        const string pattern = tr("display.item.template", "parchment of %s");
+        if (text.available())
+            name = make_stringf(pattern.c_str(), spell.c_str());
+    }
+    else if (item.base_type == OBJ_CORPSES)
+    {
+        monster_flags_t flags;
+        flags.flags = 0;
+        const string personal = get_corpse_name(item, &flags);
+        if (flags & MF_NAME_MASK)
+            return false; // arbitrary scripted grammar needs its own template
+        string species;
+        if (!try_monster_type_display_name(item.mon_type, species))
+            return false;
+        const string pattern = tr("display.item.template",
+            item.sub_type == CORPSE_BODY ? "%s corpse" : "%s skeleton");
+        if (text.available())
+            name = make_stringf(pattern.c_str(), species.c_str());
+        if (!personal.empty())
+        {
+            string display_personal = personal;
+            const monster_type original = static_cast<monster_type>(item.orig_monnum);
+            // Only a known unique's unmodified canonical name is translatable.
+            // Arbitrary player/script names and corpse identity remain literal.
+            if (!invalid_monster_type(original) && mons_is_unique(original)
+                && personal == mons_type_name(original, DESC_PLAIN)
+                && !try_monster_type_display_name(original, display_personal))
+                return false;
+            const string named = tr("display.item.template", "%s named %s");
+            if (text.available())
+                name = make_stringf(named.c_str(), name.c_str(), display_personal.c_str());
+        }
+    }
+    else if (item.base_type == OBJ_RUNES)
+        name = tr("display.item", string(rune_type_name(item.sub_type)) + " rune of Zot");
+    else
+    {
+        // A canonical type key; never change item_def::name or its consumers.
+        name = tr("display.item", item.name(DESC_DBNAME, true, false, false));
+    }
+    string modifier;
+    if (identified && !is_artefact(item) && item.base_type == OBJ_WEAPONS)
+    {
+        modifier = weapon_brand_name(item, false);
+        if (modifier.empty() && get_equip_desc(item))
+            modifier = "enchanted";
+    }
+    else if (identified && !is_artefact(item) && item.base_type == OBJ_ARMOUR && get_armour_ego_type(item) != SPARM_NORMAL)
+        modifier = armour_ego_name(item, false);
+    else if (identified && item.base_type == OBJ_MISSILES && get_ammo_brand(item) != SPMSL_NORMAL)
+        modifier = missile_brand_name(item, MBN_NAME);
+    if (!modifier.empty())
+        text.require("display.item.modifier", modifier.c_str());
+    if (item.cursed() && !appearance)
+        text.require("display.item.state", "cursed");
+
+    string equipment;
+    if (equipment_annotations)
+    {
+        const equipment_slot eq = item_equip_slot(item);
+        if (eq != SLOT_UNUSED)
+        {
+            if (item_is_melded(item))
+                equipment = "melded";
+            else if (eq == SLOT_WEAPON && is_weapon(item))
+                equipment = "weapon";
+            else if (eq == SLOT_WEAPON_OR_OFFHAND && is_weapon(item))
+                equipment = "offhand";
+            else if (eq == SLOT_OFFHAND || eq == SLOT_WEAPON_OR_OFFHAND
+                     || eq == SLOT_CLOAK || eq == SLOT_HELMET || eq == SLOT_GLOVES
+                     || eq == SLOT_BOOTS || eq == SLOT_BARDING || eq == SLOT_BODY_ARMOUR
+                     || eq == SLOT_RING || eq == SLOT_AMULET)
+                equipment = "worn";
+            else if (eq == SLOT_HAUNTED_AUX)
+                equipment = "haunted";
+            else if (eq == SLOT_GIZMO)
+                equipment = "installed";
+            else if (eq != SLOT_WEAPON)
+                return false;
+        }
+        else if (item.base_type == OBJ_TALISMANS && you.active_talisman() == &item)
+            equipment = "worn";
+        else if (you.quiver_action.item_is_quivered(item))
+            equipment = "quivered";
+    }
+    if (!equipment.empty())
+        text.require("display.item.state", equipment.c_str());
+    if (identified && (item.flags & ISFLAG_CHAOTIC))
+        text.require("display.item.state", "chaotic");
+    if (identified && (item.flags & ISFLAG_REPLICA))
+        text.require("display.item.state", "replica");
+    if (identified && item.base_type == OBJ_MISCELLANY && is_xp_evoker(item)
+        && !evoker_charges(item.sub_type))
+        text.require("display.item.state", "inert");
+    if (!text.available())
+        return false;
+
+    string result;
+    if (inventory_letter && in_inventory(item))
+        result += string(1, static_cast<char>(item.slot)) + " - ";
+    if (item.quantity > 1)
+        result += to_string(item.quantity) + " × ";
+    if (identified && item.base_type == OBJ_WEAPONS)
+        result += _plus_prefix(item);
+    else if (identified && (
+        (item.base_type == OBJ_ARMOUR && armour_is_enchantable(item))
+        || (item.base_type == OBJ_JEWELLERY && !is_artefact(item) && jewellery_has_pluses(item))))
+        result += make_stringf("%+d ", item.plus);
+    if (identified && item.base_type == OBJ_MISCELLANY)
+    {
+        if (item.sub_type == MISC_ZIGGURAT && you.zigs_completed > 0)
+            result += "+" + to_string(you.zigs_completed) + " ";
+        else if (is_xp_evoker(item) && in_inventory(item))
+            result += "+" + to_string(evoker_plus(item.sub_type)) + " ";
+    }
+    result += name;
+    if (!modifier.empty())
+        result += "（" + string(text.get("display.item.modifier", modifier.c_str())) + "）";
+    if (identified && item.base_type == OBJ_WANDS && item.charges > 0)
+        result += " (" + to_string(item.charges) + ")";
+    if (item.cursed() && !appearance)
+        result += "（" + string(text.get("display.item.state", "cursed")) + "）";
+    if (identified && (item.flags & ISFLAG_CHAOTIC))
+        result += "（" + string(text.get("display.item.state", "chaotic")) + "）";
+    if (identified && (item.flags & ISFLAG_REPLICA))
+        result += "（" + string(text.get("display.item.state", "replica")) + "）";
+    if (identified && item.base_type == OBJ_MISCELLANY && is_xp_evoker(item))
+    {
+        if (!evoker_charges(item.sub_type))
+            result += "（" + string(text.get("display.item.state", "inert")) + "）";
+        else if (evoker_max_charges(item.sub_type) > 1)
+            result += " (" + to_string(evoker_charges(item.sub_type)) + "/" + to_string(evoker_max_charges(item.sub_type)) + ")";
+    }
+    if (!equipment.empty())
+        result += "（" + string(text.get("display.item.state", equipment.c_str())) + "）";
+    // User inscriptions and canonical property symbols remain opaque.
+    // Only the generated, reviewed unrand description is localised.
+    bool complete = true;
+    const string inscription = with_inscription ? _item_inscription(item, true, &complete) : "";
+    if (!complete)
+        return false;
+    result += inscription;
+    output = result;
+    return true;
+}
+
+bool try_item_display_name(const item_def &item, string &output,
+                           bool inventory_letter, bool equipment_annotations)
+{
+    return _try_item_display_name(item, output, inventory_letter,
+                                  equipment_annotations, true);
+}
+
+bool try_item_noise_display_name(const item_def &item, string &output)
+{
+    item_def single = item;
+    single.quantity = 1;
+    return _try_item_display_name(single, output, false, false, false);
 }
 
 string item_def::name(description_level_type descrip, bool terse, bool ident,
@@ -2138,6 +2451,31 @@ static string _gem_parenthetical(gem_type gem)
     return text + " until shattered)";
 }
 
+static ui_arg _gem_parenthetical_display(gem_type gem)
+{
+    const ui_arg branch = ui_text_arg("b.branch.name", branches[branch_for_gem(gem)].longname);
+    const int limit = gem_time_limit(gem);
+    const int left = limit - you.gem_time_spent[gem];
+    const char *source;
+    string result;
+    if (left <= 0)
+        source = Options.more_gem_info || !you.gems_found[gem] ? " (%s, shattered)" : " (%s)";
+    else if (!gem_clock_active() || (!Options.more_gem_info && you.gems_found[gem]))
+        source = " (%s)";
+    else
+    {
+        result = left < limit
+            ? ui_render("i.runes", " (%s, %s/%s until shattered)", "",
+                {branch, ui_literal_arg(to_string((left + 9) / 10)),
+                 ui_literal_arg(to_string((limit + 9) / 10))})
+            : ui_render("i.runes", " (%s, %s turns until shattered)", "",
+                {branch, ui_literal_arg(to_string((left + 9) / 10))});
+        return {result, !result.empty()};
+    }
+    result = ui_render("i.runes", source, "", {branch});
+    return {result, !result.empty()};
+}
+
 static string _gem_text(const item_def *gem_it)
 {
     string text = gem_it->name(DESC_PLAIN);
@@ -2148,6 +2486,10 @@ static string _gem_text(const item_def *gem_it)
               : you.gems_found[gem] ? LIGHTGREY
                                     : DARKGREY;
     text += colourize_str(_gem_parenthetical(gem), pcol);
+    const ui_arg name = ui_text_arg("display.item", gem_type_name(gem));
+    const ui_arg details = _gem_parenthetical_display(gem);
+    if (name.available && details.available)
+        return colourize_str(name.text, _gem_colour(gem_it)) + colourize_str(details.text, pcol);
     return text;
 }
 
@@ -2185,7 +2527,16 @@ static MenuEntry* _fixup_runeorb_entry(MenuEntry* me)
         text += "</";
         text += colour_to_str(colour);
         text += ">";
-        entry->text = text;
+        const ui_arg name = ui_text_arg("display.item", string(rune_type_name(rune)) + " rune of Zot");
+        string display;
+        if (you.runes[rune])
+        {
+            if (name.available) display = name.text;
+        }
+        else
+            display = ui_render("i.runes", "%s (%s)", "", {name,
+                ui_text_arg("b.branch.name", branches[rune_location(rune)].longname)});
+        entry->text = display.empty() ? text : colourize_str(display, colour);
         break;
     }
     case OBJ_GEMS:
@@ -2193,11 +2544,11 @@ static MenuEntry* _fixup_runeorb_entry(MenuEntry* me)
         break;
     case OBJ_ORBS:
         if (player_has_orb())
-            entry->text = "<magenta>The Orb of Zot</magenta>";
+            entry->text = ui_translate("i.runes", "<magenta>The Orb of Zot</magenta>");
         else
         {
-            entry->text = "<darkgrey>The Orb of Zot"
-            " (the Realm of Zot)</darkgrey>";
+            entry->text = ui_translate("i.runes", "<darkgrey>The Orb of Zot"
+                " (the Realm of Zot)</darkgrey>");
         }
         break;
     default:
@@ -2269,9 +2620,10 @@ string RuneMenu::get_title()
                runes_in_pack() < you.obtainable_runes ? "green" :
                                                    "lightgreen";
 
-    return make_stringf("<white>Runes of Zot (</white>"
-                        "<%s>%d</%s><white> collected) & Orbs of Power</white>",
-                        col, runes_in_pack(), col);
+    return ui_render("i.runes", "<white>Runes of Zot (</white><%s>%s</%s><white> collected) & Orbs of Power</white>",
+        make_stringf("<white>Runes of Zot (</white><%s>%d</%s><white> collected) & Orbs of Power</white>",
+            col, runes_in_pack(), col),
+        {ui_literal_arg(col), ui_literal_arg(to_string(runes_in_pack())), ui_literal_arg(col)});
 }
 
 string RuneMenu::gem_title()
@@ -2283,21 +2635,32 @@ string RuneMenu::gem_title()
         gem_title += make_stringf(", %d intact", found - lost);
     // don't explicitly mention that your gems are all broken otherwise - sad!
 
-    return gem_title + ")</white>";
+    const string original = gem_title + ")</white>";
+    return Options.more_gem_info && lost < found
+        ? ui_render("i.runes", "<white>Gems (%s collected, %s intact)</white>", original,
+            {ui_literal_arg(to_string(found)), ui_literal_arg(to_string(found - lost))})
+        : ui_render("i.runes", "<white>Gems (%s collected)</white>", original,
+            {ui_literal_arg(to_string(found))});
 }
 
 void RuneMenu::set_footer()
 {
     if (!can_show_gems())
         return;
-
-    string more_text = make_stringf("[<w>!</w>/<w>^</w>"
+    const char *display_action = show_gems ? "Show Runes" : "Show Gems";
+    const char *pattern = "[<w>!</w>/<w>^</w>"
 #ifdef USE_TILE_LOCAL
-            "|<w>Right-click</w>"
+        "|<w>Right-click</w>"
 #endif
-            "]: %s", show_gems ? "Show Runes" : "Show Gems");
+        "]: %s";
+    string more_text = ui_render("i.runes", pattern, make_stringf(pattern, display_action),
+        {ui_text_arg("i.runes", display_action)});
     if (!Options.more_gem_info && can_show_more_gems())
-        more_text += make_stringf("\n[<w>-</w>]: %s", more_gems ? "Less" : "More");
+    {
+        const char *amount = more_gems ? "Less" : "More";
+        more_text += ui_render("i.runes", "\n[<w>-</w>]: %s",
+            make_stringf("\n[<w>-</w>]: %s", amount), {ui_text_arg("i.runes", amount)});
+    }
     set_more(more_text);
 }
 
@@ -3623,12 +3986,20 @@ string item_prefix(const item_def &item, bool temp)
  * @param desc The description level to use for the name string
  * @return A string containing the item's name surrounded by colour tags
  */
-string menu_colour_item_name(const item_def &item, description_level_type desc)
+string menu_colour_item_name(const item_def &item, description_level_type desc, ui_arg *display)
 {
     const string cprf      = item_prefix(item, false);
     const string item_name = item.name(desc);
 
     const int col = menu_colour(item_name, cprf, "pickup", false);
+    if (display)
+    {
+        display->available = try_item_display_name(item, display->text,
+            desc == DESC_INVENTORY || desc == DESC_INVENTORY_EQUIP,
+            desc == DESC_INVENTORY_EQUIP);
+        if (display->available && col != -1)
+            display->text = colourize_str(display->text, col);
+    }
     if (col == -1)
         return item_name;
 

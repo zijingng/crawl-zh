@@ -1,0 +1,34 @@
+{
+  "canonical_names": [
+    "Branches",
+    "Fangs",
+    "Horns",
+    "Magic Parchment",
+    "Mandibles",
+    "Misty tendrils",
+    "Paws",
+    "Pseudopod",
+    "Spores",
+    "Teeth",
+    "Teeth and claws",
+    "pincers"
+  ],
+  "hits": [
+    {
+      "term": "horns",
+      "translation": "犄角"
+    },
+    {
+      "term": "claws",
+      "translation": "利爪"
+    },
+    {
+      "term": "fangs",
+      "translation": "獠牙"
+    },
+    {
+      "term": "tendrils",
+      "translation": "触须"
+    }
+  ]
+}

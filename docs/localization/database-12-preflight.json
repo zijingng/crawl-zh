@@ -1,0 +1,774 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "source_keys": 132,
+  "selected": [
+    {
+      "key": "sparkling_message",
+      "source": "You feel fleetingly lighter.\n\nYou feel a fleeting jolt of bravery.\n\nYou feel nauseous for a moment.\n\nYour emotions uncomfortably twist.\n",
+      "hits": []
+    },
+    {
+      "key": "default fountain_eyes",
+      "source": "The fountain's eyes stare blankly through you.\n\nThe fountain's eyes stare idly in all directions.\n\nThe fountain's eyes stare into nothing.\n",
+      "hits": []
+    },
+    {
+      "key": "ashenzari peaceful fountain_blue",
+      "source": "You attempt to scry through the fountain, but the Dungeon's magics reject you.\n",
+      "hits": [
+        {
+          "Term": "Ashenzari",
+          "Translation": "艾申扎利",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "the Dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        }
+      ]
+    },
+    {
+      "key": "ashenzari fountain_blue",
+      "source": "You catch brief visions of the Dungeon's past in the fountain's reflection.\n",
+      "hits": [
+        {
+          "Term": "Ashenzari",
+          "Translation": "艾申扎利",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "the Dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        }
+      ]
+    },
+    {
+      "key": "beogh fountain_blue",
+      "source": "You look at your reflection in the fountain and see a proud orc.\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "beogh fountain_sparkling",
+      "source": "You look at your [shimmering|glittering] reflection in the fountain and see a proud orc.\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "cheibriados fountain_sparkling",
+      "source": "You briefly disapprove of the fountain's mystically arrhythmic flow.\n",
+      "hits": [
+        {
+          "Term": "Cheibriados",
+          "Translation": "切布理亚多",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "审慎之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "cheibriados peaceful dry_fountain",
+      "source": "You briefly muse on the calm stillness of an empty fountain.\n",
+      "hits": [
+        {
+          "Term": "Cheibriados",
+          "Translation": "切布理亚多",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "审慎之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "dithmenos fountain_blood",
+      "source": "You scoff at the overwrought melodramatics of this fountain.\n",
+      "hits": [
+        {
+          "Term": "Dithmenos",
+          "Translation": "迪斯姆诺",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "隐没者，黑暗之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "fedhas peaceful fountain_blue",
+      "source": "You briefly survey the algae on the fountain's rim. They seem healthy.\n",
+      "hits": [
+        {
+          "Term": "Fedhas",
+          "Translation": "费德哈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "fedhas peaceful fountain_sparkling",
+      "source": "You briefly survey the algae on the fountain's rim. They shimmer back.\n",
+      "hits": [
+        {
+          "Term": "Fedhas",
+          "Translation": "费德哈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "fedhas peaceful fountain_blood",
+      "source": "You briefly survey the mould on the fountain's rim. It seems... concerning.\n",
+      "hits": [
+        {
+          "Term": "Fedhas",
+          "Translation": "费德哈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "fedhas peaceful fountain_eyes",
+      "source": "You briefly survey the mould on the fountain's rim. It possibly surveys back.\n",
+      "hits": [
+        {
+          "Term": "Fedhas",
+          "Translation": "费德哈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "gozag peaceful fountain_blue",
+      "source": "You look for coins within the fountain, but they're all too worthless to bother.\n",
+      "hits": [
+        {
+          "Term": "Gozag",
+          "Translation": "哥萨戈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "gozag peaceful fountain_sparkling",
+      "source": "@Gozag peaceful fountain_blue@\n",
+      "hits": [
+        {
+          "Term": "Gozag",
+          "Translation": "哥萨戈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "hepliaklqana fountain_blue",
+      "source": "The fountain's ripples stir distant, transient memories.\n",
+      "hits": [
+        {
+          "Term": "Hepliaklqana",
+          "Translation": "惠普利亚卡纳",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "遗忘者\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "hepliaklqana dry_fountain",
+      "source": "You swear to never forget your legacy as this fountain's builders were forgotten.\n",
+      "hits": [
+        {
+          "Term": "Hepliaklqana",
+          "Translation": "惠普利亚卡纳",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "遗忘者\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "hepliaklqana peaceful fountain_blood",
+      "source": "You observe a moment of silence for whomever's blood flows through this fountain.\n",
+      "hits": [
+        {
+          "Term": "Hepliaklqana",
+          "Translation": "惠普利亚卡纳",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "遗忘者\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "silence",
+          "Translation": "沉默",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/状态】与噪音属性区分。 来源：duration-data.h。\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "ignis fountain_blue",
+      "source": "The fountain's water lightly sizzles in your presence.\n\nw:1\nThe dying flame fearfully flickers in the reflection of the fountain.\n",
+      "hits": [
+        {
+          "Term": "Ignis",
+          "Translation": "伊格尼斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇】垂熄之焰神祇，不能用旧神 Pakellas 替代。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "flame",
+          "Translation": "火焰",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_FIRE；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        }
+      ]
+    },
+    {
+      "key": "ignis fountain_sparkling",
+      "source": "The fountain's sparkling water lightly sizzles and shimmers in your presence.\n\nw:1\nThe dying flame fearfully flickers in the reflection of the sparkling fountain.\n",
+      "hits": [
+        {
+          "Term": "Ignis",
+          "Translation": "伊格尼斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇】垂熄之焰神祇，不能用旧神 Pakellas 替代。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "flame",
+          "Translation": "火焰",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_FIRE；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        }
+      ]
+    },
+    {
+      "key": "ignis fountain_blood",
+      "source": "The fountain's blood briefly boils in your presence.\n",
+      "hits": [
+        {
+          "Term": "Ignis",
+          "Translation": "伊格尼斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇】垂熄之焰神祇，不能用旧神 Pakellas 替代。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "jiyva peaceful fountain_blue",
+      "source": "You stop to admire the sparkling slime slowly growing over the fountain's rim.\n",
+      "hits": [
+        {
+          "Term": "Jiyva",
+          "Translation": "吉瓦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "吉瓦是统治软泥怪的混沌古神。\n【现行神祇】名称由 god_name_jiyva 单独生成，随机后缀不能当作另一位神祇。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "jiyva fountain_eyes",
+      "source": "Your genes instinctively attempt to commune with the fountain's eyes and fail.\n\nA few eyes on the fountain briefly shift into confused golden shades.\n",
+      "hits": [
+        {
+          "Term": "Jiyva",
+          "Translation": "吉瓦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "吉瓦是统治软泥怪的混沌古神。\n【现行神祇】名称由 god_name_jiyva 单独生成，随机后缀不能当作另一位神祇。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "kikubaaqudgha peaceful dry_fountain",
+      "source": "You muse upon the day when the entire world will share this fountain's fate.\n",
+      "hits": [
+        {
+          "Term": "Kikubaaqudgha",
+          "Translation": "奇库巴库哈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        }
+      ]
+    },
+    {
+      "key": "lugonu peaceful fountain_eyes",
+      "source": "You muse on Lugonu's promise to warp all of reality as thoroughly as this fountain.\n",
+      "hits": [
+        {
+          "Term": "Lugonu",
+          "Translation": "卢戈努",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇】补齐现行神祇名称。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "nemelex xobeh peaceful fountain_blue",
+      "source": "You toss an ancient coin into the fountain for a little extra luck.\n",
+      "hits": [
+        {
+          "Term": "Nemelex Xobeh",
+          "Translation": "尼姆雷斯・索布",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "骗术之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "nemelex xobeh peaceful fountain_sparkling",
+      "source": "You toss an ancient coin into the fountain for some extra glamorous luck.\n",
+      "hits": [
+        {
+          "Term": "Nemelex Xobeh",
+          "Translation": "尼姆雷斯・索布",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "骗术之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "qazlal peaceful fountain_blue",
+      "source": "w:5\nYou scoff at such attempts to contain the uncontrollable elements.\n\n@Qazlal fountain_blue@\n",
+      "hits": [
+        {
+          "Term": "Qazlal",
+          "Translation": "卡兹拉尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "风暴之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "qazlal fountain_blue",
+      "source": "The fountain bubbles and surges in the storm.\n",
+      "hits": [
+        {
+          "Term": "Qazlal",
+          "Translation": "卡兹拉尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "风暴之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "the Storm",
+          "Translation": "风暴",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        }
+      ]
+    },
+    {
+      "key": "qazlal fountain_sparkling",
+      "source": "The fountain bubbles and surges violently in the storm.\n",
+      "hits": [
+        {
+          "Term": "Qazlal",
+          "Translation": "卡兹拉尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "风暴之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "the Storm",
+          "Translation": "风暴",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        }
+      ]
+    },
+    {
+      "key": "qazlal fountain_blood",
+      "source": "The fountain's blood bubbles and surges in the storm.\n",
+      "hits": [
+        {
+          "Term": "Qazlal",
+          "Translation": "卡兹拉尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "风暴之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "the Storm",
+          "Translation": "风暴",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        }
+      ]
+    },
+    {
+      "key": "ru peaceful fountain_blue",
+      "source": "The water in the fountain reflects the world, which is itself a mere reflection.\n",
+      "hits": [
+        {
+          "Term": "Ru",
+          "Translation": "入",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "牺牲与内在力量之神\n【版本/语境】专名沿用原译“入”，不是单词“进入”；献祭祭坛组合用“入神”。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "ru peaceful fountain_eyes",
+      "source": "w:2\nThe eyes in the fountain cannot see the truth any more than any other material.\n\n@default fountain_eyes@\n",
+      "hits": [
+        {
+          "Term": "Ru",
+          "Translation": "入",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "牺牲与内在力量之神\n【版本/语境】专名沿用原译“入”，不是单词“进入”；献祭祭坛组合用“入神”。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "sif muna peaceful fountain_sparkling",
+      "source": "You struggle to determine the manifold diluted potions present in the fountain.\n",
+      "hits": [
+        {
+          "Term": "Sif Muna",
+          "Translation": "席夫·穆纳",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "sif muna peaceful fountain_blood",
+      "source": "You struggle to identify the manner of creatures' blood used in this fountain.\n",
+      "hits": [
+        {
+          "Term": "Sif Muna",
+          "Translation": "席夫·穆纳",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "sif muna peaceful fountain_eyes",
+      "source": "You idly identify at least [five|six] types of eyes growing in the fountain.\n",
+      "hits": [
+        {
+          "Term": "Sif Muna",
+          "Translation": "席夫·穆纳",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "uskayaw peaceful fountain_blue",
+      "source": "You do an impromptu, brief dance in the water, like the crinaeae of old.\n",
+      "hits": [
+        {
+          "Term": "Uskayaw",
+          "Translation": "阿斯卡亚",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "狂欢者，舞神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "uskayaw fountain_blood",
+      "source": "The fountain of blood pulses a joyous rhythm of life and death.\n",
+      "hits": [
+        {
+          "Term": "fountain of blood",
+          "Translation": "血喷泉",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Uskayaw",
+          "Translation": "阿斯卡亚",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "狂欢者，舞神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "vehumet fountain_blood",
+      "source": "You sense the potent destructive power at rest in within this fountain.\n",
+      "hits": [
+        {
+          "Term": "Vehumet",
+          "Translation": "维胡梅特",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "wu jian peaceful fountain_blue",
+      "source": "You briefly muse on the need to flow like the water through this fountain.\n\nw:5\nThe fountain is calm. The water trickles softly. Here one can find peace.\n",
+      "hits": [
+        {
+          "Term": "Wu Jian",
+          "Translation": "武剑会",
+          "Part of Speech": "noun",
+          "Variants": "Wu Jian Council",
+          "Note": "【0.34.1 译名建议】指共同升格为神的武僧集体；正文中的 the Council 和简称 The Council 均按语境称“武剑会”或“本会”，不译作政治机构“议会”；旧备注“无间道”不是英文原文依据，不据此扩写神话背景。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "xom fountain_blue",
+      "source": "Harmless butterflyfish stare at you from within the fountain.\n\nw:1\nFor a brief moment, you thought you saw Xom summoned an eel in this fountain.\n\nw:1\nFor a terrifying moment, you swear Xom summoned a kraken in this fountain.\n",
+      "hits": [
+        {
+          "Term": "kraken",
+          "Translation": "海妖",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "xom fountain_sparkling",
+      "source": "Shimmering and harmless butterflyfish glower at you from within the fountain.\n\nw:1\nFor a brief moment, you swear Xom called forth a formless jellyfish here.\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "formless jellyfish",
+          "Translation": "无形水母",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "formless",
+          "Translation": "无形之身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无形之身。"
+        }
+      ]
+    },
+    {
+      "key": "xom fountain_blood",
+      "source": "Harmless vampiric butterflyfish glare at you from within the fountain.\n\nw:1\nFor a terrifying moment, you swear Xom placed a vampire kraken in this fountain.\n",
+      "hits": [
+        {
+          "Term": "kraken",
+          "Translation": "海妖",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "vampire",
+          "Translation": "吸血鬼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【版本/语境】怪物译名保留；玩家种族已废弃。 来源：dat/species/deprecated-vampire.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "yredelemnul fountain_blue",
+      "source": "A miniscule dead [mosquito|moth] on the fountain's rim briefly twitches under your umbra.\n",
+      "hits": [
+        {
+          "Term": "Yredelemnul",
+          "Translation": "伊莱德莱姆努尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "moth",
+          "Translation": "蛾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "yredelemnul fountain_sparkling",
+      "source": "@Yredelemnul fountain_blue@\n",
+      "hits": [
+        {
+          "Term": "Yredelemnul",
+          "Translation": "伊莱德莱姆努尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "yredelemnul fountain_blood",
+      "source": "You dismiss the blood in this fountain as useless to your harvest.\n",
+      "hits": [
+        {
+          "Term": "Yredelemnul",
+          "Translation": "伊莱德莱姆努尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "zin fountain_sparkling",
+      "source": "You avert your eyes from the scattered magic in the fountain's sparkles.\n",
+      "hits": [
+        {
+          "Term": "Zin",
+          "Translation": "辛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "法则之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "zin fountain_eyes",
+      "source": "You avert your eyes from the unclean eyes pooled in the fountain.\n",
+      "hits": [
+        {
+          "Term": "Zin",
+          "Translation": "辛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "法则之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "the shining one fountain_blood",
+      "source": "You quietly vow to avenge the poor creatures bled out for this fountain.\n",
+      "hits": [
+        {
+          "Term": "the Shining One",
+          "Translation": "光明神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    }
+  ]
+}

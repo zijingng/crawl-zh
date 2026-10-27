@@ -1,0 +1,134 @@
+[
+  {
+    "file": "crawl-ref/source/wcwidth.cc",
+    "scope": "Unicode 字符显示宽度数据与算法；无独立待译文案。",
+    "sha256": "1203147019fa3c697388f59a30ad9b1d5cc5a4544affb55e13a3e1301eba9307",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/windowmanager-sdl.cc",
+    "scope": "SDL／OpenGL 窗口、字体、纹理、图标错误和底层输入；技术诊断原文保留。",
+    "sha256": "5360ebcfbfad95f1617eaedde31e602fe4b348ba55d0ef8af92f70fb6f628260",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/windowmanager-sdl.h",
+    "scope": "声明、内部枚举、窗口／随机工具接口；无独立待译文案。",
+    "sha256": "a7f1ee8b275325c31995013dc4c736f3893ff027ac79f846bc48bad057b8ea74",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/windowmanager.h",
+    "scope": "声明、内部枚举、窗口／随机工具接口；无独立待译文案。",
+    "sha256": "e047290cb0fe47ace8b2ee2349b5b5246ef9f361fbfc47f910a4e70a0c67f74c",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/wiz-dgn.cc",
+    "scope": "地形／陷阱／商店／地图创建提示、路径与输入反馈；地图名、fprops、分支诊断等规范数据保留。",
+    "sha256": "4ac3946392fdcac0119547c8316f86f4740214a33d5738f1743cd34b02e6f8b8",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/wiz-dgn.h",
+    "scope": "声明、内部枚举、窗口／随机工具接口；无独立待译文案。",
+    "sha256": "ef8752de9bc5479c45414ab8d8bb13676cf6993ddb917e20434d55f1bfca5dda",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/wiz-dump.cc",
+    "scope": "仅载入转储文件提示本地化；完整角色转储解析规则和数据字段不变。",
+    "sha256": "7258dcac187e8ce2081754412d76f05bbc30671b14c4fe06f295b89573bc5e6a",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/wiz-dump.h",
+    "scope": "声明、内部枚举、窗口／随机工具接口；无独立待译文案。",
+    "sha256": "eb3c5446cc3a8a96bb258d19b32b8db970b3493624c9b632f9d17cb99de3ee71",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/wiz-fsim.cc",
+    "scope": "模拟配置／取消提示本地化；原始模拟表头、数据和文件格式保留。",
+    "sha256": "b2a7abb3a62582f53ee5e22617b40341d24396127bdc9d31df16b34fefa7796d",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/wiz-fsim.h",
+    "scope": "声明、内部枚举、窗口／随机工具接口；无独立待译文案。",
+    "sha256": "7b4a7512c310cfefb4e1b55f641b0afcad8128dbacf2fbb043c22d67f2e60e25",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/wiz-item.cc",
+    "scope": "物品生成、调整、神器、鉴定、统计配置、卡牌、充能等交互；字段标识、统计文件格式和物品生成机制保留。",
+    "sha256": "a8cb7c3caac8b1a4948f3b9b332bdcadde26fc47d71076fd939215e78f222291",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/wiz-item.h",
+    "scope": "声明、内部枚举、窗口／随机工具接口；无独立待译文案。",
+    "sha256": "6fe8aa4d198c09f2d9c8a6388ebac8d23327dabb9034f807334902f40daadcbc",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/wiz-mon.cc",
+    "scope": "怪物创建、喊话／说话、祝福、装备、移动、召唤、变形和法术失误配置；原始怪物／路径诊断保留。",
+    "sha256": "cf2f540b96394723de5135502315c04c31648bd69e91513709cbb2e78e01da0d",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/wiz-mon.h",
+    "scope": "声明、内部枚举、窗口／随机工具接口；无独立待译文案。",
+    "sha256": "0ff18709e6bf17da0700db30a65e7087f20dc45ac445b76d3e4ebb8d3137e38c",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/wiz-you.cc",
+    "scope": "种族、技能、属性、虔诚、金币、变异、灾厄、持续状态、经验、透视、时间、神罚、佐姆、佐特时钟等配置和反馈；原标识及存档数据保留。",
+    "sha256": "295162c807334f80456a84c05c9b65c309d08495453ca22d485b36d4ccce7aa0",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/wiz-you.h",
+    "scope": "声明、内部枚举、窗口／随机工具接口；无独立待译文案。",
+    "sha256": "e6009f55d2faefc3266d3ec2f9b9f9fd25f9ec537559690562f3d204f6c741ca",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/wizard-option-type.h",
+    "scope": "声明、内部枚举、窗口／随机工具接口；无独立待译文案。",
+    "sha256": "989e881de804feded8577d7169043ca701c710d19ec02787a89497f44cdd6b26",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/wizard.cc",
+    "scope": "巫师／探索模式确认、警告、两列帮助的全部编译变体、显示选项副本；原命令路由和模式／保存机制保留。",
+    "sha256": "41edabf048b314c2a0de3e1661998ee4732493dd7603496dca3efbdbda9acf3e",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/wizard.h",
+    "scope": "纯显示名称及选项副本接口；原模式接口保留。",
+    "sha256": "a01ebce90f323f5e6790fc3bedeffb0111dec3a66fe40e01502bbd10ab073166",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/worley.cc",
+    "scope": "程序生成噪声算法；无独立待译文案。",
+    "sha256": "46b7f1d48dd1d12c8c32761205973e6edf2418e80e3dd2f0b5b4e0e4cb5e1af1",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/worley.h",
+    "scope": "声明、内部枚举、窗口／随机工具接口；无独立待译文案。",
+    "sha256": "7982c57618d50b84c1dbfbee75e65a71024075d9a135ccf70c1fd876570fb47e",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/wu-jian-attack-type.h",
+    "scope": "声明、内部枚举、窗口／随机工具接口；无独立待译文案。",
+    "sha256": "9e07c15525da1ae926488a015deaca7f68c9da14e408b219a9631ed8ebaee6d8",
+    "changed": false
+  }
+]

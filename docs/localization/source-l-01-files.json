@@ -1,0 +1,368 @@
+[
+  {
+    "file": "crawl-ref/source/l-colour.cc",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-crawl.cc",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-debug.cc",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-defs.h",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-dgn.cc",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-dgnbld.cc",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-dgnevt.cc",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-dgngrd.cc",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-dgnit.cc",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-dgnlvl.cc",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-dgnmon.cc",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-dgntil.cc",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-feat.cc",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-file.cc",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-global.cc",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-item.cc",
+    "scope": "Lua item API canonical names/keys preserved; fixed remove-operation messages translated at mpr boundary",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/l-libs.h",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-los.cc",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-mapgrd.cc",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-mapmrk.cc",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-moninf.cc",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-mons.cc",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-option.cc",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-spells.cc",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-subvault.cc",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-travel.cc",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-view.cc",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-wiz.cc",
+    "scope": "Lua bindings and declarations; API strings, script-controlled output, parser keys and technical diagnostics remain canonical",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/l-you.cc",
+    "scope": "Lua player API canonical state and names preserved; species-unavailable message translated at mpr boundary",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/lang-fake.cc",
+    "scope": "Language enum and optional fake-language filters; English substitution rules preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/lang-fake.h",
+    "scope": "Language enum and optional fake-language filters; English substitution rules preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/lang-t.h",
+    "scope": "Language enum and optional fake-language filters; English substitution rules preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/lev-pand.cc",
+    "scope": "Pandemonium generation; no player-facing prose",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/lev-pand.h",
+    "scope": "Pandemonium generation; no player-facing prose",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/level-gen-type.h",
+    "scope": "Level IDs, state and generation enums; serialized/parser identifiers preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/level-id.h",
+    "scope": "Level IDs, state and generation enums; serialized/parser identifiers preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/level-state-type.h",
+    "scope": "Level IDs, state and generation enums; serialized/parser identifiers preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/libconsole.h",
+    "scope": "Terminal/GUI backend, formatting and utility APIs; technical diagnostics and backend names preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/libgui.cc",
+    "scope": "Terminal/GUI backend, formatting and utility APIs; technical diagnostics and backend names preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/libunix.cc",
+    "scope": "Terminal/GUI backend, formatting and utility APIs; technical diagnostics and backend names preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/libunix.h",
+    "scope": "Terminal/GUI backend, formatting and utility APIs; technical diagnostics and backend names preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/libutil.cc",
+    "scope": "Terminal/GUI backend, formatting and utility APIs; technical diagnostics and backend names preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/libutil.h",
+    "scope": "Terminal/GUI backend, formatting and utility APIs; technical diagnostics and backend names preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/libw32c.cc",
+    "scope": "Terminal/GUI backend, formatting and utility APIs; technical diagnostics and backend names preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/libw32c.h",
+    "scope": "Terminal/GUI backend, formatting and utility APIs; technical diagnostics and backend names preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/loading-screen.cc",
+    "scope": "Loading completion and progress display; translated text measured using actual font width",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/loading-screen.h",
+    "scope": "Loading completion and progress display; translated text measured using actual font width",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/lookup-help-type.h",
+    "scope": "Description query prompts, typed display labels and branch paragraphs; canonical keys, cancellation sentinel and parsing retained",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/lookup-help.cc",
+    "scope": "Description query prompts, typed display labels and branch paragraphs; canonical keys, cancellation sentinel and parsing retained",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/lookup-help.h",
+    "scope": "Description query prompts, typed display labels and branch paragraphs; canonical keys, cancellation sentinel and parsing retained",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/los-def.cc",
+    "scope": "Line-of-sight geometry, opacity and ray APIs; technical diagnostics preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/los-def.h",
+    "scope": "Line-of-sight geometry, opacity and ray APIs; technical diagnostics preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/los-type.h",
+    "scope": "Line-of-sight geometry, opacity and ray APIs; technical diagnostics preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/los.cc",
+    "scope": "Line-of-sight geometry, opacity and ray APIs; technical diagnostics preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/los.h",
+    "scope": "Line-of-sight geometry, opacity and ray APIs; technical diagnostics preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/losglobal.cc",
+    "scope": "Line-of-sight geometry, opacity and ray APIs; technical diagnostics preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/losglobal.h",
+    "scope": "Line-of-sight geometry, opacity and ray APIs; technical diagnostics preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/losparam.cc",
+    "scope": "Line-of-sight geometry, opacity and ray APIs; technical diagnostics preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/losparam.h",
+    "scope": "Line-of-sight geometry, opacity and ray APIs; technical diagnostics preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/luaterp.cc",
+    "scope": "Developer Lua REPL; script output, interpreter syntax and technical/debug messages preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/luaterp.h",
+    "scope": "Developer Lua REPL; script output, interpreter syntax and technical/debug messages preserved",
+    "new": false,
+    "changed": false
+  }
+]

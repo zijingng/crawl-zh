@@ -1,0 +1,38 @@
+{
+  "batch": "morgue-01",
+  "reviewed_messages": 46,
+  "conduct_labels": 34,
+  "python_tests": 33,
+  "native_tests": 7,
+  "native_assertions": 109,
+  "native_log": "Filters: \"Morgue*\",\"Character viewer preserves*\",\"Seed display does*\",\"Item origin display*\",\"D-source artefact explanations*\"\nRNG seed: 1063871984\n0.001 s: Item origin display preserves stored place giver and English provenance\n0.001 s: D-source artefact explanations switch language without changing inscriptions\n0.000 s: Seed display does not alter canonical exported seed description\n0.000 s: Character viewer preserves the canonical export and English mode\n0.041 s: Morgue sections isolate canonical English and localize live and dead records\n0.027 s: Morgue bilingual files keep original paths and execute Lua once per section\n0.003 s: Morgue reviewed conduct and place fields retain missing-input English fallback\nAll tests passed (109 assertions in 7 test cases)\n\n\n",
+  "files": {
+    "native-bilingual.txt": {
+      "bytes": 157,
+      "sha256": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087"
+    },
+    "native-bilingual.zh.txt": {
+      "bytes": 165,
+      "sha256": "fa47ac45008801d169885dcb3ff5c4b15455d8707830d0e4fd9149023c918cab"
+    },
+    "native-bilingual.lst": {
+      "bytes": 28,
+      "sha256": "cd8cee2c8d82ec681507a850e4fdb07e79cade6ce24d58f3446f3c4e0947808b"
+    },
+    "native-explicit-english.txt": {
+      "bytes": 157,
+      "sha256": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087"
+    },
+    "native-language-english.txt": {
+      "bytes": 157,
+      "sha256": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087"
+    }
+  },
+  "source_dependencies": {
+    "crawl-ref/source/chardump.cc": "a2c540b4980cdf01b0a38bd5013efd0113bb09b229cc6a3f9eccfdf454b3c73e",
+    "crawl-ref/source/chardump.h": "4d2604dbc7e47f6466909a38a8ceda1c18e9ff5257d6031aa85722a27042c64e",
+    "crawl-ref/source/describe.cc": "9d317e68c08d4fdbcd786d1e7e00abbd20d1598745e7b946829ab3019c4e9925",
+    "crawl-ref/source/describe.h": "473e8ba68f8295876b68fba5b8b814e39fca434590ae73bdbd19cbdd53113e02"
+  },
+  "crawl_exe_bytes": 27687286
+}

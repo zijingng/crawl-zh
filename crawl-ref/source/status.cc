@@ -1,4 +1,7 @@
 #include "AppHdr.h"
+#include "p-display.h"
+#include "s-display.h"
+#include "i18n.h"
 
 #include "status.h"
 
@@ -204,6 +207,223 @@ static void _describe_zot(status_info& inf);
 static void _describe_gem(status_info& inf);
 static void _describe_rev(status_info& inf);
 static void _describe_channelled_spell(status_info& inf);
+
+// Presentation is separate because Lua and cancellation logic consume the
+// canonical English status adjectives, including the " (expiring)" suffix.
+bool fill_status_display_info(int status, status_info &inf)
+{
+    if (!fill_status_info(status, inf))
+        return false;
+    if (status == STATUS_MANUAL && !inf.long_text.empty())
+    {
+        ui_translation_group group({{"e.manual", "studying %s"}, {"e.manual", "You are studying %s."}});
+        ui_arg names, brief;
+        manual_skill_names(false, &names);
+        manual_skill_names(true, &brief);
+        if (group.available() && names.available && brief.available)
+        {
+            inf.short_text = make_stringf(group.get("e.manual", "studying %s"), brief.text.c_str());
+            inf.long_text = make_stringf(group.get("e.manual", "You are studying %s."), names.text.c_str());
+        }
+        return true;
+    }
+    if (status == DUR_TRANSFORMATION && you.form != transformation::none)
+    {
+        const Form *form = get_form();
+        inf.light_text = ui_translate("f.form.name", form->short_name.c_str());
+        inf.short_text = form->display_long_name();
+        inf.long_text = form->display_description();
+        // The canonical status keeps its English expiration strings. Apply
+        // each Chinese line atomically, including the expiration wrapper.
+        if (dur_expiring(DUR_TRANSFORMATION))
+        {
+            const ui_arg brief = {inf.short_text, inf.short_text != form->get_long_name()};
+            const ui_arg full = {inf.long_text, inf.long_text != form->get_description()};
+            status_info original;
+            fill_status_info(status, original);
+            inf.short_text = ui_render("f.form.expiring", "%s (expiring)", original.short_text, {brief});
+            inf.long_text = ui_render("f.form.expiring", "Expiring: %s", original.long_text, {full});
+        }
+        return true;
+    }
+    // Canonical fill runs once (notably the animated charge indicator).
+    // Numeric labels use the same immutable state; no rendered English parsing.
+    auto label = [&](string &field, const char *source, int value)
+    {
+        if (field.empty()) return;
+        ui_translation_group group({{"s.status.number", source}});
+        if (group.available()) field = make_stringf(group.get("s.status.number", source), value);
+    };
+    switch (status)
+    {
+    case STATUS_BLACK_TORCH:
+        if (!inf.light_text.empty() && player_has_ability(ABIL_YRED_HURL_TORCHLIGHT) && yred_torch_is_raised()) label(inf.light_text, "Torch (%d)", yred_get_torch_power());
+        break;
+    case DUR_DIVINE_SHIELD:
+        if (!inf.light_text.empty()) label(inf.light_text, "Shield (%d)", you.duration[DUR_DIVINE_SHIELD]);
+        break;
+    case STATUS_CORROSION:
+        if (!inf.light_text.empty()) label(inf.light_text, "Corr (%d)", -you.corrosion_amount());
+        break;
+    case DUR_CORROSION:
+        if (!inf.light_text.empty()) label(inf.light_text, "Corr (%d)", -you.corrosion_amount());
+        break;
+    case DUR_FLAYED:
+        if (!inf.light_text.empty()) label(inf.light_text, "Flay (%d)", -you.props[FLAY_DAMAGE_KEY].get_int());
+        break;
+    case DUR_POWERED_BY_DEATH:
+        if (!inf.light_text.empty()) label(inf.light_text, "Regen (%d)", you.props[POWERED_BY_DEATH_KEY].get_int());
+        break;
+    case STATUS_SERPENTS_LASH:
+        if (!inf.light_text.empty()) label(inf.light_text, "Lash (%u)", you.attribute[ATTR_SERPENTS_LASH]);
+        break;
+    case STATUS_HEAVENLY_STORM:
+        if (!inf.light_text.empty()) label(inf.light_text, "Heavenly (%d)", you.props[WU_JIAN_HEAVENLY_STORM_KEY].get_int());
+        break;
+    case DUR_WEREFURY:
+        if (!inf.light_text.empty()) label(inf.light_text, "Slay +%d", you.props[WEREFURY_KEY].get_int());
+        break;
+    case STATUS_CLAUSTROPHOBIA:
+        if (!inf.light_text.empty()) label(inf.light_text, "Phobia (-%d)", you.props[CLAUSTROPHOBIA_KEY].get_int());
+        break;
+    case DUR_ENKINDLED:
+        if (!inf.light_text.empty()) label(inf.light_text, "Enkindled (%d)", you.props[ENKINDLE_CHARGES_KEY].get_int());
+        break;
+    case STATUS_MNEMOPHAGE:
+        if (!inf.light_text.empty()) label(inf.light_text, "Memories (%d)", you.props[ENKINDLE_CHARGES_KEY].get_int());
+        break;
+    case STATUS_ZOT:
+        if (!inf.light_text.empty()) label(inf.light_text, "Zot (%d)", turns_until_zot());
+        break;
+    default: break;
+    }
+    if ((status == DUR_CORROSION || status == STATUS_CORROSION) && !inf.short_text.empty())
+        label(inf.short_text, "corroded (%d)", -you.corrosion_amount());
+    if (status == DUR_RAMPAGE_HEAL && !inf.light_text.empty())
+        label(inf.light_text, you.get_mutation_level(MUT_ROLLPAGE) < 2 ? "MPRegen (%d)" : "Regen (%d)",
+            you.props[RAMPAGE_HEAL_KEY].get_int());
+    if (status == DUR_FUGUE && !inf.light_text.empty())
+    {
+        const int power = you.props[FUGUE_KEY].get_int();
+        const string star = power == FUGUE_MAX_STACKS ? "*" : "";
+        inf.light_text = ui_render("s.status", "Fugue (%s)", inf.light_text,
+            {ui_literal_arg(star + to_string(power) + star)});
+    }
+    if (status == STATUS_TRICKSTER && !inf.short_text.empty())
+    {
+        const int bonus = trickster_bonus();
+        label(inf.short_text, "trickster (+%d AC)", bonus);
+        label(inf.long_text, "You are bolstered by spread misfortune (+%d AC)", bonus);
+    }
+    if (status == STATUS_GEM && !inf.light_text.empty())
+    {
+        const gem_type gem = gem_for_branch(you.where_are_you);
+        if (gem != NUM_GEM_TYPES && (gem_clock_active() || you.gems_found[gem]))
+            label(inf.light_text, "Gem (%d)", (gem_time_limit(gem) - you.gem_time_spent[gem] + 9) / 10);
+    }
+    if (status == STATUS_NET && !inf.long_text.empty())
+        inf.long_text = ui_render("s.status", "You are %s.", inf.long_text, {s_clause_arg(held_status())});
+    if (status == DUR_CONFUSING_TOUCH || status == DUR_SLIMIFY)
+        inf.long_text = ui_render("s.status", status == DUR_CONFUSING_TOUCH
+            ? "Your %s are glowing red." : "Your %s are covered in slime.", inf.long_text, {p_hand_arg()});
+    if (status == STATUS_STAT_ZERO && !inf.short_text.empty())
+    {
+        ui_arg stats{"", true};
+        for (int i = STAT_STR; i <= STAT_DEX; ++i)
+        {
+            const stat_type stat = static_cast<stat_type>(i);
+            if (you.stat(stat, false) > 0) continue;
+            const ui_arg name = ui_text_arg("s.stat", stat_desc(stat, SD_NAME));
+            stats.available = stats.available && name.available;
+            if (!stats.text.empty()) stats.text += "、";
+            stats.text += name.text;
+        }
+        inf.short_text = ui_render("s.status", "lost %s", inf.short_text, {stats});
+        inf.long_text = ui_render("s.status", "You have no %s!", inf.long_text, {stats});
+    }
+    if (status == DUR_FLOODED && !inf.long_text.empty())
+        inf.long_text = ui_render("s.status", "Your lungs are flooded with %s and you cannot breathe.", inf.long_text,
+            {s_clause_arg(you.props[WATER_HOLD_SUBSTANCE_KEY].get_string())});
+    if (status == DUR_POISONING && !inf.short_text.empty())
+    {
+        const int survival = poison_survival();
+        const int percent = you.hp <= 0 ? 100 : (you.hp - max(0, survival)) * 100 / you.hp;
+        const ui_arg severity = ui_text_arg("s.poison", percent >= 100 ? "lethally"
+            : percent > 65 ? "seriously" : percent > 35 ? "quite" : "mildly");
+        inf.short_text = ui_render("s.status", "%s poisoned (%s -> %s)", inf.short_text,
+            {severity, ui_literal_arg(to_string(you.hp)), ui_literal_arg(to_string(survival))});
+        inf.long_text = ui_render("s.status", "You are %s poisoned (%s -> %s).", inf.long_text,
+            {severity, ui_literal_arg(to_string(you.hp)), ui_literal_arg(to_string(survival))});
+    }
+    if (status == STATUS_INVISIBLE && !inf.short_text.empty())
+    {
+        const bool expire = dur_expiring(DUR_INVIS);
+        const char *brief = you.backlit() ? "invisible (but backlit and visible)" : "invisible";
+        const char *full = you.backlit() ? "You are invisible (but backlit and visible)." : "You are invisible.";
+        const ui_arg short_name = ui_text_arg("s.status", brief);
+        const ui_arg description = ui_text_arg("s.status", full);
+        inf.short_text = expire ? ui_render("s.status", "%s (expiring)", inf.short_text, {short_name})
+            : (short_name.available ? short_name.text : inf.short_text);
+        inf.long_text = expire ? ui_render("s.status", "Expiring: %s", inf.long_text, {description})
+            : (description.available ? description.text : inf.long_text);
+    }
+    if (status == STATUS_CHANNELLING_SPELL && !inf.light_text.empty())
+    {
+        const spell_type spell = (spell_type)you.attribute[ATTR_CHANNELLED_SPELL];
+        const int turns = you.attribute[ATTR_CHANNEL_DURATION];
+        if (spell == SPELL_FLAME_WAVE || spell == SPELL_SEARING_RAY || spell == SPELL_CLOCKWORK_BEE)
+            inf.light_text = ui_render("s.status", "Channelling %s%s", inf.light_text,
+                {ui_text_arg("s.channel", spell == SPELL_FLAME_WAVE ? "Wave" : spell == SPELL_SEARING_RAY ? "Ray" : "Winding"),
+                 ui_literal_arg(string(max(turns - 1, 0), spell == SPELL_CLOCKWORK_BEE ? '.' : '+'))});
+    }
+
+    if (status == DUR_HORROR && !inf.light_text.empty())
+        label(inf.light_text, "Horr (%d)", -you.props[HORROR_PENALTY_KEY].get_int());
+    if (status == DUR_GROWING_DESTRUCTION && !inf.light_text.empty())
+        inf.light_text = ui_render("s.status", "Destruction%s", inf.light_text,
+            {ui_literal_arg(string(max(0, you.props[MAKHLEB_ATROCITY_STACKS_KEY].get_int() - 1), '+'))});
+    if (status == DUR_FORTRESS_BLAST_TIMER && !inf.light_text.empty())
+        inf.light_text = ui_render("s.status", "Blast%s", inf.light_text,
+            {ui_literal_arg(string(max(0, (40 - you.duration[DUR_FORTRESS_BLAST_TIMER]) / 10), '.'))});
+    if (status == STATUS_BRIBE && !inf.short_text.empty())
+    {
+        ui_arg places{"", true};
+        for (int i = 0; i < NUM_BRANCHES; ++i)
+        {
+            const branch_type br = gozag_fixup_branch(static_cast<branch_type>(i));
+            if (branch_bribe[br] <= 0) continue;
+            const ui_arg name = ui_text_arg("b.branch.name", branches[static_cast<branch_type>(i)].longname);
+            places.available = places.available && name.available;
+            if (!places.text.empty()) places.text += "、";
+            places.text += name.text;
+        }
+        inf.short_text = ui_render("s.status", "bribing [%s]", inf.short_text, {places});
+        inf.long_text = ui_render("s.status", "You are bribing %s.", inf.long_text, {places});
+    }
+    if (status == STATUS_CONTAMINATION && !inf.short_text.empty())
+    {
+        static const char *brief[] = {"lightly contaminated", "dangerously contaminated", "extremely contaminated", "completely saturated"};
+        static const char *full[] = {"You are lightly contaminated with residual magic.", "You are dangerously contaminated with residual magic.",
+            "You are extremely contaminated with residual magic.", "You are completely saturated with residual magic!"};
+        const unsigned level = you.magic_contamination / 1000;
+        if (level < ARRAYSZ(brief))
+        {
+            const int damage = contam_max_damage();
+            const ui_arg suffix = damage > 0 ? ui_arg{ui_render("s.status", " (up to %s damage)", "",
+                {ui_literal_arg(to_string(damage))}), false} : ui_literal_arg("");
+            ui_arg tail = suffix;
+            tail.available = damage <= 0 || !tail.text.empty();
+            inf.short_text = ui_render("s.status", "Contamination: %s%s", inf.short_text,
+                {ui_text_arg("s.contamination", brief[level]), tail});
+            inf.long_text = ui_render("s.status", "Contamination: %s%s", inf.long_text,
+                {ui_text_arg("s.contamination", full[level]), tail});
+        }
+    }
+    inf.light_text = ui_translate("d.duration", inf.light_text.c_str());
+    inf.short_text = ui_translate("d.duration", inf.short_text.c_str());
+    inf.long_text = ui_translate("d.duration", inf.long_text.c_str());
+    return true;
+}
 
 bool fill_status_info(int status, status_info& inf)
 {
@@ -1382,9 +1602,10 @@ bool duration_decrements_normally(duration_type dur)
  * @param dur   The duration in question (e.g. DUR_PETRIFIED).
  * @return      A message to print for the duration when it ends.
  */
-const char *duration_end_message(duration_type dur)
+const char *duration_end_message(duration_type dur, bool display)
 {
-    return _lookup_duration(dur)->decr.end.msg;
+    const char *msg = _lookup_duration(dur)->decr.end.msg;
+    return msg && display ? ui_translate("d.duration", msg) : msg;
 }
 
 /**
@@ -1394,9 +1615,10 @@ const char *duration_end_message(duration_type dur)
  * @param dur   The duration in question (e.g. DUR_PETRIFIED).
  * @return      A message to print.
  */
-const char *duration_expire_message(duration_type dur)
+const char *duration_expire_message(duration_type dur, bool display)
 {
-    return _lookup_duration(dur)->decr.expire_msg.msg;
+    const char *msg = _lookup_duration(dur)->decr.expire_msg.msg;
+    return msg && display ? ui_translate("d.duration", msg) : msg;
 }
 
 /**

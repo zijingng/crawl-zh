@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
+#include "s-display.h"
 
 #include "wiz-dgn.h"
 
@@ -60,7 +62,7 @@ static dungeon_feature_type _find_appropriate_stairs(bool down)
     // Can't go down from bottom level of a branch.
     if (depth > brdepth[you.where_are_you])
     {
-        mpr("Can't go down from the bottom of a branch.");
+        mpr(ui_translate("w.ui", "Can't go down from the bottom of a branch."));
         return DNGN_UNSEEN;
     }
     // Going up from top level of branch
@@ -88,7 +90,7 @@ void wizard_place_stairs(bool down)
     if (stairs == DNGN_UNSEEN)
         return;
 
-    mprf("Creating %sstairs.", down ? "down" : "up");
+    mprf("%s", ui_render("w.log", "Creating %sstairs.", make_stringf("Creating %sstairs.", down ? "down" : "up"), {ui_text_arg("w.clause", down ? "down" : "up")}).c_str());
     dungeon_terrain_changed(you.pos(), stairs);
 }
 
@@ -197,9 +199,9 @@ dungeon_feature_type wizard_select_feature(bool mimic, bool allow_fprop)
     char specs[256];
     // TODO: this sub-ui is very annoying to use
     if (mimic)
-        mprf(MSGCH_PROMPT, "Create what kind of feature mimic? ");
+        mprf(MSGCH_PROMPT,"%s", ui_translate("w.ui", "Create what kind of feature mimic? "));
     else
-        mprf(MSGCH_PROMPT, "Create which feature? ");
+        mprf(MSGCH_PROMPT,"%s", ui_translate("w.ui", "Create which feature? "));
 
     if (cancellable_get_line_autohist(specs, sizeof(specs)) || specs[0] == 0)
     {
@@ -232,7 +234,7 @@ dungeon_feature_type wizard_select_feature(bool mimic, bool allow_fprop)
                 }
                 else
                 {
-                    mprf(MSGCH_DIAGNOSTICS, "No features matching '%s'",
+                    mprf(MSGCH_DIAGNOSTICS,ui_translate("w.raw", "No features matching '%s'"),
                          name.c_str());
                 }
                 return DNGN_UNSEEN;
@@ -250,6 +252,7 @@ dungeon_feature_type wizard_select_feature(bool mimic, bool allow_fprop)
                 string prefix = "No exact match for feature '" +
                                 name +  "', possible matches are: ";
 
+                prefix = ui_render("w.raw", "No exact match for feature '%s', possible matches are: ", prefix, {ui_literal_arg(name)});
                 // Use mpr_comma_separated_list() because the list
                 // might be *LONG*.
                 mpr_comma_separated_list(prefix, matches, " and ", ", ",
@@ -261,7 +264,7 @@ dungeon_feature_type wizard_select_feature(bool mimic, bool allow_fprop)
     }
 
     if (mimic && !feat_is_mimicable(feat, false)
-        && !yesno("This isn't a valid feature mimic. Create it anyway? ",
+        && !yesno(ui_translate("w.ui", "This isn't a valid feature mimic. Create it anyway? "),
                   true, 'n'))
     {
         feat = DNGN_UNSEEN;
@@ -308,11 +311,10 @@ bool wizard_create_feature(dist &target, dungeon_feature_type feat, bool mimic)
             args.mode = TARG_NON_ACTOR;
             args.needs_path = false;
             // TODO: a way to switch features while targeting?
-            args.top_prompt = make_stringf(
-                "Building '<w>%s</w>'.\n"
-                "[<w>.</w>] place feature and continue, "
-                "[<w>ret</w>] place and exit, [<w>esc</w>] exit.",
-                dungeon_feature_name(feat));
+            args.top_prompt = ui_render("w.log",
+                "Building '<w>%s</w>'.\n[<w>.</w>] place feature and continue, [<w>ret</w>] place and exit, [<w>esc</w>] exit.",
+                make_stringf("Building '<w>%s</w>'.\n[<w>.</w>] place feature and continue, [<w>ret</w>] place and exit, [<w>esc</w>] exit.", dungeon_feature_name(feat)),
+                {s_feature_arg(feat)});
 
             if (in_bounds(target.target))
                 args.default_place = target.target; // last placed position
@@ -441,7 +443,7 @@ void wizard_map_level()
 {
     if (!is_map_persistent())
     {
-        if (!yesno("Force level to be mappable?", true, 'n'))
+        if (!yesno(ui_translate("w.ui", "Force level to be mappable?"), true, 'n'))
         {
             canned_msg(MSG_OK);
             return;
@@ -449,7 +451,7 @@ void wizard_map_level()
         env.properties[FORCE_MAPPABLE_KEY] = true;
     }
 
-    mpr("Mapping level.");
+    mpr(ui_translate("w.ui", "Mapping level."));
     magic_mapping(GDM, 100, true, true, false, true, false);
 
     for (rectangle_iterator ri(BOUNDARY_BORDER - 1); ri; ++ri)
@@ -471,8 +473,7 @@ bool debug_make_trap(const coord_def& pos, trap_type trap)
 {
     if (env.grid(pos) != DNGN_FLOOR)
     {
-        mprf("You can only make a %s on a floor square.",
-             trap == TRAP_UNASSIGNED ? "trap" : full_trap_name(trap).c_str());
+        mprf("%s", ui_render("w.log", "You can only make a %s on a floor square.", make_stringf("You can only make a %s on a floor square.", trap == TRAP_UNASSIGNED ? "trap" : full_trap_name(trap).c_str()), {trap == TRAP_UNASSIGNED ? ui_text_arg("w.clause", "trap") : ui_text_arg("t.trap", full_trap_name(trap))}).c_str());
         return false;
     }
 
@@ -495,13 +496,12 @@ bool debug_make_trap(const coord_def& pos, trap_type trap)
     }
     place_specific_trap(pos, trap);
 
-    mprf("Created %s.",
-         (trap == TRAP_RANDOM)
+    mprf("%s", ui_render("w.log", "Created %s.", make_stringf("Created %s.", (trap == TRAP_RANDOM)
             ? "a random trap"
-            : trap_at(pos)->name(DESC_A).c_str());
+            : trap_at(pos)->name(DESC_A).c_str()), {trap == TRAP_RANDOM ? ui_text_arg("w.clause", "a random trap") : ui_text_arg("t.trap", full_trap_name(trap))}).c_str());
 
     if (trap == TRAP_SHAFT && !is_valid_shaft_level())
-        mpr("NOTE: Shaft traps aren't valid on this level.");
+        mpr(ui_translate("w.ui", "NOTE: Shaft traps aren't valid on this level."));
 
     return true;
 }
@@ -510,7 +510,7 @@ bool debug_make_shop(const coord_def& pos)
 {
     if (env.grid(pos) != DNGN_FLOOR)
     {
-        mpr("Insufficient floor-space for new Wal-Mart.");
+        mpr(ui_translate("w.ui", "Insufficient floor-space for new Wal-Mart."));
         return false;
     }
 
@@ -529,7 +529,7 @@ bool debug_make_shop(const coord_def& pos)
         return false;
 
     place_spec_shop(pos, static_cast<shop_type>(menu.result()));
-    mpr("Done.");
+    mpr(ui_translate("w.ui", "Done."));
     return true;
 }
 
@@ -559,7 +559,7 @@ static void debug_load_map_by_name(string name, bool primary)
 
         if (matches.empty())
         {
-            mprf("Can't find map named '%s'.", name.c_str());
+            mprf(ui_translate("w.raw", "Can't find map named '%s'."), name.c_str());
             return;
         }
         else if (matches.size() == 1)
@@ -567,6 +567,8 @@ static void debug_load_map_by_name(string name, bool primary)
             string prompt = "Only match is '";
             prompt += matches[0];
             prompt += "', use that?";
+            prompt = ui_render("w.log", "Only match is '%s', use that?", prompt,
+                {ui_literal_arg(matches[0])});
             if (!yesno(prompt.c_str(), true, 'y'))
             {
                 canned_msg(MSG_OK);
@@ -580,6 +582,7 @@ static void debug_load_map_by_name(string name, bool primary)
             string prompt = "No exact matches for '";
             prompt += name;
             prompt += "', possible matches are: ";
+            prompt = ui_render("w.raw", "No exact matches for '%s', possible matches are: ", prompt, {ui_literal_arg(name)});
             mpr_comma_separated_list(prompt, matches);
             return;
         }
@@ -598,8 +601,8 @@ static void debug_load_map_by_name(string name, bool primary)
             {
                 if (!in_bounds(*ri))
                 {
-                    mprf("Placing %s on top of you would put part of the "
-                         "map outside of the level, cancelling.",
+                    mprf(ui_translate("w.raw", "Placing %s on top of you would put part of the "
+                         "map outside of the level, cancelling."),
                          toplace->name.c_str());
                     return;
                 }
@@ -609,7 +612,7 @@ static void debug_load_map_by_name(string name, bool primary)
         }
         else
         {
-            mprf("%s decides where it goes, can't place where you are.",
+            mprf(ui_translate("w.raw", "%s decides where it goes, can't place where you are."),
                  toplace->name.c_str());
         }
     }
@@ -619,12 +622,12 @@ static void debug_load_map_by_name(string name, bool primary)
         if (toplace->orient == MAP_ENCOMPASS
             && !toplace->is_usable_in(level_id::current())
             && !toplace->place.is_usable_in(level_id::current())
-            && !yesno("Warning: this is an encompass vault not designed "
+            && !yesno(ui_translate("w.ui", "Warning: this is an encompass vault not designed "
                        "for this location; placing it with &P may result in "
-                       "crashes and save corruption. Continue?", true, 'y'))
+                       "crashes and save corruption. Continue?"), true, 'y'))
         {
-            mpr("Ok; try placing with &L or go to the relevant location to "
-                "safely place with &P.");
+            mpr(ui_translate("w.ui", "Ok; try placing with &L or go to the relevant location to "
+                "safely place with &P."));
             return;
         }
         if (toplace->is_minivault())
@@ -650,7 +653,7 @@ static void debug_load_map_by_name(string name, bool primary)
         unwind_var<string_set> lumt(env.level_uniq_map_tags, string_set());
         if (dgn_place_map(toplace, false, false, where))
         {
-            mprf("Successfully placed %s.", toplace->name.c_str());
+            mprf(ui_translate("w.raw", "Successfully placed %s."), toplace->name.c_str());
             // Fix up doors from vaults and any changes to the default walls
             // and floors from the vault.
             tile_init_flavour();
@@ -660,7 +663,7 @@ static void debug_load_map_by_name(string name, bool primary)
         }
         else
         {
-            mprf("Failed to place %s; last builder error: %s",
+            mprf(ui_translate("w.raw", "Failed to place %s; last builder error: %s"),
                 toplace->name.c_str(), crawl_state.last_builder_error.c_str());
         }
     }
@@ -764,14 +767,14 @@ void debug_test_explore()
     // Return to starting point.
     you.move_to(where, MV_INTERNAL);
 
-    mprf("Explore took %d turns.", explore_turns);
+    mprf(ui_translate("w.ui", "Explore took %d turns."), explore_turns);
 }
 
 void wizard_list_levels()
 {
     if (!you.level_stack.empty())
     {
-        mpr("Level stack:");
+        mpr(ui_translate("w.ui", "Level stack:"));
         for (unsigned int i = 0; i < you.level_stack.size(); i++)
         {
             mprf(MSGCH_DIAGNOSTICS, i+1, // inhibit merging
@@ -784,7 +787,7 @@ void wizard_list_levels()
 
     vector<level_id> levs = travel_cache.known_levels();
 
-    mpr("Known levels:");
+    mpr(ui_translate("w.ui", "Known levels:"));
     for (unsigned int i = 0; i < levs.size(); i++)
     {
         const LevelInfo* lv = travel_cache.find_level_info(levs[i]);
@@ -807,7 +810,7 @@ void wizard_list_levels()
 
 void wizard_recreate_level()
 {
-    mpr("Regenerating level.");
+    mpr(ui_translate("w.ui", "Regenerating level."));
 
     // Need to allow reuse of vaults, otherwise we'd run out of them fast.
     #ifndef DEBUG_VETO_RESUME
@@ -865,21 +868,21 @@ void wizard_clear_used_vaults()
     env.level_uniq_map_tags.clear();
     for (int i = 0; i < NUM_BRANCHES; ++i)
         branch_uniq_map_tags[i].clear();
-    mpr("All vaults are now eligible for [re]use.");
+    mpr(ui_translate("w.ui", "All vaults are now eligible for [re]use."));
 }
 
 void wizard_abyss_speed()
 {
     char specs[256];
-    mprf(MSGCH_PROMPT, "Set Abyss speed to what? (now %d, higher value = "
-                       "higher speed) ", you.abyss_speed);
+    mprf(MSGCH_PROMPT,ui_translate("w.ui", "Set Abyss speed to what? (now %d, higher value = "
+                       "higher speed) "), you.abyss_speed);
 
     if (!cancellable_get_line(specs, sizeof(specs)))
     {
         const int speed = atoi(specs);
         if (speed || specs[0] == '0')
         {
-            mprf("Setting Abyss speed to %i.", speed);
+            mprf(ui_translate("w.ui", "Setting Abyss speed to %i."), speed);
             you.abyss_speed = speed;
             return;
         }

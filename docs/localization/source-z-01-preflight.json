@@ -1,0 +1,1411 @@
+{
+  "glossary_sha256": "5ea382702e0d86c7e1fcad03e64a1c7d079f42a2a2f6af24949e155eae9dc885",
+  "files": [
+    {
+      "file": "zap-data.h",
+      "sha256": "ab6e357dd31fa55d72561259aa13deb693a91945ee1326f4f0da625ea696e3fa",
+      "literals": [
+        {
+          "line": 34,
+          "english": ""
+        },
+        {
+          "line": 53,
+          "english": "noxious fumes"
+        },
+        {
+          "line": 68,
+          "english": "blast of poison"
+        },
+        {
+          "line": 83,
+          "english": "bolt of devastation"
+        },
+        {
+          "line": 98,
+          "english": "doom bolt"
+        },
+        {
+          "line": 114,
+          "english": "bolt of flesh"
+        },
+        {
+          "line": 130,
+          "english": "surge of chaos"
+        },
+        {
+          "line": 146,
+          "english": "spray of metal splinters"
+        },
+        {
+          "line": 162,
+          "english": "crystallising shot"
+        },
+        {
+          "line": 178,
+          "english": "spray of wooden splinters"
+        },
+        {
+          "line": 194,
+          "english": "volley of thorns"
+        },
+        {
+          "line": 210,
+          "english": "volley of spikes"
+        },
+        {
+          "line": 225,
+          "english": "toxic sludge"
+        },
+        {
+          "line": 240,
+          "english": "damnation"
+        },
+        {
+          "line": 256,
+          "english": "foul vapour"
+        },
+        {
+          "line": 271,
+          "english": "blast of cleansing flame"
+        },
+        {
+          "line": 286,
+          "english": "blast of calcifying dust"
+        },
+        {
+          "line": 301,
+          "english": "ghostly fireball"
+        },
+        {
+          "line": 317,
+          "english": "icy flash freeze"
+        },
+        {
+          "line": 332,
+          "english": "flash freeze"
+        },
+        {
+          "line": 347,
+          "english": "piercing cold"
+        },
+        {
+          "line": 362,
+          "english": "mass of rock"
+        },
+        {
+          "line": 377,
+          "english": "glob of lava"
+        },
+        {
+          "line": 393,
+          "english": "seething chaos"
+        },
+        {
+          "line": 408,
+          "english": "blast of cold"
+        },
+        {
+          "line": 423,
+          "english": "blast of flame"
+        },
+        {
+          "line": 438,
+          "english": "searing blast"
+        },
+        {
+          "line": 453,
+          "english": "bolt of electricity"
+        },
+        {
+          "line": 468,
+          "english": "blazing flames"
+        },
+        {
+          "line": 483,
+          "english": "puff of flame"
+        },
+        {
+          "line": 499,
+          "english": "puff of frost"
+        },
+        {
+          "line": 515,
+          "english": "glob of acid"
+        },
+        {
+          "line": 532,
+          "english": "stinking cloud"
+        },
+        {
+          "line": 549,
+          "english": ""
+        },
+        {
+          "line": 564,
+          "english": "magic dart"
+        },
+        {
+          "line": 583,
+          "english": "bolt of fire"
+        },
+        {
+          "line": 598,
+          "english": "bolt of cold"
+        },
+        {
+          "line": 613,
+          "english": "torrent of water"
+        },
+        {
+          "line": 634,
+          "english": ""
+        },
+        {
+          "line": 649,
+          "english": ""
+        },
+        {
+          "line": 664,
+          "english": ""
+        },
+        {
+          "line": 679,
+          "english": ""
+        },
+        {
+          "line": 694,
+          "english": "fireball"
+        },
+        {
+          "line": 711,
+          "english": "concussive blast"
+        },
+        {
+          "line": 727,
+          "english": "flame wave"
+        },
+        {
+          "line": 742,
+          "english": "fireball"
+        },
+        {
+          "line": 757,
+          "english": ""
+        },
+        {
+          "line": 772,
+          "english": "bolt of lightning"
+        },
+        {
+          "line": 789,
+          "english": "bolt of poison"
+        },
+        {
+          "line": 804,
+          "english": "bolt of negative energy"
+        },
+        {
+          "line": 820,
+          "english": "fragment of death"
+        },
+        {
+          "line": 835,
+          "english": "crystal spear"
+        },
+        {
+          "line": 853,
+          "english": ""
+        },
+        {
+          "line": 868,
+          "english": "sticky flame"
+        },
+        {
+          "line": 883,
+          "english": "pyre arrow"
+        },
+        {
+          "line": 899,
+          "english": ""
+        },
+        {
+          "line": 914,
+          "english": ""
+        },
+        {
+          "line": 931,
+          "english": "sting"
+        },
+        {
+          "line": 947,
+          "english": "damnation"
+        },
+        {
+          "line": 963,
+          "english": "iron shot"
+        },
+        {
+          "line": 979,
+          "english": "iron shot"
+        },
+        {
+          "line": 995,
+          "english": "stone arrow"
+        },
+        {
+          "line": 1011,
+          "english": "zap"
+        },
+        {
+          "line": 1027,
+          "english": "stunning burst"
+        },
+        {
+          "line": 1042,
+          "english": "orb of electricity"
+        },
+        {
+          "line": 1057,
+          "english": "splash of poison"
+        },
+        {
+          "line": 1072,
+          "english": "debugging ray"
+        },
+        {
+          "line": 1087,
+          "english": "fiery breath"
+        },
+        {
+          "line": 1102,
+          "english": "glacial breath"
+        },
+        {
+          "line": 1117,
+          "english": "explosive embers"
+        },
+        {
+          "line": 1132,
+          "english": "poison gas"
+        },
+        {
+          "line": 1147,
+          "english": "splash of acid"
+        },
+        {
+          "line": 1162,
+          "english": "agony"
+        },
+        {
+          "line": 1177,
+          "english": "curse of agony"
+        },
+        {
+          "line": 1192,
+          "english": ""
+        },
+        {
+          "line": 1207,
+          "english": ""
+        },
+        {
+          "line": 1222,
+          "english": "ball of steam"
+        },
+        {
+          "line": 1237,
+          "english": "shard of ice"
+        },
+        {
+          "line": 1253,
+          "english": ""
+        },
+        {
+          "line": 1270,
+          "english": "blast of sand"
+        },
+        {
+          "line": 1286,
+          "english": "bolt of magma"
+        },
+        {
+          "line": 1302,
+          "english": "concentrated momentum"
+        },
+        {
+          "line": 1317,
+          "english": "poison arrow"
+        },
+        {
+          "line": 1337,
+          "english": ""
+        },
+        {
+          "line": 1353,
+          "english": "blast of choking fumes"
+        },
+        {
+          "line": 1368,
+          "english": ""
+        },
+        {
+          "line": 1383,
+          "english": "lance of force"
+        },
+        {
+          "line": 1399,
+          "english": "searing ray"
+        },
+        {
+          "line": 1415,
+          "english": "rebounding bolt of fire"
+        },
+        {
+          "line": 1430,
+          "english": "rebounding bolt of cold"
+        },
+        {
+          "line": 1446,
+          "english": "bolt of dispelling energy"
+        },
+        {
+          "line": 1461,
+          "english": "bolt of acid"
+        },
+        {
+          "line": 1476,
+          "english": "bolt of light"
+        },
+        {
+          "line": 1492,
+          "english": "unravelling"
+        },
+        {
+          "line": 1508,
+          "english": "iceblast"
+        },
+        {
+          "line": 1525,
+          "english": "slug dart"
+        },
+        {
+          "line": 1541,
+          "english": "bolt of lightning"
+        },
+        {
+          "line": 1556,
+          "english": "living lightning"
+        },
+        {
+          "line": 1571,
+          "english": "freezing gust"
+        },
+        {
+          "line": 1586,
+          "english": "beckoning whirlwind"
+        },
+        {
+          "line": 1601,
+          "english": "harpoon shot"
+        },
+        {
+          "line": 1617,
+          "english": "whirling bolas"
+        },
+        {
+          "line": 1641,
+          "english": "beckoning"
+        },
+        {
+          "line": 1656,
+          "english": "great blast of fire"
+        },
+        {
+          "line": 1672,
+          "english": "malmutate"
+        },
+        {
+          "line": 1687,
+          "english": ""
+        },
+        {
+          "line": 1702,
+          "english": "refrigeration"
+        },
+        {
+          "line": 1717,
+          "english": "drain life"
+        },
+        {
+          "line": 1732,
+          "english": "sonic wave"
+        },
+        {
+          "line": 1747,
+          "english": "klown pie"
+        },
+        {
+          "line": 1763,
+          "english": "foxfire"
+        },
+        {
+          "line": 1778,
+          "english": "burst of rock shards"
+        },
+        {
+          "line": 1793,
+          "english": "hail"
+        },
+        {
+          "line": 1808,
+          "english": "mystic blast"
+        },
+        {
+          "line": 1824,
+          "english": "bolt of energy"
+        },
+        {
+          "line": 1839,
+          "english": ""
+        },
+        {
+          "line": 1854,
+          "english": ""
+        },
+        {
+          "line": 1869,
+          "english": ""
+        },
+        {
+          "line": 1884,
+          "english": "fiery plasma"
+        },
+        {
+          "line": 1899,
+          "english": "bolt of lightning"
+        },
+        {
+          "line": 1914,
+          "english": "malign ofering"
+        },
+        {
+          "line": 1929,
+          "english": "umbral torchlight"
+        },
+        {
+          "line": 1945,
+          "english": "rupture"
+        },
+        {
+          "line": 1961,
+          "english": "destabilizing rupture"
+        },
+        {
+          "line": 1977,
+          "english": "acid spray"
+        },
+        {
+          "line": 1992,
+          "english": "nullifying energy"
+        },
+        {
+          "line": 2007,
+          "english": "ball of mud"
+        },
+        {
+          "line": 2022,
+          "english": "arc of electricity"
+        },
+        {
+          "line": 2037,
+          "english": "blinding ray"
+        },
+        {
+          "line": 2053,
+          "english": "crushing gravity"
+        },
+        {
+          "line": 2068,
+          "english": "arc of electricity"
+        },
+        {
+          "line": 2083,
+          "english": "volatile concoction"
+        },
+        {
+          "line": 2098,
+          "english": ""
+        },
+        {
+          "line": 2113,
+          "english": "shards of blighted ice"
+        },
+        {
+          "line": 2128,
+          "english": "shard of frigid ice"
+        },
+        {
+          "line": 2144,
+          "english": "salvo of frigid ice"
+        },
+        {
+          "line": 2161,
+          "english": "flashing steel"
+        },
+        {
+          "line": 2176,
+          "english": "phantom echo"
+        },
+        {
+          "line": 2192,
+          "english": "shard of hardened shadow"
+        },
+        {
+          "line": 2208,
+          "english": "ray of shadow"
+        },
+        {
+          "line": 2224,
+          "english": "shadowball"
+        },
+        {
+          "line": 2240,
+          "english": "creeping shadow"
+        },
+        {
+          "line": 2256,
+          "english": "shadowy lightning"
+        },
+        {
+          "line": 2271,
+          "english": "wave of devouring shadow"
+        },
+        {
+          "line": 2286,
+          "english": ""
+        },
+        {
+          "line": 2301,
+          "english": "shadow bullet"
+        },
+        {
+          "line": 2317,
+          "english": "jagged bones"
+        },
+        {
+          "line": 2332,
+          "english": "gout of destruction"
+        },
+        {
+          "line": 2347,
+          "english": "gout of destruction"
+        },
+        {
+          "line": 2362,
+          "english": "blood arrow"
+        },
+        {
+          "line": 2378,
+          "english": "rocky spike"
+        },
+        {
+          "line": 2393,
+          "english": "kinetic grapnel"
+        },
+        {
+          "line": 2408,
+          "english": "shred"
+        },
+        {
+          "line": 2423,
+          "english": "shockwave"
+        },
+        {
+          "line": 2438,
+          "english": "detonation"
+        },
+        {
+          "line": 2453,
+          "english": "bomblet"
+        },
+        {
+          "line": 2469,
+          "english": "salvo of icicles"
+        },
+        {
+          "line": 2485,
+          "english": "blast"
+        },
+        {
+          "line": 2500,
+          "english": "fortress blast"
+        },
+        {
+          "line": 2516,
+          "english": "seismic shockwave"
+        },
+        {
+          "line": 2531,
+          "english": "condensed magic"
+        },
+        {
+          "line": 2546,
+          "english": "bolt of magma"
+        },
+        {
+          "line": 2562,
+          "english": "glob of mercury"
+        },
+        {
+          "line": 2578,
+          "english": "freeze"
+        },
+        {
+          "line": 2593,
+          "english": "swarm of vampire bats"
+        },
+        {
+          "line": 2608,
+          "english": "grasping water"
+        },
+        {
+          "line": 2623,
+          "english": "billowing rust"
+        },
+        {
+          "line": 2638,
+          "english": "ghostly fireball"
+        },
+        {
+          "line": 2655,
+          "english": "buggy blast"
+        },
+        {
+          "line": 2673,
+          "english": ""
+        },
+        {
+          "line": 2688,
+          "english": "magical storm"
+        },
+        {
+          "line": 2704,
+          "english": "ball of acid"
+        },
+        {
+          "line": 2719,
+          "english": "shooting star"
+        },
+        {
+          "line": 2735,
+          "english": "beam of energy"
+        },
+        {
+          "line": 2751,
+          "english": "falling rubble"
+        },
+        {
+          "line": 2766,
+          "english": "dizzying spores"
+        }
+      ],
+      "term_hits": [
+        {
+          "Term": "arrow",
+          "Translation": "箭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "damnation",
+          "Translation": "天谴/诅咒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【语境补充 2026-10-21】无视抗性的伤害机制用天谴。place of damnation 等宗教或叙事修辞可用诅咒。Hurl Damnation 等完整历史专名以专条为准。"
+        },
+        {
+          "Term": "dart",
+          "Translation": "飞镖",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "drain",
+          "Translation": "吸能/吸取/消耗",
+          "Part of Speech": "verb",
+          "Variants": "",
+          "Note": "【0.34.1 修订】吸能状态与负能量、属性降低并非同一概念；具体消息区分吸取 HP、MP、最大 HP 等。 来源：dat/descript/status.txt; player.cc。\n【语境补充 2026-10-21】负能量或生命上限机制用吸能。吸血、汲取资源用吸取。维持法术耗费魔力用消耗。"
+        },
+        {
+          "Term": "phantom",
+          "Translation": "幻影",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "shadow",
+          "Translation": "影",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "slug",
+          "Translation": "鼻涕虫/弹丸",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【语境补充 2026-10-21】生物用鼻涕虫。手铳等射出的金属 slug 用弹丸。"
+        },
+        {
+          "Term": "spear",
+          "Translation": "矛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "vampire",
+          "Translation": "吸血鬼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【版本/语境】怪物译名保留；玩家种族已废弃。 来源：dat/species/deprecated-vampire.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "poison",
+          "Translation": "毒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/伤害/状态】poisoned 表中毒，poison resistance 表毒抗。 来源：duration-data.h。"
+        },
+        {
+          "Term": "Magic Dart",
+          "Translation": "魔法飞弹",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Fireball",
+          "Translation": "火球术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Bolt of Fire",
+          "Translation": "火焰箭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Bolt of Cold",
+          "Translation": "寒冰箭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Bolt of Magma",
+          "Translation": "熔岩箭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Freezing Gust",
+          "Translation": "冰冻阵风",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Freeze",
+          "Translation": "冰冻术/冰冻/冻结/冻伤",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】能力或法术名保留冰冻。结成冰用冻结。攻击动词造成寒冷伤害可用冻伤。\n【名称统一】法术名称采用“冰冻术”；实体、伤害、状态或普通动词按语境使用原有译法，不给一般效果描述机械加“术”。"
+        },
+        {
+          "Term": "Sticky Flame",
+          "Translation": "黏附火焰",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Poison Arrow",
+          "Translation": "剧毒箭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Sting",
+          "Translation": "毒刺",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Iron Shot",
+          "Translation": "铁弹术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Stone Arrow",
+          "Translation": "石箭术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Debugging Ray",
+          "Translation": "调试射线",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Curse of Agony",
+          "Translation": "剧痛诅咒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Bolt of Devastation",
+          "Translation": "毁灭箭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Metal Splinters",
+          "Translation": "金属碎片",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Pyre Arrow",
+          "Translation": "焚火箭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Glacial Breath",
+          "Translation": "冰川吐息",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Drain Life",
+          "Translation": "吸取生命",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Malmutate",
+          "Translation": "恶性突变",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Ghostly Fireball",
+          "Translation": "幽魂火球",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Volley of Thorns",
+          "Translation": "荆棘齐射",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Searing Ray",
+          "Translation": "灼热射线",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Orb of Electricity",
+          "Translation": "雷电之球",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Flash Freeze",
+          "Translation": "瞬间冰冻",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Bolt of Light",
+          "Translation": "光耀箭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Bolt of Flesh",
+          "Translation": "血肉箭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Cleansing Flame",
+          "Translation": "净化之焰",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Iceblast",
+          "Translation": "冰爆术/冰爆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用冰爆术。wand of iceblast 为冰爆魔杖，复合物品名省略术字。"
+        },
+        {
+          "Term": "Slug Dart",
+          "Translation": "蛞蝓镖",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Harpoon Shot",
+          "Translation": "鱼叉射击",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Foxfire",
+          "Translation": "狐火术/狐火",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。\n【名称统一】法术名称采用“狐火术”；实体、伤害、状态或普通动词按语境使用原有译法，不给一般效果描述机械加“术”。"
+        },
+        {
+          "Term": "Agony",
+          "Translation": "剧痛术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Sonic wave",
+          "Translation": "音波",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Stunning Burst",
+          "Translation": "震慑爆发",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Flame Wave",
+          "Translation": "火焰波",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Crystallising Shot",
+          "Translation": "结晶射击",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Shadowball",
+          "Translation": "暗影球",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Creeping Shadow",
+          "Translation": "蔓延暗影",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Kinetic Grapnel",
+          "Translation": "动能钩索",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Shred",
+          "Translation": "撕碎",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Fortress Blast",
+          "Translation": "堡垒冲击",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Doom Bolt",
+          "Translation": "厄运箭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "flame",
+          "Translation": "火焰",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_FIRE；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        },
+        {
+          "Term": "blazing flames",
+          "Translation": "熊熊烈焰",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_FIRE；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        },
+        {
+          "Term": "noxious fumes",
+          "Translation": "恶臭烟雾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_MEPHITIC；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        },
+        {
+          "Term": "poison gas",
+          "Translation": "毒气",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_POISON；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        },
+        {
+          "Term": "steam",
+          "Translation": "蒸汽",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_STEAM；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        },
+        {
+          "Term": "calcifying dust",
+          "Translation": "钙化粉尘",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_PETRIFY；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        },
+        {
+          "Term": "seething chaos",
+          "Translation": "翻涌混沌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_CHAOS；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        },
+        {
+          "Term": "embers",
+          "Translation": "余烬",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_EMBERS；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        },
+        {
+          "Term": "bats",
+          "Translation": "蝙蝠群",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_BATS；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        },
+        {
+          "Term": "rust",
+          "Translation": "锈尘",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_RUST；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        },
+        {
+          "Term": "bomblet",
+          "Translation": "子炸弹",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "shooting star",
+          "Translation": "流星",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "file": "zap-type.h",
+      "sha256": "7f50ef082114e4c42a101f3e13897013759eee78ac53970afe7e723a09789fa0",
+      "literals": [],
+      "term_hits": []
+    },
+    {
+      "file": "zot.cc",
+      "sha256": "5ac5d946b32ba5168e2a63813f8bc2662340e7f3016717c696838fca4b9fdea0",
+      "literals": [
+        {
+          "line": 6,
+          "english": "AppHdr.h"
+        },
+        {
+          "line": 8,
+          "english": "zot.h"
+        },
+        {
+          "line": 10,
+          "english": "activity-interrupt-type.h"
+        },
+        {
+          "line": 11,
+          "english": "branch.h"
+        },
+        {
+          "line": 12,
+          "english": "coordit.h"
+        },
+        {
+          "line": 13,
+          "english": "database.h"
+        },
+        {
+          "line": 14,
+          "english": "delay.h"
+        },
+        {
+          "line": 15,
+          "english": "god-passive.h"
+        },
+        {
+          "line": 16,
+          "english": "items.h"
+        },
+        {
+          "line": 17,
+          "english": "item-prop.h"
+        },
+        {
+          "line": 18,
+          "english": "item-status-flag-type.h"
+        },
+        {
+          "line": 19,
+          "english": "message.h"
+        },
+        {
+          "line": 20,
+          "english": "notes.h"
+        },
+        {
+          "line": 21,
+          "english": "options.h"
+        },
+        {
+          "line": 22,
+          "english": "state.h"
+        },
+        {
+          "line": 23,
+          "english": "stringutil.h"
+        },
+        {
+          "line": 24,
+          "english": "view.h"
+        },
+        {
+          "line": 29,
+          "english": "ZOT_CLOCK"
+        },
+        {
+          "line": 42,
+          "english": "ZOT_AUTS"
+        },
+        {
+          "line": 43,
+          "english": "Hells"
+        },
+        {
+          "line": 162,
+          "english": "As you die, Zot loses track of you."
+        },
+        {
+          "line": 164,
+          "english": "As you enter the new level, Zot loses track of you."
+        },
+        {
+          "line": 193,
+          "english": "Zot's power touches on you..."
+        },
+        {
+          "line": 218,
+          "english": "You have lingered too long. Zot senses you. "
+        },
+        {
+          "line": 219,
+          "english": "Dive deeper or flee this branch before you suffer!"
+        },
+        {
+          "line": 222,
+          "english": "Zot draws nearer. "
+        },
+        {
+          "line": 223,
+          "english": "Dive deeper or flee this branch before you suffer!"
+        },
+        {
+          "line": 226,
+          "english": "Zot has nearly found you. Suffering is imminent. "
+        },
+        {
+          "line": 227,
+          "english": "Descend or flee this branch!"
+        },
+        {
+          "line": 236,
+          "english": "Glimpsed the power of Zot."
+        },
+        {
+          "line": 283,
+          "english": "The power of Zot manifests... and reveals the %s gem was"
+        },
+        {
+          "line": 284,
+          "english": " a mimic! It cackles and vanishes."
+        },
+        {
+          "line": 288,
+          "english": "With a frightful flash, the power of Zot shatters the %s"
+        },
+        {
+          "line": 289,
+          "english": " gem into ten thousand fragments!"
+        },
+        {
+          "line": 322,
+          "english": "If you linger in this branch much longer, the power of Zot will "
+        },
+        {
+          "line": 323,
+          "english": "shatter your %s gem."
+        },
+        {
+          "line": 328,
+          "english": "Zot senses the otherworldly energies of your %s gem, and will "
+        },
+        {
+          "line": 329,
+          "english": "surely shatter it if you linger in this branch any longer!"
+        },
+        {
+          "line": 361,
+          "english": "gem.lost"
+        },
+        {
+          "line": 361,
+          "english": "lost the %s gem!"
+        },
+        {
+          "line": 367,
+          "english": "With a frightful flash, the power of Zot shatters your %s gem "
+        },
+        {
+          "line": 368,
+          "english": "into ten thousand fragments!"
+        },
+        {
+          "line": 396,
+          "english": ""
+        },
+        {
+          "line": 404,
+          "english": ""
+        },
+        {
+          "line": 408,
+          "english": "If you linger in this branch for another %d turns, "
+        },
+        {
+          "line": 409,
+          "english": "the power of Zot will shatter your %s gem.\n"
+        }
+      ],
+      "term_hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Zot",
+          "Translation": "佐特",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "Shatter",
+          "Translation": "粉碎术/打碎/震碎",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】高等级法术标题用粉碎术。普通破坏动作用打碎。神器独立效果可用震碎，不能一律当作施放粉碎术。"
+        },
+        {
+          "Term": "otherworldly",
+          "Translation": "异界之身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：异界之身。"
+        }
+      ]
+    },
+    {
+      "file": "zot.h",
+      "sha256": "c1ffbda0c83670d6c66c1a808bd97435903185b404730bd3393094199080d136",
+      "literals": [],
+      "term_hits": []
+    }
+  ]
+}

@@ -4,6 +4,7 @@
  */
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "ranged-attack.h"
 
@@ -28,6 +29,29 @@
 #include "unwind.h"
 #include "xom.h"
 
+static bool _try_ranged_hit_log(const char *source, const string &projectile,
+                               const actor &defender, const string &verb,
+                               const char *effect, const string &debug,
+                               const string &punctuation, string &output)
+{
+    ui_translation_group group({{"log.ranged", source},
+                                {"log.projectile.verb", verb.c_str()}});
+    const ui_arg display_punctuation = ui_attack_punctuation(punctuation);
+    if (*effect)
+        group.require("log.projectile.effect", effect);
+    string name, target;
+    if (!group.available() || !display_punctuation.available
+        || !try_ui_projectile_name(projectile, name)
+        || !try_ui_actor_name(defender, target))
+        return false;
+    output = make_stringf(group.get("log.ranged", source), name.c_str(),
+                         group.get("log.projectile.verb", verb.c_str()),
+                         target.c_str(), *effect
+                            ? group.get("log.projectile.effect", effect) : "",
+                         debug.c_str(), display_punctuation.text.c_str());
+    return true;
+}
+
 ranged_attack::ranged_attack(actor *attk, actor *defn,
                              const item_def *wpn,
                              bool tele, actor *blame)
@@ -43,6 +67,7 @@ ranged_attack::ranged_attack(actor *attk, actor *defn,
     kill_type = KILLED_BY_BEAM;
 
     proj_name = launched_projectile_name(*weapon);
+    ui_damage_source = proj_name;
 
     // [dshaligram] When changing bolt names here, you must edit
     // hiscores.cc (scorefile_entry::terse_missile_cause()) to match.
@@ -185,7 +210,39 @@ void ranged_attack::handle_phase_blocked()
 
     if (needs_message)
     {
-        mprf("%s %s the %s%s",
+        const char *source = "%s %s the %s%s";
+        ui_translation_group group({{"log.ranged", source},
+                                    {"log.projectile.verb", "blocks"}});
+        string target, projectile;
+        const char *reflection_source = defender->observable()
+            ? (defender_shield && shield_reflects(*defender_shield)
+                ? "%s blocks the %s with their %s... and reflects it back!"
+                : "%s blocks the %s with an invisible shield... and reflects it back!")
+            : "%s blocks the %s... and reflects it back!";
+        string reflection;
+        if (reflected)
+        {
+            string reflected_projectile;
+            const bool projectile_available = try_ui_projectile_name(proj_name, reflected_projectile);
+            const ui_arg shield = defender->observable() && defender_shield
+                && shield_reflects(*defender_shield) ? ui_item_arg(*defender_shield)
+                                                   : ui_literal_arg("");
+            // A template's argument count must match its selected source.
+            if (defender->observable() && defender_shield && shield_reflects(*defender_shield))
+                reflection = ui_render("r.reflection", reflection_source, "",
+                    {ui_actor_arg(*defender), ui_arg{reflected_projectile, projectile_available}, shield});
+            else
+                reflection = ui_render("r.reflection", reflection_source, "",
+                    {ui_actor_arg(*defender), ui_arg{reflected_projectile, projectile_available}});
+        }
+        if (!reflection.empty())
+            mpr(reflection);
+        else if (!reflected && group.available() && try_ui_actor_name(*defender, target)
+            && try_ui_projectile_name(proj_name, projectile))
+            mprf(group.get("log.ranged", source), target.c_str(),
+                 group.get("log.projectile.verb", "blocks"), projectile.c_str(), ".");
+        else
+            mprf(source,
              defender_name(false).c_str(),
              defender->conj_verb("block").c_str(),
              proj_name.c_str(),
@@ -208,7 +265,15 @@ void ranged_attack::handle_phase_dodged()
     if (ev_margin > -defender->missile_repulsion())
     {
         if (needs_message && defender_visible)
-            mprf("The %s is repelled.", proj_name.c_str());
+        {
+            const char *source = "The %s is repelled.";
+            ui_translation_group group({{"log.ranged", source}});
+            string projectile;
+            if (group.available() && try_ui_projectile_name(proj_name, projectile))
+                mprf(group.get("log.ranged", source), projectile.c_str());
+            else
+                mprf(source, proj_name.c_str());
+        }
 
         if (defender->is_player())
             count_action(CACT_DODGE, DODGE_REPEL);
@@ -221,7 +286,19 @@ void ranged_attack::handle_phase_dodged()
 
     if (needs_message)
     {
-        mprf("The %s%s misses %s.",
+        const char *source = "The %s%s misses %s.";
+        const string adverb = evasion_margin_adverb();
+        ui_translation_group group({{"log.ranged", source}});
+        if (!adverb.empty())
+            group.require("log.miss.adverb", adverb.c_str());
+        string projectile, target;
+        if (group.available() && try_ui_projectile_name(proj_name, projectile)
+            && try_ui_actor_name(*defender, target))
+            mprf(group.get("log.ranged", source), projectile.c_str(),
+                 adverb.empty() ? "" : group.get("log.miss.adverb", adverb.c_str()),
+                 target.c_str());
+        else
+            mprf(source,
              proj_name.c_str(),
              evasion_margin_adverb().c_str(),
              defender_name(false).c_str());
@@ -243,7 +320,11 @@ static bool _jelly_eat_missile(const string& proj_name, int damage_done)
         && !you.duration[DUR_DEATHS_DOOR]
         && !one_chance_in(3))
     {
-        mprf("Your attached jelly eats the %s!", proj_name.c_str());
+        string projectile;
+        const bool available = try_ui_projectile_name(proj_name, projectile);
+        mpr(ui_render("r.log", "Your attached jelly eats the %s!",
+            make_stringf("Your attached jelly eats the %s!", proj_name.c_str()),
+            {ui_arg{projectile, available}}));
         inc_hp(1 + random2(damage_done));
         canned_msg(MSG_GAIN_HEALTH);
         return true;
@@ -299,7 +380,13 @@ bool ranged_attack::handle_phase_hit()
         {
             if (needs_message)
             {
-                mprf("The %s %s %s%s but does no damage.",
+                const char *source = "The %s %s %s%s but does no damage.";
+                string translated;
+                if (_try_ranged_hit_log(source, proj_name, *defender, attack_verb,
+                        mulch_bonus() ? " and shatters," : "", "", "", translated))
+                    mpr(translated);
+                else
+                    mprf(source,
                     proj_name.c_str(),
                     attack_verb.c_str(),
                     defender->name(DESC_THE).c_str(),
@@ -697,7 +784,7 @@ bool ranged_attack::apply_missile_brand()
 
         if (defender->is_player())
         {
-            mprf(MSGCH_WARN, "You become untethered in space!");
+            mprf(MSGCH_WARN, "%s", ui_translate("r.ui", "You become untethered in space!"));
             you.duration[DUR_BLINKITIS] = random_range(30, 40);
             you.props[BLINKITIS_SOURCE_KEY] = attacker->name(DESC_A, true);
             you.props[BLINKITIS_AUX_KEY] = proj_name;
@@ -799,7 +886,16 @@ void ranged_attack::announce_hit()
     if (!needs_message)
         return;
 
-    mprf("The %s %s %s%s%s%s",
+    const char *source = "The %s %s %s%s%s%s";
+    string translated;
+    if (_try_ranged_hit_log(source, proj_name, *defender, attack_verb,
+            mulch_bonus() ? " and shatters for extra damage" : "",
+            debug_damage_number(), attack_strength_punctuation(damage_done), translated))
+    {
+        mpr(translated);
+        return;
+    }
+    mprf(source,
          proj_name.c_str(),
          attack_verb.c_str(),
          defender_name(false).c_str(),

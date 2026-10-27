@@ -1,0 +1,41 @@
+{
+  "reviewed_keys": 100,
+  "candidates": 340,
+  "source_keys": 731,
+  "remaining_keys": 631,
+  "legacy_overlay_present_before": false,
+  "baseline_matching_dependency_refresh": {
+    "database.cc": 4770,
+    "mon-util.cc": 10367,
+    "mon-speak.cc": 348
+  },
+  "opaque_lua_keys": [
+    "_suck_up_adj2_",
+    "_suck_up_noun_",
+    "friendly hound",
+    "friendly shoals hound"
+  ],
+  "upstream_unresolved_markers": [],
+  "english_source_unchanged": true,
+  "structure_and_po_keys": 100,
+  "selector_control_flow_unchanged": true,
+  "isolated_dependency_rejections": {
+    "_high_priest_": "dependency_changed",
+    "_high_priest_common_": "source_changed"
+  },
+  "native_tests": 159,
+  "native_assertions": 790832,
+  "python_tests": 29,
+  "windows_tiles_build": "passed",
+  "executable": "crawl-ref/source/crawl.exe",
+  "executable_sha256": "e24e3068bc9302b8994ab3c6596ccbf74415b064b8009d577926762f8d596810",
+  "visual_game_test": "not run",
+  "same_batch_intermediate_dependency_refresh": {
+    "mon-speak.cc": 438
+  },
+  "legacy_reference_present": false,
+  "unadapted_address_markers_at_batch_end": [
+    "@foe,@"
+  ],
+  "address_marker_record_correction": "Engine supports this marker; Chinese adapter completed in database-19."
+}

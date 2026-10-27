@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-24",
+  "names_reviewed": 252,
+  "glossary_added": 242,
+  "glossary_annotated": 10,
+  "glossary_sha256": "5b0e7563973cc4449b02977ed1d7b4cfb7f9aa33877063cff3f665c99ff50965",
+  "source_sha256": "97aef564ffb9eab0fb0109212c80e7895a906f4b615271064dbfd10595f2f1e6",
+  "translation_sha256": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705",
+  "entries": 251,
+  "previous_matching_entries": 161,
+  "newly_covered_entries": 90,
+  "exported": 251,
+  "missing": [],
+  "python_tests": 28,
+  "lua_state_branch_cases": 225,
+  "lua_preserved_api_keys": true,
+  "lua_control_code_unchanged": true,
+  "fallback_cases": [
+    "source_changed",
+    "missing_or_fuzzy"
+  ],
+  "source_duplicate_keys": [
+    "+los mutation"
+  ],
+  "cpp_changes": false,
+  "exe_rebuild": false
+}

@@ -1,0 +1,1380 @@
+{
+  "glossary_hits": [
+    {
+      "Term": "ability",
+      "Translation": "能力",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】与 skill（技能）区分；包括神赐、种族及其他主动能力。 来源：ability.cc。"
+    },
+    {
+      "Term": "Abyss",
+      "Translation": "深渊",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "AC",
+      "Translation": "护甲值",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】与 Armour（防具技能/防具）区分；缩写在 HUD 可保留 AC。 来源：dat/descript/skills.txt。"
+    },
+    {
+      "Term": "Armour",
+      "Translation": "防具/护身",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+    },
+    {
+      "Term": "artefact",
+      "Translation": "神器",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Bailey",
+      "Translation": "堡场",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Bazaar",
+      "Translation": "市集",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "book",
+      "Translation": "魔法书/书/手册",
+      "Part of Speech": "noun",
+      "Variants": "book of",
+      "Note": "【使用约束】book of 是组合前缀，不是完整法术书名；不得把所有 book 都补成魔法书。\n【语境补充 2026-10-21】含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+    },
+    {
+      "Term": "Brand",
+      "Translation": "印记/烙印",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】武器特殊效果类别；不等同附魔数值。旧备注列举的来源并非当前版本的完整有效清单。 来源：dat/descript/egos.txt。\n【版本/语境】完整印记名需按当前 egos 和物品名称核对，不能机械把所有品牌字义用于武器。 来源：dat/descript/egos.txt。\n【语境补充 2026-10-21】武器魔法属性统一用印记。烙在实体上的标记或动作按语境用烙印。"
+    },
+    {
+      "Term": "character",
+      "Translation": "角色/字符/性格",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【语境补充 2026-10-21】玩家或游戏人物用角色。键位、文本编码用字符。人物性情用性格。"
+    },
+    {
+      "Term": "Console",
+      "Translation": "字符版/控制台/终端",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】DCSS 版本类型，与 Tiles（图形版）成对；命令行控制台本身按上下文另译。 来源：Makefile。\n【语境补充 2026-10-21】游戏显示模式用字符版。系统控制台或终端按上下文用对应词。条件标签保留英文。"
+    },
+    {
+      "Term": "deck",
+      "Translation": "套牌",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Desolation",
+      "Translation": "荒盐之地",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 一致性建议】指 Desolation of Salt；补出盐的主题，与普通荒地区分。 来源：dat/descript/branches.txt。"
+    },
+    {
+      "Term": "dungeon",
+      "Translation": "地下城",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "evasion",
+      "Translation": "闪避值",
+      "Part of Speech": "noun",
+      "Variants": "EV",
+      "Note": "【0.34.1 修订】属性 EV；与 Dodging（闪避技能）区分。 来源：dat/descript/skills.txt。"
+    },
+    {
+      "Term": "experience",
+      "Translation": "经验值",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "floor",
+      "Translation": "地面/楼层/地板/向下取整",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【语境补充 2026-10-21】物理表面按语境用地面或地板。地下城深度用楼层。math.floor 为向下取整函数，代码标识符保留英文。"
+    },
+    {
+      "Term": "Gauntlet",
+      "Translation": "竞技场",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "god",
+      "Translation": "神",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Gozag",
+      "Translation": "哥萨戈",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+    },
+    {
+      "Term": "Inventory",
+      "Translation": "物品栏",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "max",
+      "Translation": "最大值",
+      "Part of Speech": "noun",
+      "Variants": "maximum",
+      "Note": "【0.34.1 修订】通用上限词，不限于 HP/MP；reserves 表储备，不是 maximum 同义词。 来源：player.cc。"
+    },
+    {
+      "Term": "mutation",
+      "Translation": "变异",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "mutations",
+      "Translation": "变异",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Ossuary",
+      "Translation": "埋骨地",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Pandemonium",
+      "Translation": "魔窟",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "pieces",
+      "Translation": "碎片",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "potion",
+      "Translation": "药水",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "school",
+      "Translation": "魔法学派/流派",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【版本/语境】魔法学派泛称；具体技能名称使用独立术语。 来源：dat/descript/skills.txt。\n【语境补充 2026-10-21】法术分类用魔法学派，也可在连续说明中简称流派。"
+    },
+    {
+      "Term": "Shield",
+      "Translation": "格挡值/盾牌/保护",
+      "Part of Speech": "noun",
+      "Variants": "SH",
+      "Note": "【0.34.1 修订】原表备注明确是属性；官方手册也以 Shield 为 SH 标题。此处保留该语境；普通物品 shield 仍译盾牌，必须按上下文区分。 来源：docs/crawl_manual.rst。\n【语境补充 2026-10-21】SH 属性用格挡值。装备名词 shield 用盾牌。shield 作动词用保护，不改写物品种类。"
+    },
+    {
+      "Term": "skill",
+      "Translation": "技能",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "spell",
+      "Translation": "法术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "stats",
+      "Translation": "属性",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "Str，Int，Dex，AC，EV，SH，HP，MP"
+    },
+    {
+      "Term": "Staves",
+      "Translation": "棍杖",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】技能包含棍棒及法杖的近战使用；staff 作为魔法装备仍译法杖。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+    },
+    {
+      "Term": "throw",
+      "Translation": "投掷",
+      "Part of Speech": "verb",
+      "Variants": "",
+      "Note": "【0.34.1 修订】本条是动作动词；独立补充 Throwing 技能，不把普通 throwing 自动视为技能名。 来源：skills.cc。\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Tiles",
+      "Translation": "图形版/图块/方格",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【语境补充 2026-10-21】与 Console 对举的客户端模式用图形版。资源图像用图块。地图位置的 tiles 用方格。条件标签保留英文。"
+    },
+    {
+      "Term": "Trove",
+      "Translation": "秘藏",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 一致性建议】与 Vaults（宝库）分支区分，指需满足条件才能进入的藏宝传送门。 来源：dat/descript/branches.txt。"
+    },
+    {
+      "Term": "turn",
+      "Translation": "回合/转向/变成/轮流",
+      "Part of Speech": "noun",
+      "Variants": "turns",
+      "Note": "【版本/语境】回合/动作叙述用语；不是固定时间单位 aut，动作耗时可不同。 来源：player-act.cc。\n【语境补充 2026-10-21】时间单位用回合。动词及 in turn、turn into 等短语按句意选择转向、变成、轮流等译法。"
+    },
+    {
+      "Term": "Vaults",
+      "Translation": "宝库/密室/跃起",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【语境补充 2026-10-21】分支专名用宝库。地图 vaults 用密室。vaults off a wall 作动词表示蹬墙跃起。"
+    },
+    {
+      "Term": "volcano",
+      "Translation": "火山",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "wand",
+      "Translation": "魔杖",
+      "Part of Speech": "noun",
+      "Variants": "wand of",
+      "Note": "【使用约束】wand of 是组合前缀；先确定完整物品名再处理中文词序。"
+    },
+    {
+      "Term": "wizard",
+      "Translation": "巫师",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Wizlab",
+      "Translation": "巫师实验室",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Xom",
+      "Translation": "佐姆",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+    },
+    {
+      "Term": "Ziggurat",
+      "Translation": "神塔",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 一致性建议】与原表 figurine of a ziggurat（神塔小雕像）统一；它是特殊挑战区域，不泛称金字塔。 来源：dat/descript/branches.txt。"
+    },
+    {
+      "Term": "Zin",
+      "Translation": "辛",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "法则之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+    },
+    {
+      "Term": "Will",
+      "Translation": "意志/将会/会",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+    },
+    {
+      "Term": "piety",
+      "Translation": "虔诚",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/神祇机制】神祇资源，不等同经验值。 来源：religion.cc。"
+    },
+    {
+      "Term": "penance",
+      "Translation": "赎罪",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/神祇机制】神祇惩戒/欠罪语境，不等同退出信仰后的全部神罚。 来源：religion.cc。"
+    },
+    {
+      "Term": "spell level",
+      "Translation": "法术等级",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/法术属性】区别法术强度、技能等级和施法成功率。 来源：spl-cast.cc。"
+    },
+    {
+      "Term": "evoke",
+      "Translation": "唤发/发动/使用",
+      "Part of Speech": "verb",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品操作】与祈祷、施法区分。 来源：evoke.cc。\n【语境补充 2026-10-21】技能与唤发物品的专用操作用唤发。泛指发动效果或使用物品时可按句意译。"
+    },
+    {
+      "Term": "Sewer",
+      "Translation": "下水道",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/区域】特殊入口区域。 来源：dat/descript/branches.txt。"
+    },
+    {
+      "Term": "petrifying",
+      "Translation": "正在石化",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态】过程状态。 来源：duration-data.h。"
+    },
+    {
+      "Term": "petrified",
+      "Translation": "已石化",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态】完成后的状态。 来源：duration-data.h。"
+    },
+    {
+      "Term": "Melee",
+      "Translation": "近战",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "the Dungeon",
+      "Translation": "地下城",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Abyss",
+      "Translation": "深渊",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Abyss（规范缩写 Abyss）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "Labyrinth",
+      "Translation": "迷宫",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Labyrinth（规范缩写 Lab）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "Necropolis",
+      "Translation": "亡者之城",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Necropolis（规范缩写 Necropolis）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Necropolis",
+      "Translation": "亡者之城",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Necropolis（规范缩写 Necropolis）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "Executioner",
+      "Translation": "刽子手",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "bear",
+      "Translation": "熊",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "player",
+      "Translation": "玩家",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "pseudopods",
+      "Translation": "伪足",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：伪足。"
+    },
+    {
+      "Term": "tentacles",
+      "Translation": "触手",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：触手。"
+    },
+    {
+      "Term": "float",
+      "Translation": "飘浮",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：飘浮。"
+    },
+    {
+      "Term": "spellclaws",
+      "Translation": "法术利爪",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：法术利爪。"
+    },
+    {
+      "Term": "Str",
+      "Translation": "力量",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+    },
+    {
+      "Term": "Int",
+      "Translation": "智力",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+    },
+    {
+      "Term": "Fire",
+      "Translation": "火焰强化",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+    },
+    {
+      "Term": "Ice",
+      "Translation": "寒冰强化",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+    },
+    {
+      "Term": "Reflect",
+      "Translation": "反射",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+    },
+    {
+      "Term": "Death",
+      "Translation": "死亡",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+    },
+    {
+      "Term": "SpellMotor",
+      "Translation": "法术引擎",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+    },
+    {
+      "Term": "Missiles",
+      "Translation": "投掷物",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【语境统一/物品分类】当前版本背包、拾取、帮助及巫师物品分类用投掷物；规范 OBJ_MISSILES、数据库键及配置值保留英文。"
+    }
+  ],
+  "existing_translations": [
+    {
+      "msgctxt": "c.chardump",
+      "msgid": "Turn   | Place    | Note\n",
+      "msgstr": "回合   | 地点     | 记录\n"
+    },
+    {
+      "msgctxt": "c.chardump",
+      "msgid": "Char dumped successfully.",
+      "msgstr": "角色记录已成功导出。"
+    },
+    {
+      "msgctxt": "c.chardump",
+      "msgid": "Char dumped to '%s'.",
+      "msgstr": "角色记录已导出至“%s”。"
+    },
+    {
+      "msgctxt": "c.chardump",
+      "msgid": "Error opening file '%s'",
+      "msgstr": "无法打开文件“%s”"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Table legend: (Time is in decaauts)\n A = Elapsed time spent in this place.\n B = Non-inter-level travel time spent in this place.\n C = Inter-level travel time spent in this place.\n D = Time resting spent in this place.\n E = Time spent auto-exploring this place.\n F = Levels seen in this place.\n G = Mean time per level.\n",
+      "msgstr": "表格说明（时间单位为 decaaut，即 10 aut）：\n A = 在此处花费的总时间。\n B = 除跨层旅行外花费的时间。\n C = 跨层旅行耗时。\n D = 休息耗时。\n E = 自动探索耗时。\n F = 见过的楼层数。\n G = 每层平均耗时。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Total",
+      "msgstr": "合计"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Top non-repeatable levels by time:\n",
+      "msgstr": "不可重复楼层的耗时排名：\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Note: time per level data comes from an upgraded game and may be incomplete.\n",
+      "msgstr": "注意：各层耗时来自升级过的游戏，数据可能不完整。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Table legend:\n A = Non-vault XP\n B = Vault XP\n C = Vault XP percentage of total XP\n D = Non-vault monster count\n E = Vault monster count\n F = Vault count percentage of total count\n\n",
+      "msgstr": "表格说明：\n A = 密室之外的经验\n B = 密室经验\n C = 密室经验占总经验的百分比\n D = 密室之外的怪物数\n E = 密室怪物数\n F = 密室怪物数占总怪物数的百分比\n\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Piety from conduct\n",
+      "msgstr": "行为带来的虔诚\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Conduct",
+      "msgstr": "行为"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": " || total\n",
+      "msgstr": " || 合计\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Conduct count\n",
+      "msgstr": "行为次数\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Table legend:\n A = God\n B = Rank\n C = Start time\n D = Start piety\n E = Piety gained\n F = Piety on gifts\n G = Piety on penance\n H = Piety on stepdowns\n I = Piety decays\n J = Piety lost (inc. decay)\n",
+      "msgstr": "表格说明：\n A = 神祇\n B = 等阶\n C = 开始时间\n D = 初始虔诚\n E = 获得的虔诚\n F = 礼物消耗的虔诚\n G = 赎罪消耗的虔诚\n H = 递减机制扣除的虔诚\n I = 自然衰减的虔诚\n J = 损失的虔诚（含衰减）\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Message History\n\n",
+      "msgstr": "消息记录\n\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Illustrated notes\n\n",
+      "msgstr": "图文记录\n\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Notes\n",
+      "msgstr": "记录\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Turn   | Place    | Note\n",
+      "msgstr": "回合   | 地点     | 记录\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You aren't carrying anything.",
+      "msgstr": "你没有携带任何物品。"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Inventory:\n\n",
+      "msgstr": "物品栏：\n\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "   Skills:\n",
+      "msgstr": "   技能：\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": " Your Spells              Type           Power      Damage    Failure   Level\n",
+      "msgstr": " 已知法术                 学派           强度       伤害      失败率    等级\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": " Spells                   Type           Power      Damage    Failure   Level\n",
+      "msgstr": " 法术                     学派           强度       伤害      失败率    等级\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Unusable",
+      "msgstr": "不可用"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Table legend:\n A = Kills in this place as a percentage of kills in the entire game.\n B = Kills by you in this place as a percentage of kills by you in\n     the entire game.\n C = Kills by friends in this place as a percentage of kills by\n     friends in the entire game.\n D = Other kills in this place as a percentage of other kills in the\n     entire game.\n E = Experience gained in this place as a percentage of experience\n     gained in the entire game.\n F = Experience gained in this place divided by the number of levels of\n     this place that you have seen.\n\n",
+      "msgstr": "表格说明：\n A = 此处击杀数占全局击杀数的百分比。\n B = 你在此处的击杀数占你全局击杀数的百分比。\n C = 盟友在此处的击杀数占盟友全局击杀数的百分比。\n D = 此处其他击杀数占全局其他击杀数的百分比。\n E = 此处获得的经验占全局经验的百分比。\n F = 此处获得的经验除以见过的楼层数。\n\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Levels and vault maps discovered:\n",
+      "msgstr": "已发现的楼层与密室地图：\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "DLua errors:\n",
+      "msgstr": "DLua 错误：\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Action",
+      "msgstr": "行动"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Skill      XL: |",
+      "msgstr": "技能       等级: |"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You escaped.\n",
+      "msgstr": "你逃出了地下城。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You were on %s:%s.\n",
+      "msgstr": "你曾位于%s：%s。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You are on %s:%s.\n",
+      "msgstr": "你位于%s：%s。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You collected %s gold pieces.\n",
+      "msgstr": "你共收集了 %s 枚金币。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You spent %s gold pieces at shops.\n",
+      "msgstr": "你在商店花费了 %s 枚金币。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You donated %s gold pieces to Zin.\n",
+      "msgstr": "你向辛捐献了 %s 枚金币。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You paid %s gold pieces to Gozag.\n",
+      "msgstr": "你向哥萨戈支付了 %s 枚金币。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You used %s gold pieces for miscellaneous purposes.\n",
+      "msgstr": "你在其他用途上花费了 %s 枚金币。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Melee",
+      "msgstr": "近战"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Fire",
+      "msgstr": "射击"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Throw",
+      "msgstr": "投掷"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Armour",
+      "msgstr": "防具"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Block",
+      "msgstr": "格挡"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Dodge",
+      "msgstr": "闪避"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Cast",
+      "msgstr": "施法"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Invoke",
+      "msgstr": "祈祷"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Ability",
+      "msgstr": "能力"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Evoke",
+      "msgstr": "唤发"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Use",
+      "msgstr": "使用"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Stab",
+      "msgstr": "偷袭"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Eat",
+      "msgstr": "进食"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Riposte",
+      "msgstr": "还击"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Form",
+      "msgstr": "形态"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Attack",
+      "msgstr": "攻击"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Drink",
+      "msgstr": "饮用"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Read",
+      "msgstr": "阅读"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Error",
+      "msgstr": "错误"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Normal",
+      "msgstr": "普通"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Distracted",
+      "msgstr": "分心"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Confused",
+      "msgstr": "混乱"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Fleeing",
+      "msgstr": "逃跑"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Invisible",
+      "msgstr": "隐形"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Held in net/web",
+      "msgstr": "被投网或蛛网缠住"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Petrifying",
+      "msgstr": "石化中"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Petrified",
+      "msgstr": "已石化"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Paralysed",
+      "msgstr": "麻痹"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Sleeping",
+      "msgstr": "睡眠"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Betrayed ally",
+      "msgstr": "背叛盟友"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Blind",
+      "msgstr": "失明"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "No attack",
+      "msgstr": "无攻击"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Constrict",
+      "msgstr": "束缚"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Kick",
+      "msgstr": "踢击"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Headbutt",
+      "msgstr": "头槌"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Peck",
+      "msgstr": "啄击"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Tailslap",
+      "msgstr": "尾击"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Touch",
+      "msgstr": "触碰"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Punch",
+      "msgstr": "拳击"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Bite",
+      "msgstr": "咬击"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Pseudopods",
+      "msgstr": "伪足"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Tentacles",
+      "msgstr": "触手"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Maw",
+      "msgstr": "巨口"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Executioner Blades",
+      "msgstr": "刽子手利刃"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Fungal Fists",
+      "msgstr": "真菌之拳"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Stingers",
+      "msgstr": "毒刺"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Blades",
+      "msgstr": "利刃"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Lunge",
+      "msgstr": "突刺"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Whirlwind",
+      "msgstr": "旋风"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Spellmotor",
+      "msgstr": "法术驱动"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Spellclaws",
+      "msgstr": "法术爪击"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Drunken Brawl",
+      "msgstr": "醉拳"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Sundering",
+      "msgstr": "破裂"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Other",
+      "msgstr": "其他"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Unarmed",
+      "msgstr": "徒手"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Reflection",
+      "msgstr": "反射"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Dodged",
+      "msgstr": "已闪避"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Repelled",
+      "msgstr": "已偏转"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Wand",
+      "msgstr": "魔杖"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Rod",
+      "msgstr": "法棒"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Deck",
+      "msgstr": "套牌"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Miscellaneous",
+      "msgstr": "杂项"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "tome",
+      "msgstr": "典籍"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Default",
+      "msgstr": "默认"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Removed food",
+      "msgstr": "已移除的食物"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You visited %s branches and saw %s levels.\n",
+      "msgstr": "你到过 %s 个分支，见过 %s 层。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You visited %s %s times and saw %s levels.\n",
+      "msgstr": "你到过%s %s 次，见过 %s 层。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You visited %s %s times.\n",
+      "msgstr": "你到过%s %s 次。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You visited %s ziggurats, completed %s, saw %s levels; deepest: %s.\n",
+      "msgstr": "你到过 %s 座神塔，完成 %s 座，见过 %s 层；最深到过第 %s 层。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You worshipped %s.\n",
+      "msgstr": "你曾信奉%s。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You worship %s.\n",
+      "msgstr": "你信奉%s。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "%s demands penance.\n",
+      "msgstr": "%s要求你赎罪。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You don't know any spells.\n",
+      "msgstr": "你尚未掌握任何法术。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You know the following spells:\n\n",
+      "msgstr": "你掌握以下法术：\n\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Your spell library is empty.\n\n",
+      "msgstr": "你的法术库为空。\n\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Your spell library contains the following spells:\n\n",
+      "msgstr": "你的法术库包含以下法术：\n\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You have %s spell levels left.\n",
+      "msgstr": "你还剩 %s 级法术容量。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Lua dump error: %s\n",
+      "msgstr": "Lua 角色记录错误：%s\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "%s version %s (%s) character file.\n\n",
+      "msgstr": "%s %s 版（%s）角色记录。\n\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "tiles",
+      "msgstr": "本地图形版"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "webtiles",
+      "msgstr": "网页版图形"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "console",
+      "msgstr": "字符版"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "%s is noncommittal.",
+      "msgstr": "%s尚未表态。"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "%s is aware of your devotion.",
+      "msgstr": "%s注意到了你的虔诚。"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "%s is pleased with you.",
+      "msgstr": "%s对你感到满意。"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "%s is most pleased with you.",
+      "msgstr": "%s对你相当满意。"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "%s is greatly pleased with you.",
+      "msgstr": "%s对你十分满意。"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "%s is extremely pleased with you.",
+      "msgstr": "%s对你极为满意。"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "%s is exalted by your worship.",
+      "msgstr": "你的崇拜令%s无比欣悦。"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You are a very special plaything of Xom.\n",
+      "msgstr": "你是佐姆非常特别的玩物。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You are a special plaything of Xom.\n",
+      "msgstr": "你是佐姆特别的玩物。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You are a plaything of Xom.\n",
+      "msgstr": "你是佐姆的玩物。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You are a toy of Xom.\n",
+      "msgstr": "你是佐姆的玩具。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You are a favourite toy of Xom.\n",
+      "msgstr": "你是佐姆喜爱的玩具。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You are a beloved toy of Xom.\n",
+      "msgstr": "你是佐姆心爱的玩具。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You are Xom's teddy bear.\n",
+      "msgstr": "你是佐姆的泰迪熊。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "You are a BORING thing.\n",
+      "msgstr": "你是个无聊的东西。\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": " %s Level %s %s\n",
+      "msgstr": " %s %s 级 %s\n"
+    },
+    {
+      "msgctxt": "c.dump.school",
+      "msgid": "Conj",
+      "msgstr": "塑能"
+    },
+    {
+      "msgctxt": "c.dump.school",
+      "msgid": "Hex",
+      "msgstr": "妖术"
+    },
+    {
+      "msgctxt": "c.dump.school",
+      "msgid": "Fire",
+      "msgstr": "火系"
+    },
+    {
+      "msgctxt": "c.dump.school",
+      "msgid": "Ice",
+      "msgstr": "冰系"
+    },
+    {
+      "msgctxt": "c.dump.school",
+      "msgid": "Necr",
+      "msgstr": "死灵"
+    },
+    {
+      "msgctxt": "c.dump.school",
+      "msgid": "Summ",
+      "msgstr": "召唤"
+    },
+    {
+      "msgctxt": "c.dump.school",
+      "msgid": "Frge",
+      "msgstr": "锻造"
+    },
+    {
+      "msgctxt": "c.dump.school",
+      "msgid": "Tloc",
+      "msgstr": "位移"
+    },
+    {
+      "msgctxt": "c.dump.school",
+      "msgid": "Alch",
+      "msgstr": "炼金"
+    },
+    {
+      "msgctxt": "c.dump.school",
+      "msgid": "Erth",
+      "msgstr": "土系"
+    },
+    {
+      "msgctxt": "c.dump.school",
+      "msgid": "Air",
+      "msgstr": "气系"
+    },
+    {
+      "msgctxt": "c.dump.school",
+      "msgid": "Rndm",
+      "msgstr": "随机"
+    },
+    {
+      "msgctxt": "c.dump.school",
+      "msgid": "Bug",
+      "msgstr": "错误"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "None",
+      "msgstr": "无"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Conducts for god: %s\n",
+      "msgstr": "神祇行为记录：%s\n"
+    },
+    {
+      "msgctxt": "c.dump",
+      "msgid": "Turn %s on %s:%s: %s\n\n",
+      "msgstr": "第 %s 回合，%s第 %s 层：%s\n\n"
+    }
+  ],
+  "conduct_sources": [
+    "Evil",
+    "Holy",
+    "Attack Holy",
+    "Attack Neutral",
+    "Attack Friend",
+    "Kill Living",
+    "Kill Undead",
+    "Kill Demon",
+    "Kill Natural Evil",
+    "Kill Unclean",
+    "Kill Chaotic",
+    "Kill Wizard",
+    "Kill Priest",
+    "Kill Holy",
+    "Kill Fast",
+    "Banishment",
+    "Spell Memorise",
+    "Spell Cast",
+    "Spell Practise",
+    "Cannibalism",
+    "Deliberate Mutation",
+    "Cause Glowing",
+    "Use Unclean",
+    "Use Chaos",
+    "Desecrate Orcish Remains",
+    "Kill Slime",
+    "Was Hasty",
+    "Attack In Sanctuary",
+    "Kill Nonliving",
+    "Exploration",
+    "Seen Monster",
+    "Sacrificed Love",
+    "Hurt Foe",
+    "Use Wizardly Item"
+  ],
+  "conduct_glossary_hits": [
+    {
+      "Term": "banishment",
+      "Translation": "放逐",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "mutation",
+      "Translation": "变异",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "sanctuary",
+      "Translation": "庇护所",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "spell",
+      "Translation": "法术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "undead",
+      "Translation": "亡灵",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】指不死生物类别，并不表示无法被杀死。 来源：mon-util.cc。"
+    },
+    {
+      "Term": "wizard",
+      "Translation": "巫师",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "chaos",
+      "Translation": "混沌",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+    },
+    {
+      "Term": "holy",
+      "Translation": "神圣之怒",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+    }
+  ]
+}

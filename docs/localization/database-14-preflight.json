@@ -1,0 +1,199 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "selected": [
+    {
+      "key": "default peaceful fountain_blue",
+      "source": "{{\n  -- Wisps can drink potions, so no need for another message here.\n  if you.transform() == \"death\" or you.race() == \"Mummy\" then\n    if crawl.one_chance_in(3) then\n      return \"You briefly stare at the drinking fountain and sigh.\"\n    else\n      return \"__NONE\"\n    end\n  elseif you.transform() == \"storm\" then\n    return \"The fountain crackles underneath you.\"\n  else\n    return \"You take a small sip from the fountain. Refreshing.\";\n  end\n}}\n\n{{\n  if you.transform() == \"storm\" then\n    return \"Small shocks surge through the fountain.\"\n  elseif you.transform() == \"wisp\" then\n    return \"Your reflection flickers strangely in the water.\"\n  elseif crawl.coinflip() or you.god() == \"Okawaru\" then\n    return \"You briefly stop to wash @your_hands@.\"\n  else\n    return \"You briefly stop to clean @your_weapon@.\"\n  end\n}}\n\nw:1\nYou see @any_graffiti@ on the fountain.\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "mummy",
+          "Translation": "木乃伊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/mummy.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Okawaru",
+          "Translation": "奥格瓦如",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "default fountain_blue",
+      "source": "The fountain briefly ripples from your approaching presence.\n\nw:1\nYou see @any_graffiti@ on the fountain.\n",
+      "hits": []
+    },
+    {
+      "key": "default peaceful fountain_sparkling",
+      "source": "{{\n  if you.transform() == \"death\" or you.race() == \"Mummy\" then\n    if crawl.one_chance_in(3) then\n      return \"You briefly stare at the sparkling fountain and sigh.\"\n    else\n      return \"__NONE\"\n    end\n  elseif you.transform() == \"storm\" then\n    return \"The fountain curiously crackles underneath you.\"\n  elseif crawl.coinflip() or you.god == \"Zin\" or you.god == \"Cheibriados\" then\n    return \"The fountain pulses with strange @any_colour_pattern@, and you decide not to drink from it.\"\n  else\n    return \"You take a small sip from the fountain. @sparkling_message@\"\n  end\n}}\n\nw:1\nYou see @any_graffiti@ on the fountain.\n",
+      "hits": [
+        {
+          "Term": "Cheibriados",
+          "Translation": "切布理亚多",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "审慎之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "mummy",
+          "Translation": "木乃伊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/mummy.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Zin",
+          "Translation": "辛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "法则之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "default fountain_sparkling",
+      "source": "The sparkling fountain shimmers a faint @any_colour@.\n\nw:1\nYou see @any_graffiti@ on the fountain.\n",
+      "hits": []
+    },
+    {
+      "key": "default fountain_blood",
+      "source": "{{\n   if you.can_smell() then\n     return \"You smell the mouldering metallic scent of the fountain's ceaseless blood.\"\n   elseif you.god() == \"Trog\" then\n     return \"You make sure not to track any more blood on yourself.\"\n   else\n     return \"You make sure not to track any blood on yourself.\"\n   end\n}}\n\nMiniscule mosquitoes swarm blood-drunk across the fountain's surface.\n\nw:3\nYour reflection in the fountain of blood stares back at you in silent [judgement|horror].\n\nw:3\nThe fountain of blood pulses in murmuring sobs.\n\nw:1\nThe blood fountain gushes with blood, as blood fountains often do.\n",
+      "hits": [
+        {
+          "Term": "fountain of blood",
+          "Translation": "血喷泉",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Trog",
+          "Translation": "特洛戈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "default peaceful dry_fountain",
+      "source": "w:1\nYou see @any_graffiti@ on the fountain.\n",
+      "hits": []
+    },
+    {
+      "key": "default dry_fountain",
+      "source": "w:1\nYou see @any_graffiti@ on the fountain.\n",
+      "hits": []
+    },
+    {
+      "key": "elyvilon peaceful fountain_blue",
+      "source": "You approve of the purity and functionality of this drinking fountain.\n\n@default peaceful fountain_blue@\n",
+      "hits": [
+        {
+          "Term": "Elyvilon",
+          "Translation": "艾利维隆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "gozag fountain_blood",
+      "source": "w:2\nYou flinch at the exorbitant financial cost of maintaining this fountain.\n\n@default fountain_blood@\n",
+      "hits": [
+        {
+          "Term": "Gozag",
+          "Translation": "哥萨戈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "makhleb peaceful fountain_blood",
+      "source": "You stop to admire the quantity of blood running through this fountain.\n\nYour mind is briefly consumed by the idea of bathing in this fountain.\n\nYou anoint yourself with the fountain's blood.\n\nYou briefly wash @your_weapon@ in the fountain with ritualistic fervour.\n",
+      "hits": [
+        {
+          "Term": "Makhleb",
+          "Translation": "马科列布",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "okawaru peaceful fountain_blue",
+      "source": "You briefly wash @your_weapon@ with practiced discipline.\n",
+      "hits": [
+        {
+          "Term": "Okawaru",
+          "Translation": "奥格瓦如",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "key": "trog peaceful fountain_blue",
+      "source": "{{\nif you.transform() == \"wisp\" then\n  return \"Your reflection in the fountain writhes with quiet rage.\"\nelseif you.transform() == \"fungus\" then\n  return \"You briefly stop and wring some of the blood out of your mycelia.\"\nelse\n  return \"You briefly stop and wash some of the blood off your face.\"\nend\n}}\n",
+      "hits": [
+        {
+          "Term": "fungus",
+          "Translation": "真菌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Trog",
+          "Translation": "特洛戈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    }
+  ]
+}

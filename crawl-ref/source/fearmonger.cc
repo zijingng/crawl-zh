@@ -6,6 +6,8 @@
 #include "AppHdr.h"
 
 #include "mpr.h"
+#include "i18n.h"
+#include "stringutil.h"
 #include "player.h"
 
 #include "areas.h"
@@ -25,8 +27,9 @@ bool player::add_fearmonger(const monster* mon)
     {
         set_duration(DUR_AFRAID, 7, 12);
         fearmongers.push_back(mon->mid);
-        mprf(MSGCH_WARN, "You are terrified of %s!",
-                         mon->name(DESC_THE).c_str());
+        mprf(MSGCH_WARN, "%s", ui_render("f.message", "You are terrified of %s!",
+            make_stringf("You are terrified of %s!", mon->name(DESC_THE).c_str()),
+            {ui_actor_arg(*mon)}).c_str());
     }
     else
     {
@@ -147,7 +150,7 @@ void player::_removed_fearmonger(bool quiet)
     {
         duration[DUR_AFRAID] = 0;
         if (!quiet)
-            mprf(MSGCH_DURATION, "You are no longer terrified.");
+            mprf(MSGCH_DURATION, "%s", ui_translate("f.message", "You are no longer terrified."));
     }
 }
 

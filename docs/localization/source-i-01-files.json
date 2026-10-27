@@ -1,0 +1,122 @@
+[
+  {
+    "file": "crawl-ref/source/i18n-catalogue.h",
+    "scope": "generated catalogue; never edited by hand",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/i18n-item.h",
+    "scope": "new private single-item and inventory display adapters; identification and quantity preserved",
+    "new": true,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/i18n.cc",
+    "scope": "existing typed display and English fallback infrastructure",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/i18n.h",
+    "scope": "existing display API declarations",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/initfile.cc",
+    "scope": "configuration parsing and technical diagnostics; canonical keys preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/initfile.h",
+    "scope": "configuration declarations; identifiers preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/invent.cc",
+    "scope": "inventory selectors, counts, operations, warnings and padding; canonical APIs preserved",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/invent.h",
+    "scope": "inventory API declarations",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/item-def.h",
+    "scope": "item state and canonical definitions preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/item-name.cc",
+    "scope": "opt-in menu names, rune and gem menus; canonical names and origin builders preserved",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/item-name.h",
+    "scope": "optional display result; original return values preserved",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/item-prop-enum.h",
+    "scope": "property enums preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/item-prop.cc",
+    "scope": "identification and evoker recharge messages; canonical property tables preserved",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/item-prop.h",
+    "scope": "property APIs preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/item-status-flag-type.h",
+    "scope": "status flags preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/item-type-id-state-type.h",
+    "scope": "identification enums preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/item-use.cc",
+    "scope": "equipment, reading, drinking, enchanting, branding, targeting, transformation and danger prompts",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/item-use.h",
+    "scope": "item use declarations preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/items.cc",
+    "scope": "pickup, drop, gold, stack merge, runes, gems and weapon welcome messages",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/items.h",
+    "scope": "item APIs preserved",
+    "new": false,
+    "changed": false
+  }
+]

@@ -1,0 +1,149 @@
+{
+  "batch": "source-r-01",
+  "canonical_functions": [
+    {
+      "function": "get_all_god_powers",
+      "sha256": "82233ec205bbe6f9dc241d965b7609fdc6f7a59f5b169a51ddfc070a8821d029",
+      "unchanged": true
+    },
+    {
+      "function": "god_name",
+      "sha256": "5a1cf7f2dc38de4740fe565eed26af1b5b70804a7f8fc946b890fafaae59e56a",
+      "unchanged": true
+    },
+    {
+      "function": "god_name_jiyva",
+      "sha256": "6e9008ce8c94d71ef3ed0a5ed10fc149372bf44567d4e35969376a54720779c8",
+      "unchanged": true
+    },
+    {
+      "function": "wu_jian_random_sifu_name",
+      "sha256": "ae2e95d5ca80e99ff6c1d2b40435944cc3080e6aa382d2ae39aab76719fd11e5",
+      "unchanged": true
+    },
+    {
+      "function": "str_to_god",
+      "sha256": "8800cb6787ce950b68436fe4ada97c496b6a960fd0012d4f132b07777cbdb33d",
+      "unchanged": true
+    },
+    {
+      "function": "random_god",
+      "sha256": "609924c081a8a6bddce99a149bbd894dba9d48d6cfd712db2b7b606a2362606f",
+      "unchanged": true
+    },
+    {
+      "function": "ignore_faith_reason",
+      "sha256": "91bc0aa0a50bc16ea8ec646fdb4015a05dba3e21a8f94750a54d51644f532b82",
+      "unchanged": true
+    },
+    {
+      "function": "god_spell_warn_string",
+      "sha256": "af0f3e785be19e5f8ff21898c30b7c810c36f51249b14c23f6b6d937321f3e8d",
+      "unchanged": true
+    },
+    {
+      "function": "_god_hates_your_god_reaction",
+      "sha256": "6f0505018a03662c5f05509bac6a634348cf7e69e339286ce93813103f465310",
+      "unchanged": true
+    },
+    {
+      "function": "_good_god_wrath_message",
+      "sha256": "3f2a74ba9188031fde0f90e70a3511dfc80f1c303098475d09eedacdadd2f673",
+      "unchanged": true
+    },
+    {
+      "function": "_hepliaklqana_weapon_type",
+      "sha256": "c40be93269418ee8b75b423f1c7c66ba10330690eae5d3188b91a3a8b5517aa9",
+      "unchanged": true
+    },
+    {
+      "function": "_hepliaklqana_weapon_brand",
+      "sha256": "90757bac0f9f942876c5d1e1ff2da630bab164acf6fa1af218e4cdafa2696c7d",
+      "unchanged": true
+    },
+    {
+      "function": "_hepliaklqana_shield_type",
+      "sha256": "560c410f9278d705900fc7ec50a49f32beb6ebf2d892a2f5171578577f556ff8",
+      "unchanged": true
+    },
+    {
+      "function": "_hepliaklqana_shield_ego",
+      "sha256": "11b56d756a97c9d95058507b0cc5954772dd99a294bf8c0c9670db501e03b41d",
+      "unchanged": true
+    },
+    {
+      "function": "upgrade_hepliaklqana_weapon",
+      "sha256": "bcda5dfd7f77ba4e06a0271cbd71e0357b6d10ecb3eef5b20ac26c3b0bceec77",
+      "unchanged": true
+    },
+    {
+      "function": "upgrade_hepliaklqana_shield",
+      "sha256": "5f0b4b3d6ff0b7e73d02689eda0d620d3defbf7a26f577b959be71b8e00bdf59",
+      "unchanged": true
+    },
+    {
+      "function": "hepliaklqana_ally_name",
+      "sha256": "a0de9acd944678bfbcd52da404774703a5019d97f4cdd015ea19f406fd18660f",
+      "unchanged": true
+    },
+    {
+      "function": "makhleb_mark_name",
+      "sha256": "4e391e88c28e45180e019d7e21d4429f503f436547e9ae6b85390b116faf2358",
+      "unchanged": true
+    },
+    {
+      "function": "delayed_monster",
+      "sha256": "24081ba1432d483c1247288a0e5be1f6c5d187881b71cdf8fe563b768076f87b",
+      "unchanged": true
+    },
+    {
+      "function": "delayed_monster_done",
+      "sha256": "db5194e7fabff5abbb7f4d43524e11d593488e35652922fc7c8ebbcac39f6eab",
+      "unchanged": true
+    },
+    {
+      "function": "_place_delayed_monsters",
+      "sha256": "0f82b53b854e7210bb38919078f11194e41375e8186aa49eb00859bdc0fe01f7",
+      "unchanged": true
+    }
+  ],
+  "random_calls": [
+    {
+      "file": "religion.cc",
+      "calls": 65,
+      "expressions_and_order_unchanged": true
+    },
+    {
+      "file": "ranged-attack.cc",
+      "calls": 19,
+      "expressions_and_order_unchanged": true
+    },
+    {
+      "file": "spl-book.cc",
+      "calls": 1,
+      "expressions_and_order_unchanged": true
+    }
+  ],
+  "unchanged_r_files": [
+    "randbook.cc",
+    "randbook.h",
+    "random-pick.h",
+    "random-var.cc",
+    "random-var.h",
+    "random.cc",
+    "random.h",
+    "ranged-attack.h",
+    "ray.cc",
+    "ray.h",
+    "rc-line-type.h",
+    "recite-eligibility.h",
+    "recite-type.h",
+    "religion-enum.h",
+    "rng-type.h"
+  ],
+  "notes": [
+    "God power gain/loss/general, ability identifiers, god and sifu names stay canonical English.",
+    "Randbook generators and stored artefact titles remain unchanged; no name generation or RNG is repeated for display.",
+    "Unknown typed components return the complete original sentence; no English grammar parsing."
+  ]
+}

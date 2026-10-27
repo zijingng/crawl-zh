@@ -17,6 +17,7 @@
 #include "coordit.h"
 #include "dungeon.h"
 #include "english.h"
+#include "i18n.h"
 #include "god-conduct.h"
 #include "god-passive.h"
 #include "level-state-type.h"
@@ -504,7 +505,7 @@ static void _spread_fire(const cloud_struct &cloud)
             continue;
 
         if (you.see_cell(*ai))
-            mpr("The forest fire spreads!");
+            mpr(ui_translate("c.cloud", "The forest fire spreads!"));
         destroy_wall(*ai);
         env.cloud[*ai] = cloud;
         env.cloud[*ai].pos = *ai;
@@ -675,7 +676,7 @@ static void _maybe_leave_water(const coord_def pos)
         return;
 
     if (you.pos() == pos && !you.airborne())
-        mpr("The rain has left you waist-deep in water!");
+        mpr(ui_translate("c.cloud", "The rain has left you waist-deep in water!"));
     temp_change_terrain(pos, DNGN_SHALLOW_WATER,
                         random_range(500, 1000),
                         TERRAIN_CHANGE_FLOOD);
@@ -1091,7 +1092,7 @@ static bool _actor_apply_cloud_side_effects(actor *act,
         {
             if (1 + random2(27) >= you.experience_level)
             {
-                mpr("You choke on the stench!");
+                mpr(ui_translate("c.cloud", "You choke on the stench!"));
                 // effectively one or two turns, since it will be
                 // decremented right away
                 confuse_player(random_range(2, 3));
@@ -1161,7 +1162,7 @@ static bool _actor_apply_cloud_side_effects(actor *act,
     case CLOUD_MUTAGENIC:
         if (player)
         {
-            mpr("The mutagenic energy flows into you.");
+            mpr(ui_translate("c.cloud", "The mutagenic energy flows into you."));
             // It's possible that you got trampled into the mutagenic cloud
             // and it's not your fault... so we'll say it's not intentional.
             // (it's quite bad in any case, so players won't scum, probably.)
@@ -1179,7 +1180,7 @@ static bool _actor_apply_cloud_side_effects(actor *act,
     case CLOUD_ALCOHOL:
         if (player && (coinflip()))
         {
-            mpr("You feel dizzy.");
+            mpr(ui_translate("c.cloud", "You feel dizzy."));
             you.increase_duration(DUR_VERTIGO, random_range(7, 11), 50);
             return true;
         }
@@ -1624,6 +1625,25 @@ string cloud_type_name(cloud_type type, bool terse)
     return clouds[type].verbose_name;
 }
 
+bool try_cloud_display_name(cloud_type type, bool terse, string &output)
+{
+    if (type <= CLOUD_NONE || type >= NUM_CLOUD_TYPES)
+        return false;
+    const string original = cloud_type_name(type, terse);
+    const ui_arg name = ui_text_arg("c.cloud.name", original);
+    if (!name.available)
+        return false;
+    output = name.text;
+    return true;
+}
+
+string cloud_display_name(cloud_type type, bool terse)
+{
+    string output;
+    return try_cloud_display_name(type, terse, output)
+        ? output : cloud_type_name(type, terse);
+}
+
 cloud_type cloud_name_to_type(const string &name)
 {
     const string lower_name = lowercase_string(name);
@@ -1752,30 +1772,44 @@ void cloud_struct::announce_actor_engulfed(const actor *act,
     if (!you.can_see(*act))
         return;
 
-    if (type == CLOUD_RAIN)
+    mpr(cloud_engulfed_message(*this, *act, beneficial));
+}
+
+string cloud_engulfed_message(const cloud_struct &cloud, const actor &act,
+                              bool beneficial)
+{
+    string original;
+    const char *source;
+    if (cloud.type == CLOUD_RAIN)
     {
-        mprf("%s %s in the rain.",
-            act->name(DESC_THE).c_str(),
-            act->conj_verb(silenced(act->pos())?
-                        "steam" : "sizzle").c_str());
+        const bool quiet = silenced(act.pos());
+        original = make_stringf("%s %s in the rain.",
+            act.name(DESC_THE).c_str(),
+            act.conj_verb(quiet ? "steam" : "sizzle").c_str());
+        source = quiet ? "%s steams in the rain." : "%s sizzles in the rain.";
+        return ui_render("c.cloud", source, original, {ui_actor_arg(act)});
     }
-    else if (type == CLOUD_BATS)
+    else if (cloud.type == CLOUD_BATS)
     {
-        mprf("%s %s %s.",
-             act->name(DESC_THE).c_str(),
-             (act->conj_verb("are") + " swarmed by").c_str(),
-             cloud_name().c_str());
+        original = make_stringf("%s %s %s.",
+             act.name(DESC_THE).c_str(),
+             (act.conj_verb("are") + " swarmed by").c_str(),
+             cloud.cloud_name().c_str());
+        source = "%s is swarmed by %s.";
     }
     else
     {
-        mprf("%s %s in %s.",
-             act->name(DESC_THE).c_str(),
-             beneficial ? act->conj_verb("bask").c_str()
-                        : (act->conj_verb("are") + " engulfed").c_str(),
-             cloud_name().c_str());
-        return;
+        original = make_stringf("%s %s in %s.",
+             act.name(DESC_THE).c_str(),
+             beneficial ? act.conj_verb("bask").c_str()
+                        : (act.conj_verb("are") + " engulfed").c_str(),
+             cloud.cloud_name().c_str());
+        source = beneficial ? "%s basks in %s." : "%s is engulfed in %s.";
     }
-
+    string name;
+    const bool available = try_cloud_display_name(cloud.type, false, name);
+    return ui_render("c.cloud", source, original,
+                     {ui_actor_arg(act), {name, available}});
 }
 
 /**
@@ -1938,13 +1972,13 @@ void start_still_winds()
 {
     delete_all_clouds();
     env.level_state |= LSTATE_STILL_WINDS;
-    mprf(MSGCH_WARN, "%s", "The air becomes perfectly still.");
+    mprf(MSGCH_WARN, "%s", ui_translate("c.cloud", "The air becomes perfectly still."));
 }
 
 void end_still_winds()
 {
     env.level_state &= ~LSTATE_STILL_WINDS;
-    mpr("The air resumes its normal movements.");
+    mpr(ui_translate("c.cloud", "The air resumes its normal movements."));
 }
 
 /**

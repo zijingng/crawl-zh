@@ -4,6 +4,7 @@
 **/
 
 #include "AppHdr.h"
+#include "m-display.h"
 
 #include "mon-explode.h"
 
@@ -345,13 +346,20 @@ bool explode_monster(monster* mons, killer_type killer, bool pet_kill)
     bolt beam;
     const monster_type type = mons->type;
     string sanct_msg = "";
+    const ui_arg explosion_name = m_actor_arg(*mons);
+    const char *boom_source = "%s explodes!";
+    string sanctuary_effect;
     string boom_msg = make_stringf("%s explodes!", mons->full_name(DESC_THE).c_str());
     actor* agent = nullptr;
     bool inner_flame = false;
 
     string poof_msg = "";
+    string poof_effect;
     if (mons->is_abjurable())
-        poof_msg = "The " + mons->name(DESC_PLAIN) + " residue " + summoned_poof_msg(*mons) + ".";
+    {
+        poof_effect = summoned_poof_msg(*mons);
+        poof_msg = "The " + mons->name(DESC_PLAIN) + " residue " + poof_effect + ".";
+    }
 
     auto it = explosions.find(type);
     if (it != explosions.end())
@@ -362,11 +370,15 @@ bool explode_monster(monster* mons, killer_type killer, bool pet_kill)
         string effect = "explosion is contained";
         if (explosion.sanct_effect != "")
             effect = explosion.sanct_effect;
+        sanctuary_effect = effect;
         sanct_msg = string("By Zin's power, ") +
                     apostrophise(mons->name(DESC_THE)) + " " +
                     effect + ".";
         if (type == MONS_BENNU)
+        {
+            boom_source = "%s blazes out!";
             boom_msg = make_stringf("%s blazes out!", mons->full_name(DESC_THE).c_str());
+        }
     }
     else if (mons->has_ench(ENCH_INNER_FLAME))
     {
@@ -394,6 +406,7 @@ bool explode_monster(monster* mons, killer_type killer, bool pet_kill)
     {
         _setup_haemoclasm_explosion(beam, *mons);
         mons->flags |= MF_EXPLODE_KILL;
+        boom_source = "%s shudders for a moment, then explodes violently!";
         boom_msg = make_stringf("%s shudders for a moment, then explodes violently!",
                                 mons->name(DESC_THE).c_str());
     }
@@ -416,10 +429,20 @@ bool explode_monster(monster* mons, killer_type killer, bool pet_kill)
         }
     }
 
+    // These strings are only queued UI messages. Snapshot names before death,
+    // and reuse the already chosen poof result (which can consume random numbers).
+    boom_msg = ui_render("m.clause", boom_source, boom_msg, {explosion_name});
+    if (!sanctuary_effect.empty())
+        sanct_msg = ui_render("m.clause", "By Zin's power, %s %s.", sanct_msg,
+                             {explosion_name, m_clause_arg(sanctuary_effect)});
+    if (!poof_msg.empty())
+        poof_msg = ui_render("m.clause", "The %s residue %s.", poof_msg,
+                            {explosion_name, m_clause_arg(poof_effect)});
+
     if (is_sanctuary(mons->pos()))
     {
         if (you.can_see(*mons))
-            mprf(MSGCH_GOD, "%s", sanct_msg.c_str());
+            mprf(MSGCH_GOD, "%s",ui_translate("m.ui", sanct_msg.c_str()));
         return false;
     }
 

@@ -3,6 +3,7 @@
 #ifdef USE_TILE_LOCAL
 
 #include "loading-screen.h"
+#include "i18n.h"
 #include "files.h"
 #include "options.h"
 #include "random.h"
@@ -73,7 +74,7 @@ void loading_screen_open()
     vbox->add_child(std::move(splash));
     vbox->add_child(loading_text);
     FontWrapper *font = tiles.get_crt_font();
-    vbox->min_size().width = font->string_width(load_complete_msg.c_str());
+    vbox->min_size().width = font->string_width(ui_translate("l.loading", load_complete_msg.c_str()));
     popup = make_shared<ui::Popup>(std::move(vbox));
     ui::push_layout(popup);
 }
@@ -98,7 +99,7 @@ void loading_screen_update_msg(string message)
 {
     if (!crawl_state.title_screen || in_headless_mode())
         return;
-    loading_text->set_text(message);
+    loading_text->set_text(ui_translate("l.loading", message.c_str()));
     ui::pump_events(0);
 }
 

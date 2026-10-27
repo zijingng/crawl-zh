@@ -1,0 +1,35 @@
+{
+  "batch": "morgue-status-books-01",
+  "new_reviewed_reason_keys": 43,
+  "native_tests": 14,
+  "native_assertions": 18471,
+  "python_tests": 33,
+  "all_valid_mutation_levels": true,
+  "all_current_species_growth_reasons": true,
+  "english_fallback_preserved": true,
+  "reviewed_dependency_mismatches": 0,
+  "typed_book_author": "BOOK_TITLED_KEY",
+  "book_example": "Jusinoud的石块之训诫",
+  "note_examples": [
+    "遇见魔窟领主Ylod Wia",
+    "杀死魔窟领主Ylod Wia",
+    "被魔窟领主Fubb麻痹，持续4.5回合"
+  ],
+  "english_morgue_sha256": {
+    "native-status-books.txt": "db4be93882ad672331a771dd46d87a6df84b5e92a13f06a79387b49c71052bac",
+    "native-status-books-explicit-en.txt": "db4be93882ad672331a771dd46d87a6df84b5e92a13f06a79387b49c71052bac",
+    "native-status-books-language-en.txt": "db4be93882ad672331a771dd46d87a6df84b5e92a13f06a79387b49c71052bac"
+  },
+  "windows_tiles_executable_sha256": "b301e99f6f862652d0b54df8cb5dc328c8135ad881cf47d19231ccfd31577219",
+  "existing_morgue_files_rewritten": false,
+  "validation": [
+    "canonical note strings and serialization",
+    "known legacy Pan sources resolved from typed encounter history",
+    "new typed Pan-source marker and tamper fallback",
+    "unknown source and book theme whole-message fallback",
+    "fixed and themed random book legacy regression",
+    "canonical RNG stream",
+    "actual bilingual morgue files",
+    "git diff --check"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "batch": "source-r-01",
+  "date": "2026-10-24",
+  "reviewed_messages": 268,
+  "catalogue_matches": 268,
+  "missing_messages": [],
+  "stale_dependencies": [],
+  "original_top_level_r_files": 18,
+  "current_top_level_r_files": 18,
+  "changed_r_files": 3,
+  "shared_callers": [
+    "spl-book.cc"
+  ],
+  "windows_tiles_build": true,
+  "native_cases": 92,
+  "native_assertions": 186566,
+  "python_tests": 28,
+  "limitations": [
+    "No in-game visual smoke test; Windows Tiles only.",
+    "Technical assertions, debug/wizard diagnostics and random artefact proper titles retain canonical English.",
+    "Opaque delayed callbacks and script messages keep existing semantics; no global interception or English name parsing.",
+    "God name input still accepts canonical English names; the Chinese prompt states this explicitly."
+  ]
+}

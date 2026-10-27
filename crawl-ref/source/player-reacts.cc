@@ -4,6 +4,8 @@
  **/
 
 #include "AppHdr.h"
+#include "i18n.h"
+#include "p-display.h"
 
 #include "player-reacts.h"
 
@@ -36,6 +38,7 @@
 #include "coord.h"
 #include "coordit.h"
 #include "database.h"
+#include "artefact-speech.h"
 #include "dbg-util.h"
 #include "delay.h"
 #ifdef DGL_SIMPLE_MESSAGING
@@ -166,9 +169,9 @@ static bool _decrement_a_duration(duration_type dur, int delay,
             if (you.duration[dur] <= 0)
                 you.duration[dur] = 1;
             if (need_expiration_warning(dur))
-                mprf(MSGCH_DANGER, "Careful! %s", expmsg);
+                mprf(MSGCH_DANGER, "%s", ui_render("p.duration", "Careful! %s", make_stringf("Careful! %s", expmsg), {p_duration_arg(expmsg)}).c_str());
             else
-                mprf(chan, "%s", expmsg);
+                mprf(chan, "%s", ui_translate("p.duration.message", ui_translate("d.duration", expmsg)));
         }
     }
 
@@ -176,7 +179,7 @@ static bool _decrement_a_duration(duration_type dur, int delay,
     {
         you.duration[dur] = 0;
         if (endmsg && *endmsg != '\0')
-            mprf(chan, "%s", endmsg);
+            mprf(chan, "%s", ui_translate("p.duration.message", ui_translate("d.duration", endmsg)));
         return true;
     }
 
@@ -197,9 +200,7 @@ static void _decrement_petrification(int delay)
                                             "flesh" :
                                             get_form()->flesh_equivalent;
 
-        mprf(MSGCH_DURATION, "You turn to %s%s.",
-             flesh_equiv.c_str(),
-             you.paralysed() ? "" : " and can act again");
+        mprf(MSGCH_DURATION, "%s", ui_render("p.log.57", "You turn to %s%s.", make_stringf("You turn to %s%s." , flesh_equiv.c_str(), you.paralysed() ? "" : " and can act again"), {p_clause_arg(flesh_equiv), p_clause_arg(you.paralysed() ? "" : " and can act again")}).c_str());
     }
 
     if (you.duration[DUR_PETRIFYING])
@@ -212,7 +213,7 @@ static void _decrement_petrification(int delay)
             you.fully_petrify();
         }
         else if (dur < 15 && old_dur >= 15)
-            mpr("Your limbs are stiffening.");
+            mpr(ui_translate("p.ui", "Your limbs are stiffening."));
     }
 }
 
@@ -238,7 +239,7 @@ static void _decrement_attraction(int delay)
 
     attract_monsters(delay);
     if (_decrement_a_duration(DUR_ATTRACTIVE, delay))
-        mpr("You feel less attractive to monsters.");
+        mpr(ui_translate("p.ui", "You feel less attractive to monsters."));
 }
 
 static void _decrement_paralysis(int delay)
@@ -253,7 +254,7 @@ static void _decrement_paralysis(int delay)
 
     you.give_stun_immunity(random_range(1, 3));
 
-    mprf(MSGCH_DURATION, "You can act again.");
+    mprf(MSGCH_DURATION,"%s", ui_translate("p.ui", "You can act again."));
     you.redraw_armour_class = true;
     you.redraw_evasion = true;
 }
@@ -270,7 +271,7 @@ static void _maybe_melt_armour()
     if (you.props.exists(MELT_ARMOUR_KEY))
     {
         you.props.erase(MELT_ARMOUR_KEY);
-        mprf(MSGCH_DURATION, "The heat melts your icy armour.");
+        mprf(MSGCH_DURATION,"%s", ui_translate("p.ui", "The heat melts your icy armour."));
     }
 }
 
@@ -381,11 +382,11 @@ static void _update_cowardice()
         return;
 
     if (horror_level >= HORROR_LVL_OVERWHELMING)
-        mpr("Monsters! Monsters everywhere! You have to get out of here!");
+        mpr(ui_translate("p.ui", "Monsters! Monsters everywhere! You have to get out of here!"));
     else if (horror_level >= HORROR_LVL_EXTREME)
-        mpr("You reel with horror at the sight of these foes!");
+        mpr(ui_translate("p.ui", "You reel with horror at the sight of these foes!"));
     else
-        mpr("You feel a twist of horror at the sight of this foe.");
+        mpr(ui_translate("p.ui", "You feel a twist of horror at the sight of this foe."));
 }
 
 static void _update_claustrophobia()
@@ -521,9 +522,9 @@ void player_reacts_to_monsters()
         && you.is_constricted())
     {
         if (you.constricted_type == CONSTRICT_ROOTS)
-            mprf("The roots around you sink back into the ground.");
+            mprf("%s", ui_translate("p.ui", "The roots around you sink back into the ground."));
         else if (you.constricted_type == CONSTRICT_BVC)
-            mprf("The zombie hands holding you return to the earth.");
+            mprf("%s", ui_translate("p.ui", "The zombie hands holding you return to the earth."));
 
         you.stop_being_constricted(true);
     }
@@ -564,7 +565,7 @@ void player_reacts_to_monsters()
         && !there_are_monsters_nearby(true, true, false))
     {
         if (_decrement_a_duration(DUR_STARDUST_COOLDOWN, you.time_taken))
-            mprf(MSGCH_DURATION, "Your orb has finished recharging its magic.");
+            mprf(MSGCH_DURATION,"%s", ui_translate("p.ui", "Your orb has finished recharging its magic."));
     }
 
 
@@ -610,7 +611,7 @@ static bool _check_recite()
         || you.petrified()
         || you.berserk())
     {
-        mprf(MSGCH_DURATION, "Your recitation is interrupted.");
+        mprf(MSGCH_DURATION,"%s", ui_translate("p.ui", "Your recitation is interrupted."));
         you.duration[DUR_RECITE] = 0;
         you.set_duration(DUR_RECITE_COOLDOWN, 1 + random2(10) + random2(30));
         return false;
@@ -623,7 +624,7 @@ static void _handle_recitation(int step)
 {
     mprf("\"%s\"",
          zin_recite_text(you.attribute[ATTR_RECITE_SEED],
-                         you.attribute[ATTR_RECITE_TYPE], step).c_str());
+                         you.attribute[ATTR_RECITE_TYPE], step, true).c_str());
 
     if (apply_area_visible(zin_recite_to_single_monster, you.pos()))
     {
@@ -640,17 +641,25 @@ static void _handle_recitation(int step)
 
     if (step == 0)
     {
+        const string reference = zin_recite_text(you.attribute[ATTR_RECITE_SEED],
+                                                  you.attribute[ATTR_RECITE_TYPE], -1);
         ostringstream speech;
-        speech << zin_recite_text(you.attribute[ATTR_RECITE_SEED],
-                                  you.attribute[ATTR_RECITE_TYPE], -1);
-        speech << '.';
+        speech << reference << '.';
+        ui_arg ending = ui_literal_arg("");
         if (one_chance_in(27))
         {
-            const string closure = getSpeakString("recite_closure");
+            const string closure = getSpeakString("recite_closure", Options.language == lang_t::ZH);
             if (!closure.empty())
+            {
                 speech << ' ' << closure;
+                ending = ui_text_arg("g.recite.closure", closure);
+            }
         }
-        mprf(MSGCH_DURATION, "You finish reciting %s", speech.str().c_str());
+        const string display_reference = zin_recite_text(you.attribute[ATTR_RECITE_SEED],
+                                                        you.attribute[ATTR_RECITE_TYPE], -1, true);
+        mprf(MSGCH_DURATION, "%s", ui_render("g.recite.finish", "You finish reciting %s.%s",
+            make_stringf("You finish reciting %s", speech.str().c_str()),
+            {{display_reference, display_reference != reference}, ending}).c_str());
         you.set_duration(DUR_RECITE_COOLDOWN, 1 + random2(10) + random2(30));
     }
 }
@@ -664,8 +673,7 @@ static void _try_to_respawn_ancestor()
     if (!ancestor)
         return;
 
-    mprf("%s emerges from the mists of memory!",
-         ancestor->name(DESC_YOUR).c_str());
+    mprf("%s", ui_render("p.log.60", "%s emerges from the mists of memory!", make_stringf("%s emerges from the mists of memory!" , ancestor->name(DESC_YOUR).c_str()), {ui_actor_arg(*ancestor)}).c_str());
     add_companion(ancestor);
     place_cloud(CLOUD_MIST, ancestor->pos(), random_range(1,2), ancestor); // ;)
 }
@@ -721,7 +729,7 @@ static void _handle_trickster_decay(int delay)
     if (stacks <= 0)
     {
         you.props.erase(TRICKSTER_POW_KEY);
-        mprf(MSGCH_DURATION, "You feel your existence waver again.");
+        mprf(MSGCH_DURATION,"%s", ui_translate("p.ui", "You feel your existence waver again."));
     }
 
     if (reduction > 0)
@@ -737,9 +745,9 @@ static void _handle_trickster_decay(int delay)
  */
 static void _decrement_simple_duration(duration_type dur, int delay)
 {
-    if (_decrement_a_duration(dur, delay, duration_end_message(dur),
+    if (_decrement_a_duration(dur, delay, duration_end_message(dur, false),
                              duration_expire_offset(dur),
-                             duration_expire_message(dur),
+                             duration_expire_message(dur, false),
                              duration_expire_chan(dur)))
     {
         duration_end_effect(dur);
@@ -852,7 +860,7 @@ static void _decrement_durations()
     {
         if (you.pos() != you.props[FORTRESS_BLAST_POS_KEY].get_coord())
         {
-            mprf(MSGCH_DURATION, "Your fortress blast dissipates harmlessly.");
+            mprf(MSGCH_DURATION,"%s", ui_translate("p.ui", "Your fortress blast dissipates harmlessly."));
             you.duration[DUR_FORTRESS_BLAST_TIMER] = 0;
         }
         else
@@ -918,13 +926,12 @@ static void _decrement_durations()
             you.duration[DUR_FLOODED] = 0;
         else if (_decrement_a_duration(DUR_FLOODED, delay))
         {
-            mprf(MSGCH_RECOVERY, "You finish coughing all the %s out of your lungs.",
-                 you.props[WATER_HOLD_SUBSTANCE_KEY].get_string().c_str());
+            mprf(MSGCH_RECOVERY, "%s", ui_render("p.log.61", "You finish coughing all the %s out of your lungs.", make_stringf("You finish coughing all the %s out of your lungs." , you.props[WATER_HOLD_SUBSTANCE_KEY].get_string().c_str()), {p_clause_arg(you.props[WATER_HOLD_SUBSTANCE_KEY].get_string())}).c_str());
             you.duration[DUR_FLOODED_IMMUNITY] = you.time_taken + 1;
         }
         else
         {
-            mprf(MSGCH_WARN, "Your lungs strain for air.");
+            mprf(MSGCH_WARN,"%s", ui_translate("p.ui", "Your lungs strain for air."));
             const int dmg = roll_dice(2, 5);
             ouch(div_rand_round(dmg * delay, BASELINE_DELAY), KILLED_BY_WATER,
                                                 you.props[WATER_HOLDER_KEY].get_int());
@@ -985,8 +992,8 @@ static void _decrement_durations()
         && !you.confused())
     {
         extract_barbs(
-            make_stringf("You %s the barbed spikes from your body.",
-                you.berserk() ? "rip and tear" : "carefully extract").c_str());
+            ui_render("p.extra", "You %s the barbed spikes from your body.", make_stringf("You %s the barbed spikes from your body.",
+                you.berserk() ? "rip and tear" : "carefully extract"), {p_clause_arg(you.berserk() ? "rip and tear" : "carefully extract")}).c_str());
     }
 
     if (you.wearing_jewellery(AMU_WILDSHAPE))
@@ -1043,8 +1050,8 @@ static void _decrement_durations()
         }
         if (!found)
         {
-            mprf(MSGCH_DURATION, "As the last of your armour is driven back to "
-                  "you, your cacophony ends.");
+            mprf(MSGCH_DURATION,"%s", ui_translate("p.ui", "As the last of your armour is driven back to "
+                  "you, your cacophony ends."));
             you.duration[DUR_CACOPHONY] = 0;
         }
         else if (_decrement_a_duration(DUR_CACOPHONY, delay,
@@ -1063,7 +1070,7 @@ static void _decrement_durations()
 
     if (you.duration[DUR_CELEBRANT_COOLDOWN] && you.hp == you.hp_max)
     {
-        mprf(MSGCH_DURATION, "You are ready to perform a blood rite again.");
+        mprf(MSGCH_DURATION,"%s", ui_translate("p.ui", "You are ready to perform a blood rite again."));
         you.duration[DUR_CELEBRANT_COOLDOWN] = 0;
     }
 
@@ -1072,20 +1079,20 @@ static void _decrement_durations()
         // Don't print it the message if the mutation is lost
         // before the cooldown wears off.
         if (you.get_mutation_level(MUT_TIME_WARPED_BLOOD))
-            mprf(MSGCH_DURATION, "Your time-warped blood is ready to ripple again.");
+            mprf(MSGCH_DURATION,"%s", ui_translate("p.ui", "Your time-warped blood is ready to ripple again."));
 
         you.duration[DUR_TIME_WARPED_BLOOD_COOLDOWN] = 0;
     }
 
     if (you.duration[DUR_HIVE_COOLDOWN] && you.hp == you.hp_max)
     {
-        mprf(MSGCH_DURATION, "The buzzing within you returns to its normal rhythm.");
+        mprf(MSGCH_DURATION,"%s", ui_translate("p.ui", "The buzzing within you returns to its normal rhythm."));
         you.duration[DUR_HIVE_COOLDOWN] = 0;
     }
 
     if (you.duration[DUR_MEDUSA_COOLDOWN] && you.hp == you.hp_max)
     {
-        mprf(MSGCH_DURATION, "You feel your defenses recover.");
+        mprf(MSGCH_DURATION,"%s", ui_translate("p.ui", "You feel your defenses recover."));
         you.duration[DUR_MEDUSA_COOLDOWN] = 0;
     }
 
@@ -1094,7 +1101,7 @@ static void _decrement_durations()
 
     if (you.duration[DUR_EELJOLT_COOLDOWN] && you.hp == you.hp_max)
     {
-        mprf(MSGCH_DURATION, "Your %s have fully recharged.", you.hand_name(true).c_str());
+        mprf(MSGCH_DURATION, "%s", ui_render("p.log.62", "Your hands: %s", make_stringf("Your %s have fully recharged." , you.hand_name(true).c_str()), {p_hand_arg()}).c_str());
         you.duration[DUR_EELJOLT_COOLDOWN] = 0;
     }
 
@@ -1139,6 +1146,7 @@ static void _maybe_attune_regen_items()
     vector<string> eq_list;
     bool plural = false;
 
+    vector<const item_def*> attuning_items;
     bool gained_regen = false;
     bool gained_mana_regen = false;
     bool gained_chemistry = false;
@@ -1154,6 +1162,7 @@ static void _maybe_attune_regen_items()
             || (attune_mana_regen && is_mana_regen_item(arm)
                 && (you.hp == you.hp_max || !is_regen_item(arm))))
         {
+            attuning_items.push_back(&arm);
             // Track which properties we should notify the player they have gained.
             if (!gained_regen && is_regen_item(arm))
                 gained_regen = true;
@@ -1189,9 +1198,12 @@ static void _maybe_attune_regen_items()
     plural = plural || eq_list.size() > 1;
     string eq_str = comma_separated_line(eq_list.begin(), eq_list.end());
     string msg_str = comma_separated_line(msgs.begin(), msgs.end());
-    mprf("Your %s attune%s to your body, and you begin to %s.",
-         eq_str.c_str(), plural ? " themselves" : "s itself",
-         msg_str.c_str());
+    vector<string> display_effects;
+    if (gained_regen || gained_mana_regen)
+        display_effects.push_back(gained_regen && gained_mana_regen ? "regenerate health and magic more quickly" : gained_regen ? "regenerate more quickly" : "regenerate magic more quickly");
+    if (gained_chemistry)
+        display_effects.push_back("extract magic from the potions you drink");
+    mprf("%s", ui_render("p.extra", "Your equipment %s attunes; you begin to %s.", make_stringf("Your %s attune%s to your body, and you begin to %s.", eq_str.c_str(), plural ? " themselves" : "s itself", msg_str.c_str()), {p_item_list_arg(attuning_items), p_clause_list_arg(display_effects)}).c_str());
 }
 
 // cjo: Handles player hp and mp regeneration. If the counter
@@ -1260,9 +1272,23 @@ static void _handle_fugue(int delay)
     {
         // Keep the spam down
         if (you.props[FUGUE_KEY].get_int() < 3 || one_chance_in(5))
-            mpr("The wailing of tortured souls fills the air!");
+            mpr(ui_translate("p.ui", "The wailing of tortured souls fills the air!"));
         noisy(spell_effect_noise(SPELL_FUGUE_OF_THE_FALLEN), you.pos());
     }
+}
+
+string display_eel_flavour(textdb_speech speech, const string &head,
+                          const string &skin)
+{
+    const ui_arg shown_head = ui_text_arg("x.noun", head);
+    const ui_arg shown_skin = ui_text_arg("i.skin", skin);
+    speech.replace("@head@", head, shown_head.text, shown_head.available);
+    speech.replace("@skin@", skin, shown_skin.text, shown_skin.available);
+    // Upstream does not expand the bracketed solo-search alternative here.
+    // Keep that original output rather than add a display-only random draw.
+    if (speech.english.find('[') != string::npos)
+        speech.complete = false;
+    return speech.text();
 }
 
 static void _do_eel_flavour_msg()
@@ -1271,18 +1297,17 @@ static void _do_eel_flavour_msg()
     if (there_are_monsters_nearby(true, true, false))
         return;
 
-    string msg;
+    textdb_speech speech;
     if (you.arm_count() == 1)
-        msg = getSpeakString("eel hand solo actions");
+        speech = getPairedCastString("eel hand solo actions");
     else
-        msg = getSpeakString("eel hand actions");
+        speech = getPairedCastString("eel hand actions");
 
     // XXX: Apologies for the ad hoc string replacement. We really need a
     //      centralised place to do this...
-    msg = replace_all(msg, "@head@",
-                        you.has_mutation(MUT_FORMLESS) ? "form" : "head");
-
-    msg = replace_all(msg, "@skin@", species::skin_name(you.species).c_str());
+    const string msg = display_eel_flavour(speech,
+        you.has_mutation(MUT_FORMLESS) ? "form" : "head",
+        species::skin_name(you.species));
 
     mprf(MSGCH_TALK, "%s", msg.c_str());
 }

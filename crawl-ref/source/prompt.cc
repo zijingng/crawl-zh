@@ -4,6 +4,8 @@
  **/
 
 #include "AppHdr.h"
+#include "wizard.h"
+#include "p-display.h"
 #include <climits> // UCHAR_MAX
 #include <cmath> // isnan
 
@@ -115,7 +117,7 @@ bool confirm_prompt(const char* require, const char* fmt, ...)
     va_end(args);
     buf[sizeof(buf)-1] = 0;
 
-    mprf(MSGCH_PROMPT, "%s (Confirm with \"%s\".) ", buf, require);
+    mprf(MSGCH_PROMPT, "%s", ui_render("p.prompt", "%s (Confirm with \"%s\".) ", make_stringf("%s (Confirm with \"%s\".) ", buf, require), {ui_literal_arg(buf), ui_literal_arg(require)}).c_str());
 
     if (cancellable_get_line(buf, sizeof buf))
         return false;
@@ -182,11 +184,11 @@ int yesno(const char *str, bool allow_lowercase, int default_answer, bool clear_
 
     if (use_popup)
     {
-        MenuEntry * const y_me = new MenuEntry("Yes", MEL_ITEM, 1, 'Y');
+        MenuEntry * const y_me = new MenuEntry(ui_translate("p.prompt", "Yes"), MEL_ITEM, 1, 'Y');
         y_me->add_hotkey('y');
-        MenuEntry * const n_me = new MenuEntry("No", MEL_ITEM, 1, 'N');
+        MenuEntry * const n_me = new MenuEntry(ui_translate("p.prompt", "No"), MEL_ITEM, 1, 'N');
         n_me->add_hotkey('n');
-        MenuEntry * const a_me = new MenuEntry("Always", MEL_ITEM, 1, 'A');
+        MenuEntry * const a_me = new MenuEntry(ui_translate("p.prompt", "Always"), MEL_ITEM, 1, 'A');
         a_me->add_hotkey('a');
         y_me->add_tile(tile_def(TILEG_PROMPT_YES));
         n_me->add_tile(tile_def(TILEG_PROMPT_NO));
@@ -210,9 +212,9 @@ int yesno(const char *str, bool allow_lowercase, int default_answer, bool clear_
         if (enter_defaults)
         {
             pop.set_more(make_stringf("<white>[enter]</white>: %s",
-                default_answer == 'Y' ? "Yes"
-                : default_answer == 'N' ? "No"
-                : (ask_always && default_answer == 'A') ? "Always"
+                default_answer == 'Y' ? ui_translate("p.prompt", "Yes")
+                : default_answer == 'N' ? ui_translate("p.prompt", "No")
+                : (ask_always && default_answer == 'A') ? ui_translate("p.prompt", "Always")
                 : "bugs"));
         }
     }
@@ -289,11 +291,12 @@ int yesno(const char *str, bool allow_lowercase, int default_answer, bool clear_
                          && (tmp == 'n' || tmp == 'y'
                              || (ask_always && tmp == 'a')
                              || crawl_state.game_is_hints_tutorial());
-            const string pr = make_stringf("<lightred>%s%s only, please.</lightred>",
+            const string original_pr = make_stringf("<lightred>%s%s only, please.</lightred>",
                                            upper ? "Uppercase " : "",
                                            ask_always ?
                                                "[Y]es, [N]o, or [A]lways" :
                                                "[Y]es or [N]o");
+            const string pr = ui_render("p.prompt", "<lightred>Choose %s%s.</lightred>", original_pr, {p_clause_arg(upper ? "uppercase" : ""), p_clause_arg(ask_always ? "[Y]es, [N]o, or [A]lways" : "[Y]es or [N]o")});
             if (use_popup)
                 pop.set_more(pr); // replaces keyhint if it's there
             else
@@ -560,10 +563,10 @@ WizardMenu::WizardMenu(string _title, vector<WizardEntry> &_options,
     : PromptMenu(MF_SINGLESELECT | MF_ARROWS_SELECT | MF_INIT_HOVER
                  | MF_GRID_LAYOUT | MF_ANYPRINTABLE), default_value(_default)
 {
-    set_title(new MenuEntry(_title, MEL_TITLE));
+    set_title(new MenuEntry(ui_translate("w.ui", _title.c_str()), MEL_TITLE));
     for (auto &o : _options)
     {
-        auto p = new WizardEntry(o); // Menu expects new pointers.
+        auto p = new WizardEntry(wizard_display_entry(_title, o)); // Display copy only.
         if (!p->hotkeys_count())
             p->add_hotkey(next_unused_symbol()); // Give everything a hotkey.
         add_entry(p);

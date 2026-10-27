@@ -1,0 +1,291 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "entries": [
+    {
+      "key": "_singing_no_tension_",
+      "source": "@The_weapon@ practises its scales.\n\n@The_weapon@ makes a painfully high-pitched squeak.\n\nw:30\n@The_weapon@ sings [a sudden staccato|a quivering drawn-out|a painfully high] note.\n\n@The_weapon@ trains the @_kind_of_scales_@ scales.\n\n@The_weapon@ plays a couple of bars.\n\n@The_weapon@ [nearly |clearly |][hits|misses] the concert pitch.\n\n@The_weapon@ repeatedly practises the high pitch.\n\n@The_weapon@ sings [several|three or four|a multitude of] chords at once.\n\n@The_weapon@ repeatedly practises counterpoints.\n",
+      "hits": []
+    },
+    {
+      "key": "_singing_no-low_tension_",
+      "source": "@The_weapon@ breaks into glorious song!\n\n@The_weapon@ sings[| off-key].\n\n@The_weapon@ [sings|whistles] [loudly|merrily].\n\n@The_weapon@ whines plaintively.\n\n@The_weapon@ wails mournfully.\n\n@The_weapon@ lilts tunefully.\n\n@The_weapon@ yodels.\n\n@The_weapon@ hums tunelessly.\n\n@The_weapon@ keens wildly.\n\n@The_weapon@ goes \"Da-da-da-dum\".\n\n@The_weapon@ chants serenely.\n\n@The_weapon@ trills happily.\n\n@The_weapon@ launches into yet another solo.\n\n@The_weapon@ emits a series of high-pitched trills.\n\n@The_weapon@ tries to sing in harmony with itself.\n\n@The_weapon@ provides the musical accompaniment for each of your actions.\n\n@The_weapon@ composes a new song.\n\n@The_weapon@ raucously launches into song.\n\n@The_weapon@ merrily whistles a melody.\n\n@The_weapon@ strikes up a [bolero|bossanova|calypso|fandango|mazurka|menuet|pasodoble|waltz].\n\n@The_weapon@ intones [an aria|a fugue].\n\n@The_weapon@ gives you a private [audition|concerto].\n\n@The_weapon@ [sings|hums] away to itself.\n\n@The_weapon@ lets out a series of bird calls.\n\n@The_weapon@ makes beautiful music.\n\n@The_weapon@ produces a loud orchestral chord.\n\n@The_weapon@ holds a dissonant chord.\n\n@The_weapon@ tunes itself.\n\n@The_weapon@ beats time.\n\n@The_weapon@ pulls all registers.\n\n@The_weapon@ pulls out all the stops.\n\n@The_weapon@ sets up a furious crescendo.\n\nIn a hysterical voice, @the_weapon@ strikes up a march.\n\n@The_weapon@ [sings|hums|whistles] a [little|catchy|merry] [tune|melody].\n\n@The_weapon@ [sings|hums] an eerie [tune|melody].\n\nw:5\n@The_weapon@ [sings|hums] a slow and mournful tune.\n\nw:25\n@The_weapon@ strikes up @_strikes_up_what_@.\n\n@The_weapon@ sings, \"Tra-la-la...\"\n\nw:40\n@The_weapon@ sings a [lullaby|folk song|deeply moving song|little jingle].\n\n@The_weapon@ hums a slow waltz.\n\n@The_weapon@ chants a little melody.\n\n@The_weapon@ plays a requiem for the unknown sword.\n\n@The_weapon@ plays an overture.\n\n@The_weapon@ launches into a [hymn|song] on @_song_theme_@.\n\n@The_weapon@ [composes|sings] a [hymn|song] about @_song_theme_@.\n\n@The_weapon@ [composes|sings] a hymn praising @player_god@.\n\n@The_weapon@ [composes|sings] a ballad about your adventures.\n\n@The_weapon@ prematurely composes your obituary.\n\n\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Slow",
+          "Translation": "缓慢术/减速/缓慢/迟缓",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用缓慢术。施加状态用减速。普通动作或反应用缓慢、迟缓。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_speaking_no_tension_",
+      "source": "@_common_speaking_no_tension_@\n\nw:1\n@_rare_speaking_no_tension_@\n\n",
+      "hits": []
+    },
+    {
+      "key": "_common_speaking_no_tension_",
+      "source": "@The_weapon@ shouts, \"Sing along with me!\"\n\n@The_weapon@ shouts, \"One, two, three...\"\n\n@The_weapon@ spouts musical wisdom.\n\n@The_weapon@ [points out|remarks in passing on] the lack of singing [axes|clubs|polearms|staves].\n\n@The_weapon@ embarks on a lengthy monologue about murderous music.\n\n@The_weapon@ compliments itself on its singing voice.\n\n@The_weapon@ asks you about your opinion on @_musical_topic_@.\n\n@The_weapon@ muses how they don't make such fine swords anymore.\n\n@The_weapon@ tries to improvise rhymes, and fails miserably.\n\n@The_weapon@ offers to sing all your favourite songs.\n\n@The_weapon@ asks you for a rhyme on '@_rhyme_word_@'.\n\n@The_weapon@ complains about [double|triple|short] swords.\n\n@The_weapon@ derides short swords.\n\n@The_weapon@ muses on the connection between 'duet' and 'duel'.\n\n@The_weapon@ wails, \"I am too young to rust!\"\n\n@The_weapon@ comments on your taste in music.\n\n@The_weapon@ complains about your lack of musical enthusiasm.\n\n@The_weapon@ tries to entice you into a canon.\n\n@The_weapon@ tells you about its plans for a grandiose opera.\n\n@The_weapon@ grumbles, \"I guess an audience of one is better than none...\"\n\n@The_weapon@ muses, \"If you sing and nobody listens, are you really singing?\"\n\n@The_weapon@ brightly asks, \"How about a duet?\"\n\n@The_weapon@ wonders, \"Am I just an instrument of [doom|death|destruction]?\"\n\n@The_weapon@ yells, \"No battle, no fun!\"\n\n@The_weapon@ shouts, \"Make war, not love!\"\n\n@The_weapon@ cries out, \"You certainly can't call me dull!\"\n\n@The_weapon@ tells you the story of its previous owner's [demise|death|misfortune].\n\n@The_weapon@ brightly announces, \"I've got so much to tell you!\"\n\n@The_weapon@ says, \"You could say something too, you know.\"\n\n@The_weapon@ complains, \"Are you always this [silent|uncommunicative|taciturn|quiet|boring]?\n\n@The_weapon@ grouses, \"Silence can be so depressing.\"\n\n@The_weapon@ grouses, \"Silence always makes me sulk.\"\n\n@The_weapon@ compliments you on your taste in weapons.\n\n@The_weapon@ attempts to teach you some tongue twisters.\n\n@The_weapon@ says, \"At least you will die someday and escape this tedium!\"\n\n@The_weapon@ says, \"I don't know that song, but if you hum a few bars, I can take a stab at it.\"\n\n@The_weapon@ boasts, \"I have an eight-octave range, you know.\"\n\n@The_weapon@ sighs wistfully, \"I wish my music got as much attention as my homicides...\"\n\n@The_weapon@ sneers, \"I've heard your voice, @player_name@. Let's just keep this a solo act.\"\n\n",
+      "hits": [
+        {
+          "Term": "Axes",
+          "Translation": "斧",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "Polearms",
+          "Translation": "长柄武器",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】补全类别名称。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "Staves",
+          "Translation": "棍杖",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】技能包含棍棒及法杖的近战使用；staff 作为魔法装备仍译法杖。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "silence",
+          "Translation": "沉默",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/状态】与噪音属性区分。 来源：duration-data.h。\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Duel",
+          "Translation": "决斗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+        },
+        {
+          "Term": "rust",
+          "Translation": "锈尘",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_RUST；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        },
+        {
+          "Term": "Nobody",
+          "Translation": "无名氏",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "_rare_speaking_no_tension_",
+      "source": "@The_weapon@ says, \"Hi! I'm the Singing Sword!\"\n\n@The_weapon@ chants, \"I am golden and pointed, and with blood well anointed.\"\n\n@The_weapon@ dictates a lengthy tome entitled 'The Well-Tempered Blade'.\n\n@The_weapon@ says, \"Whips just don't cut it for me, don't you agree?\"\n\n@The_weapon@ chants, \"Rather stab than club, rather slice than rub!\"\n\n@The_weapon@ states, \"Music critics are all talk and no body armour.\"\n\n@The_weapon@ demands, \"I must not be sheathed without first drawing blood!\"\n\n@The_weapon@ [explains all about|gives a lengthy lecture on] @_musical_topic_@.\n\n@The_weapon@ curses its smith, \"I was supposed to be the Stinging Sword!\"\n\n@The_weapon@ yells, \"Ploughshares to swords!\"\n\n@The_weapon@ asks, \"What song would you like to be played for your funeral?\"\n\n@The_weapon@ announces, \"I dedicate these songs to @player_name@!\"\n\n@The_weapon@ declares, \"I sing the tale of @player_name@, the warrior!\"\n\n@The_weapon@ says, \"Hey! Are you even listening?\"\n\n@The_weapon@ longs back for the days in the arena.\n\n@The_weapon@ amuses itself with detailed descriptions of past executions.\n\n@The_weapon@ wishes everyone in the dungeon [an unpleasant|a sudden] [demise|death].\n\n@The_weapon@ fumes, \"Being battered, bent and broken sure is better than this boredom!\"\n\n@The_weapon@ shouts, \"I love putting a song in people's hearts. And in their kidneys.\"\n\n@The_weapon@ grouses, \"Could you please kill something? I'm itching all over.\"\n\n@The_weapon@ laments, \"What are you waiting for? I am doing all the work.\"\n\n@The_weapon@ explains, \"Killing is an art, not a pastime.\"\n\n@The_weapon@ goes, \"Jessica and Sigmund, sitting in a tree...\"\n\n@The_weapon@ says, \"I want to meet the serpentine blade!\"\n\n@The_weapon@ says, \"Take me to Pandemonium! Now!!!\"\n\n@The_weapon@ recounts funny stories of hydra head multiplication.\n\n@The_weapon@ says, \"Sometimes people call me a magnificent bastard.\"\n\nw:1\n@The_weapon@ snarls, \"Dear diary, yet another boring day with @player_name@...\"\n\n@The_weapon@ says, \"In my experience, @player_genus_plural@ are mediocre at best.\"\n\n@The_weapon@ groans, \"Among all @player_genus_plural@, @player_name@ is the worst.\"\n\n@The_weapon@ says, \"Unhand me, foul miscreant!\"\n\n@The_weapon@ muses, \"Whom do I have to kill to get some service around here?\"\n\n@The_weapon@ sings out, \"Sing loudly and carry a big sword!\"\n\n@The_weapon@ ponders the difference in lifespan between man and sword.\n\nw:1\n@The_weapon@ says, \"All work and no play makes @player_name@ a dull boy!\"\n\n@The_weapon@ says, \"I wish I'd pick another to be my killing [tool|fool].\"\n\n@The_weapon@ hoarsely says, \"Need a drink... quick! Stab something.\"\n\nw:1\n@The_weapon@ says, \"You haven't happened to see my sheath laying around anywhere? I feel so exposed.\"\n\nw:1\n@The_weapon@ complains, \"Oh, are your palms wet and greasy. But I allow you to wield me for a while.\"\n\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "experience",
+          "Translation": "经验值",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "hydra",
+          "Translation": "海德拉",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Pandemonium",
+          "Translation": "魔窟",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Warrior",
+          "Translation": "勇士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "body armour",
+          "Translation": "躯干防具",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】装备部位，包含长袍、皮甲、锁子甲、板甲等；与包括头盔、手套、靴子等的大类“防具”区分。"
+        },
+        {
+          "Term": "Singing Sword",
+          "Translation": "歌唱之剑",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+        },
+        {
+          "Term": "the Dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "Arena",
+          "Translation": "奥格瓦如竞技场/竞技场",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Arena（规范缩写 Arena）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。\n【语境补充 2026-10-21】奥格瓦如的分支用奥格瓦如竞技场。怪物模拟模式或一般场地用竞技场。Gauntlet 依其完整专名。"
+        },
+        {
+          "Term": "the Arena",
+          "Translation": "奥格瓦如竞技场/竞技场",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Arena（规范缩写 Arena）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。\n【语境补充 2026-10-21】奥格瓦如的分支用奥格瓦如竞技场。怪物模拟模式或泛指场地用竞技场。"
+        },
+        {
+          "Term": "Jessica",
+          "Translation": "杰西卡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Sigmund",
+          "Translation": "西格蒙德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "_speaking_low-high_tension_",
+      "source": "@The_weapon@ shouts, \"The pen is mightier than the sword? Come on, pens, here I am!\"\n\n@The_weapon@ happily shouts, \"Violence is virtue, silence is sin.\"\n\n@The_weapon@ shouts a battle cry!\n\n@The_weapon@ shouts, \"Onwards! It's kill or die!\"\n\n@The_weapon@ shouts, \"Kill! Crush! Destroy!\"\n\n@The_weapon@ states, \"Their screams, my satisfaction.\"\n\n@The_weapon@ yells, \"Steel will triumph where flesh falters!\"\n\n@The_weapon@ cautions, \"Never send @a_player_genus@ to do a blade's job!\"\n\n@The_weapon@ hisses, \"Let's hear you complain about my singing with your throat slit!\"\n\n@The_weapon@ teaches, \"Practice makes perfect!\"\n\n@The_weapon@ asks, \"Do you have the will to power, @player_name@?\"\n\n@The_weapon@ laughs, \"I always appreciate a bleeding ovation!\"\n\n@The_weapon@ shouts, \"The neck bone's connected to the head bone... but not for long!\"\n\n@The_weapon@ shouts, \"My song won't be the only thing that'll get stuck in your head!\"\n\n@The_weapon@ shouts, \"If it bleeds, we can kill it!\"\n\n@The_weapon@ says, \"I want to see you dance on the blood-dimmed tide.\"\n\n@The_weapon@ shouts, \"Today is a good day to die!\"\n\n@The_weapon@ says, \"Murder is the only thing that has any meaning these days.\"\n\nw:1\n@The_weapon@ says, \"The rupture of their bodies, my rapture of the deep blood.\"\n\n@The_weapon@ shouts, \"Murder is sin, but it will be washed away with blood.\"\n\n@The_weapon@ shouts, \"Hey, monsters! @player_name@ is over here!\"\n\n@The_weapon@ shouts, \"A winner requires a loser!\"\n\n",
+      "hits": [
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "silence",
+          "Translation": "沉默",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/状态】与噪音属性区分。 来源：duration-data.h。\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_weapon_noises_low-high_tension_",
+      "source": "w:100\n@The_weapon@ @_screams_@ @_screams_how_@.\n\n@The_weapon@ @_screams_@.\n\n@The_weapon@ howls with insane laughter!\n\n@The_weapon@ erupts into mad laughter!\n\n@The_weapon@ suddenly bursts into murderous laughter!\n\n@The_weapon@ laughs in a fit of madness.\n\n@The_weapon@ makes a horrifying noise.\n\n",
+      "hits": [
+        {
+          "Term": "noise",
+          "Translation": "噪音/声音/巨响",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/战斗机制】影响听觉警觉，不同于画面显示延迟。 来源：shout.cc。\n【语境补充 2026-10-21】机制、标题及数值用噪音。具体可听声响按语境用声音或巨响，不强制把研磨声等改为噪音。"
+        }
+      ]
+    }
+  ],
+  "compound_queries": [
+    "double sword",
+    "triple sword",
+    "short sword",
+    "serpentine blade"
+  ],
+  "compound_hits": [
+    {
+      "Term": "double sword",
+      "Translation": "双重剑",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "short sword",
+      "Translation": "短剑",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    }
+  ]
+}

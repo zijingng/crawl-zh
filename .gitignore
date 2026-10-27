@@ -6,3 +6,9 @@
 *.sublime-workspace
 *.sublime-project
 games.d/
+# Generated from the reviewed PO catalogue.
+crawl-ref/source/i18n-catalogue.h
+
+# Local Python tooling caches.
+__pycache__/
+*.py[cod]

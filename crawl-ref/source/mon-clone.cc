@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "m-display.h"
+#include "i18n.h"
 
 #include "mon-clone.h"
 
@@ -119,15 +121,23 @@ static void _mons_summon_monster_illusion(monster* caster,
         {
             if (!you.can_see(*caster))
             {
-                mprf("%s seems to step out of %s!",
-                     foe->name(DESC_THE).c_str(),
-                     foe->pronoun(PRONOUN_REFLEXIVE).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = foe->name(DESC_THE);
+                const string _m1 = foe->pronoun(PRONOUN_REFLEXIVE);
+                const string _original = make_stringf("%s seems to step out of %s!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.162", "%s seems to step out of %s!")) return _original;
+                return ui_render("m.log.162", "%s seems to step out of %s!", _original, {m_actor_arg(*foe), ui_literal_arg("")});
+            })().c_str());
             }
             else
-                mprf("%s seems to draw %s out of %s!",
-                     caster->name(DESC_THE).c_str(),
-                     foe->name(DESC_THE).c_str(),
-                     foe->pronoun(PRONOUN_REFLEXIVE).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = caster->name(DESC_THE);
+                const string _m1 = foe->name(DESC_THE);
+                const string _m2 = foe->pronoun(PRONOUN_REFLEXIVE);
+                const string _original = make_stringf("%s seems to draw %s out of %s!", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.163", "%s seems to draw %s out of %s!")) return _original;
+                return ui_render("m.log.163", "%s seems to draw %s out of %s!", _original, {m_actor_arg(*caster), m_actor_arg(*foe), ui_literal_arg("")});
+            })().c_str());
         }
     }
 }
@@ -214,9 +224,9 @@ int mons_summon_illusion_from(monster* mons, actor *foe,
                  .set_summoned(mons, spell_cast, summ_dur(dur))))
         {
             if (card_power >= 0)
-                mpr("Suddenly you stand beside yourself.");
+                mpr(ui_translate("m.ui", "Suddenly you stand beside yourself."));
             else
-                mprf(MSGCH_WARN, "There is a horrible, sudden wrenching feeling in your soul!");
+                mprf(MSGCH_WARN, "%s", ui_translate("m.ui", "There is a horrible, sudden wrenching feeling in your soul!"));
 
             get_monster_data(MONS_PLAYER_ILLUSION)->holiness = you.holiness();
             _mons_load_player_enchantments(mons, clone);
@@ -225,7 +235,7 @@ int mons_summon_illusion_from(monster* mons, actor *foe,
         }
         else if (card_power >= 0)
         {
-            mpr("You see a puff of smoke.");
+            mpr(ui_translate("m.ui", "You see a puff of smoke."));
             return 0;
         }
     }

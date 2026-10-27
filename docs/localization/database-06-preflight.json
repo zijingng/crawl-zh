@@ -1,0 +1,197 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "entries": [
+    {
+      "key": "_screams_",
+      "source": "screams\n\nbooms\n\nroars\n\nbellows\n\nhowls\n\nyells\n\nshouts\n\nshrieks\n\nw:5\nthunders\n\nw:3\nclamours\n\nw:3\nexclaims\n\nw:1\nvociferates\n",
+      "hits": []
+    },
+    {
+      "key": "_screams_how_",
+      "source": "w:120\nlike a @_beastly_adjective_@ @_beast_@\n\nhysterically\n\nangrily\n\nw:60\n@_loudly_@\n",
+      "hits": []
+    },
+    {
+      "key": "_loudly_",
+      "source": "loudly\n\ndeafeningly\n\near-piercingly\n\near-splittingly\n",
+      "hits": []
+    },
+    {
+      "key": "_beastly_adjective_",
+      "source": "hungry\n\nenraged\n\nraging\n\nfurious\n\nirate\n",
+      "hits": [
+        {
+          "Term": "Hungry",
+          "Translation": "饥饿",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "_beast_",
+      "source": "dragon\n\nfrog\n\nlion\n\nbull\n\nbeast\n\nw:1\nbeast of prey\n\npredator\n\ncarnivore\n",
+      "hits": [
+        {
+          "Term": "dragon",
+          "Translation": "龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_strikes_up_what_",
+      "source": "w:5\na slow and mournful tune\n\na merry tune\n\na merry melody\n\na funeral march\n",
+      "hits": [
+        {
+          "Term": "Slow",
+          "Translation": "缓慢术/减速/缓慢/迟缓",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用缓慢术。施加状态用减速。普通动作或反应用缓慢、迟缓。"
+        }
+      ]
+    },
+    {
+      "key": "_kind_of_scales_",
+      "source": "pentatonic\n\nchromatic\n\ndiatonic\n",
+      "hits": []
+    },
+    {
+      "key": "_rhyme_word_",
+      "source": "fountain of blood\n\nkilling spree\n\nbattlefield\n",
+      "hits": [
+        {
+          "Term": "fountain of blood",
+          "Translation": "血喷泉",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "_song_theme_",
+      "source": "battle and fame\n\ndeath and destruction\n\nthe glory of death\n",
+      "hits": [
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "_musical_topic_",
+      "source": "acoustics\n\nvoice harmonics\n\nthe history of music\n\nthe theory of melody\n\nrhythms and time\n\nw:5\nthe counterpoint\n\nw:5\ndescant\n\nsyncopation\n\nw:1\nAeolian mode\n",
+      "hits": []
+    },
+    {
+      "key": "_exasperated_",
+      "source": "exasperated\n\nbugged out\n\nunnerved\n\nirascibly\n\nnervous\n\nunruly\n\ntruculent\n\nrefractory\n\nrecalcitrant\n",
+      "hits": []
+    },
+    {
+      "key": "_crimson_",
+      "source": "crimson\n\nblood-red\n\nw:1\npurple\n\nw:1\nensanguined\n\nw:1\nviolet\n",
+      "hits": []
+    },
+    {
+      "key": "_miscreants_",
+      "source": "MISCREANTS\n\nIMBECILES\n\nw:3\nSCUM\n\nw:1\nFILTH\n",
+      "hits": []
+    },
+    {
+      "key": "_pets_",
+      "source": "GUINEA PIGS\n\nCAVIES\n\nPUSSY CATS\n\nPOODLES\n\nw:1\nSPERM WHALES\n",
+      "hits": []
+    },
+    {
+      "key": "_corpses_",
+      "source": "corpses\n\nw:1\ntasty carcasses\n\nw:1\nexquisite cadavers\n",
+      "hits": []
+    },
+    {
+      "key": "_body_part_",
+      "source": "skin\n\nw:1\nhairy skin\n\ncarcass\n\nflesh\n",
+      "hits": []
+    },
+    {
+      "key": "_glorious_",
+      "source": "glorious\n\nspanking\n\nnoble\n\nexciting\n\nthrilling\n\nw:1\nerotic\n\nw:1\nmoving\n",
+      "hits": []
+    },
+    {
+      "key": "shield of the gong",
+      "source": "w:40\nGONNNNG!\n\nBOUMMMMG!\n\nPTOANNNG!\n\nPANG!\n\nBONNNG!\n\nSHROANNG!\n\n\n",
+      "hits": [
+        {
+          "Term": "Shield",
+          "Translation": "格挡值/盾牌/保护",
+          "Part of Speech": "noun",
+          "Variants": "SH",
+          "Note": "【0.34.1 修订】原表备注明确是属性；官方手册也以 Shield 为 SH 标题。此处保留该语境；普通物品 shield 仍译盾牌，必须按上下文区分。 来源：docs/crawl_manual.rst。\n【语境补充 2026-10-21】SH 属性用格挡值。装备名词 shield 用盾牌。shield 作动词用保护，不改写物品种类。"
+        },
+        {
+          "Term": "shield of the Gong",
+          "Translation": "铜锣盾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "frozen axe \"frostbite\"",
+      "source": "You hear the [roaring|howling|raging|gusting] winds of a [blizzard|squall|snowstorm].\n\nw:5\nYou hear ice [creaking|groaning|grinding|cracking].\n\nw:1\nYou hear shards of ice [tinkling|chiming].\n\nw:1\nYou hear the [rumble|boom|crash] of [a glacier calving|icebergs colliding].\n\n\n",
+      "hits": [
+        {
+          "Term": "frozen axe \"Frostbite\"",
+          "Translation": "「寒噬」冰斧",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Ice",
+          "Translation": "寒冰强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "trishula \"condemnation\"",
+      "source": "@Your_weapon@ lets out a [divine|blessed|sacred|holy] [chiming|tinkling|ringing|pealing|tintinnabulation].\n\n@Your_weapon@ sings the [divine|blessed|sacred|holy] song of the [angels|Heavens|Barachim].\n\nw:5\n@Your_weapon@ [chants|recites|intones] a [divine|blessed|sacred|holy] warrior-psalm.\n\nw:1\n@Your_weapon@ [calls|cries for|demands] [evildoers|demons|the wicked] to come forth and be judged!\n\nw:1\n@Your_weapon@ [wails|laments|cries out] at the [injustice|cruelty|suffering] of the world.\n\nw:1\n@Your_weapon@ [croaks|ribbits] in the tongue of ancient peoples.\n\n",
+      "hits": [
+        {
+          "Term": "Warrior",
+          "Translation": "勇士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "trishula \"Condemnation\"",
+          "Translation": "三叉圣戟「定罪」",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+        },
+        {
+          "Term": "holy",
+          "Translation": "神圣之怒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,981 @@
+{
+  "glossary_hits": [
+    {
+      "Term": "Abyss",
+      "Translation": "深渊",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "detected shop or portal",
+      "Translation": "探知到的商店或传送门",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "exit through the horrors of the Abyss",
+      "Translation": "穿过深渊的恐惧的出口",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "gate to the Realm of Zot",
+      "Translation": "通往佐特领域的门",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "gate to the Vaults",
+      "Translation": "宝库的门",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "gateway leading deeper into the Abyss",
+      "Translation": "通往深渊更深处的入口",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Geryon",
+      "Translation": "革律翁",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Hell",
+      "Translation": "地狱",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "hell hound",
+      "Translation": "地狱犬",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "horn of Geryon",
+      "Translation": "革律翁号角",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Lair",
+      "Translation": "野兽巢穴",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "magical portal",
+      "Translation": "魔法传送门",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "one-way gate leading to the halls of Pandemonium",
+      "Translation": "通往魔窟大厅的单向门",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "one-way gate to the infinite horrors of the Abyss",
+      "Translation": "通往深渊的无尽恐惧的单向门",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Orb of Zot",
+      "Translation": "佐特宝珠",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "你玩这游戏的原因，MacGuffin"
+    },
+    {
+      "Term": "Pandemonium",
+      "Translation": "魔窟",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "portal",
+      "Translation": "传送门",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "portal to a secret trove of treasure",
+      "Translation": "通往秘密藏宝处的传送门",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】与 Trove 术语含义对应，不误作 Vaults 分支入口。 来源：feature-data.h。"
+    },
+    {
+      "Term": "Realm of Zot",
+      "Translation": "佐特领域",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "the Serpent of Hell cocytus",
+      "Translation": "悲叹河地狱魔龙",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
+    },
+    {
+      "Term": "the Serpent of Hell dis",
+      "Translation": "冥府地狱魔龙",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
+    },
+    {
+      "Term": "the Serpent of Hell tartarus",
+      "Translation": "塔尔塔罗斯地狱魔龙",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
+    },
+    {
+      "Term": "The Vestibule of Hell",
+      "Translation": "地狱前庭",
+      "Part of Speech": "noun",
+      "Variants": "Vestibule of Hell",
+      "Note": ""
+    },
+    {
+      "Term": "vault sentinel",
+      "Translation": "宝库哨兵",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "vault warden",
+      "Translation": "宝库看守人",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Vaults",
+      "Translation": "宝库/密室/跃起",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【语境补充 2026-10-21】分支专名用宝库。地图 vaults 用密室。vaults off a wall 作动词表示蹬墙跃起。"
+    },
+    {
+      "Term": "Zot",
+      "Translation": "佐特",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Zot trap",
+      "Translation": "佐特陷阱",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Portal Projectile",
+      "Translation": "传送投射物",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Hellfire Court",
+      "Translation": "地狱火宫廷",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "gehenna serpent of hell breath",
+      "Translation": "焦热地狱之蛇吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "cocytus serpent of hell breath",
+      "Translation": "寒冰地狱之蛇吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "dis serpent of hell breath",
+      "Translation": "钢铁地狱之蛇吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "tartarus serpent of hell breath",
+      "Translation": "冥府地狱之蛇吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Summon Hell Sentinel",
+      "Translation": "召唤地狱哨卫",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【怪物与卡牌名称校对】法术名中的实体名称与对应怪物显示名统一。"
+    },
+    {
+      "Term": "Hellfire Mortar",
+      "Translation": "地狱火迫击炮",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Splinterfrost Shell",
+      "Translation": "碎霜炮弹",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Old serpent of hell breath",
+      "Translation": "旧版地狱之蛇吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Depart the Abyss",
+      "Translation": "离开深渊",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+    },
+    {
+      "Term": "Enter the Abyss",
+      "Translation": "进入深渊",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+    },
+    {
+      "Term": "Bribe Branch",
+      "Translation": "贿赂分支",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+    },
+    {
+      "Term": "the Lair of Beasts",
+      "Translation": "野兽巢穴",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Lair（规范缩写 Lair）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Vaults",
+      "Translation": "宝库",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Vaults（规范缩写 Vaults）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Realm of Zot",
+      "Translation": "佐特领域",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Zot（规范缩写 Zot）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Abyss",
+      "Translation": "深渊",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Abyss（规范缩写 Abyss）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "Hell Sentinel",
+      "Translation": "地狱哨卫",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Hellbinder",
+      "Translation": "缚狱者",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Kirke",
+      "Translation": "喀耳刻",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Parghit",
+      "Translation": "帕尔吉特",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Serpent of Hell",
+      "Translation": "地狱巨蛇",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "hell hog",
+      "Translation": "地狱猪",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "hell knight",
+      "Translation": "地狱骑士",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "hell lord",
+      "Translation": "地狱领主",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "hell rat",
+      "Translation": "地狱鼠",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "hellephant",
+      "Translation": "地狱象",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "hellion",
+      "Translation": "地狱魔",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "hellwing",
+      "Translation": "地狱翼魔",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "mountainshell",
+      "Translation": "山壳龟",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "orb of winter",
+      "Translation": "寒冬之球",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "pandemonium lord",
+      "Translation": "魔窟领主",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "vault guard",
+      "Translation": "宝库守卫",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Zot status",
+      "Translation": "佐特时钟",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：佐特时钟。"
+    },
+    {
+      "Term": "Zot count status",
+      "Translation": "佐特剩余时间",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：佐特剩余时间。"
+    },
+    {
+      "Term": "-Hellfire status",
+      "Translation": "地狱火迫击炮冷却",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：地狱火迫击炮冷却。"
+    },
+    {
+      "Term": "armoured shell",
+      "Translation": "装甲甲壳",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：装甲甲壳。"
+    }
+  ],
+  "existing_translations": [
+    {
+      "msgctxt": "display.monster",
+      "msgid": "Geryon",
+      "msgstr": "革律翁"
+    },
+    {
+      "msgctxt": "display.monster",
+      "msgid": "Kirke",
+      "msgstr": "喀耳刻"
+    },
+    {
+      "msgctxt": "display.monster",
+      "msgid": "Parghit",
+      "msgstr": "帕尔吉特"
+    },
+    {
+      "msgctxt": "display.monster",
+      "msgid": "orb of winter",
+      "msgstr": "寒冬之球"
+    },
+    {
+      "msgctxt": "display.monster",
+      "msgid": "orc",
+      "msgstr": "兽人"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Dungeon",
+      "msgstr": "地下城"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "the Dungeon",
+      "msgstr": "地下城"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Temple",
+      "msgstr": "众神殿"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "the Ecumenical Temple",
+      "msgstr": "众神殿"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Orcish Mines",
+      "msgstr": "兽人矿井"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "the Orcish Mines",
+      "msgstr": "兽人矿井"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Elven Halls",
+      "msgstr": "精灵大厅"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "the Elven Halls",
+      "msgstr": "精灵大厅"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Dwarven Hall",
+      "msgstr": "矮人大厅"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "the Dwarven Hall",
+      "msgstr": "矮人大厅"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Lair",
+      "msgstr": "野兽巢穴"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "the Lair of Beasts",
+      "msgstr": "野兽巢穴"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Swamp",
+      "msgstr": "沼泽"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "the Swamp",
+      "msgstr": "沼泽"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Shoals",
+      "msgstr": "海滩"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "the Shoals",
+      "msgstr": "海滩"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Snake Pit",
+      "msgstr": "蛇穴"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "the Snake Pit",
+      "msgstr": "蛇穴"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Spider Nest",
+      "msgstr": "蜘蛛巢"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "the Spider Nest",
+      "msgstr": "蜘蛛巢"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Slime Pits",
+      "msgstr": "史莱姆巢穴"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "the Pits of Slime",
+      "msgstr": "史莱姆巢穴"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Vaults",
+      "msgstr": "宝库"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "the Vaults",
+      "msgstr": "宝库"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Hall of Blades",
+      "msgstr": "刀刃大厅"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "the Hall of Blades",
+      "msgstr": "刀刃大厅"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Crypt",
+      "msgstr": "墓室"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "the Crypt",
+      "msgstr": "墓室"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Tomb",
+      "msgstr": "灵庙"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "the Tomb of the Ancients",
+      "msgstr": "古人灵庙"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Depths",
+      "msgstr": "地底"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "the Depths",
+      "msgstr": "地底"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Hell",
+      "msgstr": "地狱"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "the Vestibule of Hell",
+      "msgstr": "地狱前庭"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Dis",
+      "msgstr": "冥府"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "the Iron City of Dis",
+      "msgstr": "冥府铁城"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Gehenna",
+      "msgstr": "欣嫩谷"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Cocytus",
+      "msgstr": "悲叹河"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Tartarus",
+      "msgstr": "塔尔塔罗斯"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Zot",
+      "msgstr": "佐特"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "the Realm of Zot",
+      "msgstr": "佐特领域"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Forest",
+      "msgstr": "魔法森林"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "the Enchanted Forest",
+      "msgstr": "魔法森林"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Abyss",
+      "msgstr": "深渊"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "the Abyss",
+      "msgstr": "深渊"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Pandemonium",
+      "msgstr": "魔窟"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Ziggurat",
+      "msgstr": "神塔"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "a ziggurat",
+      "msgstr": "神塔"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Labyrinth",
+      "msgstr": "迷宫"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "a Labyrinth",
+      "msgstr": "迷宫"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Bazaar",
+      "msgstr": "市集"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "a bazaar",
+      "msgstr": "市集"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Trove",
+      "msgstr": "秘藏"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "a treasure trove",
+      "msgstr": "秘藏"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Sewer",
+      "msgstr": "下水道"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "a sewer",
+      "msgstr": "下水道"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Ossuary",
+      "msgstr": "埋骨地"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "an ossuary",
+      "msgstr": "埋骨地"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Bailey",
+      "msgstr": "堡场"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "a bailey",
+      "msgstr": "堡场"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Gauntlet",
+      "msgstr": "竞技场"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "a Gauntlet",
+      "msgstr": "竞技场"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Ice Cave",
+      "msgstr": "冰窟"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "an ice cave",
+      "msgstr": "冰窟"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Volcano",
+      "msgstr": "火山"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "a volcano",
+      "msgstr": "火山"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Wizlab",
+      "msgstr": "巫师实验室"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "a wizard's laboratory",
+      "msgstr": "巫师实验室"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Desolation",
+      "msgstr": "荒盐之地"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "the Desolation of Salt",
+      "msgstr": "荒盐之地"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Arena",
+      "msgstr": "奥格瓦如竞技场"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "the Arena",
+      "msgstr": "奥格瓦如竞技场"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Crucible",
+      "msgstr": "血肉熔炉"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "the Crucible of Flesh",
+      "msgstr": "血肉熔炉"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "Necropolis",
+      "msgstr": "亡者之城"
+    },
+    {
+      "msgctxt": "b.branch.name",
+      "msgid": "the Necropolis",
+      "msgstr": "亡者之城"
+    },
+    {
+      "msgctxt": "d.overview",
+      "msgid": "                    <white>Dungeon Overview and Level Annotations</white>\n",
+      "msgstr": "                    <white>地下城概览与楼层注释</white>\n"
+    },
+    {
+      "msgctxt": "d.overview",
+      "msgid": "\n<green>Branches:</green>",
+      "msgstr": "\n<green>分支：</green>"
+    },
+    {
+      "msgctxt": "d.overview",
+      "msgid": " (press <white>G</white> to reach them and <white>?/b</white> for more information)",
+      "msgstr": "（按 <white>G</white> 前往，按 <white>?/b</white> 查看更多信息）"
+    },
+    {
+      "msgctxt": "d.overview",
+      "msgid": "<yellow>%*s</yellow> <darkgrey>(visited)</darkgrey>",
+      "msgstr": "<yellow>%*s</yellow> <darkgrey>（已到访）</darkgrey>"
+    },
+    {
+      "msgctxt": "d.overview",
+      "msgid": "\n<green>Altars:</green>",
+      "msgstr": "\n<green>祭坛：</green>"
+    },
+    {
+      "msgctxt": "d.overview",
+      "msgid": " (press <white>_</white> to reach them and <white>?/g</white> for information about gods)",
+      "msgstr": "（按 <white>_</white> 前往，按 <white>?/g</white> 查看神祇信息）"
+    },
+    {
+      "msgctxt": "d.overview",
+      "msgid": "\n<green>Shops:</green>",
+      "msgstr": "\n<green>商店：</green>"
+    },
+    {
+      "msgctxt": "d.overview",
+      "msgid": " (press <white>$</white> to reach them - yellow denotes antique shop)",
+      "msgstr": "（按 <white>$</white> 前往；黄色表示古董商店）"
+    },
+    {
+      "msgctxt": "d.overview",
+      "msgid": "\n<green>Portals:</green>\n",
+      "msgstr": "\n<green>传送门：</green>\n"
+    },
+    {
+      "msgctxt": "d.overview",
+      "msgid": "\n<green>Annotations:</green> (press <white>!</white> to add a new annotation)\n",
+      "msgstr": "\n<green>注释：</green>（按 <white>!</white> 添加注释）\n"
+    },
+    {
+      "msgctxt": "d.overview",
+      "msgid": "\n<green>Annotations:</green>\n",
+      "msgstr": "\n<green>注释：</green>\n"
+    },
+    {
+      "msgctxt": "d.overview",
+      "msgid": "Sorry, you haven't seen any altar yet.",
+      "msgstr": "你还没有见过任何祭坛。"
+    },
+    {
+      "msgctxt": "d.overview",
+      "msgid": "Sorry, you haven't seen any shop yet.",
+      "msgstr": "你还没有见过任何商店。"
+    },
+    {
+      "msgctxt": "d.overview",
+      "msgid": "There is no level above you.",
+      "msgstr": "你的上方没有楼层。"
+    },
+    {
+      "msgctxt": "d.overview",
+      "msgid": "There is no level below you in this branch.",
+      "msgstr": "此分支中你的下方没有楼层。"
+    },
+    {
+      "msgctxt": "d.overview",
+      "msgid": "That's not a valid depth.",
+      "msgstr": "楼层深度无效。"
+    },
+    {
+      "msgctxt": "d.overview",
+      "msgid": "Current level annotation: <lightgrey>%s</lightgrey>",
+      "msgstr": "当前楼层注释：<lightgrey>%s</lightgrey>"
+    },
+    {
+      "msgctxt": "d.overview",
+      "msgid": "Cleared annotation.",
+      "msgstr": "已清除注释。"
+    },
+    {
+      "msgctxt": "d.overview",
+      "msgid": "Annotate which branch? (. - %s, ? - help, ! - show branch list)",
+      "msgstr": "要为哪个分支添加注释？（. - %s，? - 帮助，! - 分支列表）"
+    },
+    {
+      "msgctxt": "d.overview",
+      "msgid": "What level of %s? ",
+      "msgstr": "%s的哪一层？"
+    },
+    {
+      "msgctxt": "d.overview",
+      "msgid": "New annotation for %s (include '!' for warning): ",
+      "msgstr": "为%s添加注释（包含“!”可设置警告）："
+    },
+    {
+      "msgctxt": "morgue.place",
+      "msgid": "%s:%s",
+      "msgstr": "%s：%s"
+    }
+  ],
+  "canonical_fixture_hashes": {
+    "native-bilingual.txt": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+    "native-explicit-english.txt": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+    "native-language-english.txt": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087"
+  }
+}

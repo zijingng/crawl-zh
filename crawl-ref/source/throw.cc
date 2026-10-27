@@ -4,6 +4,9 @@
 **/
 
 #include "AppHdr.h"
+#include "target-display.h"
+#include "t-display.h"
+#include "i18n.h"
 
 #include "throw.h"
 
@@ -167,8 +170,8 @@ void fire_target_behaviour::set_prompt()
 
         if (!targeted())
         {
-            internal_prompt = make_stringf("Non-targeted %s",
-                lowercase_first(internal_prompt).c_str());
+            internal_prompt = string(ui_translate("t.fire", "Non-targeted "))
+                + lowercase_first(internal_prompt);
         }
     }
 
@@ -200,8 +203,9 @@ vector<string> fire_target_behaviour::get_monster_desc(const monster_info& mi)
         return descs;
 
     ostringstream result;
-    describe_to_hit(mi, result, ranged ? launcher : item);
-    descs.emplace_back(result.str());
+    string display;
+    describe_to_hit(mi, result, ranged ? launcher : item, false, nullptr, 0, &display);
+    descs.emplace_back(target_description_text(result.str(), {display, !display.empty()}));
 
     if (get_ammo_brand(*item) == SPMSL_SILVER && mi.is(MB_CHAOTIC))
         descs.emplace_back("chaotic");
@@ -225,11 +229,9 @@ vector<string> fire_target_behaviour::get_monster_desc(const monster_info& mi)
             if (mi.holi & (MH_UNDEAD | MH_NONLIVING))
                 immune = true;
 
-            string verb = brand == SPMSL_FRENZY ? "frenzy" : "blind";
-
-            string chance_string = immune ? "immune" :
-                                   make_stringf("chance to %s on hit: %d%%",
-                                                verb.c_str(), chance);
+            string chance_string = immune ? target_description_text("d.monster.state", "immune") :
+                target_description_format("d.target.extra", brand == SPMSL_FRENZY
+                    ? "chance to frenzy on hit: %d%%" : "chance to blind on hit: %d%%", chance);
             descs.emplace_back(chance_string);
         }
     }
@@ -287,7 +289,7 @@ static shared_ptr<quiver::action> _fire_prompt_for_item()
         // possibly they should get a similar message? They all do print a
         // more specific message if you try to use them, and some have a
         // prompt or the like (e.g. scroll of fear).
-        mpr("You have nothing you can fire or use right now.");
+        mpr(ui_translate("log.throw", "You have nothing you can fire or use right now."));
         return make_shared<quiver::action>(); // hack: prevent "Ok, then."
     }
 
@@ -329,7 +331,7 @@ bool fire_warn_if_impossible(bool silent, item_def *weapon)
         if (!weapon || !is_range_weapon(*weapon))
         {
             if (!silent)
-                mprf("You cannot throw/fire anything while %s.", held_status());
+                mprf("%s", ui_render("t.log", "You cannot throw/fire anything while %s.", make_stringf("You cannot throw/fire anything while %s.", held_status()), {t_clause_arg(held_status())}).c_str());
             return true;
         }
         else
@@ -339,8 +341,7 @@ bool fire_warn_if_impossible(bool silent, item_def *weapon)
         {
             if (!silent)
             {
-                mprf("You cannot shoot with your %s while %s.",
-                     weapon->name(DESC_BASENAME).c_str(), held_status());
+                mprf("%s", ui_render("t.log", "You cannot shoot with your %s while %s.", make_stringf("You cannot shoot with your %s while %s.", weapon->name(DESC_BASENAME).c_str(), held_status()), {ui_item_arg(*weapon), t_clause_arg(held_status())}).c_str());
             }
             return true;
         }
@@ -743,10 +744,7 @@ static void _player_shoot(ranged_attack_beam &pbolt)
     }
 
     // Create message.
-    mprf("You %s %s%s.",
-          is_thrown ? "throw" : "shoot" ,
-          article_a(pbolt.atk.projectile_name()).c_str(),
-          you.current_vision == 0 ? " into the darkness" : "");
+    mprf("%s", ui_render("t.log", "You %s %s%s.", make_stringf("You %s %s%s.", is_thrown ? "throw" : "shoot", article_a(pbolt.atk.projectile_name()).c_str(), you.current_vision == 0 ? " into the darkness" : ""), {t_clause_arg(is_thrown ? "throw" : "shoot"), t_projectile_arg(pbolt.atk.projectile_name()), t_clause_arg(you.current_vision == 0 ? " into the darkness" : "")}).c_str());
 
     pbolt.beam.set_is_tracer(false);
 
@@ -833,11 +831,14 @@ bool mons_throw(monster* mons, ranged_attack_beam& ratk, bool teleport, bool was
     const bool thrown = is_throwable(mons, weapon);
     if (mons->observable())
     {
-        mpr(make_stringf("%s%s %s %s.",
+        const string original = make_stringf("%s%s %s %s.",
                          mons->name(DESC_THE).c_str(),
                          teleport ? " magically" : "",
                          thrown ? "throws" : "shoots",
-                         article_a(ratk.atk.projectile_name()).c_str()).c_str());
+                         article_a(ratk.atk.projectile_name()).c_str());
+        mpr(ui_render("t.log", "%s%s %s %s.", original,
+            {ui_actor_arg(*mons), t_clause_arg(teleport ? " magically" : ""),
+             t_clause_arg(thrown ? "throws" : "shoots"), t_projectile_arg(ratk.atk.projectile_name())}));
     }
 
     _throw_noise(mons, weapon);

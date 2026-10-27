@@ -1,0 +1,235 @@
+{
+  "baseline": "0.34.1",
+  "files": [
+    {
+      "source": "descript/species.txt",
+      "source_entries": 27,
+      "exported": 27,
+      "english_fallback": [],
+      "source_duplicate_keys": [],
+      "source_file_sha256": "445a0c30fcd813c67f2b17334fcbf42c371a05f5dd9c7e9c92d03a84003362a8",
+      "translation_file_sha256": "b6eb67831583785c8db526c1fe7156a59d1515454bd5250246229210369b4559"
+    },
+    {
+      "source": "descript/backgrounds.txt",
+      "source_entries": 26,
+      "exported": 26,
+      "english_fallback": [],
+      "source_duplicate_keys": [],
+      "source_file_sha256": "5e1a8445defb09eb544f44b03abd35c37298ebc2daead7f89bc8550f66e66244",
+      "translation_file_sha256": "5ca962c79d01b726f95400f952289bd24a0598af7450e7f77efe58f2a363bc0c"
+    },
+    {
+      "source": "descript/skills.txt",
+      "source_entries": 29,
+      "exported": 29,
+      "english_fallback": [],
+      "source_duplicate_keys": [],
+      "source_file_sha256": "b4b466eeb86423829ee8019aec893c3858fa2a43dc3589228fd38fa20883063e",
+      "translation_file_sha256": "09dd744dab1f7cdd5429b5a5ae49dfeb0cb09ad6b2deb042951e0befe5750699"
+    },
+    {
+      "source": "descript/passives.txt",
+      "source_entries": 20,
+      "exported": 20,
+      "english_fallback": [],
+      "source_duplicate_keys": [],
+      "source_file_sha256": "fbef53a1a9f6903e8cc958ccfb24cb5eeb65d102fef93348b78a1631f23ec9c8",
+      "translation_file_sha256": "0db3e7b03364560bd99cd6f708484f795fd8ec5eab22968ed0c986d92f2666d0"
+    },
+    {
+      "source": "descript/commands.txt",
+      "source_entries": 95,
+      "exported": 95,
+      "english_fallback": [],
+      "source_duplicate_keys": [
+        "cmd_explore_no_rest"
+      ],
+      "source_file_sha256": "4f199c5180dcd4c2c293907a65aec0d9039d1d5c95181280e68de7183f82fd88",
+      "translation_file_sha256": "1d12a935ee28b13cf63c944e627d1b3eaec1a4a751ffe823b0cd6a8fb70f796c"
+    },
+    {
+      "source": "descript/clouds.txt",
+      "source_entries": 39,
+      "exported": 39,
+      "english_fallback": [],
+      "source_duplicate_keys": [],
+      "source_file_sha256": "dd9e9b4280cee1006d624fe00c7915793984f0c5899f82671d68d8f122a3d8e0",
+      "translation_file_sha256": "26cdf401b534d782a0cfe3765538c824d0977d89ef178e48261a1c026555549e"
+    },
+    {
+      "source": "descript/items.txt",
+      "source_entries": 307,
+      "exported": 307,
+      "english_fallback": [],
+      "source_duplicate_keys": [],
+      "source_file_sha256": "0219fddf2c8f488b3041d452dd2911f80b0cc95ddfb47136574b5df53e4733ab",
+      "translation_file_sha256": "3bfc00b395cdab0b2485814dbda12de2c4c499d578f12597ffb40e0dc66dc518"
+    },
+    {
+      "source": "descript/spells.txt",
+      "source_entries": 402,
+      "exported": 402,
+      "english_fallback": [],
+      "source_duplicate_keys": [],
+      "source_file_sha256": "82f08e484638853b2d275317c0e9d49e528b8b210c50bef25e4300a6aaa1978e",
+      "translation_file_sha256": "8deb60e59abf34741e3d285f39962f1810702fe9e91523e1b5554b0710ce4d14"
+    },
+    {
+      "source": "descript/ability.txt",
+      "source_entries": 154,
+      "exported": 154,
+      "english_fallback": [],
+      "source_duplicate_keys": [],
+      "source_file_sha256": "9b1210a08f6b785633118f1549b98631ce17c8b04341193c0ad5b703c70c6546",
+      "translation_file_sha256": "c464e195f3b5b6c2d569d941d304eecf68252b49213ad0a4782c1aeeafcb8d76"
+    },
+    {
+      "source": "descript/status.txt",
+      "source_entries": 237,
+      "exported": 237,
+      "english_fallback": [],
+      "source_duplicate_keys": [],
+      "source_file_sha256": "297098746b6b28b589f2c73dc17b5ed0ec3d12980b303a6da61d2565d06210d1",
+      "translation_file_sha256": "97b35176b45a2e9a8ab76a5fae670f5698c58df2ae660ddda8fe51a9c9a48dda"
+    },
+    {
+      "source": "descript/gods.txt",
+      "source_entries": 82,
+      "exported": 82,
+      "english_fallback": [],
+      "source_duplicate_keys": [],
+      "source_file_sha256": "ea181f131f0373a3979ac841c5a60cf44ea4cfb3179d64bb10233e570196aabd",
+      "translation_file_sha256": "89a77ebe9eebb50820d27f9f485f4a919012bed20cd963376b66488ac738f5b5"
+    },
+    {
+      "source": "descript/tutorial.txt",
+      "source_entries": 88,
+      "exported": 88,
+      "english_fallback": [],
+      "source_duplicate_keys": [],
+      "source_file_sha256": "0f102b0401fd64c8b34908c64aef27b42c04f170a1f92a2bcddbf2924dd7f7d6",
+      "translation_file_sha256": "d253deb2ac6442134696070e724fa0b6b78b55a35a8accae6034f8eb411af89c"
+    },
+    {
+      "source": "descript/cards.txt",
+      "source_entries": 24,
+      "exported": 24,
+      "english_fallback": [],
+      "source_duplicate_keys": [],
+      "source_file_sha256": "ab9722e5b1625bc87b31000fb76ec08ec8590238a6b4da4706ed14c364fc59d5",
+      "translation_file_sha256": "aa2b865afdf2fa6446e1d81f15579cb245304205d8f0c03e7937ab7af06262a3"
+    },
+    {
+      "source": "descript/unident.txt",
+      "source_entries": 7,
+      "exported": 7,
+      "english_fallback": [],
+      "source_duplicate_keys": [],
+      "source_file_sha256": "783e7cfeedb9229efa6462ef21232f979dccf267e66e619014b0af1829e0bde4",
+      "translation_file_sha256": "2414e5f4b95427f3c43b9f5ef409cbf0db2d6347cc7805239580ccf19ae68cf3"
+    },
+    {
+      "source": "descript/branches.txt",
+      "source_entries": 36,
+      "exported": 36,
+      "english_fallback": [],
+      "source_duplicate_keys": [],
+      "source_file_sha256": "e070134514d4d7734dd92bb0345683307375c0793891d1141f81c3694e9f1013",
+      "translation_file_sha256": "991a48c396dc108a5d63bbbd7cef3cca83f038d20ebb99ef495ff7b6991b745f"
+    },
+    {
+      "source": "descript/egos.txt",
+      "source_entries": 80,
+      "exported": 80,
+      "english_fallback": [],
+      "source_duplicate_keys": [],
+      "source_file_sha256": "351cdfa87a36d00cf32e0acd3ea481bd98b988db44ba85c4f240fd2f164b9ded",
+      "translation_file_sha256": "f2c130ef7ef35c1624e8e1b40cf9e7dcdab282358e47d1a473cbe0ba34a85205"
+    },
+    {
+      "source": "descript/monstatus.txt",
+      "source_entries": 139,
+      "exported": 139,
+      "english_fallback": [],
+      "source_duplicate_keys": [
+        "damage-immune at range monstatus"
+      ],
+      "source_file_sha256": "7ebcf0c6ab92d92f1512daa0b101c6a4df209cad669e7b47cce0b4e9437e2e76",
+      "translation_file_sha256": "ec37cfec6a8c89007312a76a37f9de05d1f8700edec7df9ffd3538aa54ea1da1"
+    },
+    {
+      "source": "descript/unrand.txt",
+      "source_entries": 140,
+      "exported": 140,
+      "english_fallback": [],
+      "source_duplicate_keys": [],
+      "source_file_sha256": "69c2cf00d0fa3146722dc171e436d4e2424f1de717630705c9a8f2601a9c53e0",
+      "translation_file_sha256": "4e54fa0d2dd9c83f12bc7bf716b5a2456d9d1d30e244e78cdffc70e7b85848cd"
+    },
+    {
+      "source": "descript/features.txt",
+      "source_entries": 290,
+      "exported": 290,
+      "english_fallback": [],
+      "source_duplicate_keys": [],
+      "source_file_sha256": "1f25d84a86edca03771e0e1727ffdc1f5245816550d7b1f38551265002b461e0",
+      "translation_file_sha256": "fdc19bbc9af1cc1262908f0581cb3edf1877f707f84fb1a140e45450c853f95e"
+    },
+    {
+      "source": "descript/hints.txt",
+      "source_entries": 116,
+      "exported": 116,
+      "english_fallback": [],
+      "source_duplicate_keys": [],
+      "source_file_sha256": "adff3ccdd69be92648c88013d83131087eab7c0838233ca497db043adc966373",
+      "translation_file_sha256": "c6df3dc8a8af8f096c279b613a7235067f0ae1b42b2898cf9902d4795930a7d2"
+    },
+    {
+      "source": "descript/monsters.txt",
+      "source_entries": 724,
+      "exported": 724,
+      "english_fallback": [],
+      "source_duplicate_keys": [],
+      "source_file_sha256": "b3c25e5b055fcc0494907278c9e7c560f976ed2742a36fd35b69f348509f9206",
+      "translation_file_sha256": "517064ac2bc8f5ef34130a96a5ce14b20ae1923f3ac052ca95032792f0dbd6c6"
+    },
+    {
+      "source": "descript/quotes.txt",
+      "source_entries": 465,
+      "exported": 465,
+      "english_fallback": [],
+      "source_duplicate_keys": [],
+      "source_file_sha256": "c57015a6e44677ed19c211adf9fdfa4b3dc7d728fbee9a0ebb359510bd35c92d",
+      "translation_file_sha256": "4e2f025189b6ad139f1c73c65e31e1b29c05aa85cfd441a895d56cdbf4b93642"
+    },
+    {
+      "source": "descript/mutations.txt",
+      "source_entries": 251,
+      "exported": 251,
+      "english_fallback": [],
+      "source_duplicate_keys": [
+        "+los mutation"
+      ],
+      "source_file_sha256": "97aef564ffb9eab0fb0109212c80e7895a906f4b615271064dbfd10595f2f1e6",
+      "translation_file_sha256": "a0259d9d922a8b11f48182970ce656b79dbc600aba3864cb0521ce6d2cd22705"
+    }
+  ],
+  "total_unique_keys": 3778,
+  "new_entries": 435,
+  "new_prose_entries": 408,
+  "new_reference_only_entries": 27,
+  "new_reference_dependencies": 38,
+  "glossary_sha256": "95cc9538a701536b1581f31834203bbbb3160668ec622f7862f43921be96fdb1",
+  "glossary_terms": 2678,
+  "python_tests": 29,
+  "lua_executions": 148,
+  "regeneration_idempotent": true,
+  "english_source_modified": false,
+  "residual_review": {
+    "candidate_entries": 159,
+    "identical_bodies": 175,
+    "classification": "159 quote entries: bibliographic authors, original titles, translators and dates; existing ancient/foreign-language originals accompanied by Chinese. All 175 identical bodies are references/aliases, not untranslated prose."
+  },
+  "runtime_ui_smoke_test": false
+}

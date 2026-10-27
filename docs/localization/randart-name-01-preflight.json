@@ -1,0 +1,23 @@
+{
+  "glossary_sha256": "95cc9538a701536b1581f31834203bbbb3160668ec622f7862f43921be96fdb1",
+  "looked_up": [
+    "cloak",
+    "artefact"
+  ],
+  "hits": [
+    {
+      "Term": "artefact",
+      "Translation": "神器",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "cloak",
+      "Translation": "披风",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    }
+  ]
+}

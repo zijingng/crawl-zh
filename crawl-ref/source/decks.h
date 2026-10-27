@@ -23,6 +23,9 @@ const int MIN_GIFT_CARDS = 4;
 /// The maximum number of cards to deal when gifting.
 const int MAX_GIFT_CARDS = 13;
 
+bool try_deck_ability_display(deck_type deck, std::string &output,
+                              bool include_draw = true);
+
 enum card_type
 {
     CARD_VELOCITY,            // remove slow, alter others' speeds
@@ -68,7 +71,9 @@ deck_type ability_deck(ability_type abil);
 
 bool gift_cards();
 void reset_cards();
-string deck_summary();
+struct ui_arg;
+// Canonical English by default; callers may request a complete display copy.
+string deck_summary(ui_arg* display = nullptr);
 
 bool deck_draw(deck_type deck);
 spret deck_triple_draw(bool fail);
@@ -84,6 +89,8 @@ void card_effect(card_type which_card, bool dealt = false,
 void draw_from_deck_of_punishment(bool deal = false);
 
 string deck_status(deck_type deck);
+string deck_display_status(deck_type deck);
+string stack_display_contents();
 string deck_name(deck_type deck);
 string deck_description(deck_type deck);
 const string stack_top();

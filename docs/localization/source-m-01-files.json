@@ -1,0 +1,723 @@
+[
+  {
+    "file": "crawl-ref/source/m-display.h",
+    "scope": "Typed display adapters, availability guards and complete English fallback",
+    "sha256": "07be61aaa1089e24e75ebf5d5d156a03894aa2791c34ac707097b9132b747687",
+    "new": true,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/macro.cc",
+    "scope": "Menus, key binding prompts and command feedback; parser/configuration identifiers retained",
+    "sha256": "6f61aa868d32f959b0b8946ae0a9b02167080e3c9d492c35b2d17418da287d15",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/macro.h",
+    "scope": "Menus, key binding prompts and command feedback; parser/configuration identifiers retained",
+    "sha256": "96bc7c70f7c2cc73deae2b9e58f4491c07f9f33ddc3ce7a9c3eb57ec55950ef6",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/macros.h",
+    "scope": "Menus, key binding prompts and command feedback; parser/configuration identifiers retained",
+    "sha256": "35f8deb47270369c567171c44cb403f264296d6f07d0558cea40f8c0a2ed2caf",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/main.cc",
+    "scope": "Main command feedback, start kit, travel and confirmations",
+    "sha256": "ae1cea342ab21f4592af2c7f0c84782dba96e144254608311e72bb3fb9ecfef0",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/makeitem.cc",
+    "scope": "Core gameplay and utility declarations/implementation; player-visible prose reviewed, canonical APIs, technical/debug text retained",
+    "sha256": "4a29bc0f4745175a2b3f21893e17213c1b0eabb60c6a283da01d1596159d0494",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/makeitem.h",
+    "scope": "Core gameplay and utility declarations/implementation; player-visible prose reviewed, canonical APIs, technical/debug text retained",
+    "sha256": "9d751818138c6181e328bb3251f2596516f776bde0f15f090d3665771a19c13d",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/map-cell.h",
+    "scope": "Map/exploration display and counts; generator identifiers and technical diagnostics retained",
+    "sha256": "f0cbe65cd4da23eead1c952127a4680407b504cdafe29e9a686e1ea100cb368c",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/map-feature.h",
+    "scope": "Map/exploration display and counts; generator identifiers and technical diagnostics retained",
+    "sha256": "c7bea273332c90d5a316920073c2a55e196937ce96476945b3f2015c2e95642f",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/map-knowledge.cc",
+    "scope": "Map/exploration display and counts; generator identifiers and technical diagnostics retained",
+    "sha256": "096971cc5850e7eb890c6a7a8d1b2f670944d6318b5f271e3e44c549bce0da76",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/map-knowledge.h",
+    "scope": "Map/exploration display and counts; generator identifiers and technical diagnostics retained",
+    "sha256": "ae7cde1e2bdd9b7f9545f66c21fe4223c159b298a8cb9f8621bd152b6611e311",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/map-marker-type.h",
+    "scope": "Map/exploration display and counts; generator identifiers and technical diagnostics retained",
+    "sha256": "cab1fb368e2927eeae03b0a8f5139fc45e7849b4a4cc05a4d74448d91aa8f2e4",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mapdef.cc",
+    "scope": "Map/exploration display and counts; generator identifiers and technical diagnostics retained",
+    "sha256": "acf5373cb61cf6ec2f65b22ddefd90250d8bb5c3345c3d1948c66263f4ef9735",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mapdef.h",
+    "scope": "Map/exploration display and counts; generator identifiers and technical diagnostics retained",
+    "sha256": "66541dce007e4f7aea47f1450607977c2e5c6dd1c3e002d39dad1f3d87b51094",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mapmark.cc",
+    "scope": "Map/exploration display and counts; generator identifiers and technical diagnostics retained",
+    "sha256": "59efbd4472dd0f2d06e9f698337d531e173f9f0411be13f74ace27d366592dac",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mapmark.h",
+    "scope": "Map/exploration display and counts; generator identifiers and technical diagnostics retained",
+    "sha256": "d4ae46d6e3a21ae1a8edc8f7e2053162d50309e8c46ea4449bd5919650ad3764",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/maps.cc",
+    "scope": "Map/exploration display and counts; generator identifiers and technical diagnostics retained",
+    "sha256": "d47159a66391b7b329be23d3c3b1d202ac31a96b03dd17ab03d999aedec24cd4",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/maps.h",
+    "scope": "Map/exploration display and counts; generator identifiers and technical diagnostics retained",
+    "sha256": "e66d5ee2dbcb0ec456da0daf67abe121b99e4572535e0c3833d4d5c21d993b0a",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/matrix.h",
+    "scope": "Core gameplay and utility declarations/implementation; player-visible prose reviewed, canonical APIs, technical/debug text retained",
+    "sha256": "29686774649a20a3d9cd4926b377ba9d539a3ef6e73b6a04df9abc5958a7e386",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/maybe-bool.cc",
+    "scope": "Core gameplay and utility declarations/implementation; player-visible prose reviewed, canonical APIs, technical/debug text retained",
+    "sha256": "dd7f7b7491f02a81a7223a8a59357f3d294462f5db638b239e02895562b78fa2",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/maybe-bool.h",
+    "scope": "Core gameplay and utility declarations/implementation; player-visible prose reviewed, canonical APIs, technical/debug text retained",
+    "sha256": "63870d0da64241da06fa102481b9f98711643b74005e9968b4bd07dcd9e39464",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/melee-attack.cc",
+    "scope": "Melee and staff combat messages, typed actors and original English grammar preserved",
+    "sha256": "a6a8594683cc13418f5e3c664ffd697a84c6d5bd476c53253452ebac9e054cd2",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/melee-attack.h",
+    "scope": "Melee and staff combat messages, typed actors and original English grammar preserved",
+    "sha256": "be64656721b4b74a90b38a0300c08f9b73fc6dc584f25018d235515a27052d69",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/menu-type.h",
+    "scope": "Menus, key binding prompts and command feedback; parser/configuration identifiers retained",
+    "sha256": "da65b864bf1cfd55a51624ddead217beece87e7e1da49fdd090cbd2e4c33176f",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/menu.cc",
+    "scope": "Menus, key binding prompts and command feedback; parser/configuration identifiers retained",
+    "sha256": "d1f2419b8e95f2f52ec517c6a476a496362fa2e33f93e9d00aa43ebf00639cd8",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/menu.h",
+    "scope": "Menus, key binding prompts and command feedback; parser/configuration identifiers retained",
+    "sha256": "78b767004e9c4eae752838a479a86489cdfe1b0cd9e9825144d9e78e1e9559b5",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/message-stream.cc",
+    "scope": "Fixed UI messages and optional monster display handoff; arbitrary Lua/script output not intercepted",
+    "sha256": "16bceb9da4df8fe40fdfe141a16bafbab6dd55d2a90be81b00023cc9ab9179e1",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/message.cc",
+    "scope": "Fixed UI messages and optional monster display handoff; arbitrary Lua/script output not intercepted",
+    "sha256": "0372d4daf4bf44ad02ed5f7004ab994e444e95a952f7988f6941844bc755b67e",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/message.h",
+    "scope": "Fixed UI messages and optional monster display handoff; arbitrary Lua/script output not intercepted",
+    "sha256": "712be76880b9435425bac32eb1d663f9c97d3b99b75758e81066eced91f81e08",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/mgen-data.h",
+    "scope": "Core gameplay and utility declarations/implementation; player-visible prose reviewed, canonical APIs, technical/debug text retained",
+    "sha256": "e1929d4dc8827bbbe88b32e11d360abaf826280d75842327767d0a288bdbef91",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mgen-enum.h",
+    "scope": "Core gameplay and utility declarations/implementation; player-visible prose reviewed, canonical APIs, technical/debug text retained",
+    "sha256": "33aa6837594b53b6897ddbb776a762649b0b1f82890807452183cd241577310c",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mi-enum.h",
+    "scope": "Core gameplay and utility declarations/implementation; player-visible prose reviewed, canonical APIs, technical/debug text retained",
+    "sha256": "5009e93239d781d5568d1055abb09bc209acdfe996486322dc918a8e2285ad32",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/misc.cc",
+    "scope": "Core gameplay and utility declarations/implementation; player-visible prose reviewed, canonical APIs, technical/debug text retained",
+    "sha256": "01ef24624f890be3fbe71f35cd0604ea1a2e2605732c6376a552bb7611f4941a",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/misc.h",
+    "scope": "Core gameplay and utility declarations/implementation; player-visible prose reviewed, canonical APIs, technical/debug text retained",
+    "sha256": "c0e6197ce09e07dc8e5ee1e4cc05dbdddd5436fd01c79317dd497c6edce25852",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-abil.cc",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "3f5648ec024f6288bec2757542673876d8a2ecce89ac3e95f2ae5213a9172562",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/mon-abil.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "93b7d45f9002394163c157c0fc463d0d7db7c0378a30c1ec5cb382df514da4f7",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-act.cc",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "0f0aa6f067b384c26999affdc6055d70dc655fa29b3f62bb3b382bb6def47ad1",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/mon-act.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "4b1d91b5a396f2cb94dda77f654696b7252655eaf75009d94f1c2a4b93377887",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-ai-action.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "fba257a56e1bc7f15e4142ecbde2e46201c01db1be3373c838f9f159c54aaaad",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-attitude-type.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "3fe974e513e002378112bc05d280897b89a725d90f4b947ee5d23a0cddaa7461",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-aura.cc",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "05e6562fb270e2a7df19d2f22057f60bb8a6246bd0f4624873a4fda5ce1f8021",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/mon-aura.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "deb35dd5be1a8e399df2d0f1b121333f98054a30600f11258c210dcfbdb1117c",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-behv.cc",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "3634be47c36dbf111f26d10542840853b8218c7e6a3474b2f00ee5cbd333fc0b",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/mon-behv.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "e883595eebf0d2d398461d73570dc298278fe29bf60ebc3b2f74a8fbe9f0737a",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-book.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "934ca6e117fd0850dab686e322187dec37569f77552262b4e7849ccef44fba35",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-cast.cc",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "89415406b73b5a5607587b93a8c6b17e83cc46095cc83d940c6530018dadf942",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/mon-cast.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "95f78822a8dd6e9438fb54f45e9915f6b189a919114d535879c3acac87d3acb9",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-clone.cc",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "c2a43eca66c54ae444a930e96b72392d7cdbb90c37ea9c0b2effd90a95e92925",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/mon-clone.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "7e2f3edb83260546fa33b63db8ccb8b86c515fe95532d2b52c2ed04e07a76eb9",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-dam-level-type.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "da1c41b1499b5c20c550c177eb0b2862ba462e85dd02255adf11cf4fbbe228ea",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-data.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "3160f2f72b25a1e0702cfad6031092a6688aff8b8ab928acb781165875670f2b",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-death.cc",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "1560de3082703c5bf2c3d92f8c944cd46b26334561902ead0930506add961b98",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/mon-death.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "d22262b5422cea40a1f6f7f4c61a27190483db48e230d04981bdfdd05c6cc9c6",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-ench.cc",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "7c5bba7265d669bc1b63f5e28fd0831fd4578cb9181725f14fd97da720d9676a",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/mon-ench.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "e2e86da19b4b0d8f586feaf7c07dc86ac7eb3ab60337afae76a1f825e412c445",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-enum.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "e7ba4b74d29026beac8b804593e31e75857bf30064f82acdf6132a033333ff6d",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-explode.cc",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "7112521e209a01005f7c7f2150c244904724e3f1b777912d3137651334aa4398",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/mon-explode.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "c4d3b2022468755efedbd8b2206e0186b12b2d1caa9d953653596048afb4c028",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-flags.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "8bbfb4abbd080d3d19595fe365675cda220b3184443e27ce553190ebedf19b69",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-gear.cc",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "fc633f857134be14da484aef0cb403d0630d0b1faff68acb863784a4cb345c92",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-gear.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "2c04a0a4f20960b76644c776e64b0496e6d4a6a4c6104e209b0f4e5686221f75",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-holy-type.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "9c26ad15563593c655c61b7270b45a772ab5b58bf474fb3498f18798332cdec2",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-info-flag-name.h",
+    "scope": "Monster display names, conditions, wounds and transient constriction snapshots; serialized canonical fields retained",
+    "sha256": "8bc3e11711059d4c4ed3e50addcffbe90c0b3e7c28dd92f7d06d17108cdff793",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-info.cc",
+    "scope": "Monster display names, conditions, wounds and transient constriction snapshots; serialized canonical fields retained",
+    "sha256": "85b8ee16a6afa1d46d89105624b32c6833f25a090b2dba1b96553f5ce74d4585",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/mon-info.h",
+    "scope": "Monster display names, conditions, wounds and transient constriction snapshots; serialized canonical fields retained",
+    "sha256": "907a90003f8e34405d0d76dda4101d17b53c5135d93514e356350d74b001c48a",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/mon-inv-type.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "f20fa38e1834f968e0de86a9c7176948ecec381a2b52af4bfac148a8f34d59d4",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-movetarget.cc",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "3f23a3163c7fe3fefe39ec0a366551fd1d9385f9ab6f323f777fef13095f0644",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-movetarget.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "c1194144479a5882661b4eae424d9f4047a063f67e811512ff73e0b69d473001",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-mst.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "2fb8455fef4f7364ccb90384dac5584c24b925e3d61a3c275265cea4fe0d46b3",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-pathfind.cc",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "20fc4191bf5e26f12c4cef3831962e056bf4ba51e881c036b892a9284e881119",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-pathfind.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "a5c98babb78d7e9204810c4070d01b898858593912ccc21f4561a746a6619b62",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-pick-data.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "39f59a00198cff6fc52f12cb95baf8eee26e50c1e127ac72b77636afbe44a4fe",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-pick.cc",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "0d910a92984ff5104be6e371ee5d00dea1de3277ada8ffa6d91343ddc8a55f75",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-pick.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "f7dd030d230ae50ba58c2098ecbbfdb21d90222dd488eedeb2612701ab92dd16",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-place.cc",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "0ebfdf7297dc807e058aca5b80b70406ac4160a5a23ffa8966edd658b4f881dc",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/mon-place.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "5cadaa58d69e455fb399cb0076799373acb1a932487ee0f22dfd9ffd3ac4db99",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-poly.cc",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "8475decf6e073973174b0388957d13fcb585ccdef2ac18e20db7e6799de2f1ee",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/mon-poly.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "60c280314771115ce4dcc887a476d41848a8df317842a05c8e6a0b98838ce486",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-project.cc",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "bbbf1a2ee272dc5993bf150ce3afabd4104808068e6681d3622ea81177038293",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/mon-project.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "1f3e397abf91b571a3b2e28ccaeea322d9796d8b058d3ba74070530029021f88",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-speak.cc",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "530915a39deded42ce1b4f147cd77ec88b2749d16e1285060912caed5a6ab8e4",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-speak.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "5988114bed4752e48dbb3d98e03ab5bbd40728f0ce03f1945c9b02c379b89c4b",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-spell.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "62b2c3539a3a8c238e800a270a4efbcf47868cc5f338281f790fb863f9790cbc",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-tentacle.cc",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "e4c6b55f3b35606b0b731925c63a381c9e9ad242a5191c2b17c9166ca2fad218",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/mon-tentacle.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "715d49485a1504094205868868d0a454d4bdf705090bf64c686c69144e5feeab",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-transit.cc",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "d1dd5f6fe309b22005fe639ee0a8126351c91d4ffffd1889753b7b53ce8f1cda",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/mon-transit.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "b981c182bf09853b169da2380bba9d090275b4623420db9bd96ddcfb4eed02a1",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mon-util.cc",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "bdcab0576b8fe5dd52b4f3b5437a7aff199b45893c82a01b8eb2cc62d8bc2e25",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/mon-util.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "aeaac93796697501882146ae68e2d816f1484383bd59228cbd26f35392aaf943",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/monster-type.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "4c776c1305ff62299c1ec85d215739c5c3fa736e433caa337648b588cea7e42e",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/monster.cc",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "4a68d1fc2b23b2cffeb21c4c26e9698ae78708bd77c678f6624151bbf6af15a1",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/monster.h",
+    "scope": "Monster combat, movement, spells, death and abilities; canonical names, game effects and RNG preserved",
+    "sha256": "60d7322235bee6649e5999f715d6db9701bd41f9a714e3e8195088615961702b",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/montravel-target-type.h",
+    "scope": "Core gameplay and utility declarations/implementation; player-visible prose reviewed, canonical APIs, technical/debug text retained",
+    "sha256": "68448408c53e8fd3f0e94c5977d87769071c78bf6c85452c7a6a04e2757c6a8c",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/movement-type.h",
+    "scope": "Core gameplay and utility declarations/implementation; player-visible prose reviewed, canonical APIs, technical/debug text retained",
+    "sha256": "f30613fb08efc92046a3ca3d0aa649b78fdbd14dc37bb0fd6ce92f619dfd83d6",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/movement.cc",
+    "scope": "Core gameplay and utility declarations/implementation; player-visible prose reviewed, canonical APIs, technical/debug text retained",
+    "sha256": "db5fb17c3cb900426d26849f37a751091212c3a83dccdf07ed7e6f621f0b1e7f",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/movement.h",
+    "scope": "Core gameplay and utility declarations/implementation; player-visible prose reviewed, canonical APIs, technical/debug text retained",
+    "sha256": "83164608ab47d16a5f34cba612f53f52a0789fbd609c8bcaac5ab2d4dfeefb79",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mpr.h",
+    "scope": "Core gameplay and utility declarations/implementation; player-visible prose reviewed, canonical APIs, technical/debug text retained",
+    "sha256": "005fcbea218379db45fb553040ac2322cbb5e4c68820280510f27b2cba666ee7",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/msvc.h",
+    "scope": "Core gameplay and utility declarations/implementation; player-visible prose reviewed, canonical APIs, technical/debug text retained",
+    "sha256": "a153c4fabf8c3f22b8d35710d93af68223853a57cdd808feb299a6e56f6bf75f",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mutant-beast.h",
+    "scope": "Core gameplay and utility declarations/implementation; player-visible prose reviewed, canonical APIs, technical/debug text retained",
+    "sha256": "9ccf3fae503a9834aa7f2ac91851b38e1238348bbd5e17fc5eb4ab1d8fcfcb34",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mutation-data.h",
+    "scope": "Mutation full/terse descriptions, numeric levels and fake mutations; canonical data/API names retained",
+    "sha256": "f2165d809a4f817bc38385cea4c427fe24c3a503d46f629544ed2672ec10e204",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mutation-type.h",
+    "scope": "Mutation full/terse descriptions, numeric levels and fake mutations; canonical data/API names retained",
+    "sha256": "faf07e170239caf8891f06568fa624a324a9d4f05d437ccc4fefec13732e87d7",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/mutation.cc",
+    "scope": "Mutation full/terse descriptions, numeric levels and fake mutations; canonical data/API names retained",
+    "sha256": "36524c2aabc9c1b80fa76650b547e2d9f0d0b1899baba4d0891551c88ed60b34",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/mutation.h",
+    "scope": "Mutation full/terse descriptions, numeric levels and fake mutations; canonical data/API names retained",
+    "sha256": "6568ac5476b6411049119f7ceff7d9e03bdca77315336c40c6c9f9debb9bc3e5",
+    "new": false,
+    "changed": true
+  }
+]

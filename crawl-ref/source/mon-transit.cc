@@ -4,6 +4,7 @@
 **/
 
 #include "AppHdr.h"
+#include "m-display.h"
 
 #include "mon-transit.h"
 
@@ -119,9 +120,13 @@ static void _handle_monster_leashing(monster& mon, bool using_stairs)
     {
         if (using_stairs && you.can_see(mon))
         {
-            mprf("%s abandons %s pursuit.",
-            mon.name(DESC_THE).c_str(),
-            mon.pronoun(PRONOUN_POSSESSIVE).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = mon.name(DESC_THE);
+                const string _m1 = mon.pronoun(PRONOUN_POSSESSIVE);
+                const string _original = make_stringf("%s abandons %s pursuit.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.229", "%s abandons %s pursuit.")) return _original;
+                return ui_render("m.log.229", "%s abandons %s pursuit.", _original, {m_actor_arg(mon), ui_literal_arg("")});
+            })().c_str());
         }
         mon.set_transit(mon.origin_level);
         mon.destroy_inventory();

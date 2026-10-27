@@ -1,0 +1,18 @@
+{
+  "rand_wpn.txt": {
+    "new_keys": 21,
+    "new_candidates": 330,
+    "reviewed_keys": 45,
+    "source_keys": 45,
+    "english_fallback": []
+  },
+  "rand_arm.txt": {
+    "new_keys": 18,
+    "new_candidates": 400,
+    "reviewed_keys": 18,
+    "source_keys": 19,
+    "english_fallback": [
+      "_armour_animal_"
+    ]
+  }
+}

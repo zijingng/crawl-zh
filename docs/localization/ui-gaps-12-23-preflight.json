@@ -1,0 +1,124 @@
+{
+  "queried_terms": [
+    "dispelling energy",
+    "lightning",
+    "Killer Klown",
+    "distortion",
+    "distorting",
+    "torrent of water",
+    "surge of chaos",
+    "negative energy",
+    "electricity",
+    "Bane of the Hunted",
+    "Mnoleg",
+    "Lom Lobon",
+    "Cerebov",
+    "Gloorx Vloq",
+    "spectral",
+    "antimagic",
+    "chaos",
+    "venom",
+    "valour",
+    "devious",
+    "reaping",
+    "entangling",
+    "rebuke",
+    "sundering",
+    "concussion"
+  ],
+  "hits": [
+    {
+      "Term": "Cerebov",
+      "Translation": "瑟雷波夫",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Gloorx Vloq",
+      "Translation": "格洛克斯·弗洛克",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Killer Klown",
+      "Translation": "杀戮小丑",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Lom Lobon",
+      "Translation": "洛姆·洛邦",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Mnoleg",
+      "Translation": "姆诺莱格",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "antimagic",
+      "Translation": "反魔法",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+    },
+    {
+      "Term": "chaos",
+      "Translation": "混沌",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+    },
+    {
+      "Term": "devious",
+      "Translation": "诡诈",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+    },
+    {
+      "Term": "rebuke",
+      "Translation": "斥责",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+    },
+    {
+      "Term": "valour",
+      "Translation": "英勇",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+    },
+    {
+      "Term": "venom",
+      "Translation": "淬毒",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+    },
+    {
+      "Term": "Bane of the Hunted",
+      "Translation": "被猎者灾厄",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 灾厄名称】来源：bane-data.h；英文名称和 TextDB 查询键保留，中文仅用于显示。"
+    }
+  ],
+  "new_reviewed_entries": 64,
+  "history_sources": [
+    "localization/zh_CN/ui.po",
+    "localization/zh_CN/textdb.po",
+    "dat/database/monspell.txt",
+    "dat/des/branches/pan.des",
+    "duration-data.h",
+    "bane-data.h"
+  ]
+}

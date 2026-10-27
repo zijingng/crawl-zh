@@ -1,3 +1,6 @@
+#include "i18n.h"
+#include "artefact-speech.h"
+#include "item-noise-display.h"
 /**
  * @file
  * @brief Functions non-standard unrandarts uses.
@@ -99,7 +102,7 @@ static void _CEREBOV_melee_effects(item_def* /*weapon*/, actor* attacker,
             && defender->res_fire() <= 3
             && !you.duration[DUR_FIRE_VULN])
         {
-            mpr("The sword of Cerebov burns away your fire resistance.");
+            mpr(ui_translate("a.art-func", "The sword of Cerebov burns away your fire resistance."));
             you.increase_duration(DUR_FIRE_VULN, 3 + random2(dam), 50);
         }
         if (defender->is_monster()
@@ -108,8 +111,10 @@ static void _CEREBOV_melee_effects(item_def* /*weapon*/, actor* attacker,
         {
             if (you.can_see(*attacker))
             {
-                mprf("The sword of Cerebov burns away %s fire resistance.",
-                     defender->name(DESC_ITS).c_str());
+                mprf("%s", ui_render("a.art-func", "The sword of Cerebov burns away the fire resistance of %s.",
+                make_stringf("The sword of Cerebov burns away %s fire resistance.",
+                     defender->name(DESC_ITS).c_str()),
+                {ui_actor_arg(*defender)}).c_str());
             }
             defender->as_monster()->add_ench(
                 mon_enchant(ENCH_FIRE_VULN, attacker,
@@ -123,13 +128,13 @@ static void _CEREBOV_melee_effects(item_def* /*weapon*/, actor* attacker,
 static void _CONDEMNATION_equip(item_def */*item*/, bool *show_msgs, bool unmeld)
 {
     if (!unmeld && you.species == SP_BARACHI)
-        _equip_mpr(show_msgs, "You feel a strange sense of familiarity.");
+        _equip_mpr(show_msgs, ui_translate("a.art-func", "You feel a strange sense of familiarity."));
 }
 
 static void _CONDEMNATION_unequip(item_def */*item*/, bool *show_msgs)
 {
     if (you.species == SP_BARACHI)
-        _equip_mpr(show_msgs, "You feel oddly sad, like being parted from an old friend.");
+        _equip_mpr(show_msgs, ui_translate("a.art-func", "You feel oddly sad, like being parted from an old friend."));
 }
 
 static void _CONDEMNATION_melee_effects(item_def* /*weapon*/, actor* attacker,
@@ -150,7 +155,7 @@ static void _CONDEMNATION_melee_effects(item_def* /*weapon*/, actor* attacker,
 
 static void _CURSES_equip(item_def */*item*/, bool *show_msgs, bool unmeld)
 {
-    _equip_mpr(show_msgs, "A shiver runs down your spine.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "A shiver runs down your spine."));
     if (!unmeld)
         death_curse(you, nullptr, "the scythe of Curses", 0);
 }
@@ -210,18 +215,22 @@ static void _THROATCUTTER_melee_effects(item_def* /*weapon*/, actor* attacker,
             case MON_SHAPE_ORB:
             case MON_SHAPE_BLOB:
             case MON_SHAPE_MISC:
-                mprf("%s put%s %s out of %s misery!",
+                mprf("%s", ui_render("a.art-func", "%s puts %s out of its misery!",
+                make_stringf("%s put%s %s out of %s misery!",
                      attacker->name(DESC_THE).c_str(),
                      plural ? "s" : "",
                      mons->name(DESC_THE).c_str(),
-                     mons->pronoun(PRONOUN_POSSESSIVE).c_str());
+                     mons->pronoun(PRONOUN_POSSESSIVE).c_str()),
+                {ui_actor_arg(*attacker), ui_actor_arg(*mons)}).c_str());
                 break;
             default: // yes, even fungi have heads :)
-                mprf("%s behead%s %s%s!",
+                mprf("%s", ui_render("a.art-func", "%s beheads %s%s!",
+                make_stringf("%s behead%s %s%s!",
                      attacker->name(DESC_THE).c_str(),
                      plural ? "s" : "",
                      mons->name(DESC_THE).c_str(),
-                     mons->heads() > 1 ? " thoroughly" : "");
+                     mons->heads() > 1 ? " thoroughly" : ""),
+                {ui_actor_arg(*attacker), ui_actor_arg(*mons), ui_text_arg("a.art-func.state", mons->heads() > 1 ? "all its heads" : "its head")}).c_str());
             }
         }
         if (mons->num_heads > 1)
@@ -235,17 +244,17 @@ static void _THROATCUTTER_melee_effects(item_def* /*weapon*/, actor* attacker,
 static void _OLGREB_equip(item_def */*item*/, bool *show_msgs, bool /*unmeld*/)
 {
     if (you.can_smell())
-        _equip_mpr(show_msgs, "You smell chlorine.");
+        _equip_mpr(show_msgs, ui_translate("a.art-func", "You smell chlorine."));
     else
-        _equip_mpr(show_msgs, "The staff glows a sickly green.");
+        _equip_mpr(show_msgs, ui_translate("a.art-func", "The staff glows a sickly green."));
 }
 
 static void _OLGREB_unequip(item_def */*item*/, bool *show_msgs)
 {
     if (you.can_smell())
-        _equip_mpr(show_msgs, "The smell of chlorine vanishes.");
+        _equip_mpr(show_msgs, ui_translate("a.art-func", "The smell of chlorine vanishes."));
     else
-        _equip_mpr(show_msgs, "The staff's sickly green glow vanishes.");
+        _equip_mpr(show_msgs, ui_translate("a.art-func", "The staff's sickly green glow vanishes."));
 }
 
 // Based on melee_attack::staff_damage(), but using only evocations skill.
@@ -267,11 +276,13 @@ static void _OLGREB_melee_effects(item_def* /*weapon*/, actor* attacker,
 
     if (!mondied && bonus_dam)
     {
-        mprf("%s %s %s%s",
+        mprf("%s", ui_render("a.art-func", "%s envenoms %s%s",
+                make_stringf("%s %s %s%s",
              attacker->name(DESC_THE).c_str(),
              attacker->conj_verb("envenom").c_str(),
              defender->name(DESC_THE).c_str(),
-             attack_strength_punctuation(bonus_dam).c_str());
+             attack_strength_punctuation(bonus_dam).c_str()),
+                {ui_actor_arg(*attacker), ui_target_arg(*defender, *attacker), ui_attack_punctuation(attack_strength_punctuation(bonus_dam))}).c_str());
 
         defender->hurt(attacker, bonus_dam);
         if (defender->alive())
@@ -307,11 +318,11 @@ static void _SINGING_SWORD_equip(item_def *item, bool *show_msgs, bool /*unmeld*
 
     if (!item->props.exists(SS_WELCOME_KEY))
     {
-        mprf(MSGCH_TALK, "The sword says, \"Hi! I'm the Singing Sword!\"");
+        mprf(MSGCH_TALK, "%s", ui_translate("a.art-func", "The sword says, \"Hi! I'm the Singing Sword!\""));
         item->props[SS_WELCOME_KEY].get_bool() = true;
     }
     else
-        mprf(MSGCH_TALK, "The Singing Sword hums in delight!");
+        mprf(MSGCH_TALK, "%s", ui_translate("a.art-func", "The Singing Sword hums in delight!"));
 
     *show_msgs = false;
 }
@@ -319,7 +330,7 @@ static void _SINGING_SWORD_equip(item_def *item, bool *show_msgs, bool /*unmeld*
 static void _SINGING_SWORD_unequip(item_def *item, bool *show_msgs)
 {
     set_artefact_name(*item, "Singing Sword");
-    _equip_mpr(show_msgs, "The Singing Sword sighs.", MSGCH_TALK);
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "The Singing Sword sighs."), MSGCH_TALK);
 }
 
 static void _SINGING_SWORD_world_reacts(item_def *item)
@@ -370,11 +381,11 @@ static void _SINGING_SWORD_melee_effects(item_def* weapon, actor* attacker,
     const char *tenname[] =  {"silenced", "no_tension", "low_tension",
                               "high_tension", "SCREAM"};
     const string key = tenname[tier];
-    string msg = getSpeakString("singing sword " + key);
+    auto speech = getPairedCastString("singing sword " + key);
 
     const int loudness[] = {0, 0, 20, 30, 40};
 
-    item_noise(*weapon, *attacker, msg, loudness[tier]);
+    paired_item_noise(*weapon, *attacker, speech, loudness[tier]);
 
     if (tier < 1)
         return; // Can't cast when silenced.
@@ -387,34 +398,34 @@ static void _SINGING_SWORD_melee_effects(item_def* weapon, actor* attacker,
 static void _PRUNE_equip(item_def */*item*/, bool *show_msgs, bool /*unmeld*/)
 {
     if (you.undead_state() == US_ALIVE)
-        _equip_mpr(show_msgs, "You struggle to resist the curse of the Prune...");
+        _equip_mpr(show_msgs, ui_translate("a.art-func", "You struggle to resist the curse of the Prune..."));
     else
-        _equip_mpr(show_msgs, "The curse of the Prune has no hold on the dead.");
+        _equip_mpr(show_msgs, ui_translate("a.art-func", "The curse of the Prune has no hold on the dead."));
 }
 
 static void _PRUNE_unequip(item_def */*item*/, bool *show_msgs)
 {
     if (you.undead_state() == US_ALIVE)
-        _equip_mpr(show_msgs, "The curse of the Prune lifts from you.");
+        _equip_mpr(show_msgs, ui_translate("a.art-func", "The curse of the Prune lifts from you."));
 }
 
 ////////////////////////////////////////////////////
 
 static void _LIGHTNING_SCALES_equip(item_def */*item*/, bool *show_msgs, bool /*unmeld*/)
 {
-    _equip_mpr(show_msgs, "You feel lightning quick.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "You feel lightning quick."));
 }
 
 static void _LIGHTNING_SCALES_unequip(item_def */*item*/, bool *show_msgs)
 {
-    _equip_mpr(show_msgs, "You feel rather sluggish.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "You feel rather sluggish."));
 }
 
 ////////////////////////////////////////////////////
 
 static void _TORMENT_equip(item_def */*item*/, bool *show_msgs, bool /*unmeld*/)
 {
-    _equip_mpr(show_msgs, "A terrible, searing pain shoots up your arm!");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "A terrible, searing pain shoots up your arm!"));
 }
 
 static void _TORMENT_melee_effects(item_def* /*weapon*/, actor* attacker,
@@ -429,13 +440,13 @@ static void _TORMENT_melee_effects(item_def* /*weapon*/, actor* attacker,
 
 static void _TROG_equip(item_def */*item*/, bool *show_msgs, bool /*unmeld*/)
 {
-    _equip_mpr(show_msgs, "You feel the exhaustion of battles past.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "You feel the exhaustion of battles past."));
     player_end_berserk();
 }
 
 static void _TROG_unequip(item_def */*item*/, bool *show_msgs)
 {
-    _equip_mpr(show_msgs, "You feel less violent.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "You feel less violent."));
 }
 
 ///////////////////////////////////////////////////
@@ -448,7 +459,7 @@ static void _VARIABILITY_melee_effects(item_def* /*weapon*/, actor* attacker,
     {
         const int pow = 75 + random2avg(75, 2);
         if (you.can_see(*attacker))
-            mpr("The mace of Variability scintillates.");
+            mpr(ui_translate("a.art-func", "The mace of Variability scintillates."));
         cast_chain_spell(SPELL_CHAIN_OF_CHAOS, pow, attacker);
     }
 }
@@ -458,7 +469,7 @@ static void _VARIABILITY_melee_effects(item_def* /*weapon*/, actor* attacker,
 static void _ZONGULDROK_equip(item_def */*item*/, bool *show_msgs,
                               bool /*unmeld*/)
 {
-    _equip_mpr(show_msgs, "You sense an extremely unholy aura.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "You sense an extremely unholy aura."));
 }
 
 static void _ZONGULDROK_melee_effects(item_def* /*weapon*/, actor* attacker,
@@ -480,7 +491,7 @@ static void _GONG_melee_effects(item_def* /*item*/, actor* wearer,
 
     string msg = getSpeakString("shield of the gong");
     if (msg.empty())
-        msg = "You hear a strange loud sound.";
+        msg = ui_translate("a.art-func", "You hear a strange loud sound.");
     mprf(MSGCH_SOUND, "%s", msg.c_str());
 
     noisy(40, wearer->pos());
@@ -530,7 +541,7 @@ static void _DEMON_AXE_melee_effects(item_def* /*item*/, actor* attacker,
                     mgen_data(type, BEH_COPY, you.pos(), MHITYOU, MG_FORCE_BEH | MG_AUTOFOE)
                     .set_summoned(&you, SPELL_SUMMON_DEMON, summ_dur(6))))
             {
-                mpr("A gate to Pandemonium opens briefly!");
+                mpr(ui_translate("a.art-func", "A gate to Pandemonium opens briefly!"));
             }
         }
 
@@ -565,8 +576,10 @@ static void _DEMON_AXE_world_reacts(item_def */*item*/)
 
     if (!you.beheld_by(closest))
     {
-        mprf("Visions of slaying %s flood into your mind.",
-             closest.name(DESC_THE).c_str());
+        mprf("%s", ui_render("a.art-func", "Visions of slaying %s flood into your mind.",
+                make_stringf("Visions of slaying %s flood into your mind.",
+             closest.name(DESC_THE).c_str()),
+                {ui_actor_arg(closest)}).c_str());
 
         // The monsters (if any) currently mesmerising the player do not include
         // this monster. To avoid trapping the player, all other beholders
@@ -577,7 +590,7 @@ static void _DEMON_AXE_world_reacts(item_def */*item*/)
 
     if (you.confused())
     {
-        mpr("Your confusion fades away as the thirst for blood takes over your mind.");
+        mpr(ui_translate("a.art-func", "Your confusion fades away as the thirst for blood takes over your mind."));
         you.duration[DUR_CONF] = 0;
     }
 
@@ -593,7 +606,7 @@ static void _DEMON_AXE_unequip(item_def */*item*/, bool */*show_msgs*/)
         // Since unwielding it costs scrolls of rem curse, we might say getting
         // the demon away is enough of a shock to get you back to senses.
         you.clear_beholders();
-        mpr("Your thirst for blood fades away.");
+        mpr(ui_translate("a.art-func", "Your thirst for blood fades away."));
     }
 }
 
@@ -604,8 +617,8 @@ static void _WYRMBANE_equip(item_def */*item*/, bool *show_msgs, bool /*unmeld*/
     _equip_mpr(show_msgs,
                species::is_draconian(you.species)
                 || you.form == transformation::dragon
-                   ? "You feel an uncomfortable desire to slay dragons."
-                   : "You feel an overwhelming desire to slay dragons!");
+                   ? ui_translate("a.art-func", "You feel an uncomfortable desire to slay dragons.")
+                   : ui_translate("a.art-func", "You feel an overwhelming desire to slay dragons!"));
 }
 
 static void _WYRMBANE_melee_effects(item_def* weapon, actor* attacker,
@@ -618,14 +631,17 @@ static void _WYRMBANE_melee_effects(item_def* weapon, actor* attacker,
     // damage to dragons, we need to grab this information now.
     const int hd = defender->dragon_level();
     string name = defender->name(DESC_THE);
+    const ui_arg display_victim = ui_actor_arg(*defender);
 
     if (!mondied)
     {
         int bonus_dam = 1 + random2(3 * dam / 2);
-        mprf("%s %s%s",
+        mprf("%s", ui_render("a.art-func", "%s convulses%s",
+                make_stringf("%s %s%s",
             defender->name(DESC_THE).c_str(),
             defender->conj_verb("convulse").c_str(),
-            attack_strength_punctuation(bonus_dam).c_str());
+            attack_strength_punctuation(bonus_dam).c_str()),
+                {ui_actor_arg(*defender), ui_attack_punctuation(attack_strength_punctuation(bonus_dam))}).c_str());
 
         defender->hurt(attacker, bonus_dam);
 
@@ -650,14 +666,18 @@ static void _WYRMBANE_melee_effects(item_def* weapon, actor* attacker,
         // Including you, if you were a dragonform felid with lives left.
         if (weapon->plus == 18)
         {
-            mprf("<white>The lance glows brightly as it skewers %s. You feel "
+            mprf("%s", ui_render("a.art-func", "<white>The lance glows brightly as it skewers %s. You feel that it has reached its full power.</white>",
+                make_stringf("<white>The lance glows brightly as it skewers %s. You feel "
                  "that it has reached its full power.</white>",
-                 name.c_str());
+                 name.c_str()),
+                {display_victim}).c_str());
         }
         else
         {
-            mprf("<green>The lance glows as it skewers %s.</green>",
-                 name.c_str());
+            mprf("%s", ui_render("a.art-func", "<green>The lance glows as it skewers %s.</green>",
+                make_stringf("<green>The lance glows as it skewers %s.</green>",
+                 name.c_str()),
+                {display_victim}).c_str());
         }
 
         you.wield_change = true;
@@ -673,10 +693,12 @@ static void _UNDEADHUNTER_melee_effects(item_def* /*item*/, actor* attacker,
         && !mondied && dam)
     {
         int bonus_dam = random2avg((1 + (dam * 3)), 3);
-        mprf("%s %s blasted by disruptive energy%s",
+        mprf("%s", ui_render("a.art-func", "%s is blasted by disruptive energy%s",
+                make_stringf("%s %s blasted by disruptive energy%s",
               defender->name(DESC_THE).c_str(),
               defender->conj_verb("be").c_str(),
-              attack_strength_punctuation(bonus_dam).c_str());
+              attack_strength_punctuation(bonus_dam).c_str()),
+                {ui_actor_arg(*defender), ui_attack_punctuation(attack_strength_punctuation(bonus_dam))}).c_str());
         defender->hurt(attacker, bonus_dam);
     }
 }
@@ -718,7 +740,7 @@ static void _SHADOWS_unequip(item_def */*item*/, bool */*show_msgs*/)
 static void _DEVASTATOR_equip(item_def */*item*/, bool *show_msgs,
                               bool /*unmeld*/)
 {
-    _equip_mpr(show_msgs, "Time to lay down the shillelagh law.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "Time to lay down the shillelagh law."));
 }
 
 static void _DEVASTATOR_melee_effects(item_def* /*item*/, actor* attacker,
@@ -732,12 +754,12 @@ static void _DEVASTATOR_melee_effects(item_def* /*item*/, actor* attacker,
 ///////////////////////////////////////////////////
 static void _DRAGONSKIN_equip(item_def */*item*/, bool *show_msgs, bool /*unmeld*/)
 {
-    _equip_mpr(show_msgs, "You feel oddly protected from the elements.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "You feel oddly protected from the elements."));
 }
 
 static void _DRAGONSKIN_unequip(item_def */*item*/, bool *show_msgs)
 {
-    _equip_mpr(show_msgs, "You no longer feel protected from the elements.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "You no longer feel protected from the elements."));
 }
 
 ///////////////////////////////////////////////////
@@ -751,13 +773,13 @@ static void _BLACK_KNIGHT_HORSE_world_reacts(item_def */*item*/)
 static void _NIGHT_equip(item_def */*item*/, bool *show_msgs, bool /*unmeld*/)
 {
     update_vision_range();
-    _equip_mpr(show_msgs, "The light fades from your surroundings.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "The light fades from your surroundings."));
 }
 
 static void _NIGHT_unequip(item_def */*item*/, bool *show_msgs)
 {
     update_vision_range();
-    _equip_mpr(show_msgs, "The light returns to your surroundings.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "The light returns to your surroundings."));
 }
 
 ///////////////////////////////////////////////////
@@ -773,8 +795,10 @@ static void _PLUTONIUM_SWORD_melee_effects(item_def* weapon,
     {
         if (you.can_see(*attacker))
         {
-            mprf("Mutagenic energy flows through %s!",
-                 weapon->name(DESC_THE, false, false, false).c_str());
+            mprf("%s", ui_render("a.art-func", "Mutagenic energy flows through %s!",
+                make_stringf("Mutagenic energy flows through %s!",
+                 weapon->name(DESC_THE, false, false, false).c_str()),
+                {ui_item_arg(*weapon)}).c_str());
         }
 
         if (attacker->is_player())
@@ -790,9 +814,9 @@ static void _PLUTONIUM_SWORD_melee_effects(item_def* weapon,
             defender->malmutate(attacker, "the plutonium sword");
         else
         {
-            mpr(random_choose("Your body deforms painfully.",
-                              "Your limbs ache and wobble like jelly.",
-                              "Your body is flooded with magical radiation."));
+            mpr(random_choose(ui_translate("a.art-func", "Your body deforms painfully."),
+                              ui_translate("a.art-func", "Your limbs ache and wobble like jelly."),
+                              ui_translate("a.art-func", "Your body is flooded with magical radiation.")));
             contaminate_player(random_range(700, 1350));
         }
         defender->hurt(attacker, random_range(5, 25));
@@ -827,11 +851,13 @@ static void _WOE_melee_effects(item_def* /*weapon*/, actor* attacker,
     }
     if (you.see_cell(attacker->pos()) || you.see_cell(defender->pos()))
     {
-        mprf("%s %s %s%s.", attacker->name(DESC_THE).c_str(),
+        mprf("%s", ui_render("a.art-func", "%s %s %s%s.",
+                make_stringf("%s %s %s%s.", attacker->name(DESC_THE).c_str(),
              attacker->conj_verb(verb).c_str(),
              (attacker == defender ? defender->pronoun(PRONOUN_REFLEXIVE)
                                    : defender->name(DESC_THE)).c_str(),
-             adv);
+             adv),
+                {ui_actor_arg(*attacker), ui_text_arg("a.art-func.kill", verb), ui_actor_arg(*defender), (adv[0] ? ui_text_arg("a.art-func.adverb", adv) : ui_literal_arg(""))}).c_str());
     }
 
     if (!mondied)
@@ -932,12 +958,14 @@ static void _ELEMENTAL_STAFF_melee_effects(item_def*, actor* attacker,
     if (bonus_dam <= 0)
         return;
 
-    mprf("%s %s %s%s",
+    mprf("%s", ui_render("a.art-func", "%s %s %s%s",
+                make_stringf("%s %s %s%s",
          attacker->name(DESC_THE).c_str(),
          attacker->conj_verb(verb).c_str(),
          (attacker == defender ? defender->pronoun(PRONOUN_REFLEXIVE)
                                : defender->name(DESC_THE)).c_str(),
-         attack_strength_punctuation(bonus_dam).c_str());
+         attack_strength_punctuation(bonus_dam).c_str()),
+                {ui_actor_arg(*attacker), ui_text_arg("a.element.verb", verb), ui_target_arg(*defender, *attacker), ui_attack_punctuation(attack_strength_punctuation(bonus_dam))}).c_str());
 
     defender->hurt(attacker, bonus_dam, flavour);
 
@@ -949,12 +977,12 @@ static void _ELEMENTAL_STAFF_melee_effects(item_def*, actor* attacker,
 
 static void _ARC_BLADE_equip(item_def */*item*/, bool *show_msgs, bool /*unmeld*/)
 {
-    _equip_mpr(show_msgs, "The arc blade crackles to life.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "The arc blade crackles to life."));
 }
 
 static void _ARC_BLADE_unequip(item_def */*item*/, bool *show_msgs)
 {
-    _equip_mpr(show_msgs, "The arc blade stops crackling.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "The arc blade stops crackling."));
 }
 
 static void _ARC_BLADE_melee_effects(item_def* /*weapon*/, actor* attacker,
@@ -966,9 +994,9 @@ static void _ARC_BLADE_melee_effects(item_def* /*weapon*/, actor* attacker,
         const int pow = 100 + random2avg(100, 2);
 
         if (you.can_see(*attacker))
-            mpr("The arc blade crackles.");
+            mpr(ui_translate("a.art-func", "The arc blade crackles."));
         else
-            mpr("You hear the crackle of electricity.");
+            mpr(ui_translate("a.art-func", "You hear the crackle of electricity."));
 
         if (attacker->pos().distance_from(defender->pos()) <= 1)
             cast_discharge(pow, *attacker, false, false);
@@ -1018,12 +1046,12 @@ static void _ORDER_melee_effects(item_def* /*item*/, actor* attacker,
 static void _FIRESTARTER_equip(item_def */*item*/, bool *show_msgs,
                                bool /*unmeld*/)
 {
-    _equip_mpr(show_msgs, "You are filled with an inner flame.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "You are filled with an inner flame."));
 }
 
 static void _FIRESTARTER_unequip(item_def */*item*/, bool *show_msgs)
 {
-    _equip_mpr(show_msgs, "Your inner flame fades away.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "Your inner flame fades away."));
 }
 
 static void _FIRESTARTER_melee_effects(item_def* /*weapon*/, actor* attacker,
@@ -1035,8 +1063,10 @@ static void _FIRESTARTER_melee_effects(item_def* /*weapon*/, actor* attacker,
             && !mondied
             && !defender->as_monster()->has_ench(ENCH_INNER_FLAME))
         {
-            mprf("%s is filled with an inner flame.",
-                 defender->name(DESC_THE).c_str());
+            mprf("%s", ui_render("a.art-func", "%s is filled with an inner flame.",
+                make_stringf("%s is filled with an inner flame.",
+                 defender->name(DESC_THE).c_str()),
+                {ui_actor_arg(*defender)}).c_str());
             defender->as_monster()->add_ench(
                 mon_enchant(ENCH_INNER_FLAME, attacker,
                             (3 + random2(dam)) * BASELINE_DELAY));
@@ -1061,12 +1091,12 @@ static void _FORCE_LANCE_melee_effects(item_def* /*weapon*/, actor* attacker,
 static void _CHILLY_DEATH_equip(item_def */*item*/, bool *show_msgs,
                                 bool /*unmeld*/)
 {
-    _equip_mpr(show_msgs, "The dagger glows with an icy blue light!");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "The dagger glows with an icy blue light!"));
 }
 
 static void _CHILLY_DEATH_unequip(item_def */*item*/, bool *show_msgs)
 {
-    _equip_mpr(show_msgs, "The dagger stops glowing.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "The dagger stops glowing."));
 }
 
 static void _CHILLY_DEATH_melee_effects(item_def* /*weapon*/, actor* attacker,
@@ -1078,8 +1108,10 @@ static void _CHILLY_DEATH_melee_effects(item_def* /*weapon*/, actor* attacker,
             && !mondied
             && !defender->as_monster()->has_ench(ENCH_FROZEN))
         {
-            mprf("%s is flash-frozen.",
-                 defender->name(DESC_THE).c_str());
+            mprf("%s", ui_render("a.art-func", "%s is flash-frozen.",
+                make_stringf("%s is flash-frozen.",
+                 defender->name(DESC_THE).c_str()),
+                {ui_actor_arg(*defender)}).c_str());
             defender->as_monster()->add_ench(
                 mon_enchant(ENCH_FROZEN, attacker,
                             (5 + random2(dam)) * BASELINE_DELAY));
@@ -1087,7 +1119,7 @@ static void _CHILLY_DEATH_melee_effects(item_def* /*weapon*/, actor* attacker,
         else if (defender->is_player()
             && !you.duration[DUR_FROZEN])
         {
-            mprf(MSGCH_WARN, "You are encased in ice.");
+            mprf(MSGCH_WARN, "%s", ui_translate("a.art-func", "You are encased in ice."));
             you.increase_duration(DUR_FROZEN, 5 + random2(dam));
         }
     }
@@ -1100,12 +1132,12 @@ static void _CHILLY_DEATH_melee_effects(item_def* /*weapon*/, actor* attacker,
 static void _FLAMING_DEATH_equip(item_def */*item*/, bool *show_msgs,
                                  bool /*unmeld*/)
 {
-    _equip_mpr(show_msgs, "The scimitar bursts into red hot flame!");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "The scimitar bursts into red hot flame!"));
 }
 
 static void _FLAMING_DEATH_unequip(item_def */*item*/, bool *show_msgs)
 {
-    _equip_mpr(show_msgs, "The scimitar stops flaming.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "The scimitar stops flaming."));
 }
 
 static void _FLAMING_DEATH_melee_effects(item_def* /*weapon*/, actor* attacker,
@@ -1128,18 +1160,22 @@ static void _FLAMING_DEATH_melee_effects(item_def* /*weapon*/, actor* attacker,
 
 ///////////////////////////////////////////////////
 
+static string _quoted_artefact_speech(const string &key)
+{
+    return quoted_artefact_speech(key);
+}
+
 static void _MAJIN_equip(item_def *item, bool *show_msgs, bool /*unmeld*/)
 {
     if (!you.max_magic_points)
         return;
 
     const bool should_msg = !show_msgs || *show_msgs;
-    _equip_mpr(show_msgs, "You feel a darkness envelop your magic.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "You feel a darkness envelop your magic."));
 
     if (!item->props.exists(MB_WELCOME_KEY) && should_msg)
     {
-        const string msg = "A voice whispers, \"" +
-                           getSpeakString("majin-bo greeting") + "\"";
+        const string msg = _quoted_artefact_speech("majin-bo greeting");
         mprf(MSGCH_TALK, "%s", msg.c_str());
         item->props[MB_WELCOME_KEY].get_bool() = true;
     }
@@ -1150,7 +1186,7 @@ static void _MAJIN_unequip(item_def */*item*/, bool *show_msgs)
     if (you.max_magic_points)
     {
         _equip_mpr(show_msgs,
-                   "The darkness slowly releases its grasp on your magic.");
+                   ui_translate("a.art-func", "The darkness slowly releases its grasp on your magic."));
     }
 }
 
@@ -1174,9 +1210,9 @@ static void _OCTOPUS_KING_equip(item_def *item, bool *show_msgs,
     int rings = _octorings_worn();
 
     if (rings == 8)
-        _equip_mpr(show_msgs, "You feel like a king!");
+        _equip_mpr(show_msgs, ui_translate("a.art-func", "You feel like a king!"));
     else if (rings)
-        _equip_mpr(show_msgs, "You feel regal.");
+        _equip_mpr(show_msgs, ui_translate("a.art-func", "You feel regal."));
     item->plus = 8 + 2 * rings;
 }
 
@@ -1202,11 +1238,15 @@ static void _CAPTAIN_melee_effects(item_def* /*weapon*/, actor* attacker,
         item_def *wpn = defender->as_monster()->disarm();
         if (wpn)
         {
-            mprf("The captain's cutlass flashes! You lacerate %s!!",
-                defender->name(DESC_THE).c_str());
-            mprf("%s %s falls to the floor!",
+            mprf("%s", ui_render("a.art-func", "The captain's cutlass flashes! You lacerate %s!!",
+                make_stringf("The captain's cutlass flashes! You lacerate %s!!",
+                defender->name(DESC_THE).c_str()),
+                {ui_actor_arg(*defender)}).c_str());
+            mprf("%s", ui_render("a.art-func", "The weapon of %s, %s, falls to the floor!",
+                make_stringf("%s %s falls to the floor!",
                 apostrophise(defender->name(DESC_THE)).c_str(),
-                wpn->name(DESC_PLAIN).c_str());
+                wpn->name(DESC_PLAIN).c_str()),
+                {ui_actor_arg(*defender), ui_item_arg(*wpn)}).c_str());
             defender->hurt(attacker, 18 + random2(18));
         }
     }
@@ -1216,7 +1256,7 @@ static void _CAPTAIN_melee_effects(item_def* /*weapon*/, actor* attacker,
 
 static void _FENCERS_equip(item_def */*item*/, bool *show_msgs, bool /*unmeld*/)
 {
-    _equip_mpr(show_msgs, "En garde!");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "En garde!"));
 }
 
 #if TAG_MAJOR_VERSION == 34
@@ -1225,7 +1265,7 @@ static void _FENCERS_equip(item_def */*item*/, bool *show_msgs, bool /*unmeld*/)
 static void _ETHERIC_CAGE_equip(item_def */*item*/, bool *show_msgs,
                                 bool /*unmeld*/)
 {
-    _equip_mpr(show_msgs, "You sense a greater flux of ambient magical fields.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "You sense a greater flux of ambient magical fields."));
 }
 
 static void _ETHERIC_CAGE_world_reacts(item_def */*item*/)
@@ -1264,24 +1304,24 @@ static void _ETERNAL_TORMENT_unequip(item_def */*item*/, bool */*show_msgs*/)
 
 static void _VINES_equip(item_def */*item*/, bool *show_msgs, bool /*unmeld*/)
 {
-    _equip_mpr(show_msgs, "The vines latch onto your body!");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "The vines latch onto your body!"));
 }
 
 static void _VINES_unequip(item_def */*item*/, bool *show_msgs)
 {
-    _equip_mpr(show_msgs, "The vines fall away from your body!");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "The vines fall away from your body!"));
 }
 
 ///////////////////////////////////////////////////
 
 static void _KRYIAS_equip(item_def */*item*/, bool *show_msgs, bool /*unmeld*/)
 {
-    _equip_mpr(show_msgs, "Your attunement to healing potions increases.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "Your attunement to healing potions increases."));
 }
 
 static void _KRYIAS_unequip(item_def */*item*/, bool *show_msgs)
 {
-    _equip_mpr(show_msgs, "Your attunement to healing potions decreases.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "Your attunement to healing potions decreases."));
 }
 
 ///////////////////////////////////////////////////
@@ -1317,13 +1357,13 @@ static void _LEECH_melee_effects(item_def* /*item*/, actor* attacker,
 static void _THERMIC_ENGINE_equip(item_def *item, bool *show_msgs,
                                   bool /*unmeld*/)
 {
-    _equip_mpr(show_msgs, "The engine hums to life!");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "The engine hums to life!"));
     item->plus = 2;
 }
 
 static void _THERMIC_ENGINE_unequip(item_def *item, bool *show_msgs)
 {
-    _equip_mpr(show_msgs, "The engine shudders to a halt.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "The engine shudders to a halt."));
     item->plus = 2;
 }
 
@@ -1348,11 +1388,13 @@ static void _THERMIC_ENGINE_melee_effects(item_def* weapon, actor* attacker,
                                                random2(dam) / 2 + 1);
     if (bonus_dam > 0)
     {
-        mprf("%s %s %s.",
+        mprf("%s", ui_render("a.art-func", "%s freezes %s.",
+                make_stringf("%s %s %s.",
             attacker->name(DESC_THE).c_str(),
             attacker->conj_verb("freeze").c_str(),
             (attacker == defender ? defender->pronoun(PRONOUN_REFLEXIVE)
-                                : defender->name(DESC_THE)).c_str());
+                                : defender->name(DESC_THE)).c_str()),
+                {ui_actor_arg(*attacker), ui_target_arg(*defender, *attacker)}).c_str());
 
         defender->hurt(attacker, bonus_dam, BEAM_COLD);
         if (defender->alive())
@@ -1413,7 +1455,7 @@ static void _EMBRACE_unequip(item_def *item, bool *show_msgs)
     int &armour = item->props[EMBRACE_ARMOUR_KEY].get_int();
     if (armour > 0)
     {
-        _equip_mpr(show_msgs, "Your corpse armour falls away.");
+        _equip_mpr(show_msgs, ui_translate("a.art-func", "Your corpse armour falls away."));
         armour = 0;
         item->plus = get_unrand_entry(item->unrand_idx)->plus;
     }
@@ -1490,17 +1532,17 @@ static void _EMBRACE_world_reacts(item_def *item)
         armour = 0;
         item->plus = base_plus;
         if (last_plus > base_plus)
-            mpr("Your corpse armour falls away.");
+            mpr(ui_translate("a.art-func", "Your corpse armour falls away."));
     }
     else
     {
         item->plus = base_plus + 1 + (armour-1) * 6 / 100;
         if (item->plus < last_plus)
-            mpr("A chunk of your corpse armour falls away.");
+            mpr(ui_translate("a.art-func", "A chunk of your corpse armour falls away."));
         else if (last_plus == base_plus)
-            mpr("The bodies of the dead rush to embrace you!");
+            mpr(ui_translate("a.art-func", "The bodies of the dead rush to embrace you!"));
         else if (item->plus > last_plus)
-            mpr("Your shell of carrion and bone grows thicker.");
+            mpr(ui_translate("a.art-func", "Your shell of carrion and bone grows thicker."));
     }
 
     if (item->plus != last_plus)
@@ -1520,13 +1562,13 @@ static void _manage_fire_shield()
 static void _SALAMANDER_equip(item_def * /* item */, bool * show_msgs,
                               bool /* unmeld */)
 {
-    _equip_mpr(show_msgs, "The air around you leaps into flame!");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "The air around you leaps into flame!"));
     _manage_fire_shield();
 }
 
 static void _SALAMANDER_unequip(item_def * /* item */, bool * show_msgs)
 {
-   _equip_mpr(show_msgs, "Your ring of flames gutters out.");
+   _equip_mpr(show_msgs, ui_translate("a.art-func", "Your ring of flames gutters out."));
 }
 
 static void _SALAMANDER_world_reacts(item_def * /* item */)
@@ -1541,7 +1583,7 @@ static void _GUARD_unequip(item_def *item, bool * show_msgs)
     monster *spectral_weapon = find_spectral_weapon(*item);
     if (spectral_weapon)
     {
-        _equip_mpr(show_msgs, "Your spectral weapon disappears.");
+        _equip_mpr(show_msgs, ui_translate("a.art-func", "Your spectral weapon disappears."));
         end_spectral_weapon(spectral_weapon, false, true);
     }
 }
@@ -1553,8 +1595,8 @@ static void _WUCAD_MU_equip(item_def */*item*/, bool *show_msgs,
 {
     if (you.has_mutation(MUT_HP_CASTING))
     {
-        _equip_mpr(show_msgs, "The crystal ball is unable to connect with your "
-                              "magical essence.");
+        _equip_mpr(show_msgs, ui_translate("a.art-func", "The crystal ball is unable to connect with your "
+                              "magical essence."));
     }
 }
 
@@ -1563,13 +1605,13 @@ static void _WUCAD_MU_equip(item_def */*item*/, bool *show_msgs,
 static void _SEVEN_LEAGUE_BOOTS_equip(item_def * /*item*/, bool *show_msgs,
                                       bool /*unmeld*/)
 {
-    _equip_mpr(show_msgs, "You feel ready to stride towards your foes.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "You feel ready to stride towards your foes."));
 }
 
 static void _SEVEN_LEAGUE_BOOTS_unequip(item_def * /*item*/, bool *show_msgs)
 {
-    _equip_mpr(show_msgs, "You no longer feel ready to stride towards your "
-                          "foes.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "You no longer feel ready to stride towards your "
+                          "foes."));
 }
 
 ////////////////////////////////////////////////////
@@ -1582,7 +1624,9 @@ static void _RCLOUDS_world_reacts(item_def */*item*/)
         if (m && !m->wont_attack() && mons_is_threatening(*m)
             && x_chance_in_y(you.time_taken, 7 * BASELINE_DELAY))
         {
-            mprf("Storm clouds gather above %s.", m->name(DESC_THE).c_str());
+            mprf("%s", ui_render("a.art-func", "Storm clouds gather above %s.",
+                make_stringf("Storm clouds gather above %s.", m->name(DESC_THE).c_str()),
+                {ui_actor_arg(*m)}).c_str());
             place_cloud(CLOUD_STORM, *ri, random_range(4, 8), &you);
         }
     }
@@ -1595,17 +1639,17 @@ static void _POWER_GLOVES_equip(item_def * /*item*/, bool *show_msgs,
 {
     if (you.has_mutation(MUT_HP_CASTING))
     {
-        _equip_mpr(show_msgs, "The gloves are unable to connect with your "
-                              "magical essence.");
+        _equip_mpr(show_msgs, ui_translate("a.art-func", "The gloves are unable to connect with your "
+                              "magical essence."));
     }
     else
-        _equip_mpr(show_msgs, "You feel an incredible surge of magic.");
+        _equip_mpr(show_msgs, ui_translate("a.art-func", "You feel an incredible surge of magic."));
 }
 
 static void _POWER_GLOVES_unequip(item_def * /*item*/, bool *show_msgs)
 {
     if (!you.has_mutation(MUT_HP_CASTING))
-        _equip_mpr(show_msgs, "The surge of magic dissipates.");
+        _equip_mpr(show_msgs, ui_translate("a.art-func", "The surge of magic dissipates."));
 }
 
 ////////////////////////////////////////////////////
@@ -1613,12 +1657,12 @@ static void _POWER_GLOVES_unequip(item_def * /*item*/, bool *show_msgs)
 static void _DREAMSHARD_NECKLACE_equip(item_def * /*item*/, bool *show_msgs,
                                       bool /*unmeld*/)
 {
-    _equip_mpr(show_msgs, "You feel a whimsical energy watch over you.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "You feel a whimsical energy watch over you."));
 }
 
 static void _DREAMSHARD_NECKLACE_unequip(item_def * /* item */, bool * show_msgs)
 {
-    _equip_mpr(show_msgs, "The world feels relentlessly logical and grey.");
+    _equip_mpr(show_msgs, ui_translate("a.art-func", "The world feels relentlessly logical and grey."));
 }
 
 ////////////////////////////////////////////////////
@@ -1639,9 +1683,11 @@ static void _AUTUMN_KATANA_melee_effects(item_def* /*weapon*/, actor* attacker,
     if (cast_manifold_assault(*attacker, 0, false, false, defender) == spret::abort)
         return;
 
-    mprf("%s slice%s through the folds of space itself!",
+    mprf("%s", ui_render("a.art-func", "%s slices through the folds of space itself!",
+                make_stringf("%s slice%s through the folds of space itself!",
          attacker->name(DESC_THE).c_str(),
-         attacker->is_player() ? "" : "s");
+         attacker->is_player() ? "" : "s"),
+                {ui_actor_arg(*attacker)}).c_str());
 
     // Casting with 100 power = up to 8 targets hit
     cast_manifold_assault(*attacker, 100, false, true, defender);
@@ -1665,8 +1711,10 @@ static void _reset_victory_stats(item_def *item)
         item->plus = get_unrand_entry(item->unrand_idx)->plus;
         artefact_set_property(*item, ARTP_SLAYING, bonus_stats);
         artefact_set_property(*item, ARTP_INTELLIGENCE, bonus_stats);
-        mprf(MSGCH_WARN, "%s stops glowing.", item->name(DESC_THE, false, true,
-                                                         false).c_str());
+        mprf(MSGCH_WARN, "%s", ui_render("a.art-func", "%s stops glowing.",
+                make_stringf("%s stops glowing.", item->name(DESC_THE, false, true,
+                                                         false).c_str()),
+                {ui_item_arg(*item)}).c_str());
 
         you.redraw_armour_class = true;
         notify_stat_change();
@@ -1705,9 +1753,11 @@ static void _VICTORY_death_effects(item_def *item, monster* mons,
             artefact_set_property(*item, ARTP_SLAYING, bonus_stats);
             artefact_set_property(*item, ARTP_INTELLIGENCE, bonus_stats);
             you.equipment.update();
-            mprf(MSGCH_GOD, GOD_OKAWARU, "%s glows%s.",
+            mprf(MSGCH_GOD, GOD_OKAWARU, "%s", ui_render("a.art-func", "%s glows%s.",
+                make_stringf("%s glows%s.",
                  item->name(DESC_THE, false, true, false).c_str(),
-                 bonus_stats == VICTORY_STAT_CAP ? " brightly" : "");
+                 bonus_stats == VICTORY_STAT_CAP ? " brightly" : ""),
+                {ui_item_arg(*item), ui_text_arg("a.art-func.state", bonus_stats == VICTORY_STAT_CAP ? "glows brightly" : "glows")}).c_str());
 
             you.redraw_armour_class = true;
             notify_stat_change();
@@ -1754,7 +1804,7 @@ static void _ASMODEUS_melee_effects(item_def* /*weapon*/, actor* attacker,
 
         if (create_monster(mg))
         {
-            mpr("The sceptre summons one of its terrible servants.");
+            mpr(ui_translate("a.art-func", "The sceptre summons one of its terrible servants."));
             did_god_conduct(DID_EVIL, 3);
         }
     }
@@ -1768,10 +1818,12 @@ static void _DREAD_KNIGHT_melee_effects(item_def* /*item*/, actor* attacker,
     if (!mondied)
     {
         int bonus_dam = random2avg((1 + defender->stat_maxhp() / 10), 3);
-        mprf("%s %s%s",
+        mprf("%s", ui_render("a.art-func", "%s convulses%s",
+                make_stringf("%s %s%s",
             defender->name(DESC_THE).c_str(),
             defender->conj_verb("convulse").c_str(),
-            attack_strength_punctuation(bonus_dam).c_str());
+            attack_strength_punctuation(bonus_dam).c_str()),
+                {ui_actor_arg(*defender), ui_attack_punctuation(attack_strength_punctuation(bonus_dam))}).c_str());
         defender->hurt(attacker, bonus_dam);
     }
 }
@@ -1801,7 +1853,7 @@ static void _SKULL_OF_ZONGULDROK_equip(item_def *item, bool *show_msgs, bool /*u
                                 ? "zonguldrok greeting"
                                 : "zonguldrok reprise";
 
-        const string msg = "A voice whispers, \"" + getSpeakString(key) + "\"";
+        const string msg = _quoted_artefact_speech(key);
         mprf(MSGCH_TALK, "%s", msg.c_str());
         item->props[ZONGULDROK_WELCOME_KEY].get_bool() = true;
     }
@@ -1812,8 +1864,7 @@ static void _SKULL_OF_ZONGULDROK_unequip(item_def */*item*/, bool *show_msgs)
     const bool should_msg = !show_msgs || *show_msgs;
     if (should_msg)
     {
-        const string msg = "A voice whispers, \"" +
-                            getSpeakString("zonguldrok farewell") + "\"";
+        const string msg = _quoted_artefact_speech("zonguldrok farewell");
         mprf(MSGCH_TALK, "%s", msg.c_str());
     }
 }
@@ -1823,10 +1874,10 @@ static void _FISTICLOAK_equip(item_def */*item*/, bool *show_msgs, bool unmeld)
 {
     if (!unmeld)
     {
-        _equip_mpr(show_msgs, getSpeakString("fungus thoughts").c_str());
+        _equip_mpr(show_msgs, getPairedCastString("fungus thoughts").text().c_str());
 
         if (you_worship(GOD_FEDHAS))
-            god_speaks(GOD_FEDHAS, "Fedhas smiles on your commitment to the cycle of life.");
+            god_speaks(GOD_FEDHAS, ui_translate("a.art-func", "Fedhas smiles on your commitment to the cycle of life."));
     }
 }
 
@@ -1834,14 +1885,14 @@ static void _FISTICLOAK_unequip(item_def */*item*/, bool *show_msgs)
 {
     const bool should_msg = !show_msgs || *show_msgs;
     if (should_msg)
-        mpr("Your thoughts feel a little more lonely.");
+        mpr(ui_translate("a.art-func", "Your thoughts feel a little more lonely."));
 }
 
 static void _FISTICLOAK_world_reacts(item_def */*item*/)
 {
     // First, a chance of flavor message.
     if (one_chance_in(1500))
-        mprf(MSGCH_TALK, "%s", getSpeakString("fungus thoughts").c_str());
+        mprf(MSGCH_TALK, "%s", getPairedCastString("fungus thoughts").text().c_str());
 
     // Now, the chance for our shroompunch
     if (!one_chance_in(4))
@@ -1866,7 +1917,7 @@ static void _FISTICLOAK_world_reacts(item_def */*item*/)
 static void _VAINGLORY_equip(item_def */*item*/, bool *show_msgs, bool unmeld)
 {
     if (!unmeld)
-        _equip_mpr(show_msgs, "You feel supremely confident.");
+        _equip_mpr(show_msgs, ui_translate("a.art-func", "You feel supremely confident."));
 }
 
 static void _VAINGLORY_unequip(item_def */*item*/, bool */*show_msgs*/)

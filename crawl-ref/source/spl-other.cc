@@ -5,6 +5,9 @@
 **/
 
 #include "AppHdr.h"
+#include "stringutil.h"
+#include "s-display.h"
+#include "i18n.h"
 
 #include "spl-other.h"
 
@@ -33,11 +36,11 @@ spret cast_sublimation_of_blood(int pow, bool fail)
     bool success = false;
 
     if (you.duration[DUR_DEATHS_DOOR])
-        mpr("You can't draw power from your own body while in death's door.");
+        mpr(ui_translate("log.spl-other", "You can't draw power from your own body while in death's door."));
     else if (!you.has_blood())
-        mpr("Your body is bloodless.");
+        mpr(ui_translate("log.spl-other", "Your body is bloodless."));
     else if (!enough_hp(2, true))
-        mpr("Your attempt to draw power from your own body fails.");
+        mpr(ui_translate("log.spl-other", "Your attempt to draw power from your own body fails."));
     else
     {
         // Take at most 90% of currhp.
@@ -59,9 +62,9 @@ spret cast_sublimation_of_blood(int pow, bool fail)
                 break;
         }
         if (success)
-            mpr("You draw magical energy from your own body!");
+            mpr(ui_translate("log.spl-other", "You draw magical energy from your own body!"));
         else
-            mpr("Your attempt to draw power from your own body fails.");
+            mpr(ui_translate("log.spl-other", "Your attempt to draw power from your own body fails."));
     }
 
     return success ? spret::success : spret::abort;
@@ -70,7 +73,7 @@ spret cast_sublimation_of_blood(int pow, bool fail)
 spret cast_death_channel(int pow, god_type god, bool fail)
 {
     fail_check();
-    mpr("Malign forces permeate your being, awaiting release.");
+    mpr(ui_translate("log.spl-other", "Malign forces permeate your being, awaiting release."));
 
     you.increase_duration(DUR_DEATH_CHANNEL,
                           30 + random2(1 + div_rand_round(2 * pow, 3)), 200);
@@ -105,9 +108,9 @@ spret cast_animate_dead(int pow, bool fail)
     fail_check();
 
     if (_dismiss_dead())
-        mpr("You dismiss your zombies and call upon the dead to rise afresh.");
+        mpr(ui_translate("log.spl-other", "You dismiss your zombies and call upon the dead to rise afresh."));
     else
-        mpr("You call upon the dead to rise.");
+        mpr(ui_translate("log.spl-other", "You call upon the dead to rise."));
 
     you.increase_duration(DUR_ANIMATE_DEAD, 20 + random2(1 + pow), 100);
     you.props[ANIMATE_DEAD_POWER_KEY] = pow;
@@ -152,7 +155,7 @@ void do_player_recall(recall_t type)
     }
 
     if (!did_recall)
-        mpr("Nothing appears to have answered your call.");
+        mpr(ui_translate("log.spl-other", "Nothing appears to have answered your call."));
 }
 
 // Remind a recalled ally (or one skipped due to proximity) not to run
@@ -365,7 +368,7 @@ bool passwall_path::check_moveto() const
 
     // TODO: handle uncertainty in messaging for things other than exclusions
 
-    return check_moveto_terrain(actual_dest, "passwall", terrain_msg)
+    return check_moveto_terrain(actual_dest, "passwall", ui_translate("s.reason", terrain_msg.c_str()))
         && check_moveto_exclusions(possible_dests(), "passwall")
         && check_moveto_cloud(actual_dest, "passwall")
         && check_moveto_trap(actual_dest, "passwall");
@@ -389,7 +392,7 @@ spret cast_passwall(const coord_def& c, int pow, bool fail)
     if (!p.spell_succeeds())
     {
         if (fail_msg.size())
-            mpr(fail_msg);
+            mpr(ui_translate("s.reason", fail_msg.c_str()));
         return spret::abort;
     }
 
@@ -398,7 +401,7 @@ spret cast_passwall(const coord_def& c, int pow, bool fail)
     if (!valid)
     {
         if (fail_msg.size())
-            mpr(fail_msg);
+            mpr(ui_translate("s.reason", fail_msg.c_str()));
     }
     else if (p.check_moveto())
     {
@@ -466,7 +469,7 @@ spret cast_intoxicate(int pow, bool fail, bool tracer)
     }
 
     fail_check();
-    mpr("You attempt to intoxicate your foes!");
+    mpr(ui_translate("log.spl-other", "You attempt to intoxicate your foes!"));
 
     const int count = apply_area_visible([pow] (coord_def where) {
         return _intoxicate_monsters(where, pow, false);
@@ -474,7 +477,7 @@ spret cast_intoxicate(int pow, bool fail, bool tracer)
 
     if (count > 0)
     {
-        mprf(MSGCH_WARN, "The world spins around you!");
+        mprf(MSGCH_WARN, "%s", ui_translate("log.spl-other", "The world spins around you!"));
         you.increase_duration(DUR_VERTIGO, 4 + count + random2(count + 1));
         you.redraw_evasion = true;
     }
@@ -523,7 +526,7 @@ spret cast_sigil_of_binding(int pow, bool fail, bool tracer)
     fail_check();
     if (!success)
     {
-        mpr("There was nowhere nearby to inscribe sigils!");
+        mpr(ui_translate("log.spl-other", "There was nowhere nearby to inscribe sigils!"));
         return spret::success;
     }
 
@@ -574,9 +577,9 @@ spret cast_sigil_of_binding(int pow, bool fail, bool tracer)
     }
 
     if (!sigil_pos_d1.empty() && !sigil_pos_d2.empty())
-        mpr("You inscribe a pair of binding sigils.");
+        mpr(ui_translate("log.spl-other", "You inscribe a pair of binding sigils."));
     else
-        mpr("You inscribe a binding sigil.");
+        mpr(ui_translate("log.spl-other", "You inscribe a binding sigil."));
 
     return spret::success;
 }
@@ -586,18 +589,17 @@ void trigger_binding_sigil(actor& actor)
     if (actor.is_binding_sigil_immune())
     {
         if (actor.is_player())
-            mpr("You slip past the binding sigil.");
+            mpr(ui_translate("log.spl-other", "You slip past the binding sigil."));
         else
         {
-            mprf("%s cannot be bound by the sigil due to %s high momentum!",
-                actor.name(DESC_THE).c_str(), actor.pronoun(PRONOUN_POSSESSIVE).c_str());
+            mprf("%s", ui_render("s.log", "%s cannot be bound by the sigil due to their high momentum!", make_stringf("%s cannot be bound by the sigil due to %s high momentum!", actor.name(DESC_THE).c_str(), actor.pronoun(PRONOUN_POSSESSIVE).c_str()), {ui_actor_arg(actor)}).c_str());
         }
         return;
     }
 
     if (actor.is_player())
     {
-        mprf(MSGCH_WARN, "You move over the binding sigil and are bound in place!");
+        mprf(MSGCH_WARN, "%s", ui_translate("log.spl-other", "You move over the binding sigil and are bound in place!"));
         you.increase_duration(DUR_NO_MOMENTUM, random_range(3, 6));
         revert_terrain_change(you.pos(), TERRAIN_CHANGE_BINDING_SIGIL);
         return;
@@ -662,7 +664,7 @@ spret cast_spike_launcher(int pow, bool fail)
     you.props.erase(SPIKE_LAUNCHER_TIMER);
     you.props[SPIKE_LAUNCHER_POWER] = pow;
 
-    mpr("You shape a spike launcher from a nearby wall.");
+    mpr(ui_translate("log.spl-other", "You shape a spike launcher from a nearby wall."));
 
     return spret::success;
 }
@@ -732,8 +734,8 @@ void handle_spike_launcher(int delay)
     // Check if we've gotten too far away from our launcher
     if (!you.see_cell_no_trans(pos) || grid_distance(you.pos(), pos) > 3)
     {
-        mpr("Your spike launcher falls apart as you grow too distant to "
-            "maintain it.");
+        mpr(ui_translate("log.spl-other", "Your spike launcher falls apart as you grow too distant to "
+            "maintain it."));
         revert_terrain_change(pos, TERRAIN_CHANGE_SPIKE_LAUNCHER);
         you.duration[DUR_SPIKE_LAUNCHER_ACTIVE] = 0;
         return;
@@ -782,7 +784,7 @@ void end_spike_launcher()
 
         if (marker->change_type == TERRAIN_CHANGE_SPIKE_LAUNCHER)
         {
-            mpr("Your spike launcher falls apart.");
+            mpr(ui_translate("log.spl-other", "Your spike launcher falls apart."));
             revert_terrain_change(marker->pos, TERRAIN_CHANGE_SPIKE_LAUNCHER);
             return;
         }

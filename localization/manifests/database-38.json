@@ -1,0 +1,648 @@
+{
+  "source": "database/monspeak.txt",
+  "lua_results": [
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Ant",
+      "keys": [
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Armataur",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Barachi",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Black Draconian",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Cat",
+      "keys": [
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Centaur",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Coglin",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Deep Dwarf",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Deep Elf",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Demigod",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Demonspawn",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Djinni",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Draconian",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Dwarf",
+      "keys": [
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Elf",
+      "keys": [
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Felid",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Formicid",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Frog",
+      "keys": [
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Gargoyle",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Geist",
+      "keys": [
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Ghoul",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Gnoll",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Goblin",
+      "keys": [
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Green Draconian",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Grey Draconian",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Halfling",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "High Elf",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Hill Orc",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Human",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Kobold",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Lava Orc",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Mayflytaur",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Merfolk",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Meteoran",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Minotaur",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Mottled Draconian",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Mountain Dwarf",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Mummy",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Naga",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Octopode",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Octopus",
+      "keys": [
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Oni",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Pale Draconian",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Poltergeist",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Purple Draconian",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Red Draconian",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Revenant",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Sludge Elf",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Spriggan",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Tengu",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Troll",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Vampire",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Vine Stalker",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "White Draconian",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Yak",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_",
+        "_suck_up_noun_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "context": "textdb-lua-fragment:database/monspeak.txt",
+      "english": "Yellow Draconian",
+      "keys": [
+        "_saint roka rival_",
+        "_hostile_orc_beogh_believer_speech_common_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    }
+  ],
+  "updated_parents": [
+    "_suck_up_noun_",
+    "_saint roka rival_",
+    "_hostile_orc_beogh_believer_speech_common_"
+  ],
+  "species_terms": {
+    "Ant": "蚂蚁",
+    "Armataur": "犰狳人",
+    "Barachi": "蛙人",
+    "Black Draconian": "黑龙人",
+    "Cat": "猫",
+    "Centaur": "半人马",
+    "Coglin": "机甲哥布林",
+    "Deep Dwarf": "地底矮人",
+    "Deep Elf": "地底精灵",
+    "Demigod": "半神",
+    "Demonspawn": "魔人",
+    "Djinni": "灯灵",
+    "Draconian": "龙人",
+    "Dwarf": "矮人",
+    "Elf": "精灵",
+    "Felid": "猫族",
+    "Formicid": "蚁族",
+    "Frog": "青蛙",
+    "Gargoyle": "石像鬼",
+    "Geist": "灵体",
+    "Ghoul": "食尸鬼",
+    "Gnoll": "豺狼人",
+    "Goblin": "地精",
+    "Green Draconian": "绿龙人",
+    "Grey Draconian": "灰龙人",
+    "Halfling": "半身人",
+    "High Elf": "高等精灵",
+    "Hill Orc": "山地兽人",
+    "Human": "人类",
+    "Kobold": "狗头人",
+    "Lava Orc": "熔岩兽人",
+    "Mayflytaur": "蜉蝣人",
+    "Merfolk": "人鱼",
+    "Meteoran": "星陨人",
+    "Minotaur": "牛头人",
+    "Mottled Draconian": "斑纹龙人",
+    "Mountain Dwarf": "山地矮人",
+    "Mummy": "木乃伊",
+    "Naga": "娜迦",
+    "Octopode": "章鱼人",
+    "Octopus": "章鱼",
+    "Oni": "鬼人",
+    "Pale Draconian": "苍白龙人",
+    "Poltergeist": "骚灵",
+    "Purple Draconian": "紫龙人",
+    "Red Draconian": "红龙人",
+    "Revenant": "还魂者",
+    "Sludge Elf": "淤泥精灵",
+    "Spriggan": "斯普利根",
+    "Tengu": "天狗",
+    "Troll": "巨魔",
+    "Vampire": "吸血鬼",
+    "Vine Stalker": "藤蔓人",
+    "White Draconian": "白龙人",
+    "Yak": "牦牛",
+    "Yellow Draconian": "黄龙人"
+  }
+}

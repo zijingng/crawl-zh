@@ -1,0 +1,23 @@
+{
+  "batch": "glossary-audit-01",
+  "scanned_entries": 11127,
+  "glossary_terms": 1707,
+  "translation_changes": 330,
+  "polysemous_terms_updated": 60,
+  "candidate_pairs_before": 3116,
+  "candidate_pairs_after_translation_review": 2664,
+  "candidate_pairs_after_glossary_review": 1717,
+  "candidate_classifications": {
+    "rule": 1514,
+    "context_review": 174,
+    "retained_executable_example_or_identifier": 29
+  },
+  "changed_translation_lookup_checks": 330,
+  "changed_textdb_exports_checked": 205,
+  "python_tests": 27,
+  "native_test_cases": 28,
+  "native_assertions": 14412,
+  "native_build": "Windows Tiles crawl.exe",
+  "manual_gameplay_tested": false,
+  "glossary_sha256": "92bf553f99af5641c1425d31753540e1fe182bfaa5129a4a140ce70d9d27d999"
+}

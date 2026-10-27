@@ -1,0 +1,31 @@
+{
+  "batch": "dynamic-logs-02",
+  "entries": 496,
+  "added": 494,
+  "updated": 2,
+  "by_kind": {
+    "fixed_log": 105,
+    "monster_event": 70,
+    "projectile_name": 201,
+    "projectile_verb": 4,
+    "projectile_effect": 3,
+    "actor_name": 1,
+    "beam_template": 9,
+    "ranged_template": 5,
+    "encounter_template": 4,
+    "equipment_template": 5,
+    "discovery_template": 3,
+    "encounter_title": 86
+  },
+  "all_batch_01_and_02_entries_in_po_and_generated_catalogue": true,
+  "all_source_and_code_fingerprints_current": true,
+  "glossary_unchanged": true,
+  "plain_encounter_titles_verified": 86,
+  "ui_manifest_entries": 6496,
+  "ui_exported": 6495,
+  "cpp_test_cases": 21,
+  "cpp_assertions": 11209,
+  "python_tests": 22,
+  "windows_tiles_build": "passed",
+  "gui_visual_review": false
+}

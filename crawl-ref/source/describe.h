@@ -54,9 +54,11 @@ struct describe_info
 };
 
 bool is_dumpable_artefact(const item_def &item);
+string item_origin_description(const item_def &item);
 
 string get_item_description(const item_def &item,
-                            item_description_mode mode = IDM_DEFAULT);
+                            item_description_mode mode = IDM_DEFAULT,
+                            bool display = false);
 
 bool describe_feature_wide(const coord_def& pos, bool do_actions=false);
 void describe_feature_type(dungeon_feature_type feat);
@@ -73,7 +75,8 @@ void get_item_desc(const item_def &item, describe_info &inf);
 void inscribe_item(item_def &item);
 void target_item(item_def &item);
 void desc_randart_props(const item_def &item, vector<string> &lines);
-string damage_rating(const item_def *item, int *rating_value = nullptr);
+string damage_rating(const item_def *item, int *rating_value = nullptr,
+                     string *display = nullptr);
 
 int describe_monster(const monster_info &mi, const string& footer = "");
 
@@ -82,7 +85,8 @@ void get_monster_db_desc(const monster_info &mi, describe_info &inf,
 branch_type serpent_of_hell_branch(monster_type m);
 string serpent_of_hell_flavour(monster_type m);
 
-string player_spell_desc(spell_type spell);
+// Canonical English by default, including Lua; UI must explicitly opt in.
+string player_spell_desc(spell_type spell, bool display = false);
 void get_spell_desc(const spell_type spell, describe_info &inf);
 void describe_spell(spell_type spelled,
                     const monster_info *mon_owner = nullptr,
@@ -95,6 +99,8 @@ void describe_bane(bane_type bane);
 string bane_long_description(bane_type bane, bool ignore_player = false);
 
 string short_ghost_description(const monster *mon, bool abbrev = false);
+// Display-only ghost prose. Unknown saved/custom titles leave output untouched.
+bool try_ghost_description_display(const monster_info &mi, string &output);
 string get_ghost_description(const monster_info &mi, bool concise = false);
 
 string get_skill_description(skill_type skill, bool need_title = false);
@@ -105,7 +111,8 @@ int hex_chance(const spell_type spell, const monster_info* mon_owner,
                bool is_wand = false);
 void describe_to_hit(const monster_info& mi, ostringstream &result,
                      const item_def* weapon = nullptr, bool verbose = false,
-                     attack *source = nullptr, int distance = 0);
+                     attack *source = nullptr, int distance = 0,
+                     string *display = nullptr);
 
 void describe_hit_chance(int hit_chance, ostringstream &result,
                          const item_def *weapon,
@@ -121,6 +128,7 @@ const char* get_size_adj(const size_type size, bool ignore_medium = false);
 
 const char* jewellery_base_ability_string(int subtype);
 string artefact_inscription(const item_def& item);
+bool try_artefact_display_inscription(const item_def &item, std::string &output);
 void add_inscription(item_def &item, string inscrip);
 
 string trap_name(trap_type trap);
@@ -136,3 +144,7 @@ string player_species_name();
 
 /* Public for testing purposes only: do not use elsewhere. */
 string _monster_habitat_description(const monster_info& mi);
+
+// Localized display helpers; canonical names and database keys stay English.
+string description_page_footer(int page, bool statuses, bool quote);
+string feature_type_display_title(dungeon_feature_type feat);

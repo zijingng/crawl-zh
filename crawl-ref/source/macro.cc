@@ -19,6 +19,7 @@
  */
 
 #include "AppHdr.h"
+#include "m-display.h"
 
 #include "macro.h"
 
@@ -788,7 +789,7 @@ void macro_save()
     f = fopen_u(macrofile.c_str(), "w");
     if (!f)
     {
-        mprf(MSGCH_ERROR, "Couldn't open %s for writing!", macrofile.c_str());
+        mprf(MSGCH_ERROR,ui_translate("m.ui", "Couldn't open %s for writing!"), macrofile.c_str());
         return;
     }
 
@@ -993,7 +994,7 @@ static string _keyseq_desc(const keyseq &key)
 static string _keyseq_action_desc(keyseq &action)
 {
     if (action.empty())
-        return "<red>[none]</red>";
+        return ui_translate("m.macro", "<red>[none]</red>");
 
     string action_str = vtostr(action);
     action_str = replace_all(action_str, "<", "<<");
@@ -1044,7 +1045,7 @@ public:
         // TODO: this seems like somehow it should involve ui::Switcher, but I
         // have no idea how to use that class with a Menu
         clear();
-        add_entry(new MenuEntry("Create/edit " + mode_name() + " from key", '~',
+        add_entry(new MenuEntry(ui_render("m.macro", "Create/edit %s from key", "Create/edit " + mode_name() + " from key", {mode_arg()}), '~',
             [this](const MenuEntry &)
                 {
                     edit_mapping(keyseq());
@@ -1052,7 +1053,7 @@ public:
                 }));
         if (get_map().size())
         {
-            MenuEntry *clear_entry = new MenuEntry("Clear all " + mode_name() + "s", '-',
+            MenuEntry *clear_entry = new MenuEntry(ui_render("m.macro", "Clear all %ss", "Clear all " + mode_name() + "s", {mode_arg()}), '-',
                 [this](const MenuEntry &)
                     {
                         status_msg = "";
@@ -1066,7 +1067,7 @@ public:
             clear_entry->add_hotkey(CK_NUMPAD_SUBTRACT2);
 
             add_entry(clear_entry);
-            add_entry(new MenuEntry("Current " + mode_name() + "s", MEL_SUBTITLE));
+            add_entry(new MenuEntry(ui_render("m.macro", "Current %ss", "Current " + mode_name() + "s", {mode_arg()}), MEL_SUBTITLE));
             for (auto &mapping : get_map())
             {
                 // TODO: indicate if macro is from rc file somehow?
@@ -1123,12 +1124,16 @@ public:
 
     void update_macro_more()
     {
+        ui_translation_group footer({{"m.macro", " cycle mode: "}, {"m.macro", " edit keymaps"},
+            {"m.macro", "Arrows/[<w>enter</w>] to select, [<w>bksp</w>] to clear selected, [<w>?</w>] for help\n"}});
+        for (const auto &mode : modes)
+            footer.require("m.macro.mode", mode.second.c_str());
         vector<string> result;
         for (auto m : modes)
             if (keymc == m.first)
-                result.push_back("<w>" + m.second + "</w>");
+                result.push_back("<w>" + string(footer.get("m.macro.mode", m.second.c_str())) + "</w>");
             else
-                result.push_back(m.second);
+                result.push_back(footer.get("m.macro.mode", m.second.c_str()));
 
         string hint;
         if (keymc != KMC_NONE)
@@ -1137,12 +1142,12 @@ public:
         // there's much less use-case for editing keymaps in-game, so hide the
         // details by default
         string mode_hint = edited_keymaps
-            ? " cycle mode: " + join_strings(result.begin(), result.end(), "|")
-            : " edit keymaps";
+            ? string(footer.get("m.macro", " cycle mode: ")) + join_strings(result.begin(), result.end(), "|")
+            : footer.get("m.macro", " edit keymaps");
 
         set_more(formatted_string::parse_string(
-            status_msg + "\n"
-            "Arrows/[<w>enter</w>] to select, [<w>bksp</w>] to clear selected, [<w>?</w>] for help\n"
+            status_msg + "\n" + footer.get("m.macro",
+            "Arrows/[<w>enter</w>] to select, [<w>bksp</w>] to clear selected, [<w>?</w>] for help\n")
             + menu_keyhelp_cmd(CMD_MENU_CYCLE_MODE)
             + mode_hint));
 
@@ -1163,20 +1168,25 @@ public:
         }
     }
 
+    ui_arg mode_arg()
+    {
+        return ui_text_arg("m.macro.mode", mode_name());
+    }
+
     virtual formatted_string calc_title() override
     {
         return formatted_string::parse_string(
-            "Editing <w>" + mode_name() + "s</w>.");
+            ui_render("m.macro", "Editing <w>%s</w>.", "Editing <w>" + mode_name() + "s</w>.", {mode_arg()}));
     }
 
     void clear_all()
     {
-        const string clear_prompt = make_stringf("Really clear all %ss?",
-                mode_name().c_str());
+        const string clear_prompt = ui_render("m.macro", "Really clear all %ss?", make_stringf("Really clear all %ss?",
+                mode_name().c_str()), {mode_arg()});
         if (yesno(clear_prompt.c_str(), true, 'N'))
         {
             get_map() = macromap();
-            status_msg = "All " + mode_name() + "s cleared!";
+            status_msg = ui_render("m.macro", "All %ss cleared!", "All " + mode_name() + "s cleared!", {mode_arg()});
             crawl_state.unsaved_macros = true;
             fill_entries();
         }
@@ -1203,10 +1213,10 @@ public:
         action_str = replace_all(action_str, "<", "<<");
         key_str = replace_all(key_str, "<", "<<");
 
-        status_msg = make_stringf("Cleared %s '%s' => '%s'.",
+        status_msg = ui_render("m.macro", "Cleared %s '%s' => '%s'.", make_stringf("Cleared %s '%s' => '%s'.",
                     mode_name().c_str(),
                     key_str.c_str(),
-                 action_str.c_str());
+                 action_str.c_str()), {mode_arg(), ui_literal_arg(key_str), ui_literal_arg(action_str)});
 
         macro_del(mapref, key);
         crawl_state.unsaved_macros = true;
@@ -1273,20 +1283,20 @@ public:
             clear();
             key.clear();
             set_more(string(""));
-            prompt = make_stringf(
+            prompt = ui_render("m.macro", "Input trigger key to edit or create a %s:", make_stringf(
                 "Input trigger key to edit or create a %s:",
-                parent.mode_name().c_str());
+                parent.mode_name().c_str()), {parent.mode_arg()});
             set_title(new MenuEntry(prompt, MEL_TITLE));
-            set_more("<lightgray>([<w>~</w>] to enter by keycode)</lightgray>");
+            set_more(ui_translate("m.macro", "<lightgray>([<w>~</w>] to enter by keycode)</lightgray>"));
             doing_key_input = true;
         }
 
         void reset_key_prompt()
         {
-            prompt = make_stringf("Current %s for %s: %s",
+            prompt = ui_render("m.macro", "Current %s for %s: %s", make_stringf("Current %s for %s: %s",
                         parent.mode_name().c_str(),
                         _keyseq_desc(key).c_str(),
-                        _keyseq_action_desc(action).c_str());
+                        _keyseq_action_desc(action).c_str()), {parent.mode_arg(), ui_literal_arg(_keyseq_desc(key)), ui_literal_arg(_keyseq_action_desc(action))});
 
             set_title(new MenuEntry(prompt + "\n", MEL_TITLE));
         }
@@ -1299,14 +1309,14 @@ public:
             reset_key_prompt();
             set_more(string(""));
 
-            add_entry(new MenuEntry("redefine", 'r',
+            add_entry(new MenuEntry(ui_translate("m.macro", "redefine"), 'r',
                 [this](const MenuEntry &)
                 {
                     set_more("");
                     return !edit_action();
                 }));
 
-            add_entry(new MenuEntry("redefine with raw key entry", 'R',
+            add_entry(new MenuEntry(ui_translate("m.macro", "redefine with raw key entry"), 'R',
                 [this](const MenuEntry &)
                 {
                     set_more("");
@@ -1316,7 +1326,7 @@ public:
 
             if (!action.empty())
             {
-                add_entry(new MenuEntry("clear", 'c',
+                add_entry(new MenuEntry(ui_translate("m.macro", "clear"), 'c',
                     [this](const MenuEntry &)
                     {
                         //weirdly MSVC requires the use of `this->` here
@@ -1325,7 +1335,7 @@ public:
                     }));
             }
 
-            add_entry(new MenuEntry("abort", 'a',
+            add_entry(new MenuEntry(ui_translate("m.macro", "abort"), 'a',
                 [this](const MenuEntry &)
                 {
                     abort = true;
@@ -1340,13 +1350,13 @@ public:
         /// except enter and esc
         void edit_action_raw()
         {
-            prompt = make_stringf(
+            prompt = ui_render("m.macro", "<w>%s</w>\nInput (raw) new %s for %s: ", make_stringf(
                 "<w>%s</w>\nInput (raw) new %s for %s: ",
                         prompt.c_str(),
                         parent.mode_name().c_str(),
-                        _keyseq_desc(key).c_str());
+                        _keyseq_desc(key).c_str()), {ui_literal_arg(prompt), parent.mode_arg(), ui_literal_arg(_keyseq_desc(key))});
             set_title(new MenuEntry(prompt, MEL_TITLE));
-            set_more("Raw input: [<w>esc</w>] to abort, [<w>enter</w>] to accept.");
+            set_more(ui_translate("m.macro", "Raw input: [<w>esc</w>] to abort, [<w>enter</w>] to accept."));
             update_menu(true);
 #ifdef USE_TILE_WEB
             // put the javascript menu mode in raw input mode
@@ -1364,14 +1374,14 @@ public:
         bool edit_action()
         {
             char buff[1024];
-            const string edit_prompt = make_stringf("<w>%s</w>\nInput new %s for %s:",
+            const string edit_prompt = ui_render("m.macro", "<w>%s</w>\nInput new %s for %s:", make_stringf("<w>%s</w>\nInput new %s for %s:",
                         prompt.c_str(),
                         parent.mode_name().c_str(),
-                        _keyseq_desc(key).c_str());
+                        _keyseq_desc(key).c_str()), {ui_literal_arg(prompt), parent.mode_arg(), ui_literal_arg(_keyseq_desc(key))});
 
             int old_last_hovered = last_hovered;
             set_hovered(-1);
-            set_more("Input a key sequence. Use <w>\\{n}</w> to enter keycode <w>n</w>. [<w>esc</w>] for menu");
+            set_more(ui_translate("m.macro", "Input a key sequence. Use <w>\\{n}</w> to enter keycode <w>n</w>. [<w>esc</w>] for menu"));
             if (!title_prompt(buff, sizeof(buff), edit_prompt.c_str()))
             {
                 set_hovered(old_last_hovered);
@@ -1385,7 +1395,7 @@ public:
             // issues with backslashes, for example
             if (!new_action.size())
             {
-                set_more(make_stringf("Parsing error in key sequence '%s'", buff));
+                set_more(ui_render("m.macro", "Parsing error in key sequence '%s'", make_stringf("Parsing error in key sequence '%s'", buff), {ui_literal_arg(buff)}));
                 return true;
             }
             set_hovered(old_last_hovered);
@@ -1458,12 +1468,10 @@ public:
                 else if (keyin == '~')
                 {
                     char buff[10];
-                    set_more("[<w>?</w>] Keycode help. "
-                        "Quick reference: 8: [<w>bksp</w>], "
-                        "9: [<w>tab</w>], 13: [<w>enter</w>], 27: [<w>esc</w>]"
+                    set_more(ui_translate("m.macro", "[<w>?</w>] Keycode help. Quick reference: 8: [<w>bksp</w>], 9: [<w>tab</w>], 13: [<w>enter</w>], 27: [<w>esc</w>]")
                         );
                     if (!title_prompt(buff, sizeof(buff),
-                        "Enter keycode by number:"
+                        ui_translate("m.macro", "Enter keycode by number:")
 #ifndef USE_TILE_LOCAL
                         , "console-keycodes"
 #endif
@@ -1543,11 +1551,11 @@ public:
                 && (!get_map().count(pop.key) || get_map()[pop.key] != pop.action))
             {
                 macro_add(get_map(), pop.key, pop.action);
-                status_msg = make_stringf("%s %s '%s' => '%s'.",
+                status_msg = ui_render("m.macro", "%s %s '%s' => '%s'.", make_stringf("%s %s '%s' => '%s'.",
                     existed ? "Redefined" : "Created",
                     mode_name().c_str(),
                     _keyseq_desc(pop.key).c_str(),
-                    _keyseq_action_desc(pop.key, get_map()).c_str());
+                    _keyseq_action_desc(pop.key, get_map()).c_str()), {ui_text_arg("m.macro", existed ? "Redefined" : "Created"), mode_arg(), ui_literal_arg(_keyseq_desc(pop.key)), ui_literal_arg(_keyseq_action_desc(pop.key, get_map()))});
                 crawl_state.unsaved_macros = true;
             }
             else if (!pop.action.size())
@@ -2285,12 +2293,12 @@ void bind_command_to_key(command_type cmd, int key)
     {
         if (command_name == "CMD_NO_CMD")
         {
-            mprf(MSGCH_ERROR, "Cannot bind command #%d to a key.",
+            mprf(MSGCH_ERROR,ui_translate("m.ui", "Cannot bind command #%d to a key."),
                  (int) cmd);
             return;
         }
 
-        mprf(MSGCH_ERROR, "Cannot bind command '%s' to a key.",
+        mprf(MSGCH_ERROR,ui_translate("m.ui", "Cannot bind command '%s' to a key."),
              command_name.c_str());
         return;
     }
@@ -2308,19 +2316,19 @@ void bind_command_to_key(command_type cmd, int key)
 
     if (is_userfunction(key))
     {
-        mprf(MSGCH_ERROR, "Cannot bind user function keys to a command.");
+        mprf(MSGCH_ERROR,"%s", ui_translate("m.ui", "Cannot bind user function keys to a command."));
         return;
     }
 
     if (is_synthetic_key(key))
     {
-        mprf(MSGCH_ERROR, "Cannot bind synthetic keys to a command.");
+        mprf(MSGCH_ERROR,"%s", ui_translate("m.ui", "Cannot bind synthetic keys to a command."));
         return;
     }
 
     if (!_allow_rebinding(key, context))
     {
-        mprf(MSGCH_ERROR, "Key %d in context %d cannot be rebound.",
+        mprf(MSGCH_ERROR,ui_translate("m.ui", "Key %d in context %d cannot be rebound."),
             key, (int) context);
         return;
     }

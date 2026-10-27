@@ -1,0 +1,197 @@
+{
+  "batch": "source-p-01",
+  "canonical_bodies": [
+    {
+      "file": "player-act.cc",
+      "signature": "string player::base_hand_name(",
+      "unchanged": true
+    },
+    {
+      "file": "player-act.cc",
+      "signature": "string player::hand_name(",
+      "unchanged": true
+    },
+    {
+      "file": "player-act.cc",
+      "signature": "string player::foot_name(",
+      "unchanged": true
+    },
+    {
+      "file": "player-act.cc",
+      "signature": "string player::arm_name(",
+      "unchanged": true
+    },
+    {
+      "file": "player-act.cc",
+      "signature": "string player::unarmed_attack_name(",
+      "unchanged": true
+    },
+    {
+      "file": "player-stats.cc",
+      "signature": "const char* stat_desc(",
+      "unchanged": true
+    },
+    {
+      "file": "player-equip.cc",
+      "signature": "int get_player_equip_slot_count(",
+      "unchanged": true
+    },
+    {
+      "file": "player-equip.cc",
+      "signature": "bool can_equip_item(",
+      "unchanged": true
+    },
+    {
+      "file": "player.cc",
+      "signature": "string describe_contamination(",
+      "unchanged": true
+    },
+    {
+      "file": "player.cc",
+      "signature": "string player_save_info::really_short_desc(",
+      "unchanged": true
+    },
+    {
+      "file": "player.cc",
+      "signature": "string player_save_info::short_desc(",
+      "unchanged": true
+    }
+  ],
+  "single_gizmo_hotkey_lookup": true,
+  "single_abyss_weighted_choice": true,
+  "glossary_sha256": "5b0e7563973cc4449b02977ed1d7b4cfb7f9aa33877063cff3f665c99ff50965",
+  "terms": [
+    {
+      "Term": "Armour",
+      "Translation": "防具/护身",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+    },
+    {
+      "Term": "Cheibriados",
+      "Translation": "切布理亚多",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "审慎之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+    },
+    {
+      "Term": "Dexterity",
+      "Translation": "敏捷/灵巧",
+      "Part of Speech": "noun",
+      "Variants": "Dex",
+      "Note": "三大基础属性之一\n【语境补充 2026-10-21】Dex 属性用敏捷。普通身手描述可用灵巧。"
+    },
+    {
+      "Term": "Gozag",
+      "Translation": "哥萨戈",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+    },
+    {
+      "Term": "Intelligence",
+      "Translation": "智力/智慧/心智",
+      "Part of Speech": "noun",
+      "Variants": "Int",
+      "Note": "三大基础属性之一\n【语境补充 2026-10-21】Int 属性用智力。生物认知、保有意识等叙述用智慧或心智。"
+    },
+    {
+      "Term": "potion of curing",
+      "Translation": "治疗药水",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Strength",
+      "Translation": "力量/强度/威力",
+      "Part of Speech": "noun",
+      "Variants": "Str",
+      "Note": "三大基础属性之一\n【语境补充 2026-10-21】Str 属性用力量。法术、效果或攻击的 strength 按语境用强度或威力。"
+    },
+    {
+      "Term": "Trog",
+      "Translation": "特洛戈",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+    },
+    {
+      "Term": "Yredelemnul",
+      "Translation": "伊莱德莱姆努尔",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+    },
+    {
+      "Term": "Shapeshifter",
+      "Translation": "变形者",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/shapeshifter.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Frozen Ramparts",
+      "Translation": "冰霜壁垒",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Fortress Blast",
+      "Translation": "堡垒冲击",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "body armour",
+      "Translation": "躯干防具",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【统一术语】装备部位，包含长袍、皮甲、锁子甲、板甲等；与包括头盔、手套、靴子等的大类“防具”区分。"
+    },
+    {
+      "Term": "Cacophony",
+      "Translation": "不谐狂响",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+    },
+    {
+      "Term": "Finesse",
+      "Translation": "精湛技艺",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+    },
+    {
+      "Term": "lance \"Wyrmbane\"",
+      "Translation": "骑枪「龙祸」",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+    },
+    {
+      "Term": "time-warped blood",
+      "Translation": "时间扭曲之血",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：时间扭曲之血。"
+    },
+    {
+      "Term": "sanguine armour",
+      "Translation": "凝血护甲",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：凝血护甲。"
+    }
+  ],
+  "notes": [
+    "step/slither use distinct movement-verb and noun contexts.",
+    "jelly as material is 胶质; the monster remains 胶怪.",
+    "potion of curing is 治疗药水; Trog is 特洛戈; Shapeshifter is 变形者.",
+    "Lua choose_stat_gain is a no-argument callback; its call and result handling are unchanged."
+  ]
+}

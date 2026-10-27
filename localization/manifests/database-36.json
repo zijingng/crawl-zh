@@ -1,0 +1,85 @@
+{
+  "source": "database/monspeak.txt",
+  "lua_results": [
+    {
+      "context": "textdb-lua:database/monspeak.txt",
+      "english": "VISUAL:@The_monster@ looks down at you expectantly.",
+      "keys": [
+        "friendly hound"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "context": "textdb-lua:database/monspeak.txt",
+      "english": "VISUAL:@The_monster@ looks up at you expectantly.",
+      "keys": [
+        "friendly hound"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "context": "textdb-lua:database/monspeak.txt",
+      "english": "VISUAL:A distinct wet dog smell emanates from @the_monster@.",
+      "keys": [
+        "friendly shoals hound"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "context": "textdb-lua:database/monspeak.txt",
+      "english": "VISUAL:@The_monster@ motions as if to dry @reflexive@ off on you.",
+      "keys": [
+        "friendly shoals hound"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "context": "textdb-lua:database/monspeak.txt",
+      "english": "@The_monster@ says, \"Ah, a wizard! I'll enjoy hearing you beg for your life.\" @player_only@",
+      "keys": [
+        "_asterion_rare_"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "context": "textdb-lua:database/monspeak.txt",
+      "english": "@The_monster@ says, \"You're no warrior. You fight like a peasant!\" @player_only@",
+      "keys": [
+        "_asterion_rare_"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "context": "textdb-lua:database/monspeak.txt",
+      "english": "@The_monster@ says, \"In the name of our god, lay down your life!\" @player_only@",
+      "keys": [
+        "_asterion_rare_"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "context": "textdb-lua:database/monspeak.txt",
+      "english": "@The_monster@ says, \"Kneel before Makhleb, unbeliever!\" @player_only@",
+      "keys": [
+        "_asterion_rare_"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "context": "textdb-lua:database/monspeak.txt",
+      "english": "@The_monster@ says, \"Ah, a fellow alchemist! Surely you'll appreciate what I've learned here.\" @player_only@",
+      "keys": [
+        "xak'krixis"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "context": "textdb-lua:database/monspeak.txt",
+      "english": "@The_monster@ says, \"Allow me to demonstrate my discoveries.\" @player_only@",
+      "keys": [
+        "xak'krixis"
+      ],
+      "review_status": "reviewed"
+    }
+  ]
+}

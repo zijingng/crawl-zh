@@ -1,0 +1,362 @@
+[
+  {
+    "english": "Fighter",
+    "planned": "战士",
+    "term": {
+      "Term": "Fighter",
+      "Translation": "战士",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行清单】已与 0.34.1 的背景名称清单对应。来源：dat/jobs/fighter.yaml。"
+    },
+    "approved": "战士"
+  },
+  {
+    "english": "Warrior",
+    "planned": "勇士",
+    "term": {
+      "Term": "Warrior",
+      "Translation": "勇士",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    "approved": "勇士"
+  },
+  {
+    "english": "Executioner",
+    "planned": "刽子手",
+    "term": {
+      "Term": "Executioner",
+      "Translation": "刽子手",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    "approved": "刽子手"
+  },
+  {
+    "english": "Conjurer",
+    "planned": "塑能师",
+    "term": {
+      "Term": "Conjurer",
+      "Translation": "塑能师",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/conjurer.yaml。"
+    },
+    "approved": "塑能师"
+  },
+  {
+    "english": "Destroyer",
+    "planned": "毁灭者",
+    "term": {
+      "Term": "destroyer",
+      "Translation": "毁灭者",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    "approved": "毁灭者"
+  },
+  {
+    "english": "Summoner",
+    "planned": "召唤师",
+    "term": {
+      "Term": "Summoner",
+      "Translation": "召唤师",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/summoner.yaml。"
+    },
+    "approved": "召唤师"
+  },
+  {
+    "english": "Worldbinder",
+    "planned": "世界缚者",
+    "term": {
+      "Term": "worldbinder",
+      "Translation": "世界扭曲者",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    "approved": "世界扭曲者"
+  },
+  {
+    "english": "Necromancer",
+    "planned": "死灵法师",
+    "term": {
+      "Term": "Necromancer",
+      "Translation": "死灵法师",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/necromancer.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    "approved": "死灵法师"
+  },
+  {
+    "english": "Cloud Mage",
+    "planned": "云雾法师",
+    "term": {
+      "Term": "Cloud Mage",
+      "Translation": "云雾法师",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    "approved": "云雾法师"
+  },
+  {
+    "english": "Hell Knight",
+    "planned": "地狱骑士",
+    "term": {
+      "Term": "hell knight",
+      "Translation": "地狱骑士",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    "approved": "地狱骑士"
+  },
+  {
+    "english": "Death Knight",
+    "planned": "死亡骑士",
+    "term": {
+      "Term": "death knight",
+      "Translation": "死亡骑士",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    "approved": "死亡骑士"
+  },
+  {
+    "english": "Kraken",
+    "planned": "北海巨妖",
+    "term": {
+      "Term": "kraken",
+      "Translation": "海妖",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    "approved": "海妖"
+  },
+  {
+    "english": "Iron Troll",
+    "planned": "钢铁巨魔",
+    "term": {
+      "Term": "iron troll",
+      "Translation": "铁巨魔",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    "approved": "铁巨魔"
+  },
+  {
+    "english": "Iron Golem",
+    "planned": "钢铁魔像",
+    "term": {
+      "Term": "iron golem",
+      "Translation": "铁魔像",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    "approved": "铁魔像"
+  },
+  {
+    "english": "Polterguardian",
+    "planned": "骚灵守卫",
+    "term": {
+      "Term": "polterguardian",
+      "Translation": "骚灵守卫",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    "approved": "骚灵守卫"
+  },
+  {
+    "english": "Undying Armoury",
+    "planned": "不朽武库",
+    "term": {
+      "Term": "undying armoury",
+      "Translation": "不死军械库",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    "approved": "不死军械库"
+  },
+  {
+    "english": "Hellbinder",
+    "planned": "地狱缚者",
+    "term": {
+      "Term": "Hellbinder",
+      "Translation": "缚狱者",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    "approved": "缚狱者"
+  },
+  {
+    "english": "Spatial Maelstrom",
+    "planned": "空间漩涡",
+    "term": {
+      "Term": "spatial maelstrom",
+      "Translation": "空间大旋涡",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    "approved": "空间大旋涡"
+  },
+  {
+    "english": "Swamp Dragon",
+    "planned": "沼泽龙",
+    "term": {
+      "Term": "swamp dragon",
+      "Translation": "沼泽龙",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    "approved": "沼泽龙"
+  },
+  {
+    "english": "Fire Dragon",
+    "planned": "火龙",
+    "term": {
+      "Term": "fire dragon",
+      "Translation": "火龙",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    "approved": "火龙"
+  },
+  {
+    "english": "Fire Storm",
+    "planned": "火焰风暴",
+    "term": {
+      "Term": "Fire Storm",
+      "Translation": "火焰风暴",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    "approved": "火焰风暴"
+  },
+  {
+    "english": "Ice Dragon",
+    "planned": "冰龙",
+    "term": {
+      "Term": "ice dragon",
+      "Translation": "冰龙",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    "approved": "冰龙"
+  },
+  {
+    "english": "Polar Vortex",
+    "planned": "极地涡旋",
+    "term": {
+      "Term": "Polar Vortex",
+      "Translation": "极地涡流",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    "approved": "极地涡流"
+  },
+  {
+    "english": "Storm Dragon",
+    "planned": "风暴龙",
+    "term": {
+      "Term": "storm dragon",
+      "Translation": "风暴龙",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    "approved": "风暴龙"
+  },
+  {
+    "english": "Twister",
+    "planned": "龙卷风",
+    "term": {
+      "Term": "twister",
+      "Translation": "龙卷风",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    "approved": "龙卷风"
+  },
+  {
+    "english": "Iron Dragon",
+    "planned": "铁龙",
+    "term": {
+      "Term": "iron dragon",
+      "Translation": "铁龙",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    "approved": "铁龙"
+  },
+  {
+    "english": "Royal Mummy",
+    "planned": "王室木乃伊",
+    "term": {
+      "Term": "royal mummy",
+      "Translation": "皇家木乃伊",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    "approved": "皇家木乃伊"
+  },
+  {
+    "english": "Pearl Dragon",
+    "planned": "珍珠龙",
+    "term": {
+      "Term": "pearl dragon",
+      "Translation": "珍珠龙",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    "approved": "珍珠龙"
+  },
+  {
+    "english": "Rockslime",
+    "planned": "岩石黏液",
+    "term": {
+      "Term": "rockslime",
+      "Translation": "岩石史莱姆",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    "approved": "岩石史莱姆"
+  },
+  {
+    "english": "Laughing Skull",
+    "planned": "欢笑骷髅",
+    "term": {
+      "Term": "laughing skull",
+      "Translation": "狂笑头骨",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    "approved": "狂笑头骨"
+  }
+]

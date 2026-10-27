@@ -1,0 +1,40 @@
+{
+  "baseline": "0.34.1",
+  "documents": [
+    {
+      "context": "help.document",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06",
+      "source_sha256": "ea3993556d98a6ac5542c9d24c469aad4ce80c8a09a82b4668d153d3425228d4",
+      "source": "crawl-ref/docs/quickstart.txt"
+    },
+    {
+      "context": "help.document",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06",
+      "source_sha256": "20e4729a10cb88a4860b683587fc453479114e25ae9dd5105a0d88d7b0114582",
+      "source": "crawl-ref/docs/macros_guide.txt"
+    },
+    {
+      "context": "help.document",
+      "review_status": "reviewed",
+      "review_batch": "help-ui-01",
+      "source_sha256": "0cd0d700b5420333fbedd6811fb62b13c20fd3e19d372a7f4ff990dc212c9a8a",
+      "source": "crawl-ref/docs/tiles_help.txt"
+    },
+    {
+      "context": "help.document",
+      "review_status": "reviewed",
+      "review_batch": "manual-aptitudes-01",
+      "source_sha256": "b45cdf81bfeff09913c3dee6c7a27742e664e85b34fe44d8f6ef661ce013a0a6",
+      "source": "crawl-ref/docs/crawl_manual.txt"
+    },
+    {
+      "context": "help.document",
+      "review_status": "reviewed",
+      "review_batch": "manual-aptitudes-01",
+      "source_sha256": "f5753ccab19540fb4155ff91766e38fb669a1c01cfb0bbfe3fc73b50d92892ec",
+      "source": "crawl-ref/docs/aptitudes.txt"
+    }
+  ]
+}

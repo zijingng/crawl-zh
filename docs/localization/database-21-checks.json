@@ -1,0 +1,58 @@
+{
+  "reviewed_keys": 121,
+  "cumulative_reviewed_keys": 408,
+  "candidates": 474,
+  "source_keys": 731,
+  "remaining_keys": 323,
+  "legacy_overlay_present_before": true,
+  "baseline_matching_dependency_refresh": {
+    "monster-speech-display.h": 279
+  },
+  "opaque_lua_keys": [
+    "_ijyb_common_"
+  ],
+  "upstream_unresolved_markers": [],
+  "address_comma_marker_supported": true,
+  "english_source_unchanged": true,
+  "structure_and_po_keys": 408,
+  "previous_translation_keys_unchanged": 287,
+  "runtime_ui_bodies_checked": 408,
+  "runtime_body_variants": [],
+  "english_selector_code_unchanged": true,
+  "english_replacement_core_unchanged": true,
+  "isolated_dependency_rejections": {
+    "grum": "dependency_changed",
+    "_grum_common_": "dependency_changed",
+    "_grum_rare_": "dependency_changed",
+    "_grum_verb_": "source_changed",
+    "grunn": "dependency_changed",
+    "_grunn_common_": "dependency_changed",
+    "_grunn_rare_": "dependency_changed"
+  },
+  "native_tests": 160,
+  "native_assertions": 991176,
+  "python_tests": 29,
+  "windows_tiles_build": "passed",
+  "executable": "crawl-ref/source/crawl.exe",
+  "executable_sha256": "5373e07050ce513a9634b2496a3e774ebbb1966475320facbba3779958ec69b7",
+  "visual_game_test": "not run",
+  "legacy_reference_files": [
+    "FAQ.txt",
+    "godname.txt",
+    "help.txt"
+  ],
+  "legacy_monspeak_reference_present": false,
+  "unreviewed_legacy_enabled": false,
+  "preserved_upstream_compatibility_keys": [
+    "jivya frederick triumphant"
+  ],
+  "ijyb_lua_test_evocations": [
+    0,
+    5
+  ],
+  "actual_monster_selector_types_added": 18,
+  "final_proofreading": [
+    "Classifier-neutral Harold retirement plan",
+    "No space after Chinese quotes before player-only control markers"
+  ]
+}

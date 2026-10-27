@@ -1,0 +1,319 @@
+{
+  "glossary_sha256": "d0189d13323ac31dd90c2654a5363043b25c85094ba3a4de5aa0eea54eaf0fd7",
+  "queries": [
+    "branch names",
+    "barbs",
+    "level",
+    "floor"
+  ],
+  "hits": [
+    {
+      "Term": "floor",
+      "Translation": "地面/楼层/地板/向下取整",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【语境补充 2026-10-21】物理表面按语境用地面或地板。地下城深度用楼层。math.floor 为向下取整函数，代码标识符保留英文。"
+    },
+    {
+      "Term": "Barbs status",
+      "Translation": "倒刺/倒刺状态",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态描述键】仅翻译显示文本，英文键保持不变；此文件中的存在性不保证所有模式都会产生该状态。 来源：dat/descript/status.txt。\n【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：倒刺。"
+    },
+    {
+      "Term": "the Dungeon",
+      "Translation": "地下城",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Ecumenical Temple",
+      "Translation": "众神殿",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Temple（规范缩写 Temple）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Orcish Mines",
+      "Translation": "兽人矿井",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Orcish Mines（规范缩写 Orc）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Elven Halls",
+      "Translation": "精灵大厅",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Elven Halls（规范缩写 Elf）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "Dwarven Hall",
+      "Translation": "矮人大厅",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Dwarven Hall（规范缩写 Dwarf）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Dwarven Hall",
+      "Translation": "矮人大厅",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Dwarven Hall（规范缩写 Dwarf）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Lair of Beasts",
+      "Translation": "野兽巢穴",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Lair（规范缩写 Lair）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Swamp",
+      "Translation": "沼泽",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Swamp（规范缩写 Swamp）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Shoals",
+      "Translation": "海滩",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Shoals（规范缩写 Shoals）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Snake Pit",
+      "Translation": "蛇穴",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Snake Pit（规范缩写 Snake）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Spider Nest",
+      "Translation": "蜘蛛巢",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Spider Nest（规范缩写 Spider）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Pits of Slime",
+      "Translation": "史莱姆巢穴",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Slime Pits（规范缩写 Slime）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Vaults",
+      "Translation": "宝库",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Vaults（规范缩写 Vaults）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "Hall of Blades",
+      "Translation": "刀刃大厅",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Hall of Blades（规范缩写 Blade）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Hall of Blades",
+      "Translation": "刀刃大厅",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Hall of Blades（规范缩写 Blade）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Crypt",
+      "Translation": "墓室",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Crypt（规范缩写 Crypt）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Tomb of the Ancients",
+      "Translation": "古人灵庙",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Tomb（规范缩写 Tomb）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Depths",
+      "Translation": "地底/深处",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Depths（规范缩写 Depths）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。\n【语境补充 2026-10-21】分支专名用地底。普通地点的纵深描述用深处。"
+    },
+    {
+      "Term": "the Iron City of Dis",
+      "Translation": "冥府铁城",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Dis（规范缩写 Dis）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Realm of Zot",
+      "Translation": "佐特领域",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Zot（规范缩写 Zot）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "Forest",
+      "Translation": "魔法森林",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Forest（规范缩写 Forest）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Enchanted Forest",
+      "Translation": "魔法森林",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Forest（规范缩写 Forest）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Abyss",
+      "Translation": "深渊",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Abyss（规范缩写 Abyss）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "a ziggurat",
+      "Translation": "神塔",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Ziggurat（规范缩写 Zig）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "Labyrinth",
+      "Translation": "迷宫",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Labyrinth（规范缩写 Lab）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "a Labyrinth",
+      "Translation": "迷宫",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Labyrinth（规范缩写 Lab）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "a bazaar",
+      "Translation": "市集",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Bazaar（规范缩写 Bazaar）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "a treasure trove",
+      "Translation": "秘藏",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Trove（规范缩写 Trove）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "a sewer",
+      "Translation": "下水道",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Sewer（规范缩写 Sewer）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "an ossuary",
+      "Translation": "埋骨地",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Ossuary（规范缩写 Ossuary）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "a bailey",
+      "Translation": "堡场",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Bailey（规范缩写 Bailey）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "a Gauntlet",
+      "Translation": "竞技场",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Gauntlet（规范缩写 Gauntlet）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "an ice cave",
+      "Translation": "冰窟",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Ice Cave（规范缩写 IceCv）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "a volcano",
+      "Translation": "火山",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Volcano（规范缩写 Volcano）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "a wizard's laboratory",
+      "Translation": "巫师实验室",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Wizlab（规范缩写 WizLab）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Desolation of Salt",
+      "Translation": "荒盐之地",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Desolation（规范缩写 Desolation）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "Arena",
+      "Translation": "奥格瓦如竞技场/竞技场",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Arena（规范缩写 Arena）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。\n【语境补充 2026-10-21】奥格瓦如的分支用奥格瓦如竞技场。怪物模拟模式或一般场地用竞技场。Gauntlet 依其完整专名。"
+    },
+    {
+      "Term": "the Arena",
+      "Translation": "奥格瓦如竞技场/竞技场",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Arena（规范缩写 Arena）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。\n【语境补充 2026-10-21】奥格瓦如的分支用奥格瓦如竞技场。怪物模拟模式或泛指场地用竞技场。"
+    },
+    {
+      "Term": "Crucible",
+      "Translation": "血肉熔炉",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Crucible（规范缩写 Crucible）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Crucible of Flesh",
+      "Translation": "血肉熔炉",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Crucible（规范缩写 Crucible）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "Necropolis",
+      "Translation": "亡者之城",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Necropolis（规范缩写 Necropolis）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "the Necropolis",
+      "Translation": "亡者之城",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Necropolis（规范缩写 Necropolis）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    }
+  ]
+}

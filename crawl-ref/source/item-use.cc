@@ -4,6 +4,9 @@
 **/
 
 #include "AppHdr.h"
+#include "target-display.h"
+#include "i18n.h"
+#include "i18n-item.h"
 
 #include "item-use.h"
 
@@ -32,6 +35,7 @@
 #include "hints.h"
 #include "invent.h"
 #include "item-prop.h"
+#include "item-name.h"
 #include "item-status-flag-type.h"
 #include "items.h"
 #include "known-items.h"
@@ -144,38 +148,43 @@ private:
     vector<operation_types> available_modes;
 };
 
+static string _item_use_reason(const string &english)
+{
+    return ui_translate("i.reason", english.c_str());
+}
+
 static string _default_use_title(operation_types oper)
 {
     switch (oper)
     {
     case OPER_EQUIP:
         return Options.equip_unequip
-            ? "Equip or unequip which item?"
-            : "Equip which item?";
+            ? ui_translate("i.ui", "Equip or unequip which item?")
+            : ui_translate("i.ui", "Equip which item?");
     case OPER_WIELD:
         return Options.equip_unequip
-            ? "Wield or unwield which item (- for none)?"
-            : "Wield which item (- for none)?";
+            ? ui_translate("i.ui", "Wield or unwield which item (- for none)?")
+            : ui_translate("i.ui", "Wield which item (- for none)?");
     case OPER_WEAR:
         if (Options.equip_unequip)
-            return "Wear or take off which item?";
-        return "Wear which item?";
+            return ui_translate("i.ui", "Wear or take off which item?");
+        return ui_translate("i.ui", "Wear which item?");
     case OPER_PUTON:
         return Options.equip_unequip
-            ? "Put on or remove which piece of jewellery?"
-            : "Put on which piece of jewellery?";
+            ? ui_translate("i.ui", "Put on or remove which piece of jewellery?")
+            : ui_translate("i.ui", "Put on which piece of jewellery?");
     case OPER_QUAFF:
-        return "Drink which item?";
+        return ui_translate("i.ui", "Drink which item?");
     case OPER_READ:
-        return "Read which item?";
+        return ui_translate("i.ui", "Read which item?");
     case OPER_EVOKE:
-        return "Evoke which item?";
+        return ui_translate("i.ui", "Evoke which item?");
     case OPER_TAKEOFF:
-        return "Take off which piece of armour?";
+        return ui_translate("i.ui", "Take off which piece of armour?");
     case OPER_REMOVE:
-        return "Remove which piece of jewellery?";
+        return ui_translate("i.ui", "Remove which piece of jewellery?");
     case OPER_UNEQUIP:
-        return "Unequip which item?";
+        return ui_translate("i.ui", "Unequip which item?");
     default:
         return "buggy";
     }
@@ -424,7 +433,7 @@ bool UseItemMenu::empty_check() const
         return false;
 
     mprf(MSGCH_PROMPT, "%s",
-        no_selectables_message(item_type_filter).c_str());
+        ui_translate("i.inventory.empty", no_selectables_message(item_type_filter).c_str()));
     return true;
 }
 
@@ -437,7 +446,7 @@ static void _note_tele_cancel(MenuEntry* entry)
         && ie->item->is_identified()
         && you.duration[DUR_TELEPORT])
     {
-        ie->text += " (cancels current teleport)";
+        ie->text += ui_translate("i.ui", " (cancels current teleport)");
     }
 }
 
@@ -457,9 +466,10 @@ void UseItemMenu::populate_menu()
     // it (currently) enables the inv section.
     if (show_unarmed())
     {
-        string hands_string = you.unarmed_attack_name("Unarmed");
+        const string original_hands = you.unarmed_attack_name("Unarmed");
+        string hands_string = ui_translate("i.ui", original_hands.c_str());
         if (!you.weapon())
-            hands_string += " (current attack)";
+            hands_string += ui_translate("i.ui", " (current attack)");
 
         MenuEntry *hands = new MenuEntry(hands_string, MEL_ITEM);
         if (!you.weapon())
@@ -479,7 +489,7 @@ void UseItemMenu::populate_menu()
         // items.
         if (!item_floor.empty())
         {
-            inv_header = new MenuEntry("Inventory Items", MEL_TITLE);
+            inv_header = new MenuEntry(ui_translate("i.ui", "Inventory Items"), MEL_TITLE);
             inv_header->colour = LIGHTCYAN;
             add_entry(inv_header);
         }
@@ -502,7 +512,7 @@ void UseItemMenu::populate_menu()
 #endif
         // Load floor items to menu. Always add a subtitle, even if there are
         // no inv items.
-        floor_header = new MenuEntry("Floor Items", MEL_TITLE);
+        floor_header = new MenuEntry(ui_translate("i.ui", "Floor Items"), MEL_TITLE);
         floor_header->colour = LIGHTCYAN;
         add_entry(floor_header);
 
@@ -619,28 +629,30 @@ void UseItemMenu::update_sections()
     for (; i < static_cast<int>(items.size()); i++)
         if (items[i]->level == MEL_ITEM)
             items[i]->set_enabled(!is_inventory);
-    const string cycle_hint = make_stringf("<lightgray> (%s to select)</lightgray>",
-            menu_keyhelp_cmd(CMD_MENU_CYCLE_HEADERS).c_str());
+    const string cycle_key = menu_keyhelp_cmd(CMD_MENU_CYCLE_HEADERS);
+    const string cycle_hint = ui_render("i.menu", "<lightgray> (%s to select)</lightgray>",
+        make_stringf("<lightgray> (%s to select)</lightgray>", cycle_key.c_str()),
+        {ui_literal_arg(cycle_key)});
 
     // a `,` will trigger quick activation, rather than cycle headers
     const bool easy_floor = Options.easy_floor_use && item_floor.size() == 1
         && (is_inventory || !inv_header);
     if (inv_header)
     {
-        inv_header->text = "Inventory Items";
+        inv_header->text = ui_translate("i.ui", "Inventory Items");
         if (!is_inventory)
             inv_header->text += cycle_hint;
     }
 
     if (floor_header)
     {
-        floor_header->text = "Floor Items";
+        floor_header->text = ui_translate("i.ui", "Floor Items");
         if (easy_floor)
         {
-            floor_header->text += make_stringf(
-                "<lightgray> (%s to %s)</lightgray>",
-                menu_keyhelp_cmd(CMD_MENU_CYCLE_HEADERS).c_str(),
-                _oper_name(oper).c_str());
+            floor_header->text += ui_render("i.menu", "<lightgray> (%s to %s)</lightgray>",
+                make_stringf("<lightgray> (%s to %s)</lightgray>",
+                    cycle_key.c_str(), _oper_name(oper).c_str()),
+                {ui_literal_arg(cycle_key), ui_text_arg("i.operation", _oper_name(oper))});
         }
         else if (is_inventory)
             floor_header->text += cycle_hint;
@@ -727,7 +739,7 @@ string UseItemMenu::get_keyhelp(bool) const
 
     // XX the logic here is getting convoluted, if only these were widgets...
     const string desc_key = is_set(MF_ARROWS_SELECT)
-                                    ? "[<w>?</w>] describe selected" : "";
+                                    ? ui_translate("i.ui", "[<w>?</w>] describe selected") : "";
     string full;
     string eu_modes;
     string modes;
@@ -739,7 +751,7 @@ string UseItemMenu::get_keyhelp(bool) const
         {
             eu_modes = "[<w>tab</w>] ";
             eu_modes += (generalize_oper(oper) == OPER_EQUIP)
-                ? "<w>equip</w>|unequip  " : "equip|<w>unequip</w>  ";
+                ? ui_translate("i.ui", "<w>equip</w>|unequip  ") : ui_translate("i.ui", "equip|<w>unequip</w>  ");
         }
 
         if (available_modes.size() > 1)
@@ -747,7 +759,7 @@ string UseItemMenu::get_keyhelp(bool) const
             vector<string> mode_names;
             for (const auto &o : available_modes)
             {
-                string n = _oper_name(o);
+                string n = ui_translate("i.operation", _oper_name(o).c_str());
                 if (o == oper)
                     n = "<w>" + n + "</w>";
                 mode_names.push_back(n);
@@ -907,19 +919,23 @@ static bool _can_generically_use_armour(bool wear=true)
     if (you.has_mutation(MUT_NO_ARMOUR))
     {
         if (wear)
-            mprf(MSGCH_PROMPT, "You can't wear anything.");
+            mprf(MSGCH_PROMPT, "%s", ui_translate("i.ui", "You can't wear anything."));
         else
         {
-            mprf(MSGCH_PROMPT, "You can't remove your %s, sorry.",
-                species::skin_name(you.species).c_str());
+            mprf(MSGCH_PROMPT, "%s", ui_render("i.use", "You can't remove your %s, sorry.",
+                make_stringf("You can't remove your %s, sorry.", species::skin_name(you.species).c_str()),
+                {ui_text_arg("i.skin", species::skin_name(you.species))}).c_str());
         }
         return false;
     }
 
     if (!form_can_wear())
     {
-        mprf(MSGCH_PROMPT, "You can't %s anything in your present form.",
-            wear ? "wear" : "remove");
+        mprf(MSGCH_PROMPT, "%s", ui_render("i.use", wear
+                ? "You can't wear anything in your present form."
+                : "You can't remove anything in your present form.",
+            make_stringf("You can't %s anything in your present form.", wear ? "wear" : "remove"),
+            {}).c_str());
         return false;
     }
 
@@ -931,9 +947,9 @@ static bool _can_wield_anything()
     item_def dummy_weapon;
     dummy_weapon.base_type = OBJ_WEAPONS;
     string veto_reason;
-    bool ret = can_equip_item(dummy_weapon, true, &veto_reason);
+    bool ret = can_equip_item(dummy_weapon, true, &veto_reason, true);
     if (!veto_reason.empty())
-        mprf(MSGCH_PROMPT, "%s", veto_reason.c_str());
+        mprf(MSGCH_PROMPT, "%s", _item_use_reason(veto_reason).c_str());
 
     return ret;
 }
@@ -976,9 +992,13 @@ static bool _can_generically_use(operation_types oper)
             && you_can_wear(SLOT_AMULET, true) == false
             && you.transform_uncancellable)
         {
-            mprf(MSGCH_PROMPT, "You can't %s jewellery%s.",
-                oper == OPER_PUTON ? "wear" : "remove",
-                you.has_mutation(MUT_NO_JEWELLERY) ? "" :  " in your present form");
+            const char *source = you.has_mutation(MUT_NO_JEWELLERY)
+                ? oper == OPER_PUTON ? "You can't wear jewellery." : "You can't remove jewellery."
+                : oper == OPER_PUTON ? "You can't wear jewellery in your present form."
+                                    : "You can't remove jewellery in your present form.";
+            mprf(MSGCH_PROMPT, "%s", ui_render("i.use", source,
+                make_stringf("You can't %s jewellery%s.", oper == OPER_PUTON ? "wear" : "remove",
+                    you.has_mutation(MUT_NO_JEWELLERY) ? "" : " in your present form"), {}).c_str());
             return false;
         }
         break;
@@ -992,7 +1012,7 @@ static bool _can_generically_use(operation_types oper)
 
     if (!err.empty())
     {
-        mprf(MSGCH_PROMPT, "%s", err.c_str());
+        mprf(MSGCH_PROMPT, "%s", _item_use_reason(err).c_str());
         return false;
     }
     return true;
@@ -1067,7 +1087,7 @@ static int _move_item_from_floor_to_inv(const item_def &to_get)
 
     if (!move_item_to_inv(to_get.index(), to_get.quantity, true))
     {
-        mpr("You can't carry that many items.");
+        mpr(ui_translate("phase4.item-use", "You can't carry that many items."));
         you.last_pickup = tmp_l_p;
     }
     // Get the slot of the last thing picked up
@@ -1105,7 +1125,7 @@ static item_def* _item_swap_menu(const vector<item_def*>& candidates)
         item->flags |= ISFLAG_MARKED_FOR_MENU;
 
     int ret = prompt_invent_item(
-                "To do this, you must remove one of the following items:",
+                ui_translate("i.ui", "To do this, you must remove one of the following items:"),
                 menu_type::invlist, OSEL_MARKED_ITEMS, OPER_UNEQUIP,
                 invprompt_flag::no_warning | invprompt_flag::hide_known);
 
@@ -1137,6 +1157,16 @@ static bool _equipment_effectively_identical(const item_def& item1, const item_d
            && item1.brand == item2.brand
            && !item1.cursed() && !item2.cursed()
            && !is_artefact(item1) && !is_artefact(item2);
+}
+
+string equipment_swap_choice_display(const item_def &item, char key)
+{
+    const string escaped = key == '<' ? "<<" : string(1, key);
+    const string original = "<w>" + escaped + "</w> or " + item.name(DESC_INVENTORY);
+    string name;
+    const bool available = try_item_display_name(item, name, true, true);
+    return ui_render("i.swap", "<w>%s</w> or %s", original,
+        {ui_literal_arg(escaped), {name, available}});
 }
 
 static item_def* _item_swap_prompt(const vector<item_def*>& candidates)
@@ -1179,20 +1209,12 @@ static item_def* _item_swap_prompt(const vector<item_def*>& candidates)
 
     clear_messages();
 
-    mprf(MSGCH_PROMPT,
-         "To do this, you must remove one of the following items:");
-    mprf(MSGCH_PROMPT, "(<w>?</w> for menu, <w>Esc</w> to cancel)");
+    mprf(MSGCH_PROMPT, "%s", ui_translate("i.ui", "To do this, you must remove one of the following items:"));
+    mprf(MSGCH_PROMPT, "%s", ui_translate("i.ui", "(<w>?</w> for menu, <w>Esc</w> to cancel)"));
 
     for (size_t i = 0; i < candidates.size(); i++)
     {
-        string m = "<w>";
-        const char key = _item_swap_keys[i];
-        m += key;
-        if (key == '<')
-            m += '<';
-
-        m += "</w> or " + candidates[i]->name(DESC_INVENTORY);
-        mprf_nocap("%s", m.c_str());
+        mprf_nocap("%s", equipment_swap_choice_display(*candidates[i], _item_swap_keys[i]).c_str());
     }
     flush_prev_message();
 
@@ -1260,6 +1282,8 @@ bool warn_about_changing_gear(const vector<item_def*>& to_remove, item_def* to_e
     {
         string prompt = "You can't shoot while berserk! Really wield " +
                         to_equip->name(DESC_INVENTORY) + "?";
+        prompt = ui_render("i.use", "You can't shoot while berserk! Really wield %s?",
+            prompt, {ui_inventory_item_arg(*to_equip)});
         if (!yesno(prompt.c_str(), false, 'n'))
         {
             canned_msg(MSG_OK);
@@ -1287,9 +1311,12 @@ bool warn_about_changing_gear(const vector<item_def*>& to_remove, item_def* to_e
     }
 
     string reason;
-    if (needs_delay && !i_feel_safe(false, false, false, true, -1, &reason))
+    ui_arg display_reason{"", false};
+    if (needs_delay && !i_feel_safe(false, false, false, true, -1, &reason, &display_reason))
     {
-        string warning = make_stringf("Spend multiple turns changing equipment while %s?", reason.c_str());
+        string warning = ui_render("i.use", "Spend multiple turns changing equipment while %s?",
+            make_stringf("Spend multiple turns changing equipment while %s?", reason.c_str()),
+            {display_reason});
         if (!yesno(warning.c_str(), true, 'n'))
         {
             canned_msg(MSG_OK);
@@ -1310,9 +1337,14 @@ bool warn_about_changing_gear(const vector<item_def*>& to_remove, item_def* to_e
             {
                 if (++removed_flight >= equipped_flight)
                 {
-                    mprf(MSGCH_PROMPT, "Removing %s right now would cause you to %s!",
+                    mprf(MSGCH_PROMPT, "%s", ui_render("i.use",
+                        env.grid(you.pos()) == DNGN_DEEP_WATER
+                            ? "Removing %s right now would cause you to drown!"
+                            : "Removing %s right now would cause you to burn!",
+                        make_stringf("Removing %s right now would cause you to %s!",
                             item->name(DESC_YOUR).c_str(),
-                            env.grid(you.pos()) == DNGN_DEEP_WATER ? "drown" : "burn");
+                            env.grid(you.pos()) == DNGN_DEEP_WATER ? "drown" : "burn"),
+                        {ui_item_arg(*item)}).c_str());
                     return false;
                 }
             }
@@ -1328,9 +1360,9 @@ bool try_equip_item(item_def& item)
         return use_talisman(item);
 
     string reason;
-    if (!can_equip_item(item, true, &reason))
+    if (!can_equip_item(item, true, &reason, true))
     {
-        mprf(MSGCH_PROMPT, "%s", reason.c_str());
+        mprf(MSGCH_PROMPT, "%s", _item_use_reason(reason).c_str());
         return false;
     }
 
@@ -1338,7 +1370,7 @@ bool try_equip_item(item_def& item)
     // to even pick it up, first
     if (item.pos != ITEM_IN_INVENTORY && !room_in_inventory(item))
     {
-        mpr("You can't carry that many items.");
+        mpr(ui_translate("phase4.item-use", "You can't carry that many items."));
         return false;
     }
     else if (item_is_equipped(item))
@@ -1489,8 +1521,8 @@ bool handle_chain_removal(vector<item_def*>& to_remove, bool interactive)
         {
             if ((int)chain_remove.size() < chain_remove_num)
             {
-                mprf(MSGCH_PROMPT, "A cursed item is preventing you from removing %s.",
-                        item.name(DESC_INVENTORY).c_str());
+                mprf(MSGCH_PROMPT, "%s", ui_render("i.use", "A cursed item is preventing you from removing %s.",
+                make_stringf("A cursed item is preventing you from removing %s.", item.name(DESC_INVENTORY).c_str()), {ui_inventory_item_arg(item)}).c_str());
                 return false;
             }
             // We must remove all of the items found.
@@ -1582,8 +1614,10 @@ void do_equipment_change(item_def* to_equip, equipment_slot equip_slot,
                 start_delay<EquipOffDelay>(1, *item);
             else
             {
-                mprf("You %s %s.", item_unequip_verb(*item).c_str(),
-                                   item->name(DESC_YOUR).c_str());
+                mpr(ui_render("i.use", "You %s %s.",
+                    make_stringf("You %s %s.", item_unequip_verb(*item).c_str(),
+                        item->name(DESC_YOUR).c_str()),
+                    {ui_text_arg("i.operation", item_unequip_verb(*item)), ui_item_arg(*item)}));
                 unequip_item(*item);
             }
         }
@@ -1616,8 +1650,8 @@ bool can_unequip_item(item_def& item, bool silent)
     {
         if (!silent)
         {
-            mprf(MSGCH_PROMPT, "%s is melded into your body!",
-                               item.name(DESC_YOUR).c_str());
+            mprf(MSGCH_PROMPT, "%s", ui_render("i.use", "%s is melded into your body!",
+                make_stringf("%s is melded into your body!", item.name(DESC_YOUR).c_str()), {ui_item_arg(item)}).c_str());
         }
         return false;
     }
@@ -1626,8 +1660,8 @@ bool can_unequip_item(item_def& item, bool silent)
     {
         if (!silent)
         {
-            mprf(MSGCH_PROMPT, "%s is stuck to your body!",
-                                item.name(DESC_YOUR).c_str());
+            mprf(MSGCH_PROMPT, "%s", ui_render("i.use", "%s is stuck to your body!",
+                make_stringf("%s is stuck to your body!", item.name(DESC_YOUR).c_str()), {ui_item_arg(item)}).c_str());
         }
         return false;
     }
@@ -1636,8 +1670,8 @@ bool can_unequip_item(item_def& item, bool silent)
     {
         if (!silent)
         {
-            mprf(MSGCH_PROMPT, "Your thirst for blood prevents you from unwielding "
-                               "your weapon!");
+            mprf(MSGCH_PROMPT, "%s", ui_translate("i.ui", "Your thirst for blood prevents you from unwielding "
+                               "your weapon!"));
         }
         return false;
     }
@@ -1646,8 +1680,8 @@ bool can_unequip_item(item_def& item, bool silent)
     {
         if (!silent)
         {
-            mprf(MSGCH_PROMPT, "It would be unfitting for someone so glorious to "
-                               "remove their crown in front of an audience.");
+            mprf(MSGCH_PROMPT, "%s", ui_translate("i.ui", "It would be unfitting for someone so glorious to "
+                               "remove their crown in front of an audience."));
         }
         return false;
     }
@@ -1836,11 +1870,11 @@ void prompt_inscribe_item()
 {
     if (inv_count() < 1)
     {
-        mpr("You don't have anything to inscribe.");
+        mpr(ui_translate("phase4.item-use", "You don't have anything to inscribe."));
         return;
     }
 
-    int item_slot = prompt_invent_item("Inscribe which item?",
+    int item_slot = prompt_invent_item(ui_translate("i.ui", "Inscribe which item?"),
                                        menu_type::invlist, OSEL_ANY);
 
     if (prompt_failed(item_slot))
@@ -1881,11 +1915,11 @@ bool oni_drunken_swing()
         bool success = false;
         if (you.weapon())
         {
-            mprf("You take a swig of the potion and twirl %s.",
-                 you.weapon()->name(DESC_YOUR).c_str());
+            mpr(ui_render("i.use", "You take a swig of the potion and twirl %s.",
+                make_stringf("You take a swig of the potion and twirl %s.", you.weapon()->name(DESC_YOUR).c_str()), {ui_item_arg(*you.weapon())}));
         }
         else
-            mpr("You take a swig of the potion and flex your muscles.");
+            mpr(ui_translate("phase4.item-use", "You take a swig of the potion and flex your muscles."));
 
         for (actor* victim : targets)
         {
@@ -1911,7 +1945,7 @@ bool drink(item_def* potion)
     string r = cannot_drink_item_reason(potion, true, true);
     if (!r.empty())
     {
-        mpr(r);
+        mpr(_item_use_reason(r));
         return false;
     }
     ASSERT(potion);
@@ -1929,6 +1963,9 @@ bool drink(item_def* potion)
                                  potion->name(DESC_DBNAME).c_str(),
                                  penance ? " This action would place"
                                            " you under penance!" : "");
+    prompt = ui_render("i.use", "Really quaff %s?%s", prompt,
+        {ui_single_item_arg(*potion), penance
+            ? ui_text_arg("i.use", " This action would place you under penance!") : ui_literal_arg("")});
     if (alreadyknown && (is_dangerous_item(*potion, true) || penance)
         && Options.bad_item_prompt
         && !yesno(prompt.c_str(), false, 'n'))
@@ -1946,6 +1983,8 @@ bool drink(item_def* potion)
                                             "while wearing %s?",
                                             item->name(DESC_THE, false, true,
                                                        false).c_str());
+        unrand_prompt = ui_render("i.use", "Really quaff with monsters nearby while wearing %s?", unrand_prompt,
+            {ui_item_arg(*item)});
 
         if (item->props[VICTORY_STAT_KEY].get_int() > 0
             && nearby_mons
@@ -1998,15 +2037,15 @@ bool drink(item_def* potion)
             || potion->sub_type == POT_MIGHT
             || potion->sub_type == POT_RESISTANCE))
         {
-            mprf("Your mutated metabolism churns, savouring the %s.",
-                potion->name(DESC_QUALNAME).c_str());
+            mpr(ui_render("i.use", "Your mutated metabolism churns, savouring the %s.",
+                make_stringf("Your mutated metabolism churns, savouring the %s.", potion->name(DESC_QUALNAME).c_str()), {ui_single_item_arg(*potion)}));
         }
 
     if (!alreadyknown)
     {
         if (heal_on_id)
         {
-            mpr("The energy of discovery flows from your fingertips!");
+            mpr(ui_translate("phase4.item-use", "The energy of discovery flows from your fingertips!"));
             potionlike_effect(POT_HEAL_WOUNDS, 40);
         }
 
@@ -2116,6 +2155,7 @@ static void _brand_weapon(item_def &wpn)
     you.wield_change = true;
 
     const string itname = _item_name(wpn);
+    const ui_arg display_name = ui_item_arg(wpn);
 
     _rebrand_weapon(wpn);
 
@@ -2126,87 +2166,104 @@ static void _brand_weapon(item_def &wpn)
     {
     case SPWPN_HEAVY:
         flash_colour = BROWN;
-        mprf("%s becomes incredibly heavy!",itname.c_str());
+        mpr(ui_render("i.brand", "%s becomes incredibly heavy!",
+            make_stringf("%s becomes incredibly heavy!", itname.c_str()), {display_name}));
         break;
 
     case SPWPN_PROTECTION:
         flash_colour = YELLOW;
-        mprf("%s projects an invisible shield of force!",itname.c_str());
+        mpr(ui_render("i.brand", "%s projects an invisible shield of force!",
+            make_stringf("%s projects an invisible shield of force!", itname.c_str()), {display_name}));
         break;
 
     case SPWPN_FLAMING:
         flash_colour = RED;
-        mprf("%s is engulfed in flames!", itname.c_str());
+        mpr(ui_render("i.brand", "%s is engulfed in flames!",
+            make_stringf("%s is engulfed in flames!", itname.c_str()), {display_name}));
         break;
 
     case SPWPN_FREEZING:
         flash_colour = LIGHTCYAN;
-        mprf("%s is covered with a thin layer of ice!", itname.c_str());
+        mpr(ui_render("i.brand", "%s is covered with a thin layer of ice!",
+            make_stringf("%s is covered with a thin layer of ice!", itname.c_str()), {display_name}));
         break;
 
     case SPWPN_DRAINING:
         flash_colour = DARKGREY;
-        mprf("%s craves living souls!", itname.c_str());
+        mpr(ui_render("i.brand", "%s craves living souls!",
+            make_stringf("%s craves living souls!", itname.c_str()), {display_name}));
         break;
 
     case SPWPN_VAMPIRISM:
         flash_colour = DARKGREY;
-        mprf("%s thirsts for the lives of mortals!", itname.c_str());
+        mpr(ui_render("i.brand", "%s thirsts for the lives of mortals!",
+            make_stringf("%s thirsts for the lives of mortals!", itname.c_str()), {display_name}));
         break;
 
     case SPWPN_VENOM:
         flash_colour = GREEN;
-        mprf("%s drips with poison.", itname.c_str());
+        mpr(ui_render("i.brand", "%s drips with poison.",
+            make_stringf("%s drips with poison.", itname.c_str()), {display_name}));
         break;
 
     case SPWPN_ELECTROCUTION:
         flash_colour = LIGHTCYAN;
-        mprf("%s crackles with electricity.", itname.c_str());
+        mpr(ui_render("i.brand", "%s crackles with electricity.",
+            make_stringf("%s crackles with electricity.", itname.c_str()), {display_name}));
         break;
 
     case SPWPN_CHAOS:
         flash_colour = random_colour();
-        mprf("%s erupts in a glittering mayhem of colour.", itname.c_str());
+        mpr(ui_render("i.brand", "%s erupts in a glittering mayhem of colour.",
+            make_stringf("%s erupts in a glittering mayhem of colour.", itname.c_str()), {display_name}));
         break;
 
     case SPWPN_ACID:
         flash_colour = ETC_SLIME;
-        mprf("%s oozes corrosive slime.", itname.c_str());
+        mpr(ui_render("i.brand", "%s oozes corrosive slime.",
+            make_stringf("%s oozes corrosive slime.", itname.c_str()), {display_name}));
         break;
 
     case SPWPN_SPECTRAL:
         flash_colour = BLUE;
-        mprf("%s acquires a faint afterimage.", itname.c_str());
+        mpr(ui_render("i.brand", "%s acquires a faint afterimage.",
+            make_stringf("%s acquires a faint afterimage.", itname.c_str()), {display_name}));
         break;
 
     case SPWPN_REBUKE:
         flash_colour = WHITE;
-        mprf("%s quivers with indignation.", itname.c_str());
+        mpr(ui_render("i.brand", "%s quivers with indignation.",
+            make_stringf("%s quivers with indignation.", itname.c_str()), {display_name}));
         break;
 
     case SPWPN_VALOUR:
         flash_colour = WHITE;
-        mprf("%s thrums with vital power.", itname.c_str());
+        mpr(ui_render("i.brand", "%s thrums with vital power.",
+            make_stringf("%s thrums with vital power.", itname.c_str()), {display_name}));
         break;
 
     case SPWPN_ENTANGLING:
         flash_colour = LIGHTGREEN;
-        mprf("%s erupts in a tangle of vines.", itname.c_str());
+        mpr(ui_render("i.brand", "%s erupts in a tangle of vines.",
+            make_stringf("%s erupts in a tangle of vines.", itname.c_str()), {display_name}));
         break;
 
     case SPWPN_SUNDERING:
         flash_colour = LIGHTRED;
-        mprf("%s becomes viciously sharp.", itname.c_str());
+        mpr(ui_render("i.brand", "%s becomes viciously sharp.",
+            make_stringf("%s becomes viciously sharp.", itname.c_str()), {display_name}));
         break;
 
     case SPWPN_CONCUSSION:
         flash_colour = YELLOW;
-        mprf("%s begins to exert an overwhelming pressure.", itname.c_str());
+        mpr(ui_render("i.brand", "%s begins to exert an overwhelming pressure.",
+            make_stringf("%s begins to exert an overwhelming pressure.", itname.c_str()), {display_name}));
         break;
 
     case SPWPN_DEVIOUS:
         flash_colour = BLUE;
-        mprf("%s glints wickedly in the shadows.", itname.c_str());
+        mpr(ui_render("i.brand", "%s glints wickedly in the shadows.",
+            make_stringf("%s glints wickedly in the shadows.", itname.c_str()), {display_name}));
         break;
 
     default:
@@ -2217,7 +2274,9 @@ static void _brand_weapon(item_def &wpn)
     if (success)
     {
         item_set_appearance(wpn);
-        mprf_nocap("%s", wpn.name(DESC_INVENTORY_EQUIP).c_str());
+        string display_inventory;
+        mprf_nocap("%s", try_item_display_name(wpn, display_inventory, true)
+            ? display_inventory.c_str() : wpn.name(DESC_INVENTORY_EQUIP).c_str());
         // Might be rebranding to/from protection or evasion.
         you.redraw_armour_class = true;
         you.redraw_evasion = true;
@@ -2238,7 +2297,7 @@ static item_def* _choose_target_item_for_scroll(bool scroll_known, object_select
                        {
                            if (scroll_known
                                || crawl_state.seen_hups
-                               || yesno("Really abort (and waste the scroll)?", false, 0))
+                               || yesno(ui_translate("i.ui", "Really abort (and waste the scroll)?"), false, 0))
                            {
                                return true;
                            }
@@ -2263,8 +2322,8 @@ static item_def* _scroll_choose_weapon(bool alreadyknown, const string &pre_msg,
     const bool branding = scroll == SCR_BRAND_WEAPON;
 
     item_def* target = _choose_target_item_for_scroll(alreadyknown, _enchant_selector(scroll),
-                                                      branding ? "Brand which weapon?"
-                                                               : "Enchant which weapon?");
+                                                      branding ? ui_translate("i.ui", "Brand which weapon?")
+                                                               : ui_translate("i.ui", "Enchant which weapon?"));
     if (!target)
         return target;
 
@@ -2312,6 +2371,7 @@ bool enchant_weapon(item_def &wpn, bool quiet)
 
     // Get item name now before changing enchantment.
     string iname = _item_name(wpn);
+    const ui_arg display_name = ui_item_arg(wpn);
 
     if (is_enchantable_weapon(wpn))
     {
@@ -2320,7 +2380,10 @@ bool enchant_weapon(item_def &wpn, bool quiet)
         if (!quiet)
         {
             const char* dur = wpn.plus < MAX_WPN_ENCHANT ? "moment" : "while";
-            mprf("%s glows red for a %s.", iname.c_str(), dur);
+            mpr(ui_render("i.enchant", wpn.plus < MAX_WPN_ENCHANT
+                ? "%s glows red for a moment." : "%s glows red for a while.",
+                make_stringf("%s glows red for a %s.", iname.c_str(), dur),
+                {display_name}));
         }
     }
 
@@ -2376,7 +2439,7 @@ static bool _identify(bool alreadyknown, const string &pre_msg)
     if (!itemp)
     {
         itemp = _choose_target_item_for_scroll(alreadyknown, OSEL_UNIDENT,
-            "Identify which item? (\\ to view known items)");
+            ui_translate("i.ui", "Identify which item? (\\ to view known items)"));
     }
 
     if (!itemp)
@@ -2468,6 +2531,7 @@ bool enchant_armour(item_def &arm, bool quiet)
     }
 
     string name = _item_name(arm);
+    const ui_arg display_name = ui_item_arg(arm);
 
     ++arm.plus;
 
@@ -2477,7 +2541,10 @@ bool enchant_armour(item_def &arm, bool quiet)
                             && arm.sub_type != ARM_TROLL_LEATHER_ARMOUR;
         string glow = conjugate_verb("glow", plural);
         const char* dur = is_enchantable_armour(arm) ? "moment" : "while";
-        mprf("%s %s green for a %s.", name.c_str(), glow.c_str(), dur);
+        mpr(ui_render("i.enchant", is_enchantable_armour(arm)
+            ? "%s glows green for a moment." : "%s glows green for a while.",
+            make_stringf("%s %s green for a %s.", name.c_str(), glow.c_str(), dur),
+            {display_name}));
     }
 
     return true;
@@ -2503,7 +2570,7 @@ static bool _handle_enchant_armour(bool alreadyknown, const string &pre_msg)
     if (!target)
     {
         target = _choose_target_item_for_scroll(alreadyknown,
-            OSEL_ENCHANTABLE_ARMOUR, "Enchant which item?");
+            OSEL_ENCHANTABLE_ARMOUR, ui_translate("i.ui", "Enchant which item?"));
     }
 
     if (!target)
@@ -2550,7 +2617,7 @@ static void _vulnerability_scroll()
     }
 
     you.strip_willpower(&you, dur, true);
-    mpr("A wave of despondency washes over your surroundings.");
+    mpr(ui_translate("phase4.item-use", "A wave of despondency washes over your surroundings."));
 }
 
 static bool _handle_amnesia(bool alreadyknown)
@@ -2564,7 +2631,7 @@ static bool _handle_amnesia(bool alreadyknown)
         {
             if (crawl_state.seen_hups)
                 return false;
-            if (!yesno("Really abort (and waste the scroll)?", false, 0))
+            if (!yesno(ui_translate("i.ui", "Really abort (and waste the scroll)?"), false, 0))
                 continue;
         }
 
@@ -2617,18 +2684,18 @@ static vector<string> _desc_finite_wl(const monster_info& mi)
     vector<string> r;
     const int wl = mi.willpower();
     if (wl == WILL_INVULN)
-        r.push_back("infinite will");
+        r.push_back(target_description_text("i.target", "infinite will"));
     else
-        r.push_back("susceptible");
+        r.push_back(target_description_text("i.target", "susceptible"));
     return r;
 }
 
 static vector<string> _desc_res_torment(const monster_info& mi)
 {
     if (mi.resists() & (MR_RES_TORMENT))
-        return { "not susceptible" };
+        return { target_description_text("i.target", "not susceptible") };
     else
-        return { "susceptible" };
+        return { target_description_text("i.target", "susceptible") };
 }
 
 class targeter_finite_will : public targeter_multimonster
@@ -2846,7 +2913,7 @@ bool read(item_def* scroll, dist *target)
     string failure_reason = cannot_read_item_reason(scroll);
     if (!failure_reason.empty())
     {
-        mpr(failure_reason);
+        mpr(_item_use_reason(failure_reason));
         return false;
     }
     ASSERT(scroll);
@@ -2864,6 +2931,10 @@ bool read(item_def* scroll, dist *target)
                                              verb_object.c_str(),
                                              hostile_check ? ""
                     : " and you can't even see any enemies this would affect");
+        penance_prompt = ui_render("i.scroll.confirm", hostile_check
+            ? "Really read %s? This action would place you under penance!"
+            : "Really read %s? This action would place you under penance and you can't even see any enemies this would affect!",
+            penance_prompt, {ui_single_item_arg(*scroll)});
 
         targeter_radius hitfunc(&you, LOS_NO_TRANS);
 
@@ -2888,20 +2959,20 @@ bool read(item_def* scroll, dist *target)
             return false;
         }
         else if (bad_item
-                 && !yesno(make_stringf("Really %s?%s",
-                                        verb_object.c_str(),
-                                        hostile_check ? ""
-                        : " You can't even see any enemies this would affect."
-                                        ).c_str(),
-                           false, 'n'))
+                 && !yesno(ui_render("i.scroll.confirm", hostile_check
+                        ? "Really read %s?"
+                        : "Really read %s? You can't even see any enemies this would affect.",
+                    make_stringf("Really %s?%s", verb_object.c_str(), hostile_check ? ""
+                        : " You can't even see any enemies this would affect."),
+                    {ui_single_item_arg(*scroll)}).c_str(), false, 'n'))
         {
             canned_msg(MSG_OK);
             return false;
         }
-        else if (!bad_item && !hostile_check && !yesno(make_stringf(
-            "You can't see any enemies this would affect, really %s?",
-                                        verb_object.c_str()).c_str(),
-                                                false, 'n'))
+        else if (!bad_item && !hostile_check && !yesno(ui_render("i.scroll.confirm",
+            "You can't see any enemies this would affect, really read %s?",
+            make_stringf("You can't see any enemies this would affect, really %s?", verb_object.c_str()),
+            {ui_single_item_arg(*scroll)}).c_str(), false, 'n'))
         {
             // is this too nanny dev?
             canned_msg(MSG_OK);
@@ -2918,6 +2989,8 @@ bool read(item_def* scroll, dist *target)
                                             "while wearing %s?",
                                             item->name(DESC_THE, false, true,
                                                        false).c_str());
+        unrand_prompt = ui_render("i.use", "Really read with monsters nearby while wearing %s?", unrand_prompt,
+            {ui_item_arg(*item)});
 
         if (item->props[VICTORY_STAT_KEY].get_int() > 0
             && nearby_mons
@@ -2958,11 +3031,16 @@ bool read(item_def* scroll, dist *target)
 
     // For cancellable scrolls leave printing this message to their
     // respective functions.
-    const string pre_succ_msg =
+    const string original_succ_msg =
             make_stringf("As you %s the %s, it %s.",
                           is_loud ? "thunderously recite" : "read",
                           scroll->name(DESC_QUALNAME).c_str(),
                          which_scroll == SCR_FOG ? "dissolves into smoke" : "crumbles to dust");
+    const string pre_succ_msg = ui_render("i.scroll", "As you %s the %s, it %s.",
+        original_succ_msg,
+        {ui_text_arg("i.scroll.part", is_loud ? "thunderously recite" : "read"),
+         ui_single_item_arg(*scroll),
+         ui_text_arg("i.scroll.part", which_scroll == SCR_FOG ? "dissolves into smoke" : "crumbles to dust")});
     if (!_is_cancellable_scroll(which_scroll))
     {
         mpr(pre_succ_msg);
@@ -2983,7 +3061,7 @@ bool read(item_def* scroll, dist *target)
         if (!reason.empty())
         {
             mpr(pre_succ_msg);
-            mpr(reason);
+            mpr(_item_use_reason(reason));
             break;
         }
 
@@ -3012,7 +3090,7 @@ bool read(item_def* scroll, dist *target)
         if (!reason.empty())
         {
             mpr(pre_succ_msg);
-            mpr(reason);
+            mpr(_item_use_reason(reason));
             break;
         }
 
@@ -3022,7 +3100,7 @@ bool read(item_def* scroll, dist *target)
 
     case SCR_ACQUIREMENT:
         if (!alreadyknown)
-            mpr("This is a scroll of acquirement!");
+            mpr(ui_translate("phase4.item-use", "This is a scroll of acquirement!"));
 
         // included in default force_more_message
         // Identify it early in case the player checks the '\' screen.
@@ -3030,7 +3108,7 @@ bool read(item_def* scroll, dist *target)
 
         if (feat_eliminates_items(env.grid(you.pos())))
         {
-            mpr("Anything you acquired here would fall and be lost!");
+            mpr(ui_translate("phase4.item-use", "Anything you acquired here would fall and be lost!"));
             cancel_scroll = true;
             break;
         }
@@ -3039,12 +3117,12 @@ bool read(item_def* scroll, dist *target)
         break;
 
     case SCR_FEAR:
-        mpr("You assume a fearsome visage.");
+        mpr(ui_translate("phase4.item-use", "You assume a fearsome visage."));
         mass_enchantment(ENCH_FEAR, 1000);
         break;
 
     case SCR_NOISE:
-        noisy(25, you.pos(), "You hear a loud clanging noise!");
+        noisy(25, you.pos(), ui_translate("i.use", "You hear a loud clanging noise!"));
         break;
 
     case SCR_SUMMONING:
@@ -3093,9 +3171,9 @@ bool read(item_def* scroll, dist *target)
         }
 
         if (had_effect)
-            mpr("The creatures around you are filled with an inner flame!");
+            mpr(ui_translate("phase4.item-use", "The creatures around you are filled with an inner flame!"));
         else
-            mpr("The air around you briefly surges with heat, but it dissipates.");
+            mpr(ui_translate("phase4.item-use", "The air around you briefly surges with heat, but it dissipates."));
 
         bad_effect = true;
         break;
@@ -3116,7 +3194,7 @@ bool read(item_def* scroll, dist *target)
         if (!alreadyknown)
         {
             mpr(pre_succ_msg);
-            mpr("It is a scroll of enchant weapon.");
+            mpr(ui_translate("phase4.item-use", "It is a scroll of enchant weapon."));
             // included in default force_more_message (to show it before menu)
 
             run_uncancel(UNC_ENCHANT_WEAPON);
@@ -3130,7 +3208,7 @@ bool read(item_def* scroll, dist *target)
         if (!alreadyknown)
         {
             mpr(pre_succ_msg);
-            mpr("It is a scroll of brand weapon.");
+            mpr(ui_translate("phase4.item-use", "It is a scroll of brand weapon."));
             // included in default force_more_message (to show it before menu)
 
             run_uncancel(UNC_BRAND_WEAPON);
@@ -3144,7 +3222,7 @@ bool read(item_def* scroll, dist *target)
         if (!alreadyknown)
         {
             mpr(pre_succ_msg);
-            mpr("It is a scroll of identify.");
+            mpr(ui_translate("phase4.item-use", "It is a scroll of identify."));
             // included in default force_more_message (to show it before menu)
             // Do this here so it doesn't turn up in the ID menu.
             identify_item(*scroll);
@@ -3160,7 +3238,7 @@ bool read(item_def* scroll, dist *target)
         if (!alreadyknown)
         {
             mpr(pre_succ_msg);
-            mpr("It is a scroll of enchant armour.");
+            mpr(ui_translate("phase4.item-use", "It is a scroll of enchant armour."));
             // included in default force_more_message (to show it before menu)
 
             run_uncancel(UNC_ENCHANT_ARMOUR);
@@ -3177,7 +3255,7 @@ bool read(item_def* scroll, dist *target)
     case SCR_RANDOM_USELESSNESS:
     case SCR_HOLY_WORD:
     {
-        mpr("This item has been removed, sorry!");
+        mpr(ui_translate("i.ui", "This item has been removed, sorry!"));
         cancel_scroll = true;
         break;
     }
@@ -3195,12 +3273,12 @@ bool read(item_def* scroll, dist *target)
         if (!alreadyknown)
         {
             mpr(pre_succ_msg);
-            mpr("It is a scroll of amnesia.");
+            mpr(ui_translate("phase4.item-use", "It is a scroll of amnesia."));
             // included in default force_more_message (to show it before menu)
         }
         if (you.spell_no == 0 || you.has_mutation(MUT_INNATE_CASTER))
         {
-            mpr("You feel forgetful for a moment.");
+            mpr(ui_translate("phase4.item-use", "You feel forgetful for a moment."));
             break;
         }
 
@@ -3222,6 +3300,7 @@ bool read(item_def* scroll, dist *target)
     identify_item(*scroll);
 
     string scroll_name = scroll->name(DESC_QUALNAME);
+    const ui_arg scroll_display = ui_single_item_arg(*scroll);
 
     if (!cancel_scroll)
     {
@@ -3245,16 +3324,16 @@ bool read(item_def* scroll, dist *target)
         && which_scroll != SCR_AMNESIA
         && which_scroll != SCR_ACQUIREMENT)
     {
-        mprf("It %s %s.",
-             scroll->quantity < prev_quantity ? "was" : "is",
-             article_a(scroll_name).c_str());
+        mpr(ui_render("i.scroll", scroll->quantity < prev_quantity ? "It was %s." : "It is %s.",
+            make_stringf("It %s %s.", scroll->quantity < prev_quantity ? "was" : "is",
+                article_a(scroll_name).c_str()), {scroll_display}));
     }
 
     if (!alreadyknown)
     {
         if (you.unrand_equipped(UNRAND_DELATRAS_GLOVES))
         {
-            mpr("The energy of discovery flows from your fingertips!");
+            mpr(ui_translate("phase4.item-use", "The energy of discovery flows from your fingertips!"));
             potionlike_effect(POT_MAGIC, 40);
         }
 
@@ -3301,13 +3380,13 @@ static vector<string> _desc_see_invis(const monster_info& mi)
 {
     vector<string> r;
     if (mi.can_see_invisible())
-        r.push_back("can see invisible");
+        r.push_back(target_description_text("i.target", "can see invisible"));
     else if (!mi.is(MB_CANT_SEE_YOU))
     {
         if (!you.backlit())
-            r.push_back("will become unable to see you");
+            r.push_back(target_description_text("i.target", "will become unable to see you"));
         else
-            r.push_back("cannot see invisible");
+            r.push_back(target_description_text("i.target", "cannot see invisible"));
     }
     return r;
 }
@@ -3337,7 +3416,7 @@ bool invisibility_target_check(const char* prompt)
     if (!found_any)
         return true;
     if (!found_susceptible)
-        return yesno("You can't see any enemy this would conceal you from. Use anyway?", true, 'n');
+        return yesno(ui_translate("i.ui", "You can't see any enemy this would conceal you from. Use anyway?"), true, 'n');
 
     direction_chooser_args args;
     unique_ptr<targeter> hitfunc = make_unique<targeter_invisibility>();
@@ -3395,13 +3474,13 @@ bool use_talisman(item_def& talisman)
     string reason = cannot_put_on_talisman_reason(talisman);
     if (!reason.empty())
     {
-        mpr(reason);
+        mpr(_item_use_reason(reason));
         return false;
     }
 
     if (talisman.pos != ITEM_IN_INVENTORY && !room_in_inventory(talisman))
     {
-        mpr("You can't carry that many items.");
+        mpr(ui_translate("phase4.item-use", "You can't carry that many items."));
         return false;
     }
 
@@ -3414,8 +3493,10 @@ bool use_talisman(item_def& talisman)
                                                      TALISMAN_MEDUSA,
                                                      TALISMAN_SPORE);
 
-        mprf("%s responds to your shapeshifting skill and transforms into a %s!",
-             real_item.name(DESC_YOUR).c_str(), talisman_type_name(new_type).c_str());
+        mpr(ui_render("i.use", "%s responds to your shapeshifting skill and transforms into a %s!",
+            make_stringf("%s responds to your shapeshifting skill and transforms into a %s!",
+                real_item.name(DESC_YOUR).c_str(), talisman_type_name(new_type).c_str()),
+            {ui_item_arg(real_item), ui_text_arg("display.item", talisman_type_name(new_type))}));
 
         real_item.sub_type = new_type;
         seen_item(real_item);
@@ -3429,7 +3510,7 @@ bool use_talisman(item_def& talisman)
         return false;
     if (transforming_is_unsafe(trans))
         return false;
-    if (!i_feel_safe(true) && !yesno("Still begin transforming?", true, 'n'))
+    if (!i_feel_safe(true) && !yesno(ui_translate("i.ui", "Still begin transforming?"), true, 'n'))
     {
         canned_msg(MSG_OK);
         return false;
@@ -3450,14 +3531,14 @@ void tile_item_pickup(int idx, bool part)
 {
     if (item_is_stationary(env.item[idx]))
     {
-        mpr("You can't pick that up.");
+        mpr(ui_translate("phase4.item-use", "You can't pick that up."));
         return;
     }
 
     int quantity = env.item[idx].quantity;
     if (part && quantity > 1)
     {
-        quantity = prompt_for_int("Pick up how many? ", true);
+        quantity = prompt_for_int(ui_translate("i.ui", "Pick up how many? "), true);
         if (quantity < 1)
         {
             canned_msg(MSG_OK);
@@ -3479,7 +3560,7 @@ void tile_item_drop(int idx, bool partdrop)
     int quantity = you.inv[idx].quantity;
     if (partdrop && quantity > 1)
     {
-        quantity = prompt_for_int("Drop how many? ", true);
+        quantity = prompt_for_int(ui_translate("i.ui", "Drop how many? "), true);
         if (quantity < 1)
         {
             canned_msg(MSG_OK);

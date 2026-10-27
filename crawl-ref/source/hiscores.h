@@ -26,10 +26,12 @@ void hiscores_read_to_memory();
 string hiscores_print_list(int display_count, int format, int newest_entry, int& start_out);
 void hiscores_print_all(int display_count = -1, int format = SCORE_TERSE);
 void show_hiscore_table();
+class formatted_string;
+bool read_morgue_display(const string &base, formatted_string &text);
 
-string hiscores_format_single(const scorefile_entry &se);
+string hiscores_format_single(const scorefile_entry &se, bool display = false);
 string hiscores_format_single_long(const scorefile_entry &se,
-                                   bool verbose = false);
+                                   bool verbose = false, bool display = false);
 
 void mark_milestone(const string &type, const string &milestone,
                     const string &origin_level = "", time_t t = 0);
@@ -179,10 +181,14 @@ public:
     bool parse(const string &line);
 
     string hiscore_line(death_desc_verbosity verbosity) const;
+    string display_hiscore_line(death_desc_verbosity verbosity) const;
 
     string character_description(death_desc_verbosity) const;
     // Full description of death: Killed by an xyz wielding foo
     string death_description(death_desc_verbosity) const;
+    string display_death_description(death_desc_verbosity) const;
+    string display_damage_description() const;
+    string death_cause_snapshot() const;
     string death_place(death_desc_verbosity) const;
     string game_time(death_desc_verbosity) const;
 

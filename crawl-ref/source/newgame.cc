@@ -4,8 +4,10 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "newgame.h"
+#include "player-save-info.h"
 
 #include "cio.h"
 #include "command.h"
@@ -45,6 +47,63 @@
 #include "outer-menu.h"
 
 using namespace ui;
+
+string character_welcome_display(bool game_start, const string &name,
+                                  species_type species, job_type job)
+{
+    return ui_render("fix.welcome", game_start
+        ? "<yellow>Welcome, %s the %s %s.</yellow>"
+        : "<yellow>Welcome back, %s the %s %s.</yellow>", "",
+        {ui_literal_arg(name), ui_text_arg("display.creation", species::name(species)),
+         ui_text_arg("display.creation", get_job_name(job))});
+}
+
+string save_character_display(const player_save_info &save, bool short_form,
+                               bool use_qualifier)
+{
+    const string original = short_form ? save.really_short_desc()
+                                      : save.short_desc(use_qualifier);
+    // Header strings can describe historical or custom characters. Do not
+    // reinterpret them using a different current species/background.
+    if (save.species == SP_UNKNOWN || save.job == JOB_UNKNOWN
+        || save.species_name != species::name(save.species)
+        || save.class_name != get_job_name(save.job))
+        return original;
+    const ui_arg race = ui_text_arg("display.creation", species::name(save.species));
+    const ui_arg job = ui_text_arg("display.creation", get_job_name(save.job));
+    if (short_form)
+        return ui_render("fix.save", "%s the %s %s", original,
+            {ui_literal_arg(save.name), race, job});
+    const char *key = "%s, a level %s %s %s";
+    ui_translation_group group({{"fix.save", key}});
+    const string qualifier = use_qualifier
+        ? game_state::game_type_name_for(save.saved_game_type) : "";
+    if (!qualifier.empty())
+        group.require("fix.mode", qualifier.c_str());
+    ui_arg deity{"", true};
+    if (save.religion != GOD_NO_GOD)
+    {
+        group.require("fix.save", " of %s");
+        deity = ui_text_arg("display.god", save.god_name);
+    }
+    if (!group.available() || !race.available || !job.available || !deity.available)
+        return original;
+    string result = ui_render("fix.save", key, original,
+        {ui_literal_arg(save.name), ui_literal_arg(to_string(save.experience_level)), race, job});
+    if (!qualifier.empty())
+        result = "[" + string(group.get("fix.mode", qualifier.c_str())) + "] " + result;
+    if (save.religion != GOD_NO_GOD)
+    {
+        if (save.religion == GOD_JIYVA && !save.jiyva_second_name.empty())
+            deity.text += " " + save.jiyva_second_name;
+        result += ui_render("fix.save", " of %s", "", {deity});
+    }
+#ifdef WIZARD
+    if (save.wizard)
+        result += " (WIZ)"; // startup strips this canonical badge marker
+#endif
+    return result;
+}
 
 static void _choose_gamemode_map(newgame_def& ng, newgame_def& ng_choice,
                                  const newgame_def& defaults);
@@ -164,6 +223,44 @@ string newgame_char_description(const newgame_def& ng)
         return species::name(ng.species) + " " + get_job_name(ng.job);
 }
 
+// The canonical description above remains suitable for settings and diagnostics.
+static string _n_character_display(const newgame_def& ng)
+{
+    const string original;
+    if (_is_random_viable_choice(ng))
+        return ui_render("n.character", "Recommended character", original, {});
+    if (_is_random_choice(ng))
+        return ui_render("n.character", "Random character", original, {});
+    if (_is_random_job(ng.job))
+        return ui_render("n.character", ng.job == JOB_RANDOM ? "Random %s" : "Recommended %s",
+            original, {ui_text_arg("display.creation", species::name(ng.species))});
+    if (_is_random_species(ng.species))
+        return ui_render("n.character", ng.species == SP_RANDOM ? "Random %s" : "Recommended %s",
+            original, {ui_text_arg("display.creation", get_job_name(ng.job))});
+    return ui_render("n.character", "%s %s", original,
+        {ui_text_arg("display.creation", species::name(ng.species)),
+         ui_text_arg("display.creation", get_job_name(ng.job))});
+}
+
+ui_arg newgame_char_display_arg(const newgame_def& ng)
+{
+    const string shown = _n_character_display(ng);
+    return {shown, !shown.empty()};
+}
+
+string newgame_char_display_description(const newgame_def& ng)
+{
+    const ui_arg shown = newgame_char_display_arg(ng);
+    return shown.available ? shown.text : newgame_char_description(ng);
+}
+
+static string _n_character_statement(const newgame_def& ng, const string& original)
+{
+    return ui_render("n.character", "You are a%s %s %s.", original,
+        {ui_literal_arg(""), ui_text_arg("display.creation", species::name(ng.species)),
+         ui_text_arg("display.creation", get_job_name(ng.job))});
+}
+
 static string _welcome(const newgame_def& ng)
 {
     string text;
@@ -186,7 +283,38 @@ static string _welcome(const newgame_def& ng)
     if (!text.empty())
         text = ", " + text;
     text = "Welcome" + text + ".";
-    return text;
+    const string original = text;
+    ui_arg role{"", true};
+    if (ng.species != SP_UNKNOWN && ng.job != JOB_UNKNOWN)
+    {
+        const string shown = ui_render("n.character", "%s %s", "",
+            {ui_text_arg("display.creation", species::name(ng.species)),
+             ui_text_arg("display.creation", get_job_name(ng.job))});
+        role = {shown, !shown.empty()};
+    }
+    else if (ng.species != SP_UNKNOWN)
+        role = ui_text_arg("display.creation", species::name(ng.species));
+    else if (ng.job != JOB_UNKNOWN)
+        role = ui_text_arg("display.creation", get_job_name(ng.job));
+    if (!ng.name.empty() && !role.text.empty())
+    {
+        const string shown = ui_render("n.character", "%s the %s", "",
+            {ui_literal_arg(ng.name), role});
+        role = {shown, !shown.empty()};
+    }
+    else if (!ng.name.empty())
+    {
+        if (!role.available) return original;
+        role = ui_literal_arg(ng.name);
+    }
+    else if (!role.text.empty())
+    {
+        const string shown = ui_render("n.character", "unnamed %s", "", {role});
+        role = {shown, !shown.empty()};
+    }
+    if (!role.available) return original;
+    return role.text.empty() ? ui_render("n.character", "Welcome.", original, {})
+        : ui_render("n.character", "Welcome, %s.", original, {role});
 }
 
 void choose_tutorial_character(newgame_def& ng_choice)
@@ -346,8 +474,9 @@ static void _choose_species_job(newgame_def& ng, newgame_def& ng_choice,
     {
         // Either an invalid combination was passed in through options,
         // or we messed up.
-        end(1, false, "Incompatible species and background (%s) selected.",
-                                newgame_char_description(ng).c_str());
+        end(1, false, "%s", ui_render("n.ui", "Incompatible species and background (%s) selected.",
+            make_stringf("Incompatible species and background (%s) selected.", newgame_char_description(ng).c_str()),
+            {newgame_char_display_arg(ng)}).c_str());
     }
 }
 
@@ -361,6 +490,7 @@ static bool _reroll_random(newgame_def& ng)
     prompt.cprintf("You are a%s %s %s.",
             (is_vowel(specs[0])) ? "n" : "", specs.c_str(),
             get_job_name(ng.job));
+    prompt = formatted_string::parse_string(_n_character_statement(ng, prompt.to_colour_string(LIGHTGREY)));
 
     auto title_hbox = make_shared<Box>(Widget::HORZ);
 #ifdef USE_TILE
@@ -379,7 +509,7 @@ static bool _reroll_random(newgame_def& ng)
 
     auto vbox = make_shared<Box>(Box::VERT);
     vbox->add_child(std::move(title_hbox));
-    vbox->add_child(make_shared<Text>("Do you want to play this combination? [Y/n/q]"));
+    vbox->add_child(make_shared<Text>(ui_translate("n.ui", "Do you want to play this combination? [Y/n/q]")));
     auto popup = make_shared<ui::Popup>(std::move(vbox));
 
     bool done = false;
@@ -429,8 +559,9 @@ static void _choose_char(newgame_def& ng, newgame_def& choice,
     // Apologies to non-public servers.
     if (ng.type == GAME_TYPE_NORMAL || ng.type == GAME_TYPE_DESCENT)
     {
-        if (!yesno("Trunk doesn't count for the tournament, you want "
-                   TOURNEY ". Play trunk anyway? (Y/N)", false, 'n'))
+        if (!yesno(ui_render("n.ui", "Trunk doesn't count for the tournament, you want %s. Play trunk anyway? (Y/N)",
+            "Trunk doesn't count for the tournament, you want " TOURNEY ". Play trunk anyway? (Y/N)",
+            {ui_literal_arg(TOURNEY)}).c_str(), false, 'n'))
         {
             game_ended(game_exit::abort);
         }
@@ -584,6 +715,7 @@ static void _choose_name(newgame_def& ng, newgame_def& choice)
     title.cprintf("You are a%s %s %s.",
             (is_vowel(specs[0])) ? "n" : "", specs.c_str(),
             get_job_name(ng.job));
+    title = formatted_string::parse_string(_n_character_statement(ng, title.to_colour_string(LIGHTGREY)));
 
     auto title_hbox = make_shared<Box>(Widget::HORZ);
 #ifdef USE_TILE
@@ -609,15 +741,15 @@ static void _choose_name(newgame_def& ng, newgame_def& choice)
     vbox->add_child(sub_items);
 
     _add_menu_sub_item(sub_items, 0, 0,
-            "Esc - Quit", "", CK_ESCAPE, CK_ESCAPE);
+            ui_translate("n.ui", "Esc - Quit"), "", CK_ESCAPE, CK_ESCAPE);
     _add_menu_sub_item(sub_items, 1, 0,
-            "* - Random name", "", '*', '*');
+            ui_translate("phase3.newgame", "* - Random name"), "", '*', '*');
 
     auto ok_switcher = make_shared<Switcher>();
     ok_switcher->align_y = Widget::STRETCH;
     {
         auto tmp = make_shared<Text>();
-        tmp->set_text(formatted_string("Enter - Begin!", BROWN));
+        tmp->set_text(formatted_string(ui_translate("n.ui", "Enter - Begin!"), BROWN));
 
         auto btn = make_shared<MenuButton>();
         btn->on_activate_event([&](const ActivateEvent&) {
@@ -644,7 +776,7 @@ static void _choose_name(newgame_def& ng, newgame_def& choice)
         btn->highlight_colour = STARTUP_HIGHLIGHT_CONTROL;
 
         auto err = make_shared<Text>(
-                formatted_string("That's a silly name!", LIGHTRED));
+                formatted_string(ui_translate("phase3.newgame", "That's a silly name!"), LIGHTRED));
         err->set_margin_for_sdl(0, 0, 0, 10);
         auto box = make_shared<Box>(Box::HORZ);
         box->set_cross_alignment(Widget::CENTER);
@@ -704,12 +836,12 @@ static void _choose_name(newgame_def& ng, newgame_def& choice)
     {
         formatted_string prompt;
         prompt.textcolour(CYAN);
-        prompt.cprintf("What is your name today? ");
+        prompt.cprintf("%s", ui_translate("phase3.newgame", "What is your name today? "));
         prompt.textcolour(LIGHTGREY);
         prompt.cprintf("%s\n", buf);
         prompt.textcolour(LIGHTRED);
         if (overwrite_prompt)
-            prompt.cprintf("You have an existing game under this name; really overwrite? [Y/n]");
+            prompt.cprintf("%s", ui_translate("phase3.newgame", "You have an existing game under this name; really overwrite? [Y/n]"));
         prompt_ui->set_text(prompt);
 
         ui::pump_events();
@@ -776,9 +908,9 @@ public:
     void update_buttons()
     {
         if (valid_seed())
-            begin_button->set_text(formatted_string("[Enter] Begin!", BROWN));
+            begin_button->set_text(formatted_string(ui_translate("n.ui", "[Enter] Begin!"), BROWN));
         else
-            begin_button->set_text(formatted_string("[Enter] Begin!", DARKGRAY));
+            begin_button->set_text(formatted_string(ui_translate("n.ui", "[Enter] Begin!"), DARKGRAY));
     }
 
     void set_text(const string &s) // why is it `string s` in TextEntry?
@@ -829,7 +961,7 @@ static void _choose_seed(newgame_def& ng, newgame_def& choice,
     bool cancel = false;
 
     auto begin_label = make_shared<ui::Text>();
-    begin_label->set_text(formatted_string("[Enter] Begin!", BROWN));
+    begin_label->set_text(formatted_string(ui_translate("n.ui", "[Enter] Begin!"), BROWN));
     begin_label->set_margin_for_sdl(4,8);
     begin_label->set_margin_for_crt(0, 2, 0, 0);
 
@@ -839,18 +971,17 @@ static void _choose_seed(newgame_def& ng, newgame_def& choice,
     auto popup = make_shared<ui::Popup>(box);
 
     const string title_text = make_stringf(
-        "Play a game with a custom seed for version %s.\n",
+        ui_translate("n.ui", "Play a game with a custom seed for version %s.\n"),
         Version::Long);
     box->add_child(make_shared<ui::Text>(formatted_string(title_text, CYAN)));
 
-    const string body_text = "Choose 0 for a random seed. "
-            "[Tab]/[Shift-Tab] to cycle input focus.\n";
+    const string body_text = ui_translate("n.ui", "Choose 0 for a random seed. [Tab]/[Shift-Tab] to cycle input focus.\n");
     box->add_child(make_shared<ui::Text>(body_text));
 
     auto seed_hbox = make_shared<ui::Box>(ui::Box::HORZ);
     box->add_child(seed_hbox);
 
-    const string prompt_text = "Seed: ";
+    const string prompt_text = ui_translate("n.ui", "Seed: ");
     seed_hbox->add_child(make_shared<ui::Text>(prompt_text));
     auto seed_input = make_shared<SeedTextEntry>(begin_label.get());
     seed_input->set_sync_id("seed");
@@ -864,7 +995,7 @@ static void _choose_seed(newgame_def& ng, newgame_def& choice,
     seed_hbox->set_cross_alignment(Widget::CENTER);
 
     auto clear_btn_label = make_shared<ui::Text>();
-    clear_btn_label->set_text(formatted_string("[-] Clear", BROWN));
+    clear_btn_label->set_text(formatted_string(ui_translate("n.ui", "[-] Clear"), BROWN));
     clear_btn_label->set_margin_for_sdl(4, 4);
     clear_btn_label->set_margin_for_crt(0, 1, 0, 1);
     auto clear_btn = make_shared<MenuButton>();
@@ -881,7 +1012,7 @@ static void _choose_seed(newgame_def& ng, newgame_def& choice,
     seed_hbox->add_child(std::move(clear_btn));
 
     auto d_btn_label = make_shared<ui::Text>();
-    d_btn_label->set_text(formatted_string("[d] Today's daily seed", BROWN));
+    d_btn_label->set_text(formatted_string(ui_translate("n.ui", "[d] Today's daily seed"), BROWN));
     d_btn_label->set_margin_for_sdl(4,8);
     d_btn_label->set_margin_for_crt(0, 2, 0, 0);
 
@@ -903,19 +1034,13 @@ static void _choose_seed(newgame_def& ng, newgame_def& choice,
     });
     seed_hbox->add_child(std::move(daily_seed_btn));
 
-    const string footer_text =
+    const string footer_text = string()
 #ifdef USE_TILE_LOCAL
-        "\n"
-        "Press [p] or [ctrl-v] to paste a seed from the clipboard\n"
-        "(overwriting the current value).\n"
+         + string(ui_translate("n.ui", "\nPress [p] or [ctrl-v] to paste a seed from the clipboard\n(overwriting the current value).\n"))
 #endif
-        "\n"
-        "The seed will determine the dungeon layout, monsters, and items\n"
-        "that you discover, relative to this version of crawl. Upgrading\n"
-        "mid-game may affect seeding. (See the manual for more details.)\n"
+         + string(ui_translate("n.ui", "\nThe seed will determine the dungeon layout, monsters, and items\nthat you discover, relative to this version of crawl. Upgrading\nmid-game may affect seeding. (See the manual for more details.)\n"))
 #ifdef SEEDING_UNRELIABLE
-        "Warning: your build of crawl does not support stable seeding!\n"
-        "Levels may differ from 'official' seeded games.\n"
+         + string(ui_translate("n.ui", "Warning: your build of crawl does not support stable seeding!\nLevels may differ from 'official' seeded games.\n"))
 #endif
         ;
     box->add_child(make_shared<ui::Text>(footer_text));
@@ -925,7 +1050,7 @@ static void _choose_seed(newgame_def& ng, newgame_def& choice,
     choice.pregenerate = Options.pregen_dungeon == level_gen_type::full;
     pregen_check->set_checked(choice.pregenerate);
     pregen_check->set_visible(show_pregen_toggle);
-    pregen_check->set_child(make_shared<ui::Text>("Fully pregenerate the dungeon"));
+    pregen_check->set_child(make_shared<ui::Text>(ui_translate("n.ui", "Fully pregenerate the dungeon")));
     box->add_child(pregen_check);
 
     auto button_hbox = make_shared<ui::Box>(ui::Box::HORZ);
@@ -1045,7 +1170,7 @@ bool choose_game(newgame_def& ng, newgame_def& choice,
 #endif
 
     if (ng.name.empty())
-        end(1, false, "No player name specified.");
+        end(1, false, "%s", ui_translate("n.ui", "No player name specified."));
 
     ASSERT(is_good_name(ng.name, false)
            && _job_allowed(ng.species, ng.job)
@@ -1176,8 +1301,9 @@ public:
         welcome.textcolour(BROWN);
         welcome.cprintf("%s", _welcome(m_ng).c_str());
         welcome.textcolour(YELLOW);
-        welcome.cprintf(" Please select your ");
-        welcome.cprintf(m_choice_type == C_JOB ? "background." : "species.");
+        welcome.cprintf("%s", m_choice_type == C_JOB
+            ? ui_translate("newgame.choose", " Please select your background.")
+            : ui_translate("newgame.choose", " Please select your species."));
         m_vbox->add_child(make_shared<Text>(welcome));
 
         descriptions = make_shared<Switcher>();
@@ -1317,7 +1443,7 @@ protected:
         string text;
         text += letter;
         text += " - ";
-        text += item_name;
+        text += ui_translate("display.creation", item_name.c_str());
         label->set_text(formatted_string(text, fg));
 
         string desc = unwrap_desc(getGameStartDescription(item_name));
@@ -1344,7 +1470,7 @@ protected:
 
     void _add_group_title(const char* name, coord_def position)
     {
-        auto text = make_shared<Text>(formatted_string(name, LIGHTBLUE));
+        auto text = make_shared<Text>(formatted_string(ui_translate("display.creation.group", name), LIGHTBLUE));
         text->set_margin_for_sdl(7, 0, 7, 32+2+6);
         m_main_items->add_label(std::move(text), position.x, position.y);
     }
@@ -1361,13 +1487,24 @@ protected:
     {
         string choice_name = choice_type == C_JOB ? "background" : "species";
         string other_choice_name = choice_type == C_JOB ? "species" : "background";
+        const ui_translation_group choice_text({
+            {"newgame.noun", "background"},
+            {"newgame.noun", "species"},
+            {"newgame.recommended", "Picks a random recommended %s based on your current %s choice."},
+            {"newgame.random", "    * - Random %s"},
+            {"newgame.random.description", "Picks a random %s."},
+            {"newgame.change", "Space - Change %s"},
+            {"newgame.change.description", "Lets you change your %s choice."},
+            {"newgame.first", "Space - Pick %s first"},
+            {"newgame.first.description", "Lets you pick your %s first."}
+        });
 
         string text, desc;
 
         if (choice_type == C_SPECIES)
-            text = "+ - Recommended species";
+            text = ui_translate("phase3.newgame", "+ - Recommended species");
         else
-            text = "+ - Recommended background";
+            text = ui_translate("phase3.newgame", "+ - Recommended background");
 
         int id;
         // If the player has species chosen, use VIABLE, otherwise use RANDOM
@@ -1378,43 +1515,43 @@ protected:
         }
         else
             id = M_RANDOM;
-        desc = "Picks a random recommended " + other_choice_name + " based on your current " + choice_name + " choice.";
+        desc = make_stringf(choice_text.get("newgame.recommended", "Picks a random recommended %s based on your current %s choice."), choice_text.get("newgame.noun", other_choice_name.c_str()), choice_text.get("newgame.noun", choice_name.c_str()));
 
         _add_choice_menu_option(0, 0,
                 text, '+', id, desc);
 
         _add_choice_menu_option(0, 1,
-                "# - Recommended character", '#', M_VIABLE_CHAR,
-                "Shuffles through random recommended character combinations "
-                "until you accept one.");
+                ui_translate("phase3.newgame", "# - Recommended character"), '#', M_VIABLE_CHAR,
+                ui_translate("phase3.newgame", "Shuffles through random recommended character combinations "
+                "until you accept one."));
 
         _add_choice_menu_option(0, 2,
-                "% - List aptitudes", '%', M_APTITUDES,
-                "Lists the numerical skill train aptitudes for all races.");
+                ui_translate("phase3.newgame", "% - List aptitudes"), '%', M_APTITUDES,
+                ui_translate("phase3.newgame", "Lists the numerical skill train aptitudes for all races."));
 
         _add_choice_menu_option(0, 3,
-                "? - Help", '?', M_HELP,
-                "Opens the help screen.");
+                ui_translate("phase3.newgame", "? - Help"), '?', M_HELP,
+                ui_translate("phase3.newgame", "Opens the help screen."));
 
         _add_choice_menu_option(1, 0,
-                "    * - Random " + choice_name, '*', M_RANDOM,
-                "Picks a random " + choice_name + ".");
+                make_stringf(choice_text.get("newgame.random", "    * - Random %s"), choice_text.get("newgame.noun", choice_name.c_str())), '*', M_RANDOM,
+                make_stringf(choice_text.get("newgame.random.description", "Picks a random %s."), choice_text.get("newgame.noun", choice_name.c_str())));
 
         _add_choice_menu_option(1, 1,
-                "    ! - Random character", '!', M_RANDOM_CHAR,
-                "Shuffles through random character combinations "
-                "until you accept one.");
+                ui_translate("phase3.newgame", "    ! - Random character"), '!', M_RANDOM_CHAR,
+                ui_translate("phase3.newgame", "Shuffles through random character combinations "
+                "until you accept one."));
 
         if ((choice_type == C_JOB && ng.species != SP_UNKNOWN)
             || (choice_type == C_SPECIES && ng.job != JOB_UNKNOWN))
         {
-            text = "Space - Change " + other_choice_name;
-            desc = "Lets you change your " + other_choice_name + " choice.";
+            text = make_stringf(choice_text.get("newgame.change", "Space - Change %s"), choice_text.get("newgame.noun", other_choice_name.c_str()));
+            desc = make_stringf(choice_text.get("newgame.change.description", "Lets you change your %s choice."), choice_text.get("newgame.noun", other_choice_name.c_str()));
         }
         else
         {
-            text = "Space - Pick " + other_choice_name + " first";
-            desc = "Lets you pick your " + other_choice_name + " first.";
+            text = make_stringf(choice_text.get("newgame.first", "Space - Pick %s first"), choice_text.get("newgame.noun", other_choice_name.c_str()));
+            desc = make_stringf(choice_text.get("newgame.first.description", "Lets you pick your %s first."), choice_text.get("newgame.noun", other_choice_name.c_str()));
         }
         _add_choice_menu_option(1, 2,
                 text, ' ', M_ABORT, desc);
@@ -1422,9 +1559,9 @@ protected:
         if (_char_defined(defaults))
         {
             _add_choice_menu_option(1, 3,
-                    "  Tab - " + newgame_char_description(defaults), '\t',
+                    "  Tab - " + newgame_char_display_description(defaults), '\t',
                     M_DEFAULT_CHOICE,
-                    "Play a new game with your previous choice.");
+                    ui_translate("phase3.newgame", "Play a new game with your previous choice."));
         }
     }
 
@@ -1749,8 +1886,11 @@ static void _construct_weapon_menu(const newgame_def& ng,
 
         const char letter = 'a' + i;
 
+        const string display_name = choice.skill == SK_UNARMED_COMBAT
+            ? ui_translate("creation.weapon", choice.label.c_str())
+            : ui_translate("display.item", choice.label.c_str());
         string text = make_stringf(" %c - %s", letter,
-                chop_string(choice.label, max_text_width, true).c_str()
+                chop_string(display_name, max_text_width, true).c_str()
                 );
 
         weapon_type wpn_type = weapons[i].first;
@@ -1763,7 +1903,7 @@ static void _construct_weapon_menu(const newgame_def& ng,
         label->set_text(formatted_string(text, fg));
 
         hbox->set_main_alignment(Widget::Align::STRETCH);
-        string apt_text = make_stringf("(%+d apt)",
+        string apt_text = make_stringf(ui_translate("creation.weapon", "(%+d apt)"),
                 species_apt(choice.skill, ng.species));
         auto suffix = make_shared<Text>(formatted_string(apt_text, fg));
         hbox->add_child(suffix);
@@ -1780,29 +1920,29 @@ static void _construct_weapon_menu(const newgame_def& ng,
         main_items->add_button(std::move(btn), 0, i);
     }
 
-    _add_menu_sub_item(sub_items, 0, 0, "+ - Recommended random choice",
-            "Picks a random recommended weapon", '+', M_VIABLE);
-    _add_menu_sub_item(sub_items, 0, 1, "% - List aptitudes",
-            "Lists the numerical skill train aptitudes for all races", '%',
+    _add_menu_sub_item(sub_items, 0, 0, ui_translate("phase3.newgame", "+ - Recommended random choice"),
+            ui_translate("phase3.newgame", "Picks a random recommended weapon"), '+', M_VIABLE);
+    _add_menu_sub_item(sub_items, 0, 1, ui_translate("phase3.newgame", "% - List aptitudes"),
+            ui_translate("phase3.newgame", "Lists the numerical skill train aptitudes for all races"), '%',
             M_APTITUDES);
-    _add_menu_sub_item(sub_items, 0, 2, "? - Help",
-            "Opens the help screen", '?', M_HELP);
-    _add_menu_sub_item(sub_items, 1, 0, "* - Random weapon",
-            "Picks a random weapon", '*', WPN_RANDOM);
-    _add_menu_sub_item(sub_items, 1, 1, "Bksp - Return to character menu",
-            "Lets you return back to Character choice menu", CK_BKSP, M_ABORT);
+    _add_menu_sub_item(sub_items, 0, 2, ui_translate("phase3.newgame", "? - Help"),
+            ui_translate("phase3.newgame", "Opens the help screen"), '?', M_HELP);
+    _add_menu_sub_item(sub_items, 1, 0, ui_translate("phase3.newgame", "* - Random weapon"),
+            ui_translate("phase3.newgame", "Picks a random weapon"), '*', WPN_RANDOM);
+    _add_menu_sub_item(sub_items, 1, 1, ui_translate("phase3.newgame", "Bksp - Return to character menu"),
+            ui_translate("phase3.newgame", "Lets you return back to Character choice menu"), CK_BKSP, M_ABORT);
 
     if (defweapon != WPN_UNKNOWN)
     {
         string text = "Tab - ";
 
-        text += defweapon == WPN_RANDOM  ? "Random" :
-                defweapon == WPN_VIABLE  ? "Recommended" :
-                defweapon == WPN_UNARMED ? "unarmed" :
-                weapon_base_name(defweapon);
+        text += defweapon == WPN_RANDOM  ? ui_translate("n.ui", "Random") :
+                defweapon == WPN_VIABLE  ? ui_translate("n.ui", "Recommended") :
+                defweapon == WPN_UNARMED ? ui_translate("creation.weapon", "unarmed") :
+                ui_translate("display.item", weapon_base_name(defweapon));
 
         _add_menu_sub_item(sub_items, 1, 2, text,
-                "Select your old weapon", '\t', M_DEFAULT_CHOICE);
+                ui_translate("phase3.newgame", "Select your old weapon"), '\t', M_DEFAULT_CHOICE);
     }
 }
 
@@ -1834,7 +1974,7 @@ static bool _prompt_weapon(const newgame_def& ng, newgame_def& ng_choice,
     auto vbox = make_shared<Box>(Box::VERT);
     vbox->set_cross_alignment(Widget::Align::STRETCH);
     vbox->add_child(title_hbox);
-    auto prompt = make_shared<Text>(formatted_string("You have a choice of weapons.", CYAN));
+    auto prompt = make_shared<Text>(formatted_string(ui_translate("phase3.newgame", "You have a choice of weapons."), CYAN));
     vbox->add_child(prompt);
 
     auto main_items = make_shared<OuterMenu>(true, 1, weapons.size());
@@ -2111,7 +2251,7 @@ static void _construct_gamemode_map_menu(const mapref_vector& maps,
         text = " ";
         text += letter;
         text += " - ";
-        text += map_name;
+        text += ui_translate("n.map", map_name.c_str());
 
 #ifdef USE_TILE
         auto hbox = make_shared<Box>(Box::HORZ);
@@ -2154,20 +2294,20 @@ static void _construct_gamemode_map_menu(const mapref_vector& maps,
     // Don't overwhelm new players with aptitudes or the full list of commands!
     if (!crawl_state.game_is_tutorial())
     {
-        _add_menu_sub_item(sub_items, 0, 0, "% - List aptitudes",
-                "Lists the numerical skill train aptitudes for all races",
+        _add_menu_sub_item(sub_items, 0, 0, ui_translate("phase3.newgame", "% - List aptitudes"),
+                ui_translate("phase3.newgame", "Lists the numerical skill train aptitudes for all races"),
                 '%', M_APTITUDES);
-        _add_menu_sub_item(sub_items, 0, 1, "? - Help",
-                "Opens the help screen", '?', M_HELP);
-        _add_menu_sub_item(sub_items, 1, 0, "* - Random map",
-                "Picks a random sprint map", '*', M_RANDOM);
+        _add_menu_sub_item(sub_items, 0, 1, ui_translate("phase3.newgame", "? - Help"),
+                ui_translate("phase3.newgame", "Opens the help screen"), '?', M_HELP);
+        _add_menu_sub_item(sub_items, 1, 0, ui_translate("n.ui", "* - Random map"),
+                ui_translate("n.ui", "Picks a random sprint map"), '*', M_RANDOM);
     }
 
     // TODO: let players escape back to first screen menu
     // Adjust the end marker to align the - because Bksp text is longer by 3
     //tmp = new TextItem();
-    //tmp->set_text("Bksp - Return to character menu");
-    //tmp->set_description_text("Lets you return back to Character choice menu");
+    //tmp->set_text(ui_translate("phase3.newgame", "Bksp - Return to character menu"));
+    //tmp->set_description_text(ui_translate("phase3.newgame", "Lets you return back to Character choice menu"));
     //tmp->set_fg_colour(BROWN);
     //tmp->add_hotkey(CK_BKSP);
     //tmp->set_id(M_ABORT);
@@ -2180,9 +2320,13 @@ static void _construct_gamemode_map_menu(const mapref_vector& maps,
     {
         text.clear();
         text += "Tab - ";
-        text += defaults.map;
+        const auto old_map = find_if(maps.begin(), maps.end(), [&](const map_def* map) {
+            return map->name == defaults.map;
+        });
+        text += old_map == maps.end() ? defaults.map
+            : ui_translate("n.map", (*old_map)->desc_or_name().c_str());
         _add_menu_sub_item(sub_items, 1, 1, text,
-                "Select your previous sprint map and character", '\t',
+                ui_translate("n.ui", "Select your previous sprint map and character"), '\t',
                 M_DEFAULT_CHOICE);
     }
 }
@@ -2202,11 +2346,13 @@ static void _prompt_gamemode_map(newgame_def& ng, newgame_def& ng_choice,
     welcome.textcolour(BROWN);
     welcome.cprintf("%s\n", _welcome(ng).c_str());
     if (Options.seed_from_rc)
-        welcome.cprintf("Custom seed: %" PRIu64 "\n", Options.seed_from_rc);
+        welcome.cprintf("%s", ui_render("n.ui", "Custom seed: %s\n",
+            make_stringf("Custom seed: %" PRIu64 "\n", Options.seed_from_rc),
+            {ui_literal_arg(to_string(Options.seed_from_rc))}).c_str());
 
     welcome.textcolour(CYAN);
-    welcome.cprintf("\nYou have a choice of %s:",
-            ng_choice.type == GAME_TYPE_TUTORIAL ? "lessons" : "maps");
+    welcome.cprintf("%s", ui_translate("n.ui", ng_choice.type == GAME_TYPE_TUTORIAL
+        ? "\nYou have a choice of lessons:" : "\nYou have a choice of maps:"));
 
     auto vbox = make_shared<Box>(Box::VERT);
     vbox->set_cross_alignment(Widget::Align::STRETCH);
@@ -2316,7 +2462,9 @@ static void _choose_gamemode_map(newgame_def& ng, newgame_def& ng_choice,
     const mapref_vector maps = find_maps_for_tag(type_name);
 
     if (maps.empty())
-        end(1, true, "No %s maps found.", type_name.c_str());
+        end(1, true, "%s", ui_render("n.ui", "No %s maps found.",
+            make_stringf("No %s maps found.", type_name.c_str()),
+            {ui_text_arg("n.gametype", type_name)}).c_str());
 
     if (ng_choice.map.empty())
     {

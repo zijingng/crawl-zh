@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
+#include "unicode.h"
 
 #include "dungeon.h"
 
@@ -7602,7 +7604,7 @@ static void _remember_vault_placement(const vault_placement &place)
 #endif
 }
 
-string dump_vault_maps()
+string dump_vault_maps(bool display)
 {
     string out = "";
 
@@ -7619,6 +7621,10 @@ string dump_vault_maps()
             continue;
         }
 
+        const ui_arg place = display ? stash_level_arg(lid) : ui_arg{"", false};
+        const string name = place.available ? place.text : lid.describe();
+        const int indent = place.available ? (you.wizard ? 12 : 0) + max(8, strwidth(name)) + 2
+                                           : (you.wizard ? 22 : 10);
         if (you.wizard)
         {
             // because the save is already gone at the point where we are
@@ -7628,14 +7634,14 @@ string dump_vault_maps()
                 out += "[-gen]      ";
                 if (!you.vault_list.count(lid))
                 {
-                    out +=  lid.describe() + "\n";
+                    out += name + "\n";
                     continue;
                 }
             }
             else
                 out += you.level_visited(lid) ? "[+gen,+vis] " : "[+gen,-vis] ";
         }
-        out += lid.describe();
+        out += name;
         vector<string> &maps(you.vault_list[lid]);
         if (maps.size() == 0)
         {
@@ -7643,16 +7649,16 @@ string dump_vault_maps()
             continue;
         }
 
-        out += ": " + string(max(8 - int(lid.describe().length()), 0), ' ');
+        out += ": " + string(max(8 - strwidth(name), 0), ' ');
 
         // TODO: some way of showing no_dump maps in wizmode?
 
         string vaults = comma_separated_line(maps.begin(), maps.end(), ", ");
-        out += wordwrap_line(vaults, you.wizard ? 58 : 70) + "\n";
+        out += wordwrap_line(vaults, place.available ? max(1, 80 - indent) : (you.wizard ? 58 : 70)) + "\n";
         while (!vaults.empty())
         {
-            out += string(you.wizard ? 22 : 10, ' ')
-                    + wordwrap_line(vaults, you.wizard ? 58 : 70, false) + "\n";
+            out += string(indent, ' ')
+                    + wordwrap_line(vaults, place.available ? max(1, 80 - indent) : (you.wizard ? 58 : 70), false) + "\n";
         }
 
     }

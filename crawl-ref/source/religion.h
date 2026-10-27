@@ -225,6 +225,8 @@ struct god_power
     { }
 
     void display(bool gaining, const char* fmt) const;
+    // Presentation only; gain/loss/general stay canonical English.
+    string display_text(bool gaining, const char* fmt) const;
 };
 
 void set_god_ability_slots();

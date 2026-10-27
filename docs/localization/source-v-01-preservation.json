@@ -1,0 +1,141 @@
+{
+  "batch": "source-v-01",
+  "canonical_functions": [
+    {
+      "file": "version.cc",
+      "function": "Version::record",
+      "sha256": "aa476bc1e6e17c2838659b4f25bfa084f2833597ae528fb9c9bc1d3902dbf2ca",
+      "unchanged": true
+    },
+    {
+      "file": "version.cc",
+      "function": "Version::history_size",
+      "sha256": "7e1f3b3fb0c93f8e0128a31967020469f50328e0aa50518f8c8a83caf5add0d0",
+      "unchanged": true
+    },
+    {
+      "file": "version.cc",
+      "function": "Version::history",
+      "sha256": "3838e092aa14597f83e62419d0842a9f174b68bb644ede7bf04cbc9cd980e130",
+      "unchanged": true
+    },
+    {
+      "file": "view.cc",
+      "function": "screenshot",
+      "sha256": "bdd8d9814122205d2a911a7d2c1632640a74032df1fa53ee24c12b22a64741b7",
+      "unchanged": true
+    },
+    {
+      "file": "view.cc",
+      "function": "view_update",
+      "sha256": "f4949e82d83bd3dd2273859f79462fd2607004c50bdd2953ed01911fd6c1515f",
+      "unchanged": true
+    },
+    {
+      "file": "view.cc",
+      "function": "viewwindow",
+      "sha256": "8331e1fa69dc5d1e7eed844c1f0ae74405d04d50ee3019e7ff5bc1665685b031",
+      "unchanged": true
+    },
+    {
+      "file": "view.cc",
+      "function": "view_dungeon",
+      "sha256": "0a0b7e5f6acad8207b743b92f774aaa58184c80b406eefd782de855ff4248944",
+      "unchanged": true
+    },
+    {
+      "file": "view.cc",
+      "function": "toggle_show_terrain",
+      "sha256": "d03d168558fcb4af90ffe81f494de5c7c28e7913ffe035cab0ce6bc712b3fbf5",
+      "unchanged": true
+    },
+    {
+      "file": "viewmap.cc",
+      "function": "_get_travel_colour",
+      "sha256": "ca8800064b9759399a54b9003d99e719d65f203b0bca16838c75a5bb145f4a7e",
+      "unchanged": true
+    },
+    {
+      "file": "viewmap.cc",
+      "function": "travel_colour_override",
+      "sha256": "be6f9942adb96095bdb8fd5487ebe4522eca687c4722b582e633eed7b7da4168",
+      "unchanged": true
+    },
+    {
+      "file": "viewmap.cc",
+      "function": "is_feature",
+      "sha256": "457305ca545208d617ea4c582994b07ca02d5b9ceb4bf01f0c19701db8d75471",
+      "unchanged": true
+    },
+    {
+      "file": "viewmap.cc",
+      "function": "_find_feature",
+      "sha256": "304561cecec3e31d272f481e8af6c639f45159954270043e0c520fe8a5835223",
+      "unchanged": true
+    },
+    {
+      "file": "viewmap.cc",
+      "function": "_draw_level_map",
+      "sha256": "5f3948cc8fded241224dd966e84b79c2e422d7c4e138bade9c93676ab79f9646",
+      "unchanged": true
+    },
+    {
+      "file": "viewmap.cc",
+      "function": "_reset_travel_colours",
+      "sha256": "bd3657217e94cdf0696c5a268e43919ee42f12fc7ed7e6b306152eb19f47498e",
+      "unchanged": true
+    },
+    {
+      "file": "viewmap.cc",
+      "function": "_comp_glyphs",
+      "sha256": "891f0fcfabb384397c5ac60a6e44d6cf1f625623b3f89ea1464127a3531a8273",
+      "unchanged": true
+    },
+    {
+      "file": "viewmap.cc",
+      "function": "_stair_dest",
+      "sha256": "19b9f432b37f9c469090a1236d7c3bcad03ffe23d4565034203a62a5c63ab4e6",
+      "unchanged": true
+    },
+    {
+      "file": "viewmap.cc",
+      "function": "_unforget_map",
+      "sha256": "daf8500a0b4459400c1e44eb3f3fcf28bc03da3237596c247e18cacb13237124",
+      "unchanged": true
+    },
+    {
+      "file": "viewmap.cc",
+      "function": "_forget_map",
+      "sha256": "552ba4b84942940bd4985e5a98f80add9c0d8870dd92a84cff2c7c83c3b25544",
+      "unchanged": true
+    },
+    {
+      "file": "viewmap.cc",
+      "function": "_recentre_map_target",
+      "sha256": "c35df4aac3b6b4427f2457f4ce91ae8195818c9aa3a0b91d8ff336146a485be6",
+      "unchanged": true
+    }
+  ],
+  "random_calls": [
+    {
+      "file": "view.cc",
+      "calls": 9,
+      "expressions_and_order_unchanged": true
+    }
+  ],
+  "unchanged_v_files": [
+    "version.cc",
+    "version.h",
+    "view.h",
+    "viewchar.cc",
+    "viewchar.h",
+    "viewgeom.cc",
+    "viewgeom.h"
+  ],
+  "layer_menu_input_and_state_tail_unchanged": true,
+  "notes": [
+    "Version history and compilation data remain canonical, including persisted arbitrary historical strings; no parsing of English save text.",
+    "Map titles use the original branch enum, brdepth and depth; canonical level_id::describe() is unchanged.",
+    "Layer menu keeps all colour arguments and shortcut keys, with complete local/console templates."
+  ]
+}

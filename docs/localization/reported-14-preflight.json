@@ -1,0 +1,547 @@
+{
+  "queries": [
+    "Nobody",
+    "Lehudib",
+    "Rutra",
+    "ooze",
+    "dragon scales",
+    "talisman",
+    "staff",
+    "Okawaru",
+    "Golubria",
+    "Cigotuvi",
+    "Doroklohe",
+    "Wucad",
+    "Yara",
+    "Leda",
+    "Erebora",
+    "Iskenderun",
+    "Borgnjor",
+    "Tukima",
+    "Alistair",
+    "Maxwell",
+    "Eringya",
+    "Ozocubu",
+    "Zonguldrok"
+  ],
+  "glossary_hits": [
+    {
+      "Term": "acid dragon scales",
+      "Translation": "酸龙鳞",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Cigotuvi's Monster",
+      "Translation": "西戈图维的怪物",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "fire dragon scales",
+      "Translation": "火龙鳞",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "gold dragon scales",
+      "Translation": "金龙鳞",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【版本/语境】原表英文沿用；当前物品名为 golden dragon scales，新增现行英文条目。 来源：item-name.cc。\n【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
+    },
+    {
+      "Term": "Iskenderun",
+      "Translation": "伊斯肯德伦",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Maxwell's etheric cage",
+      "Translation": "麦克斯韦的以太笼",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Maxwell's thermic engine",
+      "Translation": "麦克斯韦热能引擎",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Okawaru",
+      "Translation": "奥格瓦如",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+    },
+    {
+      "Term": "Passage of Golubria",
+      "Translation": "格鲁布里亚通道",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "quicksilver dragon scales",
+      "Translation": "水银龙鳞",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "shadow dragon scales",
+      "Translation": "影龙鳞",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "staff",
+      "Translation": "法杖/工作人员",
+      "Part of Speech": "noun",
+      "Variants": "staff of",
+      "Note": "【使用约束】魔法装备上下文使用法杖，普通木棍和 Staves 技能要分开处理。\n【语境补充 2026-10-21】武器用法杖。maintenance staff 等人员集合用工作人员。"
+    },
+    {
+      "Term": "staff of Battle",
+      "Translation": "战斗之杖",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
+    },
+    {
+      "Term": "sword of Zonguldrok",
+      "Translation": "宗古多克之剑",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "talisman",
+      "Translation": "变形护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品类别】用于 Shapeshifting，不能与佩戴的 amulet（护身符）混用。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "golden dragon scales",
+      "Translation": "金龙鳞",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/防具】现行英文名称，原 gold dragon scales 条目保留历史关联。 来源：item-name.cc。"
+    },
+    {
+      "Term": "blade talisman",
+      "Translation": "刃手护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "dragon-coil talisman",
+      "Translation": "盘龙护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "eel talisman",
+      "Translation": "鳗鱼护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "fortress talisman",
+      "Translation": "堡垒护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "granite talisman",
+      "Translation": "花岗岩护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "hive talisman",
+      "Translation": "蜂巢护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "inkwell talisman",
+      "Translation": "墨池护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "lupine talisman",
+      "Translation": "狼形护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "maw talisman",
+      "Translation": "巨口护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "medusa talisman",
+      "Translation": "美杜莎护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "protean talisman",
+      "Translation": "万变护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "quill talisman",
+      "Translation": "棘刺护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "riddle talisman",
+      "Translation": "谜语护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "rimehorn talisman",
+      "Translation": "霜角护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "sanguine talisman",
+      "Translation": "鲜血护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "scarab talisman",
+      "Translation": "圣甲虫护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "serpent talisman",
+      "Translation": "巨蛇护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "spider talisman",
+      "Translation": "蜘蛛护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "spore talisman",
+      "Translation": "孢子护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "storm talisman",
+      "Translation": "风暴护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "talisman of death",
+      "Translation": "死亡护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "wellspring talisman",
+      "Translation": "涌泉护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "Lehudib's Crystal Spear",
+      "Translation": "雷胡迪布的水晶矛",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Iskenderun's Mystic Blast",
+      "Translation": "伊斯肯德伦的秘法冲击",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Borgnjor's Revivification",
+      "Translation": "博格尼奥的复生术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Ozocubu's Refrigeration",
+      "Translation": "奥佐库布的制冷术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Ozocubu's Armour",
+      "Translation": "奥佐库布的护甲",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Tukima's Dance",
+      "Translation": "图基玛之舞",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Cigotuvi's Putrefaction",
+      "Translation": "西戈图维的腐化术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Alistair's Intoxication",
+      "Translation": "阿利斯泰尔的醉乱术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Leda's Liquefaction",
+      "Translation": "莉达的液化术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Iskenderun's Battlesphere",
+      "Translation": "伊斯肯德伦的作战球",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【怪物与卡牌名称校对】法术名中的实体名称与对应怪物显示名统一。"
+    },
+    {
+      "Term": "Yara's Violent Unravelling",
+      "Translation": "雅拉的暴力解构",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Borgnjor's Vile Clutch",
+      "Translation": "博格尼奥的邪恶之握",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Eringya's Noxious Bog",
+      "Translation": "艾琳佳的毒沼",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Maxwell's Capacitive Coupling",
+      "Translation": "麦克斯韦的电容耦合",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Maxwell's Portable Piledriver",
+      "Translation": "麦克斯韦的便携打桩机",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Eringya's Surprising Crocodile",
+      "Translation": "艾琳佳的惊奇鳄鱼",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Alistair's Walking Alembic",
+      "Translation": "阿利斯泰尔的行走蒸馏器",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【怪物与卡牌名称校对】法术名中的实体名称与对应怪物显示名统一。"
+    },
+    {
+      "Term": "Cigotuvi's Degeneration",
+      "Translation": "西戈图维的退化术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Cigotuvi's Embrace",
+      "Translation": "西戈图维的拥抱",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Shroud of Golubria",
+      "Translation": "格鲁布里亚的帷幕",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Tomb of Doroklohe",
+      "Translation": "多罗克洛赫之墓",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Evoke the Staff of Olgreb",
+      "Translation": "发动奥格雷布之杖",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+    },
+    {
+      "Term": "Oozemancy",
+      "Translation": "黏液术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+    },
+    {
+      "Term": "staff of Olgreb",
+      "Translation": "奥格雷布之杖",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+    },
+    {
+      "Term": "crystal ball of Wucad Mu",
+      "Translation": "乌卡德穆水晶球",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+    },
+    {
+      "Term": "faerie dragon scales",
+      "Translation": "仙灵龙鳞",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+    },
+    {
+      "Term": "Elemental Staff",
+      "Translation": "元素法杖",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+    },
+    {
+      "Term": "Maxwell's patent armour",
+      "Translation": "麦克斯韦专利铠甲",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+    },
+    {
+      "Term": "staff of the Meek",
+      "Translation": "谦卑者之杖",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+    },
+    {
+      "Term": "skull of Zonguldrok",
+      "Translation": "宗古多克之颅",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+    },
+    {
+      "Term": "Nobody",
+      "Translation": "无名氏",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "morphogenic ooze",
+      "Translation": "塑形黏液",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "void ooze",
+      "Translation": "虚空黏液",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Ooze status",
+      "Translation": "唤泥",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：唤泥。"
+    },
+    {
+      "Term": "OozeRegen status",
+      "Translation": "再生黏液",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：再生黏液。"
+    },
+    {
+      "Term": "ooze flood",
+      "Translation": "黏液灌注",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：黏液灌注。"
+    }
+  ]
+}

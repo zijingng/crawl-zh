@@ -1,0 +1,50 @@
+{
+  "reviewed_keys": 62,
+  "cumulative_reviewed_keys": 527,
+  "candidates": 258,
+  "source_keys": 731,
+  "remaining_keys": 204,
+  "baseline_matching_dependency_refresh": {},
+  "opaque_lua_keys": [],
+  "upstream_unresolved_markers": [],
+  "address_comma_marker_supported": true,
+  "english_source_unchanged": true,
+  "native_tests": 160,
+  "native_assertions": 1121590,
+  "python_tests": 29,
+  "windows_tiles_build": "passed",
+  "executable": "crawl-ref/source/crawl.exe",
+  "executable_sha256": "80669932bc215f5063f5f1826125c7de1eab6f347cf8940c5fbe5d814c6e7478",
+  "visual_game_test": "not run",
+  "verification_scope": "database-22 through database-24 combined final catalogue",
+  "combined_reviewed_keys": 190,
+  "combined_candidates": 873,
+  "final_reviewed_keys": 598,
+  "parameter_test_assertions": 120,
+  "legacy_reference_files": [
+    "FAQ.txt",
+    "godname.txt",
+    "help.txt"
+  ],
+  "legacy_monspeak_reference_present": false,
+  "unreviewed_legacy_enabled": false,
+  "previous_translation_keys_unchanged": 408,
+  "actual_monster_selector_types_added": 42,
+  "added_display_markers": [
+    "@Subjective@",
+    "@Foe_genus@"
+  ],
+  "lua_profiles": [
+    {
+      "race": "Human",
+      "skill": 0,
+      "memorised": false
+    },
+    {
+      "race": "Armataur",
+      "skill": 12,
+      "memorised": true
+    }
+  ],
+  "generated_chinese_overlay_present_before": true
+}

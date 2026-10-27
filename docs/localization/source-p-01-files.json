@@ -1,0 +1,275 @@
+[
+  {
+    "file": "crawl-ref/source/p-display.h",
+    "scope": "Typed presentation arguments for anatomy, canonical clauses, duration text and item lists; unavailable components retain complete English expression",
+    "sha256": "5842e7ace1924d25767373dd4ec5055d4312465b55d0684b67147b966dd118d3",
+    "new": true,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/package.cc",
+    "scope": "Internal algorithms, enum/props keys, save structures or technical diagnostics; no new player-facing prose",
+    "sha256": "804353670ffbeaabab3d6fd3318c89d223602ebf730827f1b739bbb1f923e2d3",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/package.h",
+    "scope": "Internal algorithms, enum/props keys, save structures or technical diagnostics; no new player-facing prose",
+    "sha256": "2277904b90dbc96e73834013a817d475b39444bf305da9a127b61635d840203b",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/pattern.cc",
+    "scope": "Internal algorithms, enum/props keys, save structures or technical diagnostics; no new player-facing prose",
+    "sha256": "b1c554e996c9f72a9439ee76473b6f2bd7e0aed34dbd28672f4400dbc3a694e9",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/pattern.h",
+    "scope": "Internal algorithms, enum/props keys, save structures or technical diagnostics; no new player-facing prose",
+    "sha256": "72e478591fb60d5cbbbb7c95cc952f1328af11f8ef3139a6255a28b3f80e1eec",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/pcg.cc",
+    "scope": "Internal algorithms, enum/props keys, save structures or technical diagnostics; no new player-facing prose",
+    "sha256": "c300e8cfcfff49524d6dd45c4ebbec0896e2fd16e93aed5e10f754aacd1fa285",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/pcg.h",
+    "scope": "Internal algorithms, enum/props keys, save structures or technical diagnostics; no new player-facing prose",
+    "sha256": "e200dfc91b6975d7274d946538aa3b7a6485d6eb4f907bff949378198909bbd6",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/perlin.cc",
+    "scope": "Internal algorithms, enum/props keys, save structures or technical diagnostics; no new player-facing prose",
+    "sha256": "a9837e1e3144f5425869a6c9eb050c18eb25d0d37a7255d7297bce63b6ae555b",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/perlin.h",
+    "scope": "Internal algorithms, enum/props keys, save structures or technical diagnostics; no new player-facing prose",
+    "sha256": "ede412ea746ff20fafb74794ae3aef930a703e73691cb0dbb183c925f66a4993",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/piety-info.cc",
+    "scope": "Internal algorithms, enum/props keys, save structures or technical diagnostics; no new player-facing prose",
+    "sha256": "b33e46be571d5bee2996a19a1c618b11d1c6749c6e52a7455af5ee779727b49e",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/piety-info.h",
+    "scope": "Internal algorithms, enum/props keys, save structures or technical diagnostics; no new player-facing prose",
+    "sha256": "1b3f0000a82e2fda48669d33048ac792fdebddd83b4abf11d9b25a69b372b143",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/place-info.cc",
+    "scope": "Canonical branch/location APIs and counters; actual location display uses existing typed presentation boundaries",
+    "sha256": "7c303ef11bd3eee0908440213538f5dd5b0e0e852412f51ae8b40953cc1c33fb",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/place-info.h",
+    "scope": "Canonical branch/location APIs and counters; actual location display uses existing typed presentation boundaries",
+    "sha256": "105bc280499597052612428abc58a1c8d64f64c84ac96f2b24e568b85edc0a7f",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/place.cc",
+    "scope": "Canonical branch/location APIs and counters; actual location display uses existing typed presentation boundaries",
+    "sha256": "482002dfe608e5ec888be40ce18ffa350759ec44e19d6313a3848628953816ee",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/place.h",
+    "scope": "Canonical branch/location APIs and counters; actual location display uses existing typed presentation boundaries",
+    "sha256": "ac1893a90a6f64488723e37fa79c1a6583711c4a96ed323cc5f1dc95f5bda1fe",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/platform.h",
+    "scope": "Internal algorithms, enum/props keys, save structures or technical diagnostics; no new player-facing prose",
+    "sha256": "0484f29acfe09a53e977a58b23cee73134b3a2b4efc41c9e68d9aed202ec2f08",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/playable.cc",
+    "scope": "Species/job/combo JSON schema and canonical names; creation UI uses existing typed adapters",
+    "sha256": "bdb32a6bb328d1282f7c9d73fb09486be0f478ebb52ae786b146cda58e569bfb",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/playable.h",
+    "scope": "Species/job/combo JSON schema and canonical names; creation UI uses existing typed adapters",
+    "sha256": "abcaac414117961d1bd3f35ce00ca87ecd7201bbbc9c0bb32e809444fac6bf8a",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/player-act.cc",
+    "scope": "Berserk feedback and canonical actor/body APIs with separate anatomy display adapters",
+    "sha256": "8d91e90d59a9489e7fe01e2dcf320151836516fe8bf8a98cd158e4521b96d2a0",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/player-equip.cc",
+    "scope": "Equipment effects, meld/unmeld lists, regeneration attunement and god messages; reason/name APIs and equipment rules preserved",
+    "sha256": "ae579f4ad7a5fdd60bdc517329b11420fc6d3ccfad89a30397e2c0d716ae2a25",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/player-equip.h",
+    "scope": "Equipment effects, meld/unmeld lists, regeneration attunement and god messages; reason/name APIs and equipment rules preserved",
+    "sha256": "a2eeb041319143127211fcc0da4f310c424be66619f2d827fcdfd31ea820a98e",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/player-notices.cc",
+    "scope": "Encounter and Abyss appearance messages and god warnings; selected random flavor reused, canonical notes retained",
+    "sha256": "c29ad525a7e083359018e405b7c44f34f99429c9d92d7c3e88212a7139976fc8",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/player-notices.h",
+    "scope": "Encounter and Abyss appearance messages and god warnings; selected random flavor reused, canonical notes retained",
+    "sha256": "c89aed3df3cbcc6b5b1020a3b12a80c1756d38946882029bcfa6be7c51ed8ac4",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/player-reacts.cc",
+    "scope": "Duration expiration, transformations, regeneration, cooldowns and body feedback; canonical duration text used for complete warning fallback",
+    "sha256": "980fc321e1d6e29dc0e03d17d6187f07de52aca9aaceedc03f1a326598624737",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/player-reacts.h",
+    "scope": "Duration expiration, transformations, regeneration, cooldowns and body feedback; canonical duration text used for complete warning fallback",
+    "sha256": "d71e10a360e0add28fd8875a7b463a4d31c93734991f11983dbad9f95611203a",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/player-save-info.h",
+    "scope": "Internal algorithms, enum/props keys, save structures or technical diagnostics; no new player-facing prose",
+    "sha256": "57733e592d9bedad616dfd4448859dd57dad6c02ef72cde61a7f717c247568fe",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/player-stats.cc",
+    "scope": "Attribute selection and changes; Lua level-up hook retains original English message and input keys",
+    "sha256": "13a63b2bad6b6e45ea66157469aedab9c243aff35187f66dfef6582d0382a162",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/player-stats.h",
+    "scope": "Attribute selection and changes; Lua level-up hook retains original English message and input keys",
+    "sha256": "786840d73f0d3eeb4268a4b8c8387f7a4d40401870c1d278eed07e8bf3f133fa",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/player.cc",
+    "scope": "Movement and terrain confirmation, levels, contamination, conditions, healing, doors and character status; canonical save/API/kill-cause data retained",
+    "sha256": "8af567b5b5299f9d84e7f97b319dba88a310713d4738f48a982641afbefb98fa",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/player.h",
+    "scope": "Internal algorithms, enum/props keys, save structures or technical diagnostics; no new player-facing prose",
+    "sha256": "1a911888f373f80c2b4af8fd634bf3308714a1e5a45fe41b55a5822f30619658",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/potion-type.h",
+    "scope": "Internal algorithms, enum/props keys, save structures or technical diagnostics; no new player-facing prose",
+    "sha256": "f9a919654809410717544d316b90d0b87d8da5b1c98e38e08fc5da9041330179",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/potion.cc",
+    "scope": "Potion effects and confirmation prompts; effect checks, durations, RNG, canonical potion and reason interfaces preserved",
+    "sha256": "1c80098c5a54507eedef6192130963bfa68c0ff33f6d6bf42969e8a46835b3cd",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/potion.h",
+    "scope": "Potion effects and confirmation prompts; effect checks, durations, RNG, canonical potion and reason interfaces preserved",
+    "sha256": "06972587f6d0b031b6b7c181a06fea3577512f5196a067b9a87214e295fa9725",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/precision-menu.cc",
+    "scope": "Generic transport/rendering and geometry; caller-provided display text preserved, diagnostics are technical",
+    "sha256": "14e2fb1b5ea1e573e5be007e334eb27dd505defc52e44774b38bdeff971321f4",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/precision-menu.h",
+    "scope": "Generic transport/rendering and geometry; caller-provided display text preserved, diagnostics are technical",
+    "sha256": "b634cb3a66f6557694febccbc33989ae589b107cb70d7a63e7cef2e78697be84",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/prompt.cc",
+    "scope": "Confirmation labels, retry hints and typed confirmation token; input protocol and caller-authored prompts retained",
+    "sha256": "1af8b9ed6a680c0554d0e8c4d780b0a1bd614341ac65fe9fa4dfcc5273aed39f",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/prompt.h",
+    "scope": "Confirmation labels, retry hints and typed confirmation token; input protocol and caller-authored prompts retained",
+    "sha256": "c804285b53d95cd9024dcb08e7be1f100e6c7c2acc0f957d0eeabfb6708ae865",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/pronoun-type.h",
+    "scope": "Internal algorithms, enum/props keys, save structures or technical diagnostics; no new player-facing prose",
+    "sha256": "e819cef0ec0e8e11225a75651d9858effead126beda4b52b80a46766f2740d1b",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/props.h",
+    "scope": "Internal algorithms, enum/props keys, save structures or technical diagnostics; no new player-facing prose",
+    "sha256": "68c64a19d511325753d4d96c838d4675bead7222eaf45ed8eb736cfb2cf8a081",
+    "new": false,
+    "changed": false
+  }
+]

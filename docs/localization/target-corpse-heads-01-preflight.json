@@ -1,0 +1,31 @@
+{
+  "glossary_sha256": "e8b68cdbeb69768c2b1bf2f973a2335c21e45c3e8ade4729316bd2f6bd1ae6f1",
+  "queries": [
+    "corpse",
+    "skeleton",
+    "hydra",
+    "aim",
+    "here",
+    "head",
+    "look",
+    "heal"
+  ],
+  "hits": [
+    {
+      "Term": "corpse",
+      "Translation": "尸体",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "hydra",
+      "Translation": "海德拉",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    }
+  ],
+  "existing_corpse_display": "display.item.template: %s corpse / %s skeleton",
+  "existing_prefixes": "d.target.prefix: Aim / Look; s.target.prompt: Apport / Smite / Fragment what (e.g. wall or brittle monster)?"
+}

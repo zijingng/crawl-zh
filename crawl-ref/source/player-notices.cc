@@ -5,11 +5,15 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
+#include "p-display.h"
+#include "item-name.h"
 
 #include "act-iter.h"
 #include "areas.h"
 #include "attitude-change.h"
 #include "database.h"
+#include "misc-display.h"
 #include "delay.h"
 #include "describe.h"
 #include "directn.h"
@@ -75,7 +79,14 @@ static bool _check_monster_alert(const monster& mon)
         // And if it wasn't a monster that would get an encounter warning due to
         // being a summon, make sure to say something.
         if (mon.is_summoned())
-            mprf(MSGCH_MONSTER_WARNING, "%s comes into view.", mon.name(DESC_A).c_str());
+        {
+            const char *source = "%s comes into view.";
+            string translated;
+            if (try_ui_actor_log("log.encounter", source, mon, translated))
+                mprf(MSGCH_MONSTER_WARNING, "%s", translated.c_str());
+            else
+                mprf(MSGCH_MONSTER_WARNING, source, mon.name(DESC_A).c_str());
+        }
 
         more(true);
         return true;
@@ -311,11 +322,13 @@ static void _count_monster_types(const vector<monster*> &monsters,
 }
 
 
-static string _describe_monsters_from_species(const vector<details> &species)
+static string _describe_monsters_from_species(const vector<details> &species,
+                                              vector<ui_arg> *named = nullptr)
 {
     return comma_separated_fn(species.begin(), species.end(),
-        [] (const details &det)
+        [named] (const details &det)
         {
+            if (named) named->push_back({"", false});
             string name = det.name;
             const monster_type base_type =
                 mons_is_zombified(*(det.mon)) ? det.mon->base_monster
@@ -324,7 +337,16 @@ static string _describe_monsters_from_species(const vector<details> &species)
             // uniques keep their names.
             if ((det.mon->is_named() || mons_is_unique(base_type)) && det.count == 1)
             {
-                string title = getMiscString(det.mon->name(DESC_DBNAME) + " title");
+                const string key = det.mon->name(DESC_DBNAME) + " title";
+                string title;
+                if (named)
+                {
+                    const auto paired = getPairedMiscString(key);
+                    title = paired.english;
+                    named->back() = {paired.translated, paired.complete};
+                }
+                else
+                    title = getMiscString(key, "", Options.language == lang_t::ZH);
                 if (!title.empty())
                     return title;
 
@@ -332,6 +354,8 @@ static string _describe_monsters_from_species(const vector<details> &species)
                 // proper articles for all named monsters as well as proper
                 // types for all zombified uniques.
                 monster_info mi(det.mon);
+                if (named)
+                    named->back().available = mi.try_display_name(named->back().text);
                 return mi.full_name(DESC_A);
             }
             else if (det.count > 1 && det.genus)
@@ -360,11 +384,13 @@ string describe_monsters_condensed(const vector<monster*>& monsters)
     return _describe_monsters_from_species(species);
 }
 
-static string _abyss_monster_creation_message(const monster* mon)
+static string _abyss_monster_creation_message(const monster* mon, string &display)
 {
     if (mon->type == MONS_DEATH_COB)
     {
-        return coinflip() ? " appears in a burst of microwaves!"
+        const bool microwaves = coinflip();
+        display = microwaves ? ui_render("p.abyss", "%s appears in a burst of microwaves!", "", {ui_actor_arg(*mon)}) : ui_render("p.abyss", "%s pops from nullspace!", "", {ui_actor_arg(*mon)});
+        return microwaves ? " appears in a burst of microwaves!"
                           : " pops from nullspace!";
     }
 
@@ -391,7 +417,133 @@ static string _abyss_monster_creation_message(const monster* mon)
 
     };
 
-    return *random_choose_weighted(messages);
+    const string *chosen = random_choose_weighted(messages);
+    for (size_t i = 0; i < messages.size(); ++i)
+    {
+        if (chosen != &messages[i].first)
+            continue;
+        switch (i)
+        {
+        case 0: display = ui_render("p.abyss", "%s appears in a shower of translocational energy.", "", {ui_actor_arg(*mon)}); break;
+        case 1: display = ui_render("p.abyss", "%s appears in a shower of sparks.", "", {ui_actor_arg(*mon)}); break;
+        case 2: display = ui_render("p.abyss", "%s materialises.", "", {ui_actor_arg(*mon)}); break;
+        case 3: display = ui_render("p.abyss", "%s emerges from chaos.", "", {ui_actor_arg(*mon)}); break;
+        case 4: display = ui_render("p.abyss", "%s emerges from the beyond.", "", {ui_actor_arg(*mon)}); break;
+        case 5: display = ui_render("p.abyss", "%s assembles itself!", "", {ui_actor_arg(*mon)}); break;
+        case 6: display = ui_render("p.abyss", "%s erupts from nowhere.", "", {ui_actor_arg(*mon)}); break;
+        case 7: display = ui_render("p.abyss", "%s bursts from nowhere.", "", {ui_actor_arg(*mon)}); break;
+        case 8: display = ui_render("p.abyss", "%s is cast out of space.", "", {ui_actor_arg(*mon)}); break;
+        case 9: display = ui_render("p.abyss", "%s is cast out of reality.", "", {ui_actor_arg(*mon)}); break;
+        case 10: display = ui_render("p.abyss", "%s coalesces out of pure chaos.", "", {ui_actor_arg(*mon)}); break;
+        case 11: display = ui_render("p.abyss", "%s coalesces out of seething chaos.", "", {ui_actor_arg(*mon)}); break;
+        case 12: display = ui_render("p.abyss", "%s punctures the fabric of time!", "", {ui_actor_arg(*mon)}); break;
+        case 13: display = ui_render("p.abyss", "%s punctures the fabric of the universe.", "", {ui_actor_arg(*mon)}); break;
+        case 14: display = ui_render("p.abyss", "%s manifests%s!", "", {ui_actor_arg(*mon), p_clause_arg(silenced(you.pos()) ? "" : " with a bang")}); break;
+        }
+        break;
+    }
+    return *chosen;
+}
+
+// Use the same already-counted species and visible inventory as the English
+// warning. No database query or random choice is repeated in this renderer.
+static bool _try_encounter_log(const vector<monster*> &monsters,
+                              const unordered_set<const monster*> &single,
+                              const vector<details> &species,
+                              const vector<ui_arg> &named,
+                              const char *source, string &output)
+{
+    ui_translation_group text({{"log.encounter", source}});
+    if (!text.available())
+        return false;
+    vector<string> names;
+    for (size_t index = 0; index < species.size(); ++index)
+    {
+        const details &det = species[index];
+        string name;
+        const monster_type base = mons_is_zombified(*det.mon)
+            ? det.mon->base_monster : det.mon->type;
+        if (det.count == 1 && (det.mon->is_named() || mons_is_unique(base)))
+        {
+            if (index >= named.size() || !named[index].available) return false;
+            name = named[index].text;
+        }
+        else if (det.count > 1 && det.genus)
+        {
+            if (!try_monster_type_display_name(mons_genus(det.mon->type), name))
+                return false;
+        }
+        else if (!monster_info(det.mon, MILEV_NAME).try_display_name(name))
+            return false;
+        if (det.count > 1)
+            name = std::to_string(det.count) + " × " + name;
+        names.push_back(name);
+    }
+
+    string result = make_stringf(text.get("log.encounter", source),
+                                join_strings(names.begin(), names.end(), "、").c_str());
+    for (const monster *mon : monsters)
+    {
+        monster_info mi(mon, MILEV_SKIP_SAFE);
+        if (!_is_mon_equipment_worth_listing(mi, monsters.size() == 1)
+            || (_does_core_name_include_inventory(mon) && single.count(mon)))
+            continue;
+        // Animated equipment descriptions have additional special grammar.
+        if (mons_class_is_animated_weapon(mi.type) || mi.is(MB_ARMED)
+            || mi.props.exists(SPECIAL_WEAPON_KEY)
+            || (mi.wields_two_weapons() && !mi.inv[MSLOT_WEAPON] && mi.inv[MSLOT_ALT_WEAPON]))
+            return false;
+        vector<string> equipment;
+        auto add_item = [&](mon_inv_type slot, const char *pattern) -> bool
+        {
+            if (!mi.inv[slot])
+                return true;
+            item_def shown = *mi.inv[slot];
+            // The English equipment warning does not disclose quiver counts.
+            if (slot == MSLOT_MISSILE && shown.sub_type != MI_THROWING_NET)
+                shown.quantity = 1;
+            string name;
+            text.require("log.encounter.equipment", pattern);
+            if (!text.available() || !try_item_display_name(shown, name, false, false))
+                return false;
+            equipment.push_back(make_stringf(text.get("log.encounter.equipment", pattern), name.c_str()));
+            return true;
+        };
+        const item_def *primary = mi.inv[MSLOT_WEAPON].get();
+        const item_def *alternate = mi.inv[MSLOT_ALT_WEAPON].get();
+        const bool weapons = primary && (monsters.size() == 1
+            || item_is_worth_listing(*primary)
+            || (mi.wields_two_weapons() && alternate && item_is_worth_listing(*alternate)));
+        if (weapons && !add_item(MSLOT_WEAPON, "wielding %s"))
+            return false;
+        if (mi.wields_two_weapons() && weapons
+            && !add_item(MSLOT_ALT_WEAPON, "wielding %s"))
+            return false;
+        for (auto slot : {MSLOT_ARMOUR, MSLOT_SHIELD, MSLOT_JEWELLERY, MSLOT_MISSILE})
+        {
+            if (!mi.inv[slot] || !item_is_worth_listing(*mi.inv[slot])
+                || (slot == MSLOT_ARMOUR
+                    && (mi.type == MONS_ARMOUR_ECHO || mi.type == MONS_HAUNTED_ARMOUR)))
+                continue;
+            if (!add_item(slot, slot == MSLOT_MISSILE ? "quivering %s" : "wearing %s"))
+                return false;
+        }
+        if ((!mi.wields_two_weapons() && !add_item(MSLOT_ALT_WEAPON, "carrying %s"))
+            || !add_item(MSLOT_WAND, "carrying %s"))
+            return false;
+        if (!equipment.empty())
+        {
+            string subject;
+            const char *pattern = "%s is %s.";
+            text.require("log.encounter.equipment", pattern);
+            if (!text.available() || !mi.try_display_name(subject))
+                return false;
+            result += "\n" + make_stringf(text.get("log.encounter.equipment", pattern),
+                subject.c_str(), join_strings(equipment.begin(), equipment.end(), "、").c_str());
+        }
+    }
+    output = result;
+    return true;
 }
 
 /**
@@ -415,6 +567,7 @@ static void _handle_encounter_messages(const vector<monster*> monsters,
     _count_monster_types(monsters, single, species);
 
     ostringstream out;
+    vector<ui_arg> named;
 
     // Abyss spawn messages should be printed one at a time, regardless of how
     // many things are seen at once.
@@ -424,29 +577,37 @@ static void _handle_encounter_messages(const vector<monster*> monsters,
         // to condense message spam a little.
         for (details& sp : species)
         {
-            string msg = _abyss_monster_creation_message(sp.mon);
+            string display;
+            string msg = _abyss_monster_creation_message(sp.mon, display);
             for (int i = 0; i < sp.count; ++i)
             {
-                mprf(MSGCH_MONSTER_WARNING, "%s%s", sp.mon->name(DESC_A).c_str(),
-                                                    msg.c_str());
+                mprf(MSGCH_MONSTER_WARNING, "%s", (display.empty() ? make_stringf("%s%s", sp.mon->name(DESC_A).c_str(), msg.c_str()) : display).c_str());
             }
         }
     }
     else if (sc == SC_ORBRUN)
     {
-        out << _describe_monsters_from_species(species).c_str() << " appear";
+        out << _describe_monsters_from_species(species, &named).c_str() << " appear";
         if (monsters.size() == 1)
             out << "s";
         out << " in pursuit of the Orb! ";
     }
     else
-        out << "You encounter " << _describe_monsters_from_species(species) << ".";
+        out << "You encounter " << _describe_monsters_from_species(species, &named) << ".";
 
     _monster_headsup(monsters, single, out);
 
     string msg = out.str();
+    if (sc != SC_ABYSS)
+    {
+        const char *source = sc == SC_ORBRUN
+            ? "%s appear in pursuit of the Orb!" : "You encounter %s.";
+        string translated;
+        if (_try_encounter_log(monsters, single, species, named, source, translated))
+            msg = translated;
+    }
     if (!msg.empty())
-        mprf(MSGCH_MONSTER_WARNING, "%s", out.str().c_str());
+        mprf(MSGCH_MONSTER_WARNING, "%s", msg.c_str());
 }
 
 static bool _monster_needs_warning(const monster& mon)
@@ -637,7 +798,7 @@ void seen_monster(monster* mons, bool do_encounter_message)
             wyrmbane = offhand_wpn;
 
         if (wyrmbane && mons->dragon_level() > wyrmbane->plus)
-            mpr("<green>Wyrmbane glows as a worthy foe approaches.</green>");
+            mpr(ui_translate("p.ui", "<green>Wyrmbane glows as a worthy foe approaches.</green>"));
     }
 
     // attempt any god conversions on first sight
@@ -679,8 +840,7 @@ void seen_monster(monster* mons, bool do_encounter_message)
         && coinflip()
         && mons->get_experience_level() >= random2(you.experience_level))
     {
-        mprf(MSGCH_GOD, GOD_GOZAG, "Gozag incites %s against you.",
-                mons->name(DESC_THE).c_str());
+        mprf(MSGCH_GOD, GOD_GOZAG, "%s", ui_render("p.log.53", "Gozag incites %s against you.", make_stringf("Gozag incites %s against you." , mons->name(DESC_THE).c_str()), {ui_actor_arg(*mons)}).c_str());
         gozag_incite(mons);
     }
 
@@ -691,7 +851,7 @@ void seen_monster(monster* mons, bool do_encounter_message)
         string msg = make_stringf(" warns you: %s is a foul%s shapeshifter.",
                                     uppercase_first(mons->name(DESC_THE)).c_str(),
                                     mons->has_ench(ENCH_GLOWING_SHAPESHIFTER) ? " glowing" : "");
-        simple_god_message(msg.c_str());
+        simple_god_message(msg.c_str(), false, you.religion, ui_render("p.warning", "%s warns you: %s is a foul%s shapeshifter.", "", {ui_text_arg("display.god", god_name(you.religion)), ui_actor_arg(*mons), p_clause_arg(mons->has_ench(ENCH_GLOWING_SHAPESHIFTER) ? " glowing" : "")}));
         discover_shifter(*mons);
 #ifndef USE_TILE_LOCAL
             // XXX: should this really be here...?

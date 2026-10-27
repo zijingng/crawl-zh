@@ -7,6 +7,7 @@
 #include "mon-util.h"
 #include "options.h"
 #include "tag-version.h"
+#include "i18n.h"
 
 using std::vector;
 
@@ -309,6 +310,10 @@ struct monster_info_base
     CrawlHashTable props;
     string constrictor_name;
     vector<string> constricting_name;
+    // Display snapshots, not serialized identifiers. Legacy cached descriptions
+    // without these inputs fall back to their complete canonical English row.
+    ui_arg constrictor_display{"", false};
+    vector<ui_arg> constricting_display;
     monster_spells spells;
     mon_attack_def attack[MAX_NUM_ATTACKS];
     bool can_go_frenzy;
@@ -364,7 +369,8 @@ struct monster_info : public monster_info_base
 
     void to_string(int count, string& desc, int& desc_colour,
                    bool fullname = true, const char *adjective = nullptr,
-                   bool verbose = true) const;
+                   bool verbose = true, bool display = true,
+                   bool *translated = nullptr) const;
 
     /* only real equipment is visible, miscellany is for mimic items */
     unique_ptr<item_def> inv[MSLOT_LAST_VISIBLE_SLOT + 1];
@@ -406,8 +412,15 @@ struct monster_info : public monster_info_base
     string common_name(description_level_type desc = DESC_PLAIN) const;
     string proper_name(description_level_type desc = DESC_PLAIN) const;
     string full_name(description_level_type desc = DESC_PLAIN) const;
+    // Presentation only; failure leaves output untouched. Internal names,
+    // database keys, Lua and English sentences continue using full_name().
+    bool try_display_name(string &output) const;
+    string display_name_tag() const;
 
     vector<string> attributes() const;
+    vector<ui_arg> attribute_display_args() const;
+    ui_arg wounds_display_arg(bool colour = false) const;
+    ui_arg constriction_display_arg() const;
 
     const char *pronoun(pronoun_type variant) const;
     bool pronoun_plurality() const;
@@ -513,6 +526,7 @@ protected:
 // Colour should be between -1 and 15 inclusive!
 bool set_monster_list_colour(monster_list_colour_type, int colour);
 void clear_monster_list_colours();
+bool try_monster_type_display_name(monster_type type, string &output);
 
 void get_monster_info(vector<monster_info>& mons);
 
@@ -520,6 +534,7 @@ void mons_to_string_pane(string& desc, int& desc_colour, bool fullname,
                            const vector<monster_info>& mi, int start,
                            int count);
 void mons_conditions_string(string& desc, const vector<monster_info>& mi,
-                            int start, int count, bool equipment);
+                            int start, int count, bool equipment,
+                            bool display = false, bool *translated = nullptr);
 
 string description_for_ench(enchant_type type);

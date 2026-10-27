@@ -1,0 +1,28 @@
+{
+  "batch": 52,
+  "new_translation_keys": 0,
+  "program_candidates": {
+    "random_book_title": 10,
+    "xom_book_title": 9
+  },
+  "offline_expansion": {
+    "random_book_title": {
+      "expanded_names": 7545,
+      "ambiguous": {}
+    },
+    "xom_book_title": {
+      "expanded_names": 7683,
+      "ambiguous": {}
+    }
+  },
+  "offline_player_name": "Ceneedgh",
+  "english_and_chinese_randbook_data_unchanged": true,
+  "randbook_reviewed_keys": 72,
+  "python_tests_passed": 32,
+  "native_cases_passed": 5,
+  "native_assertions_passed": 26092,
+  "native_seconds": 2.234,
+  "windows_tiles_build": "passed",
+  "gui_visual_test": false,
+  "native_coverage": "all root candidates, cross-dictionary boundary samples, player-name suffixes, unknown components, real item display, English switching and RNG; not every expanded name"
+}

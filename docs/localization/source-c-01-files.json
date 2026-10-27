@@ -1,0 +1,339 @@
+{
+  "files": [
+    {
+      "source": "crawl-ref/source/caction-type.h",
+      "sha256": "0f27ec968c0dfe5cafe7c1e1e970988eb271402e45d65361f16daf6e76403068",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    },
+    {
+      "source": "crawl-ref/source/canned-message-type.h",
+      "sha256": "26bf17362be43dc29b227e488cd723b08c1fb557606cce82e2bb3be2fde489c2",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    },
+    {
+      "source": "crawl-ref/source/caught-type.h",
+      "sha256": "fcce36a1b297c3e5b7cd8c30d2ba1d99e5241ec188d06e5bf4cb2eef70d226b1",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    },
+    {
+      "source": "crawl-ref/source/char-set-type.h",
+      "sha256": "b9d0c026a3e4d75959d1849630fd779225592e39a3134d0ddff8d950f9b0f2b8",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    },
+    {
+      "source": "crawl-ref/source/chardump.cc",
+      "sha256": "f26645ec0d011b5764c52e57ce84a0ebeeefa0befdfdcb4231d8164049b61df2",
+      "generated": false,
+      "note": "游戏内查看的角色记录与导出提示；规范导出、自定义 Lua 及外部模块内容保留原逻辑。"
+    },
+    {
+      "source": "crawl-ref/source/chardump.h",
+      "sha256": "af7587cd57c28f96d29400396540f63b47cec41ea5f751689e9a25e74c420373",
+      "generated": false,
+      "note": "公开无文件 I/O 的角色记录读取与独立种子显示接口。"
+    },
+    {
+      "source": "crawl-ref/source/cio.cc",
+      "sha256": "37c1bcb6d5fead85c22ff224e946f6832aa653b7f97df5d6299600a76d7003ea",
+      "generated": false,
+      "note": "输入与换行基础设施，CTRL/SHIFT 为规范按键名，无独立待译游戏文案。"
+    },
+    {
+      "source": "crawl-ref/source/cio.h",
+      "sha256": "c1b0f7dc8e4b0dbd03dbca4f76350cbb1cc4976c9c360f3b4663b180ba229bf6",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    },
+    {
+      "source": "crawl-ref/source/cleansing-flame-source-type.h",
+      "sha256": "95067fe0564a530800a9a5b20195e78027291fb379b92d39dfeec2b9174b792d",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    },
+    {
+      "source": "crawl-ref/source/cloud-type.h",
+      "sha256": "05a1d119e698869fa7e40931268a7510d6d30175914da36db31ae21ea624a503",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    },
+    {
+      "source": "crawl-ref/source/cloud.cc",
+      "sha256": "6c83feb466b82bbacf59f98446bf3ab4bf1005f0f88d86b3f65143bb1db09d09",
+      "generated": false,
+      "note": "云名显示、云层效果日志与静风提示；规范名称表、Lua 键及伤害归因保留英文。"
+    },
+    {
+      "source": "crawl-ref/source/cloud.h",
+      "sha256": "3252129307c39550d7b92d7a42130409ec69ecf074fba131f76d766bd10e5932",
+      "generated": false,
+      "note": "新增仅用于显示的接口，保留原名称与解析接口。"
+    },
+    {
+      "source": "crawl-ref/source/clua.cc",
+      "sha256": "34a9a9992d1d6bca557d5cabf4bbde648a3119837d5fe63b5c6eec5cdf95df6d",
+      "generated": false,
+      "note": "持久化文件写入失败提示；Lua API、异常和脚本诊断保留英文。"
+    },
+    {
+      "source": "crawl-ref/source/clua.h",
+      "sha256": "bdfbac30251923ce64ed6bb363881fa77f8444a0dcfd09eb6414a3ccc557b6b7",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    },
+    {
+      "source": "crawl-ref/source/cluautil.cc",
+      "sha256": "342e32f953a02e2bcccd8862289bc266303ba892e13296f2b30365edb4bb4bd0",
+      "generated": false,
+      "note": "Lua 辅助与内部接口，不改变脚本语义及技术诊断。"
+    },
+    {
+      "source": "crawl-ref/source/cluautil.h",
+      "sha256": "6c64d8898b4a1b090ca0a3b8519695e65293ddb6a6b9d110e0684687381a78a8",
+      "generated": false,
+      "note": "Lua 参数检查和边界诊断，属于脚本开发接口。"
+    },
+    {
+      "source": "crawl-ref/source/cmd-keys.h",
+      "sha256": "88a7aa53fdeb933f6ea990bf65244606f4717a080e78ec29aab8fa334ccff37c",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    },
+    {
+      "source": "crawl-ref/source/cmd-name.h",
+      "sha256": "719f0184c4f515e06d697d30aa8e32db15a6ac61b322fd70fbcef6fd8c8f19fa",
+      "generated": false,
+      "note": "命令枚举对应的规范字符串，供配置、Lua 与解析使用。"
+    },
+    {
+      "source": "crawl-ref/source/colour.cc",
+      "sha256": "ea636830e8bbcbc28e8ab2581983388a00d949e0942038c53ca6309eea7512d2",
+      "generated": false,
+      "note": "颜色规范名称、解析及算法，不翻译内部颜色键。"
+    },
+    {
+      "source": "crawl-ref/source/colour.h",
+      "sha256": "7991b3a3e3c7c33e6b2701edfdce411e665c4c5009ef9d18b6ed65dd34c281c1",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    },
+    {
+      "source": "crawl-ref/source/command-type.h",
+      "sha256": "7148cabe38cf4e98930c3a1590836e4299310360e7c55253ab13b2048296dd5c",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    },
+    {
+      "source": "crawl-ref/source/command.cc",
+      "sha256": "9ef1aeda7a96b489b1c62a18447f775f09b78535157730e4c9fd385ec6871bfb",
+      "generated": false,
+      "note": "版本与种子、功能列表、终端说明、装备列表及已有帮助文本。"
+    },
+    {
+      "source": "crawl-ref/source/command.h",
+      "sha256": "95ef9010b9da06635a464802de01c257b2630a344680a5126e7703c047d7e432",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    },
+    {
+      "source": "crawl-ref/source/compflag.h",
+      "sha256": "f5b39fa92567696ad4189570f05871411fc3a05feed6e795e47136d27fc265bc",
+      "generated": true,
+      "note": "自动生成的编译器、平台与构建标记，不手工翻译。"
+    },
+    {
+      "source": "crawl-ref/source/conduct-type.h",
+      "sha256": "851c960cf86292e07fd33f3f27d2b4d41098839255ee4d7338bd12caaa861b01",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    },
+    {
+      "source": "crawl-ref/source/config.h",
+      "sha256": "b08e9c75d6c81639e42b0d821f1998f7d4b0603b48a6e6dfa03e6e93c899e1be",
+      "generated": false,
+      "note": "编译期平台与特性配置。"
+    },
+    {
+      "source": "crawl-ref/source/confirm-prompt-type.h",
+      "sha256": "e4b425ffcb1edc3e2b598c8d12f36e9cb268532239dcdb882f8270a9ffe8e091",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    },
+    {
+      "source": "crawl-ref/source/constrict-type.h",
+      "sha256": "6a6e82d8497cbfc024e3f0de5ca62ef1b8d8d0ddb5889bf2051a2626e94d2d0b",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    },
+    {
+      "source": "crawl-ref/source/coord-circle.cc",
+      "sha256": "39b6baa7da095886c8aa5fcfd92be2ea2302b9e50ae5cbc7ff0a1c815a6f2f9c",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    },
+    {
+      "source": "crawl-ref/source/coord-circle.h",
+      "sha256": "42d7a5c2f0dfee57c4ae56fafe30bbbb545396ac99366679df5f5a104ed1a102",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    },
+    {
+      "source": "crawl-ref/source/coord-def.h",
+      "sha256": "9a2b9350e7257236907615df9fbf3b17988a1b4668a7914411d2d8e7205cdfc8",
+      "generated": false,
+      "note": "坐标类型及调试输出。"
+    },
+    {
+      "source": "crawl-ref/source/coord.cc",
+      "sha256": "ceabbc417a0c5014e6a8893c3cd1a23c5e07d0b89540e247b704c645eea5d9ab",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    },
+    {
+      "source": "crawl-ref/source/coord.h",
+      "sha256": "ba2198e90cb7c1b7624af3faf304a9cc373dacb55bdf4f326a2fd036e8251b8e",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    },
+    {
+      "source": "crawl-ref/source/coordit.cc",
+      "sha256": "a8dd113de2bf02013c9019f5d70d850c9e2d8821b09ff9e2e5014a58a619b77b",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    },
+    {
+      "source": "crawl-ref/source/coordit.h",
+      "sha256": "eb8e6014731712c11c32bcc2307dae5521134d622036bb360dfb33c8d402724c",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    },
+    {
+      "source": "crawl-ref/source/corpse.cc",
+      "sha256": "f8ae2287145cdaa4279305616c560bcd57da8c4b404e9be43d08719264ad20f2",
+      "generated": false,
+      "note": "尸体腐化与骨骼逻辑，无独立玩家文案。"
+    },
+    {
+      "source": "crawl-ref/source/corpse.h",
+      "sha256": "a76306d4cacaf342fc22f77f293cb0c0430567a47ee86a12e638cd9c05c3b762",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    },
+    {
+      "source": "crawl-ref/source/crash.cc",
+      "sha256": "2233d491fd3813a80a2d21988b8dfaa9655856877edbf0a1432de125c75e9388",
+      "generated": false,
+      "note": "崩溃、栈回溯和 GDB 诊断，保留技术信息。"
+    },
+    {
+      "source": "crawl-ref/source/crash.h",
+      "sha256": "f2494bd4fa6e64ad5bdf1782fba808b921b88435b63cc23c2320951d0673ee29",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    },
+    {
+      "source": "crawl-ref/source/ctest.cc",
+      "sha256": "669d782c1ed3cdc8c219e7756a5a6d96a4e1466f21b0db7af207f2e8b1b54f1b",
+      "generated": false,
+      "note": "开发测试执行与结果诊断，保留英文。"
+    },
+    {
+      "source": "crawl-ref/source/ctest.h",
+      "sha256": "120c9398408ec57dd8891fb3022b636f9f02ed164fc32497f449689dd050857f",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    },
+    {
+      "source": "crawl-ref/source/curse-type.h",
+      "sha256": "56aaaf9afd534908114ed50170f62ed0af0dad96610ab96ddcecedb52e2b93ff",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    },
+    {
+      "source": "crawl-ref/source/cursor-type.h",
+      "sha256": "ad02c721350d518987ae68245f73a162681f537fb385d2c7647c4713fe4a1fc4",
+      "generated": false,
+      "note": "类型、枚举、声明、坐标算法或规范命令键；没有独立玩家显示文案。"
+    }
+  ],
+  "auxiliary": [
+    {
+      "source": "crawl-ref/source/catch2-tests/catch_amalgamated.cc",
+      "sha256": "713d9ed6fab7637984c930a76375bfd2729dbe979bebee4455abd9b884e4a27e",
+      "note": "第三方 Catch2 合并源码，不作游戏翻译。"
+    },
+    {
+      "source": "crawl-ref/source/scripts/csim.lua",
+      "sha256": "52d27ae32a7ce3802f86157c4c6e3722ff81dfdb85271e6c5a3d8aa383161912",
+      "note": "构建、测试、调试或模拟器脚本；规范输入、断言及技术输出保持英文。"
+    },
+    {
+      "source": "crawl-ref/source/test/corpse.lua",
+      "sha256": "728b78884dbc17d68d638fc30b85c32dfe1b3128fb2b1ed27a1ece3c0ead5bf8",
+      "note": "构建、测试、调试或模拟器脚本；规范输入、断言及技术输出保持英文。"
+    },
+    {
+      "source": "crawl-ref/source/util/checkconventionalcommit.py",
+      "sha256": "60519c452382478a379d097ae88c7dc60481c33101c9416c9e33f26c8a8ff08e",
+      "note": "构建、测试、调试或模拟器脚本；规范输入、断言及技术输出保持英文。"
+    },
+    {
+      "source": "crawl-ref/source/util/configure-msvc.py",
+      "sha256": "66e5ca0ccf4163dac4cbaaf683f29ed24438eacd9fe466dfe1d0e9a906d07c09",
+      "note": "构建、测试、调试或模拟器脚本；规范输入、断言及技术输出保持英文。"
+    },
+    {
+      "source": "crawl-ref/source/util/configure.py",
+      "sha256": "af3b73232fb8f6beb76c58ff3159e2d0926583cebef71813450d6c6d5e3ed034",
+      "note": "构建、测试、调试或模拟器脚本；规范输入、断言及技术输出保持英文。"
+    },
+    {
+      "source": "crawl-ref/source/webserver/config.py",
+      "sha256": "5559ad4d0dc33781a04252a4cff6a8d6dd02431b99605baf180c72fd70e47248",
+      "note": "WebTiles 平台代码；服务器配置和协议保持英文，网页前端不属于本批 Windows Tiles 显示适配。"
+    },
+    {
+      "source": "crawl-ref/source/webserver/game_data/static/cell_renderer.js",
+      "sha256": "77f7be1c188b2c0edc09a99c4c3de00684271e3cc922a7f586b86de86d097137",
+      "note": "WebTiles 平台代码；服务器配置和协议保持英文，网页前端不属于本批 Windows Tiles 显示适配。"
+    },
+    {
+      "source": "crawl-ref/source/webserver/static/scripts/chat.js",
+      "sha256": "bc46404fb3560d224bdc2b12cb4436db88f652971177ad0d522d9e9c82f06d3f",
+      "note": "WebTiles 平台代码；服务器配置和协议保持英文，网页前端不属于本批 Windows Tiles 显示适配。"
+    },
+    {
+      "source": "crawl-ref/source/webserver/static/scripts/client.js",
+      "sha256": "30cd3e3b59838b07414b88df40ec362f2a4adae9ff8546f62c6fdf34ea5364a8",
+      "note": "WebTiles 平台代码；服务器配置和协议保持英文，网页前端不属于本批 Windows Tiles 显示适配。"
+    },
+    {
+      "source": "crawl-ref/source/webserver/static/scripts/comm.js",
+      "sha256": "38ee3e5080701df9c55d39b922c68f2036cf7876c4091ba22ab531e40044a0d3",
+      "note": "WebTiles 平台代码；服务器配置和协议保持英文，网页前端不属于本批 Windows Tiles 显示适配。"
+    },
+    {
+      "source": "crawl-ref/source/webserver/webtiles/checkoutput.py",
+      "sha256": "f9dea842fb34c738078bb33233b8031b8b3d702d08b0cb13383928a53a5a6ba3",
+      "note": "WebTiles 平台代码；服务器配置和协议保持英文，网页前端不属于本批 Windows Tiles 显示适配。"
+    },
+    {
+      "source": "crawl-ref/source/webserver/webtiles/config.py",
+      "sha256": "c5d9bad7f6f9a7c2ce7bdd3b58f7b39c3381d1b33d94a99545c01810dbeccad8",
+      "note": "WebTiles 平台代码；服务器配置和协议保持英文，网页前端不属于本批 Windows Tiles 显示适配。"
+    },
+    {
+      "source": "crawl-ref/source/webserver/webtiles/connection.py",
+      "sha256": "75df68e44111533c0236102a876b8eac7002168e2f0e8f2f08b8b8e0b4e7dd6f",
+      "note": "WebTiles 平台代码；服务器配置和协议保持英文，网页前端不属于本批 Windows Tiles 显示适配。"
+    },
+    {
+      "source": "crawl-ref/source/crawl-gdb.py",
+      "sha256": "c9aa642e157ea23125bb8462566fa05bed5f3dd38863f111b909fd6493582871",
+      "note": "GDB 类型打印与自动加载接口，保留调试输出。"
+    }
+  ]
+}

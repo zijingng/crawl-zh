@@ -1,0 +1,125 @@
+{
+  "batch": "school-terms-01",
+  "glossary_term": "school",
+  "translation": "魔法学派/学派",
+  "glossary_files": [
+    "localization/glossary.csv",
+    "../paratranz/terms-808-reviewed-0.34.1.csv"
+  ],
+  "modified_ui_entries": 2,
+  "modified_textdb_entries": 13,
+  "clarity_changes": 0,
+  "English_source_and_keys_unchanged": true,
+  "other_glossary_rows_unchanged": true,
+  "python_tests": 33,
+  "native_tests": 5,
+  "native_assertions": 3439,
+  "build": "crawl.exe succeeded",
+  "changes": [
+    {
+      "file": "ui.po",
+      "context": "phase3.spl-cast",
+      "english": "           Type                      Failure  Level  ",
+      "before": "           流派                      失败率   等级   ",
+      "after": "           学派                      失败率   等级   "
+    },
+    {
+      "file": "ui.po",
+      "context": "phase3.spl-book",
+      "english": "<w>Spells %s                   Type                      %sLevel",
+      "before": "<w>法术 %s                    流派                      %s等级",
+      "after": "<w>法术 %s                    学派                      %s等级"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/unrand.txt:elemental staff",
+      "english": "A powerful staff which used to belong to the leader of the Guild of Five\nElements. It is imbued with protective and offensive enhancements from all\nthe elemental schools of magic.\n",
+      "before": "一支强大的法杖，曾经属于五行会的会长。\n它注入了各种元素魔法流派的进攻和防御性增益。\n",
+      "after": "一支强大的法杖，曾经属于五行会的会长。\n它注入了各种元素魔法学派的进攻和防御性增益。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/skills.txt:hexes",
+      "english": "Hexes try to bestow various enchantments on nearby things. While none do direct\ndamage, being ensorcelled can effectively take an opponent out of combat,\nalthough they often require overcoming an opponent's willpower to have an effect.\nSkill in Hexes can help overcome this.\n\nBeing skilled in Hexes increases the success rate and spell power of spells in\nthis school. Many spells belong to a combination of several schools, in which\ncase spellcasting success and power will depend on the average skill in these\nschools.\n",
+      "before": "妖术系魔法试图对附近的事物施加各种附魔效果。虽然不直接造成伤害，但中招的对手可能完全失去战斗力；不过，这类法术往往必须克服对手的意志才能生效。精通妖术系魔法有助于克服这种抵抗。\n\n精通妖术系魔法能提高该流派法术的成功率和法术强度。许多法术同时属于多个流派，此时施法成功率和法术强度取决于这些流派技能的平均值。\n",
+      "after": "妖术系魔法试图对附近的事物施加各种附魔效果。虽然不直接造成伤害，但中招的对手可能完全失去战斗力；不过，这类法术往往必须克服对手的意志才能生效。精通妖术系魔法有助于克服这种抵抗。\n\n精通妖术系魔法能提高该学派法术的成功率和法术强度。许多法术同时属于多个学派，此时施法成功率和法术强度取决于这些学派技能的平均值。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/skills.txt:conjurations",
+      "english": "Conjurations are battle oriented spells, which often work by conjuring up a\nchunk of short-lived matter and propelling it towards the victim to deal direct\ndamage. Being skilled in Conjurations usually increases the damage and accuracy\nof such spells, and sometimes affects their range or the size of the area\naffected.\n\nBeing skilled in Conjurations increases the success rate and spell power of\nspells in this school. Many spells belong to a combination of several schools,\nin which case spellcasting success and power will depend on the average skill\nin these schools.\n",
+      "before": "塑能系魔法以战斗为主，常通过创造短暂存在的物质并将其射向目标来造成直接伤害。精通塑能系魔法通常会提高此类法术的伤害和命中率，有时也会影响射程或作用范围。\n\n精通塑能系魔法能提高该流派法术的成功率和法术强度。许多法术同时属于多个流派，此时施法成功率和法术强度取决于这些流派技能的平均值。\n",
+      "after": "塑能系魔法以战斗为主，常通过创造短暂存在的物质并将其射向目标来造成直接伤害。精通塑能系魔法通常会提高此类法术的伤害和命中率，有时也会影响射程或作用范围。\n\n精通塑能系魔法能提高该学派法术的成功率和法术强度。许多法术同时属于多个学派，此时施法成功率和法术强度取决于这些学派技能的平均值。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/skills.txt:summonings",
+      "english": "Summonings deals with summoning creatures from another plane of reality to\ntemporarily aid you. Increasing Summonings skill may grant a number of effects\ndepending on the spell, such as longer duration or more powerful allies. Note\nthat summoned beings do not leave corpses and give no experience when killed,\nand their equipment is as ephemeral as they are.\n\nBeing skilled in Summonings increases the success rate and spell power of\nspells in this school. Many spells belong to a combination of several schools,\nin which case spellcasting success and power will depend on the average skill\nin these schools.\n",
+      "before": "召唤系魔法从其他现实位面召来生物，暂时为你提供帮助。提高召唤系魔法技能可能产生不同效果，例如延长持续时间或召来更强大的盟友，具体取决于法术。注意，召唤生物死亡时不留下尸体、不提供经验，它们的装备也和它们一样只是暂时存在。\n\n精通召唤系魔法能提高该流派法术的成功率和法术强度。许多法术同时属于多个流派，此时施法成功率和法术强度取决于这些流派技能的平均值。\n",
+      "after": "召唤系魔法从其他现实位面召来生物，暂时为你提供帮助。提高召唤系魔法技能可能产生不同效果，例如延长持续时间或召来更强大的盟友，具体取决于法术。注意，召唤生物死亡时不留下尸体、不提供经验，它们的装备也和它们一样只是暂时存在。\n\n精通召唤系魔法能提高该学派法术的成功率和法术强度。许多法术同时属于多个学派，此时施法成功率和法术强度取决于这些学派技能的平均值。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/skills.txt:forgecraft",
+      "english": "Forgecraft is the art of shaping tangible objects out of magic. Forgecraft\nspells can construct a wide array of mechanical creatures that will fight\nalongside the caster, as well as create traps and barricades and even turn the\nphysical resilience of one's armour into a weapon.\n\nBeing skilled in Forgecraft increases the success rate and spell power of\nspells in this school. Many spells belong to a combination of several schools,\nin which case spellcasting success and power will depend on the average skill\nin these schools.\n",
+      "before": "锻造术是用魔法塑造实体物件的技艺。此类法术能创造多种机械生物与施法者并肩作战，也能制造陷阱和路障，甚至把防具的物理坚固性化为武器。\n\n精通锻造术能提高该流派法术的成功率和法术强度。许多法术同时属于多个流派，此时施法成功率和法术强度取决于这些流派技能的平均值。\n",
+      "after": "锻造术是用魔法塑造实体物件的技艺。此类法术能创造多种机械生物与施法者并肩作战，也能制造陷阱和路障，甚至把防具的物理坚固性化为武器。\n\n精通锻造术能提高该学派法术的成功率和法术强度。许多法术同时属于多个学派，此时施法成功率和法术强度取决于这些学派技能的平均值。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/skills.txt:necromancy",
+      "english": "Necromancy is the art of draining and gaining life, although most often\nassociated with zombies and other undead. As such, Necromancy spells have a\nwide range of effects, ranging from spells to create or disrupt the undead to\nspells granting unholy healing in various forms.\n\nBeing skilled in Necromancy increases the success rate and spell power of\nspells in this school. Many spells belong to a combination of several schools,\nin which case spellcasting success and power will depend on the average skill\nin these schools.\n",
+      "before": "死灵系魔法是汲取与获取生命的技艺，尽管通常与僵尸及其他亡灵联系在一起。因此，这类法术的效果非常广泛，既能创造或破坏亡灵，也能以各种方式提供邪恶的治疗。\n\n精通死灵系魔法能提高该流派法术的成功率和法术强度。许多法术同时属于多个流派，此时施法成功率和法术强度取决于这些流派技能的平均值。\n",
+      "after": "死灵系魔法是汲取与获取生命的技艺，尽管通常与僵尸及其他亡灵联系在一起。因此，这类法术的效果非常广泛，既能创造或破坏亡灵，也能以各种方式提供邪恶的治疗。\n\n精通死灵系魔法能提高该学派法术的成功率和法术强度。许多法术同时属于多个学派，此时施法成功率和法术强度取决于这些学派技能的平均值。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/skills.txt:translocations",
+      "english": "Translocations focus on the spatial movement of beings or objects, including\nuseful spells to translocate yourself over short distances quickly or to\ntransport your enemies away from you.\n\nBeing skilled in Translocations increases the success rate and spell power of\nspells in this school. Many spells belong to a combination of several schools,\nin which case spellcasting success and power will depend on the average skill\nin these schools.\n",
+      "before": "位移系魔法专注于生物或物体在空间中的移动，包含使自己快速移动一小段距离、将敌人传送到远处等实用法术。\n\n精通位移系魔法能提高该流派法术的成功率和法术强度。许多法术同时属于多个流派，此时施法成功率和法术强度取决于这些流派技能的平均值。\n",
+      "after": "位移系魔法专注于生物或物体在空间中的移动，包含使自己快速移动一小段距离、将敌人传送到远处等实用法术。\n\n精通位移系魔法能提高该学派法术的成功率和法术强度。许多法术同时属于多个学派，此时施法成功率和法术强度取决于这些学派技能的平均值。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/skills.txt:alchemy",
+      "english": "Alchemy is the art of toxins and transmutation. Spells in this school can twist\nobjects and creatures into different shapes, unleash powerful poisons, or even\nunweave the fabric of magic itself.\n\nBeing skilled in Alchemy increases the success rate and spell power of\nspells in this school. Many spells belong to a combination of several schools,\nin which case spellcasting success and power will depend on the average skill\nin these schools.\n",
+      "before": "炼金术是毒素与转化的技艺。这一流派的法术能扭曲物体和生物的形态，释放强力毒素，甚至瓦解魔法本身的结构。\n\n精通炼金术能提高该流派法术的成功率和法术强度。许多法术同时属于多个流派，此时施法成功率和法术强度取决于这些流派技能的平均值。\n",
+      "after": "炼金术是毒素与转化的技艺。这一学派的法术能扭曲物体和生物的形态，释放强力毒素，甚至瓦解魔法本身的结构。\n\n精通炼金术能提高该学派法术的成功率和法术强度。许多法术同时属于多个学派，此时施法成功率和法术强度取决于这些学派技能的平均值。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/skills.txt:fire magic",
+      "english": "Fire Magic focuses mainly on dealing fire damage over long distances, with many\neffective Conjurations.\n\nBeing skilled in Fire Magic increases the success rate and spell power of\nspells in this school. Many spells belong to a combination of several schools,\nin which case spellcasting success and power will depend on the average skill\nin these schools.\n",
+      "before": "火系魔法主要用来从远处造成火焰伤害，包含许多强力的塑能法术。\n\n精通火系魔法能提高该流派法术的成功率和法术强度。许多法术同时属于多个流派，此时施法成功率和法术强度取决于这些流派技能的平均值。\n",
+      "after": "火系魔法主要用来从远处造成火焰伤害，包含许多强力的塑能法术。\n\n精通火系魔法能提高该学派法术的成功率和法术强度。许多法术同时属于多个学派，此时施法成功率和法术强度取决于这些学派技能的平均值。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/skills.txt:ice magic",
+      "english": "Ice Magic contains a range of direct damage spells, as well as some defensive\neffects - for example, crafting temporary ice armour.\n\nBeing skilled in Ice Magic increases the success rate and spell power of spells\nin this school. Many spells belong to a combination of several schools, in\nwhich case spellcasting success and power will depend on the average skill in\nthese schools.\n",
+      "before": "冰系魔法包含多种直接伤害法术，也有一些防御效果，例如制造临时冰甲。\n\n精通冰系魔法能提高该流派法术的成功率和法术强度。许多法术同时属于多个流派，此时施法成功率和法术强度取决于这些流派技能的平均值。\n",
+      "after": "冰系魔法包含多种直接伤害法术，也有一些防御效果，例如制造临时冰甲。\n\n精通冰系魔法能提高该学派法术的成功率和法术强度。许多法术同时属于多个学派，此时施法成功率和法术强度取决于这些学派技能的平均值。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/skills.txt:air magic",
+      "english": "Air Magic provides spells to deal damage directly with the wind, as well as\nnoisy but powerful lightning Conjurations. It also provides some utility\nspells, such as a call to the wind to assist your movement or a Hex to prevent\nmost use of magic in the area surrounding you.\n\nBeing skilled in Air Magic increases the success rate and spell power of spells\nin this school. Many spells belong to a combination of several schools, in\nwhich case spellcasting success and power will depend on the average skill in\nthese schools.\n",
+      "before": "气系魔法既能直接用风造成伤害，也能施放喧闹而强大的闪电塑能法术。它还包含一些实用法术，例如呼风辅助移动，或用妖术阻止周围区域内的大多数魔法使用。\n\n精通气系魔法能提高该流派法术的成功率和法术强度。许多法术同时属于多个流派，此时施法成功率和法术强度取决于这些流派技能的平均值。\n",
+      "after": "气系魔法既能直接用风造成伤害，也能施放喧闹而强大的闪电塑能法术。它还包含一些实用法术，例如呼风辅助移动，或用妖术阻止周围区域内的大多数魔法使用。\n\n精通气系魔法能提高该学派法术的成功率和法术强度。许多法术同时属于多个学派，此时施法成功率和法术强度取决于这些学派技能的平均值。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/skills.txt:earth magic",
+      "english": "Earth Magic contains spells able to deal large amounts of direct physical\ndamage, which cannot be resisted like fire, cold and lightning damage can. It\nis also linked with Alchemy, with spells to liquefy the earth around you, or to\nturn your enemies to stone.\n\nBeing skilled in Earth Magic increases the success rate and spell power of\nspells in this school. Many spells belong to a combination of several schools,\nin which case spellcasting success and power will depend on the average skill\nin these schools.\n",
+      "before": "土系魔法能造成大量直接物理伤害，无法像火焰、寒冷和闪电伤害那样用抗性抵挡。它也与炼金术有关，能使周围土地液化，或将敌人石化。\n\n精通土系魔法能提高该流派法术的成功率和法术强度。许多法术同时属于多个流派，此时施法成功率和法术强度取决于这些流派技能的平均值。\n",
+      "after": "土系魔法能造成大量直接物理伤害，无法像火焰、寒冷和闪电伤害那样用抗性抵挡。它也与炼金术有关，能使周围土地液化，或将敌人石化。\n\n精通土系魔法能提高该学派法术的成功率和法术强度。许多法术同时属于多个学派，此时施法成功率和法术强度取决于这些学派技能的平均值。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:database/help.txt:spell-library",
+      "english": "<h>Spell Library</h>\n<w>Tab</w> or <w>!</w>  : Cycle forward through <w>Memorise</w>, <w>Describe</w>, <w>Hide</w>, and <w>Show</w> pages.\n<w>Shift-Tab</w> : Cycle backward through these pages.\n<w>Ctrl-F</w>    : Filter the list of spells shown with a regex.\n<w>?</w>         : Show this help.\n\nBy default, the spell library opens to the <w>Memorise</w> page; to begin memorising a\nspell, just press its letter. To read a spell's description, first switch to\nthe <w>Describe</w> page by pressing <w>Tab</w>, then press the spell's letter.\n\nMost characters will not be interested in memorising the majority of spells that\naccumulate in their spell library; this is where the <w>Show</w> and <w>Hide</w> pages come in\nhandy. To hide a spell from the <w>Memorise</w> and <w>Describe</w> pages, press its spell\nletter from the <w>Hide</w> page. Hidden spells can be shown again from the <w>Show</w> page.\n\nThe <w>auto_hide_spells</w> option can be useful; when enabled, all newly discovered\nspells are hidden by default.\n\n<w>Ctrl-F</w> can be used to filter the list of spells. Any filter set in this way will\npersist until the spell library is closed and reopened, or until a new filter is\nset with <w>Ctrl-F</w>. If <w>Enter</w> is pressed at the prompt without entering any text,\nthat will reset the filter to none.\nYou can filter spells by name and by spell school.\n",
+      "before": "<h>法术库</h>\n<w>Tab</w> 或 <w>!</w>：向前循环切换<w>记忆</w>、<w>说明</w>、<w>隐藏</w>和<w>显示</w>页面。\n<w>Shift-Tab</w>：向后循环切换这些页面。\n<w>Ctrl-F</w>：用正则表达式筛选显示的法术。\n<w>?</w>：显示本帮助。\n\n法术库默认打开<w>记忆</w>页；按法术对应的字母即可开始记忆。\n要阅读法术说明，先按 <w>Tab</w> 切到<w>说明</w>页，再按法术对应的字母。\n\n大多数角色不会想记忆法术库中积累的大部分法术，\n这时<w>显示</w>和<w>隐藏</w>页面就很有用。\n在<w>隐藏</w>页按法术字母，就能将其从<w>记忆</w>和<w>说明</w>页隐藏。\n已隐藏的法术可以从<w>显示</w>页重新显示。\n\n<w>auto_hide_spells</w> 选项也很有用：启用后，新发现的所有法术默认都会隐藏。\n\n<w>Ctrl-F</w> 可筛选法术列表。筛选条件会一直保留，\n直到关闭并重新打开法术库，或用 <w>Ctrl-F</w> 设置新条件。\n在提示处不输入任何内容直接按 <w>Enter</w>，会清除筛选条件。\n可以按法术名称和魔法流派筛选。\n",
+      "after": "<h>法术库</h>\n<w>Tab</w> 或 <w>!</w>：向前循环切换<w>记忆</w>、<w>说明</w>、<w>隐藏</w>和<w>显示</w>页面。\n<w>Shift-Tab</w>：向后循环切换这些页面。\n<w>Ctrl-F</w>：用正则表达式筛选显示的法术。\n<w>?</w>：显示本帮助。\n\n法术库默认打开<w>记忆</w>页；按法术对应的字母即可开始记忆。\n要阅读法术说明，先按 <w>Tab</w> 切到<w>说明</w>页，再按法术对应的字母。\n\n大多数角色不会想记忆法术库中积累的大部分法术，\n这时<w>显示</w>和<w>隐藏</w>页面就很有用。\n在<w>隐藏</w>页按法术字母，就能将其从<w>记忆</w>和<w>说明</w>页隐藏。\n已隐藏的法术可以从<w>显示</w>页重新显示。\n\n<w>auto_hide_spells</w> 选项也很有用：启用后，新发现的所有法术默认都会隐藏。\n\n<w>Ctrl-F</w> 可筛选法术列表。筛选条件会一直保留，\n直到关闭并重新打开法术库，或用 <w>Ctrl-F</w> 设置新条件。\n在提示处不输入任何内容直接按 <w>Enter</w>，会清除筛选条件。\n可以按法术名称和魔法学派筛选。\n"
+    }
+  ]
+}

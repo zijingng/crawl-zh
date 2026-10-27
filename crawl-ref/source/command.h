@@ -6,6 +6,7 @@
 #pragma once
 
 #include <string>
+#include <map>
 #include <vector>
 
 #include "cio.h"
@@ -29,6 +30,12 @@ void show_skill_menu_help();
 void show_spell_library_help();
 
 void show_help(int section = CK_HOME, string highlight_string = "");
+
+// Localized help retains line-sized operations for viewport glyph batching.
+formatted_string help_document_display(const formatted_string &original);
+
+// Zero-based section positions in the document actually being displayed.
+std::map<int, int> help_document_hotkeys(const string &text);
 
 int show_keyhelp_menu(const vector<formatted_string> &lines);
 

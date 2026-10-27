@@ -1,0 +1,134 @@
+{
+  "source": "database/monspeak.txt",
+  "entries": [
+    {
+      "key": "spectator",
+      "context": "textdb:database/monspeak.txt:spectator",
+      "source_sha256": "b262a60f784ab482ce3dd842af37b4a4990cdb28a2fcc2261c602de2b353a092",
+      "review_status": "reviewed",
+      "review_batch": "database-33",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_spectator_speech_",
+          "source_sha256": "01d820f51b69f0249e6cc65bf531aed23251904ee91182191d322a73ab218df2",
+          "translation_sha256": "b0dc5d77541d002adb54467f5feaeded1d84936ae0e5c262294ee58c8bbc3c1d"
+        }
+      ]
+    },
+    {
+      "key": "_spectator_speech_",
+      "context": "textdb:database/monspeak.txt:_spectator_speech_",
+      "source_sha256": "01d820f51b69f0249e6cc65bf531aed23251904ee91182191d322a73ab218df2",
+      "review_status": "reviewed",
+      "review_batch": "database-33",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_loudly_or_repeatedly_",
+          "source_sha256": "d88af7e58fec4045a569b48eb5fd9f3ce3931af28501dad17f98cd7668c64fdd",
+          "translation_sha256": "cd1b5e701028a8f2b0c277a3c90c8b9b49eac7695c2bb14e74444f99bdb33c9f"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_mutters_",
+          "source_sha256": "c9ca2aafbcf3525e6f1ba07423133530a0a0d65f8db08d24e9b69a7d7310fbc3",
+          "translation_sha256": "2874cd79885ec2a7c400b6211416fe830a19a5b1748501ab4a5986ed54ac80c8"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_shouts_",
+          "source_sha256": "82905179e411b95af8411ee9a9cd2ec14e46cd56dfe133d9ce19d630b492508a",
+          "translation_sha256": "04a1ce1d7878f119796b9e3173d6909a493d2654680db1e77f66e338852eb381"
+        }
+      ]
+    },
+    {
+      "key": "goblin sharper",
+      "context": "textdb:database/monspeak.txt:goblin sharper",
+      "source_sha256": "4e0acc871ccbd8578122e0f129149e09cd1f46da988594099c025bc3864ee3a5",
+      "review_status": "reviewed",
+      "review_batch": "database-33",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_deck_of_destruction_line_",
+          "source_sha256": "d41b23590aca85b9681a560a0e8f3a658109901da60e0ad44f0ed53f778f4185",
+          "translation_sha256": "3f6743386800d97ccd6f6c2b52e461ed028b39830c3686f12133433d7b51ab67"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_deck_of_escape_line_",
+          "source_sha256": "ee8d5b3caa4452ee7e947b2c720cdaa72445c69ad131d7af284a8a56fa70f633",
+          "translation_sha256": "da5c954a0fe6b93d3e7073c420a219cbfc8fa354bf0b7f5d0693dcb55ada9e17"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_deck_of_oddities_card_",
+          "source_sha256": "90a86630d6baf22d2e11f9e5041fc2e27abfc163d029a9e4f0c6bf67cf26ee37",
+          "translation_sha256": "98d85b9eeb71530d156739ced529b4756236cff71084d3a53e1cb0b111e3cbf6"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_deck_of_punishment_line_",
+          "source_sha256": "bd922908437003e127f129b8b4ab11f3bd6e79fc7f3bf2a5eac2ab84d1981db3",
+          "translation_sha256": "4d031206c7633288a6c7af4ee770e0d805c6fd279bd28c4f4de6ff469370471d"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_deck_of_summoning_line_",
+          "source_sha256": "1aa342113f3b4ceeaa38905bb47d1dcf6fec56163f24b931a6733fdf8049f818",
+          "translation_sha256": "2be9d5422f7e436e4f6dbc57185739265870ea66afc0966c6aad9482cf5a9c0f"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_misplaced_card_",
+          "source_sha256": "8a0c80311e7fa022c29a48f50a6123c8ec160987da2f1f933652e42c608af352",
+          "translation_sha256": "63628723f4274259b60f2fa69413dff1e34c8410cbe63e3bb94879b02c358a7d"
+        }
+      ]
+    },
+    {
+      "key": "_deck_of_oddities_card_",
+      "context": "textdb:database/monspeak.txt:_deck_of_oddities_card_",
+      "source_sha256": "90a86630d6baf22d2e11f9e5041fc2e27abfc163d029a9e4f0c6bf67cf26ee37",
+      "review_status": "reviewed",
+      "review_batch": "database-33"
+    },
+    {
+      "key": "_misplaced_card_",
+      "context": "textdb:database/monspeak.txt:_misplaced_card_",
+      "source_sha256": "8a0c80311e7fa022c29a48f50a6123c8ec160987da2f1f933652e42c608af352",
+      "review_status": "reviewed",
+      "review_batch": "database-33"
+    },
+    {
+      "key": "_deck_of_destruction_line_",
+      "context": "textdb:database/monspeak.txt:_deck_of_destruction_line_",
+      "source_sha256": "d41b23590aca85b9681a560a0e8f3a658109901da60e0ad44f0ed53f778f4185",
+      "review_status": "reviewed",
+      "review_batch": "database-33"
+    },
+    {
+      "key": "_deck_of_escape_line_",
+      "context": "textdb:database/monspeak.txt:_deck_of_escape_line_",
+      "source_sha256": "ee8d5b3caa4452ee7e947b2c720cdaa72445c69ad131d7af284a8a56fa70f633",
+      "review_status": "reviewed",
+      "review_batch": "database-33"
+    },
+    {
+      "key": "_deck_of_summoning_line_",
+      "context": "textdb:database/monspeak.txt:_deck_of_summoning_line_",
+      "source_sha256": "1aa342113f3b4ceeaa38905bb47d1dcf6fec56163f24b931a6733fdf8049f818",
+      "review_status": "reviewed",
+      "review_batch": "database-33"
+    },
+    {
+      "key": "_deck_of_punishment_line_",
+      "context": "textdb:database/monspeak.txt:_deck_of_punishment_line_",
+      "source_sha256": "bd922908437003e127f129b8b4ab11f3bd6e79fc7f3bf2a5eac2ab84d1981db3",
+      "review_status": "reviewed",
+      "review_batch": "database-33"
+    }
+  ]
+}

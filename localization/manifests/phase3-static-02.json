@@ -1,0 +1,1150 @@
+{
+  "baseline": "0.34.1",
+  "batch": "phase3-static-02",
+  "glossary_sha256": "2c2041390a82e14b9a05b05bd5de2db212369f05cdb2862461ffad562765d81f",
+  "new_entries": 181,
+  "by_file": {
+    "descript/items.txt": 64,
+    "descript/spells.txt": 51,
+    "descript/status.txt": 66
+  },
+  "entries": [
+    {
+      "source": "descript/items.txt",
+      "key": "amulet of chemistry",
+      "source_sha256": "984dacb2f869dc56aafa1e412c848d1ba83dc1e36b487347de734a947cfbb722",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "amulet of dissipation",
+      "source_sha256": "7148f313a5e8060b4a7d11c270ac4a8316a77f9d7f46ccbddac64b4f942ce92a",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "amulet of faith",
+      "source_sha256": "3383db1d5ba66c75bfc3f361699310988ca4e61ab2e2f3c638c20ef1038bb11f",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "amulet of guardian spirit",
+      "source_sha256": "991392b8c21d0fe7f16dde4918dce295b9b895b6a9c0d5a7e29b2d833ed591f3",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "amulet of magic regeneration",
+      "source_sha256": "30a78d46af3283fb244495da5326c4948db42f21516e48798641b670cc238174",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "amulet of nothing",
+      "source_sha256": "558fe81eb02740ccc821e154a54962a919e34bf0171efc1188850183e00ccf56",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "amulet of reflection",
+      "source_sha256": "16c09f9bbc67d68367effcc78a31ba039dd16a35e92b756084a5e599dd206630",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "amulet of regeneration",
+      "source_sha256": "375a09a2772c65f09bb3743d52926f8fd51027a54924cdb61df60455ff89a315",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "amulet of the acrobat",
+      "source_sha256": "c2a26444fe1aaf43c48d84adec20f8436d70f3203e1067a6ae889c6467ac2cca",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "amulet of wildshape",
+      "source_sha256": "c2dfbc31040819ec9c44a3e72e3958a39f6aae02fa7013feb04328991db7d1e3",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "potion of ambrosia",
+      "source_sha256": "e1910c7b95a01d0fa124d67c77f4105f05dd45abdb06a6a0bdfa9490f2959eb6",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "potion of berserk rage",
+      "source_sha256": "41571f8fa7a897d3e3e1c411da9de5ae82738bf464ac07eeba2da26c4412cca4",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "potion of blood",
+      "source_sha256": "907ddccdb0a6de0f980a877fb576142381dc11ee9c370bcfa67e06e5a3eb6b14",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "potion of brilliance",
+      "source_sha256": "4add32967757abef554c7b92096a92ed3f0c4241a1fd3bb58f1bf657028c1498",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "potion of cancellation",
+      "source_sha256": "7c52bc25f9842c2470f35c62eff8856726a17c59448145f03dbd7fab6934232b",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "potion of enlightenment",
+      "source_sha256": "bf201dbd3308b65ce475c9b4ac387de8243cc01c18c76f09235f154f67853805",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "potion of experience",
+      "source_sha256": "7fa9e558387428d8561b14f94f32e103d1552eacd890c18851c7be03d938b8fb",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "potion of lignification",
+      "source_sha256": "9df14b41401291f65b2df525afd73d79f2bbf6b9e65bc5a9a6c902f82fdbe083",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "potion of moonshine",
+      "source_sha256": "4dc59f258dd293389f039c2c2f362b3da747ae85fe6162e87eead2739b0e890e",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "potion of mutation",
+      "source_sha256": "1cb3d1e71a911e9191265c6eb5547f817b1c04eff0d64c969cb01eb45ffccb99",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "potion of resistance",
+      "source_sha256": "482679d08e97ab9400b4a0705eac812c5e76eff052b379a053cc359fd935dd76",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "potion of attraction",
+      "source_sha256": "8dd6a151b662a008be5206de25e278bc14f4f7b5a7fc5c785b27cf14e8a4f9f2",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "ring of dexterity",
+      "source_sha256": "28e7837dc94060ebe16c91d2a10fea13ebb4cb53ffeef4638f5ceb060ee6057a",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "ring of evasion",
+      "source_sha256": "36bc5c940be25d1a8118efc735d8992f8d9a2ce04f38889a5f47de71be94056e",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "ring of flight",
+      "source_sha256": "ea00926d66e36c224cea33d3d6e0eb3f9c910ef5bc27f361737cae4ab4f25663",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "ring of intelligence",
+      "source_sha256": "5afe29a96d5d5934b009eb1b370d718bc30d1c5e354aeebbffe48df06c04a066",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "ring of resist corrosion",
+      "source_sha256": "49c9e5bbe45404e689d86510e45e60476ad68e90f873578effe5af8db7e8ab1c",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "ring of magical power",
+      "source_sha256": "12fe347815b8619c0bea24836353f6fa04a8ca2b956b3189fbe10811c423056f",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "ring of poison resistance",
+      "source_sha256": "4f6d22bd9e46ae434b2b2f93a7853a42c7cb3ebaf0d0dcfe371f1a358a35018b",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "ring of positive energy",
+      "source_sha256": "974314083c7d2989e160ea8c89e5ede1680aa237a5b0a872a5bf2bc1708df8f9",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "ring of protection",
+      "source_sha256": "4b4a5b4634d72f2f9f59afa6fa8f7f369e55433273e804505de1194a0b70b34e",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "ring of protection from cold",
+      "source_sha256": "f2ca6c10522b4bbdf767fa5aba79189b636714673bd6a66400cd87a92a5f3811",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "ring of protection from fire",
+      "source_sha256": "4e09d65e655539ebe4f3d37da0ff05851cb25f32f7abc0388e4b8420222f1576",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "ring of willpower",
+      "source_sha256": "056f2f1b3060cfe66e227e01134da4bc475d946a9ea22ee1ee9b17325ed1c986",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "ring of see invisible",
+      "source_sha256": "b18befcfcb9863dc19d9eac3e93f02a23a76322fd6b6a7dd45c8e2477ce32514",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "ring of slaying",
+      "source_sha256": "5cfa4a409029698cc1de4d3fde17f90d6783f8f3fc7e45db9692b6d0981dc116",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "ring of strength",
+      "source_sha256": "e7702e5fa0f517175a87a895b0b0b2e9ee898842c009ec81d053dde1bd1e0a4c",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "ring of wizardry",
+      "source_sha256": "a6ab558512c2de389b9c39040004f2cb89e707aca4cf9cdec97321bc3d097ed0",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "scroll of acquirement",
+      "source_sha256": "b40c098170125b8b8ae0e34c05d38a48af6e3104e2b995fb315c99b6a923828d",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "scroll of amnesia",
+      "source_sha256": "1b6d632522dba8a36df47f940c339478714b3bc821a6d35de2bc3cec54d97d97",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "scroll of brand weapon",
+      "source_sha256": "443022dbf22f4b09522c0c387dce246c996167dcf111d14c83da6e88dc0b1ec7",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "scroll of butterflies",
+      "source_sha256": "85663e5eb9e2543816b074994008511a0af7eefa93d6bb40c9ee4ce8f9e44e82",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "scroll of fear",
+      "source_sha256": "54d75a819a5d15a01d08475c6a36ee628c6c2819cc88d9520714b923519c3030",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "scroll of fog",
+      "source_sha256": "2a510724c0bcf2fc59952370558e75ad1b4fc9e0cd44e3e971946e6e37d7ba60",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "scroll of immolation",
+      "source_sha256": "24d44bd63ad46344d7e97c40780fbf3bea702df045d193e10197697854fbc3b2",
+      "review_note": "补回每次受击也会释放火焰，而非只在死亡时爆炸。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "scroll of noise",
+      "source_sha256": "489a8863a787e99f4d6aec1d319cda16d35051b3ec5018ce94feff78f541a7d4",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "scroll of poison",
+      "source_sha256": "48bb90c13ac7348ffe3c6957ea923e40caf2e1fe0c365fd99128479d9f88ea00",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "scroll of revelation",
+      "source_sha256": "f1fbd54dd83f3208b8985adfc94626461966e43433ac1aad9a3fee621204d28e",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "scroll of silence",
+      "source_sha256": "0d4d8e7510c4d16307d3bc85fff0898dae12f7204fad5c15f9792b48c1df008a",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "scroll of summoning",
+      "source_sha256": "c8ddb3b6a87f9aa6f8f46b0577a837c89dace11b11d6329bc4deb983adc485d1",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "scroll of torment",
+      "source_sha256": "44aaca4f243415ad99e3c9b36e8216f3f3439147f6e96cf44f45afd472335bf0",
+      "review_note": "保留活物生命减半、神圣生物减少约三分之一以及不直接致死；对照 spl-goditem.cc 的负能量抗性修正确认含义。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "scroll of vulnerability",
+      "source_sha256": "181365611ed023ee5f5747ce3a7a3d3206777ba8460f43e2b54b3ca81456d6bb",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "wand of acid",
+      "source_sha256": "41e18b44086321f4867e8a4fe3e130125dbedd53c1e767128294a0b2679926f1",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "wand of charming",
+      "source_sha256": "f88247e3a40c94331c37bae1b0d761b7335f00476ed102eee9fccac791f536ed",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "wand of digging",
+      "source_sha256": "a1d387abc80c1604ec5415284ec368a26b3e3334a33568fc329c40295b58ea80",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "wand of flame",
+      "source_sha256": "856a8a14043aeedaf48fbcbc853730373a323d3ae37ef053ee301e6ab6199186",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "wand of iceblast",
+      "source_sha256": "93219638cff962313b5fa3ee1f559be6c5f0f29347c688672836a702e5933a9d",
+      "review_note": "fight.cc::_get_resistible_fraction(BEAM_ICE)=50，明确一半伤害不受寒冷抗性减免；不沿用 beam.cc 中陈旧的 40% 注释。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "wand of light",
+      "source_sha256": "a3840ce242eb5c87f941315e645b44574be0f8c7a8939f7ca304c7a162c47144",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "wand of mindburst",
+      "source_sha256": "62a582633c970f303b3cc0d6de4bdf6a6fc2a182cb0016c8b518d851a9e9e583",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "wand of paralysis",
+      "source_sha256": "2f44f6a4fc56d12a7b3b0006fb00573e2c234f6c3a93e30b2054424b420c650d",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "wand of polymorph",
+      "source_sha256": "5e8ef475bb2da677f5758ddf2c5649eb730467f66ce5d2249f615670132bf2e9",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "wand of quicksilver",
+      "source_sha256": "c474c7b5cb965d6f1384c22e79c5768c8f17c84ab91f2bb9d6186947296a29e7",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "wand of roots",
+      "source_sha256": "5df7ede778535c671f548cdd6baa0937074a58262f81e830832bbdfea6a95362",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "wand of warping",
+      "source_sha256": "541601bf374950000346686d1d49e6782fadfa44099430f38ef9e1b0bb0820ae",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Sting spell",
+      "source_sha256": "d76955109a22cb3fa53baa512ae338058cad848fd037a71359c931e7f808c3e7",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Construct Spike Launcher spell",
+      "source_sha256": "7192d004edc5e10aaa1343d502476b92e438684874dfd82745d8f502ff7daff5",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Kinetic Grapnel spell",
+      "source_sha256": "9da0b0a48cc004e92ef5427cbe490f7c3331f971bda86c2588c1aba410dd187f",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Launch Clockwork Bee spell",
+      "source_sha256": "ce13629503252cc59fe41fdc81a406435822ad03c0259e1e77b469264823dac2",
+      "review_note": "保留多回合上弦、攻击次数耗尽休眠、移动进入修复、消耗 1 MP 以及法术强度影响攻击次数。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Jinxbite spell",
+      "source_sha256": "7ecc15cedca3737dbb621a749b35ee95fc299aadeaf280ef7272d6a4a5984866",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Sigil of Binding spell",
+      "source_sha256": "d3e9b7d8dca4b933e957a81b71b90f1d264ee2fddf17a1d1a09ecff12774632f",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Ensorcelled Hibernation spell",
+      "source_sha256": "6a5b802cf50333f7c36e766c37e8eae87cfcc795e9528bc3ba10739ac927ab31",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Confusing Touch spell",
+      "source_sha256": "aef000444fb2b9cd94d3f0d7057547a0f14833e85a9e3b2df386d7b0500056b8",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Tukima's Dance spell",
+      "source_sha256": "f5e5280fa1e6621b9726bfc54bba2a77ebfab9ac3c04a8a5b40cb64a58312873",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Searing Ray spell",
+      "source_sha256": "1ab55acd5424d52e61a8525014815406e52e331a3e205e76685ee343d569726e",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Fulminant Prism spell",
+      "source_sha256": "57fe7c776b8e82b563df21f05be0d3c6943a54d464e081eb14a283185628e672",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Iskenderun's Mystic Blast spell",
+      "source_sha256": "b74ce4f6b337ad6c205a524c2d1554d21eda6f52eb734046174ecbb4abc6e1f0",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Scorch spell",
+      "source_sha256": "8099d3a80d17d3c5d18fee3bb724287c51e625b048d3bc93cd81d716475a1a2b",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Inner Flame spell",
+      "source_sha256": "5dfb953831e9c5aeb1d28759008ed84f271da2f420d8a071c83c780fc9f6dc06",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Flame Wave spell",
+      "source_sha256": "0038bfcea73c0ae427f66f18479a2070c3153a8a4dbf4352e1b348c0ebbbc842",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Static Discharge spell",
+      "source_sha256": "007a2936c58cc9ea5aa5abfa57c4942d4272c46c3186428fa2752eff04c870f6",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Swiftness spell",
+      "source_sha256": "1cc309b6df669d06381daeae3a7c98de38a5a224686075ba038821c49a5e0c9b",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Airstrike spell",
+      "source_sha256": "ab1019262f03985a5da34acf721a4968a5626d012c331972defa9cfcd68d776b",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Passwall spell",
+      "source_sha256": "0a5f6f5108527f1621beb5df360abf8618412ee1c9cfd79ebac324f476c5c24e",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Stone Arrow spell",
+      "source_sha256": "fbac42dc7472588ae555c47897a3af5a94eda55806d227b2010c551c7a1d3029",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Petrify spell",
+      "source_sha256": "6dd3032ff594f573cbebf7274456f67268f36949b979487938dc26677a5903b9",
+      "review_note": "保留主目标外至多两个连锁目标、次级目标法术强度较低，以及石化中受到伤害减半。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Grave Claw spell",
+      "source_sha256": "167950cd21c5ccea57351f7c0b7921f89a944a4b2f0c45184ecc451b49297a62",
+      "review_note": "保留必定命中、原地禁足、最多储存三次，以及仅通过足够活物死亡补充。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Vampiric Draining spell",
+      "source_sha256": "2f9a09d7bc350ead937dcc0139731ea3bb53ce796669878b3bdd7d5be8a01ba8",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Animate Dead spell",
+      "source_sha256": "2d3b6c8c20fd347aa3d7c251bcc635075c4510283363ac6e21a049eac864a975",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Call Imp spell",
+      "source_sha256": "4e72ee61a2590468a322d367eed9e42aa2184b93678ce8e0a884045a9fbe7690",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Call Canine Familiar spell",
+      "source_sha256": "757f4119fb469e019dc64db858460090b5b5e8981e7d3690ef0f18ebd7bf7160",
+      "review_note": "重施条件是魔宠在附近；保留治疗、解毒、下次更快攻击及劈砍相邻敌人全部效果。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Ice Beast spell",
+      "source_sha256": "01b37cbec99aeaee596f44ee8c9b38439392840272ea1f04df39d55edc6eae86",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Seismosaurus Egg spell",
+      "source_sha256": "0f1e651c65832c3485106bb222c5de142701dad5aa0bb5feee39a49989504a3b",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Forge Blazeheart Golem spell",
+      "source_sha256": "ac2791c47cc2748b0bee621dcac0c3c0090d63c141cbb8cc4fc74cdb63ea033d",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Lesser Beckoning spell",
+      "source_sha256": "dc1402906f10105bacc95320e857d9be238f260e54f6aa4bb9bec32dcb3f8077",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Momentum Strike spell",
+      "source_sha256": "0518a416aed818d23a8a7042ec0a350a7370cf03ff6896cd6c2ab7345a58a225",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Vhi's Electric Charge spell",
+      "source_sha256": "fb5efcaaa10246bf3cc0ef5c97caf0e91bb1eec0036b212d5c836bac5ca44811",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Mephitic Cloud spell",
+      "source_sha256": "5f1b62d845469a536e0ceab9754959975343d0fcdfa0f6694feddde31700e7ed",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Mercury Arrow spell",
+      "source_sha256": "cd1d825f9ebce7be280da7e4a80ff8265bcf7bf29cb8a29da1518c147acb3a96",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Olgreb's Toxic Radiance spell",
+      "source_sha256": "9514c0e247fe4159c2ed31bf5c392069c9c059e67e6ed98161444cf8addc2802",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Sticky Flame spell",
+      "source_sha256": "47fc20b4e05c6523e5c239974d16f4553dc66369201033069e1208e23e83b5e2",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Ignite Poison spell",
+      "source_sha256": "11104b5940bea6e07ffc365b4f964d68c516391fbf68eb36d8f330f6efbea0db",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Frozen Ramparts spell",
+      "source_sha256": "bcfccadfb2998ff791b12413f2cbf51ea4466eaf428e901de5a22d560c568a47",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Ozocubu's Armour spell",
+      "source_sha256": "c78eb46cf778aeef0c7adbb65fba845b81f3fc426361bedfd6767d195cc6c51a",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Hailstorm spell",
+      "source_sha256": "b028043dcb20cc0aac429f63fc5afd3973c847047e27d0c1214d5b3fe003298f",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Brom's Barrelling Boulder spell",
+      "source_sha256": "8e7c379d3b5e6fde9a8e0b3394a7c5619cf6462ed7bdf96da9917fcd882a32df",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Volatile Blastmotes spell",
+      "source_sha256": "de9ec6fa3cd876ea0f917439ed5feb294a64a423f43b5ce9cc3dc365bb5ca5ec",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Dimensional Bullseye spell",
+      "source_sha256": "233e2c147ccb96224f1218b8e877420e6908348203bc15e5e88cabb7cf1868b7",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Cause Fear spell",
+      "source_sha256": "d4c7272681cf442dd38701b4ba8386a674031bb0c715c2f21e7776ad32706b78",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Teleport Other spell",
+      "source_sha256": "d303210c4ce0b2fc297ccd5064681de577524e0fcec56aa960c2b734cfe3d289",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Rending Blade spell",
+      "source_sha256": "2eb939c440a8e7bb96e647fe18305197945b62dde7e904c18ce0993edbf902a4",
+      "review_note": "施法暂时封存全部剩余魔力，利刃消失就归还；并非永久失去魔力。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Maxwell's Portable Piledriver spell",
+      "source_sha256": "a836ad7b6f1bf7f7ef20efd4ff7eee9e37f84d35d54c6f353989f79bf6f3dd52",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Curse of Agony spell",
+      "source_sha256": "0288b91ea6d05e473da73def170296cb52021513cb36f973b0adf57bcceaab93",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Forge Lightning Spire spell",
+      "source_sha256": "51fe8eb04a2a427903e510ca2968e49b202ae4fcd09644d330f8304fdee38ef2",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Gloom spell",
+      "source_sha256": "9fe18a2dceb80fd485f2034bbf049225f5afc7c5919a8c967ef00f149659cf69",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Eringya's Surprising Crocodile spell",
+      "source_sha256": "6aecfb56d669832b1a812a68010ea82b7d2fc4ecb4fa6ffa6374912b9a5cf0e0",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Mesm status",
+      "source_sha256": "8b75c1d0c575a834efa796f8e033cf1163d2b6a58cc43b40aaf7c28b7982829f",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "-Tele status",
+      "source_sha256": "f401c33eaa81897813a845cb60b248bb83d3cfda3d12a8e49084327785e25c36",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "-Move status",
+      "source_sha256": "5f7755ad3a57807635a5810ccc9391d1230070cfdeaf396677b035f439ec3f12",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Fire status",
+      "source_sha256": "459fef4fe2786e591e77f3fb87f55d3d3cd280d7d7bd564a4989e5bd4571427b",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Fire+ status",
+      "source_sha256": "8609d7ae67bd8a59eaaa3a1773f7291bcfb640077fd6b183c34b3aaaa3fe9dc1",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Fire++ status",
+      "source_sha256": "8609d7ae67bd8a59eaaa3a1773f7291bcfb640077fd6b183c34b3aaaa3fe9dc1",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Corona status",
+      "source_sha256": "0d2c5087f65c286120909d1887b08fa4594fea080ee571627b12fde79217ec72",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Barbs status",
+      "source_sha256": "606d11b33d6bafc25a68f0dbcf0a8d9b94c4c54431662435210899e57ba65a70",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Sick status",
+      "source_sha256": "8a4e4fcf7d526efeb859f6b210446ed2013c24b9bbe1bd1845f36fb7ff4e52ad",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Vertigo status",
+      "source_sha256": "b1f2c9e312a850dd7cc2750d1b99f181422851cf03098b6dd9efdac456a15cb4",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Corr status",
+      "source_sha256": "3a5b25027bf2c1e63e475ca0a447fa4ea125544ca361a5e6b46c53b5cd3faf02",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Flay status",
+      "source_sha256": "226da6d2e0c0381049a3795b9e29f90210f1f0934ed755baaf3c5e142e60fe02",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Weak status",
+      "source_sha256": "9f247686de1528e80a9899340ea64ebcd3d203144ce86f35893012a447d574ce",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Frozen status",
+      "source_sha256": "e161d168a3c09008f6f81dbee965a0ce3956a14c974387fc55bec2da3ad7858b",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Sap status",
+      "source_sha256": "2f4e34d5bcd71076e3bf5fba4c89802ee6459cc17da5e60272d3c87076be820b",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "-Cast status",
+      "source_sha256": "a36ab0dcf8adca7f8a14e4b238476bcb67bdd0384763f0ad6fdb7359cb7446ac",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Crippled status",
+      "source_sha256": "ef0c044a3b5bc1394904f45b0eeea2125993ebaf7ed1d13b4428095afe0626fd",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "DChan status",
+      "source_sha256": "028af7acb6e0cd5fc27b089b1c9d2a465404dd49b016713fc75c2ae4db7a6f8b",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Vit status",
+      "source_sha256": "a8102f43b268348890a59ee8421b3a10cd3ab86168d8a1d089d5816d19bec422",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Will/2 status",
+      "source_sha256": "15a9fdfe006b96cec5c64d0ab95d2d938de1a30aef94448216ecf5d2fa6f5ee7",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Stone status",
+      "source_sha256": "f637b097a21c013ae05a904448211dda22ce3c8ed897575ee67e15a00d96aa7f",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Petr status",
+      "source_sha256": "8bfac59c6665974c092264cd462d5703d6840ebca84f57f5fd02a85dd10edea2",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Resist status",
+      "source_sha256": "0ae21d8bc68c755b91bca526d657d976941e240b875ac6f31e8f138de2dc0690",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Slime status",
+      "source_sha256": "7c602d7221091560bedebcfb2b9ebfac0c82b055b572af89cdf606fbd7f0e42e",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "-Swift status",
+      "source_sha256": "82716101d9fd5f671669d57ef01469e2b7c3a5ea321eb002bcca99e2c1a30a41",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "DDoor status",
+      "source_sha256": "e0a715508faeb2a28da6b4a9895ae5b5c7e63195c412b4c38bc26527d59e1401",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "-DDoor status",
+      "source_sha256": "8d89e454fea7ab26f5b9d0bce9a4bfd8af08a2de4290cb9ceb7ae2db0bf1c9b2",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Quad status",
+      "source_sha256": "b113af7b817df70a438049c4e893b7ab62559a9c543ee90a7d78cc5ad19c8bad",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Flooded status",
+      "source_sha256": "114887103bbb814499ee3e05bbf1f97133b2b6d8a10162335daa5e3be6350817",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Stealth status",
+      "source_sha256": "bbf7d54e90e2f588c6bab3a55a96394cab2a2d88818d16f9205b3c7fb5b7afc5",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Vortex status",
+      "source_sha256": "04c3f4555e10f414b39bf268e045105db2d6c62f1b5fc0b7da21cdb100ec028c",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "-Vortex status",
+      "source_sha256": "06dbc875563aa96031e166ccded479a335722b9914536783c7d9a5afa966703f",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Liquid status",
+      "source_sha256": "5efd02e079f70ec752bd117a76249e3b551712758f5ad9a39f51b0d86b7d5ff9",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Hero status",
+      "source_sha256": "a6116013abf45eb98d9d2505d4b8fd81870212efa775f51f8e9eccfe4402a3b3",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Finesse status",
+      "source_sha256": "8562f152dfe7e80ecf7d244fbf189d8a71fd8f0147c140112497df41c4709443",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Duel status",
+      "source_sha256": "79ea3f5284bd69c1a8712258dae2962c0fcc24a36f5c8a1d913373e1de925213",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Disjoin status",
+      "source_sha256": "1f82448e523c77965ea91b3bab49e3cbdd89c5cd9df202f7425956713c5b2b9d",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Fugue status",
+      "source_sha256": "65f54fadcd700d7f1cacb9f81cfbed8a13e672e1cf626fecccefb6faad235e5b",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Debt status",
+      "source_sha256": "e9cdc3c828bc8921e699198b8691644954f120353cee31f8dfa97fe78eed0707",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Toxic status",
+      "source_sha256": "9f9b0bed5fa4949c12544cc3ef83b911a9ad7284692a593565ac57ca21d05853",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Recite status",
+      "source_sha256": "d2d355a2cc899aed63f7761bc78989c31c24f2c208acb7dc03336ca13db9f114",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "-Recite status",
+      "source_sha256": "8b9b7f3a7c59ec882a5f9ca3ed99a10687d684b53f4c775e126edf624fd6c266",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "rF- status",
+      "source_sha256": "26c1ddc08de5793dd5f6a1d2efb92068b8f4f326a48f6d211eaf7805157bacfe",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "rP- status",
+      "source_sha256": "ad507494d0f04548f263a243d2ff33515466e552b2261276921c7df480ac2b79",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Bullseye status",
+      "source_sha256": "9aba778924a7c4f27da1e97108c21863c42c49664e0464b2b57358c5a8ca38f0",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Forest status",
+      "source_sha256": "b7cc4c173b0ac27bb86edddbb0c1e81eaedc7ac50a6532f4a2ecefa31ad9b34d",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Dragoncall status",
+      "source_sha256": "502f325d39a1a2c745775fadbf501962580c32a088e26c46241aa5b3b39643e4",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "-Dragoncall status",
+      "source_sha256": "584f95e71791f976d44aa47760c089a392326da133d662c5b7399d34e7c1f4b3",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "-Potion status",
+      "source_sha256": "cef2f56b34662ce28075386f6d566b193065f34ae6acd98119243b5033c316ec",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "rElec+ status",
+      "source_sha256": "1aadf8b9e1b2911c5f9420b52808875f5b07cb50e074a7516e0f028ec112758c",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Horr status",
+      "source_sha256": "51e4470133435759718ee1fd110f8b3647b711dddecf5f9d560a5dd82b7714fa",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "-Scroll status",
+      "source_sha256": "b1cf76016de880fefcde22e859da5e7c13f1337d73afe5207e84a3e95b1424af",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Cleave status",
+      "source_sha256": "8cd975e30dda99eaa8b7c60e467c86829cae89b7357e58335a60e58bc44bc2e0",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Ambros status",
+      "source_sha256": "aa47af99d1d50f74cbf159cfd65ee653e09d2e33e57003078b544a8fbeb45d6f",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Surge status",
+      "source_sha256": "7701bbf0f8210bc2621cf3ddfddc1e630b58807a4c487452a6d475c354867934",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Howl status",
+      "source_sha256": "ed7814b0ce4569da33ace07df217fbeebfa0af7e5bf7d86373590664d5dde69b",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Blood status",
+      "source_sha256": "6972b9e4112b248e4f15617a10bac359b5aa3f4b495b75e8930b7065ecc6c673",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Channel status",
+      "source_sha256": "52f092eef7093a966404b70d2bcbe26e640ef7e969f459255e79efc60a07f7a3",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "-Hop status",
+      "source_sha256": "a11f2083fbaa8a38ff97ce78e41bb5123a838abd10ae88983038f1e7f45f6c24",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "-Blink status",
+      "source_sha256": "11cf906b6afe46b8ecd99a44a9cffcee29d76a1cc9482503096adc658b6c424f",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Blind status",
+      "source_sha256": "cdc674213a832234c165bacb79a68ddd989e30aa586d4cd198c399c680c1da9c",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Drowsy status",
+      "source_sha256": "3d1155da53c2c51903128e8c5fefd074d70e0301cff4e8dcbe46b2341e7a90ff",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Doom status",
+      "source_sha256": "bf3ae086840865d4cec1546d637977b294799852b4ad3a1fb63401da68d0b0a5",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Ostracised status",
+      "source_sha256": "1f620ce54e9645990478fef624406f53605edeb2ef95da655f460aa3c5ce3701",
+      "review_note": "按当前英文逐段新译并校对，不自动批准历史译文。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Contam status",
+      "source_sha256": "86766f09965497b3e42da0c5d3a92a68e31da0bb8e33eb8c7fcc82d646782a4f",
+      "review_note": "保留 you.contam_max_damage() 与 dmg > 0 分支；仅翻译 3 个返回文本字面量，显示当前最大爆炸伤害。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "App status",
+      "source_sha256": "416cb2219eef3478b0aa8f1bf4a51088a6968905972ab18d0bfdff6620627698",
+      "review_note": "Octopode 程序值不变；章鱼分支只增加额外触手攻击伤害，不能泛化为所有触手攻击。"
+    }
+  ],
+  "terminology_revisions": [
+    {
+      "source": "descript/backgrounds.txt",
+      "key": "Warper",
+      "previous_reviewed_chinese": "位移术士起始携带自选武器、闪现卷轴和离散飞镖，法术库中还有一些位移系法术。\n",
+      "reviewed_chinese": "位移术士起始携带自选武器、闪烁卷轴和离散飞镖，法术库中还有一些位移系法术。\n",
+      "reason": "统一术语表：willpower=意志，blink=闪烁。"
+    },
+    {
+      "source": "descript/skills.txt",
+      "key": "Dodging",
+      "previous_reviewed_chinese": "闪避技能影响躲开攻击的几率，无论是近战、远程还是魔法攻击。但某些攻击无法闪避，例如附魔效果（必须靠意志力抵抗）和爆炸。\n",
+      "reviewed_chinese": "闪避技能影响躲开攻击的几率，无论是近战、远程还是魔法攻击。但某些攻击无法闪避，例如附魔效果（必须靠意志抵抗）和爆炸。\n",
+      "reason": "统一术语表：willpower=意志，blink=闪烁。"
+    },
+    {
+      "source": "descript/skills.txt",
+      "key": "Hexes",
+      "previous_reviewed_chinese": "妖术系魔法试图对附近的事物施加各种附魔效果。虽然不直接造成伤害，但中招的对手可能完全失去战斗力；不过，这类法术往往必须克服对手的意志力才能生效。精通妖术系魔法有助于克服这种抵抗。\n\n精通妖术系魔法能提高该流派法术的成功率和法术强度。许多法术同时属于多个流派，此时施法成功率和法术强度取决于这些流派技能的平均值。\n",
+      "reviewed_chinese": "妖术系魔法试图对附近的事物施加各种附魔效果。虽然不直接造成伤害，但中招的对手可能完全失去战斗力；不过，这类法术往往必须克服对手的意志才能生效。精通妖术系魔法有助于克服这种抵抗。\n\n精通妖术系魔法能提高该流派法术的成功率和法术强度。许多法术同时属于多个流派，此时施法成功率和法术强度取决于这些流派技能的平均值。\n",
+      "reason": "统一术语表：willpower=意志，blink=闪烁。"
+    },
+    {
+      "source": "descript/passives.txt",
+      "key": "no teleportation passive",
+      "previous_reviewed_chinese": "你无法传送或闪现。\n",
+      "reviewed_chinese": "你无法传送或闪烁。\n",
+      "reason": "统一术语表：willpower=意志，blink=闪烁。"
+    },
+    {
+      "source": "descript/ability.txt",
+      "key": "Word of Chaos ability",
+      "previous_reviewed_chinese": "说出混沌之言，迫使附近敌人闪现离开使用者。受影响者还可能被减速、缠绕或吓退。调用混沌之言并非易事，会吸取使用者部分生命值上限，随后短时间内无法再次使用。\n",
+      "reviewed_chinese": "说出混沌之言，迫使附近敌人闪烁离开使用者。受影响者还可能被减速、缠绕或吓退。调用混沌之言并非易事，会吸取使用者部分生命值上限，随后短时间内无法再次使用。\n",
+      "reason": "统一术语表：willpower=意志，blink=闪烁。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Will++ status",
+      "previous_reviewed_chinese": "你的意志力显著增强，能抵御多种魔法效果。\n",
+      "reviewed_chinese": "你的意志显著增强，能抵御多种魔法效果。\n",
+      "reason": "统一术语表：willpower=意志，blink=闪烁。"
+    },
+    {
+      "source": "descript/status.txt",
+      "key": "Regen Will++ status",
+      "previous_reviewed_chinese": "特洛格之手同时使你以异常快的速度恢复生命，并增强意志力以抵御多种魔法效果。\n",
+      "reviewed_chinese": "特洛格之手同时使你以异常快的速度恢复生命，并增强意志以抵御多种魔法效果。\n",
+      "reason": "统一术语表：willpower=意志，blink=闪烁。"
+    }
+  ]
+}

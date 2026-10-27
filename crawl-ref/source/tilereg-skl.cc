@@ -1,4 +1,6 @@
 #include "AppHdr.h"
+#include "t-display.h"
+#include "i18n.h"
 
 #ifdef USE_TILE_LOCAL
 
@@ -50,6 +52,10 @@ void SkillRegion::draw_tag()
                                apt > 0 ? '+' : ' ',
                                apt);
 
+    desc = ui_render("t.tiles.row", "%s Skill %s Aptitude %s", desc,
+        {ui_text_arg("display.skill", skill_name(skill)),
+         ui_literal_arg(make_stringf("%4.1f", you.skill(skill, 10) / 10.0)),
+         ui_literal_arg(make_stringf("%c%d", apt > 0 ? '+' : ' ', apt))});
     draw_desc(desc.c_str());
 }
 
@@ -72,11 +78,11 @@ int SkillRegion::handle_mouse(wm_mouse_event &event)
 #endif
         m_last_clicked_item = item_idx;
         if (!you.can_currently_train[skill])
-            mpr("You cannot train this skill.");
+            mpr(ui_translate("t.ui", "You cannot train this skill."));
         else if (you.has_mutation(MUT_DISTRIBUTED_TRAINING))
-            mpr("You can't change your training allocations!");
+            mpr(ui_translate("t.ui", "You can't change your training allocations!"));
         else if (you.skills[skill] >= 27)
-            mpr("There's no point to toggling this skill anymore.");
+            mpr(ui_translate("t.ui", "There's no point to toggling this skill anymore."));
         else
         {
             tiles.set_need_redraw();
@@ -105,7 +111,7 @@ bool SkillRegion::update_tab_tip_text(string &tip, bool active)
 {
     const char *prefix = active ? "" : "[L-Click] ";
 
-    tip = make_stringf("%s%s", prefix, "Manage skills");
+    tip = make_stringf("%s%s", prefix, ui_translate("t.tiles", "Manage skills"));
 
     return true;
 }
@@ -121,23 +127,23 @@ bool SkillRegion::update_tip_text(string& tip)
 
     const int flag = m_items[item_idx].flag;
     if (flag & TILEI_FLAG_INVALID)
-        tip = "You cannot train this skill now.";
+        tip = ui_translate("t.tiles", "You cannot train this skill now.");
     else if (!you.has_mutation(MUT_DISTRIBUTED_TRAINING))
     {
         const skill_type skill = (skill_type) m_items[item_idx].idx;
 
         tip = "[L-Click] ";
         if (you.train[skill])
-            tip += "Disable training";
+            tip += ui_translate("t.tiles", "Disable training");
         else
-            tip += "Enable training";
+            tip += ui_translate("t.tiles", "Enable training");
     }
 #ifdef WIZARD
     if (you.wizard)
         tip += "\n[Ctrl + L-Click] Change skill level (wizmode)";
 #endif
 
-    tip += "\n[R-Click] Describe";
+    tip += ui_translate("t.tiles", "\n[R-Click] Describe");
 
     return true;
 }

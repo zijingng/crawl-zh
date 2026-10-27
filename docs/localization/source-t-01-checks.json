@@ -1,0 +1,26 @@
+{
+  "batch": "source-t-01",
+  "date": "2026-10-24",
+  "reviewed_messages": 476,
+  "catalogue_matches": 476,
+  "missing_messages": [],
+  "stale_dependencies": [],
+  "original_top_level_t_files": 103,
+  "current_top_level_t_files": 104,
+  "changed_original_t_files": 25,
+  "shared_callers": [
+    "directn.cc",
+    "describe.cc"
+  ],
+  "windows_tiles_build": true,
+  "native_cases": 100,
+  "native_assertions": 189756,
+  "python_tests": 28,
+  "canonical_interface_groups": 33,
+  "random_script_calls": 144,
+  "limitations": [
+    "No in-game visual smoke test. Windows Tiles built; WebTiles-only paths not separately built.",
+    "Technical/debug diagnostics, arbitrary TextDB/Lua messages, external announcements and opaque custom map descriptions retain established boundaries.",
+    "Search, pathfinding, grouping, save/config/Lua/protocol keys, hotkeys and canonical tab names remain unchanged."
+  ]
+}

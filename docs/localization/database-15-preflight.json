@@ -1,0 +1,394 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "source_keys": 58,
+  "selected": [
+    {
+      "key": "_writing_adj_",
+      "source": "angular\n\nblocky\n\nbold\n\ncurvy\n\nflowing\n\njagged\n\npulsating\n\nshifting\n\nsinuous\n\nsloping\n\nspidery\n\nswirling\n\nthrobbing\n\ntwitching\n\nwrithing\n",
+      "hits": []
+    },
+    {
+      "key": "_writing_noun_",
+      "source": "binary code\n\ncharacters\n\ncuneiform\n\nfigures\n\nglyphs\n\nhieroglyphics\n\nideograms\n\nletters\n\nprint-out\n\nrunes\n\nscrawl\n\nsigils\n\nsymbols\n\ntext\n\nwriting\n",
+      "hits": []
+    },
+    {
+      "key": "_writing_style_",
+      "source": "@any_colour@\n\n@_writing_adj_@ @any_colour@\n\n@any_glowing_colour@\n",
+      "hits": []
+    },
+    {
+      "key": "_writing_type_",
+      "source": "@_writing_style_@ @_writing_noun_@\n",
+      "hits": []
+    },
+    {
+      "key": "_graffiti_type_",
+      "source": "@_writing_style_@ graffiti\n",
+      "hits": []
+    },
+    {
+      "key": "_pattern_type_",
+      "source": "@any_colour_pattern@\n\n@any_glowing_colour_pattern@\n",
+      "hits": []
+    },
+    {
+      "key": "_graffiti_image_",
+      "source": "of [a goblin|a kobold|a spriggan] with its head poking out of a tunnel\n\nof [a dragon|an elephant|a yak] trampling over all in its path\n\nof [a gnoll|a human|an orc] brandishing a nasty-looking weapon\n\nof [an ogre|an oni|a troll] ripping one of its enemies in half\n\nof [a deep elf|a lich|a tengu] shooting a blast of magic\n\nof a felid hanging from a tree branch\n\nof a demon grinning evilly\n\nof an eggplant just sitting there\n\nthat looks like nothing you recognise\n",
+      "hits": [
+        {
+          "Term": "Gnoll",
+          "Translation": "豺狼人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/gnoll.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "kobold",
+          "Translation": "狗头人",
+          "Part of Speech": "noun",
+          "Variants": "kobolds",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/kobold.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "lich",
+          "Translation": "巫妖",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "ogre",
+          "Translation": "食人魔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【版本/语境】怪物名；现行玩家种族为 Oni，不直接把 Ogre 当作当前种族。 来源：dat/species/oni.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "tengu",
+          "Translation": "天狗",
+          "Part of Speech": "noun",
+          "Variants": "Te",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/tengu.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "troll",
+          "Translation": "巨魔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/troll.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Deep Elf",
+          "Translation": "地底精灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/deep-elf.yaml。"
+        },
+        {
+          "Term": "Felid",
+          "Translation": "猫族",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/felid.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Human",
+          "Translation": "人类",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/human.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Oni",
+          "Translation": "鬼人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/oni.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Spriggan",
+          "Translation": "斯普利根",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/spriggan.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "dragon",
+          "Translation": "龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "elephant",
+          "Translation": "大象",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "elf",
+          "Translation": "精灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "goblin",
+          "Translation": "地精",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "yak",
+          "Translation": "牦牛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_life_or_death_",
+      "source": "deserves death\n\ndeserves undeath\n\ndeserves life\n\nis dead\n\nis undead\n\nlives\n",
+      "hits": [
+        {
+          "Term": "undead",
+          "Translation": "亡灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】指不死生物类别，并不表示无法被杀死。 来源：mon-util.cc。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_loves_or_hates_",
+      "source": "curses\n\ndefends\n\nhates\n\ninsults\n\nloves\n\npraises\n",
+      "hits": []
+    },
+    {
+      "key": "_graffiti_wares_quality_",
+      "source": "inferior\n\nhigh-quality\n\nlow-quality\n\nmediocre\n\nsuperior\n",
+      "hits": []
+    },
+    {
+      "key": "_graffiti_class_master_",
+      "source": "a master class on excavation taught by formicids\n\na master class on insults taught by [demons|imps]\n\na master class on the many uses of giant clubs taught by [ogres|oni]\n\na master class on Unarmed Combat taught by felids\n\nw:1\na master class on [art|calligraphy] taught by anonymous graffiti authors\n",
+      "hits": [
+        {
+          "Term": "Unarmed Combat",
+          "Translation": "徒手格斗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "Oni",
+          "Translation": "鬼人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/oni.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "giant",
+          "Translation": "巨人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_religion_better_or_worse_",
+      "source": "less of a believer\n\nmore of a believer\n\n\nw:1\na better atheist\n\nw:1\na worse atheist\n",
+      "hits": []
+    },
+    {
+      "key": "any_graffiti",
+      "source": "graffiti of @_pattern_type_@\n\ngraffiti of @_writing_type_@\n\n@_graffiti_unreadable_@\n\n@_graffiti_type_with_signature_maybe_@\n\n@_graffiti_type_with_signature_maybe_@ @_graffiti_image_@\n\n@_graffiti_type_with_signature_maybe_@ @_graffiti_rumour_@\n\n@_graffiti_type_with_signature_maybe_@ @_graffiti_unique_comment_@\n\n@_graffiti_type_with_signature_maybe_@ @_graffiti_species_@\n\n@_graffiti_type_@ @_graffiti_fight_@\n\n@_graffiti_type_@ @_graffiti_advertisement_@\n\n@_graffiti_type_@ saying that @_graffiti_short_saying_@\n\nw:2\n@_graffiti_type_with_signature_maybe_@ @_graffiti_religion_not_non-orc_or_orc_@\n\nw:2\n@_graffiti_type_with_signature_maybe_non-orc_@ @_graffiti_religion_non-orc_@\n\nw:2\n@_graffiti_type_with_signature_maybe_orc_@ @_graffiti_religion_orc_@\n\nw:1\n@_graffiti_type_@ @_graffiti_obscenities_@\n",
+      "hits": [
+        {
+          "Term": "species",
+          "Translation": "种族",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    }
+  ],
+  "compound_queries": [
+    "goblin",
+    "kobold",
+    "spriggan",
+    "dragon",
+    "elephant",
+    "yak",
+    "gnoll",
+    "human",
+    "orc",
+    "ogre",
+    "oni",
+    "troll",
+    "deep elf",
+    "lich",
+    "tengu",
+    "felid",
+    "demon",
+    "imp",
+    "formicid",
+    "giant club",
+    "Unarmed Combat"
+  ],
+  "compound_hits": [
+    {
+      "Term": "Gnoll",
+      "Translation": "豺狼人",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/gnoll.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "kobold",
+      "Translation": "狗头人",
+      "Part of Speech": "noun",
+      "Variants": "kobolds",
+      "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/kobold.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "lich",
+      "Translation": "巫妖",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "ogre",
+      "Translation": "食人魔",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【版本/语境】怪物名；现行玩家种族为 Oni，不直接把 Ogre 当作当前种族。 来源：dat/species/oni.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "tengu",
+      "Translation": "天狗",
+      "Part of Speech": "noun",
+      "Variants": "Te",
+      "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/tengu.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "troll",
+      "Translation": "巨魔",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/troll.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Unarmed Combat",
+      "Translation": "徒手格斗",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+    },
+    {
+      "Term": "Deep Elf",
+      "Translation": "地底精灵",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/deep-elf.yaml。"
+    },
+    {
+      "Term": "Felid",
+      "Translation": "猫族",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/felid.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Formicid",
+      "Translation": "蚁族",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/formicid.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Human",
+      "Translation": "人类",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/human.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Oni",
+      "Translation": "鬼人",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/oni.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Spriggan",
+      "Translation": "斯普利根",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/spriggan.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "dragon",
+      "Translation": "龙",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "elephant",
+      "Translation": "大象",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "goblin",
+      "Translation": "地精",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "orc",
+      "Translation": "兽人",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "yak",
+      "Translation": "牦牛",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    }
+  ]
+}

@@ -10,6 +10,7 @@
 #include "torment-source-type.h"
 
 class actor;
+struct ui_arg;
 
 spret cast_healing(int pow, bool fail);
 bool heal_monster(monster& patient, int amount);
@@ -76,7 +77,8 @@ const enchant_type dispellable_enchantments[] =
 
 bool player_is_debuffable();
 bool player_is_cancellable();
-string describe_player_cancellation(bool debuffs_only = false);
+// Canonical result remains English; optional display data is all-or-nothing.
+string describe_player_cancellation(bool debuffs_only = false, ui_arg* display = nullptr);
 void debuff_player(bool ignore_resistance = false);
 bool monster_is_debuffable(const monster &mon);
 bool monster_can_be_unravelled(const monster &mon);

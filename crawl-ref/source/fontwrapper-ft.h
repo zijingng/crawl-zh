@@ -32,6 +32,7 @@ public:
 
     // font loading
     virtual bool load_font(const char *font_name, unsigned int font_size) override;
+    virtual bool load_fallback(const char *font_name) override;
     virtual bool configure_font() override;
     virtual bool resize(unsigned int size) override;
 
@@ -105,13 +106,13 @@ protected:
     struct GlyphInfo
     {
         // offset before drawing glyph; can be negative
-        int8_t offset;
+        int offset;
         // per-glyph horizontal advance
-        int8_t advance;
+        int advance;
         // per-glyph width
-        int8_t width;
+        int width;
         // per-glyph ascender
-        int8_t ascender;
+        int ascender;
 
         // does glyph have any pixels?
         bool renderable;
@@ -133,6 +134,9 @@ protected:
     // cached value of the maximum advance from m_advance
     coord_def m_max_advance;
 
+    // Terminal cells use a Latin advance, not the font's widest CJK glyph.
+    int m_cell_width;
+
     // minimum offset (likely negative)
     int m_min_offset;
 
@@ -151,6 +155,9 @@ protected:
 
     FT_Byte *ttf;
     FT_Face face;
+    FT_Face fallback_face = nullptr;
+    vector<FT_Byte> fallback_data;
+    FT_Face glyph_face(char32_t ch) const;
     unsigned char *pixels;
     unsigned int fsize;
 };

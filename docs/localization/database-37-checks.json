@@ -1,0 +1,10 @@
+{
+  "new_fragments": 15,
+  "prior_rows_unchanged": 756,
+  "english_source_unchanged": true,
+  "export_filter_test_passed": true,
+  "python_tests": 32,
+  "native_tests": 161,
+  "assertions": 1229078,
+  "tiles_build_success": true
+}

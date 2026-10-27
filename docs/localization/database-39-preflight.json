@@ -1,0 +1,96 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "selected": [
+    {
+      "source": "database/godspeak.txt",
+      "key": "_xom_plaything_",
+      "english": "{{\nif you.piety_rank() > 4 then\n    return \"teddy bear\"\nelseif you.piety_rank() > 2 then\n    return \"toy\"\nelse\n    return \"plaything\"\nend\n}}\n",
+      "hits": [
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "piety",
+          "Translation": "虔诚",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇机制】神祇资源，不等同经验值。 来源：religion.cc。"
+        },
+        {
+          "Term": "bear",
+          "Translation": "熊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/wpnnoise.txt",
+      "key": "_speaking_low_tension_",
+      "english": "@The_weapon@ shouts, \"Live by the sword, die by the sword!\"\n\nw:1\n@The_weapon@ shouts, \"Lie [by|to] the sword, die by the sword!\"\n\n@The_weapon@ realises, \"If we kill all of them, no-one will be listening!\"\n\n@The_weapon@ sighs, \"How I wish you were a better fighter.\"\n\n@The_weapon@ comments on your fighting techniques.\n\n@The_weapon@ compares you unfavourably to its previous owner.\n\n@The_weapon@ complains, \"This is a chore.\"\n\n@The_weapon@ judges, \"You're not an artist, at best an artisan.\"\n\n@The_weapon@ says, \"They will have to pry me from your cold, dead hands.\"\n\n@The_weapon@ moans, \"By {{ if you.god() == \"No God\" then return \"my blade\"\nelse return \"@player_god@\"; end }}, you are such a [coward|dastard|craven|faintheart|poltroon|wuss].\"\n\n@The_weapon@ wonders, \"Who is more incompetent - you or the opposition?\"\n\n@The_weapon@ utters, \"Their cries, their tears, I cannot stand it anymore.\"\n\n@The_weapon@ says, \"Will you forgive me a little stab on the side?\"\n\n@The_weapon@ says, \"Your kiss, my thrill, your miss, my kill.\"\n\n@The_weapon@ boasts, \"My voice can shatter a wine glass. My blade can shatter a human skull.\"\n\n",
+      "hits": [
+        {
+          "Term": "Fighter",
+          "Translation": "战士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的背景名称清单对应。来源：dat/jobs/fighter.yaml。"
+        },
+        {
+          "Term": "Fighting",
+          "Translation": "战斗/作战/格斗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】物理战斗通用技能，亦增加生命上限；与 Unarmed Combat（徒手格斗）区分。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。\n【语境补充 2026-10-21】技能标签固定用战斗。普通动作按句意用作战或格斗。"
+        },
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Human",
+          "Translation": "人类",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/human.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "Shatter",
+          "Translation": "粉碎术/打碎/震碎",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】高等级法术标题用粉碎术。普通破坏动作用打碎。神器独立效果可用震碎，不能一律当作施放粉碎术。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Glass",
+          "Translation": "玻璃",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    }
+  ]
+}

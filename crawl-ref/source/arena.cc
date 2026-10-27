@@ -4,6 +4,7 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "arena.h"
 
@@ -545,7 +546,7 @@ namespace arena
             cgotoxy(1, line++, GOTO_STAT);
             textcolour(BROWN);
             center_print(crawl_view.hudsz.x,
-                         make_stringf("Round %d of %d",
+                         make_stringf(ui_translate("a.arena", "Round %d of %d"),
                                       after_fight ? trials_done
                                                   : trials_done + 1,
                                       total_trials));
@@ -834,7 +835,7 @@ namespace arena
             while (fight_is_on() && !contest_cancelled)
             {
 #ifdef ARENA_VERBOSE
-                mprf("---- Turn #%d ----", turns);
+                mprf(ui_translate("a.arena", "---- Turn #%d ----"), turns);
 #endif
 
                 if (crawl_state.terminal_resized)
@@ -865,7 +866,7 @@ namespace arena
 
         if (contest_cancelled)
         {
-            mpr("Cancelling contest at user request");
+            mpr(ui_translate("a.arena", "Cancelling contest at user request"));
             clear_messages();
             return;
         }
@@ -928,9 +929,9 @@ namespace arena
 
         string msg;
         if (was_tied)
-            msg = "Tie";
+            msg = ui_translate("a.arena", "Tie");
         else
-            msg = "Winner: %s!";
+            msg = ui_translate("a.arena", "Winner: %s!");
 
         if (Options.arena_dump_msgs || Options.arena_list_eq)
             msg = "---------- " + msg + " ----------";
@@ -1064,21 +1065,23 @@ namespace arena
         if (trials_done > 0)
         {
             string outcome = make_stringf(
-                "Final score: %s (%d); %s (%d) [%d ties]",
+                ui_translate("a.arena", "Final score: %s (%d); %s (%d) [%d ties]"),
                  faction_a.desc.c_str(), team_a_wins,
                  faction_b.desc.c_str(), trials_done - team_a_wins - ties,
                  ties);
             if (contest_cancelled)
             {
-                outcome += make_stringf("\n(Cancelled after %d trial%s)",
-                    trials_done, trials_done > 1 ? "s" : "");
+                outcome += ui_render("a.arena", "\n(Cancelled after %s trials)",
+                make_stringf("\n(Cancelled after %d trial%s)",
+                    trials_done, trials_done > 1 ? "s" : ""),
+                {ui_literal_arg(to_string(trials_done))});
             }
 
-            mpr("---- Contest finished ----\n" + outcome);
+            mpr(ui_translate("a.arena", "---- Contest finished ----\n") + outcome);
             if (!skipped_arena_ui)
             {
-                ui::message(outcome, "Arena results:",
-                    "<cyan>Hit any key to continue, ctrl-p for the full log.</cyan>");
+                ui::message(outcome, ui_translate("a.arena", "Arena results:"),
+                    ui_translate("a.arena", "<cyan>Hit any key to continue, ctrl-p for the full log.</cyan>"));
             }
         }
 
@@ -1198,11 +1201,13 @@ void arena_placed_monster(monster* mons)
     const bool summoned = mons->is_summoned();
 
 #ifdef ARENA_VERBOSE
-    mprf("%s %s!",
+    mprf("%s", ui_render("a.arena", "%s %s!",
+                make_stringf("%s %s!",
          mons->full_name(DESC_A).c_str(),
          arena::is_respawning                ? "respawns" :
          (summoned && ! arena::real_summons) ? "is summoned"
-                                             : "enters the arena");
+                                             : "enters the arena"),
+                {ui_actor_arg(*mons), ui_text_arg("a.arena.action", arena::is_respawning ? "respawns" : (summoned && !arena::real_summons) ? "is summoned" : "enters the arena")}).c_str());
 #endif
 
     for (mon_inv_iterator ii(*mons); ii; ++ii)
@@ -1275,7 +1280,7 @@ void arena_monster_died(monster* mons, killer_type killer,
              && arena::faction_b.active_members <= 0)
     {
         if (mons->flags & MF_HARD_RESET && !MON_KILL(killer))
-            mpr("Last arena monster was dismissed.");
+            mpr(ui_translate("a.arena", "Last arena monster was dismissed."));
         // If all monsters are dead, and the last one to die is a giant
         // spore or ball lightning, then that monster's faction is the
         // winner, since self-destruction is their purpose. But if a
@@ -1468,7 +1473,7 @@ static void _choose_arena_teams(newgame_def& choice,
     arena::skipped_arena_ui = false;
     clear_message_store();
 
-    auto text = make_shared<Text>("Enter your choice of teams:\n ");
+    auto text = make_shared<Text>(ui_translate("a.arena", "Enter your choice of teams:\n "));
     auto vbox = make_shared<Box>(ui::Widget::VERT);
     vbox->add_child(text);
     vbox->set_cross_alignment(Widget::Align::STRETCH);
@@ -1477,7 +1482,7 @@ static void _choose_arena_teams(newgame_def& choice,
     teams_input->set_text(default_arena_teams);
     vbox->add_child(teams_input);
     formatted_string prompt;
-    prompt.cprintf("\nExamples:\n");
+    prompt.cprintf("%s", ui_translate("a.arena", "\nExamples:\n"));
     prompt.cprintf("  Sigmund v Jessica\n");
     prompt.cprintf("  99 orc v Royal Jelly\n");
     prompt.cprintf("  20-headed hydra v 10 kobold ; scimitar ego:flaming");

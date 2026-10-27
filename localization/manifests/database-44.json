@@ -1,0 +1,371 @@
+{
+  "entries": [
+    {
+      "key": "_suspicion_name_",
+      "context": "textdb:database/rand_all.txt:_suspicion_name_",
+      "source_sha256": "7e4d52cbee7f1af8baecf0699534458e1d463d420322f4b453bb38fda086d970",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": [
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_conflict_name_",
+          "source_sha256": "198d3aba99bb3a764219abcd532cb9ec2a7fd4c288d8b9f9afb9f1079ce509de",
+          "translation_sha256": "1c1da681e8acf02451460de2d03360604826937f33ee58fd2a69e51931ae0921"
+        },
+        {
+          "source": "database/rand_all.txt",
+          "key": "_suspicion_no_conflict_name_",
+          "source_sha256": "1c4a601bbf21cbfe2b118c6d7bfec8206360c41dc508184091156547ae59371f",
+          "translation_sha256": "9a224b35b1accdd7196d7a256fbe52d8abf64bd976fa0342530341ee0eaf1855"
+        }
+      ]
+    },
+    {
+      "key": "divine_esteem",
+      "context": "textdb:database/rand_all.txt:divine_esteem",
+      "source_sha256": "8945979dc73dac5e86a75da50ff38c6ce24ecad8012929321ba0d69a68cd4fb8",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": [
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_anger_quality_",
+          "source_sha256": "edca7776e9c73ba6b8ea422a8fcc8da231eede5a500cb2a72983fae41976b545",
+          "translation_sha256": "b5bef192153559119ff7820c28429505987da187177044727bd2a2903eb102aa"
+        }
+      ]
+    },
+    {
+      "key": "_xom_esteem_",
+      "context": "textdb:database/rand_all.txt:_xom_esteem_",
+      "source_sha256": "89619cedd701ca378ca1ff10f922f379c5c2ade17ccf2017b41a296ea672cf84",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": [
+        {
+          "source": "database/rand_all.txt",
+          "key": "divine_esteem",
+          "source_sha256": "8945979dc73dac5e86a75da50ff38c6ce24ecad8012929321ba0d69a68cd4fb8",
+          "translation_sha256": "d0fa35115b37983c2b65281c804f40c138fdd53a4bde7606a5647c891c6e966d"
+        }
+      ]
+    },
+    {
+      "key": "_sky_or_light_",
+      "context": "textdb:database/rand_all.txt:_sky_or_light_",
+      "source_sha256": "a8f02e0a05620f2643c90cc23e725ad3ca4b6763faa80b1d9e1b230672ac47d3",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": [
+        {
+          "source": "database/rand_all.txt",
+          "key": "_sky_colour_name_",
+          "source_sha256": "e61b399284de8f09020fb263b4f373f152f7d99881c87bf6b20f75e8dabd86e4",
+          "translation_sha256": "867febe12bb3e18d3d476a7366e260649c41ceac91c58a3d8b4f3aac0e7b0557"
+        }
+      ]
+    },
+    {
+      "key": "_virtue_or_vice_",
+      "context": "textdb:database/rand_all.txt:_virtue_or_vice_",
+      "source_sha256": "fb02c71ee57a7ddbd5d67785975fadba43da493dad729bb2ceed771674d4e9ba",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": [
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_valour_name_",
+          "source_sha256": "05f3320a799bd4ca26f7eccba39d060c8dd757100722ad460d3a2a841ec2e264",
+          "translation_sha256": "a5928249521fbc34d66c847185eab7e56757dcbe3bd294d154b354adeded9991"
+        },
+        {
+          "source": "database/rand_all.txt",
+          "key": "_vice_name_",
+          "source_sha256": "e7120ee43536b49f2d49e1bc2c12721b6fa1a86901055dcf3218ed3f010e8769",
+          "translation_sha256": "e308d79ea3595593e9fbf636dfbdc618078c12918a189988e2433bee7d182d9d"
+        },
+        {
+          "source": "database/rand_all.txt",
+          "key": "_virtue_name_",
+          "source_sha256": "e7fb759c1ef8e5e3f1dfc525b04c140b7040f79d696841b6d8e2bc47ee59c79d",
+          "translation_sha256": "b16300a73ae2ed99d7c182cd38d259ed4e42d89ae8706721192e0d4351493f0f"
+        }
+      ]
+    },
+    {
+      "key": "_power_or_anger_",
+      "context": "textdb:database/rand_wpn.txt:_power_or_anger_",
+      "source_sha256": "58718f3951c96187ae070ca6e43e28251121ea9a732193496ea5d986257ab061",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": [
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_anger_name_",
+          "source_sha256": "ff830fe890139e7cdb2707aed566b28249dbbff83fb47598ca0292974358ef5b",
+          "translation_sha256": "897481e8cd1e8ce4f62f16923e6d4ce3d01865b35e77b1e442eb27d40f30cdaa"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_conflict_name_",
+          "source_sha256": "198d3aba99bb3a764219abcd532cb9ec2a7fd4c288d8b9f9afb9f1079ce509de",
+          "translation_sha256": "1c1da681e8acf02451460de2d03360604826937f33ee58fd2a69e51931ae0921"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_power_name_",
+          "source_sha256": "899a48eb344433cac461bfd7c8bb07d4d6c8d85eaf1e37a5de69ed2fbcc16f0e",
+          "translation_sha256": "c2bab8d874622bb39638ee871571548d24f8c3d9d17e4982d0a9106ed520a97a"
+        }
+      ]
+    },
+    {
+      "key": "_power_name_",
+      "context": "textdb:database/rand_wpn.txt:_power_name_",
+      "source_sha256": "899a48eb344433cac461bfd7c8bb07d4d6c8d85eaf1e37a5de69ed2fbcc16f0e",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": []
+    },
+    {
+      "key": "_conflict_name_",
+      "context": "textdb:database/rand_wpn.txt:_conflict_name_",
+      "source_sha256": "198d3aba99bb3a764219abcd532cb9ec2a7fd4c288d8b9f9afb9f1079ce509de",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": []
+    },
+    {
+      "key": "_anger_name_",
+      "context": "textdb:database/rand_wpn.txt:_anger_name_",
+      "source_sha256": "ff830fe890139e7cdb2707aed566b28249dbbff83fb47598ca0292974358ef5b",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": [
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_anger_possessive_",
+          "source_sha256": "781088052d9fe7f136e027fe7373c8845305877f3f39740aed19fae194197a37",
+          "translation_sha256": "e5ffdf5432e3e321b014ab0cef17fed4dd690da18b7b15aa62b7ded9b6747f85"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_anger_quality_",
+          "source_sha256": "edca7776e9c73ba6b8ea422a8fcc8da231eede5a500cb2a72983fae41976b545",
+          "translation_sha256": "b5bef192153559119ff7820c28429505987da187177044727bd2a2903eb102aa"
+        }
+      ]
+    },
+    {
+      "key": "_anger_quality_",
+      "context": "textdb:database/rand_wpn.txt:_anger_quality_",
+      "source_sha256": "edca7776e9c73ba6b8ea422a8fcc8da231eede5a500cb2a72983fae41976b545",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": []
+    },
+    {
+      "key": "_anger_possessive_",
+      "context": "textdb:database/rand_wpn.txt:_anger_possessive_",
+      "source_sha256": "781088052d9fe7f136e027fe7373c8845305877f3f39740aed19fae194197a37",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": []
+    },
+    {
+      "key": "_battle_or_war_",
+      "context": "textdb:database/rand_wpn.txt:_battle_or_war_",
+      "source_sha256": "54d8efe8ccb987454b10050b3e29121abf84a3c26e38e933cb056aa8f6cdf85b",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": []
+    },
+    {
+      "key": "death_or_doom",
+      "context": "textdb:database/rand_wpn.txt:death_or_doom",
+      "source_sha256": "518e51f4da673da25ef5903bc7aad206453b7f41d73f12659dd09dadf53950d7",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": []
+    },
+    {
+      "key": "_strategy_or_justice_",
+      "context": "textdb:database/rand_wpn.txt:_strategy_or_justice_",
+      "source_sha256": "3c6d4c9a8ed9f732a1f5772e335a01a5eb36f8786574573085c341f9ee4cb096",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": [
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_justice_name_",
+          "source_sha256": "9105202f37c1ce5349ca22f97f2991864745c09c3c83e4a68c690b1f9920dbcf",
+          "translation_sha256": "a7dac4f740f5d24ed39231f1b701b86c24cd18b5b496f06a7537362eea1df7ba"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_strategy_name_",
+          "source_sha256": "cb206c136ab72e0ba3bc9732e48258584047626771815368f7ab5207fb09e3b6",
+          "translation_sha256": "c7d1f3355ed7715c61227129eaf03efbb87e396dc23aa148a81ecb947b92c3f2"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_valour_name_",
+          "source_sha256": "05f3320a799bd4ca26f7eccba39d060c8dd757100722ad460d3a2a841ec2e264",
+          "translation_sha256": "a5928249521fbc34d66c847185eab7e56757dcbe3bd294d154b354adeded9991"
+        }
+      ]
+    },
+    {
+      "key": "_strategy_name_",
+      "context": "textdb:database/rand_wpn.txt:_strategy_name_",
+      "source_sha256": "cb206c136ab72e0ba3bc9732e48258584047626771815368f7ab5207fb09e3b6",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": []
+    },
+    {
+      "key": "_valour_name_",
+      "context": "textdb:database/rand_wpn.txt:_valour_name_",
+      "source_sha256": "05f3320a799bd4ca26f7eccba39d060c8dd757100722ad460d3a2a841ec2e264",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": []
+    },
+    {
+      "key": "_justice_name_",
+      "context": "textdb:database/rand_wpn.txt:_justice_name_",
+      "source_sha256": "9105202f37c1ce5349ca22f97f2991864745c09c3c83e4a68c690b1f9920dbcf",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": []
+    },
+    {
+      "key": "_diviner_name_",
+      "context": "textdb:database/rand_wpn.txt:_diviner_name_",
+      "source_sha256": "c906aef473ce2fd857f18d4fd2eb01d8833e0e565126ac765e4a9394ea9159a6",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": []
+    },
+    {
+      "key": "_evil_stuff_",
+      "context": "textdb:database/rand_wpn.txt:_evil_stuff_",
+      "source_sha256": "0fc213c6978cfdb32c8db226fe81461021daf1a9789448dca9b7e8c22a6f628f",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": []
+    },
+    {
+      "key": "_catastrophe_name_",
+      "context": "textdb:database/rand_wpn.txt:_catastrophe_name_",
+      "source_sha256": "c724b808200820a87d4ec7f64e1d033dda4dde4935779c29c55ee0e950c86ff8",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": []
+    },
+    {
+      "key": "_chaos_name_",
+      "context": "textdb:database/rand_wpn.txt:_chaos_name_",
+      "source_sha256": "12aab0f2d0ac37ce1cc8ea344e3da8db7922788b29a2c86c49c79ae64b8ee3f9",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": []
+    },
+    {
+      "key": "_balance_or_order_",
+      "context": "textdb:database/rand_wpn.txt:_balance_or_order_",
+      "source_sha256": "007a7670cea018da96f116c1b3dda76c8dff909cdcaebc16a591e3968e839f7d",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": []
+    },
+    {
+      "key": "_economics_or_politics_",
+      "context": "textdb:database/rand_wpn.txt:_economics_or_politics_",
+      "source_sha256": "88edb32eb9d3efbf9a27e2936a2d4efd70fc01efb5aa7e23cd2a72cd83302f23",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": []
+    },
+    {
+      "key": "_place_name_",
+      "context": "textdb:database/rand_wpn.txt:_place_name_",
+      "source_sha256": "f36d793dcbdf366622fc52c395520df38db3dc8d6bf595dc080d765a7e075987",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": []
+    },
+    {
+      "key": "_discomfort_weapon_",
+      "context": "textdb:database/rand_wpn.txt:_discomfort_weapon_",
+      "source_sha256": "bd4a5af200c83d52b62044cb3aa2c08e18906d2987563b751269625351f7b569",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": []
+    },
+    {
+      "key": "_philosophy_name_",
+      "context": "textdb:database/rand_wpn.txt:_philosophy_name_",
+      "source_sha256": "ff04d39fcfe8fc99012fe8242e7919035864eb9e598508a9dfa6108500f605f1",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": []
+    },
+    {
+      "key": "_science_name_",
+      "context": "textdb:database/rand_wpn.txt:_science_name_",
+      "source_sha256": "8adcd539df61bb2357fa487c7549fc402a35e3ad32120a21d8a45acb08e56cb1",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": []
+    },
+    {
+      "key": "_magic_name_",
+      "context": "textdb:database/rand_wpn.txt:_magic_name_",
+      "source_sha256": "e833151880d0be625decfd55ce105a3a3606839aa94d081f6bf0655083376e66",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": []
+    },
+    {
+      "key": "_substance_name_",
+      "context": "textdb:database/rand_wpn.txt:_substance_name_",
+      "source_sha256": "4bf84b347ada22ab98cd2eb992be8432b0bf272874d5c3363a934787ed9d522c",
+      "review_status": "reviewed",
+      "review_batch": "database-44",
+      "dependencies": []
+    }
+  ],
+  "candidates": {
+    "_suspicion_name_": 2,
+    "divine_esteem": 21,
+    "_xom_esteem_": 21,
+    "_sky_or_light_": 14,
+    "_virtue_or_vice_": 3,
+    "_power_or_anger_": 3,
+    "_power_name_": 17,
+    "_conflict_name_": 11,
+    "_anger_name_": 2,
+    "_anger_quality_": 12,
+    "_anger_possessive_": 9,
+    "_battle_or_war_": 34,
+    "death_or_doom": 30,
+    "_strategy_or_justice_": 3,
+    "_strategy_name_": 10,
+    "_valour_name_": 21,
+    "_justice_name_": 18,
+    "_diviner_name_": 9,
+    "_evil_stuff_": 31,
+    "_catastrophe_name_": 18,
+    "_chaos_name_": 32,
+    "_balance_or_order_": 25,
+    "_economics_or_politics_": 67,
+    "_place_name_": 33,
+    "_discomfort_weapon_": 22,
+    "_philosophy_name_": 50,
+    "_science_name_": 29,
+    "_magic_name_": 4,
+    "_substance_name_": 25
+  }
+}

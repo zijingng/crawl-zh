@@ -1,0 +1,2168 @@
+{
+  "batch": "beam-corrosion-01",
+  "new_messages": [
+    {
+      "context": "log.projectile.verb",
+      "english": "burns",
+      "review_status": "reviewed",
+      "review_batch": "beam-corrosion-01",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e713f8c6fd0774b24a10fd8ab927d8b7bf72c72aa5f0bbbc7cea833ffb6b2d23"
+        },
+        {
+          "source": "crawl-ref/source/beam-display.h",
+          "sha256": "8135a9fd40382865470e0e04d4b4864c529959f54428e5eacda39dd024635810"
+        },
+        {
+          "source": "crawl-ref/source/spl-damage.cc",
+          "sha256": "4a0c181320d8dbd23a9749dbca4b6124f965cbb1e9f9ea0145a48efe262393c2"
+        }
+      ]
+    },
+    {
+      "context": "log.projectile.verb",
+      "english": "skewers",
+      "review_status": "reviewed",
+      "review_batch": "beam-corrosion-01",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e713f8c6fd0774b24a10fd8ab927d8b7bf72c72aa5f0bbbc7cea833ffb6b2d23"
+        },
+        {
+          "source": "crawl-ref/source/beam-display.h",
+          "sha256": "8135a9fd40382865470e0e04d4b4864c529959f54428e5eacda39dd024635810"
+        },
+        {
+          "source": "crawl-ref/source/mon-cast.cc",
+          "sha256": "a1ce9e129a8f20dac878c8d7e3d5081e232ea8b4e56c70e3982c39459f0d533b"
+        },
+        {
+          "source": "crawl-ref/source/spl-other.cc",
+          "sha256": "3bf586d193730b03433e118fe141261fe11e3b14158be233bf2ffb58916dc210"
+        }
+      ]
+    },
+    {
+      "context": "log.projectile.verb",
+      "english": "skewer",
+      "review_status": "reviewed",
+      "review_batch": "beam-corrosion-01",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e713f8c6fd0774b24a10fd8ab927d8b7bf72c72aa5f0bbbc7cea833ffb6b2d23"
+        },
+        {
+          "source": "crawl-ref/source/beam-display.h",
+          "sha256": "8135a9fd40382865470e0e04d4b4864c529959f54428e5eacda39dd024635810"
+        },
+        {
+          "source": "crawl-ref/source/spl-damage.cc",
+          "sha256": "4a0c181320d8dbd23a9749dbca4b6124f965cbb1e9f9ea0145a48efe262393c2"
+        }
+      ]
+    },
+    {
+      "context": "log.projectile.verb",
+      "english": "envelops",
+      "review_status": "reviewed",
+      "review_batch": "beam-corrosion-01",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e713f8c6fd0774b24a10fd8ab927d8b7bf72c72aa5f0bbbc7cea833ffb6b2d23"
+        },
+        {
+          "source": "crawl-ref/source/beam-display.h",
+          "sha256": "8135a9fd40382865470e0e04d4b4864c529959f54428e5eacda39dd024635810"
+        },
+        {
+          "source": "crawl-ref/source/mon-cast.cc",
+          "sha256": "a1ce9e129a8f20dac878c8d7e3d5081e232ea8b4e56c70e3982c39459f0d533b"
+        }
+      ]
+    },
+    {
+      "context": "log.projectile.verb",
+      "english": "slices through",
+      "review_status": "reviewed",
+      "review_batch": "beam-corrosion-01",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e713f8c6fd0774b24a10fd8ab927d8b7bf72c72aa5f0bbbc7cea833ffb6b2d23"
+        },
+        {
+          "source": "crawl-ref/source/beam-display.h",
+          "sha256": "8135a9fd40382865470e0e04d4b4864c529959f54428e5eacda39dd024635810"
+        },
+        {
+          "source": "crawl-ref/source/mon-act.cc",
+          "sha256": "0f0aa6f067b384c26999affdc6055d70dc655fa29b3f62bb3b382bb6def47ad1"
+        }
+      ]
+    },
+    {
+      "context": "log.projectile.verb",
+      "english": "engulf",
+      "review_status": "reviewed",
+      "review_batch": "beam-corrosion-01",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e713f8c6fd0774b24a10fd8ab927d8b7bf72c72aa5f0bbbc7cea833ffb6b2d23"
+        },
+        {
+          "source": "crawl-ref/source/beam-display.h",
+          "sha256": "8135a9fd40382865470e0e04d4b4864c529959f54428e5eacda39dd024635810"
+        },
+        {
+          "source": "crawl-ref/source/mon-act.cc",
+          "sha256": "0f0aa6f067b384c26999affdc6055d70dc655fa29b3f62bb3b382bb6def47ad1"
+        }
+      ]
+    },
+    {
+      "context": "log.projectile.verb",
+      "english": "batters",
+      "review_status": "reviewed",
+      "review_batch": "beam-corrosion-01",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e713f8c6fd0774b24a10fd8ab927d8b7bf72c72aa5f0bbbc7cea833ffb6b2d23"
+        },
+        {
+          "source": "crawl-ref/source/beam-display.h",
+          "sha256": "8135a9fd40382865470e0e04d4b4864c529959f54428e5eacda39dd024635810"
+        },
+        {
+          "source": "crawl-ref/source/mon-cast.cc",
+          "sha256": "a1ce9e129a8f20dac878c8d7e3d5081e232ea8b4e56c70e3982c39459f0d533b"
+        },
+        {
+          "source": "crawl-ref/source/mon-explode.cc",
+          "sha256": "7112521e209a01005f7c7f2150c244904724e3f1b777912d3137651334aa4398"
+        }
+      ]
+    },
+    {
+      "context": "log.projectile.verb",
+      "english": "passes through",
+      "review_status": "reviewed",
+      "review_batch": "beam-corrosion-01",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e713f8c6fd0774b24a10fd8ab927d8b7bf72c72aa5f0bbbc7cea833ffb6b2d23"
+        },
+        {
+          "source": "crawl-ref/source/beam-display.h",
+          "sha256": "8135a9fd40382865470e0e04d4b4864c529959f54428e5eacda39dd024635810"
+        },
+        {
+          "source": "crawl-ref/source/mon-cast.cc",
+          "sha256": "a1ce9e129a8f20dac878c8d7e3d5081e232ea8b4e56c70e3982c39459f0d533b"
+        }
+      ]
+    },
+    {
+      "context": "log.projectile.verb",
+      "english": "grips",
+      "review_status": "reviewed",
+      "review_batch": "beam-corrosion-01",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e713f8c6fd0774b24a10fd8ab927d8b7bf72c72aa5f0bbbc7cea833ffb6b2d23"
+        },
+        {
+          "source": "crawl-ref/source/beam-display.h",
+          "sha256": "8135a9fd40382865470e0e04d4b4864c529959f54428e5eacda39dd024635810"
+        },
+        {
+          "source": "crawl-ref/source/mon-cast.cc",
+          "sha256": "a1ce9e129a8f20dac878c8d7e3d5081e232ea8b4e56c70e3982c39459f0d533b"
+        }
+      ]
+    },
+    {
+      "context": "log.projectile.verb",
+      "english": "grasp",
+      "review_status": "reviewed",
+      "review_batch": "beam-corrosion-01",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e713f8c6fd0774b24a10fd8ab927d8b7bf72c72aa5f0bbbc7cea833ffb6b2d23"
+        },
+        {
+          "source": "crawl-ref/source/beam-display.h",
+          "sha256": "8135a9fd40382865470e0e04d4b4864c529959f54428e5eacda39dd024635810"
+        },
+        {
+          "source": "crawl-ref/source/mon-cast.cc",
+          "sha256": "a1ce9e129a8f20dac878c8d7e3d5081e232ea8b4e56c70e3982c39459f0d533b"
+        }
+      ]
+    },
+    {
+      "context": "log.projectile.verb",
+      "english": "weakly hits",
+      "review_status": "reviewed",
+      "review_batch": "beam-corrosion-01",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e713f8c6fd0774b24a10fd8ab927d8b7bf72c72aa5f0bbbc7cea833ffb6b2d23"
+        },
+        {
+          "source": "crawl-ref/source/beam-display.h",
+          "sha256": "8135a9fd40382865470e0e04d4b4864c529959f54428e5eacda39dd024635810"
+        },
+        {
+          "source": "crawl-ref/source/mon-project.cc",
+          "sha256": "bbbf1a2ee272dc5993bf150ce3afabd4104808068e6681d3622ea81177038293"
+        }
+      ]
+    },
+    {
+      "context": "log.projectile.verb",
+      "english": "blasts",
+      "review_status": "reviewed",
+      "review_batch": "beam-corrosion-01",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e713f8c6fd0774b24a10fd8ab927d8b7bf72c72aa5f0bbbc7cea833ffb6b2d23"
+        },
+        {
+          "source": "crawl-ref/source/beam-display.h",
+          "sha256": "8135a9fd40382865470e0e04d4b4864c529959f54428e5eacda39dd024635810"
+        },
+        {
+          "source": "crawl-ref/source/mon-project.cc",
+          "sha256": "bbbf1a2ee272dc5993bf150ce3afabd4104808068e6681d3622ea81177038293"
+        }
+      ]
+    },
+    {
+      "context": "log.projectile.verb",
+      "english": "feebly blasts",
+      "review_status": "reviewed",
+      "review_batch": "beam-corrosion-01",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e713f8c6fd0774b24a10fd8ab927d8b7bf72c72aa5f0bbbc7cea833ffb6b2d23"
+        },
+        {
+          "source": "crawl-ref/source/beam-display.h",
+          "sha256": "8135a9fd40382865470e0e04d4b4864c529959f54428e5eacda39dd024635810"
+        },
+        {
+          "source": "crawl-ref/source/mon-project.cc",
+          "sha256": "bbbf1a2ee272dc5993bf150ce3afabd4104808068e6681d3622ea81177038293"
+        }
+      ]
+    },
+    {
+      "context": "log.projectile.verb",
+      "english": "drowns",
+      "review_status": "reviewed",
+      "review_batch": "beam-corrosion-01",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e713f8c6fd0774b24a10fd8ab927d8b7bf72c72aa5f0bbbc7cea833ffb6b2d23"
+        },
+        {
+          "source": "crawl-ref/source/beam-display.h",
+          "sha256": "8135a9fd40382865470e0e04d4b4864c529959f54428e5eacda39dd024635810"
+        },
+        {
+          "source": "crawl-ref/source/spl-damage.cc",
+          "sha256": "4a0c181320d8dbd23a9749dbca4b6124f965cbb1e9f9ea0145a48efe262393c2"
+        }
+      ]
+    },
+    {
+      "context": "log.projectile.verb",
+      "english": "pelts",
+      "review_status": "reviewed",
+      "review_batch": "beam-corrosion-01",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e713f8c6fd0774b24a10fd8ab927d8b7bf72c72aa5f0bbbc7cea833ffb6b2d23"
+        },
+        {
+          "source": "crawl-ref/source/beam-display.h",
+          "sha256": "8135a9fd40382865470e0e04d4b4864c529959f54428e5eacda39dd024635810"
+        },
+        {
+          "source": "crawl-ref/source/spl-damage.cc",
+          "sha256": "4a0c181320d8dbd23a9749dbca4b6124f965cbb1e9f9ea0145a48efe262393c2"
+        }
+      ]
+    },
+    {
+      "context": "o.corrode.source",
+      "english": "the acid",
+      "review_status": "reviewed",
+      "review_batch": "beam-corrosion-01",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/player.cc",
+          "sha256": "27595345575bf7dda31b81b67a523b2bac92ec44cc0df5439f04f251046b645c"
+        },
+        {
+          "source": "crawl-ref/source/beam.cc",
+          "sha256": "e713f8c6fd0774b24a10fd8ab927d8b7bf72c72aa5f0bbbc7cea833ffb6b2d23"
+        }
+      ]
+    },
+    {
+      "context": "o.corrode.source",
+      "english": "the rust",
+      "review_status": "reviewed",
+      "review_batch": "beam-corrosion-01",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/player.cc",
+          "sha256": "27595345575bf7dda31b81b67a523b2bac92ec44cc0df5439f04f251046b645c"
+        },
+        {
+          "source": "crawl-ref/source/cloud.cc",
+          "sha256": "6c83feb466b82bbacf59f98446bf3ab4bf1005f0f88d86b3f65143bb1db09d09"
+        }
+      ]
+    },
+    {
+      "context": "o.corrode.source",
+      "english": "the entropic weave",
+      "review_status": "reviewed",
+      "review_batch": "beam-corrosion-01",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/player.cc",
+          "sha256": "27595345575bf7dda31b81b67a523b2bac92ec44cc0df5439f04f251046b645c"
+        },
+        {
+          "source": "crawl-ref/source/mon-cast.cc",
+          "sha256": "a1ce9e129a8f20dac878c8d7e3d5081e232ea8b4e56c70e3982c39459f0d533b"
+        }
+      ]
+    },
+    {
+      "context": "o.corrode.source",
+      "english": "a flying bit",
+      "review_status": "reviewed",
+      "review_batch": "beam-corrosion-01",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/player.cc",
+          "sha256": "27595345575bf7dda31b81b67a523b2bac92ec44cc0df5439f04f251046b645c"
+        },
+        {
+          "source": "crawl-ref/source/mon-util.cc",
+          "sha256": "6befaae186616aaac2d2d6a5b966a3455f4189f8791cc686ff4a48b70239dbb8"
+        }
+      ]
+    },
+    {
+      "context": "o.corrode.source",
+      "english": "Your corrupting presence",
+      "review_status": "reviewed",
+      "review_batch": "beam-corrosion-01",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/player.cc",
+          "sha256": "27595345575bf7dda31b81b67a523b2bac92ec44cc0df5439f04f251046b645c"
+        },
+        {
+          "source": "crawl-ref/source/monster.cc",
+          "sha256": "f42c9c605461c982beb35994570c7e17d52e5749ef848c8ea8525e6a70f62cb4"
+        }
+      ]
+    },
+    {
+      "context": "o.corrode.source",
+      "english": "wild magic",
+      "review_status": "reviewed",
+      "review_batch": "beam-corrosion-01",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/player.cc",
+          "sha256": "27595345575bf7dda31b81b67a523b2bac92ec44cc0df5439f04f251046b645c"
+        },
+        {
+          "source": "crawl-ref/source/spl-miscast.cc",
+          "sha256": "539eeb7d5ee95fe42a55937a28f0ed0843f6b7d3e212ab03385d5fe36b459ad6"
+        }
+      ]
+    },
+    {
+      "context": "o.corrode.source",
+      "english": "The trap's stomach acid",
+      "review_status": "reviewed",
+      "review_batch": "beam-corrosion-01",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/player.cc",
+          "sha256": "27595345575bf7dda31b81b67a523b2bac92ec44cc0df5439f04f251046b645c"
+        },
+        {
+          "source": "crawl-ref/source/traps.cc",
+          "sha256": "3de3012c705110952e4baebefcb565dfec502dd8ac6d241cf34e77bbcc98b0bd"
+        }
+      ]
+    }
+  ],
+  "shared_dependency_rechecks": [
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.verb",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.verb",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.verb",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.verb",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.effect",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.effect",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.effect",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.actor",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.invisible.action",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.pie",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.pie",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.pie",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.pie",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.pie",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.pie",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.noun",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.noun",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.noun",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.noun",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.noun",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.noun",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.noun",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.noun",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.noun",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.noun",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.noun",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.noun",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.noun",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.noun",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion.sound",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion.sound",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion.sound",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion.sound",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion.sound",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion.sound",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion.sound",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion.sound",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion.sound",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion.sound",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion.sound",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion.sound",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion.sound",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion.sound",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion.sound",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.explosion.sound",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.monster",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.noun",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.summoning.reason",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.summoning.reason",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.summoning.reason",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.summoning.reason",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.noun",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.noun",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.beam",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "b.noun",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "z.ui",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "z.ui",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "z.ui",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "z.ui",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "z.ui",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "z.ui",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "z.log",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "z.log",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "z.log",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "z.log",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "z.log",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "log.projectile.name",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    },
+    {
+      "context": "z.log",
+      "source": "crawl-ref/source/beam.cc",
+      "before": "e8d440ab5fdeeddfb4274a7ea8762ade0f8822245ce2c50dc622e39c88e13d49",
+      "after": "930987e9c15b21524fa2edebb53875b43093bfbd76e66ea78141a45a798a9916"
+    }
+  ],
+  "all_literal_hit_verbs": [
+    "batters",
+    "blasts",
+    "burns",
+    "drowns",
+    "engulf",
+    "engulfs",
+    "envelops",
+    "feebly blasts",
+    "grasp",
+    "grips",
+    "hits",
+    "passes through",
+    "pelts",
+    "skewer",
+    "skewers",
+    "slices through",
+    "weakly hits"
+  ]
+}

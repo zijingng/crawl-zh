@@ -4,6 +4,7 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "exclude.h"
 
@@ -119,8 +120,18 @@ void add_auto_excludes()
     if (mons.empty())
         return;
 
-    mprf(MSGCH_WARN, "Marking area around %s as unsafe for travelling.",
-            describe_monsters_condensed(mons).c_str());
+    const string original = make_stringf("Marking area around %s as unsafe for travelling.",
+        describe_monsters_condensed(mons).c_str());
+    vector<string> names;
+    bool available = true;
+    for (const monster *mon : mons)
+    {
+        const ui_arg name = ui_actor_arg(*mon);
+        available &= name.available;
+        names.push_back(name.text);
+    }
+    mprf(MSGCH_WARN, "%s", ui_render("e.exclude", "Marking area around %s as unsafe for travelling.",
+        original, {{join_strings(names.begin(), names.end(), "、"), available}}).c_str());
     learned_something_new(HINT_AUTO_EXCLUSION);
 }
 
@@ -689,6 +700,67 @@ string exclude_set::get_exclusion_desc()
     }
     return desc_str + comma_separated_line(desc.begin(), desc.end(),
                                            " and ", ", ");
+}
+
+bool exclude_set::try_display_desc(const level_id &level, string &output) const
+{
+    if (Options.language != lang_t::ZH) return false;
+    map<string, int> counts;
+    int other = 0;
+    for (const auto &entry : exclude_roots)
+    {
+        const string &name = entry.second.desc;
+        if (strstr(name.c_str(), "cloud")) continue;
+        if (auto_unique_annotations.count(make_pair(name, level))) continue;
+        if (name.empty()) ++other;
+        else ++counts[name];
+    }
+    vector<string> parts;
+    for (const auto &entry : counts)
+    {
+        ui_arg name = ui_text_arg("e.exclude.name", entry.first);
+        if (!name.available) name = ui_text_arg("display.monster", entry.first);
+        if (!name.available)
+        {
+            // Exact stored metadata keys generated from the canonical monster
+            // table, not a parser for rendered annotation prose.
+            static const map<string, string> detected_names = [] {
+                map<string, string> names;
+                for (int i = 0; i < NUM_MONSTERS; ++i)
+                {
+                    const string base = mons_type_name(static_cast<monster_type>(i), DESC_PLAIN);
+                    if (!base.empty()) names[base + " (detected)"] = base;
+                }
+                return names;
+            }();
+            if (const string *base = map_find(detected_names, entry.first))
+            {
+                const string text = ui_render("e.exclude", "%s (detected)", "",
+                    {ui_text_arg("display.monster", *base)});
+                name = {text, !text.empty()};
+            }
+        }
+        if (!name.available) return false;
+        const string text = entry.second > 1
+            ? ui_render("e.exclude", "%s %s", "", {ui_literal_arg(to_string(entry.second)), name})
+            : name.text;
+        if (text.empty()) return false;
+        parts.push_back(text);
+    }
+    if (other)
+    {
+        const string text = ui_render("e.exclude", parts.empty()
+            ? "%s exclusions" : "%s more exclusions", "", {ui_literal_arg(to_string(other))});
+        if (text.empty()) return false;
+        parts.push_back(text);
+    }
+    if (parts.empty()) { output.clear(); return true; }
+    string text = join_strings(parts.begin(), parts.end(), "、");
+    if (parts.size() > 1 || !other)
+        text = ui_render("e.exclude", "exclusions: %s", "", {ui_literal_arg(text)});
+    if (text.empty()) return false;
+    output = text;
+    return true;
 }
 
 void marshallExcludes(writer& outf, const exclude_set& excludes)

@@ -6,6 +6,11 @@
 #include "AppHdr.h"
 
 #include "xom.h"
+#include "x-display.h"
+#include "i18n.h"
+#include "p-display.h"
+#include "s-display.h"
+#include "mon-info.h"
 
 #include <algorithm>
 #include <functional>
@@ -204,15 +209,99 @@ const string describe_xom_favour()
 #define XOM_SPEECH(x) x
 static string _get_xom_speech(const string &key)
 {
-    string result = getSpeakString("Xom " + key);
+    auto speech = getPairedSpeakString("Xom " + key);
 
-    if (result.empty())
-        result = getSpeakString("Xom " XOM_SPEECH("general effect"));
+    if (speech.english.empty())
+        speech = getPairedSpeakString("Xom " XOM_SPEECH("general effect"));
 
-    if (result.empty())
-        return "Xom makes something happen.";
+    if (speech.english.empty())
+        return ui_translate("x.ui", "Xom makes something happen.");
 
+    return speech.text();
+}
+
+
+// Display copies only. None of these helpers select effects or consume RNG.
+string xom_scenery_message(const string &original, int fountains, int snacks,
+                           int trees, int opened, int closed)
+{
+    ui_translation_group group;
+    vector<string> parts;
+    const auto append = [&](int count, const char *key)
+    {
+        if (count <= 0)
+            return;
+        group.require("x.scenery", key);
+        parts.push_back(ui_render("x.scenery", key, "",
+                                  {ui_literal_arg(to_string(count))}));
+    };
+    append(fountains, "%s fountains start gushing blood");
+    append(snacks, "%s nearby snacks are swapped around");
+    append(trees, "%s trees are warped by chaos");
+    append(opened, "%s doors burst open");
+    append(closed, "%s doors slam shut");
+    group.require("x.scenery", "%s!");
+    if (!group.available() || parts.empty())
+        return original;
+    return ui_render("x.scenery", "%s!", original,
+        {ui_literal_arg(comma_separated_line(parts.begin(), parts.end(), "；", "；"))});
+}
+
+string xom_buff_message(const monster &mon, const vector<enchant_type> &effects,
+                        bool healed, const string &original)
+{
+    ui_arg states{"", true};
+    for (enchant_type effect : effects)
+    {
+        const auto state = ui_text_arg("d.monster.state", description_for_ench(effect));
+        states.available = states.available && state.available;
+        if (!states.text.empty())
+            states.text += "、";
+        states.text += state.text;
+    }
+    return ui_render("x.log", healed ? "%s suddenly gains %s, is healed, and looks braver for a moment!"
+                                     : "%s suddenly gains %s and looks braver for a moment!",
+        original, {ui_actor_arg(mon), states});
+}
+
+static ui_arg _xom_anatomy_arg(const string &canonical)
+{
+    if (canonical == you.hand_name(false) || canonical == you.hand_name(true))
+        return p_hand_arg();
+    if (canonical == you.arm_name(true))
+        return p_arm_arg();
+    if (canonical == you.foot_name(false) || canonical == you.foot_name(true))
+        return p_foot_arg();
+    for (const char *context : {"p.clause", "s.anatomy", "x.noun"})
+    {
+        const auto noun = ui_text_arg(context, canonical);
+        if (noun.available)
+            return noun;
+    }
+    return {"", false};
+}
+
+static textdb_speech _xom_template(const string &key)
+{
+    auto result = getPairedSpeakString("Xom " + key);
+    if (result.english.empty())
+        result = getPairedSpeakString("Xom general effect");
+    if (result.english.empty())
+        result = {"Xom makes something happen.", ui_translate("x.ui", "Xom makes something happen."), true};
     return result;
+}
+
+static void _xom_replace(textdb_speech &speech, const string &marker,
+                          const string &canonical, const ui_arg &display)
+{
+    speech.replace(marker, canonical, display.text, display.available);
+}
+
+static void _xom_random_body(textdb_speech &speech, const string &marker,
+                            bool plural, int kind)
+{
+    const string noun = random_body_part_name(plural, kind);
+    _xom_replace(speech, marker, noun, _xom_anatomy_arg(noun));
 }
 
 static bool _xom_is_bored()
@@ -295,12 +384,12 @@ static void _xom_is_stimulated(int maxinterestingness,
     if (was_stimulated || force_message)
     {
         god_speaks(GOD_XOM,
-                   ((interestingness > 160) ? message_array[5] :
+                   ui_translate("x.ui", ((interestingness > 160) ? message_array[5] :
                     (interestingness >  80) ? message_array[4] :
                     (interestingness >  60) ? message_array[3] :
                     (interestingness >  40) ? message_array[2] :
                     (interestingness >  20) ? message_array[1]
-                                            : message_array[0]));
+                                            : message_array[0])));
         //updating piety status line
         you.redraw_title = true;
     }
@@ -374,7 +463,7 @@ void xom_tick()
         if (old_xom_favour != new_xom_favour)
         {
             const string msg = "You are now " + new_xom_favour;
-            god_speaks(you.religion, msg.c_str());
+            god_speaks(you.religion, ui_render("x.log", "You are now %s", msg, {ui_text_arg("d.god.xom.favour", new_xom_favour)}).c_str());
         }
 
         if (you.gift_timeout == 1)
@@ -554,14 +643,14 @@ static void _xom_divination(int sever)
         // still on the map when the original one has been killed. Then
         // another one is spawned, so the number is the same as before.
         // There's no way we can check this, however.
-        mpr("You detect items, but no nearby creatures.");
+        mpr(ui_translate("x.ui", "You detect items, but no nearby creatures."));
     }
     else
     {
         if (num_items > 0)
-            mpr("You detect items and creatures!");
+            mpr(ui_translate("x.ui", "You detect items and creatures!"));
         else
-            mpr("You detect creatures, but no further items.");
+            mpr(ui_translate("x.ui", "You detect creatures, but no further items."));
     }
 
     take_note(Note(NOTE_XOM_EFFECT, you.raw_piety, -1, "divination: all"), true);
@@ -588,8 +677,7 @@ static void _try_brand_switch(const int item_index)
         return;
 
     // TODO: shared code with _do_chaos_upgrade
-    mprf("%s erupts in a glittering mayhem of colour.",
-                            item.name(DESC_THE, false, false, false).c_str());
+    mprf("%s", ui_render("x.log", "%s erupts in a glittering mayhem of colour.", make_stringf("%s erupts in a glittering mayhem of colour.", item.name(DESC_THE, false, false, false).c_str()), {ui_item_arg(item)}).c_str());
     if (is_random_artefact(item))
         artefact_set_property(item, ARTP_BRAND, SPWPN_CHAOS);
     else
@@ -604,7 +692,7 @@ static void _xom_make_item(object_class_type base, int subtype, int power)
 
     if (thing_created == NON_ITEM)
     {
-        god_speaks(GOD_XOM, "\"No, never mind.\"");
+        god_speaks(GOD_XOM, ui_translate("x.ui", "\"No, never mind.\""));
         return;
     }
     else if (base == OBJ_ARMOUR && subtype == ARM_ORB && one_chance_in(4))
@@ -643,7 +731,7 @@ static void _xom_acquirement(int /*sever*/)
             false, you.pos());
     if (item_index == NON_ITEM)
     {
-        god_speaks(GOD_XOM, "\"No, never mind.\"");
+        god_speaks(GOD_XOM, ui_translate("x.ui", "\"No, never mind.\""));
         return;
     }
 
@@ -797,9 +885,7 @@ static void _do_chaos_upgrade(item_def &item, const monster* mon)
     {
         const description_level_type desc = mon->friendly() ? DESC_YOUR
                                                             : DESC_THE;
-        mprf("%s %s erupts in a glittering mayhem of colour.",
-            apostrophise(mon->name(desc)).c_str(),
-            item.name(DESC_PLAIN, false, false, false).c_str());
+        mprf("%s", ui_render("x.log", "%s %s erupts in a glittering mayhem of colour.", make_stringf("%s %s erupts in a glittering mayhem of colour.", apostrophise(mon->name(desc)).c_str(), item.name(DESC_PLAIN, false, false, false).c_str()), {ui_actor_arg(*mon), ui_item_arg(item)}).c_str());
     }
 
     const int brand = (item.base_type == OBJ_WEAPONS) ? (int) SPWPN_CHAOS
@@ -1400,7 +1486,7 @@ static void _xom_rearrange_pieces(int sever)
             {
                 if (!did_message)
                 {
-                    mpr("Some monsters swap places.");
+                    mpr(ui_translate("x.ui", "Some monsters swap places."));
                     did_message = true;
                 }
                 if (one_chance_in(4))
@@ -1485,8 +1571,7 @@ static void _xom_snakes_to_sticks(int /*sever*/)
         item.quantity = 1;
 
         // Output some text since otherwise snakes will disappear silently.
-        mprf("%s reforms as %s.", mi->name(DESC_THE).c_str(),
-             item.name(DESC_A).c_str());
+        mprf("%s", ui_render("x.log", "%s reforms as %s.", make_stringf("%s reforms as %s.", mi->name(DESC_THE).c_str(), item.name(DESC_A).c_str()), {ui_actor_arg(**mi), ui_item_arg(item)}).c_str());
 
         // Dismiss monster silently.
         move_item_to_grid(&item_slot, mi->pos());
@@ -1541,8 +1626,7 @@ static void _xom_lights_up_webs(int /*sever*/)
     if (webs_count > 0)
     {
         god_speaks(GOD_XOM, _get_xom_speech("lights up webs").c_str());
-        mprf("%s %s into flame!", number_in_words(webs_count).c_str(),
-              webs_count == 1 ? "web bursts" : "webs burst");
+        mprf("%s", ui_render("x.log", "Webs burst into flame: %s", make_stringf("%s %s into flame!", number_in_words(webs_count).c_str(), webs_count == 1 ? "web bursts" : "webs burst"), {ui_literal_arg(to_string(webs_count))}).c_str());
         string note = make_stringf("lit up %d webs", webs_count);
         take_note(Note(NOTE_XOM_EFFECT, you.raw_piety, -1, note), true);
     }
@@ -1611,9 +1695,7 @@ static void _xom_animate_monster_weapon(int sever)
     // Make the monster unwield its weapon.
     mon->unequip(MSLOT_WEAPON, false, true);
 
-    mprf("%s %s dances into the air!",
-         apostrophise(mon->name(DESC_THE)).c_str(),
-         env.item[wpn].name(DESC_PLAIN).c_str());
+    mprf("%s", ui_render("x.log", "%s %s dances into the air!", make_stringf("%s %s dances into the air!", apostrophise(mon->name(DESC_THE)).c_str(), env.item[wpn].name(DESC_PLAIN).c_str()), {ui_actor_arg(*mon), ui_item_arg(env.item[wpn])}).c_str());
 
     destroy_item(dancing->inv[MSLOT_WEAPON]);
 
@@ -1660,9 +1742,9 @@ static void _xom_harmless_flora(int /*sever*/)
     {
         god_speaks(GOD_XOM, _get_xom_speech("flora ring").c_str());
         if (mon_type == MONS_DEMONIC_PLANT)
-            mpr("Demonic plants sprout up around you!");
+            mpr(ui_translate("x.ui", "Demonic plants sprout up around you!"));
         else
-            mpr("Toadstools sprout up around you!");
+            mpr(ui_translate("x.ui", "Toadstools sprout up around you!"));
 
         const string note = make_stringf("made a garden");
         take_note(Note(NOTE_XOM_EFFECT, you.raw_piety, -1, note), true);
@@ -1865,7 +1947,7 @@ static void _xom_door_ring(bool good)
         else
             message = "The dungeon churns and shimmers intensely around you.";
 
-        mprf(good ? MSGCH_GOD : MSGCH_WARN, "%s", message.c_str());
+        mprf(good ? MSGCH_GOD : MSGCH_WARN, "%s", ui_translate("x.ui", message.c_str()));
 
         string note = "";
         if (good)
@@ -1943,9 +2025,9 @@ static int _xom_shatter_walls(coord_def where, bool more_than_dig)
     if (you.see_cell(where))
     {
         if (feat_is_door(feat))
-            mpr("A door shatters!");
+            mpr(ui_translate("x.ui", "A door shatters!"));
         else if (feat == DNGN_GRATE)
-            mpr("An iron grate is ripped into pieces!");
+            mpr(ui_translate("x.ui", "An iron grate is ripped into pieces!"));
     }
 
     noisy(spell_effect_noise(SPELL_SHATTER), where);
@@ -1973,11 +2055,11 @@ static void _xom_fake_shatter(int /*sever*/)
     god_speaks(GOD_XOM, _get_xom_speech("fake shatter").c_str());
 
     if (silenced(you.pos()))
-        mpr("The dungeon shakes... harmlessly?");
+        mpr(ui_translate("x.ui", "The dungeon shakes... harmlessly?"));
     else
     {
         noisy(spell_effect_noise(SPELL_SHATTER), you.pos());
-        mprf(MSGCH_SOUND, "The dungeon rumbles... harmlessly?");
+        mprf(MSGCH_SOUND, "%s", ui_translate("x.ui", "The dungeon rumbles... harmlessly?"));
     }
 
     run_animation(ANIMATION_SHAKE_VIEWPORT, UA_PLAYER);
@@ -2006,7 +2088,7 @@ static void _xom_fake_shatter(int /*sever*/)
     }
 
     if (rocks)
-        mpr("Some rocks are dislodged from the ceiling.");
+        mpr(ui_translate("x.ui", "Some rocks are dislodged from the ceiling."));
 
     if (dest)
         take_note(Note(NOTE_XOM_EFFECT, you.raw_piety, -1, "fake shatter"), true);
@@ -2032,7 +2114,7 @@ static void _xom_give_mutations(bool good)
              num_tries > 1 ? "s" : "");
 
     take_note(Note(NOTE_XOM_EFFECT, you.raw_piety, -1, note), true);
-    mpr("Your body is suffused with distortional energy.");
+    mpr(ui_translate("x.ui", "Your body is suffused with distortional energy."));
 
     bool failMsg = true;
 
@@ -2410,9 +2492,7 @@ static void _xom_change_scenery(int /*sever*/)
         take_note(Note(NOTE_XOM_EFFECT, you.raw_piety, -1, ("scenery: "
             + comma_separated_line(terse.begin(), terse.end(), ", ", ", ")).c_str()),
             true);
-        mprf("%s!",
-             comma_separated_line(effects.begin(), effects.end(),
-                                  ", and ").c_str());
+        mpr(xom_scenery_message(comma_separated_line(effects.begin(), effects.end(), ", and ") + "!", fountains_blood, food_swapped, trees_polymorphed, 0, 0));
     }
 }
 
@@ -2486,9 +2566,7 @@ static void _xom_open_and_close_doors(int /* sever */)
         take_note(Note(NOTE_XOM_EFFECT, you.raw_piety, -1, ("scenery: "
             + comma_separated_line(terse.begin(), terse.end(), ", ", ", ")).c_str()),
             true);
-        mprf("%s!",
-             comma_separated_line(effects.begin(), effects.end(),
-                                  ", and ").c_str());
+        mpr(xom_scenery_message(comma_separated_line(effects.begin(), effects.end(), ", and ") + "!", 0, 0, 0, doors_open, doors_close));
     }
 
     if (doors_open || doors_close)
@@ -2677,10 +2755,7 @@ static void _xom_enchant_monster(int sever, bool helpful)
         if (affected == cap)
             break;
 
-        mprf("%s suddenly %s %s!",
-              application->name(DESC_THE).c_str(),
-              (ench == ENCH_PETRIFYING || ench == ENCH_REGENERATION) ? "starts" : "looks",
-              ench_name.c_str());
+        mprf("%s", ui_render("x.log", "%s suddenly changes: %s!", make_stringf("%s suddenly %s %s!", application->name(DESC_THE).c_str(), (ench == ENCH_PETRIFYING || ench == ENCH_REGENERATION) ? "starts" : "looks", ench_name.c_str()), {ui_actor_arg(*application), ui_text_arg("d.monster.state", ench_name)}).c_str());
 
         application->add_ench(mon_enchant(ench, &you, time));
         affected++;
@@ -2784,7 +2859,7 @@ static void _xom_hyper_enchant_monster(int sever)
             targetable.insert(targetable.begin(), mon);
             string summ = make_stringf("%s pulls itself out of thin air.",
                                         targetable[0]->name(DESC_A, true).c_str());
-            god_speaks(GOD_XOM, summ.c_str());
+            god_speaks(GOD_XOM, ui_render("x.log", "%s pulls itself out of thin air.", summ, {ui_actor_arg(*targetable[0])}).c_str());
         }
     }
     else
@@ -2802,6 +2877,8 @@ static void _xom_hyper_enchant_monster(int sever)
     if (!targetable.empty())
     {
         string lines = "";
+        vector<enchant_type> display_effects;
+        bool display_healed = false;
 
         for (enchant_type apply : buff_list)
         {
@@ -2829,6 +2906,7 @@ static void _xom_hyper_enchant_monster(int sever)
                 lines += make_stringf("looks %s, ", ench_name.c_str());
 
             targetable[0]->add_ench(mon_enchant(apply, nullptr, time));
+            display_effects.push_back(apply);
             buff_count++;
         }
 
@@ -2838,14 +2916,16 @@ static void _xom_hyper_enchant_monster(int sever)
         {
             targetable[0]->heal(targetable[0]->max_hit_points);
             lines += make_stringf("is healed, ");
+            display_healed = true;
         }
 
         god_speaks(GOD_XOM, _get_xom_speech("good hyper enchant monster").c_str());
 
         // Rather than figuring out sentence structure from the above list,
         // just staple on a line from casting Cantrip onto the end instead.
-        mprf("%s suddenly %sand looks braver for a moment!",
-              targetable[0]->name(DESC_THE, true).c_str(), lines.c_str());
+        mpr(xom_buff_message(*targetable[0], display_effects, display_healed,
+              make_stringf("%s suddenly %sand looks braver for a moment!",
+              targetable[0]->name(DESC_THE, true).c_str(), lines.c_str())));
     }
 
     const string note = make_stringf("buffed friendly %s %d %s",
@@ -2928,10 +3008,10 @@ static void _xom_wave_of_despair(int sever)
     }
 
     if (skeleton_count)
-        mpr("Skeletons, inanimate yet cursed, drop down from the ceiling.");
+        mpr(ui_translate("x.ui", "Skeletons, inanimate yet cursed, drop down from the ceiling."));
 
     draw_ring_animation(you.pos(), you.current_vision, DARKGRAY, MAGENTA, true, 35);
-    mprf(MSGCH_DANGER, "A draining tide of despair and horror washes over you and your surroundings!");
+    mprf(MSGCH_DANGER, "%s", ui_translate("x.ui", "A draining tide of despair and horror washes over you and your surroundings!"));
 
     const int pow = 50 + random_range(sever / 2, sever);
 
@@ -3034,7 +3114,7 @@ static void _xom_time_control(int sever)
 
     god_speaks(GOD_XOM, _get_xom_speech(xomline).c_str());
 
-    mprf(bad ? MSGCH_WARN : MSGCH_GOD, "%s", message.c_str());
+    mprf(bad ? MSGCH_WARN : MSGCH_GOD, "%s", ui_translate("x.ui", message.c_str()));
 
     if (!you.stasis())
         you.increase_duration(dur, time / 10);
@@ -3073,8 +3153,8 @@ static void _xom_pseudo_miscast(int /*sever*/)
     take_note(Note(NOTE_XOM_EFFECT, you.raw_piety, -1, "silly message"), true);
     god_speaks(GOD_XOM, _get_xom_speech("zero miscast effect").c_str());
 
-    vector<string> messages;
-    vector<string> priority;
+    vector<textdb_speech> messages;
+    vector<textdb_speech> priority;
 
     vector<item_def *> inv_items;
     for (auto &item : you.inv)
@@ -3084,7 +3164,7 @@ static void _xom_pseudo_miscast(int /*sever*/)
     }
 
     // Assure that the messages vector has at least one element.
-    messages.emplace_back("Nothing appears to happen... Ominous!");
+    messages.push_back({"Nothing appears to happen... Ominous!", ui_translate("x.ui", "Nothing appears to happen... Ominous!"), ui_text_arg("x.ui", "Nothing appears to happen... Ominous!").available});
 
     ///////////////////////////////////
     // Dungeon feature dependent stuff.
@@ -3103,48 +3183,50 @@ static void _xom_pseudo_miscast(int /*sever*/)
 
     for (size_t iv = 0; iv < in_view.size(); ++iv)
     {
-        string str;
+        textdb_speech str;
 
         if (in_view[iv] == DNGN_LAVA)
-            str = _get_xom_speech("feature lava");
+            str = _xom_template("feature lava");
         else if (in_view[iv] == DNGN_SHALLOW_WATER
                  || in_view[iv] == DNGN_FOUNTAIN_BLUE
                  || in_view[iv] == DNGN_FOUNTAIN_SPARKLING)
         {
-            str = _get_xom_speech("feature shallow water");
+            str = _xom_template("feature shallow water");
         }
         else if (in_view[iv] == DNGN_DEEP_WATER)
-            str = _get_xom_speech("feature deep water");
+            str = _xom_template("feature deep water");
         else if (in_view[iv] == DNGN_FOUNTAIN_BLOOD)
-            str = _get_xom_speech("feature blood");
+            str = _xom_template("feature blood");
         else if (in_view[iv] == DNGN_FOUNTAIN_EYES)
-            str = _get_xom_speech("feature eyes");
+            str = _xom_template("feature eyes");
         else if (in_view[iv] == DNGN_DRY_FOUNTAIN)
-            str = _get_xom_speech("feature dry");
+            str = _xom_template("feature dry");
         else if (feat_is_statuelike(in_view[iv]))
-            str = _get_xom_speech("feature statuelike");
+            str = _xom_template("feature statuelike");
         else if (feat_is_tree(in_view[iv]))
-            str = _get_xom_speech("feature tree");
+            str = _xom_template("feature tree");
         else if (in_view[iv] == DNGN_CLEAR_ROCK_WALL
                  || in_view[iv] == DNGN_CLEAR_STONE_WALL
                  || in_view[iv] == DNGN_CLEAR_PERMAROCK_WALL
                  || in_view[iv] == DNGN_CRYSTAL_WALL)
         {
-            str = _get_xom_speech("feature translucent wall");
+            str = _xom_template("feature translucent wall");
         }
         else if (in_view[iv] == DNGN_METAL_WALL)
-            str = _get_xom_speech("feature metal wall");
+            str = _xom_template("feature metal wall");
         else if (in_view[iv] == DNGN_STONE_ARCH)
-            str = _get_xom_speech("feature stone arch");
+            str = _xom_template("feature stone arch");
 
-        if (!str.empty())
+        if (!str.english.empty())
         {
-            str = replace_all(str, "@the_feature@", in_view_name[iv]);
-            str = replace_all(str, "@The_feature@",
-                              uppercase_first(in_view_name[iv]));
+            _xom_replace(str, "@the_feature@", in_view_name[iv], s_feature_arg(in_view[iv]));
+            _xom_replace(str, "@The_feature@", uppercase_first(in_view_name[iv]), s_feature_arg(in_view[iv]));
 
             // For name-related bits in graffiti.
-            str = do_mon_name_replacements(str);
+            const string before_names = str.english;
+            str.english = do_mon_name_replacements(str.english);
+            if (str.english != before_names)
+                str.complete = false;
 
             messages.push_back(str);
         }
@@ -3158,23 +3240,23 @@ static void _xom_pseudo_miscast(int /*sever*/)
     {
         const string feat_name = feature_description_at(you.pos(), false,
                                                         DESC_THE);
-        string str;
+        textdb_speech str;
 
         if (you.airborne())
         {
-            str = _get_xom_speech(
+            str = _xom_template(
                       feat_is_water(feat) ? "underfoot airborne water"
                                           : "underfoot airborne general");
         }
         else
         {
-            str = _get_xom_speech(
+            str = _xom_template(
                       feat_is_water(feat) ? "underfoot water"
                                           : "underfoot general");
         }
 
-        str = replace_all(str, "@the_feature@", feat_name);
-        str = replace_all(str, "@The_feature@", uppercase_first(feat_name));
+        _xom_replace(str, "@the_feature@", feat_name, s_feature_arg(feat));
+        _xom_replace(str, "@The_feature@", uppercase_first(feat_name), s_feature_arg(feat));
 
         // Don't put airborne messages into the priority vector for
         // anyone who can fly a lot.
@@ -3188,21 +3270,21 @@ static void _xom_pseudo_miscast(int /*sever*/)
     {
         const item_def &item = **random_iterator(inv_items);
         string name = item.name(DESC_YOUR, false, false, false);
-        string str;
+        textdb_speech str;
 
         if (feat_has_solid_floor(feat))
         {
-            str = _get_xom_speech(
+            str = _xom_template(
                       item.quantity == 1 ? "floor inventory singular"
                                          : "floor inventory plural");
         }
         else
-            str = _get_xom_speech(
+            str = _xom_template(
                       item.quantity == 1 ? "inventory singular"
                                          : "inventory plural");
 
-        str = replace_all(str, "@your_item@", name);
-        str = replace_all(str, "@Your_item@", uppercase_first(name));
+        _xom_replace(str, "@your_item@", name, ui_item_arg(item));
+        _xom_replace(str, "@Your_item@", uppercase_first(name), ui_item_arg(item));
 
         messages.push_back(str);
     }
@@ -3214,7 +3296,7 @@ static void _xom_pseudo_miscast(int /*sever*/)
         && starts_with(species::skin_name(you.species), "bandage")
         && you_can_wear(SLOT_BODY_ARMOUR, true) != false)
     {
-        string str = _get_xom_speech(
+        textdb_speech str = _xom_template(
                 (!you.airborne() && !you.swimming()) ? "floor bandages"
                                                      : "bandages");
         messages.push_back(str);
@@ -3222,69 +3304,63 @@ static void _xom_pseudo_miscast(int /*sever*/)
 
     if (player_has_ears())
     {
-        string str = _get_xom_speech("ears");
+        textdb_speech str = _xom_template("ears");
         messages.push_back(str);
     }
 
     {
-        string str = _get_xom_speech(
+        textdb_speech str = _xom_template(
                 you.get_mutation_level(MUT_MISSING_EYE) ? "one eye"
                                                         : "eyes");
         messages.push_back(str);
     }
 
     {
-        string str = _get_xom_speech("mouth");
+        textdb_speech str = _xom_template("mouth");
         messages.push_back(str);
     }
 
     if (player_has_hair())
     {
-        string str = _get_xom_speech("hair");
+        textdb_speech str = _xom_template("hair");
         messages.push_back(str);
     }
 
     if (player_has_feet() && !you.airborne() && !you.cannot_act())
     {
-        string str = _get_xom_speech("impromptu dance");
+        textdb_speech str = _xom_template("impromptu dance");
 
-        str = replace_all(str, "@hand@", you.hand_name(false));
-        str = replace_all(str, "@hands@", you.hand_name(true));
+        _xom_replace(str, "@hand@", you.hand_name(false), p_hand_arg());
+        _xom_replace(str, "@hands@", you.hand_name(true), p_hand_arg());
 
-        str = replace_all(str, "@foot@", you.foot_name(false));
-        str = replace_all(str, "@feet@", you.foot_name(true));
+        _xom_replace(str, "@foot@", you.foot_name(false), p_foot_arg());
+        _xom_replace(str, "@feet@", you.foot_name(true), p_foot_arg());
 
         messages.push_back(str);
     }
 
     if (you.has_tail())
     {
-        string str = _get_xom_speech("tail");
+        textdb_speech str = _xom_template("tail");
         messages.push_back(str);
     }
 
     {
-        string str = _get_xom_speech("random body part singular");
+        textdb_speech str = _xom_template("random body part singular");
 
-        str = replace_all(str, "@random_body_part_any_singular@",
-                          random_body_part_name(false, BPART_ANY));
-        str = replace_all(str, "@random_body_part_internal_singular@",
-                          random_body_part_name(false, BPART_INTERNAL));
-        str = replace_all(str, "@random_body_part_external_singular@",
-                          random_body_part_name(false, BPART_EXTERNAL));
+        _xom_random_body(str, "@random_body_part_any_singular@", false, BPART_ANY);
+        _xom_random_body(str, "@random_body_part_internal_singular@", false, BPART_INTERNAL);
+        _xom_random_body(str, "@random_body_part_external_singular@", false, BPART_EXTERNAL);
 
         messages.push_back(str);
     }
 
     {
-        string str = _get_xom_speech("random body part plural");
+        textdb_speech str = _xom_template("random body part plural");
 
-        str = replace_all(str, "@random_body_part_any_plural@",
-                          random_body_part_name(true, BPART_ANY));
-        str = replace_all(str, "@random_body_part_internal_plural@",
-                          random_body_part_name(true, BPART_INTERNAL));
-        str = replace_all(str, "@random_body_part_external_plural@",
-                          random_body_part_name(true, BPART_EXTERNAL));
+        _xom_random_body(str, "@random_body_part_any_plural@", true, BPART_ANY);
+        _xom_random_body(str, "@random_body_part_internal_plural@", true, BPART_INTERNAL);
+        _xom_random_body(str, "@random_body_part_external_plural@", true, BPART_EXTERNAL);
 
         messages.push_back(str);
     }
@@ -3296,11 +3372,11 @@ static void _xom_pseudo_miscast(int /*sever*/)
     {
         const bool one_handed = you.equipment.get_first_slot_item(SLOT_OFFHAND)
                                 || you.get_mutation_level(MUT_MISSING_HAND);
-        string str = _get_xom_speech(one_handed ? "unarmed one hand"
+        textdb_speech str = _xom_template(one_handed ? "unarmed one hand"
                                                 : "unarmed two hands");
 
-        str = replace_all(str, "@hand@", you.hand_name(false));
-        str = replace_all(str, "@hands@", you.hand_name(true));
+        _xom_replace(str, "@hand@", you.hand_name(false), p_hand_arg());
+        _xom_replace(str, "@hands@", you.hand_name(true), p_hand_arg());
 
         messages.push_back(str);
     }
@@ -3308,10 +3384,10 @@ static void _xom_pseudo_miscast(int /*sever*/)
     if (item_def* item = you.equipment.get_first_slot_item(SLOT_OFFHAND))
     {
         string name = "your " + item->name(DESC_BASENAME, false, false, false);
-        string str = _get_xom_speech("offhand slot");
+        textdb_speech str = _xom_template("offhand slot");
 
-        str = replace_all(str, "@your_item@", name);
-        str = replace_all(str, "@Your_item@", uppercase_first(name));
+        _xom_replace(str, "@your_item@", name, ui_item_arg(*item));
+        _xom_replace(str, "@Your_item@", uppercase_first(name), ui_item_arg(*item));
 
         messages.push_back(str);
     }
@@ -3319,15 +3395,14 @@ static void _xom_pseudo_miscast(int /*sever*/)
     if (item_def* item = _xom_get_random_worn_slot_item(SLOT_CLOAK))
     {
         string name = "your " + item->name(DESC_BASENAME, false, false, false);
-        string str = _get_xom_speech("cloak slot");
+        textdb_speech str = _xom_template("cloak slot");
 
-        str = replace_all(str, "@your_item@", name);
-        str = replace_all(str, "@Your_item@", uppercase_first(name));
+        _xom_replace(str, "@your_item@", name, ui_item_arg(*item));
+        _xom_replace(str, "@Your_item@", uppercase_first(name), ui_item_arg(*item));
 
         // XXX: The formless mutation doesn't technically mean you don't have a
         // form; it means you don't have a head.
-        str = replace_all(str, "@head@",
-                          you.has_mutation(MUT_FORMLESS) ? "form" : "head");
+        _xom_replace(str, "@head@", you.has_mutation(MUT_FORMLESS) ? "form" : "head", ui_text_arg("x.noun", you.has_mutation(MUT_FORMLESS) ? "form" : "head"));
 
         messages.push_back(str);
     }
@@ -3335,15 +3410,14 @@ static void _xom_pseudo_miscast(int /*sever*/)
     if (item_def* item = _xom_get_random_worn_slot_item(SLOT_HELMET))
     {
         string name = "your " + item->name(DESC_BASENAME, false, false, false);
-        string str = _get_xom_speech("helmet slot");
+        textdb_speech str = _xom_template("helmet slot");
 
-        str = replace_all(str, "@your_item@", name);
-        str = replace_all(str, "@Your_item@", uppercase_first(name));
+        _xom_replace(str, "@your_item@", name, ui_item_arg(*item));
+        _xom_replace(str, "@Your_item@", uppercase_first(name), ui_item_arg(*item));
 
         // XXX: The formless mutation doesn't technically mean you don't have a
         // form; it means you don't have a head.
-        str = replace_all(str, "@head@",
-                          you.has_mutation(MUT_FORMLESS) ? "form" : "head");
+        _xom_replace(str, "@head@", you.has_mutation(MUT_FORMLESS) ? "form" : "head", ui_text_arg("x.noun", you.has_mutation(MUT_FORMLESS) ? "form" : "head"));
 
         messages.push_back(str);
     }
@@ -3351,10 +3425,10 @@ static void _xom_pseudo_miscast(int /*sever*/)
     if (item_def* item = _xom_get_random_worn_slot_item(SLOT_GLOVES))
     {
         string name = "your " + item->name(DESC_BASENAME, false, false, false);
-        string str = _get_xom_speech("gloves slot");
+        textdb_speech str = _xom_template("gloves slot");
 
-        str = replace_all(str, "@your_item@", name);
-        str = replace_all(str, "@Your_item@", uppercase_first(name));
+        _xom_replace(str, "@your_item@", name, ui_item_arg(*item));
+        _xom_replace(str, "@Your_item@", uppercase_first(name), ui_item_arg(*item));
 
         messages.push_back(str);
     }
@@ -3362,10 +3436,10 @@ static void _xom_pseudo_miscast(int /*sever*/)
     if (item_def* item = _xom_get_random_worn_slot_item(SLOT_LOWER_BODY))
     {
         string name = "your " + item->name(DESC_BASENAME, false, false, false);
-        string str = _get_xom_speech("boots slot");
+        textdb_speech str = _xom_template("boots slot");
 
-        str = replace_all(str, "@your_item@", name);
-        str = replace_all(str, "@Your_item@", uppercase_first(name));
+        _xom_replace(str, "@your_item@", name, ui_item_arg(*item));
+        _xom_replace(str, "@Your_item@", uppercase_first(name), ui_item_arg(*item));
 
         messages.push_back(str);
     }
@@ -3373,15 +3447,14 @@ static void _xom_pseudo_miscast(int /*sever*/)
     if (item_def* item = you.equipment.get_first_slot_item(SLOT_AMULET))
     {
         string name = "your " + item->name(DESC_BASENAME, false, false, false);
-        string str = _get_xom_speech("amulet slot");
+        textdb_speech str = _xom_template("amulet slot");
 
-        str = replace_all(str, "@your_item@", name);
-        str = replace_all(str, "@Your_item@", uppercase_first(name));
+        _xom_replace(str, "@your_item@", name, ui_item_arg(*item));
+        _xom_replace(str, "@Your_item@", uppercase_first(name), ui_item_arg(*item));
 
         // XXX: The formless mutation doesn't technically mean you don't have a
         // form; it means you don't have a head.
-        str = replace_all(str, "@head@",
-                          you.has_mutation(MUT_FORMLESS) ? "form" : "head");
+        _xom_replace(str, "@head@", you.has_mutation(MUT_FORMLESS) ? "form" : "head", ui_text_arg("x.noun", you.has_mutation(MUT_FORMLESS) ? "form" : "head"));
 
         messages.push_back(str);
     }
@@ -3389,10 +3462,10 @@ static void _xom_pseudo_miscast(int /*sever*/)
     if (item_def* item = you.equipment.get_first_slot_item(SLOT_GIZMO))
     {
         string name = "your " + item->name(DESC_BASENAME, false, false, false);
-        string str = _get_xom_speech("gizmo slot");
+        textdb_speech str = _xom_template("gizmo slot");
 
-        str = replace_all(str, "@your_item@", name);
-        str = replace_all(str, "@Your_item@", uppercase_first(name));
+        _xom_replace(str, "@your_item@", name, ui_item_arg(*item));
+        _xom_replace(str, "@Your_item@", uppercase_first(name), ui_item_arg(*item));
 
         messages.push_back(str);
     }
@@ -3401,10 +3474,10 @@ static void _xom_pseudo_miscast(int /*sever*/)
     {
         // Don't just say "your ring" here. We want to know which one.
         string name = "your " + item->name(DESC_QUALNAME, false, false, false);
-        string str = _get_xom_speech("ring slot");
+        textdb_speech str = _xom_template("ring slot");
 
-        str = replace_all(str, "@your_item@", name);
-        str = replace_all(str, "@Your_item@", uppercase_first(name));
+        _xom_replace(str, "@your_item@", name, ui_item_arg(*item));
+        _xom_replace(str, "@Your_item@", uppercase_first(name), ui_item_arg(*item));
 
         string ring_holder_singular;
         string ring_holder_plural;
@@ -3412,8 +3485,8 @@ static void _xom_pseudo_miscast(int /*sever*/)
         ring_holder_singular = you.hand_name(false);
         ring_holder_plural = you.hand_name(true);
 
-        str = replace_all(str, "@hand@", ring_holder_singular);
-        str = replace_all(str, "@hands@", ring_holder_plural);
+        _xom_replace(str, "@hand@", ring_holder_singular, p_hand_arg());
+        _xom_replace(str, "@hands@", ring_holder_plural, p_hand_arg());
 
         messages.push_back(str);
     }
@@ -3421,40 +3494,40 @@ static void _xom_pseudo_miscast(int /*sever*/)
     if (item_def* item = you.body_armour())
     {
         string name = "your " + item->name(DESC_BASENAME, false, false, false);
-        string str;
+        textdb_speech str;
 
         if (name.find("dragon") != string::npos)
-            str = _get_xom_speech("dragon armour");
+            str = _xom_template("dragon armour");
         else if (item->sub_type == ARM_ANIMAL_SKIN)
-            str = _get_xom_speech("animal skin");
+            str = _xom_template("animal skin");
         else if (item->sub_type == ARM_LEATHER_ARMOUR)
-            str = _get_xom_speech("leather armour");
+            str = _xom_template("leather armour");
         else if (item->sub_type == ARM_ROBE)
-            str = _get_xom_speech("robe");
+            str = _xom_template("robe");
         else if (item->sub_type >= ARM_RING_MAIL
                  && item->sub_type <= ARM_PLATE_ARMOUR)
         {
-            str = _get_xom_speech("metal armour");
+            str = _xom_template("metal armour");
         }
 
-        if (!str.empty())
+        if (!str.english.empty())
         {
-            str = replace_all(str, "@your_item@", name);
-            str = replace_all(str, "@Your_item@", uppercase_first(name));
+            _xom_replace(str, "@your_item@", name, ui_item_arg(*item));
+            _xom_replace(str, "@Your_item@", uppercase_first(name), ui_item_arg(*item));
 
             messages.push_back(str);
         }
     }
 
-    string str;
+    textdb_speech str;
 
     if (!priority.empty() && coinflip())
         str = priority[random2(priority.size())];
     else
         str = messages[random2(messages.size())];
 
-    str = maybe_pick_random_substring(str);
-    mpr(str);
+    str.pick_substrings();
+    mpr(str.text());
 }
 
 static void _xom_chaos_upgrade(int /*sever*/)
@@ -3498,7 +3571,7 @@ static void _xom_player_confusion_effect(int sever)
     if (you.can_drink())
     {
         god_speaks(GOD_XOM, _get_xom_speech("confusion").c_str());
-        mprf(MSGCH_WARN, "You are %sconfused.", conf ? "more " : "");
+        mprf(MSGCH_WARN, "%s", ui_render("x.log", "You are %sconfused.", make_stringf("You are %sconfused.", conf ? "more " : ""), {ui_text_arg("x.clause", conf ? "more" : "now")}).c_str());
     }
     else
     {
@@ -3507,8 +3580,7 @@ static void _xom_player_confusion_effect(int sever)
         const bool was_mighty = you.duration[DUR_MIGHT];
         you.increase_duration(DUR_MIGHT, dur);
         god_speaks(GOD_XOM, _get_xom_speech("drinkless confusion").c_str());
-        mprf(MSGCH_WARN, "You feel %s and %sconfused.",
-            was_mighty ? "mightier" : "very mighty", conf ? "more " : "");
+        mprf(MSGCH_WARN, "%s", ui_render("x.log", "You feel %s and %sconfused.", make_stringf("You feel %s and %sconfused.", was_mighty ? "mightier" : "very mighty", conf ? "more " : ""), {ui_text_arg("x.clause", was_mighty ? "mightier" : "very mighty"), ui_text_arg("x.clause", conf ? "more" : "now")}).c_str());
     }
 
     // At higher severities, Xom is less likely to confuse surrounding
@@ -3667,8 +3739,7 @@ bool move_stair(coord_def stair_pos, bool away, bool allow_under)
 
     string stair_str = feature_description_at(stair_pos, false, DESC_THE);
 
-    mprf("%s slides %s you!", stair_str.c_str(),
-         away ? "away from" : "towards");
+    mprf("%s", ui_render("x.log", "%s slides: %s!", make_stringf("%s slides %s you!", stair_str.c_str(), away ? "away from" : "towards"), {s_feature_at_arg(stair_pos), ui_text_arg("x.clause", away ? "away from you" : "towards you")}).c_str());
 
     // Animate stair moving.
     const feature_def &feat_def = get_feature_def(feat);
@@ -3734,7 +3805,7 @@ static void _xom_repel_stairs(bool unclimbable)
             real_stairs = true;
 
     // Don't mention staircases if there aren't any nearby.
-    string stair_msg = _get_xom_speech("repel stairs");
+    auto stair_msg = _xom_template("repel stairs");
     string feat_name;
 
     if (!real_stairs)
@@ -3746,9 +3817,9 @@ static void _xom_repel_stairs(bool unclimbable)
     else
         feat_name = "staircase";
 
-    stair_msg = replace_all(stair_msg, "@staircase@", feat_name);
+    _xom_replace(stair_msg, "@staircase@", feat_name, ui_text_arg("x.noun", feat_name));
 
-    god_speaks(GOD_XOM, stair_msg.c_str());
+    god_speaks(GOD_XOM, stair_msg.text().c_str());
 
     you.duration[DUR_REPEL_STAIRS_MOVE] = 1000; // 100 turns
     if (unclimbable)
@@ -3763,7 +3834,7 @@ static void _xom_repel_stairs(bool unclimbable)
     if (!count_moved)
     {
         if (one_chance_in(8))
-            mpr("Nothing appears to happen... Ominous!");
+            mpr(ui_translate("x.ui", "Nothing appears to happen... Ominous!"));
         else
             canned_msg(MSG_NOTHING_HAPPENS);
     }
@@ -3841,7 +3912,7 @@ static void _xom_doom(int /*sever*/)
     }
 
     if (!(you.attribute[ATTR_DOOM] + power >= 100))
-        mpr("Your doom draws closer.");
+        mpr(ui_translate("x.ui", "Your doom draws closer."));
 
     you.doom(power);
 
@@ -4097,30 +4168,24 @@ static void _xom_brain_drain(int sever)
 
         if (created)
         {
-            string react = _get_xom_speech("drained brain");
+            auto react = _xom_template("drained brain");
 
-            react = replace_all(react, "@random_body_part_any_singular@",
-                                random_body_part_name(false, BPART_ANY));
-            react = replace_all(react, "@random_body_part_internal_singular@",
-                                random_body_part_name(false, BPART_INTERNAL));
-            react = replace_all(react, "@random_body_part_external_singular@",
-                                random_body_part_name(false, BPART_EXTERNAL));
-            react = replace_all(react, "@random_body_part_any_plural@",
-                                random_body_part_name(true, BPART_ANY));
-            react = replace_all(react, "@random_body_part_internal_plural@",
-                                random_body_part_name(true, BPART_INTERNAL));
-            react = replace_all(react, "@random_body_part_external_plural@",
-                                random_body_part_name(true, BPART_EXTERNAL));
+            _xom_random_body(react, "@random_body_part_any_singular@", false, BPART_ANY);
+            _xom_random_body(react, "@random_body_part_internal_singular@", false, BPART_INTERNAL);
+            _xom_random_body(react, "@random_body_part_external_singular@", false, BPART_EXTERNAL);
+            _xom_random_body(react, "@random_body_part_any_plural@", true, BPART_ANY);
+            _xom_random_body(react, "@random_body_part_internal_plural@", true, BPART_INTERNAL);
+            _xom_random_body(react, "@random_body_part_external_plural@", true, BPART_EXTERNAL);
 
-            react = maybe_pick_random_substring(react);
+            react.pick_substrings();
 
             const string note = make_stringf("drained mp, created monsters");
-            mprf(MSGCH_WARN, "%s", react.c_str());
+            mprf(MSGCH_WARN, "%s", react.text().c_str());
             take_note(Note(NOTE_XOM_EFFECT, you.raw_piety, -1, note), true);
         }
         else
         {
-            mprf(MSGCH_WARN, "You feel nearly all of your power leaking away!");
+            mprf(MSGCH_WARN, "%s", ui_translate("x.ui", "You feel nearly all of your power leaking away!"));
             const string note = make_stringf("drained mp");
             take_note(Note(NOTE_XOM_EFFECT, you.raw_piety, -1, note), true);
         }
@@ -4207,9 +4272,7 @@ static void _xom_grants_word_of_recall(int /*sever*/)
         xom_speech = "grant voiceless word of recall";
 
     god_speaks(GOD_XOM, _get_xom_speech(xom_speech).c_str());
-    mprf(MSGCH_WARN, "%s is forced to slowly start %s a word of recall!",
-                     targetable[0]->name(DESC_A, true, false).c_str(),
-                     phrasing.c_str());
+    mprf(MSGCH_WARN, "%s", ui_render("x.log", "%s is forced to slowly start %s a word of recall!", make_stringf("%s is forced to slowly start %s a word of recall!", targetable[0]->name(DESC_A, true, false).c_str(), phrasing.c_str()), {ui_actor_arg(*targetable[0]), ui_text_arg("x.voice", phrasing)}).c_str());
     mon_enchant chant_timer = mon_enchant(ENCH_WORD_OF_RECALL, targetable[0], duration);
     targetable[0]->add_ench(chant_timer);
 
@@ -4329,15 +4392,12 @@ static void _xom_cleaving(int sever)
     if (const item_def* const weapon = you.weapon())
     {
         const bool axe = item_attack_skill(*weapon) == SK_AXES;
-        mprf(MSGCH_DURATION,
-             "%s %s sharp%s", weapon->name(DESC_YOUR).c_str(),
-             conjugate_verb("look", weapon->quantity > 1).c_str(),
-             (axe) ? " (like it always does)." : ".");
+        mprf(MSGCH_DURATION, "%s", ui_render("x.log", "%s looks sharp: %s", make_stringf("%s %s sharp%s", weapon->name(DESC_YOUR).c_str(), conjugate_verb("look", weapon->quantity > 1).c_str(), (axe) ? " (like it always does)." : "."), {ui_item_arg(*weapon), ui_text_arg("x.clause", axe ? "as always" : "period")}).c_str());
     }
     else
     {
         mprf(MSGCH_DURATION, "%s",
-             you.hands_act("look", "sharp.").c_str());
+             ui_render("x.log", "Your %s look sharp.", you.hands_act("look", "sharp."), {p_hand_arg()}).c_str());
     }
 
     take_note(Note(NOTE_XOM_EFFECT, you.raw_piety, -1, "cleaving"), true);
@@ -5106,7 +5166,7 @@ void xom_take_action(xom_event_type action, int sever)
         if (was_bored || old_xom_favour != new_xom_favour)
         {
             const string msg = "You are now " + new_xom_favour;
-            god_speaks(you.religion, msg.c_str());
+            god_speaks(you.religion, ui_render("x.log", "You are now %s", msg, {ui_text_arg("d.god.xom.favour", new_xom_favour)}).c_str());
         }
 #ifdef NOTE_DEBUG_XOM
         const string note = string("reroll piety: ") + you.raw_piety;
@@ -5119,7 +5179,7 @@ void xom_take_action(xom_event_type action, int sever)
         // now that it's not "BORING thing" anymore.
         const string new_xom_favour = describe_xom_favour();
         const string msg = "You are now " + new_xom_favour;
-        god_speaks(you.religion, msg.c_str());
+        god_speaks(you.religion, ui_render("x.log", "You are now %s", msg, {ui_text_arg("d.god.xom.favour", new_xom_favour)}).c_str());
     }
 }
 
@@ -5314,7 +5374,7 @@ bool xom_saves_your_life(const kill_method_type death_type)
     if (you.hp < 1)
         set_hp(1 + random2(you.hp_max/4));
 
-    god_speaks(GOD_XOM, "Xom revives you!");
+    god_speaks(GOD_XOM, ui_translate("x.ui", "Xom revives you!"));
 
     // Ideally, this should contain the death cause but that is too much
     // trouble for now.
@@ -5339,8 +5399,8 @@ void xom_new_level_noise_or_stealth()
         if (!player_under_penance(GOD_XOM) && coinflip())
         {
             god_speaks(GOD_XOM, _get_xom_speech("stealth player").c_str());
-            mpr(you.duration[DUR_STEALTH] ? "You feel more stealthy."
-                                          : "You feel stealthy.");
+            mpr(ui_translate("x.ui", you.duration[DUR_STEALTH] ? "You feel more stealthy."
+                                          : "You feel stealthy."));
             you.increase_duration(DUR_STEALTH, 10 + random2(80));
             take_note(Note(NOTE_XOM_EFFECT, you.raw_piety, -1,
                            "stealth player"), true);
@@ -5611,8 +5671,8 @@ static string _list_exploration_estimate()
 void debug_xom_effects()
 {
     // Repeat N times.
-    const int N = prompt_for_int("How many iterations over the "
-                                 "entire piety range? ", true);
+    const int N = prompt_for_int(ui_translate("x.ui", "How many iterations over the "
+                                 "entire piety range? "), true);
 
     if (N <= 0)
     {
@@ -5748,7 +5808,7 @@ void debug_xom_effects()
     }
     fprintf(ostat, "---- FINISHED XOM DEBUG TESTING ----\n");
     fclose(ostat);
-    mpr("Results written into 'xom_debug.stat'.");
+    mpr(ui_translate("x.ui", "Results written into 'xom_debug.stat'."));
 
     you.raw_piety= real_piety;
     you.religion = real_god;

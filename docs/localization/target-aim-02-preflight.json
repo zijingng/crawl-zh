@@ -1,0 +1,634 @@
+{
+  "glossary_hits": [
+    {
+      "Term": "accuracy",
+      "Translation": "命中率",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "amulet of inaccuracy",
+      "Translation": "偏差护身符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
+    },
+    {
+      "Term": "frozen axe \"Frostbite\"",
+      "Translation": "「寒噬」冰斧",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "good monster polymorph",
+      "Translation": "好的怪物变形",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "poison magic",
+      "Translation": "毒系魔法",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【历史学派】独立技能已合并为 Alchemy（炼金术）；不作为现行可训练学派。来源：docs/changelog.txt。"
+    },
+    {
+      "Term": "whip \"Snakebite\"",
+      "Translation": "「蛇咬」鞭",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "poison",
+      "Translation": "毒",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/伤害/状态】poisoned 表中毒，poison resistance 表毒抗。 来源：duration-data.h。"
+    },
+    {
+      "Term": "scroll of poison",
+      "Translation": "毒雾卷轴",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "ring of poison resistance",
+      "Translation": "毒抗戒指",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "Polymorph",
+      "Translation": "变形术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Poisonous Cloud",
+      "Translation": "毒云术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Poison Arrow",
+      "Translation": "剧毒箭",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Ignite Poison",
+      "Translation": "燃毒术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Brain Bite",
+      "Translation": "噬脑术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Spit Poison",
+      "Translation": "喷吐毒液",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：喷吐毒液。"
+    },
+    {
+      "Term": "Miasma Breath",
+      "Translation": "瘴气吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Caustic Breath",
+      "Translation": "强酸吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Fire Breath",
+      "Translation": "火焰吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Searing Breath",
+      "Translation": "灼热吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Chaos Breath",
+      "Translation": "混沌吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Cold Breath",
+      "Translation": "寒冷吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Glacial Breath",
+      "Translation": "冰川吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Holy Breath",
+      "Translation": "神圣吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "gehenna serpent of hell breath",
+      "Translation": "焦热地狱之蛇吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "cocytus serpent of hell breath",
+      "Translation": "寒冰地狱之蛇吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "dis serpent of hell breath",
+      "Translation": "钢铁地狱之蛇吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "tartarus serpent of hell breath",
+      "Translation": "冥府地狱之蛇吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Poisonous Vapours",
+      "Translation": "毒气术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Jinxbite",
+      "Translation": "厄咒之啮",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Noxious Breath",
+      "Translation": "恶臭吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Combustion Breath",
+      "Translation": "燃烧吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Nullifying Breath",
+      "Translation": "消魔吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Steam Breath",
+      "Translation": "蒸汽吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Mud Breath",
+      "Translation": "泥浆吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Galvanic Breath",
+      "Translation": "电流吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Rust Breath",
+      "Translation": "锈蚀吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Golden Breath",
+      "Translation": "黄金吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Bolt of Inaccuracy",
+      "Translation": "失准箭",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Cure Poison",
+      "Translation": "解毒术",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Draconian Breath",
+      "Translation": "龙人吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Localized Ignite Poison",
+      "Translation": "局部燃毒",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Poison Weapon",
+      "Translation": "武器淬毒",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Poison cloud",
+      "Translation": "毒素云雾",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Old serpent of hell breath",
+      "Translation": "旧版地狱之蛇吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Breathe Poison Gas",
+      "Translation": "喷吐毒气",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+    },
+    {
+      "Term": "Breathe Rust",
+      "Translation": "喷吐锈蚀",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+    },
+    {
+      "Term": "knife of Accuracy",
+      "Translation": "精准之刃",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+    },
+    {
+      "Term": "poison gas",
+      "Translation": "毒气",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_POISON；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+    },
+    {
+      "Term": "-Breath status",
+      "Translation": "吐息冷却",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：吐息冷却。"
+    },
+    {
+      "Term": "Breath status",
+      "Translation": "吐息",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：吐息。"
+    },
+    {
+      "Term": "Breath+ status",
+      "Translation": "吐息+",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：吐息+。"
+    },
+    {
+      "Term": "Breath++ status",
+      "Translation": "吐息++",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：吐息++。"
+    },
+    {
+      "Term": "Blind status",
+      "Translation": "致盲",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：致盲。"
+    },
+    {
+      "Term": "inhibited regeneration",
+      "Translation": "再生受阻",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：再生受阻。"
+    },
+    {
+      "Term": "poison resistance",
+      "Translation": "毒素抗性",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：毒素抗性。"
+    },
+    {
+      "Term": "acidic bite",
+      "Translation": "酸性噬咬",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：酸性噬咬。"
+    },
+    {
+      "Term": "antimagic bite",
+      "Translation": "反魔法噬咬",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：反魔法噬咬。"
+    },
+    {
+      "Term": "retaliatory headbutt",
+      "Translation": "反击头撞",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：反击头撞。"
+    },
+    {
+      "Term": "snow-blindness",
+      "Translation": "雪盲",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：雪盲。"
+    },
+    {
+      "Term": "Bane of Snow-blindness",
+      "Translation": "雪盲灾厄",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 灾厄名称】来源：bane-data.h；英文名称和 TextDB 查询键保留，中文仅用于显示。"
+    }
+  ],
+  "existing_translations": [
+    "msgctxt \"d.target.prefix\"\nmsgid \"Aim\"\nmsgstr \"瞄准\"",
+    "msgctxt \"d.target.prefix\"\nmsgid \"Look\"\nmsgstr \"查看\"",
+    "#, c-format\nmsgctxt \"d.hit\"\nmsgid \"about %s%% to hit with %s\"\nmsgstr \"约 %s%% 命中率（使用%s）\"",
+    "#, c-format\nmsgctxt \"d.hit\"\nmsgid \"about %s%% to hit with %s (while you are blinded and from distance %s)\"\nmsgstr \"约 %s%% 命中率（使用%s；你处于致盲状态，距离为 %s）\"",
+    "#, c-format\nmsgctxt \"d.hit\"\nmsgid \"%s and %s%% to hit with your %s\"\nmsgstr \"%s；辅助攻击命中率为 %s%%（%s）\"",
+    "#, c-format\nmsgctxt \"d.hit\"\nmsgid \"You have %s.\\n\"\nmsgstr \"你的命中情况：%s。\\n\"",
+    "#, c-format\nmsgctxt \"d.hit\"\nmsgid \"You have %s (at present).\\n\"\nmsgstr \"当前你的命中情况：%s。\\n\"",
+    "#, c-format\nmsgctxt \"d.hit\"\nmsgid \"You have %s (while incapacitated).\\n\"\nmsgstr \"目标失能时，你的命中情况：%s。\\n\"",
+    "#, c-format\nmsgctxt \"d.hit\"\nmsgid \"%s has about %s%% to hit you.\\n\"\nmsgstr \"%s命中你的概率约为 %s%%。\\n\"",
+    "#, c-format\nmsgctxt \"d.hit\"\nmsgid \"%s has a %s%% chance to notice you each turn.\\n\"\nmsgstr \"%s每回合发现你的概率为 %s%%。\\n\"",
+    "msgctxt \"d.hit.aux\"\nmsgid \"grab\"\nmsgstr \"抓取\"",
+    "msgctxt \"d.hit.aux\"\nmsgid \"kick\"\nmsgstr \"踢击\"",
+    "msgctxt \"d.hit.aux\"\nmsgid \"headbutt\"\nmsgstr \"头槌\"",
+    "msgctxt \"d.hit.aux\"\nmsgid \"peck\"\nmsgstr \"啄击\"",
+    "msgctxt \"d.hit.aux\"\nmsgid \"tail-slap\"\nmsgstr \"尾击\"",
+    "msgctxt \"d.hit.aux\"\nmsgid \"punch\"\nmsgstr \"拳击\"",
+    "msgctxt \"d.hit.aux\"\nmsgid \"bite\"\nmsgstr \"啃咬\"",
+    "msgctxt \"d.hit.aux\"\nmsgid \"pseudopods\"\nmsgstr \"伪足\"",
+    "msgctxt \"d.hit.aux\"\nmsgid \"squeeze\"\nmsgstr \"挤压\"",
+    "msgctxt \"d.hit.aux\"\nmsgid \"touch\"\nmsgstr \"触碰\"",
+    "msgctxt \"d.hit.aux\"\nmsgid \"chomp\"\nmsgstr \"吞咬\"",
+    "msgctxt \"d.hit.aux\"\nmsgid \"whirl of blades\"\nmsgstr \"刀刃旋风\"",
+    "msgctxt \"d.hit.aux\"\nmsgid \"shroompunch\"\nmsgstr \"蘑菇拳\"",
+    "msgctxt \"d.hit.aux\"\nmsgid \"sting\"\nmsgstr \"刺击\"",
+    "msgctxt \"d.hit.aux\"\nmsgid \"slice\"\nmsgstr \"切割\"",
+    "msgctxt \"d.hit.aux\"\nmsgid \"tentacle spike\"\nmsgstr \"触须尖刺\"",
+    "msgctxt \"d.hit.aux\"\nmsgid \"eel-slap\"\nmsgstr \"鳗手拍击\"",
+    "msgctxt \"d.hit.aux\"\nmsgid \"tentacle-slap\"\nmsgstr \"触须拍击\"",
+    "msgctxt \"d.hit.aux\"\nmsgid \"claw\"\nmsgstr \"爪击\"",
+    "msgctxt \"d.hit.aux\"\nmsgid \"off-hand punch\"\nmsgstr \"副手拳击\"",
+    "msgctxt \"d.hit.aux\"\nmsgid \"off-hand claw\"\nmsgstr \"副手爪击\"",
+    "msgctxt \"d.hit.aux\"\nmsgid \"off-hand eel-slap\"\nmsgstr \"副手鳗手拍击\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"charmed\"\nmsgstr \"被魅惑\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"hexed\"\nmsgstr \"控制权被夺走\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"summoned\"\nmsgstr \"召唤物\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"minion\"\nmsgstr \"仆从\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"wandering\"\nmsgstr \"游荡\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"mesmerising\"\nmsgstr \"令人着迷\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"berserk\"\nmsgstr \"狂暴\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"fast\"\nmsgstr \"疾速\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"rolling\"\nmsgstr \"滚动\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"inner flame\"\nmsgstr \"心火\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"reflects damage\"\nmsgstr \"反射伤害\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"reflect damage\"\nmsgstr \"反射伤害\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"soul bound\"\nmsgstr \"灵魂受缚\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"souls bound\"\nmsgstr \"灵魂受缚\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"strong\"\nmsgstr \"强力\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"empowered\"\nmsgstr \"法术增强\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"charged\"\nmsgstr \"蓄电完毕\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"charging\"\nmsgstr \"部分蓄电\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"agile\"\nmsgstr \"异常灵活\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"swift\"\nmsgstr \"快速移动\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"pursuing\"\nmsgstr \"快速追击\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"stilling wind\"\nmsgstr \"平息风势\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"silencing\"\nmsgstr \"散发沉默领域\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"can howl\"\nmsgstr \"准备嚎叫\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"vortex\"\nmsgstr \"冰冻漩涡环绕\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"vortices\"\nmsgstr \"冰冻漩涡环绕\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"gusty\"\nmsgstr \"躁动气流环绕\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"frenzied\"\nmsgstr \"狂乱而凶猛\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"scary\"\nmsgstr \"令人恐惧\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"chanting recall\"\nmsgstr \"吟唱召回术\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"deflects missiles\"\nmsgstr \"偏转投射物\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"deflect missiles\"\nmsgstr \"偏转投射物\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"toxic aura\"\nmsgstr \"散发剧毒能量\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"toxic auras\"\nmsgstr \"散发剧毒能量\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"curare\"\nmsgstr \"浓缩毒液\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"sign of ruin\"\nmsgstr \"带有毁灭征兆\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"signs of ruin\"\nmsgstr \"带有毁灭征兆\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"resistant\"\nmsgstr \"抗性异常强大\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"invisible\"\nmsgstr \"略显透明\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"regenerating\"\nmsgstr \"再生\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"strong-willed\"\nmsgstr \"意志坚定\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"sheltered\"\nmsgstr \"受到伤害庇护\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"incited\"\nmsgstr \"受哥萨戈煽动\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"clouds\"\nmsgstr \"云雾环绕\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"flame-wreathed\"\nmsgstr \"烈焰缠身\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"unsilenced\"\nmsgstr \"不受沉默影响\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"doubled vigour\"\nmsgstr \"活力加倍\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"soul-gripped\"\nmsgstr \"灵魂被掌控\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"caught\"\nmsgstr \"被网困住\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"webbed\"\nmsgstr \"被蛛网困住\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"paralysed\"\nmsgstr \"麻痹\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"petrified\"\nmsgstr \"已石化\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"confused\"\nmsgstr \"混乱\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"dormant\"\nmsgstr \"休眠\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"asleep\"\nmsgstr \"熟睡\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"unaware\"\nmsgstr \"毫无察觉\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"blind\"\nmsgstr \"失明\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"distracted\"\nmsgstr \"未在注意你\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"unable to see you\"\nmsgstr \"无法看见你\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"infested\"\nmsgstr \"虫卵寄生\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"stupefied\"\nmsgstr \"愚钝\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"pinned\"\nmsgstr \"被钉住\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"withering\"\nmsgstr \"逐渐枯萎\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"crumbling\"\nmsgstr \"逐渐崩解\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"petrifying\"\nmsgstr \"正在石化\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"mad\"\nmsgstr \"陷入疯狂\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"fleeing\"\nmsgstr \"逃跑\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"dazed\"\nmsgstr \"恍惚\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"mute\"\nmsgstr \"失声\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"frozen\"\nmsgstr \"被冰包裹\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"burning\"\nmsgstr \"液态火焰缠身\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"poisoned\"\nmsgstr \"中毒\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"very poisoned\"\nmsgstr \"严重中毒\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"extremely poisoned\"\nmsgstr \"极度中毒\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"contam\"\nmsgstr \"受到魔法污染\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"heavy contam\"\nmsgstr \"受到严重魔法污染\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"slow\"\nmsgstr \"减速\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"catching breath\"\nmsgstr \"调整呼吸\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"weak-willed\"\nmsgstr \"意志薄弱\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"combustible\"\nmsgstr \"火焰易伤\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"easily poisoned\"\nmsgstr \"毒素易伤\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"misshapen\"\nmsgstr \"畸形变异\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"corroded\"\nmsgstr \"腐蚀\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"flayed\"\nmsgstr \"遍体鳞伤\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"rooted\"\nmsgstr \"被树根绞缠\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"clutched\"\nmsgstr \"被丧尸之手绞缠\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"skewered\"\nmsgstr \"倒刺贯体\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"sick\"\nmsgstr \"疾病\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"weak\"\nmsgstr \"虚弱\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"drained\"\nmsgstr \"轻度吸能\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"very drained\"\nmsgstr \"重度吸能\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"magic-sapped\"\nmsgstr \"魔力枯竭\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"corona\"\nmsgstr \"微微发光\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"coronas\"\nmsgstr \"微微发光\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"flooded\"\nmsgstr \"无法呼吸\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"anchored\"\nmsgstr \"无法位移\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"struggling\"\nmsgstr \"缓慢移动\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"pain bonded\"\nmsgstr \"痛苦联结\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"idealised\"\nmsgstr \"理想化\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"ally target\"\nmsgstr \"盟友目标\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"magic disrupted\"\nmsgstr \"魔法受扰\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"anguished\"\nmsgstr \"承受苦痛\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"reflecting\"\nmsgstr \"反射被格挡的投射物\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"teleporting\"\nmsgstr \"即将传送\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"bound\"\nmsgstr \"束缚在原地\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"bullseye target\"\nmsgstr \"被你的空间靶心锁定\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"vitrified\"\nmsgstr \"脆弱如玻璃\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"agonized\"\nmsgstr \"受到剧痛诅咒\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"cursed with agony\"\nmsgstr \"受到剧痛诅咒\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"retreating\"\nmsgstr \"撤退\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"divinely empowered\"\nmsgstr \"受到比欧弗之触强化\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"anointable\"\nmsgstr \"可成为你的使徒\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"target of vengeance\"\nmsgstr \"兽人复仇目标\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"targets of vengeance\"\nmsgstr \"兽人复仇目标\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"magnetised\"\nmsgstr \"磁性粉尘覆盖\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"rimeblight\"\nmsgstr \"感染霜疫\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"shadowless\"\nmsgstr \"失去影子\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"paralysed with fear\"\nmsgstr \"恐惧麻痹\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"soul-splintered\"\nmsgstr \"灵魂分裂\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"grapneled\"\nmsgstr \"被动能钩索钩住\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"tempered\"\nmsgstr \"淬炼\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"untethered\"\nmsgstr \"空间失锚\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"chaos-laced\"\nmsgstr \"混沌缠绕\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"vexed\"\nmsgstr \"恼怒挥击\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"ablaze\"\nmsgstr \"记忆燃烧\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"bee\"\nmsgstr \"正在给发条蜜蜂上弦\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"figment\"\nmsgstr \"虚弱幻影\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"paradox\"\nmsgstr \"悖论触及\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"warded\"\nmsgstr \"免疫远处伤害\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"dim\"\nmsgstr \"法术削弱\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"wand\"\nmsgstr \"魔杖\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"wands\"\nmsgstr \"魔杖\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"polearm\"\nmsgstr \"长柄武器\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"polearms\"\nmsgstr \"长柄武器\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"launcher\"\nmsgstr \"发射器\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"launchers\"\nmsgstr \"发射器\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"missile\"\nmsgstr \"投射物\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"missiles\"\nmsgstr \"投射物\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"reaching\"\nmsgstr \"长柄触及\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"constriction\"\nmsgstr \"缠绕\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"trample\"\nmsgstr \"践踏\"",
+    "msgctxt \"m.moncondition\"\nmsgid \"drag\"\nmsgstr \"拖拽\"",
+    "msgctxt \"s.target\"\nmsgid \"not susceptible\"\nmsgstr \"不受影响\"",
+    "msgctxt \"s.target\"\nmsgid \"already infected\"\nmsgstr \"已经感染\"",
+    "msgctxt \"s.target\"\nmsgid \"stationary\"\nmsgstr \"无法移动\"",
+    "msgctxt \"s.target\"\nmsgid \"will blink\"\nmsgstr \"将会闪现\"",
+    "msgctxt \"s.target\"\nmsgid \"infinite will\"\nmsgstr \"无限意志\"",
+    "msgctxt \"s.target\"\nmsgid \"will change colour\"\nmsgstr \"将会改变颜色\"",
+    "msgctxt \"s.target\"\nmsgid \"will change shape\"\nmsgstr \"将会变形\"",
+    "msgctxt \"s.target\"\nmsgid \"will probably split\"\nmsgstr \"很可能分裂\"",
+    "msgctxt \"s.target\"\nmsgid \"immune to roots\"\nmsgstr \"免疫根须\"",
+    "msgctxt \"s.target\"\nmsgid \"unstickable\"\nmsgstr \"无法附着\"",
+    "msgctxt \"s.target\"\nmsgid \"inflict weakness\"\nmsgstr \"施加虚弱\"",
+    "msgctxt \"s.target\"\nmsgid \"diminish spells\"\nmsgstr \"削弱法术\"",
+    "#, c-format\nmsgctxt \"s.target\"\nmsgid \"chance to confuse: %d%%\"\nmsgstr \"混乱概率：%d%%\"",
+    "#, c-format\nmsgctxt \"s.target\"\nmsgid \"chance to slow: %d%%\"\nmsgstr \"减速概率：%d%%\"",
+    "#, c-format\nmsgctxt \"s.target\"\nmsgid \"chance to blind: %d%%\"\nmsgstr \"致盲概率：%d%%\"",
+    "#, c-format\nmsgctxt \"s.target\"\nmsgid \"empty space bonus: %d/8\"\nmsgstr \"空地加成：%d/8\"",
+    "#, c-format\nmsgctxt \"s.target\"\nmsgid \"chance to weaken: %d%%\"\nmsgstr \"虚弱概率：%d%%\"",
+    "#, c-format\nmsgctxt \"s.target\"\nmsgid \"chance to blink: %d%%\"\nmsgstr \"闪现概率：%d%%\"",
+    "#, c-format\nmsgctxt \"s.target\"\nmsgid \"chance to affect: %d%%\"\nmsgstr \"生效概率：%d%%\"",
+    "#, c-format\nmsgctxt \"s.target\"\nmsgid \"chance to teleport: %d%%\"\nmsgstr \"传送概率：%d%%\"",
+    "#, c-format\nmsgctxt \"s.target\"\nmsgid \"chance to daze and blind: %d%%\"\nmsgstr \"晕眩及致盲概率：%d%%\"",
+    "msgctxt \"s.target\"\nmsgid \"will inflict weakness, and diminish spells\"\nmsgstr \"将施加虚弱并削弱法术\"",
+    "msgctxt \"s.target\"\nmsgid \"will inflict weakness\"\nmsgstr \"将施加虚弱\"",
+    "msgctxt \"s.target\"\nmsgid \"will diminish spells\"\nmsgstr \"将削弱法术\"",
+    "#, c-format\nmsgctxt \"s.target\"\nmsgid \"%s%% to hit%s\"\nmsgstr \"命中率%s%%%s\"",
+    "#, c-format\nmsgctxt \"s.target\"\nmsgid \"2x%s%% to hit%s\"\nmsgstr \"2×命中率%s%%%s\"",
+    "#, c-format\nmsgctxt \"s.target\"\nmsgid \"will become %s\"\nmsgstr \"将变为%s\"",
+    "msgctxt \"d.target.prefix\"\nmsgid \"Here\"\nmsgstr \"此处\"",
+    "msgctxt \"d.target.prefix\"\nmsgid \"Heal\"\nmsgstr \"治疗\""
+  ],
+  "findings": [
+    "describe_to_hit compact display always empty",
+    "equipment attitude path looks up rendered attributes as static keys",
+    "empty callback descriptors can cause whole-row fallback"
+  ]
+}

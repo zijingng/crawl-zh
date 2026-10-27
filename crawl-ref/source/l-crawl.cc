@@ -5,12 +5,14 @@
 #include "AppHdr.h"
 
 #include "l-libs.h"
+#include "i18n.h"
 
 #include "branch.h"
 #include "chardump.h"
 #include "cluautil.h"
 #include "command.h"
 #include "delay.h"
+#include "database.h"
 #include "describe.h"
 #include "directn.h"
 #include "dlua.h"
@@ -28,6 +30,7 @@
 #include "mutation.h"
 #include "notes.h"
 #include "output.h"
+#include "options.h"
 #include "perlin.h"
 #include "prompt.h"
 #include "religion.h"
@@ -58,6 +61,68 @@
  * @param channel channel to print on; defaults to 0 (<code>MSGCH_PLAIN</code>)
  * @function mpr
  */
+static int crawl_ui_translate(lua_State *ls)
+{
+    const char *context = luaL_checkstring(ls, 1);
+    const char *source = luaL_checkstring(ls, 2);
+    lua_pushstring(ls, ui_translate(context, source));
+    return 1;
+}
+
+// Explicit display-only adapters. nil components make the entire message fall
+// back; canonical Lua names, message filters and crawl.mpr remain unchanged.
+static int crawl_ui_name(lua_State *ls)
+{
+    const ui_arg name = ui_text_arg(luaL_checkstring(ls, 1),
+                                    luaL_checkstring(ls, 2));
+    if (name.available)
+        lua_pushstring(ls, name.text.c_str());
+    else
+        lua_pushnil(ls);
+    return 1;
+}
+
+static int crawl_ui_format(lua_State *ls)
+{
+    const char *context = luaL_checkstring(ls, 1);
+    const char *source = luaL_checkstring(ls, 2);
+    const char *original = luaL_checkstring(ls, 3);
+    ui_translation_group text({{context, source}});
+    string result;
+    bool complete = text.available();
+    int arg = 4;
+    if (complete)
+    {
+        const string pattern = text.get(context, source);
+        for (size_t i = 0; i < pattern.size() && complete; ++i)
+        {
+            if (pattern[i] != '%')
+                result += pattern[i];
+            else if (++i < pattern.size() && pattern[i] == '%')
+                result += '%';
+            else if (i < pattern.size() && pattern[i] == 's'
+                     && arg <= lua_gettop(ls) && lua_isstring(ls, arg))
+                result += lua_tostring(ls, arg++);
+            else
+                complete = false;
+        }
+        complete = complete && arg == lua_gettop(ls) + 1;
+    }
+    lua_pushstring(ls, complete ? result.c_str() : original);
+    return 1;
+}
+
+static int crawl_ui_feature_at(lua_State *ls)
+{
+    const coord_def where(luaL_safe_checkint(ls, 1), luaL_safe_checkint(ls, 2));
+    string name;
+    if (in_bounds(where) && try_feature_display_at(where, false, name))
+        lua_pushstring(ls, name.c_str());
+    else
+        lua_pushnil(ls);
+    return 1;
+}
+
 static int crawl_mpr(lua_State *ls)
 {
     if (!crawl_state.io_inited)
@@ -727,12 +792,17 @@ static int crawl_msgch_name(lua_State *ls)
 
 /*** Make a note.
  * @tparam string note
+ * @tparam[opt] string location_kind Reviewed location type: portal or realm.
+ * @tparam[opt] string location_name Canonical English location name.
  * @function take_note
  */
 static int crawl_take_note(lua_State *ls)
 {
     const char* msg = luaL_checkstring(ls, 1);
-    take_note(Note(NOTE_MESSAGE, 0, 0, msg));
+    if (lua_gettop(ls) >= 3)
+        take_note(make_location_note(msg, luaL_checkstring(ls, 2), luaL_checkstring(ls, 3)));
+    else
+        take_note(Note(NOTE_MESSAGE, 0, 0, msg));
     return 0;
 }
 
@@ -1495,13 +1565,66 @@ static int crawl_bane_desc(lua_State *ls)
         return 0;
 
     const bane_type bane = bane_from_name(s);
+    unwind_var<lang_t> language(Options.language, lang_t::EN);
     lua_pushstring(ls, bane_long_description(bane, true).c_str());
+    return 1;
+}
+
+static int crawl_ui_bane_name(lua_State *ls)
+{
+    const bane_type bane = bane_from_name(luaL_checkstring(ls, 1));
+    const string original = bane_name(bane);
+    const string shown = bane_display_name(bane);
+    if (Options.language == lang_t::ZH && shown != original)
+        lua_pushstring(ls, shown.c_str());
+    else
+        lua_pushnil(ls);
+    return 1;
+}
+
+// The portal needs the complete description, including the duration. Never
+// embed a partially translated TextDB result in a translated Lua sentence.
+static int crawl_ui_bane_desc(lua_State *ls)
+{
+    const bane_type bane = bane_from_name(luaL_checkstring(ls, 1));
+    const string key = bane_name(bane, true) + " bane";
+    string english;
+    {
+        unwind_var<lang_t> language(Options.language, lang_t::EN);
+        english = getLongDescription(key);
+    }
+    string body = getLongDescription(key);
+    bool complete = Options.language == lang_t::ZH;
+    if (!english.empty())
+        complete = complete && !body.empty() && body != english;
+    else
+    {
+        const ui_arg short_desc = ui_text_arg("b.bane.desc", bane_desc(bane));
+        body = short_desc.text + "\n";
+        complete = complete && short_desc.available;
+    }
+    const int dur = bane_base_duration(bane);
+    const char *duration = dur > BANE_DUR_LONG ? "This bane usually lasts a very long time."
+        : dur > BANE_DUR_MEDIUM ? "This bane usually lasts a long time."
+        : dur > BANE_DUR_SHORT ? "This bane usually lasts a moderate length of time."
+                              : "This bane usually lasts a short length of time.";
+    const ui_arg duration_text = ui_text_arg("d.bane", duration);
+    if (complete && duration_text.available)
+    {
+        hint_replace_cmds(body);
+        lua_pushstring(ls, (body + "\n" + duration_text.text + "\n").c_str());
+    }
+    else
+        lua_pushnil(ls);
     return 1;
 }
 
 static const struct luaL_Reg crawl_clib[] =
 {
     { "mpr",                crawl_mpr },
+    { "ui_translate",       crawl_ui_translate },
+    { "ui_name",            crawl_ui_name },
+    { "ui_format",          crawl_ui_format },
     { "formatted_mpr",      crawl_formatted_mpr },
     { "dpr",                crawl_dpr },
     { "stack",              crawl_stack },
@@ -1573,6 +1696,8 @@ static const struct luaL_Reg crawl_clib[] =
     { "hints_type",         crawl_hints_type },
     { "bane_name",          crawl_bane_name },
     { "bane_description",   crawl_bane_desc },
+    { "ui_bane_name",       crawl_ui_bane_name },
+    { "ui_bane_description", crawl_ui_bane_desc },
     { nullptr, nullptr },
 };
 
@@ -1867,6 +1992,7 @@ LUAFN(crawl_setfenv)
 
 static const struct luaL_Reg crawl_dlib[] =
 {
+{ "ui_feature_at", crawl_ui_feature_at },
 { "args", _crawl_args },
 { "mark_milestone", _crawl_milestone },
 { "redraw_view", _crawl_redraw_view },

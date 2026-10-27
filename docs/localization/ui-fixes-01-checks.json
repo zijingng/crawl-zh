@@ -1,0 +1,24 @@
+{
+  "batch": "ui-fixes-01",
+  "date": "2026-10-25",
+  "reported_issues": 7,
+  "messages": 16,
+  "generated_catalogue_matches": true,
+  "source_fingerprints_current": true,
+  "canonical_speech_replacement_file_unchanged": true,
+  "lua_control_flow_and_english_messages_preserved": true,
+  "preserved_calls": {
+    "noise_and_hint_calls": 9,
+    "canonical_speech_expansion": 1,
+    "shout_random_calls": 4
+  },
+  "windows_tiles_build": true,
+  "native_cases": 116,
+  "native_assertions": 191733,
+  "python_tests": 28,
+  "limitations": [
+    "No graphical in-game mouse/hover smoke test. Native tests exercise the actual map-hover function and shared item-name adapter; inventory draw call sites are verified separately.",
+    "Unknown, historical or custom metadata and unsupported speech tokens use whole-sentence English.",
+    "Character proper names and save filenames remain unchanged."
+  ]
+}

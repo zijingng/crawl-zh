@@ -1,0 +1,19 @@
+{
+  "batch": "manual-render-01",
+  "cause": "One formatted operation for the whole translated manual causes Tiles glyph-atlas eviction before the queued glyphs are drawn; Text culls by operation, not by line within an operation.",
+  "manual_unique_characters": 1496,
+  "glyph_atlas_usable_slots": 1023,
+  "max_unique_characters_in_50_lines": 436,
+  "translation_changed": false,
+  "fix": "Split the translated help document into UTF-8 line-sized formatted operations; retain original operations when untranslated or English.",
+  "native_regression_tests_added": 1,
+  "build_status": "success: Windows Tiles crawl.exe and native test executable built",
+  "source_dependencies": {
+    "command.cc": "248631692e8ab2f8511e6cebf586285c6e29964e8360527f3b1b7c474f8121b5",
+    "command.h": "e3f75a3b493cfd6581542f1bb2c294914b0fb5416c2acf47e55205a7a6d9f6b0"
+  },
+  "python_tests": 33,
+  "native_log": "Filters: \"Help document*\",\"Manual section*\",\"Chinese stash*\"\nRNG seed: 352128926\n0.012 s: Help documents require the complete English source and preserve fallback pointers\n0.000 s: Manual section anchors ignore contents and preserve empty lines\n0.007 s: Chinese stash aliases preserve canonical annotations and unknown item boundaries\n0.000 s: Chinese stash matching evaluates bilingual boolean expressions once and scopes UTF8 regex\n0.003 s: Chinese stash ground shop and feature searches retain canonical result identities\n0.001 s: Chinese stash description appends aliases while shared Lua annotations stay English\n0.008 s: Help document display keeps Chinese UTF8 lines separate for the Tiles atlas\nAll tests passed (295 assertions in 7 test cases)\n\n\n",
+  "game_ui_visually_verified": false,
+  "executable_bytes": 27750455
+}

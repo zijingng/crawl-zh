@@ -1,0 +1,39 @@
+{
+  "batch": "wording-01",
+  "windows_tiles_build": "passed",
+  "exe": {
+    "bytes": 27828441,
+    "sha256": "4e995f032130b2cc7782dfe48964ded201a12ab048ba39d66ec28b898d4423c2"
+  },
+  "native": {
+    "cases": 5,
+    "assertions": 245,
+    "passed": true
+  },
+  "python": {
+    "cases": 33,
+    "passed": true
+  },
+  "changed_translation_lines": 12,
+  "glossary": {
+    "original_terms": 2824,
+    "new_terms": 6,
+    "current_terms": 2830,
+    "columns": 5,
+    "existing_records_unchanged": true,
+    "sha256": "c8c0a5ace4c587ce5a662d90801d0af9f8777b51a04fb992a71976bf96343f1c"
+  },
+  "manual_inscription_mentions": 21,
+  "canonical_english_documents_unchanged": true,
+  "invariants": [
+    "English source strings and canonical duration keys unchanged",
+    "Manual command and rc examples retained",
+    "HUD light colors and RNG unchanged",
+    "English configuration uses original status labels"
+  ],
+  "scope_note": "Item inscription uses 铭文; Imprint Weapon and binding sigil actions retain distinct contextual wording",
+  "limitations": [
+    "No live game window interaction",
+    "Historical morgue and legacy reference files are not rewritten"
+  ]
+}

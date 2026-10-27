@@ -4,6 +4,7 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "chardump.h"
 
@@ -23,6 +24,8 @@
 #include "art-enum.h"
 #include "branch.h"
 #include "describe.h"
+#include "describe-god.h"
+#include "item-name.h"
 #include "dgn-overview.h"
 #include "dungeon.h"
 #include "fight.h"
@@ -55,11 +58,24 @@
 #include "tag-version.h"
 #include "transform.h"
 #include "travel.h"
+#include "unwind.h"
 #include "unicode.h"
 #include "version.h"
 #include "viewchar.h"
 #include "view.h"
 #include "xom.h"
+
+// Scoped to _get_dump: exports and reentrant Lua exports keep canonical text.
+static bool _dump_display = false;
+static const char *_dump_text(const char *english)
+{
+    return _dump_display ? ui_translate("c.dump", english) : english;
+}
+static string _dump_render(const char *source, const string &english,
+                            initializer_list<ui_arg> args)
+{
+    return _dump_display ? ui_render("c.dump", source, english, args) : english;
+}
 
 struct dump_params;
 
@@ -110,6 +126,9 @@ struct dump_params
     string section;
     bool full_id;
     const scorefile_entry *se;
+    vector<string> lua_sections;
+    const vector<string> *lua_replay = nullptr;
+    size_t lua_index = 0;
 
     dump_params(const string &sec = "", bool id = false,
                 const scorefile_entry *s = nullptr)
@@ -174,9 +193,17 @@ static void dump_section(dump_params &par)
 }
 
 static dump_params _get_dump(bool full_id = false,
-                             const scorefile_entry *se = nullptr)
+                             const scorefile_entry *se = nullptr, bool display = false,
+                             const vector<string> *lua_replay = nullptr)
 {
+    unwind_var<bool> display_scope(_dump_display, display && Options.language == lang_t::ZH);
+    // Nested descriptions must not leak UI language into the canonical export.
+    unwind_var<lang_t> language(Options.language,
+                               _dump_display ? Options.language : lang_t::EN);
+    unwind_var<const char *> lang_name(Options.lang_name,
+                                       _dump_display ? Options.lang_name : nullptr);
     dump_params par("", full_id, se);
+    par.lua_replay = lua_replay;
 
     for (const string &section : Options.dump_order)
     {
@@ -189,9 +216,33 @@ static dump_params _get_dump(bool full_id = false,
 }
 
 bool dump_char(const string &fname, bool quiet, bool full_id,
-               const scorefile_entry *se)
+               const scorefile_entry *se, bool localized)
 {
-    return _write_dump(fname, _get_dump(full_id, se), quiet);
+    const dump_params english = _get_dump(full_id, se);
+    if (!_write_dump(fname, english, quiet))
+        return false;
+    if (localized && Options.language == lang_t::ZH)
+    {
+        // Keep the original .txt/.lst paths and execute custom Lua only once.
+        const dump_params chinese = _get_dump(full_id, se, true, &english.lua_sections);
+        const string path = morgue_directory()
+                          + strip_filename_unsafe_chars(fname) + ".zh.txt";
+        FILE *file = fopen_replace(path.c_str());
+        if (file)
+        {
+            // This is a UTF-8 document, independent of the terminal charset.
+            const bool written = fputs(chinese.text.c_str(), file) >= 0;
+            const bool closed = fclose(file) == 0;
+            if (!written || !closed)
+                mprf(MSGCH_ERROR, ui_translate("morgue.file", "Error writing Chinese character file '%s'."), path.c_str());
+            else if (!quiet)
+                mprf(ui_translate("morgue.file", "Chinese character file written to '%s'."), path.c_str());
+        }
+        else
+            mprf(MSGCH_ERROR, ui_translate("c.chardump", "Error opening file '%s'"), path.c_str());
+    }
+    // A failed optional translation must not invalidate the canonical morgue.
+    return true;
 }
 
 string seed_description()
@@ -203,8 +254,19 @@ string seed_description()
             : you.deterministic_levelgen ? "" : " (classic levelgen)");
 }
 
+string seed_display_description()
+{
+    const string original = seed_description();
+    const char *suffix = crawl_state.type == GAME_TYPE_CUSTOM_SEED
+        ? " (custom seed)" : you.deterministic_levelgen ? "" : " (classic levelgen)";
+    const ui_arg mode = *suffix ? ui_text_arg("c.seed", suffix) : ui_literal_arg("");
+    return ui_render("c.seed", "Game seed: %s%s", original,
+        {ui_literal_arg(to_string(crawl_state.seed)), mode});
+}
+
 static void _sdump_header(dump_params &par)
 {
+    const size_t display_start = par.text.size();
     string type = crawl_state.game_type_name();
     if (type.empty())
         type = CRAWL;
@@ -223,9 +285,20 @@ static void _sdump_header(dump_params &par)
     par.text += " (console)";
 #endif
     par.text += " character file.\n\n";
+    par.text.replace(display_start, string::npos,
+        _dump_render("%s version %s (%s) character file.\n\n", par.text.substr(display_start),
+            {ui_literal_arg(type), ui_literal_arg(Version::Long),
+#ifdef USE_TILE_LOCAL
+             ui_text_arg("c.dump", "tiles")
+#elif defined(USE_TILE_WEB)
+             ui_text_arg("c.dump", ::tiles.is_controlled_from_web() ? "webtiles" : "console")
+#else
+             ui_text_arg("c.dump", "console")
+#endif
+            }));
 
     if (you.fully_seeded && crawl_state.seed_is_known())
-        par.text += seed_description() + "\n\n";
+        par.text += (_dump_display ? seed_display_description() : seed_description()) + "\n\n";
 }
 
 static void _sdump_stats(dump_params &par)
@@ -238,7 +311,9 @@ static void _sdump_transform(dump_params &par)
 {
     string &text(par.text);
     if (you.form != transformation::none)
-        text += get_form()->get_description(par.se) + "\n\n";}
+        text += (_dump_display ? get_form()->display_description(par.se)
+                               : get_form()->get_description(par.se)) + "\n\n";
+}
 
 static branch_type single_portals[] =
 {
@@ -259,6 +334,7 @@ static branch_type single_portals[] =
 static void _sdump_visits(dump_params &par)
 {
     string &text(par.text);
+    const size_t display_start = text.size();
 
     string have = "have ";
     string seen = "seen";
@@ -376,11 +452,55 @@ static void _sdump_visits(dump_params &par)
     }
 
     text += "\n";
+    if (_dump_display)
+    {
+        // Validate the complete paragraph before replacing its English span.
+        ui_translation_group group({
+            {"c.dump", "You visited %s branches and saw %s levels.\n"},
+            {"c.dump", "You visited %s %s times and saw %s levels.\n"},
+            {"c.dump", "You visited %s %s times.\n"},
+            {"c.dump", "You visited %s ziggurats, completed %s, saw %s levels; deepest: %s.\n"},
+        });
+        for (int br = 0; br < NUM_BRANCHES; ++br)
+            if (you.get_place_info(static_cast<branch_type>(br)).num_visits > 0)
+                group.require("b.branch.name", branches[br].shortname);
+        if (group.available())
+        {
+            string shown = make_stringf(group.get("c.dump", "You visited %s branches and saw %s levels.\n"),
+                to_string(branches_visited.size()).c_str(), to_string(branches_total.levels_seen).c_str());
+            for (branch_type br : {BRANCH_PANDEMONIUM, BRANCH_ABYSS, BRANCH_BAZAAR, BRANCH_NECROPOLIS})
+            {
+                const PlaceInfo pi = you.get_place_info(br);
+                if (!pi.num_visits)
+                    continue;
+                const char *name = group.get("b.branch.name", branches[br].shortname);
+                shown += br == BRANCH_PANDEMONIUM
+                    ? make_stringf(group.get("c.dump", "You visited %s %s times and saw %s levels.\n"),
+                        name, to_string(pi.num_visits).c_str(), to_string(pi.levels_seen).c_str())
+                    : make_stringf(group.get("c.dump", "You visited %s %s times.\n"),
+                        name, to_string(pi.num_visits).c_str());
+            }
+            const PlaceInfo zig = you.get_place_info(BRANCH_ZIGGURAT);
+            if (zig.num_visits)
+                shown += make_stringf(group.get("c.dump", "You visited %s ziggurats, completed %s, saw %s levels; deepest: %s.\n"),
+                    to_string(zig.num_visits).c_str(), to_string(you.zigs_completed).c_str(),
+                    to_string(zig.levels_seen).c_str(), to_string(you.zig_max).c_str());
+            for (branch_type br : single_portals)
+            {
+                const PlaceInfo pi = you.get_place_info(br);
+                if (pi.num_visits)
+                    shown += make_stringf(group.get("c.dump", "You visited %s %s times.\n"),
+                        group.get("b.branch.name", branches[br].shortname), to_string(pi.num_visits).c_str());
+            }
+            text.replace(display_start, string::npos, shown + "\n");
+        }
+    }
 }
 
 static void _sdump_gold(dump_params &par)
 {
     string &text(par.text);
+    const size_t display_start = text.size();
 
     int lines = 0;
 
@@ -426,6 +546,31 @@ static void _sdump_gold(dump_params &par)
 
     if (lines > 0)
         text += "\n";
+    if (_dump_display)
+    {
+        const pair<int, const char *> entries[] = {
+            {ATTR_GOLD_FOUND, "You collected %s gold pieces.\n"},
+            {ATTR_PURCHASES, "You spent %s gold pieces at shops.\n"},
+            {ATTR_DONATIONS, "You donated %s gold pieces to Zin.\n"},
+            {ATTR_GOZAG_GOLD_USED, "You paid %s gold pieces to Gozag.\n"},
+            {ATTR_MISC_SPENDING, "You used %s gold pieces for miscellaneous purposes.\n"},
+        };
+        ui_translation_group group;
+        for (const auto &entry : entries)
+            if (you.attribute[entry.first] > 0)
+                group.require("c.dump", entry.second);
+        if (group.available())
+        {
+            string shown;
+            for (const auto &entry : entries)
+                if (you.attribute[entry.first] > 0)
+                    shown += make_stringf(group.get("c.dump", entry.second),
+                        to_string(you.attribute[entry.first]).c_str());
+            if (lines > 0)
+                shown += "\n";
+            text.replace(display_start, string::npos, shown);
+        }
+    }
 }
 
 static void _sdump_misc(dump_params &par)
@@ -448,12 +593,23 @@ static string _denanify(const string &s)
     return out;
 }
 
+static string _dump_level_name(const level_id &id, const string &original)
+{
+    if (!_dump_display || !id.is_valid() || id.branch < 0)
+        return original;
+    return ui_render("morgue.place", "%s:%s", original,
+        {ui_text_arg("b.branch.name", branches[id.branch].shortname),
+         ui_literal_arg(to_string(id.depth))});
+}
+
 static string _sdump_level_xp_info(LevelXPInfo xp_info, string name = "")
 {
     string out;
 
     if (name.empty())
-        name = xp_info.level.describe();
+        name = _dump_level_name(xp_info.level, xp_info.level.describe());
+    if (_dump_display)
+        name = chop_string(name, 11);
 
     float c, f;
     unsigned int total_xp = xp_info.vault_xp + xp_info.non_vault_xp;
@@ -475,7 +631,10 @@ static string _sdump_turns_place_info(const PlaceInfo place_info, string name = 
     string out;
 
     if (name.empty())
-        name = place_info.short_name();
+        name = _dump_display ? ui_translate("b.branch.name", place_info.short_name().c_str())
+                             : place_info.short_name();
+    if (_dump_display)
+        name = chop_string(name, 14);
 
     unsigned int non_interlevel =
         place_info.elapsed_total / 10 - place_info.elapsed_interlevel / 10;
@@ -504,21 +663,21 @@ static void _sdump_turns_by_place(dump_params &par)
     const vector<PlaceInfo> all_visited = you.get_all_place_info(true);
 
     text +=
-"Table legend: (Time is in decaauts)\n"
+_dump_text("Table legend: (Time is in decaauts)\n"
 " A = Elapsed time spent in this place.\n"
 " B = Non-inter-level travel time spent in this place.\n"
 " C = Inter-level travel time spent in this place.\n"
 " D = Time resting spent in this place.\n"
 " E = Time spent auto-exploring this place.\n"
 " F = Levels seen in this place.\n"
-" G = Mean time per level.\n";
+" G = Mean time per level.\n");
 
     text += "               ";
     text += "    A        B        C        D        E      F       G\n";
     text += "               ";
     text += "+--------+--------+--------+--------+--------+-----+--------+\n";
 
-    text += _sdump_turns_place_info(you.global_info, "Total");
+    text += _sdump_turns_place_info(you.global_info, _dump_text("Total"));
 
     for (const PlaceInfo &pi : all_visited)
         text += _sdump_turns_place_info(pi);
@@ -538,11 +697,26 @@ static void _sdump_turns_by_place(dump_params &par)
     sort(to_sort.begin(), to_sort.end());
     reverse(to_sort.begin(), to_sort.end());
 
-    text += "Top non-repeatable levels by time:\n";
+    text += _dump_text("Top non-repeatable levels by time:\n");
     for (unsigned int i = 0; i < 15 && i < to_sort.size(); i++)
-        text += make_stringf("%8s: %d daAuts\n", to_sort[i].second.c_str(), to_sort[i].first / 10);
+    {
+        string name = to_sort[i].second;
+        if (_dump_display)
+        {
+            try
+            {
+                name = _dump_level_name(level_id::parse_level_id(name), name);
+            }
+            catch (const bad_level_id &)
+            {
+                // Preserve unknown or user-provided canonical identifiers.
+            }
+            name = chop_string(name, 8);
+        }
+        text += make_stringf("%8s: %d daAuts\n", name.c_str(), to_sort[i].first / 10);
+    }
     if (time_tracking.exists("upgrade"))
-        text += "Note: time per level data comes from an upgraded game and may be incomplete.\n";
+        text += _dump_text("Note: time per level data comes from an upgraded game and may be incomplete.\n");
     text += "\n";
 }
 
@@ -553,20 +727,20 @@ static void _sdump_xp_by_level(dump_params &par)
     vector<LevelXPInfo> all_info = you.get_all_xp_info(true);
 
     text +=
-"Table legend:\n"
+_dump_text("Table legend:\n"
 " A = Non-vault XP\n"
 " B = Vault XP\n"
 " C = Vault XP percentage of total XP\n"
 " D = Non-vault monster count\n"
 " E = Vault monster count\n"
-" F = Vault count percentage of total count\n\n";
+" F = Vault count percentage of total count\n\n");
 
     text += "            ";
     text += "     A         B        C        D         E        F   \n";
     text += "            ";
     text += "+---------+---------+-------+---------+---------+-------\n";
 
-    text += _sdump_level_xp_info(you.global_xp_info, "Total");
+    text += _sdump_level_xp_info(you.global_xp_info, _dump_text("Total"));
 
     text += "            ";
     text += "+---------+---------+-------+---------+---------+-------\n";
@@ -587,7 +761,7 @@ static string _sdump_rank_piety_info(RankPietyInfo r)
 
     int rank = piety_rank(r.initial_piety);
 
-    string name = god_name(r.god);
+    string name = _dump_display ? ui_translate("display.god", god_name(r.god).c_str()) : god_name(r.god);
 
     out =
         make_stringf(" %16s | %1d | %7d | %3d | %3d | %3d | %3d | %3d | %3d | %3d \n",
@@ -604,19 +778,22 @@ static string _sdump_god_conduct_info(god_type god, const map<int, ConductPietyI
 {
     string out;
 
-    out += make_stringf("Conducts for god: %s\n", god_name(god).c_str());
+    out += _dump_render("Conducts for god: %s\n",
+        make_stringf("Conducts for god: %s\n", god_name(god).c_str()),
+        {ui_text_arg("display.god", god_name(god))});
 
     int max_lt = (min<int>(you.max_level, 27) - 1) / 3;
 
     // Don't show both a total and 1..3 when there's only one tier.
     if (max_lt)
         max_lt++;
-    out += "Piety from conduct\n";
+    out += _dump_text("Piety from conduct\n");
 
-    string header = make_stringf("%21s", "Conduct");
+    string header = _dump_display ? chop_string(_dump_text("Conduct"), 21)
+                                 : make_stringf("%21s", _dump_text("Conduct"));
     for (int lt = 0; lt < max_lt; lt++)
         header += make_stringf(" | %2d-%2d", lt * 3 + 1, lt * 3 + 3);
-    header += " || total\n";
+    header += _dump_text(" || total\n");
     string divider = string(22, '-');
     for (int lt = 0; lt < max_lt; lt++)
         divider += "+-------";
@@ -637,7 +814,9 @@ static string _sdump_god_conduct_info(god_type god, const map<int, ConductPietyI
     for (auto &pair : grouped_conducts.back().piety_from_conducts)
     {
         conduct_type conduct = pair.first;
-        out += make_stringf("%20s ", conduct_description(conduct).c_str());
+        out += _dump_display
+            ? chop_string(ui_translate("morgue.conduct", conduct_description(conduct).c_str()), 20) + " "
+            : make_stringf("%20s ", conduct_description(conduct).c_str());
         for (int lt = 0; lt <= max_lt; lt++)
         {
             float piety = 0.0f;
@@ -653,13 +832,15 @@ static string _sdump_god_conduct_info(god_type god, const map<int, ConductPietyI
     }
     out += divider;
 
-    out += "Conduct count\n";
+    out += _dump_text("Conduct count\n");
     out += header;
     out += divider;
     for (auto &pair : grouped_conducts.back().conducts_count)
     {
         conduct_type conduct = pair.first;
-        out += make_stringf("%20s ", conduct_description(conduct).c_str());
+        out += _dump_display
+            ? chop_string(ui_translate("morgue.conduct", conduct_description(conduct).c_str()), 20) + " "
+            : make_stringf("%20s ", conduct_description(conduct).c_str());
         for (int lt = 0; lt <= max_lt; lt++)
         {
             int count = 0;
@@ -697,7 +878,7 @@ static void _sdump_piety_info(dump_params &par)
     vector<RankPietyInfo> all_info = you.piety_info.rank_info;
 
     text +=
-"Table legend:\n"
+_dump_text("Table legend:\n"
 " A = God\n"
 " B = Rank\n"
 " C = Start time\n"
@@ -707,7 +888,7 @@ static void _sdump_piety_info(dump_params &par)
 " G = Piety on penance\n"
 " H = Piety on stepdowns\n"
 " I = Piety decays\n"
-" J = Piety lost (inc. decay)\n"
+" J = Piety lost (inc. decay)\n")
 ;
 
     text += "         A          B      C       D     E     F     G     H     I     J   \n";
@@ -738,19 +919,28 @@ static void _sdump_separator(dump_params &par)
 // dump whatever it returns.
 static void _sdump_lua(dump_params &par)
 {
+    if (par.lua_replay)
+    {
+        if (par.lua_index < par.lua_replay->size())
+            par.text += (*par.lua_replay)[par.lua_index++];
+        return;
+    }
+    const size_t start = par.text.size();
     string luatext;
     if (!clua.callfn(par.section.c_str(), ">s", &luatext)
         && !clua.error.empty())
     {
-        par.text += "Lua dump error: " + clua.error + "\n";
+        par.text += _dump_render("Lua dump error: %s\n", "Lua dump error: " + clua.error + "\n",
+                                 {ui_literal_arg(clua.error)});
     }
     else
         par.text += luatext;
+    par.lua_sections.push_back(par.text.substr(start));
 }
 
 string chardump_desc(const item_def& item)
 {
-    string desc = get_item_description(item, IDM_DUMP);
+    string desc = get_item_description(item, IDM_DUMP, _dump_display);
     string outs;
 
     outs.reserve(desc.length() + 32);
@@ -775,7 +965,7 @@ static void _sdump_messages(dump_params &par)
     // A little message history:
     if (Options.dump_message_count > 0)
     {
-        par.text += "Message History\n\n";
+        par.text += _dump_text("Message History\n\n");
         par.text += get_last_messages(Options.dump_message_count);
     }
 }
@@ -792,7 +982,7 @@ static void _sdump_screenshots(dump_params &par)
     if (note_list.empty())
         return;
 
-    text += "Illustrated notes\n\n";
+    text += _dump_text("Illustrated notes\n\n");
 
     for (const Note &note : note_list)
     {
@@ -801,10 +991,17 @@ static void _sdump_screenshots(dump_params &par)
 
         text += note.screen;
         text += "\n";
+        const size_t display_start = text.size();
         text += make_stringf("Turn %d on ", note.turn);
         text += note.place.describe() + ": ";
         text += note.name;
         text += "\n\n";
+        if (note.place.is_valid())
+            text.replace(display_start, string::npos,
+                _dump_render("Turn %s on %s:%s: %s\n\n", text.substr(display_start),
+                    {ui_literal_arg(to_string(note.turn)),
+                     ui_text_arg("b.branch.name", branches[note.place.branch].shortname),
+                     ui_literal_arg(to_string(note.place.depth)), ui_literal_arg(note.name)}));
     }
 }
 
@@ -814,19 +1011,26 @@ static void _sdump_notes(dump_params &par)
     if (note_list.empty())
         return;
 
-    text += "Notes\n";
-    text += "Turn   | Place    | Note\n";
-    text += "-------+----------+-------------------------------------------\n";
+    text += _dump_text("Notes\n");
+    text += _dump_display ? ui_translate("morgue.notes", "Turn   | Place    | Note\n")
+                          : "Turn   | Place    | Note\n";
+    text += _dump_display ? "-------+----------------+-------------------------------------\n"
+                          : "-------+----------+-------------------------------------------\n";
     for (const Note &note : note_list)
     {
         if (note.hidden())
             continue;
 
         string prefix = note.describe(true, true, false);
-        string suffix = note.describe(false, false, true);
+        if (_dump_display)
+            prefix = make_stringf("%6d | %s | ", note.turn,
+                chop_string(_dump_level_name(note.place, note.place.describe()), 14).c_str());
+        string suffix = _dump_display ? note.display_describe(false, false, true)
+                                      : note.describe(false, false, true);
         if (suffix.empty())
             continue;
-        int spaceleft = 80 - prefix.length() - 1; // Use 100 cols
+        const int prefix_width = _dump_display ? strwidth(prefix) : prefix.length();
+        int spaceleft = 80 - prefix_width - 1;
         if (spaceleft <= 0)
             return;
 
@@ -837,13 +1041,14 @@ static void _sdump_notes(dump_params &par)
 
         text += prefix + parts[0] + "\n";
         for (unsigned int j = 1; j < parts.size(); ++j)
-            text += string(prefix.length()-2, ' ') + string("| ") + parts[j] + "\n";
+            text += string(prefix_width-2, ' ') + string("| ") + parts[j] + "\n";
     }
     text += "\n";
 }
 
 static void _sdump_location(dump_params &par)
 {
+    const size_t display_start = par.text.size();
     if (you.depth == 0 && player_in_branch(BRANCH_DUNGEON))
         par.text += "You escaped";
     else if (par.se)
@@ -853,6 +1058,15 @@ static void _sdump_location(dump_params &par)
 
     par.text += ".";
     par.text += "\n";
+    const string original = par.text.substr(display_start);
+    string shown;
+    if (you.depth == 0 && player_in_branch(BRANCH_DUNGEON))
+        shown = _dump_render("You escaped.\n", original, {});
+    else
+        shown = _dump_render(par.se ? "You were on %s:%s.\n" : "You are on %s:%s.\n",
+            original, {ui_text_arg("b.branch.name", branches[you.where_are_you].shortname),
+                       ui_literal_arg(to_string(you.depth))});
+    par.text.replace(display_start, string::npos, shown);
 }
 
 static void _sdump_religion(dump_params &par)
@@ -866,12 +1080,31 @@ static void _sdump_religion(dump_params &par)
             text += "You worship ";
         text += god_name(you.religion);
         text += ".\n";
+        if (_dump_display)
+        {
+            const string original = (par.se ? "You worshipped " : "You worship ")
+                + god_name(you.religion) + ".\n";
+            const string shown = _dump_render(par.se ? "You worshipped %s.\n" : "You worship %s.\n",
+                original, {ui_text_arg("display.god", god_name(you.religion))});
+            text.replace(text.size() - original.size(), original.size(), shown);
+        }
 
         if (!you_worship(GOD_XOM))
         {
             if (!player_under_penance())
             {
-                text += god_prayer_reaction();
+                const string original = god_prayer_reaction();
+                const char *sources[] = {
+                    "%s is noncommittal.", "%s is noncommittal.",
+                    "%s is aware of your devotion.", "%s is pleased with you.",
+                    "%s is most pleased with you.", "%s is greatly pleased with you.",
+                    "%s is extremely pleased with you.", "%s is exalted by your worship.",
+                };
+                const int rank = god_favour_rank(you.religion);
+                text += rank >= 0 && rank < int(ARRAYSZ(sources))
+                    ? _dump_render(sources[rank], original,
+                        {ui_text_arg("display.god", god_name(you.religion))})
+                    : original;
                 text += "\n";
             }
             else
@@ -880,6 +1113,11 @@ static void _sdump_religion(dump_params &par)
 
                 text += uppercase_first(god_name(you.religion));
                 text += " " + verb + " demanding penance.\n";
+                const string original = uppercase_first(god_name(you.religion))
+                    + " " + verb + " demanding penance.\n";
+                text.replace(text.size() - original.size(), original.size(),
+                    _dump_render("%s demands penance.\n", original,
+                        {ui_text_arg("display.god", god_name(you.religion))}));
             }
         }
         else
@@ -890,6 +1128,22 @@ static void _sdump_religion(dump_params &par)
                 text += "You are ";
             text += describe_xom_favour();
             text += "\n";
+            const string original = (par.se ? "You were " : "You are ") + describe_xom_favour() + "\n";
+            const char *moods[] = {
+                "You are a very special plaything of Xom.\n",
+                "You are a special plaything of Xom.\n",
+                "You are a plaything of Xom.\n",
+                "You are a toy of Xom.\n",
+                "You are a favourite toy of Xom.\n",
+                "You are a beloved toy of Xom.\n",
+                "You are Xom's teddy bear.\n",
+            };
+            const int rank = xom_favour_rank();
+            if (you.gift_timeout < 1 || (rank >= 0 && rank < int(ARRAYSZ(moods))))
+            {
+                const char *key = you.gift_timeout < 1 ? "You are a BORING thing.\n" : moods[rank];
+                text.replace(text.size() - original.size(), original.size(), _dump_render(key, original, {}));
+            }
         }
     }
 }
@@ -953,12 +1207,12 @@ static void _sdump_inventory(dump_params &par)
 
     if (!inv_count)
     {
-        text += "You aren't carrying anything.";
+        text += _dump_text("You aren't carrying anything.");
         text += "\n";
     }
     else
     {
-        text += "Inventory:\n\n";
+        text += _dump_text("Inventory:\n\n");
 
         for (int obj = 0; obj < NUM_OBJECT_CLASSES; obj++)
         {
@@ -967,7 +1221,7 @@ static void _sdump_inventory(dump_params &par)
             if (inv_class2[i] == 0)
                 continue;
 
-            text += item_class_name(i);
+            text += _dump_display ? ui_translate("inventory.category", item_class_name(i)) : item_class_name(i);
             text += "\n";
 
             for (const auto &item : you.inv)
@@ -976,12 +1230,20 @@ static void _sdump_inventory(dump_params &par)
                     continue;
 
                 text += " ";
-                text += item.name(DESC_INVENTORY_EQUIP);
+                string item_name;
+                text += _dump_display && try_item_display_name(item, item_name, true, true)
+                    ? item_name : item.name(DESC_INVENTORY_EQUIP);
 
                 inv_count--;
 
                 if (origin_describable(item) && _dump_item_origin(item))
-                    text += "\n" "   (" + origin_desc(item) + ")";
+                {
+                    const string original = origin_desc(item);
+                    string shown = _dump_display ? item_origin_description(item) : original;
+                    if (shown == original + ".")
+                        shown = original;
+                    text += "\n" "   (" + shown + ")";
+                }
 
                 if (is_dumpable_artefact(item))
                     text += chardump_desc(item);
@@ -997,9 +1259,9 @@ static void _sdump_skills(dump_params &par)
 {
     string &text(par.text);
 
-    text += "   Skills:\n";
+    text += _dump_text("   Skills:\n");
 
-    dump_skills(text);
+    dump_skills(text, _dump_display);
     text += "\n";
     text += "\n";
 }
@@ -1011,9 +1273,22 @@ static string spell_type_shortname(spschool spell_class, bool slash)
     if (slash)
         ret = "/";
 
-    ret += spelltype_short_name(spell_class);
+    ret += _dump_display ? ui_translate("c.dump.school", spelltype_short_name(spell_class)) : spelltype_short_name(spell_class);
 
     return ret;
+}
+
+static bool _dump_spell_available(spell_type spell)
+{
+    if (!_dump_display || !ui_text_arg("display.spell", spell_title(spell)).available)
+        return false;
+    for (const auto school : spschools_type::range())
+        if (spell_typematch(spell, school)
+            && !ui_text_arg("c.dump.school", spelltype_short_name(school)).available)
+        {
+            return false;
+        }
+    return true;
 }
 
 static void _sdump_spells(dump_params &par)
@@ -1026,6 +1301,7 @@ static void _sdump_spells(dump_params &par)
     {
         int spell_levels = player_spell_levels();
 
+        const size_t intro_start = text.size();
         if (spell_levels == 1)
             text += "You " + verb + " one spell level left.";
         else if (spell_levels == 0)
@@ -1044,21 +1320,29 @@ static void _sdump_spells(dump_params &par)
         }
 
         text += "\n";
+        const string original = text.substr(intro_start);
+        text.replace(intro_start, string::npos,
+            spell_levels == 0
+                ? _dump_render(par.se ? "You couldn't memorise any spells.\n"
+                                      : "You cannot memorise any spells.\n", original, {})
+                : _dump_render(par.se ? "You had %s spell levels left.\n"
+                                      : "You have %s spell levels left.\n", original,
+                               {ui_literal_arg(to_string(spell_levels))}));
     }
 
     if (!you.spell_no)
     {
         verb = par.se? "didn't" : "don't";
 
-        text += "You " + verb + " know any spells.\n";
+        text += _dump_render(par.se ? "You didn't know any spells.\n" : "You don't know any spells.\n", "You " + verb + " know any spells.\n", {});
     }
     else
     {
         verb = par.se? "knew" : "know";
 
-        text += "You " + verb + " the following spells:\n\n";
+        text += _dump_render(par.se ? "You knew the following spells:\n\n" : "You know the following spells:\n\n", "You " + verb + " the following spells:\n\n", {});
 
-        text += " Your Spells              Type           Power      Damage    Failure   Level" "\n";
+        text += _dump_text(" Your Spells              Type           Power      Damage    Failure   Level" "\n");
 
         for (int j = 0; j < 52; j++)
         {
@@ -1067,11 +1351,14 @@ static void _sdump_spells(dump_params &par)
 
             if (spell != SPELL_NO_SPELL)
             {
+                unwind_var<bool> display(_dump_display, _dump_spell_available(spell));
+                unwind_var<lang_t> language(Options.language,
+                    _dump_display ? Options.language : lang_t::EN);
                 string spell_line;
 
                 spell_line += letter;
                 spell_line += " - ";
-                spell_line += spell_title(spell);
+                spell_line += _dump_display ? spell_display_title(spell) : spell_title(spell);
 
                 spell_line = chop_string(spell_line, 24);
                 spell_line += "  ";
@@ -1115,24 +1402,27 @@ static void _sdump_spells(dump_params &par)
     if (!you.spell_library.count())
     {
         verb = par.se ? "was" : "is";
-        text += "Your spell library " + verb + " empty.\n\n";
+        text += _dump_render(par.se ? "Your spell library was empty.\n\n" : "Your spell library is empty.\n\n", "Your spell library " + verb + " empty.\n\n", {});
     }
     else
     {
         verb = par.se? "contained" : "contains";
-        text += "Your spell library " + verb + " the following spells:\n\n";
-        text += " Spells                   Type           Power      Damage    Failure   Level" "\n";
+        text += _dump_render(par.se ? "Your spell library contained the following spells:\n\n" : "Your spell library contains the following spells:\n\n", "Your spell library " + verb + " the following spells:\n\n", {});
+        text += _dump_text(" Spells                   Type           Power      Damage    Failure   Level" "\n");
 
         auto const library = get_sorted_spell_list(true, false);
 
         for (const spell_type spell : library)
         {
+            unwind_var<bool> display(_dump_display, _dump_spell_available(spell));
+            unwind_var<lang_t> language(Options.language,
+                _dump_display ? Options.language : lang_t::EN);
             const bool memorisable = you_can_memorise(spell);
 
             string spell_line;
 
             spell_line += ' ';
-            spell_line += spell_title(spell);
+            spell_line += _dump_display ? spell_display_title(spell) : spell_title(spell);
 
             spell_line = chop_string(spell_line, 24);
             spell_line += "  ";
@@ -1153,7 +1443,7 @@ static void _sdump_spells(dump_params &par)
             if (memorisable)
                 spell_line += spell_power_string(spell);
             else
-                spell_line += "Unusable";
+                spell_line += _dump_text("Unusable");
 
             spell_line = chop_string(spell_line, 52);
 
@@ -1181,7 +1471,7 @@ static void _sdump_spells(dump_params &par)
 
 static void _sdump_kills(dump_params &par)
 {
-    par.text += you.kills.kill_info();
+    par.text += you.kills.kill_info(_dump_display);
     par.text += "\n";
 }
 
@@ -1190,7 +1480,10 @@ static string _sdump_kills_place_info(const PlaceInfo place_info, string name = 
     string out;
 
     if (name.empty())
-        name = place_info.short_name();
+        name = _dump_display ? ui_translate("b.branch.name", place_info.short_name().c_str())
+                             : place_info.short_name();
+    if (_dump_display)
+        name = chop_string(name, 14);
 
     unsigned int global_total_kills = 0;
     for (int i = 0; i < KC_NCATEGORIES; i++)
@@ -1235,7 +1528,7 @@ static void _sdump_kills_by_place(dump_params &par)
     string result = "";
 
     string header =
-    "Table legend:\n"
+    _dump_text("Table legend:\n"
     " A = Kills in this place as a percentage of kills in the entire game.\n"
     " B = Kills by you in this place as a percentage of kills by you in\n"
     "     the entire game.\n"
@@ -1246,7 +1539,7 @@ static void _sdump_kills_by_place(dump_params &par)
     " E = Experience gained in this place as a percentage of experience\n"
     "     gained in the entire game.\n"
     " F = Experience gained in this place divided by the number of levels of\n"
-    "     this place that you have seen.\n\n";
+    "     this place that you have seen.\n\n");
 
     header += "               ";
     header += "    A       B       C       D       E               F\n";
@@ -1256,7 +1549,7 @@ static void _sdump_kills_by_place(dump_params &par)
     string footer = "               ";
     footer += "+-------+-------+-------+-------+-------+----------------------\n";
 
-    result += _sdump_kills_place_info(you.global_info, "Total");
+    result += _sdump_kills_place_info(you.global_info, _dump_text("Total"));
 
     for (const PlaceInfo &pi : all_visited)
         result += _sdump_kills_place_info(pi);
@@ -1280,7 +1573,7 @@ static void _sdump_hiscore(dump_params &par)
     if (!par.se)
         return;
 
-    string hiscore = hiscores_format_single_long(*(par.se), true);
+    string hiscore = hiscores_format_single_long(*(par.se), true, _dump_display);
     trim_string(hiscore);
     par.text += hiscore;
     par.text += "\n\n";
@@ -1303,15 +1596,15 @@ static void _sdump_vault_list(dump_params &par)
 #endif
      )
     {
-        par.text += "Levels and vault maps discovered:\n";
-        par.text += dump_vault_maps();
+        par.text += _dump_text("Levels and vault maps discovered:\n");
+        par.text += dump_vault_maps(_dump_display);
         par.text += "\n";
     }
 }
 
 static void _sdump_dlua_errors(dump_params &par)
 {
-    par.text += "DLua errors:\n";
+    par.text += _dump_text("DLua errors:\n");
     for (const CLuaError &error : dlua_errors)
     {
         par.text += error.message + "\n";
@@ -1476,7 +1769,7 @@ static string _describe_action_subtype(caction_type type, int compound_subtype)
     case CACT_THROW:
     {
         if (auxtype == OBJ_MISSILES)
-            return uppercase_first(item_base_name(OBJ_MISSILES, subtype));
+            return _dump_display ? ui_translate("display.item", item_base_name(OBJ_MISSILES, subtype).c_str()) : uppercase_first(item_base_name(OBJ_MISSILES, subtype));
         else
             return "Other";
     }
@@ -1497,17 +1790,18 @@ static string _describe_action_subtype(caction_type type, int compound_subtype)
             // Paranoia: an artefact may lose its specialness.
             const char *tn = get_unrand_entry(subtype)->type_name;
             if (tn)
-                return uppercase_first(tn);
+                return _dump_display ? ui_translate("display.item", tn) : uppercase_first(tn);
             subtype = get_unrand_entry(subtype)->sub_type;
         }
-        return uppercase_first(item_base_name(OBJ_WEAPONS, subtype));
+        return _dump_display ? ui_translate("display.item", item_base_name(OBJ_WEAPONS, subtype).c_str()) : uppercase_first(item_base_name(OBJ_WEAPONS, subtype));
     case CACT_ARMOUR:
         return (subtype == -1) ? "None"
-               : uppercase_first(item_base_name(OBJ_ARMOUR, subtype));
+               : _dump_display ? ui_translate("display.item", item_base_name(OBJ_ARMOUR, subtype).c_str())
+                               : uppercase_first(item_base_name(OBJ_ARMOUR, subtype));
     case CACT_BLOCK:
     {
         if (subtype > -1)
-            return uppercase_first(item_base_name(OBJ_ARMOUR, subtype));
+            return _dump_display ? ui_translate("display.item", item_base_name(OBJ_ARMOUR, subtype).c_str()) : uppercase_first(item_base_name(OBJ_ARMOUR, subtype));
         switch (auxtype)
         {
         case BLOCK_OTHER:
@@ -1531,13 +1825,15 @@ static string _describe_action_subtype(caction_type type, int compound_subtype)
         }
     }
     case CACT_CAST:
-        return spell_title((spell_type)subtype);
+        return _dump_display ? spell_display_title((spell_type)subtype) : spell_title((spell_type)subtype);
     case CACT_INVOKE:
     case CACT_ABIL:
-        return ability_name((ability_type)subtype, true);
+        return _dump_display ? ability_display_name((ability_type)subtype)
+                             : ability_name((ability_type)subtype, true);
     case CACT_EVOKE:
         if (subtype >= UNRAND_START && subtype <= UNRAND_LAST)
-            return uppercase_first(get_unrand_entry(subtype)->name);
+            return _dump_display ? ui_translate("display.item", get_unrand_entry(subtype)->name)
+                                 : uppercase_first(get_unrand_entry(subtype)->name);
 
         if (auxtype > -1)
         {
@@ -1545,7 +1841,8 @@ static string _describe_action_subtype(caction_type type, int compound_subtype)
             dummy.base_type = (object_class_type)(auxtype);
             dummy.sub_type  = subtype;
             dummy.quantity  = 1;
-            return uppercase_first(dummy.name(DESC_DBNAME, true));
+            return _dump_display ? ui_translate("display.item", dummy.name(DESC_DBNAME, true).c_str())
+                                 : uppercase_first(dummy.name(DESC_DBNAME, true));
         }
 
 #if TAG_MAJOR_VERSION == 34
@@ -1569,7 +1866,8 @@ static string _describe_action_subtype(caction_type type, int compound_subtype)
 #endif
 
     case CACT_USE:
-        return uppercase_first(base_type_string((object_class_type)subtype));
+        return _dump_display ? ui_translate("inventory.category", item_class_name(subtype))
+                             : uppercase_first(base_type_string((object_class_type)subtype));
     case CACT_STAB:
         COMPILE_CHECK(ARRAYSZ(_stab_names) == NUM_STABS);
         ASSERT_RANGE(subtype, 1, NUM_STABS);
@@ -1578,14 +1876,18 @@ static string _describe_action_subtype(caction_type type, int compound_subtype)
         if ((transformation)subtype == transformation::none)
             return "Default";
         else
-            return get_form((transformation)subtype)->short_name;
+            // Historical counts must not read the current form's properties.
+            return _dump_display ? ui_translate("f.form.name", get_form((transformation)subtype)->short_name.c_str())
+                                 : get_form((transformation)subtype)->short_name;
     case CACT_ATTACK:
         ASSERT_RANGE(subtype, 0, NUM_ATTACK_COUNT_TYPES);
         return _attack_count_names[subtype];
     case CACT_DRINK:
-        return uppercase_first(potion_type_name(subtype));
+        return _dump_display ? ui_translate("display.item", (string("potion of ") + potion_type_name(subtype)).c_str())
+                             : uppercase_first(potion_type_name(subtype));
     case CACT_READ:
-        return uppercase_first(scroll_type_name(subtype));
+        return _dump_display ? ui_translate("display.item", (string("scroll of ") + scroll_type_name(subtype)).c_str())
+                             : uppercase_first(scroll_type_name(subtype));
 #if TAG_MAJOR_VERSION == 34
     case CACT_EAT:
         return "Removed food";
@@ -1624,10 +1926,11 @@ static void _sdump_action_counts(dump_params &par)
     if (max_lt)
         max_lt++;
 
-    par.text += make_stringf("%-26s", "Action");
+    par.text += _dump_display ? chop_string(_dump_text("Action"), 26)
+                             : make_stringf("%-26s", _dump_text("Action"));
     for (int lt = 0; lt < max_lt; lt++)
         par.text += make_stringf(" | %2d-%2d", lt * 3 + 1, lt * 3 + 3);
-    par.text += " || total\n" + string(27, '-');
+    par.text += _dump_text(" || total\n") + string(27, '-');
     for (int lt = 0; lt < max_lt; lt++)
         par.text += "+-------";
     par.text += "++-------\n";
@@ -1655,12 +1958,13 @@ static void _sdump_action_counts(dump_params &par)
         {
             if (ac == action_vec.begin())
             {
-                const string act = _describe_action(caction_type(cact));
-                par.text += make_stringf("%7.7s: ", act.c_str());
+                const string act = _dump_text(_describe_action(caction_type(cact)).c_str());
+                par.text += _dump_display ? chop_string(act, 7) + ": "
+                    : make_stringf("%7.7s: ", act.c_str());
             }
             else
                 par.text.append(9, ' ');
-            par.text += chop_string(_describe_action_subtype(caction_type(cact), ac->first), 17);
+            par.text += chop_string(_dump_text(_describe_action_subtype(caction_type(cact), ac->first).c_str()), 17);
             for (int lt = 0; lt < max_lt; lt++)
             {
                 int ltotal = 0;
@@ -1713,7 +2017,7 @@ static void _sdump_skill_gains(dump_params &par)
         }
     }
 
-    par.text += "Skill      XL: |";
+    par.text += _dump_text("Skill      XL: |");
     for (xl = 1; xl <= max_xl; xl++)
         par.text += make_stringf(" %2d", xl);
     par.text += " |\n";
@@ -1724,7 +2028,9 @@ static void _sdump_skill_gains(dump_params &par)
 
     for (skill_type skill : skill_order)
     {
-        par.text += make_stringf("%-14s |", skill_name(skill));
+        par.text += _dump_display
+            ? chop_string(ui_translate("display.skill", skill_name(skill)), 14) + " |"
+            : make_stringf("%-14s |", skill_name(skill));
         const XlToSkillLevelMap &gains = skill_gains[skill];
         for (xl = 1; xl <= max_xl; xl++)
         {
@@ -1757,10 +2063,10 @@ static void _sdump_apostles(dump_params &par)
     if (get_num_apostles() == 0)
         return;
 
-    par.text += "Apostles: \n\n";
+    par.text += _dump_text("Apostles: \n\n");
 
     for (int i = 1; i <= get_num_apostles(); ++i)
-        par.text += formatted_string::parse_string(trimmed_string(apostle_short_description(i)) + "\n\n");
+        par.text += formatted_string::parse_string(trimmed_string(apostle_short_description(i, _dump_display)) + "\n\n");
 
     par.text += "\n";
 }
@@ -1912,7 +2218,11 @@ static bool _write_dump(const string &fname, const dump_params &par, bool quiet)
     string stash_file_name;
     stash_file_name = file_name;
     stash_file_name += ".lst";
-    StashTrack.dump(stash_file_name.c_str(), par.full_id);
+    {
+        unwind_var<lang_t> language(Options.language, lang_t::EN);
+        unwind_var<const char *> lang_name(Options.lang_name, nullptr);
+        StashTrack.dump(stash_file_name.c_str(), par.full_id);
+    }
 
     file_name += ".txt";
     FILE *handle = fopen_replace(file_name.c_str());
@@ -1926,13 +2236,13 @@ static bool _write_dump(const string &fname, const dump_params &par, bool quiet)
         succeeded = true;
         if (!quiet)
 #ifdef DGAMELAUNCH
-            mpr("Char dumped successfully.");
+            mpr(ui_translate("c.chardump", "Char dumped successfully."));
 #else
-            mprf("Char dumped to '%s'.", file_name.c_str());
+            mprf(ui_translate("c.chardump", "Char dumped to '%s'."), file_name.c_str());
 #endif
     }
     else
-        mprf(MSGCH_ERROR, "Error opening file '%s'", file_name.c_str());
+        mprf(MSGCH_ERROR, ui_translate("c.chardump", "Error opening file '%s'"), file_name.c_str());
 
     return succeeded;
 }
@@ -1951,13 +2261,13 @@ void display_notes()
     scr.set_more();
     const string tag = "notes";
     scr.set_tag(tag);
-    _add_text(scr, tag, "Turn   | Place    | Note\n");
+    _add_text(scr, tag, ui_translate("c.chardump", _dump_text("Turn   | Place    | Note\n")));
     for (const Note &note : note_list)
     {
         if (note.hidden())
             continue;
         string prefix = note.describe(true, true, false);
-        string suffix = note.describe(false, false, true);
+        string suffix = note.display_describe(false, false, true);
         if (suffix.empty())
             continue;
         int spaceleft = 80 - prefix.length() - 1; // Use 100 cols
@@ -1982,10 +2292,15 @@ void display_notes()
 void display_char_dump()
 {
     formatted_scroller scr(FS_PREWRAPPED_TEXT);
-    scr.add_raw_text(_get_dump().text, false);
+    scr.add_raw_text(character_dump_text(true), false);
     scr.set_more();
     scr.set_tag("dump");
     scr.show();
+}
+
+string character_dump_text(bool display, bool full_id, const scorefile_entry *se)
+{
+    return _get_dump(full_id, se, display).text;
 }
 
 #ifdef DGL_WHEREIS

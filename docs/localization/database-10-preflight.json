@@ -1,0 +1,305 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "entries": [
+    {
+      "key": "_real_song_no_tension_",
+      "source": "@The_weapon@ sings, \"I was forged under a slaughtering star...\"\n\nw:1\n@The_weapon@ sings, \"Nobody knows the trouble I've seen... Nobody but Ashenzari.\"\n\n@The_weapon@ sings, \"It's hip to be square!\"\n\n@The_weapon@ sings, \"It's a dead man's party! Who could ask for more?\"\n\nw:1\n@The_weapon@ sings, \"Oh, the shark, babe, has such teeth, dear, and it shows them pearly white...\"\n\n@The_weapon@ roars, \"Silence is golden, golden...\"\n\n@The_weapon@ sings, \"Where have all the monsters gone?\"\n\n@The_weapon@ sings, \"Song sung blue, everybody knows one...\"\n\n@The_weapon@ sings, \"Thank you for the music...\"\n\n@The_weapon@ wails, \"Look what they done to my song!\"\n\n@The_weapon@ sings, \"Old McDonald has a farm...\"\n\n@The_weapon@ sings, \"Pop! Goes the weasel.\"\n\n@The_weapon@ sings, \"Obladi oblada, life goes on...\"\n\n@The_weapon@ sings, \"Ninety-nine potions of booze on the wall...\"\n\n@The_weapon@ sings, \"Can you hear me through the dark night far away?\"\n\n@The_weapon@ sings, \"Sing, sing a song, sing out loud, sing out strong...\"\n\n@The_weapon@ sings, \"In the dungeon the dragon sleeps tonight.\"\n\n@The_weapon@ sings, \"Kill for the laughter, kill for the tears...\"\n\n@The_weapon@ sings, \"Come roses or sage, come lovely mint, come balm...\"\n\n@The_weapon@ sings, \"Orcs got the gold mine, I got the shaft...\"\n\n@The_weapon@ sings, \"We had joy, we had fun, we slew demons in the sun...\"\n\n",
+      "hits": [
+        {
+          "Term": "Ashenzari",
+          "Translation": "艾申扎利",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "silence",
+          "Translation": "沉默",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/状态】与噪音属性区分。 来源：duration-data.h。\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "the Dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "Nobody",
+          "Translation": "无名氏",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "dragon",
+          "Translation": "龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "strong",
+          "Translation": "强壮",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：强壮。"
+        }
+      ]
+    },
+    {
+      "key": "_real_song_low_tension_",
+      "source": "@The_weapon@ sings, \"Let it be, let it be...\"\n\n@The_weapon@ sings, \"What fun it is to ride and sing a slaying song tonight!\"\n\n@The_weapon@ sings, \"Killing me softly with this song...\"\n\n@The_weapon@ [sings|whistles], \"Always look on the bright side of death...\"\n\n@The_weapon@ sings, \"This'll be the day that I die...\"\n\n@The_weapon@ rasps, \"@player_name@, join me in death!\"\n\n@The_weapon@ sings, \"I need a hero!\"\n\n@The_weapon@ asks plaintively, \"@player_name@, can I go out and kill tonight?\"\n\nw:1\n@The_weapon@ sings, \"...and was not in a bit afraid to be killed in nasty ways, many, many nasty ways...\"\n\n@The_weapon@ sings, \"I am a fighter, not a lover.\"\n\n@The_weapon@ sings, \"I stabbed a man in the dungeon, just to watch him die.\"\n\n@The_weapon@ sings, in a lilting soprano, \"[Heiajaheia! Heiajaheia!|Wagala weia! Wallala, weiala weia!|Wallala! Lalaleia! Leialala!|Heia! Heia! Hahei!]\"\n\nw:1\n@The_weapon@ sings, in a lilting soprano, \"Badly you guard... the sleeping gold; watch better o'er... the slumberer's bed!\"\n\nw:1\n@The_weapon@ sings, in a stentorian basso, \"Damp fills my nostrils: curse this sneezing!\"\n\nw:1\n@The_weapon@ sings, in a stentorian basso, \"...for hear me, ye waves: thus I curse love!\"\n\nw:1\n@The_weapon@ sings, in a stentorian basso, \"Thank you, stupid! Your work has stood the test.\"\n\nw:1\n@The_weapon@ sings, in a stentorian basso, \"The whole world will I win... all for my own!\"\n\nw:1\n@The_weapon@ sings, in a stentorian basso, \"All you gods I'll grip... in my golden grasp!\"\n\nw:1\n@The_weapon@ sings, in a stentorian basso, \"As I renounced love, all living things... shall love renounce!\"\n\nw:1\n@The_weapon@ sings, in a stentorian basso, \"Beware! Beware! For when once you men... serve my might...\"\n\nw:1\n@The_weapon@ sings, in a stentorian basso, \"Beware the nocturnal host... when the Abyssal horde rises... from the silent depths... to the day's light!\"\n\nw:1\n@The_weapon@ sings, in a stentorian basso, \"With wisdom the fool... is puffed up to bursting! Now may envy devour you!\"\n\nw:1\n@The_weapon@ sings, in a stentorian basso, \"Take heed, haughty god! If I sinned, I sinned only 'gainst myself!\"\n\nw:1\n@The_weapon@ sings, in a stentorian basso, \"But you, immortal one, sin against... all that was, is and shall be!\"\"\n\nw:1\n@The_weapon@ sings, in a stentorian basso, \"It shall gladden... no happy man; its bright gleam... shall light on no one lucky!\"\n\nw:1\n@The_weapon@ sings, in a thundering basso, \"Many a time have I paid... giants their due.\"\n\nw:1\n@The_weapon@ sings, in a thundering basso, \"A sultry haze... hangs in the air; its dull weight... oppresses me.\"\n\n@The_weapon@ sings, in a thundering basso, \"Heda! Heda! Hedo!\"\n\nw:1\n@The_weapon@ sings, in a rumbling basso, \"...its glittering glow hides... runes of riches...\"\n\nw:1\n@The_weapon@ sings, in a mocking tenor, \"As you command, I will willingly lead you - steeply down: shall we journey to the Orb?\"\n\nw:1\n@The_weapon@ sings, in a rumbling basso, \"But for all the world... I will not surrender the Orb!\"\n\nw:1\n@The_weapon@ sings, in a mocking tenor, \"Then shall we swing down... through the sulphurous cleft?\"\n\nw:1\n@The_weapon@ sings, in a mocking tenor, \"Oh! Oh! Terrible serpent, do not swallow me!\"\n\nw:1\n@The_weapon@ sings, in a mocking tenor, \"Slink off home! No knot holds you: go your way freely!\"\n\nw:1\n@The_weapon@ sings, in a piercing soprano, \"Woe! Woe is me!\"\n\nw:1\n@The_weapon@ sings, in a squeaky tenor, \"Oh, Oh! Ow! Ow! Ow!\"\n\nw:1\n@The_weapon@ sings, in a melting tenor, \"How soft the breeze... which breathes on us again!\"\n\nw:1\n@The_weapon@ sings, in a mocking tenor, \"Your power lends you... high-flying courage: grim and great... has grown your strength.\"\n\nw:1\n@The_weapon@ sings, in a mocking tenor, \"For moon, stars and the radiant sun... may, too, do no other... than to serve you!\"\n\nw:1\n@The_weapon@ sings, in a mocking tenor, \"Take whatever shape you wish... with wonder strike me dumb!\"\n\nw:1\n@The_weapon@ sings, in a cavernous basso, \"Ah, her gaze... still gleams toward me; the stars of her eyes... still shine on me!\"\n\nw:1\n@The_weapon@ sings, in a forceful soprano, \"Irredeemably... to dark destruction... its possession dooms you.\"\n\nw:1\n@The_weapon@ sings, in a forceful soprano, \"Hear me! Hear me! Hear me! All that is shall come to an end.\"\n\nw:1\n@The_weapon@ sings, in a forceful soprano, \"A dark day... dawns for the gods.\"\n\nw:1\n@The_weapon@ sings, in a forceful soprano, \"Whatever was - I know; whatever is, whatever shall be - I also see.\"\n\n",
+      "hits": [
+        {
+          "Term": "Depths",
+          "Translation": "地底/深处",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "A branch\n【语境补充 2026-10-21】分支专名用地底。the depths of the dungeon 等普通深度描述用深处，不额外引入地底分支。"
+        },
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Fighter",
+          "Translation": "战士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的背景名称清单对应。来源：dat/jobs/fighter.yaml。"
+        },
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Strength",
+          "Translation": "力量/强度/威力",
+          "Part of Speech": "noun",
+          "Variants": "Str",
+          "Note": "三大基础属性之一\n【语境补充 2026-10-21】Str 属性用力量。法术、效果或攻击的 strength 按语境用强度或威力。"
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "slaying",
+          "Translation": "杀戮",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/装备属性】属性加成，具体命中和伤害适用范围以机制为准。 来源：item-name.cc。"
+        },
+        {
+          "Term": "Might",
+          "Translation": "强力术/可能/力量",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术或能力标题保留强力术。情态动词 might 表示可能。名词 might 表示力量或威力。"
+        },
+        {
+          "Term": "the Dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "the Orb",
+          "Translation": "宝珠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "lucky",
+          "Translation": "幸运",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：幸运。"
+        },
+        {
+          "Term": "Air",
+          "Translation": "空气强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "Light",
+          "Translation": "轻盈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "Command",
+          "Translation": "统御",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "_real_song_low-high_tension_",
+      "source": "@The_weapon@ sings, \"Roll, roll, roll those heads, roll them all along. Merrily, merrily, merrily...\"\n\nw:1\n@The_weapon@ sings, \"This blade is made for cutting, and that's just what I'll do...\"\n\n@The_weapon@ sings, \"We shall overcome...\"\n\n@The_weapon@ sings, \"Slicing up eyeballs, I want you to know!\"\n\nw:1\n@The_weapon@ sings, \"So knives out, cook him up, squash his head, put him in the pot.\"\n\nw:1\n@The_weapon@ sings, \"Straight outta Zot, crazy bloodletter named Singing Sword.\"\n\n@The_weapon@ sings, \"Gouge away, you can gouge away...\"\n\nw:1\n@The_weapon@ roars, \"The pleasure is to slay, it makes no difference what you say.\"\n\n@The_weapon@ sings, \"Killing is my business... and business is good!\"\n\n@The_weapon@ roars, \"I want to gut you like an animal!\"\n\n@The_weapon@ happily sings, \"...another one bites the dust!\"\n\n@The_weapon@ sings, \"Die when you die!\"\n\n@The_weapon@ sings, \"I will survive!\"\n\n@The_weapon@ sings, \"As long as I know how to carve I know I'm still alive.\"\n\n@The_weapon@ sings, \"You spin me right round baby, right round...\"\n\nw:1\n@The_weapon@ sings, in a stentorian basso, \"Despicable dogs, put down the jewellery!\"\n\nw:1\n@The_weapon@ sings, in a stentorian basso, \"I have faith in your faithlessness, not your fidelity! But dauntlessly - I defy you all!\"\n\nw:1\n@The_weapon@ sings, in a stentorian basso, \"Too hard for you... because you're too stupid!\"\n\nw:1\n@The_weapon@ sings, in a stentorian basso, \"Bring it in there... as I command! Pile the hoard... into a heap!\"\n\nw:1\n@The_weapon@ sings, in a thundering basso, \"Come here, you cur! If you want to measure, measure yourself against me!\"\n\nw:1\n@The_weapon@ sings, in a rumbling basso, \"You slyly... evade the POINT.\"\n\nw:1\n@The_weapon@ sings, in a rumbling basso, \"Shall I exert myself... against the miscreant for you?\"\n\nw:1\n@The_weapon@ sings, in a rumbling basso, \"But fall will the foe... with your cunning's aid!\"\n\nw:1\n@The_weapon@ sings, in a rumbling basso, \"Enough, blasphemous fool!\"\n\nw:1\n@The_weapon@ sings, in a rumbling basso, \"Leave him... his slavering fury!\"\n\n",
+      "hits": [
+        {
+          "Term": "Zot",
+          "Translation": "佐特",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "Roll",
+          "Translation": "翻滚",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Singing Sword",
+          "Translation": "歌唱之剑",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+        },
+        {
+          "Term": "eyeballs",
+          "Translation": "眼球",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：眼球。"
+        },
+        {
+          "Term": "faith",
+          "Translation": "信仰",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：信仰。"
+        },
+        {
+          "Term": "Slay",
+          "Translation": "杀戮",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "Command",
+          "Translation": "统御",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "_real_song_high_tension_",
+      "source": "@The_weapon@ sings, \"We are the champions of the world!\"\n\n@The_weapon@ sings, \"Ain't no stopping us now...\"\n\n@The_weapon@ sings, \"I did it my way!\"\n\nw:1\n@The_weapon@ sings, in a stentorian basso, \"Tremble with terror, abject throng!\"\n\nw:1\n@The_weapon@ sings, in a stentorian basso, \"Rascally robber! Rogue! Ruffian!\"\n\nw:1\n@The_weapon@ sings, in a stentorian basso, \"Terrible vengeance... I vow for this wrong!\"\n\nw:1\n@The_weapon@ sings, in a stentorian basso, \"Ah! Crushed! Shattered! Of wretches the wretchedest slave!\"\n\nw:1\n@The_weapon@ sings, in a thundering basso, \"Breche denn alles!\"\n\nw:1\n@The_weapon@ sings, in a mocking tenor, \"Does a mist deceive me? Does a dream mock me? How anxious and pale... you've a-sudden become!\"\n\n\n\n",
+      "hits": [
+        {
+          "Term": "slave",
+          "Translation": "奴隶",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "singing sword no_tension",
+      "source": "w:400\n@_singing_no_tension_@\n\nw:100\n@_singing_no-low_tension_@\n\nw:200\n@_speaking_no_tension_@\n\nw:10\n@_real_song_no_tension_@\n\nw:120\n@_instrumental_noises_@\n\nw:70\n@weapon_noises@\n\nw:100\n@_weapon_chatter_@\n",
+      "hits": [
+        {
+          "Term": "Singing Sword",
+          "Translation": "歌唱之剑",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "singing sword low_tension",
+      "source": "w:400\n@_singing_no-low_tension_@\n\nw:100\n@_speaking_low_tension_@\n\nw:100\n@_speaking_low-high_tension_@\n\nw:7\n@_real_song_low_tension_@\n\nw:3\n@_real_song_low-high_tension_@\n\nw:160\n@_instrumental_noises_@\n\nw:70\n@weapon_noises@\n\nw:160\n@_weapon_noises_low-high_tension_@\n",
+      "hits": [
+        {
+          "Term": "Singing Sword",
+          "Translation": "歌唱之剑",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "singing sword high_tension",
+      "source": "w:300\n@_speaking_low-high_tension_@\n\nw:3\n@_real_song_low-high_tension_@\n\nw:7\n@_real_song_high_tension_@\n\nw:150\n@_speaking_high_tension_@\n\nw:200\n@_instrumental_noises_@\n\nw:30\n@weapon_noises@\n\nw:360\n@_weapon_noises_low-high_tension_@\n",
+      "hits": [
+        {
+          "Term": "Singing Sword",
+          "Translation": "歌唱之剑",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "singing sword scream",
+      "source": "@_SCREAM_@\n",
+      "hits": [
+        {
+          "Term": "Singing Sword",
+          "Translation": "歌唱之剑",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+        }
+      ]
+    }
+  ]
+}

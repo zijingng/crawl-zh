@@ -1,0 +1,229 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "selected": [
+    {
+      "source": "database/rand_all.txt",
+      "key": "_jewellery_animal_",
+      "english": "Death Scarab\n\nFirefly\n\nScarab\n\nw:5\nMagpie\n\nw:5\nRaven\n",
+      "hits": [
+        {
+          "Term": "death scarab",
+          "Translation": "死亡圣甲虫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "raven",
+          "Translation": "渡鸦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ],
+      "plural_aware_hits": [
+        {
+          "Term": "death scarab",
+          "Translation": "死亡圣甲虫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "raven",
+          "Translation": "渡鸦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_all.txt",
+      "key": "_jewellery_special_name_",
+      "english": "Attitude\n\nDisaster\n\nEphemeral Luck\n\nFalse Pretenses\n\nFinality\n\nLady Luck\n\nMoodiness\n\nReimbursement\n\nthe Tempest\n\nTemptation\n\nVelleity\n\nWishful Thinking\n\nYendor\n",
+      "hits": [],
+      "plural_aware_hits": []
+    },
+    {
+      "source": "database/rand_all.txt",
+      "key": "_suspicion_no_conflict_name_",
+      "english": "Doubts\n\nIncredulity\n\nJealousy\n\nMistrust\n\nParanoia\n\nScepticism\n\nSecrets\n\nSuspected Treachery\n\nSuspicion\n\nTrepidation\n",
+      "hits": [],
+      "plural_aware_hits": []
+    },
+    {
+      "source": "database/rand_all.txt",
+      "key": "_time_name_",
+      "english": "Autumn\n\nDawn\n\nDay\n\nDusk\n\nEternal Night\n\nEternal Winter\n\nEternity\n\nEvenfall\n\nMidnight\n\nMidsummer\n\nMidwinter\n\nNoon\n\nw:5\nSpring\n\nw:5\nSpringtime\n\nw:5\nSummer\n\nw:5\nSummertime\n\nTime Moved Backwards\n\nTomorrow\n\nTwilight\n\nWinter\n\nYesterday\n\nthe Distant Future\n\nthe Equinox\n\nthe Evening\n\nthe Everdark\n\nthe Harvest\n\nthe Morning\n\nthe Past\n\nthe Present\n\nthe Solstice\n",
+      "hits": [],
+      "plural_aware_hits": []
+    },
+    {
+      "source": "database/rand_all.txt",
+      "key": "_sky_colour_name_",
+      "english": "Black\n\nBlue\n\nGrey\n\nIndigo\n\nOrange\n\nPurple\n\nRed\n",
+      "hits": [],
+      "plural_aware_hits": []
+    },
+    {
+      "source": "database/rand_all.txt",
+      "key": "_virtue_name_",
+      "english": "Benevolence\n\nCharity\n\nCompassion\n\nDevotion\n\nDiscretion\n\nGenerosity\n\nGrace\n\nHonesty\n\nHospitality\n\nKindness\n\nLargesse\n\nModesty\n\nPatience\n\nTemperance\n\nThoughtfulness\n\nTruth\n\nUnderstanding\n\nVirtue\n\nWariness\n\nWisdom\n\n",
+      "hits": [],
+      "plural_aware_hits": []
+    },
+    {
+      "source": "database/rand_all.txt",
+      "key": "_vice_name_",
+      "english": "Gluttony\n\nGreed\n\nLust\n\nPride\n\nSloth\n\nVanity\n\nAmorality\n\nCowardice\n\nDishonesty\n\nDishonour\n\nEquivocation\n\nFoolhardiness\n\nImmorality\n\nImpatience\n\nLies\n\nMisconduct\n\nMoral Flaws\n\nPast Mistakes\n\nRecklessness\n\nSin\n\nSpite\n\nTergiversation\n\nUntruth\n\nVice\n\nYouthful Indiscretion\n\nthe Original Sin\n\n",
+      "hits": [],
+      "plural_aware_hits": []
+    },
+    {
+      "source": "database/rand_all.txt",
+      "key": "_destiny_name_",
+      "english": "Causality\n\nDestiny\n\nDoom\n\nFate\n\nKarma\n\nKismet\n\nWyrd\n\n",
+      "hits": [],
+      "plural_aware_hits": []
+    },
+    {
+      "source": "database/rand_all.txt",
+      "key": "_number_or_qualifier_",
+      "english": "the Three\n\nthe Four\n\nthe Five\n\nthe Six\n\nthe Seven\n\nthe Eight\n\nthe Nine\n\nthe Ten\n\nthe Eleven\n\nw:5\nthe Twelve\n\nw:5\nthe Dozen\n\nthe Thirteen\n\nw:5\nthe Twenty\n\nw:1\nthe Twenty-Seven\n\nthe Fifty\n\nw:5\nthe Sixty-Six\n\nw:5\nthe Seventy-Seven\n\nw:5\nthe Ninety-Nine\n\nw:5\na Hundred\n\nw:5\nthe Hundredfold\n\na Thousand\n\na Million\n\na Billion\n\nthe\n\nthe Assorted\n\nthe Countless\n\nthe Manifold\n\nthe Many\n\nthe Several\n\nthe Aged\n\nthe Ageless\n\nthe Ancient\n\nthe Battered\n\nthe Bouncing\n\nthe Bruised\n\nthe Crushed\n\nthe Curious\n\nthe Disturbing\n\nthe Endless\n\nthe Exiled\n\nthe Final\n\nthe First\n\nthe Foremost\n\nthe Forgotten\n\nthe Forsaken\n\nthe Hidden\n\nthe Illusory\n\nthe Immovable\n\nthe Inquisitive\n\nthe Insatiable\n\nthe Invisible\n\nthe Jolly\n\nthe Last\n\nthe Lonely\n\nthe Lost\n\nthe Lumpy\n\nthe Modern\n\nthe Neverending\n\nthe Peculiar\n\nthe Postmodern\n\nthe Pure\n\nthe Secret\n\nthe Sneaky\n\nthe Special\n\nthe Thirsty\n\nthe Thoughtful\n\nthe Tired\n\nthe Unstoppable\n\nthe Vanishing\n\nthe Wary\n\nthe Well-Known\n\n",
+      "hits": [],
+      "plural_aware_hits": []
+    },
+    {
+      "source": "database/rand_all.txt",
+      "key": "_thing_names_",
+      "english": "Allies\n\nArtisans\n\nArtists\n\nBeasts\n\nBeds\n\nBeggars\n\nBlessings\n\nBones\n\nBounties\n\nBrambles\n\nw:5\nCities\n\nCoins\n\nContinents\n\nCurses\n\nDances\n\nDeaths\n\nDefenders\n\nDomains\n\nDemons\n\nDreams\n\nEars\n\nEmperors\n\nEyes\n\nFriends\n\nFriars\n\nGeomancers\n\nGhosts\n\nGods\n\nHeavens\n\nHells\n\nHosts\n\nInterlopers\n\nInvaders\n\nKnaves\n\nw:25\nKnives\n\nLeylines\n\nLies\n\nLives\n\nLoafs\n\nLovers\n\nMice\n\nMoons\n\nMouths\n\nMystics\n\nw:5\nNightcaps\n\nNightingales\n\nNightmares\n\nNights\n\nOlives\n\nOrbs\n\nPeople\n\nPersimmons\n\nPlaces\n\nPlanets\n\nPortals\n\nPriests\n\nPrinces\n\nProphets\n\nQueens\n\nQuests\n\nRealms\n\nRunes\n\nScars\n\nSeas\n\nSeers\n\nServitors\n\nShips\n\nShrikes\n\nSongs\n\nSouls\n\nSpines\n\nSpirits\n\nw:5\nSpreadsheets\n\nStars\n\nStories\n\nSuns\n\nTables\n\nTales\n\nTeeth\n\nThickets\n\nw:5\nThings\n\nw:5\nTowns\n\nTusks\n\nUltimatums\n\nUnderlurkers\n\nw:5\nVillages\n\nViolins\n\nVisionaries\n\nVisions\n\nWars\n\nWishes\n\nWonders\n\nXalams\n\nXenops\n\nXeniums\n\nw:5\nXenophobes\n\nYaks\n\nYouths\n\nZiggurats\n",
+      "hits": [],
+      "plural_aware_hits": [
+        {
+          "Term": "ghost",
+          "Translation": "鬼魂",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Hell",
+          "Translation": "地狱",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "portal",
+          "Translation": "传送门",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Ziggurat",
+          "Translation": "神塔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 一致性建议】与原表 figurine of a ziggurat（神塔小雕像）统一；它是特殊挑战区域，不泛称金字塔。 来源：dat/descript/branches.txt。"
+        },
+        {
+          "Term": "yak",
+          "Translation": "牦牛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Spirit",
+          "Translation": "灵魂护盾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_all.txt",
+      "key": "_verbing_",
+      "english": "w:5\nAgeing\n\nw:5\nBaking\n\nBedazzling\n\nBedighting\n\nBespelling\n\nBlushing\n\nw:5\nBreathing\n\nBrewing\n\nBuilding\n\nBurning\n\nw:5\nBursting\n\nChanging\n\nCharming\n\nChewing\n\nConjuring\n\nCrafting\n\nCursing\n\nDancing\n\nDestroying\n\nDevouring\n\nDisbelieving\n\nw:5\nDripping\n\nEnchanting\n\nEnfolding\n\nFeeding\n\nFlying\n\nForging\n\nFortifying\n\nFreezing\n\nGazing\n\nw:5\nGlimmering\n\nw:5\nGlowing\n\nGnashing\n\nGrinning\n\nGrowing\n\nHammering\n\nHealing\n\nHolding\n\nHowling\n\nw:5\nHugging\n\nHungering\n\nHurling\n\nHurting\n\nHurtling\n\nImbibing\n\nInviting\n\nJumping\n\nKissing\n\nKeeping\n\nLeaping\n\nLoving\n\nLusting\n\nw:1\nMalding\n\nMauling\n\nMashing\n\nMuttering\n\nNurturing\n\nProtecting\n\nRescuing\n\nRiding\n\nScorching\n\nScreaming\n\nSharing\n\nSheltering\n\nShifting\n\nShimmering\n\nShouting\n\nShrinking\n\nSinging\n\nSmoking\n\nStopping\n\nSummoning\n\nSupporting\n\nTeaching\n\nTelling\n\nThieving\n\nThreshing\n\nTransmuting\n\nTwisting\n\nUplifting\n\nUsurping\n\nWinnowing\n\nWitching\n\nWizarding\n\nWrithing\n\nw:5\nBashing\n\nw:5\nSlashing\n\nw:5\nPiercing\n",
+      "hits": [
+        {
+          "Term": "screaming",
+          "Translation": "尖叫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：尖叫。"
+        }
+      ],
+      "plural_aware_hits": [
+        {
+          "Term": "screaming",
+          "Translation": "尖叫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：尖叫。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_all.txt",
+      "key": "_adjective_",
+      "english": "Blue\n\nGreen\n\nRed\n\nw:5\nAmorous\n\nAntique\n\nArcadian\n\nw:5\nAvant Garde\n\nBaleful\n\nBarnacled\n\nBeastly\n\nBedazzled\n\nBellicose\n\nBeloved\n\nBequeathed\n\nBespelled\n\nBright\n\nBurning\n\nBursted\n\nw:5\nBurnt\n\nCarved\n\nCaustic\n\nClean\n\nCleverly Designed\n\nCharmed\n\nw:5\nCharred\n\nContumacious\n\nDamp\n\nDecaying\n\nDeeply Unsettling\n\nDelicate\n\nDelightful\n\nDemonic\n\nDivine\n\nDoomed\n\nDowdy\n\nDull\n\nDurable\n\nEnormous\n\nEthereal\n\nExceptional\n\nExtremely Toothy\n\nEye-covered\n\nFabulous\n\nFae\n\nFeral\n\nFerocious\n\nFestooned\n\nFiligreed\n\nFloral\n\nFreezing\n\nFresh\n\nw:5\nFuturistic\n\nFuzzy\n\nGhostly\n\nGlamorous\n\nGolden\n\nGrand\n\nGrim\n\nHairy\n\nHaunted\n\nHistrionic\n\nImpassible\n\nImpish\n\nIndestructible\n\nIntense\n\nIrksome\n\nJocular\n\nLachrymose\n\nLiving\n\nMajestic\n\nMeager\n\nw:5\nModern\n\nMordant\n\nNarrow\n\nNice\n\nNoxious\n\nOily\n\nOrnamental\n\nPainted\n\nParsimonious\n\nPowerful\n\nPuckish\n\nQuiescent\n\nQuick\n\nReasonable\n\nResonant\n\nRotten\n\nSandy\n\nScuffed\n\nSharp\n\nShrieking\n\nw:5\nSilly\n\nSlimy\n\nSolemn\n\nSoft\n\nSqueaky\n\nStained\n\nSufficient\n\nTentacled\n\nTerrible\n\nToothy\n\nTortured\n\nTransparent\n\nUbiquitous\n\nUnbearable\n\nVerdant\n\nViny\n\nVoracious\n\nWeak\n\nWicked\n\nWonderful\n\nZealous\n",
+      "hits": [
+        {
+          "Term": "weak",
+          "Translation": "虚弱",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：虚弱。"
+        }
+      ],
+      "plural_aware_hits": [
+        {
+          "Term": "weak",
+          "Translation": "虚弱",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：虚弱。"
+        }
+      ]
+    },
+    {
+      "source": "database/rand_all.txt",
+      "key": "_fruit_name_",
+      "english": "Orange\n\nBanana\n\nBanana Bread\n\nPear\n\nApple\n\nApricot\n\nTomato\n\nPeach\n\nPlum\n\nRambutan\n\nLychee\n\nMango\n\nWatermelon\n\nRockmelon\n\nStrawberry\n\nCoconut\n\nBreadfruit\n\nEggfruit\n\nDragonfruit\n\nDurian\n\nJackfruit\n\nLongan\n\nTamarind\n\nGuava\n\nMangosteen\n\nSoursop\n\nTangerine\n\nCherry\n\nGrape\n\nSultana\n\nFig\n\nDate\n\nLemon\n\nLime\n\nMedlar\n",
+      "hits": [],
+      "plural_aware_hits": []
+    }
+  ]
+}

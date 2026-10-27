@@ -86,6 +86,7 @@ struct Note
     void save(writer& outf) const;
     void load(reader& inf);
     string describe(bool when = true, bool where = true, bool what = true) const;
+    string display_describe(bool when = true, bool where = true, bool what = true) const;
     bool hidden() const;
     void check_milestone() const;
 
@@ -98,6 +99,15 @@ struct Note
     string desc;
     string screen;
 };
+
+// Canonical English plus typed snapshots for optional localized display.
+Note make_starting_note(const string &name, species_type species, job_type job);
+Note make_xp_level_note(int level, int hp, int maxhp, int mp, int maxmp);
+Note make_version_note(const string &before, const string &after);
+Note make_feature_note(const coord_def &where);
+Note make_identified_item_note(const item_def &item, const string &description);
+Note make_obtained_item_note(const item_def &item, int time_left);
+Note make_location_note(const string &original, const string &kind, const string &name);
 
 extern vector<Note> note_list;
 void activate_notes(bool active);

@@ -5,6 +5,8 @@
 
 #pragma once
 
+struct ui_arg;
+
 #include <vector>
 
 #include "player.h"
@@ -101,7 +103,7 @@ string skill_title_by_rank(
     int dex = you.base_stats[STAT_DEX], int str = you.base_stats[STAT_STR],
     int intel = you.base_stats[STAT_INT],
     god_type god = you.religion,
-    int piety = you.raw_piety, bool conducts = true);
+    int piety = you.raw_piety, bool conducts = true, ui_arg* display = nullptr);
 
 unsigned get_skill_rank(unsigned skill_lev);
 
@@ -132,7 +134,7 @@ vector<skill_type> get_crosstrain_skills(skill_type sk);
 int get_crosstrain_points(skill_type sk);
 
 void skill_menu(int flag = 0, int exp = 0);
-void dump_skills(string &text);
+void dump_skills(string &text, bool display = false);
 int skill_bump(skill_type skill, int scale = 1, bool allow_random = true);
 void fixup_skills();
 

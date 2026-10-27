@@ -1,0 +1,1606 @@
+{
+  "baseline": "0.34.1",
+  "entries": [
+    {
+      "context": "help.interface",
+      "english": "<h>Dungeon Crawl Help\n\nPress one of the following keys to\nobtain more information on a certain\naspect of Dungeon Crawl.\n<w>?</w>: List of commands\n<w>^</w>: Quickstart Guide",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<h>Dungeon Crawl 帮助\n\n按下列按键，查看游戏各方面的帮助。\n\n<w>?</w>: 命令列表\n<w>^</w>: 快速入门",
+      "english_sha256": "45536bf0719939787c573126e5268c1a776dca89e5e7e306133129c39093f40f"
+    },
+    {
+      "context": "help.interface",
+      "english": "<darkgrey>:: Browse character notes</darkgrey>\n<darkgrey>#: Browse character dump</darkgrey>",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<darkgrey>:: 查看角色笔记</darkgrey>\n<darkgrey>#: 查看角色转储</darkgrey>",
+      "english_sha256": "7a9c3c9640e7d144501ee0c1370bb35d7acfddf7385b562239cd9af0b5035a30"
+    },
+    {
+      "context": "help.interface",
+      "english": "<w>:</w>: Browse character notes\n<w>#</w>: Browse character dump",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<w>:</w>: 查看角色笔记\n<w>#</w>: 查看角色转储",
+      "english_sha256": "849652a3fe0d5cb1d9b1d14a31eaf7dd5135efdd50051be014d87927e7bf70ab"
+    },
+    {
+      "context": "help.interface",
+      "english": "<w>~</w>: Macros help\n<w>&</w>: Options help\n<w>%</w>: Table of aptitudes\n<w>/</w>: Lookup description\n<w>Q</w>: FAQ\n<w>V</w>: Version information\n<w>!</w>: Display diagnostics\n<w>Home</w>: This screen\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<w>~</w>: 宏帮助\n<w>&</w>: 配置选项帮助\n<w>%</w>: 技能资质表\n<w>/</w>: 查询说明\n<w>Q</w>: 常见问题\n<w>V</w>: 版本信息\n<w>!</w>: 显示诊断信息\n<w>Home</w>: 返回本页\n",
+      "english_sha256": "38313b99a49fa7bc50c4443db1cd394fab0d7a560253f68f042cae18333e138c"
+    },
+    {
+      "context": "help.interface",
+      "english": "<h>Manual Contents\n\n<w>*</w>       Table of contents\n<w>A</w>.      Overview\n<w>B</w>.      Starting Screen\n<w>C</w>.      Attributes and Stats\n<w>D</w>.      Exploring the Dungeon\n<w>E</w>.      Experience and Skills\n<w>F</w>.      Monsters\n<w>G</w>.      Items\n<w>H</w>.      Spellcasting\n<w>I</w>.      Targeting\n<w>J</w>.      Religion\n<w>K</w>.      Mutations\n<w>L</w>.      Licence, Contact, History\n<w>M</w>.      Macros, Options, Performance\n<w>N</w>.      Philosophy\n<w>1</w>.      List of Character Species\n<w>2</w>.      List of Character Backgrounds\n<w>3</w>.      List of Skills\n<w>4</w>.      List of Keys and Commands\n<w>5</w>.      Inscriptions\n<w>6</w>.      Dungeon sprint modes\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<h>主手册目录\n\n<w>*</w>       目录\n<w>A</w>.      概述\n<w>B</w>.      开始界面\n<w>C</w>.      属性与状态数值\n<w>D</w>.      探索地牢\n<w>E</w>.      经验与技能\n<w>F</w>.      怪物\n<w>G</w>.      物品\n<w>H</w>.      施法\n<w>I</w>.      选择目标\n<w>J</w>.      宗教\n<w>K</w>.      变异\n<w>L</w>.      许可、联系与历史\n<w>M</w>.      宏、配置与性能\n<w>N</w>.      设计理念\n<w>1</w>.      种族列表\n<w>2</w>.      背景列表\n<w>3</w>.      技能列表\n<w>4</w>.      按键与命令列表\n<w>5</w>.      题词\n<w>6</w>.      地牢冲刺模式\n",
+      "english_sha256": "ccd18081a8f00ab83676f6fe53b3f55c7e22f83da34a67ad20fd0b36ca0ca10b"
+    },
+    {
+      "context": "help.interface",
+      "english": "<h>Movement:\nTo move in a direction or to attack, \nuse the numpad (try Numlock off and \non) or vi keys:\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<h>移动：\n使用小键盘或 vi 按键移动或攻击。\n小键盘可尝试开启或关闭 Numlock。\n",
+      "english_sha256": "648fbc5ad6573e37ef6d98c4056fd2057b00e5d8d7664e36f071fb8c041c4ebf"
+    },
+    {
+      "context": "help.interface",
+      "english": "<h>Rest:\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<h>休息：\n",
+      "english_sha256": "94de323c7a18cd5793aee3b258cd3dc65e1f3b125a1ac22d3172c59b5ac0e2b8"
+    },
+    {
+      "context": "help.interface",
+      "english": "wait a turn (also <w>s</w>, <w>Del</w>)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "等待一回合（也可用 <w>s</w>、<w>Del</w>）",
+      "english_sha256": "a6c56894ad566f07dedaa990481b2f594058d3249a487ec138643a4ad063910f"
+    },
+    {
+      "context": "help.interface",
+      "english": "rest and long wait; stops when",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "休息并等待，停止条件见下方",
+      "english_sha256": "be91701575f612c12ffcb6f31fe3ec35f2a3fc2b54b27cbb509d6fbb158e0de4"
+    },
+    {
+      "context": "help.interface",
+      "english": "    Health or Magic become full or\n    something is detected. If Health\n    and Magic are already full, stops\n    when 100 turns over (<w>numpad-5</w>)\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "    生命或魔力回满，或发现情况时停止。\n    若生命和魔力均已满，则等待 100 回合\n    后停止。（也可用 <w>numpad-5</w>。）\n",
+      "english_sha256": "77d29e0bba7e033fb50b578612d83ec09bff63d06354049bfafaaa315bb119f3"
+    },
+    {
+      "context": "help.interface",
+      "english": "<h>Extended Movement:\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<h>长距离移动：\n",
+      "english_sha256": "3822f7417a187578ea1144b870cf35e9de35341fa894eca00f7a3ceba59a932c"
+    },
+    {
+      "context": "help.interface",
+      "english": "auto-explore",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "自动探索",
+      "english_sha256": "eebac4b822c87646a61d6c3c3d85593765349b593f3266a7b104fac1339e74f3"
+    },
+    {
+      "context": "help.interface",
+      "english": "interlevel travel",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "跨层旅行",
+      "english_sha256": "07bf58e35d55f671fdcd4975f3e38f439fdfadab2915d34a072cad1345cfec3a"
+    },
+    {
+      "context": "help.interface",
+      "english": "Find items",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "查找物品",
+      "english_sha256": "f9ef987ff6467a0560bc9b54e86bd4900ac72f15b7c11a374946908172bf1e0e"
+    },
+    {
+      "context": "help.interface",
+      "english": "set Waypoint",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "设置导航点",
+      "english_sha256": "8710ac8185d36dabe87dcfa06876762ef47275138a7029dbb5a178c7d0c2e378"
+    },
+    {
+      "context": "help.interface",
+      "english": "<w>/ Dir.</w>, <w>Shift-Dir.</w>: long walk\n<w>* Dir.</w>, <w>Ctrl-Dir.</w> : attack without move \n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<w>/ Dir.</w>、<w>Shift-Dir.</w>: 持续前进\n<w>* Dir.</w>、<w>Ctrl-Dir.</w> : 原地攻击\n",
+      "english_sha256": "1e748ae219df75fa490364421b03f383c4e8c5bf5d90f6988b50edd4071a2377"
+    },
+    {
+      "context": "help.interface",
+      "english": "<h>Autofight:\n<w>Tab</w>          : attack nearest monster,\n               moving if necessary\n<w>Shift-Tab</w>, <w>p</w> : trigger quivered action;\n               if targeted, aims at\n               nearest monster\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<h>自动战斗：\n<w>Tab</w>          : 攻击最近的怪物，\n               必要时先向其移动\n<w>Shift-Tab</w>、<w>p</w> : 执行备选动作；\n               需要目标时，瞄准\n               最近的怪物\n",
+      "english_sha256": "b034e205d5c6ce2eccd8598518a41633a06b1ff863ae41e105a0f7ef25674ddd"
+    },
+    {
+      "context": "help.interface",
+      "english": "<h>Item types (and common commands)\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<h>物品类型（及常用命令）\n",
+      "english_sha256": "36451fb9aa73437d0c663997d7e609a5d5ea2509dea6f612570cc770fabc186f"
+    },
+    {
+      "context": "help.interface",
+      "english": "<cyan>)</cyan> : hand weapons (<w>%</w>ield)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<cyan>)</cyan> : 武器（<w>%</w> 持用）",
+      "english_sha256": "0fccd1f4ac87dd34ec4fb00f3ee4aa1beec33646d6683fb36863e3078b27ae39"
+    },
+    {
+      "context": "help.interface",
+      "english": "<brown>(</brown> : missiles (<w>%</w>uiver, <w>%</w>ire, <w>%</w>/<w>%</w> cycle)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<brown>(</brown> : 弹药（<w>%</w> 备选、<w>%</w> 发射，\n    <w>%</w>/<w>%</w> 切换）",
+      "english_sha256": "4778f50c363b1b7429f860c33c053174fa7e95f5fdfb5beab604e7fffed3bf44"
+    },
+    {
+      "context": "help.interface",
+      "english": "<cyan>[</cyan> : armour (<w>%</w>ear and <w>%</w>ake off)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<cyan>[</cyan> : 护甲（<w>%</w> 穿上、<w>%</w> 脱下）",
+      "english_sha256": "3d94599aa3a1099ff7e4ad14a22c6b3bcbefb96c3d385bfa36607f7fc768f6c8"
+    },
+    {
+      "context": "help.interface",
+      "english": "<w>?</w> : scrolls (<w>%</w>ead)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<w>?</w> : 卷轴（<w>%</w> 阅读）",
+      "english_sha256": "0835c1990e69aedfc375710dceee86cdf3c117c48ff0382b3fe2ee6395edf068"
+    },
+    {
+      "context": "help.interface",
+      "english": "<magenta>!</magenta> : potions (<w>%</w>uaff)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<magenta>!</magenta> : 药水（<w>%</w> 饮用）",
+      "english_sha256": "31f8eb6bad559bfc09a4b9eda1d178d4154b058df286c3a3f16b98fd2f6137fd"
+    },
+    {
+      "context": "help.interface",
+      "english": "<blue>=</blue> : rings (<w>%</w>ut on and <w>%</w>emove)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<blue>=</blue> : 戒指（<w>%</w> 戴上、<w>%</w> 摘下）",
+      "english_sha256": "1246ffee4cfde0e3331fe4d61e8b893ff2b764614062da12d6fa768ff6a0fe4e"
+    },
+    {
+      "context": "help.interface",
+      "english": "<red>\"</red> : amulets (<w>%</w>ut on and <w>%</w>emove)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<red>\"</red> : 护身符（<w>%</w> 戴上、<w>%</w> 摘下）",
+      "english_sha256": "750ac3edcd59cae963ff9730ed2eab4a104891df8088252c9accda9bbd4c229b"
+    },
+    {
+      "context": "help.interface",
+      "english": "<lightred>percent</lightred> : talismans (e<w>%</w>oke)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<lightred>percent</lightred> : 变形护符（<w>%</w> 发动）",
+      "english_sha256": "28a8b6df6650aa6af15577c0dede0d216e123d279c7cffdfda67d23d9e87b608"
+    },
+    {
+      "context": "help.interface",
+      "english": "<lightgrey>/</lightgrey> : wands (e<w>%</w>oke)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<lightgrey>/</lightgrey> : 魔杖（<w>%</w> 发动）",
+      "english_sha256": "adf1ed8d88fa6e848f99758b3a8aa6ac64285cd7c7a553f66ef2d6c3da2a31e6"
+    },
+    {
+      "context": "help.interface",
+      "english": "</lightcyan> : books (<w>%</w>emorise, <w>%</w>ap, <w>%</w>ap,\n    pick up to add to library)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "</lightcyan> : 法术书（<w>%</w> 记忆、<w>%</w> 或 <w>%</w> 施法，\n    拾取即可将法术加入法术库）",
+      "english_sha256": "fb861cbc662b066c5e14e8d94834ac4557b36b7d5d2005ac9c62614345e84ed8"
+    },
+    {
+      "context": "help.interface",
+      "english": "<brown>|</brown> : staves (<w>%</w>ield)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<brown>|</brown> : 棍杖（<w>%</w> 持用）",
+      "english_sha256": "4cd10d9a57baeb5db4df9689b513e8fc04840b847e9f2d752cb86848381ba2ed"
+    },
+    {
+      "context": "help.interface",
+      "english": "<lightgreen>}</lightgreen> : miscellaneous items (e<w>%</w>oke)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<lightgreen>}</lightgreen> : 杂项物品（<w>%</w> 发动）",
+      "english_sha256": "1760932b5b28873377ea809aeea43e7551b877c4022ef93ce9dbae7165f25539"
+    },
+    {
+      "context": "help.interface",
+      "english": "<yellow>$</yellow> : gold (<w>%</w> counts gold)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<yellow>$</yellow> : 金币（<w>%</w> 查看数量）",
+      "english_sha256": "e7d03f32a3520ca1034064b5176aba9cfed8113bca3fe8c66f0874b18af84ef0"
+    },
+    {
+      "context": "help.interface",
+      "english": "<lightmagenta>0</lightmagenta> : the Orb of Zot\n    Carry it to the surface and win!\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<lightmagenta>0</lightmagenta> : 佐特宝珠\n    把它带回地表即可获胜！\n",
+      "english_sha256": "d984d549179ec51f05027179667a82f625c0d60b6b3cb1322ee3fef0c8e1f367"
+    },
+    {
+      "context": "help.interface",
+      "english": "<h>Other Gameplay Actions:\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<h>其他游戏动作：\n",
+      "english_sha256": "e5f05c9a0b070d0cd7196370439dfd42cdd6ecf0bd7088bf0b5782d42b5d84b7"
+    },
+    {
+      "context": "help.interface",
+      "english": "use special Ability (<w>%!</w> for help)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "使用特殊能力（<w>%!</w> 查看帮助）",
+      "english_sha256": "ea1bae1a514aba302ef5f95eba0c29bf2b1969d488039a5dc887ccc40a968648"
+    },
+    {
+      "context": "help.interface",
+      "english": "cast spell, abort without targets",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "施法；没有目标时取消",
+      "english_sha256": "4c2499ffbd8fc81a5ee496aa2dd337ca49c153e485bdbedb9b458d42dd73b73b"
+    },
+    {
+      "context": "help.interface",
+      "english": "cast spell, no matter what",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "强制施法",
+      "english_sha256": "4563196bccd4341afc4d27ebabd1b8812787b6a604a81acecf217039f74d4290"
+    },
+    {
+      "context": "help.interface",
+      "english": "list all memorised spells",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "列出已记忆的法术",
+      "english_sha256": "2ee70073fce7e3225f135fb39af99c18262118d7c8295b1bf18826446917e737"
+    },
+    {
+      "context": "help.interface",
+      "english": "Memorise a spell from your library",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "从法术库中记忆法术",
+      "english_sha256": "d611b62cdbc4866b7e3df907de6eb306d4317dd2548a425fdb63896d83a1cd88"
+    },
+    {
+      "context": "help.interface",
+      "english": "tell allies (<w>%t</w> to shout)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "指挥盟友（<w>%t</w> 喊叫）",
+      "english_sha256": "2a8a525e9be6955163e59b6d98735857260263728c61822c7306e27bc0b89904"
+    },
+    {
+      "context": "help.interface",
+      "english": "re-do previous command",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "再次执行上一条命令",
+      "english_sha256": "adc9b344ba22a206f3a7b679e68e55da379634b2293a474f130f44b15fa7431a"
+    },
+    {
+      "context": "help.interface",
+      "english": "repeat next command # of times",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "指定下一条命令的重复次数",
+      "english_sha256": "bbba5e6406372d40520085d4d05bab791aa3e0b476f58208582e20aee43f8f8b"
+    },
+    {
+      "context": "help.interface",
+      "english": "<h>Non-Gameplay Commands / Info\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<h>非游戏动作／信息\n",
+      "english_sha256": "a4637b234319a61bd5deaa1ceb8d7294db061ea498170d3ce5ebf8dfd410fdc9"
+    },
+    {
+      "context": "help.interface",
+      "english": "game menu",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "游戏菜单",
+      "english_sha256": "a9ccf0a24ae7af2b4d7ea1d857e536c7de244c9aa732dfa8bd3ec7fe4ed56c28"
+    },
+    {
+      "context": "help.interface",
+      "english": "show Previous messages",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "查看先前消息",
+      "english_sha256": "0a261d1153bd7b1a3a278a9e1fb92453beffa367cf9dfbe5c92e098725234e07"
+    },
+    {
+      "context": "help.interface",
+      "english": "Redraw screen",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "重绘画面",
+      "english_sha256": "bc94482787bcd514c7b2aa364951c6ff63b8f052bb94ee89ee23d36ddaafc8e2"
+    },
+    {
+      "context": "help.interface",
+      "english": "Clear main and level maps",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "清空主地图和楼层地图",
+      "english_sha256": "97d564a3f8057eb93705f25ee41f76fc6ff67944b972aad8a914b296963db705"
+    },
+    {
+      "context": "help.interface",
+      "english": "quick add macro",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "快速添加宏",
+      "english_sha256": "c0a753e35c50ee4c4cae280a940ac7f3c37157d809d0c848b6eddcb89b10a1a4"
+    },
+    {
+      "context": "help.interface",
+      "english": "edit macros",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "编辑宏",
+      "english_sha256": "79625b7dac5370823285927914ed2b7f293fada5a1893cf004fcbdf513b62ce1"
+    },
+    {
+      "context": "help.interface",
+      "english": "annotate the dungeon level",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "为当前楼层添加注释",
+      "english_sha256": "6aec2f551b9423a64f2e15d8393785b2cc1768ca0c9452b11a19a58b4db022e1"
+    },
+    {
+      "context": "help.interface",
+      "english": "dump character to file",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "将角色信息转储到文件",
+      "english_sha256": "e2303c1a555d7b802eda0644c92217927a0b5f60fd9ef870e7ff4d5c78465d89"
+    },
+    {
+      "context": "help.interface",
+      "english": "add note (use <w>%:</w> to read notes)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "添加笔记（<w>%:</w> 查看笔记）",
+      "english_sha256": "6320f5dede559b2ad45ddfcb5eed53a7ce17c5e1bfa0550f153a550b54221461"
+    },
+    {
+      "context": "help.interface",
+      "english": "reassign inventory/spell letters",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "重新分配物品／法术字母",
+      "english_sha256": "2df6651f083ea7cfc934819fd2f001ac4c6cb47e2bb5ea0f7a107702e7ed5b7c"
+    },
+    {
+      "context": "help.interface",
+      "english": "read messages (online play only)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "阅读消息（仅限在线游戏）",
+      "english_sha256": "73f75c77af81f54dab3aa022bd0fd46cd84d0c5d326c7502b08b432e9c6db7e0"
+    },
+    {
+      "context": "help.interface",
+      "english": "<h>Game Saving and Quitting:\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<h>保存与退出：\n",
+      "english_sha256": "9c5d47244bdaac549c603891730e8edb2a89260e92f324e50f4e277d0c557e68"
+    },
+    {
+      "context": "help.interface",
+      "english": "Save game and exit",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "保存并退出",
+      "english_sha256": "546504745aa7b68ff2d654853b63e2b763b142b93694f4cbcb3f077157211137"
+    },
+    {
+      "context": "help.interface",
+      "english": "Save and exit without query",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "不经询问，保存并退出",
+      "english_sha256": "ca8604ac4fc32206c1f8c750b93b3603819abaaeba7d6755f5f6b880d63c2669"
+    },
+    {
+      "context": "help.interface",
+      "english": "Abandon the current character",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "放弃当前角色",
+      "english_sha256": "769eb1ac448829ce3bcc758c3924734fc2a999179f04f2ad2fa470dc4d1b994b"
+    },
+    {
+      "context": "help.interface",
+      "english": "         and quit the game\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "         并退出游戏\n",
+      "english_sha256": "c32e07af0bec26c244d5ae9716de6cc2d2277c1a085ffb2d9cb2c00c53536b88"
+    },
+    {
+      "context": "help.interface",
+      "english": "<h>Player Character Information:\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<h>角色信息：\n",
+      "english_sha256": "e98486f838fa82e03042dfd35860fdf15637c97188b4404f9dccecfc21eb027c"
+    },
+    {
+      "context": "help.interface",
+      "english": "display character status",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "显示角色状态",
+      "english_sha256": "9cf0951e76813b7c42bf4809b706800f4a0dfa79b0325b39a2ed6d74630fe8f8"
+    },
+    {
+      "context": "help.interface",
+      "english": "show skill screen",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "查看技能界面",
+      "english_sha256": "41a31b2d0218c4815a9294f0ce2e7d0415a2eb18145eafb37568e18fd8c62a5a"
+    },
+    {
+      "context": "help.interface",
+      "english": "character overview",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "角色概览",
+      "english_sha256": "69e964277aa55d7945eac92e9122b1dab56ddec14feb6bfea4a419a98a85f5b0"
+    },
+    {
+      "context": "help.interface",
+      "english": "show religion screen",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "查看宗教界面",
+      "english_sha256": "aa4d6b41c49252df1e9f4a3572cddea60be76ff88c40b2845c287ba460a53a9c"
+    },
+    {
+      "context": "help.interface",
+      "english": "show Abilities/mutations",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "查看能力／变异",
+      "english_sha256": "84552f697969f341e5cf6cc3726b424939272d1483fe2a33f0ae08f6074f38d1"
+    },
+    {
+      "context": "help.interface",
+      "english": "show item knowledge",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "查看物品鉴定信息",
+      "english_sha256": "722c42e23b8dea4b0a22324e7ba8588ac178e604052e6205686035009ccb8aed"
+    },
+    {
+      "context": "help.interface",
+      "english": "show your spell library",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "查看法术库",
+      "english_sha256": "508e2d409d9675f7c8c25af7d8c81ed3d9e8d1a5ec68b73fab1fa8340b8f5465"
+    },
+    {
+      "context": "help.interface",
+      "english": "show runes collected",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "查看已收集的符文",
+      "english_sha256": "84ad3c658d192cdd4d52c04b0aebb561891dec13780136ac293b313bd851bd5b"
+    },
+    {
+      "context": "help.interface",
+      "english": "display worn armour",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "显示穿戴的护甲",
+      "english_sha256": "42f95b20f3241a8a4bd4058430b8a8feddcdf894b1fe3026ab232cded3205864"
+    },
+    {
+      "context": "help.interface",
+      "english": "display worn jewellery",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "显示佩戴的首饰",
+      "english_sha256": "3eb8ef8c5add234375da0935f30e22f0f4563726f3ae2585cb5ffd1a88d7baa5"
+    },
+    {
+      "context": "help.interface",
+      "english": "display gold in possession",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "显示持有的金币",
+      "english_sha256": "caa4c16ee6d5efd5e53a22ba98c1ad84e7afa88391a1d9b8730b27b0b0b7fcec"
+    },
+    {
+      "context": "help.interface",
+      "english": "display experience info",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "显示经验信息",
+      "english_sha256": "ce73fbf9aeb45879c59273385b546bce120f743ea7b40f0fede80ece2c5949ac"
+    },
+    {
+      "context": "help.interface",
+      "english": "<h>Dungeon Interaction and Information:\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<h>地牢交互与信息：\n",
+      "english_sha256": "1b4c1a65b63e933c7a14eeb0ed4b7bd1c38cf753aac081f2d1cce8fddf2770f8"
+    },
+    {
+      "context": "help.interface",
+      "english": "<w>%</w>/<w>%</w>    : Open/Close door",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<w>%</w>/<w>%</w>    : 开门／关门",
+      "english_sha256": "8cb01516bd4f33af2bf32a6fa8082e37e0468ecce55a83f48cbfeaeb6cf698cf"
+    },
+    {
+      "context": "help.interface",
+      "english": "<w>%</w>/<w>%</w>    : use staircase",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<w>%</w>/<w>%</w>    : 上楼／下楼",
+      "english_sha256": "784616480595277c2c29e4ecb5353a280dd9752993c8784b98e1627215f205f4"
+    },
+    {
+      "context": "help.interface",
+      "english": "examine occupied tile and",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "检查脚下的格子，并可",
+      "english_sha256": "b0d608bae0a6e2fb454f0348f4d5b7464830c314635be00ec28b800c20644c7b"
+    },
+    {
+      "context": "help.interface",
+      "english": "         pickup part of a single stack\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "         从一堆物品中拾取部分数量\n",
+      "english_sha256": "4cbdc88970e35d3d3c1b05050544a9aa7dead1779a79a34e23ef8dc5dec39665"
+    },
+    {
+      "context": "help.interface",
+      "english": "eXamine surroundings/targets",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "查看周围环境／目标",
+      "english_sha256": "45b41e56df43b483ae7226c7aebc2e850ed3892a8b3be9240b63570bc2442e2f"
+    },
+    {
+      "context": "help.interface",
+      "english": "eXamine level map (<w>%?</w> for help)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "查看楼层地图（<w>%?</w> 查看帮助）",
+      "english_sha256": "de3d4ee5e87d3c611ecfecc19845d6ed80414d2abfe6787745975cdcc0cadfb5"
+    },
+    {
+      "context": "help.interface",
+      "english": "list monsters, items, features",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "列出视野内的怪物、物品",
+      "english_sha256": "5d1b6baacbb856a941aea75e6236037a48effaff5b06e7a006b9c1dc5b2b6714"
+    },
+    {
+      "context": "help.interface",
+      "english": "         in view\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "         及地形设施\n",
+      "english_sha256": "0a2ae200bd231ccc75f9740c99d2fd2308f1c25f4227ea72c7068d01fff06fac"
+    },
+    {
+      "context": "help.interface",
+      "english": "toggle view layers",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "切换显示图层",
+      "english_sha256": "c4f6b9ce53dbc8c4007ea908965248f27b2b36f39fb2c288032c1d5c3c8f9da3"
+    },
+    {
+      "context": "help.interface",
+      "english": "show dungeon Overview",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "查看地牢概览",
+      "english_sha256": "0bf422e3fdf1ef7c751a619bfe0c016224706512c93e7f9414a1cd9a74de8f4d"
+    },
+    {
+      "context": "help.interface",
+      "english": "toggle auto-pickup",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "开关自动拾取",
+      "english_sha256": "71566f7d8989db9f3b5a20945b1d438a52a55dd1388e6aad8ab63986c1edfd34"
+    },
+    {
+      "context": "help.interface",
+      "english": "<h>Inventory management:\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<h>背包管理：\n",
+      "english_sha256": "5cbca6a67fe005f448f03ae11bb519f9caf5fb5f3d053664b940d0f72bebdf22"
+    },
+    {
+      "context": "help.interface",
+      "english": "show Inventory list",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "显示背包列表",
+      "english_sha256": "bea022143c61b7500875a97020bc86ed302a3b92d10ce46f3e36938e6dd238b4"
+    },
+    {
+      "context": "help.interface",
+      "english": "pick up items (also <w>g</w>)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "拾取物品（也可用 <w>g</w>）",
+      "english_sha256": "0ae094cd39ac6a4f861c7923a7c87dc7e913da9166b76e8a9187e6f0f00c6301"
+    },
+    {
+      "context": "help.interface",
+      "english": "    (press twice for pick up menu)\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "    （连按两次打开拾取菜单）\n",
+      "english_sha256": "79f126f81b5086060c8e05784e03ed1f4601b322ab8d7eb7f2151a0a80d79fce"
+    },
+    {
+      "context": "help.interface",
+      "english": "Drop an item",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "丢弃物品",
+      "english_sha256": "b58bb4bb876c002a77356c7b4c354d671e7771eaa98b434c1a80ef447d6de614"
+    },
+    {
+      "context": "help.interface",
+      "english": "<w>%#</w>: Drop exact number of items",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<w>%#</w>: 丢弃指定数量的物品",
+      "english_sha256": "85c2d70df97b8ac2d0e552c78756c58ce5a15abdef4a6198e8e640754975ac9a"
+    },
+    {
+      "context": "help.interface",
+      "english": "Drop the last item(s) you picked up",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "丢弃上次拾取的物品",
+      "english_sha256": "4d56016acb398c2b868e5372f9d9f4ae0c79c4855ffbfe103c80f65f0cfb83f9"
+    },
+    {
+      "context": "help.interface",
+      "english": "<h>Item Interaction:\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<h>物品操作：\n",
+      "english_sha256": "9556b054c28235961f2e1a0d2b74e6d25f513f47bf1cfb0b1763275ec28e170e"
+    },
+    {
+      "context": "help.interface",
+      "english": "inscribe item",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "为物品添加题词",
+      "english_sha256": "c75e46f68ae5c4e34207e3229ab446a9c483d1260d1e7be466ac91387e715394"
+    },
+    {
+      "context": "help.interface",
+      "english": "Fire the currently quivered action",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "执行当前备选动作",
+      "english_sha256": "2a9921bcf2de13d439d1cea6e214f9c1f4bcb928ee989dbb5560107c7aaac6dd"
+    },
+    {
+      "context": "help.interface",
+      "english": "select an item and Fire it",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "选择并发射一件物品",
+      "english_sha256": "804cfd2dc1fbe996e7544b468901dbb073e999d964141fd367d5462fee72fce5"
+    },
+    {
+      "context": "help.interface",
+      "english": "select action to be Quivered",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "选择备选动作",
+      "english_sha256": "ac0198790741522cc24696451365b93571775f75fbe03db7763726e58bf19bf0"
+    },
+    {
+      "context": "help.interface",
+      "english": "swap between most recent quiver actions",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "在最近使用的备选动作间切换",
+      "english_sha256": "5817c87726d36c36dd11fc704adae0b9a5d06d4798876c02b5b622a2787f325a"
+    },
+    {
+      "context": "help.interface",
+      "english": "Quaff a potion",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "饮用药水",
+      "english_sha256": "46fb6c697db1fea5c1be3048ac2cdd4adddfad205ff78f008720e2a46a84f9a2"
+    },
+    {
+      "context": "help.interface",
+      "english": "Read a scroll",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "阅读卷轴",
+      "english_sha256": "fe63e1e8017de43178d9a34082f2690876c5e0aae5985a4b57d163116f946293"
+    },
+    {
+      "context": "help.interface",
+      "english": "Wield an item (<w>-</w> for none)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "持用物品（<w>-</w> 表示空手）",
+      "english_sha256": "d58ff9d653825954d93e329f2a8abd2c504949c5bce81a89585c40ffd0a3c14b"
+    },
+    {
+      "context": "help.interface",
+      "english": "wield item a, or switch to b",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "持用 a 槽物品，或切换到 b 槽",
+      "english_sha256": "6c491ced5732d1bad3dc172bdd72285301e1a1c1515136074e8d232a05b22216"
+    },
+    {
+      "context": "help.interface",
+      "english": "    (use <w>%</w> to assign slots)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "    （用 <w>%</w> 分配物品字母）",
+      "english_sha256": "dc55cfa99b99d5fe5883be68f28d852901bc775cdf25b4d18e7c15807664f2de"
+    },
+    {
+      "context": "help.interface",
+      "english": "attack with wielded item",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "用手中物品攻击",
+      "english_sha256": "3d633c10fb536b44431a3f7dc001ec5f9a6d4137e9d6c980e25b696143d98ba9"
+    },
+    {
+      "context": "help.interface",
+      "english": "eVoke wand and miscellaneous item",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "发动魔杖或杂项物品",
+      "english_sha256": "f6c423fe3973d9186795ae3c0b45094b7fd9397948b9a8032012e6c37a8553a5"
+    },
+    {
+      "context": "help.interface",
+      "english": "<w>%</w>/<w>%</w> : Equip or Unequip an item",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<w>%</w>/<w>%</w> : 装备／卸下物品",
+      "english_sha256": "0d6a3c14617b509855b5413a6d6954985e21625f8598813071661d5b9eac40e1"
+    },
+    {
+      "context": "help.interface",
+      "english": "<w>%</w>/<w>%</w> : Wear or Take off armour",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<w>%</w>/<w>%</w> : 穿上／脱下护甲",
+      "english_sha256": "9264160f45e9b074af3499577bfa437e27006c0f9da480c00db82be90976ac89"
+    },
+    {
+      "context": "help.interface",
+      "english": "<w>%</w>/<w>%</w> : Put on or Remove jewellery",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<w>%</w>/<w>%</w> : 戴上／摘下首饰",
+      "english_sha256": "6020ff52eae2588a0272d2a6308d75c02acc00db517c3cfbb731f805e641f4c2"
+    },
+    {
+      "context": "help.interface",
+      "english": "<h>Additional help:\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<h>更多帮助：\n",
+      "english_sha256": "73515f8631cf7865e9734c9a7e5a45072548463bad3d00b940d43be8ecd14c0c"
+    },
+    {
+      "context": "help.interface",
+      "english": "Many commands have context sensitive help, among them <w>%</w>, <w>%</w>, <w>%</w> (or any form of targeting), <w>%</w>, and <w>%</w>.\nYou can read descriptions of your current spells (<w>%</w>), skills (<w>%?</w>) and abilities (<w>%!</w>).",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "许多命令带有对应帮助，例如 <w>%</w>、<w>%</w>、<w>%</w>（或其他选择目标的界面）、<w>%</w> 和 <w>%</w>。\n可查看当前法术（<w>%</w>）、技能（<w>%?</w>）及能力（<w>%!</w>）的说明。",
+      "english_sha256": "373eaaf923357b98f77771602780e9ea50523bb1054a41fd52e3ceb214379c69"
+    },
+    {
+      "context": "help.interface",
+      "english": "<w>Shift-Dir.</w> runs into one direction",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<w>Shift-Dir.</w> 向指定方向持续前进",
+      "english_sha256": "9a5781f212630d4be9a00c5b0e01ae9f3084118d763487552824295b8979c5ca"
+    },
+    {
+      "context": "help.interface",
+      "english": "<w>%</w> or <w>%</w> : ascend/descend the stairs",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<w>%</w> 或 <w>%</w> : 上楼／下楼",
+      "english_sha256": "95f8611e161c7bbbeae7c46e2284d9507318dfd8dd5d432c27187f7707cff290"
+    },
+    {
+      "context": "help.interface",
+      "english": "autoexplore",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "自动探索",
+      "english_sha256": "016c9337b8f93eb95738f3f1254e11c250ece9510dcfeb3c001908df10eca5c6"
+    },
+    {
+      "context": "help.interface",
+      "english": "\n<h>Attacking monsters\nWalking into a monster will attack it\nwith the wielded weapon or barehanded.",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "\n<h>攻击怪物\n朝怪物移动，即会用手中武器\n或徒手攻击它。",
+      "english_sha256": "288b072ef8d6cf9683baeba4fc0833f808561de85335c86d2ecfd01b60e1de46"
+    },
+    {
+      "context": "help.interface",
+      "english": "\n<h>Ranged combat and magic\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "\n<h>远程战斗与魔法\n",
+      "english_sha256": "b36d4917386ec880b38180b1362fc22d7bc81ba6c3099536ae140456bb338d7a"
+    },
+    {
+      "context": "help.interface",
+      "english": "<w>%</w> to throw/fire missiles",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<w>%</w> 投掷／发射弹药",
+      "english_sha256": "d7a862ce60d72eb78c429c12c0a496a7132aef313d44479873ec9b61abae9ccf"
+    },
+    {
+      "context": "help.interface",
+      "english": "<w>%</w>/<w>%</w> to cast spells (<w>%?/%</w> lists spells)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<w>%</w>/<w>%</w> 施法（<w>%?/%</w> 列出法术）",
+      "english_sha256": "a01622c0e12d2b22ba2616768be9e2acec75de55defdffc3790026236e2998c5"
+    },
+    {
+      "context": "help.interface",
+      "english": "Memorise spells and view spell\n    library (get books to add to it)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "记忆法术并查看法术库\n    （获取法术书可扩充法术库）",
+      "english_sha256": "c1d8dd338c92def6ee44d4dac081c3d32f8c3d180d70c0406ae28c355a89dec5"
+    },
+    {
+      "context": "help.interface",
+      "english": "<h>Item types and inventory management\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<h>物品类型与背包管理\n",
+      "english_sha256": "5fabc4804a599bd51af006965b78680defcce6b1d080796604e1515c25cfc476"
+    },
+    {
+      "context": "help.interface",
+      "english": "<console><cyan>)</cyan> : </console>hand weapons (<w>%</w>ield)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<console><cyan>)</cyan> : </console>武器（<w>%</w> 持用）",
+      "english_sha256": "031964980086f4ac6023f40437daadbd081108e2a8d0c457131ebce72654b6a5"
+    },
+    {
+      "context": "help.interface",
+      "english": "<console><brown>(</brown> : </console>missiles (<w>%</w>uiver, <w>%</w>ire, <w>%</w>/<w>%</w> cycle)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<console><brown>(</brown> : </console>弹药（<w>%</w> 备选、<w>%</w> 发射，\n    <w>%</w>/<w>%</w> 切换）",
+      "english_sha256": "89b5e60c34bfa74a2cb9c41b982133ed29d1d06b9a8fcede2d06aa17bbb1a53d"
+    },
+    {
+      "context": "help.interface",
+      "english": "<console><cyan>[</cyan> : </console>armour (<w>%</w>ear and <w>%</w>ake off)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<console><cyan>[</cyan> : </console>护甲（<w>%</w> 穿上、<w>%</w> 脱下）",
+      "english_sha256": "b4e37d0fad3168360cb539cafffcc36ce400876f144df8ae56289a005764b1d8"
+    },
+    {
+      "context": "help.interface",
+      "english": "<console><w>?</w> : </console>scrolls (<w>%</w>ead)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<console><w>?</w> : </console>卷轴（<w>%</w> 阅读）",
+      "english_sha256": "b143aa84475b067d3907175dad0fdaaa6c50dfbe441a633dccb53cbd433a86a7"
+    },
+    {
+      "context": "help.interface",
+      "english": "<console><magenta>!</magenta> : </console>potions (<w>%</w>uaff)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<console><magenta>!</magenta> : </console>药水（<w>%</w> 饮用）",
+      "english_sha256": "eca9b601c17ee5294c513ae1da57cdabb9d3e92daf00a60c46c63ff965539038"
+    },
+    {
+      "context": "help.interface",
+      "english": "<console><blue>=</blue> : </console>rings (<w>%</w>ut on and <w>%</w>emove)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<console><blue>=</blue> : </console>戒指（<w>%</w> 戴上、<w>%</w> 摘下）",
+      "english_sha256": "d259022a022b11273f42167a50c89c4d08e93d85e57e3b8978354f983775d6fe"
+    },
+    {
+      "context": "help.interface",
+      "english": "<console><red>\"</red> : </console>amulets (<w>%</w>ut on and <w>%</w>emove)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<console><red>\"</red> : </console>护身符（<w>%</w> 戴上、<w>%</w> 摘下）",
+      "english_sha256": "3f3fec6408bf4568d850c4caf5ecddcfabcca1030016dc05c7072c78ac7df9ae"
+    },
+    {
+      "context": "help.interface",
+      "english": "<console><lightred>percent</lightred> : </console>talismans (e<w>%</w>oke)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<console><lightred>percent</lightred> : </console>变形护符（<w>%</w> 发动）",
+      "english_sha256": "4ea836e0ee882f1adfc3010269af0c4de31af4d1a001135e32b1fcd635684a13"
+    },
+    {
+      "context": "help.interface",
+      "english": "<console><lightgrey>/</lightgrey> : </console>wands (e<w>%</w>oke)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<console><lightgrey>/</lightgrey> : </console>魔杖（<w>%</w> 发动）",
+      "english_sha256": "a05856b8153113a981a7c9605e4e867d404ff0a9dc226639dbe9b9467e3af903"
+    },
+    {
+      "context": "help.interface",
+      "english": "</lightcyan> : </console>books (<w>%</w>emorise, <w>%</w>ap, <w>%</w>ap,\n    pick up to add to spell library)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "</lightcyan> : </console>法术书（<w>%</w> 记忆、<w>%</w> 或 <w>%</w> 施法，\n    拾取即可将法术加入法术库）",
+      "english_sha256": "9d3fc8aa88af68e8023909ea21a04fe5a9edb1d6a2ccd8a6d6b039d26e91d3da"
+    },
+    {
+      "context": "help.interface",
+      "english": "</brown> : </console>staves (<w>%</w>ield)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "</brown> : </console>棍杖（<w>%</w> 持用）",
+      "english_sha256": "fea590ae2402d122c3a3509ce11ce234cea87b790d34c55108b883983a87e0de"
+    },
+    {
+      "context": "help.interface",
+      "english": "inventory (select item to view)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "背包（选择物品查看详情）",
+      "english_sha256": "2cbe4bcddf2f0e67bdf4f4f0e2d20cc3c5e89c6701395608e2897a73742378d5"
+    },
+    {
+      "context": "help.interface",
+      "english": "pick up item from ground (also <w>g</w>)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "拾取地上物品（也可用 <w>g</w>）",
+      "english_sha256": "ca1eb87bbcd5b8bf3965bc676a70c2f868d6c2be42148da0707a4ac82b0d097d"
+    },
+    {
+      "context": "help.interface",
+      "english": "drop item",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "丢弃物品",
+      "english_sha256": "a5e344fee0cdc2de989bae33a8c6d6f85141477beccc0896d9100e325bfce410"
+    },
+    {
+      "context": "help.interface",
+      "english": "drop the last item(s) you picked up",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "丢弃上次拾取的物品",
+      "english_sha256": "a11b2e3eb9050ee7d9c374cf5b78991a5c909d0a8244cf9ffe83d7fd8f13505a"
+    },
+    {
+      "context": "help.interface",
+      "english": "<h>Additional important commands\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<h>其他重要命令\n",
+      "english_sha256": "4aed7e7e1c10af469467f385fdb2e20391299d832e456c6ef701a934e977df69"
+    },
+    {
+      "context": "help.interface",
+      "english": "Save the game and exit",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "保存并退出游戏",
+      "english_sha256": "6baf39d7abdf96ab2f33a123837aa6c68b8213d11e38ca6fba839f6497da3969"
+    },
+    {
+      "context": "help.interface",
+      "english": "show previous messages",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "查看先前消息",
+      "english_sha256": "32bf2e9f73be5e2175e8373251cfa0802ce2b8a31d4f6c39bd7869a2599c628b"
+    },
+    {
+      "context": "help.interface",
+      "english": "use an ability",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "使用能力",
+      "english_sha256": "64ffc60bc58887a930ce17496463c7dc947269c5faca809bea563de96cb24903"
+    },
+    {
+      "context": "help.interface",
+      "english": "show character overview",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "查看角色概览",
+      "english_sha256": "131bab96b235988c39d4d09c9bdf83b1ae37310dafeea0d22af37737ab759bb5"
+    },
+    {
+      "context": "help.interface",
+      "english": "show religion overview",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "查看宗教概览",
+      "english_sha256": "a7ca63bdb105edbd2cd1572c77752eaaa6e6b564d7cc08383a08c14e695389b0"
+    },
+    {
+      "context": "help.interface",
+      "english": "show map of the whole level",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "查看整个楼层的地图",
+      "english_sha256": "59c20b75924535269cf90e93afcd76c016b3916401b7785f1ed9e74d949f10a2"
+    },
+    {
+      "context": "help.interface",
+      "english": "show dungeon overview",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "查看地牢概览",
+      "english_sha256": "e3eeb13a6ba397d346be23b9d6162377168b9a715e7b707bc69e187a8febd94e"
+    },
+    {
+      "context": "help.interface",
+      "english": "\n<h>Targeting\n<w>Enter</w> or <w>.</w> or <w>Del</w> : confirm target\n<w>+</w> and <w>-</w> : cycle between targets\n<w>f</w> or <w>p</w> : shoot at previous target\n         if still alive and in sight\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "\n<h>选择目标\n<w>Enter</w>、<w>.</w> 或 <w>Del</w> : 确认目标\n<w>+</w> 和 <w>-</w> : 切换目标\n<w>f</w> 或 <w>p</w> : 向上一个目标发射\n         （须仍存活且在视野内）\n",
+      "english_sha256": "0450f593302135549383b8c2ed675d10d23df7fe14aa87dc0bf13f0704dcb8fe"
+    },
+    {
+      "context": "help.interface",
+      "english": "<w>~</w>: Macros help\n<w>&</w>: Options help\n<w>%</w>: Table of aptitudes\n<w>/</w>: Lookup description\n<w>Q</w>: FAQ\n<w>T</w>: Tiles key help\n<w>V</w>: Version information\n<w>!</w>: Display diagnostics\n<w>Home</w>: This screen\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<w>~</w>: 宏帮助\n<w>&</w>: 配置选项帮助\n<w>%</w>: 技能资质表\n<w>/</w>: 查询说明\n<w>Q</w>: 常见问题\n<w>T</w>: Tiles 操作帮助\n<w>V</w>: 版本信息\n<w>!</w>: 显示诊断信息\n<w>Home</w>: 返回本页\n",
+      "english_sha256": "64bc75db87093422ea986efb9a2161fd9f4ade305f3a1ab889ae5f156e65ba75"
+    },
+    {
+      "context": "help.interface",
+      "english": "edit player doll",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "编辑角色外观",
+      "english_sha256": "d20fdefcd64e9115b0b5095e4df31b8ea7e983628bc0100cd20a2ea54706a1f8"
+    },
+    {
+      "context": "help.interface",
+      "english": "mute/unmute sound effects",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "开关音效",
+      "english_sha256": "cd27b9b39e448f7d78f808372e8c48b81c4deeea023fcc1ad4cf93f7ae5d5ef2"
+    },
+    {
+      "context": "help.interface",
+      "english": "<w>%</w>/<w>%</w> : zoom out/in",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<w>%</w>/<w>%</w> : 缩小／放大",
+      "english_sha256": "b2d07a2f10666a5e6315eb7c417ad96acd40164a38dc15c0aa0d4c832c38866b"
+    },
+    {
+      "context": "help.interface",
+      "english": "<w>F12</w> : read messages (online play only)",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<w>F12</w> : 阅读消息（仅限在线游戏）",
+      "english_sha256": "c528468d27f7ce8d6e4def3548e5f2db2a6299586d1364e08d89b5f164ed21ac"
+    },
+    {
+      "context": "help.interface",
+      "english": "<w>~</w>: Macros help\n<w>&</w>: Options help\n<w>%</w>: Table of aptitudes\n<w>/</w>: Lookup description\n<w>Q</w>: FAQ\n<w>T</w>: Tiles key help\n<w>V</w>: Version information\n<w>!</w>: Display diagnostics\n<w>Home</w>: This screen\n\n<h>Android Controls\n\n<w>Back key</w>: Alias for escape\n<w>Volume keys</w>: Zoom dungeon & map\nLong press for right click.\nTouch with two fingers for scrolling.\nToggle keyboard icon controls the\nvirtual keyboard visibility.\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<w>~</w>: 宏帮助\n<w>&</w>: 配置选项帮助\n<w>%</w>: 技能资质表\n<w>/</w>: 查询说明\n<w>Q</w>: 常见问题\n<w>T</w>: Tiles 操作帮助\n<w>V</w>: 版本信息\n<w>!</w>: 显示诊断信息\n<w>Home</w>: 返回本页\n\n<h>Android 操作\n\n<w>Back key</w>: 相当于 Esc\n<w>Volume keys</w>: 缩放地牢与地图\n长按相当于鼠标右键。\n双指触摸可滚动。\n键盘切换图标用于显示或隐藏\n虚拟键盘。\n",
+      "english_sha256": "9dccabbe2314dc962fad2d999e7b1ced996438c0b547813faf6c446363e2cd59"
+    },
+    {
+      "context": "help.interface",
+      "english": "<h>Examine surroundings ('<w>x</w><h>' in main):\n<w>Esc</w> : cancel (also <w>Space</w>, <w>x</w>)\n<w>Ctrl-X</w> : list all things in view\n<w>Dir.</w>: move cursor in that direction\n<w>.</w> : move to cursor (also <w>Enter</w>, <w>Del</w>)\n<w>g</w> : pick up item at cursor\n<w>v</w> : describe monster under cursor\n<w>+</w> : cycle monsters forward (also <w>=</w>)\n<w>-</w> : cycle monsters backward\n<w>^</w> : cycle through traps\n<w>_</w> : cycle through altars\n<w><<</w>/<w>></w> : cycle through up/down stairs\n<w>Tab</w> : cycle through shops and portals\n<w>r</w> : move cursor to you\n<w>e</w> : create/remove travel exclusion\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<h>查看周围（主界面按 '<w>x</w><h>'）：\n<w>Esc</w> : 取消（也可用 <w>Space</w>、<w>x</w>）\n<w>Ctrl-X</w> : 列出视野内所有事物\n<w>Dir.</w>: 向指定方向移动光标\n<w>.</w> : 移动到光标位置（也可用 <w>Enter</w>、<w>Del</w>）\n<w>g</w> : 拾取光标处的物品\n<w>v</w> : 查看光标处怪物的说明\n<w>+</w> : 切换至下一只怪物（也可用 <w>=</w>）\n<w>-</w> : 切换至上一只怪物\n<w>^</w> : 循环查看陷阱\n<w>_</w> : 循环查看祭坛\n<w><<</w>/<w>></w> : 循环查看上楼／下楼楼梯\n<w>Tab</w> : 循环查看商店与传送门\n<w>r</w> : 将光标移回自身\n<w>e</w> : 创建／移除旅行禁区\n",
+      "english_sha256": "99ffc54f8a4bd7b985e903826fcbe3530389ea641b899b22bc601acb60acb11f"
+    },
+    {
+      "context": "help.interface",
+      "english": "<h>Targeting (zap wands, cast spells, etc.):\nMost keys from examine surroundings work.\nSome keys fire at the target. <w>Ctrl-X</w> only\nlists eligible targets. By default,\nrange is respected and beams don't stop.\n<w>Enter</w> : fire (<w>Space</w>, <w>Del</w>, <w>f</w>)\n<w>.</w> : fire, stop at target\n<w>@</w> : fire, stop at target, ignore range\n<w>!</w> : fire, don't stop, ignore range\n<w>p</w> : fire at Previous target (also <w>f</w>)\n<w>:</w> : show/hide beam path\n<w>Shift-Dir.</w> : fire straight-line beam\n             (also <w>/ Dir.</w>)\n\n<h>Firing mode ('<w>f</w><h>' in main):\n<w>Q</w> : choose fire action.\n<w>(</w> : cycle to previous suitable action\n<w>)</w> : cycle to next suitable action.\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<h>选择目标（魔杖、施法等）：\n多数查看周围的按键仍可使用。\n部分按键会向目标发射。<w>Ctrl-X</w>\n只列出有效目标。默认遵守射程，\n且射线不会在目标处停止。\n<w>Enter</w> : 发射（<w>Space</w>、<w>Del</w>、<w>f</w>）\n<w>.</w> : 发射，并在目标处停止\n<w>@</w> : 同上，但忽略射程\n<w>!</w> : 发射，不停止且忽略射程\n<w>p</w> : 向上一个目标发射（也可用 <w>f</w>）\n<w>:</w> : 显示／隐藏射线路径\n<w>Shift-Dir.</w> : 沿指定方向直线发射\n             （也可用 <w>/ Dir.</w>）\n\n<h>发射模式（主界面按 '<w>f</w><h>'）：\n<w>Q</w> : 选择发射动作\n<w>(</w> : 切换至上一个适用动作\n<w>)</w> : 切换至下一个适用动作\n",
+      "english_sha256": "1501a4ab7092b254e092ec2dc807631d8bb990bfba818baa96600a79c9aef42a"
+    },
+    {
+      "context": "help.interface",
+      "english": "Dungeon Crawl Help",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "Dungeon Crawl 帮助",
+      "english_sha256": "a0b7f5106069f2c3b5ebbb2bfad06a031778316eb398beb1e08c776c4e9b61a3"
+    },
+    {
+      "context": "help.interface",
+      "english": "Manual",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "主手册",
+      "english_sha256": "b0b9fe24ffa9629125bdc59b122f80d605ab604eb1b74485c2f2ecfde26576ae"
+    },
+    {
+      "context": "help.interface",
+      "english": "Aptitudes",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "技能资质",
+      "english_sha256": "7ff3fe2e9cb0a79dd7f5be94eb2de32f2399d7b7a13c06c61535d8fac937a07e"
+    },
+    {
+      "context": "help.interface",
+      "english": "Quickstart",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "快速入门",
+      "english_sha256": "d3b2aefa7524f88c9fad4817ff9c53d2ffebfa40ab1f1a747494423c9bd02307"
+    },
+    {
+      "context": "help.interface",
+      "english": "Macros",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "宏",
+      "english_sha256": "866dcd98eca7475c2199ad8a55fbdea2dca67cbdaa65166aa1864b5b452dfd17"
+    },
+    {
+      "context": "help.interface",
+      "english": "Options",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "配置选项",
+      "english_sha256": "d0db8b5e364b6989e4b8f38a2b3846b87d99a51c1592ebf35d21cc66405a8e39"
+    },
+    {
+      "context": "help.interface",
+      "english": "Tiles",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "图形版",
+      "english_sha256": "4da22a362d386464986ac588eba5fd2fc7197f751e2c6aab248827c60201fdbc"
+    },
+    {
+      "context": "help.interface",
+      "english": "Key help",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "按键帮助",
+      "english_sha256": "a159d1b7ca0be71b7994981d6d684acb4b86ae70cc319c15646ff700527dba48"
+    },
+    {
+      "context": "help.interface",
+      "english": "Frequently Asked Questions",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "常见问题",
+      "english_sha256": "a3d458e1bd1eda066018d8db2dd5537c9e742f02f68401457c01553e77f57403"
+    },
+    {
+      "context": "help.interface",
+      "english": "<w>~</w>: Macros help\n<w>&</w>: Options help\n<w>%</w>: Table of aptitudes\n<w>/</w>: Lookup description\n<w>Q</w>: FAQ\n<w>V</w>: Version information\n<w>!</w>: Display diagnostics\n<w>Home</w>: This screen\n\n<h>Android Controls\n\n<w>Back key</w>: Alias for escape\n<w>Volume keys</w>: Zoom dungeon & map\nLong press for right click.\nTouch with two fingers for scrolling.\nToggle keyboard icon controls the\nvirtual keyboard visibility.\n",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "<w>~</w>: 宏帮助\n<w>&</w>: 配置选项帮助\n<w>%</w>: 技能资质表\n<w>/</w>: 查询说明\n<w>Q</w>: 常见问题\n<w>V</w>: 版本信息\n<w>!</w>: 显示诊断信息\n<w>Home</w>: 返回本页\n\n<h>Android 操作\n\n<w>Back key</w>: 相当于 Esc\n<w>Volume keys</w>: 缩放地牢与地图\n长按相当于鼠标右键。\n双指触摸可滚动。\n键盘切换图标用于显示或隐藏\n虚拟键盘。\n",
+      "english_sha256": "5f4567e465174b88b79cd6e23da9ac041248aff32a3fefae876e5d5879ecc1bf"
+    },
+    {
+      "context": "help.document",
+      "english": "\nNote: If you are experiencing significant slowdown and lags with the Tiles\nversion of Dungeon Crawl Stone Soup, scroll down to the end of this file.\n\n\nTiles specific commands\n-----------------------\n\nThere are several different ways to interact with your environment, both\nby typing the command keys, and by using the mouse.\n\nOf notable interest is the clickable tab area to the right of the screen\nthat allows easy access to e.g. inventory, spells, or common commands.\n\nDepending on your screen resolution, one of more of these panels may be\nopen at any time, though you can temporarily exchange the inventory view\nwith another type of tiled panel by clicking on the tab icons.\n\nYou can customize the priority of the control panels by modifying the\ntile_layout_priority option in init.txt in the settings directory.\n\n\nMovement\n--------\n\nYou can move by using the arrow keys, the vi-keys, or the number pad.\n(For the latter try both Numlock on and off.)\n\nNumpad:   7 8 9     vi-keys:   y k u\n           \\|/                  \\|/\n          4-.-6                h-.-l\n           /|\\                  /|\\\n          1 2 3                b j n\n\n\nTo run several steps into the same direction, press Shift along with these\nkeys.\n\nYou can also move by clicking somewhere on the map or minimap with your\nmouse. If the square is reachable from your current position and there are\nno hostile monsters in sight, you will automatically travel there. If there\nare hostile monsters in sight, you will only take a single step at a time.\n\nFor automatic exploration, you can either type the 'o' command or you can\nclick on the corresponding tile in the command panel to the right of your\nscreen. Like mouseclick travel, these will refuse to work if there are\nhostile monsters in sight.\n\n\nGetting information\n-------------------\n\nDoing a right-click with your mouse on any feature, monster or item on the\nmain map or in the tiled control panels will display the description of\nsaid feature, monster or item on a separate screen.\n\nA simple mouseover will usually display the same description, or as much of\nit as can fit, in the message area.\n\nSimilarly, letting your mouse rest for a while on a feature, monster or\nitem will usually display a \"tool tip\" of applicable commands.\n\n\nAttacking monsters\n------------------\n\nYou can attack a monster in melee by moving into it with the movement keys\nor by clicking on it with your mouse.\n\nFor ranged attacks (including spells and wands), mouse over the monsters\nand wait for the tool tip to appear. Alternatively, you can cast spells by\nclicking on the spell tiles in the spell panel, or fire ammunition or\nevoke wands by clicking on them in the inventory panel.\n\nIn the command panel, you'll also find a tile described as \"Autofight\",\nwhich, if clicked, will attack an adjacent monster in melee, or if there is\nno adjacent monster, take one step in the direction of the closest monster.\n\n\nItem usage\n----------\n\nThe easiest way to use items is by clicking on them in the inventory panel.\nThe mouseover tool tip will tell you what a mouseclick will do, and also\nthe corresponding command key to execute the same action.\nAs an alternative, you can also use an item by selecting it in the inventory\n('i' command) and then pressing the appropriate key in the action prompt.\n\nTo pick up items on the ground, you can either click on them one by one in\nthe floor section of the inventory panel, or you can click on the player\ntile and pull up a menu of selectable items instead. In the latter case,\n'Enter' will confirm your selection and start pick up.\n\nDropping items works similarly, either by clicking on single items in the\ninventory panel, or by typing the 'd' command and then selecting items\nfrom a menu.\n\n\nInteracting with the dungeon\n----------------------------\n\nAgain, doing a mouseover on features (such as staircases or doors) in the\nmain map will tell you how to interact with them.\n\n\nCharacter status\n----------------\n\nDoing a right-click on the player tile will display a character overview\nscreen listing equipment, resistances and stats.\n\nMore detailed screens on specific aspects of your characters can be\naccessed by clicking on the corresponding tiles in the command panel.\n\n\nCharacter appearance\n--------------------\n\nYou can change your character's appearance with the Doll Editor, accessed with\nthe '-' command. Use 'm' to switch between modes: Equip, where your appearance\ndynamically updates based on the items you equip; Default, a sprite based on\nyour character’s race and background; and Custom, which allows you to fully\ncustomize each part of your character's look. Use the number keys to switch\nbetween custom doll slots and the arrow keys to modify the different parts of\neach custom sprite. Save your changes and selection with 'Ctrl-S'.\n\n\n\nIf you are experiencing significant slowdown and lags...\n--------------------------------------------------------\n\nCrawl renders its graphics using OpenGL and SDL. However, it needs hardware\nacceleration to not run slowly. If you are on Windows, make sure to update\nyour graphics card driver. If you are on Linux, be sure that you are using\nDRI.\n\nIt has been tested successfully with cards as old as the i865. Unfortunately,\nit has been known to be slow on the i810 and there is little to be done in\nthat case but to run the console version instead or switch to a different\nmachine.\n\nYou can try tweaking a number of options in init.txt in the settings\ndirectory to see whether performance improves:\n\ntravel_delay = -1\n    This setting suppresses redrawing until travelling is finished or\n    interrupted.\n\ntile_update_rate = 1000\n    By default, the screen gets redrawn at least every 1000 milliseconds,\n    more often if you take actions that change the display. You could try\n    cranking up this value, though this may lead to updating taking too long.\n\ntile_runrest_rate = 17\n    While running and resting the screen is redrawn every 17 milliseconds.\n    If Crawl is slow while running or resting, increase this number.\n\ntile_tooltip_ms = 0\n    Deactivating the tooltips means there's less stuff to draw every time.\n\nclear_map = false\n    Not having to redraw remembered monsters outside your line of sight\n    takes some load off the redrawing routines.\n\ntile_window_width   = 1024\ntile_window_height  = 768\n    The larger the map area the more cells there are to redraw each turn.\n    If you've got a large display showing way more than the necessary 17x17\n    grids of the map, you could try specifying a lower resolution.",
+      "review_status": "reviewed",
+      "module": "command.cc",
+      "review_batch": "help-ui-01",
+      "literal_percent": true,
+      "chinese": "\n注意：若图形版 Dungeon Crawl Stone Soup 明显变慢或卡顿，请阅读文末的性能说明。\n\n\n\n图形版专用操作\n--------------\n\n你可以用键盘命令或鼠标与周围环境交互。\n\n屏幕右侧可点击的标签页能方便地打开背包、法术或常用命令面板。\n\n根据屏幕分辨率，可能同时显示一个或多个面板。点击标签图标，可以暂时把背包面板\n切换为其他图形面板。\n\n修改 settings 目录中 init.txt 的 tile_layout_priority 选项，可以调整控制面板\n的优先顺序。\n\n\n移动\n----\n\n可用方向键、vi 按键或数字小键盘移动。小键盘可尝试开启或关闭 Numlock。\n\n小键盘：  7 8 9     vi 按键： y k u\n           \\|/                \\|/\n          4-.-6              h-.-l\n           /|\\                /|\\\n          1 2 3              b j n\n\n按住 Shift 再按方向键，可以向同一方向连续行走。\n\n也可以用鼠标点击地图或小地图上的位置。如果该位置可以到达，且视野内没有敌对怪\n物，就会自动前往。如果视野内有敌对怪物，则每次只会迈出一步。\n\n按 o 或点击右侧命令面板中的自动探索图标，即可自动探索。与点击地图旅行一样，\n视野内有敌对怪物时不能使用。\n\n\n获取信息\n--------\n\n右键点击主地图或控制面板上的地形设施、怪物或物品，会打开其说明界面。\n\n将鼠标移到相应位置，通常也会在消息区显示相同说明，或显示消息区容得下的部分。\n\n将鼠标在地形设施、怪物或物品上停留片刻，通常会出现列出适用命令的提示框。\n\n\n攻击怪物\n--------\n\n使用方向键朝怪物移动，或用鼠标点击怪物，即可进行近战攻击。\n\n进行远程攻击（包括法术和魔杖）时，可把鼠标移到怪物上并等待提示框出现。也可以\n点击法术面板的法术图标施法，或点击背包面板中的弹药、魔杖进行发射或发动。\n\n命令面板中还有名为 Autofight（自动战斗）的图标。点击它会近战攻击相邻怪物；若\n没有相邻怪物，则向最近的怪物迈出一步。\n\n\n使用物品\n--------\n\n最方便的方法是在背包面板中点击物品。悬停提示会说明点击的效果，以及执行相同动\n作的键盘命令。\n\n也可以按 i 打开背包，选择物品，再按操作提示中相应的按键。\n\n拾取地上物品时，可以在背包面板的地面区域逐个点击，也可以点击角色图标，打开物\n品选择菜单。后者按 Enter 确认选择并开始拾取。\n\n丢弃物品的方式类似：在背包面板中点击单件物品，或按 d 后在菜单中选择物品。\n\n\n与地牢交互\n----------\n\n将鼠标移到主地图上的楼梯、门等地形设施，同样会显示如何与其交互。\n\n\n角色状态\n--------\n\n右键点击角色图标，可以打开角色概览，查看装备、抗性和属性数值。\n\n点击命令面板中的相应图标，可以查看角色各方面的详细信息。\n\n\n角色外观\n--------\n\n按 - 打开角色外观编辑器。按 m 切换模式：Equip（装备）会根据穿戴物品动态更新\n外观；Default（默认）使用由种族和背景决定的图像；Custom（自定义）允许逐个调\n整外观部件。\n\n用数字键切换自定义外观槽位，用方向键修改各个部件。按 Ctrl-S 保存修改和当前选\n择。\n\n\n若游戏明显变慢或卡顿……\n--------------------------\n\nCrawl 使用 OpenGL 和 SDL 绘图，需要硬件加速才能流畅运行。Windows 用户应更新\n显卡驱动；Linux 用户应确认正在使用 DRI。\n\n游戏曾在 i865 等较老显卡上成功运行；但已知 i810 的运行速度较慢。这种情况下，\n通常只能改用字符版或换一台机器。\n\n可尝试调整 settings 目录中的 init.txt，观察下列选项能否改善性能：\n\ntravel_delay = -1\n    旅行结束或中断之前不重绘画面。\n\ntile_update_rate = 1000\n    默认至少每 1000 毫秒重绘一次；执行改变画面的动作时会更频繁。\n    可以尝试增大此值，但可能导致画面更新不够及时。\n\ntile_runrest_rate = 17\n    连续行走或休息时，每 17 毫秒重绘一次。\n    若行走或休息时卡顿，可增大此值。\n\ntile_tooltip_ms = 0\n    关闭悬停提示，减少每次需要绘制的内容。\n\nclear_map = false\n    不重绘视野外记忆中的怪物，可减少重绘负担。\n\ntile_window_width   = 1024\ntile_window_height  = 768\n    地图区域越大，每回合需要重绘的格子越多。\n    若大屏显示的地图远大于所需的 17x17 格，可以尝试降低分辨率。",
+      "english_sha256": "0cd0d700b5420333fbedd6811fb62b13c20fd3e19d372a7f4ff990dc212c9a8a"
+    }
+  ],
+  "note": "保留按键占位符顺序、实际绑定、颜色标签与字符版专用标记；主手册和配置指南尚未全译。"
+}

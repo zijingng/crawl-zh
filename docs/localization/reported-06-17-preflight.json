@@ -1,0 +1,108 @@
+{
+  "terms": {
+    "Cassandra": "卡珊德拉",
+    "Swamp": "沼泽",
+    "Marshlight": "沼泽幽光",
+    "Orb of Destruction": "毁灭之球",
+    "Force Lance": "力场长枪",
+    "Rampage": "横冲直撞",
+    "Margery": "玛格丽",
+    "eleionoma": "沼泽树精",
+    "hellephant": "地狱象",
+    "will-o-the-wisp": "鬼火"
+  },
+  "new_ui_parameters": [
+    [
+      "s.shop.type",
+      "One-of-a-Kind",
+      "独一无二",
+      "shopping.cc"
+    ],
+    [
+      "s.shop.suffix",
+      "Rings",
+      "戒指店",
+      "shopping.cc"
+    ],
+    [
+      "s.shop.suffix",
+      "Books",
+      "魔法书店",
+      "shopping.cc"
+    ],
+    [
+      "a.knockback.cause",
+      "lance of force",
+      "，冲击来自力场长枪",
+      "actor.cc"
+    ],
+    [
+      "p.move",
+      "rampage",
+      "横冲直撞进入",
+      "player.cc"
+    ],
+    [
+      "display.monster",
+      "marshlight",
+      "沼泽幽光",
+      "spl-summoning.cc"
+    ],
+    [
+      "log.projectile.name",
+      "splinters",
+      "木屑",
+      "mon-cast.cc"
+    ],
+    [
+      "log.projectile.name",
+      "metal splinters",
+      "金属碎片",
+      "mon-cast.cc"
+    ],
+    [
+      "log.projectile.name",
+      "flames",
+      "火焰",
+      "mon-cast.cc"
+    ],
+    [
+      "log.projectile.name",
+      "wavering orb of destruction",
+      "摇曳的毁灭之球",
+      "mon-project.cc"
+    ],
+    [
+      "s.forest",
+      "The forest abruptly stops moving.",
+      "森林突然停止了活动。",
+      "spl-damage.cc"
+    ],
+    [
+      "s.forest",
+      "The forest calms down.",
+      "森林平静了下来。",
+      "spl-damage.cc"
+    ],
+    [
+      "s.forest",
+      "The forest starts to sway and rumble!",
+      "森林开始摇晃，隆隆作响！",
+      "spl-damage.cc"
+    ]
+  ],
+  "source_changes": {
+    "crawl-ref/source/item-name.cc": [
+      "0263d179cd2a88d2c88f82cedd599997aa374e204db58189a36d4b4fcd01b365",
+      "321a330157853e5c53f8df84f63c746a9a58184930fef5e0cf68d8bf570aff26"
+    ],
+    "crawl-ref/source/traps.cc": [
+      "64783b8a405bc74135bc964344afefeb56fdfd08a5be99f051a485ea50a5b9bc",
+      "f5753619233fbd94d47f70c488facc6488a80df81edf59f043ebb25d788029d2"
+    ],
+    "crawl-ref/source/mon-death.cc": [
+      "1560de3082703c5bf2c3d92f8c944cd46b26334561902ead0930506add961b98",
+      "b8a5100c045adf8f74d250f12aa94125af860f2a2a65249cd9dd007094de95c5"
+    ]
+  }
+}

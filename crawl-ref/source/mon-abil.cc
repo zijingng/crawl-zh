@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "m-display.h"
+#include "i18n.h"
 
 #include "mon-abil.h"
 
@@ -269,11 +271,21 @@ static monster* _do_split(monster* thing, const coord_def & target, bool quiet =
     {
         if (thing->type == MONS_SLYMDRA)
         {
-            mprf("%s separates from %s.", new_slime->name(DESC_A).c_str(),
-                                          thing->name(DESC_A).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = new_slime->name(DESC_A);
+                const string _m1 = thing->name(DESC_A);
+                const string _original = make_stringf("%s separates from %s.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.076", "%s separates from %s.")) return _original;
+                return ui_render("m.log.076", "%s separates from %s.", _original, {m_actor_arg(*new_slime), m_actor_arg(*thing)});
+            })().c_str());
         }
         else
-            mprf("%s splits.", thing->name(DESC_A).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = thing->name(DESC_A);
+                const string _original = make_stringf("%s splits.", _m0.c_str());
+                if (!m_display_active("m.log.077", "%s splits.")) return _original;
+                return ui_render("m.log.077", "%s splits.", _original, {m_actor_arg(*thing)});
+            })().c_str());
     }
 
     // Inflict the new slime with any enchantments on the parent.
@@ -333,6 +345,7 @@ static monster* _do_split(monster* thing, const coord_def & target, bool quiet =
 static void _do_merge_slimes(monster* initial_slime, monster* merge_to)
 {
     const string old_name = merge_to->name(DESC_A);
+    const ui_arg old_display = m_actor_arg(*merge_to);
     const bool merge_to_was_visible = you.can_see(*merge_to);
 
     // Combine enchantment durations.
@@ -380,14 +393,22 @@ static void _do_merge_slimes(monster* initial_slime, monster* merge_to)
         if (you.can_see(*merge_to))
         {
             // cases 1 and 2
-            mprf("Two slime creatures merge to form %s.",
-                 merge_to->name(DESC_A).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = merge_to->name(DESC_A);
+                const string _original = make_stringf("Two slime creatures merge to form %s.", _m0.c_str());
+                if (!m_display_active("m.log.078", "Two slime creatures merge to form %s.")) return _original;
+                return ui_render("m.log.078", "Two slime creatures merge to form %s.", _original, {m_actor_arg(*merge_to)});
+            })().c_str());
         }
         else
         {
             // case 3
-            mprf("Something merges into %s, and it vanishes!",
-                 old_name.c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = old_name;
+                const string _original = make_stringf("Something merges into %s, and it vanishes!", _m0.c_str());
+                if (!m_display_active("m.log.079", "Something merges into %s, and it vanishes!")) return _original;
+                return ui_render("m.log.079", "Something merges into %s, and it vanishes!", _original, {old_display});
+            })().c_str());
         }
 
         flash_view_delay(UA_MONSTER, LIGHTGREEN, 150);
@@ -395,8 +416,12 @@ static void _do_merge_slimes(monster* initial_slime, monster* merge_to)
     else if (you.can_see(*initial_slime))
     {
         // case 4
-        mprf("%s merges with something you can't see.",
-             initial_slime->name(DESC_A).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = initial_slime->name(DESC_A);
+                const string _original = make_stringf("%s merges with something you can't see.", _m0.c_str());
+                if (!m_display_active("m.log.080", "%s merges with something you can't see.")) return _original;
+                return ui_render("m.log.080", "%s merges with something you can't see.", _original, {m_actor_arg(*initial_slime)});
+            })().c_str());
     }
     // case 5 (no-op)
 
@@ -633,13 +658,22 @@ bool slymdra_polymorph(monster& slymdra, poly_power_type power)
     {
         if (count == 1)
         {
-            mprf("A slime creature is ejected from %s body as it begins to warp and change.",
-                 slymdra.name(DESC_ITS).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = slymdra.name(DESC_ITS);
+                const string _original = make_stringf("A slime creature is ejected from %s body as it begins to warp and change.", _m0.c_str());
+                if (!m_display_active("m.log.081", "A slime creature is ejected from %s body as it begins to warp and change.")) return _original;
+                return ui_render("m.log.081", "A slime creature is ejected from %s body as it begins to warp and change.", _original, {m_actor_arg(slymdra)});
+            })().c_str());
         }
         else
         {
-            mprf("%d slime creatures are ejected from %s body as it begins to warp and change.",
-                 count, slymdra.name(DESC_ITS).c_str());
+            mprf("%s", ([&]() -> string {
+                const auto _m0 = count;
+                const string _m1 = slymdra.name(DESC_ITS);
+                const string _original = make_stringf("%d slime creatures are ejected from %s body as it begins to warp and change.", _m0, _m1.c_str());
+                if (!m_display_active("m.log.082", "%s slime creatures are ejected from %s body as it begins to warp and change.")) return _original;
+                return ui_render("m.log.082", "%s slime creatures are ejected from %s body as it begins to warp and change.", _original, {ui_literal_arg(to_string(_m0)), m_actor_arg(slymdra)});
+            })().c_str());
         }
     }
 
@@ -709,14 +743,17 @@ static void _starcursed_scream(monster* mon, actor* target)
         if (you.see_cell(target->pos()))
         {
             mprf(target->as_monster()->friendly() ? MSGCH_FRIEND_SPELL
-                                                  : MSGCH_MONSTER_SPELL,
-                 "%s writhes in pain as voices assail %s mind.",
-                 target->name(DESC_THE).c_str(),
-                 target->pronoun(PRONOUN_POSSESSIVE).c_str());
+                                                  : MSGCH_MONSTER_SPELL, "%s", ([&]() -> string {
+                const string _m0 = target->name(DESC_THE);
+                const string _m1 = target->pronoun(PRONOUN_POSSESSIVE);
+                const string _original = make_stringf("%s writhes in pain as voices assail %s mind.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.083", "%s writhes in pain as voices assail %s mind.")) return _original;
+                return ui_render("m.log.083", "%s writhes in pain as voices assail %s mind.", _original, {m_actor_arg(*target), ui_literal_arg("")});
+            })().c_str());
         }
     }
     else
-        mprf(MSGCH_MONSTER_SPELL, "%s", message);
+        mprf(MSGCH_MONSTER_SPELL, "%s",ui_translate("m.ui", string(message).c_str()));
     target->hurt(mon, dam, BEAM_MISSILE, KILLED_BY_BEAM, "",
                  "accursed screaming");
 
@@ -836,6 +873,7 @@ bool lost_soul_revive(monster& mons, killer_type killer)
 
         // save this before we revive it
         const string revivee_name = mons.name(DESC_THE);
+        const ui_arg revivee_display = m_actor_arg(mons);
         const bool was_alive = bool(mons.holiness() & MH_NATURAL);
 
         // In this case the old monster will be replaced by
@@ -864,17 +902,25 @@ bool lost_soul_revive(monster& mons, killer_type killer)
         {
             if (!was_alive)
             {
-                mprf("%s sacrifices itself to reknit %s!",
-                     mi->name(DESC_THE).c_str(),
-                     revivee_name.c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = mi->name(DESC_THE);
+                const string _m1 = revivee_name;
+                const string _original = make_stringf("%s sacrifices itself to reknit %s!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.084", "%s sacrifices itself to reknit %s!")) return _original;
+                return ui_render("m.log.084", "%s sacrifices itself to reknit %s!", _original, {m_actor_arg(*mi), revivee_display});
+            })().c_str());
             }
             else
             {
-                mprf("%s assumes the form of %s%s!",
-                     mi->name(DESC_THE).c_str(),
-                     revivee_name.c_str(),
-                     (mi->is_summoned() ? " and becomes anchored to this"
-                      " world" : ""));
+                mprf("%s", ([&]() -> string {
+                const string _m0 = mi->name(DESC_THE);
+                const string _m1 = revivee_name;
+                const string _m2 = (mi->is_summoned() ? " and becomes anchored to this"
+                      " world" : "");
+                const string _original = make_stringf("%s assumes the form of %s%s!", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.085", "%s assumes the form of %s%s!")) return _original;
+                return ui_render("m.log.085", "%s assumes the form of %s%s!", _original, {m_actor_arg(*mi), revivee_display, m_clause_arg(_m2)});
+            })().c_str());
             }
         }
 
@@ -913,13 +959,21 @@ void treant_release_fauna(monster& mons)
     {
         if (fauna_t == MONS_RAVEN)
         {
-            mprf("Jet-black ravens fly out from beneath %s foliage!",
-                 mons.name(DESC_ITS).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = mons.name(DESC_ITS);
+                const string _original = make_stringf("Jet-black ravens fly out from beneath %s foliage!", _m0.c_str());
+                if (!m_display_active("m.log.086", "Jet-black ravens fly out from beneath %s foliage!")) return _original;
+                return ui_render("m.log.086", "Jet-black ravens fly out from beneath %s foliage!", _original, {m_actor_arg(mons)});
+            })().c_str());
         }
         else
         {
-            mprf("Angry insects surge out from beneath %s foliage!",
-                mons.name(DESC_ITS).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = mons.name(DESC_ITS);
+                const string _original = make_stringf("Angry insects surge out from beneath %s foliage!", _m0.c_str());
+                if (!m_display_active("m.log.087", "Angry insects surge out from beneath %s foliage!")) return _original;
+                return ui_render("m.log.087", "Angry insects surge out from beneath %s foliage!", _original, {m_actor_arg(mons)});
+            })().c_str());
         }
     }
 }
@@ -1076,13 +1130,24 @@ static bool _slymdra_try_merge(monster* mons)
                                                       : make_stringf("sprouts %d new heads", gained_heads);
             if (did_merge > 1)
             {
-                mprf("%s absorbs %d nearby slime creatures and %s.",
-                        mons->name(DESC_THE).c_str(), did_merge, head_msg.c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = mons->name(DESC_THE);
+                const auto _m1 = did_merge;
+                const string _m2 = head_msg;
+                const string _original = make_stringf("%s absorbs %d nearby slime creatures and %s.", _m0.c_str(), _m1, _m2.c_str());
+                if (!m_display_active("m.log.088", "%s absorbs %s nearby slime creatures and %s.")) return _original;
+                return ui_render("m.log.088", "%s absorbs %s nearby slime creatures and %s.", _original, {m_actor_arg(*mons), {std::to_string(_m1), true}, {std::to_string(gained_heads), true}});
+            })().c_str());
             }
             else
             {
-                mprf("%s absorbs a nearby slime creature and %s.",
-                        mons->name(DESC_THE).c_str(), head_msg.c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = mons->name(DESC_THE);
+                const string _m1 = head_msg;
+                const string _original = make_stringf("%s absorbs a nearby slime creature and %s.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.089", "%s absorbs a nearby slime creature and %s.")) return _original;
+                return ui_render("m.log.089", "%s absorbs a nearby slime creature and %s.", _original, {m_actor_arg(*mons), {std::to_string(gained_heads), true}});
+            })().c_str());
             }
         }
         mons->num_heads = new_heads;
@@ -1464,6 +1529,12 @@ bool pyrrhic_recollection(monster& nobody)
     nobody.spells.clear();
     const auto& recollection = _recollections[memories[memories.size() - 1].get_int()];
 
+    const auto m_memory_spells = [](const vector<pair<spell_type, uint8_t>> &spells) -> ui_arg {
+        vector<ui_arg> names;
+        for (const auto &spell : spells)
+            names.push_back(ui_text_arg("display.spell", spell_title(spell.first)));
+        return m_join_args(names);
+    };
     vector<string> spell_names;
     for (pair<spell_type, uint8_t> spell : recollection.spells)
     {
@@ -1476,13 +1547,20 @@ bool pyrrhic_recollection(monster& nobody)
 
     if (can_see)
     {
-        mprf(MSGCH_MONSTER_SPELL, "%s ignites a memory of %s%s.",
-                nobody.name(DESC_THE).c_str(),
-                comma_separated_line(spell_names.begin(), spell_names.end()).c_str(),
-                was_injured ? " to re-knit themselves" : "");
-        string speech = make_stringf("\"We remember... %s...\"",
-                            getSpeakString("nobody_recollection " + recollection.key).c_str());
-        mons_speaks_msg(&nobody, speech, MSGCH_TALK);
+        mprf(MSGCH_MONSTER_SPELL, "%s", ([&]() -> string {
+                const string _m0 = nobody.name(DESC_THE);
+                const string _m1 = comma_separated_line(spell_names.begin(), spell_names.end());
+                const string _m2 = was_injured ? " to re-knit themselves" : "";
+                const string _original = make_stringf("%s ignites a memory of %s%s.", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.090", "%s ignites a memory of %s%s.")) return _original;
+                return ui_render("m.log.090", "%s ignites a memory of %s%s.", _original, {m_actor_arg(nobody), m_memory_spells(recollection.spells), m_clause_arg(_m2)});
+            })().c_str());
+        // Pick one canonical recollection and its paired display text together.
+        const auto memory = getPairedSpeakString("nobody_recollection " + recollection.key);
+        const string speech = make_stringf("\"We remember... %s...\"", memory.english.c_str());
+        const string display = ui_render("m.nobody.recollection", "\"We remember... %s...\"",
+            speech, {{memory.translated, memory.complete}});
+        mons_speaks_msg(&nobody, speech, MSGCH_TALK, false, display);
     }
 
     // Heal and move.
@@ -1573,8 +1651,13 @@ void solar_ember_blast()
 
         flash_tile(mon->pos(), RED, 0);
         const int damage_done = mons_adjust_flavoured(mon, beam, mon->apply_ac(dmg.roll()));
-        mprf("The solar flare engulfs %s%s.", mon->name(DESC_THE).c_str(),
-                damage_done ? "" : " but does no damage");
+        mprf("%s", ([&]() -> string {
+                const string _m0 = mon->name(DESC_THE);
+                const string _m1 = damage_done ? "" : " but does no damage";
+                const string _original = make_stringf("The solar flare engulfs %s%s.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.091", "The solar flare engulfs %s%s.")) return _original;
+                return ui_render("m.log.091", "The solar flare engulfs %s%s.", _original, {m_actor_arg(*mon), m_clause_arg(_m1)});
+            })().c_str());
         mon->hurt(ember, damage_done, BEAM_FIRE);
     }
 
@@ -1636,7 +1719,7 @@ void activate_tesseracts()
 
         if (!did_activate)
         {
-            mprf(MSGCH_WARN, "You feel the power of Zot begin to gather its forces!");
+            mprf(MSGCH_WARN, "%s", ui_translate("m.ui", "You feel the power of Zot begin to gather its forces!"));
             take_note(Note(NOTE_TESSERACT_ACTIVATED));
             mark_milestone("tesseract.activate", "activated a tesseract");
             // Tracked on the player instead of the monster so status lookup is quicker.

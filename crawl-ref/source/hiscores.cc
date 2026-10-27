@@ -11,6 +11,7 @@
  */
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "hiscores.h"
 
@@ -34,6 +35,8 @@
 #include "item-prop.h"
 #include "item-status-flag-type.h"
 #include "items.h"
+#include "item-name.h"
+#include "mon-info.h"
 #include "jobs.h"
 #ifdef USE_TILE_WEB
 # include "json.h"
@@ -215,7 +218,7 @@ void logfile_new_entry(const scorefile_entry &ne)
 
 template <class t_printf>
 static void _hiscores_print_entry(const scorefile_entry &se,
-                                  int index, int format, t_printf pf)
+                                  int index, int format, t_printf pf, bool display = false)
 {
     char buf[200];
     // print position (tracked implicitly by order score file)
@@ -226,9 +229,9 @@ static void _hiscores_print_entry(const scorefile_entry &se,
     string entry;
     // format the entry
     if (format == SCORE_TERSE)
-        entry = hiscores_format_single(se);
+        entry = hiscores_format_single(se, display);
     else
-        entry = hiscores_format_single_long(se, (format == SCORE_VERBOSE));
+        entry = hiscores_format_single_long(se, (format == SCORE_VERBOSE), display);
 
     entry += "\n";
     pf("%s", entry.c_str());
@@ -324,7 +327,7 @@ string hiscores_print_list(int display_count, int format, int newest_entry, int&
 
         _hiscores_print_entry(*hs_list[i], i, format, [&ret](const char */*fmt*/, const char *s){
             ret += string(s);
-        });
+        }, true);
 
         // return to normal color for next entry
         if (i == newest_entry)
@@ -335,48 +338,51 @@ string hiscores_print_list(int display_count, int format, int newest_entry, int&
     return ret;
 }
 
+bool read_morgue_display(const string &base, formatted_string &text)
+{
+    const string safe_base = strip_filename_unsafe_chars(base);
+    FILE *file = nullptr;
+    if (Options.language == lang_t::ZH)
+        file = lk_open("r", catpath(morgue_directory(), safe_base + ".zh.txt"));
+    if (!file)
+        file = lk_open("r", catpath(morgue_directory(), safe_base + ".txt"));
+    if (!file) return false;
+    string bytes;
+    char buf[4096];
+    size_t count;
+    while ((count = fread(buf, 1, sizeof buf, file)) != 0)
+        bytes.append(buf, count);
+    const bool ok = !ferror(file);
+    lk_close(file);
+    if (!ok) return false;
+    // Files are plain text. Keep literal markup, blank lines and complete UTF-8
+    // characters; byte chunks above are reassembled before line processing.
+    formatted_string result;
+    result.textcolour(WHITE);
+    size_t start = 0;
+    while (start < bytes.size())
+    {
+        const size_t newline = bytes.find('\n', start);
+        const size_t end = newline == string::npos ? bytes.size() : newline;
+        size_t content_end = end;
+        if (content_end > start && bytes[content_end - 1] == '\r') --content_end;
+        result += bytes.substr(start, content_end - start);
+        if (newline != string::npos) result += "\n";
+        start = newline == string::npos ? bytes.size() : newline + 1;
+    }
+    text = std::move(result);
+    return true;
+}
+
 static void _show_morgue(scorefile_entry& se)
 {
-    int flags = FS_PREWRAPPED_TEXT;
-    formatted_scroller morgue_file(flags);
-
+    formatted_string text;
+    if (!read_morgue_display(morgue_name(se.get_name(), se.get_death_time()), text))
+        return;
+    formatted_scroller morgue_file(FS_PREWRAPPED_TEXT | FS_LINEWISE_TEXT);
     morgue_file.set_tag("morgue");
     morgue_file.set_more();
-
-    string morgue_base = morgue_name(se.get_name(), se.get_death_time());
-    string morgue_path = catpath(morgue_directory(),
-                            strip_filename_unsafe_chars(morgue_base) + ".txt");
-    FILE* morgue = lk_open("r", morgue_path);
-
-    if (!morgue) // TODO: add an error message
-        return;
-
-    char buf[200];
-    string morgue_text = "";
-
-    while (fgets(buf, sizeof buf, morgue) != nullptr)
-    {
-        string line = string(buf);
-        size_t newline_pos = line.find_last_of('\n');
-        if (newline_pos != string::npos)
-            line.erase(newline_pos);
-        morgue_text += "<w>" + replace_all(line, "<", "<<") + "</w>" + '\n';
-    }
-
-    lk_close(morgue);
-
-    column_composer cols(2, 40);
-    cols.add_formatted(
-            0,
-            morgue_text,
-            true);
-
-    vector<formatted_string> blines = cols.formatted_lines();
-
-    unsigned i;
-    for (i = 0; i < blines.size(); ++i)
-        morgue_file.add_formatted_string(blines[i], true);
-
+    morgue_file.add_formatted_string(text);
     morgue_file.show();
 }
 
@@ -428,7 +434,7 @@ UIHiscoresMenu::UIHiscoresMenu()
 #endif
 
     auto title = make_shared<Text>(formatted_string(
-                CRAWL ": High Scores", YELLOW));
+                string(CRAWL) + ui_translate("h.scores", ": High Scores"), YELLOW));
     title->set_margin_for_sdl(0, 0, 0, 16);
     title_hbox->add_child(std::move(title));
 
@@ -449,7 +455,7 @@ UIHiscoresMenu::UIHiscoresMenu()
     }
     else
     {
-        auto placeholder = formatted_string("No high scores yet...", DARKGRAY);
+        auto placeholder = formatted_string(ui_translate("h.scores", "No high scores yet..."), DARKGRAY);
         m_root->add_child(make_shared<Text>(placeholder));
         initial_focus = this;
     }
@@ -485,7 +491,7 @@ void UIHiscoresMenu::_add_hiscore_row(scorefile_entry& se, int id)
 {
     auto tmp = make_shared<Text>();
 
-    tmp->set_text(hiscores_format_single(se));
+    tmp->set_text(hiscores_format_single(se, true));
     auto btn = make_shared<MenuButton>();
     tmp->set_margin_for_sdl(2);
     btn->set_child(std::move(tmp));
@@ -494,7 +500,7 @@ void UIHiscoresMenu::_add_hiscore_row(scorefile_entry& se, int id)
         return true;
     });
     btn->on_focusin_event([this, se](const FocusEvent&) {
-        formatted_string desc(hiscores_format_single_long(se, true));
+        formatted_string desc(hiscores_format_single_long(se, true, true));
         desc.cprintf(string(max(0, 9-count_linebreaks(desc)), '\n'));
         m_description->set_text(std::move(desc));
         return false;
@@ -553,9 +559,10 @@ static const char *_range_type_verb(const char *const aux)
     return "blasted";                                 // spells, wands
 }
 
-string hiscores_format_single(const scorefile_entry &se)
+string hiscores_format_single(const scorefile_entry &se, bool display)
 {
-    return se.hiscore_line(scorefile_entry::DDV_ONELINE);
+    return display ? se.display_hiscore_line(scorefile_entry::DDV_ONELINE)
+                   : se.hiscore_line(scorefile_entry::DDV_ONELINE);
 }
 
 static bool _hiscore_same_day(time_t t1, time_t t2)
@@ -586,10 +593,19 @@ static string _hiscore_newline_string()
     return "\n             ";
 }
 
-string hiscores_format_single_long(const scorefile_entry &se, bool verbose)
+static string _hiscore_display_date(time_t value)
 {
-    return se.hiscore_line(verbose ? scorefile_entry::DDV_VERBOSE
-                                   : scorefile_entry::DDV_NORMAL);
+    const tm *date = TIME_FN(&value);
+    return make_stringf("%04d-%02d-%02d", date->tm_year + 1900,
+                        date->tm_mon + 1, date->tm_mday);
+}
+
+string hiscores_format_single_long(const scorefile_entry &se, bool verbose,
+                                   bool display)
+{
+    const auto detail = verbose ? scorefile_entry::DDV_VERBOSE
+                                : scorefile_entry::DDV_NORMAL;
+    return display ? se.display_hiscore_line(detail) : se.hiscore_line(detail);
 }
 
 // --------------------------------------------------------------------------
@@ -1836,6 +1852,489 @@ string scorefile_entry::hiscore_line(death_desc_verbosity verbosity) const
     line += game_time(verbosity);
 
     return line;
+}
+
+// Saved components are matched against exact reviewed names or names generated
+// from canonical types. Unknown prose is never partially translated.
+static ui_arg _score_component(const string &name, bool monster_name = false)
+{
+    if (name.empty()) return {"", true};
+    for (const char *context : {"h.death.component", "display.monster", "display.item",
+                               "display.spell", "log.projectile.name", "c.cloud.name"})
+    {
+        const ui_arg result = ui_text_arg(context, name);
+        if (result.available) return result;
+    }
+    if (monster_name)
+        for (int i = 0; i < NUM_MONSTERS; ++i)
+        {
+            if (invalid_monster_index(i)) continue;
+            const auto type = static_cast<monster_type>(i);
+            if (name != mons_type_name(type, DESC_A)
+                && name != mons_type_name(type, DESC_THE)) continue;
+            return ui_text_arg("display.monster", mons_type_name(type, DESC_PLAIN));
+        }
+    // Plain weapon names from older scores have no item metadata. Only accept
+    // an exact canonical name; enchantments and artefacts need typed metadata.
+    if (!monster_name)
+        for (int i = 0; i < NUM_WEAPONS; ++i)
+        {
+            item_def item; item.base_type = OBJ_WEAPONS; item.sub_type = i;
+            item.quantity = 1;
+            const string base = item.name(DESC_DBNAME, true, false, false);
+            if (name == article_a(base)) return ui_text_arg("display.item", base);
+            // An unmodified, unenchanted weapon also has a fully determined
+            // canonical name (normally including +0). Match the entire name.
+            item.flags |= ISFLAG_IDENTIFIED;
+            if (name == item.name(DESC_A)) return ui_item_arg(item);
+        }
+    return {"", false};
+}
+
+string scorefile_entry::display_hiscore_line(death_desc_verbosity verbosity) const
+{
+    if (Options.language != lang_t::ZH || verbosity == DDV_LOGVERBOSE)
+        return hiscore_line(verbosity);
+    const bool single = verbosity == DDV_TERSE || verbosity == DDV_ONELINE;
+    string character = character_description(verbosity);
+    if (!single)
+    {
+        const bool verbose = verbosity == DDV_VERBOSE;
+        ui_arg display_title = ui_text_arg("d.skill.title", title);
+        if (verbose && race >= 0 && race < NUM_SPECIES)
+        {
+            ui_arg candidate{"", false};
+            const string canonical = skill_title_by_rank(best_skill,
+                get_skill_rank(best_skill_lvl), static_cast<species_type>(race),
+                dex, str, intel, god, piety, false, &candidate);
+            if (canonical == title)
+                display_title = candidate;
+        }
+        string header = verbose
+            ? ui_render("h.scores", "%s %s the %s (level %s", "",
+                {ui_literal_arg(to_string(points)), ui_literal_arg(name),
+                 display_title, ui_literal_arg(to_string(lvl))})
+            : ui_render("h.scores", "%s %s, %s %s (level %s", "",
+                {ui_literal_arg(to_string(points)), ui_literal_arg(name),
+                 ui_text_arg("display.creation", _species_name(race)),
+                 ui_text_arg("display.creation", _job_name(job)),
+                 ui_literal_arg(to_string(lvl))});
+        ui_arg mode = ui_literal_arg("");
+        if (wiz_mode) mode = ui_text_arg("h.scores", " *WIZ*");
+        else if (explore_mode) mode = ui_text_arg("h.scores", " *EXPLORE*");
+        if (!header.empty() && mode.available)
+        {
+            if (final_max_max_hp > 0)
+            {
+                header += make_stringf(", %d/%d", final_hp, final_max_hp);
+                if (final_max_hp < final_max_max_hp)
+                    header += make_stringf(" (%d)", final_max_max_hp);
+                header += " HP";
+            }
+            header += "）" + mode.text;
+            character = header + _hiscore_newline_string();
+            if (verbose)
+            {
+                string began = ui_render("h.scores", "Began as a %s %s on %s.", "",
+                    {ui_text_arg("display.creation", _species_name(race)),
+                     ui_text_arg("display.creation", _job_name(job)),
+                     ui_literal_arg(_hiscore_display_date(birth_time))});
+                // The template preserves argument order; Chinese puts the
+                // recorded date after the species and background as well.
+                if (began.empty())
+                {
+                    const string srace = _species_name(race);
+                    began = make_stringf("Began as a%s %s %s on %s.",
+                        is_vowel(srace[0]) ? "n" : "", srace.c_str(),
+                        _job_name(job), _hiscore_date_string(birth_time).c_str());
+                }
+                character += began + _hiscore_newline_string();
+                if (god != GOD_NO_GOD && !species::mutation_level(
+                    static_cast<species_type>(race), MUT_FORLORN))
+                {
+                    const string canonical = god == GOD_XOM
+                        ? make_stringf("Was a %sPlaything of Xom.", lvl >= 20 ? "Favourite " : "")
+                        : make_stringf("Was %s of %s%s",
+                            piety >= piety_breakpoint(5) ? "the Champion" :
+                            piety >= piety_breakpoint(4) ? "a High Priest" :
+                            piety >= piety_breakpoint(3) ? "an Elder" :
+                            piety >= piety_breakpoint(2) ? "a Priest" :
+                            piety >= piety_breakpoint(1) ? "a Believer" :
+                            piety >= piety_breakpoint(0) ? "a Follower" : "an Initiate",
+                            god_name(god).c_str(), penance > 0 ? " (penitent)." : ".");
+                    string faith;
+                    if (god == GOD_XOM)
+                        faith = ui_translate("h.scores", lvl >= 20
+                            ? "Was a Favourite Plaything of Xom." : "Was a Plaything of Xom.");
+                    else
+                    {
+                        const char *rank = piety >= piety_breakpoint(5) ? "Champion" :
+                            piety >= piety_breakpoint(4) ? "High Priest" :
+                            piety >= piety_breakpoint(3) ? "Elder" :
+                            piety >= piety_breakpoint(2) ? "Priest" :
+                            piety >= piety_breakpoint(1) ? "Believer" :
+                            piety >= piety_breakpoint(0) ? "Follower" : "Initiate";
+                        faith = ui_render("h.scores", penance > 0
+                            ? "Was a penitent %s of %s." : "Was a %s of %s.", canonical,
+                            {ui_text_arg("h.scores.rank", rank),
+                             ui_text_arg("display.god", god_name(god))});
+                    }
+                    character += faith + _hiscore_newline_string();
+                }
+            }
+        }
+    }
+    const string death = display_death_description(verbosity);
+    string time = game_time(verbosity);
+    if (verbosity == DDV_VERBOSE)
+    {
+        time = ui_render("h.scores", "The game lasted %s (%s turns).", time,
+            {ui_literal_arg(make_time_string(real_time)), ui_literal_arg(to_string(num_turns))});
+        if (time.find('\n') == string::npos)
+            time += _hiscore_newline_string();
+    }
+    string place = death_place(verbosity);
+    if (!single && !place.empty() && mapdesc.empty()
+        && branch >= BRANCH_DUNGEON && branch < NUM_BRANCHES)
+    {
+        string localized = ui_render("h.scores", "At %s, level %s.", "",
+            {ui_text_arg("b.branch.name", branches[branch].longname),
+             ui_literal_arg(to_string(dlvl))});
+        if (!localized.empty())
+        {
+            if (verbosity == DDV_VERBOSE && death_time
+                && !_hiscore_same_day(birth_time, death_time))
+            {
+                const string dated = ui_render("h.scores", "On %s: %s", "",
+                    {ui_literal_arg(_hiscore_display_date(death_time)), ui_literal_arg(localized)});
+                localized = dated;
+            }
+            if (!localized.empty())
+                place = localized + _hiscore_newline_string();
+        }
+    }
+    return character + death + place + time;
+}
+
+string scorefile_entry::display_death_description(death_desc_verbosity verbosity) const
+{
+    if (Options.language != lang_t::ZH || verbosity == DDV_LOGVERBOSE)
+        return death_description(verbosity);
+    const bool single = verbosity == DDV_TERSE || verbosity == DDV_ONELINE;
+    string death = death_description(verbosity);
+    if (auxkilldata.empty() && death_source_name.empty() && killerpath.empty()
+        && !you.duration[DUR_PARALYSIS] && !you.duration[DUR_PETRIFIED]
+        && !you.duration[DUR_SLEEP]
+        && !you.duration[DUR_VEXED])
+    {
+        const char *source = nullptr;
+        switch (death_type)
+        {
+        case KILLED_BY_POISON: source = "Succumbed to poison"; break;
+        case KILLED_BY_WEAKNESS: source = "Collapsed under their own weight"; break;
+        case KILLED_BY_CLUMSINESS: source = "Slipped on a banana peel"; break;
+        case KILLED_BY_QUITTING: source = "Quit the game"; break;
+        case KILLED_BY_WIZMODE: source = "Entered wizard mode"; break;
+        case KILLED_BY_EXPLORING: source = "Entered explore mode"; break;
+        case KILLED_BY_DRAINING: source = "Drained of all life"; break;
+        case KILLED_BY_STARVATION: source = "Starved to death"; break;
+        case KILLED_BY_FREEZING: source = "Frozen to death"; break;
+        case KILLED_BY_BURNING: source = "Burnt to a crisp"; break;
+        case KILLED_BY_WILD_MAGIC: source = "Killed by wild magic"; break;
+        case KILLED_BY_XOM: source = "Killed for Xom's enjoyment"; break;
+        case KILLED_BY_ROTTING: source = "Rotted away"; break;
+        case KILLED_BY_TSO_SMITING: source = "Smitten by the Shining One"; break;
+        case KILLED_BY_BEOGH_SMITING: source = "Smitten by Beogh"; break;
+        case KILLED_BY_PETRIFICATION: source = "Turned to stone"; break;
+        case KILLED_BY_SOMETHING: source = "Died"; break;
+        case KILLED_BY_FALLING_DOWN_STAIRS: source = "Fell down a flight of stairs"; break;
+        case KILLED_BY_FALLING_THROUGH_GATE: source = "Fell down through a gate"; break;
+        case KILLED_BY_ACID: source = "Splashed with acid"; break;
+        case KILLED_BY_CURARE: source = "Asphyxiated"; break;
+        case KILLED_BY_MIRROR_DAMAGE: source = "Killed by mirror damage"; break;
+        case KILLED_BY_BARBS: source = "Succumbed to barbed spike wounds"; break;
+        case KILLED_BY_ZOT: source = "Tarried too long and was consumed by Zot"; break;
+        case KILLED_BY_WINNING: source = "Escaped with the Orb"; break;
+        case KILLED_BY_LAVA:
+            if (race >= 0 && race < NUM_SPECIES)
+                source = starts_with(species::skin_name(static_cast<species_type>(race)), "bandage")
+                    ? "Turned to ash by lava" : "Took a swim in molten lava";
+            break;
+        case KILLED_BY_WATER:
+            if (race >= 0 && race < NUM_SPECIES)
+                source = species::is_undead(static_cast<species_type>(race))
+                    ? starts_with(species::skin_name(static_cast<species_type>(race)), "bandage")
+                        ? "Soaked and fell apart" : "Sank and fell apart"
+                    : "Drowned";
+            break;
+        case KILLED_BY_STUPIDITY:
+            if (race >= 0 && race < NUM_SPECIES)
+                source = species::is_undead(static_cast<species_type>(race))
+                    || species::is_nonliving(static_cast<species_type>(race))
+                        ? "Forgot to exist" : "Forgot to breathe";
+            break;
+        case KILLED_BY_LEAVING:
+            if (race >= 0 && race < NUM_SPECIES)
+                source = num_runes > 0 || gems_found > 0 ? "Got out of the dungeon"
+                    : species::is_undead(static_cast<species_type>(race))
+                        ? "Safely got out of the dungeon" : "Got out of the dungeon alive";
+            break;
+        case KILLED_BY_TARGETING: source = "Killed themself with bad targeting"; break;
+        case KILLED_BY_REFLECTION: source = "Killed by a reflected bolt"; break;
+        case KILLED_BY_BOUNCE: source = "Killed themself with a bounced beam"; break;
+        case KILLED_BY_SELF_AIMED: source = "Shot themself with a beam"; break;
+        case KILLED_BY_DEATH_EXPLOSION: source = "Killed by an exploding monster"; break;
+        case KILLED_BY_DIVINE_WRATH: source = "Killed by divine wrath"; break;
+        default: break;
+        }
+        if (source)
+        {
+            ui_arg translated = ui_text_arg("h.scores", source);
+            const bool with_damage = death_type == KILLED_BY_FREEZING
+                    || death_type == KILLED_BY_BURNING || death_type == KILLED_BY_WILD_MAGIC
+                    || death_type == KILLED_BY_XOM || death_type == KILLED_BY_TSO_SMITING
+                    || death_type == KILLED_BY_BEOGH_SMITING || death_type == KILLED_BY_SOMETHING
+                    || death_type == KILLED_BY_FALLING_DOWN_STAIRS
+                    || death_type == KILLED_BY_FALLING_THROUGH_GATE
+                    || death_type == KILLED_BY_ACID || death_type == KILLED_BY_MIRROR_DAMAGE
+                    || death_type == KILLED_BY_TARGETING || death_type == KILLED_BY_REFLECTION
+                    || death_type == KILLED_BY_BOUNCE || death_type == KILLED_BY_SELF_AIMED
+                    || death_type == KILLED_BY_DEATH_EXPLOSION
+                    || death_type == KILLED_BY_DIVINE_WRATH;
+            string damage_text;
+            if (with_damage && damage > 0
+                && (verbosity == DDV_VERBOSE || verbosity == DDV_TERSE))
+            {
+                damage_text = ui_render("h.scores", " (%s damage)", "",
+                    {ui_literal_arg(to_string(damage))});
+                translated.available &= !damage_text.empty();
+            }
+            string treasure;
+            if (verbosity == DDV_VERBOSE
+                && (death_type == KILLED_BY_WINNING || death_type == KILLED_BY_LEAVING))
+            {
+                auto append = [&](const char *clause_source, initializer_list<ui_arg> args) {
+                    const string clause = ui_render("h.scores", clause_source, "", args);
+                    translated.available &= !clause.empty();
+                    treasure += clause;
+                };
+                if (num_runes >= 1)
+                {
+                    treasure += _hiscore_newline_string();
+                    append("... with %s runes", {ui_literal_arg(to_string(num_runes))});
+                }
+                if (gems_found >= 1)
+                {
+                    treasure += _hiscore_newline_string();
+                    append("... with %s gems", {ui_literal_arg(to_string(gems_found))});
+                    if (Options.more_gem_info)
+                        append(" (%s intact)", {ui_literal_arg(to_string(gems_intact))});
+                }
+                if ((num_runes >= 1 || gems_found >= 1) && death_time > 0
+                    && !_hiscore_same_day(birth_time, death_time))
+                    append(" on %s", {ui_literal_arg(_hiscore_display_date(death_time))});
+                treasure += "!";
+            }
+            if (translated.available)
+            {
+                death = (single ? " " : "") + translated.text + damage_text + treasure;
+                if (!single)
+                    death += _hiscore_newline_string();
+            }
+        }
+    }
+
+    // Do not omit summoner attribution or disabling circumstances from a death.
+    if (!killerpath.empty() || you.duration[DUR_PARALYSIS]
+        || you.duration[DUR_PETRIFIED] || you.duration[DUR_SLEEP]
+        || you.duration[DUR_VEXED]) return death;
+    const ui_arg killer = _score_component(death_source_name, true);
+    const ui_arg cause = _score_component(auxkilldata);
+    // Elemental/status deaths carry their source separately from the fixed
+    // verb. Translate every displayed clause or retain the entire paragraph.
+    string elemental;
+    bool handled = true, elemental_damage = true, extra_effect = false;
+    auto fixed = [&](const char *source) {
+        return ui_render("h.scores", source, "", {});
+    };
+    auto by = [&](const char *source, ui_arg who) {
+        return ui_render("h.death", source, "", {who});
+    };
+    switch (death_type)
+    {
+    case KILLED_BY_FREEZING:
+        elemental = death_source_name.empty() ? fixed("Frozen to death")
+            : by("Frozen to death by %s", killer);
+        break;
+    case KILLED_BY_BURNING:
+        elemental = death_source_name.empty() ? fixed("Burnt to a crisp")
+            : by("Incinerated by %s", killer);
+        extra_effect = !death_source_name.empty() && !auxkilldata.empty();
+        break;
+    case KILLED_BY_DRAINING:
+        elemental = death_source_name.empty()
+            ? (auxkilldata.empty() ? fixed("Drained of all life")
+                                  : by("Drained of all life by %s", cause))
+            : by("Drained of all life by %s", killer);
+        extra_effect = !death_source_name.empty() && !auxkilldata.empty();
+        elemental_damage = extra_effect && verbosity == DDV_VERBOSE;
+        break;
+    case KILLED_BY_ROTTING:
+        elemental_damage = false;
+        if (!auxkilldata.empty() && !death_source_name.empty())
+            elemental = ui_render("h.death", "Rotted away (%s) (%s)", "", {cause, killer});
+        else if (!auxkilldata.empty() || !death_source_name.empty())
+            elemental = by("Rotted away (%s)", auxkilldata.empty() ? killer : cause);
+        else elemental = fixed("Rotted away");
+        break;
+    case KILLED_BY_BLINKING:
+        if (death_source_name.empty()) return death;
+        elemental = by("Disjoined by %s", killer);
+        extra_effect = !auxkilldata.empty();
+        break;
+    case KILLED_BY_ACID:
+        elemental = death_source_name.empty() ? fixed("Splashed with acid")
+            : by("Splashed with acid from %s", killer);
+        break;
+    case KILLED_BY_COLLISION:
+        elemental = by("Collided with %s", _score_component(auxkilldata, true));
+        if (verbosity == DDV_VERBOSE)
+        {
+            const string pushed = by("... after being knocked back by %s", killer);
+            if (death_source_name.empty() || elemental.empty() || pushed.empty()) return death;
+            elemental += _hiscore_newline_string() + pushed;
+        }
+        break;
+    default: handled = false; break;
+    }
+    if (handled)
+    {
+        if (elemental.empty()) return death;
+        // Aux effects of burning/draining/blinking are printed in verbose and
+        // terse canonical records. Require them even if this view omits them.
+        if (extra_effect)
+        {
+            const string effect = by("... with %s", cause);
+            if (effect.empty()) return death;
+            if (verbosity == DDV_VERBOSE) elemental += _hiscore_newline_string() + effect;
+            else if (verbosity == DDV_TERSE) elemental += "，" + effect;
+        }
+        if (elemental_damage && damage > 0
+            && (verbosity == DDV_VERBOSE || verbosity == DDV_TERSE))
+        {
+            const string amount = ui_render("h.scores", " (%s damage)", "",
+                {ui_literal_arg(to_string(damage))});
+            if (amount.empty()) return death;
+            elemental += amount;
+        }
+        if (single) elemental = " " + elemental;
+        else if (verbosity == DDV_VERBOSE) elemental += _hiscore_newline_string();
+        return elemental;
+    }
+    const char *key = nullptr;
+    bool weapon = false, effect = false, damage_needed = true;
+    switch (death_type)
+    {
+    case KILLED_BY_MONSTER:
+        key = final_hp > -6 ? "Slain by %s" : final_hp > -14 ? "Mangled by %s"
+            : final_hp > -22 ? "Demolished by %s" : "Annihilated by %s";
+        weapon = !auxkilldata.empty(); break;
+    case KILLED_BY_HEADBUTT: key = "Headbutted by %s"; break;
+    case KILLED_BY_ROLLING: key = "Rolled over by %s"; break;
+    case KILLED_BY_SPINES: key = "Impaled on the spines of %s"; break;
+    case KILLED_BY_BEING_THROWN: key = "Thrown by %s"; break;
+    case KILLED_BY_CONSTRICTION: key = "Constricted to death by %s"; break;
+    case KILLED_BY_POISON:
+        if (!auxkilldata.empty()) return death;
+        key = "Succumbed to poison from %s"; damage_needed = false; break;
+    case KILLED_BY_BEAM:
+        // Capitalized aux strings describe complete missile attacks; indirect
+        // 'by ...' causes likewise need their own typed adapter.
+        if (auxkilldata.empty() || isupper(auxkilldata[0])
+            || starts_with(auxkilldata, "by ")) return death;
+        key = "Killed from afar by %s"; effect = true; break;
+    case KILLED_BY_DISINT:
+        key = "Blown up by %s"; effect = !auxkilldata.empty(); break;
+    case KILLED_BY_CLOUD:
+        if (!cause.available || auxkilldata.empty()) return death;
+        key = death_source_name.empty() ? "Engulfed by %s"
+                                       : "Engulfed by %s from %s";
+        break;
+    default: return death;
+    }
+    if (death_type != KILLED_BY_CLOUD && death_source_name.empty()) return death;
+    string shown = death_type == KILLED_BY_CLOUD
+        ? (death_source_name.empty() ? ui_render("h.death", key, "", {cause})
+                                    : ui_render("h.death", key, "", {cause, killer}))
+        : ui_render("h.death", key, "", {killer});
+    if (shown.empty()) return death;
+    const bool verbose = verbosity == DDV_VERBOSE;
+    if (weapon || effect)
+    {
+        const string extra = ui_render("h.death", weapon
+            ? "... wielding %s" : "... with %s", "", {cause});
+        if (extra.empty()) return death;
+        if (verbose) shown += _hiscore_newline_string();
+        else shown += "，";
+        shown += extra;
+    }
+    if (damage_needed && damage > 0 && (verbose || verbosity == DDV_TERSE))
+    {
+        const string amount = ui_render("h.scores", " (%s damage)", "",
+            {ui_literal_arg(to_string(damage))});
+        if (amount.empty()) return death;
+        shown += amount;
+    }
+    if (single) shown = " " + shown;
+    else if (verbose) shown += _hiscore_newline_string();
+    return shown;
+}
+
+// Minimal canonical snapshot: safe for damage-only entries that have never
+// initialized character, skill, level or game-time score fields.
+string scorefile_entry::death_cause_snapshot() const
+{
+    xlog_fields snapshot;
+    snapshot.add_field("ktyp", "%s", _kill_method_name(kill_method_type(death_type)));
+    snapshot.add_field("killer", "%s", death_source_name.c_str());
+    snapshot.add_field("kaux", "%s", auxkilldata.c_str());
+    snapshot.add_field("kpath", "%s", killerpath.c_str());
+    snapshot.add_field("ikiller", "%s", indirectkiller.c_str());
+    snapshot.add_field("dam", "%d", damage);
+    snapshot.add_field("hp", "%d", final_hp);
+    if (race >= 0 && race < NUM_SPECIES)
+        snapshot.add_field("race", "%s", _species_name(race).c_str());
+    return snapshot.xlog_line();
+}
+
+string scorefile_entry::display_damage_description() const
+{
+    const string original = death_description(DDV_TERSE);
+    if (Options.language != lang_t::ZH || !killerpath.empty()) return original;
+    const char *label = nullptr;
+    bool with_damage = false;
+    switch (death_type)
+    {
+    case KILLED_BY_FREEZING: label = "frozen"; with_damage = true; break;
+    case KILLED_BY_BURNING: label = "burnt"; with_damage = true; break;
+    case KILLED_BY_DRAINING: label = "drained"; break;
+    case KILLED_BY_ROTTING: label = "rotting"; break;
+    case KILLED_BY_ACID: label = "acid"; with_damage = true; break;
+    case KILLED_BY_CURARE: label = "asphyx"; break;
+    case KILLED_BY_BARBS: label = "barbs"; break;
+    case KILLED_BY_MIRROR_DAMAGE: label = "mirror damage"; with_damage = true; break;
+    case KILLED_BY_FALLING_DOWN_STAIRS: label = "fell downstairs"; with_damage = true; break;
+    case KILLED_BY_FALLING_THROUGH_GATE: label = "fell through a gate"; with_damage = true; break;
+    default: return original;
+    }
+    const string number = with_damage && damage > 0 ? make_stringf(" (%d)", damage) : "";
+    // Never drop a weapon, spell, poison attribution or summoner suffix.
+    if (original != string(label) + number) return original;
+    const ui_arg translated = ui_text_arg("h.damage", label);
+    if (!translated.available) return original;
+    if (number.empty()) return translated.text;
+    return ui_render("h.damage", "%s (%s)", original,
+        {translated, ui_literal_arg(to_string(damage))});
 }
 
 string scorefile_entry::game_time(death_desc_verbosity verbosity) const

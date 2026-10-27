@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
+#include "s-display.h"
 
 #include "wiz-item.h"
 
@@ -75,7 +77,7 @@ static void _make_all_books()
 void wizard_create_spec_object_by_name()
 {
     char buf[1024];
-    mprf(MSGCH_PROMPT, "Enter name of item (or ITEM spec): ");
+    mprf(MSGCH_PROMPT,"%s", ui_translate("w.ui", "Enter name of item (or ITEM spec): "));
     if (cancellable_get_line_autohist(buf, sizeof buf) || !*buf)
     {
         canned_msg(MSG_OK);
@@ -112,7 +114,7 @@ void wizard_create_spec_object()
     int thing_created = get_mitm_slot();
     if (thing_created == NON_ITEM)
     {
-        mpr("Could not allocate item.");
+        mpr(ui_translate("w.ui", "Could not allocate item."));
         return;
     }
     item_def& item(env.item[thing_created]);
@@ -126,7 +128,7 @@ void wizard_create_spec_object()
     }
     else if (class_wanted == OBJ_GOLD)
     {
-        int amount = prompt_for_int("How much gold? ", true);
+        int amount = prompt_for_int(ui_translate("w.ui", "How much gold? "), true);
         if (amount <= 0)
         {
             canned_msg(MSG_OK);
@@ -145,19 +147,19 @@ void wizard_create_spec_object()
 
         if (mon == MONS_NO_MONSTER || mon == MONS_PROGRAM_BUG)
         {
-            mpr("No such monster.");
+            mpr(ui_translate("w.ui", "No such monster."));
             return;
         }
 
         if (!mons_class_can_leave_corpse(mon))
         {
-            mpr("That monster doesn't leave corpses.");
+            mpr(ui_translate("w.ui", "That monster doesn't leave corpses."));
             return;
         }
 
         if (mons_is_draconian_job(mon))
         {
-            mpr("You can't make a draconian corpse by its background.");
+            mpr(ui_translate("w.ui", "You can't make a draconian corpse by its background."));
             mon = MONS_DRACONIAN;
         }
 
@@ -168,22 +170,23 @@ void wizard_create_spec_object()
         if (mons_genus(mon) == MONS_HYDRA)
         {
             dummy.num_heads
-                =  max(1, min(27, prompt_for_int("How many heads? ", false)));
+                =  max(1, min(27, prompt_for_int(ui_translate("w.ui", "How many heads? "), false)));
         }
 
         if (!place_monster_corpse(dummy, true))
         {
-            mpr("Failed to create corpse.");
+            mpr(ui_translate("w.ui", "Failed to create corpse."));
             return;
         }
     }
     else
     {
         char specs[80];
-        string prompt = make_stringf("What type of %s? ",
-                                     base_type_string(class_wanted));
+        string prompt = ui_render("w.log", "What type of %s? ",
+            make_stringf("What type of %s? ", base_type_string(class_wanted)),
+            {ui_text_arg("w.itemclass", base_type_string(class_wanted))});
         if (class_wanted == OBJ_BOOKS)
-            prompt += "(\"all\" for all) ";
+            prompt += ui_translate("w.ui", "(\"all\" for all) ");
         msgwin_get_line_autohist(prompt, specs, sizeof(specs));
 
         string temp = specs;
@@ -205,7 +208,7 @@ void wizard_create_spec_object()
 
         if (!get_item_by_name(&item, specs, class_wanted, true))
         {
-            mpr("No such item.");
+            mpr(ui_translate("w.ui", "No such item."));
 
             // Clean up item
             destroy_item(thing_created);
@@ -231,7 +234,7 @@ static void _tweak_randart(item_def &item)
 {
     if (item_is_equipped(item))
     {
-        mprf(MSGCH_PROMPT, "You can't tweak the randart properties of an equipped item.");
+        mprf(MSGCH_PROMPT,"%s", ui_translate("w.ui", "You can't tweak the randart properties of an equipped item."));
         return;
     }
     else
@@ -269,7 +272,7 @@ static void _tweak_randart(item_def &item)
     switch (artp_value_type(prop))
     {
     case ARTP_VAL_BOOL:
-        mprf(MSGCH_PROMPT, "Toggling %s to %s.", artp_name(prop),
+        mprf(MSGCH_PROMPT,ui_translate("w.raw", "Toggling %s to %s."), artp_name(prop),
              props[prop] ? "off" : "on");
         artefact_set_property(item, static_cast<artefact_prop_type>(prop),
                              !props[prop]);
@@ -277,12 +280,12 @@ static void _tweak_randart(item_def &item)
 
     case ARTP_VAL_POS:
     {
-        mprf(MSGCH_PROMPT, "%s was %d.", artp_name(prop), props[prop]);
-        const int val = prompt_for_int("New value? ", true);
+        mprf(MSGCH_PROMPT,ui_translate("w.raw", "%s was %d."), artp_name(prop), props[prop]);
+        const int val = prompt_for_int(ui_translate("w.ui", "New value? "), true);
 
         if (val < 0)
         {
-            mprf(MSGCH_PROMPT, "Value for %s must be non-negative",
+            mprf(MSGCH_PROMPT,ui_translate("w.raw", "Value for %s must be non-negative"),
                  artp_name(prop));
             return;
         }
@@ -292,8 +295,8 @@ static void _tweak_randart(item_def &item)
     }
     case ARTP_VAL_ANY:
     {
-        mprf(MSGCH_PROMPT, "%s was %d.", artp_name(prop), props[prop]);
-        const int val = prompt_for_int("New value? ", false);
+        mprf(MSGCH_PROMPT,ui_translate("w.raw", "%s was %d."), artp_name(prop), props[prop]);
+        const int val = prompt_for_int(ui_translate("w.ui", "New value? "), false);
         artefact_set_property(item, static_cast<artefact_prop_type>(prop),
                              val);
         break;
@@ -301,11 +304,11 @@ static void _tweak_randart(item_def &item)
 
     case ARTP_VAL_BRAND:
     {
-        mprf(MSGCH_PROMPT, "%s was %s.", artp_name(prop),
+        mprf(MSGCH_PROMPT,ui_translate("w.raw", "%s was %s."), artp_name(prop),
              props[prop] ? ego_type_string(item, false).c_str() : "normal");
 
         char specs[80];
-        msgwin_get_line("New ego? ", specs, sizeof(specs));
+        msgwin_get_line(ui_translate("w.ui", "New ego? "), specs, sizeof(specs));
         if (specs[0] == '\0')
         {
             canned_msg(MSG_OK);
@@ -316,13 +319,12 @@ static void _tweak_randart(item_def &item)
 
         if (ego == 0 && string(specs) != "normal") // this is secretly a hack
         {
-            mprf("No such ego as: %s", specs);
+            mprf(ui_translate("w.raw", "No such ego as: %s"), specs);
             break;
         }
         if (ego == -1)
         {
-            mprf("Ego '%s' is invalid for %s.",
-                 specs, item.name(DESC_A).c_str());
+            mprf("%s", ui_render("w.log", "Ego '%s' is invalid for %s.", make_stringf("Ego '%s' is invalid for %s.", specs, item.name(DESC_A).c_str()), {ui_literal_arg(specs), ui_item_arg(item)}).c_str());
             break;
         }
 
@@ -340,7 +342,7 @@ void wizard_tweak_object()
     char specs[50];
     int keyin;
 
-    int item = prompt_invent_item("Tweak which item? ", menu_type::invlist, OSEL_ANY);
+    int item = prompt_invent_item(ui_translate("w.ui", "Tweak which item? "), menu_type::invlist, OSEL_ANY);
 
     if (prompt_failed(item))
         return;
@@ -388,7 +390,7 @@ void wizard_tweak_object()
         else
             mprf("Old value: 0x%08" PRIx64, old_val);
 
-        msgwin_get_line("New value? ", specs, sizeof(specs));
+        msgwin_get_line(ui_translate("w.ui", "New value? "), specs, sizeof(specs));
         if (specs[0] == '\0')
         {
             canned_msg(MSG_OK);
@@ -402,7 +404,7 @@ void wizard_tweak_object()
         if (keyin == 'e' && new_val & ISFLAG_ARTEFACT_MASK
             && !you.inv[item].props.exists(ARTEFACT_PROPS_KEY))
         {
-            mpr("You can't set this flag on a non-artefact.");
+            mpr(ui_translate("w.ui", "You can't set this flag on a non-artefact."));
             continue;
         }
 
@@ -437,7 +439,7 @@ static bool _make_book_randart(item_def &book)
 
     do
     {
-        mprf(MSGCH_PROMPT, "Make book fixed [t]heme or fixed [l]evel? ");
+        mprf(MSGCH_PROMPT,"%s", ui_translate("w.ui", "Make book fixed [t]heme or fixed [l]evel? "));
         type = toalower(getch_ck());
     }
     while (type != 't' && type != 'l');
@@ -451,7 +453,7 @@ static bool _make_book_randart(item_def &book)
 /// Prompt for an item in inventory & print its base shop value.
 void wizard_value_item()
 {
-    const int i = prompt_invent_item("Value of which item?",
+    const int i = prompt_invent_item(ui_translate("w.ui", "Value of which item?"),
                                      menu_type::invlist, OSEL_ANY);
 
     if (prompt_failed(i))
@@ -461,9 +463,9 @@ void wizard_value_item()
     const int real_value = item_value(item, true);
     const int known_value = item_value(item, false);
     if (real_value != known_value)
-        mprf("Real value: %d (known: %d)", real_value, known_value);
+        mprf(ui_translate("w.ui", "Real value: %d (known: %d)"), real_value, known_value);
     else
-        mprf("Value: %d", real_value);
+        mprf(ui_translate("w.ui", "Value: %d"), real_value);
 }
 
 /**
@@ -560,7 +562,7 @@ void wizard_create_all_artefacts(bool override_unique)
 
 void wizard_make_object_randart()
 {
-    int i = prompt_invent_item("Make an artefact out of which item?",
+    int i = prompt_invent_item(ui_translate("w.ui", "Make an artefact out of which item?"),
                                 menu_type::invlist, OSEL_ANY);
 
     if (prompt_failed(i))
@@ -570,13 +572,13 @@ void wizard_make_object_randart()
 
     if (is_unrandom_artefact(item))
     {
-        mpr("That item is already an unrandom artefact.");
+        mpr(ui_translate("w.ui", "That item is already an unrandom artefact."));
         return;
     }
 
     if (!item_type_can_be_artefact(item.base_type))
     {
-        mpr("That item cannot be turned into an artefact.");
+        mpr(ui_translate("w.ui", "That item cannot be turned into an artefact."));
         return;
     }
 
@@ -590,7 +592,7 @@ void wizard_make_object_randart()
 
     if (is_random_artefact(item))
     {
-        if (!yesno("Is already a randart; wipe and re-use?", true, 'n'))
+        if (!yesno(ui_translate("w.ui", "Is already a randart; wipe and re-use?"), true, 'n'))
         {
             canned_msg(MSG_OK);
             return;
@@ -601,13 +603,13 @@ void wizard_make_object_randart()
         item.props.clear();
     }
 
-    mprf(MSGCH_PROMPT, "Fake item as gift from which god (ENTER to leave alone): ");
+    mprf(MSGCH_PROMPT,"%s", ui_translate("w.ui", "Fake item as gift from which god (ENTER to leave alone): "));
     char name[80];
     if (!cancellable_get_line(name, sizeof(name)) && name[0])
     {
         god_type god = str_to_god(name, false);
         if (god == GOD_NO_GOD)
-            mpr("No such god, leaving item origin alone.");
+            mpr(ui_translate("w.ui", "No such god, leaving item origin alone."));
         else
         {
             mprf("God gift of %s.", god_name(god, false).c_str());
@@ -619,13 +621,13 @@ void wizard_make_object_randart()
     {
         if (!_make_book_randart(item))
         {
-            mpr("Failed to turn book into randart.");
+            mpr(ui_translate("w.ui", "Failed to turn book into randart."));
             return;
         }
     }
     else if (!make_item_randart(item, true))
     {
-        mpr("Failed to turn item into randart.");
+        mpr(ui_translate("w.ui", "Failed to turn item into randart."));
         return;
     }
 
@@ -638,7 +640,7 @@ void wizard_make_object_randart()
 
 void wizard_identify_pack()
 {
-    mpr("You feel a rush of knowledge.");
+    mpr(ui_translate("w.ui", "You feel a rush of knowledge."));
     identify_inventory();
     you.wield_change  = true;
     quiver::set_needs_redraw();
@@ -655,7 +657,7 @@ static void _forget_item(item_def &item)
 
 void wizard_unidentify_pack()
 {
-    mpr("You feel a rush of antiknowledge.");
+    mpr(ui_translate("w.ui", "You feel a rush of antiknowledge."));
     for (auto &item : you.inv)
         if (item.defined())
             _forget_item(item);
@@ -673,7 +675,7 @@ void wizard_unidentify_pack()
 
 void wizard_list_items()
 {
-    mpr("Item stacks (by location and top item):");
+    mpr(ui_translate("w.ui", "Item stacks (by location and top item):"));
     for (const auto &item : env.item)
     {
         if (item.defined() && !item.held_by_monster() && item.link != NON_ITEM)
@@ -685,7 +687,7 @@ void wizard_list_items()
     }
 
     mpr("");
-    mpr("Floor items (stacks only show top item):");
+    mpr(ui_translate("w.ui", "Floor items (stacks only show top item):"));
 
     const coord_def start(1,1), end(GXM-1, GYM-1);
     for (rectangle_iterator ri(start, end); ri; ++ri)
@@ -756,7 +758,7 @@ static void _debug_acquirement_stats()
     int p = get_mitm_slot(11);
     if (p == NON_ITEM)
     {
-        mpr("Too many items on level.");
+        mpr(ui_translate("w.ui", "Too many items on level."));
         return;
     }
     env.item[p].base_type = OBJ_UNASSIGNED;
@@ -778,7 +780,7 @@ static void _debug_acquirement_stats()
         return;
     auto type = static_cast<object_class_type>(menu.result());
 
-    const int num_itrs = prompt_for_int("How many iterations? ", true);
+    const int num_itrs = prompt_for_int(ui_translate("w.ui", "How many iterations? "), true);
     if (num_itrs < 0)
     {
         canned_msg(MSG_OK);
@@ -811,7 +813,7 @@ static void _debug_acquirement_stats()
         if (kbhit())
         {
             getch_ck();
-            mpr("Stopping early due to keyboard input.");
+            mpr(ui_translate("w.ui", "Stopping early due to keyboard input."));
             break;
         }
 
@@ -820,7 +822,7 @@ static void _debug_acquirement_stats()
 
         if (item_index == NON_ITEM || !env.item[item_index].defined())
         {
-            mpr("Acquirement failed, stopping early.");
+            mpr(ui_translate("w.ui", "Acquirement failed, stopping early."));
             break;
         }
 
@@ -881,7 +883,7 @@ static void _debug_acquirement_stats()
 
     if (total_quant == 0 || acq_calls == 0)
     {
-        mpr("No items generated.");
+        mpr(ui_translate("w.ui", "No items generated."));
         return;
     }
 
@@ -1107,7 +1109,7 @@ static void _debug_acquirement_stats()
 
     fprintf(ostat, "-----------------------------------------\n\n");
     fclose(ostat);
-    mpr("Results written into acquirement_stats.txt.");
+    mpr(ui_translate("w.ui", "Results written into acquirement_stats.txt."));
 }
 
 /**
@@ -1122,7 +1124,7 @@ static int _median(vector<int> &counts)
 static void _debug_randart_stats()
 {
     char buf[1024];
-    mprf(MSGCH_PROMPT, "Enter name of item (or ITEM spec): ");
+    mprf(MSGCH_PROMPT,"%s", ui_translate("w.ui", "Enter name of item (or ITEM spec): "));
     if (cancellable_get_line_autohist(buf, sizeof buf) || !*buf)
     {
         canned_msg(MSG_OK);
@@ -1142,7 +1144,7 @@ static void _debug_randart_stats()
     item_spec ispec = ilist.get_item(0);
     ispec.level = ISPEC_RANDART;
 
-    const int num_itrs = prompt_for_int("How many iterations? ", true);
+    const int num_itrs = prompt_for_int(ui_translate("w.ui", "How many iterations? "), true);
     if (num_itrs < 0)
     {
         canned_msg(MSG_OK);
@@ -1182,7 +1184,7 @@ static void _debug_randart_stats()
         if (kbhit())
         {
             getch_ck();
-            mpr("Stopping early due to keyboard input.");
+            mpr(ui_translate("w.ui", "Stopping early due to keyboard input."));
             break;
         }
 
@@ -1327,13 +1329,13 @@ static void _debug_randart_stats()
     }
 
     fprintf(ostat, "\n-----------------------------------------\n\n");
-    mpr("Results written into 'randart_stats.txt'.");
+    mpr(ui_translate("w.ui", "Results written into 'randart_stats.txt'."));
     fclose(ostat);
 }
 
 void debug_item_statistics()
 {
-    mpr("Generate stats for: [a] acquirement [b] randart properties");
+    mpr(ui_translate("w.ui", "Generate stats for: [a] acquirement [b] randart properties"));
     flush_prev_message();
 
     const int keyin = toalower(get_ch());
@@ -1353,7 +1355,7 @@ void wizard_draw_card()
     char buf[80];
     if (cancellable_get_line_autohist(buf, sizeof buf))
     {
-        mpr("Unknown card.");
+        mpr(ui_translate("w.ui", "Unknown card."));
         return;
     }
 
@@ -1374,7 +1376,7 @@ void wizard_draw_card()
         }
     }
     if (!found_card)
-        mpr("Unknown card.");
+        mpr(ui_translate("w.ui", "Unknown card."));
 }
 
 void wizard_identify_all_items()
@@ -1428,7 +1430,7 @@ void wizard_recharge_evokers()
 
         evoker_debt(dummy.sub_type) = 0;
     }
-    mpr("Evokers recharged.");
+    mpr(ui_translate("w.ui", "Evokers recharged."));
 }
 
 void wizard_unobtain_runes_and_orb()
@@ -1438,6 +1440,6 @@ void wizard_unobtain_runes_and_orb()
     you.chapter = CHAPTER_ORB_HUNTING;
     invalidate_agrid(true);
 
-    mpr("Unobtained all runes and the Orb of Zot.");
+    mpr(ui_translate("w.ui", "Unobtained all runes and the Orb of Zot."));
 }
 #endif

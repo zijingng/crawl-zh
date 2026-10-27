@@ -4,6 +4,9 @@
 **/
 
 #include "AppHdr.h"
+#include "t-display.h"
+#include "mon-info.h"
+#include "i18n.h"
 
 #include "traps.h"
 #include "trap-def.h"
@@ -19,6 +22,7 @@
 #include "cloud.h"
 #include "coordit.h"
 #include "database.h" // harlequin trap lines
+#include "misc-display.h"
 #include "delay.h"
 #include "describe.h"
 #include "dungeon.h"
@@ -323,7 +327,7 @@ static const vector<pair<function<void ()>, int>> zot_effects = {
               mg.set_non_actor_summoner("a Zot trap");
               mg.extra_flags |= (MF_NO_REWARD | MF_HARD_RESET);
               if (create_monster(mg))
-                  mpr("You sense a hostile presence.");
+                  mpr(ui_translate("t.ui", "You sense a hostile presence."));
          }, 3 },
     { [] {
              coord_def pt = find_gateway_location(&you);
@@ -337,14 +341,14 @@ static const vector<pair<function<void ()>, int>> zot_effects = {
               mg.set_non_actor_summoner("a Zot trap");
               mg.extra_flags |= (MF_NO_REWARD | MF_HARD_RESET);
               if (create_monster(mg))
-                  mpr("A huge vortex of air appears!");
+                  mpr(ui_translate("t.ui", "A huge vortex of air appears!"));
          }, 1 },
 };
 
 // Zot traps only target the player. This rolls their effect.
 static void _zot_trap()
 {
-    mpr("The power of Zot is invoked against you!");
+    mpr(ui_translate("t.ui", "The power of Zot is invoked against you!"));
     (*random_choose_weighted(zot_effects))();
 }
 
@@ -382,7 +386,7 @@ void trap_def::trigger(actor& triggerer)
         if (search_result == passage_type::free)
         {
             if (you_trigger)
-                mpr("You enter the passage of Golubria.");
+                mpr(ui_translate("t.ui", "You enter the passage of Golubria."));
             else
                 simple_monster_message(*m, " enters the passage of Golubria.");
 
@@ -396,8 +400,8 @@ void trap_def::trigger(actor& triggerer)
         }
         else if (you_trigger)
         {
-            mprf("This passage %s!", search_result == passage_type::blocked ?
-                 "seems to be blocked by something" : "doesn't lead anywhere");
+            mprf("%s", ui_render("t.log", "This passage %s!", make_stringf("This passage %s!", search_result == passage_type::blocked ?
+                 "seems to be blocked by something" : "doesn't lead anywhere"), {t_clause_arg(search_result == passage_type::blocked ? "is blocked" : "doesn't lead anywhere")}).c_str());
         }
         break;
     }
@@ -405,10 +409,9 @@ void trap_def::trigger(actor& triggerer)
     {
         dprf("Triggered dispersal.");
         if (you_trigger)
-            mprf("You enter %s!", name(DESC_A).c_str());
+            mprf("%s", ui_render("t.log", "You enter %s!", make_stringf("You enter %s!", name(DESC_A).c_str()), {ui_text_arg("t.trap", full_trap_name(type))}).c_str());
         else
-            mprf("%s enters %s!", triggerer.name(DESC_THE).c_str(),
-                    name(DESC_A).c_str());
+            mprf("%s", ui_render("t.log", "%s enters %s!", make_stringf("%s enters %s!", triggerer.name(DESC_THE).c_str(), name(DESC_A).c_str()), {ui_actor_arg(triggerer), ui_text_arg("t.trap", full_trap_name(type))}).c_str());
 
         for (monster_near_iterator mi(pos, LOS_NO_TRANS); mi; ++mi)
             if (!mi->no_tele())
@@ -424,13 +427,13 @@ void trap_def::trigger(actor& triggerer)
     case TRAP_TELEPORT:
     case TRAP_TELEPORT_PERMANENT:
         if (you_trigger)
-            mprf("You enter %s!", name(DESC_A).c_str());
+            mprf("%s", ui_render("t.log", "You enter %s!", make_stringf("You enter %s!", name(DESC_A).c_str()), {ui_text_arg("t.trap", full_trap_name(type))}).c_str());
         if (ammo_qty > 0 && !--ammo_qty)
         {
             // can't use trap_destroyed, as we might recurse into a shaft
             // or be banished by a Zot trap
             env.map_knowledge(pos).set_feature(DNGN_FLOOR);
-            mprf("%s disappears.", name(DESC_THE).c_str());
+            mprf("%s", ui_render("t.log", "%s disappears.", make_stringf("%s disappears.", name(DESC_THE).c_str()), {ui_text_arg("t.trap", full_trap_name(type))}).c_str());
             destroy();
         }
         if (!triggerer.no_tele())
@@ -440,12 +443,11 @@ void trap_def::trigger(actor& triggerer)
     case TRAP_TYRANT:
     {
         if (you_trigger)
-            mpr("You enter a tyrant's trap.");
+            mpr(ui_translate("t.ui", "You enter a tyrant's trap."));
         else
         {
-            mprf("%s %s!", triggerer.name(DESC_THE).c_str(),
-                 mons_intel(*m) >= I_HUMAN ? "invokes a tyrant's trap upon you" :
-                                             "sets off a tyrant's trap");
+            mprf("%s", ui_render("t.log", "%s invokes a tyrant's trap!", make_stringf("%s %s!", triggerer.name(DESC_THE).c_str(), mons_intel(*m) >= I_HUMAN ? "invokes a tyrant's trap upon you" :
+                                             "sets off a tyrant's trap"), {ui_actor_arg(triggerer)}).c_str());
         }
 
         int debuff_time = 10 + random2(5);
@@ -461,12 +463,10 @@ void trap_def::trigger(actor& triggerer)
                  visible_mons++;
 
         if (buffed_mons.size() == 0)
-           mpr("Your strength is siphoned away, and you feel your attacks grow feeble!");
+           mpr(ui_translate("t.ui", "Your strength is siphoned away, and you feel your attacks grow feeble!"));
         else
         {
-            mprf("Your strength is siphoned away as %s grow%s stronger!",
-                describe_monsters_condensed(buffed_mons).c_str(),
-                visible_mons > 1 ? "" : "s");
+            mprf("%s", ui_render("t.log", "Your strength is siphoned away as %s grow stronger!", make_stringf("Your strength is siphoned away as %s grow%s stronger!", describe_monsters_condensed(buffed_mons).c_str(), visible_mons > 1 ? "" : "s"), {t_visible_monsters_arg(buffed_mons)}).c_str());
         }
 
         break;
@@ -475,12 +475,11 @@ void trap_def::trigger(actor& triggerer)
     case TRAP_ARCHMAGE:
     {
         if (you_trigger)
-            mpr("You enter an archmage's trap.");
+            mpr(ui_translate("t.ui", "You enter an archmage's trap."));
         else
         {
-            mprf("%s %s!", triggerer.name(DESC_THE).c_str(),
-                 mons_intel(*m) >= I_HUMAN ? "invokes an archmage's trap upon you" :
-                                             "sets off an archmage's trap");
+            mprf("%s", ui_render("t.log", "%s invokes a archmage's trap!", make_stringf("%s %s!", triggerer.name(DESC_THE).c_str(), mons_intel(*m) >= I_HUMAN ? "invokes an archmage's trap upon you" :
+                                             "sets off an archmage's trap"), {ui_actor_arg(triggerer)}).c_str());
         }
 
         int buff_time = 200 + random2(80);
@@ -492,17 +491,16 @@ void trap_def::trigger(actor& triggerer)
                                                                    pos, buff_time);
 
         if (buffed_mons.size() == 0)
-           mprf(MSGCH_WARN, "Your power is siphoned away!");
+           mprf(MSGCH_WARN, "%s", ui_translate("t.ui", "Your power is siphoned away!"));
         else
         {
             string m_list = describe_monsters_condensed(buffed_mons);
 
             if (drain == 0)
-                mprf("The spells of %s are empowered!", m_list.c_str());
+                mprf("%s", ui_render("t.log", "The spells of %s are empowered!", make_stringf("The spells of %s are empowered!", m_list.c_str()), {t_visible_monsters_arg(buffed_mons)}).c_str());
             else
             {
-                mprf(MSGCH_WARN, "Your power is siphoned away as the spells of %s are empowered!",
-                     m_list.c_str());
+                mprf(MSGCH_WARN, "%s", ui_render("t.log", "Your power is siphoned away as the spells of %s are empowered!", make_stringf("Your power is siphoned away as the spells of %s are empowered!", m_list.c_str()), {t_visible_monsters_arg(buffed_mons)}).c_str());
             }
         }
         break;
@@ -511,7 +509,7 @@ void trap_def::trigger(actor& triggerer)
     case TRAP_HARLEQUIN:
     {
         if (you_trigger)
-            mpr("You enter a harlequin's trap.");
+            mpr(ui_translate("t.ui", "You enter a harlequin's trap."));
 
         int buff_time = 200 + random2(80);
 
@@ -524,22 +522,25 @@ void trap_def::trigger(actor& triggerer)
             // monsters walking on the trap unless it actually does something.
             if (!you_trigger)
             {
-                mprf("%s %s!", triggerer.name(DESC_THE).c_str(),
-                 mons_intel(*m) >= I_HUMAN ? "invokes a harlequin's trap" :
-                                             "sets off a harlequin's trap");
+                mprf("%s", ui_render("t.log", "%s invokes a harlequin's trap!", make_stringf("%s %s!", triggerer.name(DESC_THE).c_str(), mons_intel(*m) >= I_HUMAN ? "invokes a harlequin's trap" :
+                                             "sets off a harlequin's trap"), {ui_actor_arg(triggerer)}).c_str());
             }
 
             string m_list = describe_monsters_condensed(buffed_mons);
-            mprf(MSGCH_MONSTER_ENCHANT, "%s the attacks of %s are laced with chaos!",
-                 getMiscString("harlequin_trap_lines").c_str(),  m_list.c_str());
+            const auto trap_speech = getPairedMiscString("harlequin_trap_lines");
+            const string &trap_line = trap_speech.english;
+            mprf(MSGCH_MONSTER_ENCHANT, "%s", ui_render("t.log",
+                "%s the attacks of %s are laced with chaos!",
+                make_stringf("%s the attacks of %s are laced with chaos!", trap_line.c_str(), m_list.c_str()),
+                {{trap_speech.translated, trap_speech.complete}, t_visible_monsters_arg(buffed_mons)}).c_str());
 
             // Almost certainly not worth setting up any penance;
             // player-triggered Zot traps summoning demons don't either.
             if (you_trigger && is_good_god(you.religion))
-                mprf(MSGCH_GOD, "You feel a twinge of divine disapproval.");
+                mprf(MSGCH_GOD, "%s", ui_translate("t.ui", "You feel a twinge of divine disapproval."));
         }
         else if (!you_trigger)
-            mprf("%s enters a harlequin's trap.", triggerer.name(DESC_THE).c_str());
+            mprf("%s", ui_render("t.log", "%s enters a harlequin's trap.", make_stringf("%s enters a harlequin's trap.", triggerer.name(DESC_THE).c_str()), {ui_actor_arg(triggerer)}).c_str());
 
         break;
     }
@@ -547,21 +548,20 @@ void trap_def::trigger(actor& triggerer)
     case TRAP_DEVOURER:
     {
         if (you_trigger)
-            mpr("You enter a devourer's trap.");
+            mpr(ui_translate("t.ui", "You enter a devourer's trap."));
 
         if (x_chance_in_y(3, 4))
         {
             if (!you_trigger)
             {
-                mprf("%s %s!", triggerer.name(DESC_THE).c_str(),
-                mons_intel(*m) >= I_HUMAN ? "invokes an devourer's trap upon you" :
-                                            "sets off an devourer's trap");
+                mprf("%s", ui_render("t.log", "%s invokes a devourer's trap!", make_stringf("%s %s!", triggerer.name(DESC_THE).c_str(), mons_intel(*m) >= I_HUMAN ? "invokes an devourer's trap upon you" :
+                                            "sets off an devourer's trap"), {ui_actor_arg(triggerer)}).c_str());
             }
             flash_tile(you.pos(), YELLOW, 60, TILE_BOLT_DEFAULT_YELLOW);
             you.corrode(nullptr, "The trap's stomach acid", 6);
         }
         else if (!you_trigger)
-            mprf("%s enters a devourer's trap.", triggerer.name(DESC_THE).c_str());
+            mprf("%s", ui_render("t.log", "%s enters a devourer's trap.", make_stringf("%s enters a devourer's trap.", triggerer.name(DESC_THE).c_str()), {ui_actor_arg(triggerer)}).c_str());
 
         break;
     }
@@ -574,20 +574,19 @@ void trap_def::trigger(actor& triggerer)
             break;
         trap_destroyed = true;
         if (you_trigger)
-            mpr("You set off the alarm!");
+            mpr(ui_translate("t.ui", "You set off the alarm!"));
         else
-            mprf("%s %s the alarm!", triggerer.name(DESC_THE).c_str(),
-                 mons_intel(*m) >= I_HUMAN ? "pulls" : "sets off");
+            mprf("%s", ui_render("t.log", "%s sets off the alarm!", make_stringf("%s %s the alarm!", triggerer.name(DESC_THE).c_str(), mons_intel(*m) >= I_HUMAN ? "pulls" : "sets off"), {ui_actor_arg(triggerer)}).c_str());
 
         if (silenced(pos))
         {
-            mprf("%s vibrates slightly, failing to make a sound.",
-                 name(DESC_THE).c_str());
+            mprf("%s", ui_render("t.log", "%s vibrates slightly, failing to make a sound.", make_stringf("%s vibrates slightly, failing to make a sound.", name(DESC_THE).c_str()), {ui_text_arg("t.trap", full_trap_name(type))}).c_str());
         }
         else
         {
             string msg = make_stringf("%s emits a blaring wail!",
                                name(DESC_THE).c_str());
+            msg = ui_render("t.log", "%s emits a blaring wail!", msg, {ui_text_arg("t.trap", full_trap_name(type))});
             noisy(40, pos, msg.c_str(), triggerer.mid);
         }
 
@@ -617,7 +616,7 @@ void trap_def::trigger(actor& triggerer)
                 triggered = true;
 
                 if (!simple_monster_message(*m, " drops a net on you."))
-                    mpr("Something launches a net on you.");
+                    mpr(ui_translate("t.ui", "Something launches a net on you."));
             }
         }
 
@@ -625,11 +624,11 @@ void trap_def::trigger(actor& triggerer)
             break;
 
         if (you_trigger)
-            mpr("You trigger a net trap.");
+            mpr(ui_translate("t.ui", "You trigger a net trap."));
 
         if (random2avg(2 * you.evasion(), 2) > 18 + env.absdepth0 / 2)
         {
-            mpr("You avoid being caught in a net.");
+            mpr(ui_translate("t.ui", "You avoid being caught in a net."));
             break;
         }
 
@@ -637,7 +636,7 @@ void trap_def::trigger(actor& triggerer)
         {
             const string reason = _net_immune_reason();
             if (!reason.empty())
-                mpr(reason);
+                mpr(ui_translate("t.reason", reason.c_str()));
             break;
         }
 
@@ -663,7 +662,7 @@ void trap_def::trigger(actor& triggerer)
         if (you_trigger)
         {
             if (one_chance_in(3))
-                mpr("You pick your way through the web.");
+                mpr(ui_translate("t.ui", "You pick your way through the web."));
             else if (you.trap_in_web())
             {
                 if (ammo_qty == 1)
@@ -681,7 +680,7 @@ void trap_def::trigger(actor& triggerer)
                 if (m->trap_in_web())
                 {
                     if (!m->visible_to(&you))
-                        mpr("A web moves frantically as something is caught in it!");
+                        mpr(ui_translate("t.ui", "A web moves frantically as something is caught in it!"));
                     // Don't try to escape the web in the same turn
                     m->props[NEWLY_TRAPPED_KEY] = true;
                     if (ammo_qty == 1)
@@ -694,7 +693,7 @@ void trap_def::trigger(actor& triggerer)
     case TRAP_ZOT:
         if (you_trigger)
         {
-            mpr("You enter the Zot trap.");
+            mpr(ui_translate("t.ui", "You enter the Zot trap."));
             _zot_trap();
         }
         else if (m)
@@ -705,7 +704,7 @@ void trap_def::trigger(actor& triggerer)
 
             // Give the player a chance to figure out what happened
             if (player_can_hear(pos))
-                mprf(MSGCH_SOUND, "You hear a loud \"Zot\"!");
+                mprf(MSGCH_SOUND, "%s", ui_translate("t.ui", "You hear a loud \"Zot\"!"));
 
             if (you.see_cell_no_trans(pos) && one_chance_in(5))
                 _zot_trap();
@@ -733,8 +732,7 @@ void trap_def::trigger(actor& triggerer)
         // after one use in down_stairs()
         if (!you_trigger)
         {
-            mprf("%s shaft crumbles and collapses.",
-                 triggerer_seen ? "The" : "A");
+            mprf("%s", ui_render("t.log", "The shaft crumbles and collapses.", make_stringf("%s shaft crumbles and collapses.", triggerer_seen ? "The" : "A"), {}).c_str());
             know_trap_destroyed = true;
             trap_destroyed = true;
 
@@ -758,7 +756,7 @@ void trap_def::trigger(actor& triggerer)
 #if TAG_MAJOR_VERSION == 34
         if (is_removed_trap(type))
         {
-            mpr("The trap seems to be inoperative.");
+            mpr(ui_translate("t.ui", "The trap seems to be inoperative."));
             trap_destroyed = true;
         }
 #endif
@@ -967,7 +965,7 @@ static string _malev_msg()
 
 static void _print_malev()
 {
-    mpr(_malev_msg());
+    mpr(ui_render("t.log", "A malevolent force fills %s...", _malev_msg(), {ui_text_arg("b.branch.name", branches[you.where_are_you].longname)}));
 }
 
 /**
@@ -1020,7 +1018,7 @@ void do_trap_effects()
                 simple_god_message(" reveals an alarm trap just before you would have tripped it.");
                 return;
             }
-            mpr("With a horrendous wail, an alarm goes off!");
+            mpr(ui_translate("t.ui", "With a horrendous wail, an alarm goes off!"));
             fake_noisy(40, you.pos());
             you.sentinel_mark(true);
             apply_noises(); // Otherwise the noise from them won't kick in until the end of the turn.
@@ -1037,11 +1035,11 @@ void do_trap_effects()
                                       _malev_msg().c_str());
             if (have_passive(passive_t::avoid_traps))
             {
-                mpr(msg);
+                mpr(ui_render("t.log", "A malevolent force fills %s and a teleportation trap spontaneously manifests!", msg, {ui_text_arg("b.branch.name", branches[you.where_are_you].longname)}));
                 simple_god_message(" warns you in time for you to avoid it.");
                 return;
             }
-            mpr(msg);
+            mpr(ui_render("t.log", "A malevolent force fills %s and a teleportation trap spontaneously manifests!", msg, {ui_text_arg("b.branch.name", branches[you.where_are_you].longname)}));
             hostile_teleport_player();
             break;
         }
@@ -1231,7 +1229,7 @@ bool player::trap_in_web()
     you.redraw_evasion      = true;
     quiver::set_needs_redraw();
 
-    mpr("You are caught in a web!");
+    mpr(ui_translate("t.ui", "You are caught in a web!"));
 
     return true;
 }
@@ -1259,7 +1257,7 @@ bool player::trap_in_net(bool real, bool quiet)
     quiver::set_needs_redraw();
 
     if (!quiet)
-        mpr("You become entangled in the net!");
+        mpr(ui_translate("t.ui", "You become entangled in the net!"));
 
     stop_running();
     stop_delay(true); // even stair delays
@@ -1284,9 +1282,9 @@ bool monster::trap_in_net(bool real, bool quiet)
         if (!quiet && you.can_see(*this))
         {
             if (is_insubstantial())
-                mprf("The net passes right through %s!", name(DESC_THE).c_str());
+                mprf("%s", ui_render("t.log", "The net passes right through %s!", make_stringf("The net passes right through %s!", name(DESC_THE).c_str()), {ui_actor_arg(*this)}).c_str());
             else
-                mprf("%s effortlessly oozes through the net!", name(DESC_THE).c_str());
+                mprf("%s", ui_render("t.log", "%s effortlessly oozes through the net!", make_stringf("%s effortlessly oozes through the net!", name(DESC_THE).c_str()), {ui_actor_arg(*this)}).c_str());
         }
         return false;
     }
@@ -1301,7 +1299,7 @@ bool monster::trap_in_net(bool real, bool quiet)
     if (!quiet && you.see_cell(pos()))
     {
         if (!visible_to(&you))
-            mpr("Something gets caught in the net!");
+            mpr(ui_translate("t.ui", "Something gets caught in the net!"));
         else
             simple_monster_message(*this, " is caught in the net!");
     }
@@ -1317,12 +1315,12 @@ void player::struggle_against_net()
         // Roll a chance to escape the web.
         if (x_chance_in_y(3, 10))
         {
-            mpr("You struggle to detach yourself from the web.");
+            mpr(ui_translate("t.ui", "You struggle to detach yourself from the web."));
             return;
         }
         else
         {
-            mpr("You disentangle yourself.");
+            mpr(ui_translate("t.ui", "You disentangle yourself."));
             stop_being_caught();
             return;
         }
@@ -1332,15 +1330,15 @@ void player::struggle_against_net()
     const int damage = random_range(1, 4);
     if (damage >= you.attribute[ATTR_HELD])
     {
-        mprf("You %s the net and break free!", damage > 3 ? "shred" : "rip");
+        mprf("%s", ui_render("t.log", "You %s the net and break free!", make_stringf("You %s the net and break free!", damage > 3 ? "shred" : "rip"), {t_clause_arg(damage > 3 ? "shred" : "rip")}).c_str());
         stop_being_caught();
         return;
     }
 
     if (damage > 3)
-        mpr("You tear a large gash into the net.");
+        mpr(ui_translate("t.ui", "You tear a large gash into the net."));
     else
-        mpr("You struggle against the net.");
+        mpr(ui_translate("t.ui", "You struggle against the net."));
 
     you.attribute[ATTR_HELD] -= damage;
 }
@@ -1397,3 +1395,42 @@ bool is_removed_trap(trap_type trap)
     }
 }
 #endif
+
+
+ui_arg t_monster_info_arg(const monster_info &mon)
+{
+    ui_arg result{"", false};
+    result.available = mon.try_display_name(result.text);
+    return result;
+}
+
+ui_arg t_visible_monsters_arg(const vector<monster*> &monsters)
+{
+    ui_arg result{"", true};
+    for (const monster *mon : monsters)
+    {
+        const ui_arg name = ui_actor_arg(*mon);
+        if (!result.text.empty()) result.text += "、";
+        result.text += name.text;
+        result.available = result.available && name.available;
+    }
+    return result;
+}
+
+
+ui_arg t_harlequin_arg(const string &selected)
+{
+    const char *keys[] = {
+        "Strange impish giggling echoes through your mind as",
+        "The roar of a mocking crowd runs through your mind as",
+        "A round of applause drowns out your thoughts as",
+        "A cruel sense of mischief rushes through your surroundings as"
+    };
+    for (const char *key : keys)
+    {
+        const ui_arg translated = ui_text_arg("t.harlequin", key);
+        if (selected == key || translated.available && selected == translated.text)
+            return translated;
+    }
+    return {"", false};
+}

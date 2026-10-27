@@ -1,0 +1,105 @@
+{
+  "glossary_hits": [
+    {
+      "Term": "boots",
+      "Translation": "靴子",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Gauntlet",
+      "Translation": "竞技场",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "gloves",
+      "Translation": "手套",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "volcano",
+      "Translation": "火山",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Desolation of Salt",
+      "Translation": "荒盐之地",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/区域】与 Desolation 统一。 来源：dat/descript/branches.txt。"
+    },
+    {
+      "Term": "a bazaar",
+      "Translation": "市集",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Bazaar（规范缩写 Bazaar）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "a sewer",
+      "Translation": "下水道",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Sewer（规范缩写 Sewer）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "an ossuary",
+      "Translation": "埋骨地",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Ossuary（规范缩写 Ossuary）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "a bailey",
+      "Translation": "堡场",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Bailey（规范缩写 Bailey）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "an ice cave",
+      "Translation": "冰窟",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Ice Cave（规范缩写 IceCv）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "a volcano",
+      "Translation": "火山",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Volcano（规范缩写 Volcano）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "a wizard's laboratory",
+      "Translation": "巫师实验室",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Wizlab（规范缩写 WizLab）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    },
+    {
+      "Term": "Necropolis",
+      "Translation": "亡者之城",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Necropolis（规范缩写 Necropolis）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+    }
+  ],
+  "history_sources": [
+    "localization/zh_CN/ui.po",
+    "localization/manifests/lua-01.json",
+    "tools/localization/lua_ui_checks.lua"
+  ],
+  "root_causes": [
+    "Initial portal messages and disappearance prose missing from lua.map",
+    "Unrelated stale generated dat/descript/zh/mutations.txt dependency disabled the existing Lua and cosmetic appearance translations"
+  ],
+  "scope": "All 10 timed portal entry message definitions; no change to map, item identification, timer or RNG semantics"
+}

@@ -90,24 +90,24 @@ function TroveMarker:fdesc_long (marker)
 
   if toll.item then
     if self:showing_item() then
-      state = "This portal requires the presence of " ..
-              self:item_name() .. " to function.\n"
+      state = crawl.ui_format("lua.ui", "This portal requires the presence of %s to function.\n", "This portal requires the presence of " ..
+              self:item_name() .. " to function.\n", self:display_item_name())
     else
-      state = "This portal needs " ..
-              self:item_name() .. " to function.\n"
+      state = crawl.ui_format("lua.ui", "This portal needs %s to function.\n", "This portal needs " ..
+              self:item_name() .. " to function.\n", self:display_item_name())
     end
   elseif toll.type == "nopiety" then
-      state = "The portal is engraved with runes symbolizing the primacy of the "
+      state = crawl.ui_translate("lua.ui", "The portal is engraved with runes symbolizing the primacy of the "
             .. "material over the divine. Those who enter it may find riches, "
             .. "but when they return, they will find that whatever gods they "
-            .. "held dear have forgotten them in their absence.\n"
+            .. "held dear have forgotten them in their absence.\n")
   elseif toll.type == "bane" then
-      state = "The portal is guarded from trespassers with a powerful curse. "
+      state = crawl.ui_format("lua.ui", "The portal is guarded from trespassers with a powerful curse. All who enter will suffer the %s:\n\n%s", "The portal is guarded from trespassers with a powerful curse. "
             .. "All who enter will suffer the " .. crawl.bane_name(toll.bane) .. ":\n\n"
-            .. crawl.bane_description(toll.bane)
+            .. crawl.bane_description(toll.bane), crawl.ui_bane_name(toll.bane), crawl.ui_bane_description(toll.bane))
   elseif toll.type == "drain" then
-      state = "The portal is warded with dark magic that will temporarily drain "
-            .. "a significant fraction of the maximum health of whoever enters it.\n"
+      state = crawl.ui_translate("lua.ui", "The portal is warded with dark magic that will temporarily drain "
+            .. "a significant fraction of the maximum health of whoever enters it.\n")
   else
     error("\nThis portal is very buggy.")
   end
@@ -129,18 +129,18 @@ function TroveMarker:overview_note (marker)
   local toll = get_toll(self.props)
   if toll.item then
     if self:showing_item() then
-      return "show " .. self:item_name(false)
+      return crawl.ui_format("lua.ui", "show %s", "show " .. self:item_name(false), self:display_item_name())
     else
-      return "give " .. self:item_name(false)
+      return crawl.ui_format("lua.ui", "give %s", "give " .. self:item_name(false), self:display_item_name())
     end
   elseif toll.type == "nopiety" then
-    return "lose all piety"
+    return crawl.ui_translate("lua.ui", "lose all piety")
   elseif toll.type == "bane" then
-    return "suffer the " .. crawl.bane_name(toll.bane)
+    return crawl.ui_format("lua.ui", "suffer the %s", "suffer the " .. crawl.bane_name(toll.bane), crawl.ui_bane_name(toll.bane))
   elseif toll.type == "drain" then
-    return "suffer draining"
+    return crawl.ui_translate("lua.ui", "suffer draining")
   else
-    return "be buggy"
+    return crawl.ui_translate("lua.ui", "be buggy")
   end
 end
 
@@ -262,14 +262,14 @@ end
 function TroveMarker:describe(marker)
   local toll = get_toll(self)
   if toll.item then
-    return "The portal requires " .. self:item_name() .. " for entry.\n"
+    return crawl.ui_format("lua.ui", "The portal requires %s for entry.\n", "The portal requires " .. self:item_name() .. " for entry.\n", self:display_item_name())
   elseif toll.type == "nopiety" then
-    return "Entrants to this portal will become Ostracised and temporarily lose "
-           .. "all standing with their god.\n"
+    return crawl.ui_translate("lua.ui", "Entrants to this portal will become Ostracised and temporarily lose "
+           .. "all standing with their god.\n")
   elseif toll.type == "bane" then
-    return "Entrants to this portal suffer the " .. crawl.bane_name(toll.bane) .. ".\n"
+    return crawl.ui_format("lua.ui", "Entrants to this portal suffer the %s.\n", "Entrants to this portal suffer the " .. crawl.bane_name(toll.bane) .. ".\n", crawl.ui_bane_name(toll.bane))
   else
-    return "This portal is very buggy."
+    return crawl.ui_translate("lua.ui", "This portal is very buggy.")
   end
 end
 
@@ -361,6 +361,37 @@ function TroveMarker:item_name(do_grammar)
   else
     return crawl.grammar(s, "a")
   end
+end
+
+function TroveMarker:display_item_name()
+  local item = get_toll(self).item
+  if not item then return nil end
+  local key = item.sub_type
+  if key == "rune of Zot" then
+    key = item.ego_type
+  elseif item.base_type == "potion" or item.base_type == "scroll" then
+    key = item.base_type .. " of " .. key
+  elseif string.find(key, "demon") then
+    key = "demon weapon"
+  end
+  if key == "boots" or key == "gloves" then key = "pair of " .. key end
+  if key == "boots" or key == "gloves" then key = "pair of " .. key end
+  local name = crawl.ui_name("display.item", key)
+  if key == "demon weapon" then
+    name = crawl.ui_name("lua.ui", key)
+  end
+  if not name then return nil end
+  if (item.base_type == "weapon" or item.base_type == "armour")
+      and item.plus1 ~= false and item.plus1 ~= nil then
+    local plus = (item.plus1 >= 0 and "+" or "") .. item.plus1
+    name = crawl.ui_format("lua.ui", "enhanced item: %s %s", "", plus, name)
+    if name == "" then return nil end
+  end
+  if item.quantity > 1 then
+    name = crawl.ui_format("lua.ui", "%s × %s", "", tostring(item.quantity), name)
+    if name == "" then return nil end
+  end
+  return name
 end
 
 function TroveMarker:search_for_rune(marker, pname, dry_run)
@@ -530,17 +561,17 @@ function TroveMarker:check_item_veto(marker, pname)
   -- The message is slightly different for items that aren't actually taken by
   -- the trove (runes, currently).
   if self:showing_item() then
-    if not crawl.yesno("This trove requires the presence of "
+    if not crawl.yesno(crawl.ui_format("lua.ui", "This trove requires the presence of %s to function. Show it the items?", "This trove requires the presence of "
                        .. self:item_name() .. " to function. Show it the item"
-                       .. self:plural() .. "?", true, "n") then
-      crawl.mpr("Okay, then.", "prompt")
+                       .. self:plural() .. "?", self:display_item_name()), true, "n") then
+      crawl.mpr(crawl.ui_translate("lua.ui", "Okay, then."), "prompt")
       return "veto"
     end
   else
-    if not crawl.yesno("This trove needs " .. self:item_name() ..
+    if not crawl.yesno(crawl.ui_format("lua.ui", "This trove needs %s to function. Give it the items?", "This trove needs " .. self:item_name() ..
                        " to function. Give it the item" ..
-                       self:plural() .. "?", true, "n") then
-      crawl.mpr("Okay, then.", "prompt")
+                       self:plural() .. "?", self:display_item_name()), true, "n") then
+      crawl.mpr(crawl.ui_translate("lua.ui", "Okay, then."), "prompt")
       return "veto"
     end
   end
@@ -548,12 +579,12 @@ function TroveMarker:check_item_veto(marker, pname)
   if item.sub_type == "rune of Zot" then
     -- Begin by checking for runes.
     if self:search_for_rune() then
-      crawl.mpr("The portal draws power from the presence of the item"
-                .. self:plural() .. " and buzzes to life!")
+      crawl.mpr(crawl.ui_translate("lua.ui", "The portal draws power from the presence of the item"
+                .. self:plural() .. " and buzzes to life!"))
       self:note_payed("rune", false, item.ego_type)
       return
     else
-      crawl.mpr("You don't have " .. self:item_name() .. " with you.")
+      crawl.mpr(crawl.ui_format("lua.ui", "You don't have %s with you.", "You don't have " .. self:item_name() .. " with you.", self:display_item_name()))
       return "veto"
     end
   end
@@ -564,9 +595,9 @@ function TroveMarker:check_item_veto(marker, pname)
   if #acceptable_items == 0 then
     -- Give a different message for items that are not taken away.
     if self:showing_item() then
-      crawl.mpr("You don't have " .. self:item_name() .. " with you.")
+      crawl.mpr(crawl.ui_format("lua.ui", "You don't have %s with you.", "You don't have " .. self:item_name() .. " with you.", self:display_item_name()))
     else
-      crawl.mpr("You don't have the item" .. self:plural() .. " to give!")
+      crawl.mpr(crawl.ui_translate("lua.ui", "You don't have the item" .. self:plural() .. " to give!"))
     end
     return "veto"
   end
@@ -585,19 +616,19 @@ function TroveMarker:check_item_veto(marker, pname)
 
   -- Open the portal and maybe consume the item.
   if self:showing_item() then
-    crawl.mpr("The portal draws power from the presence of the item" ..
-              self:plural() .. " and buzzes to life!")
+    crawl.mpr(crawl.ui_translate("lua.ui", "The portal draws power from the presence of the item" ..
+              self:plural() .. " and buzzes to life!"))
     self:note_payed(titem, false)
   else
     -- We should not try to take equipped items, there are too many weird edge
     -- cases like distortion.
     if titem.equipped then
-      crawl.mpr("You must unequip the item" .. self:plural() .. " first!")
+      crawl.mpr(crawl.ui_translate("lua.ui", "You must unequip the item" .. self:plural() .. " first!"))
       return "veto"
     end
     self:note_payed(titem, true)
-    crawl.mpr("The portal accepts the item" .. self:plural() ..
-              " and buzzes to life!")
+    crawl.mpr(crawl.ui_translate("lua.ui", "The portal accepts the item" .. self:plural() ..
+              " and buzzes to life!"))
     titem.dec_quantity(item.quantity)
   end
   return
@@ -618,9 +649,9 @@ function TroveMarker:check_veto(marker, pname)
     return self:check_item_veto(marker, pname)
   elseif toll.type == "nopiety" then
     local yesno_message = (
-      "This portal proclaims the superiority of the material over the divine; "
+      crawl.ui_translate("lua.ui", "This portal proclaims the superiority of the material over the divine; "
       .. "entrants will become Ostracised and temporarily lose all standing "
-      .. "with their god.\nEnter anyway?")
+      .. "with their god.\nEnter anyway?"))
     if crawl.yesno(yesno_message, true, "n") then
       self:accept_nopiety()
     else
@@ -628,9 +659,9 @@ function TroveMarker:check_veto(marker, pname)
     end
   elseif toll.type == "bane" then
     local yesno_message = (
-      "The portal is guarded from trespassers with a powerful curse. "
+      crawl.ui_format("lua.ui", "The portal is guarded from trespassers with a powerful curse. All who enter will suffer the %s for %s XL. Enter anyway?", "The portal is guarded from trespassers with a powerful curse. "
       .. "All who enter will suffer the " .. crawl.bane_name(toll.bane)
-      .. " for " .. (you.xl_to_remove_bane(toll.bane, 200) / 10) .. " XL. Enter anyway?")
+      .. " for " .. (you.xl_to_remove_bane(toll.bane, 200) / 10) .. " XL. Enter anyway?", crawl.ui_bane_name(toll.bane), tostring(you.xl_to_remove_bane(toll.bane, 200) / 10)))
     if crawl.yesno(yesno_message, true, "n") then
       self:accept_bane()
     else
@@ -638,16 +669,16 @@ function TroveMarker:check_veto(marker, pname)
     end
   elseif toll.type == "drain" then
     local yesno_message = (
-      "The portal is warded with dark magic that will temporarily drain "
+      crawl.ui_translate("lua.ui", "The portal is warded with dark magic that will temporarily drain "
       .. "a significant fraction of the maximum health of whoever enters it. "
-      .. "Enter anyway?")
+      .. "Enter anyway?"))
     if crawl.yesno(yesno_message, true, "n") then
       self:accept_drain()
     else
       return "veto"
     end
   else
-    crawl.mpr("This trove is too buggy to enter!")
+    crawl.mpr(crawl.ui_translate("lua.ui", "This trove is too buggy to enter!"))
     return "veto"
   end
 end

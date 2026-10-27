@@ -1,0 +1,167 @@
+[
+  {
+    "file": "crawl-ref/source/game-chapter.h",
+    "scope": "declarations_enums_data_or_geometry_headers; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/game-exit-type.h",
+    "scope": "declarations_enums_data_or_geometry_headers; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/game-options.cc",
+    "scope": "rc_parser_option_keys_and_technical_errors_preserved",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/game-options.h",
+    "scope": "declarations_enums_data_or_geometry_headers; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/game-type.h",
+    "scope": "declarations_enums_data_or_geometry_headers; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/gender-type.h",
+    "scope": "declarations_enums_data_or_geometry_headers; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/geom2d.cc",
+    "scope": "geometry_only_no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/geom2d.h",
+    "scope": "declarations_enums_data_or_geometry_headers; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/ghost.cc",
+    "scope": "generated_proper_names_ghost_storage_and_validation_preserved",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/ghost.h",
+    "scope": "declarations_enums_data_or_geometry_headers; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/glwrapper-ogl.cc",
+    "scope": "OpenGL_backend_and_technical_diagnostics",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/glwrapper-ogl.h",
+    "scope": "declarations_enums_data_or_geometry_headers; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/glwrapper.cc",
+    "scope": "graphics_backend_and_technical_diagnostics",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/glwrapper.h",
+    "scope": "declarations_enums_data_or_geometry_headers; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/god-abil.cc",
+    "scope": "fixed_and_dynamic_ability_UI_recitation_sacrifices_curses_merchants_bribes_movement_and_summons; canonical_APIs_preserved",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/god-abil.h",
+    "scope": "declarations_enums_data_or_geometry_headers; no_owned_gameplay_prose",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/god-blessing.cc",
+    "scope": "typed_blessing_message_from_single_random_blessing_result",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/god-blessing.h",
+    "scope": "declarations_enums_data_or_geometry_headers; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/god-companions.cc",
+    "scope": "challenge_recruitment_dismissal_vengeance_revive_lists_and_existing_apostle_description_adapters",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/god-companions.h",
+    "scope": "declarations_enums_data_or_geometry_headers; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/god-conduct.cc",
+    "scope": "typed_likes_dislikes_and_soul_logs; canonical_conduct_tables_and_default_prose_preserved",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/god-conduct.h",
+    "scope": "declarations_enums_data_or_geometry_headers; no_owned_gameplay_prose",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/god-item.cc",
+    "scope": "item_rules_only_no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/god-item.h",
+    "scope": "declarations_enums_data_or_geometry_headers; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/god-menu.cc",
+    "scope": "existing_display_god_adapter; canonical_ASCII_hotkeys_and_data_preserved",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/god-menu.h",
+    "scope": "declarations_enums_data_or_geometry_headers; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/god-passive.cc",
+    "scope": "resistance_messages_martial_combat_and_item_identification; TextDB_executioner_chatter_preserved",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/god-passive.h",
+    "scope": "declarations_enums_data_or_geometry_headers; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/god-prayer.cc",
+    "scope": "unknown_altar_candidate_list_conversion_confirmation_and_prayer",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/god-prayer.h",
+    "scope": "declarations_enums_data_or_geometry_headers; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/god-type.h",
+    "scope": "declarations_enums_data_or_geometry_headers; no_owned_gameplay_prose",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/god-wrath.cc",
+    "scope": "god_event_messages_and_typed_champions; cause_of_death_and_summoner_names_preserved",
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/god-wrath.h",
+    "scope": "declarations_enums_data_or_geometry_headers; no_owned_gameplay_prose",
+    "changed": false
+  }
+]

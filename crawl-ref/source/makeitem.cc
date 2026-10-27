@@ -4,6 +4,7 @@
 **/
 
 #include "AppHdr.h"
+#include "m-display.h"
 
 #include "makeitem.h"
 
@@ -2332,6 +2333,7 @@ void lucky_upgrade_item(item_def& item)
     }
 
     string old_name = uppercase_first(item.name(DESC_THE, false, true));
+    const ui_arg old_display = ui_item_arg(item);
     bool did_upgrade = false;
 
     // Need to use the bespoke methods for weapons/armour so that it hands out
@@ -2349,7 +2351,13 @@ void lucky_upgrade_item(item_def& item)
         // Messaging is really weird if we don't do this, and it seems a
         // relatively unimportant freebie.
         identify_item(item);
-        mprf("<cyan>Lucky! %s was actually %s</cyan>!", old_name.c_str(), item.name(DESC_THE).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = old_name;
+                const string _m1 = item.name(DESC_THE);
+                const string _original = make_stringf("<cyan>Lucky! %s was actually %s</cyan>!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.011", "<cyan>Lucky! %s was actually %s</cyan>!")) return _original;
+                return ui_render("m.log.011", "<cyan>Lucky! %s was actually %s</cyan>!", _original, {old_display, ui_item_arg(item)});
+            })().c_str());
     }
 }
 

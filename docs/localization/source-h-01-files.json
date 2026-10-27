@@ -1,0 +1,50 @@
+[
+  {
+    "file": "crawl-ref/source/hash.cc",
+    "scope": "hash_algorithms; no player-facing prose",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/hash.h",
+    "scope": "hash API declarations; no player-facing prose",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/hints-display.h",
+    "scope": "new private display paragraph builders; all required clauses/components must be available; no game effects or RNG",
+    "new": true,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/hints.cc",
+    "scope": "character selection; fixed help; first sightings; rest; entity-aware TextDB parameters; return-to-game and religion event paragraphs; item/monster/terrain/cloud display; canonical English builders retained",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/hints.h",
+    "scope": "hint triggers/state/API declarations; enum names preserved",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/hiscores.cc",
+    "scope": "native high score display opt-in; headings; recorded character/species/background/title/faith; environment endings; rune/gem counts; location/date/duration; serialized killer/weapon clauses fall back as complete English death paragraphs",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/hiscores.h",
+    "scope": "canonical APIs default to English; explicit native UI display entry point",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/holy-word-source-type.h",
+    "scope": "rule enum; identifiers preserved",
+    "new": false,
+    "changed": false
+  }
+]

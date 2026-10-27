@@ -6,6 +6,7 @@
  */
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "attack.h"
 
@@ -483,16 +484,20 @@ bool attack::distortion_affects_defender()
     {
     case SMALL_DMG:
         special_damage += 1 + random2avg(7, 2);
-        special_damage_message = make_stringf("Space warps around %s%s",
+        special_damage_message = ui_render("a.attack", "Space warps around %s%s",
+                make_stringf("Space warps around %s%s",
                                               defender_name(false).c_str(),
-                                              attack_strength_punctuation(special_damage).c_str());
+                                              attack_strength_punctuation(special_damage).c_str()),
+                {ui_actor_arg(*defender), ui_attack_punctuation(attack_strength_punctuation(special_damage))});
         break;
     case BIG_DMG:
         special_damage += 3 + random2avg(24, 2);
         special_damage_message =
-            make_stringf("Space warps horribly around %s%s",
+            ui_render("a.attack", "Space warps horribly around %s%s",
+                make_stringf("Space warps horribly around %s%s",
                          defender_name(false).c_str(),
-                         attack_strength_punctuation(special_damage).c_str());
+                         attack_strength_punctuation(special_damage).c_str()),
+                {ui_actor_arg(*defender), ui_attack_punctuation(attack_strength_punctuation(special_damage))});
         break;
     case BLINK:
         if (defender_visible)
@@ -529,10 +534,12 @@ void attack::pain_affects_defender()
         if (special_damage && defender_visible)
         {
             special_damage_message =
+                ui_render("a.attack", "%s writhes in agony%s",
                 make_stringf("%s %s in agony%s",
                              defender->name(DESC_THE).c_str(),
                              defender->conj_verb("writhe").c_str(),
-                           attack_strength_punctuation(special_damage).c_str());
+                           attack_strength_punctuation(special_damage).c_str()),
+                {ui_actor_arg(*defender), ui_attack_punctuation(attack_strength_punctuation(special_damage))});
         }
     }
 }
@@ -654,12 +661,14 @@ void attack::drain_defender()
         else if (defender_visible)
         {
             special_damage_message =
+                ui_render("a.attack", "%s drains %s%s",
                 make_stringf(
                     "%s %s %s%s",
                     atk_name(DESC_THE).c_str(),
                     attacker->conj_verb("drain").c_str(),
                     defender_name(true).c_str(),
-                    attack_strength_punctuation(special_damage).c_str());
+                    attack_strength_punctuation(special_damage).c_str()),
+                {ui_actor_arg(*attacker), ui_target_arg(*defender, *attacker), ui_attack_punctuation(attack_strength_punctuation(special_damage))});
         }
     }
 }
@@ -668,10 +677,12 @@ void attack::drain_defender_speed()
 {
     if (needs_message)
     {
-        mprf("%s %s %s vigour!",
+        mprf("%s", ui_render("a.attack", "%s drains the vigour of %s!",
+                make_stringf("%s %s %s vigour!",
              atk_name(DESC_THE).c_str(),
              attacker->conj_verb("drain").c_str(),
-             def_name(DESC_ITS).c_str());
+             def_name(DESC_ITS).c_str()),
+                {ui_actor_arg(*attacker), ui_target_arg(*defender, *attacker)}).c_str());
     }
     defender->slow_down(attacker, 5 + random2(7));
 }
@@ -711,6 +722,25 @@ string attack::debug_damage_number()
 #endif
 }
 
+// Localise only the punctuation argument of a complete translated message.
+ui_arg ui_attack_punctuation(const string &canonical)
+{
+    if (canonical.empty())
+        return ui_literal_arg("");
+    if (canonical == ".")
+        return ui_text_arg("log.attack.punctuation", ".");
+    if (canonical.find_first_not_of('!') != string::npos)
+        return {"", false};
+    ui_arg result = ui_text_arg("log.attack.punctuation", "!");
+    if (result.available)
+    {
+        const string mark = result.text;
+        for (size_t i = 1; i < canonical.size(); ++i)
+            result.text += mark;
+    }
+    return result;
+}
+
 /* Returns standard attack punctuation
  *
  * Used in player / monster (both primary and aux) attacks
@@ -747,26 +777,34 @@ void attack::stab_message()
     case 4:     // confused/fleeing/distracted
         if (!one_chance_in(3))
         {
-            mprf("You catch %s completely off-guard!",
-                  defender->name(DESC_THE).c_str());
+            mprf("%s", ui_render("a.attack", "You catch %s completely off-guard!",
+                make_stringf("You catch %s completely off-guard!",
+                  defender->name(DESC_THE).c_str()),
+                {ui_actor_arg(*defender)}).c_str());
         }
         else
         {
-            mprf("You %s %s from behind!",
+            mprf("%s", ui_render("a.attack", "You %s %s from behind!",
+                make_stringf("You %s %s from behind!",
                   you.has_mutation(MUT_PAWS) ? "pounce on" : "strike",
-                  defender->name(DESC_THE).c_str());
+                  defender->name(DESC_THE).c_str()),
+                {ui_text_arg("a.attack.verb", you.has_mutation(MUT_PAWS) ? "pounce on" : "strike"), ui_actor_arg(*defender)}).c_str());
         }
         break;
     case 1:
         if (you.has_mutation(MUT_PAWS) && coinflip())
         {
-            mprf("You pounce on the unaware %s!",
-                 defender->name(DESC_PLAIN).c_str());
+            mprf("%s", ui_render("a.attack", "You pounce on the unaware %s!",
+                make_stringf("You pounce on the unaware %s!",
+                 defender->name(DESC_PLAIN).c_str()),
+                {ui_actor_arg(*defender)}).c_str());
             break;
         }
-        mprf("%s fails to defend %s.",
+        mprf("%s", ui_render("a.attack", "%s fails to defend itself.",
+                make_stringf("%s fails to defend %s.",
               defender->name(DESC_THE).c_str(),
-              defender->pronoun(PRONOUN_REFLEXIVE).c_str());
+              defender->pronoun(PRONOUN_REFLEXIVE).c_str()),
+                {ui_actor_arg(*defender)}).c_str());
         break;
     }
 
@@ -1158,11 +1196,13 @@ bool attack::apply_damage_brand(const char *what)
         if (special_damage && defender_visible)
         {
             special_damage_message =
+                ui_render("a.attack", "%s convulses%s",
                 make_stringf(
                     "%s %s%s",
                     defender_name(false).c_str(),
                     defender->conj_verb("convulse").c_str(),
-                    attack_strength_punctuation(special_damage).c_str());
+                    attack_strength_punctuation(special_damage).c_str()),
+                {ui_actor_arg(*defender), ui_attack_punctuation(attack_strength_punctuation(special_damage))});
         }
         break;
 
@@ -1180,11 +1220,13 @@ bool attack::apply_damage_brand(const char *what)
         if (defender_visible && special_damage)
         {
             special_damage_message =
+                ui_render("a.attack", "%s convulses%s",
                 make_stringf(
                     "%s %s%s",
                     defender_name(false).c_str(),
                     defender->conj_verb("convulse").c_str(),
-                    attack_strength_punctuation(special_damage).c_str());
+                    attack_strength_punctuation(special_damage).c_str()),
+                {ui_actor_arg(*defender), ui_attack_punctuation(attack_strength_punctuation(special_damage))});
         }
         break;
     }
@@ -1199,10 +1241,14 @@ bool attack::apply_damage_brand(const char *what)
                     attack_strength_punctuation(special_damage);
             special_damage_message =
                 defender->is_player()
-                ? make_stringf("You are electrocuted%s", punctuation.c_str())
-                : make_stringf("Lightning courses through %s%s",
+                ? ui_render("a.attack", "You are electrocuted%s",
+                make_stringf("You are electrocuted%s", punctuation.c_str()),
+                {ui_attack_punctuation(punctuation)})
+                : ui_render("a.attack", "Lightning courses through %s%s",
+                make_stringf("Lightning courses through %s%s",
                                defender->name(DESC_THE).c_str(),
-                               punctuation.c_str());
+                               punctuation.c_str()),
+                {ui_actor_arg(*defender), ui_attack_punctuation(punctuation)});
             special_damage_flavour = BEAM_ELECTRICITY;
             defender->expose_to_element(BEAM_ELECTRICITY, 2);
         }
@@ -1244,13 +1290,17 @@ bool attack::apply_damage_brand(const char *what)
             {
                 if (defender->is_player())
                 {
-                    mprf("%s draws strength from your wounds!",
-                         attacker->name(DESC_THE).c_str());
+                    mprf("%s", ui_render("a.attack", "%s draws strength from your wounds!",
+                make_stringf("%s draws strength from your wounds!",
+                         attacker->name(DESC_THE).c_str()),
+                {ui_actor_arg(*attacker)}).c_str());
                 }
                 else
                 {
-                    mprf("%s is healed.",
-                         attacker->name(DESC_THE).c_str());
+                    mprf("%s", ui_render("a.attack", "%s is healed.",
+                make_stringf("%s is healed.",
+                         attacker->name(DESC_THE).c_str()),
+                {ui_actor_arg(*attacker)}).c_str());
                 }
             }
 
@@ -1317,8 +1367,10 @@ bool attack::apply_damage_brand(const char *what)
             else if (!ench_flavour_affects_monster(attacker, beam_temp.flavour, mon)
                      || mons_invuln_will(*mon))
             {
-                mprf("%s is completely immune to your confusing touch!",
-                     mon->name(DESC_THE).c_str());
+                mprf("%s", ui_render("a.attack", "%s is completely immune to your confusing touch!",
+                make_stringf("%s is completely immune to your confusing touch!",
+                     mon->name(DESC_THE).c_str()),
+                {ui_actor_arg(*defender)}).c_str());
                 you.duration[DUR_CONFUSING_TOUCH] = 1;
             }
         }
@@ -1350,7 +1402,9 @@ bool attack::apply_damage_brand(const char *what)
         if (coinflip() && attacker->can_constrict(*defender, CONSTRICT_ENTANGLE))
         {
             if (you.can_see(*defender))
-                mprf("%s becomes entangled by vines.", defender->name(DESC_THE).c_str());
+                mprf("%s", ui_render("a.attack", "%s becomes entangled by vines.",
+                make_stringf("%s becomes entangled by vines.", defender->name(DESC_THE).c_str()),
+                {ui_actor_arg(*defender)}).c_str());
             attacker->start_constricting(*defender, CONSTRICT_ENTANGLE);
         }
         break;
@@ -1409,7 +1463,8 @@ void attack::calc_elemental_brand_damage(beam_type flavour,
     if (needs_message && special_damage > 0 && verb)
     {
         // XXX: assumes "what" is singular
-        special_damage_message = make_stringf(
+        special_damage_message = ui_render("a.attack", "%s %s %s %s%s",
+                make_stringf(
             "%s %s %s%s%s",
             what ? what : atk_name(DESC_THE).c_str(),
             what ? conjugate_verb(verb, false).c_str()
@@ -1419,7 +1474,8 @@ void attack::calc_elemental_brand_damage(beam_type flavour,
             flavour == BEAM_FIRE && defender->res_fire() < 0
              || flavour == BEAM_COLD && defender->res_cold() < 0 ? " terribly"
                 : "",
-            attack_strength_punctuation(special_damage).c_str());
+            attack_strength_punctuation(special_damage).c_str()),
+                {(what ? ui_text_arg("log.projectile.name", ui_damage_source) : ui_actor_arg(*attacker)), ((flavour == BEAM_FIRE && defender->res_fire() < 0 || flavour == BEAM_COLD && defender->res_cold() < 0) ? ui_text_arg("a.attack.degree", "terribly") : ui_literal_arg("")), ui_text_arg("a.element.verb", verb), (what ? ui_actor_arg(*defender) : ui_target_arg(*defender, *attacker)), ui_attack_punctuation(attack_strength_punctuation(special_damage))});
     }
 }
 
@@ -1468,7 +1524,7 @@ int attack::player_stab(int damage)
         {
             if (!you.duration[DUR_DEVIOUS])
             {
-                mprf(MSGCH_DURATION, "You feel devious.");
+                mprf(MSGCH_DURATION, "%s", ui_translate("log.attack", "You feel devious."));
                 you.props.erase(DEVIOUS_KEY);
             }
 
@@ -1615,7 +1671,7 @@ void attack::maybe_trigger_autodazzler()
         proj.fire(tracer);
         if (tracer.friend_info.count == 0)
         {
-            mpr("Your autodazzler retaliates!");
+            mpr(ui_translate("log.attack", "Your autodazzler retaliates!"));
 
             proj.fire();
         }
@@ -1627,8 +1683,10 @@ bool attack::paragon_defends_player()
     if (defender->is_player() && paragon_defense_bonus_active()
         && one_chance_in(3))
     {
-        mprf("Your paragon deflects %s attack away from you.",
-                    attacker->name(DESC_ITS).c_str());
+        mprf("%s", ui_render("a.attack", "Your paragon deflects the attack of %s away from you.",
+                make_stringf("Your paragon deflects %s attack away from you.",
+                    attacker->name(DESC_ITS).c_str()),
+                {ui_actor_arg(*attacker)}).c_str());
         return true;
     }
 

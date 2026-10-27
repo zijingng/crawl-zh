@@ -1,0 +1,996 @@
+{
+  "batch": "monstatus-review-02",
+  "baseline": "0.34.1",
+  "glossary_sha256": "3acf7e754b74c3a78747521330c1f5a9752db9a0ba1b5e1ff6e97d27b46be70e",
+  "glossary_terms": 1552,
+  "reviewed": 139,
+  "corrected": 29,
+  "retained": 110,
+  "duplicate_source_keys": [
+    "damage-immune at range monstatus"
+  ],
+  "english_unchanged": true,
+  "entries": [
+    {
+      "key": "ablaze with memories monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "2a5cd030b0f81501b9cfcb20afc1ef3fb5b1f2dd92b19c7c62de7a848226c36a",
+      "translation_sha256": "eab71f50723ea214e9a004c9876e2e93c6600a021f36278feaec3a0144948dcc"
+    },
+    {
+      "key": "about to teleport monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "382be17eb8e20b113bda6995714825ab14158178118e7164a9632de279540205",
+      "translation_sha256": "aa37773c0277cf5e4b66b71806007fc1337cbfa983a880c5ec13209d15825635"
+    },
+    {
+      "key": "afflicted by rimeblight monstatus",
+      "action": "corrected",
+      "source_sha256": "ba65d5d896f1a7431ffd8c6d0751933024b1a957721ad96601203337efd1abff",
+      "translation_sha256": "ed112a7442193f3bf620c9992fdbd4ef69ba098f99b8eeb4be2c4bf5928258f8"
+    },
+    {
+      "key": "ally target monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "a2596392202bed4d5da355b4c847593ed99fd6cf56b059f9651e6f3f1fb7aa04",
+      "translation_sha256": "704683aa70616e1ba402010f81ff57c6e06d670c81db7b46426c3e10e5008d40"
+    },
+    {
+      "key": "anguished monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "fe6bb13f389d0799916f012c4b219227d2b540457e3438c43019fee194986d03",
+      "translation_sha256": "cf103b86a87c3008584da6e6a47d9eb442816ccafdfcc918d2a691ea324a08f7"
+    },
+    {
+      "key": "asleep monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "b8dd619a8829fe69dfc6060bfe7c100a5f7d2c63c308ecbcdcd379c6852eaf6d",
+      "translation_sha256": "72d0685d593d4ec9b0bd17f4438d8579c25a32aa5d1ea459f7b15e700376fcb3"
+    },
+    {
+      "key": "berserk monstatus",
+      "action": "corrected",
+      "source_sha256": "7e8f633e77031ec052abff1d5f526644c465f5ce654caf18c4630b1aa5f69203",
+      "translation_sha256": "68d8066bf3b885803131b977c547bef73459ec701e1f619aca0530dfa8f48a83"
+    },
+    {
+      "key": "blind monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "fa2d005e8c57270eb65bca500d96762f042cae98e30412bde423c90652796618",
+      "translation_sha256": "aa382ed81a9f21f06e723be597d0a5ff7799bbf6a949948027cc7a461926e563"
+    },
+    {
+      "key": "bound in place monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "614c6cd79baff16d8fa5d7a90f1d86b6bdb88ad3ab1a0b67563bbdc6d5ab1ebe",
+      "translation_sha256": "2f8c0791bf0a614f8469c9868fffbd8a2c91876f732cb08ca3fad1428a37314a"
+    },
+    {
+      "key": "called by a tesseract monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "d64d66576978384d8d87963cb904729e67a73d1d03befc4d32ac4d9aae9ee818",
+      "translation_sha256": "45c0b42960214812c6ea39b89998cd73c7bb53f99a05628fcbe600cafbcd1e6d"
+    },
+    {
+      "key": "catching its breath monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "17cc5f5277d1013cf7dbdf761568199185836deb4cc714ed58902a3b1381bb7e",
+      "translation_sha256": "947a456dabc18f94371865cc70da3774d3bb5ece6a6d62dde97f12a63f011c8a"
+    },
+    {
+      "key": "catching his breath monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "877f44fe48b758d7a317855097f98f0dc3a206e9c04d11fad579bd84a1723804",
+      "translation_sha256": "877f44fe48b758d7a317855097f98f0dc3a206e9c04d11fad579bd84a1723804"
+    },
+    {
+      "key": "catching her breath monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "877f44fe48b758d7a317855097f98f0dc3a206e9c04d11fad579bd84a1723804",
+      "translation_sha256": "877f44fe48b758d7a317855097f98f0dc3a206e9c04d11fad579bd84a1723804"
+    },
+    {
+      "key": "catching their breath monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "877f44fe48b758d7a317855097f98f0dc3a206e9c04d11fad579bd84a1723804",
+      "translation_sha256": "877f44fe48b758d7a317855097f98f0dc3a206e9c04d11fad579bd84a1723804"
+    },
+    {
+      "key": "chanting recall monstatus",
+      "action": "corrected",
+      "source_sha256": "ac4a301df78a398461d90e4e45921a9aeee74d38fd5b6e40a19cfa23fef4f2a3",
+      "translation_sha256": "5a69c19e6556ee30ccfc9bd82146d15c537b988fef240e5fe45a36e138f3f6de"
+    },
+    {
+      "key": "charmed monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "55ca52fd45e29f8dfcdd5bb71845a77c6bec6f72e805fffeceee38a4c2e6ed5d",
+      "translation_sha256": "5c64e62b4d2890770b853765163d066bcc223daa98c60396dfed64aac69d0c71"
+    },
+    {
+      "key": "concentrated venom monstatus",
+      "action": "corrected",
+      "source_sha256": "872d788a1e1524485caea63a9c66eab15a1f70cd35ed9e29facc0d98b6493c95",
+      "translation_sha256": "4e2b2fdb92d59c1b46e3fa7a935621fb44e55de9d5ea4b7aad6a839fb6e956be"
+    },
+    {
+      "key": "confused monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "0a731bec350a0f5a2cb09d729dd9c57fd9be50939c1625754e09ba63ecad907a",
+      "translation_sha256": "c9b126dd0cb91485dcdcfba13409a12613c718eda4a7895c0208890e1fe26f1a"
+    },
+    {
+      "key": "contaminated monstatus",
+      "action": "corrected",
+      "source_sha256": "bb6814134a9bb78a242f3fcbb291695fae11c2d0b786b3f454f387839c77bd75",
+      "translation_sha256": "1696a343dc9a4461a181f6bbf8be5548465b23b9a0131c1e4f28f629a2c9cabf"
+    },
+    {
+      "key": "constricted by roots monstatus",
+      "action": "corrected",
+      "source_sha256": "3b8d03080e9731f354947f8a6fcd6e279fec1c947e4b40e31eeced96eb464848",
+      "translation_sha256": "823d14f5085602dca3c5df8ead10695b70faed6c4ad5ae181b725b8b3be01346"
+    },
+    {
+      "key": "constricted by zombie hands monstatus",
+      "action": "corrected",
+      "source_sha256": "7a96b4b8a6356bce3a50fcab8426dfdecd187e49e02a0f9756d9d0c77ed22aa2",
+      "translation_sha256": "968adffb180815a07a2d5c2417371bf03a10e94a5b1dac0e1cdd2d29500c9e16"
+    },
+    {
+      "key": "control wrested from you monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "127c96f9e62dcae2f0e3816373453ca3e0db386da80e953a92ec610d75a36828",
+      "translation_sha256": "c05192887ac3bc8c37bb076b1465d650784e3be7f3cb1cf21e1438411ad2fd06"
+    },
+    {
+      "key": "corroded monstatus",
+      "action": "corrected",
+      "source_sha256": "da588e64e69fbc8da779bcd899397f860730b5bf0d383f16152eb93fcb7fbe13",
+      "translation_sha256": "4874714d8c602e4fe1e721e7ef93586b21119615bdbff94fadb4e2ce74c60d04"
+    },
+    {
+      "key": "covered in liquid flames monstatus",
+      "action": "corrected",
+      "source_sha256": "7da32312d5b561761eec6bc57eca3ca0831f6c26964db246126925c4937a2baa",
+      "translation_sha256": "ab977c6e51e1380c5e06f4fa9fef8fe365685bc72030540e2ca90b351c4d95a7"
+    },
+    {
+      "key": "covered in magnetic dust monstatus",
+      "action": "corrected",
+      "source_sha256": "2084e501affa5c46e66bd33dbe52ee49d307ba057749f01077010d0f8302e67d",
+      "translation_sha256": "457f63603514436343d61aa011c828a35bcb6e7f475c1e7231f7c7d4bf2442c5"
+    },
+    {
+      "key": "covered in terrible wounds monstatus",
+      "action": "corrected",
+      "source_sha256": "cfc61c2b0da0cf3d822a9a7bd9ba925f05cec01ae9c5096893dbbc8f503ac387",
+      "translation_sha256": "289fb76d6282151ad4d759dd9c9756fe3ddde9639be3f7b4d571ae8884e2a869"
+    },
+    {
+      "key": "covering ground quickly monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "5b174473058cdccbf3d4290af23020ccaf90190d64fbe772ade333d4fa296e08",
+      "translation_sha256": "7a4f390ac1a09aeca3dcaa162010ee3c4526ef23634ba9a645aa99ea946c1c00"
+    },
+    {
+      "key": "covering ground slowly monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "a803d1d2430bb940c3f974173e393d3931f7bbfeca2eb62b1d78bcbe02e154f2",
+      "translation_sha256": "ff0861ce794012e1c2bb405dfdaed71f2468398e9a2974beaa200e7e5cf5f551"
+    },
+    {
+      "key": "crumbling away monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "040503686e74daebd01a225b778e1b59885653e56fe3abe399d0ed91a3128171",
+      "translation_sha256": "4f755c5a3c07c24d032664a16f47665a0f4acd05d61712bc71ca4311f6892502"
+    },
+    {
+      "key": "cursed with the promise of agony monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "4cbcd83def79a0d130f6dfca579daa7106ef0963d319c819cadac302f1a4fa04",
+      "translation_sha256": "ed4f747454cec5f698f0925bfe34ae3b111b5b83bc249b1695d64e02fd909204"
+    },
+    {
+      "key": "damage-immune at range monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "f9ec4e631d853ef5759fb285d23b62a78b8f321518fff7124b4f97dbbd5c5826",
+      "translation_sha256": "6040e4a791a017f7615f0a5fadad4e1ca2b9bf4866ad579fe717b43cf03b2978"
+    },
+    {
+      "key": "dazed monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "22320982a53ff254e327b34f8b7823c4a9e60137d25979213ce007f770c19e39",
+      "translation_sha256": "20368fba27f3bf552559408e83cf1ca44540bb986b5ce180fee1943435a4557d"
+    },
+    {
+      "key": "diminished spells monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "4cc44e19f2b975a5bf75f4ca1f5015eefa085650a866ff4c9547a7ff905e1b44",
+      "translation_sha256": "101d5c5b41f296c82b25bd0b1ffb603adef4895f2ebbcab6e8ffb1192492e8ff"
+    },
+    {
+      "key": "dormant monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "c90df48a2944c018b8e485138bd3cab9b4399247e64df8ffca4df511a6fe5856",
+      "translation_sha256": "c90df48a2944c018b8e485138bd3cab9b4399247e64df8ffca4df511a6fe5856"
+    },
+    {
+      "key": "doubled in vigour monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "ca51d21c5d3eedca76a2d8b1ae3f109f319f835d7e0f60ef86dca9c816c7a8cc",
+      "translation_sha256": "11efe215de9c33aa39b3c9d81254dc5749d3b43e0a9ad269b38aa3832ea46cc0"
+    },
+    {
+      "key": "empowered by the touch of beogh monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "62aad1221a09cfc0c6f3360301f4895ae5b0271a2787918863be7267e09cb77b",
+      "translation_sha256": "939ee1ef0fc9ea54002237d9d7cba9ae2508df60e9c924458993dcedc80977e6"
+    },
+    {
+      "key": "encased in ice monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "aea048c3ac652aa0df2ba27b61fe1174043cbffe52f166ffa1d07981b319f517",
+      "translation_sha256": "f020cd9626db1543bccae918bbd340b8f68718a2eae582246fad33bf423fb75a"
+    },
+    {
+      "key": "entangled in a net monstatus",
+      "action": "corrected",
+      "source_sha256": "ee28efcee67da1c79edb5bd8f6be66dea4e3d59796f6fc7a9c5b3f33d498d95f",
+      "translation_sha256": "3ac6735ca45fe85a39c973bf7bde9cf0dae6ed635107e149baa5f27eddf6d38e"
+    },
+    {
+      "key": "entangled in a web monstatus",
+      "action": "corrected",
+      "source_sha256": "5912df9340951f5d4766a036de3b3e1ff037e660f721db63fd1ba4856fb7543a",
+      "translation_sha256": "7fc8f726d66c852f8a09eb07d2f9a9da28b487fced5f13ff2a1e011251110971"
+    },
+    {
+      "key": "extremely poisoned monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "6bfc0c6be9819a0f56d6f75851a1287de20c482774a4059ccf470d520b8e3c41",
+      "translation_sha256": "eb238af15ce2b445565ae4c81dc423c25de0e7375a3ea1b8ba5d5b55ca59309a"
+    },
+    {
+      "key": "fast monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "acc13b6443903e77bb2921f6eaefc99806b91d99422b54a3d7c44ce76e589b87",
+      "translation_sha256": "69603676b6ed6bf97e7e76616ada3fc2ff443d333896cb631e26f973afd4ed26"
+    },
+    {
+      "key": "feeble figment monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "183561ac16845baccfbe8fff27cb513ffddcba10cfede4a5c35d91fe3d31d89b",
+      "translation_sha256": "5d710eb3ae1cd1e68c96e4858fd142f5257c7457aca9a497f1fa627ddcc97ca8"
+    },
+    {
+      "key": "flame-wreathed monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "7472b3fe543ce7a4efa4ceb829a3330625cf91be79fcee0ff1b735df57f37606",
+      "translation_sha256": "b723e40c894766ad183b3ffca955d54d8fa61f1dbb29c3bb15c9e5ff21829706"
+    },
+    {
+      "key": "fleeing monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "68e1fa3ac99e27e1051202b9d671dbf8753280c26d472e800c5aa19fabc22c55",
+      "translation_sha256": "177875ce693b58cb16c747704b3d6c1f837648e5dca77e3a0434fda897128f4e"
+    },
+    {
+      "key": "fragile as glass monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "2ed264635a06f7723ea85c63f66f95e955354814f5557da519a7f06d97fd8096",
+      "translation_sha256": "6fa1976be25fb622377b133eb18839cacf8473d21325cb16029019afc544ccec"
+    },
+    {
+      "key": "frenzied and wild monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "fd20269f8fe9d2534c1cc1e14f572fd03eeb527f954ab38ce550960c333a2021",
+      "translation_sha256": "bfa60abe6398b64368e970a1cbb9023b1f8c674cd8c9e0cc35daf28277f5296d"
+    },
+    {
+      "key": "fully charged monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "ca7269ef1c19cc5b23698efc1a8b1be7ea56c0962e36b5356e4073c3f1e439af",
+      "translation_sha256": "779d0c7a756e65f3915ff0ab23d1b6fde6122c4ab52125173ef2fcfdf901cd18"
+    },
+    {
+      "key": "grapneled monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "74aac90cac4426a3c90051b3bc1c7c8449a8e8ca5e930c3a4be12112e79e812f",
+      "translation_sha256": "43e4418d20dc77046190ce0c1102ff442c608af2f9104ce4165c5b3aeb25e289"
+    },
+    {
+      "key": "heavily contaminated monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "738deb077dd79e78f1e77528e47c6d64a34de30fa45d17f5a474752abf518a4d",
+      "translation_sha256": "738deb077dd79e78f1e77528e47c6d64a34de30fa45d17f5a474752abf518a4d"
+    },
+    {
+      "key": "heavily drained monstatus",
+      "action": "corrected",
+      "source_sha256": "1598170f06dd665791cc41d9f541cded91062ae1ec68398d536f2729cb010a9a",
+      "translation_sha256": "22eeb17d728f9ece23234d4eb19fb07de90dbc8cf965d48ab4de0e124b585382"
+    },
+    {
+      "key": "idealised monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "d6209888ef7f04df98bdf539d871092c9e29380f0b6b8dc5235639fe14d46fb4",
+      "translation_sha256": "45aa40185e88b46025fe302d0f0172b565f0ea5fec7a796a458b832a3f887d5f"
+    },
+    {
+      "key": "incited by gozag monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "9d9fc5b64482f523f39f6963df181c531315b84664f4172742213126b0d540c5",
+      "translation_sha256": "8cc2f8a50b2db2bf2ce5a7cbf2e6d06b5e0be6252469555b18ac6fe43dade06a"
+    },
+    {
+      "key": "indifferent monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "f56ecb868d3b5e1cedc864455b3e86766fca5a7cdf7f55ce434ad3dd3aa9862e",
+      "translation_sha256": "5f105ad30a439b0a88a948f8484da800ad111e60546cc1ae48bf2117db70da9f"
+    },
+    {
+      "key": "infested monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "2b4a9519c842c49f129e7e50a9fcc6aed33239e40136de92a59a1cd0cfc094d0",
+      "translation_sha256": "1df6acdf2ba32ad8d30fef84efdceb44e2a13a68f408248f225301d94c97ee52"
+    },
+    {
+      "key": "inner flame monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "e9a53f2dc86881646099b3979a97a8b1ba2ba661105e1ae9972318bf51e7a279",
+      "translation_sha256": "2981c29be9846ef04e8614c426ae85d6e14a2459235259c4eaee5410a173bc02"
+    },
+    {
+      "key": "inspiring fear monstatus",
+      "action": "corrected",
+      "source_sha256": "4ebe624524e1a7a82a793991f211c855ffc3b69d9deb43cced3c2e4fb8ad72d7",
+      "translation_sha256": "36ccdb85fe36a256c8ac672af0ffb7ceb36829c65678854205c3103f83c9d0c8"
+    },
+    {
+      "key": "interlaced with chaos monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "dbc3d63467b3a6db90c808b89a793e7a2d3120d10a2f79562753518bd04e84c9",
+      "translation_sha256": "700882f51dce6d3581c04dddeb6b4145babe6c439e87c9cc269b8650f46d9c81"
+    },
+    {
+      "key": "lashing out in frustration monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "b324bf832880fb1e14188477a7d9c5d574eecf6c3757051bf9bc879d83de5f99",
+      "translation_sha256": "6f2d8e256058a05fadca3aceab3d1380f29fdad85624f035f7ed1cdec6417f90"
+    },
+    {
+      "key": "lightly drained monstatus",
+      "action": "corrected",
+      "source_sha256": "5c5449c975dc81a730d2e06c885d9b761e912c6eb18a870cf1dc114d64054ca9",
+      "translation_sha256": "eae8a4c3f9ba110983a27244c3dd38b42fe9d87c0ba92b14edd988c083b3b7f3"
+    },
+    {
+      "key": "lost in madness monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "391b61644837a8cc42681255a10d9cc8bcad48eed2be905324e9756b96bb55f8",
+      "translation_sha256": "bd1446feb5734ab4fef3861b6b15f1bdade3d0d56f9e2778369fa274d29b1a4e"
+    },
+    {
+      "key": "magic disrupted monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "7af4a758103c5401bec9910bd13e86cca837e2101457dc690fe652b256f54eb4",
+      "translation_sha256": "97f65cd58e830b72cb9a5eb2dbbb0d7d3c09d13e43dcd054d21f57e63a0dce5c"
+    },
+    {
+      "key": "magic-sapped monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "ebfb1a86f50b5fc7c9161be4f4f9598bc66c98c34ce41adbbfefff715894dcaa",
+      "translation_sha256": "30336fbc6b7cf24e35c7f0c20ea0536c9cbb57737899ded72117633937e2c96c"
+    },
+    {
+      "key": "marked with the sign of ruin monstatus",
+      "action": "corrected",
+      "source_sha256": "4c0b3ec0efd3a0c9ff816ca9311b6889351e0794c376d5297ac20802665d2d66",
+      "translation_sha256": "b2de45fc85d5f18ae6247b9ee14788c7ca401756db398e13c0aea39246e762be"
+    },
+    {
+      "key": "mesmerising monstatus",
+      "action": "corrected",
+      "source_sha256": "ec1805b49449b281d7138edda9da2fd6652732402119aa98a6c8c2ebed81045a",
+      "translation_sha256": "66d99cbd08a1882e002521ad1c0f9bd6f4672d1657a73da9587d900cdc3ff779"
+    },
+    {
+      "key": "minion monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "8c7b64d52b6f95214950f96ac6c9cada136969b0e737a14a6f45e1480e431267",
+      "translation_sha256": "21ca92749eb88885a23520c7a53aad78421c788c6a7fb8c4e633d92d98d38e5c"
+    },
+    {
+      "key": "missing a shadow monstatus",
+      "action": "corrected",
+      "source_sha256": "db4806336180c23f57fae8dfd80587cd5762587de4789945f10ee57c52d14088",
+      "translation_sha256": "7c87ff74b73095e0a36acc40b60079ba02e4f2289b9ce3d0042cdf7256c63f49"
+    },
+    {
+      "key": "misshapen and mutated monstatus",
+      "action": "corrected",
+      "source_sha256": "2774c64391b25aba7cca392dec57dd0d2223a06d6e997045a0fcc7b9768f8418",
+      "translation_sha256": "9f0c67a111b638dbec9de645adaef81fb448d76b841ec5b6b6a431e32e62427f"
+    },
+    {
+      "key": "more vulnerable to fire monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "b818bacbde7681c7ede25cb61ef9d9dae5f2c691ce1fa81a67e683230e01b243",
+      "translation_sha256": "4e81ce6fb87f39310b755e43d0ab7e200ce7516b0bfb5d551c816ce766febb3b"
+    },
+    {
+      "key": "more vulnerable to poison monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "be4072016c42791c1de275b6183fba6d44eb199552e4d2a328b74468b89b2206",
+      "translation_sha256": "d434d905030329418eec796728e854b58d46d756dd131ef044b2a5a477c0734f"
+    },
+    {
+      "key": "mute monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "2cb374d783df6876669cf236a87cd1625f96de37e75b1ea5a49b75fd98aa065a",
+      "translation_sha256": "a1bac5c1e47eeb96589883b08e62b00ac2b35a65e11c342f77fbc65a26627edd"
+    },
+    {
+      "key": "not watching you monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "96245b9aaae782d163388fc177bbcf0309cc256ca59e1bcf17ce9d344c08d6ac",
+      "translation_sha256": "0174966423cea61dad5767e5f6d3d78eeeb521d289d23de0d494c33faa6be421"
+    },
+    {
+      "key": "paralysed monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "121a80075bb7979035ed3697643bdbd75e1317fe3f1fdf49984558d6cb8a1d05",
+      "translation_sha256": "da1788d38dd5b6aac0dccc75a716ecc8455e5e456c1e7901baef42e1b9420550"
+    },
+    {
+      "key": "paralysed with fear monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "0fc28f181224332cdcb8834f2e95a97fa1755f38d6e342fd18168806ab5a8f45",
+      "translation_sha256": "0fc28f181224332cdcb8834f2e95a97fa1755f38d6e342fd18168806ab5a8f45"
+    },
+    {
+      "key": "partially charged monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "e2f8b72fa64029e40fb5ef2b2406008f615d9de08750e4ea3c4f2354f3e42775",
+      "translation_sha256": "2430ce473e269f02ef101ae32de68938f0b38109310fce8ade9b9569431bd1a2"
+    },
+    {
+      "key": "peaceful monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "b2a6920469dee43d47e00d3c630d3b491679276dfcab0b7399ed8ace1c42bbdf",
+      "translation_sha256": "b06b842ef07335ebc97260a0efc2e92e921d009499f4633b309e179276af94a9"
+    },
+    {
+      "key": "petrifying slowly monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "bea3a8704db21a570e9d8a21c91ca2ef2b806a8283358e911bd19bacb9c06c48",
+      "translation_sha256": "add919c41285dc9042561db4d28e5373fea97be6ecdd1f093c5907e65c9a1c1f"
+    },
+    {
+      "key": "petrified monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "c91a091e310adcf5bc60b3cdc36f74103b0262bce7dc8b6aacada0de1a1c9ff4",
+      "translation_sha256": "314142ea043ee9ff38a3e3e33fe0062bc488b6d9bad7c61a866f4a83e30181f0"
+    },
+    {
+      "key": "poisoned monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "f0f68d2b59872a25a86100da1cf1de97c6cf29e60bd9eae94bc862b808172d2d",
+      "translation_sha256": "769ddbbc787b4d51fe50547b1b58e6c0d0bf36724175876685eb9a18f95029ab"
+    },
+    {
+      "key": "radiating silence monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "afd2c21da704181c9e159aeac245c4cb048fef3d5a84c3e98feb9c7f427a6ff4",
+      "translation_sha256": "480c542c30e763a63b9a9e958143cde7b8211ce3bc1353a2e58e28fd09db3433"
+    },
+    {
+      "key": "radiating toxic energy monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "8fd0bdaf17a169fced13358bbbd990086a96600d6ccf169c3638d805fec7f38d",
+      "translation_sha256": "0a3c053c73c4f76deebfbfb7de1b01cab901610f44f415a494727b215fb7fb58"
+    },
+    {
+      "key": "ready to become your apostle monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "5dfd1b05d2506f26a6244befc93e2046695e4dc6d5f055c7a285779ce6040469",
+      "translation_sha256": "da0ee6f8f17ebef9a3e04a01fc0179c9d21c7568040edfb5afb2236da0b9ee2f"
+    },
+    {
+      "key": "ready to howl monstatus",
+      "action": "corrected",
+      "source_sha256": "38040ebceac1e46c7c50faace6c87420d3dea490d4eab0e476c7700ff5f4c00e",
+      "translation_sha256": "bebf8c2b1a8f86eb536fd00d94e015d25e0d9dfcdb1858c414b536b28984deee"
+    },
+    {
+      "key": "ready to sunder monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "7c94d06926b2ce5d951b8d32379ff0f2958843b1e692788ab2de8fb7f9a4dc8b",
+      "translation_sha256": "6cc5826be252a52c98f370b3b44dc34ad71ae039ed99776e5d44cd97f38ab6ef"
+    },
+    {
+      "key": "reflecting blocked projectiles monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "b2e35a580512ef7bbd1c2bc9b8b014485ee71c608bf477a7c1cdaf0952f4bca1",
+      "translation_sha256": "c1168552471f89a6dda3c27aee3c201e04308ac68ffad29cb8c6372a032fd6c0"
+    },
+    {
+      "key": "reflecting injuries monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "fc79335f76d15d907522be07c81e687100fa7c3401c332a78d287ec26408a4c2",
+      "translation_sha256": "88a42739288477ec5bc495c9aab85a418a414f9d45e5753edaf72b5be81f84f9"
+    },
+    {
+      "key": "regenerating monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "eb52a06e4ece1e779bdc665e1fa1db91573e6707878ab94f540a858d63863d66",
+      "translation_sha256": "e00a02e438fbc99360284c0f53715909045d9bb54d180090a03760ea325b9374"
+    },
+    {
+      "key": "repelling missiles monstatus",
+      "action": "corrected",
+      "source_sha256": "978507563919fbc5d6ca751f5d70535670d0a0a52d6c4fe746bdf028480cf7a7",
+      "translation_sha256": "b1d6c65285e908b90ae8e20ed8c1f9194c508b4b706cf7206514499312495967"
+    },
+    {
+      "key": "retreating monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "aafa76fdce4dd36ac174f2e084bf3eef82c905aa6e9d95a805c7f784e3233395",
+      "translation_sha256": "83a5facd5a2fa98c6f2f1280871541da4477bce1f157c4d9ddc8be7d93ec482f"
+    },
+    {
+      "key": "rolling monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "f6ae00bebc59c3ec80b42735be25391e17b38fa1ab2097e9a2d9be7094b21e53",
+      "translation_sha256": "47660e67c769ecce8ec8fd391627c2b3fbfcb8d67d03ed7d99a192de1d01599b"
+    },
+    {
+      "key": "sharing its pain monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "316d9f5065ffd84b549fba9d3cc242161b6dce4e4da9c58cd58a88ab95def1bb",
+      "translation_sha256": "0e81b74de390214ccf19c4288aac27487de9bb5810971c2a0c2e5c7df5552f27"
+    },
+    {
+      "key": "sharing his pain monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "246c4fccbac949f40dbfcee06dedd13620a46423e5a568d20f29bc7feb566968",
+      "translation_sha256": "246c4fccbac949f40dbfcee06dedd13620a46423e5a568d20f29bc7feb566968"
+    },
+    {
+      "key": "sharing her pain monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "246c4fccbac949f40dbfcee06dedd13620a46423e5a568d20f29bc7feb566968",
+      "translation_sha256": "246c4fccbac949f40dbfcee06dedd13620a46423e5a568d20f29bc7feb566968"
+    },
+    {
+      "key": "sharing their pain monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "246c4fccbac949f40dbfcee06dedd13620a46423e5a568d20f29bc7feb566968",
+      "translation_sha256": "246c4fccbac949f40dbfcee06dedd13620a46423e5a568d20f29bc7feb566968"
+    },
+    {
+      "key": "sheltered from injuries monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "9ef7ba0b2b5432d7e6b26dbe679e6776f4361bf130254c45bdab2d61c5634e68",
+      "translation_sha256": "0e4455570f574059fcede2ab59be044b4aae9544efd6d99f68f7a04b199dae42"
+    },
+    {
+      "key": "sick monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "d13acd9801241b7bfd97b930041fbaeeecabfe4f15824b6ea73ec5e15ed9e417",
+      "translation_sha256": "0ff09b8c680926674881cab9b1169ec209fd4931295f443141d44d0f19b108df"
+    },
+    {
+      "key": "silenced monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "c76b5e5670f19bceba4f6768b7265b232c5b0344162cb45850953563c3b2909b",
+      "translation_sha256": "b00323d8030ec3df1ef038e4bf21d8f37f628356b4a8997fc10699aaecb8afc4"
+    },
+    {
+      "key": "skewered by barbs monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "dcb9cb7445d258c70ca29c600a826fd734f1d26e71fe8828f6d57fb39cefd6f9",
+      "translation_sha256": "9e4a9b48a194a1cf7e19dded64829161634a2832692227bb6471dfa547f0696e"
+    },
+    {
+      "key": "slightly transparent monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "68787fd83f6fd8c9c67f68d1ed1ec9e9bfc71826549a7fa8c95a5c27c4952851",
+      "translation_sha256": "d2e15e70f0a1a0fd3c60f53ae52c6cf9aed8118efa67ac2ab7fd631673b6f996"
+    },
+    {
+      "key": "slow monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "31128d1c0bcb1bb7c7ac2679b32d762a2458a7acd2aa235d9a12fd7d5cd7424c",
+      "translation_sha256": "febbe4e43fb7de804d5659d610e3bb3540ae114db50a2b0fb0c4931a5b5131e8"
+    },
+    {
+      "key": "softly glowing monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "596443744938029aa997c47c1f229063c133133c35103ec1ff6e70a01202ee51",
+      "translation_sha256": "30f9c902e07e7b7ab37e2df29c81967fc3a8b473e0f7231e9314218a6f6bf9d1"
+    },
+    {
+      "key": "soul bound monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "673ad8e7dccf51ca8f029d8ee6adba6d721cb1d54eb37fe93a1f7e89fd9f2c4c",
+      "translation_sha256": "53e336775b203eca7e05fa0fdc0e30302130574d249f311df88616a01f24a147"
+    },
+    {
+      "key": "soul-gripped monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "1121421b00c077abf7600837d2b46ab1fef69bc5e9f363d1fa6be5c7742d1061",
+      "translation_sha256": "4161de8d9da73dfe542b47e558e62ae503a9cefc6ce2f872dc8021237fb5571d"
+    },
+    {
+      "key": "soul-splintered monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "38394e4e90138690285ef181f918fe50f311fcab037b94f4cb991dc2387cfa55",
+      "translation_sha256": "305b122ce3f92f00ae3317baad1adec855a06999f8b4551e1101c8f705d614f4"
+    },
+    {
+      "key": "spells empowered monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "e90830b8b9900c2e90d5f4026bdc3582f0e0b81ae09eb39839f6d4c5b5e06d00",
+      "translation_sha256": "6ba55f204919d7a254fcac157e3ad685f70d16236bcc22b88720b5703fc00519"
+    },
+    {
+      "key": "spells diminished monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "55baa2b662669628ba0675d44b1bd477cd3ac65ddca936c316777456d957799a",
+      "translation_sha256": "0706c8cbaf22a4622b0c3c8dfd48a3b751829f6ddc9b8bdc3d10111a6f05946e"
+    },
+    {
+      "key": "stilling the winds monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "cf1efea63917dee81882af0169b2f99454bec85116786a0b8536082f7f677687",
+      "translation_sha256": "a7053d92f84b73d8444e6ce1cd09677bcdc10c07e3e5532e4310aeb75cb23394"
+    },
+    {
+      "key": "strong monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "4ca177bc2b457c517d4ccefbabdab2de946a6d13032fb18a441ec0cff1e171c9",
+      "translation_sha256": "a94eb9047e4ee527917ea7e689357117491e1df67b95cfb29d546ed3683af9b8"
+    },
+    {
+      "key": "strong-willed monstatus",
+      "action": "corrected",
+      "source_sha256": "9cc91c8ebea7d8c981964e230db31a03790ed3a9ab46aa11f8f4e5e702bf507a",
+      "translation_sha256": "671a6ed5f4cf03c80537a873762da18b98d99f4d432450c29a1a751d4b08e250"
+    },
+    {
+      "key": "stupefied monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "4534aace0aca9f0625138bd2bd7105c00dd9fd9b66d241377cd0869ea0e2d5d4",
+      "translation_sha256": "99745401bf904673c6b6076bd254b3e685ac4c71eb1245dd21aa21b019c0beda"
+    },
+    {
+      "key": "surrounded by a freezing vortex monstatus",
+      "action": "corrected",
+      "source_sha256": "36e8fe0643822fa7481fd393832d449a6890a9f942676b0082e71143f058e8de",
+      "translation_sha256": "1e55e61a4ab611d598a32161e0e8c9cd28452ef37850116b9344b82f9e5928c3"
+    },
+    {
+      "key": "surrounded by acidic fog monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "9df44fe3ea303f1ce8fdf668265ccc80f234fc25beb429d32a21ba5b6c200669",
+      "translation_sha256": "27e0ce89bca96a10f0e2c4d667584cb6d8d3c6daefdb5c247247a4816883ce32"
+    },
+    {
+      "key": "surrounded by chaotic energy monstatus",
+      "action": "corrected",
+      "source_sha256": "6bbb9e064f01c4f5cf5ae735859d654a5dea861e61e001bb15d31e5c9e8ff030",
+      "translation_sha256": "f43e7d6ff6475bb5b4e3b39d72442565f0cd1319408bf5ac89876fbace9fdb1c"
+    },
+    {
+      "key": "surrounded by flames monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "52df3635a941d90aa86141b5c3ae672af9edaccbb81b8e90cecbf0e06d281510",
+      "translation_sha256": "6684c88e7db37c004dfcf04e6636c2616600cfb7b0b90681ba03022e7e89a88e"
+    },
+    {
+      "key": "surrounded by fog monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "6eef788e74acfbe9b4627d5967f80092f53cc625a2f6ac4eb1bb9e41b791cfe5",
+      "translation_sha256": "a94933ede2743feed4527a1524e7e350bedd19a2726f4ad6c04c18c1ee88f90b"
+    },
+    {
+      "key": "surrounded by foul miasma monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "113f38f6e9c87b1e372b1a8603bee489513e02d831e27a46b3246144f5df1f0a",
+      "translation_sha256": "6eeb51b5a87f3215d27d4274d1a8a3a6a21f031b06c0d7283ecd40a4c8cf9c70"
+    },
+    {
+      "key": "surrounded by freezing clouds monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "8581c7b722fc942ade2506f7081aa3c868d7e35edcf4f92748a4ca433f0d9e62",
+      "translation_sha256": "40d098305abe23f13398ca4520f3edf98b971f51a365ae6a3f2370fbfa83815f"
+    },
+    {
+      "key": "surrounded by mutagenic energy monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "df4f99ebe0b78aa94ee4987b565252e834ef4ad4232604d266b545bfaed6fe94",
+      "translation_sha256": "afd1ddd70a1616e549a295680203e2d4a96b2e2866db503f24f5a94f44b201ec"
+    },
+    {
+      "key": "surrounded by negative energy monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "6fa5b7548c0844dfe7c67a4006e4d5dcd009a32f43bac2337c10e8904805c7f4",
+      "translation_sha256": "dd219d567c7d8ebbc98c853f7b3a2ea595be57225aee4e6deda765185d5bc83c"
+    },
+    {
+      "key": "surrounded by restless winds monstatus",
+      "action": "corrected",
+      "source_sha256": "43ee0e59dd8f5fce08effae1795f13763c474dba302d9b2575748022b17746ce",
+      "translation_sha256": "f0c7fcbe82b539562be1f7f2df608f5f2421f5a3c274ceffb88a1e10964142db"
+    },
+    {
+      "key": "surrounded by thunder monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "56aac021ab684842fe85cb32f4c996b800bd10afaab3f8e7d79d0b5ab21f053d",
+      "translation_sha256": "12832a69e9a744253a5badf704e6e3fa2456e659148f77617c8d30696bfd413f"
+    },
+    {
+      "key": "target of orcish vengeance monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "4ca9c56dd3f6771075fa25ae8e9c1e99eff4b8cee6ff218374510880000710d8",
+      "translation_sha256": "04005ef918231278ad0c6155d23f5f2ea4be8d362d59529cdb74300f6250b8e7"
+    },
+    {
+      "key": "targeted by your dimensional bullseye monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "bdab09a4909f0f6e3ab7a049340659529bd21f1e6f1cc27d68f913a8b3dd663b",
+      "translation_sha256": "deeadb855ab46d878b4592d65cbd0f5e5556d186d17095accb7544932f51bf24"
+    },
+    {
+      "key": "tempered monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "906cdc68540701e7fcca07ea2864963cb4c825d429e71de27ecd018e9939e27e",
+      "translation_sha256": "e5e2bb738fedea39f57b6753db7d73c897ccdeb82fe7cad07a2abee3b038605d"
+    },
+    {
+      "key": "touched by paradox monstatus",
+      "action": "corrected",
+      "source_sha256": "23dac12cc594a72fcf78a077549f1eebbb35591165772fa4f0e627271d7dc3ce",
+      "translation_sha256": "85601d9bed053d1ccf65f8d58edddcb8f22d8beb7da8d9fdf3c96d44220344b3"
+    },
+    {
+      "key": "unable to see you monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "a4f57d032a70d03d1a42f04cb8c5351d776e31e502f1ac535da20360d93f68b5",
+      "translation_sha256": "e9e6b100bc387d3aa893ab401b5454cfafb7b80292b29f9a47d71748f8851161"
+    },
+    {
+      "key": "unable to translocate monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "b4ef5e7183e8fd19780c4136cd6d94bad6422f6219887bc381fd0954f4b90ea7",
+      "translation_sha256": "3b00e68fa6491c861b6474b3299888d2d03444e357d4763f6bbf33ddc6601535"
+    },
+    {
+      "key": "unaffected by silence monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "cd2c95d6ab3a7dd8003979b7bd72c615e8d00cf3f430483b02b2035a2b293244",
+      "translation_sha256": "1856f0fa2f1d8ff02478d3efb40b7093e3abd03ed2e5a720e1f48a9da2992787"
+    },
+    {
+      "key": "unrewarding monstatus",
+      "action": "corrected",
+      "source_sha256": "ec17105a622dba32e6187bd4c78d79d21f28e14675615afbd272e38b0b771fa4",
+      "translation_sha256": "5aed0d128d67250d99b13f0dbaf44c81881c69c13157334f75c858a1257b0df5"
+    },
+    {
+      "key": "untethered in space monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "2dacf235ffad07d2b68556a1e2bc1f8a97130bb56ed61fb5784b4d00da68f865",
+      "translation_sha256": "3e367842f6d13128f0d09526d2dd7b963fa7a61f2d302a5b06ffc7a0a9712367"
+    },
+    {
+      "key": "unusually agile monstatus",
+      "action": "corrected",
+      "source_sha256": "8f133cef5d13bec035298cdea1e52d967a766c889002c450257a7f3cf72249db",
+      "translation_sha256": "db2c0d92d6226aaa1c8ec91fadab8896f5a9c8422a36daf2fab585f0ccab7338"
+    },
+    {
+      "key": "unusually resistant monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "ca00225d87f508531374342949107c7222488046737be024e97c49a07012ecf6",
+      "translation_sha256": "3804a2cf42ba210f77c6965a7c9f2441899b22a5b27c7a44a0e0a501c98c3c3d"
+    },
+    {
+      "key": "very poisoned monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "9ae20309c5e6eb233a5a07d87c27f7b4b2f6a4c898a22cbebc5d0dea649a8eb3",
+      "translation_sha256": "3f96bb3e5bcb54fbce899adf83704055a3ef1b2b1b79670984fa2d17898eefc2"
+    },
+    {
+      "key": "unable to breathe monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "68a9ca1bba5e96fb4048085776504f02bf4537677755fd487ab4fba813ec47a0",
+      "translation_sha256": "51dba0457ba226efbc0423ca6b14b12c0c6d22afee1bf9fda55ad24ad4bdfba1"
+    },
+    {
+      "key": "weak monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "4b46927cb9c6b39babcc0aab29dbb9f29f9dc757dc4fde539b3349b9d3e591e3",
+      "translation_sha256": "548d0bb1cb112964cbb7c0904da9a89dd10d41b45a8ec75d1e5e21635737de31"
+    },
+    {
+      "key": "weak-willed monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "30a5987db2d250bfe2a404941b74a2e31db2f8337782e931afd310a38b596d25",
+      "translation_sha256": "5570c88a65aa0ef942822265cf3874df1b6f56ff1dae17c5baa94d36291b2516"
+    },
+    {
+      "key": "winding a clockwork bee monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "ecfc42f72aef0bb456d26e5550883df1a33e8821389f82f5330fd8ec3a22a7da",
+      "translation_sha256": "ef141a1e06d41eb6906aa6ad8653075aca9f3bac891509fd595408c7b4913299"
+    },
+    {
+      "key": "withering away monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "90827ff5543487ac4d0c6e7cb6e1066df27191df671115dcba34c6932e9373f9",
+      "translation_sha256": "4bf1a26f6758c2adc65e694f04e946dac6f20513583709af7b83878205964cfa"
+    },
+    {
+      "key": "low-tier stab monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "47eb90dba7a39b39966e3f07790f4e261f1e0908e7a144caec8a114c57c80562",
+      "translation_sha256": "64e4435709023233f135385c9c682b804b8bf66fef8f7473cc9858d39c5ddc55"
+    },
+    {
+      "key": "high-tier stab monstatus",
+      "action": "retained_after_review",
+      "source_sha256": "aceec8a2aabcb31d1876a1400d90792b018a147a78e71a4040ff38b589faba5c",
+      "translation_sha256": "a9aa705694e3c31e2804f1a0e0b16e3257e30ff7ba1a07d79df4947b0b896e62"
+    }
+  ],
+  "changes": [
+    {
+      "key": "afflicted by rimeblight monstatus",
+      "before": "这个生物每回合受到无视护甲的寒冷伤害，有时还会爆发冰霜，伤害附近盟友。死亡时，它可能将霜疫传播给附近其他盟友。\n\n自然生物、恶魔或神圣生物的生命降至较低水平时，会被立即杀死，并化为霜柱。\n",
+      "after": "这个生物每回合受到无视护甲值的寒冷伤害，有时还会爆发冰霜，伤害附近盟友。死亡时，它可能将霜疫传播给附近其他盟友。\n\n自然生物、恶魔或神圣生物的生命降至较低水平时，会被立即杀死，并化为霜柱。\n"
+    },
+    {
+      "key": "berserk monstatus",
+      "before": "这个生物的生命增加 50%，近战伤害提高 50%，移动和行动速度提高 50%。它只能移动或攻击，不能执行其他动作。\n\n狂暴结束后，它会短暂减速，且暂时无法再次狂暴。\n",
+      "after": "这个生物的生命增加 50%，近战伤害提高 50%，移动和行动速度提高 50%。它只能移动或攻击，不能执行其他动作。\n\n狂暴结束后，它会短暂陷入缓慢状态，且暂时无法再次狂暴。\n"
+    },
+    {
+      "key": "chanting recall monstatus",
+      "before": "这个生物正在吟诵召回之言。短暂延迟后，当前楼层其他地方具有智慧的盟友会被召至施法者附近。大多数通常会阻止施法的效果都能打断吟诵。\n",
+      "after": "这个生物正在吟诵召回真言。短暂延迟后，当前楼层其他地方具有智慧的盟友会被召至施法者附近。大多数通常会阻止施法的效果都能打断吟诵。\n"
+    },
+    {
+      "key": "concentrated venom monstatus",
+      "before": "这个生物的天然毒液得到强化，通过攻击或吐息施加的毒素有几率使易感目标减速并窒息。\n",
+      "after": "这个生物的天然毒液得到强化，通过攻击或吐息施加的毒素有几率使会受此效果影响的目标减速并窒息。\n"
+    },
+    {
+      "key": "contaminated monstatus",
+      "before": "这个生物受到变形能量污染，每第三次被这种能量击中时都会受到可观伤害。\n",
+      "after": "这个生物受到变形能量污染，每受到三次这种能量的影响，就会受到一次可观的伤害。\n"
+    },
+    {
+      "key": "constricted by roots monstatus",
+      "before": "这个生物被树根缠绕，闪避降低，每回合受到一些伤害，也可能无法移动。不过，每次尝试移动都有几率彻底挣脱。\n",
+      "after": "这个生物被树根绞缠，闪避值降低，每回合受到一些伤害，也可能无法移动。不过，每次尝试移动都有几率彻底挣脱。\n"
+    },
+    {
+      "key": "constricted by zombie hands monstatus",
+      "before": "这个生物被地底深处伸出的尸骸之手缠住，闪避降低，每回合受到一些伤害，也可能无法移动。不过，每次尝试移动都有几率彻底挣脱。\n",
+      "after": "这个生物被地底深处伸出的尸骸之手绞缠，闪避值降低，每回合受到一些伤害，也可能无法移动。不过，每次尝试移动都有几率彻底挣脱。\n"
+    },
+    {
+      "key": "corroded monstatus",
+      "before": "这个生物的 AC 降低 8。\n",
+      "after": "这个生物的护甲值降低 8。\n"
+    },
+    {
+      "key": "covered in liquid flames monstatus",
+      "before": "这个生物被黏着火焰覆盖，每回合受到无视护甲的火焰伤害。移动能甩掉火焰，使效果更快结束；走入水中则会完全熄灭火焰。\n",
+      "after": "这个生物被黏附火焰覆盖，每回合受到无视护甲值的火焰伤害。移动能甩掉火焰，使效果更快结束；走入水中则会完全熄灭火焰。\n"
+    },
+    {
+      "key": "covered in magnetic dust monstatus",
+      "before": "这个生物无法躲避攻击或隐形。它死亡后会留下磁化碎片云。\n\n每次施放 Magnavolt，都会自动向它射出一道闪电束。\n",
+      "after": "这个生物无法躲避攻击或隐形。它死亡后会留下磁化碎片云。\n\n每次施放 巨磁电涌，都会自动向它射出一道闪电束。\n"
+    },
+    {
+      "key": "covered in terrible wounds monstatus",
+      "before": "剥皮幽灵在这个生物身上造成了幻觉伤口。伤口会随时间消失，或在剥皮幽灵被摧毁时消失。\n",
+      "after": "剥皮鬼在这个生物身上造成了幻觉伤口。伤口会随时间消失，或在剥皮鬼被摧毁时消失。\n"
+    },
+    {
+      "key": "entangled in a net monstatus",
+      "before": "这个生物被网困住，闪避大幅降低且无法格挡。尝试移动或攻击时，它只会挣扎，最终可能挣破网。施法不受影响。\n\n[[low-tier stab monstatus]]\n",
+      "after": "这个生物被网困住，闪避值大幅降低且无法格挡。尝试移动或攻击时，它只会挣扎，最终可能挣破网。施法不受影响。\n\n[[low-tier stab monstatus]]\n"
+    },
+    {
+      "key": "entangled in a web monstatus",
+      "before": "这个生物被蛛网困住，闪避大幅降低且无法格挡。尝试移动或攻击时，它只会挣扎，最终可能挣破蛛网。施法不受影响。\n\n[[low-tier stab monstatus]]\n",
+      "after": "这个生物被蛛网困住，闪避值大幅降低且无法格挡。尝试移动或攻击时，它只会挣扎，最终可能挣破蛛网。施法不受影响。\n\n[[low-tier stab monstatus]]\n"
+    },
+    {
+      "key": "heavily drained monstatus",
+      "before": "这个生物受到严重吸取：近战命中率、法术强度和特殊攻击效果的威力降低，也更容易受到多种状态效果影响。\n",
+      "after": "这个生物受到严重吸能：近战命中率、法术强度和特殊攻击效果的威力降低，也更容易受到多种状态效果影响。\n"
+    },
+    {
+      "key": "inspiring fear monstatus",
+      "before": "你目前十分畏惧这个生物，无法主动靠近它，对它进行的近战攻击也有 33% 会失败。\n\n一旦看不见它，此效果就会结束。\n",
+      "after": "你目前十分畏惧这个生物，无法主动靠近它，对它进行的近战攻击也有 33% 的几率失败。\n\n一旦看不见它，此效果就会结束。\n"
+    },
+    {
+      "key": "lightly drained monstatus",
+      "before": "这个生物受到轻度吸取：近战命中率、法术强度和特殊攻击效果的威力略微降低，也略微更容易受到多种状态效果影响。\n",
+      "after": "这个生物受到轻度吸能：近战命中率、法术强度和特殊攻击效果的威力略微降低，也略微更容易受到多种状态效果影响。\n"
+    },
+    {
+      "key": "marked with the sign of ruin monstatus",
+      "before": "这个生物注定走向无法逃避的衰败与毁灭。每次受到近战伤害，它都会遭到严重吸取，并陷入减速、虚弱或失明中的一种状态。\n",
+      "after": "这个生物注定走向无法逃避的衰败与毁灭。每次受到近战伤害，它都会遭到严重吸能，并陷入减速、虚弱或失明中的一种状态。\n"
+    },
+    {
+      "key": "mesmerising monstatus",
+      "before": "这个生物魅惑了你，使你无法主动远离它。\n\n一旦看不见它，此效果就会结束。\n",
+      "after": "这个生物使你陷入迷魂状态，无法主动远离它。\n\n一旦看不见它，此效果就会结束。\n"
+    },
+    {
+      "key": "missing a shadow monstatus",
+      "before": "这个生物的影子被撕去了，永远无法再次受到 Aphotic Marionette 的影响。\n",
+      "after": "这个生物的影子被撕去了，永远无法再次受到 无光提线偶 的影响。\n"
+    },
+    {
+      "key": "misshapen and mutated monstatus",
+      "before": "这个生物的 AC 降低 8，命中率、法术强度、品牌伤害和意志也中等幅度降低。\n",
+      "after": "这个生物的护甲值降低 8，命中率、法术强度、印记伤害和意志也有所降低。\n"
+    },
+    {
+      "key": "ready to howl monstatus",
+      "before": "这个生物尚未对你施加遗忘嚎叫，可能尝试这样做。\n",
+      "after": "这个生物尚未对你施加湮灭嚎叫，可能尝试这样做。\n"
+    },
+    {
+      "key": "repelling missiles monstatus",
+      "before": "躲避物理或魔法飞射物时，这个生物的 EV 增加 15。\n",
+      "after": "躲避物理或魔法飞射物时，这个生物的闪避值增加 15。\n"
+    },
+    {
+      "key": "strong-willed monstatus",
+      "before": "这个生物的意志提高两档。\n",
+      "after": "这个生物的意志提高 2 档。\n"
+    },
+    {
+      "key": "surrounded by a freezing vortex monstatus",
+      "before": "这个生物是一场毁灭性的极地涡旋的源头。\n",
+      "after": "这个生物是一场毁灭性的极地涡流的源头。\n"
+    },
+    {
+      "key": "surrounded by chaotic energy monstatus",
+      "before": "这个生物在自身周围拖出一圈翻腾的混沌云雾。\n",
+      "after": "这个生物在自身周围拖出一圈翻涌混沌云。\n"
+    },
+    {
+      "key": "surrounded by restless winds monstatus",
+      "before": "这个生物最近施放过极地涡旋，短时间内无法再次施放。\n",
+      "after": "这个生物最近施放过极地涡流，短时间内无法再次施放。\n"
+    },
+    {
+      "key": "touched by paradox monstatus",
+      "before": "这个生物失去了空间锚定，能够将多重突击作为天生能力使用。每次使用时，还会有 33% 几率闪烁到附近随机位置。\n",
+      "after": "这个生物失去了空间锚定，能够将多重突袭作为天生能力使用。每次使用时，还会有 33% 几率闪烁到附近随机位置。\n"
+    },
+    {
+      "key": "unrewarding monstatus",
+      "before": "击杀这个生物不会获得经验或神恩。\n",
+      "after": "击杀这个生物不会获得经验或虔诚。\n"
+    },
+    {
+      "key": "unusually agile monstatus",
+      "before": "这个生物的闪避略有提高。\n",
+      "after": "这个生物的闪避值略有提高。\n"
+    }
+  ]
+}

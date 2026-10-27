@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
+#include "p-display.h"
 
 #include "player.h"
 
@@ -107,7 +109,7 @@ static void _pruneify()
     if (!you.may_pruneify())
         return;
 
-    mpr("The curse of the Prune overcomes you.");
+    mpr(ui_translate("p.ui", "The curse of the Prune overcomes you."));
     did_god_conduct(DID_CHAOS, 10);
 }
 
@@ -132,19 +134,28 @@ static void _moveto_maybe_repel_stairs()
 
     if (x_chance_in_y(pct, 100))
     {
+        const dungeon_feature_type source_stair = env.grid(you.pos());
         const string stair_str = feature_description_at(you.pos(), false,
                                                         DESC_THE);
         const string prep = feat_preposition(new_grid, true, &you);
 
         if (slide_feature_over(you.pos()))
         {
-            mprf("%s slides away as you move %s it!", stair_str.c_str(),
-                 prep.c_str());
+            string display_stair;
+            const bool named = try_feature_display_name(source_stair, NUM_TRAPS, display_stair);
+            mprf("%s", ui_render("p.extra", "%s slides away as you move %s it!", make_stringf("%s slides away as you move %s it!", stair_str.c_str(), prep.c_str()), {p_clause_arg(prep), {display_stair, named}}).c_str());
 
             if (player_in_a_dangerous_place() && one_chance_in(5))
                 xom_is_stimulated(25);
         }
     }
+}
+
+static ui_arg _p_feature_arg(const coord_def &pos)
+{
+    string display;
+    const bool available = try_feature_display_at(pos, false, display);
+    return {display, available};
 }
 
 bool check_moveto_cloud(const coord_def& p, const string &move_verb,
@@ -176,9 +187,9 @@ bool check_moveto_cloud(const coord_def& p, const string &move_verb,
 
         if (prompted)
             *prompted = true;
-        string prompt = make_stringf("Really %s into that cloud of %s?",
+        string prompt = ui_render("p.prompt", "Really %s into that cloud of %s?", make_stringf("Really %s into that cloud of %s?",
                                      move_verb.c_str(),
-                                     cloud_type_name(ctype).c_str());
+                                     cloud_type_name(ctype).c_str()), {ui_text_arg("p.move", move_verb), ui_text_arg("c.cloud.name", cloud_type_name(ctype))});
         learned_something_new(HINT_CLOUD_WARNING);
 
         if (!yesno(prompt.c_str(), false, 'n'))
@@ -205,7 +216,7 @@ bool check_moveto_trap(const coord_def& p, const string &move_verb,
     if (trap->type == TRAP_ZOT && !trap->is_safe() && !crawl_state.disables[DIS_CONFIRMATIONS])
     {
         string msg = "Do you really want to %s into the Zot trap?";
-        string prompt = make_stringf(msg.c_str(), move_verb.c_str());
+        string prompt = ui_render("p.prompt", "Do you really want to %s into the Zot trap?", make_stringf(msg.c_str(), move_verb.c_str()), {ui_text_arg("p.move", move_verb)});
 
         if (prompted)
             *prompted = true;
@@ -221,11 +232,11 @@ bool check_moveto_trap(const coord_def& p, const string &move_verb,
 
         if (prompted)
             *prompted = true;
-        prompt = make_stringf("Really %s %s that %s?", move_verb.c_str(),
+        prompt = ui_render("p.prompt", "Really %s %s that %s?", make_stringf("Really %s %s that %s?", move_verb.c_str(),
                               (trap->type == TRAP_ALARM
                                || trap->type == TRAP_PLATE) ? "onto"
                               : "into",
-                              feature_description_at(p, false, DESC_BASENAME).c_str());
+                              feature_description_at(p, false, DESC_BASENAME).c_str()), {ui_text_arg("p.move", move_verb), p_clause_arg((trap->type == TRAP_ALARM || trap->type == TRAP_PLATE) ? "onto" : "into"), _p_feature_arg(p)});
         if (!yesno(prompt.c_str(), true, 'n'))
         {
             canned_msg(MSG_OK);
@@ -248,7 +259,7 @@ static bool _check_moveto_dangerous(const coord_def& p, const string& msg)
     else if (species::likes_water(you.species) && feat_is_water(env.grid(p)))
     {
         // player normally likes water, but is in a form that doesn't
-        mpr("You cannot enter water in your current form.");
+        mpr(ui_translate("p.ui", "You cannot enter water in your current form."));
     }
     else
         canned_msg(MSG_UNTHINKING_ACT);
@@ -269,6 +280,8 @@ static bool _check_moveto_binding_sigil(coord_def p, const string &move_verb,
 
         prompt += "Are you sure you want to " + move_verb
                 + " onto a binding sigil?";
+        prompt = ui_render("p.prompt", "Move %s %s to \u675f\u7f1a\u5370\u8bb0?", prompt, {msg.empty() ? ui_arg{"", true} : ui_text_arg("p.reason", msg), ui_text_arg("p.move", move_verb)});
+        prompt = ui_render("p.prompt", "Move %s %s to 束缚印记?", prompt, {msg.empty() ? ui_arg{"", true} : ui_text_arg("p.reason", msg), ui_text_arg("p.move", move_verb)});
 
         if (!yesno(prompt.c_str(), false, 'n'))
         {
@@ -306,6 +319,7 @@ bool check_moveto_terrain(const coord_def& p, const string &move_verb,
 
         prompt += "Are you sure you want to " + move_verb
                 + " into a toxic bog?";
+        prompt = ui_render("p.prompt", "Move %s %s to \u6bd2\u6cbc?", prompt, {msg.empty() ? ui_arg{"", true} : ui_text_arg("p.reason", msg), ui_text_arg("p.move", move_verb)});
 
         if (!yesno(prompt.c_str(), false, 'n'))
         {
@@ -336,6 +350,7 @@ bool check_moveto_terrain(const coord_def& p, const string &move_verb,
         prompt += need_expiration_warning(DUR_FLIGHT, p)
             ? " while you are losing your buoyancy?"
             : " while your transformation is expiring?";
+        prompt = ui_render("p.prompt", "Dangerous movement %s: %s %s %s %s?", prompt, {msg.empty() ? ui_arg{"", true} : ui_text_arg("p.reason", msg), ui_text_arg("p.move", move_verb), p_clause_arg(you.airborne() ? "over" : "into"), p_clause_arg(env.grid(p) == DNGN_DEEP_WATER ? "deep water" : "lava"), p_clause_arg(need_expiration_warning(DUR_FLIGHT, p) ? "losing buoyancy" : "transformation expiring")});
 
         if (!yesno(prompt.c_str(), false, 'n'))
         {
@@ -363,10 +378,11 @@ bool check_moveto_exclusions(const vector<coord_def> &areas,
     }
     if (count == 0)
         return true;
-    const string prompt = make_stringf((count == (int) areas.size() ?
+    const string original_prompt = make_stringf((count == (int) areas.size() ?
                     "Really %s into a travel-excluded area?" :
                     "You might %s into a travel-excluded area, are you sure?"),
                               move_verb.c_str());
+    const string prompt = ui_render("p.prompt", "Excluded movement %s: %s", original_prompt, {p_clause_arg(count == (int)areas.size() ? "will enter" : "might enter"), ui_text_arg("p.move", move_verb)});
 
     if (prompted)
         *prompted = true;
@@ -442,7 +458,7 @@ bool swap_check(monster* mons, coord_def &loc, bool quiet)
         || mons->type == MONS_BLAZEHEART_CORE)
     {
         if (!quiet)
-            mpr("It's unwise to walk into this.");
+            mpr(ui_translate("p.ui", "It's unwise to walk into this."));
         return false;
     }
 
@@ -451,7 +467,7 @@ bool swap_check(monster* mons, coord_def &loc, bool quiet)
         if (!quiet)
         {
             simple_monster_message(*mons,
-                make_stringf(" is %s!", held_status(mons)).c_str());
+                make_stringf(" is %s!", held_status(mons)).c_str(), false, MSGCH_PLAIN, 0, DESC_THE, ui_render("p.extra", "%s is %s!", "", {ui_actor_arg(*mons), p_clause_arg(held_status(mons))}));
         }
         return false;
     }
@@ -459,7 +475,7 @@ bool swap_check(monster* mons, coord_def &loc, bool quiet)
     if (mons->is_constricted())
     {
         if (!quiet)
-            simple_monster_message(*mons, " is being constricted!");
+            simple_monster_message(*mons, " is being constricted!", false, MSGCH_PLAIN, 0, DESC_THE, ui_render("p.log.71", "%s is being constricted!", "", {ui_actor_arg(*mons)}));
         return false;
     }
 
@@ -472,18 +488,17 @@ bool swap_check(monster* mons, coord_def &loc, bool quiet)
             if (is_valid_tempering_target(*mons, you))
             {
                 simple_monster_message(*mons, " cannot move out of your way! "
-                    "(Use ctrl+direction or * direction to deconstruct it instead.)");
+                    "(Use ctrl+direction or * direction to deconstruct it instead.)", false, MSGCH_PLAIN, 0, DESC_THE, ui_render("p.log.72", "%s cannot move out of your way! (Use ctrl+direction or * direction to deconstruct it instead.)", "", {ui_actor_arg(*mons)}));
             }
             else
-                simple_monster_message(*mons, " cannot move out of your way!");
+                simple_monster_message(*mons, " cannot move out of your way!", false, MSGCH_PLAIN, 0, DESC_THE, ui_render("p.log.73", "%s cannot move out of your way!", "", {ui_actor_arg(*mons)}));
         }
         return false;
     }
 
     // prompt when swapping into known zot traps
     if (!quiet && trap_at(loc) && trap_at(loc)->type == TRAP_ZOT
-        && !confirm_prompt("yes", "Do you really want to swap %s into the Zot trap?",
-                           mons->name(DESC_YOUR).c_str()))
+        && !confirm_prompt("yes", "%s", ui_render("p.extra", "Do you really want to swap %s into the Zot trap?", make_stringf("Do you really want to swap %s into the Zot trap?", mons->name(DESC_YOUR).c_str()), {ui_actor_arg(*mons)}).c_str()))
     {
         return false;
     }
@@ -510,10 +525,8 @@ bool swap_check(monster* mons, coord_def &loc, bool quiet)
     if (!swap && !quiet)
     {
         // Might not be ideal, but it's better than insta-killing the monster.
-        mprf("There is no room for %s to move out of your way! "
-             "(Try telling them to retreat with <w>%sr</w> instead.)",
-              mons->name(DESC_THE).c_str(),
-              command_to_string(CMD_SHOUT).c_str());
+        mprf("%s", ui_render("p.log.74", "There is no room for %s to move out of your way! (Try telling them to retreat with <w>%sr</w> instead.)", make_stringf("There is no room for %s to move out of your way! "
+             "(Try telling them to retreat with <w>%sr</w> instead.)" , mons->name(DESC_THE).c_str(), command_to_string(CMD_SHOUT).c_str()), {ui_actor_arg(*mons), ui_literal_arg(command_to_string(CMD_SHOUT))}).c_str());
         // FIXME: activity_interrupt::hit_monster isn't ideal.
         interrupt_activity(activity_interrupt::hit_monster, mons);
     }
@@ -537,9 +550,9 @@ static void _enter_water(dungeon_feature_type old_feat,
     if (!stepped)
     {
         if (you.can_swim())
-            noisy(4, you.pos(), "Floosh!");
+            noisy(4, you.pos(), ui_translate("p.ui", "Floosh!"));
         else
-            noisy(8, you.pos(), "Splash!");
+            noisy(8, you.pos(), ui_translate("p.ui", "Splash!"));
     }
 
     // Merfolk special-case most relevant messages.
@@ -551,21 +564,19 @@ static void _enter_water(dungeon_feature_type old_feat,
         return;
 
     if (new_grid == DNGN_TOXIC_BOG)
-        mprf("You %s the toxic bog.", stepped ? "enter" : "fall into");
+        mprf("%s", ui_render("p.log.75", "You %s the toxic bog.", make_stringf("You %s the toxic bog." , stepped ? "enter" : "fall into"), {p_clause_arg(stepped ? "enter" : "fall into")}).c_str());
     else
     {
-        mprf("You %s the %s water.",
-             stepped ? "enter" : "fall into",
-             new_grid == DNGN_SHALLOW_WATER ? "shallow" : "deep");
+        mprf("%s", ui_render("p.log.76", "You %s the %s.", make_stringf("You %s the %s water." , stepped ? "enter" : "fall into", new_grid == DNGN_SHALLOW_WATER ? "shallow" : "deep"), {p_clause_arg(stepped ? "enter" : "fall into"), p_clause_arg(new_grid == DNGN_SHALLOW_WATER ? "shallow water" : "deep water")}).c_str());
     }
 
     if (you.slow_in_water())
     {
-        mpr("Moving in this stuff is going to be slow.");
+        mpr(ui_translate("p.ui", "Moving in this stuff is going to be slow."));
         if (you.invisible())
-            mpr("...and don't expect to remain undetected.");
+            mpr(ui_translate("p.ui", "...and don't expect to remain undetected."));
     } else if (you.invisible())
-        mpr("Don't expect to remain undetected while in the water.");
+        mpr(ui_translate("p.ui", "Don't expect to remain undetected while in the water."));
 }
 
 static bool _valid_entanglement_target(const monster& mon, bool check_no_tele)
@@ -627,7 +638,7 @@ static void _check_spatial_entanglement(const coord_def& oldpos)
     place_cloud(CLOUD_TLOC_ENERGY, mon->pos(), random_range(2, 3), &you);
     mon->move_to(spot, MV_TRANSLOCATION, true);
 
-    mprf("%s is dragged along with you!", mon->name(DESC_THE).c_str());
+    mprf("%s", ui_render("p.log.77", "%s is dragged along with you!", make_stringf("%s is dragged along with you!" , mon->name(DESC_THE).c_str()), {ui_actor_arg(*mon)}).c_str());
     mon->speed_increment -= you.time_taken;
     mon->finalise_movement();
     if (mon->alive())
@@ -761,7 +772,7 @@ void player::finalise_movement(const actor* /*to_blame*/)
            redraw_armour_class = true;
            wield_change = true;
            if (!was_slimy)
-               mpr("Acid dripping from the walls corrodes you.");
+               mpr(ui_translate("p.ui", "Acid dripping from the walls corrodes you."));
        }
     }
 
@@ -1103,6 +1114,7 @@ bool berserk_check_wielded_weapon()
         if (penance)
             prompt += " This could place you under penance!";
 
+        prompt = ui_render("p.prompt", "Berserk while wielding %s?%s", prompt, {ui_item_arg(*wpn), p_clause_arg(penance ? " This could place you under penance!" : "")});
         if (!yesno(prompt.c_str(), true, 'n'))
         {
             canned_msg(MSG_OK);
@@ -2529,7 +2541,7 @@ static void _handle_hp_drain(int exp)
     calc_hp();
 
     if (drain_removed)
-        mprf(MSGCH_RECOVERY, "Your life force feels restored.");
+        mprf(MSGCH_RECOVERY,"%s", ui_translate("p.ui", "Your life force feels restored."));
 }
 
 static void _handle_breath_recharge(int exp)
@@ -2553,7 +2565,7 @@ static void _handle_breath_recharge(int exp)
     {
         you.props.erase(DRACONIAN_BREATH_RECHARGE_KEY);
         gain_draconian_breath_uses(1);
-        mprf(MSGCH_DURATION, "You feel power welling in your lungs.");
+        mprf(MSGCH_DURATION,"%s", ui_translate("p.ui", "You feel power welling in your lungs."));
     }
 }
 
@@ -2568,7 +2580,7 @@ static void _handle_cacophony_recharge(int exp)
     if (you.props[CACOPHONY_XP_KEY].get_int() <= 0)
     {
         you.props.erase(CACOPHONY_XP_KEY);
-        mprf(MSGCH_DURATION, "You feel ready to make another cacophony.");
+        mprf(MSGCH_DURATION,"%s", ui_translate("p.ui", "You feel ready to make another cacophony."));
     }
 }
 
@@ -2586,7 +2598,7 @@ static void _handle_batform_recharge(int exp)
     if (you.props[BATFORM_XP_KEY].get_int() <= 0)
     {
         you.props.erase(BATFORM_XP_KEY);
-        mprf(MSGCH_DURATION, "You feel ready to scatter into bats once more.");
+        mprf(MSGCH_DURATION,"%s", ui_translate("p.ui", "You feel ready to scatter into bats once more."));
     }
 }
 
@@ -2604,7 +2616,7 @@ static void _handle_watery_grave_recharge(int exp)
     if (you.props[WATERY_GRAVE_XP_KEY].get_int() <= 0)
     {
         you.props.erase(WATERY_GRAVE_XP_KEY);
-        mprf(MSGCH_DURATION, "You feel ready to drown your foes once more.");
+        mprf(MSGCH_DURATION,"%s", ui_translate("p.ui", "You feel ready to drown your foes once more."));
     }
 }
 
@@ -2620,7 +2632,7 @@ static void _handle_banes(int exp)
         you.attribute[ATTR_DOOM] -= div_rand_round(loss, 60);
         if (you.attribute[ATTR_DOOM] <= 0)
         {
-            mprf(MSGCH_DURATION, "You feel the doom around you dissipate.");
+            mprf(MSGCH_DURATION,"%s", ui_translate("p.ui", "You feel the doom around you dissipate."));
             you.attribute[ATTR_DOOM] = 0;
         }
 
@@ -2751,7 +2763,7 @@ static bool _felid_extra_life()
         && you.lives < 2)
     {
         you.lives++;
-        mprf(MSGCH_INTRINSIC_GAIN, "Extra life!");
+        mprf(MSGCH_INTRINSIC_GAIN,"%s", ui_translate("p.ui", "Extra life!"));
         you.attribute[ATTR_LIFE_GAINED] = you.max_level;
         // Should play the 1UP sound from SMB...
         return true;
@@ -2776,10 +2788,9 @@ static void _gain_and_note_hp_mp()
     const int note_maxhp = get_real_hp(false, true);
     const int note_maxmp = get_real_mp(false);
 
-    take_note(Note(NOTE_XP_LEVEL_CHANGE, you.experience_level, 0,
-        make_stringf("HP: %d/%d MP: %d/%d",
-            min(you.hp, note_maxhp), note_maxhp,
-            min(you.magic_points, note_maxmp), note_maxmp)));
+    take_note(make_xp_level_note(you.experience_level,
+        min(you.hp, note_maxhp), note_maxhp,
+        min(you.magic_points, note_maxmp), note_maxmp));
 }
 
 static int _rest_trigger_level(int max)
@@ -2893,8 +2904,8 @@ static void _gain_innate_spells()
                                      oldspell);
                 if (oldindex != end(you.spells))
                 {
-                    mpr("Your capacity for spells is full, and you lose "
-                        "access to an earlier spell.");
+                    mpr(ui_translate("p.ui", "Your capacity for spells is full, and you lose "
+                        "access to an earlier spell."));
                     del_spell_from_memory(oldspell);
                     spell_vec[j].get_int() = SPELL_NO_SPELL;
                     break;
@@ -2908,7 +2919,7 @@ static void _gain_innate_spells()
                 continue;
             }
         }
-        mprf("The power to cast %s wells up from within.", spell_title(spell));
+        mprf("%s", ui_render("p.log.78", "The power to cast %s wells up from within.", make_stringf("The power to cast %s wells up from within." , spell_title(spell)), {ui_text_arg("display.spell", spell_title(spell))}).c_str());
         add_spell_to_memory(spell);
     }
 }
@@ -2944,7 +2955,7 @@ static void _revenant_spell_gift()
     // spells. Hey, it's probably not literally impossible.
     if (gift_possibilities.empty())
     {
-        mpr("You remember only oblivion.");
+        mpr(ui_translate("p.ui", "You remember only oblivion."));
         return;
     }
 
@@ -2959,8 +2970,8 @@ static void _revenant_spell_gift()
         }
     }
 
-    mprf("You remember %s.", msg.c_str());
-    mprf("(You can now cast %s.)", spell_title(spell));
+    mprf("%s", ui_render("p.log.79", "You remember %s.", make_stringf("You remember %s." , msg.c_str()), {p_clause_arg(msg)}).c_str());
+    mprf("%s", ui_render("p.log.80", "(You can now cast %s.)", make_stringf("(You can now cast %s.)" , spell_title(spell)), {ui_text_arg("display.spell", spell_title(spell))}).c_str());
     library_add_spells({spell}, true);
     add_spell_to_memory(spell);
 }
@@ -3007,8 +3018,7 @@ void level_change(bool skip_attribute_increase)
 
         if (new_exp <= you.max_level)
         {
-            mprf(MSGCH_INTRINSIC_GAIN,
-                 "Welcome back to level %d!", new_exp);
+            mprf(MSGCH_INTRINSIC_GAIN,ui_translate("p.ui", "Welcome back to level %d!"), new_exp);
 
             // No more prompts for this XL past this point.
 
@@ -3021,13 +3031,13 @@ void level_change(bool skip_attribute_increase)
             update_screen();
 
             if (new_exp == 27)
-                mprf(MSGCH_INTRINSIC_GAIN, "You have reached level 27, the final one!");
+                mprf(MSGCH_INTRINSIC_GAIN,"%s", ui_translate("p.ui", "You have reached level 27, the final one!"));
             else if (new_exp == you.get_max_xl())
-                mprf(MSGCH_INTRINSIC_GAIN, "You have reached level %d, the highest you will ever reach!",
+                mprf(MSGCH_INTRINSIC_GAIN,ui_translate("p.ui", "You have reached level %d, the highest you will ever reach!"),
                         you.get_max_xl());
             else
             {
-                mprf(MSGCH_INTRINSIC_GAIN, "You have reached level %d!",
+                mprf(MSGCH_INTRINSIC_GAIN, ui_translate("player.level", "You have reached level %d!"),
                      new_exp);
             }
 
@@ -3062,7 +3072,7 @@ void level_change(bool skip_attribute_increase)
             case SP_NAGA:
                 if (!(you.experience_level % 3))
                 {
-                    mprf(MSGCH_INTRINSIC_GAIN, "Your skin feels tougher.");
+                    mprf(MSGCH_INTRINSIC_GAIN,"%s", ui_translate("p.ui", "Your skin feels tougher."));
                     you.redraw_armour_class = true;
                 }
                 break;
@@ -3095,9 +3105,7 @@ void level_change(bool skip_attribute_increase)
 #ifdef USE_TILE
                     init_player_doll();
 #endif
-                    mprf(MSGCH_INTRINSIC_GAIN,
-                         "Your scales start taking on %s colour.",
-                         article_a(species::scale_type(you.species)).c_str());
+                    mprf(MSGCH_INTRINSIC_GAIN, "%s", ui_render("p.log.81", "Your scales start taking on %s colour.", make_stringf("Your scales start taking on %s colour." , article_a(species::scale_type(you.species)).c_str()), {p_clause_arg(species::scale_type(you.species))}).c_str());
 
                     // Produce messages about skill increases/decreases. We
                     // restore one skill level at a time so that at most the
@@ -3108,10 +3116,7 @@ void level_change(bool skip_attribute_increase)
                         const int newapt = species_apt(sk, you.species);
                         if (oldapt != newapt)
                         {
-                            mprf(MSGCH_INTRINSIC_GAIN, "You learn %s %s%s.",
-                                 skill_name(sk),
-                                 abs(oldapt - newapt) > 1 ? "much " : "",
-                                 oldapt > newapt ? "slower" : "quicker");
+                            mprf(MSGCH_INTRINSIC_GAIN, "%s", ui_render("p.log.82", "You learn %s %s%s.", make_stringf("You learn %s %s%s." , skill_name(sk), abs(oldapt - newapt) > 1 ? "much " : "", oldapt > newapt ? "slower" : "quicker"), {ui_text_arg("display.skill", skill_name(sk)), p_clause_arg(abs(oldapt - newapt) > 1 ? "much " : ""), p_clause_arg(oldapt > newapt ? "slower" : "quicker")}).c_str());
                         }
 
                         you.skills[sk] = saved_skills[sk];
@@ -3125,7 +3130,7 @@ void level_change(bool skip_attribute_increase)
 
                     // Tell the player about their new species
                     for (auto &mut : species::fake_mutations(you.species, false))
-                        mprf(MSGCH_INTRINSIC_GAIN, "%s", mut.c_str());
+                        mprf(MSGCH_INTRINSIC_GAIN, "%s", ui_translate("m.fakemut", mut.c_str()));
 
                     gain_draconian_breath_uses(2);
 
@@ -3156,8 +3161,8 @@ void level_change(bool skip_attribute_increase)
                         {
                             if (you.experience_level == level)
                             {
-                                mprf(MSGCH_MUTATION, "You feel monstrous as "
-                                     "your demonic heritage exerts itself.");
+                                mprf(MSGCH_MUTATION,"%s", ui_translate("p.ui", "You feel monstrous as "
+                                     "your demonic heritage exerts itself."));
                                 mark_milestone("monstrous", "discovered their "
                                                "monstrous ancestry!");
                                 take_note(Note(NOTE_MESSAGE, 0, 0,
@@ -3180,8 +3185,7 @@ void level_change(bool skip_attribute_increase)
                     {
                         if (!gave_message)
                         {
-                            mprf(MSGCH_INTRINSIC_GAIN,
-                                 "Your demonic ancestry asserts itself...");
+                            mprf(MSGCH_INTRINSIC_GAIN,"%s", ui_translate("p.ui", "Your demonic ancestry asserts itself..."));
 
                             gave_message = true;
                         }
@@ -3204,11 +3208,10 @@ void level_change(bool skip_attribute_increase)
 
                     case COGLIN_GIZMO_XL:
                     {
-                        mpr("You feel a burst of inspiration! You are finally "
-                            "ready to make a one-of-a-kind gizmo!");
-                        mprf("(press <w>%c</w> on the <w>%s</w>bility menu to create your gizmo)",
-                                get_talent(ABIL_INVENT_GIZMO).hotkey,
-                                command_to_string(CMD_USE_ABILITY).c_str());
+                        mpr(ui_translate("p.ui", "You feel a burst of inspiration! You are finally "
+                            "ready to make a one-of-a-kind gizmo!"));
+                        const char gizmo_hotkey = get_talent(ABIL_INVENT_GIZMO).hotkey;
+                        mprf("%s", ui_render("p.log.84", "Gizmo menu <w>%s</w>, hotkey <w>%s</w>", make_stringf("(press <w>%c</w> on the <w>%s</w>bility menu to create your gizmo)" , gizmo_hotkey, command_to_string(CMD_USE_ABILITY).c_str()), {ui_literal_arg(command_to_string(CMD_USE_ABILITY)), ui_literal_arg(string(1, gizmo_hotkey))}).c_str());
                     }
                     break;
                 }
@@ -3233,7 +3236,7 @@ void level_change(bool skip_attribute_increase)
 
         if (species::is_draconian(you.species) && !(you.experience_level % 3))
         {
-            mprf(MSGCH_INTRINSIC_GAIN, "Your scales feel tougher.");
+            mprf(MSGCH_INTRINSIC_GAIN,"%s", ui_translate("p.ui", "Your scales feel tougher."));
             you.redraw_armour_class = true;
         }
         if (!updated_maxhp)
@@ -3457,6 +3460,16 @@ static void _display_movement_speed()
     const bool antiswift = (you.duration[DUR_SWIFTNESS] > 0
                             && you.attribute[ATTR_SWIFTNESS] < 0);
 
+    const string display = ui_render("p.status", "Your %s speed is %s%s.", "", {p_clause_arg(swim ? "swimming" : water ? "wading" : fly ? "flying" : "movement"), p_clause_arg(move_cost < 8 ? "very quick" : move_cost < 10 ? "quick" : move_cost == 10 ? "average" : move_cost < 13 ? "slow" : "very slow"), p_clause_arg(swift ? "aided by the wind" : antiswift ? "hindered by the wind" : "")});
+    if (!display.empty())
+    {
+        if (you.wizard)
+            mprf("%s (%d).", display.c_str(), move_cost);
+        else
+            mpr(display);
+        return;
+    }
+
     _display_char_status(move_cost, "Your %s speed is %s%s%s",
           // order is important for these:
           (swim)    ? "swimming" :
@@ -3526,11 +3539,7 @@ static void _display_attack_delay(const item_def *offhand)
                          shield_penalty ? "shield" : "armour");
     }
 
-    mprf("Your attack delay is about %.1f%s%s.",
-         (float)delay / 10,
-         at_min_delay ?
-            " (and cannot be improved with additional weapon skill)" : "",
-         penalty_msg.c_str());
+    mprf("%s", ui_render("p.status", "Your attack delay is about %s%s%s.", make_stringf("Your attack delay is about %.1f%s%s.", (float)delay / 10, at_min_delay ? " (and cannot be improved with additional weapon skill)" : "", penalty_msg.c_str()), {ui_literal_arg(make_stringf("%.1f", (float)delay / 10)), p_clause_arg(at_min_delay ? "minimum weapon delay" : ""), (shield_penalty || armour_penalty) ? p_clause_arg(shield_penalty && armour_penalty ? "slowed by shield and armour" : shield_penalty ? "slowed by shield" : "slowed by armour") : ui_arg{"", true}}).c_str());
 }
 
 /**
@@ -3545,13 +3554,13 @@ static void _display_damage_rating(const item_def *weapon)
     else
         weapon_name = "unarmed combat";
 
+    string display_rating;
+    const string rating = damage_rating(weapon, nullptr, &display_rating);
     if (weapon && is_unrandom_artefact(*weapon, UNRAND_WOE))
-        mpr(uppercase_first(damage_rating(weapon)));
+        mpr(uppercase_first(display_rating.empty() ? rating : display_rating));
     else
     {
-        mprf("Your damage rating with %s is about %s",
-             weapon_name.c_str(),
-             damage_rating(weapon).c_str());
+        mprf("%s", ui_render("p.prompt", "Your damage rating with %s is about %s", make_stringf("Your damage rating with %s is about %s", weapon_name.c_str(), rating.c_str()), {weapon ? ui_item_arg(*weapon) : ui_text_arg("display.skill", skill_name(SK_UNARMED_COMBAT)), {display_rating, !display_rating.empty()}}).c_str());
     }
     return;
 }
@@ -3565,19 +3574,19 @@ void display_char_status()
     if (halo_size >= 0)
     {
         if (halo_size > 5)
-            mpr("You are illuminated by a large divine halo.");
+            mpr(ui_translate("p.ui", "You are illuminated by a large divine halo."));
         else if (halo_size > 3)
-            mpr("You are illuminated by a divine halo.");
+            mpr(ui_translate("p.ui", "You are illuminated by a divine halo."));
         else
-            mpr("You are illuminated by a small divine halo.");
+            mpr(ui_translate("p.ui", "You are illuminated by a small divine halo."));
     }
     else if (you.haloed())
-        mpr("An external divine halo illuminates you.");
+        mpr(ui_translate("p.ui", "An external divine halo illuminates you."));
 
     status_info inf;
     for (unsigned i = 0; i <= STATUS_LAST_STATUS; ++i)
     {
-        if (fill_status_info(i, inf) && !inf.long_text.empty())
+        if (fill_status_display_info(i, inf) && !inf.long_text.empty())
             mpr(inf.long_text);
     }
     string cinfo = _constriction_description();
@@ -3597,7 +3606,7 @@ void display_char_status()
         || innate_stat(STAT_INT) != you.intel()
         || innate_stat(STAT_DEX) != you.dex())
     {
-        mprf("Your base attributes are Str %d, Int %d, Dex %d.",
+        mprf(ui_translate("p.ui", "Your base attributes are Str %d, Int %d, Dex %d."),
              innate_stat(STAT_STR),
              innate_stat(STAT_INT),
              innate_stat(STAT_DEX));
@@ -3895,7 +3904,7 @@ void flush_mp()
         && you.magic_points < you.max_magic_points
                               * Options.magic_point_warning / 100)
     {
-        mprf(MSGCH_DANGER, "* * * LOW MAGIC WARNING * * *");
+        mprf(MSGCH_DANGER,"%s", ui_translate("p.ui", "* * * LOW MAGIC WARNING * * *"));
     }
 
     take_note(Note(NOTE_MP_CHANGE, you.magic_points, you.max_magic_points));
@@ -3908,7 +3917,7 @@ void flush_hp()
         && you.hp <= (you.hp_max * Options.hp_warning) / 100)
     {
         flash_view_delay(UA_HP, RED, 50);
-        mprf(MSGCH_DANGER, "* * * LOW HITPOINT WARNING * * *");
+        mprf(MSGCH_DANGER,"%s", ui_translate("p.ui", "* * * LOW HITPOINT WARNING * * *"));
         dungeon_events.fire_event(DET_HP_WARNING);
     }
     you.redraw_hit_points = true;
@@ -3984,7 +3993,7 @@ bool enough_hp(int minimum, bool suppress_msg, bool abort_macros)
     if (you.duration[DUR_DEATHS_DOOR])
     {
         if (!suppress_msg)
-            mpr("You cannot pay life while functionally dead.");
+            mpr(ui_translate("p.ui", "You cannot pay life while functionally dead."));
 
         if (abort_macros)
         {
@@ -3998,7 +4007,7 @@ bool enough_hp(int minimum, bool suppress_msg, bool abort_macros)
     if (you.hp < minimum + 1)
     {
         if (!suppress_msg)
-            mpr("You don't have enough health at the moment.");
+            mpr(ui_translate("p.ui", "You don't have enough health at the moment."));
 
         if (abort_macros)
         {
@@ -4023,9 +4032,9 @@ bool enough_mp(int minimum, bool suppress_msg, bool abort_macros)
         if (!suppress_msg)
         {
             if (get_real_mp(true) < minimum)
-                mpr("You don't have enough magic capacity.");
+                mpr(ui_translate("p.ui", "You don't have enough magic capacity."));
             else
-                mpr("You don't have enough magic at the moment.");
+                mpr(ui_translate("p.ui", "You don't have enough magic at the moment."));
         }
         if (abort_macros)
         {
@@ -4390,7 +4399,7 @@ void contaminate_player(int change, bool controlled, bool msg)
         if (msg)
         {
             mprf(player_harmful_contamination() ? MSGCH_WARN : MSGCH_PLAIN,
-                 "%s", describe_contamination().c_str());
+                 "%s", ui_render("p.status", "Contamination: %s%s", describe_contamination(), {p_clause_arg(you.magic_contamination < 1000 ? "You are lightly contaminated with residual magic." : you.magic_contamination < 2000 ? "You are dangerously contaminated with residual magic." : you.magic_contamination < 3000 ? "You are extremely contaminated with residual magic." : "You are completely saturated with residual magic!"), contam_max_damage() > 0 ? ui_arg{make_stringf(ui_translate("p.status", " (up to %d damage)"), contam_max_damage()), ui_translation_group({{"p.status", " (up to %d damage)"}}).available()} : ui_arg{"", true}}).c_str());
         }
         if (player_harmful_contamination())
             xom_is_stimulated(new_level * 25);
@@ -4399,19 +4408,18 @@ void contaminate_player(int change, bool controlled, bool msg)
     {
         if (!player_harmful_contamination() && was_glowing)
         {
-            mprf(MSGCH_RECOVERY,
-                 "Your magical contamination has faded to a safe level.");
+            mprf(MSGCH_RECOVERY,"%s", ui_translate("p.ui", "Your magical contamination has faded to a safe level."));
         }
 
         if (!player_harmful_contamination() && was_glowing && you.invisible())
         {
-            mpr("You fade completely from view now that you are no longer "
-                "glowing from magical contamination.");
+            mpr(ui_translate("p.ui", "You fade completely from view now that you are no longer "
+                "glowing from magical contamination."));
         }
     }
 
     if (msg && old_amount > 0 && you.magic_contamination == 0)
-        mpr("Your magical contamination has completely faded away.");
+        mpr(ui_translate("p.ui", "Your magical contamination has completely faded away."));
 
     if (you.magic_contamination > 0)
         learned_something_new(HINT_GLOWING);
@@ -4453,14 +4461,14 @@ bool confuse_player(int amount, bool quiet, bool force)
     if (!force && you.clarity())
     {
         if (!quiet)
-            mpr("You feel momentarily confused.");
+            mpr(ui_translate("p.ui", "You feel momentarily confused."));
         return false;
     }
 
     if (!force && you.duration[DUR_DIVINE_STAMINA] > 0)
     {
         if (!quiet)
-            mpr("Your divine stamina protects you from confusion!");
+            mpr(ui_translate("p.ui", "Your divine stamina protects you from confusion!"));
         return false;
     }
 
@@ -4473,8 +4481,7 @@ bool confuse_player(int amount, bool quiet, bool force)
 
         if (!quiet)
         {
-            mprf(MSGCH_WARN, "You are %sconfused.",
-                 old_value > 0 ? "more " : "");
+            mprf(MSGCH_WARN, "%s", ui_render("p.log.90", "You are %sconfused.", make_stringf("You are %sconfused." , old_value > 0 ? "more " : ""), {p_clause_arg(old_value > 0 ? "more " : "")}).c_str());
         }
 
         learned_something_new(HINT_YOU_ENCHANTED);
@@ -4495,7 +4502,7 @@ bool poison_player(int amount, string source, string source_aux, bool force)
 
     if (you.duration[DUR_DIVINE_STAMINA] > 0)
     {
-        mpr("Your divine stamina protects you from poison!");
+        mpr(ui_translate("p.ui", "Your divine stamina protects you from poison!"));
         return false;
     }
 
@@ -4522,11 +4529,10 @@ bool poison_player(int amount, string source, string source_aux, bool force)
     if (you.duration[DUR_POISONING] > old_value)
     {
         if (poison_is_lethal() && !was_fatal)
-            mprf(MSGCH_DANGER, "You are lethally poisoned!");
+            mprf(MSGCH_DANGER,"%s", ui_translate("p.ui", "You are lethally poisoned!"));
         else
         {
-            mprf(MSGCH_WARN, "You are %spoisoned.",
-                old_value > 0 ? "more " : "");
+            mprf(MSGCH_WARN, "%s", ui_render("p.log.91", "You are %spoisoned.", make_stringf("You are %spoisoned." , old_value > 0 ? "more " : ""), {p_clause_arg(old_value > 0 ? "more " : "")}).c_str());
         }
 
         learned_something_new(HINT_YOU_POISON);
@@ -4663,7 +4669,7 @@ void handle_player_poison(int delay)
         int oldhp = you.hp;
         ouch(dmg, KILLED_BY_POISON);
         if (you.hp < oldhp)
-            mprf(channel, "You feel %ssick.", adj);
+            mprf(channel, "%s", ui_render("p.log.92", "You feel %ssick.", make_stringf("You feel %ssick." , adj), {p_clause_arg(adj)}).c_str());
     }
 
     // Now decrease the poison in our system
@@ -4686,7 +4692,7 @@ void reduce_player_poison(int amount)
         you.duration[DUR_POISONING] = 0;
         you.props.erase(POISONER_KEY);
         you.props.erase(POISON_AUX_KEY);
-        mprf(MSGCH_RECOVERY, "You are no longer poisoned.");
+        mprf(MSGCH_RECOVERY,"%s", ui_translate("p.ui", "You are no longer poisoned."));
     }
 
     you.redraw_hit_points = true;
@@ -4789,7 +4795,7 @@ bool miasma_player(actor *who, string source_aux)
 
     if (you.duration[DUR_DIVINE_STAMINA] > 0)
     {
-        mpr("Your divine stamina protects you from the miasma!");
+        mpr(ui_translate("p.ui", "Your divine stamina protects you from the miasma!"));
         return false;
     }
 
@@ -4834,13 +4840,11 @@ bool sticky_flame_player(int intensity, int duration, string source, string sour
 
     if (you.duration[DUR_STICKY_FLAME] > 0)
     {
-        mprf(MSGCH_WARN, "You are even more covered in %sliquid fire!",
-                          intensity_str.c_str());
+        mprf(MSGCH_WARN, "%s", ui_render("p.log.93", "You are even more covered in %sliquid fire!", make_stringf("You are even more covered in %sliquid fire!" , intensity_str.c_str()), {p_clause_arg(intensity_str)}).c_str());
     }
     else
     {
-        mprf(MSGCH_WARN, "You are covered in %sliquid fire! Move or burn!",
-                         intensity_str.c_str());
+        mprf(MSGCH_WARN, "%s", ui_render("p.log.94", "You are covered in %sliquid fire! Move or burn!", make_stringf("You are covered in %sliquid fire! Move or burn!" , intensity_str.c_str()), {p_clause_arg(intensity_str)}).c_str());
     }
 
     you.increase_duration(DUR_STICKY_FLAME, duration, 35);
@@ -4855,7 +4859,7 @@ void dec_sticky_flame_player(int delay)
 
     if (feat_is_water(env.grid(you.pos())))
     {
-        mprf(MSGCH_RECOVERY, "You dip into the water, and the flames go out!");
+        mprf(MSGCH_RECOVERY,"%s", ui_translate("p.ui", "You dip into the water, and the flames go out!"));
         end_sticky_flame_player();
         return;
     }
@@ -4863,8 +4867,7 @@ void dec_sticky_flame_player(int delay)
     int base_damage = roll_dice(2, you.props[STICKY_FLAME_POWER_KEY].get_int());
     int damage = resist_adjust_damage(&you, BEAM_FIRE, base_damage);
 
-    mprf(MSGCH_WARN, "The liquid fire burns you%s!",
-         damage > base_damage ? " terribly" : "");
+    mprf(MSGCH_WARN, "%s", ui_render("p.log.95", "The liquid fire burns you%s!", make_stringf("The liquid fire burns you%s!" , damage > base_damage ? " terribly" : ""), {p_clause_arg(damage > base_damage ? " terribly" : "")}).c_str());
 
     damage = div_rand_round(damage * delay, BASELINE_DELAY);
 
@@ -4878,7 +4881,7 @@ void dec_sticky_flame_player(int delay)
 
     if (you.duration[DUR_STICKY_FLAME == 0])
     {
-        mprf(MSGCH_RECOVERY, "The liquid fire finally exhausts itself.");
+        mprf(MSGCH_RECOVERY,"%s", ui_translate("p.ui", "The liquid fire finally exhausts itself."));
         end_sticky_flame_player();
     }
 }
@@ -4900,11 +4903,11 @@ void shake_off_sticky_flame()
     // (20 aut is picked fairly arbitrarily to include even most slowed actions)
     if (dur <= 20)
     {
-        mprf(MSGCH_RECOVERY, "You shake off the liquid fire.");
+        mprf(MSGCH_RECOVERY,"%s", ui_translate("p.ui", "You shake off the liquid fire."));
         end_sticky_flame_player();
     }
     else
-        mpr("You shake off some of the fire as you move.");
+        mpr(ui_translate("p.ui", "You shake off some of the fire as you move."));
 }
 
 // End the sticky flame status entirely
@@ -4921,9 +4924,9 @@ void silence_player(int turns)
     ASSERT(!crawl_state.game_is_arena());
 
     if (you.duration[DUR_SILENCE])
-        mpr("You feel your silence will last longer.");
+        mpr(ui_translate("p.ui", "You feel your silence will last longer."));
     else
-        mpr("An unnatural silence engulfs you.");
+        mpr(ui_translate("p.ui", "An unnatural silence engulfs you."));
 
     you.increase_duration(DUR_SILENCE, turns, 30);
 
@@ -4942,7 +4945,7 @@ bool slow_player(int turns)
 
     if (you.stasis())
     {
-        mpr("Your stasis prevents you from being slowed.");
+        mpr(ui_translate("p.ui", "Your stasis prevents you from being slowed."));
         return false;
     }
 
@@ -4952,13 +4955,13 @@ bool slow_player(int turns)
     int threshold = haste_mul(100);
 
     if (you.duration[DUR_SLOW] >= threshold * BASELINE_DELAY)
-        mpr("You already are as slow as you could be.");
+        mpr(ui_translate("p.ui", "You already are as slow as you could be."));
     else
     {
         if (you.duration[DUR_SLOW] == 0)
-            mprf(MSGCH_WARN, "You feel yourself slow down.");
+            mprf(MSGCH_WARN,"%s", ui_translate("p.ui", "You feel yourself slow down."));
         else
-            mprf(MSGCH_WARN, "You feel as though you will be slow longer.");
+            mprf(MSGCH_WARN,"%s", ui_translate("p.ui", "You feel as though you will be slow longer."));
 
         you.increase_duration(DUR_SLOW, turns, threshold);
         learned_something_new(HINT_YOU_ENCHANTED);
@@ -4991,7 +4994,7 @@ void dec_slow_player(int delay)
     {
         you.duration[DUR_SLOW] = 0;
         if (!have_stat_zero())
-            mprf(MSGCH_DURATION, "You feel yourself speed up.");
+            mprf(MSGCH_DURATION,"%s", ui_translate("p.ui", "You feel yourself speed up."));
     }
 }
 
@@ -5007,13 +5010,13 @@ void barb_player(int turns, int pow)
 
     if (!you.duration[DUR_BARBS])
     {
-        mpr("Barbed spikes become lodged in your body.");
+        mpr(ui_translate("p.ui", "Barbed spikes become lodged in your body."));
         you.set_duration(DUR_BARBS, min(max_turns, turns));
         you.attribute[ATTR_BARBS_POW] = min(max_pow, pow);
     }
     else
     {
-        mpr("More barbed spikes become lodged in your body.");
+        mpr(ui_translate("p.ui", "More barbed spikes become lodged in your body."));
         you.increase_duration(DUR_BARBS, turns, max_turns);
         you.attribute[ATTR_BARBS_POW] =
             min(max_pow, you.attribute[ATTR_BARBS_POW]++);
@@ -5039,9 +5042,9 @@ void blind_player(int amount, colour_t flavour_colour)
     {
         you.props[BLIND_COLOUR_KEY] = flavour_colour;
         if (current > 0)
-            mpr("You are blinded for an even longer time.");
+            mpr(ui_translate("p.ui", "You are blinded for an even longer time."));
         else
-            mpr("You are blinded!");
+            mpr(ui_translate("p.ui", "You are blinded!"));
         learned_something_new(HINT_YOU_ENCHANTED);
         xom_is_stimulated((you.duration[DUR_BLIND] - current) / BASELINE_DELAY);
     }
@@ -5070,7 +5073,7 @@ void dec_berserk_recovery_player(int delay)
 
     if (you.duration[DUR_BERSERK_COOLDOWN] <= BASELINE_DELAY)
     {
-        mprf(MSGCH_DURATION, "You recover from your berserk rage.");
+        mprf(MSGCH_DURATION,"%s", ui_translate("p.ui", "You recover from your berserk rage."));
         you.duration[DUR_BERSERK_COOLDOWN] = 0;
     }
 }
@@ -5084,12 +5087,12 @@ bool haste_player(int turns, bool rageext)
 
     if (you.stasis())
     {
-        mpr("Your stasis prevents you from being hasted.");
+        mpr(ui_translate("p.ui", "Your stasis prevents you from being hasted."));
         return false;
     }
     else if (have_passive(passive_t::no_haste))
     {
-        simple_god_message(" protects you from inadvertent hurry.");
+        simple_god_message(" protects you from inadvertent hurry.", false, you.religion, ui_render("p.log.96", "%s protects you from inadvertent hurry.", "", {ui_text_arg("display.god", god_name(you.religion))}));
         return false;
     }
 
@@ -5099,11 +5102,11 @@ bool haste_player(int turns, bool rageext)
     const int threshold = 80;
 
     if (!you.duration[DUR_HASTE])
-        mpr("You feel yourself speed up.");
+        mpr(ui_translate("p.ui", "You feel yourself speed up."));
     else if (you.duration[DUR_HASTE] > threshold * BASELINE_DELAY)
-        mpr("You already have as much speed as you can handle.");
+        mpr(ui_translate("p.ui", "You already have as much speed as you can handle."));
     else if (!rageext)
-        mpr("You feel as though your hastened speed will last longer.");
+        mpr(ui_translate("p.ui", "You feel as though your hastened speed will last longer."));
 
     you.increase_duration(DUR_HASTE, turns, threshold);
 
@@ -5125,7 +5128,7 @@ void dec_haste_player(int delay)
         // message if we cross the threshold
         if (old_dur > threshold && you.duration[DUR_HASTE] <= threshold)
         {
-            mprf(MSGCH_DURATION, "Your extra speed is starting to run out.");
+            mprf(MSGCH_DURATION,"%s", ui_translate("p.ui", "Your extra speed is starting to run out."));
             if (coinflip())
                 you.duration[DUR_HASTE] -= BASELINE_DELAY;
         }
@@ -5133,7 +5136,7 @@ void dec_haste_player(int delay)
     else if (you.duration[DUR_HASTE] <= BASELINE_DELAY)
     {
         if (!you.duration[DUR_BERSERK])
-            mprf(MSGCH_DURATION, "You feel yourself slow down.");
+            mprf(MSGCH_DURATION,"%s", ui_translate("p.ui", "You feel yourself slow down."));
         you.duration[DUR_HASTE] = 0;
     }
 }
@@ -5179,7 +5182,7 @@ void dec_ambrosia_player(int delay)
     inc_mp(you.scale_potion_mp_healing(mp_restoration));
 
     if (!you.duration[DUR_AMBROSIA])
-        mpr("You feel less invigorated.");
+        mpr(ui_translate("p.ui", "You feel less invigorated."));
 }
 
 void dec_channel_player(int delay)
@@ -5196,7 +5199,7 @@ void dec_channel_player(int delay)
     inc_mp(mp_restoration);
 
     if (!you.duration[DUR_CHANNEL_ENERGY])
-        mpr("You feel less invigorated.");
+        mpr(ui_translate("p.ui", "You feel less invigorated."));
 }
 
 void dec_frozen_ramparts(int delay)
@@ -5210,7 +5213,7 @@ void dec_frozen_ramparts(int delay)
     if (!you.duration[DUR_FROZEN_RAMPARTS])
     {
         end_frozen_ramparts();
-        mpr("The frozen ramparts melt away.");
+        mpr(ui_translate("p.ui", "The frozen ramparts melt away."));
     }
 }
 
@@ -5233,6 +5236,7 @@ void apply_rampage_heal(int distance_moved)
 
 bool invis_allowed(bool quiet, string *fail_reason, bool temp)
 {
+    string display_reason;
     string msg;
     bool success = true;
 
@@ -5267,6 +5271,7 @@ bool invis_allowed(bool quiet, string *fail_reason, bool temp)
             msg = "Your " + comma_separated_line(sources.begin(), sources.end())
                   + " glow" + (sources.size() == 1 ? "s" : "")
                   + " too brightly for you to become invisible.";
+            display_reason = ui_render("p.extra", "Your %s glow too brightly for you to become invisible.", msg, {p_clause_list_arg(sources)});
             success = false;
         }
     }
@@ -5275,7 +5280,7 @@ bool invis_allowed(bool quiet, string *fail_reason, bool temp)
         msg = "You are backlit; invisibility will do you no good right now";
         if (quiet)
             success = false;
-        else if (!quiet && !yesno((msg + "; use anyway?").c_str(), false, 'n'))
+        else if (!quiet && !yesno(ui_render("p.extra", "%s; use anyway?", (msg + "; use anyway?"), {ui_text_arg("p.reason", msg)}).c_str(), false, 'n'))
         {
             // XX this shouldn't be here. Currently used only for evoke invis.
             canned_msg(MSG_OK);
@@ -5290,7 +5295,7 @@ bool invis_allowed(bool quiet, string *fail_reason, bool temp)
         if (fail_reason)
             *fail_reason = msg;
         if (!quiet)
-            mpr(msg);
+            mpr(display_reason.empty() ? ui_translate("p.reason", msg.c_str()) : display_reason);
     }
     return success;
 }
@@ -5312,7 +5317,7 @@ bool flight_allowed(bool quiet, string *fail_reason)
         if (fail_reason)
             *fail_reason = msg;
         if (!quiet)
-            mpr(msg);
+            mpr(ui_translate("p.reason", msg.c_str()));
     }
     return success;
 }
@@ -5321,13 +5326,13 @@ void float_player()
 {
     if (you.fishtail)
     {
-        mpr("Your tail turns into legs as you fly out of the water.");
+        mpr(ui_translate("p.ui", "Your tail turns into legs as you fly out of the water."));
         merfolk_stop_swimming();
     }
     else if (you.has_mutation(MUT_TENGU_FLIGHT))
-        mpr("You swoop lightly up into the air.");
+        mpr(ui_translate("p.ui", "You swoop lightly up into the air."));
     else
-        mpr("You fly up into the air.");
+        mpr(ui_translate("p.ui", "You fly up into the air."));
 }
 
 void fly_player(int pow, bool already_flying)
@@ -5337,7 +5342,7 @@ void fly_player(int pow, bool already_flying)
 
     bool standing = !you.airborne() && !already_flying;
     if (!already_flying)
-        mprf(MSGCH_DURATION, "You feel %s buoyant.", standing ? "very" : "more");
+        mprf(MSGCH_DURATION, "%s", ui_render("p.log.97", "You feel %s buoyant.", make_stringf("You feel %s buoyant." , standing ? "very" : "more"), {p_clause_arg(standing ? "very" : "more")}).c_str());
 
     you.increase_duration(DUR_FLIGHT, 25 + random2(pow), 100);
 
@@ -5347,11 +5352,10 @@ void fly_player(int pow, bool already_flying)
 
 void enable_emergency_flight()
 {
-    mprf("You can't survive in this terrain! You fly above the %s, but the "
-         "process is draining.",
-         (env.grid(you.pos()) == DNGN_LAVA)       ? "lava" :
+    mprf("%s", ui_render("p.log.98", "You can't survive in this terrain! You fly above the %s, but the process is draining.", make_stringf("You can't survive in this terrain! You fly above the %s, but the "
+         "process is draining." , (env.grid(you.pos()) == DNGN_LAVA)       ? "lava" :
          (env.grid(you.pos()) == DNGN_DEEP_WATER) ? "water"
-                                             : "buggy terrain");
+                                             : "buggy terrain"), {p_clause_arg((env.grid(you.pos()) == DNGN_LAVA) ? "lava" : (env.grid(you.pos()) == DNGN_DEEP_WATER) ? "water" : "buggy terrain")}).c_str());
 
     you.props[EMERGENCY_FLIGHT_KEY] = true;
 }
@@ -5384,7 +5388,7 @@ bool land_player(bool quiet)
     }
 
     if (!quiet)
-        mpr("You float gracefully downwards.");
+        mpr(ui_translate("p.ui", "You float gracefully downwards."));
 
     // Re-enter the terrain.
     // Interrupt travel, but not other delays.
@@ -5946,29 +5950,27 @@ void player::banish(const actor* /*agent*/, const string &who, bool force)
 
     if (player_in_branch(BRANCH_ARENA))
     {
-        simple_god_message(" prevents your banishment from the Arena!",
-                           false, GOD_OKAWARU);
+        simple_god_message(" prevents your banishment from the Arena!", false, GOD_OKAWARU, ui_render("p.log.99", "%s prevents your banishment from the Arena!", "", {ui_text_arg("display.god", god_name(GOD_OKAWARU))}));
         return;
     }
 
     if (you.duration[DUR_BEOGH_DIVINE_CHALLENGE])
     {
-        simple_god_message(" refuses to let the Abyss claim you during a challenge!",
-                           false, GOD_BEOGH);
+        simple_god_message(" refuses to let the Abyss claim you during a challenge!", false, GOD_BEOGH, ui_render("p.log.100", "%s refuses to let the Abyss claim you during a challenge!", "", {ui_text_arg("display.god", god_name(GOD_BEOGH))}));
 
         return;
     }
 
     if (elapsed_time <= attribute[ATTR_BANISHMENT_IMMUNITY])
     {
-        mpr("You resist the pull of the Abyss.");
+        mpr(ui_translate("p.ui", "You resist the pull of the Abyss."));
         return;
     }
 
     if (!force && player_in_branch(BRANCH_ABYSS)
         && x_chance_in_y(you.depth, brdepth[BRANCH_ABYSS]))
     {
-        mpr("You wobble for a moment.");
+        mpr(ui_translate("p.ui", "You wobble for a moment."));
         return;
     }
 
@@ -7372,16 +7374,17 @@ bool player::resists_dislodge(string event) const
     if (!you.unrand_equipped(UNRAND_MOUNTAIN_BOOTS))
         return false;
     if (!event.empty())
-        mprf("Your boots keep you from %s.", event.c_str());
+        mprf("%s", ui_render("p.log.101", "Your boots keep you from %s.", make_stringf("Your boots keep you from %s." , event.c_str()), {p_clause_arg(event)}).c_str());
     return true;
 }
 
-bool player::corrode(const actor* /*source*/, const char* corrosion_msg, int amount)
+bool player::corrode(const actor* source, const char* corrosion_msg, int amount)
 {
     // always increase duration, but...
     increase_duration(DUR_CORROSION, 10 + roll_dice(2, 4), 50,
-                      make_stringf("%s corrodes you!",
-                                   corrosion_msg).c_str());
+                      ui_render("o.corrode", "%s corrodes you!",
+                          make_stringf("%s corrodes you!", corrosion_msg),
+                          {ui_corrode_source_arg(source, corrosion_msg)}).c_str());
 
     // Reduce corrosion amount by 50% if you have resistance.
     if (res_corr())
@@ -7411,9 +7414,7 @@ void player::splash_with_acid(actor* evildoer)
     const int dam = roll_dice(4, 3);
     const int post_res_dam = resist_adjust_damage(&you, BEAM_ACID, dam);
 
-    mprf("You are splashed with acid%s%s",
-         post_res_dam > 0 ? "" : " but take no damage",
-         attack_strength_punctuation(post_res_dam).c_str());
+    mprf("%s", ui_render("p.log.102", "You are splashed with acid%s%s", make_stringf("You are splashed with acid%s%s" , post_res_dam > 0 ? "" : " but take no damage", attack_strength_punctuation(post_res_dam).c_str()), {p_clause_arg(post_res_dam > 0 ? "" : " but take no damage"), ui_attack_punctuation(attack_strength_punctuation(post_res_dam))}).c_str());
     if (post_res_dam > 0)
     {
         if (post_res_dam < dam)
@@ -7445,13 +7446,25 @@ void player::confuse(actor */*who*/, int str)
  * @param str The number of turns the paralysis will last (plus 5 aut).
  * @param source Description of the source of the paralysis.
  */
+// Snapshot an opaque Pan lord name while its actor identity is still known.
+// Canonical disabling messages and durations stay in the existing note fields.
+static Note _disabled_actor_note(NOTE_TYPES type, int duration, const string &source, const actor *who)
+{
+    Note note(type, duration, 0, source);
+    const monster *mon = who ? who->as_monster() : nullptr;
+    if (mon && mon->type == MONS_PANDEMONIUM_LORD
+        && !mon->mname.empty() && source == mon->mname)
+        note.desc = "morgue-pan-source-v1\n" + source;
+    return note;
+}
+
 void player::paralyse(const actor *who, int str, string source)
 {
     ASSERT(!crawl_state.game_is_arena());
 
     if (stasis())
     {
-        mpr("Your stasis prevents you from being paralysed.");
+        mpr(ui_translate("p.ui", "Your stasis prevents you from being paralysed."));
         return;
     }
 
@@ -7459,13 +7472,13 @@ void player::paralyse(const actor *who, int str, string source)
     if (who && who != &you
         && (duration[DUR_PARALYSIS] || duration[DUR_STUN_IMMUNITY]))
     {
-        mpr("You shrug off the repeated attempt to disable you.");
+        mpr(ui_translate("p.ui", "You shrug off the repeated attempt to disable you."));
         return;
     }
 
     you.wake_up();
 
-    mpr("You suddenly lose the ability to move!");
+    mpr(ui_translate("p.ui", "You suddenly lose the ability to move!"));
     _pruneify();
 
     you.duration[DUR_PARALYSIS] = str * BASELINE_DELAY + 5;
@@ -7482,7 +7495,7 @@ void player::paralyse(const actor *who, int str, string source)
 
     if (!source.empty())
     {
-        take_note(Note(NOTE_PARALYSIS, you.duration[DUR_PARALYSIS], 0, source));
+        take_note(_disabled_actor_note(NOTE_PARALYSIS, you.duration[DUR_PARALYSIS], source, who));
         // use the real name here even for invisible monsters
         props[DISABLED_BY_KEY] = use_actor_name ? who->name(DESC_A, true)
                                                : source;
@@ -7503,7 +7516,7 @@ void player::petrify(const actor *who, bool force)
 
     if (duration[DUR_DIVINE_STAMINA] > 0)
     {
-        mpr("Your divine stamina protects you from petrification!");
+        mpr(ui_translate("p.ui", "Your divine stamina protects you from petrification!"));
         return;
     }
 
@@ -7520,7 +7533,7 @@ void player::petrify(const actor *who, bool force)
         props.erase(DISABLED_BY_KEY);
 
     redraw_evasion = true;
-    mprf(MSGCH_WARN, "You are slowing down.");
+    mprf(MSGCH_WARN,"%s", ui_translate("p.ui", "You are slowing down."));
 }
 
 bool player::fully_petrify(bool /*quiet*/)
@@ -7529,7 +7542,7 @@ bool player::fully_petrify(bool /*quiet*/)
                         + random2(4 * BASELINE_DELAY);
     redraw_armour_class = true;
     redraw_evasion = true;
-    mpr("You have turned to stone.");
+    mpr(ui_translate("p.ui", "You have turned to stone."));
     _pruneify();
 
     stop_delay(true, true);
@@ -7542,21 +7555,21 @@ bool player::vex(const actor* who, int dur, string source, string special_msg)
 {
     if (you.clarity())
     {
-        mprf("Your clarity of mind shields you.");
+        mprf("%s", ui_translate("p.ui", "Your clarity of mind shields you."));
         return false;
     }
     else if (duration[DUR_STUN_IMMUNITY])
     {
-        mpr("You shrug off the repeated attempt to disable you.");
+        mpr(ui_translate("p.ui", "You shrug off the repeated attempt to disable you."));
         return false;
     }
     else if (you.duration[DUR_VEXED])
         return false;
 
     if (!special_msg.empty())
-        mprf(MSGCH_WARN, "You %s", special_msg.c_str());
+        mprf(MSGCH_WARN, "%s", ui_render("p.log.103", "You %s", make_stringf("You %s" , special_msg.c_str()), {p_clause_arg(special_msg)}).c_str());
     else
-        mprf(MSGCH_WARN, "You feel overwhelmed by frustration!");
+        mprf(MSGCH_WARN,"%s", ui_translate("p.ui", "You feel overwhelmed by frustration!"));
     you.duration[DUR_VEXED] = dur * BASELINE_DELAY;
 
     const bool use_actor_name = source.empty() && who != nullptr;
@@ -7564,7 +7577,7 @@ bool player::vex(const actor* who, int dur, string source, string special_msg)
         source = who->name(DESC_A);
     if (!source.empty())
     {
-        take_note(Note(NOTE_VEXED, dur, 0, source));
+        take_note(_disabled_actor_note(NOTE_VEXED, dur, source, who));
         props[DISABLED_BY_KEY] = use_actor_name ? who->name(DESC_A, true)
                                                : source;
     }
@@ -7766,11 +7779,11 @@ bool player::sicken(int amount)
 
     if (duration[DUR_DIVINE_STAMINA] > 0)
     {
-        mpr("Your divine stamina protects you from disease!");
+        mpr(ui_translate("p.ui", "Your divine stamina protects you from disease!"));
         return false;
     }
 
-    mpr("You feel ill.");
+    mpr(ui_translate("p.ui", "You feel ill."));
     increase_duration(DUR_SICKNESS, amount, 210);
 
     return true;
@@ -7872,12 +7885,12 @@ void player::backlight()
     if (!duration[DUR_INVIS])
     {
         if (duration[DUR_CORONA])
-            mpr("You glow brighter.");
+            mpr(ui_translate("p.ui", "You glow brighter."));
         else
-            mpr("You are outlined in light.");
+            mpr(ui_translate("p.ui", "You are outlined in light."));
     }
     else
-        mpr("You feel strangely conspicuous.");
+        mpr(ui_translate("p.ui", "You feel strangely conspicuous."));
 
     increase_duration(DUR_CORONA, random_range(15, 35), 250);
 }
@@ -8037,7 +8050,7 @@ bool player::doom(int amount)
     if (you.attribute[ATTR_DOOM] >= 100)
     {
         you.attribute[ATTR_DOOM] = 0;
-        mprf(MSGCH_WARN, "Doom befalls you....");
+        mprf(MSGCH_WARN,"%s", ui_translate("p.ui", "Doom befalls you...."));
         add_bane();
         return true;
     }
@@ -8115,7 +8128,7 @@ void player::put_to_sleep(actor* source, int dur, bool hibernate)
 
     if (duration[DUR_STUN_IMMUNITY])
     {
-        mpr("You shrug off repeated attempt to disable you.");
+        mpr(ui_translate("p.ui", "You shrug off repeated attempt to disable you."));
         return;
     }
 
@@ -8123,7 +8136,7 @@ void player::put_to_sleep(actor* source, int dur, bool hibernate)
         || duration[DUR_PETRIFIED]
         || duration[DUR_PETRIFYING])
     {
-        mpr("You can't fall asleep in your current state!");
+        mpr(ui_translate("p.ui", "You can't fall asleep in your current state!"));
         return;
     }
 
@@ -8132,7 +8145,7 @@ void player::put_to_sleep(actor* source, int dur, bool hibernate)
     else
         props.erase(DISABLED_BY_KEY);
 
-    mpr("You fall asleep.");
+    mpr(ui_translate("p.ui", "You fall asleep."));
     _pruneify();
 
     stop_directly_constricting_all();
@@ -8152,7 +8165,7 @@ void player::wake_up(bool break_sleep, bool break_daze)
     {
         duration[DUR_SLEEP] = 0;
         give_stun_immunity(random_range(3, 5));
-        mprf(MSGCH_RECOVERY, "You wake up.");
+        mprf(MSGCH_RECOVERY,"%s", ui_translate("p.ui", "You wake up."));
         flash_view(UA_MONSTER, BLACK);
         redraw_armour_class = true;
         redraw_evasion = true;
@@ -8162,7 +8175,7 @@ void player::wake_up(bool break_sleep, bool break_daze)
     {
         duration[DUR_DAZED] = 0;
         give_stun_immunity(1);
-        mprf(MSGCH_RECOVERY, "You snap out of your daze.");
+        mprf(MSGCH_RECOVERY,"%s", ui_translate("p.ui", "You snap out of your daze."));
     }
 }
 
@@ -8199,13 +8212,13 @@ bool player::do_shaft()
     }
     if (you.species == SP_FORMICID)
     {
-        mpr("Your tunneler's instincts keep you from falling into a shaft!");
+        mpr(ui_translate("p.ui", "Your tunneler's instincts keep you from falling into a shaft!"));
         return false;
     }
     if (you_worship(GOD_YREDELEMNUL) && yred_torch_is_raised())
     {
-        mpr("Yredelemnul refuses to let your conquest be stopped by a trick of"
-            " the earth!");
+        mpr(ui_translate("p.ui", "Yredelemnul refuses to let your conquest be stopped by a trick of"
+            " the earth!"));
         return false;
     }
 
@@ -8219,21 +8232,21 @@ bool player::can_do_shaft_ability(bool quiet) const
     if (form_changes_anatomy())
     {
         if (!quiet)
-            mpr("You can't shaft yourself in your current form.");
+            mpr(ui_translate("p.ui", "You can't shaft yourself in your current form."));
         return false;
     }
 
     if (attribute[ATTR_HELD])
     {
         if (!quiet)
-            mprf("You can't shaft yourself while %s.", held_status());
+            mprf("%s", ui_render("p.log.104", "You can't shaft yourself while %s.", make_stringf("You can't shaft yourself while %s." , held_status()), {p_clause_arg(held_status())}).c_str());
         return false;
     }
 
     if (you.cannot_move())
     {
         if (!quiet)
-            mpr("You can't shaft yourself while unable to move.");
+            mpr(ui_translate("p.ui", "You can't shaft yourself while unable to move."));
         return false;
     }
 
@@ -8242,14 +8255,14 @@ bool player::can_do_shaft_ability(bool quiet) const
         if (!is_valid_shaft_level(false))
         {
             if (!quiet)
-                mpr("You can't shaft yourself on this level.");
+                mpr(ui_translate("p.ui", "You can't shaft yourself on this level."));
             return false;
         }
     }
     else
     {
         if (!quiet)
-            mpr("You can't shaft yourself on this terrain.");
+            mpr(ui_translate("p.ui", "You can't shaft yourself on this terrain."));
         return false;
     }
 
@@ -8262,7 +8275,7 @@ bool player::do_shaft_ability()
 {
     if (can_do_shaft_ability(true))
     {
-        mpr("A shaft appears beneath you!");
+        mpr(ui_translate("p.ui", "A shaft appears beneath you!"));
         down_stairs(DNGN_TRAP_SHAFT, true);
         return true;
     }
@@ -8377,7 +8390,7 @@ bool player::attempt_escape()
 
     if (x_chance_in_y(_constriction_escape_chance(escape_attempts), 100))
     {
-        mprf("You escape %s grasp.", object.c_str());
+        mprf("%s", ui_render("p.log.105", "You escape %s grasp.", make_stringf("You escape %s grasp." , object.c_str()), {constricted_type == CONSTRICT_MELEE ? ui_actor_arg(*themonst) : p_clause_arg(object)}).c_str());
 
         // Stun the monster we struggled again and prevent the player from being
         // constricted for several turns (so that they are guaranteed to be able
@@ -8394,8 +8407,7 @@ bool player::attempt_escape()
     }
     else
     {
-        mprf("%s grasp on you weakens, but your attempt to escape fails.",
-             object.c_str());
+        mprf("%s", ui_render("p.log.106", "%s grasp on you weakens, but your attempt to escape fails.", make_stringf("%s grasp on you weakens, but your attempt to escape fails." , object.c_str()), {constricted_type == CONSTRICT_MELEE ? ui_actor_arg(*themonst) : p_clause_arg(object)}).c_str());
         turn_is_over = true;
         return false;
     }
@@ -8406,12 +8418,12 @@ void player::sentinel_mark(bool trap)
     flash_tile(you.pos(), YELLOW, 120, TILE_BOLT_SENTINEL_MARK);
     if (duration[DUR_SENTINEL_MARK])
     {
-        mpr("The mark upon you grows brighter.");
+        mpr(ui_translate("p.ui", "The mark upon you grows brighter."));
         increase_duration(DUR_SENTINEL_MARK, random_range(20, 40), 180);
     }
     else
     {
-        mprf(MSGCH_WARN, "A sentinel's mark forms upon you.");
+        mprf(MSGCH_WARN,"%s", ui_translate("p.ui", "A sentinel's mark forms upon you."));
         increase_duration(DUR_SENTINEL_MARK, trap ? random_range(25, 40)
                                                   : random_range(35, 60),
                           250);
@@ -8463,9 +8475,9 @@ bool player::made_nervous_by(const monster *mons)
 void player::weaken(const actor */*attacker*/, int pow)
 {
     if (!duration[DUR_WEAK])
-        mprf(MSGCH_WARN, "You feel your attacks grow feeble.");
+        mprf(MSGCH_WARN,"%s", ui_translate("p.ui", "You feel your attacks grow feeble."));
     else
-        mprf(MSGCH_WARN, "You feel as though you will be weak longer.");
+        mprf(MSGCH_WARN,"%s", ui_translate("p.ui", "You feel as though you will be weak longer."));
 
     increase_duration(DUR_WEAK, pow + random2(pow + 3), 50);
 }
@@ -8473,9 +8485,9 @@ void player::weaken(const actor */*attacker*/, int pow)
 void player::diminish(const actor */*attacker*/, int pow)
 {
     if (!duration[DUR_DIMINISHED_SPELLS])
-        mprf(MSGCH_WARN, "You feel your spells grow feeble.");
+        mprf(MSGCH_WARN,"%s", ui_translate("p.ui", "You feel your spells grow feeble."));
     else
-        mprf(MSGCH_WARN, "You feel as though your spells will be weakened for longer.");
+        mprf(MSGCH_WARN,"%s", ui_translate("p.ui", "You feel as though your spells will be weakened for longer."));
 
     increase_duration(DUR_DIMINISHED_SPELLS, pow + random2(pow + 3), 50);
 }
@@ -8485,7 +8497,7 @@ bool player::strip_willpower(actor */*attacker*/, int dur, bool quiet)
     // Only prints a message when you gain this status for the first time,
     // replicating old behavior. Should this change?
     if (!quiet && !you.duration[DUR_LOWERED_WL])
-        mpr("Your willpower is stripped away!");
+        mpr(ui_translate("p.ui", "Your willpower is stripped away!"));
 
     you.increase_duration(DUR_LOWERED_WL, dur, 40);
 
@@ -8498,7 +8510,7 @@ bool player::drain_magic(actor */*attacker*/, int pow)
     if (!amount)
         return false;
 
-    mprf(MSGCH_WARN, "You feel your power leaking away.");
+    mprf(MSGCH_WARN,"%s", ui_translate("p.ui", "You feel your power leaking away."));
     drain_mp(amount);
     return true;
 }
@@ -8517,9 +8529,9 @@ void player::vitrify(const actor* /*attacker*/, int dur, bool quiet)
     if (!quiet)
     {
         if (!you.duration[DUR_VITRIFIED])
-            mprf(MSGCH_WARN, "Your body becomes as fragile as glass!");
+            mprf(MSGCH_WARN,"%s", ui_translate("p.ui", "Your body becomes as fragile as glass!"));
         else
-            mpr("You feel your fragility will last longer.");
+            mpr(ui_translate("p.ui", "You feel your fragility will last longer."));
     }
 
     you.increase_duration(DUR_VITRIFIED, dur, 50);
@@ -8538,7 +8550,7 @@ bool player::floodify(const actor* attacker, int dur, const char* substance)
     props[WATER_HOLDER_KEY].get_int() = attacker->mid;
     props[WATER_HOLDER_NAME_KEY] = attacker->name(DESC_A, true);
 
-    mprf(MSGCH_WARN, "%s floods into your lungs!", substance);
+    mprf(MSGCH_WARN, "%s", ui_render("p.log.107", "%s floods into your lungs!", make_stringf("%s floods into your lungs!" , substance), {p_clause_arg(substance)}).c_str());
 
     return true;
 }
@@ -8588,8 +8600,11 @@ bool need_expiration_warning(coord_def p)
 
 static string _constriction_description()
 {
+    vector<string> display_lines;
+    bool display_available = true;
     string cinfo = "";
     vector<string> c_name;
+    vector<string> display_names;
 
     const int num_free_tentacles = you.usable_tentacles();
     if (num_free_tentacles)
@@ -8597,6 +8612,9 @@ static string _constriction_description()
         cinfo += make_stringf("You have %d tentacle%s available for constriction.",
                               num_free_tentacles,
                               num_free_tentacles > 1 ? "s" : "");
+        const string line = ui_render("p.extra", "You have %s tentacles available for constriction.", "", {ui_literal_arg(to_string(num_free_tentacles))});
+        display_available = display_available && !line.empty();
+        display_lines.push_back(line);
     }
 
     if (you.constricted_type == CONSTRICT_MELEE)
@@ -8609,6 +8627,9 @@ static string _constriction_description()
 
         cinfo += make_stringf("You are being constricted by %s.",
                               constrictor->name(DESC_A).c_str());
+        const string line = ui_render("p.extra", "You are being constricted by %s.", "", {ui_actor_arg(*constrictor)});
+        display_available = display_available && !line.empty();
+        display_lines.push_back(line);
     }
 
     if (you.is_constricting())
@@ -8622,6 +8643,9 @@ static string _constriction_description()
                 continue;
 
             c_name.push_back(whom->name(DESC_A));
+            const ui_arg name = ui_actor_arg(*whom);
+            display_available = display_available && name.available;
+            display_names.push_back(name.text);
         }
 
         if (!c_name.empty())
@@ -8632,10 +8656,13 @@ static string _constriction_description()
             cinfo += "You are constricting ";
             cinfo += comma_separated_line(c_name.begin(), c_name.end());
             cinfo += ".";
+            const string line = ui_render("p.extra", "You are constricting %s.", "", {{comma_separated_line(display_names.begin(), display_names.end(), "、", "、"), display_available}});
+            display_available = display_available && !line.empty();
+            display_lines.push_back(line);
         }
     }
 
-    return cinfo;
+    return display_available ? comma_separated_line(display_lines.begin(), display_lines.end(), "\n", "\n") : cinfo;
 }
 
 /**
@@ -8719,19 +8746,18 @@ void print_potion_heal_message()
     {
         if (you.unrand_equipped(UNRAND_KRYIAS))
         {
-            mprf("%s enhances the healing.",
-                 you.body_armour()->name(DESC_THE, false, false, false).c_str());
+            mprf("%s", ui_render("p.log.108", "%s enhances the healing.", make_stringf("%s enhances the healing." , you.body_armour()->name(DESC_THE, false, false, false).c_str()), {ui_item_arg(*you.body_armour())}).c_str());
         }
         else if (you.has_mutation(MUT_DOUBLE_POTION_HEAL))
-            mpr("You savour every drop.");
+            mpr(ui_translate("p.ui", "You savour every drop."));
         else
-            mpr("The healing is enhanced."); // bad message, but this should
+            mpr(ui_translate("p.ui", "The healing is enhanced.")); // bad message, but this should
                                              // never be possible anyway
     }
     else if (_get_potion_heal_factor() == 0)
-        mpr("Your system rejects the healing.");
+        mpr(ui_translate("p.ui", "Your system rejects the healing."));
     else if (_get_potion_heal_factor() < 2)
-        mpr("Your system partially rejects the healing.");
+        mpr(ui_translate("p.ui", "Your system partially rejects the healing."));
 }
 
 bool player::can_potion_heal(bool temp)
@@ -8838,7 +8864,7 @@ void player_open_door(coord_def doorpos)
                     canned_msg(MSG_OK);
                 else
                 {
-                    if (yesno("Put travel exclusion on door? (Y/n)",
+                    if (yesno(ui_translate("p.ui", "Put travel exclusion on door? (Y/n)"),
                               true, 'y'))
                     {
                         // Zero radius exclusion right on top of door.
@@ -8853,8 +8879,8 @@ void player_open_door(coord_def doorpos)
 
         if (!ignore_exclude && is_exclude_root(doorpos))
         {
-            string prompt = make_stringf("This %s%s is marked as excluded! "
-                                         "Open it anyway?", adj, noun);
+            string prompt = ui_render("p.extra", "This %s%s is marked as excluded! Open it anyway?", make_stringf("This %s%s is marked as excluded! "
+                                         "Open it anyway?", adj, noun), {p_clause_arg(adj), p_clause_arg(noun)});
 
             if (!yesno(prompt.c_str(), true, 'n', true, false))
             {
@@ -8889,7 +8915,7 @@ void player_open_door(coord_def doorpos)
                 mprf(berserk_open.c_str(), adj, noun);
             }
             else
-                mprf("The %s%s flies open!", adj, noun);
+                mprf("%s", ui_render("p.log.109", "The %s%s flies open!", make_stringf("The %s%s flies open!" , adj, noun), {p_clause_arg(adj), p_clause_arg(noun)}).c_str());
         }
         else
         {
@@ -8902,7 +8928,7 @@ void player_open_door(coord_def doorpos)
                 mprf(MSGCH_SOUND, berserk_open.c_str(), adj, noun);
             }
             else
-                mprf(MSGCH_SOUND, "The %s%s flies open with a bang!", adj, noun);
+                mprf(MSGCH_SOUND, "%s", ui_render("p.log.110", "The %s%s flies open with a bang!", make_stringf("The %s%s flies open with a bang!" , adj, noun), {p_clause_arg(adj), p_clause_arg(noun)}).c_str());
             noisy(15, you.pos());
         }
     }
@@ -8912,8 +8938,7 @@ void player_open_door(coord_def doorpos)
             mprf(MSGCH_SOUND, door_open_creak.c_str(), adj, noun);
         else
         {
-            mprf(MSGCH_SOUND, "As you open the %s%s, it creaks loudly!",
-                 adj, noun);
+            mprf(MSGCH_SOUND, "%s", ui_render("p.log.111", "As you open the %s%s, it creaks loudly!", make_stringf("As you open the %s%s, it creaks loudly!" , adj, noun), {p_clause_arg(adj), p_clause_arg(noun)}).c_str());
         }
         noisy(10, you.pos());
     }
@@ -8935,7 +8960,7 @@ void player_open_door(coord_def doorpos)
                verb = "You open the %s%s.";
         }
 
-        mprf(verb, adj, noun);
+        mprf("%s", ui_render("p.extra", "Open %s%s.", make_stringf(verb, adj, noun), {p_clause_arg(adj), {p_clause_arg(noun).text, p_clause_arg(noun).available && door_airborne.empty() && door_open_verb.empty()}}).c_str());
     }
 
     vector<coord_def> excludes;
@@ -9009,13 +9034,13 @@ void player_close_door(coord_def doorpos)
             const bool mons_unseen = !you.can_see(*mon);
             if (mons_unseen || (mon->holiness() & MH_NONLIVING))
             {
-                mprf("Something is blocking the %s!", waynoun);
+                mprf("%s", ui_render("p.log.112", "Something is blocking the %s!", make_stringf("Something is blocking the %s!" , waynoun), {p_clause_arg(waynoun)}).c_str());
                 // No free detection!
                 if (mons_unseen)
                     you.turn_is_over = true;
             }
             else
-                mprf("There's a creature in the %s!", waynoun);
+                mprf("%s", ui_render("p.log.113", "There's a creature in the %s!", make_stringf("There's a creature in the %s!" , waynoun), {p_clause_arg(waynoun)}).c_str());
             return;
         }
 
@@ -9023,7 +9048,7 @@ void player_close_door(coord_def doorpos)
         {
             if (!has_push_spaces(dc, false, &door_vec))
             {
-                mprf("There's something jamming the %s.", waynoun);
+                mprf("%s", ui_render("p.log.114", "There's something jamming the %s.", make_stringf("There's something jamming the %s." , waynoun), {p_clause_arg(waynoun)}).c_str());
                 return;
             }
         }
@@ -9031,7 +9056,7 @@ void player_close_door(coord_def doorpos)
         // messaging with gateways will be inconsistent if this isn't last
         if (you.pos() == dc)
         {
-            mprf("There's a thick-headed creature in the %s!", waynoun);
+            mprf("%s", ui_render("p.log.115", "There's a thick-headed creature in the %s!", make_stringf("There's a thick-headed creature in the %s!" , waynoun), {p_clause_arg(waynoun)}).c_str());
             return;
         }
     }
@@ -9059,7 +9084,7 @@ void player_close_door(coord_def doorpos)
                 mprf(berserk_close.c_str(), adj, noun);
             }
             else
-                mprf("You slam the %s%s shut%s!", adj, noun, items_msg);
+                mprf("%s", ui_render("p.log.116", "You slam the %s%s shut%s!", make_stringf("You slam the %s%s shut%s!" , adj, noun, items_msg), {p_clause_arg(adj), p_clause_arg(noun), p_clause_arg(items_msg)}).c_str());
         }
         else
         {
@@ -9073,8 +9098,7 @@ void player_close_door(coord_def doorpos)
             }
             else
             {
-                mprf(MSGCH_SOUND, "You slam the %s%s shut with a bang%s!",
-                                  adj, noun, items_msg);
+                mprf(MSGCH_SOUND, "%s", ui_render("p.log.117", "You slam the %s%s shut with a bang%s!", make_stringf("You slam the %s%s shut with a bang%s!" , adj, noun, items_msg), {p_clause_arg(adj), p_clause_arg(noun), p_clause_arg(items_msg)}).c_str());
             }
 
             noisy(15, you.pos());
@@ -9086,8 +9110,7 @@ void player_close_door(coord_def doorpos)
             mprf(MSGCH_SOUND, door_close_creak.c_str(), adj, noun);
         else
         {
-            mprf(MSGCH_SOUND, "As you close the %s%s%s, it creaks loudly!",
-                              adj, noun, items_msg);
+            mprf(MSGCH_SOUND, "%s", ui_render("p.log.118", "As you close the %s%s%s, it creaks loudly!", make_stringf("As you close the %s%s%s, it creaks loudly!" , adj, noun, items_msg), {p_clause_arg(adj), p_clause_arg(noun), p_clause_arg(items_msg)}).c_str());
         }
 
         noisy(10, you.pos());
@@ -9099,14 +9122,14 @@ void player_close_door(coord_def doorpos)
             if (!door_airborne.empty())
                 mprf(door_airborne.c_str(), adj, noun);
             else
-                mprf("You reach down and close the %s%s%s.", adj, noun, items_msg);
+                mprf("%s", ui_render("p.log.119", "You reach down and close the %s%s%s.", make_stringf("You reach down and close the %s%s%s." , adj, noun, items_msg), {p_clause_arg(adj), p_clause_arg(noun), p_clause_arg(items_msg)}).c_str());
         }
         else
         {
             if (!door_close_verb.empty())
                 mprf(door_close_verb.c_str(), adj, noun);
             else
-                mprf("You close the %s%s%s.", adj, noun, items_msg);
+                mprf("%s", ui_render("p.log.120", "You close the %s%s%s.", make_stringf("You close the %s%s%s." , adj, noun, items_msg), {p_clause_arg(adj), p_clause_arg(noun), p_clause_arg(items_msg)}).c_str());
         }
     }
 
@@ -9201,7 +9224,7 @@ int player::inaccuracy() const
 void player_end_berserk()
 {
     if (!you.duration[DUR_PARALYSIS] && !you.petrified())
-        mprf(MSGCH_WARN, "You are exhausted.");
+        mprf(MSGCH_WARN,"%s", ui_translate("p.ui", "You are exhausted."));
 
     you.berserk_penalty = 0;
 
@@ -9244,7 +9267,7 @@ void activate_sanguine_armour()
     you.duration[DUR_SANGUINE_ARMOUR] = random_range(60, 100);
     if (!was_active)
     {
-        mpr("Your blood congeals into armour.");
+        mpr(ui_translate("p.ui", "Your blood congeals into armour."));
         you.redraw_armour_class = true;
     }
 }
@@ -9256,7 +9279,7 @@ void activate_sanguine_armour()
 void refresh_weapon_protection()
 {
     if (!you.duration[DUR_SPWPN_PROTECTION])
-        mpr("Your weapon exudes an aura of protection.");
+        mpr(ui_translate("p.ui", "Your weapon exudes an aura of protection."));
 
     you.increase_duration(DUR_SPWPN_PROTECTION, 3 + random2(2), 5);
     you.redraw_armour_class = true;
@@ -9364,7 +9387,7 @@ void trickster_trigger(const monster& victim, enchant_type ench)
     if (!you.props.exists(TRICKSTER_POW_KEY))
     {
         you.props[TRICKSTER_POW_KEY].get_int() = 0;
-        mprf(MSGCH_DURATION, "You feel bolstered by spreading misfortune.");
+        mprf(MSGCH_DURATION,"%s", ui_translate("p.ui", "You feel bolstered by spreading misfortune."));
     }
 
     // Start the bonus off at meaningful level, but give less for each effect
@@ -9421,8 +9444,7 @@ void maybe_harvest_memory(const monster& victim)
     if (progress < ENKINDLE_CHARGE_COST)
         return;
 
-    mprf("You devour the vestiges of %s's existence in your flames.",
-            victim.name(DESC_THE).c_str());
+    mprf("%s", ui_render("p.log.121", "You devour the vestiges of %s's existence in your flames.", make_stringf("You devour the vestiges of %s's existence in your flames." , victim.name(DESC_THE).c_str()), {ui_actor_arg(victim)}).c_str());
 
     you.props[ENKINDLE_CHARGES_KEY].get_int() += 1;
     progress = 0;
@@ -9481,8 +9503,7 @@ bool player::immune_to_hex(const spell_type hex) const
 void player::be_agile(int pow)
 {
     const bool were_agile = you.duration[DUR_AGILITY] > 0;
-    mprf(MSGCH_DURATION, "You feel %sagile all of a sudden.",
-         were_agile ? "more " : "");
+    mprf(MSGCH_DURATION, "%s", ui_render("p.log.122", "You feel %sagile all of a sudden.", make_stringf("You feel %sagile all of a sudden." , were_agile ? "more " : ""), {p_clause_arg(were_agile ? "more " : "")}).c_str());
 
     you.increase_duration(DUR_AGILITY, 35 + random2(pow), 80);
     if (!were_agile)

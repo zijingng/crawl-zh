@@ -1,0 +1,64 @@
+{
+  "batch": "morgue-04",
+  "build": {
+    "windows_tiles": "passed",
+    "exe_bytes": 27778939,
+    "exe_sha256": "58b39ad81d9c1a08e5ca17af7222b55ddfa5ff3824510c3b71e6f56b18cce002"
+  },
+  "native": {
+    "cases": 11,
+    "assertions": 623,
+    "passed": true
+  },
+  "python": {
+    "cases": 33,
+    "passed": true
+  },
+  "reviewed_templates_added": 12,
+  "canonical_previous_fixtures": {
+    "native-bilingual.txt": {
+      "before": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+      "after": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+      "unchanged": true
+    },
+    "native-explicit-english.txt": {
+      "before": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+      "after": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+      "unchanged": true
+    },
+    "native-language-english.txt": {
+      "before": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+      "after": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+      "unchanged": true
+    }
+  },
+  "runtime_files": {
+    "native-start-levels.lst": {
+      "bytes": 28,
+      "sha256": "cd8cee2c8d82ec681507a850e4fdb07e79cade6ce24d58f3446f3c4e0947808b"
+    },
+    "native-start-levels.txt": {
+      "bytes": 843,
+      "sha256": "22af822d9a4a6d851ecf6073ff460009811c3ab6673789a328f1d8b8691e15b9"
+    },
+    "native-start-levels.zh.txt": {
+      "bytes": 1057,
+      "sha256": "b225b68aa7f2c12f6bd92292f5074907ffa3e79d159d811b4e97402a22058850"
+    }
+  },
+  "verified": [
+    "Starting species/job snapshot independent of current character",
+    "Initial level, level-up and level-loss HP/MP use unchanged calculations",
+    "Zero and negative values retained",
+    "Version strings and colon escaping",
+    "Note serialization round trip and display does not mutate saved bytes",
+    "Missing, invalid and mismatched metadata retains complete English",
+    "User notes are untouched",
+    "Actual paired files and language-specific browser selection",
+    "Canonical English fixture bytes and RNG unchanged"
+  ],
+  "remaining": [
+    "Existing untyped historical notes retain English",
+    "Wanderer/Djinn starting equipment and spell-list snapshots not yet covered"
+  ]
+}

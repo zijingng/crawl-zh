@@ -1,0 +1,98 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "selected": [
+    {
+      "source": "database/randname.txt",
+      "key": "ashenzari",
+      "english": "w:100\nof the @_ashenzari_adjective_@ @_ashenzari_object_@\n\nw:100\nof @god_name_possessive@ @_ashenzari_object_@\n\nw:100\n\"@_ashenzari_adjective_@ @_ashenzari_object_@\"\n\nw:50\n\"@_ashenzari_object_@ of @god_name@\"\n\nw:100\n\"@_ashenzari_object_@ of the @_ashenzari_epithet_@\"\n\nw:20\n\"@_celestial_bodies_@ of the @_ashenzari_epithet_@\"\n\nw:20\nof the @_ashenzari_epithet_@\n\nw:20\nof the @_ashenzari_bound_adjective_@ @_celestial_bodies_@\n\nw:20\nof the @_ashenzari_knowledge_adjective_@ @_celestial_bodies_@\n\nw:20\nof @god_name_possessive@ @_celestial_bodies_@\n\nw:20\n\"Share My @_ashenzari_object_@\"\n\nw:20\n\"@_ashenzari_bound_adjective_@ With Me\"\n\nw:20\n\"@_ashenzari_bound_adjective_@ Together\"\n\nof the @_ashenzari_bound_adjective_@ @_ashenzari_heavens_@\n\nof the @_ashenzari_knowledge_adjective_@ @_ashenzari_heavens_@\n\nof the Fated @_ashenzari_object_@\n\nw:5\nof Apeoromancy\n\nw:5\n\"At What Cost Knowledge?\"\n\nw:5\n\"Behold Eternity\"\n\nw:5\nof Cremastomancy\n\nw:5\nof Curses and Power\n\nw:5\nof Desmomancy\n\nw:5\nof the Eye in the Sky\n\nw:5\n\"Gaze Upon Infinity\"\n\nw:5\n\"I Knew You'd Do That\"\n\nw:5\n\"I Foresaw This\"\n\nw:5\nof Ouranomancy\n\nw:5\n\"Overhang to Understand\"\n\nw:5\n\"Per Aspera Ad Scientiam\"\n\nw:5\nof Panopticon\n\nw:5\nof Star-Bound Wisdom\n\nw:5\nof Supernal Gnosis\n\nw:5\nof Supernal Knowledge\n\nw:5\nof Supernal Understanding\n\nw:5\nof Supernal Wisdom\n\nw:5\n\"Thunder Perfect Mind\"\n\nw:5\nof Toth-Mos' Legacy\n\nw:5\nof the Unyielding Gaze\n\nw:5\nof the Wild Blue Yonder\n\nw:1\n\"Oscillating Fan\"\n",
+      "hits": [
+        {
+          "Term": "Ashenzari",
+          "Translation": "艾申扎利",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "thunder",
+          "Translation": "雷霆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_STORM；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        }
+      ]
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "_ashenzari_object_",
+      "english": "Adversity\n\nAffliction\n\nBurden\n\nFetters\n\nGnosis\n\nLoss\n\nOmen\n\nOrdeal\n\nPortent\n\nPrison\n\nRegret\n\nRepose\n\nRessentiment\n\nSorrow\n\nVision\n\nYoke\n\nw:100\n@_diviner_name_@\n\nw:150\n@_discomfort_weapon_@\n\nw:100\n@_philosophy_name_@\n\nw:100\n@_discomfort_and_inaction_@\n\nw:100\n@_suspicion_no_conflict_name_@\n",
+      "hits": []
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "_ashenzari_adjective_",
+      "english": "w:50\n@_ashenzari_bound_adjective_@\n\nw:50\n@_ashenzari_knowledge_adjective_@\n\n@_ashenzari_celestial_adjective_@\n",
+      "hits": [
+        {
+          "Term": "Ashenzari",
+          "Translation": "艾申扎利",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ]
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "_ashenzari_bound_adjective_",
+      "english": "Bound\n\nChained\n\nCircumscribed\n\nCursed\n\nEnsconced\n\nEternal\n\nLashed\n\nRestrained\n\nRuined\n\nShackled\n\nShattered\n\nTethered\n",
+      "hits": []
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "_ashenzari_celestial_adjective_",
+      "english": "Astral\n\nCelestial\n\nCosmic\n\nDistant\n\nElysian\n\nSidereal\n\nStellar\n\nSublime\n",
+      "hits": []
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "_ashenzari_knowledge_adjective_",
+      "english": "All-seeing\n\nAstrological\n\nClairvoyant\n\nCryptic\n\nEnlightened\n\nEnigmatic\n\nEsoteric\n\nGnostic\n\nManifest\n\nMantic\n\nOmniscient\n\nOracular\n\nPangnostic\n\nPerceptive\n\nPrescient\n\nProfound\n\nProphetic\n\nRevealing\n\nSibylline\n\nUnveiling\n\nVisionary\n",
+      "hits": []
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "_ashenzari_epithet_",
+      "english": "w:100\n@_ashenzari_adjective_@ God\n\nw:50\n@_ashenzari_bound_adjective_@ Augur\n\nw:50\n@_ashenzari_celestial_adjective_@ Augur\n\nw:50\n@_ashenzari_bound_adjective_@ Sage\n\nw:50\n@_ashenzari_celestial_adjective_@ Sage\n\nw:50\n@_ashenzari_bound_adjective_@ Seer\n\nw:50\n@_ashenzari_celestial_adjective_@ Seer\n\nAll-Knowing\n\nCurse-Bearer\n\nSoothsayer\n\nUnmoving One\n",
+      "hits": [
+        {
+          "Term": "Ashenzari",
+          "Translation": "艾申扎利",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "_ashenzari_heavens_",
+      "english": "Cosmos\n\nEmpyrean\n\nEther\n\nFirmament\n\nHeavens\n\nw:40\nSky\n\nSphere\n\nWelkin\n",
+      "hits": []
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "messages": 116,
+  "generated_catalogue_matches": true,
+  "source_dependencies_current": true,
+  "lua_files": 109,
+  "glossary_current": true,
+  "native_tests": 118,
+  "native_assertions": 191871,
+  "python_tests": 28,
+  "graphical_smoke_test": false
+}

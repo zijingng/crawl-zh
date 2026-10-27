@@ -1,0 +1,2415 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "selected": [
+    {
+      "key": "xom crazy yiuf",
+      "source": "@The_monster@ says, \"The life which is unexamined is not worth living.\"\n\n@The_monster@ says, \"My goal is simple. It is a complete understanding of the universe, why it is as it is and why it exists at all.\"\n\n@The_monster@ says, \"One may say the eternal mystery of the world is its comprehensibility.\"\n\n@The_monster@ says, \"Which is more difficult, to awaken one who sleeps or to awaken one who, awake, dreams that he is awake?\"\n\n@The_monster@ says, \"Everyone has the same god; only people differ.\"\n\n@The_monster@ says, \"Against boredom even gods struggle in vain.\"\n\n@The_monster@ says, \"No facts are to me sacred; none are profane; I simply experiment, an endless seeker, with no past at my back.\"\n\n@The_monster@ says, \"The present is the child, and the necessary child, of all the past, and the mother of all the future.\"\n\n@The_monster@ says, \"Reason is nothing but a wonderful and unintelligible instinct in our souls.\"\n\n@The_monster@ says, \"It is extremely absurd to expect to be enlightened by reason, and yet to prescribe to it beforehand on which side it must incline.\"\n\n@The_monster@ says, \"The real reality is there, but everything you KNOW about 'it' is in your mind and yours to do with as you like.\"\n\nVISUAL:@The_monster@ considers dialectic materialism.\n\nVISUAL:@The_monster@ ponders an existential dilemma.\n\nVISUAL:@The_monster@ shuffles @possessive@ notes under @possessive@ cloak.\n\nVISUAL:@The_monster@ heaves a sigh in contemplation.\n",
+      "hits": [
+        {
+          "Term": "cloak",
+          "Translation": "披风",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Crazy Yiuf",
+          "Translation": "疯子尤夫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "orb crazy yiuf",
+      "source": "@The_monster@ says, \"Wait for me!\"\n\n@The_monster@ says, \"You found it!\"\n\n@The_monster@ says, \"Get me out of this place.\"\n\n@The_monster@ says, \"You came back for me.\"\n",
+      "hits": [
+        {
+          "Term": "Crazy Yiuf",
+          "Translation": "疯子尤夫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "confused crazy yiuf",
+      "source": "@The_monster@ says, \"This beard itches something crazy!\"\n\n@The_monster@ says, \"I wonder if I left the window open.\"\n\nVISUAL:@The_monster@ scratches @possessive@ head thoughtfully.\n\n@The_monster@ says, \"Have you seen my glasses?\"\n\n@The_monster@ says, \"Perhaps I shall have lamb for dinner.\"\n\n@The_monster@ says, \"Oh, this is rather nice.\"\n\n@The_monster@ says, \"Have you seen my cloak?\"\n\n@The_monster@ laughs.\n\nVISUAL:@The_monster@ counts something out on @possessive@ fingers.\n\n@The_monster@ says, \"My, my head's in a spin!\"\n\n@The_monster@ says, \"I feel rather peculiar.\"\n",
+      "hits": [
+        {
+          "Term": "cloak",
+          "Translation": "披风",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Crazy Yiuf",
+          "Translation": "疯子尤夫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "dissolution",
+      "source": "@_dissolution_common_@\n\nw:5\n@_dissolution_speech_@\n",
+      "hits": [
+        {
+          "Term": "Dissolution",
+          "Translation": "溶解者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_dissolution_common_",
+      "source": "@The_monster@ gurgles.\n\n@The_monster@ gurgles loudly.\n\n@The_monster@ emits a sizzling noise.\n\nVISUAL:@The_monster@ jiggles.\n\nVISUAL:@The_monster@ wobbles.\n",
+      "hits": [
+        {
+          "Term": "noise",
+          "Translation": "噪音/声音/巨响",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/战斗机制】影响听觉警觉，不同于画面显示延迟。 来源：shout.cc。\n【语境补充 2026-10-21】机制、标题及数值用噪音。具体可听声响按语境用声音或巨响，不强制把研磨声等改为噪音。"
+        },
+        {
+          "Term": "Dissolution",
+          "Translation": "溶解者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_dissolution_speech_",
+      "source": "@The_monster@ says, \"Join with me for eternity!\"\n\n@The_monster@ says, \"Become one with my sorrow!\"\n\n@The_monster@ says, \"Slime for the Slime God!\"\n\n@The_monster@ says, \"Acid is thicker than water.\"\n\n@The_monster@ says, \"Acid to acid, slime to slime.\"\n\nw:5\n@_dissolution_rare_@\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Dissolution",
+          "Translation": "溶解者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "acid",
+          "Translation": "酸蚀",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "_dissolution_rare_",
+      "source": "@The_monster@ says, \"We come from slime, we turn to slime.\"\n\nw:1\n@The_monster@ says, \"From Slime we come, to Slime we go.\"\n\n@The_monster@ says, \"Resolve to dissolve!\"\n\n@The_monster@ presages, \"An acid flood will etch off all the scum!\"\n\nw:2\n@The_monster@ says, \"There is a problem solver and @possessive@ name is Dissolver!\"\n",
+      "hits": [
+        {
+          "Term": "turn",
+          "Translation": "回合/转向/变成/轮流",
+          "Part of Speech": "noun",
+          "Variants": "turns",
+          "Note": "【版本/语境】回合/动作叙述用语；不是固定时间单位 aut，动作耗时可不同。 来源：player-act.cc。\n【语境补充 2026-10-21】时间单位用回合。动词及 in turn、turn into 等短语按句意选择转向、变成、轮流等译法。"
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "Dissolution",
+          "Translation": "溶解者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "acid",
+          "Translation": "酸蚀",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "temple donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"I can never find the altar I want in here.\"\n\n@The_monster@ says, \"There are too many gods demanding my worship. I hate that.\"\n\n@The_monster@ says, \"Why did you bring me all the way here just to see the Temple?\"\n\n@The_monster@ says, \"There's not enough treasure in here.\"\n\n@The_monster@ says, \"You've already taken the rune from here, haven't you?\"\n\n@The_monster@ says, \"The so-called 'good' gods are just as evil as the rest. I hate hypocrisy.\"\n\n@The_monster@ says, \"I hate temples.\"\n\nw:5\n@The_monster@ says, \"What about an ecumenical tavern?\"\n\n",
+      "hits": [
+        {
+          "Term": "altar",
+          "Translation": "祭坛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Temple",
+          "Translation": "众神殿/神庙/庙宇",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【语境补充 2026-10-21】分支简称用众神殿。泛指某位神祇的建筑用神庙或庙宇。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "orc donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"Orcs complain a lot, don't they? I hate it.\"\n\n@The_monster@ says, \"Orcs smell really bad. Yuck.\"\n\n@The_monster@ says, \"At least there's gold. That doesn't make up for it.\"\n\n@The_monster@ says, \"I'll never be able to carry all this gold! I hate that.\"\n\n@The_monster@ says, \"What do they mine anyway? I've never seen them mine anything.\"\n\n@The_monster@ says, \"Have you ever seen an orcish miner? Me neither.\"\n\nVISUAL:@The_monster@ kicks a rock and scowls.\n\n@The_monster@ says, \"Why is it so dark? Have they never heard of torches?\"\n\n@The_monster@ ponders, \"They're ugly as hell, too!\"\n\n@The_monster@ says, \"I ran into an orc. He called himself a warlord, and I asked what war?\"\n\n@The_monster@ says, \"These orcs are so stupid, they must've eaten the rune.\"\n\n@The_monster@ says, \"I asked for directions to the rune, but they belched at me.\"\n\n@The_monster@ says, \"I prefer the Lair of the Beasts, to be honest. At least animals don't complain.\"\n\n@The_monster@ says, \"I hate complainers so much.\"\n",
+      "hits": [
+        {
+          "Term": "Hell",
+          "Translation": "地狱",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Lair",
+          "Translation": "野兽巢穴",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "elf donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"Why would you have your front door in a mine? Stupid.\"\n\n@The_monster@ says, \"I hope this rune is worth it!\"\n\n@The_monster@ says, \"I thought elves might be good for a party. Nope.\"\n\n@The_monster@ says, \"Really pretty, but really, really boring. I hate that.\"\n\n@The_monster@ says, \"What's with all the gesturing? I hate that.\"\n\n@The_monster@ says, \"None of these elves know how to fight. I hate that.\"\n\n@The_monster@ says, \"What's the point of a Hall of Blades anyway?\"\n",
+      "hits": [
+        {
+          "Term": "Might",
+          "Translation": "强力术/可能/力量",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术或能力标题保留强力术。情态动词 might 表示可能。名词 might 表示力量或威力。"
+        },
+        {
+          "Term": "Hall of Blades",
+          "Translation": "刀刃大厅",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Hall of Blades（规范缩写 Blade）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "elf",
+          "Translation": "精灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "swamp donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"What's that horrible smell? It's like... yuck.\"\n\n@The_monster@ says, \"If there's anything I hate more than water, it's brackish swamp water.\"\n\n@The_monster@ says, \"I hate trees. I hate swamp water. I hate this place.\"\n\n@The_monster@ says, \"That buzzing noise? I hate that the most.\"\n\n@The_monster@ says, \"What could mosquitoes possibly want with my blood?\"\n\n@The_monster@ says, \"I hope these swamp worms drown.\"\n\n@The_monster@ says, \"Damn it, I left my flaming sword at home.\"\n\n@The_monster@ says, \"Don't you hate leeches? I know I do.\"\n\n@The_monster@ says, \"I hate mosquitoes. Almost as much as I hate swamp water.\"\n\n@The_monster@ says, \"At least there's some dry land. I hate getting wet.\"\n\n@The_monster@ says, \"Is there a plague of frogs happening, or something? At least it's not locusts.\"\n\n@The_monster@ says, \"The more heads they grow, the more I hate hydras.\"\n",
+      "hits": [
+        {
+          "Term": "Swamp",
+          "Translation": "沼泽",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "noise",
+          "Translation": "噪音/声音/巨响",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/战斗机制】影响听觉警觉，不同于画面显示延迟。 来源：shout.cc。\n【语境补充 2026-10-21】机制、标题及数值用噪音。具体可听声响按语境用声音或巨响，不强制把研磨声等改为噪音。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "shoals donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"Tides? I despise tides. No, wait, I hate tides!\"\n\n@The_monster@ says, \"I like turtle soup. I hate turtles.\"\n\n@The_monster@ says, \"I haven't seen any pirates yet. I hate pirates.\"\n\n@The_monster@ says, \"At least this place doesn't smell as bad as the Swamp.\"\n\n@The_monster@ says, \"The sirens are starting to hurt my ears.\"\n\n@The_monster@ says, \"Are sirens supposed to sound like that? I can sing better than that!\"\n\n@The_monster@ says, \"Where'd the sea come from? I thought this place was underground.\"\n\n@The_monster@ says, \"I like the beach, but I hate the sea.\"\n\n@The_monster@ says, \"These tides are fast. That can't be natural!\"\n\n@The_monster@ says, \"At least there aren't any ducks around. I hate ducks.\"\n\n@The_monster@ says, \"I'm soaked through. I hate being wet!\"\n\n@The_monster@ says, \"Those krakens don't even look real.\"\n\n@The_monster@ says, \"I'm looking for Ms. Medusa. Have you seen her?\"\n\n@The_monster@ says, \"I don't understand half of what these people say. It's all Greek to me.\"\n\n@The_monster@ says, \"And I thought they were famous for their poetry.\"\n\n@The_monster@ says, \"I slipped earlier. I hate that.\"\n\n@The_monster@ says, \"I wish these tides would just make up their mind. In and out, in and out...\"\n\n@The_monster@ says, \"A turtle bit me. I hate turtles.\"\n\n@The_monster@ says, \"This tentacle just came out of nowhere and touched me. I hate tentacles!\"\n",
+      "hits": [
+        {
+          "Term": "Shoals",
+          "Translation": "海滩",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Swamp",
+          "Translation": "沼泽",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "the Swamp",
+          "Translation": "沼泽",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Swamp（规范缩写 Swamp）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "tentacle",
+          "Translation": "触手",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "tentacles",
+          "Translation": "触手",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：触手。"
+        }
+      ]
+    },
+    {
+      "key": "spider donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"There's a spider on your neck!\"\n\n@The_monster@ says, \"I hate crawling things.\"\n\n@The_monster@ says, \"Someone should clean these parts. I hate webs.\"\n\n@The_monster@ says, \"My uncle had bigger webs in his attic. I hated that.\"\n\n@The_monster@ says, \"I hate getting stuck.\"\n\n@The_monster@ says, \"Dancing spiders? With no cane or a top hat?\"\n\n@The_monster@ says, \"Something's up my trousers! Aieee!\"\n\n@The_monster@ says, \"I hate venom. I hate getting bitten.\"\n\n@The_monster@ says, \"Arachnophobia is no disease, it's common sense.\"\n\n@The_monster@ says, \"There, on the ceiling! And on that wall!\"\n\n",
+      "hits": [
+        {
+          "Term": "hat",
+          "Translation": "帽子",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "spider",
+          "Translation": "蜘蛛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "venom",
+          "Translation": "淬毒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "slime donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"Where's all the loot?\"\n\n@The_monster@ says, \"I feel like a jelly sandwich, now.\"\n\n@The_monster@ says, \"This place is the Pits.\"\n\n@The_monster@ says, \"I hate the colour green.\"\n\n@The_monster@ says, \"I can't smell anything here. I hate that.\"\n\n@The_monster@ says, \"I can't get this icky slime off my feet.\"\n\n@The_monster@ says, \"I keep getting this feeling like someone's watching me. Creepy.\"\n\n@The_monster@ says, \"I always freeze up when I think I'm being watched.\"\n\n@The_monster@ says, \"Acid blobs make me think of reflux. I hate reflux.\"\n\n@The_monster@ says, \"What's up with all this goo? It's like a world of goo. I hate goo.\"\n\n@The_monster@ says, \"Someone said I could use acid to solve all my problems. It just made them worse.\"\n\n@The_monster@ says, \"I hope the rune isn't sticky.\"\n\n@The_monster@ says, \"A rock stubbed itself on my toe. I hate that.\"\n\n@The_monster@ says, \"What's so magical about quicksilver, anyway?\"\n",
+      "hits": [
+        {
+          "Term": "Freeze",
+          "Translation": "冰冻术/冰冻/冻结/冻伤",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】能力或法术名保留冰冻。结成冰用冻结。攻击动词造成寒冷伤害可用冻伤。\n【名称统一】法术名称采用“冰冻术”；实体、伤害、状态或普通动词按语境使用原有译法，不给一般效果描述机械加“术”。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "jelly",
+          "Translation": "胶怪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "acid",
+          "Translation": "酸蚀",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "snake donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"You know that hissing noise? I hate that.\"\n\n@The_monster@ says, \"You know that slithering noise? I hate that.\"\n\n@The_monster@ says, \"I'd like to make these snakes into gloves, but I hate gloves.\"\n\n@The_monster@ says, \"This place is the Pits.\"\n\n@The_monster@ says, \"What do naga need barding for?\"\n\n@The_monster@ says, \"What's a barding, anyway? Does it sing for its supper?\"\n\n@The_monster@ says, \"Robes are for wimps. Real warriors wear heavy armour!\"\n\n@The_monster@ says, \"Nagas are pretty ugly. I hate nagas.\"\n\n@The_monster@ says, \"Did all the warriors here go to shield school or something?\"\n\n@The_monster@ says, \"So, why is that serpent talking?\"\n\n@The_monster@ says, \"What sort of name is 'naga' anyway? They're not even good at nagging.\"\n\n@The_monster@ says, \"At least there aren't any garudas. I hate garudas.\"\n\n@The_monster@ says, \"You'd think there'd be more pits. I haven't seen any.\"\n\n@The_monster@ says, \"I'm sick of this place. Or maybe that's poison...\"\n\n@The_monster@ says, \"I hate mutated serpents.\"\n\n@The_monster@ says, \"So, nagas are stealthy? Don't make me laugh.\"\n\n@The_monster@ says, \"I wish they'd hurry up and stop blocking the corridors.\"\n\n@The_monster@ says, \"Man, snails must be faster than these guys.\"\n\n@The_monster@ says, \"How does a snake shoot lightning, anyway?\"\n\nw:1\n@The_monster@ says, \"First nagas, now salamanders. What's next, crocodiles with mirrors on their heads?\"\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "gloves",
+          "Translation": "手套",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "school",
+          "Translation": "魔法学派/流派",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【版本/语境】魔法学派泛称；具体技能名称使用独立术语。 来源：dat/descript/skills.txt。\n【语境补充 2026-10-21】法术分类用魔法学派，也可在连续说明中简称流派。"
+        },
+        {
+          "Term": "Shield",
+          "Translation": "格挡值/盾牌/保护",
+          "Part of Speech": "noun",
+          "Variants": "SH",
+          "Note": "【0.34.1 修订】原表备注明确是属性；官方手册也以 Shield 为 SH 标题。此处保留该语境；普通物品 shield 仍译盾牌，必须按上下文区分。 来源：docs/crawl_manual.rst。\n【语境补充 2026-10-21】SH 属性用格挡值。装备名词 shield 用盾牌。shield 作动词用保护，不改写物品种类。"
+        },
+        {
+          "Term": "Naga",
+          "Translation": "娜迦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/naga.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "noise",
+          "Translation": "噪音/声音/巨响",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/战斗机制】影响听觉警觉，不同于画面显示延迟。 来源：shout.cc。\n【语境补充 2026-10-21】机制、标题及数值用噪音。具体可听声响按语境用声音或巨响，不强制把研磨声等改为噪音。"
+        },
+        {
+          "Term": "barding",
+          "Translation": "身甲",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/防具】供娜迦和犰狳人使用的专用身甲；按装备上下文说明。 来源：dat/descript/items.txt。"
+        },
+        {
+          "Term": "poison",
+          "Translation": "毒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/伤害/状态】poisoned 表中毒，poison resistance 表毒抗。 来源：duration-data.h。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "snake",
+          "Translation": "蛇",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "heavy",
+          "Translation": "沉重",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "vaults donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"The Vaults? They should've called it the Dumps.\"\n\n@The_monster@ says, \"Don't bother, there's only junk at the bottom.\"\n\n@The_monster@ says, \"I asked the warden where the rune was. She slammed the door in my face.\"\n\n@The_monster@ says, \"I don't remember getting an invitation to a convocation.\"\n\n@The_monster@ says, \"Who designed this place? It's just a bunch of weird little rooms stuck together.\"\n\n@The_monster@ says, \"This is an awful lot of space just to hold some junk.\"\n\n@The_monster@ says, \"I saw some yaktaurs earlier, but I bolted.\"\n\n@The_monster@ says, \"I saw a dragon earlier, but I didn't get too close - it seemed pretty mercurial.\"\n\n@The_monster@ says, \"Why are there poltergeists guarding this place, but not the Crypt?\"\n",
+      "hits": [
+        {
+          "Term": "Crypt",
+          "Translation": "墓室",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Vaults",
+          "Translation": "宝库/密室/跃起",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【语境补充 2026-10-21】分支专名用宝库。地图 vaults 用密室。vaults off a wall 作动词表示蹬墙跃起。"
+        },
+        {
+          "Term": "weird",
+          "Translation": "奇怪的",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "the Vaults",
+          "Translation": "宝库",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Vaults（规范缩写 Vaults）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "the Crypt",
+          "Translation": "墓室",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Crypt（规范缩写 Crypt）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "dragon",
+          "Translation": "龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "crypt donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"Zombies are pretty boring.\"\n\n@The_monster@ says, \"Man, I can't wait until I find the rune.\"\n\n@The_monster@ says, \"They must've been making zombies for centuries to fill this place.\"\n\n@The_monster@ says, \"My neck hurts.\"\n\n@The_monster@ says, \"Is it cursed, or does it curse? I can never tell.\"\n\n@The_monster@ says, \"Curse skulls, curse toes... What next?\"\n\n@The_monster@ says, \"This isn't even all that spooky.\"\n\n@The_monster@ says, \"This place is pretty cryptic.\"\n\n@The_monster@ says, \"Skeletons give me the creeps.\"\n\n@The_monster@ says, \"I hate skeletons.\"\n\n@The_monster@ says, \"I hate draugr.\"\n\n@The_monster@ says, \"I hate zombies.\"\n\n@The_monster@ says, \"I hate vampires.\"\n\n@The_monster@ says, \"That ghoul gave me heartburn.\"\n\n@The_monster@ says, \"What sort of name is 'necrophage', anyway?\"\n\n@The_monster@ says, \"Where are all the doors?\"\n\n@The_monster@ says, \"You know, I thought there'd be more coffins in a crypt...\"\n\n@The_monster@ says, \"Have you seen a sarcophagus full of treasure around? Me neither.\"\n\n@The_monster@ says, \"I just hope the loot isn't guarded by liches. I hate liches.\"\n\n@The_monster@ says, \"That mummy wasn't so great.\"\n\n@The_monster@ says, \"This place has the same junk as everywhere else. I hate that.\"\n\n@The_monster@ says, \"Why is it so quiet?\"\n\n@The_monster@ says, \"So much for the uneasy undead.\"\n\n@The_monster@ says, \"They don't shamble much, do they? I hate that.\"\n\n@The_monster@ says, \"They don't even play music.\"\n\n@The_monster@ says, \"Some mausoleum.\"\n\n@The_monster@ says, \"I saw a sphinx earlier. I hate that.\"\n\n@The_monster@ says, \"The Crypt, the Tomb, what's next? The Coffin?\"\n\n@The_monster@ says, \"All these vampires have me hopping mad!\"\n\n@The_monster@ says, \"I hate revenants, but I forget why! And I hate that, too!\"\n\n@The_monster@ says, \"I got a splinter from a draugr. I hate that.\"\n",
+      "hits": [
+        {
+          "Term": "Crypt",
+          "Translation": "墓室",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "ghoul",
+          "Translation": "食尸鬼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【版本/语境】怪物译名保留；玩家种族已废弃，不据此加入现行角色创建列表。 来源：dat/species/deprecated-ghoul.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "mummy",
+          "Translation": "木乃伊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/mummy.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "sphinx",
+          "Translation": "斯芬克斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Tomb",
+          "Translation": "灵庙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "undead",
+          "Translation": "亡灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】指不死生物类别，并不表示无法被杀死。 来源：mon-util.cc。"
+        },
+        {
+          "Term": "the Crypt",
+          "Translation": "墓室",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Crypt（规范缩写 Crypt）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "draugr",
+          "Translation": "尸鬼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "necrophage",
+          "Translation": "食腐尸",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "the Tomb",
+          "Translation": "陵墓",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        }
+      ]
+    },
+    {
+      "key": "abyss donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"But I don't want to have to go deeper!\"\n\n@The_monster@ says, \"What does 'eldritch' mean, anyway?\"\n\n@The_monster@ says, \"I keep hearing this weird shrieking in my head. I hate that.\"\n\n@The_monster@ says, \"I've never heard of a star cursing anything.\"\n\n@The_monster@ says, \"I've never heard of a star spawning anything.\"\n\n@The_monster@ throws up @possessive@ hands and says, \"Alright, I admit it, I'm lost!\"\n\n@The_monster@ says, \"I hate wrenching sensations.\"\n\n@The_monster@ says, \"What's so abyssal about tentacles and stars?\"\n\n@The_monster@ says, \"Screaming refractions? What's next, yodelling boulders?\"\n",
+      "hits": [
+        {
+          "Term": "Abyss",
+          "Translation": "深渊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "weird",
+          "Translation": "奇怪的",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "screaming",
+          "Translation": "尖叫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：尖叫。"
+        },
+        {
+          "Term": "tentacles",
+          "Translation": "触手",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：触手。"
+        }
+      ]
+    },
+    {
+      "key": "zot donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"I saw a draconian who kept changing colours. Some people are so indecisive.\"\n\n@The_monster@ says, \"How come everyone is wearing a cloak down here?\"\n\n@The_monster@ says, \"I offered a draconian some spare armour, but he said it didn't fit.\"\n\n@The_monster@ says, \"I keep feeling something staring at me. Is it you?\"\n\n@The_monster@ says, \"How do you make a golem out of electricity?\"\n\n@The_monster@ says, \"What's an 'Orb Guardian', anyway?\"\n\n@The_monster@ says, \"Orbs of fire, orbs of destruction, the Orb of Zot... what's with all the orbs?\"\n\n@The_monster@ says, \"I hate orbs.\"\n\n@The_monster@ says, \"I hate clowns.\"\n\n@The_monster@ says, \"I hate draconians.\"\n\n@The_monster@ says, \"I hate purple.\"\n\n@The_monster@ says, \"Are they setting up a circus down here?\"\n\n@The_monster@ says, \"This place probably doesn't see many tourists.\"\n\n@The_monster@ says, \"Oh, so that's what those runes are for!\"\n\n@The_monster@ says, \"Why do the walls change colour every floor? Did they keep running out of paint?\"\n\n@The_monster@ says, \"What's stopping the guards from just stealing the Orb themselves?\"\n\n@The_monster@ says, \"I hope I don't run into any orbs of ice down here!\"\n\n@The_monster@ says, \"Did you bring your rings of ice?\"\n\n@The_monster@ says, \"The Orb of Power is here? Where are the others, then?\"\n\n@The_monster@ says, \"I saw some tasty-looking maize earlier, but it tried to eat me. I hate that.\"\n\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "cloak",
+          "Translation": "披风",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "floor",
+          "Translation": "地面/楼层/地板/向下取整",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【语境补充 2026-10-21】物理表面按语境用地面或地板。地下城深度用楼层。math.floor 为向下取整函数，代码标识符保留英文。"
+        },
+        {
+          "Term": "Orb of Zot",
+          "Translation": "佐特宝珠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "你玩这游戏的原因，MacGuffin"
+        },
+        {
+          "Term": "Zot",
+          "Translation": "佐特",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Draconian",
+          "Translation": "龙人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/draconian-base.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Orb Guardian",
+          "Translation": "宝珠守卫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "golem",
+          "Translation": "魔像",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "the Orb",
+          "Translation": "宝珠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Fire",
+          "Translation": "火焰强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "Ice",
+          "Translation": "寒冰强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "orb donald",
+      "source": "w:25\n@_generic_Donald_@\n\n@The_monster@ says, \"Thanks for carrying the Orb of Power for me.\"\n\n@The_monster@ says, \"Isn't that thing heavy? I could take a turn.\"\n\n@The_monster@ says, \"Aren't you worried about radiation? You should put that down.\"\n\n@The_monster@ says, \"What are you going to do with that Orb?\"\n\n@The_monster@ says, \"Don't you think the Orb of Power was down there for a reason?\"\n\n@The_monster@ says, \"I heard that the world ends if you bring it to the surface.\"\n\n@The_monster@ says, \"Someone is going to come looking for that Orb.\"\n\n@The_monster@ says, \"Are you sure that's the real Orb, and not some cheap imitation?\"\n\n@The_monster@ says, \"You have the Orb. Was it worth it?\"\n\n",
+      "hits": [
+        {
+          "Term": "turn",
+          "Translation": "回合/转向/变成/轮流",
+          "Part of Speech": "noun",
+          "Variants": "turns",
+          "Note": "【版本/语境】回合/动作叙述用语；不是固定时间单位 aut，动作耗时可不同。 来源：player-act.cc。\n【语境补充 2026-10-21】时间单位用回合。动词及 in turn、turn into 等短语按句意选择转向、变成、轮流等译法。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "the Orb",
+          "Translation": "宝珠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "heavy",
+          "Translation": "沉重",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "zin donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"So much for spreading the word; you get punched in the face instead.\"\n\n@The_monster@ says, \"This pamphlet doesn't say what the point to Recitation is.\"\n\n@The_monster@ says, \"I wanna be an adventurer, not a preacher!\"\n\n@The_monster@ says, \"What does Zin need our gold for, anyway?\"\n\n@The_monster@ says, \"Something seems a little bit odd about a God who wants to be paid.\"\n\n@The_monster@ says, \"I've got two hundred gold pieces. Is that enough to cure these mutations?\"\n\n@The_monster@ says, \"Didn't you like your horns?\"\n\n@The_monster@ says, \"If I give you twenty gold pieces, can you get rid of this nasty case of scales I've got?\"\n\n@The_monster@ covers @possessive@ ears. \"Shut up!\"\n\n@The_monster@ says, \"Wouldn't you get more for your money with Gozag?\"\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Gozag",
+          "Translation": "哥萨戈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "mutations",
+          "Translation": "变异",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "pieces",
+          "Translation": "碎片",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Zin",
+          "Translation": "辛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "法则之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "horns",
+          "Translation": "犄角",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：犄角。"
+        }
+      ]
+    },
+    {
+      "key": "the shining one donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"What's the point of being chivalric if nobody's going to be chivalric back?\"\n\n@The_monster@ says, \"I open the door for a goblin; he punches me in the face. I hate chivalry.\"\n\n@The_monster@ says, \"Hah! I saw you coming a mile away.\"\n\n@The_monster@ says, \"You stick out like a sore thumb. Or at least, a shining one.\"\n\n@The_monster@ says, \"Won't need this ring of positive energy, then, will I?\"\n\n@The_monster@ says, \"Can you turn the glow down a bit? I can't see you to hit you.\"\n\n@The_monster@ says, \"Cleansing flame? What's it supposed to be cleansing? The floor?\"\n\n@The_monster@ says, \"I hate haloes.\"\n",
+      "hits": [
+        {
+          "Term": "floor",
+          "Translation": "地面/楼层/地板/向下取整",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【语境补充 2026-10-21】物理表面按语境用地面或地板。地下城深度用楼层。math.floor 为向下取整函数，代码标识符保留英文。"
+        },
+        {
+          "Term": "ring of positive energy",
+          "Translation": "正能量戒指",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【使用约束】物品专名保留正能量；效果涉及负能量抗性，不是生命再生。"
+        },
+        {
+          "Term": "the Shining One",
+          "Translation": "光明神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "turn",
+          "Translation": "回合/转向/变成/轮流",
+          "Part of Speech": "noun",
+          "Variants": "turns",
+          "Note": "【版本/语境】回合/动作叙述用语；不是固定时间单位 aut，动作耗时可不同。 来源：player-act.cc。\n【语境补充 2026-10-21】时间单位用回合。动词及 in turn、turn into 等短语按句意选择转向、变成、轮流等译法。"
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "Cleansing Flame",
+          "Translation": "净化之焰",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "flame",
+          "Translation": "火焰",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_FIRE；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Nobody",
+          "Translation": "无名氏",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "goblin",
+          "Translation": "地精",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Energy",
+          "Translation": "能量",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "kikubaaqudgha donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"Kikubaa-what? How do you even say that?\"\n\n@The_monster@ says, \"Sorry, didn't catch that. You worship who? How do you spell it?\"\n\n@The_monster@ says, \"Can you spell it for me - slowly?\"\n\n@The_monster@ says, \"How do you pronounce that?\"\n\n@The_monster@ says, \"I hate zombies.\"\n\n@The_monster@ says, \"Yuck, you smell of miasma!\"\n\n@The_monster@ says, \"I hate wretches.\"\n\n@The_monster@ says, \"How deep do you have to dig to get a never-ending supply of wretches?\"\n\n@The_monster@ says, \"You must really love pain. I hate it.\"\n\n@The_monster@ says, \"Do you just use necromancy for everything, then?\"\n\n@The_monster@ says, \"Why a 'Demon-God'? Wouldn't a 'Zombie-God' be more appropriate?\"\n\n@The_monster@ says, \"I hate ruin.\"\n\n@The_monster@ says, \"I hate despair.\"\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Kikubaaqudgha",
+          "Translation": "奇库巴库哈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Necromancy",
+          "Translation": "死灵系魔法",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "spell",
+          "Translation": "法术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "zombie",
+          "Translation": "丧尸",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Dig",
+          "Translation": "挖掘术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Pain",
+          "Translation": "痛苦术/痛苦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用痛苦术。卡牌、武器印记或普通感受用痛苦，完整物品专名优先。\n【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "friendly yredelemnul donald",
+      "source": "@_yredelemnul_Donald_@\n\n__NEXT\n",
+      "hits": [
+        {
+          "Term": "Yredelemnul",
+          "Translation": "伊莱德莱姆努尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "yredelemnul donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@_yredelemnul_Donald_@\n",
+      "hits": [
+        {
+          "Term": "Yredelemnul",
+          "Translation": "伊莱德莱姆努尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_yredelemnul_donald_",
+      "source": "@The_monster@ says, \"How does a bone dragon fly, anyway?\"\n\n@The_monster@ says, \"How do you flay a ghost, anyway?\"\n\n@The_monster@ says, \"Pah! You're not even a real necromancer.\"\n\n@The_monster@ says, \"Did you drop out of Necromancy School?\"\n\n@The_monster@ says, \"Ah. You're responsible for all those zombies.\"\n\n@The_monster@ says, \"I hate zombies.\"\n\n@The_monster@ says, \"Zombies? Spectres? Don't you get bored without any real company?\"\n\n@The_monster@ says, \"Angels painted black are so last century.\"\n\n@The_monster@ says, \"If you wanted the light to be dimmer, you could have said so.\"\n\n@The_monster@ says, \"What kind of torch can only be lit once per level?\"\n\n@The_monster@ says, \"How does that torch stay lit when you throw its fire all over?\"\n\n@The_monster@ says, \"I hate being shackled.\"\n",
+      "hits": [
+        {
+          "Term": "bone dragon",
+          "Translation": "骨龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "ghost",
+          "Translation": "鬼魂",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Necromancy",
+          "Translation": "死灵系魔法",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "school",
+          "Translation": "魔法学派/流派",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【版本/语境】魔法学派泛称；具体技能名称使用独立术语。 来源：dat/descript/skills.txt。\n【语境补充 2026-10-21】法术分类用魔法学派，也可在连续说明中简称流派。"
+        },
+        {
+          "Term": "throw",
+          "Translation": "投掷",
+          "Part of Speech": "verb",
+          "Variants": "",
+          "Note": "【0.34.1 修订】本条是动作动词；独立补充 Throwing 技能，不把普通 throwing 自动视为技能名。 来源：skills.cc。\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Yredelemnul",
+          "Translation": "伊莱德莱姆努尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Necromancer",
+          "Translation": "死灵法师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/necromancer.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Flay",
+          "Translation": "剥皮术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "dragon",
+          "Translation": "龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Fly",
+          "Translation": "飞行",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "Fire",
+          "Translation": "火焰强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "Light",
+          "Translation": "轻盈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "okawaru donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"Okawaru always makes me think of chokos.\"\n\n@The_monster@ says, \"Oh, hey! I could use a new shield. Have you got any spares?\"\n\n@The_monster@ says, \"Nice kit.\"\n\n@The_monster@ asks, \"How many innocent creatures did you kill for those shoes?\"\n\n@The_monster@ says, \"Okawaru's gifts are murder.\"\n\n@The_monster@ says, \"You can only wear one cloak at a time, you know?\"\n\n@The_monster@ says, \"Do you think you're a hero? I hate that.\"\n\n@The_monster@ says, \"How much finesse does it take to swing your arms real fast, anyway?\"\n\n@The_monster@ says, \"I could take you in a fair duel. No cheating!\"\n",
+      "hits": [
+        {
+          "Term": "cloak",
+          "Translation": "披风",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Okawaru",
+          "Translation": "奥格瓦如",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Shield",
+          "Translation": "格挡值/盾牌/保护",
+          "Part of Speech": "noun",
+          "Variants": "SH",
+          "Note": "【0.34.1 修订】原表备注明确是属性；官方手册也以 Shield 为 SH 标题。此处保留该语境；普通物品 shield 仍译盾牌，必须按上下文区分。 来源：docs/crawl_manual.rst。\n【语境补充 2026-10-21】SH 属性用格挡值。装备名词 shield 用盾牌。shield 作动词用保护，不改写物品种类。"
+        },
+        {
+          "Term": "Finesse",
+          "Translation": "精湛技艺",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+        },
+        {
+          "Term": "Duel",
+          "Translation": "决斗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "makhleb donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"At least you've got demons for company.\"\n\n@The_monster@ says, \"Are you sure that summoning demons is a good idea?\"\n\n@The_monster@ says, \"Hey, watch where you throw those bolts!\"\n\n@The_monster@ says, \"What will you do after everything's destroyed?\"\n\n@The_monster@ says, \"I hate demons.\"\n\n@The_monster@ says, \"I hate blood.\"\n\n@The_monster@ says, \"I hate suffering.\"\n\n@The_monster@ says, \"I hate branding.\"\n\n@The_monster@ says, \"I hate pacts.\"\n\n@The_monster@ says, \"I hate the Hells.\"\n\n@The_monster@ says, \"I just stubbed my toe. Does that mean I'm cleansed?\"\n\n@The_monster@ says, \"If I carve 'Go Away' into myself, will Makhleb do that?\"\n\n@The_monster@ says, \"What's the Crucible of Flesh? Some kind of fancy barbecue place?\"\n",
+      "hits": [
+        {
+          "Term": "Makhleb",
+          "Translation": "马科列布",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "throw",
+          "Translation": "投掷",
+          "Part of Speech": "verb",
+          "Variants": "",
+          "Note": "【0.34.1 修订】本条是动作动词；独立补充 Throwing 技能，不把普通 throwing 自动视为技能名。 来源：skills.cc。\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "Crucible",
+          "Translation": "血肉熔炉",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Crucible（规范缩写 Crucible）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "the Crucible of Flesh",
+          "Translation": "血肉熔炉",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Crucible（规范缩写 Crucible）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "sif muna donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"Don't you wish for a portable bookcase?\"\n\n@The_monster@ says, \"Imagine how many trees were cut down to fuel your hobby.\"\n\n@The_monster@ says, \"Man, that must be some big library.\"\n\n@The_monster@ says, \"Found the spell you wanted yet?\"\n\n@The_monster@ says, \"If you wanted to read so much, why didn't you become a librarian?\"\n\n@The_monster@ says, \"Did you remember that thing that you forgot? I hate that.\"\n\n@The_monster@ says, \"It's like an all you can read... something.\"\n\n@The_monster@ says, \"I hate books.\"\n\n@The_monster@ says, \"Surely there's a limit to the number of books you can carry. Right?\"\n\n@The_monster@ says, \"It's good how you can learn magic as if by magic.\"\n\n@The_monster@ says, \"I hate spells.\"\n\n@The_monster@ says, \"Don't you just hate miscasts?\"\n",
+      "hits": [
+        {
+          "Term": "Sif Muna",
+          "Translation": "席夫·穆纳",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "spell",
+          "Translation": "法术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "trog donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"So, are you allowed to read books?\"\n\n@The_monster@ says, \"You troglodyte!\"\n\n@The_monster@ says, \"I heard Trog has abandonment issues.\"\n\n@The_monster@ says, \"I bet Trog's next axe will take you to the Abyss.\"\n\n@The_monster@ says, \"I considered Trog, but the aftereffects of berserk scare me.\"\n\n@The_monster@ says, \"I bet you wish you could cast spells now, right?\"\n\n@The_monster@ says, \"Are you sure you're allowed to read scrolls?\"\n\n@The_monster@ says, \"Hey, I thought wands weren't allowed!\"\n\n@The_monster@ says, \"If I tell you I hate magic, will you worship me?\"\n\n@The_monster@ says, \"I hate ogres.\"\n",
+      "hits": [
+        {
+          "Term": "Abyss",
+          "Translation": "深渊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Trog",
+          "Translation": "特洛戈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "berserk",
+          "Translation": "狂暴",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/状态】与背景 Berserker（狂战士）区分。 来源：duration-data.h。"
+        },
+        {
+          "Term": "the Abyss",
+          "Translation": "深渊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Abyss（规范缩写 Abyss）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "nemelex xobeh donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"What's all in the cards? Your future?\"\n\n@The_monster@ says, \"I bet you're feeling stupid now, huh?\"\n\n@The_monster@ says, \"If I draw a card, can you tell me which one it is?\"\n\n@The_monster@ says, \"Where do you keep all those decks?\"\n\n@The_monster@ says, \"I'm sure I saw a card fall out of that deck.\"\n\n@The_monster@ says, \"I've seen this trick before. You've got the ace up your sleeve, right?\"\n\n@The_monster@ says, \"You need to come to terms with your gambling problem.\"\n\n@The_monster@ says, \"How about a game of 52 card pickup?\"\n\n@The_monster@ laughs, \"An explosive gambit... I hate that.\"\n",
+      "hits": [
+        {
+          "Term": "deck",
+          "Translation": "套牌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Nemelex Xobeh",
+          "Translation": "尼姆雷斯・索布",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "骗术之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "elyvilon donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"Whatever happened to, 'First, do no harm'?\"\n\n@The_monster@ says, \"Doesn't healing your enemies sound rather pointless?\"\n\n@The_monster@ says, \"Maybe you should start praying.\"\n\n@The_monster@ says, \"If I give you my weapon, will you leave me alone?\"\n\n@The_monster@ says, \"Come on. Make me an offer of peace that I can't refuse!\"\n\n@The_monster@ says, \"For every monster you don't kill, I'll kill three.\"\n",
+      "hits": [
+        {
+          "Term": "Elyvilon",
+          "Translation": "艾利维隆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Harm",
+          "Translation": "伤害",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "lugonu donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"Why would you want to visit the Abyss? For a holiday?\"\n\n@The_monster@ says, \"Nothing ever attacks me when I'm in the Abyss.\"\n\n@The_monster@ says, \"Are you going to banish me, too?\"\n\n@The_monster@ says, \"The world's bad enough without you corrupting it.\"\n\n@The_monster@ says, \"You must really love eldritch horrors. I hate them.\"\n\n@The_monster@ says, \"How can a god be banished to the Abyss?\"\n",
+      "hits": [
+        {
+          "Term": "Abyss",
+          "Translation": "深渊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Lugonu",
+          "Translation": "卢戈努",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇】补齐现行神祇名称。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Banish",
+          "Translation": "放逐",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+        },
+        {
+          "Term": "the Abyss",
+          "Translation": "深渊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Abyss（规范缩写 Abyss）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "beogh donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"Beogh must be pretty vain, having all those worshippers get remade in Beogh's image.\"\n\n@The_monster@ says, \"One of the priests looked like she was going to ask me to join... I guess she changed her mind.\"\n\n@The_monster@ says, \"You think walking on water is cool? I can swim.\"\n\n@The_monster@ says, \"Isn't it annoying when people just start challenging you, and you can't get away from them?\"\n\n@The_monster@ says, \"I'd get sick of only having three followers at most.\"\n\n@The_monster@ says, \"How do you find enough ash and charcoal to anoint them all?\"\n\n@The_monster@ says, \"You'll need more than orcs to take me on.\"\n\n@The_monster@ says, \"Do you like preaching on mountaintops?\"\n\n@The_monster@ says, \"What is divine providence, anyway? I hate that.\"\n\n@The_monster@ says, \"You'd better watch out. The one on the left looks like he gets lost easily.\"\n\n@The_monster@ says, \"You think you're the Messiah? I met another orc who thought that, too.\"\n\n@The_monster@ says, \"Messiah? I hate messiahs.\"\n\n@The_monster@ bows and submits to you. \"Nah, just kidding.\"\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Bows",
+          "Translation": "弓",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【历史技能】独立技能已合并为 Ranged Weapons（远程武器）；物品类别仍可使用弓、弩、投石索。来源：docs/changelog.txt。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "ignis donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"Don't fight so hard! You'll just burn out.\"\n\n@The_monster@ says, \"Huh, so Ignis will die when you do... how's that make you feel?\"\n\n@The_monster@ says, \"You'd think a god of fire would be a bit brighter.\"\n\n@The_monster@ says, \"Feel like your fire's burning out? I hate that.\"\n\n@The_monster@ says, \"You know a god's a real winner when you're their only follower, right?\"\n\n@The_monster@ says, \"Oh, I wondered where that burning smell was coming from.\"\n\n@The_monster@ says, \"Why not join one of those new, up-and-coming flame gods instead?\"\n\n@The_monster@ says, \"Doesn't it hurt to go crashing headfirst through the ceiling?\"\n\n@The_monster@ says, \"Wow, you can rise to a higher floor... isn't that called 'climbing stairs'?\"\n\n@The_monster@ says, \"Wow, fire everywhere! I hate that.\"\n",
+      "hits": [
+        {
+          "Term": "floor",
+          "Translation": "地面/楼层/地板/向下取整",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【语境补充 2026-10-21】物理表面按语境用地面或地板。地下城深度用楼层。math.floor 为向下取整函数，代码标识符保留英文。"
+        },
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Ignis",
+          "Translation": "伊格尼斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/神祇】垂熄之焰神祇，不能用旧神 Pakellas 替代。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "flame",
+          "Translation": "火焰",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_FIRE；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Fire",
+          "Translation": "火焰强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "jiyva donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"Come slime with me!\"\n\n@The_monster@ says, \"You look a bit slimy.\"\n\n@The_monster@ says, \"Ah. That explains where all the items went.\"\n\n@The_monster@ says, \"Are you going to open a jelly farm when you find the Orb?\"\n\n@The_monster@ says, \"I hate it when jellies take over a level.\"\n\n@The_monster@ says, \"Your jellies ate my lunch. I hate that.\"\n\n@The_monster@ says, \"I hate slime.\"\n\n@The_monster@ says, \"You must hate doors a lot.\"\n\n@The_monster@ says, \"If I pretend to be a jelly, can I have your stuff?\"\n",
+      "hits": [
+        {
+          "Term": "Jiyva",
+          "Translation": "吉瓦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "吉瓦是统治软泥怪的混沌古神。\n【现行神祇】名称由 god_name_jiyva 单独生成，随机后缀不能当作另一位神祇。来源：religion.cc。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "jelly",
+          "Translation": "胶怪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "the Orb",
+          "Translation": "宝珠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        }
+      ]
+    },
+    {
+      "key": "fedhas donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"What's with all that fungus?\"\n\n@The_monster@ says, \"I hate [trees|plants|fungi].\"\n\n@The_monster@ says, \"Do you like gardening? I hate gardening.\"\n\n@The_monster@ says, \"So, how do you deal with the weeds?\"\n\n@The_monster@ says, \"A plant spat acid at me. I hate that.\"\n\n@The_monster@ says, \"Better hope you don't develop allergies.\"\n",
+      "hits": [
+        {
+          "Term": "Fedhas",
+          "Translation": "费德哈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "fungus",
+          "Translation": "真菌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "plant",
+          "Translation": "植物",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "acid",
+          "Translation": "酸蚀",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "cheibriados donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"Slow down!\"\n\n@The_monster@ says, \"You're not very quick on the uptake, are you?\"\n\n@The_monster@ says, \"You know, if you want, I know a very good posture trainer.\"\n\n@The_monster@ says, \"Am I talking too fast for you?\"\n\n@The_monster@ says, \"Look at me! I'm running, I'm running!\"\n\n@The_monster@ says, \"Quick, run away!\"\n\n@The_monster@ says, \"How about we settle this with a race?\"\n",
+      "hits": [
+        {
+          "Term": "Cheibriados",
+          "Translation": "切布理亚多",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "审慎之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Slow",
+          "Translation": "缓慢术/减速/缓慢/迟缓",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用缓慢术。施加状态用减速。普通动作或反应用缓慢、迟缓。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "xom donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"Xom? Are you insane?\"\n\n@The_monster@ says, \"I don't get Xom.\"\n\n@The_monster@ says, \"I hate Xom.\"\n\n@The_monster@ says, \"I hate maniacal laughter.\"\n\n@The_monster@ says, \"I hate divine lightning.\"\n\n@The_monster@ says, \"If it's mutations you're wanting, wouldn't Jiyva be a better deal?\"\n\n@The_monster@ says, \"I hope you love dancing weapons. I hate them.\"\n\n@The_monster@ says, \"Been surrounded by packs of demons recently? I hate that.\"\n\n@The_monster@ says, \"Xom just doesn't make any sense. I hate that.\"\n\n@The_monster@ says, \"What kind of name is 'Xom', anyway?\"\n\n@The_monster@ says, \"What is a 'random number god' anyway?\"\n\n@The_monster@ says, \"I had a teddy bear once. I hated it.\"\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Jiyva",
+          "Translation": "吉瓦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "吉瓦是统治软泥怪的混沌古神。\n【现行神祇】名称由 god_name_jiyva 单独生成，随机后缀不能当作另一位神祇。来源：religion.cc。"
+        },
+        {
+          "Term": "maniacal",
+          "Translation": "疯狂的",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "mutations",
+          "Translation": "变异",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Xom",
+          "Translation": "佐姆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "bear",
+          "Translation": "熊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "vehumet donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"What kind of god gives you spells but not spellbooks?\"\n\n@The_monster@ says, \"Let it end in hellfire? Why is there only one hellfire spell?\"\n\n@The_monster@ says, \"I hate Vehumet.\"\n\n@The_monster@ says, \"I hate hellfire.\"\n\n@The_monster@ says, \"What's the point of conjuring, anyway?\"\n\n@The_monster@ says, \"Do you find it easier to cast spells, now?\"\n\n@The_monster@ says, \"I hate explosions.\"\n\n@The_monster@ says, \"You're supposed to blow everything up for a god who barely gives you powers?\"\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "spell",
+          "Translation": "法术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Vehumet",
+          "Translation": "维胡梅特",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "ashenzari donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"You seem like a real know-it-all. I hate that.\"\n\n@The_monster@ says, \"What's the point of being all-knowing if you can't do anything?\"\n\n@The_monster@ makes a face at you and exclaims, \"Curses!\"\n\n@The_monster@ says, \"I got nailed to the sky once. No big deal, really.\"\n\n@The_monster@ says, \"I hate voyeurs.\"\n\n@The_monster@ says, \"What does a god have to do to get cursed, anyway?\"\n",
+      "hits": [
+        {
+          "Term": "Ashenzari",
+          "Translation": "艾申扎利",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "dithmenos donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"Sounds like you're dealing with a pretty shady god there.\"\n\n@The_monster@ says, \"I'll bet you have a pretty dark future.\"\n\n@The_monster@ squints around. \"I can't see a thing. I hate that.\"\n\n@The_monster@ says, \"I hate shadows.\"\n\n@The_monster@ says, \"I hate starless nights.\"\n\n@The_monster@ says, \"Are you still afraid of the dark?\"\n\n@The_monster@ says, \"Careful; you might trip over your own shadow.\"\n",
+      "hits": [
+        {
+          "Term": "Dithmenos",
+          "Translation": "迪斯姆诺",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "隐没者，黑暗之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "shadow",
+          "Translation": "影",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Might",
+          "Translation": "强力术/可能/力量",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术或能力标题保留强力术。情态动词 might 表示可能。名词 might 表示力量或威力。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Shadows",
+          "Translation": "阴影",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "gozag donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"Spare some coin?\"\n\n@The_monster@ says, \"I hate the rich.\"\n\n@The_monster@ says, \"I bet you have to pay people to get friends.\"\n\n@The_monster@ says, \"Couldn't find enough potions?\"\n\n@The_monster@ says, \"So the shops here weren't enough for you?\"\n\n@The_monster@ says, \"I saw some gold over there. Quick, better go get it!\"\n\n@The_monster@ says, \"What do potions have to do with a god of gold, anyway?\"\n\n@The_monster@ says, \"If you give me all your gold, I promise I'll be your friend too.\"\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Gozag",
+          "Translation": "哥萨戈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "qazlal donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"How do you sleep at night with all those storm clouds?\"\n\n@The_monster@ says, \"Must be pretty hard to see through all that dust.\"\n\n@The_monster@ says, \"I hate storms.\"\n\n@The_monster@ says, \"I hate disasters.\"\n\n@The_monster@ says, \"I hate elementals.\"\n\n@The_monster@ says, \"What was that? Sorry, I couldn't hear you over all this noise.\"\n\n@The_monster@ says, \"Well, at least you're never short of company.\"\n\n@The_monster@ says, \"Great. Now my shield is all dirty.\"\n",
+      "hits": [
+        {
+          "Term": "Qazlal",
+          "Translation": "卡兹拉尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "风暴之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Shield",
+          "Translation": "格挡值/盾牌/保护",
+          "Part of Speech": "noun",
+          "Variants": "SH",
+          "Note": "【0.34.1 修订】原表备注明确是属性；官方手册也以 Shield 为 SH 标题。此处保留该语境；普通物品 shield 仍译盾牌，必须按上下文区分。 来源：docs/crawl_manual.rst。\n【语境补充 2026-10-21】SH 属性用格挡值。装备名词 shield 用盾牌。shield 作动词用保护，不改写物品种类。"
+        },
+        {
+          "Term": "noise",
+          "Translation": "噪音/声音/巨响",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/战斗机制】影响听觉警觉，不同于画面显示延迟。 来源：shout.cc。\n【语境补充 2026-10-21】机制、标题及数值用噪音。具体可听声响按语境用声音或巨响，不强制把研磨声等改为噪音。"
+        },
+        {
+          "Term": "Sleep",
+          "Translation": "睡眠术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "ru donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"Missing something?\"\n\n@The_monster@ says, \"I hate sacrifices.\"\n\n@The_monster@ says, \"I hate sacrificants.\"\n\n@The_monster@ says, \"Once, I gave up eating meat for a week. I hated that.\"\n\n@The_monster@ says, \"Once, I gave up drinking for a week. I hated that.\"\n\n@The_monster@ says, \"I hate hidden layers of reality.\"\n\n@The_monster@ says, \"I hate existential doubt.\"\n\n@The_monster@ says, \"The great annihilating truth is that I hate you.\"\n",
+      "hits": [
+        {
+          "Term": "Ru",
+          "Translation": "入",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "牺牲与内在力量之神\n【版本/语境】专名沿用原译“入”，不是单词“进入”；献祭祭坛组合用“入神”。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "pakellas donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"I hate inventors.\"\n\n@The_monster@ says, \"What are you with all those gadgets, some kind of pawn shop?\"\n\n@The_monster@ says, \"What would you do with the Orb, anyway? Experiment on it?\"\n\n@The_monster@ says, \"Bet you can't [analyse|invent] your way out of this one.\"\n\n@The_monster@ says, \"Can I borrow that [wand|lamp|fan] for a second? You must have some to spare.\"\n",
+      "hits": [
+        {
+          "Term": "Pakellas",
+          "Translation": "帕克拉斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【版本/语境】已移除的玩家神祇；保留历史资料用途，不作为 0.34.1 可选神祇。 来源：god-type.h。"
+        },
+        {
+          "Term": "shop",
+          "Translation": "商店",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "wand",
+          "Translation": "魔杖",
+          "Part of Speech": "noun",
+          "Variants": "wand of",
+          "Note": "【使用约束】wand of 是组合前缀；先确定完整物品名再处理中文词序。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "the Orb",
+          "Translation": "宝珠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        }
+      ]
+    },
+    {
+      "key": "hepliaklqana donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"I went to a family reunion once. I hated it.\"\n\n@The_monster@ says, \"Who would want to remember their ancestors? They're dead.\"\n\n@The_monster@ says, \"If your ancestor was so tough and powerful, how come they're dead?\"\n\n@The_monster@ says, \"Would you happen to remember where the Orb is?\"\n\n@The_monster@ says, \"Ghost stories? Ooh, I'm so scared!\"\n\n@The_monster@ says, \"Isn't it convenient that your ancestor always knows how to fight?\"\n\n@The_monster@ says, \"I forgot what I was going to say. I hate that.\"\n",
+      "hits": [
+        {
+          "Term": "ancestor",
+          "Translation": "先祖",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "ghost",
+          "Translation": "鬼魂",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Hepliaklqana",
+          "Translation": "惠普利亚卡纳",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "遗忘者\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "the Orb",
+          "Translation": "宝珠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        }
+      ]
+    },
+    {
+      "key": "uskayaw donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"Dance? No thanks, I don't dance.\"\n\n@The_monster@ says, \"I hate drums.\"\n\n@The_monster@ says, \"I hate chants.\"\n\n@The_monster@ says, \"Poetry of the foot? All you're doing is stomping around.\"\n\n@The_monster@ says, \"You look ridiculous with all that flailing around.\"\n\n@The_monster@ says, \"That's not dancing; that's just a fancy way of killing things.\"\n\n@The_monster@ says, \"What kind of dance blows up spectators?\"\n",
+      "hits": [
+        {
+          "Term": "Uskayaw",
+          "Translation": "阿斯卡亚",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "狂欢者，舞神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "wu jian donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"Path? I don't see a path anywhere.\"\n\n@The_monster@ says, \"You're jumping off the walls? I hate that.\"\n\n@The_monster@ says, \"Watching you spin around is making me dizzy. I hate that.\"\n\n@The_monster@ says, \"Why not just HIT them without all this spinning and flipping nonsense?\"\n\n@The_monster@ says, \"Don't you get tired of all these old geezers telling you what to do?\"\n\n@The_monster@ says, \"No way as a way? Sounds like nonsense.\"\n",
+      "hits": [
+        {
+          "Term": "Wu Jian",
+          "Translation": "武剑会",
+          "Part of Speech": "noun",
+          "Variants": "Wu Jian Council",
+          "Note": "【0.34.1 译名建议】指共同升格为神的武僧集体；正文中的 the Council 和简称 The Council 均按语境称“武剑会”或“本会”，不译作政治机构“议会”；旧备注“无间道”不是英文原文依据，不据此扩写神话背景。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "no god donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ says, \"Don't you get lonely without a god?\"\n\n@The_monster@ says, \"I hate the gods.\"\n\n@The_monster@ says, \"I hate atheists.\"\n\nw:5\n@The_monster@ says, \"I hate the gods, and the gods hate me.\"\n\n@The_monster@ says, \"You must run out of gods to curse by.\"\n\n@The_monster@ says, \"Did you miss the Ecumenical Temple?\"\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Temple",
+          "Translation": "众神殿/神庙/庙宇",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【语境补充 2026-10-21】分支简称用众神殿。泛指某位神祇的建筑用神庙或庙宇。"
+        },
+        {
+          "Term": "the Ecumenical Temple",
+          "Translation": "众神殿",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Temple（规范缩写 Temple）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_generic_donald_",
+      "source": "@The_monster@ says, \"You're really ugly. Did you know that?\"\n\n@The_monster@ says, \"This is such a pointless quest.\"\n\n@The_monster@ says, \"They wouldn't let me join their adventuring club without the Orb.\"\n\n@The_monster@ says, \"I hate this place.\"\n\n@The_monster@ says, \"I hate you, too.\"\n\n@The_monster@ says, \"My feet hurt.\"\n\n@The_monster@ says, \"My hands hurt, too.\"\n\n@The_monster@ says, \"I think I'm starting to get a cough. I hate that.\"\n\n@The_monster@ says, \"I've got a headache. I hate that.\"\n\n@The_monster@ says, \"That colour you're wearing? I hate that.\"\n\n@The_monster@ says, \"Like I always say, the jar is half empty.\"\n\n@The_monster@ says, \"And you think you've got it bad...\"\n\n@The_monster@ says, \"I wonder if there's an end to this place.\"\n\n@The_monster@ says, \"Is it turtles all the way down?\"\n\n@The_monster@ says, \"The people that built this place? They must be crazy.\"\n\n@The_monster@ says, \"The air in here stinks. I hate that.\"\n\n@The_monster@ says, \"I bet the Orb isn't even all that great.\"\n\n@The_monster@ says, \"So, what is this Orb thing, anyway?\"\n\n@The_monster@ says, \"I hope I haven't come all this way for a glorified paperweight.\"\n\n@The_monster@ says, \"I don't get what's so special about the number twenty-seven.\"\n\n@The_monster@ says, \"The other people here are really rude.\"\n\n@The_monster@ says, \"Maybe I'll visit Hell next.\"\n\n@The_monster@ says, \"The Vaults look kind of boring.\"\n\n@The_monster@ says, \"I can never work out what any of these scrolls mean.\"\n\n@The_monster@ sighs.\n\nVISUAL:@The_monster@ winces.\n\nVISUAL:@The_monster@ makes a rude gesture at you.\n\nVISUAL:@The_monster@ shakes @possessive@ head.\n\n@The_monster@ says, \"What lunatic would build a room out of doors?\"\n\n@The_monster@ says, \"Why would someone put a sword in a little box?\"\n\n@The_monster@ says, \"I think I hate rivers, but I can't remember why.\"\n\n@The_monster@ says, \"That guy with the scythe is really mean.\"\n\nw:1\n@The_monster@ says, \"What kind of a name is Fauntleroy?\"\n\nw:1\n@The_monster@ says, \"What's the big idea?!\"\n",
+      "hits": [
+        {
+          "Term": "Hell",
+          "Translation": "地狱",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Vaults",
+          "Translation": "宝库/密室/跃起",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【语境补充 2026-10-21】分支专名用宝库。地图 vaults 用密室。vaults off a wall 作动词表示蹬墙跃起。"
+        },
+        {
+          "Term": "the Vaults",
+          "Translation": "宝库",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Vaults（规范缩写 Vaults）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "the Orb",
+          "Translation": "宝珠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Air",
+          "Translation": "空气强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "friendly donald",
+      "source": "w:50\n@_generic_Donald_@\n\n@The_monster@ sings, \"Roses are red / violets are blue / I hate many things / But most of all you!\"\n",
+      "hits": [
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "default hostile confused donald",
+      "source": "@The_monster@ says, \"I suppose everything's okay, then?\"\n\n@The_monster@ says, \"Actually, I like you.\"\n\n@The_monster@ says, \"Oh boy, oh boy, oh boy!\"\n\n@The_monster@ says, \"Aw, phooey!\"\n\n@The_monster@ says, \"But I've got a wife! And kids! Have I?\"\n\n@The_monster@ screams.\n\n@The_monster@ makes quacking noises.\n\n@The_monster@ says, \"My legs! My legs! What happened to my legs?\"\n\n@The_monster@ sings badly, off-key.\n\nVISUAL:@The_monster@ does a happy little dance.\n\nVISUAL:@The_monster@ sticks a finger up @possessive@ nose.\n\nVISUAL:@The_monster@ tugs at @possessive@ hair.\n\nVISUAL:@The_monster@ twirls gently on the spot.\n",
+      "hits": [
+        {
+          "Term": "hostile",
+          "Translation": "敌对",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "donald marionette",
+      "source": "@The_monster@ says, \"Don't use me like a cheap sock puppet. I hate that.\"\n",
+      "hits": [
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "donald riddle",
+      "source": "@The_monster@ says, \"Everybody knows that one already. Try something more original.\"\n",
+      "hits": [
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "donald killed",
+      "source": "w:100\n__NONE\n\nw:1\n@The_monster@ says, \"I'm dying. I hate that.\"\n",
+      "hits": [
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "donald banished",
+      "source": "w:100\n__NONE\n\nw:1\n@The_monster@ says, \"Banished to the Abyss. I hate that.\"\n",
+      "hits": [
+        {
+          "Term": "Abyss",
+          "Translation": "深渊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "the Abyss",
+          "Translation": "深渊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Abyss（规范缩写 Abyss）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "donald triumphant",
+      "source": "@The_monster@ says, \"I won. I... don't hate that.\"\n\n@The_monster@ says, \"Well, maybe you weren't so bad after all.\"\n",
+      "hits": [
+        {
+          "Term": "Donald",
+          "Translation": "唐纳德",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    }
+  ],
+  "legacy_overlay_present": true,
+  "deferred_keys": [
+    "twin_died dowan",
+    "twin_banished dowan",
+    "twin_slimified dowan",
+    "dowan",
+    "fleeing dowan",
+    "_dowan_common_",
+    "_dowan_rare_",
+    "dowan_duvessa_dies",
+    "dowan_duvessa_dies_invisible",
+    "dowan_duvessa_dies_distance",
+    "dowan_duvessa_dies_bytwin",
+    "dowan_duvessa_dies_invisible_bytwin",
+    "dowan_duvessa_dies_distance_bytwin",
+    "twin_died duvessa",
+    "twin_ikilled duvessa",
+    "twin_banished duvessa",
+    "twin_ikilled dowan",
+    "duvessa",
+    "_duvessa_common_",
+    "_duvessa_rare_",
+    "duvessa_dowan_dies",
+    "duvessa_dowan_dies_invisible",
+    "duvessa_dowan_dies_distance",
+    "duvessa_dowan_dies_bytwin",
+    "duvessa_dowan_dies_invisible_bytwin",
+    "duvessa_dowan_dies_distance_bytwin",
+    "edmund",
+    "_edmund_common_",
+    "_edmund_rare_",
+    "edmund triumphant",
+    "erica",
+    "_erica_common_",
+    "_erica_rare_",
+    "erica triumphant",
+    "erolcha",
+    "_erolcha_common_",
+    "_erolcha_rare_",
+    "erolcha banished",
+    "eustachio",
+    "_eustachio_common_",
+    "_eustachio_rare_",
+    "eustachio triumphant",
+    "frances",
+    "_frances_common_",
+    "_frances_rare_",
+    "frederick",
+    "beogh frederick",
+    "okawaru frederick",
+    "_frederick_common_",
+    "_frederick_rare_",
+    "frederick triumphant",
+    "frederick riddle",
+    "ashenzari frederick triumphant",
+    "beogh frederick triumphant",
+    "cheibriados frederick triumphant",
+    "dithmenos frederick triumphant",
+    "elyvilon frederick triumphant",
+    "fedhas frederick triumphant",
+    "gozag frederick triumphant",
+    "hepliaklqana frederick triumphant",
+    "ignis frederick triumphant",
+    "jivya frederick triumphant"
+  ],
+  "compound_queries": [
+    "Unearth Wretches",
+    "merfolk siren",
+    "Medusa",
+    "hydra",
+    "leech",
+    "mosquito",
+    "swamp worm",
+    "siren",
+    "kraken",
+    "yaktaur",
+    "quicksilver dragon",
+    "poltergeist",
+    "sphinx",
+    "curse skull",
+    "curse toe",
+    "wretch",
+    "screaming refraction",
+    "orb of fire",
+    "orb of destruction",
+    "ring of ice",
+    "Orb of Power",
+    "choko",
+    "dancing weapon",
+    "turtle",
+    "tortoise",
+    "salamander",
+    "garuda",
+    "necrophage",
+    "draugr",
+    "Tomb",
+    "the Tomb",
+    "positive energy",
+    "gargoyle"
+  ],
+  "compound_hits": [
+    {
+      "Term": "gargoyle",
+      "Translation": "石像鬼",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/gargoyle.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "hydra",
+      "Translation": "海德拉",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "kraken",
+      "Translation": "海妖",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "merfolk siren",
+      "Translation": "人鱼塞壬",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "salamander",
+      "Translation": "沙罗曼蛇",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "sphinx",
+      "Translation": "斯芬克斯",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Tomb",
+      "Translation": "灵庙",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "yaktaur",
+      "Translation": "半人牛",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Poltergeist",
+      "Translation": "骚灵",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/poltergeist.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Orb of Destruction",
+      "Translation": "毁灭之球",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Unearth Wretches",
+      "Translation": "掘出苦役",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+    },
+    {
+      "Term": "curse skull",
+      "Translation": "诅咒头骨",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "curse toe",
+      "Translation": "诅咒脚趾",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "dancing weapon",
+      "Translation": "舞动武器",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "draugr",
+      "Translation": "尸鬼",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "necrophage",
+      "Translation": "食腐尸",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "orb of fire",
+      "Translation": "火焰之球",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "quicksilver dragon",
+      "Translation": "水银龙",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "screaming refraction",
+      "Translation": "尖啸折光体",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "swamp worm",
+      "Translation": "沼泽蠕虫",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "the Tomb",
+      "Translation": "陵墓",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "new_reviewed_ui_parameters": 13,
+  "python_tests_passed": 32,
+  "native_test_cases_passed": 5,
+  "native_assertions_passed": 197,
+  "native_seconds": 0.13,
+  "windows_tiles_build": "passed",
+  "gui_visual_test": false,
+  "margery": "Existing reviewed TextDB colour/actor rendering passes; no duplicate translation added",
+  "textdb_reviewed_counts": {
+    "monspeak.txt": 731,
+    "monspell.txt": 262
+  }
+}

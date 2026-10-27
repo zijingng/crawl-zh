@@ -1,0 +1,2653 @@
+{
+  "glossary_sha256": "5b0e7563973cc4449b02977ed1d7b4cfb7f9aa33877063cff3f665c99ff50965",
+  "files": [
+    {
+      "file": "package.cc",
+      "sha256": "804353670ffbeaabab3d6fd3318c89d223602ebf730827f1b739bbb1f923e2d3",
+      "hits": [
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开"
+        },
+        {
+          "term": "manual",
+          "translation": "手册/手动"
+        },
+        {
+          "term": "throw",
+          "translation": "投掷"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        }
+      ]
+    },
+    {
+      "file": "package.h",
+      "sha256": "2277904b90dbc96e73834013a817d475b39444bf305da9a127b61635d840203b",
+      "hits": []
+    },
+    {
+      "file": "pattern.cc",
+      "sha256": "b1c554e996c9f72a9439ee76473b6f2bd7e0aed34dbd28672f4400dbc3a694e9",
+      "hits": [
+        {
+          "term": "rC",
+          "translation": "冰抗"
+        }
+      ]
+    },
+    {
+      "file": "pattern.h",
+      "sha256": "72e478591fb60d5cbbbb7c95cc952f1328af11f8ef3139a6255a28b3f80e1eec",
+      "hits": []
+    },
+    {
+      "file": "pcg.cc",
+      "sha256": "c300e8cfcfff49524d6dd45c4ebbec0896e2fd16e93aed5e10f754aacd1fa285",
+      "hits": [
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "rot",
+          "translation": "腐烂"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        }
+      ]
+    },
+    {
+      "file": "pcg.h",
+      "sha256": "e200dfc91b6975d7274d946538aa3b7a6485d6eb4f907bff949378198909bbd6",
+      "hits": [
+        {
+          "term": "max",
+          "translation": "最大值"
+        }
+      ]
+    },
+    {
+      "file": "perlin.cc",
+      "sha256": "a9837e1e3144f5425869a6c9eb050c18eb25d0d37a7255d7297bce63b6ae555b",
+      "hits": [
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "Zin",
+          "translation": "辛"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "noise",
+          "translation": "噪音/声音/巨响"
+        },
+        {
+          "term": "speed",
+          "translation": "快速"
+        }
+      ]
+    },
+    {
+      "file": "perlin.h",
+      "sha256": "ede412ea746ff20fafb74794ae3aef930a703e73691cb0dbb183c925f66a4993",
+      "hits": [
+        {
+          "term": "Zin",
+          "translation": "辛"
+        },
+        {
+          "term": "noise",
+          "translation": "噪音/声音/巨响"
+        }
+      ]
+    },
+    {
+      "file": "piety-info.cc",
+      "sha256": "b33e46be571d5bee2996a19a1c618b11d1c6749c6e52a7455af5ee779727b49e",
+      "hits": [
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "piety",
+          "translation": "虔诚"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "float",
+          "translation": "飘浮"
+        }
+      ]
+    },
+    {
+      "file": "piety-info.h",
+      "sha256": "1b3f0000a82e2fda48669d33048ac792fdebddd83b4abf11d9b25a69b372b143",
+      "hits": [
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "stats",
+          "translation": "属性"
+        },
+        {
+          "term": "piety",
+          "translation": "虔诚"
+        },
+        {
+          "term": "penance",
+          "translation": "赎罪"
+        },
+        {
+          "term": "faith",
+          "translation": "信仰"
+        },
+        {
+          "term": "float",
+          "translation": "飘浮"
+        }
+      ]
+    },
+    {
+      "file": "place-info.cc",
+      "sha256": "7c303ef11bd3eee0908440213538f5dd5b0e0e852412f51ae8b40953cc1c33fb",
+      "hits": [
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "place-info.h",
+      "sha256": "105bc280499597052612428abc58a1c8d64f64c84ac96f2b24e568b85edc0a7f",
+      "hits": []
+    },
+    {
+      "file": "place.cc",
+      "sha256": "482002dfe608e5ec888be40ce18ffa350759ec44e19d6313a3848628953816ee",
+      "hits": [
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "Hell",
+          "translation": "地狱"
+        },
+        {
+          "term": "Pandemonium",
+          "translation": "魔窟"
+        },
+        {
+          "term": "the Dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "Necropolis",
+          "translation": "亡者之城"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "place.h",
+      "sha256": "ac1893a90a6f64488723e37fa79c1a6583711c4a96ed323cc5f1dc95f5bda1fe",
+      "hits": [
+        {
+          "term": "Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        }
+      ]
+    },
+    {
+      "file": "platform.h",
+      "sha256": "0484f29acfe09a53e977a58b23cee73134b3a2b4efc41c9e68d9aed202ec2f08",
+      "hits": [
+        {
+          "term": "weird",
+          "translation": "奇怪的"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        }
+      ]
+    },
+    {
+      "file": "playable.cc",
+      "sha256": "bdb32a6bb328d1282f7c9d73fb09486be0f478ebb52ae786b146cda58e569bfb",
+      "hits": [
+        {
+          "term": "aptitude",
+          "translation": "技能天资/天资"
+        },
+        {
+          "term": "Elementalist",
+          "translation": "元素使"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "vine stalker",
+          "translation": "藤蔓人"
+        },
+        {
+          "term": "Fire Elementalist",
+          "translation": "火元素使"
+        }
+      ]
+    },
+    {
+      "file": "playable.h",
+      "sha256": "abcaac414117961d1bd3f35ce00ca87ecd7201bbbc9c0bb32e809444fac6bf8a",
+      "hits": [
+        {
+          "term": "species",
+          "translation": "种族"
+        }
+      ]
+    },
+    {
+      "file": "player-act.cc",
+      "sha256": "eea386f40fedfee188fd65f29a9051a981a0039014995def36f582f300ee8540",
+      "hits": [
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "blink",
+          "translation": "闪烁/闪现/眨眼"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "potion",
+          "translation": "药水"
+        },
+        {
+          "term": "Shield",
+          "translation": "格挡值/盾牌/保护"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "stasis",
+          "translation": "稳态"
+        },
+        {
+          "term": "stats",
+          "translation": "属性"
+        },
+        {
+          "term": "statue",
+          "translation": "雕像"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "wand",
+          "translation": "魔杖"
+        },
+        {
+          "term": "Felid",
+          "translation": "猫族"
+        },
+        {
+          "term": "Naga",
+          "translation": "娜迦"
+        },
+        {
+          "term": "Octopode",
+          "translation": "章鱼人"
+        },
+        {
+          "term": "Ranged Weapons",
+          "translation": "远程武器"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "berserk",
+          "translation": "狂暴"
+        },
+        {
+          "term": "haste",
+          "translation": "疾速"
+        },
+        {
+          "term": "Slow",
+          "translation": "缓慢术/减速/缓慢/迟缓"
+        },
+        {
+          "term": "Death's Door",
+          "translation": "死亡之门"
+        },
+        {
+          "term": "Confusing Touch",
+          "translation": "混乱之触"
+        },
+        {
+          "term": "Melee",
+          "translation": "近战"
+        },
+        {
+          "term": "Storm Form",
+          "translation": "风暴形态"
+        },
+        {
+          "term": "Finesse",
+          "translation": "精湛技艺"
+        },
+        {
+          "term": "Nobody",
+          "translation": "无名氏"
+        },
+        {
+          "term": "dragon",
+          "translation": "龙"
+        },
+        {
+          "term": "giant",
+          "translation": "巨人"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "spider",
+          "translation": "蜘蛛"
+        },
+        {
+          "term": "tentacle",
+          "translation": "触手"
+        },
+        {
+          "term": "clumsy",
+          "translation": "笨拙"
+        },
+        {
+          "term": "speed",
+          "translation": "快速"
+        },
+        {
+          "term": "clarity",
+          "translation": "清明"
+        },
+        {
+          "term": "claws",
+          "translation": "利爪"
+        },
+        {
+          "term": "tentacles",
+          "translation": "触手"
+        }
+      ]
+    },
+    {
+      "file": "player-equip.cc",
+      "sha256": "31cceb019791a3b23915337a2694f57675d3a11e6e5d58d3e4fb6b578b7c148b",
+      "hits": [
+        {
+          "term": "ability",
+          "translation": "能力"
+        },
+        {
+          "term": "amulet of",
+          "translation": "护身符"
+        },
+        {
+          "term": "amulet of faith",
+          "translation": "忠诚护身符"
+        },
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "banishment",
+          "translation": "放逐"
+        },
+        {
+          "term": "boots",
+          "translation": "靴子"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "cloak",
+          "translation": "披风"
+        },
+        {
+          "term": "drain",
+          "translation": "吸能/吸取/消耗"
+        },
+        {
+          "term": "dread",
+          "translation": "恐惧"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "gloves",
+          "translation": "手套"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "hat",
+          "translation": "帽子"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "mutations",
+          "translation": "变异"
+        },
+        {
+          "term": "necromantic",
+          "translation": "死灵的"
+        },
+        {
+          "term": "Shield",
+          "translation": "格挡值/盾牌/保护"
+        },
+        {
+          "term": "Shields",
+          "translation": "盾牌/保护"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "sphinx",
+          "translation": "斯芬克斯"
+        },
+        {
+          "term": "stats",
+          "translation": "属性"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "Trog",
+          "translation": "特洛戈"
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        },
+        {
+          "term": "Coglin",
+          "translation": "机甲哥布林"
+        },
+        {
+          "term": "Alchemy",
+          "translation": "炼金术"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "piety",
+          "translation": "虔诚"
+        },
+        {
+          "term": "poison",
+          "translation": "毒"
+        },
+        {
+          "term": "Pain",
+          "translation": "痛苦术/痛苦"
+        },
+        {
+          "term": "Haunt",
+          "translation": "鬼魂缠身"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Roll",
+          "translation": "翻滚"
+        },
+        {
+          "term": "Regeneration",
+          "translation": "再生术/再生/恢复"
+        },
+        {
+          "term": "Sacrifice",
+          "translation": "献祭/牺牲/祭仪"
+        },
+        {
+          "term": "Banish",
+          "translation": "放逐"
+        },
+        {
+          "term": "fungal fisticloak",
+          "translation": "真菌拳击斗篷"
+        },
+        {
+          "term": "the Dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "flame",
+          "translation": "火焰"
+        },
+        {
+          "term": "sparks",
+          "translation": "电火花"
+        },
+        {
+          "term": "crab",
+          "translation": "蟹"
+        },
+        {
+          "term": "dragon",
+          "translation": "龙"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "strong",
+          "translation": "强壮"
+        },
+        {
+          "term": "meek",
+          "translation": "温顺"
+        },
+        {
+          "term": "strong-willed",
+          "translation": "坚定意志"
+        },
+        {
+          "term": "acrobatic",
+          "translation": "杂技"
+        },
+        {
+          "term": "horns",
+          "translation": "犄角"
+        },
+        {
+          "term": "beak",
+          "translation": "鸟喙"
+        },
+        {
+          "term": "claws",
+          "translation": "利爪"
+        },
+        {
+          "term": "hooves",
+          "translation": "蹄足"
+        },
+        {
+          "term": "antennae",
+          "translation": "触角"
+        },
+        {
+          "term": "talons",
+          "translation": "趾爪"
+        },
+        {
+          "term": "stinger",
+          "translation": "螫刺"
+        },
+        {
+          "term": "magic regeneration",
+          "translation": "魔力再生"
+        },
+        {
+          "term": "repulsion field",
+          "translation": "排斥力场"
+        },
+        {
+          "term": "demonic touch",
+          "translation": "恶魔之触"
+        },
+        {
+          "term": "faith",
+          "translation": "信仰"
+        },
+        {
+          "term": "tentacles",
+          "translation": "触手"
+        }
+      ]
+    },
+    {
+      "file": "player-equip.h",
+      "sha256": "a2eeb041319143127211fcc0da4f310c424be66619f2d827fcdfd31ea820a98e",
+      "hits": [
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "talisman",
+          "translation": "变形护符"
+        },
+        {
+          "term": "Regeneration",
+          "translation": "再生术/再生/恢复"
+        },
+        {
+          "term": "Lear's hauberk",
+          "translation": "李尔锁子甲"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "player-notices.cc",
+      "sha256": "839c3a4d294483a61d866e4ef195e35cb4d3fae9168ddb37206a9ed2f4dda6c4",
+      "hits": [
+        {
+          "term": "Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "Beogh",
+          "translation": "比欧弗"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Gozag",
+          "translation": "哥萨戈"
+        },
+        {
+          "term": "hostile",
+          "translation": "敌对"
+        },
+        {
+          "term": "hydra",
+          "translation": "海德拉"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "sphinx",
+          "translation": "斯芬克斯"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        },
+        {
+          "term": "Zin",
+          "translation": "辛"
+        },
+        {
+          "term": "Human",
+          "translation": "人类"
+        },
+        {
+          "term": "Shapeshifter",
+          "translation": "变形者"
+        },
+        {
+          "term": "Summoner",
+          "translation": "召唤师"
+        },
+        {
+          "term": "the Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "translocational energy",
+          "translation": "位移能量"
+        },
+        {
+          "term": "seething chaos",
+          "translation": "翻涌混沌"
+        },
+        {
+          "term": "sparks",
+          "translation": "电火花"
+        },
+        {
+          "term": "hog",
+          "translation": "猪"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "Wrath",
+          "translation": "神怒"
+        },
+        {
+          "term": "the Orb",
+          "translation": "宝珠"
+        }
+      ]
+    },
+    {
+      "file": "player-notices.h",
+      "sha256": "c89aed3df3cbcc6b5b1020a3b12a80c1756d38946882029bcfa6be7c51ed8ac4",
+      "hits": []
+    },
+    {
+      "file": "player-reacts.cc",
+      "sha256": "99e401f8a0b5fe10c78161c44ecfb6aa9316c699549fa9e4bbd622da6376f91e",
+      "hits": [
+        {
+          "term": "Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "AC",
+          "translation": "护甲值"
+        },
+        {
+          "term": "ancestor",
+          "translation": "先祖"
+        },
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "drain",
+          "translation": "吸能/吸取/消耗"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Maurice",
+          "translation": "莫里斯"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "mutations",
+          "translation": "变异"
+        },
+        {
+          "term": "Ru",
+          "translation": "入"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "stats",
+          "translation": "属性"
+        },
+        {
+          "term": "stealth",
+          "translation": "潜行"
+        },
+        {
+          "term": "Strength",
+          "translation": "力量/强度/威力"
+        },
+        {
+          "term": "Translocations",
+          "translation": "位移系魔法"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "Uskayaw",
+          "translation": "阿斯卡亚"
+        },
+        {
+          "term": "wand",
+          "translation": "魔杖"
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        },
+        {
+          "term": "zombie",
+          "translation": "丧尸"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "piety",
+          "translation": "虔诚"
+        },
+        {
+          "term": "aut",
+          "translation": "时间单位"
+        },
+        {
+          "term": "evoke",
+          "translation": "唤发/发动/使用"
+        },
+        {
+          "term": "berserk",
+          "translation": "狂暴"
+        },
+        {
+          "term": "silence",
+          "translation": "沉默"
+        },
+        {
+          "term": "petrified",
+          "translation": "已石化"
+        },
+        {
+          "term": "Volatile Blastmotes",
+          "translation": "不稳定爆炸微粒"
+        },
+        {
+          "term": "Swiftness",
+          "translation": "迅捷术"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Fortress Blast",
+          "translation": "堡垒冲击"
+        },
+        {
+          "term": "Flight",
+          "translation": "飞行术/飞行/一群"
+        },
+        {
+          "term": "Regeneration",
+          "translation": "再生术/再生/恢复"
+        },
+        {
+          "term": "Cacophony",
+          "translation": "不谐狂响"
+        },
+        {
+          "term": "Recite",
+          "translation": "诵经"
+        },
+        {
+          "term": "Blood for Blood",
+          "translation": "以血还血"
+        },
+        {
+          "term": "the Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "flame",
+          "translation": "火焰"
+        },
+        {
+          "term": "blastmotes",
+          "translation": "爆裂微灵"
+        },
+        {
+          "term": "haunted armour",
+          "translation": "附魂防具"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "tentacle",
+          "translation": "触手"
+        },
+        {
+          "term": "frail",
+          "translation": "体弱"
+        },
+        {
+          "term": "low MP",
+          "translation": "魔力低下"
+        },
+        {
+          "term": "speed",
+          "translation": "快速"
+        },
+        {
+          "term": "time-warped blood",
+          "translation": "时间扭曲之血"
+        },
+        {
+          "term": "powered by death",
+          "translation": "死亡之力"
+        },
+        {
+          "term": "magic regeneration",
+          "translation": "魔力再生"
+        }
+      ]
+    },
+    {
+      "file": "player-reacts.h",
+      "sha256": "d71e10a360e0add28fd8875a7b463a4d31c93734991f11983dbad9f95611203a",
+      "hits": []
+    },
+    {
+      "file": "player-save-info.h",
+      "sha256": "57733e592d9bedad616dfd4448859dd57dad6c02ef72cde61a7f717c247568fe",
+      "hits": [
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "yak",
+          "translation": "牦牛"
+        }
+      ]
+    },
+    {
+      "file": "player-stats.cc",
+      "sha256": "406f409934440e1ec519b930994768091d57a34c855da910110b1056a1a34b29",
+      "hits": [
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "Dexterity",
+          "translation": "敏捷/灵巧"
+        },
+        {
+          "term": "experience",
+          "translation": "经验值"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Intelligence",
+          "translation": "智力/智慧/心智"
+        },
+        {
+          "term": "manual",
+          "translation": "手册/手动"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "mutations",
+          "translation": "变异"
+        },
+        {
+          "term": "stats",
+          "translation": "属性"
+        },
+        {
+          "term": "Strength",
+          "translation": "力量/强度/威力"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "dopey",
+          "translation": "迟钝"
+        },
+        {
+          "term": "clumsy",
+          "translation": "笨拙"
+        },
+        {
+          "term": "clever",
+          "translation": "聪颖"
+        },
+        {
+          "term": "agile",
+          "translation": "敏捷"
+        }
+      ]
+    },
+    {
+      "file": "player-stats.h",
+      "sha256": "786840d73f0d3eeb4268a4b8c8387f7a4d40401870c1d278eed07e8bf3f133fa",
+      "hits": [
+        {
+          "term": "mutation",
+          "translation": "变异"
+        }
+      ]
+    },
+    {
+      "file": "player.cc",
+      "sha256": "a519e8aff670a21fed8c3d432879f0760cdc9de08f17819fba5af0b1b7bf2dfb",
+      "hits": [
+        {
+          "term": "ability",
+          "translation": "能力"
+        },
+        {
+          "term": "Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "AC",
+          "translation": "护甲值"
+        },
+        {
+          "term": "amulet of",
+          "translation": "护身符"
+        },
+        {
+          "term": "amulet of the acrobat",
+          "translation": "杂技护身符"
+        },
+        {
+          "term": "aptitude",
+          "translation": "技能天资/天资"
+        },
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "armour class",
+          "translation": "护甲值"
+        },
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "banishment",
+          "translation": "放逐"
+        },
+        {
+          "term": "bat",
+          "translation": "蝙蝠"
+        },
+        {
+          "term": "Beogh",
+          "translation": "比欧弗"
+        },
+        {
+          "term": "blink",
+          "translation": "闪烁/闪现/眨眼"
+        },
+        {
+          "term": "book",
+          "translation": "魔法书/书/手册"
+        },
+        {
+          "term": "boots",
+          "translation": "靴子"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "Cheibriados",
+          "translation": "切布理亚多"
+        },
+        {
+          "term": "cloak",
+          "translation": "披风"
+        },
+        {
+          "term": "confuse",
+          "translation": "混乱"
+        },
+        {
+          "term": "Console",
+          "translation": "字符版/控制台/终端"
+        },
+        {
+          "term": "demonspawn",
+          "translation": "魔人"
+        },
+        {
+          "term": "Dis",
+          "translation": "冥府"
+        },
+        {
+          "term": "Dodging",
+          "translation": "闪避"
+        },
+        {
+          "term": "drain",
+          "translation": "吸能/吸取/消耗"
+        },
+        {
+          "term": "draining",
+          "translation": "吸能/汲取/耗损"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "evasion",
+          "translation": "闪避值"
+        },
+        {
+          "term": "exclusion",
+          "translation": "移动禁区"
+        },
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开"
+        },
+        {
+          "term": "experience",
+          "translation": "经验值"
+        },
+        {
+          "term": "Fighting",
+          "translation": "战斗/作战/格斗"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "fungus",
+          "translation": "真菌"
+        },
+        {
+          "term": "Gauntlet",
+          "translation": "竞技场"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "haloed",
+          "translation": "处于光环中"
+        },
+        {
+          "term": "hostile",
+          "translation": "敌对"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "Jiyva",
+          "translation": "吉瓦"
+        },
+        {
+          "term": "lich",
+          "translation": "巫妖"
+        },
+        {
+          "term": "liquefied",
+          "translation": "液化的"
+        },
+        {
+          "term": "magic contamination",
+          "translation": "魔法污染"
+        },
+        {
+          "term": "magical contamination",
+          "translation": "魔法污染"
+        },
+        {
+          "term": "Majin-Bo",
+          "translation": "魔神棒"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "mummy",
+          "translation": "木乃伊"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "mutations",
+          "translation": "变异"
+        },
+        {
+          "term": "Orb of Zot",
+          "translation": "佐特宝珠"
+        },
+        {
+          "term": "Pandemonium",
+          "translation": "魔窟"
+        },
+        {
+          "term": "potion",
+          "translation": "药水"
+        },
+        {
+          "term": "randart",
+          "translation": "随机神器"
+        },
+        {
+          "term": "rC",
+          "translation": "冰抗"
+        },
+        {
+          "term": "revenant",
+          "translation": "还魂者"
+        },
+        {
+          "term": "rF",
+          "translation": "火抗"
+        },
+        {
+          "term": "robe",
+          "translation": "长袍"
+        },
+        {
+          "term": "robe of Night",
+          "translation": "夜之长袍"
+        },
+        {
+          "term": "robust",
+          "translation": "强健"
+        },
+        {
+          "term": "rot",
+          "translation": "腐烂"
+        },
+        {
+          "term": "rPois",
+          "translation": "毒抗"
+        },
+        {
+          "term": "scarf",
+          "translation": "围巾"
+        },
+        {
+          "term": "Shield",
+          "translation": "格挡值/盾牌/保护"
+        },
+        {
+          "term": "Shields",
+          "translation": "盾牌/保护"
+        },
+        {
+          "term": "SInv",
+          "translation": "看破隐形"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "Spellcasting",
+          "translation": "施法"
+        },
+        {
+          "term": "sphinx",
+          "translation": "斯芬克斯"
+        },
+        {
+          "term": "staff",
+          "translation": "法杖/工作人员"
+        },
+        {
+          "term": "stasis",
+          "translation": "稳态"
+        },
+        {
+          "term": "stats",
+          "translation": "属性"
+        },
+        {
+          "term": "statue",
+          "translation": "雕像"
+        },
+        {
+          "term": "Staves",
+          "translation": "棍杖"
+        },
+        {
+          "term": "stealth",
+          "translation": "潜行"
+        },
+        {
+          "term": "Strength",
+          "translation": "力量/强度/威力"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "torment",
+          "translation": "折磨"
+        },
+        {
+          "term": "Translocations",
+          "translation": "位移系魔法"
+        },
+        {
+          "term": "Trog",
+          "translation": "特洛戈"
+        },
+        {
+          "term": "troll",
+          "translation": "巨魔"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "umbraed",
+          "translation": "处于幽暗光环中"
+        },
+        {
+          "term": "Unarmed Combat",
+          "translation": "徒手格斗"
+        },
+        {
+          "term": "undead",
+          "translation": "亡灵"
+        },
+        {
+          "term": "vampire",
+          "translation": "吸血鬼"
+        },
+        {
+          "term": "warlock's mirror",
+          "translation": "术士的镜子"
+        },
+        {
+          "term": "weird",
+          "translation": "奇怪的"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        },
+        {
+          "term": "Yredelemnul",
+          "translation": "伊莱德莱姆努尔"
+        },
+        {
+          "term": "Zin",
+          "translation": "辛"
+        },
+        {
+          "term": "zombie",
+          "translation": "丧尸"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特"
+        },
+        {
+          "term": "Zot trap",
+          "translation": "佐特陷阱"
+        },
+        {
+          "term": "Felid",
+          "translation": "猫族"
+        },
+        {
+          "term": "Human",
+          "translation": "人类"
+        },
+        {
+          "term": "Merfolk",
+          "translation": "人鱼"
+        },
+        {
+          "term": "Octopode",
+          "translation": "章鱼人"
+        },
+        {
+          "term": "Poltergeist",
+          "translation": "骚灵"
+        },
+        {
+          "term": "Wanderer",
+          "translation": "漫游者"
+        },
+        {
+          "term": "Throwing",
+          "translation": "投掷"
+        },
+        {
+          "term": "SH",
+          "translation": "格挡值"
+        },
+        {
+          "term": "willpower",
+          "translation": "意志"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "rN",
+          "translation": "负能量抗性"
+        },
+        {
+          "term": "piety",
+          "translation": "虔诚"
+        },
+        {
+          "term": "penance",
+          "translation": "赎罪"
+        },
+        {
+          "term": "aut",
+          "translation": "时间单位"
+        },
+        {
+          "term": "noise",
+          "translation": "噪音/声音/巨响"
+        },
+        {
+          "term": "encumbrance",
+          "translation": "累赘"
+        },
+        {
+          "term": "slaying",
+          "translation": "杀戮"
+        },
+        {
+          "term": "evoke",
+          "translation": "唤发/发动/使用"
+        },
+        {
+          "term": "evoker",
+          "translation": "唤发器"
+        },
+        {
+          "term": "talisman",
+          "translation": "变形护符"
+        },
+        {
+          "term": "barding",
+          "translation": "身甲"
+        },
+        {
+          "term": "Dungeon Sprint",
+          "translation": "地下城冲刺"
+        },
+        {
+          "term": "confusion",
+          "translation": "混乱"
+        },
+        {
+          "term": "paralysis",
+          "translation": "麻痹"
+        },
+        {
+          "term": "poison",
+          "translation": "毒"
+        },
+        {
+          "term": "corrosion",
+          "translation": "腐蚀"
+        },
+        {
+          "term": "berserk",
+          "translation": "狂暴"
+        },
+        {
+          "term": "haste",
+          "translation": "疾速"
+        },
+        {
+          "term": "silence",
+          "translation": "沉默"
+        },
+        {
+          "term": "invisibility",
+          "translation": "隐形"
+        },
+        {
+          "term": "petrifying",
+          "translation": "正在石化"
+        },
+        {
+          "term": "petrified",
+          "translation": "已石化"
+        },
+        {
+          "term": "contamination",
+          "translation": "魔法污染"
+        },
+        {
+          "term": "Polymorph",
+          "translation": "变形术"
+        },
+        {
+          "term": "Slow",
+          "translation": "缓慢术/减速/缓慢/迟缓"
+        },
+        {
+          "term": "Petrify",
+          "translation": "石化术/石化"
+        },
+        {
+          "term": "Polar Vortex",
+          "translation": "极地涡流"
+        },
+        {
+          "term": "Pain",
+          "translation": "痛苦术/痛苦"
+        },
+        {
+          "term": "Sticky Flame",
+          "translation": "黏附火焰"
+        },
+        {
+          "term": "Sting",
+          "translation": "毒刺"
+        },
+        {
+          "term": "Corona",
+          "translation": "光晕术"
+        },
+        {
+          "term": "Paralyse",
+          "translation": "麻痹术/麻痹"
+        },
+        {
+          "term": "Sleep",
+          "translation": "睡眠术"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Trog's Hand",
+          "translation": "特洛格之手"
+        },
+        {
+          "term": "Malmutate",
+          "translation": "恶性突变"
+        },
+        {
+          "term": "Sentinel's Mark",
+          "translation": "哨兵印记"
+        },
+        {
+          "term": "Dimension Anchor",
+          "translation": "次元锚定"
+        },
+        {
+          "term": "Virulence",
+          "translation": "毒性激增"
+        },
+        {
+          "term": "Frozen Ramparts",
+          "translation": "冰霜壁垒"
+        },
+        {
+          "term": "Roll",
+          "translation": "翻滚"
+        },
+        {
+          "term": "Vitrify",
+          "translation": "玻璃化"
+        },
+        {
+          "term": "Vex",
+          "translation": "恼乱术"
+        },
+        {
+          "term": "Flight",
+          "translation": "飞行术/飞行/一群"
+        },
+        {
+          "term": "Infusion",
+          "translation": "灌注术/灌注/补充"
+        },
+        {
+          "term": "Melee",
+          "translation": "近战"
+        },
+        {
+          "term": "Regeneration",
+          "translation": "再生术/再生/恢复"
+        },
+        {
+          "term": "See Invisible",
+          "translation": "看破隐形"
+        },
+        {
+          "term": "Striking",
+          "translation": "打击术"
+        },
+        {
+          "term": "Sacrifice",
+          "translation": "献祭/牺牲/祭仪"
+        },
+        {
+          "term": "Vortex",
+          "translation": "涡流"
+        },
+        {
+          "term": "body armour",
+          "translation": "躯干防具"
+        },
+        {
+          "term": "Cacophony",
+          "translation": "不谐狂响"
+        },
+        {
+          "term": "Enkindle",
+          "translation": "燃忆"
+        },
+        {
+          "term": "Jump",
+          "translation": "跃击"
+        },
+        {
+          "term": "Divine Shield",
+          "translation": "神圣护盾"
+        },
+        {
+          "term": "Heroism",
+          "translation": "英雄气概"
+        },
+        {
+          "term": "Banish",
+          "translation": "放逐"
+        },
+        {
+          "term": "Sacrifice Stealth",
+          "translation": "牺牲潜行"
+        },
+        {
+          "term": "staff of Olgreb",
+          "translation": "奥格雷布之杖"
+        },
+        {
+          "term": "dragonskin cloak",
+          "translation": "龙皮斗篷"
+        },
+        {
+          "term": "mountain boots",
+          "translation": "山岳之靴"
+        },
+        {
+          "term": "the Dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "the Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "Arena",
+          "translation": "奥格瓦如竞技场/竞技场"
+        },
+        {
+          "term": "the Arena",
+          "translation": "奥格瓦如竞技场/竞技场"
+        },
+        {
+          "term": "flame",
+          "translation": "火焰"
+        },
+        {
+          "term": "steam",
+          "translation": "蒸汽"
+        },
+        {
+          "term": "wisps of flame",
+          "translation": "缕缕火焰"
+        },
+        {
+          "term": "bats",
+          "translation": "蝙蝠群"
+        },
+        {
+          "term": "dragon",
+          "translation": "龙"
+        },
+        {
+          "term": "jelly",
+          "translation": "胶怪"
+        },
+        {
+          "term": "orc",
+          "translation": "兽人"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "spider",
+          "translation": "蜘蛛"
+        },
+        {
+          "term": "tentacle",
+          "translation": "触手"
+        },
+        {
+          "term": "Wrath",
+          "translation": "神怒"
+        },
+        {
+          "term": "the Orb",
+          "translation": "宝珠"
+        },
+        {
+          "term": "inhibited regeneration",
+          "translation": "再生受阻"
+        },
+        {
+          "term": "weak",
+          "translation": "虚弱"
+        },
+        {
+          "term": "frail",
+          "translation": "体弱"
+        },
+        {
+          "term": "strong",
+          "translation": "强壮"
+        },
+        {
+          "term": "poison resistance",
+          "translation": "毒素抗性"
+        },
+        {
+          "term": "fire resistance",
+          "translation": "火焰抗性"
+        },
+        {
+          "term": "cold resistance",
+          "translation": "寒冷抗性"
+        },
+        {
+          "term": "teleportitis",
+          "translation": "随机传送"
+        },
+        {
+          "term": "speed",
+          "translation": "快速"
+        },
+        {
+          "term": "clarity",
+          "translation": "清明"
+        },
+        {
+          "term": "evolution",
+          "translation": "进化"
+        },
+        {
+          "term": "claws",
+          "translation": "利爪"
+        },
+        {
+          "term": "antennae",
+          "translation": "触角"
+        },
+        {
+          "term": "ephemeral shield",
+          "translation": "短暂护盾"
+        },
+        {
+          "term": "icemail",
+          "translation": "冰甲"
+        },
+        {
+          "term": "nightstalker",
+          "translation": "夜行者"
+        },
+        {
+          "term": "powered by death",
+          "translation": "死亡之力"
+        },
+        {
+          "term": "sturdy frame",
+          "translation": "结实体格"
+        },
+        {
+          "term": "sanguine armour",
+          "translation": "凝血护甲"
+        },
+        {
+          "term": "faith",
+          "translation": "信仰"
+        },
+        {
+          "term": "tentacles",
+          "translation": "触手"
+        },
+        {
+          "term": "float",
+          "translation": "飘浮"
+        },
+        {
+          "term": "trickster",
+          "translation": "诡术师"
+        },
+        {
+          "term": "stumbling",
+          "translation": "踉跄"
+        }
+      ]
+    },
+    {
+      "file": "player.h",
+      "sha256": "1a911888f373f80c2b4af8fd634bf3308714a1e5a45fe41b55a5822f30619658",
+      "hits": [
+        {
+          "term": "ability",
+          "translation": "能力"
+        },
+        {
+          "term": "Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "AC",
+          "translation": "护甲值"
+        },
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "background",
+          "translation": "背景"
+        },
+        {
+          "term": "blink",
+          "translation": "闪烁/闪现/眨眼"
+        },
+        {
+          "term": "book",
+          "translation": "魔法书/书/手册"
+        },
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "confuse",
+          "translation": "混乱"
+        },
+        {
+          "term": "Dithmenos",
+          "translation": "迪斯姆诺"
+        },
+        {
+          "term": "drain",
+          "translation": "吸能/吸取/消耗"
+        },
+        {
+          "term": "draining",
+          "translation": "吸能/汲取/耗损"
+        },
+        {
+          "term": "evasion",
+          "translation": "闪避值"
+        },
+        {
+          "term": "experience",
+          "translation": "经验值"
+        },
+        {
+          "term": "explore mode",
+          "translation": "探索模式"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "Jiyva",
+          "translation": "吉瓦"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "mutations",
+          "translation": "变异"
+        },
+        {
+          "term": "portal",
+          "translation": "传送门"
+        },
+        {
+          "term": "potion",
+          "translation": "药水"
+        },
+        {
+          "term": "rot",
+          "translation": "腐烂"
+        },
+        {
+          "term": "Ru",
+          "translation": "入"
+        },
+        {
+          "term": "shadow",
+          "translation": "影"
+        },
+        {
+          "term": "Shield",
+          "translation": "格挡值/盾牌/保护"
+        },
+        {
+          "term": "Sif Muna",
+          "translation": "席夫·穆纳"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "stasis",
+          "translation": "稳态"
+        },
+        {
+          "term": "statue",
+          "translation": "雕像"
+        },
+        {
+          "term": "stealth",
+          "translation": "潜行"
+        },
+        {
+          "term": "Strength",
+          "translation": "力量/强度/威力"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特"
+        },
+        {
+          "term": "Coglin",
+          "translation": "机甲哥布林"
+        },
+        {
+          "term": "Merfolk",
+          "translation": "人鱼"
+        },
+        {
+          "term": "Minotaur",
+          "translation": "牛头人"
+        },
+        {
+          "term": "Throwing",
+          "translation": "投掷"
+        },
+        {
+          "term": "SH",
+          "translation": "格挡值"
+        },
+        {
+          "term": "willpower",
+          "translation": "意志"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "piety",
+          "translation": "虔诚"
+        },
+        {
+          "term": "penance",
+          "translation": "赎罪"
+        },
+        {
+          "term": "aut",
+          "translation": "时间单位"
+        },
+        {
+          "term": "noise",
+          "translation": "噪音/声音/巨响"
+        },
+        {
+          "term": "slaying",
+          "translation": "杀戮"
+        },
+        {
+          "term": "talisman",
+          "translation": "变形护符"
+        },
+        {
+          "term": "poison",
+          "translation": "毒"
+        },
+        {
+          "term": "berserk",
+          "translation": "狂暴"
+        },
+        {
+          "term": "haste",
+          "translation": "疾速"
+        },
+        {
+          "term": "petrifying",
+          "translation": "正在石化"
+        },
+        {
+          "term": "petrified",
+          "translation": "已石化"
+        },
+        {
+          "term": "Polymorph",
+          "translation": "变形术"
+        },
+        {
+          "term": "Petrify",
+          "translation": "石化术/石化"
+        },
+        {
+          "term": "Swiftness",
+          "translation": "迅捷术"
+        },
+        {
+          "term": "Paralyse",
+          "translation": "麻痹术/麻痹"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Malmutate",
+          "translation": "恶性突变"
+        },
+        {
+          "term": "Vitrify",
+          "translation": "玻璃化"
+        },
+        {
+          "term": "Platinum Paragon",
+          "translation": "白金典范"
+        },
+        {
+          "term": "Vex",
+          "translation": "恼乱术"
+        },
+        {
+          "term": "Banish",
+          "translation": "放逐"
+        },
+        {
+          "term": "the Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "Wrath",
+          "translation": "神怒"
+        },
+        {
+          "term": "speed",
+          "translation": "快速"
+        },
+        {
+          "term": "clarity",
+          "translation": "清明"
+        },
+        {
+          "term": "stinger",
+          "translation": "螫刺"
+        },
+        {
+          "term": "faith",
+          "translation": "信仰"
+        },
+        {
+          "term": "retaliatory headbutt",
+          "translation": "反击头撞"
+        }
+      ]
+    },
+    {
+      "file": "potion-type.h",
+      "sha256": "f9a919654809410717544d316b90d0b87d8da5b1c98e38e08fc5da9041330179",
+      "hits": [
+        {
+          "term": "potion",
+          "translation": "药水"
+        }
+      ]
+    },
+    {
+      "file": "potion.cc",
+      "sha256": "a26b9fcfdc7c72de7af309d2b4f96d59cc9878e21726f6452f3337f490d48c7a",
+      "hits": [
+        {
+          "term": "Cheibriados",
+          "translation": "切布理亚多"
+        },
+        {
+          "term": "fungus",
+          "translation": "真菌"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Gozag",
+          "translation": "哥萨戈"
+        },
+        {
+          "term": "haloed",
+          "translation": "处于光环中"
+        },
+        {
+          "term": "magical contamination",
+          "translation": "魔法污染"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "mutations",
+          "translation": "变异"
+        },
+        {
+          "term": "potion",
+          "translation": "药水"
+        },
+        {
+          "term": "potion of mutation",
+          "translation": "变异药水"
+        },
+        {
+          "term": "robe",
+          "translation": "长袍"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "stasis",
+          "translation": "稳态"
+        },
+        {
+          "term": "stats",
+          "translation": "属性"
+        },
+        {
+          "term": "Trog",
+          "translation": "特洛戈"
+        },
+        {
+          "term": "umbraed",
+          "translation": "处于幽暗光环中"
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        },
+        {
+          "term": "Zin",
+          "translation": "辛"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "confusion",
+          "translation": "混乱"
+        },
+        {
+          "term": "haste",
+          "translation": "疾速"
+        },
+        {
+          "term": "invisibility",
+          "translation": "隐形"
+        },
+        {
+          "term": "contamination",
+          "translation": "魔法污染"
+        },
+        {
+          "term": "Death's Door",
+          "translation": "死亡之门"
+        },
+        {
+          "term": "Corona",
+          "translation": "光晕术"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Potion Petition",
+          "translation": "请求药剂"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "Wrath",
+          "translation": "神怒"
+        }
+      ]
+    },
+    {
+      "file": "potion.h",
+      "sha256": "06972587f6d0b031b6b7c181a06fea3577512f5196a067b9a87214e295fa9725",
+      "hits": [
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "potion",
+          "translation": "药水"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "precision-menu.cc",
+      "sha256": "14e2fb1b5ea1e573e5be007e334eb27dd505defc52e44774b38bdeff971321f4",
+      "hits": [
+        {
+          "term": "background",
+          "translation": "背景"
+        },
+        {
+          "term": "Console",
+          "translation": "字符版/控制台/终端"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "float",
+          "translation": "飘浮"
+        }
+      ]
+    },
+    {
+      "file": "precision-menu.h",
+      "sha256": "b634cb3a66f6557694febccbc33989ae589b107cb70d7a63e7cef2e78697be84",
+      "hits": [
+        {
+          "term": "arrow",
+          "translation": "箭"
+        },
+        {
+          "term": "background",
+          "translation": "背景"
+        },
+        {
+          "term": "Console",
+          "translation": "字符版/控制台/终端"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        }
+      ]
+    },
+    {
+      "file": "prompt.cc",
+      "sha256": "4682382726b0dbe383508c3f8a21a59e9d0abac5b5a5817456f5006defe94190",
+      "hits": [
+        {
+          "term": "arrow",
+          "translation": "箭"
+        },
+        {
+          "term": "Console",
+          "translation": "字符版/控制台/终端"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "weird",
+          "translation": "奇怪的"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "Pain",
+          "translation": "痛苦术/痛苦"
+        },
+        {
+          "term": "Arena",
+          "translation": "奥格瓦如竞技场/竞技场"
+        },
+        {
+          "term": "the Arena",
+          "translation": "奥格瓦如竞技场/竞技场"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "prompt.h",
+      "sha256": "c804285b53d95cd9024dcb08e7be1f100e6c7c2acc0f957d0eeabfb6708ae865",
+      "hits": [
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        }
+      ]
+    },
+    {
+      "file": "pronoun-type.h",
+      "sha256": "e819cef0ec0e8e11225a75651d9858effead126beda4b52b80a46766f2740d1b",
+      "hits": []
+    },
+    {
+      "file": "props.h",
+      "sha256": "68c64a19d511325753d4d96c838d4675bead7222eaf45ed8eb736cfb2cf8a081",
+      "hits": [
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    }
+  ],
+  "shared_baselines": [
+    {
+      "file": "Makefile",
+      "sha256": "362718510ef8fd15838f8427edd55728f9c4f4856e22949d84b1240e4e7c67e1"
+    },
+    {
+      "file": "status.cc",
+      "sha256": "ad236e88cc9a8742324737030b52e057c7ee69e97d0a26b2924f9e29dd4ad2d6"
+    },
+    {
+      "file": "status.h",
+      "sha256": "2e95012fabe745e965ea56fb82adb8d8e199f7c3fe3d6be8f685fc6ab301aa5d"
+    }
+  ]
+}

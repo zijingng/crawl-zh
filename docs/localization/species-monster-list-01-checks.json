@@ -1,0 +1,25 @@
+{
+  "batch": "species-monster-list-01",
+  "new_reviewed_ui_entries": 9,
+  "native_tests": 9,
+  "native_assertions": 6729,
+  "python_tests": 33,
+  "all_current_player_species_available": true,
+  "visible_monster_combinations": 144,
+  "attitudes": [
+    "hostile",
+    "friendly",
+    "neutral"
+  ],
+  "conditions": [
+    "charmed",
+    "summoned",
+    "ally target",
+    "catching breath"
+  ],
+  "english_fallback_preserved": true,
+  "reviewed_dependency_mismatches": 0,
+  "legacy_deferred_entry": "combat.fear",
+  "active_replacement": "combat.fear.actor",
+  "windows_tiles_executable_sha256": "c1463ea8520e18e8465258abaa35412f6dc806803470c45fc2e624a10b7301d9"
+}

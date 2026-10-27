@@ -80,9 +80,7 @@ void Version::record(string prev)
     {
         you.props[VERSION_HISTORY_PROP].get_vector().push_back(
                                                     CrawlStoreValue(Long));
-        const string note = make_stringf("Upgraded the game from %s to %s",
-                                         prev.c_str(), Long);
-        take_note(Note(NOTE_MESSAGE, 0, 0, note));
+        take_note(make_version_note(prev, Long));
     }
 }
 

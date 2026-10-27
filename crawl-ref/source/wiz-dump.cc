@@ -4,6 +4,7 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "wiz-dump.h"
 
@@ -634,7 +635,7 @@ bool chardump_parser::parse()
 void wizard_load_dump_file()
 {
     char filename[80];
-    msgwin_get_line_autohist("Which dump file? ", filename, sizeof(filename));
+    msgwin_get_line_autohist(ui_translate("w.ui", "Which dump file? "), filename, sizeof(filename));
 
     if (filename[0] == '\0')
         canned_msg(MSG_OK);

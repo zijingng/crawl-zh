@@ -1,0 +1,730 @@
+[
+  {
+    "file": "crawl-ref/source/t-display.h",
+    "scope": "New presentation-only helpers for canonical clauses/projectiles and typed monsters.",
+    "sha256": "85f02935aaba026ef08b58228b6f5df857a5e2a2ea1fc394ee176bddba9dc0b5",
+    "changed": true,
+    "new": true
+  },
+  {
+    "file": "crawl-ref/source/tag-pref.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "9a7a87434be70150ae891b99b5120d8a94db072baa7e5b742561bb1a9c3fabf7",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tag-version.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "89a8f01703519a8d84eef31f376c7faca3467f5d93003efbbb71378e11ee2906",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tags.cc",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "e09344d8d307903c5256e58d46ed54397c50ecd4a126523434cca8219e8d009c",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tags.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "774c894a2ebec6eff95742443d09437e0ae789e495658ee0b70ea83cd2a069fc",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/targ-mode-type.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "2aba3ed722db096d0598983f609958d6ea628a7430c666a18f443171397e5494",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/target-compass.cc",
+    "scope": "Direction prompt; HUP technical diagnostics retained.",
+    "sha256": "5e2e2f531b74959ba66072dad1b2b62cac2bc9f4a6abc6f9bf68f23e4e4780de",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/target-compass.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "b2b3dd702012de8de134b682a520a74ef07fc15f70499e0658fc9b22d3112d64",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/target.cc",
+    "scope": "Canonical target failure reasons plus ephemeral typed display metadata, wall/monster restrictions and full-message fallback.",
+    "sha256": "2ec61fae00b9b79adcfc513dcf1099abd3640dd50c8e982576e56f57d7f641e9",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/target.h",
+    "scope": "Separate display failure accessor/cache; canonical why_not retained.",
+    "sha256": "ed3b3bd9b8ea6b65f046f3cbfce82fa6b9ace3a5e8bed8a146de00490d6cc310",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/targeting-type.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "e12c6cfa5df276c3daf7c26a21fc4b922d48346c27889b5ce5d4761e9db7a5b7",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/teleport.cc",
+    "scope": "Monster teleport messages and canonical entity names.",
+    "sha256": "063a86a0ec485fe0e9bdfa28184641ca4600d2c32c3228332624a19752cece0a",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/teleport.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "1ea9e2f97bedbd1d297c3c1f9375507c476979674d6cd06881728abf476368b2",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/terrain-change-type.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "94f4c64a75a7455986a7c8c4e4149c10d60d355c84873f281d349c6c641e2f1a",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/terrain.cc",
+    "scope": "Slime/ice/frigid wall damage, moving terrain and pool messages. Canonical feature descriptions and prepositions retained.",
+    "sha256": "72f967ca688021084f0e12702322223e2e2d0e7b785be25e0230689bce086d6c",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/terrain.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "3daed853e359ce4ba9fc139f4e7970a0d75127ab5d36026736bf4c2812cf8c6f",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/text-tag-type.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "5d327f3754a17cb73ee06651ae43c8c5f70006f851bfe1f4d73083982683eb3f",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/threads.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "094631683280be2da348176bb8f7bc99ccee2eb2d5c287043db45b3e39c1fe83",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/throw.cc",
+    "scope": "Player/monster projectile launch messages and held restrictions; canonical projectile keys and mechanics unchanged.",
+    "sha256": "c187fe5565f8166615f2e1200ce438316564cec42fe123d9f88a0173ecb9e3a1",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/throw.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "ae82830ba087e9f861de80f0318a25e88d01c30c2175ebb925f0f1d80275957a",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tile-env.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "2c66afa4fa6da4a381515dcd8eddddab59ec9ff29a9ab3d19d843374d54b632d",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tile-flags.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "2ae2713cfd9f74eaa5ce31854689306f7a272169743b4bdadc8f774f4b6fdc93",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tile-inventory-flags.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "ed1116306dc64019f928430ab53160625ff62a2c2316cccb5f94fcb766b194cd",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tile-player-flag-cut.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "60b6116a66616029b1f571fbddf4a408abb5a8717433c59181a15c645d14d14d",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tile-player-flags.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "a4551b79048c94aa5423d81a63ef7b26b7649065b8108fb9f0dfddaf9c27f39e",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilebuf.cc",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "e9a01959e341003655cc03a4952a6829a79454f80a36af433efbc4eedbc55824",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilebuf.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "8be4778b954ed0c163639a998b1809b7ed536e2eddf7eea9ff8f9a6a16e8e9d8",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilecell.cc",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "dea15068babe6aa32c5092084104bfe9cc792815fb2e760f5dc40eb1074c88b6",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilecell.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "be5313dd7217aacee0d35aad1157d4b7cc4dad9fefbed1aca9938a1882ee3cd7",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tiledgnbuf.cc",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "b1967f03ff03a390eb5c9a5f03b9f8b8bf4f0ae14192373f880b75f6b1e57c31",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tiledgnbuf.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "fa3bac525fd36030f6d20b82408db58f3e20f2c2e37afb074bed90c46836081f",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tiledoll.cc",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "ffb1e8150ccf2d6dd9ff5e3d9364cfc1b51b4d7f907a84c43459c94e9b6d13e5",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tiledoll.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "6becb05cad6c499e6eaf7c8d728d1eb5c16ae7cf47ebb5bd9f0bc2b608017a26",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilefont.cc",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "48d72572b17dfbc38b6f7991afe4882a2aecf326044b1ceb67f89bb34021b278",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilefont.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "74e20dabdb2c44dd0856a10aa10e88c2277c5417468e82bb2560f96a49bba925",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilemcache.cc",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "bc82734f8202811a9a84793ff48fedf13fba2fdd187572d0088e5fe0536f19dc",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilemcache.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "67efc675a4a7d66156d12b340d465c8171465fc256633d6fdac6faf6b6659ae1",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilepick-p.cc",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "eb9f0a7c1b45a30cbb7c69f2b75e239872a35de23b31ccef0fea79a17cc69e06",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilepick-p.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "b7984b355933941743b2b48952e9d803d62c6076a062b5620bb0e1199ae6441b",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilepick.cc",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "7db0179b91d78972f2d468613e8b8a786616c6c7e289b4ad078b6bb67a801652",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilepick.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "de40f71ab1ab93c2efd0f230fa34dd6d271c5f22dfbef0b30262c9771fa78a15",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-abl.cc",
+    "scope": "Tiles tooltip, tab, name/numeric row or paper-doll display; command keys, canonical names and assets retained.",
+    "sha256": "ff09ddbdee1d5312140518436385e778cf377856441f3c590ec77bd2c47e35ca",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-abl.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "1de52dc2ec47dacb227736ac37012882ddf5b36105be39f2933ffb8e8157b215",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-cmd.cc",
+    "scope": "Tiles tooltip, tab, name/numeric row or paper-doll display; command keys, canonical names and assets retained.",
+    "sha256": "11fc76eff0f4ff365d42ae4562df793f56420e8369e36c66ccb2b915402abc8e",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-cmd.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "fad4d5837f91229e60be313b9e7754a4fc10f5f19072fa0b27ad0dc09dd5d4e3",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-crt.cc",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "00a44ae2a5cac1f1607d760bbc1a0c08d3dca354767c6cbe37e32c6cd333e5a5",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-crt.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "5996de0c0884a8d2fd57b15db01315a6b3277587b3d8d437fa7eac5f00b42be5",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-dgn.cc",
+    "scope": "Tiles tooltip, tab, name/numeric row or paper-doll display; command keys, canonical names and assets retained.",
+    "sha256": "92c0eec4e456b8a44dfab3238ffac67a432b5f214cb9b370779cd7858e6e8961",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-dgn.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "b49f461b5c84b5dd470ed6fdbf4310cc2089a3c6c5d1286b077a918c2b9abdca",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-doll.cc",
+    "scope": "Tiles tooltip, tab, name/numeric row or paper-doll display; command keys, canonical names and assets retained.",
+    "sha256": "cc09f1a79062d7296b12cc52927f205184b29499c67822619b659a43d4989551",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-doll.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "ed26df7e95b85109d7b447502421d13d7af47d02195a8f5dbc974f5fd1fc26dc",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-grid.cc",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "fe792ffb48c2d3f487f01d494673627647102a867b17961ec41c2ea122a8d7eb",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-grid.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "3bb0f80a557b86e5c223fc4af477011951e5b01fe78a1fca9f632bcf406a91a6",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-inv.cc",
+    "scope": "Tiles tooltip, tab, name/numeric row or paper-doll display; command keys, canonical names and assets retained.",
+    "sha256": "7937f7588a6ad0b257989160a4cfa042c906f127548bbc053b604720da82fd41",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-inv.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "297c5e600601c0e8da6b3364f649a17f347972fc44df02195bc0d6c5b8cf1eb7",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-map.cc",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "cdbaf4e5838af4aa196cfdebb85e296df8b05f6933305709f659b03f840c2c01",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-map.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "a1d8a80b6a90b421f91b81c33ebdb0347ffbcc30dc1483fdb00772997bc3fba3",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-mem.cc",
+    "scope": "Tiles tooltip, tab, name/numeric row or paper-doll display; command keys, canonical names and assets retained.",
+    "sha256": "7a002d5b790fe247b4fb434bbdbfb4512b78172d657f1efee37a0a2eb4529353",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-mem.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "3c15496ab8aa40c1b71094abee4f08d23384741a06ddf5d24c23c0b9053c0df0",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-mon.cc",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "9b81d079971c8f90a9b2eb6774bc496922b912daef02db6f79151a3c888d4bb8",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-mon.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "5cd6f50152601381df03a972d997feaa96027ff2dd38bb1a5709d0d29c9e369a",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-msg.cc",
+    "scope": "Tiles tooltip, tab, name/numeric row or paper-doll display; command keys, canonical names and assets retained.",
+    "sha256": "f3e00c1a8a512e79ac7e3b4f19c3b3932939b4cb07d5634b8c238496c888cd11",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-msg.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "1ef246832048769741d0f93bf76f55f8783ba8261c85c6c649c6fdd9f4da1a9f",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-skl.cc",
+    "scope": "Tiles tooltip, tab, name/numeric row or paper-doll display; command keys, canonical names and assets retained.",
+    "sha256": "be8dc051f48c6940a3ff018a0fba7f18572d52d9c7417a3bc4546f0d013f7d7a",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-skl.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "9d1197106ca4513ee7fe587bb1e9581fc11876ba864927e2f68b22d665c7e4db",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-spl.cc",
+    "scope": "Tiles tooltip, tab, name/numeric row or paper-doll display; command keys, canonical names and assets retained.",
+    "sha256": "b468a5a3edcdc9fdb3a5c6b3d16867ea694ed1e5ee0dad424280c34c22382b1f",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-spl.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "5f78e4665fd5b7fd06e621cd4c70d9a0171ddb1f983b034ad2cc626f259685bb",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-stat.cc",
+    "scope": "Tiles tooltip, tab, name/numeric row or paper-doll display; command keys, canonical names and assets retained.",
+    "sha256": "272bf4335fdeb1b9481c4164ec79f9de794fbb48ecf72b6f6df013ac46fab3d7",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-stat.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "7d898e8595480fecc40ee6e7346a8f0da2774f99113d6820118d19aeb81936c9",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-tab.cc",
+    "scope": "Tiles tooltip, tab, name/numeric row or paper-doll display; command keys, canonical names and assets retained.",
+    "sha256": "9fb2df81c72332848429f4a2e0499be2c528d667f10d4c996e5fbc4698abc9d3",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-tab.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "bceaaa9fc2a4c9f4a0d7559099ad5d678049dc8c29048d2fce4411a4367f231f",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-text.cc",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "22b8eb886e3873a08972dc02be08eeb658fc7e0ca1671d0ebbf26118ac197fca",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg-text.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "06721dff996e7397ade0f243bb0d753a9590cd41fe172293d4acaefbd5646ef4",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg.cc",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "e589c9bd8db555c0b02b48ed41ce9975b6b3e6d40a483cbf0896bc4aa19dfd5e",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilereg.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "7cc8fbda0861629dcd07266f4bcd56984e755cdb8a009bf3cb2b5b12d45c88d7",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tiles-build-specific.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "d1be625eb3de7297de0c5eaef5e65d56ba42345e3112cb5f549e5957793b45a8",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tiles.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "8e7419b90ae6c1a623945f6b99bab33fabfcd5350a48815f153f257c9c518028",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilesdl.cc",
+    "scope": "Tiles tooltip, tab, name/numeric row or paper-doll display; command keys, canonical names and assets retained.",
+    "sha256": "13285196e1af0451f9c9d789a38d5497d15ec66c8f5831e6bbf9ba9bf542813a",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tilesdl.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "227d30624fe88bde224fdab42e108f03ea216b00d3e492c2fe910d24a14f42cd",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tiletex.cc",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "469626fc574ec99c2c07676302147840ac7e445050663bac64592547d569744e",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tiletex.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "1de522bf0787d378d21aad203f358600e1a9841f575aeead067b31d3275e59bb",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tileview.cc",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "c5d1e6c02d5a121e0c3c7bd0994c0bf13cce185eda233baf9a0f6a994ad37c0e",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tileview.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "2f311095a21f9e6053c3d74dd996e86577a875f273594ac4ddb8515d3b7b5bb7",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tileweb-text.cc",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "b21ed771cb98621e824f4c6e2db44872706d5ffe7203d3a690a7a0e24f68ecf0",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tileweb-text.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "619aeee667d1354a9ae82a447a17f6c5a7faab1e3b30267d6c23d1c2ebf9ea27",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tileweb.cc",
+    "scope": "Tiles tooltip, tab, name/numeric row or paper-doll display; command keys, canonical names and assets retained.",
+    "sha256": "a618aa030231cc23cf9ca0a16f38613d1a27a1843f5676a88d5635506085d190",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tileweb.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "3e8b4ef59ff9b25cd1e3ab3b5d02f12cae9839fa9124c864fa29555345096f71",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/timed-effect-type.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "e536c16869ac77306fb87a14c4d6cb2b741784998023367f5e7e9519c5e8e7d3",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/timed-effects.cc",
+    "scope": "Contamination, god/jelly messages, splitting, temporary walls, binding sigils, seals and memories.",
+    "sha256": "1ec2d20d2d0d7145fd8c7c8193942c519e1c25786a142e09dc4a7d4c0d5e5b57",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/timed-effects.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "c27bd14a36302cc6c233becae9b4b7c2c7c2fb69e27a1b8e9b4d5f180b835991",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/torment-source-type.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "8cbcca7133bffc1ca259c2a801e19392ac4a7ba8daa7526c9696d7469c896d4f",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/transform.cc",
+    "scope": "Display-only form entry/exit and meld adapters, safety prompts, equipment, sun, maw and gaze logs. Canonical form virtual methods retained.",
+    "sha256": "20b33ef8bba458d396e488f141c31f5cc4ba82d886b5a858be80d412924a5d14",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/transform.h",
+    "scope": "Presentation adapters declared; canonical form API retained.",
+    "sha256": "1a8029eb99d07cae83805745dfd86d1e5734178e9fb344cbd037a02f9dece79b",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/transformation.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "d73c0481cf7ea96f5c953fb6685746c7c175a6bb2b150a541f3c0d4b4b0bac6d",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/trap-def.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "85c13ae20113322802d4092a6c5d016d068c0a5b51c92fade3be67260213f095",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/trap-type.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "e44ceb97acd0882a12da6889f79406f436728f3c742fc0d310d9ac10208c9bfd",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/traps.cc",
+    "scope": "Trap effects, names at display sites, buff lists, malevolence, net/web messages and typed adapters. TextDB/Lua selection evaluated once.",
+    "sha256": "3de3012c705110952e4baebefcb565dfec502dd8ac6d241cf34e77bbcc98b0bd",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/traps.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "a53a4a20f9f8704aa0cb664e9d3d533273ef842d42670cf5099ad4dbef06dbb3",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/travel-defs.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "7f2b4a8f1f838cdbc3844aa3550bccae8bc7d3a86b5f5178fb09c295857b28b1",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/travel-open-doors-type.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "601016ef5adb9b624cbc4718da68a7f92c6e7cd2161051cb4a3a3bc61fc34b7a",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/travel.cc",
+    "scope": "Travel/explore status, pickup decisions, route prompts, branches/altars, waypoints and typed discoveries; original search/pathfinding/grouping retained.",
+    "sha256": "1749507ba809fb4b18f6f68bf0c8dd7753ba090bbf34f6f158d2327131204acc",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/travel.h",
+    "scope": "Ephemeral discovery display fields; canonical names and quantities retained.",
+    "sha256": "f8729cbab3248d27a3ac7ec1fddc35d5ec28cdd494d000044688708ee6dd5435",
+    "changed": true,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tutorial.cc",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "949cc9f2ec2cba8bc754e8c631624c150bf6793fe68cfdd9b718d691b89f3827",
+    "changed": false,
+    "new": false
+  },
+  {
+    "file": "crawl-ref/source/tutorial.h",
+    "scope": "Declarations, enums, rendering/assets, protocol or technical diagnostics reviewed; existing translated content reused.",
+    "sha256": "75231fafef804626bf0ea7498d72e5958779f45199a20cc7157a6dc8e43d5527",
+    "changed": false,
+    "new": false
+  }
+]

@@ -6,6 +6,7 @@
 #include "AppHdr.h"
 
 #include "zot.h"
+#include "i18n.h"
 
 #include "activity-interrupt-type.h" // for zot clock key
 #include "branch.h" // for zot clock key
@@ -159,9 +160,9 @@ void decr_zot_clock(bool extra_life)
         if (bezotted())
         {
             if (extra_life)
-                mpr("As you die, Zot loses track of you.");
+                mpr(ui_translate("z.ui", "As you die, Zot loses track of you."));
             else
-                mpr("As you enter the new level, Zot loses track of you.");
+                mpr(ui_translate("z.ui", "As you enter the new level, Zot loses track of you."));
         }
         zot = max(0, zot - ZOT_CLOCK_PER_FLOOR / div);
     }
@@ -190,7 +191,7 @@ void incr_zot_clock()
 
     if (_zot_clock() >= MAX_ZOT_CLOCK)
     {
-        mpr("Zot's power touches on you...");
+        mpr(ui_translate("z.ui", "Zot's power touches on you..."));
         // Use your 'base' MHP (excluding forms, berserk, artefacts...)
         // to calculate loss, so that Dragon Form doesn't penalize extra HP
         // and players in unskilled talisman forms don't lose less HP.
@@ -215,16 +216,16 @@ void incr_zot_clock()
     switch (lvl)
     {
         case 1:
-            mpr("You have lingered too long. Zot senses you. "
-                "Dive deeper or flee this branch before you suffer!");
+            mpr(ui_translate("z.ui", "You have lingered too long. Zot senses you. "
+                "Dive deeper or flee this branch before you suffer!"));
             break;
         case 2:
-            mpr("Zot draws nearer. "
-                "Dive deeper or flee this branch before you suffer!");
+            mpr(ui_translate("z.ui", "Zot draws nearer. "
+                "Dive deeper or flee this branch before you suffer!"));
             break;
         case 3:
-            mpr("Zot has nearly found you. Suffering is imminent. "
-                "Descend or flee this branch!");
+            mpr(ui_translate("z.ui", "Zot has nearly found you. Suffering is imminent. "
+                "Descend or flee this branch!"));
             break;
     }
 
@@ -280,13 +281,13 @@ static void _shatter_floor_gem(gem_type gem, bool quiet = false)
 
             if (was_mimic)
             {
-                mprf("The power of Zot manifests... and reveals the %s gem was"
-                     " a mimic! It cackles and vanishes.", gem_adj(gem));
+                mpr(ui_render("z.log", "The power of Zot manifests... and reveals the %s gem was a mimic! It cackles and vanishes.", make_stringf("The power of Zot manifests... and reveals the %s gem was"
+                     " a mimic! It cackles and vanishes.", gem_adj(gem)), {ui_text_arg("display.item", string(gem_adj(gem)) + " gem")}));
                 continue;
             }
 
-            mprf("With a frightful flash, the power of Zot shatters the %s"
-                 " gem into ten thousand fragments!", gem_adj(gem));
+            mpr(ui_render("z.log", "With a frightful flash, the power of Zot shatters the %s gem into ten thousand fragments!", make_stringf("With a frightful flash, the power of Zot shatters the %s"
+                 " gem into ten thousand fragments!", gem_adj(gem)), {ui_text_arg("display.item", string(gem_adj(gem)) + " gem")}));
             // Using UA_PICKUP here is dubious.
             flash_view_delay(UA_PICKUP, MAGENTA, 100);
             flash_view_delay(UA_PICKUP, LIGHTMAGENTA, 100);
@@ -319,15 +320,14 @@ void print_gem_warnings(int gem_int, int old_time_taken)
 
     if (old_time_taken + 2700 < limit && time_taken + 2700 >= limit)
     {
-        mprf("If you linger in this branch much longer, the power of Zot will "
-             "shatter your %s gem.", gem_adj(gem));
+        mpr(ui_render("z.log", "If you linger in this branch much longer, the power of Zot will shatter your %s gem.", make_stringf("If you linger in this branch much longer, the power of Zot will "
+             "shatter your %s gem.", gem_adj(gem)), {ui_text_arg("display.item", string(gem_adj(gem)) + " gem")}));
     }
 
     if (old_time_taken + 1000 < limit && time_taken + 1000 >= limit)
     {
-        mprf("Zot senses the otherworldly energies of your %s gem, and will "
-             "surely shatter it if you linger in this branch any longer!",
-             gem_adj(gem));
+        mpr(ui_render("z.log", "Zot senses the otherworldly energies of your %s gem, and will surely shatter it if you linger in this branch any longer!", make_stringf("Zot senses the otherworldly energies of your %s gem, and will "
+             "surely shatter it if you linger in this branch any longer!", gem_adj(gem)), {ui_text_arg("display.item", string(gem_adj(gem)) + " gem")}));
     }
 }
 
@@ -364,8 +364,8 @@ void incr_gem_clock()
 
         if (Options.more_gem_info)
         {
-            mprf("With a frightful flash, the power of Zot shatters your %s gem "
-                 "into ten thousand fragments!", gem_adj(gem));
+            mpr(ui_render("z.log", "With a frightful flash, the power of Zot shatters your %s gem into ten thousand fragments!", make_stringf("With a frightful flash, the power of Zot shatters your %s gem "
+                 "into ten thousand fragments!", gem_adj(gem)), {ui_text_arg("display.item", string(gem_adj(gem)) + " gem")}));
             // Using UA_PICKUP here is dubious.
             flash_view_delay(UA_PICKUP, MAGENTA, 100);
             flash_view_delay(UA_PICKUP, LIGHTMAGENTA, 100);
@@ -405,7 +405,6 @@ string gem_status()
     }
     const int time_left = gem_time_left(gem);
     const int turns_left = (time_left + 9) / 10; // round up
-    return make_stringf("If you linger in this branch for another %d turns, "
-                        "the power of Zot will shatter your %s gem.\n",
-                        turns_left, gem_adj(gem));
+    return ui_render("z.log", "If you linger in this branch for another %s turns, the power of Zot will shatter your %s gem.\n", make_stringf("If you linger in this branch for another %d turns, "
+                        "the power of Zot will shatter your %s gem.\n", turns_left, gem_adj(gem)), {ui_literal_arg(to_string(turns_left)), ui_text_arg("display.item", string(gem_adj(gem)) + " gem")});
 }

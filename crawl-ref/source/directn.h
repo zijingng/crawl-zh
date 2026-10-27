@@ -347,6 +347,9 @@ bool full_describe_square(const coord_def &c, bool cleanup = true);
 string get_square_desc(const coord_def &pos);
 string cell_monster_description(const coord_def& pos, bool include_areas = false,
                                 targeting_behaviour* behavior = nullptr);
+// Canonical body plus an optional complete display copy; used by real targeting.
+string monster_target_description(const monster_info &mi, targeting_behaviour *behavior,
+                                  ui_arg &display, bool include_areas = false);
 string cell_items_description(const coord_def& pos);
 string cell_floor_description(const coord_def& pos, bool boring_too);
 
@@ -360,8 +363,16 @@ string get_monster_equipment_desc(const monster_info& mi,
                                   description_level_type mondtype = DESC_A,
                                   bool print_attitude = false);
 
+bool try_monster_equipment_display(const monster_info& mi, string &output,
+    mons_equip_desc_level_type level = DESC_FULL,
+    description_level_type mondtype = DESC_A, bool print_attitude = false);
+
 string feature_description_at(const coord_def& where, bool covering = false,
                               description_level_type dtype = DESC_A);
+// Display-only feature descriptions. False leaves output untouched.
+bool try_feature_display_name(dungeon_feature_type feat, trap_type trap,
+                              string &output);
+bool try_feature_display_at(const coord_def &where, bool covering, string &output);
 string raw_feature_description(const coord_def& where);
 string feature_description(dungeon_feature_type grid,
                            trap_type trap = NUM_TRAPS,

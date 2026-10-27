@@ -1,4 +1,5 @@
 #include "AppHdr.h"
+#include "t-display.h"
 
 #ifdef USE_TILE_LOCAL
 
@@ -41,12 +42,12 @@ bool StatRegion::update_tip_text(string& tip)
 #ifdef __ANDROID__
     if (tiles.is_using_small_layout())
     {
-        tip = "[L-Click] Toggle tab icons";
+        tip = ui_translate("t.tiles", "[L-Click] Toggle tab icons");
         return true;
     }
 #endif
 
-    tip = "[L-Click] Show player information";
+    tip = ui_translate("t.tiles", "[L-Click] Show player information");
     return true;
 }
 

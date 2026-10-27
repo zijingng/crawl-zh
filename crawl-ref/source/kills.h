@@ -122,6 +122,9 @@ struct kill_exp
         places.push_back(kg.place);
     }
 
+    // Native display only; canonical desc and Lua accessors remain English.
+    string display_description() const;
+
     // operator< is implemented for a descending sort.
     bool operator < (const kill_exp &b) const
     {
@@ -173,7 +176,7 @@ public:
 
     int total_kills() const;
 
-    string kill_info() const;
+    string kill_info(bool display = false) const;
 private:
     const char *category_name(kill_category kc) const;
 

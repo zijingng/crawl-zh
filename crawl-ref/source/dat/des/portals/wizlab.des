@@ -164,8 +164,9 @@ end
 
 function wizlab_milestone (e, wizlab_desc)
     crawl.mark_milestone("br.enter", "entered " .. wizlab_desc .. ".", "parent")
-    crawl.take_note("Entered " .. wizlab_desc)
-    crawl.mpr("Welcome to " .. wizlab_desc .. "!")
+    crawl.take_note("Entered " .. wizlab_desc, "portal", wizlab_desc)
+    crawl.mpr(crawl.ui_format("lua.portal.arrival", "Welcome to %s!",
+        "Welcome to " .. wizlab_desc .. "!", crawl.ui_name("lua.portal.name", wizlab_desc)))
 end
 
 function wizlab_doroklohe_convert_boxes(data, triggerable, triggerer,

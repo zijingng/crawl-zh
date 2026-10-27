@@ -1,0 +1,21 @@
+{
+  "batch": "source-n-01",
+  "date": "2026-10-24",
+  "reviewed_messages": 120,
+  "catalogue_matches": 120,
+  "missing_messages": [],
+  "stale_dependencies": [],
+  "original_top_level_n_files": 20,
+  "current_top_level_n_files": 20,
+  "windows_tiles_build": true,
+  "native_cases": 79,
+  "native_assertions": 180454,
+  "python_tests": 28,
+  "limitations": [
+    "Arbitrary Lua script messages and public Lua name/key results remain controlled by existing script semantics; no global translation interception.",
+    "Missing typed names, paragraphs or source fingerprints cause complete row/sentence English fallback.",
+    "Canonical creation descriptions and values, random choices, name validation, note serialization and milestones retain upstream semantics.",
+    "Technical generator diagnostics, unknown custom map labels and opaque historical/user/script note fields retain original English or supplied prose.",
+    "No in-game visual smoke test; Windows Tiles only."
+  ]
+}

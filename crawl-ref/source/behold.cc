@@ -4,6 +4,7 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "mpr.h"
 #include "player.h"
@@ -29,8 +30,10 @@ void player::add_beholder(monster& mon, bool forced, int dur)
         beholders.push_back(mon.mid);
         if (!forced)
         {
-            mprf(MSGCH_WARN, "You are mesmerised by %s!",
-                             mon.name(DESC_THE).c_str());
+            mprf(MSGCH_WARN, "%s", ui_render("b.behold", "You are mesmerised by %s!",
+                make_stringf("You are mesmerised by %s!",
+                             mon.name(DESC_THE).c_str()),
+                {ui_actor_arg(mon)}).c_str());
         }
     }
     else
@@ -120,8 +123,10 @@ static void _removed_beholder_msg(const monster *mons)
 
     if (is_sanctuary(you.pos()) && !mons_is_fleeing(mon))
     {
-        string msg = make_stringf("The Sanctuary denies %s grip on your mind.",
-                                  mons->name(DESC_ITS).c_str());
+        string msg = ui_render("b.behold", "The Sanctuary denies %s grip on your mind.",
+                make_stringf("The Sanctuary denies %s grip on your mind.",
+                                  mons->name(DESC_ITS).c_str()),
+                {ui_actor_arg(*mons)});
         god_speaks(GOD_ZIN, msg.c_str());
         return;
     }
@@ -131,17 +136,23 @@ static void _removed_beholder_msg(const monster *mons)
         if (silenced(you.pos()) || silenced(mon.pos()))
         {
             if (you.can_see(mon))
-                mprf("You can no longer hear %s singing!", mon.name(DESC_ITS).c_str());
+                mprf("%s", ui_render("b.behold", "You can no longer hear %s singing!",
+                make_stringf("You can no longer hear %s singing!", mon.name(DESC_ITS).c_str()),
+                {ui_actor_arg(mon)}).c_str());
             else
-                mpr("The silence clears your mind.");
+                mpr(ui_translate("b.beam", "The silence clears your mind."));
         }
         else
-            mprf("%s stops singing.", mon.name(DESC_THE).c_str());
+            mprf("%s", ui_render("b.behold", "%s stops singing.",
+                make_stringf("%s stops singing.", mon.name(DESC_THE).c_str()),
+                {ui_actor_arg(mon)}).c_str());
     }
     else
     {
-        mprf("%s loses %s grip on your mind.", mon.name(DESC_THE).c_str(),
-                                               mon.pronoun(PRONOUN_POSSESSIVE).c_str());
+        mprf("%s", ui_render("b.behold", "%s loses its grip on your mind.",
+                make_stringf("%s loses %s grip on your mind.", mon.name(DESC_THE).c_str(),
+                                               mon.pronoun(PRONOUN_POSSESSIVE).c_str()),
+                {ui_actor_arg(mon)}).c_str());
     }
 }
 
@@ -201,7 +212,7 @@ void player::_removed_beholder(bool quiet)
         duration[DUR_MESMERISED] = 0;
         you.duration[DUR_MESMERISE_IMMUNE] = random_range(21, 40);
         if (!quiet)
-            mprf(MSGCH_DURATION, "You are no longer mesmerised.");
+            mprf(MSGCH_DURATION, "%s", ui_translate("b.beam", "You are no longer mesmerised."));
     }
 }
 

@@ -1,0 +1,109 @@
+{
+  "batch": "clarity-terms-01",
+  "glossary_terms": [
+    "clarity",
+    "clarity passive",
+    "Clar"
+  ],
+  "translation": "清醒",
+  "ui_entries": 11,
+  "textdb_entries": 2,
+  "Lucidity_translation_unchanged": true,
+  "English_keys_unchanged": true,
+  "python_tests": 33,
+  "native_log": "Filters: \"M mutation*\",\"Equipment property*\",\"Equipment display rows*\"\nRNG seed: 141508808\n0.044 s: M mutation display keeps canonical descriptions and RNG intact\n0.000 s: Equipment display rows keep inventory letters and equipped state with English fallback\n0.003 s: Equipment property tags localize typed values without changing canonical inscriptions\nAll tests passed (2267 assertions in 3 test cases)\n\n\n",
+  "build": "crawl.exe succeeded",
+  "changes": [
+    {
+      "file": "ui.po",
+      "context": "d.god.power",
+      "english": "Ashenzari keeps your mind clear.",
+      "before": "艾申扎利使你的心智保持清明。",
+      "after": "艾申扎利使你保持头脑清醒。"
+    },
+    {
+      "file": "ui.po",
+      "context": "l.lookup.name",
+      "english": "clarity passive",
+      "before": "清明",
+      "after": "清醒"
+    },
+    {
+      "file": "ui.po",
+      "context": "m.mutation",
+      "english": "You possess an exceptional clarity of mind.",
+      "before": "你的头脑异常清明。",
+      "after": "你的头脑异常清醒。"
+    },
+    {
+      "file": "ui.po",
+      "context": "a.mutation.name",
+      "english": "clarity",
+      "before": "清明",
+      "after": "清醒"
+    },
+    {
+      "file": "ui.po",
+      "context": "o.passive",
+      "english": "clarity",
+      "before": "清明",
+      "after": "清醒"
+    },
+    {
+      "file": "ui.po",
+      "context": "p.ui",
+      "english": "Your clarity of mind shields you.",
+      "before": "清明的头脑保护了你。",
+      "after": "清醒的头脑保护了你。"
+    },
+    {
+      "file": "ui.po",
+      "context": "r.power",
+      "english": "Ashenzari will now keep your mind clear.",
+      "before": "艾申扎利现在会保持你的头脑清明。",
+      "after": "艾申扎利现在会使你保持头脑清醒。"
+    },
+    {
+      "file": "ui.po",
+      "context": "r.power",
+      "english": "Ashenzari will no longer keep your mind clear.",
+      "before": "艾申扎利不再保持你的头脑清明。",
+      "after": "艾申扎利不再使你保持头脑清醒。"
+    },
+    {
+      "file": "ui.po",
+      "context": "r.power",
+      "english": "Ashenzari keeps your mind clear.",
+      "before": "艾申扎利使你的心智保持清明。",
+      "after": "艾申扎利使你保持头脑清醒。"
+    },
+    {
+      "file": "ui.po",
+      "context": "equipment.property",
+      "english": "Clar",
+      "before": "清明",
+      "after": "清醒"
+    },
+    {
+      "file": "ui.po",
+      "context": "equipment.ego",
+      "english": "Clar",
+      "before": "清明",
+      "after": "清醒"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/gods.txt:ashenzari powers",
+      "english": "Ashenzari exhorts followers to curse their possessions, periodically offering\nthese curses to worshippers as they explore. These curses grant improvements\nto specific skills, but cursed equipment cannot normally be enchanted and can\nonly be removed by shattering it forever. As worshippers equip more cursed\nequipment, Ashenzari will grant increasing knowledge of the surrounding dungeon.\nEventually, Ashenzari will reveal the invisible, grant clarity of mind, and\nprotect worshippers from the Dungeon's malevolent forces.\n",
+      "before": "艾申扎利 鼓励信徒诅咒自己的财物，并在探索时定期提供这些诅咒。诅咒会提高特定技能，但受诅咒装备通常无法附魔，只有将其永久粉碎才能卸下。穿戴的受诅咒装备越多，祂就会赐予越多关于周围地下城的知识。最终，祂会揭示隐形事物、赐予清明心智，并保护信徒免遭地下城中的恶意力量侵害。\n",
+      "after": "艾申扎利 鼓励信徒诅咒自己的财物，并在探索时定期提供这些诅咒。诅咒会提高特定技能，但受诅咒装备通常无法附魔，只有将其永久粉碎才能卸下。穿戴的受诅咒装备越多，祂就会赐予越多关于周围地下城的知识。最终，祂会揭示隐形事物、使信徒保持头脑清醒，并保护信徒免遭地下城中的恶意力量侵害。\n"
+    },
+    {
+      "file": "textdb.po",
+      "context": "textdb:descript/mutations.txt:clarity mutation",
+      "english": "Your mind is exceptionally clear, preventing you from becoming confused,\nmesmerised, or supernaturally afraid. You also cannot become involuntarily\nenraged.\n",
+      "before": "你的头脑格外清明，不会陷入混乱、迷惑或超自然恐惧，也不会被迫狂暴。\n",
+      "after": "你的头脑格外清醒，不会陷入混乱、迷惑或超自然恐惧，也不会被迫狂暴。\n"
+    }
+  ]
+}

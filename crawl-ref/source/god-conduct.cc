@@ -1,4 +1,5 @@
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "god-conduct.h"
 
@@ -398,7 +399,38 @@ static peeve_map divine_peeves[] =
     peeve_map(),
 };
 
-string get_god_dislikes(god_type which_god)
+// Display one complete paragraph from the same canonical conduct lists.
+static string _conduct_display(god_type god, const vector<string> &ordinary,
+                              const vector<string> &strong, bool likes,
+                              const string &original)
+{
+    const ui_arg name = ui_text_arg("display.god", god_name(god));
+    ui_translation_group text;
+    vector<string> paragraphs;
+    for (int i = 0; i < 2; ++i)
+    {
+        const auto &list = i ? strong : ordinary;
+        if (list.empty())
+            continue;
+        const char *pattern = likes
+            ? (i ? "%s especially likes it when %s." : "%s likes it when %s.")
+            : (i ? "%s strongly dislikes it when %s." : "%s dislikes it when %s.");
+        text.require("g.conduct", pattern);
+        vector<string> translated;
+        for (const string &entry : list)
+        {
+            text.require("g.conduct", entry.c_str());
+            translated.push_back(text.get("g.conduct", entry.c_str()));
+        }
+        if (!text.available() || !name.available)
+            return original;
+        paragraphs.push_back(make_stringf(text.get("g.conduct", pattern), name.text.c_str(),
+            join_strings(translated.begin(), translated.end(), "；").c_str()));
+    }
+    return paragraphs.empty() ? original : join_strings(paragraphs.begin(), paragraphs.end(), " ");
+}
+
+string get_god_dislikes(god_type which_god, bool display)
 {
     // Return early for the special cases.
     if (which_god == GOD_NO_GOD || which_god == GOD_XOM)
@@ -456,7 +488,7 @@ string get_god_dislikes(god_type which_god)
         text += ".";
     }
 
-    return text;
+    return display ? _conduct_display(which_god, dislikes, really_dislikes, false, text) : text;
 }
 
 /// A definition of the way in which a god likes a conduct being taken.
@@ -600,9 +632,7 @@ static like_response okawaru_kill(const char* desc)
 
             if (piety > 3200)
             {
-                mprf(MSGCH_GOD, you.religion,
-                     "<white>%s is honoured by your kill.</white>",
-                     uppercase_first(god_name(you.religion)).c_str());
+                mprf(MSGCH_GOD, you.religion, "%s", ui_render("g.message", "<white>%s is honoured by your kill.</white>", make_stringf("<white>%s is honoured by your kill.</white>", uppercase_first(god_name(you.religion)).c_str()), {ui_text_arg("display.god", god_name(you.religion))}).c_str());
             }
             else if (piety > 9) // might still be miniscule
                 simple_god_message(" accepts your kill.");
@@ -642,16 +672,13 @@ static const like_response _yred_kill_response()
                     //Print a reminder if the torch isn't lit, but *could* be
                     if (yred_cannot_light_torch_reason().empty())
                     {
-                        mprf(MSGCH_GOD, "With your torch unlit, %s soul goes wasted...",
-                             you.can_see(*victim) ? victim->pronoun(PRONOUN_POSSESSIVE).c_str() : "a");
+                        mprf(MSGCH_GOD, "%s", ui_render("g.message", "With your torch unlit, %s soul goes wasted...", make_stringf("With your torch unlit, %s soul goes wasted...", you.can_see(*victim) ? victim->pronoun(PRONOUN_POSSESSIVE).c_str() : "a"), {you.can_see(*victim) ? ui_actor_arg(*victim) : ui_text_arg("g.soul", "a creature")}).c_str());
                     }
                 }
                 else
                 {
-                    mprf(MSGCH_GOD, "%s %ssoul becomes fuel for the torch.",
-                         you.can_see(*victim) ? victim->pronoun(PRONOUN_POSSESSIVE).c_str() : "A",
-                         mons_is_unique(victim->type) ? "potent "
-                             : victim->holiness() & MH_HOLY ? "unsullied " : "");
+                    mprf(MSGCH_GOD, "%s", ui_render("g.message", "%s %ssoul becomes fuel for the torch.", make_stringf("%s %ssoul becomes fuel for the torch.", you.can_see(*victim) ? victim->pronoun(PRONOUN_POSSESSIVE).c_str() : "A", mons_is_unique(victim->type) ? "potent "
+                             : victim->holiness() & MH_HOLY ? "unsullied " : ""), {you.can_see(*victim) ? ui_actor_arg(*victim) : ui_text_arg("g.soul", "a creature"), ui_text_arg("g.soul", mons_is_unique(victim->type) ? "potent" : victim->holiness() & MH_HOLY ? "unsullied" : "ordinary")}).c_str());
 
                     if (mons_is_unique(victim->type))
                         piety *= 3;
@@ -1050,7 +1077,7 @@ void set_attack_conducts(god_conduct_trigger conduct[3], const monster &mon,
     _first_attack_conduct.insert(mid);
 }
 
-string get_god_likes(god_type which_god)
+string get_god_likes(god_type which_god, bool display)
 {
     switch (which_god)
     {
@@ -1129,7 +1156,7 @@ string get_god_likes(god_type which_god)
         }
     }
 
-    return text;
+    return display ? _conduct_display(which_god, likes, really_likes, true, text) : text;
 }
 
 conduct_type god_hates_item_handling(const item_def& item)

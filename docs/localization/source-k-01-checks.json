@@ -1,0 +1,21 @@
+{
+  "batch": "source-k-01",
+  "date": "2026-10-23",
+  "reviewed_messages": 41,
+  "catalogue_matches": 41,
+  "missing_messages": [],
+  "stale_dependencies": [],
+  "original_top_level_k_files": 9,
+  "current_top_level_k_files": 9,
+  "windows_tiles_build": true,
+  "native_cases": 68,
+  "native_assertions": 175043,
+  "python_tests": 28,
+  "limitations": [
+    "Old ghost and named Pandemonium demon records contain rendered English descriptions; their complete lines remain English.",
+    "Custom Lua output remains controlled by its author; original category, desc, base_name, summary and modifier APIs remain canonical English.",
+    "Missing typed names, modifiers, places or source fingerprints cause complete row English fallback.",
+    "Technical diagnostics, debug text, configuration/Lua/save keys and enum IDs remain English.",
+    "No in-game visual smoke test; Windows Tiles only."
+  ]
+}

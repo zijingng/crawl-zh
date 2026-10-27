@@ -1,0 +1,44 @@
+{
+  "batch": "ui-gaps-12-23",
+  "windows_tiles_build": "passed",
+  "exe": {
+    "bytes": 27830401,
+    "sha256": "b89d57da84f4d871cf3c18fddcb5b02b764576f30814c2dbe05dea8e392f5e87"
+  },
+  "native": {
+    "cases": 13,
+    "assertions": 2092,
+    "passed": true
+  },
+  "python": {
+    "cases": 33,
+    "passed": true
+  },
+  "new_reviewed_entries": 64,
+  "all_new_entries_in_compiled_catalogue": true,
+  "coverage": {
+    "chaos_flavours": 8,
+    "klown_attack_verbs": 20,
+    "special_touch_brands": 28,
+    "duration_end_callbacks": 4,
+    "fixed_Pandemonium_lords": 4,
+    "bane_types": 14
+  },
+  "canonical_english_morgue_fixtures": {
+    "native-bilingual.txt": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+    "native-explicit-english.txt": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087",
+    "native-language-english.txt": "1eea7ddec7422f349a1b4a19b27262454d47a65ec2b4be31b47d21036074d087"
+  },
+  "invariants": [
+    "Original beam name, selected flavour and real_flavour preserved",
+    "No reroll for chaos, attack verbs or translated parameters",
+    "Original monster and item identities and identification flags retained",
+    "Canonical Lua notes and milestones remain English",
+    "Unknown components and English configuration retain original English paths",
+    "RNG state unchanged"
+  ],
+  "limitations": [
+    "No live game UI interaction",
+    "Existing morgue files are not rewritten"
+  ]
+}

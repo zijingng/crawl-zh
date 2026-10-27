@@ -1,0 +1,285 @@
+{
+  "source": "database/monspeak.txt",
+  "entries": [
+    {
+      "key": "friendly related beogh orc",
+      "context": "textdb:database/monspeak.txt:friendly related beogh orc",
+      "source_sha256": "480c90cb799ea88a9eb173127ff93b85ed08cbacb556e1e5274be3acccd16ed4",
+      "review_status": "reviewed",
+      "review_batch": "database-30",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_friendly_beogh_speech_",
+          "source_sha256": "1326b2ed20f9e66e806ceff656c08a8b616859bc6f8c75ae31d549716453e50b",
+          "translation_sha256": "1326b2ed20f9e66e806ceff656c08a8b616859bc6f8c75ae31d549716453e50b"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_orc_speech_",
+          "source_sha256": "074b98ec91eec59245a3e63402329c2250fa3e3d0e27ff30d6e70ff9dbb11557",
+          "translation_sha256": "9411b0c811abeba2b0ad7365519324beaeb50f610575b3af871e2c914577b5a3"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "default friendly humanoid",
+          "source_sha256": "c20c75c08a015b7ebaff285975022b9f02deb622a530d6813675f6185e3d312d",
+          "translation_sha256": "c20c75c08a015b7ebaff285975022b9f02deb622a530d6813675f6185e3d312d"
+        }
+      ]
+    },
+    {
+      "key": "_friendly_beogh_speech_",
+      "context": "textdb:database/monspeak.txt:_friendly_beogh_speech_",
+      "source_sha256": "1326b2ed20f9e66e806ceff656c08a8b616859bc6f8c75ae31d549716453e50b",
+      "review_status": "reviewed",
+      "review_batch": "database-30",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_friendly_beogh_speech_common_",
+          "source_sha256": "84c94f7d234320770647705ff086292b844d140a2e34b8a2f1c302e3f7f385db",
+          "translation_sha256": "0932698527c198fdc45fbcc3641098b29a7eb47fce15f5a188186d9fb97b450d"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_friendly_beogh_speech_rare_",
+          "source_sha256": "0f34cbe16c285abdf86cbc01b0d438505c8a2a56680202f61371c454e872bb26",
+          "translation_sha256": "1613a239a59b031fccc8bd32712ea323fc9cefe466ae6ac636721d329403041f"
+        }
+      ]
+    },
+    {
+      "key": "_friendly_beogh_speech_common_",
+      "context": "textdb:database/monspeak.txt:_friendly_beogh_speech_common_",
+      "source_sha256": "84c94f7d234320770647705ff086292b844d140a2e34b8a2f1c302e3f7f385db",
+      "review_status": "reviewed",
+      "review_batch": "database-30",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_loudly_or_repeatedly_",
+          "source_sha256": "d88af7e58fec4045a569b48eb5fd9f3ce3931af28501dad17f98cd7668c64fdd",
+          "translation_sha256": "cd1b5e701028a8f2b0c277a3c90c8b9b49eac7695c2bb14e74444f99bdb33c9f"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_orc_heathen_",
+          "source_sha256": "75db43c8f7ca310f62d5ab6e43d253055dc2f62c852cfd9011b16be5f4e619ef",
+          "translation_sha256": "05d544fbbc0cf33b0279ebc0bbebaa5938a586894e0c9b86384ca51474c5d457"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_orc_modifier_",
+          "source_sha256": "fbce70943ff9d7077e98e607acb312eb317044d923cb4dda29120be2e115c9b3",
+          "translation_sha256": "b9ed38291fd2ab5953e2509c0b292fa6e4b95a7bf27eadc1e8c6235dcf3572c3"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_orc_says_",
+          "source_sha256": "62be86336fd1df30d16b1fc2408a8a0d2de63cdb479a7afe757ec5df9f890149",
+          "translation_sha256": "5364df26626b61a496f83ff15a1307f1b4c3278dd6db1395b7c573bdb94f7892"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_says_or_shouts_",
+          "source_sha256": "b9df4814798ad309767ea5384256f98fd00239e3d562f3fc7b2a340201544ffe",
+          "translation_sha256": "0baf1b9056f739a37c759efb243da10ce2088d7119745fa66301436f71f3c61a"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_shouts_",
+          "source_sha256": "82905179e411b95af8411ee9a9cd2ec14e46cd56dfe133d9ce19d630b492508a",
+          "translation_sha256": "04a1ce1d7878f119796b9e3173d6909a493d2654680db1e77f66e338852eb381"
+        }
+      ]
+    },
+    {
+      "key": "_friendly_beogh_speech_rare_",
+      "context": "textdb:database/monspeak.txt:_friendly_beogh_speech_rare_",
+      "source_sha256": "0f34cbe16c285abdf86cbc01b0d438505c8a2a56680202f61371c454e872bb26",
+      "review_status": "reviewed",
+      "review_batch": "database-30",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_mutters_",
+          "source_sha256": "c9ca2aafbcf3525e6f1ba07423133530a0a0d65f8db08d24e9b69a7d7310fbc3",
+          "translation_sha256": "2874cd79885ec2a7c400b6211416fe830a19a5b1748501ab4a5986ed54ac80c8"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_orc_heathen_",
+          "source_sha256": "75db43c8f7ca310f62d5ab6e43d253055dc2f62c852cfd9011b16be5f4e619ef",
+          "translation_sha256": "05d544fbbc0cf33b0279ebc0bbebaa5938a586894e0c9b86384ca51474c5d457"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_orc_says_",
+          "source_sha256": "62be86336fd1df30d16b1fc2408a8a0d2de63cdb479a7afe757ec5df9f890149",
+          "translation_sha256": "5364df26626b61a496f83ff15a1307f1b4c3278dd6db1395b7c573bdb94f7892"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_says_or_shouts_",
+          "source_sha256": "b9df4814798ad309767ea5384256f98fd00239e3d562f3fc7b2a340201544ffe",
+          "translation_sha256": "0baf1b9056f739a37c759efb243da10ce2088d7119745fa66301436f71f3c61a"
+        }
+      ]
+    },
+    {
+      "key": "related beogh orc high priest",
+      "context": "textdb:database/monspeak.txt:related beogh orc high priest",
+      "source_sha256": "ea8d0139c1ef0ee501ca980b6c06ba124888e15d954ecd93e156373fe812ec0b",
+      "review_status": "reviewed",
+      "review_batch": "database-30",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_high_priest_",
+          "source_sha256": "83db7e37d61e2c95ecd1cc9a7ecce6a4987874c66287ceade3b9a816675a7a5e",
+          "translation_sha256": "83db7e37d61e2c95ecd1cc9a7ecce6a4987874c66287ceade3b9a816675a7a5e"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "related beogh orc",
+          "source_sha256": "830d674a2bb23d99e9063bb2773b0604adc91b4e27d672a184497936e9686b1c",
+          "translation_sha256": "830d674a2bb23d99e9063bb2773b0604adc91b4e27d672a184497936e9686b1c"
+        }
+      ]
+    },
+    {
+      "key": "orc high priest",
+      "context": "textdb:database/monspeak.txt:orc high priest",
+      "source_sha256": "1770cf95fdf23c507c032412fb6f4f5decb08e900e70873487a7ce3c4d99b5af",
+      "review_status": "reviewed",
+      "review_batch": "database-30",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_orc_speech_",
+          "source_sha256": "074b98ec91eec59245a3e63402329c2250fa3e3d0e27ff30d6e70ff9dbb11557",
+          "translation_sha256": "9411b0c811abeba2b0ad7365519324beaeb50f610575b3af871e2c914577b5a3"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_high_priest_",
+          "source_sha256": "83db7e37d61e2c95ecd1cc9a7ecce6a4987874c66287ceade3b9a816675a7a5e",
+          "translation_sha256": "83db7e37d61e2c95ecd1cc9a7ecce6a4987874c66287ceade3b9a816675a7a5e"
+        }
+      ]
+    },
+    {
+      "key": "related beogh orc sorcerer",
+      "context": "textdb:database/monspeak.txt:related beogh orc sorcerer",
+      "source_sha256": "fc9dbb0ba7440d3e02602d0d35858d1f3538c26530ac58110ea016bdc0a30a7d",
+      "review_status": "reviewed",
+      "review_batch": "database-30",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_wizard_",
+          "source_sha256": "6ce3c2a162afbb074b878d49fb96bd60ed416a7bbc0301f402c3aeb4a4565125",
+          "translation_sha256": "6ce3c2a162afbb074b878d49fb96bd60ed416a7bbc0301f402c3aeb4a4565125"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "related beogh orc",
+          "source_sha256": "830d674a2bb23d99e9063bb2773b0604adc91b4e27d672a184497936e9686b1c",
+          "translation_sha256": "830d674a2bb23d99e9063bb2773b0604adc91b4e27d672a184497936e9686b1c"
+        }
+      ]
+    },
+    {
+      "key": "orc sorcerer",
+      "context": "textdb:database/monspeak.txt:orc sorcerer",
+      "source_sha256": "89b68dc5a8a0cf50fa02383a56c65180182a9245c61c1890bf687b207a51c2c1",
+      "review_status": "reviewed",
+      "review_batch": "database-30",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_orc_speech_",
+          "source_sha256": "074b98ec91eec59245a3e63402329c2250fa3e3d0e27ff30d6e70ff9dbb11557",
+          "translation_sha256": "9411b0c811abeba2b0ad7365519324beaeb50f610575b3af871e2c914577b5a3"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_wizard_",
+          "source_sha256": "6ce3c2a162afbb074b878d49fb96bd60ed416a7bbc0301f402c3aeb4a4565125",
+          "translation_sha256": "6ce3c2a162afbb074b878d49fb96bd60ed416a7bbc0301f402c3aeb4a4565125"
+        }
+      ]
+    },
+    {
+      "key": "related beogh Blorkula the orcula",
+      "context": "textdb:database/monspeak.txt:related beogh blorkula the orcula",
+      "source_sha256": "687adab1460c952840a1fd9e67ac843635ad2921865ac8610b555428cee35f10",
+      "review_status": "reviewed",
+      "review_batch": "database-30",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "blorkula the orcula",
+          "source_sha256": "853e6825d7cfc1c63575a1a2d56408d33ae735251c9aa530495a638380971bd7",
+          "translation_sha256": "853e6825d7cfc1c63575a1a2d56408d33ae735251c9aa530495a638380971bd7"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "related beogh orc",
+          "source_sha256": "830d674a2bb23d99e9063bb2773b0604adc91b4e27d672a184497936e9686b1c",
+          "translation_sha256": "830d674a2bb23d99e9063bb2773b0604adc91b4e27d672a184497936e9686b1c"
+        }
+      ]
+    },
+    {
+      "key": "related beogh Urug",
+      "context": "textdb:database/monspeak.txt:related beogh urug",
+      "source_sha256": "0fbab0b1cc6e913f0b5783b05a2dff130fa12d0d440b79ce1d037ea91d127613",
+      "review_status": "reviewed",
+      "review_batch": "database-30",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "related beogh orc",
+          "source_sha256": "830d674a2bb23d99e9063bb2773b0604adc91b4e27d672a184497936e9686b1c",
+          "translation_sha256": "830d674a2bb23d99e9063bb2773b0604adc91b4e27d672a184497936e9686b1c"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "urug",
+          "source_sha256": "01d5599d33cfb1926d59ed5aa931e8925ad8b7ed929aca41ec36c22439e6db5d",
+          "translation_sha256": "01d5599d33cfb1926d59ed5aa931e8925ad8b7ed929aca41ec36c22439e6db5d"
+        }
+      ]
+    },
+    {
+      "key": "beogh_converted_orc_reaction_sight",
+      "context": "textdb:database/monspeak.txt:beogh_converted_orc_reaction_sight",
+      "source_sha256": "c2558ba6c8e4162150e1932ff695dbfc7c620178b9d74138df390f22e469097a",
+      "review_status": "reviewed",
+      "review_batch": "database-30"
+    },
+    {
+      "key": "beogh_converted_orc_speech_sight",
+      "context": "textdb:database/monspeak.txt:beogh_converted_orc_speech_sight",
+      "source_sha256": "8f049af81c91360dd31ad8ca52835e895c6c348b224bc7ef79570c82fd07052a",
+      "review_status": "reviewed",
+      "review_batch": "database-30"
+    },
+    {
+      "key": "beogh_converted_orc_reaction_battle",
+      "context": "textdb:database/monspeak.txt:beogh_converted_orc_reaction_battle",
+      "source_sha256": "170816c781ffb8aa1a31b3b6ec0c76be28b2d94762a910a3dd00983f62a6a7bc",
+      "review_status": "reviewed",
+      "review_batch": "database-30"
+    },
+    {
+      "key": "beogh_converted_orc_speech_battle",
+      "context": "textdb:database/monspeak.txt:beogh_converted_orc_speech_battle",
+      "source_sha256": "654b2c66fec2e72154885542e58755d01f51bd258f284b599630d19e22b488df",
+      "review_status": "reviewed",
+      "review_batch": "database-30"
+    }
+  ]
+}

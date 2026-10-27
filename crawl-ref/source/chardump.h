@@ -35,14 +35,18 @@ enum item_origin_dump_selector
 class scorefile_entry;
 string morgue_directory();
 bool dump_char(const string &fname, bool quiet = false, bool full_id = false,
-               const scorefile_entry *se = nullptr);
+               const scorefile_entry *se = nullptr, bool localized = true);
 void dump_map(const char* fname, bool debug = false, bool dist = false, bool log = false);
 void dump_map(FILE *fp, bool debug = false, bool dist = false, bool log = false);
 void display_notes();
 void display_char_dump();
+// Complete canonical export or an on-screen presentation; no file I/O.
+string character_dump_text(bool display = false, bool full_id = false,
+                           const scorefile_entry *se = nullptr);
 string chardump_desc(const item_def& item);
 
 string seed_description();
+string seed_display_description();
 
 #ifdef DGL_WHEREIS
 class xlog_fields;

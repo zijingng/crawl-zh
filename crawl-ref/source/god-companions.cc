@@ -4,6 +4,7 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "god-companions.h"
 
@@ -77,7 +78,7 @@ void remove_bound_soul_companion()
             mons = &entry.second.mons.mons;
         if (mons->type == MONS_BOUND_SOUL)
         {
-            mprf("%s is freed.", mons->name(DESC_THE, true).c_str());
+            mpr(ui_render("g.message", "%s is freed.", make_stringf("%s is freed.", mons->name(DESC_THE, true).c_str()), {ui_actor_arg(*mons)}));
             remove_companion(mons);
             return;
         }
@@ -206,7 +207,7 @@ void wizard_list_companions()
 {
     if (companion_list.size() == 0)
     {
-        mpr("You have no companions.");
+        mpr(ui_translate("g.message", "You have no companions."));
         return;
     }
 
@@ -354,7 +355,7 @@ static void _remove_offlevel_companion(mid_t mid)
 
 void beogh_do_ostracism()
 {
-    mprf(MSGCH_GOD, "Beogh sends your followers elsewhere.");
+    mprf(MSGCH_GOD, "%s", ui_translate("g.message", "Beogh sends your followers elsewhere."));
     for (unsigned int i = FIRST_RECRUITED_APOSTLE; i < apostles.size(); ++i)
     {
         if (apostles[i].state == STATE_ALIVE)
@@ -483,9 +484,14 @@ static bool _try_generate_apostle_challenge(int pow, int band_pow)
 
     // Todo: Make sure not to pick the same name as any existing apostle
 
-    string challenge_msg = " speaks to you: ";
-    challenge_msg += getSpeakString("Beogh apostle challenge");
-    simple_god_message(challenge_msg.c_str());
+    // Select the canonical weighted passage once. Translate that same passage
+    // as a complete component, so a missing body keeps the entire message English.
+    const string passage = getSpeakString("Beogh apostle challenge", Options.language == lang_t::ZH);
+    string challenge_msg = " speaks to you: " + passage;
+    simple_god_message(challenge_msg.c_str(), false, you.religion,
+        ui_render("g.challenge", "%s speaks to you: %s", "",
+            {ui_text_arg("display.god", god_name(you.religion)),
+             ui_text_arg("g.challenge", passage)}));
 
     you.duration[DUR_BEOGH_DIVINE_CHALLENGE] = 100;
 
@@ -586,8 +592,8 @@ bool maybe_generate_apostle_challenge()
 
 void flee_apostle_challenge()
 {
-    mprf(MSGCH_GOD, "Beogh is disappointed with your cowardice.");
-    mprf(MSGCH_GOD, "\"Reflect upon your actions, mortal!\"");
+    mprf(MSGCH_GOD, "%s", ui_translate("g.message", "Beogh is disappointed with your cowardice."));
+    mprf(MSGCH_GOD, "%s", ui_translate("g.message", "\"Reflect upon your actions, mortal!\""));
     dock_piety(0, 15, true);
 
     // Remove the apostle (and its band)
@@ -651,6 +657,17 @@ void win_apostle_challenge(monster& apostle)
                             command_to_string(CMD_USE_ABILITY).c_str());
     }
 
+    ui_arg reminder = ui_literal_arg("");
+    if (get_num_apostles() == 0)
+    {
+        reminder.text = ui_render("g.companion",
+            " (press %s on the %s ability menu to recruit an apostle)", "",
+            {ui_literal_arg(string(1, get_talent(ABIL_BEOGH_RECRUIT_APOSTLE).hotkey)),
+             ui_literal_arg(command_to_string(CMD_USE_ABILITY))});
+        reminder.available = !reminder.text.empty();
+    }
+    msg = ui_render("g.companion", "Beogh will allow you to induct %s into your service.%s",
+        msg, {ui_actor_arg(apostle), reminder});
     mprf(MSGCH_GOD, "%s", msg.c_str());
 
     // Remove the rest of the apostle's band
@@ -689,11 +706,39 @@ string get_apostle_name(int slot, bool with_title)
     return name;
 }
 
+bool try_apostle_display_name(int slot, bool with_title, string &output)
+{
+    if (slot < 0 || slot >= static_cast<int>(apostles.size()))
+        return false;
+    const monster &apostle = apostles[slot].apostle.mons;
+    const string name = apostle.name(DESC_PLAIN, true);
+    ui_translation_group group;
+    if (!group.available())
+        return false;
+    if (!with_title)
+    {
+        output = name; // Generated proper name, not English grammar.
+        return true;
+    }
+    const int type = apostle.props[APOSTLE_TYPE_KEY].get_int();
+    if (type < 0 || type >= NUM_APOSTLE_TYPES)
+        return false;
+    const ui_arg title = ui_text_arg("a.apostle.title", apostle_type_names[type]);
+    group.require("a.ability", "%s, %s");
+    if (!title.available || !group.available())
+        return false;
+    output = make_stringf(group.get("a.ability", "%s, %s"), name.c_str(),
+                          title.text.c_str());
+    return true;
+}
+
 void beogh_recruit_apostle()
 {
     monster* real = monster_by_mid(apostles[0].apostle.mons.mid);
 
     string msg;
+    bool recalled = false;
+    bool revived = false;
 
     // The apostle we want to recruit is still around on this floor
     if (real && real->alive())
@@ -702,13 +747,17 @@ void beogh_recruit_apostle()
         if (!you.can_see(*real))
         {
             if (try_recall(real->mid))
+            {
                 msg += "Beogh recalls " + real->name(DESC_THE, true) + " to your side and ";
+                recalled = true;
+            }
         }
     }
     // Apostle died before we could recruit them
     else
     {
         real = apostles[0].restore();
+        revived = true;
         msg += "Beogh breathes life back into " + real->name(DESC_THE, true) + " and ";
     }
 
@@ -717,7 +766,11 @@ void beogh_recruit_apostle()
     else
         msg += "You anoint " + real->name(DESC_THE, true) + " with ash and charcoal and welcome " + real->pronoun(PRONOUN_OBJECTIVE) + " as a companion.";
 
-    mpr(msg.c_str());
+    const char *pattern = revived
+        ? "Beogh breathes life back into %s, and you anoint them with ash and charcoal and welcome them as a companion."
+        : recalled ? "Beogh recalls %s to your side, and you anoint them with ash and charcoal and welcome them as a companion."
+                   : "You anoint %s with ash and charcoal and welcome them as a companion.";
+    mpr(ui_render("g.companion", pattern, msg, {ui_actor_arg(*real)}));
 
     // Now actually convert and save the apostle
     real->hit_points = real->max_hit_points;
@@ -772,13 +825,14 @@ void beogh_dismiss_apostle(int slot)
     ASSERT(slot > 0 && slot < 4);
 
     const string name = apostles[slot].apostle.mons.name(DESC_THE, true);
-    if (!yesno(make_stringf("Really dismiss %s?", name.c_str()).c_str(), false, 'n'))
+    if (!yesno(ui_render("g.companion", "Really dismiss %s?", make_stringf("Really dismiss %s?", name.c_str()),
+        {ui_actor_arg(apostles[slot].apostle.mons)}).c_str(), false, 'n'))
     {
         canned_msg(MSG_OK);
         return;
     }
 
-    mprf("You release %s from your service.", name.c_str());
+    mpr(ui_render("g.message", "You release %s from your service.", make_stringf("You release %s from your service.", name.c_str()), {ui_actor_arg(apostles[slot].apostle.mons)}));
 
     // Remove our follower monster (if they are elsewhere, use an excursion to
     // remove them immediately.)
@@ -923,7 +977,7 @@ void beogh_swear_vengeance(const monster& apostle)
     }
 
     if (new_targets)
-        mprf(MSGCH_DURATION, "You swear to avenge %s death!", apostle.name(DESC_ITS, true).c_str());
+        mprf(MSGCH_DURATION, "%s", ui_render("g.message", "You swear to avenge %s death!", make_stringf("You swear to avenge %s death!", apostle.name(DESC_ITS, true).c_str()), {ui_actor_arg(apostle)}).c_str());
 
     apostle_data& a = _get_saved_apostle(apostle);
     a.state = STATE_DEAD;
@@ -960,7 +1014,7 @@ void beogh_progress_vengeance()
     you.duration[DUR_BEOGH_SEEKING_VENGEANCE] -= 1;
     if (you.duration[DUR_BEOGH_SEEKING_VENGEANCE] == 0)
     {
-        mprf(MSGCH_DURATION, "You feel as though your fallen companions have been avenged.");
+        mprf(MSGCH_DURATION, "%s", ui_translate("g.message", "You feel as though your fallen companions have been avenged."));
 
         // This cleanup should usually be unnecessary, since we are only supposed
         // to end when we've killed EVERY marked target, but slime creature
@@ -1007,6 +1061,8 @@ void beogh_resurrect_followers(bool end_ostracism_only)
 {
     vector<int> dead_apostles;
     vector<string> revived_names;
+    vector<string> display_revived_names;
+    bool revived_names_available = true;
     vector<bool> was_banished;
 
     for (unsigned int i = FIRST_RECRUITED_APOSTLE; i < apostles.size(); ++i)
@@ -1022,7 +1078,12 @@ void beogh_resurrect_followers(bool end_ostracism_only)
             was_banished.push_back(apostles[i].state == STATE_BANISHED);
 
             if (apostles[i].state == STATE_DEAD)
+            {
                 revived_names.push_back(apostles[i].apostle.mons.name(DESC_THE, true));
+                const ui_arg name = ui_actor_arg(apostles[i].apostle.mons);
+                revived_names_available &= name.available;
+                display_revived_names.push_back(name.text);
+            }
         }
     }
 
@@ -1052,7 +1113,7 @@ void beogh_resurrect_followers(bool end_ostracism_only)
     // The rest of the bookkeeping only applies to real resurrections
     if (end_ostracism_only)
     {
-        mprf(MSGCH_GOD, "Your apostles return to your side.");
+        mprf(MSGCH_GOD, "%s", ui_translate("g.message", "Your apostles return to your side."));
         return;
     }
 
@@ -1068,8 +1129,14 @@ void beogh_resurrect_followers(bool end_ostracism_only)
 
     if (!revived_names.empty())
     {
-        mpr_comma_separated_list("Beogh breathes life back into ", revived_names,
-                                " and ", ", ", MSGCH_GOD);
+        const string translated = ui_render("g.companion", "Beogh breathes life back into %s", "",
+            {{join_strings(display_revived_names.begin(), display_revived_names.end(), "、"),
+              revived_names_available}});
+        if (!translated.empty())
+            mprf(MSGCH_GOD, "%s", translated.c_str());
+        else
+            mpr_comma_separated_list("Beogh breathes life back into ", revived_names,
+                                    " and ", ", ", MSGCH_GOD);
     }
 
     you.props.erase(BEOGH_RES_PIETY_GAINED_KEY);
@@ -1115,7 +1182,7 @@ static int _calc_attack_damage(const monster& apostle)
            + weapon->plus;
 }
 
-string apostle_short_description(int slot)
+string apostle_short_description(int slot, bool translate)
 {
     apostle_data& apostle_d = apostles[slot];
     monster& apostle = *apostle_d.apostle.peek();
@@ -1140,9 +1207,11 @@ string apostle_short_description(int slot)
         status.c_str());
 
     // Stat line
+    const int shown_hp = apostle.max_hit_points;
+    const int shown_ac = apostle.armour_class();
+    const int shown_damage = _calc_attack_damage(apostle);
     str += make_stringf("HP: %d    AC: %d    Damage:%d (w/weapon)\n",
-        apostle.max_hit_points, apostle.armour_class(),
-        _calc_attack_damage(apostle));
+        shown_hp, shown_ac, shown_damage);
 
     string item_str;
     for (unsigned int i = 0; i < NUM_MONSTER_SLOTS; ++i)
@@ -1162,10 +1231,51 @@ string apostle_short_description(int slot)
     while (!spell_str.empty())
         str += wordwrap_line(spell_str, 71);
 
+    string display;
+    ui_translation_group group({{"a.apostle", "%s (<%s>%s</%s>)     %s\n"},
+        {"a.apostle", "HP: %d    AC: %d    Damage:%d (w/weapon)\n"}});
+    const auto build_display = [&]() {
+        if (!translate || !group.available())
+            return false;
+        const ui_arg title = ui_text_arg("a.apostle.title", apostle_type_names[atype]);
+        const ui_arg shown_status = status.empty() ? ui_literal_arg("")
+                                                 : ui_text_arg("a.apostle", status);
+        if (!title.available || !shown_status.available)
+            return false;
+        display = make_stringf(group.get("a.apostle", "%s (<%s>%s</%s>)     %s\n"),
+            apostle.name(DESC_PLAIN, true).c_str(), _apostle_type_colours[atype],
+            title.text.c_str(), _apostle_type_colours[atype], shown_status.text.c_str());
+        display += make_stringf(group.get("a.apostle",
+            "HP: %d    AC: %d    Damage:%d (w/weapon)\n"),
+            shown_hp, shown_ac, shown_damage);
+        for (unsigned i = 0; i < NUM_MONSTER_SLOTS; ++i)
+        {
+            if (apostle.inv[i] == NON_ITEM)
+                continue;
+            const ui_arg item = ui_item_arg(env.item[apostle.inv[i]]);
+            if (!item.available)
+                return false;
+            display += item.text + "\n";
+        }
+        vector<string> spells;
+        for (const auto &spell : apostle.spells)
+        {
+            const ui_arg name = ui_text_arg("display.spell", spell_title(spell.spell));
+            if (!name.available)
+                return false;
+            spells.push_back(name.text);
+        }
+        string spell_names = join_strings(spells.begin(), spells.end(), "、");
+        while (!spell_names.empty())
+            display += wordwrap_line(spell_names, 71);
+        return true;
+    };
+    const bool translated = build_display();
+
     // Destroyed peeked monster (or we'll keep making copies of their equipment
     // all over the floor's item list)
     apostle.destroy_inventory();
     apostle.reset();
 
-    return str;
+    return translated ? display : str;
 }

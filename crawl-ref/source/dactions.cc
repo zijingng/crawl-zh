@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
+#include "stringutil.h"
 
 #include "dactions.h"
 
@@ -309,15 +311,21 @@ static void _pikel_band_message()
         if (you.get_mutation_level(MUT_NO_LOVE))
         {
             const char *substr = visible_minions > 1 ? "minions" : "minion";
-            mprf("Pikel's spell is broken, but his former %s can only feel hate"
-                 " for you!", substr);
+            mpr(ui_render("d.action", visible_minions > 1
+                ? "Pikel's spell is broken, but his former minions can only feel hate for you!"
+                : "Pikel's spell is broken, but his former minion can only feel hate for you!",
+                make_stringf("Pikel's spell is broken, but his former %s can only feel hate"
+                             " for you!", substr), {}));
         }
         else
         {
             const char *substr = visible_minions > 1
                 ? "minions thank you for their"
                 : "minion thanks you for its";
-            mprf("With Pikel's spell broken, his former %s freedom.", substr);
+            mpr(ui_render("d.action", visible_minions > 1
+                ? "With Pikel's spell broken, his former minions thank you for their freedom."
+                : "With Pikel's spell broken, his former minion thanks you for its freedom.",
+                make_stringf("With Pikel's spell broken, his former %s freedom.", substr), {}));
         }
     }
 }
@@ -492,7 +500,9 @@ static void _daction_hog_to_human(monster *mon, bool in_transit)
     behaviour_event(mon, ME_EVAL);
 
     if (could_see && !can_see)
-        mpr("The hog vanishes!");
+        mpr(ui_translate("d.action", "The hog vanishes!"));
     else if (!could_see && can_see)
-        mprf("%s appears from out of thin air!", mon->name(DESC_A).c_str());
+        mpr(ui_render("d.action", "%s appears from out of thin air!",
+            make_stringf("%s appears from out of thin air!", mon->name(DESC_A).c_str()),
+            {ui_actor_arg(*mon)}));
 }

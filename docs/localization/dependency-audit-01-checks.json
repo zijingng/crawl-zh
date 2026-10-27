@@ -1,0 +1,61 @@
+{
+  "active_reviewed_entries": 28797,
+  "stale_dependencies_before": 3,
+  "stale_dependencies_after": 0,
+  "ui_messages": 23050,
+  "ui_status": {
+    "exported": 23049,
+    "unreviewed": 1
+  },
+  "generated_ui_catalogue_matches_current_inputs": true,
+  "textdb_files": 45,
+  "textdb_entries": 5748,
+  "textdb_status": {
+    "reviewed": 5748
+  },
+  "textdb_source_entries": 5748,
+  "textdb_exported_entries": 5748,
+  "help_documents": [
+    {
+      "source": "crawl-ref/docs/quickstart.txt",
+      "status": "reviewed"
+    },
+    {
+      "source": "crawl-ref/docs/macros_guide.txt",
+      "status": "reviewed"
+    },
+    {
+      "source": "crawl-ref/docs/tiles_help.txt",
+      "status": "reviewed"
+    },
+    {
+      "source": "crawl-ref/docs/crawl_manual.txt",
+      "status": "reviewed"
+    },
+    {
+      "source": "crawl-ref/docs/aptitudes.txt",
+      "status": "reviewed"
+    }
+  ],
+  "restored_groups": [
+    {
+      "context": "textdb:database/miscname.txt:summon_horrible_things",
+      "candidates": 28
+    },
+    {
+      "context": "textdb:database/miscname.txt:harlequin_trap_lines",
+      "candidates": 4
+    },
+    {
+      "context": "textdb:database/monspeak.txt:orb spider charge",
+      "candidates": 3
+    }
+  ],
+  "native_tests": 3,
+  "native_assertions": 51736,
+  "python_tests": 33,
+  "runtime_code_changed": false,
+  "translation_bodies_changed": false,
+  "excluded_unreviewed_content_unchanged": true,
+  "english_fallback_preserved": true
+}

@@ -1,0 +1,1668 @@
+{
+  "baseline": "0.34.1",
+  "batch": "phase3-static-06",
+  "glossary_sha256": "2c2041390a82e14b9a05b05bd5de2db212369f05cdb2862461ffad562765d81f",
+  "new_textdb": 204,
+  "by_file": {
+    "descript/items.txt": 76,
+    "descript/spells.txt": 128
+  },
+  "entries": [
+    {
+      "source": "descript/items.txt",
+      "key": "decaying skeleton",
+      "context": "textdb:descript/items.txt:decaying skeleton",
+      "source_sha256": "6a8cb355fc32addf3875224808b24a5d932fa999f52b06751e7ed72226ebf273",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of sloth",
+      "context": "textdb:descript/items.txt:book of sloth",
+      "source_sha256": "b1ec043e516bcd56143c2400f8edb0245aec3a65628134eb648d9715ac121af7",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of fixed level",
+      "context": "textdb:descript/items.txt:book of fixed level",
+      "source_sha256": "d36dd1eb69743a94503b7d2311f6de6e3febd958eabe48ddfae11464b1f9589b",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of fixed theme",
+      "context": "textdb:descript/items.txt:book of fixed theme",
+      "source_sha256": "d36dd1eb69743a94503b7d2311f6de6e3febd958eabe48ddfae11464b1f9589b",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "corpse",
+      "context": "textdb:descript/items.txt:corpse",
+      "source_sha256": "7396d551495f5e79b96a7ea71a7148304ac644ca127da04ea66312b6af17354d",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "giant club",
+      "context": "textdb:descript/items.txt:giant club",
+      "source_sha256": "3006bba5067e66a15868e05838ea439f1dc438968ce2420ff62991f4fdb3924f",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "gold piece",
+      "context": "textdb:descript/items.txt:gold piece",
+      "source_sha256": "7f9a2b79e376c93b147a1e42723cc9333d775cff26ae1d4aafeca2227245f483",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "baked corpse",
+      "context": "textdb:descript/items.txt:baked corpse",
+      "source_sha256": "944b3f249ff025e69cd6b83c6f7879e2a569f47b4d720291d15c4bc6cd8b5a50",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "longbow",
+      "context": "textdb:descript/items.txt:longbow",
+      "source_sha256": "7319e32c9341f1bd7f7e39161c10fce28f8ce0030af88fcf2177bf06153e258c",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of lightning",
+      "context": "textdb:descript/items.txt:book of lightning",
+      "source_sha256": "f12ddfd187f85e920dc54897004a9743e2c8e7cd3639f6e6ffa2ba9a47af9c7b",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "great mace",
+      "context": "textdb:descript/items.txt:great mace",
+      "source_sha256": "96bdf64f39d550ca9f3f2c0b779b66a32d48d777404bcd7ebabbcc5ad95205f8",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "scimitar",
+      "context": "textdb:descript/items.txt:scimitar",
+      "source_sha256": "a4954de43fa23f9005e202163cd3af6f1521c28402aab51223a11cfb44235378",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "demon blade",
+      "context": "textdb:descript/items.txt:demon blade",
+      "source_sha256": "307abd20ad9929a45b32c3c1d259ca20fa6c70200720c25b58a87e72b22a0295",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "dire flail",
+      "context": "textdb:descript/items.txt:dire flail",
+      "source_sha256": "ae3208ed4dd1c54f940dc392db6921bfe1042368413f8f408b6cee66ff637100",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "falchion",
+      "context": "textdb:descript/items.txt:falchion",
+      "source_sha256": "3e95dd910494f99e7e74fadbd84ea992884763c001632c428569d1c6b5eed053",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "hammer",
+      "context": "textdb:descript/items.txt:hammer",
+      "source_sha256": "91541632efe11a2a38d50379485ec195b92d475665d952ca1949fb6f485b25a5",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "demon whip",
+      "context": "textdb:descript/items.txt:demon whip",
+      "source_sha256": "6132267ed2ca818e8e4282c7364404ba0dbcbe5ef42ca01a9921fe432c064883",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "glaive",
+      "context": "textdb:descript/items.txt:glaive",
+      "source_sha256": "49b5f0653f62ed0d9afb465a99942f36cbc81799a49f2d3dcb2104433507a8a4",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "rune of zot",
+      "context": "textdb:descript/items.txt:rune of zot",
+      "source_sha256": "f3e1649bee060bdbe993abd5d283f7c0e4a519d6163f4df1b8acd5c2f6c75e1d",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "deck of punishment",
+      "context": "textdb:descript/items.txt:deck of punishment",
+      "source_sha256": "ae5b5a387c20464d4282043e93950ccf97892d20a1b0de6aeedbb24ac92efb2a",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "fen folio",
+      "context": "textdb:descript/items.txt:fen folio",
+      "source_sha256": "b34f862e00d382470071bd46e807f6c7533aae3b272485769d8f80a9be609806",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "giant spiked club",
+      "context": "textdb:descript/items.txt:giant spiked club",
+      "source_sha256": "98ce6a50571665e2be6e079255644ff514dc30e009670da96165eb003879ae5f",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of conjurations",
+      "context": "textdb:descript/items.txt:book of conjurations",
+      "source_sha256": "4fc56d989b14560c86066b1cbb3b079750612512721f682d43a08483c767a79b",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "deck of escape",
+      "context": "textdb:descript/items.txt:deck of escape",
+      "source_sha256": "91f7b5e3c76773e7e7e7764c55843942271130cb5216b47a983c8d0c6a4258aa",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "great sword",
+      "context": "textdb:descript/items.txt:great sword",
+      "source_sha256": "5ec8076c1ae31579063d1398990b0f866156ce0da72ced1091e868667735d981",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "handbook of applied construction",
+      "context": "textdb:descript/items.txt:handbook of applied construction",
+      "source_sha256": "d9057d767de58c6e7ad4f057da7745588cd9e647d00b9ced0eece7a73df424be",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "manual",
+      "context": "textdb:descript/items.txt:manual",
+      "source_sha256": "a3a9c6aeed1ac9d36acee25adc40ddbbdfcf29e03931054aae5493389a6fcc94",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "partisan",
+      "context": "textdb:descript/items.txt:partisan",
+      "source_sha256": "c04b06e72510713cf7047cac7ba4358c287fc2df27f9c0bbc5fc1f5d1d68fa91",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "deck of summoning",
+      "context": "textdb:descript/items.txt:deck of summoning",
+      "source_sha256": "a8bd4814d69ec9ae9dc5963dbd9c4fe7ae80c0d27366d1d7d459af9692aa6367",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of burglary",
+      "context": "textdb:descript/items.txt:book of burglary",
+      "source_sha256": "8719460931d92c204e338aee86715236e5283656ddb1142c72a8218140d9463c",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of callings",
+      "context": "textdb:descript/items.txt:book of callings",
+      "source_sha256": "f41b5bdd774934f37d18e052b71d3b6cc0c831c598d10bf7918763984c6a1823",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of iron",
+      "context": "textdb:descript/items.txt:book of iron",
+      "source_sha256": "83e9b50f66c5d8c6d0a9c2605d5f0c0c970638546fe541baddacc3a0e4829ea0",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of power",
+      "context": "textdb:descript/items.txt:book of power",
+      "source_sha256": "704021dee08b23a88b74c1bfff53f287616715a6762e003a51a5f7acd505a91e",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of the dragon",
+      "context": "textdb:descript/items.txt:book of the dragon",
+      "source_sha256": "d42ef3c07c9d3baa58ae217c6b6ff302828745bd7e195ea774367b75a62bbe4e",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "swamp dragon scales",
+      "context": "textdb:descript/items.txt:swamp dragon scales",
+      "source_sha256": "b8d57be3e4d635d611d0b910c2a236ad94ac7e3d646344f66a1d0e804d3191ec",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "orb",
+      "context": "textdb:descript/items.txt:orb",
+      "source_sha256": "ca135739cdda529254584d40c549ead3e5dd8de5ee1217dd64edb43e332a1591",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "pearl dragon scales",
+      "context": "textdb:descript/items.txt:pearl dragon scales",
+      "source_sha256": "3151b33a8dc70e71a4b5365a5341bd0d8ef349cb30b5d453ff7b6cabbc9ce70a",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of displacement",
+      "context": "textdb:descript/items.txt:book of displacement",
+      "source_sha256": "da04642d200a8193c55e70f0e1b29deb3e74767c22af5f1c13f21da238a5e185",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "halberd",
+      "context": "textdb:descript/items.txt:halberd",
+      "source_sha256": "7dad330407cb2476777823ca62dc87774f227b184501dcb12d3c01cc92c9b1c1",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "lajatang",
+      "context": "textdb:descript/items.txt:lajatang",
+      "source_sha256": "a3d7e313a63de8d68874ffbc2d8c8966d92944ab313698fcdb02d8d743cc5f9f",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "orb of zot",
+      "context": "textdb:descript/items.txt:orb of zot",
+      "source_sha256": "ce9d45aa7bdaced38b5d696bce78cb338de01a98b0f1041de1a55a12174c794d",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of beasts",
+      "context": "textdb:descript/items.txt:book of beasts",
+      "source_sha256": "674d9ef19fa1a01acdc7b18a96f79f419ac73c690d238005f5a1c14bdfa5e116",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of hexes",
+      "context": "textdb:descript/items.txt:book of hexes",
+      "source_sha256": "af6ebe5be624f5bef20dbc987412c624c8ea7deac01facbf00577c04bfe2d8d1",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of unlife",
+      "context": "textdb:descript/items.txt:book of unlife",
+      "source_sha256": "44c9b4dca2c618410e5abc56d4adec4062e5f89bc608806b10dae469bfbd269d",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "pair of gloves",
+      "context": "textdb:descript/items.txt:pair of gloves",
+      "source_sha256": "3509c8dc69d06954858c1d5b1a6dda45ebb6e26de95f05c6fd5135a442ccbaba",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "parchment",
+      "context": "textdb:descript/items.txt:parchment",
+      "source_sha256": "eaf85a5357615dbeca62b8fa08509dfb750a2583d28cdd98e22c5f1c2ba9020e",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "executioner's axe",
+      "context": "textdb:descript/items.txt:executioner's axe",
+      "source_sha256": "c9ad3b41037a5abd28a0d6d2cea70724520fd67ceb92062439ab3c8881b696f8",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "stone",
+      "context": "textdb:descript/items.txt:stone",
+      "source_sha256": "e70e2931c3c198affffbc9261f7822784df7b1d6ba1c4d0f61ed5cf6721ca9eb",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of dangerous friends",
+      "context": "textdb:descript/items.txt:book of dangerous friends",
+      "source_sha256": "be1a52bc701063e3fa0c67633cbd7e606cd287591210244d3de72bb7b3db24cc",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of death",
+      "context": "textdb:descript/items.txt:book of death",
+      "source_sha256": "2bc27d6e67c80eb8114fe29e4ddf5cdba2179dc1b9d68cbd3de36c571e4bb2f2",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of fire",
+      "context": "textdb:descript/items.txt:book of fire",
+      "source_sha256": "269aac80749d7d9452bcec2db456271997d31587550a5a88ed1d6d28945335ee",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "pair of boots",
+      "context": "textdb:descript/items.txt:pair of boots",
+      "source_sha256": "d6813e592f8df4634d479c201b85e372cf8f1f814fe4906bedacc2f4acfa4ca2",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "scythe",
+      "context": "textdb:descript/items.txt:scythe",
+      "source_sha256": "b4e0938995e5d65ad11fb049cd048c86c4069c204249f5a02c0a29a43d4289fa",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "triple sword",
+      "context": "textdb:descript/items.txt:triple sword",
+      "source_sha256": "994c330348a5ea6de4688aa9d0c7aa97a15d6dec9b74a49752db5e2140d52a80",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of geomancy",
+      "context": "textdb:descript/items.txt:book of geomancy",
+      "source_sha256": "2e55171949b7b328cf138632864b435a4ccc56aa9950ea06c08bdcf75eff7c51",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "deck of destruction",
+      "context": "textdb:descript/items.txt:deck of destruction",
+      "source_sha256": "fccd1f9d783e9e827502e2f24eaa0768dae3259d5185125653e3fa866d24e883",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "eggplant",
+      "context": "textdb:descript/items.txt:eggplant",
+      "source_sha256": "ddd083414a6ae401616a4c7a62cbcff7da0de15c44a0a157439693794de7fae7",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "ice dragon scales",
+      "context": "textdb:descript/items.txt:ice dragon scales",
+      "source_sha256": "71b0d96f2db45e9024dba29fd135c9a8695a23a3bc346f79f05d20e81ba6580a",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of annihilations",
+      "context": "textdb:descript/items.txt:book of annihilations",
+      "source_sha256": "b9a73b375b60e38701942cf71708cf3a1f37a7d90c7c6469b86f59df57e1c064",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of ice",
+      "context": "textdb:descript/items.txt:book of ice",
+      "source_sha256": "f2d88a009256f13955264cc6bfdafe7a21d312c455490bf4ebedc431df27b43d",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "prismatic gem",
+      "context": "textdb:descript/items.txt:prismatic gem",
+      "source_sha256": "e5eb1f8546600c0b36041528e11894c08a416b2c7dda2dcbda403ef1516e55c5",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06",
+      "dependencies": [
+        {
+          "source": "descript/items.txt",
+          "key": "gem",
+          "source_sha256": "414549b129483dff2dd50e78ee0999de629cac45d6f35682069536eb679a09a5",
+          "translation_sha256": "ce13c88988edecc1997f389affe472f234d99dc1c6c7daacf6f31ec6811365be"
+        }
+      ]
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "young poisoner's handbook",
+      "context": "textdb:descript/items.txt:young poisoner's handbook",
+      "source_sha256": "18ef9d2bd7b381d50d13dc4e42eb700e226f2920e5187c695bd009b7c64dc306",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "azure gem",
+      "context": "textdb:descript/items.txt:azure gem",
+      "source_sha256": "2931a6e4eebbb6822f364169a523d06caf05c6bfc0d4ba0a442ed9a74de52fc6",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06",
+      "dependencies": [
+        {
+          "source": "descript/items.txt",
+          "key": "gem",
+          "source_sha256": "414549b129483dff2dd50e78ee0999de629cac45d6f35682069536eb679a09a5",
+          "translation_sha256": "ce13c88988edecc1997f389affe472f234d99dc1c6c7daacf6f31ec6811365be"
+        }
+      ]
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of dreams",
+      "context": "textdb:descript/items.txt:book of dreams",
+      "source_sha256": "5ad146da42e93387126a482bd221fbd913b8e2cd7183d56334639a5f258fbd47",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of minor magic",
+      "context": "textdb:descript/items.txt:book of minor magic",
+      "source_sha256": "3ae078c63c9616a89574f79c638d8e6e9204f60d3bb1d9fd4673c9d13ea93b83",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of necromancy",
+      "context": "textdb:descript/items.txt:book of necromancy",
+      "source_sha256": "2ac323d06e44b7fbb56d8f42ac4e0c55f41420ed70c8f7f80cc0b9a9812e6f6d",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of spatial translocations",
+      "context": "textdb:descript/items.txt:book of spatial translocations",
+      "source_sha256": "afcb8e92acd53ef421c251ad13536658f88069f1fd45d013364a9b4fd91beadd",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "storm dragon scales",
+      "context": "textdb:descript/items.txt:storm dragon scales",
+      "source_sha256": "ed0aa1ef7ac666138f330f267107e5e5de88bf253f9cb39f71c095cc0766d6db",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of spectacle",
+      "context": "textdb:descript/items.txt:book of spectacle",
+      "source_sha256": "a6b5fbcbe2927408d6308c7f8cc4488250ba50553a651c59d92fbfc022edb744",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "eudemon blade",
+      "context": "textdb:descript/items.txt:eudemon blade",
+      "source_sha256": "ad8d79c0184a15f77eb77008be98b6de933b3cfa79ca4ad1c72ce28e144908c7",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "troll leather armour",
+      "context": "textdb:descript/items.txt:troll leather armour",
+      "source_sha256": "4ca8d326608848e0d43415fc32b486cf4993eb7760489f729eca15a499fc730c",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "arbalest",
+      "context": "textdb:descript/items.txt:arbalest",
+      "source_sha256": "a8b626dd8b81902f2629c1ebc1cb5fabd8985233423ddd46699fb0feafbbb06b",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "book of flames",
+      "context": "textdb:descript/items.txt:book of flames",
+      "source_sha256": "6e6137386013bd8b415ded8977ba1cedebd69b7bca75de8afeda92c375fc2527",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "sack of spiders",
+      "context": "textdb:descript/items.txt:sack of spiders",
+      "source_sha256": "ca4cb69ce261fc6dd11fd091df4facebdca050302fbf7f5a938cbedf20ac621b",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "starry gem",
+      "context": "textdb:descript/items.txt:starry gem",
+      "source_sha256": "ba9812319ce7d1a32591ed59904f8e467f92fde1fa20baffceb82a7301401629",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06",
+      "dependencies": [
+        {
+          "source": "descript/items.txt",
+          "key": "gem",
+          "source_sha256": "414549b129483dff2dd50e78ee0999de629cac45d6f35682069536eb679a09a5",
+          "translation_sha256": "ce13c88988edecc1997f389affe472f234d99dc1c6c7daacf6f31ec6811365be"
+        }
+      ]
+    },
+    {
+      "source": "descript/items.txt",
+      "key": "gem",
+      "context": "textdb:descript/items.txt:gem",
+      "source_sha256": "414549b129483dff2dd50e78ee0999de629cac45d6f35682069536eb679a09a5",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Infernal Servant spell",
+      "context": "textdb:descript/spells.txt:infernal servant spell",
+      "source_sha256": "11c1918d4c08487e82315123b12a6b85053edd5d64a46798e00b05290445f074",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Heal Other spell",
+      "context": "textdb:descript/spells.txt:heal other spell",
+      "source_sha256": "6559fcb4f19bf1d9ae597525cfeaabdf810ee40ddaa90fd6033c0afdc6e0fa6b",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Invisibility spell",
+      "context": "textdb:descript/spells.txt:invisibility spell",
+      "source_sha256": "7b84db53366ec2e5ac192bdf5c24c26c1145661a186bac398441e07bccee3b28",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Invisibility Other spell",
+      "context": "textdb:descript/spells.txt:invisibility other spell",
+      "source_sha256": "26a25e412e5c8a24e9161761ac53357ea1161a3b757cbf4f0931a5c0ceefe2db",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Drakes spell",
+      "context": "textdb:descript/spells.txt:summon drakes spell",
+      "source_sha256": "4ae34017493087b9a72b5cd3f6bc43effaa955287e2dbd185f01e2680bc40808",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Sin Beast spell",
+      "context": "textdb:descript/spells.txt:summon sin beast spell",
+      "source_sha256": "2842bb28dd0201439b9899c164a17565e70e77d8ed28cdf3f36cefcd553831f1",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Spiders spell",
+      "context": "textdb:descript/spells.txt:summon spiders spell",
+      "source_sha256": "23d2486195bd3049e8e26b1d316a7bac326f0245fe9d0113eb63eb793359ff0b",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Thunderbolt spell",
+      "context": "textdb:descript/spells.txt:thunderbolt spell",
+      "source_sha256": "fa3593dab9df3f58231d8fde61748d87a3fd2c4f445b47c355f17e7853a4e12b",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Banishment spell",
+      "context": "textdb:descript/spells.txt:banishment spell",
+      "source_sha256": "0cc9366dcf9c511d322fcefa6f184364e2adfcacca729e61edf2ca143afccca2",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Bolt of Cold spell",
+      "context": "textdb:descript/spells.txt:bolt of cold spell",
+      "source_sha256": "ec3ac4fee4e95d226824318a4745c564e9d09e9e34661d981b233a54dd43c748",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Bolt of Fire spell",
+      "context": "textdb:descript/spells.txt:bolt of fire spell",
+      "source_sha256": "0d7dbc222f73deb8738ccfdafa79e457cbd02d7b3824e5794e9e48acac7127b3",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Dig spell",
+      "context": "textdb:descript/spells.txt:dig spell",
+      "source_sha256": "22fcdc5d4124d85e79a8d934b0a30ead0529a6d53ae4ae2e39dc5b8d4ecb8c09",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Fireball spell",
+      "context": "textdb:descript/spells.txt:fireball spell",
+      "source_sha256": "c0aecdd92c0b99fbb4d042662a48f5e206eba865fdf520eb620808e6b2c27f86",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Haste spell",
+      "context": "textdb:descript/spells.txt:haste spell",
+      "source_sha256": "8510b9dc09d55b5bb06ed683867d7b6ada160b4a709ecfba70a1293cc6e61672",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Hellfire Court spell",
+      "context": "textdb:descript/spells.txt:hellfire court spell",
+      "source_sha256": "c76f135a577a8f981a734bcc93fcdc5d4c44de4e5ff150e99e616d50d534ce82",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Shadow Beam spell",
+      "context": "textdb:descript/spells.txt:shadow beam spell",
+      "source_sha256": "57140d4f99c7c2adde2c0a4ae901eb6751c3cd268118d6e18d3494b35c8ee298",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Slow spell",
+      "context": "textdb:descript/spells.txt:slow spell",
+      "source_sha256": "63d4eaad6b1284fb78ee17c25e35586ab4becf249bcaa34293e5d09db5919e9e",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Spit Acid spell",
+      "context": "textdb:descript/spells.txt:spit acid spell",
+      "source_sha256": "5a62bd44ae738c1ca44e76f5feb339453e8f2ff765ad78de3357a87f27b98767",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Air Elementals spell",
+      "context": "textdb:descript/spells.txt:summon air elementals spell",
+      "source_sha256": "36fed707b426705062515573d84a38514cb6585452915e587372954d988090da",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Earth Elementals spell",
+      "context": "textdb:descript/spells.txt:summon earth elementals spell",
+      "source_sha256": "447b8e3a22280906a7adadf61b7e6c5c8aa7a0ae9debcb85af2273b9a655a9bd",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Fire Elementals spell",
+      "context": "textdb:descript/spells.txt:summon fire elementals spell",
+      "source_sha256": "7e339db2de3bd0f1c3591b566f5b199bf9f1f42ce5f6b58f790a80d3f9549c0d",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Ufetubus spell",
+      "context": "textdb:descript/spells.txt:summon ufetubus spell",
+      "source_sha256": "6eb8cf1232daf0fb5880965a56ec384808f776c71e4959a8d9dc221740be350e",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Water Elementals spell",
+      "context": "textdb:descript/spells.txt:summon water elementals spell",
+      "source_sha256": "cd0dca2ba65dc85f084b05d61856c5d7d4ef42fbaa647eccd5efc9731f05c428",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Throw Flame spell",
+      "context": "textdb:descript/spells.txt:throw flame spell",
+      "source_sha256": "b97b7b51c70ea3e8c0cdd8ce3ff0a8ba2cb6d1a3ec2d17c9466d12bacf1841e7",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Throw Frost spell",
+      "context": "textdb:descript/spells.txt:throw frost spell",
+      "source_sha256": "e4a98a8409ff323d301037d92cf29f908204db91dbcbd31817483ca88e0cf2ef",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Venom Bolt spell",
+      "context": "textdb:descript/spells.txt:venom bolt spell",
+      "source_sha256": "aba70a53465e869399030a656c6e0365e88361facd286cf2d961a4c5c6656214",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Acid Ball spell",
+      "context": "textdb:descript/spells.txt:acid ball spell",
+      "source_sha256": "bb618fb025b884400e246bf5711ac11da8be8275661db649c7f98009cb70f9b5",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Cold Breath spell",
+      "context": "textdb:descript/spells.txt:cold breath spell",
+      "source_sha256": "96bb901fc783267550d4bf28e959456dfa61434cca78d75f39c1fb23689f4d1e",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Corrosive Bolt spell",
+      "context": "textdb:descript/spells.txt:corrosive bolt spell",
+      "source_sha256": "0db0cf66041cf434949344836d4cc5d647a72208bee0f6e8bf68240f342eae39",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Haste Other spell",
+      "context": "textdb:descript/spells.txt:haste other spell",
+      "source_sha256": "aa1a4e5e9ab4ea8306c463ba2c42d613badd75570bfe56468fccdd5dc16db032",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Hunting Call spell",
+      "context": "textdb:descript/spells.txt:hunting call spell",
+      "source_sha256": "4aeb13e59e0138fce1318ae274283dc921cf112a37539b2f7493646f88e16075",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Iron Shot spell",
+      "context": "textdb:descript/spells.txt:iron shot spell",
+      "source_sha256": "e6bfaac58cddfef18faeeaf25f65568ea603aa2c3f31c15124c0054cd2ae7b50",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Lehudib's Crystal Spear spell",
+      "context": "textdb:descript/spells.txt:lehudib's crystal spear spell",
+      "source_sha256": "c1f62bbcf1e819c4bcb28e59a85aa5cdddd89c27673c40053b5977a96b0737df",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Might spell",
+      "context": "textdb:descript/spells.txt:might spell",
+      "source_sha256": "b7647d0fa6f64e8cb900f1fff8833fd31e8ed3f4b215857fca6df69b14ff8ff1",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Slug Dart spell",
+      "context": "textdb:descript/spells.txt:slug dart spell",
+      "source_sha256": "5827f4991d124274dfa7cc3bb3d00fd123104afeb18f99d81359abde55536007",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Spawn Tentacles spell",
+      "context": "textdb:descript/spells.txt:spawn tentacles spell",
+      "source_sha256": "dc4309b44b0afd8d719b71a3e47105d3f3caefc123a972bb5c2b287e1e68a447",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Emperor Scorpions spell",
+      "context": "textdb:descript/spells.txt:summon emperor scorpions spell",
+      "source_sha256": "7692f97ed5ca5ccd097d1582fef70a5317189fb7db5b51ae6896722aac88c5c0",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Scarabs spell",
+      "context": "textdb:descript/spells.txt:summon scarabs spell",
+      "source_sha256": "80ebe19e6849763d1c3014f70b59ab8e4a56422d220d0a03939d0c378836c505",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Scorpions spell",
+      "context": "textdb:descript/spells.txt:summon scorpions spell",
+      "source_sha256": "f77b28b849178bd33d28facd1946faae13d17bbe7fe61b5c88dda9cca569cadf",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Vermin spell",
+      "context": "textdb:descript/spells.txt:summon vermin spell",
+      "source_sha256": "f55741767f3d8241f2928a35a8c320f6f315100980cad4fc6b4158eab6499023",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Volley of Thorns spell",
+      "context": "textdb:descript/spells.txt:volley of thorns spell",
+      "source_sha256": "0afe5217cf893c8c3afc32e393b0f5598ccda4e01557645753e34a5cf46b69d1",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Warning Cry spell",
+      "context": "textdb:descript/spells.txt:warning cry spell",
+      "source_sha256": "fa6685ab81ca5e6f0099ba739714598a8a8f64ae585de52f3710dade79c765d5",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Flaming Cloud spell",
+      "context": "textdb:descript/spells.txt:flaming cloud spell",
+      "source_sha256": "eceec25e9ca8035a2b670a1077dc3aa040482d627c3e607ef73e30b7e7d3013e",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Poisonous Cloud spell",
+      "context": "textdb:descript/spells.txt:poisonous cloud spell",
+      "source_sha256": "1332e2042a02bbf36d9c1a778a4a3666c75133389251be95431806b8e475ddb0",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Holies spell",
+      "context": "textdb:descript/spells.txt:summon holies spell",
+      "source_sha256": "0f1070841857b94ceac33cc54eaf73993e149b82473290bedd4a481233b9ab93",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Virulence spell",
+      "context": "textdb:descript/spells.txt:virulence spell",
+      "source_sha256": "677349bbd3a50c4c1b8555021c0ab44cbada8fd5d4f917a24f16f535cb3e08e2",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Doom Bolt spell",
+      "context": "textdb:descript/spells.txt:doom bolt spell",
+      "source_sha256": "3674034545d672b221a5885b7566be326bfce848404c1d8747da7f83110d79e6",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Druid's Call spell",
+      "context": "textdb:descript/spells.txt:druid's call spell",
+      "source_sha256": "6004ebb2ea4068cbafdb53302016cfdad76048aa06efcb3c78b1a32173e1b3dc",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Fire Breath spell",
+      "context": "textdb:descript/spells.txt:fire breath spell",
+      "source_sha256": "46d0e17b2e991acb30c7ad4413859f7d1345392d9dd584d51da8c52544e130c1",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Freezing Cloud spell",
+      "context": "textdb:descript/spells.txt:freezing cloud spell",
+      "source_sha256": "09356055b1bd0c9237d5f03d34b926b9a528a060729d71c28b604aa5b16d57bb",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Ink Cloud spell",
+      "context": "textdb:descript/spells.txt:ink cloud spell",
+      "source_sha256": "b493d80bff59121e453655535e3782da4068d854603dfcb0af46648f5e44cb6d",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Mass Confusion spell",
+      "context": "textdb:descript/spells.txt:mass confusion spell",
+      "source_sha256": "09b22454e41ab773bea7ee1145a18cea48511d773cc4acdc29c494eed136acc2",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Might Other spell",
+      "context": "textdb:descript/spells.txt:might other spell",
+      "source_sha256": "c35bf92291f1573e69f8da66014397772ffb44311662e798969ecf8c7ff03d87",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Pain spell",
+      "context": "textdb:descript/spells.txt:pain spell",
+      "source_sha256": "0e95e217ac2c757b041d0334657e1fc448eadcbd7f07b61d6991d52dbf335964",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Minor Demon spell",
+      "context": "textdb:descript/spells.txt:summon minor demon spell",
+      "source_sha256": "9d09cb0127d5bb164c1add2de40e4689919187f7d54498bd0057af9e7f740303",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Tzitzimitl spell",
+      "context": "textdb:descript/spells.txt:summon tzitzimitl spell",
+      "source_sha256": "98f1189efdd9d0bae5fb7fbe2ad8447d39942ca0354b9baf0016426fd99016e8",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Abjuration spell",
+      "context": "textdb:descript/spells.txt:abjuration spell",
+      "source_sha256": "14999e6a185e8d8e149d832e99e0d3955c491ae0e4465eb1ce7c33eddf375b58",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Blink Close spell",
+      "context": "textdb:descript/spells.txt:blink close spell",
+      "source_sha256": "ba603738f387bc7293451741ca664497eac6c95adf19d77f96b2e4651c037f27",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Entropic Weave spell",
+      "context": "textdb:descript/spells.txt:entropic weave spell",
+      "source_sha256": "35b8def720509191e756833690141766afc49fa4cb20d49ee0045aab2a592eec",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Major Healing spell",
+      "context": "textdb:descript/spells.txt:major healing spell",
+      "source_sha256": "0e38bedd41695aff316b7c501ebaf3fd2b2877c064e21c67566dcfb62bb1ddf5",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Minor Healing spell",
+      "context": "textdb:descript/spells.txt:minor healing spell",
+      "source_sha256": "5881c4c641a150f9b91511f5eff85460e6ea8db61f36db8cc6e9745b0d5cdd55",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Portal Projectile spell",
+      "context": "textdb:descript/spells.txt:portal projectile spell",
+      "source_sha256": "ed0d3fb113a10ed35ba5a19210c129b0dc65e1334b97a5ad57b36afd7015df6a",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Shadow Shard spell",
+      "context": "textdb:descript/spells.txt:shadow shard spell",
+      "source_sha256": "f41e14abebb8b4a6edb479470a97bfce004906076b14b245b95c7dd1f5e6b943",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Steam Ball spell",
+      "context": "textdb:descript/spells.txt:steam ball spell",
+      "source_sha256": "6501b06b617e52f0f51ff8fc9ab716f3c963cc1a6a6161570ea780b104a53cbf",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Executioners spell",
+      "context": "textdb:descript/spells.txt:summon executioners spell",
+      "source_sha256": "146cd46a401a2b7b0c754e7173cb45a7c193b3cd87c3e2c286aa57a61a1bd156",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Hell Sentinel spell",
+      "context": "textdb:descript/spells.txt:summon hell sentinel spell",
+      "source_sha256": "19c1efe47f0a3d7aa380de8c436135792d045230dadeccab9c0fef19efa3feef",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Mushrooms spell",
+      "context": "textdb:descript/spells.txt:summon mushrooms spell",
+      "source_sha256": "d9385a6fd5d8ba0c77046e6c62da4b0d1220bda5eb4acfb992df2b3512e7e596",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Confuse spell",
+      "context": "textdb:descript/spells.txt:confuse spell",
+      "source_sha256": "3576cc13dcc9f1f4969f932c78a6ff46af901893fa02e339cd537c74a82ec866",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Death Rattle spell",
+      "context": "textdb:descript/spells.txt:death rattle spell",
+      "source_sha256": "2ea0629d587cbe7ba8b045d22a260ea035e725da8b2f83bf23d550b2288fd7f9",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Electrical Bolt spell",
+      "context": "textdb:descript/spells.txt:electrical bolt spell",
+      "source_sha256": "108d1456c3c4829bb7a3eef9d5ee46aa9a0550ecf35ce706729e7b13e244e1e5",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Major Destruction spell",
+      "context": "textdb:descript/spells.txt:major destruction spell",
+      "source_sha256": "9be2b87dbf22f8d67da842d38b0a7508807bae1d4f3b36d3826413edb5bd30e0",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Malign Offering spell",
+      "context": "textdb:descript/spells.txt:malign offering spell",
+      "source_sha256": "6bb9d44bfcb2dfe3ea99dbcdc3f6c497fb5c8e2ff7bc96d03ce14b54a11003a9",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Noxious Cloud spell",
+      "context": "textdb:descript/spells.txt:noxious cloud spell",
+      "source_sha256": "7ac03b96185e2c7bc61f3a3711f73b0fc1d3558491a751628f4183283673b608",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Paralyse spell",
+      "context": "textdb:descript/spells.txt:paralyse spell",
+      "source_sha256": "28309bcb5d6a39bb1d0aa6a0e2ede09e14fed772e36ddb8fc0d4a6e59550cd62",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Shadow Shot spell",
+      "context": "textdb:descript/spells.txt:shadow shot spell",
+      "source_sha256": "1c4bcc2ffbb975395351a8c2aa180ecceb223d17094b196bbd6c38c81721bcfa",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Starburst spell",
+      "context": "textdb:descript/spells.txt:starburst spell",
+      "source_sha256": "e5c9f5028b80f7ab61de1ed0c57a7ccd84e8c0b8c330cf02b34323e76d656eeb",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Blink Allies Away spell",
+      "context": "textdb:descript/spells.txt:blink allies away spell",
+      "source_sha256": "603e175fea450d96636ebc98064fd4f2d76e811338f11e425ebb4071bcac5fd8",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Blink Away spell",
+      "context": "textdb:descript/spells.txt:blink away spell",
+      "source_sha256": "f82accd89abe64b4641124cc44e5cf4feb055c0baf8215e20dffea67227b8962",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Debugging Ray spell",
+      "context": "textdb:descript/spells.txt:debugging ray spell",
+      "source_sha256": "a6f5ff5f31d56d7a3bd685e81c21e64e0ede33d1a7202c8c5d90eb9b991e4477",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Shadowball spell",
+      "context": "textdb:descript/spells.txt:shadowball spell",
+      "source_sha256": "f24b7f2ece976def5c44bfce7bb016d827375e8e39acae7b04462c5e804cabc8",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Chaos Breath spell",
+      "context": "textdb:descript/spells.txt:chaos breath spell",
+      "source_sha256": "706b2fb072b663e31ee7e99d222ecae9e5376d91cdcf7744a3536b79f7286aab",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Diminish Spells spell",
+      "context": "textdb:descript/spells.txt:diminish spells spell",
+      "source_sha256": "e8a9fbe68219adfc8f6c16c0f3e270845e7dac13f9b07bca3e360d96b21b084d",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Dispel Undead Range spell",
+      "context": "textdb:descript/spells.txt:dispel undead range spell",
+      "source_sha256": "45f30029c54812cdcf166b9108d0fa28a16203f2ca3ad6c6870010d4bc3a16b6",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Eruption spell",
+      "context": "textdb:descript/spells.txt:eruption spell",
+      "source_sha256": "1fd3d8b7a79450d52bbd970bd5c9d6be01a6bea5e2c8c7b83582a94ab5d6e4f2",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Fleetfoot spell",
+      "context": "textdb:descript/spells.txt:fleetfoot spell",
+      "source_sha256": "4735cd5ee64c4b77ac8fad95930297a864f7c39b67c6533da12b49deb0050527",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Metal Splinters spell",
+      "context": "textdb:descript/spells.txt:metal splinters spell",
+      "source_sha256": "6061bbd296093be45d87309f632c3d90423cba39ad3786b0a6e72a67a923dc88",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Petrifying Cloud spell",
+      "context": "textdb:descript/spells.txt:petrifying cloud spell",
+      "source_sha256": "52de06b3dfc75293d77cd3198532c50640566c75e4e162cb0a40f6f9e8507587",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Shred spell",
+      "context": "textdb:descript/spells.txt:shred spell",
+      "source_sha256": "77b763404b7dd512600cec0de5d2a976d9642d1a4f7518b38fc990c45a16516c",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Smiting spell",
+      "context": "textdb:descript/spells.txt:smiting spell",
+      "source_sha256": "eb606f086de8587cf68ca829609712d5cf8c386f487373ef43a48d244f816492",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Spit Lava spell",
+      "context": "textdb:descript/spells.txt:spit lava spell",
+      "source_sha256": "44366d147d9d8776120db12911bc9f0761121f074c4eb61c0cc9c2fb0242ad69",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Splinterspray spell",
+      "context": "textdb:descript/spells.txt:splinterspray spell",
+      "source_sha256": "b75706906c64b83eb7c343f86fd7e5dc25080c794f03ab4c3909da2ecb793c77",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Stoke Flames spell",
+      "context": "textdb:descript/spells.txt:stoke flames spell",
+      "source_sha256": "11c8c7e930ede07c1d51df3007e4e0a9892eca2c3e47ee13abaca80fdcdcaf89",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Greater Demon spell",
+      "context": "textdb:descript/spells.txt:summon greater demon spell",
+      "source_sha256": "08a41dd9a8b79e1d34f4fae8de16f1663bbe1ea938b636b170fd7aa6157af546",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Undead spell",
+      "context": "textdb:descript/spells.txt:summon undead spell",
+      "source_sha256": "21ea78d969d459728d6d2b348571f0168b80fdf97b5cb49f90cf46f23cad608b",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Blink Allies Encircling spell",
+      "context": "textdb:descript/spells.txt:blink allies encircling spell",
+      "source_sha256": "0a3ee433142d24de606aca952ceab2877d1b0e67431c88c669f7da27aa15bb67",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Blink Other spell",
+      "context": "textdb:descript/spells.txt:blink other spell",
+      "source_sha256": "c42efc689932f3f9d5e51b84898ee99ce493ad58f6c9255aa85014acc7acecda",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Bolt of Devastation spell",
+      "context": "textdb:descript/spells.txt:bolt of devastation spell",
+      "source_sha256": "b5684eed833f37222cfb3fa375539487c5b78fd18183beb94bd0a9905aeb420b",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Bolt of Draining spell",
+      "context": "textdb:descript/spells.txt:bolt of draining spell",
+      "source_sha256": "86f0b843b24b31610d3b870915c777ed7cfb504bc45485c7e394e370d871a618",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Bolt of Magma spell",
+      "context": "textdb:descript/spells.txt:bolt of magma spell",
+      "source_sha256": "b7485d5908f7d03e1b60be6d58369485c58458a6af4e070ae2dbbe805836b1fc",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Dispel Undead spell",
+      "context": "textdb:descript/spells.txt:dispel undead spell",
+      "source_sha256": "aedef119799cbca2931c77d46e812fe641d9e6047bda67dbab1de3ddf0316312",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Ghostly Fireball spell",
+      "context": "textdb:descript/spells.txt:ghostly fireball spell",
+      "source_sha256": "d48068010d212754025a8785206e49dfdba256f7ae4de685654f8a18d8f928ce",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Polymorph spell",
+      "context": "textdb:descript/spells.txt:polymorph spell",
+      "source_sha256": "ce47f5603458c0eeddee84d1946c81e48a960c863228cd54b6d6a9560420134c",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Shadow Turret spell",
+      "context": "textdb:descript/spells.txt:shadow turret spell",
+      "source_sha256": "27da9ebbbf595740014d96a681d2c5b024d9bd693b5309388500dbd1cc490647",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Throw Barbs spell",
+      "context": "textdb:descript/spells.txt:throw barbs spell",
+      "source_sha256": "2f5ea00a7a7cd769bac920803613d218f3ebd5b4647fe717b97cd9500ed52e7b",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Agonising Touch spell",
+      "context": "textdb:descript/spells.txt:agonising touch spell",
+      "source_sha256": "40c80106158eaff9333bb20cbd80ea814c19293cb0741494b730e33b11d45bb0",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Agony spell",
+      "context": "textdb:descript/spells.txt:agony spell",
+      "source_sha256": "4802fcd943d5d3b109b3b1c89a396213b4de7224dc2bd369273b4e97eb4bb3ea",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Blinkbolt spell",
+      "context": "textdb:descript/spells.txt:blinkbolt spell",
+      "source_sha256": "d78aa5b2dc01b97b9b2fff40405b6882cc7faa4c56f56e8d90e895d9afd6de37",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Ensnare spell",
+      "context": "textdb:descript/spells.txt:ensnare spell",
+      "source_sha256": "51a804a9236a3df4ecabe58df3cd4bc21b18e5c61469c13b70d8e3a11f10ef4f",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Sticks to Snakes spell",
+      "context": "textdb:descript/spells.txt:sticks to snakes spell",
+      "source_sha256": "7c213878becfc7633a5d503657c50b4c25bafe5233464cdc6c9abbc8c24a1102",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Strip Willpower spell",
+      "context": "textdb:descript/spells.txt:strip willpower spell",
+      "source_sha256": "587b80d255f0a81e33c595a18f5fa9705fad0e8880bc8b5ccc655d9489d2ad7a",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Lee's Rapid Deconstruction spell",
+      "context": "textdb:descript/spells.txt:lee's rapid deconstruction spell",
+      "source_sha256": "154e08e16a51db54480e4fc478da8c32e75307f4162c8618294413aeb833d869",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Fire Storm spell",
+      "context": "textdb:descript/spells.txt:fire storm spell",
+      "source_sha256": "bfd84f870f537c4747c5eb8c4c46ea7bcc19e0d3f338edc73657a075889ed394",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Ignition spell",
+      "context": "textdb:descript/spells.txt:ignition spell",
+      "source_sha256": "4290e4eb800605eb272289a53d42ebe455845b5afd82809ba9afddbbfb825528",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Polar Vortex spell",
+      "context": "textdb:descript/spells.txt:polar vortex spell",
+      "source_sha256": "912a8c3a9adbb2dea4c8eb0b088e35a7577fb10620466f1f75d81afd0a570b3a",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Shatter spell",
+      "context": "textdb:descript/spells.txt:shatter spell",
+      "source_sha256": "19dbd78398dcd85fb4fbd867f5a8f956efef2dcddd32a80e0efdd3791b485c6e",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Dragon's Call spell",
+      "context": "textdb:descript/spells.txt:dragon's call spell",
+      "source_sha256": "0214990e7ae0c926df319758bccd5cfe3252de6731c2a105c236931ad27e8768",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Summon Horrible Things spell",
+      "context": "textdb:descript/spells.txt:summon horrible things spell",
+      "source_sha256": "328dc0fd5656c454ef26e0b5a24d60943b16f6bb8ac09416fa7d2ab414b900a8",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Malign Gateway spell",
+      "context": "textdb:descript/spells.txt:malign gateway spell",
+      "source_sha256": "62e7606ab0b902d60b8ade33c4c5a697da6bcdb9e0b2a40e18a18e90ad2f0b8e",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Ozocubu's Refrigeration spell",
+      "context": "textdb:descript/spells.txt:ozocubu's refrigeration spell",
+      "source_sha256": "28c8ea387e657c638a040e35cb3d00d32c40a82925a093e6990d6371c0048f66",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Borgnjor's Revivification spell",
+      "context": "textdb:descript/spells.txt:borgnjor's revivification spell",
+      "source_sha256": "a121d109f723dde7cced6976f0c9bfb17df5d0fe718b7fc3f87a781635e8160f",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Death's Door spell",
+      "context": "textdb:descript/spells.txt:death's door spell",
+      "source_sha256": "928d5c308fd62dd616172db589aee16c5b8ed1b571991c09ef36a1f811f99f11",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Infestation spell",
+      "context": "textdb:descript/spells.txt:infestation spell",
+      "source_sha256": "b21d2095bc16576ebfab5830f7fb81f857621806664b5f3e064842c27a65a59c",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Death Channel spell",
+      "context": "textdb:descript/spells.txt:death channel spell",
+      "source_sha256": "9f8d8ae0421e92f2b56766e53b2661550509058a4574f425d584d83a335ded37",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Anguish spell",
+      "context": "textdb:descript/spells.txt:anguish spell",
+      "source_sha256": "444ef8e531ac5b1dae5fa2eddbe15209e9e09937c0b962d00fc149ad53da4dfa",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Manifold Assault spell",
+      "context": "textdb:descript/spells.txt:manifold assault spell",
+      "source_sha256": "a83648d2f5cab6157fe7f9647871cd96ae620d05cb4097aba07f59d2351f8bda",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Maxwell's Capacitive Coupling spell",
+      "context": "textdb:descript/spells.txt:maxwell's capacitive coupling spell",
+      "source_sha256": "ab08ba61f31ac3f91dc5ae0d7274181ba9c34ce39884d94d45b511917a31acad",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Irradiate spell",
+      "context": "textdb:descript/spells.txt:irradiate spell",
+      "source_sha256": "780f7841e5e8e507073c4aa86024586de50f5a5927c901a3e18661a7a11106ca",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    },
+    {
+      "source": "descript/spells.txt",
+      "key": "Alistair's Intoxication spell",
+      "context": "textdb:descript/spells.txt:alistair's intoxication spell",
+      "source_sha256": "c4067b22417c1998b19b0a012e8c6abbe396668f917d4f5802f94f67b22e3a77",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-06"
+    }
+  ]
+}

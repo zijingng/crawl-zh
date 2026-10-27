@@ -1,5 +1,7 @@
 #pragma once
 
+class level_id;
+
 #include <vector>
 
 #include "los-def.h"
@@ -76,6 +78,7 @@ public:
     bool is_excluded(const coord_def &p) const;
     bool is_exclude_root(const coord_def &p) const;
     string get_exclusion_desc();
+    bool try_display_desc(const level_id &level, string &output) const;
 
     size_t size()  const;
     bool   empty() const;

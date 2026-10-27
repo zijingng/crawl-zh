@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "m-display.h"
+#include "i18n.h"
 
 #include "message.h"
 
@@ -31,6 +33,7 @@
 #include "tiles-build-specific.h"
 #include "tag-version.h"
 #include "unwind.h"
+#include "unicode.h"
 #include "view.h"
 
 static void _mpr(string text, msg_channel_type channel=MSGCH_PLAIN, int param=0,
@@ -46,8 +49,29 @@ void mpr_nojoin(msg_channel_type channel, string text)
     _mpr(text, channel, 0, true);
 }
 
-static bool _ends_in_punctuation(const string& text)
+static bool _has_cjk_message_text(const string &text)
 {
+    for (size_t offset = 0; offset < text.size(); )
+    {
+        char32_t c;
+        const int length = utf8towc(&c, text.c_str() + offset);
+        if (length <= 0)
+            break;
+        if ((c >= 0x3400 && c <= 0x9fff) || (c >= 0xf900 && c <= 0xfaff)
+            || (c >= 0x20000 && c <= 0x323af)
+            || (c >= 0x3000 && c <= 0x303f) || (c >= 0xff01 && c <= 0xff65))
+        {
+            return true;
+        }
+        offset += length;
+    }
+    return false;
+}
+
+static bool _ends_in_punctuation(const string& text, bool *chinese = nullptr)
+{
+    if (chinese)
+        *chinese = false;
     if (text.size() == 0)
         return false;
     switch (text[text.size() - 1])
@@ -60,8 +84,51 @@ static bool _ends_in_punctuation(const string& text)
     case ':':
         return true;
     default:
-        return false;
+        break;
     }
+    if (Options.language != lang_t::ZH)
+        return false;
+    size_t end = text.size();
+    while (end)
+    {
+        size_t start = end - 1;
+        while (start && (static_cast<unsigned char>(text[start]) & 0xc0) == 0x80)
+            --start;
+        char32_t c;
+        const int length = utf8towc(&c, text.c_str() + start);
+        if (length <= 0 || start + length != end)
+            return false;
+        switch (c)
+        {
+        case U'。': case U'！': case U'？': case U'，':
+        case U'；': case U'：': case U'、': case U'…':
+            if (chinese)
+                *chinese = true;
+            return true;
+        case U'.': case U'!': case U'?': case U',': case U';': case U':':
+            return true;
+        case U'”': case U'’': case U'」': case U'』': case U'）': case U'】':
+        case U'》': case U'"': case U'\'':
+            // A quoted Chinese sentence still has its own punctuation.
+            // A quoted item name does not acquire punctuation by this rule.
+            if (!_has_cjk_message_text(text))
+                return false;
+            end = start;
+            continue;
+        default:
+            return false;
+        }
+    }
+    return false;
+}
+
+string message_join_separator(const string &previous, int repeats)
+{
+    bool chinese = false;
+    if (repeats <= 1 && _ends_in_punctuation(previous, &chinese))
+        return chinese ? "" : " ";
+    return Options.language == lang_t::ZH && _has_cjk_message_text(previous)
+        ? "；" : "; ";
 }
 
 struct message_particle
@@ -180,7 +247,8 @@ struct message_line
             // combat on the same turn - should find a nicer heuristic
         {
             // "; " or " "?
-            const int seplen = last_msg().needs_semicolon() ? 2 : 1;
+            const int seplen = strwidth(message_join_separator(
+                last_msg().pure_text(), last_msg().repeats));
             const int total_len = pure_len() + seplen + other.pure_len();
             if (total_len > (int)msgwin_line_length())
                 return false;
@@ -198,6 +266,10 @@ struct message_line
     /// including non-rendering text (<red> etc)?
     int pure_len() const
     {
+        // Measure exactly what the Chinese renderer will print, including the
+        // preceding particle's separator and any repetition counter.
+        if (Options.language == lang_t::ZH)
+            return strwidth(pure_text_with_repeats());
         // could we do this more functionally?
         int len = 0;
         for (auto &msg : messages)
@@ -213,16 +285,15 @@ struct message_line
     string full_text() const
     {
         string text = "";
-        bool needs_semicolon = false;
+        string separator;
         for (auto &msg : messages)
         {
-            if (!text.empty())
+            if (!text.empty() && !separator.empty())
             {
-                text += make_stringf("<lightgrey>%s </lightgrey>",
-                                     needs_semicolon ? ";" : "");
+                text += "<lightgrey>" + separator + "</lightgrey>";
             }
             text += msg.with_repeats();
-            needs_semicolon = msg.needs_semicolon();
+            separator = message_join_separator(msg.pure_text(), msg.repeats);
         }
         return text;
     }
@@ -725,10 +796,10 @@ public:
                     more_str += "or click ";
                 more_str += "to continue. You can later reread messages with "
                             "Ctrl-P.";
-                cprintf(more_str.c_str());
+                cprintf("%s", ui_translate("m.ui", more_str.c_str()));
             }
             else
-                cprintf("--more--");
+                cprintf( "%s", ui_translate("m.ui", "--more--"));
 
             readkey_more(user);
         }
@@ -1953,62 +2024,66 @@ void canned_msg(canned_message_type which_message)
     switch (which_message)
     {
         case MSG_SOMETHING_APPEARS:
-            mprf("Something appears %s!",
-                 player_has_feet() ? "at your feet" : "before you");
+            mprf("%s", ([&]() -> string {
+                const string _m0 = player_has_feet() ? "at your feet" : "before you";
+                const string _original = make_stringf("Something appears %s!", _m0.c_str());
+                if (!m_display_active("m.log.070", "Something appears %s!")) return _original;
+                return ui_render("m.log.070", "Something appears %s!", _original, {m_clause_arg(_m0)});
+            })().c_str());
             break;
         case MSG_NOTHING_HAPPENS:
-            mpr("Nothing appears to happen.");
+            mpr(ui_translate("m.ui", "Nothing appears to happen."));
             break;
         case MSG_YOU_UNAFFECTED:
-            mpr("You are unaffected.");
+            mpr(ui_translate("m.ui", "You are unaffected."));
             break;
         case MSG_YOU_RESIST:
-            mpr("You resist.");
+            mpr(ui_translate("m.ui", "You resist."));
             learned_something_new(HINT_YOU_RESIST);
             break;
         case MSG_YOU_PARTIALLY_RESIST:
-            mpr("You partially resist.");
+            mpr(ui_translate("m.ui", "You partially resist."));
             break;
         case MSG_TOO_BERSERK:
-            mpr("You are too berserk!");
+            mpr(ui_translate("m.ui", "You are too berserk!"));
             crawl_state.cancel_cmd_repeat();
             break;
         case MSG_TOO_CONFUSED:
-            mpr("You are too confused!");
+            mpr(ui_translate("m.ui", "You are too confused!"));
             break;
         case MSG_PRESENT_FORM:
-            mpr("You can't do that in your present form.");
+            mpr(ui_translate("m.ui", "You can't do that in your present form."));
             crawl_state.cancel_cmd_repeat();
             break;
         case MSG_NOTHING_CARRIED:
-            mpr("You aren't carrying anything.");
+            mpr(ui_translate("m.ui", "You aren't carrying anything."));
             crawl_state.cancel_cmd_repeat();
             break;
         case MSG_CANNOT_DO_YET:
-            mpr("You can't do that yet.");
+            mpr(ui_translate("m.ui", "You can't do that yet."));
             crawl_state.cancel_cmd_repeat();
             break;
         case MSG_OK:
-            mprf(MSGCH_PROMPT, "Okay, then.");
+            mprf(MSGCH_PROMPT, "%s", ui_translate("m.ui", "Okay, then."));
             crawl_state.cancel_cmd_repeat();
             break;
         case MSG_UNTHINKING_ACT:
-            mpr("Why would you want to do that?");
+            mpr(ui_translate("m.ui", "Why would you want to do that?"));
             crawl_state.cancel_cmd_repeat();
             break;
         case MSG_NOTHING_THERE:
-            mpr("There's nothing there!");
+            mpr(ui_translate("m.ui", "There's nothing there!"));
             crawl_state.cancel_cmd_repeat();
             break;
         case MSG_NOTHING_CLOSE_ENOUGH:
-            mpr("There's nothing close enough!");
+            mpr(ui_translate("m.ui", "There's nothing close enough!"));
             crawl_state.cancel_cmd_repeat();
             break;
         case MSG_SPELL_FIZZLES:
-            mpr("The spell fizzles.");
+            mpr(ui_translate("m.ui", "The spell fizzles."));
             break;
         case MSG_HUH:
-            mprf(MSGCH_EXAMINE_FILTER, "Huh?");
+            mprf(MSGCH_EXAMINE_FILTER, "%s", ui_translate("m.ui", "Huh?"));
             crawl_state.cancel_cmd_repeat();
             break;
         case MSG_EMPTY_HANDED_ALREADY:
@@ -2017,76 +2092,96 @@ void canned_msg(canned_message_type which_message)
             const char* when =
             (which_message == MSG_EMPTY_HANDED_ALREADY ? "already" : "now");
             if (you.has_mutation(MUT_NO_GRASPING))
-                mprf("Your mouth is %s empty.", when);
+                mprf("%s", ([&]() -> string {
+                const string _m0 = when;
+                const string _original = make_stringf("Your mouth is %s empty.", _m0.c_str());
+                if (!m_display_active("m.log.071", "Your mouth is %s empty.")) return _original;
+                return ui_render("m.log.071", "Your mouth is %s empty.", _original, {m_clause_arg(_m0)});
+            })().c_str());
             else if (you.has_usable_claws(true))
-                mprf("You are %s empty-clawed.", when);
+                mprf("%s", ([&]() -> string {
+                const string _m0 = when;
+                const string _original = make_stringf("You are %s empty-clawed.", _m0.c_str());
+                if (!m_display_active("m.log.072", "You are %s empty-clawed.")) return _original;
+                return ui_render("m.log.072", "You are %s empty-clawed.", _original, {m_clause_arg(_m0)});
+            })().c_str());
             else if (you.has_usable_tentacles(true))
-                mprf("You are %s empty-tentacled.", when);
+                mprf("%s", ([&]() -> string {
+                const string _m0 = when;
+                const string _original = make_stringf("You are %s empty-tentacled.", _m0.c_str());
+                if (!m_display_active("m.log.073", "You are %s empty-tentacled.")) return _original;
+                return ui_render("m.log.073", "You are %s empty-tentacled.", _original, {m_clause_arg(_m0)});
+            })().c_str());
             else
-                mprf("You are %s empty-handed.", when);
+                mprf("%s", ([&]() -> string {
+                const string _m0 = when;
+                const string _original = make_stringf("You are %s empty-handed.", _m0.c_str());
+                if (!m_display_active("m.log.074", "You are %s empty-handed.")) return _original;
+                return ui_render("m.log.074", "You are %s empty-handed.", _original, {m_clause_arg(_m0)});
+            })().c_str());
             break;
         }
         case MSG_YOU_BLINK:
-            mpr("You blink.");
+            mpr(ui_translate("m.ui", "You blink."));
             break;
         case MSG_STRANGE_STASIS:
-            mpr("You feel a strange sense of stasis.");
+            mpr(ui_translate("m.ui", "You feel a strange sense of stasis."));
             break;
         case MSG_NO_SPELLS:
-            mpr("You don't know any spells.");
+            mpr(ui_translate("m.ui", "You don't know any spells."));
             break;
         case MSG_MANA_INCREASE:
-            mpr("You feel your magic capacity increase.");
+            mpr(ui_translate("m.ui", "You feel your magic capacity increase."));
             break;
         case MSG_MANA_DECREASE:
-            mpr("You feel your magic capacity decrease.");
+            mpr(ui_translate("m.ui", "You feel your magic capacity decrease."));
             break;
         case MSG_DISORIENTED:
-            mpr("You feel momentarily disoriented.");
+            mpr(ui_translate("m.ui", "You feel momentarily disoriented."));
             break;
         case MSG_DETECT_NOTHING:
-            mpr("You detect nothing.");
+            mpr(ui_translate("m.ui", "You detect nothing."));
             break;
         case MSG_CANNOT_MOVE:
-            mpr("You cannot move.");
+            mpr(ui_translate("m.ui", "You cannot move."));
             break;
         case MSG_YOU_DIE:
-            mpr_nojoin(MSGCH_PLAIN, "You die...");
+            mpr_nojoin(MSGCH_PLAIN, ui_translate("m.ui", "You die..."));
             break;
         case MSG_GHOSTLY_OUTLINE:
-            mpr("You see a ghostly outline there, and the spell fizzles.");
+            mpr(ui_translate("m.ui", "You see a ghostly outline there, and the spell fizzles."));
             break;
         case MSG_FULL_HEALTH:
-            mpr("Your health is already full.");
+            mpr(ui_translate("m.ui", "Your health is already full."));
             break;
         case MSG_FULL_MAGIC:
-            mpr("Your reserves of magic are already full.");
+            mpr(ui_translate("m.ui", "Your reserves of magic are already full."));
             break;
         case MSG_GAIN_HEALTH:
-            mpr("You feel better.");
+            mpr(ui_translate("m.ui", "You feel better."));
             break;
         case MSG_GAIN_MAGIC:
-            mpr("You feel your power returning.");
+            mpr(ui_translate("m.ui", "You feel your power returning."));
             break;
         case MSG_MAGIC_DRAIN:
         {
             if (you.has_mutation(MUT_HP_CASTING))
-                mpr("You feel momentarily drained.");
+                mpr(ui_translate("m.ui", "You feel momentarily drained."));
             else
-                mprf(MSGCH_WARN, "You suddenly feel drained of magical energy!");
+                mprf(MSGCH_WARN, "%s", ui_translate("m.ui", "You suddenly feel drained of magical energy!"));
             break;
         }
         case MSG_SOMETHING_IN_WAY:
-            mpr("There's something in the way.");
+            mpr(ui_translate("m.ui", "There's something in the way."));
             break;
         case MSG_CANNOT_SEE:
-            mpr("You can't see that place.");
+            mpr(ui_translate("m.ui", "You can't see that place."));
             break;
         case MSG_GOD_DECLINES:
-            mpr("Your god isn't willing to do this for you now.");
+            mpr(ui_translate("m.ui", "Your god isn't willing to do this for you now."));
             break;
         case MSG_NO_AVAILABLE_SPACE:
-            mpr("There is no available space!");
+            mpr(ui_translate("m.ui", "There is no available space!"));
             break;
     }
 }
@@ -2099,7 +2194,8 @@ bool simple_monster_message(const monster& mons, const char *event,
                             bool need_possessive,
                             msg_channel_type channel,
                             int param,
-                            description_level_type descrip)
+                            description_level_type descrip,
+                            const string &display)
 {
     if (you.see_cell(mons.pos())
         && (channel == MSGCH_MONSTER_SPELL || channel == MSGCH_FRIEND_SPELL
@@ -2109,6 +2205,21 @@ bool simple_monster_message(const monster& mons, const char *event,
         if (need_possessive)
             msg = apostrophise(msg);
         msg += event;
+
+        // An exact event template plus a canonical actor adapter is required.
+        // Unknown events and custom descriptions keep their original
+        // English construction, including the existing visibility gate above.
+        const string source = string(need_possessive ? "%s's" : "%s") + event;
+        ui_translation_group group({{"log.monster", source.c_str()}});
+        string name;
+        if ((descrip == DESC_THE || descrip == DESC_A) && group.available()
+            && try_ui_actor_name(mons, name))
+        {
+            msg = make_stringf(group.get("log.monster", source.c_str()), name.c_str());
+        }
+
+        if (Options.language == lang_t::ZH && !display.empty())
+            msg = display;
 
         if (channel == MSGCH_PLAIN && mons.wont_attack())
             channel = MSGCH_FRIEND_ACTION;
@@ -2130,12 +2241,19 @@ string god_speaker(god_type which_deity)
 
 // yet another wrapper for mpr() {dlb}:
 void simple_god_message(const char *event, bool need_possessive,
-                        god_type which_deity)
+                        god_type which_deity, const string &display)
 {
     string msg = god_speaker(which_deity);
+    const string speaker = msg;
     if (need_possessive)
         msg = apostrophise(msg);
     msg += event;
+
+    const string source = string(need_possessive ? "%s's" : "%s") + event;
+    msg = ui_render("log.god", source.c_str(), msg,
+                    {ui_text_arg("display.god", speaker)});
+    if (Options.language == lang_t::ZH && !display.empty())
+        msg = display;
 
     god_speaks(which_deity, msg.c_str());
 }
@@ -2143,7 +2261,10 @@ void simple_god_message(const char *event, bool need_possessive,
 void wu_jian_sifu_message(const char *event)
 {
     string msg;
-    msg = uppercase_first(string("Sifu ") + wu_jian_random_sifu_name() + event);
+    const string name = wu_jian_random_sifu_name();
+    msg = uppercase_first(string("Sifu ") + name + event);
+    const string source = string("Sifu %s") + event;
+    msg = ui_render("g.sifu", source.c_str(), msg, {ui_literal_arg(name)});
     god_speaks(GOD_WU_JIAN, msg.c_str());
 }
 

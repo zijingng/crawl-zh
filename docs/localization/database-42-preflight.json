@@ -1,0 +1,238 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "selected": [
+    {
+      "source": "database/randname.txt",
+      "key": "general appearance",
+      "english": "brightly glowing\n\nsmoking\n\nscorched\n\ntwisted\n\nshimmering\n\nwarped\n\ntransparent\n\ntranslucent\n\nencrusted\n\npitted\n\nslimy\n\npolished\n\nfine\n\nincandescent\n\nancient\n\nfaintly glowing\n\nsteaming\n\ndazzling\n\nmasterwork\n\nw:2\nsmouldering\n\nw:5\nglimmering\n\nw:2\nbuzzing\n\nw:5\nfading\n\nw:2\nblackened\n",
+      "hits": []
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "weapon appearance",
+      "english": "iridescent\n\nbloodstained\n\ncrystal\n\njewelled\n\nichor-stained\n\nw:3\nivory\n\nw:3\nbone\n\nw:1\nsapphire\n\nw:3\nebony\n\nw:180\n@general appearance@\n",
+      "hits": [
+        {
+          "Term": "ichor",
+          "Translation": "灵液",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "robe appearance",
+      "english": "fabulously ornate\n\ndull\n\nsheer\n\nthick\n\nheavy\n\nwizard\n\nominously black\n\nbrightly glowing\n\nsmoking\n\ntwisted\n\nshimmering\n\nwarped\n\ntransparent\n\nslimy\n\nfine\n\nluminous\n\nripped\n\ncolourful\n\ncreamy pearl\n\nopalescent\n\nancient\n\nfaintly glowing\n\nsteaming\n\nfaintly humming\n\nbloodstained\n\nheavily jewelled\n\nichor-stained\n\ndistressingly furry\n\ntattered\n\nsilken\n\nshadowed\n",
+      "hits": [
+        {
+          "Term": "ichor",
+          "Translation": "灵液",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "robe",
+          "Translation": "长袍",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "wizard",
+          "Translation": "巫师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "heavy",
+          "Translation": "沉重",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "body armour appearance",
+      "english": "w:3\nsmelly\n\nw:3\nbronze\n\nw:2\n@_gemstone_@-studded\n\n@_gemstone_@-encrusted\n\nw:200\n@armour appearance@\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "body armour",
+          "Translation": "躯干防具",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】装备部位，包含长袍、皮甲、锁子甲、板甲等；与包括头盔、手套、靴子等的大类“防具”区分。"
+        }
+      ]
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "armour appearance",
+      "english": "faintly humming\n\nbloodstained\n\nheavily runed\n\njewelled\n\nichor-stained\n\ndistressingly furry\n\nspiked\n\nw:160\n@general appearance@\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "ichor",
+          "Translation": "灵液",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "_gemstone_",
+      "english": "diamond\n\nruby\n\njacinth\n\nsapphire\n\nblack opal\n\nemerald\n\nturquoise\n\ncitrine\n\naquamarine\n\namber\n\ntopaz\n\njet\n\nopal\n\ngarnet\n\namethyst\n\njasper\n\nobsidian\n\nagate\n\njade\n\npearl\n\ntiger eye\n\nametrine\n",
+      "hits": []
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "_jewellery appearance_",
+      "english": "scintillating\n\nsparkling\n\nflickering\n\nglittering\n\nsmoking\n\nscorched\n\nshimmering\n\nwavering\n\nwarped\n\ntransparent\n\ntranslucent\n\npitted\n\nslimy\n\nfine\n\nradiant\n\nancient\n\nbrightly glowing\n\nfaintly glowing\n\nsteaming\n\nheavily runed\n\nvibrating\n\ntwitching\n\ncoiled\n\nbound\n\nclouded\n\nw:2\nserpentine\n",
+      "hits": []
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "_ring material_",
+      "english": "wooden\n\nivory\n\nbone\n\namber\n\nsilver\n\ngolden\n\nplatinum\n\niron\n\nsteel\n\nbronze\n\nbrass\n\ncopper\n\ntin\n\nlead\n\npewter\n\ngranite\n\nmarble\n\njade\n\nturquoise\n\nlapis lazuli\n\nglass\n\ncarnelian\n\nw:2\ngossamer\n",
+      "hits": [
+        {
+          "Term": "Glass",
+          "Translation": "玻璃",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "silver",
+          "Translation": "白银",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "_amulet material_",
+      "english": "ivory\n\nbone\n\ngraven\n\nsilver\n\ngolden\n\nplatinum\n\niron\n\nsteel\n\nbronze\n\nbrass\n\ncopper\n\ntin\n\nlead\n\npewter\n\nzirconium\n\nsapphire\n\nemerald\n\ngarnet\n\nruby\n\njade\n\ncrystal\n\ndiamond\n\namethyst\n",
+      "hits": [
+        {
+          "Term": "silver",
+          "Translation": "白银",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "ring appearance",
+      "english": "@_jewellery appearance_@ @_ring material_@\n",
+      "hits": []
+    },
+    {
+      "source": "database/randname.txt",
+      "key": "amulet appearance",
+      "english": "@_jewellery appearance_@ @_amulet material_@\n",
+      "hits": []
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "book appearance",
+      "english": "@_book_adjective_@\n",
+      "hits": [
+        {
+          "Term": "book",
+          "Translation": "魔法书/书/手册",
+          "Part of Speech": "noun",
+          "Variants": "book of",
+          "Note": "【使用约束】book of 是组合前缀，不是完整法术书名；不得把所有 book 都补成魔法书。\n【语境补充 2026-10-21】含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "book_noun",
+      "english": "Almanac\n\nAnthology\n\nAtlas\n\nBook\n\nCatalogue\n\nCodex\n\nCompendium\n\nCompilation\n\nCyclopedia\n\nDirectory\n\nElucidation\n\nEncyclopedia\n\nFolio\n\nGrimoire\n\nHandbook\n\nIncunable\n\nIncunabulum\n\nOctavo\n\nOmnibus\n\nPapyrus\n\nPrecepts\n\nQuarto\n\nSecrets\n\nSpellbook\n\nTome\n\nVellum\n\nVolume\n",
+      "hits": [
+        {
+          "Term": "book",
+          "Translation": "魔法书/书/手册",
+          "Part of Speech": "noun",
+          "Variants": "book of",
+          "Note": "【使用约束】book of 是组合前缀，不是完整法术书名；不得把所有 book 都补成魔法书。\n【语境补充 2026-10-21】含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+        },
+        {
+          "Term": "spellbook",
+          "Translation": "魔法书",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "_book_noun_on_",
+      "english": "Annotations\n\nCollected Works\n\nCommentary\n\nDiscourse\n\nDiscursus\n\nDisquisition\n\nDissertation\n\nEnchiridion\n\nEssays\n\nExcursus\n\nExposition\n\nGuide\n\nGuidebook\n\nInformation\n\nLectures\n\nLessons\n\nMeditations\n\nMonograph\n\nNotes\n\nOpusculum\n\nReference Book\n\nTeachings\n\nTextbook\n\nThoughts\n\nTractate\n\nTreatise\n\nVademecum\n\nVerses\n\nWritings\n",
+      "hits": [
+        {
+          "Term": "book",
+          "Translation": "魔法书/书/手册",
+          "Part of Speech": "noun",
+          "Variants": "book of",
+          "Note": "【使用约束】book of 是组合前缀，不是完整法术书名；不得把所有 book 都补成魔法书。\n【语境补充 2026-10-21】含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "_book_adjective_",
+      "english": "ancient\n\nantique\n\nbackwards\n\nblack\n\nblackened\n\nclothbound\n\ncolourful\n\nconspicuous\n\ncurious\n\ncurling\n\ndecrepit\n\ndisorganised\n\ndog-eared\n\ndroning\n\ndusty\n\nembossed\n\nengraved\n\nexquisite\n\nfaded\n\nfoxed\n\nfuliginous\n\nfusty\n\ngaudy\n\nglistering\n\nglossy\n\ngraven\n\ngrimy\n\nhumming\n\nilluminated\n\ninconspicuous\n\ninnocuous\n\nleatherbound\n\nlevitating\n\nlithographed\n\nloosely-bound\n\nmoth-eaten\n\nmouldy\n\nmumbling\n\nmurmuring\n\nmusty\n\nodd\n\npeculiar\n\nplain\n\nquavering\n\nquivering\n\nragged\n\nrare\n\nremarkable\n\nresplendent\n\nshimmering\n\nshiny\n\nsimple\n\nsooty\n\nsparkling\n\nstained\n\nsticky\n\nstrange\n\nsuspect\n\nsuspicious\n\ntattered\n\nthrumming\n\ntimeworn\n\ntorn\n\ntrembling\n\nuncut\n\nunremarkable\n\nunusual\n\nupside-down\n\nvellum\n\nvibrant\n\nvibrating\n\nwater-damaged\n\nweird\n\nwell-preserved\n\nwhispering\n\nworn\n\nwrinkled\n\nyellowed\n",
+      "hits": [
+        {
+          "Term": "book",
+          "Translation": "魔法书/书/手册",
+          "Part of Speech": "noun",
+          "Variants": "book of",
+          "Note": "【使用约束】book of 是组合前缀，不是完整法术书名；不得把所有 book 都补成魔法书。\n【语境补充 2026-10-21】含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+        },
+        {
+          "Term": "weird",
+          "Translation": "奇怪的",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "moth",
+          "Translation": "蛾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    }
+  ]
+}

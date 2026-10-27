@@ -1,0 +1,20 @@
+{
+  "batch": "source-u-01",
+  "date": "2026-10-24",
+  "reviewed_top_level_files": 13,
+  "unchanged_files": 13,
+  "changed_files": 0,
+  "reviewed_literal_tokens": 106,
+  "new_translations": 0,
+  "generated_catalogue_matches": true,
+  "stale_dependencies": [],
+  "windows_tiles_build": true,
+  "native_cases": 100,
+  "native_assertions": 189756,
+  "python_tests": 28,
+  "limitations": [
+    "No in-game visual smoke test; WebTiles-only paths not separately built.",
+    "Caller-provided text is localized at its source, never globally intercepted in generic widgets.",
+    "Protocol keys, formatting tokens, encoding bytes, glyphs and technical/debug diagnostics retain their original values."
+  ]
+}

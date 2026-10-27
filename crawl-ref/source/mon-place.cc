@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "m-display.h"
+#include "i18n.h"
 
 #include "mon-place.h"
 #include "mgen-data.h"
@@ -3120,7 +3122,12 @@ void check_lovelessness(monster &mons)
     mons.attitude = ATT_HOSTILE;
     mons.del_ench(ENCH_CHARM);
     behaviour_event(&mons, ME_ALERT, &you);
-    mprf("%s feels only hate for you!", mons.name(DESC_THE).c_str());
+    mprf("%s", ([&]() -> string {
+                const string _m0 = mons.name(DESC_THE);
+                const string _original = make_stringf("%s feels only hate for you!", _m0.c_str());
+                if (!m_display_active("m.log.217", "%s feels only hate for you!")) return _original;
+                return ui_render("m.log.217", "%s feels only hate for you!", _original, {m_actor_arg(mons)});
+            })().c_str());
 }
 
 /**
@@ -3202,7 +3209,7 @@ monster* create_monster(mgen_data mg, bool fail_msg)
             fail_msg = false;
 
         if (!summd && fail_msg && you.see_cell(mg.pos))
-            mpr("You see a puff of smoke.");
+            mpr(ui_translate("m.ui", "You see a puff of smoke."));
     }
 
     return summd;

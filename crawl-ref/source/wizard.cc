@@ -3,6 +3,8 @@
  * @brief Wizard mode command handling.
 **/
 #include "AppHdr.h"
+#include "i18n.h"
+#include "transform.h"
 #include "options.h"
 
 #ifdef WIZARD
@@ -63,7 +65,7 @@ static void _do_wizard_command(int wiz_command)
         if (player_in_branch(BRANCH_ABYSS))
             wizard_set_abyss();
         else
-            mpr("You can only abyss_teleport() inside the Abyss.");
+            mpr(ui_translate("w.ui", "You can only abyss_teleport() inside the Abyss."));
         break;
 
     case 'b': wizard_blink(); break;
@@ -106,7 +108,7 @@ static void _do_wizard_command(int wiz_command)
 
     // case 'j': break;
     case 'J':
-        mpr("Running Jiyva off-level sacrifice.");
+        mpr(ui_translate("w.ui", "Running Jiyva off-level sacrifice."));
         jiyva_eat_offlevel_items();
         break;
     // case CONTROL('J'): break;
@@ -207,12 +209,12 @@ static void _do_wizard_command(int wiz_command)
 
     case ']':
         if (!wizard_add_mutation())
-            mpr("Failure to give mutation.");
+            mpr(ui_translate("w.ui", "Failure to give mutation."));
         break;
 
     case '}':
         if (!wizard_toggle_bane())
-            mpr("Failure to toggle bane.");
+            mpr(ui_translate("w.ui", "Failure to toggle bane."));
         break;
 
     case '\\': debug_make_shop(); break;
@@ -282,7 +284,7 @@ void handle_wizard_command()
 
     if (you.suppress_wizard)
     {
-        mprf(MSGCH_WARN, "Re-activating wizard mode.");
+        mprf(MSGCH_WARN,"%s", ui_translate("w.ui", "Re-activating wizard mode."));
         you.wizard = true;
         you.suppress_wizard = false;
 #ifdef USE_TILE_LOCAL
@@ -292,21 +294,21 @@ void handle_wizard_command()
         update_screen();
         if (crawl_state.cmd_repeat_start)
         {
-            crawl_state.cancel_cmd_repeat("Can't repeat re-activating wizard "
-                                          "mode.");
+            crawl_state.cancel_cmd_repeat(ui_translate("w.ui", "Can't repeat re-activating wizard "
+                                          "mode."));
         }
         return;
     }
     else if (!you.wizard)
     {
-        mprf(MSGCH_WARN, "WARNING: ABOUT TO ENTER WIZARD MODE!");
+        mprf(MSGCH_WARN,"%s", ui_translate("w.ui", "WARNING: ABOUT TO ENTER WIZARD MODE!"));
 
 #ifndef SCORE_WIZARD_CHARACTERS
         if (!you.explore)
-            mprf(MSGCH_WARN, "If you continue, your game will not be scored!");
+            mprf(MSGCH_WARN,"%s", ui_translate("w.ui", "If you continue, your game will not be scored!"));
 #endif
 
-        if (!confirm_prompt("wiz", "Do you really want to enter wizard mode?"))
+        if (!confirm_prompt("wiz",ui_translate("w.ui", "Do you really want to enter wizard mode?")))
         {
             canned_msg(MSG_OK);
             return;
@@ -329,14 +331,14 @@ void handle_wizard_command()
 
         if (crawl_state.cmd_repeat_start)
         {
-            crawl_state.cancel_cmd_repeat("Can't repeat entering wizard "
-                                          "mode.");
+            crawl_state.cancel_cmd_repeat(ui_translate("w.ui", "Can't repeat entering wizard "
+                                          "mode."));
             return;
         }
     }
 
     {
-        mprf(MSGCH_PROMPT, "Enter Wizard Command (? - help): ");
+        mprf(MSGCH_PROMPT,"%s", ui_translate("w.ui", "Enter Wizard Command (? - help): "));
         cursor_control con(true);
         wiz_command = getchm();
         if (wiz_command == '*')
@@ -366,8 +368,8 @@ void handle_wizard_command()
             break;
 
         default:
-            crawl_state.cant_cmd_repeat("You cannot repeat that "
-                                        "wizard command.");
+            crawl_state.cant_cmd_repeat(ui_translate("w.ui", "You cannot repeat that "
+                                        "wizard command."));
             return;
         }
     }
@@ -386,15 +388,15 @@ void enter_explore_mode()
         handle_wizard_command();
     else if (!you.explore)
     {
-        mprf(MSGCH_WARN, "WARNING: ABOUT TO ENTER EXPLORE MODE!");
-        mpr("In explore mode, death is optional.");
-        mpr("Once you set a character to explore mode, you can't switch back.");
+        mprf(MSGCH_WARN,"%s", ui_translate("w.ui", "WARNING: ABOUT TO ENTER EXPLORE MODE!"));
+        mpr(ui_translate("w.ui", "In explore mode, death is optional."));
+        mpr(ui_translate("w.ui", "Once you set a character to explore mode, you can't switch back."));
 
 #ifndef SCORE_WIZARD_CHARACTERS
-        mprf(MSGCH_WARN, "If you continue, your game will not be scored!");
+        mprf(MSGCH_WARN,"%s", ui_translate("w.ui", "If you continue, your game will not be scored!"));
 #endif
 
-        if (!confirm_prompt("explore", "Do you really want to enter explore mode?"))
+        if (!confirm_prompt("explore",ui_translate("w.ui", "Do you really want to enter explore mode?")))
         {
             canned_msg(MSG_OK);
             return;
@@ -414,7 +416,7 @@ void enter_explore_mode()
 
         if (crawl_state.cmd_repeat_start)
         {
-            crawl_state.cancel_cmd_repeat("Can't repeat entering explore mode");
+            crawl_state.cancel_cmd_repeat(ui_translate("w.ui", "Can't repeat entering explore mode"));
             return;
         }
     }
@@ -425,7 +427,7 @@ int list_wizard_commands(bool do_redraw_screen)
     // 2 columns
     column_composer cols(2, 44);
     cols.add_formatted(0,
-                       "<yellow>Player stats</yellow>\n"
+                       ui_translate("w.help", "<yellow>Player stats</yellow>\n"
                        "<w>A</w>      set all skills to level\n"
                        "<w>Ctrl-D</w> change enchantments/durations\n"
                        "<w>g</w>      exercise a skill\n"
@@ -479,11 +481,11 @@ int list_wizard_commands(bool do_redraw_screen)
                        "<w>e</w>      trigger explore traps\n"
                        "<w>Ctrl-B</w> banish yourself to the Abyss\n"
                        "<w>Ctrl-S</w> change Abyss speed\n"
-                       "<w>Ctrl-W</w> change Shoals' tide speed\n",
+                       "<w>Ctrl-W</w> change Shoals' tide speed\n"),
                        true);
 
     cols.add_formatted(1,
-                       "<yellow>Other player related effects</yellow>\n"
+                       ui_translate("w.help", "<yellow>Other player related effects</yellow>\n"
                        "<w>c</w>      card effect\n"
 #ifdef DEBUG_BONES
                        "<w>Ctrl-G</w> save/load ghost (bones file)\n"
@@ -539,7 +541,7 @@ int list_wizard_commands(bool do_redraw_screen)
                        "<yellow>Other wizard commands</yellow>\n"
                        "(not prefixed with <w>&</w>!)\n"
                        "<w>x?</w>     list targeted commands\n"
-                       "<w>X?</w>     list map-mode commands\n",
+                       "<w>X?</w>     list map-mode commands\n"),
                        true);
 
     int key = show_keyhelp_menu(cols.formatted_lines());
@@ -551,3 +553,39 @@ int list_wizard_commands(bool do_redraw_screen)
     return key;
 }
 #endif // defined(WIZARD)
+
+
+#ifdef WIZARD
+WizardEntry wizard_display_entry(const std::string &title, const WizardEntry &original)
+{
+    WizardEntry result(original);
+    result.text = wizard_display_choice(title, original.text);
+    return result;
+}
+
+std::string wizard_display_choice(const std::string &title, const std::string &canonical)
+{
+    if (!ui_text_arg("w.ui", title).available)
+        return canonical;
+    const char *context = "w.entry";
+    if (canonical == "any" || canonical == "None")
+        return ui_translate("w.entry", canonical.c_str());
+    if (title == "Which form (ESC to exit)?")
+    {
+        for (int i = 0; i < NUM_TRANSFORMS; ++i)
+        {
+            const Form *form = get_form(static_cast<transformation>(i));
+            if (form->wiz_name == canonical)
+            {
+                const ui_arg name = ui_text_arg("f.form.name", form->short_name);
+                return name.available ? name.text : canonical;
+            }
+        }
+        return canonical;
+    }
+    else if (title == "Make which kind of trap?") context = "w.trap";
+    else if (title == "Make which kind of shop?") context = "w.shop";
+    const ui_arg name = ui_text_arg(context, canonical);
+    return name.available ? name.text : canonical;
+}
+#endif

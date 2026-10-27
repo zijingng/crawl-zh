@@ -1,0 +1,2200 @@
+{
+  "glossary_sha256": "52a49cacc2a408942ddf87655c491c1631c5ad7f7286553126fd959e04f66ee0",
+  "files": [
+    {
+      "file": "l-colour.cc",
+      "sha256": "6705b92e54c26f022b66f777055faa0ae9118d5ede45c2724f0e109d0b6051e2",
+      "hits": [
+        {
+          "term": "elemental",
+          "translation": "元素生物"
+        }
+      ]
+    },
+    {
+      "file": "l-crawl.cc",
+      "sha256": "fa7d6f57c6cdd931ce092088ce97e80a6a5e372d8132b65dd65cdaa32b4b1769",
+      "hits": [
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "Console",
+          "translation": "字符版/控制台/终端"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "evasion",
+          "translation": "闪避值"
+        },
+        {
+          "term": "exclusion",
+          "translation": "移动禁区"
+        },
+        {
+          "term": "experience",
+          "translation": "经验值"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "Jiyva",
+          "translation": "吉瓦"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "stats",
+          "translation": "属性"
+        },
+        {
+          "term": "throw",
+          "translation": "投掷"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "noise",
+          "translation": "噪音/声音/巨响"
+        },
+        {
+          "term": "evoke",
+          "translation": "唤发/发动/使用"
+        },
+        {
+          "term": "berserk",
+          "translation": "狂暴"
+        },
+        {
+          "term": "Roll",
+          "translation": "翻滚"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "l-debug.cc",
+      "sha256": "d64d238260471809adda37fe8cb005bb263b4dc69cb0a2de218f62f70ec42fae",
+      "hits": [
+        {
+          "term": "Dis",
+          "translation": "冥府"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "entrance",
+          "translation": "入口"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Hell",
+          "translation": "地狱"
+        },
+        {
+          "term": "Lair",
+          "translation": "野兽巢穴"
+        },
+        {
+          "term": "portal",
+          "translation": "传送门"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "Vaults",
+          "translation": "宝库/密室/跃起"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "Wrath",
+          "translation": "神怒"
+        }
+      ]
+    },
+    {
+      "file": "l-defs.h",
+      "sha256": "ab1d6a8c98e9eb0a8bfead157ad4dfe8da9e122daf524a457b2a24b9e0b4748e",
+      "hits": []
+    },
+    {
+      "file": "l-dgn.cc",
+      "sha256": "f43b4431659ac69dd82420df36c046747b79bb68b0411a664a18350c7bf12f8a",
+      "hits": [
+        {
+          "term": "Depths",
+          "translation": "地底/深处"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "Shoals",
+          "translation": "海滩"
+        },
+        {
+          "term": "transporter",
+          "translation": "转移装置"
+        },
+        {
+          "term": "Vaults",
+          "translation": "宝库/密室/跃起"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "noise",
+          "translation": "噪音/声音/巨响"
+        },
+        {
+          "term": "Roll",
+          "translation": "翻滚"
+        }
+      ]
+    },
+    {
+      "file": "l-dgnbld.cc",
+      "sha256": "0910e54b63436a15853b6d97c1cf1c2f78600ad45a91875b91542552fa119bcf",
+      "hits": [
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "gate",
+          "translation": "门"
+        },
+        {
+          "term": "Gehenna",
+          "translation": "欣嫩谷"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "Shoals",
+          "translation": "海滩"
+        },
+        {
+          "term": "Swamp",
+          "translation": "沼泽"
+        },
+        {
+          "term": "Vaults",
+          "translation": "宝库/密室/跃起"
+        },
+        {
+          "term": "weird",
+          "translation": "奇怪的"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        }
+      ]
+    },
+    {
+      "file": "l-dgnevt.cc",
+      "sha256": "bdc9b216608c8c488574813af647abeeae4774397d0071432c700bdec2c39639",
+      "hits": [
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "l-dgngrd.cc",
+      "sha256": "b72b2383fc57bb7f02fa87cb9266d6c830fe60110c142c3f4074965b788ffcb1",
+      "hits": [
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        }
+      ]
+    },
+    {
+      "file": "l-dgnit.cc",
+      "sha256": "8f8c0b89f3f1443e061c90c9a87cd007a80e33ef4e7d7e8ab59ac5adfe3f082f",
+      "hits": [
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "shop",
+          "translation": "商店"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        }
+      ]
+    },
+    {
+      "file": "l-dgnlvl.cc",
+      "sha256": "a949b7cfe6ed81acf9b08d2504a2c3ec536984c7e75d3dc71199a7c5626c32fd",
+      "hits": [
+        {
+          "term": "entrance",
+          "translation": "入口"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "l-dgnmon.cc",
+      "sha256": "eb7e0db338d340d0240dbd3ff06e62b43730cc1fe055f078d5d10af88536de54",
+      "hits": [
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "Pandemonium",
+          "translation": "魔窟"
+        }
+      ]
+    },
+    {
+      "file": "l-dgntil.cc",
+      "sha256": "c1f77f0998428145207dfbb2e2d3f4193176c9a976cfdbc43f39de6dabb04633",
+      "hits": [
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        }
+      ]
+    },
+    {
+      "file": "l-feat.cc",
+      "sha256": "2e6ea58c8d90c7b06988eca9011c05022c4347a900c6b302b92508146abf0140",
+      "hits": [
+        {
+          "term": "altar",
+          "translation": "祭坛"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "entrance",
+          "translation": "入口"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "gate",
+          "translation": "门"
+        },
+        {
+          "term": "portal",
+          "translation": "传送门"
+        },
+        {
+          "term": "staircase",
+          "translation": "楼梯"
+        },
+        {
+          "term": "statue",
+          "translation": "雕像"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "l-file.cc",
+      "sha256": "d5b1a336af91b199c49053ebab53f7898c8cb35a5473b818c8788738a50d6238",
+      "hits": [
+        {
+          "term": "minor",
+          "translation": "较小的"
+        },
+        {
+          "term": "slave",
+          "translation": "奴隶"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        }
+      ]
+    },
+    {
+      "file": "l-global.cc",
+      "sha256": "efd22af05f9771303c6186951d6c40cfe6923b6981a1b29c402476f390c9d5ed",
+      "hits": []
+    },
+    {
+      "file": "l-item.cc",
+      "sha256": "43e53645111e3b89c2c62e805397cc909d2287f59658a3b682e526beae7df34c",
+      "hits": [
+        {
+          "term": "AC",
+          "translation": "护甲值"
+        },
+        {
+          "term": "accuracy",
+          "translation": "命中率"
+        },
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "Axes",
+          "translation": "斧"
+        },
+        {
+          "term": "book",
+          "translation": "魔法书/书/手册"
+        },
+        {
+          "term": "corpse",
+          "translation": "尸体"
+        },
+        {
+          "term": "Dexterity",
+          "translation": "敏捷/灵巧"
+        },
+        {
+          "term": "evasion",
+          "translation": "闪避值"
+        },
+        {
+          "term": "Evocable",
+          "translation": "可唤发物品"
+        },
+        {
+          "term": "Fighting",
+          "translation": "战斗/作战/格斗"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "Gnoll",
+          "translation": "豺狼人"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Intelligence",
+          "translation": "智力/智慧/心智"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "Okawaru",
+          "translation": "奥格瓦如"
+        },
+        {
+          "term": "Polearms",
+          "translation": "长柄武器"
+        },
+        {
+          "term": "potion",
+          "translation": "药水"
+        },
+        {
+          "term": "Shield",
+          "translation": "格挡值/盾牌/保护"
+        },
+        {
+          "term": "shop",
+          "translation": "商店"
+        },
+        {
+          "term": "shopping list",
+          "translation": "购物清单"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "Strength",
+          "translation": "力量/强度/威力"
+        },
+        {
+          "term": "throw",
+          "translation": "投掷"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "Coglin",
+          "translation": "机甲哥布林"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "encumbrance rating",
+          "translation": "累赘值"
+        },
+        {
+          "term": "encumbrance",
+          "translation": "累赘"
+        },
+        {
+          "term": "slaying",
+          "translation": "杀戮"
+        },
+        {
+          "term": "evoke",
+          "translation": "唤发/发动/使用"
+        },
+        {
+          "term": "evoker",
+          "translation": "唤发器"
+        },
+        {
+          "term": "elemental",
+          "translation": "元素生物"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "l-libs.h",
+      "sha256": "f991ee298537cc5f32e654c6cc997316109135c3ebb733ffc1520876f64f4832",
+      "hits": [
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "shop",
+          "translation": "商店"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        }
+      ]
+    },
+    {
+      "file": "l-los.cc",
+      "sha256": "ff6f9cea14ac4b940b9a848f0e829c582ca6e0617e1200b807b9af1898545abc",
+      "hits": [
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "line of sight",
+          "translation": "视线"
+        }
+      ]
+    },
+    {
+      "file": "l-mapgrd.cc",
+      "sha256": "3a0537789d67397157e9f3d6998004ef5de8fd010af79c87c47555a5800ebf0a",
+      "hits": []
+    },
+    {
+      "file": "l-mapmrk.cc",
+      "sha256": "24f1e865125791c633a7b036e0a08e3fe259137e7a457980170c5901709b3d6b",
+      "hits": []
+    },
+    {
+      "file": "l-moninf.cc",
+      "sha256": "66cb52697bcb4f151e9cc3e6902754bc2ec9ebef24a3d1b7d21f7c8692e81501",
+      "hits": [
+        {
+          "term": "AC",
+          "translation": "护甲值"
+        },
+        {
+          "term": "book",
+          "translation": "魔法书/书/手册"
+        },
+        {
+          "term": "dagger",
+          "translation": "匕首"
+        },
+        {
+          "term": "dart",
+          "translation": "飞镖"
+        },
+        {
+          "term": "draining",
+          "translation": "吸能/汲取/耗损"
+        },
+        {
+          "term": "evasion",
+          "translation": "闪避值"
+        },
+        {
+          "term": "Evocable",
+          "translation": "可唤发物品"
+        },
+        {
+          "term": "Evocations",
+          "translation": "唤发"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "hostile",
+          "translation": "敌对"
+        },
+        {
+          "term": "hydra",
+          "translation": "海德拉"
+        },
+        {
+          "term": "Intelligence",
+          "translation": "智力/智慧/心智"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "robe",
+          "translation": "长袍"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "spellbook",
+          "translation": "魔法书"
+        },
+        {
+          "term": "throw",
+          "translation": "投掷"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "undead",
+          "translation": "亡灵"
+        },
+        {
+          "term": "wand",
+          "translation": "魔杖"
+        },
+        {
+          "term": "Human",
+          "translation": "人类"
+        },
+        {
+          "term": "Summoner",
+          "translation": "召唤师"
+        },
+        {
+          "term": "willpower",
+          "translation": "意志"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "evoke",
+          "translation": "唤发/发动/使用"
+        },
+        {
+          "term": "confusion",
+          "translation": "混乱"
+        },
+        {
+          "term": "paralysis",
+          "translation": "麻痹"
+        },
+        {
+          "term": "poison",
+          "translation": "毒"
+        },
+        {
+          "term": "corrosion",
+          "translation": "腐蚀"
+        },
+        {
+          "term": "invisibility",
+          "translation": "隐形"
+        },
+        {
+          "term": "petrifying",
+          "translation": "正在石化"
+        },
+        {
+          "term": "petrified",
+          "translation": "已石化"
+        },
+        {
+          "term": "Polymorph",
+          "translation": "变形术"
+        },
+        {
+          "term": "Slow",
+          "translation": "缓慢术/减速/缓慢/迟缓"
+        },
+        {
+          "term": "Abjuration",
+          "translation": "驱逐术"
+        },
+        {
+          "term": "Shock",
+          "translation": "电击术/电击"
+        },
+        {
+          "term": "Sleep",
+          "translation": "睡眠术"
+        },
+        {
+          "term": "Discord",
+          "translation": "不和之音/Discord"
+        },
+        {
+          "term": "Frenzy",
+          "translation": "狂乱术"
+        },
+        {
+          "term": "Melee",
+          "translation": "近战"
+        },
+        {
+          "term": "Sigmund",
+          "translation": "西格蒙德"
+        },
+        {
+          "term": "plant",
+          "translation": "植物"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "l-mons.cc",
+      "sha256": "580c27731c2360ead1b5f79f50550b48afa52a0a184a21a4b02eef222475295a",
+      "hits": [
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "Enchant",
+          "translation": "附魔"
+        },
+        {
+          "term": "experience",
+          "translation": "经验值"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "Vaults",
+          "translation": "宝库/密室/跃起"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特"
+        },
+        {
+          "term": "Shapeshifter",
+          "translation": "变形者"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "Sleep",
+          "translation": "睡眠术"
+        },
+        {
+          "term": "the Dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "dancing weapon",
+          "translation": "舞动武器"
+        },
+        {
+          "term": "glowing shapeshifter",
+          "translation": "发光变形怪"
+        }
+      ]
+    },
+    {
+      "file": "l-option.cc",
+      "sha256": "49719bef2a48eb2c5228b7746f53a95726b54904ad6f65f3a228974b668aeb44",
+      "hits": [
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "background",
+          "translation": "背景"
+        },
+        {
+          "term": "blink",
+          "translation": "闪烁/闪现/眨眼"
+        },
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        }
+      ]
+    },
+    {
+      "file": "l-spells.cc",
+      "sha256": "48bc80598064fd618f62fad9006d6c29b86f0e94d72720db4a8c03c1956c27bb",
+      "hits": [
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "miscast",
+          "translation": "施法失误"
+        },
+        {
+          "term": "smite",
+          "translation": "神罚"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "failure rate",
+          "translation": "失败率"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "l-subvault.cc",
+      "sha256": "5744f63c6f7ed0374be0dfad3c095d5c24d717cf607375f2b8bf43b45be59e70",
+      "hits": []
+    },
+    {
+      "file": "l-travel.cc",
+      "sha256": "44da7bea06f76d4bc8e48472119a87a7dd9fa5f54ef2b60ca9bf8e384683bccd",
+      "hits": [
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "exclusion",
+          "translation": "移动禁区"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "Waypoint",
+          "translation": "导航点"
+        },
+        {
+          "term": "Flight",
+          "translation": "飞行术/飞行/一群"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "l-view.cc",
+      "sha256": "6448c9892e1c82fcecd2d320616d7d81b1bd73bdd102cec6e5504c24629cdd7c",
+      "hits": [
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "shop",
+          "translation": "商店"
+        },
+        {
+          "term": "line of sight",
+          "translation": "视线"
+        },
+        {
+          "term": "Mesmerise",
+          "translation": "迷魂术/迷住/迷惑"
+        },
+        {
+          "term": "Flight",
+          "translation": "飞行术/飞行/一群"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "l-wiz.cc",
+      "sha256": "a6961f8c1af2a5b32afdba1924657fcdf78c5311cba53854bf6143262af3f5d2",
+      "hits": [
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "l-you.cc",
+      "sha256": "cc4f1f1cbaac21aa84cd9d9f9bcf67ca9ed64f09ab1487115e40b27b8be8845e",
+      "hits": [
+        {
+          "term": "ability",
+          "translation": "能力"
+        },
+        {
+          "term": "Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "AC",
+          "translation": "护甲值"
+        },
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "armour class",
+          "translation": "护甲值"
+        },
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "background",
+          "translation": "背景"
+        },
+        {
+          "term": "book",
+          "translation": "魔法书/书/手册"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "Dexterity",
+          "translation": "敏捷/灵巧"
+        },
+        {
+          "term": "drain",
+          "translation": "吸能/吸取/消耗"
+        },
+        {
+          "term": "draining",
+          "translation": "吸能/汲取/耗损"
+        },
+        {
+          "term": "evasion",
+          "translation": "闪避值"
+        },
+        {
+          "term": "experience",
+          "translation": "经验值"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "hit points",
+          "translation": "生命值"
+        },
+        {
+          "term": "Intelligence",
+          "translation": "智力/智慧/心智"
+        },
+        {
+          "term": "magic contamination",
+          "translation": "魔法污染"
+        },
+        {
+          "term": "magic points",
+          "translation": "魔力值"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "mutations",
+          "translation": "变异"
+        },
+        {
+          "term": "portal",
+          "translation": "传送门"
+        },
+        {
+          "term": "rC",
+          "translation": "冰抗"
+        },
+        {
+          "term": "rF",
+          "translation": "火抗"
+        },
+        {
+          "term": "rPois",
+          "translation": "毒抗"
+        },
+        {
+          "term": "Shield",
+          "translation": "格挡值/盾牌/保护"
+        },
+        {
+          "term": "SInv",
+          "translation": "看破隐形"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "stealth",
+          "translation": "潜行"
+        },
+        {
+          "term": "Strength",
+          "translation": "力量/强度/威力"
+        },
+        {
+          "term": "torment",
+          "translation": "折磨"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "Unarmed Combat",
+          "translation": "徒手格斗"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特"
+        },
+        {
+          "term": "SH",
+          "translation": "格挡值"
+        },
+        {
+          "term": "willpower",
+          "translation": "意志"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "rN",
+          "translation": "负能量抗性"
+        },
+        {
+          "term": "rElec",
+          "translation": "电抗"
+        },
+        {
+          "term": "rCorr",
+          "translation": "腐蚀抗性"
+        },
+        {
+          "term": "piety",
+          "translation": "虔诚"
+        },
+        {
+          "term": "penance",
+          "translation": "赎罪"
+        },
+        {
+          "term": "line of sight",
+          "translation": "视线"
+        },
+        {
+          "term": "noise",
+          "translation": "噪音/声音/巨响"
+        },
+        {
+          "term": "poison",
+          "translation": "毒"
+        },
+        {
+          "term": "corrosion",
+          "translation": "腐蚀"
+        },
+        {
+          "term": "berserk",
+          "translation": "狂暴"
+        },
+        {
+          "term": "haste",
+          "translation": "疾速"
+        },
+        {
+          "term": "silence",
+          "translation": "沉默"
+        },
+        {
+          "term": "petrifying",
+          "translation": "正在石化"
+        },
+        {
+          "term": "contamination",
+          "translation": "魔法污染"
+        },
+        {
+          "term": "Slow",
+          "translation": "缓慢术/减速/缓慢/迟缓"
+        },
+        {
+          "term": "Shock",
+          "translation": "电击术/电击"
+        },
+        {
+          "term": "Swiftness",
+          "translation": "迅捷术"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Ostracise",
+          "translation": "放逐术"
+        },
+        {
+          "term": "See Invisible",
+          "translation": "看破隐形"
+        },
+        {
+          "term": "the Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "flame",
+          "translation": "火焰"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "the Orb",
+          "translation": "宝珠"
+        }
+      ]
+    },
+    {
+      "file": "lang-fake.cc",
+      "sha256": "d3b7dc8564093b1dec84b06d64d804c435c9b2617bc72afad46761f1678b90d4",
+      "hits": [
+        {
+          "term": "angel",
+          "translation": "天使"
+        },
+        {
+          "term": "battleaxe",
+          "translation": "大型战斧"
+        },
+        {
+          "term": "battlesphere",
+          "translation": "作战球"
+        },
+        {
+          "term": "book",
+          "translation": "魔法书/书/手册"
+        },
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "Dis",
+          "translation": "冥府"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "spear",
+          "translation": "矛"
+        },
+        {
+          "term": "SH",
+          "translation": "格挡值"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "Jump",
+          "translation": "跃击"
+        },
+        {
+          "term": "ink",
+          "translation": "墨汁"
+        },
+        {
+          "term": "Sigmund",
+          "translation": "西格蒙德"
+        },
+        {
+          "term": "battlemage",
+          "translation": "战斗法师"
+        }
+      ]
+    },
+    {
+      "file": "lang-fake.h",
+      "sha256": "d71c613afd1296a45bccf44ef44400a0484bb350e4f8b8d82ab28e570764c456",
+      "hits": []
+    },
+    {
+      "file": "lang-t.h",
+      "sha256": "15c2d7ad214328ec0f168de2bb922bd4ace676e3c3e19aac2545ebad5b9e0b3f",
+      "hits": [
+        {
+          "term": "Ru",
+          "translation": "入"
+        }
+      ]
+    },
+    {
+      "file": "lev-pand.cc",
+      "sha256": "307265cda67fe61b13bea2c2e02aaf568552325bceee540ffc6e019cd8d8a4d2",
+      "hits": [
+        {
+          "term": "demonspawn",
+          "translation": "魔人"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "Hell",
+          "translation": "地狱"
+        },
+        {
+          "term": "Pandemonium",
+          "translation": "魔窟"
+        },
+        {
+          "term": "shadow",
+          "translation": "影"
+        },
+        {
+          "term": "Tzitzimitl",
+          "translation": "兹兹米特尔"
+        },
+        {
+          "term": "warmonger",
+          "translation": "战狂"
+        },
+        {
+          "term": "ynoxinul",
+          "translation": "铁鳞魔"
+        },
+        {
+          "term": "silence",
+          "translation": "沉默"
+        },
+        {
+          "term": "Executioner",
+          "translation": "刽子手"
+        },
+        {
+          "term": "balrug",
+          "translation": "巴尔鲁格"
+        },
+        {
+          "term": "cacodemon",
+          "translation": "邪眼恶魔"
+        },
+        {
+          "term": "hellion",
+          "translation": "地狱魔"
+        },
+        {
+          "term": "nekomata",
+          "translation": "猫又"
+        },
+        {
+          "term": "neqoxec",
+          "translation": "涅克索克"
+        },
+        {
+          "term": "reaper",
+          "translation": "收割者"
+        },
+        {
+          "term": "tormentor",
+          "translation": "折磨者"
+        },
+        {
+          "term": "zykzyl",
+          "translation": "兹克兹尔"
+        }
+      ]
+    },
+    {
+      "file": "lev-pand.h",
+      "sha256": "32547c67115e4f3ad20dec8c0d21201c5811cf93b969589c43059f5a6909f71e",
+      "hits": [
+        {
+          "term": "Pandemonium",
+          "translation": "魔窟"
+        }
+      ]
+    },
+    {
+      "file": "level-gen-type.h",
+      "sha256": "0ef71931d7dab178f59692fcddf3d362f0e0985d08f9aebf575b082b66461a75",
+      "hits": []
+    },
+    {
+      "file": "level-id.h",
+      "sha256": "37a1bcf5a995dba928dac3d3ae3b9bb427a2aa7a61e85cd1a4c20c3d27820af7",
+      "hits": [
+        {
+          "term": "Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "Depths",
+          "translation": "地底/深处"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "portal",
+          "translation": "传送门"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "the Dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "level-state-type.h",
+      "sha256": "a7443c83a2d55daaea5279b245c12d8f8ada79a89d1b1b5594cacc98a0bcc57d",
+      "hits": [
+        {
+          "term": "Beogh",
+          "translation": "比欧弗"
+        }
+      ]
+    },
+    {
+      "file": "libconsole.h",
+      "sha256": "db659f779858408d63f6cd07500fe8954f89a977e69df67a78114eace26fc26e",
+      "hits": [
+        {
+          "term": "Console",
+          "translation": "字符版/控制台/终端"
+        }
+      ]
+    },
+    {
+      "file": "libgui.cc",
+      "sha256": "2c2bce6aa6d0013e8418c53dd9c9f2b7a1708c9e9b5f0af7a89f05d66e4b5507",
+      "hits": [
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "Console",
+          "translation": "字符版/控制台/终端"
+        },
+        {
+          "term": "Dis",
+          "translation": "冥府"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        }
+      ]
+    },
+    {
+      "file": "libunix.cc",
+      "sha256": "64499cebce19721963dd8e431e768ad8c933dd5ea6fe7a798e4a3001ce1154fe",
+      "hits": [
+        {
+          "term": "arrow",
+          "translation": "箭"
+        },
+        {
+          "term": "background",
+          "translation": "背景"
+        },
+        {
+          "term": "blink",
+          "translation": "闪烁/闪现/眨眼"
+        },
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "Console",
+          "translation": "字符版/控制台/终端"
+        },
+        {
+          "term": "Dis",
+          "translation": "冥府"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "libunix.h",
+      "sha256": "c6c5a23a05666adbd564eda05dea0bd4ac49c273388034b13696e08869b944cf",
+      "hits": []
+    },
+    {
+      "file": "libutil.cc",
+      "sha256": "d2eaf1e41e25100b2005d1cb64de2a34c753176ec7694d9a6fd16e33f9b6ca4a",
+      "hits": [
+        {
+          "term": "Console",
+          "translation": "字符版/控制台/终端"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "Sleep",
+          "translation": "睡眠术"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        }
+      ]
+    },
+    {
+      "file": "libutil.h",
+      "sha256": "c2f787c5c43db7479a3a0d0dc3cca4e66c7d6db4c402f2fa6d42c344caaf218a",
+      "hits": [
+        {
+          "term": "Console",
+          "translation": "字符版/控制台/终端"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        }
+      ]
+    },
+    {
+      "file": "libw32c.cc",
+      "sha256": "12e9d3d91f2aeb6f7350feeeabf67bddf92c2c46ef70345f679b22788822aee4",
+      "hits": [
+        {
+          "term": "background",
+          "translation": "背景"
+        },
+        {
+          "term": "blink",
+          "translation": "闪烁/闪现/眨眼"
+        },
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "Console",
+          "translation": "字符版/控制台/终端"
+        },
+        {
+          "term": "Dis",
+          "translation": "冥府"
+        },
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "Sleep",
+          "translation": "睡眠术"
+        },
+        {
+          "term": "apis",
+          "translation": "圣牛"
+        }
+      ]
+    },
+    {
+      "file": "libw32c.h",
+      "sha256": "124ab3726594c2f919488c392cff466dcbe5b32eabf569061a917b4918b63833",
+      "hits": []
+    },
+    {
+      "file": "loading-screen.cc",
+      "sha256": "edcf621d6fc3505fcecd2f80fa9aa51aa5a6580945283812a2003c2ee71b7389",
+      "hits": [
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        }
+      ]
+    },
+    {
+      "file": "loading-screen.h",
+      "sha256": "dbbd6bdac7190f7f65b145c8f50acc94bd6926568416f852a0d7c5bf721531a6",
+      "hits": []
+    },
+    {
+      "file": "lookup-help-type.h",
+      "sha256": "474452e31ea339fc5948a746a7f1cc88babad5034384010850e415d6f7bb8c71",
+      "hits": [
+        {
+          "term": "ability",
+          "translation": "能力"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        }
+      ]
+    },
+    {
+      "file": "lookup-help.cc",
+      "sha256": "3c12bd733371aafdc1361ea149020a56f06c2fe0333bb2df5cb60b22bdb05467",
+      "hits": [
+        {
+          "term": "ability",
+          "translation": "能力"
+        },
+        {
+          "term": "Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "book",
+          "translation": "魔法书/书/手册"
+        },
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "Cocytus",
+          "translation": "悲叹河"
+        },
+        {
+          "term": "Dis",
+          "translation": "冥府"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "entrance",
+          "translation": "入口"
+        },
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开"
+        },
+        {
+          "term": "Gauntlet",
+          "translation": "竞技场"
+        },
+        {
+          "term": "Gehenna",
+          "translation": "欣嫩谷"
+        },
+        {
+          "term": "ghost",
+          "translation": "鬼魂"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Hell",
+          "translation": "地狱"
+        },
+        {
+          "term": "Lair",
+          "translation": "野兽巢穴"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "mutations",
+          "translation": "变异"
+        },
+        {
+          "term": "Pakellas",
+          "translation": "帕克拉斯"
+        },
+        {
+          "term": "portal",
+          "translation": "传送门"
+        },
+        {
+          "term": "potion",
+          "translation": "药水"
+        },
+        {
+          "term": "school",
+          "translation": "魔法学派/流派"
+        },
+        {
+          "term": "shop",
+          "translation": "商店"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "Tartarus",
+          "translation": "塔尔塔罗斯"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "Vaults",
+          "translation": "宝库/密室/跃起"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "Ziggurat",
+          "translation": "神塔"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特"
+        },
+        {
+          "term": "Draconian",
+          "translation": "龙人"
+        },
+        {
+          "term": "Monk",
+          "translation": "武僧"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "noise",
+          "translation": "噪音/声音/巨响"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "the Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "Royal Jelly",
+          "translation": "皇家胶怪"
+        },
+        {
+          "term": "Serpent of Hell",
+          "translation": "地狱巨蛇"
+        },
+        {
+          "term": "dancing weapon",
+          "translation": "舞动武器"
+        },
+        {
+          "term": "goblin",
+          "translation": "地精"
+        },
+        {
+          "term": "jelly",
+          "translation": "胶怪"
+        },
+        {
+          "term": "knight",
+          "translation": "骑士"
+        },
+        {
+          "term": "orc",
+          "translation": "兽人"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "slime creature",
+          "translation": "史莱姆生物"
+        },
+        {
+          "term": "tentacle",
+          "translation": "触手"
+        },
+        {
+          "term": "the Cloud",
+          "translation": "云雾"
+        }
+      ]
+    },
+    {
+      "file": "lookup-help.h",
+      "sha256": "89698f603fd65533b012a973db6b4fdf9b5043faa4fbdda7e550134ac214d298",
+      "hits": [
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "los-def.cc",
+      "sha256": "c6c1458c355618b370d56e8cd254c70a5ae61cbb6fb289b2869e5cef3d1c1760",
+      "hits": [
+        {
+          "term": "max",
+          "translation": "最大值"
+        }
+      ]
+    },
+    {
+      "file": "los-def.h",
+      "sha256": "24b0d305bc2e87c564f229f8c680c4b80eefa3dc1d55f90d94c575c17b0c67cd",
+      "hits": []
+    },
+    {
+      "file": "los-type.h",
+      "sha256": "fe70af39bb25cb7622bf4f0a61e7295ddb6d415e395d7dee61c8e13d0c667d5a",
+      "hits": [
+        {
+          "term": "statue",
+          "translation": "雕像"
+        },
+        {
+          "term": "Arena",
+          "translation": "奥格瓦如竞技场/竞技场"
+        }
+      ]
+    },
+    {
+      "file": "los.cc",
+      "sha256": "34b8a0d28f049f02b82d91ad8ed08e69b1adb0e08627de2ecb1f3a0f0e953e03",
+      "hits": [
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "throw",
+          "translation": "投掷"
+        },
+        {
+          "term": "SH",
+          "translation": "格挡值"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Arena",
+          "translation": "奥格瓦如竞技场/竞技场"
+        },
+        {
+          "term": "bush",
+          "translation": "灌木"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "los.h",
+      "sha256": "5dc5490f8dc525afaf352e769dd1f156b5e0f2657823a7adeb7f48f7af163d45",
+      "hits": [
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "SH",
+          "translation": "格挡值"
+        }
+      ]
+    },
+    {
+      "file": "losglobal.cc",
+      "sha256": "9aba23a0dcd5db36d55f25b4051de48b34b386d3273dfc8fdad8bb53688176e2",
+      "hits": [
+        {
+          "term": "max",
+          "translation": "最大值"
+        }
+      ]
+    },
+    {
+      "file": "losglobal.h",
+      "sha256": "7a2187550fa37bf23eae4f6de754341a108163047ffb96729ed89e0b82f66171",
+      "hits": []
+    },
+    {
+      "file": "losparam.cc",
+      "sha256": "0576687e34fd0116917e7a08c249fecd1f42a4c5f397b5ac52b41bccd47544a0",
+      "hits": [
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        }
+      ]
+    },
+    {
+      "file": "losparam.h",
+      "sha256": "f272ff230fc512e9a29e58b10feb75d18d0465c22d622b3087b798dd5d5cc872",
+      "hits": [
+        {
+          "term": "blink",
+          "translation": "闪烁/闪现/眨眼"
+        },
+        {
+          "term": "exclusion",
+          "translation": "移动禁区"
+        },
+        {
+          "term": "portal",
+          "translation": "传送门"
+        },
+        {
+          "term": "Translocations",
+          "translation": "位移系魔法"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "line of sight",
+          "translation": "视线"
+        },
+        {
+          "term": "spellspark servitor",
+          "translation": "法术火花仆从"
+        },
+        {
+          "term": "Apportation",
+          "translation": "牵引术"
+        },
+        {
+          "term": "Portal Projectile",
+          "translation": "传送飞射物"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "luaterp.cc",
+      "sha256": "7be38e264f651fb7d77cf0f8371e0e799d6cc95e22569be17d66dfc1a8076a66",
+      "hits": [
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开"
+        }
+      ]
+    },
+    {
+      "file": "luaterp.h",
+      "sha256": "01976a0ce5f3db15b12ef4acfe0d49fa5fdb2afd25ce37b227bf047a468efbe5",
+      "hits": []
+    }
+  ],
+  "shared_baselines": [
+    {
+      "file": "Makefile",
+      "sha256": "050267a2c1537e87d1edcec6631384ba42afca214f23071bd4b82cb6399bf0c5"
+    },
+    {
+      "file": "startup.cc",
+      "sha256": "22f0e17af45f74d3404fdd7382afbbf4e5d0a138dcdfe97413b623c24b32c2cb"
+    }
+  ]
+}

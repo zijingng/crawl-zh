@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "t-display.h"
+#include "i18n.h"
 
 #include "transform.h"
 
@@ -412,6 +414,28 @@ string Form::get_uc_attack_name(string default_name) const
     if (uc_attack.empty())
         return default_name + brand_suffix;
     return uc_attack + brand_suffix;
+}
+
+ui_arg Form::uc_attack_display_arg(const string& default_name) const
+{
+    ui_translation_group group({{"o.unarmed", "Attack: %s"}});
+    if (!group.available()) return {"", false};
+    const char* special = this == get_form(transformation::statue) ? "Stone %s"
+        : this == get_form(transformation::storm) ? "Storm %s"
+        : this == get_form(transformation::eel_hands) ? "Eel %s" : nullptr;
+    if (special)
+    {
+        const string hand = you.base_hand_name(true, this != get_form(transformation::eel_hands));
+        const string text = ui_render("o.unarmed", special, "", {ui_text_arg("o.body", hand)});
+        return {text, !text.empty()};
+    }
+    const ui_arg name = ui_text_arg("o.unarmed", uc_attack.empty() ? default_name : uc_attack);
+    const brand_type brand = get_uc_brand();
+    const string text = brand == SPWPN_NORMAL
+        ? ui_render("o.unarmed", "Attack: %s", "", {name})
+        : ui_render("o.unarmed", "Branded attack: %s (%s)", "",
+            {name, ui_text_arg("o.brand", brand_type_name(brand, true))});
+    return {text, !text.empty()};
 }
 
 /**
@@ -1765,9 +1789,7 @@ bool transforming_is_unsafe(transformation which_trans)
 {
     if (feat_dangerous_for_form(which_trans, env.grid(you.pos())))
     {
-        mprf(MSGCH_PROMPT, "%s right now would cause you to %s!",
-                which_trans == transformation::none ? "Untransforming" : "Transforming",
-                env.grid(you.pos()) == DNGN_LAVA ? "burn" : "drown");
+        mprf(MSGCH_PROMPT, "%s", ui_render("t.log", "%s right now would cause you to %s!", make_stringf("%s right now would cause you to %s!", which_trans == transformation::none ? "Untransforming" : "Transforming", env.grid(you.pos()) == DNGN_LAVA ? "burn" : "drown"), {t_clause_arg(which_trans == transformation::none ? "Untransforming" : "Transforming"), t_clause_arg(env.grid(you.pos()) == DNGN_LAVA ? "burn" : "drown")}).c_str());
         return true;
     }
 
@@ -1791,9 +1813,7 @@ bool transforming_is_unsafe(transformation which_trans)
         if (item->cursed()
             || (is_artefact(*item) && artefact_property(*item, ARTP_FRAGILE)))
         {
-            mprf(MSGCH_PROMPT, "%s right now would shatter %s!",
-                 which_trans == transformation::none ? "Untransforming" : "Transforming",
-                 item->name(DESC_YOUR).c_str());
+            mprf(MSGCH_PROMPT, "%s", ui_render("t.log", "%s right now would shatter %s!", make_stringf("%s right now would shatter %s!", which_trans == transformation::none ? "Untransforming" : "Transforming", item->name(DESC_YOUR).c_str()), {t_clause_arg(which_trans == transformation::none ? "Untransforming" : "Transforming"), ui_item_arg(*item)}).c_str());
             return true;
         }
     }
@@ -1875,7 +1895,7 @@ bool check_transform_into(transformation which_trans, bool involuntary,
     if (!reason.empty())
     {
         if (!involuntary)
-            mpr(reason);
+            mpr(ui_translate("t.form", reason.c_str()));
         return false;
     }
 
@@ -1885,15 +1905,13 @@ bool check_transform_into(transformation which_trans, bool involuntary,
     const auto feat = env.grid(you.pos());
     if (!involuntary && feat_dangerous_for_form(which_trans, feat, talisman))
     {
-        mprf("Transforming right now would cause you to %s!",
-             feat == DNGN_DEEP_WATER ? "drown" : "burn");
+        mprf("%s", ui_render("t.log", "Transforming right now would cause you to %s!", make_stringf("Transforming right now would cause you to %s!", feat == DNGN_DEEP_WATER ? "drown" : "burn"), {t_clause_arg(env.grid(you.pos()) == DNGN_DEEP_WATER ? "drown" : "burn")}).c_str());
         return false;
     }
 
     if (!involuntary && get_form(which_trans)->mult_hp(100) < 90)
     {
-        if (!yesno("This transformation would significantly lower your maximum hit points. "
-                  "Transform anyway?", true, 'n'))
+        if (!yesno(ui_translate("t.ui", "This transformation would significantly lower your maximum hit points. Transform anyway?"), true, 'n'))
         {
             return false;
         }
@@ -1912,13 +1930,11 @@ static void _print_death_brand_changes(item_def *weapon, bool entering_death)
     }
     if (entering_death)
     {
-        mprf("%s goes dull and lifeless in your grasp.",
-             weapon->name(DESC_YOUR).c_str());
+        mprf("%s", ui_render("t.log", "%s goes dull and lifeless in your grasp.", make_stringf("%s goes dull and lifeless in your grasp.", weapon->name(DESC_YOUR).c_str()), {ui_item_arg(*weapon)}).c_str());
     }
     else
     {
-        mprf("%s softly glows with a divine radiance!",
-             uppercase_first(weapon->name(DESC_YOUR)).c_str());
+        mprf("%s", ui_render("t.log", "%s softly glows with a divine radiance!", make_stringf("%s softly glows with a divine radiance!", uppercase_first(weapon->name(DESC_YOUR)).c_str()), {ui_item_arg(*weapon)}).c_str());
     }
 }
 
@@ -1929,11 +1945,11 @@ static void _on_enter_form(transformation which_trans)
     switch (which_trans)
     {
     case transformation::tree:
-        mpr("Your roots penetrate the ground.");
+        mpr(ui_translate("t.ui", "Your roots penetrate the ground."));
         if (you.duration[DUR_TELEPORT])
         {
             you.duration[DUR_TELEPORT] = 0;
-            mpr("You feel strangely stable.");
+            mpr(ui_translate("t.ui", "You feel strangely stable."));
         }
         you.duration[DUR_FLIGHT] = 0;
         break;
@@ -1958,8 +1974,7 @@ static void _on_enter_form(transformation which_trans)
     case transformation::maw:
         if (have_passive(passive_t::goldify_corpses))
         {
-            mprf(MSGCH_WARN, "Gozag's golden gift will leave your new mouth "
-                             "with nothing to eat.");
+            mprf(MSGCH_WARN, "%s", ui_translate("t.ui", "Gozag's golden gift will leave your new mouth with nothing to eat."));
         }
         break;
 
@@ -2012,7 +2027,7 @@ static void _enter_form(int dur, transformation which_trans, bool using_talisman
     if (!(you.form == transformation::vampire || you.form == transformation::bat_swarm)
          && !(which_trans == transformation::vampire || which_trans == transformation::bat_swarm))
     {
-        mpr(get_form(which_trans)->transform_message());
+        mpr(get_form(which_trans)->display_form_message(get_form(which_trans)->transform_message()));
     }
 
     // If we're wielding a two-hander, shift it into the crab two-hander slot
@@ -2028,7 +2043,7 @@ static void _enter_form(int dur, transformation which_trans, bool using_talisman
 
     if (you.digging && form_changes_anatomy(which_trans))
     {
-        mpr("Your mandibles meld away.");
+        mpr(ui_translate("t.ui", "Your mandibles meld away."));
         you.digging = false;
     }
 
@@ -2205,7 +2220,7 @@ void untransform(bool skip_move, bool scale_hp, bool preserve_equipment,
 
     const string message = get_form(old_form)->get_untransform_message();
     if (!message.empty())
-        mprf(MSGCH_DURATION, "%s", message.c_str());
+        mprf(MSGCH_DURATION, "%s", get_form(old_form)->display_form_message(message, true).c_str());
 
     set_form(transformation::none, 0, scale_hp);
 
@@ -2238,7 +2253,7 @@ void untransform(bool skip_move, bool scale_hp, bool preserve_equipment,
         if (monster* ember = get_solar_ember())
         {
             monster_die(*ember, KILL_RESET, NON_MONSTER);
-            mprf(MSGCH_DURATION, "Your tiny sun winks out.");
+            mprf(MSGCH_DURATION, "%s", ui_translate("t.ui", "Your tiny sun winks out."));
         }
     }
     else if (old_form == transformation::rime_yak)
@@ -2273,8 +2288,7 @@ void untransform(bool skip_move, bool scale_hp, bool preserve_equipment,
     {
         for (item_def* item : forced_remove)
         {
-            mprf("%s falls away%s!", item->name(DESC_YOUR).c_str(),
-                    item->cursed() ? ", shattering the curse!" : "");
+            mprf("%s", ui_render("t.log", "%s falls away%s!", make_stringf("%s falls away%s!", item->name(DESC_YOUR).c_str(), item->cursed() ? ", shattering the curse!" : ""), {ui_item_arg(*item), t_clause_arg(item->cursed() ? ", shattering the curse!" : "")}).c_str());
 
             unequip_item(*item, false);
         }
@@ -2381,10 +2395,10 @@ void merfolk_start_swimming()
     if (you.fishtail)
         return;
 
-    mpr("Your legs become a tail as you dive into the water.");
+    mpr(ui_translate("t.ui", "Your legs become a tail as you dive into the water."));
 
     if (you.invisible())
-        mpr("...but don't expect to remain undetected.");
+        mpr(ui_translate("t.ui", "...but don't expect to remain undetected."));
 
     you.fishtail = true;
     you.redraw_evasion = true;
@@ -2516,9 +2530,9 @@ void sphinx_check_riddle()
     // Tiny chance to do something other than make noise.
     if (one_chance_in(20))
     {
-        string msg = getShoutString("Sphinx riddle success");
-        msg = do_mon_str_replacements(msg, *best_mon, S_SILENT);
-        mpr(msg);
+        auto speech = getPairedShoutString("Sphinx riddle success");
+        do_mon_str_replacements(speech.english, *best_mon, S_SILENT, &speech);
+        mpr(speech.text());
 
         if (coinflip())
             best_mon->vex(&you, random_range(5, 8));
@@ -2531,10 +2545,10 @@ void sphinx_check_riddle()
         // messages about them ignoring you.
         string mon_msg = getSpeakString(best_mon->name(DESC_PLAIN) + " riddle");
 
-        string msg = getShoutString(mon_msg.empty() ? "Sphinx riddle failure"
-                                                    : "Sphinx riddle failure acknowledged");
-        msg = do_mon_str_replacements(msg, *best_mon, S_SILENT);
-        mpr(msg);
+        auto speech = getPairedShoutString(mon_msg.empty() ? "Sphinx riddle failure"
+                                                          : "Sphinx riddle failure acknowledged");
+        do_mon_str_replacements(speech.english, *best_mon, S_SILENT, &speech);
+        mpr(speech.text());
 
         if (!mon_msg.empty())
             mons_speaks_msg(best_mon, mon_msg, MSGCH_TALK);
@@ -2557,8 +2571,8 @@ void sun_scarab_spawn_ember(bool first_time)
     if (monster* mon = create_monster(mg))
     {
         you.props[SOLAR_EMBER_MID_KEY].get_int() = mon->mid;
-        mprf(MSGCH_DURATION, first_time ? "A tiny sun coalesces beside you."
-                                        : "You reconstitute your solar ember.");
+        mprf(MSGCH_DURATION, "%s", ui_translate("t.form", first_time ? "A tiny sun coalesces beside you."
+                                        : "You reconstitute your solar ember."));
         you.props.erase(SOLAR_EMBER_REVIVAL_KEY);
     }
 }
@@ -2591,13 +2605,12 @@ bool maw_hunger_check(monster* mon)
     {
         if (!you.clarity())
         {
-            mprf("Your maw growls hungrily at the sight of %s.", mon->name(DESC_THE).c_str());
+            mprf("%s", ui_render("t.log", "Your maw growls hungrily at the sight of %s.", make_stringf("Your maw growls hungrily at the sight of %s.", mon->name(DESC_THE).c_str()), {ui_actor_arg(*mon)}).c_str());
             you.add_beholder(*mon, true, random_range(6, 10));
         }
         else
         {
-            mprf("Your maw growls hungrily at the sight of %s, but you resist your urges.",
-                 mon->name(DESC_THE).c_str());
+            mprf("%s", ui_render("t.log", "Your maw growls hungrily at the sight of %s, but you resist your urges.", make_stringf("Your maw growls hungrily at the sight of %s, but you resist your urges.", mon->name(DESC_THE).c_str()), {ui_actor_arg(*mon)}).c_str());
         }
 
         noisy(you.shout_volume(), you.pos(), MID_PLAYER);
@@ -2615,15 +2628,12 @@ bool vampire_mesmerism_check(monster& mon)
     {
         if (mon.check_willpower(&you, get_form()->get_effect_chance()) <= 0)
         {
-            mprf("%s loses %s in your eye%s.",
-                    mon.name(DESC_THE).c_str(),
-                    mon.pronoun(PRONOUN_REFLEXIVE).c_str(),
-                    you.has_mutation(MUT_MISSING_EYE) ? "" : "s");
+            mprf("%s", ui_render("t.log", "%s loses themself in your gaze.", make_stringf("%s loses %s in your eye%s.", mon.name(DESC_THE).c_str(), mon.pronoun(PRONOUN_REFLEXIVE).c_str(), you.has_mutation(MUT_MISSING_EYE) ? "" : "s"), {ui_actor_arg(mon)}).c_str());
             mon.daze(random_range(3, 5));
         }
         else
         {
-            mprf("%s is briefly mesmerised by your gaze.", mon.name(DESC_THE).c_str());
+            mprf("%s", ui_render("t.log", "%s is briefly mesmerised by your gaze.", make_stringf("%s is briefly mesmerised by your gaze.", mon.name(DESC_THE).c_str()), {ui_actor_arg(mon)}).c_str());
             // This works even if called during the stealth check, whereas a 1-turn daze
             // would wear off with no effect and produce extra messages on top of that.
             mon.speed_increment -= 10;
@@ -2633,4 +2643,85 @@ bool vampire_mesmerism_check(monster& mon)
     }
 
     return false;
+}
+
+
+// Exact canonical anatomy keys; no parsing of articles or English modifiers.
+static ui_arg _t_form_body_arg(const string &key)
+{
+    for (const char *context : {"a.bodypart", "p.clause", "o.body", "s.anatomy"})
+    {
+        const ui_arg result = ui_text_arg(context, key);
+        if (result.available) return result;
+    }
+    return {"", false};
+}
+
+// Display metadata is optional; canonical virtual methods above stay English.
+string Form::display_description(bool past_tense) const
+{
+    const string original = get_description(past_tense);
+    if (this == get_form(transformation::dragon) && species::is_draconian(you.species))
+        return ui_render("f.form.description", past_tense ? "You were a fearsome %s!"
+                                                        : "You are a fearsome %s!", original,
+            {ui_text_arg("display.monster", mons_class_name(get_equivalent_mons()))});
+    if (this == get_form(transformation::eel_hands))
+        return ui_render("f.form.description", past_tense ? "Your %s were electric eels."
+                                                        : "Your %s are electric eels.", original,
+            {ui_text_arg("a.bodypart", hand_transform_parts())});
+    if (this == get_form(transformation::spore))
+        return ui_render("f.form.description", past_tense ? "Your %s was a mass of colorful fungus."
+                                                        : "Your %s is a mass of colorful fungus.", original,
+            {_t_form_body_arg(you.arm_name(false))});
+    return ui_translate("f.form.description", original.c_str());
+}
+
+string Form::display_long_name() const
+{
+    const string original = get_long_name();
+    if (this == get_form(transformation::slaughter))
+        return ui_render("f.form.name", "vessel of slaughter (+%s%% damage done)", original,
+            {ui_literal_arg(to_string(you.props[MAKHLEB_SLAUGHTER_BOOST_KEY].get_int()))});
+    if (this == get_form(transformation::eel_hands))
+        return ui_translate("a.bodypart", original.c_str());
+    return ui_translate("f.form.name", original.c_str());
+}
+
+
+string Form::display_form_message(const string &original, bool ending) const
+{
+    if (this == get_form(transformation::eel_hands))
+        return ui_render("t.form", ending ? "Your %s return to normal."
+            : "Your %s turn into wriggling electric eels!", original,
+            {ui_text_arg("a.bodypart", hand_transform_parts())});
+    if (!ending && this == get_form(transformation::spore))
+        return ui_render("t.form", "Dense mycelia sprout from your %s and %s.", original,
+            {_t_form_body_arg(you.arm_name(false)), _t_form_body_arg(you.foot_name(true))});
+    if (!ending && this == get_form(transformation::dragon) && species::is_draconian(you.species))
+        return ui_render("t.form", "You turn into a fearsome %s!", original,
+            {ui_text_arg("display.monster", mons_class_name(get_equivalent_mons()))});
+    return ui_translate("t.form", original.c_str());
+}
+
+
+string Form::display_melding_description(bool itemized) const
+{
+    const string original = melding_description(itemized);
+    if (original.empty()) return original;
+    const ui_arg fixed = ui_text_arg("t.meld", original);
+    if (fixed.available) return fixed.text;
+    ui_arg list{"", true};
+    for (int i = SLOT_WEAPON; i < SLOT_GIZMO; ++i)
+    {
+        const auto slot = static_cast<equipment_slot>(i);
+        if (!slot_is_blocked(slot) || !itemized && you.equipment.num_slots[slot] == 0)
+            continue;
+        const ui_arg name = ui_text_arg("m.equipment.slot", equip_slot_name(slot));
+        if (!list.text.empty()) list.text += "、";
+        list.text += name.text;
+        list.available = list.available && name.available;
+    }
+    if (itemized)
+        return list.available ? list.text : original;
+    return ui_render("t.meld", "Your %s are melded.", original, {list});
 }

@@ -1,0 +1,2415 @@
+{
+  "glossary_sha256": "52a49cacc2a408942ddf87655c491c1631c5ad7f7286553126fd959e04f66ee0",
+  "files": [
+    {
+      "file": "game-chapter.h",
+      "sha256": "58c33264ea0dfa766e985707be5d38cae88e82694ea62fa5ea924bcf59d95c0c",
+      "hits": [
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "the Dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "the Orb",
+          "translation": "宝珠"
+        }
+      ]
+    },
+    {
+      "file": "game-exit-type.h",
+      "sha256": "58cd74d192a4ca3f97148179223554d51eb6a31218eb022ca45ba8f2605a6672",
+      "hits": [
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开"
+        }
+      ]
+    },
+    {
+      "file": "game-options.cc",
+      "sha256": "03df06df72a0342885c6c54b17e25d559a7b924152df1778343c3462edcfe519",
+      "hits": [
+        {
+          "term": "blink",
+          "translation": "闪烁/闪现/眨眼"
+        },
+        {
+          "term": "rC",
+          "translation": "冰抗"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "elemental",
+          "translation": "元素生物"
+        }
+      ]
+    },
+    {
+      "file": "game-options.h",
+      "sha256": "402f777b34afe0c6065e71811181de97ed2717c1cbe2de95220d51dec1234e6a",
+      "hits": [
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "rC",
+          "translation": "冰抗"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "elemental",
+          "translation": "元素生物"
+        }
+      ]
+    },
+    {
+      "file": "game-type.h",
+      "sha256": "80fe98e0253aeb7914f82e7eea81e25fdb51f5cc4964a304a9f099c9bca965f3",
+      "hits": [
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        }
+      ]
+    },
+    {
+      "file": "gender-type.h",
+      "sha256": "64386a8d1d05cdde7612db8353306a65508d0d575117a30fc3fb97659cd3b123",
+      "hits": []
+    },
+    {
+      "file": "geom2d.cc",
+      "sha256": "b6e0490e5a0d8e23d68e2ba42a241ecf61058905538642dd35977fe1017a983f",
+      "hits": [
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        }
+      ]
+    },
+    {
+      "file": "geom2d.h",
+      "sha256": "e009b01c23b711a9d22d0b9f824195f6240024ea66b0f054847cb216b6911999",
+      "hits": []
+    },
+    {
+      "file": "ghost.cc",
+      "sha256": "7282bb234d121af9e499ba1ed50eb0b32b5bbc794c9a0095e50e1188175bc9d6",
+      "hits": [
+        {
+          "term": "AC",
+          "translation": "护甲值"
+        },
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "bardiche",
+          "translation": "长柄大斧"
+        },
+        {
+          "term": "Bows",
+          "translation": "弓"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "conjuration",
+          "translation": "塑能"
+        },
+        {
+          "term": "Conjurations",
+          "translation": "塑能系魔法/魔法"
+        },
+        {
+          "term": "dagger",
+          "translation": "匕首"
+        },
+        {
+          "term": "Enchant",
+          "translation": "附魔"
+        },
+        {
+          "term": "evasion",
+          "translation": "闪避值"
+        },
+        {
+          "term": "experience",
+          "translation": "经验值"
+        },
+        {
+          "term": "ghost",
+          "translation": "鬼魂"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Hexes",
+          "translation": "妖术系魔法"
+        },
+        {
+          "term": "hit points",
+          "translation": "生命值"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "Pandemonium",
+          "translation": "魔窟"
+        },
+        {
+          "term": "rapier",
+          "translation": "西洋剑"
+        },
+        {
+          "term": "rPois",
+          "translation": "毒抗"
+        },
+        {
+          "term": "school",
+          "translation": "魔法学派/流派"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "smite",
+          "translation": "神罚"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "stats",
+          "translation": "属性"
+        },
+        {
+          "term": "Strength",
+          "translation": "力量/强度/威力"
+        },
+        {
+          "term": "Unarmed Combat",
+          "translation": "徒手格斗"
+        },
+        {
+          "term": "undead",
+          "translation": "亡灵"
+        },
+        {
+          "term": "Ranged Weapons",
+          "translation": "远程武器"
+        },
+        {
+          "term": "Alchemy",
+          "translation": "炼金术"
+        },
+        {
+          "term": "willpower",
+          "translation": "意志"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "poison",
+          "translation": "毒"
+        },
+        {
+          "term": "haste",
+          "translation": "疾速"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Battlecry",
+          "translation": "战吼"
+        },
+        {
+          "term": "Melee",
+          "translation": "近战"
+        },
+        {
+          "term": "flame",
+          "translation": "火焰"
+        },
+        {
+          "term": "giant",
+          "translation": "巨人"
+        },
+        {
+          "term": "pandemonium lord",
+          "translation": "魔窟领主"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "player ghost",
+          "translation": "玩家幽灵"
+        },
+        {
+          "term": "ugly thing",
+          "translation": "丑陋之物"
+        },
+        {
+          "term": "very ugly thing",
+          "translation": "极丑陋之物"
+        },
+        {
+          "term": "Wrath",
+          "translation": "神怒"
+        }
+      ]
+    },
+    {
+      "file": "ghost.h",
+      "sha256": "03911cb0eeba48380f358c80550493566b66248950e8cb643164de08e766fc53",
+      "hits": [
+        {
+          "term": "AC",
+          "translation": "护甲值"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "Enchant",
+          "translation": "附魔"
+        },
+        {
+          "term": "ghost",
+          "translation": "鬼魂"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Pandemonium",
+          "translation": "魔窟"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "Warrior",
+          "translation": "勇士"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "willpower",
+          "translation": "意志"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "player ghost",
+          "translation": "玩家幽灵"
+        }
+      ]
+    },
+    {
+      "file": "glwrapper-ogl.cc",
+      "sha256": "6620bfea494ed6f10bf073b30cc1b89aab98733827ba57a2d0da4c3fb25d192f",
+      "hits": [
+        {
+          "term": "Console",
+          "translation": "字符版/控制台/终端"
+        },
+        {
+          "term": "weird",
+          "translation": "奇怪的"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        }
+      ]
+    },
+    {
+      "file": "glwrapper-ogl.h",
+      "sha256": "bface66999bbe496e64d19ea687de834836179a065dc1465344856f1264c6957",
+      "hits": []
+    },
+    {
+      "file": "glwrapper.cc",
+      "sha256": "56b53a20429026c0400acd7bf41576de51de8cb88133f432522ddfb8b27d6751",
+      "hits": []
+    },
+    {
+      "file": "glwrapper.h",
+      "sha256": "f4eefe3c47243ba279a2a0e8dc4690090ccb87327141f5dad6331a455cb651bb",
+      "hits": [
+        {
+          "term": "silence",
+          "translation": "沉默"
+        }
+      ]
+    },
+    {
+      "file": "god-abil.cc",
+      "sha256": "2011a1213478c27c98812b4cbf5c31c5bedf7daf70f459413ff27a60276e5bdc",
+      "hits": [
+        {
+          "term": "ability",
+          "translation": "能力"
+        },
+        {
+          "term": "Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "AC",
+          "translation": "护甲值"
+        },
+        {
+          "term": "altar",
+          "translation": "祭坛"
+        },
+        {
+          "term": "amulet of",
+          "translation": "护身符"
+        },
+        {
+          "term": "amulet of faith",
+          "translation": "忠诚护身符"
+        },
+        {
+          "term": "ancestor",
+          "translation": "先祖"
+        },
+        {
+          "term": "animate",
+          "translation": "活化/活的"
+        },
+        {
+          "term": "Apocalypse",
+          "translation": "启示录"
+        },
+        {
+          "term": "Armour",
+          "translation": "防具/护身"
+        },
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "Ashenzari",
+          "translation": "艾申扎利"
+        },
+        {
+          "term": "Beogh",
+          "translation": "比欧弗"
+        },
+        {
+          "term": "book",
+          "translation": "魔法书/书/手册"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "confuse",
+          "translation": "混乱"
+        },
+        {
+          "term": "conjuration",
+          "translation": "塑能"
+        },
+        {
+          "term": "Conjurations",
+          "translation": "塑能系魔法/魔法"
+        },
+        {
+          "term": "corpse",
+          "translation": "尸体"
+        },
+        {
+          "term": "damnation",
+          "translation": "天谴/诅咒"
+        },
+        {
+          "term": "demonspawn",
+          "translation": "魔人"
+        },
+        {
+          "term": "drain",
+          "translation": "吸能/吸取/消耗"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "evasion",
+          "translation": "闪避值"
+        },
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开"
+        },
+        {
+          "term": "Fedhas",
+          "translation": "费德哈"
+        },
+        {
+          "term": "Fighting",
+          "translation": "战斗/作战/格斗"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "gateway",
+          "translation": "入口/传送门/出口"
+        },
+        {
+          "term": "ghost",
+          "translation": "鬼魂"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Gozag",
+          "translation": "哥萨戈"
+        },
+        {
+          "term": "Hell",
+          "translation": "地狱"
+        },
+        {
+          "term": "Hepliaklqana",
+          "translation": "惠普利亚卡纳"
+        },
+        {
+          "term": "hostile",
+          "translation": "敌对"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "Invocations",
+          "translation": "祈祷"
+        },
+        {
+          "term": "Kikubaaqudgha",
+          "translation": "奇库巴库哈"
+        },
+        {
+          "term": "lost soul",
+          "translation": "亡魂"
+        },
+        {
+          "term": "Makhleb",
+          "translation": "马科列布"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "minor",
+          "translation": "较小的"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "mutations",
+          "translation": "变异"
+        },
+        {
+          "term": "passage",
+          "translation": "通道/穿行/流逝"
+        },
+        {
+          "term": "portal",
+          "translation": "传送门"
+        },
+        {
+          "term": "potion",
+          "translation": "药水"
+        },
+        {
+          "term": "purple draconian",
+          "translation": "紫龙人"
+        },
+        {
+          "term": "robust",
+          "translation": "强健"
+        },
+        {
+          "term": "Ru",
+          "translation": "入"
+        },
+        {
+          "term": "school",
+          "translation": "魔法学派/流派"
+        },
+        {
+          "term": "shadow",
+          "translation": "影"
+        },
+        {
+          "term": "Shield",
+          "translation": "格挡值/盾牌/保护"
+        },
+        {
+          "term": "shop",
+          "translation": "商店"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "smite",
+          "translation": "神罚"
+        },
+        {
+          "term": "species",
+          "translation": "种族"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "stasis",
+          "translation": "稳态"
+        },
+        {
+          "term": "stats",
+          "translation": "属性"
+        },
+        {
+          "term": "the Shining One",
+          "translation": "光明神"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "torment",
+          "translation": "折磨"
+        },
+        {
+          "term": "Translocations",
+          "translation": "位移系魔法"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "tyrant",
+          "translation": "暴君"
+        },
+        {
+          "term": "undead",
+          "translation": "亡灵"
+        },
+        {
+          "term": "Vehumet",
+          "translation": "维胡梅特"
+        },
+        {
+          "term": "weird",
+          "translation": "奇怪的"
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        },
+        {
+          "term": "Yredelemnul",
+          "translation": "伊莱德莱姆努尔"
+        },
+        {
+          "term": "Zin",
+          "translation": "辛"
+        },
+        {
+          "term": "Draconian",
+          "translation": "龙人"
+        },
+        {
+          "term": "Summoner",
+          "translation": "召唤师"
+        },
+        {
+          "term": "Ranged Weapons",
+          "translation": "远程武器"
+        },
+        {
+          "term": "Lugonu",
+          "translation": "卢戈努"
+        },
+        {
+          "term": "Ignis",
+          "translation": "伊格尼斯"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "piety",
+          "translation": "虔诚"
+        },
+        {
+          "term": "penance",
+          "translation": "赎罪"
+        },
+        {
+          "term": "aut",
+          "translation": "时间单位"
+        },
+        {
+          "term": "noise",
+          "translation": "噪音/声音/巨响"
+        },
+        {
+          "term": "Serpent's Lash",
+          "translation": "腾蛇鞭"
+        },
+        {
+          "term": "confusion",
+          "translation": "混乱"
+        },
+        {
+          "term": "paralysis",
+          "translation": "麻痹"
+        },
+        {
+          "term": "poison",
+          "translation": "毒"
+        },
+        {
+          "term": "invisibility",
+          "translation": "隐形"
+        },
+        {
+          "term": "contamination",
+          "translation": "魔法污染"
+        },
+        {
+          "term": "Slow",
+          "translation": "缓慢术/减速/缓慢/迟缓"
+        },
+        {
+          "term": "Smiting",
+          "translation": "神罚"
+        },
+        {
+          "term": "Pain",
+          "translation": "痛苦术/痛苦"
+        },
+        {
+          "term": "Shatter",
+          "translation": "粉碎术/打碎/震碎"
+        },
+        {
+          "term": "Paralyse",
+          "translation": "麻痹术/麻痹"
+        },
+        {
+          "term": "Bolt of Devastation",
+          "translation": "毁灭箭"
+        },
+        {
+          "term": "Sleep",
+          "translation": "睡眠术"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Drain Life",
+          "translation": "吸取生命"
+        },
+        {
+          "term": "Discord",
+          "translation": "不和之音/Discord"
+        },
+        {
+          "term": "Flay",
+          "translation": "剥皮术"
+        },
+        {
+          "term": "Upheaval",
+          "translation": "剧变术"
+        },
+        {
+          "term": "Roll",
+          "translation": "翻滚"
+        },
+        {
+          "term": "Hurl Torchlight",
+          "translation": "投掷炬光"
+        },
+        {
+          "term": "Darkness",
+          "translation": "黑暗术"
+        },
+        {
+          "term": "Melee",
+          "translation": "近战"
+        },
+        {
+          "term": "Mislead",
+          "translation": "误导术"
+        },
+        {
+          "term": "Sacrifice",
+          "translation": "献祭/牺牲/祭仪"
+        },
+        {
+          "term": "Vortex",
+          "translation": "涡流"
+        },
+        {
+          "term": "Jump",
+          "translation": "跃击"
+        },
+        {
+          "term": "Recite",
+          "translation": "诵经"
+        },
+        {
+          "term": "Imprison",
+          "translation": "囚禁"
+        },
+        {
+          "term": "Donate Gold",
+          "translation": "捐献金币"
+        },
+        {
+          "term": "Divine Shield",
+          "translation": "神圣护盾"
+        },
+        {
+          "term": "Duel",
+          "translation": "决斗"
+        },
+        {
+          "term": "Divine Vigour",
+          "translation": "神圣活力"
+        },
+        {
+          "term": "Slouch",
+          "translation": "懒行"
+        },
+        {
+          "term": "Step From Time",
+          "translation": "步出时间"
+        },
+        {
+          "term": "Curse Item",
+          "translation": "诅咒物品"
+        },
+        {
+          "term": "Power Leap",
+          "translation": "强力跃击"
+        },
+        {
+          "term": "Sacrifice Skill",
+          "translation": "牺牲技能"
+        },
+        {
+          "term": "Disaster Area",
+          "translation": "灾难领域"
+        },
+        {
+          "term": "Stomp",
+          "translation": "践踏"
+        },
+        {
+          "term": "Line Pass",
+          "translation": "穿阵舞步"
+        },
+        {
+          "term": "Grand Finale",
+          "translation": "终场绝演"
+        },
+        {
+          "term": "Transference",
+          "translation": "移形换位"
+        },
+        {
+          "term": "Wall Jump",
+          "translation": "蹬墙跳"
+        },
+        {
+          "term": "Convert to Beogh",
+          "translation": "皈依比欧弗"
+        },
+        {
+          "term": "the Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "Arena",
+          "translation": "奥格瓦如竞技场/竞技场"
+        },
+        {
+          "term": "the Arena",
+          "translation": "奥格瓦如竞技场/竞技场"
+        },
+        {
+          "term": "Crucible",
+          "translation": "血肉熔炉"
+        },
+        {
+          "term": "flame",
+          "translation": "火焰"
+        },
+        {
+          "term": "salt",
+          "translation": "盐尘"
+        },
+        {
+          "term": "elemental",
+          "translation": "元素生物"
+        },
+        {
+          "term": "orc",
+          "translation": "兽人"
+        },
+        {
+          "term": "pillar of salt",
+          "translation": "盐柱"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "spectral thing",
+          "translation": "幽影生物"
+        },
+        {
+          "term": "tentacle",
+          "translation": "触手"
+        },
+        {
+          "term": "the Storm",
+          "translation": "风暴"
+        },
+        {
+          "term": "Wrath",
+          "translation": "神怒"
+        }
+      ]
+    },
+    {
+      "file": "god-abil.h",
+      "sha256": "9cb133cd789a38db3a08fc412a23a36c41e3e2d25a5da02635d661617c00e829",
+      "hits": [
+        {
+          "term": "ability",
+          "translation": "能力"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "shadow",
+          "translation": "影"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "Recite",
+          "translation": "诵经"
+        }
+      ]
+    },
+    {
+      "file": "god-blessing.cc",
+      "sha256": "5ecb213243ce5668a85e69e7bd97f474b8b54b69c54e948d0d95d894e5145785",
+      "hits": [
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "potion",
+          "translation": "药水"
+        },
+        {
+          "term": "the Shining One",
+          "translation": "光明神"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "confusion",
+          "translation": "混乱"
+        },
+        {
+          "term": "Charm",
+          "translation": "魅惑术/护符/符印"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "god-blessing.h",
+      "sha256": "1a96da658f75152e3514876a9a4661652e12eed8a9b30d7fb5d3bf40b5dc4119",
+      "hits": [
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "god-companions.cc",
+      "sha256": "f3ed0f65e3abe37d8e1c90953133c6e1df676dda9bd301e7d233a7c0c638fe0b",
+      "hits": [
+        {
+          "term": "ability",
+          "translation": "能力"
+        },
+        {
+          "term": "Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "AC",
+          "translation": "护甲值"
+        },
+        {
+          "term": "ancestor",
+          "translation": "先祖"
+        },
+        {
+          "term": "Beogh",
+          "translation": "比欧弗"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "ghost",
+          "translation": "鬼魂"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Hepliaklqana",
+          "translation": "惠普利亚卡纳"
+        },
+        {
+          "term": "hostile",
+          "translation": "敌对"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "Pandemonium",
+          "translation": "魔窟"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "piety",
+          "translation": "虔诚"
+        },
+        {
+          "term": "penance",
+          "translation": "赎罪"
+        },
+        {
+          "term": "poison",
+          "translation": "毒"
+        },
+        {
+          "term": "Slow",
+          "translation": "缓慢术/减速/缓慢/迟缓"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Recall",
+          "translation": "召回术/召回"
+        },
+        {
+          "term": "Resurrect",
+          "translation": "复活术/复活"
+        },
+        {
+          "term": "the Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "Nobody",
+          "translation": "无名氏"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "slime creature",
+          "translation": "史莱姆生物"
+        }
+      ]
+    },
+    {
+      "file": "god-companions.h",
+      "sha256": "e425bb696b6626eba5a0e2451ce989f4ed57f598c0976c900532be3f1d720cab",
+      "hits": [
+        {
+          "term": "Beogh",
+          "translation": "比欧弗"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "piety",
+          "translation": "虔诚"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "god-conduct.cc",
+      "sha256": "407d1e034df2837172719bdbdeee61293cb65f26bea153eb7935212ea2e92fd4",
+      "hits": [
+        {
+          "term": "Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "banishment",
+          "translation": "放逐"
+        },
+        {
+          "term": "Beogh",
+          "translation": "比欧弗"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "hostile",
+          "translation": "敌对"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "Ru",
+          "translation": "入"
+        },
+        {
+          "term": "sanctuary",
+          "translation": "庇护所"
+        },
+        {
+          "term": "Slime Pits",
+          "translation": "史莱姆巢穴"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "Spellcasting",
+          "translation": "施法"
+        },
+        {
+          "term": "Staves",
+          "translation": "棍杖"
+        },
+        {
+          "term": "Trog",
+          "translation": "特洛戈"
+        },
+        {
+          "term": "undead",
+          "translation": "亡灵"
+        },
+        {
+          "term": "Uskayaw",
+          "translation": "阿斯卡亚"
+        },
+        {
+          "term": "weird",
+          "translation": "奇怪的"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "Zin",
+          "translation": "辛"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "piety",
+          "translation": "虔诚"
+        },
+        {
+          "term": "penance",
+          "translation": "赎罪"
+        },
+        {
+          "term": "contamination",
+          "translation": "魔法污染"
+        },
+        {
+          "term": "Polymorph",
+          "translation": "变形术"
+        },
+        {
+          "term": "Slow",
+          "translation": "缓慢术/减速/缓慢/迟缓"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Banish",
+          "translation": "放逐"
+        },
+        {
+          "term": "the Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "orc",
+          "translation": "兽人"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "rat",
+          "translation": "老鼠"
+        },
+        {
+          "term": "Wrath",
+          "translation": "神怒"
+        }
+      ]
+    },
+    {
+      "file": "god-conduct.h",
+      "sha256": "3b4054aae28891d176579670a1930b805a0fa94bc16f1c849a5e425bbfd52554",
+      "hits": [
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        }
+      ]
+    },
+    {
+      "file": "god-item.cc",
+      "sha256": "49ad7cf31c318c70e8fe597a6a915ae7054b4e63c7602681baf608b82bc77c90",
+      "hits": [
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "book",
+          "translation": "魔法书/书/手册"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Necromancy",
+          "translation": "死灵系魔法"
+        },
+        {
+          "term": "potion",
+          "translation": "药水"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "Berserker",
+          "translation": "狂战士"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "god-item.h",
+      "sha256": "6a722616d4e2b63d11b863f63e6686c24e734c2420e462e70399b75126fcfca1",
+      "hits": [
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "god-menu.cc",
+      "sha256": "1d6c02960ab295294dc078cffc786eede384c2e93e6df2763dc2f1ff5ef586bc",
+      "hits": [
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格"
+        }
+      ]
+    },
+    {
+      "file": "god-menu.h",
+      "sha256": "1a81e152a1297b4b2cbf4b7eb7675ebfd93e50f9442c71912b28e03558c81547",
+      "hits": [
+        {
+          "term": "god",
+          "translation": "神"
+        }
+      ]
+    },
+    {
+      "file": "god-passive.cc",
+      "sha256": "f0781bd0104f69a07847d4289e4439f5989c8d69c381ffac4740ab171dbc3d2f",
+      "hits": [
+        {
+          "term": "ability",
+          "translation": "能力"
+        },
+        {
+          "term": "accuracy",
+          "translation": "命中率"
+        },
+        {
+          "term": "arrow",
+          "translation": "箭"
+        },
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "Ashenzari",
+          "translation": "艾申扎利"
+        },
+        {
+          "term": "Beogh",
+          "translation": "比欧弗"
+        },
+        {
+          "term": "blink",
+          "translation": "闪烁/闪现/眨眼"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印"
+        },
+        {
+          "term": "character",
+          "translation": "角色/字符/性格"
+        },
+        {
+          "term": "Cheibriados",
+          "translation": "切布理亚多"
+        },
+        {
+          "term": "conjuration",
+          "translation": "塑能"
+        },
+        {
+          "term": "Dithmenos",
+          "translation": "迪斯姆诺"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "Elyvilon",
+          "translation": "艾利维隆"
+        },
+        {
+          "term": "experience",
+          "translation": "经验值"
+        },
+        {
+          "term": "Fedhas",
+          "translation": "费德哈"
+        },
+        {
+          "term": "Fighting",
+          "translation": "战斗/作战/格斗"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Gozag",
+          "translation": "哥萨戈"
+        },
+        {
+          "term": "Hepliaklqana",
+          "translation": "惠普利亚卡纳"
+        },
+        {
+          "term": "Hexes",
+          "translation": "妖术系魔法"
+        },
+        {
+          "term": "hostile",
+          "translation": "敌对"
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏"
+        },
+        {
+          "term": "Invocations",
+          "translation": "祈祷"
+        },
+        {
+          "term": "Jiyva",
+          "translation": "吉瓦"
+        },
+        {
+          "term": "Kikubaaqudgha",
+          "translation": "奇库巴库哈"
+        },
+        {
+          "term": "Makhleb",
+          "translation": "马科列布"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "minor",
+          "translation": "较小的"
+        },
+        {
+          "term": "Necromancy",
+          "translation": "死灵系魔法"
+        },
+        {
+          "term": "Okawaru",
+          "translation": "奥格瓦如"
+        },
+        {
+          "term": "Pakellas",
+          "translation": "帕克拉斯"
+        },
+        {
+          "term": "Qazlal",
+          "translation": "卡兹拉尔"
+        },
+        {
+          "term": "Ru",
+          "translation": "入"
+        },
+        {
+          "term": "shadow",
+          "translation": "影"
+        },
+        {
+          "term": "Shadow Step",
+          "translation": "暗影步"
+        },
+        {
+          "term": "Shield",
+          "translation": "格挡值/盾牌/保护"
+        },
+        {
+          "term": "Sif Muna",
+          "translation": "席夫·穆纳"
+        },
+        {
+          "term": "SInv",
+          "translation": "看破隐形"
+        },
+        {
+          "term": "skill",
+          "translation": "技能"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "Staves",
+          "translation": "棍杖"
+        },
+        {
+          "term": "Strength",
+          "translation": "力量/强度/威力"
+        },
+        {
+          "term": "throw",
+          "translation": "投掷"
+        },
+        {
+          "term": "Trog",
+          "translation": "特洛戈"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "tyrant",
+          "translation": "暴君"
+        },
+        {
+          "term": "Uskayaw",
+          "translation": "阿斯卡亚"
+        },
+        {
+          "term": "Vaults",
+          "translation": "宝库/密室/跃起"
+        },
+        {
+          "term": "Vehumet",
+          "translation": "维胡梅特"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师"
+        },
+        {
+          "term": "Wu Jian",
+          "translation": "武剑会"
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        },
+        {
+          "term": "Yredelemnul",
+          "translation": "伊莱德莱姆努尔"
+        },
+        {
+          "term": "Zin",
+          "translation": "辛"
+        },
+        {
+          "term": "Coglin",
+          "translation": "机甲哥布林"
+        },
+        {
+          "term": "Forgecraft",
+          "translation": "锻造术"
+        },
+        {
+          "term": "Alchemy",
+          "translation": "炼金术"
+        },
+        {
+          "term": "Lugonu",
+          "translation": "卢戈努"
+        },
+        {
+          "term": "Ignis",
+          "translation": "伊格尼斯"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "piety",
+          "translation": "虔诚"
+        },
+        {
+          "term": "penance",
+          "translation": "赎罪"
+        },
+        {
+          "term": "aut",
+          "translation": "时间单位"
+        },
+        {
+          "term": "noise",
+          "translation": "噪音/声音/巨响"
+        },
+        {
+          "term": "Serpent's Lash",
+          "translation": "腾蛇鞭"
+        },
+        {
+          "term": "Heavenly Storm",
+          "translation": "天界风暴"
+        },
+        {
+          "term": "haste",
+          "translation": "疾速"
+        },
+        {
+          "term": "Slow",
+          "translation": "缓慢术/减速/缓慢/迟缓"
+        },
+        {
+          "term": "Pain",
+          "translation": "痛苦术/痛苦"
+        },
+        {
+          "term": "Paralyse",
+          "translation": "麻痹术/麻痹"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Roll",
+          "translation": "翻滚"
+        },
+        {
+          "term": "Shred",
+          "translation": "撕碎"
+        },
+        {
+          "term": "Melee",
+          "translation": "近战"
+        },
+        {
+          "term": "Jump",
+          "translation": "跃击"
+        },
+        {
+          "term": "Shadowslip",
+          "translation": "遁影"
+        },
+        {
+          "term": "Wall Jump",
+          "translation": "蹬墙跳"
+        },
+        {
+          "term": "flame",
+          "translation": "火焰"
+        },
+        {
+          "term": "steam",
+          "translation": "蒸汽"
+        },
+        {
+          "term": "Executioner",
+          "translation": "刽子手"
+        },
+        {
+          "term": "elemental",
+          "translation": "元素生物"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "the Orb",
+          "translation": "宝珠"
+        }
+      ]
+    },
+    {
+      "file": "god-passive.h",
+      "sha256": "280169f502138fd58138260da7f682d744e62464dc298204381b9ef3492c04aa",
+      "hits": [
+        {
+          "term": "ability",
+          "translation": "能力"
+        },
+        {
+          "term": "Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "accuracy",
+          "translation": "命中率"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城"
+        },
+        {
+          "term": "Enchant",
+          "translation": "附魔"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Hell",
+          "translation": "地狱"
+        },
+        {
+          "term": "Jiyva",
+          "translation": "吉瓦"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "miscast",
+          "translation": "施法失误"
+        },
+        {
+          "term": "mummy",
+          "translation": "木乃伊"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "mutations",
+          "translation": "变异"
+        },
+        {
+          "term": "Necromancy",
+          "translation": "死灵系魔法"
+        },
+        {
+          "term": "Okawaru",
+          "translation": "奥格瓦如"
+        },
+        {
+          "term": "rF",
+          "translation": "火抗"
+        },
+        {
+          "term": "rot",
+          "translation": "腐烂"
+        },
+        {
+          "term": "shadow",
+          "translation": "影"
+        },
+        {
+          "term": "SInv",
+          "translation": "看破隐形"
+        },
+        {
+          "term": "Slime Pits",
+          "translation": "史莱姆巢穴"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "stealth",
+          "translation": "潜行"
+        },
+        {
+          "term": "Strength",
+          "translation": "力量/强度/威力"
+        },
+        {
+          "term": "torment",
+          "translation": "折磨"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "Yredelemnul",
+          "translation": "伊莱德莱姆努尔"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "piety",
+          "translation": "虔诚"
+        },
+        {
+          "term": "noise",
+          "translation": "噪音/声音/巨响"
+        },
+        {
+          "term": "paralysis",
+          "translation": "麻痹"
+        },
+        {
+          "term": "poison",
+          "translation": "毒"
+        },
+        {
+          "term": "corrosion",
+          "translation": "腐蚀"
+        },
+        {
+          "term": "berserk",
+          "translation": "狂暴"
+        },
+        {
+          "term": "Polymorph",
+          "translation": "变形术"
+        },
+        {
+          "term": "Abjuration",
+          "translation": "驱逐术"
+        },
+        {
+          "term": "See Invisible",
+          "translation": "看破隐形"
+        },
+        {
+          "term": "the Abyss",
+          "translation": "深渊"
+        },
+        {
+          "term": "spectral mist",
+          "translation": "幽魂薄雾"
+        },
+        {
+          "term": "elemental",
+          "translation": "元素生物"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "Wrath",
+          "translation": "神怒"
+        },
+        {
+          "term": "the Orb",
+          "translation": "宝珠"
+        }
+      ]
+    },
+    {
+      "file": "god-prayer.cc",
+      "sha256": "9188addfb2fbf5e0254da3f8404e8b49d8dbed9fa08768df85199e2fd8f193a9",
+      "hits": [
+        {
+          "term": "altar",
+          "translation": "祭坛"
+        },
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Gozag",
+          "translation": "哥萨戈"
+        },
+        {
+          "term": "Lair",
+          "translation": "野兽巢穴"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "Vaults",
+          "translation": "宝库/密室/跃起"
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        },
+        {
+          "term": "Zin",
+          "translation": "辛"
+        },
+        {
+          "term": "piety",
+          "translation": "虔诚"
+        },
+        {
+          "term": "penance",
+          "translation": "赎罪"
+        },
+        {
+          "term": "orc",
+          "translation": "兽人"
+        }
+      ]
+    },
+    {
+      "file": "god-prayer.h",
+      "sha256": "b02a112377f59d87d4bc0c6eabd76adbea3301e4ee2a1a396299d3a05ea4bc4d",
+      "hits": [
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Sacrifice",
+          "translation": "献祭/牺牲/祭仪"
+        }
+      ]
+    },
+    {
+      "file": "god-type.h",
+      "sha256": "26d6b003f2c7f0b66d3304bd5fb32683d9169f22a34adfdcbfc2e012818ec85f",
+      "hits": [
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        }
+      ]
+    },
+    {
+      "file": "god-wrath.cc",
+      "sha256": "55e025d6f98fc836ac042257bdd74d02ed5a2c25cf9fd27f6c32076c71cf6ee9",
+      "hits": [
+        {
+          "term": "artefact",
+          "translation": "神器"
+        },
+        {
+          "term": "Ashenzari",
+          "translation": "艾申扎利"
+        },
+        {
+          "term": "axioms of law",
+          "translation": "法则公理"
+        },
+        {
+          "term": "banishment",
+          "translation": "放逐"
+        },
+        {
+          "term": "Beogh",
+          "translation": "比欧弗"
+        },
+        {
+          "term": "Cheibriados",
+          "translation": "切布理亚多"
+        },
+        {
+          "term": "conjuration",
+          "translation": "塑能"
+        },
+        {
+          "term": "corpse",
+          "translation": "尸体"
+        },
+        {
+          "term": "deck",
+          "translation": "套牌"
+        },
+        {
+          "term": "demonspawn",
+          "translation": "魔人"
+        },
+        {
+          "term": "Dithmenos",
+          "translation": "迪斯姆诺"
+        },
+        {
+          "term": "divine host",
+          "translation": "神众"
+        },
+        {
+          "term": "drain",
+          "translation": "吸能/吸取/消耗"
+        },
+        {
+          "term": "draining",
+          "translation": "吸能/汲取/耗损"
+        },
+        {
+          "term": "Elyvilon",
+          "translation": "艾利维隆"
+        },
+        {
+          "term": "experience",
+          "translation": "经验值"
+        },
+        {
+          "term": "Fedhas",
+          "translation": "费德哈"
+        },
+        {
+          "term": "fungus",
+          "translation": "真菌"
+        },
+        {
+          "term": "ghost",
+          "translation": "鬼魂"
+        },
+        {
+          "term": "god",
+          "translation": "神"
+        },
+        {
+          "term": "Gozag",
+          "translation": "哥萨戈"
+        },
+        {
+          "term": "Hepliaklqana",
+          "translation": "惠普利亚卡纳"
+        },
+        {
+          "term": "Hexes",
+          "translation": "妖术系魔法"
+        },
+        {
+          "term": "Intelligence",
+          "translation": "智力/智慧/心智"
+        },
+        {
+          "term": "Jiyva",
+          "translation": "吉瓦"
+        },
+        {
+          "term": "Kikubaaqudgha",
+          "translation": "奇库巴库哈"
+        },
+        {
+          "term": "Makhleb",
+          "translation": "马科列布"
+        },
+        {
+          "term": "max",
+          "translation": "最大值"
+        },
+        {
+          "term": "minor",
+          "translation": "较小的"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异"
+        },
+        {
+          "term": "mutations",
+          "translation": "变异"
+        },
+        {
+          "term": "Necromancy",
+          "translation": "死灵系魔法"
+        },
+        {
+          "term": "Okawaru",
+          "translation": "奥格瓦如"
+        },
+        {
+          "term": "Pakellas",
+          "translation": "帕克拉斯"
+        },
+        {
+          "term": "Qazlal",
+          "translation": "卡兹拉尔"
+        },
+        {
+          "term": "Ru",
+          "translation": "入"
+        },
+        {
+          "term": "scroll of noise",
+          "translation": "噪音卷轴"
+        },
+        {
+          "term": "shadow",
+          "translation": "影"
+        },
+        {
+          "term": "shop",
+          "translation": "商店"
+        },
+        {
+          "term": "Sif Muna",
+          "translation": "席夫·穆纳"
+        },
+        {
+          "term": "spell",
+          "translation": "法术"
+        },
+        {
+          "term": "stats",
+          "translation": "属性"
+        },
+        {
+          "term": "Strength",
+          "translation": "力量/强度/威力"
+        },
+        {
+          "term": "the Shining One",
+          "translation": "光明神"
+        },
+        {
+          "term": "throw",
+          "translation": "投掷"
+        },
+        {
+          "term": "titan",
+          "translation": "泰坦"
+        },
+        {
+          "term": "Trog",
+          "translation": "特洛戈"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流"
+        },
+        {
+          "term": "undead",
+          "translation": "亡灵"
+        },
+        {
+          "term": "Uskayaw",
+          "translation": "阿斯卡亚"
+        },
+        {
+          "term": "Vehumet",
+          "translation": "维胡梅特"
+        },
+        {
+          "term": "Warrior",
+          "translation": "勇士"
+        },
+        {
+          "term": "Wu Jian",
+          "translation": "武剑会"
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆"
+        },
+        {
+          "term": "Yredelemnul",
+          "translation": "伊莱德莱姆努尔"
+        },
+        {
+          "term": "Zin",
+          "translation": "辛"
+        },
+        {
+          "term": "Summoner",
+          "translation": "召唤师"
+        },
+        {
+          "term": "Lugonu",
+          "translation": "卢戈努"
+        },
+        {
+          "term": "Ignis",
+          "translation": "伊格尼斯"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会"
+        },
+        {
+          "term": "penance",
+          "translation": "赎罪"
+        },
+        {
+          "term": "noise",
+          "translation": "噪音/声音/巨响"
+        },
+        {
+          "term": "berserk",
+          "translation": "狂暴"
+        },
+        {
+          "term": "haste",
+          "translation": "疾速"
+        },
+        {
+          "term": "Polymorph",
+          "translation": "变形术"
+        },
+        {
+          "term": "Slow",
+          "translation": "缓慢术/减速/缓慢/迟缓"
+        },
+        {
+          "term": "Smiting",
+          "translation": "神罚"
+        },
+        {
+          "term": "Paralyse",
+          "translation": "麻痹术/麻痹"
+        },
+        {
+          "term": "Sleep",
+          "translation": "睡眠术"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量"
+        },
+        {
+          "term": "Brothers in Arms",
+          "translation": "战斗兄弟"
+        },
+        {
+          "term": "Legendary Destruction",
+          "translation": "传奇毁灭"
+        },
+        {
+          "term": "Major Destruction",
+          "translation": "强力毁灭"
+        },
+        {
+          "term": "Cleansing Flame",
+          "translation": "净化之焰"
+        },
+        {
+          "term": "Vex",
+          "translation": "恼乱术"
+        },
+        {
+          "term": "Darkness",
+          "translation": "黑暗术"
+        },
+        {
+          "term": "Frenzy",
+          "translation": "狂乱术"
+        },
+        {
+          "term": "Summon Elemental",
+          "translation": "召唤元素"
+        },
+        {
+          "term": "Banish",
+          "translation": "放逐"
+        },
+        {
+          "term": "flame",
+          "translation": "火焰"
+        },
+        {
+          "term": "rain",
+          "translation": "雨水"
+        },
+        {
+          "term": "thunder",
+          "translation": "雷霆"
+        },
+        {
+          "term": "dream sheep",
+          "translation": "梦羊"
+        },
+        {
+          "term": "elemental",
+          "translation": "元素生物"
+        },
+        {
+          "term": "elf",
+          "translation": "精灵"
+        },
+        {
+          "term": "orc",
+          "translation": "兽人"
+        },
+        {
+          "term": "plant",
+          "translation": "植物"
+        },
+        {
+          "term": "player",
+          "translation": "玩家"
+        },
+        {
+          "term": "tentacle",
+          "translation": "触手"
+        },
+        {
+          "term": "the Elements",
+          "translation": "元素"
+        },
+        {
+          "term": "Wrath",
+          "translation": "神怒"
+        }
+      ]
+    },
+    {
+      "file": "god-wrath.h",
+      "sha256": "12b6e58653db88b9eec8a6f7a3f86f1306ba38130588b50b969099b6b7e14d80",
+      "hits": [
+        {
+          "term": "god",
+          "translation": "神"
+        }
+      ]
+    }
+  ]
+}

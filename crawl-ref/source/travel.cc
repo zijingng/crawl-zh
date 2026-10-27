@@ -7,6 +7,8 @@
  *   refactor.
  */
 #include "AppHdr.h"
+#include "t-display.h"
+#include "i18n.h"
 
 #include "travel.h"
 
@@ -185,8 +187,9 @@ bool deviant_route_warning::warn_continue_travel(
         return true;
 
     target = dest;
-    const string prompt = make_stringf("Have to go through %s. Continue?",
-                                       deviant.describe().c_str());
+    const string original = make_stringf("Have to go through %s. Continue?", deviant.describe().c_str());
+    const string prompt = ui_render("t.travel.ui", "Have to go through %s. Continue?", original,
+        {ui_literal_arg(deviant.describe())});
     // If the user says "Yes, shut up and take me there", we won't ask
     // again for that destination. If the user says "No", we will
     // prompt again.
@@ -772,7 +775,7 @@ static void _explore_find_target_square()
         const bool unknown_trans = _level_has_unknown_transporters();
         if (!estatus && !unknown_trans)
         {
-            mpr("Done exploring.");
+            mpr(ui_translate("t.ui", "Done exploring."));
             learned_something_new(HINT_DONE_EXPLORE);
         }
         else
@@ -806,8 +809,20 @@ static void _explore_find_target_square()
                                                       inacc.end()).c_str());
                 reasons.push_back(inacc_desc.c_str());
             }
-            mprf("Partly explored, %s.",
-                 comma_separated_line(reasons.begin(), reasons.end()).c_str());
+            ui_arg display_reasons{"", true};
+            auto append_reason = [&](const ui_arg &reason) {
+                if (!display_reasons.text.empty()) display_reasons.text += "、";
+                display_reasons.text += reason.text;
+                display_reasons.available = display_reasons.available && reason.available;
+            };
+            if (runed_door_pause) append_reason(ui_text_arg("t.explore", "unopened runed door"));
+            if (unknown_trans) append_reason(ui_text_arg("t.explore", "unvisited transporter"));
+            if (closed_door_pause) append_reason(ui_text_arg("t.explore", "unopened door"));
+            for (const char *kind : inacc)
+                append_reason(ui_text_arg("t.explore", kind));
+            mpr(ui_render("t.explore", "Partly explored, %s.",
+                make_stringf("Partly explored, %s.", comma_separated_line(reasons.begin(), reasons.end()).c_str()),
+                {display_reasons}));
         }
         stop_running();
     }
@@ -866,13 +881,23 @@ void explore_pickup_event(int did_pickup, int tried_pickup)
             // If response is Yes (1) or Always (2), mark items for no pickup
             // If the response is Always, remove the item from autopickup
             // Otherwise, stop autoexplore.
-            int response = yesno(prompt.c_str(), true, 'n', true, false,
+            ui_arg display_items{"", true};
+            for (const item_def *item : to_pickup)
+            {
+                const ui_arg name = ui_item_arg(*item);
+                if (!display_items.text.empty()) display_items.text += "、";
+                display_items.text += name.text;
+                display_items.available = display_items.available && name.available;
+            }
+            const string display_prompt = ui_render("t.explore", "Could not pick up %s here; Ignore?", prompt, {display_items});
+            int response = yesno(display_prompt.c_str(), true, 'n', true, false,
                                  false, &map, true, allow_always);
             switch (response)
             {
                 case 2:
                 {
                     vector<string> ap_disabled;
+                    ui_arg display_disabled{"", true};
                     for (stack_iterator si(you.pos()); si; ++si)
                     {
                         if (!item_needs_autopickup(*si)
@@ -883,13 +908,16 @@ void explore_pickup_event(int did_pickup, int tried_pickup)
 
                         set_item_autopickup(*si, AP_FORCE_OFF);
                         ap_disabled.push_back(pluralise(si->name(DESC_DBNAME)));
+                        const ui_arg name = ui_item_arg(*si);
+                        if (!display_disabled.text.empty()) display_disabled.text += "、";
+                        display_disabled.text += name.text;
+                        display_disabled.available = display_disabled.available && name.available;
                     }
 
                     if (!ap_disabled.empty())
                     {
-                        mprf("Autopickup disabled for %s.",
-                             comma_separated_line(ap_disabled.begin(),
-                                                  ap_disabled.end()).c_str());
+                        mpr(ui_render("t.explore", "Autopickup disabled for %s.",
+                            make_stringf("Autopickup disabled for %s.", comma_separated_line(ap_disabled.begin(), ap_disabled.end()).c_str()), {display_disabled}));
                     }
                 }
                 // intentional fallthrough
@@ -947,8 +975,9 @@ static void _find_travel_pos(const coord_def& youpos, int *move_x, int *move_y)
         *move_y = 0;
         if (!barrier.second.empty())
         {
-            mpr("Could not " + you.running.runmode_name() + ", "
-                + barrier.second + ".");
+            mpr(ui_render("t.explore", "Could not %s, %s.",
+                "Could not " + you.running.runmode_name() + ", " + barrier.second + ".",
+                {ui_text_arg("t.runmode", you.running.runmode_name()), ui_text_arg("t.barrier", barrier.second)}));
         }
         return;
     }
@@ -1061,7 +1090,7 @@ command_type travel()
 
     if (Options.travel_key_stop && kbhit())
     {
-        mprf("Key pressed, stopping %s.", you.running.runmode_name().c_str());
+        mprf("%s", ui_render("t.log", "Key pressed, stopping %s.", make_stringf("Key pressed, stopping %s.", you.running.runmode_name().c_str()), {ui_text_arg("t.runmode", you.running.runmode_name())}).c_str());
         stop_running();
         return CMD_NO_CMD;
     }
@@ -1069,8 +1098,7 @@ command_type travel()
     // Excluded squares are only safe if marking stairs, i.e. another level.
     if (is_excluded(you.pos()) && !is_stair_exclusion(you.pos()))
     {
-        mprf("You're in a travel-excluded area, stopping %s.",
-             you.running.runmode_name().c_str());
+        mprf("%s", ui_render("t.log", "You're in a travel-excluded area, stopping %s.", make_stringf("You're in a travel-excluded area, stopping %s.", you.running.runmode_name().c_str()), {ui_text_arg("t.runmode", you.running.runmode_name())}).c_str());
         stop_running();
         return CMD_NO_CMD;
     }
@@ -2304,11 +2332,11 @@ public:
         // in the prompt itself
         // XX convert this to keyhints in a more?
         if (travel_mode == Mode::altars)
-            segs.emplace_back("_ - list branches");
+            segs.emplace_back(ui_translate("t.travel.ui", "_ - list branches"));
         else if (travel_mode == Mode::waypoints)
-            segs.emplace_back("* - list branches");
+            segs.emplace_back(ui_translate("t.travel.ui", "* - list branches"));
         else if (mode_allowed(Mode::waypoints))
-            segs.emplace_back("* - list waypoints");
+            segs.emplace_back(ui_translate("t.travel.ui", "* - list waypoints"));
 
         if (has_default_target())
         {
@@ -2319,7 +2347,7 @@ public:
         }
 
         if (!(prompt_flags & TPF_SHOW_ALL_BRANCHES))
-            segs.emplace_back("? - help");
+            segs.emplace_back(ui_translate("t.travel.ui", "? - help"));
 
         string shortcuts;
         if (!segs.empty())
@@ -2329,7 +2357,7 @@ public:
                                               ", ", ", ");
             shortcuts += ") ";
         }
-        set_title(make_stringf("Where to? %s", shortcuts.c_str()));
+        set_title(ui_render("t.travel.ui", "Where to? %s", make_stringf("Where to? %s", shortcuts.c_str()), {ui_literal_arg(shortcuts)}));
     }
 
     bool seen_altars() const
@@ -2422,7 +2450,7 @@ public:
 
                 // XX this menu would be more useful if it showed the target
                 // branch
-                MenuEntry *altar_entry = new MenuEntry(altar_name, god_initial,
+                MenuEntry *altar_entry = new MenuEntry(ui_translate("display.god", god_name(god).c_str()), god_initial,
                     [this, altar_target](const MenuEntry&)
                     {
                         result = ID_ALTAR;
@@ -2441,7 +2469,7 @@ public:
         {
             for (const branch_type &br : prompt_branches)
             {
-                MenuEntry *br_entry = new MenuEntry(branches[br].shortname,
+                MenuEntry *br_entry = new MenuEntry(branch_display_name(br),
                     branches[br].travel_shortcut,
                     [this,&br](const MenuEntry&)
                     {
@@ -2819,10 +2847,8 @@ static level_pos _prompt_travel_depth(const level_id &id, bool remember_targ)
     while (true)
     {
         msgwin_clear_temporary();
-        mprf(MSGCH_PROMPT, "What level of %s? "
-             "(default %s, ? - help) ",
-             branches[target.id.branch].longname,
-             _get_trans_travel_dest(target, true).c_str());
+        mprf(MSGCH_PROMPT, "%s", ui_render("t.log", "What level of %s? (default %s, ? - help) ", make_stringf("What level of %s? "
+             "(default %s, ? - help) ", branches[target.id.branch].longname, _get_trans_travel_dest(target, true).c_str()), {ui_text_arg("b.branch.name", branches[target.id.branch].longname), ui_literal_arg(_get_trans_travel_dest(target, true))}).c_str());
 
         char buf[100];
         const int response =
@@ -2920,12 +2946,12 @@ static void _start_translevel_travel()
         if (level_target.pos.x == -1 &&
             level_target.id.depth == branches[level_target.id.branch].numlevels)
         {
-            mpr("You're already at the bottom of this branch!");
+            mpr(ui_translate("t.ui", "You're already at the bottom of this branch!"));
             return;
         }
         else if (level_target.pos.x == -1 || level_target.pos == you.pos())
         {
-            mpr("You're already here!");
+            mpr(ui_translate("t.ui", "You're already here!"));
             return;
         }
     }
@@ -2958,15 +2984,15 @@ void start_translevel_travel(const level_pos &pos)
     if (!can_travel_to(pos.id))
     {
         if (!can_travel_interlevel())
-            mpr("Sorry, you can't auto-travel out of here.");
+            mpr(ui_translate("t.ui", "Sorry, you can't auto-travel out of here."));
         else
-            mpr("Sorry, I don't know how to get there.");
+            mpr(ui_translate("t.ui", "Sorry, I don't know how to get there."));
         return;
     }
 
     if (pos.is_valid() && !in_bounds(pos.pos))
     {
-        mpr("Sorry, I don't know how to get there.");
+        mpr(ui_translate("t.ui", "Sorry, I don't know how to get there."));
         return;
     }
 
@@ -2995,7 +3021,7 @@ void start_translevel_travel(const level_pos &pos)
         {
             if (!_loadlev_populate_stair_distances(pos))
             {
-                mpr("Level memory is imperfect, aborting.");
+                mpr(ui_translate("t.ui", "Level memory is imperfect, aborting."));
                 return ;
             }
         }
@@ -3398,7 +3424,7 @@ static bool _find_transtravel_square(const level_pos &target, bool verbose)
         return false;
     if (maybe_traversable)
     {
-        mpr("Sorry, I don't know how to get there.");
+        mpr(ui_translate("t.ui", "Sorry, I don't know how to get there."));
         return false;
     }
 
@@ -3406,7 +3432,7 @@ static bool _find_transtravel_square(const level_pos &target, bool verbose)
     coord_def closest_alt = _find_closest_adj(target.pos);
     if (closest_alt.origin())
     {
-        mpr("Sorry, I don't know how to traverse that place.");
+        mpr(ui_translate("t.ui", "Sorry, I don't know how to traverse that place."));
         return false;
     }
 
@@ -3461,7 +3487,7 @@ void start_explore(bool grab_items, bool skip_autorest)
     if (!i_feel_safe(true, true))
         return;
 
-    if (should_fear_zot() && !yesno("Really explore while Zot is near?", false, 'n'))
+    if (should_fear_zot() && !yesno(ui_translate("t.ui", "Really explore while Zot is near?"), false, 'n'))
     {
         canned_msg(MSG_OK);
         return;
@@ -3481,7 +3507,7 @@ void start_explore(bool grab_items, bool skip_autorest)
 void do_explore_cmd(bool skip_autorest)
 {
     if (you.berserk())
-        mpr("Calm down first, please.");
+        mpr(ui_translate("t.ui", "Calm down first, please."));
     else                        // Start exploring
         start_explore(Options.explore_greedy, skip_autorest);
 }
@@ -4347,9 +4373,9 @@ void TravelCache::delete_waypoint()
     while (get_waypoint_count())
     {
         clear_messages();
-        mpr("Existing waypoints:");
+        mpr(ui_translate("t.ui", "Existing waypoints:"));
         list_waypoints();
-        mprf(MSGCH_PROMPT, "Delete which waypoint? (* - delete all, Esc - exit) ");
+        mprf(MSGCH_PROMPT, "%s", ui_translate("t.ui", "Delete which waypoint? (* - delete all, Esc - exit) "));
 
         int key = getchm();
         if (key >= '0' && key <= '9')
@@ -4375,7 +4401,7 @@ void TravelCache::delete_waypoint()
     }
 
     clear_messages();
-    mpr("All waypoints deleted. Have a nice day!");
+    mpr(ui_translate("t.ui", "All waypoints deleted. Have a nice day!"));
 }
 
 void TravelCache::add_waypoint(int x, int y)
@@ -4385,16 +4411,15 @@ void TravelCache::add_waypoint(int x, int y)
     const bool waypoints_exist = get_waypoint_count();
     if (waypoints_exist)
     {
-        mpr("Existing waypoints:");
+        mpr(ui_translate("t.ui", "Existing waypoints:"));
         list_waypoints();
     }
 
     if (you.where_are_you == BRANCH_ABYSS)
-        mprf(MSGCH_PROMPT, "Waypoints on this level may disappear at any time.");
+        mprf(MSGCH_PROMPT, "%s", ui_translate("t.ui", "Waypoints on this level may disappear at any time."));
     else if (!is_connected_branch(you.where_are_you))
-        mprf(MSGCH_PROMPT, "Waypoints will disappear once you leave this level.");
-    mprf(MSGCH_PROMPT, "Assign waypoint to what number? (0-9%s) ",
-         waypoints_exist? ", D - delete waypoint" : "");
+        mprf(MSGCH_PROMPT, "%s", ui_translate("t.ui", "Waypoints will disappear once you leave this level."));
+    mprf(MSGCH_PROMPT, "%s", ui_render("t.log", "Assign waypoint to what number? (0-9%s) ", make_stringf("Assign waypoint to what number? (0-9%s) ", waypoints_exist? ", D - delete waypoint" : ""), {t_clause_arg(waypoints_exist ? ", D - delete waypoint" : "")}).c_str());
 
     int keyin = toalower(get_ch());
 
@@ -4437,15 +4462,14 @@ void TravelCache::set_waypoint(int waynum, int x, int y)
     if (overwrite)
     {
         if (lid == old_lid) // same level
-            mprf("Waypoint %d re-assigned to %s.", waynum, new_dest.c_str());
+            mprf("%s", ui_render("t.log", "Waypoint %s re-assigned to %s.", make_stringf("Waypoint %d re-assigned to %s.", waynum, new_dest.c_str()), {ui_literal_arg(to_string(waynum)), ui_literal_arg(new_dest)}).c_str());
         else
         {
-            mprf("Waypoint %d re-assigned from %s to %s.",
-                 waynum, old_dest.c_str(), new_dest.c_str());
+            mprf("%s", ui_render("t.log", "Waypoint %s re-assigned from %s to %s.", make_stringf("Waypoint %d re-assigned from %s to %s.", waynum, old_dest.c_str(), new_dest.c_str()), {ui_literal_arg(to_string(waynum)), ui_literal_arg(old_dest), ui_literal_arg(new_dest)}).c_str());
         }
     }
     else
-        mprf("Waypoint %d assigned to %s.", waynum, new_dest.c_str());
+        mprf("%s", ui_render("t.log", "Waypoint %s assigned to %s.", make_stringf("Waypoint %d assigned to %s.", waynum, new_dest.c_str()), {ui_literal_arg(to_string(waynum)), ui_literal_arg(new_dest)}).c_str());
 
     update_waypoints();
 }
@@ -4716,7 +4740,7 @@ bool runrest::run_should_stop() const
     {
 #ifndef USE_TILE_LOCAL
         // XXX: Remove this once exclusions are visible.
-        mprf(MSGCH_WARN, "Stopped running for exclusion.");
+        mprf(MSGCH_WARN, "%s", ui_translate("t.ui", "Stopped running for exclusion."));
 #endif
         return true;
     }
@@ -4897,24 +4921,26 @@ void explore_discoveries::found_feature(const coord_def &pos,
 {
     if (feat == DNGN_ENTER_SHOP && ES_shop)
     {
-        shops.emplace_back(shop_name(*shop_at(pos)), feat);
+        ui_arg shop_display{"", false};
+        const string original_shop = shop_name(*shop_at(pos), &shop_display);
+        shops.emplace_back(original_shop, 1, shop_display);
         es_flags |= ES_SHOP;
     }
     else if (feat_is_stair(feat) && ES_stair)
     {
-        const named_thing<int> stair(cleaned_feature_description(pos), 1);
+        const named_thing<int> stair(cleaned_feature_description(pos), 1, s_feature_at_arg(pos));
         add_stair(stair);
         es_flags |= ES_STAIR;
     }
     else if (_feat_is_branchlike(feat) && ES_branch)
     {
-        const named_thing<int> stair(cleaned_feature_description(pos), 1);
+        const named_thing<int> stair(cleaned_feature_description(pos), 1, s_feature_at_arg(pos));
         add_stair(stair);
         es_flags |= ES_BRANCH;
     }
     else if (feat_is_portal(feat) && ES_portal)
     {
-        const named_thing<int> portal(cleaned_feature_description(pos), 1);
+        const named_thing<int> portal(cleaned_feature_description(pos), 1, s_feature_at_arg(pos));
         add_stair(portal);
         es_flags |= ES_PORTAL;
     }
@@ -4936,9 +4962,11 @@ void explore_discoveries::found_feature(const coord_def &pos,
             }
 
             string desc = env.markers.property_at(pos, MAT_ANY, "stop_explore");
+            const bool custom_description = !desc.empty();
             if (desc.empty())
                 desc = cleaned_feature_description(pos);
-            runed_doors.emplace_back(desc, 1);
+            runed_doors.emplace_back(desc, 1,
+                !custom_description ? s_feature_at_arg(pos) : ui_arg{"", false});
             es_flags |= ES_RUNED_DOOR;
         }
     }
@@ -4961,15 +4989,17 @@ void explore_discoveries::found_feature(const coord_def &pos,
             }
 
             string desc = env.markers.property_at(pos, MAT_ANY, "stop_explore");
+            const bool custom_description = !desc.empty();
             if (desc.empty())
                 desc = cleaned_feature_description(pos);
-            transporters.emplace_back(desc, 1);
+            transporters.emplace_back(desc, 1,
+                !custom_description ? s_feature_at_arg(pos) : ui_arg{"", false});
             es_flags |= ES_TRANSPORTER;
         }
     }
     else if (feat_is_altar(feat) && ES_altar)
     {
-        const named_thing<int> altar(cleaned_feature_description(pos), 1);
+        const named_thing<int> altar(cleaned_feature_description(pos), 1, s_feature_at_arg(pos));
         if (!merge_feature(altars, altar))
             altars.push_back(altar);
         es_flags |= ES_ALTAR;
@@ -4992,12 +5022,13 @@ void explore_discoveries::found_feature(const coord_def &pos,
         {
             string desc = lowercase_first(feature_description_at(pos));
             marked_feats.push_back(desc + ".");
+            marked_display.push_back(s_feature_at_arg(pos));
             return;
         }
     }
     else if (feat == DNGN_RUNELIGHT)
     {
-        runelights.emplace_back(cleaned_feature_description(pos), 1);
+        runelights.emplace_back(cleaned_feature_description(pos), 1, s_feature_at_arg(pos));
         es_flags |= ES_RUNELIGHT;
     }
 }
@@ -5031,6 +5062,7 @@ void explore_discoveries::add_item(const item_def &i)
             item.thing.quantity = orig_quantity + i.quantity;
             item.name = item.thing.name(DESC_A, false, false, true,
                                         !is_stackable_item(i));
+            item.display = ui_item_arg(item.thing);
             return;
         }
         item.thing.quantity = orig_quantity;
@@ -5043,7 +5075,14 @@ void explore_discoveries::add_item(const item_def &i)
     else if (mon && mon->type == MONS_PLANT)
         itemname += " (under plant)";
 
-    items.emplace_back(itemname, i);
+    ui_arg item_display = ui_item_arg(i);
+    if (mon && mons_species(mon->type) == MONS_BUSH)
+        item_display = {ui_render("t.discovery", "%s (under bush)", "", {item_display}),
+                        item_display.available && ui_text_arg("t.discovery", "%s (under bush)").available};
+    else if (mon && mon->type == MONS_PLANT)
+        item_display = {ui_render("t.discovery", "%s (under plant)", "", {item_display}),
+                        item_display.available && ui_text_arg("t.discovery", "%s (under plant)").available};
+    items.emplace_back(itemname, i, item_display);
 
     // First item of this type?
     // XXX: Only works when travelling.
@@ -5104,7 +5143,7 @@ template <class citer> bool explore_discoveries::has_duplicates(
 }
 
 template <class C> void explore_discoveries::say_any(
-    const C &coll, const char *category) const
+    const C &coll, const char *category, ui_arg display) const
 {
     if (coll.empty())
         return;
@@ -5117,17 +5156,49 @@ template <class C> void explore_discoveries::say_any(
 
     if (has_duplicates(coll.begin(), coll.end()))
     {
-        mprf("Found %s %s.", number_in_words(size).c_str(), category);
+        mprf("%s", ui_render("t.discovery", "Found %s %s.",
+            make_stringf("Found %s %s.", number_in_words(size).c_str(), category),
+            {ui_literal_arg(to_string(size)), ui_text_arg("t.category", category)}).c_str());
         return;
     }
 
     const auto message = "Found " +
                            comma_separated_line(coll.begin(), coll.end()) + ".";
 
-    if (formatted_string::parse_string(message).width() >= get_number_of_cols())
-        mprf("Found %s %s.", number_in_words(size).c_str(), category);
+    if (crawl_state.io_inited
+        && formatted_string::parse_string(message).width() >= get_number_of_cols())
+        mprf("%s", ui_render("t.discovery", "Found %s %s.",
+            make_stringf("Found %s %s.", number_in_words(size).c_str(), category),
+            {ui_literal_arg(to_string(size)), ui_text_arg("t.category", category)}).c_str());
     else
-        mpr(message);
+        mpr(ui_render("t.discovery", "Found %s.", message, {display}));
+}
+
+ui_arg explore_discoveries::display_discovery(const named_thing<int> &thing) const
+{
+    if (thing.thing == 1)
+        return thing.display;
+    return {ui_render("t.discovery", "%s %s", "",
+        {ui_literal_arg(to_string(thing.thing)), thing.display}),
+        thing.display.available && ui_text_arg("t.discovery", "%s %s").available};
+}
+
+ui_arg explore_discoveries::display_discovery(const named_thing<item_def> &thing) const
+{
+    return thing.display;
+}
+
+template <class Z> ui_arg explore_discoveries::display_list(const vector<named_thing<Z>> &v) const
+{
+    ui_arg result{"", true};
+    for (const auto &thing : v)
+    {
+        const ui_arg name = display_discovery(thing);
+        result.available = result.available && name.available;
+        if (!result.text.empty()) result.text += "、";
+        result.text += name.text;
+    }
+    return result;
 }
 
 vector<string> explore_discoveries::apply_quantities(
@@ -5161,20 +5232,20 @@ bool explore_discoveries::stop_explore() const
     for (const string &msg : marker_msgs)
         mpr(msg);
 
-    for (const string &marked : marked_feats)
-        mprf("Found %s", marked.c_str());
+    for (size_t i = 0; i < marked_feats.size(); ++i)
+        mpr(ui_render("t.discovery", "Found %s.", "Found " + marked_feats[i], {marked_display[i]}));
 
     if (!es_flags)
         return marker_stop;
 
-    say_any(items, "item");
-    say_any(shops, "shop");
-    say_any(apply_quantities(altars), "altar");
-    say_any(apply_quantities(portals), "portal");
-    say_any(apply_quantities(stairs), "stair");
-    say_any(apply_quantities(transporters), "transporter");
-    say_any(apply_quantities(runed_doors), "runed door");
-    say_any(apply_quantities(runelights), "runelights");
+    say_any(items, "item", display_list(items));
+    say_any(shops, "shop", display_list(shops));
+    say_any(apply_quantities(altars), "altar", display_list(altars));
+    say_any(apply_quantities(portals), "portal", display_list(portals));
+    say_any(apply_quantities(stairs), "stair", display_list(stairs));
+    say_any(apply_quantities(transporters), "transporter", display_list(transporters));
+    say_any(apply_quantities(runed_doors), "runed door", display_list(runed_doors));
+    say_any(apply_quantities(runelights), "runelights", display_list(runelights));
 
     return true;
 }
@@ -5188,12 +5259,12 @@ void do_interlevel_travel()
     {
         if (you.running.pos == you.pos())
         {
-            mpr("You're already here!");
+            mpr(ui_translate("t.ui", "You're already here!"));
             return;
         }
         else if (!you.running.pos.x || !you.running.pos.y)
         {
-            mpr("Sorry, you can't auto-travel out of here.");
+            mpr(ui_translate("t.ui", "Sorry, you can't auto-travel out of here."));
             return;
         }
 

@@ -1,0 +1,17 @@
+{
+  "exported": 65,
+  "source_keys": 65,
+  "english_fallback": [],
+  "reviewed_batches": [
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11"
+  ],
+  "other_owned_files_unchanged": true,
+  "reference_dependencies": 52,
+  "generated_header": true
+}

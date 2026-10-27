@@ -1,0 +1,1427 @@
+{
+  "batch": "ability-review-01",
+  "baseline": "0.34.1",
+  "glossary_terms": 1665,
+  "glossary_sha256": "7643f2c67d8cd26a12bcc304dc02c72c15ab7a1f331c52f2aa3bf28a76e4cd9d",
+  "reviewed": 154,
+  "actions": {
+    "new_translation": 127,
+    "corrected": 6,
+    "retained_after_review": 21
+  },
+  "entries": [
+    {
+      "key": "No ability ability",
+      "action": "retained_after_review",
+      "source_sha256": "4c02e68e74276663fdcc8912cea2a860cbc6b49ba28449a0c5aa300a749c3fb8",
+      "translation_sha256": "8e7a7ed41c70e44201dee78595987e54063bbda30646e793df41b54399a28ee7",
+      "before": "如果你看到这段说明，说明游戏出现了错误。\n",
+      "after": "如果你看到这段说明，说明游戏出现了错误。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Spit Poison ability",
+      "action": "retained_after_review",
+      "source_sha256": "c517b2168e46d4963217156636e4d5fd7cdd0979ef175b697936bcfb8005cb6b",
+      "translation_sha256": "c928c45933aa8a3d12f4984fc98dab90f5faed5114a17ccc1beca32ce050a059",
+      "before": "向目标生物喷吐毒液。\n",
+      "after": "向目标生物喷吐毒液。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Combustion Breath ability",
+      "action": "retained_after_review",
+      "source_sha256": "f5d86db83c13b2c83ec2ba6257035ef8a5c93bad7913262e097b73e641496e9b",
+      "translation_sha256": "89a4c1bc283c5d6acb2d0dd4420c92585ad862763b94f37d86ee190a457bdad1",
+      "before": "喷出一团不稳定的余烬，触及生物时会在其周围猛烈爆炸。不会伤害使用者。\n",
+      "after": "喷出一团不稳定的余烬，触及生物时会在其周围猛烈爆炸。不会伤害使用者。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Glacial Breath ability",
+      "action": "retained_after_review",
+      "source_sha256": "0cd4d3a88b1e2e8f1338d904cc4d48a3e7f1037ee0dfe9a359597eb854ec41a4",
+      "translation_sha256": "c8f795edc39dbd6fe592212422b82e5ef7575ab97420df8d3487a27502d7182d",
+      "before": "呼出一道强劲寒潮，将被其杀死的所有生物封在坚固耐久的冰块中。\n",
+      "after": "呼出一道强劲寒潮，将被其杀死的所有生物封在坚固耐久的冰块中。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Nullifying Breath ability",
+      "action": "retained_after_review",
+      "source_sha256": "1a1daedd411cf94f7bab591ab1af58010f0df92223d176eecef0baa5c99d183f",
+      "translation_sha256": "6e6d5012d8cdfde6b426300243b6c470c67a949c0e401e5abb918faea0a0f980",
+      "before": "喷出大团纯粹的反魔法能量，驱散所命中生物的魔法效果，并在一段时间内严重干扰其施法能力。不会伤害使用者。\n",
+      "after": "喷出大团纯粹的反魔法能量，驱散所命中生物的魔法效果，并在一段时间内严重干扰其施法能力。不会伤害使用者。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Steam Breath ability",
+      "action": "retained_after_review",
+      "source_sha256": "e35928afad4c5cf043f946fe99aef2fbb7d9010ca4eccb03f97ab52677ec0225",
+      "translation_sha256": "9fe3692dc6b7feca68913fdbe8a1036c38dd58f19280861d5ea49a6edb4c5eaf",
+      "before": "喷出一股强劲蒸汽，烫伤目标，并沿途留下遮蔽视线的蒸汽云雾。\n",
+      "after": "喷出一股强劲蒸汽，烫伤目标，并沿途留下遮蔽视线的蒸汽云雾。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Galvanic Breath ability",
+      "action": "retained_after_review",
+      "source_sha256": "7b1f4b7fc68dae13f1ffae2278ea005f3574876c7461a0d4b0529dec08f945b6",
+      "translation_sha256": "779ac9c01bd14956bf531c655e5949342f2e7d5d3c3573515e760d8744fadc7f",
+      "before": "呼出一股带电的能量，电流会穿过目标并传导至与其相连的所有其他生物。\n",
+      "after": "呼出一股带电的能量，电流会穿过目标并传导至与其相连的所有其他生物。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Mud Breath ability",
+      "action": "corrected",
+      "source_sha256": "3eda59daeca2c9b6b891cc9121d7fb2913c317e5a075eebd76e8c334cf5c4377",
+      "translation_sha256": "9e7430ea42729784557fd9110238c5630db6409c0511e62235b3d374aff8c712",
+      "before": "吐出一个巨大的泥球，击退命中的目标，并在周围铺满泥浆，阻碍敌人移动，还会使其偶尔失手。\n",
+      "after": "吐出一个巨大的泥球，击退命中的目标，并在周围铺满泥浆，阻碍敌人移动，还会使其偶尔攻击失手。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Caustic Breath ability",
+      "action": "retained_after_review",
+      "source_sha256": "7ef1174b8e85d9e576673d2fb7589e6cf930c8078a72d287a2c95ee060044355",
+      "translation_sha256": "fd49d8468449bb3fcf66ae9fb53307a03399c8e60fd4106c679547664f8bab62",
+      "before": "喷出浓酸，腐蚀命中的目标，并在经过的空格上留下腐蚀云雾。\n",
+      "after": "喷出浓酸，腐蚀命中的目标，并在经过的空格上留下腐蚀云雾。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Noxious Breath ability",
+      "action": "retained_after_review",
+      "source_sha256": "a6ee3206ee555ef382991bc344d09f5d7c154b8f4198f4eef3e42e4ca4cef46f",
+      "translation_sha256": "3003e3268c62cd69285c5cfc1046694ff8c1c71a4f6e43e30e9bfcb19b822ecc",
+      "before": "喷出一道毒雾，能使身处其中且没有毒素抗性的生物混乱。等级越高，云雾覆盖的范围越大，持续时间也越长。\n",
+      "after": "喷出一道毒雾，能使身处其中且没有毒素抗性的生物混乱。等级越高，云雾覆盖的范围越大，持续时间也越长。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Breathe Fire ability",
+      "action": "retained_after_review",
+      "source_sha256": "46d0e17b2e991acb30c7ad4413859f7d1345392d9dd584d51da8c52544e130c1",
+      "translation_sha256": "cb27078f826ace3119904b6adaf83ee406e17af534a72d22b40ae6e0a3c8a33c",
+      "before": "向目标生物喷出一股火焰。\n",
+      "after": "向目标生物喷出一股火焰。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Breathe Poison Gas ability",
+      "action": "retained_after_review",
+      "source_sha256": "226c4809653a6e80b1aaaa929c2f1ce1dcac1a37aac0abfbf7e875277280de46",
+      "translation_sha256": "3afb4c86d93456c58229e86e50a7e6d574ad54d625f02f4016cdee50afa13972",
+      "before": "向目标生物喷出一股毒气。\n",
+      "after": "向目标生物喷出一股毒气。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Invent Gizmo ability",
+      "action": "retained_after_review",
+      "source_sha256": "29629aee95442d4138b80bf3dec61f6dd47a1f4b5e4f121602897021eb865c21",
+      "translation_sha256": "ecf5fd7a70c1321a0f396f31b19b3eb99f678348b9cb4fa3aeea551024a8aaf1",
+      "before": "运用机甲哥布林无与伦比的创造力，发明并组装一件独一无二的装备，永久安装到自身。这种灵感不会再来一次，务必慎重选择。\n",
+      "after": "运用机甲哥布林无与伦比的创造力，发明并组装一件独一无二的装备，永久安装到自身。这种灵感不会再来一次，务必慎重选择。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Hurl Damnation ability",
+      "action": "corrected",
+      "source_sha256": "f94486b282eab1da1f7463800b723dca8b11f018d6eb7fb82239aec52d5cdda3",
+      "translation_sha256": "f40e318b8d8395299194511d9b56db0e969983a2037bcade1416e4ffe5234f81",
+      "before": "以天谴轰击目标敌人。这股邪恶力量会伤害目标及其相邻的所有生物，不受护甲或抗性等任何防护手段影响。不过，某些生物完全不受其伤害，通常是那些自己也能调用这种力量的生物。\n",
+      "after": "以天谴轰击目标敌人。这股邪恶力量会伤害目标及其相邻的所有生物，不受护甲值或抗性等任何防护手段影响。不过，某些生物完全不受其伤害，通常是那些自己也能调用这种力量的生物。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Word of Chaos ability",
+      "action": "corrected",
+      "source_sha256": "66a3196a19ed0e3dbfc780951e27d48c68a64cc885fe48b8d744d1adb7766921",
+      "translation_sha256": "11f8f67c89011a5288f06e26a71c001a2e88ad7c190a3be0b7d1403355bbf7d7",
+      "before": "说出混沌之言，迫使附近敌人闪烁离开使用者。受影响者还可能被减速、缠绕或吓退。调用混沌之言并非易事，会吸取使用者部分生命值上限，随后短时间内无法再次使用。\n",
+      "after": "说出混沌真言，迫使附近敌人闪烁离开使用者。受影响者还可能被减速、缠绕或吓退。调用混沌真言并非易事，会降低使用者的部分生命上限，随后短时间内无法再次使用。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Heal Wounds ability",
+      "action": "retained_after_review",
+      "source_sha256": "1e163015c1cda4dfddf5460806d79dbf96fca163e6841bba5667ed8b1f9f6dc9",
+      "translation_sha256": "50c00d0fe4c25d1da77024e0131c39cc1cd9a1bd534b8b1f83e62a5cf7f67128",
+      "before": "大幅治疗使用者，但有一定几率永久降低 1 点魔力上限。\n",
+      "after": "大幅治疗使用者，但有一定几率永久降低 1 点魔力上限。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Dig ability",
+      "action": "corrected",
+      "source_sha256": "f050f672f16c1ef0a6a661e1642c30b34cf7e0635dfd20c42bebeff1723a4a02",
+      "translation_sha256": "7f9380b9328fbb76c9bc7f389d5ce1c5e1aa9fc519841fd8d5a152c952ed2d9e",
+      "before": "允许在软岩和锈蚀栅栏中挖掘通道。发动此能力没有消耗，只是进入准备挖掘的状态；生效后，向墙壁移动就会开始挖掘。这会制造一些噪声，并吸取使用者的生命值上限。\n\n生效后，再次发动此能力，或进行任何非挖掘的移动动作，都会取消挖掘状态。\n",
+      "after": "允许在软岩和锈蚀栅栏中挖掘通道。发动此能力没有消耗，只是进入准备挖掘的状态；生效后，向墙壁移动就会开始挖掘。这会制造一些噪声，并降低使用者的生命上限。\n\n生效后，再次发动此能力，或进行任何非挖掘的移动动作，都会取消挖掘状态。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Shaft Self ability",
+      "action": "retained_after_review",
+      "source_sha256": "9eeaa7a5f17d9b346d73cdd0832ab704e8691aae7fc2c11ff4855b24630c4af6",
+      "translation_sha256": "3fec197569457ec0f58cb1c67640fd1b7fec45a10f9ece543b6e1493e91e4014",
+      "before": "如同跳入竖井陷阱，将你送到下方一至三层的随机位置。挖掘竖井需要一些时间。\n",
+      "after": "如同跳入竖井陷阱，将你送到下方一至三层的随机位置。挖掘竖井需要一些时间。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Evoke Blink ability",
+      "action": "retained_after_review",
+      "source_sha256": "d961022720456e7fe3d634d5ccea606f6526a1b6c04d791d51b565dc71dba325",
+      "translation_sha256": "4274e76dbf79d67e4a32f22b306a4a2c210648bdf19f8f37a92ef32733c91b3d",
+      "before": "将使用者随机位移一小段距离。以此方式位移后，短时间内无法再次发动此能力；间隔取决于唤发技能。\n",
+      "after": "将使用者随机位移一小段距离。以此方式位移后，短时间内无法再次发动此能力；间隔取决于唤发技能。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Evoke Berserk Rage ability",
+      "action": "retained_after_review",
+      "source_sha256": "a338fef01d0a2a1794e2bb1c21843cb03e122b2fac47535950d6cef1b7f92459",
+      "translation_sha256": "a338fef01d0a2a1794e2bb1c21843cb03e122b2fac47535950d6cef1b7f92459",
+      "before": "<Berserk ability>\n",
+      "after": "<Berserk ability>\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Evoke Invisibility ability",
+      "action": "retained_after_review",
+      "source_sha256": "9f5bffd1cac3fa156b43e73d16c3b8fb1991d71e2991991697f9942481f0e371",
+      "translation_sha256": "69df12419edc4c3fb0b4abe01db36d0d6c3b1e0a1f0c139e35b965900d673bd0",
+      "before": "使使用者短暂隐形。\n",
+      "after": "使使用者短暂隐形。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "End Transformation ability",
+      "action": "retained_after_review",
+      "source_sha256": "4d2eb1ee6a7f81be104ec0e1a6d8fd9ab1e9b251afc6abbf93666641fb4f73c4",
+      "translation_sha256": "5cd1766fa332085ad311d0a540ee7c892ce88a28ffbdc327040e064216c71fc5",
+      "before": "使你恢复正常形态。\n",
+      "after": "使你恢复正常形态。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Begin Untransformation ability",
+      "action": "retained_after_review",
+      "source_sha256": "af6c07bb75951d119fcef725529039eb18327ae21dbea8ea34988a33515973ed",
+      "translation_sha256": "21ec374ddf5251680cc39709a45e68682be8cf117a1d99243ee868fae8aae698",
+      "before": "开始恢复你的原本形态，需要短暂集中精神。\n",
+      "after": "开始恢复你的原本形态，需要短暂集中精神。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Imbue Servitor ability",
+      "action": "corrected",
+      "source_sha256": "6232d0f53e1dc71a8b9009b3f1bdc4e26f03770e6d3fe1b2972f681557483a02",
+      "translation_sha256": "82738ec582ec713a2e237a1045bc9237522456239fd9086b55b53302a938bf99",
+      "before": "从施法者的伤害类法术中选出一个，赋予今后创造的法术火花仆从，替换此前赋予的法术。施法者自己必须能施放该法术，且失败率不高于 20%。\n",
+      "after": "从施法者的伤害类法术中选出一个，赋予今后创造的法术火花仆从，替换此前赋予的法术。施法者自己必须能施放该法术，且失败率不高于 20%。\n\n注意：以此方式灌注法术需要数回合，若当前已有仆从，也会将其遣散。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Imprint Weapon ability",
+      "action": "new_translation",
+      "source_sha256": "c06c5740991cdd2d1f0587ab29ce5f664f522078f297be05bb2eae120f08c14e",
+      "translation_sha256": "bf552548ebc9cf7479d6145c20b364144cf45258366d7ee04dee41f926e0fc8e",
+      "before": null,
+      "after": "分析背包中一件神器近战武器的结构，并将其铭刻于你的白金典范法术中，使你今后创造的白金典范都能持用一件功能相同的复制品。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Cacophony ability",
+      "action": "new_translation",
+      "source_sha256": "8a0662c2179e4be9d794037aa8e3ab80e375abcba43c83ae087154e19ad52ed4",
+      "translation_sha256": "fb5fd42bb5100d41b6ab89ea1226b00c2f82a9d7235db674a8a50bc5c474ae61",
+      "before": null,
+      "after": "完全展现你的骚灵本性，让你附身的所有防具短暂飞出，独立于你的其他行动发动攻击。靴子、围巾和头盔从四面八方袭击敌人，欢快的喧闹声充斥四周。\n\n这些物品仍与你相连，只能被指挥到近处，但它们受到的伤害不会由你承担，你也可以自由地穿过它们射击。它们的攻击可能使敌人陷入各种轻微的不利状态，有时是晕眩、吸能，甚至混乱。\n\n使用后，你必须获得经验值，才能恢复足够的力量再次使用此能力。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Bat Swarm ability",
+      "action": "new_translation",
+      "source_sha256": "fb0c977d743f58ca1d992a30710949c6087d0f21649e0f10cd867d132c9cfefd",
+      "translation_sha256": "d22ad264418efa322411558954b87b79dfd19bb51fe282e0b01098d604b60d89",
+      "before": null,
+      "after": "将身体分散为一群吸血蝙蝠，使装备融入身体，但让你移动迅速、身法灵活。从体内涌出的蝙蝠数量极多，甚至如令人窒息的云雾般填满附近空间，袭击敌人，并逐渐使其入睡。\n\n使用后，你必须获得经验值，才能恢复足够的力量再次使用此能力。（变形术技能会加快此能力的恢复速度。）\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Enkindle ability",
+      "action": "new_translation",
+      "source_sha256": "1e4d397f6369b0bf8070aaf3810c3fdeeff80fc7de07ad915628c09643b394d8",
+      "translation_sha256": "ea986dd3c667401e04aa42f720f5a87ccf7193c3b965d71c425e75c4d1657685",
+      "before": null,
+      "after": "将幽焰催至炽盛，燃尽积累的全部记忆，大幅增强施法能力。\n\n在此状态下，伤害类法术不消耗魔力，不受负重影响，并获得施法成功率和法术强度加成，后者随经验等级提高。在燃忆状态下进行的法术爪击，还会造成与所施法术等级成正比的额外伤害，并按所造成伤害的一定比例治疗你。\n\n在燃忆状态下，每次施法都会消耗一份记忆。记忆耗尽时，状态就会结束；即使仍有记忆，经过短暂时间后也会结束。\n\n以你当前的经验等级，所能容纳的记忆最多支持以此方式连续施放 {{return 3 + math.floor(you.xl() * 3 / 20);}} 个法术。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Breathe Rust ability",
+      "action": "new_translation",
+      "source_sha256": "e3e94f1621d229d5fc883abd830161c5d4a8fbe0de3f381e0ee83b77c8abfcf3",
+      "translation_sha256": "dc81d9296c42d44efb5d71a7e0046cf676dccafaa41c0879e99da34c5c6af157",
+      "before": null,
+      "after": "呼出一股氧化气雾，持续腐蚀身处其中的生物，并削弱其攻击。这些云雾持续时间很长，但只造成极少伤害。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Golden Breath ability",
+      "action": "new_translation",
+      "source_sha256": "4c15ef5a022b0e24818eb560508a8807da84c2f3a066c2268621070781a06087",
+      "translation_sha256": "9532165a105cc56d4a908ae52f217a301ec418abf191736b011577d322096398",
+      "before": null,
+      "after": "呼出一股强劲的毁灭性元素吐息，同时造成火焰和寒冷伤害，并沿途留下毒雾。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Recite ability",
+      "action": "new_translation",
+      "source_sha256": "7120cc495d82798befe16f29f2da139ae7cc8ee11750327b24ca0e1009cb2815",
+      "translation_sha256": "011f986b1a28540f8ed82a8edd0573af8c9349bc9f4cd8a3a1defcf73cb7e1f0",
+      "before": null,
+      "after": "短暂向附近怪物宣讲辛的律法。完成一次诵经后，需要等待片刻才能再次诵经。\n\n诵经的效果因目标而异：混沌与不洁生物会受到强大且能造成伤害的惩戒，亡灵和恶魔受到较弱的斥责，其他有智慧的生物则会陷入混乱，其中异教徒及其他神祇的祭司受到的惩罚尤其严厉。诵经效果随祈祷技能和虔诚提高而增强。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Vitalisation ability",
+      "action": "new_translation",
+      "source_sha256": "7261eca5a1778fe8a1e881299237604e0abac14bbcbe80400071bf28bad0e154",
+      "translation_sha256": "662d694e0ddf834caf8765a7c3ad6761abb28c4ce5c3ea2d96466a8e706e8c1a",
+      "before": null,
+      "after": "暂时保护你免受毒素、混乱、石化、疾病以及污秽疫病云雾的影响。同时暂时提高力量、智力和敏捷，增幅取决于祈祷技能。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Imprison ability",
+      "action": "new_translation",
+      "source_sha256": "d8472187e6efa7a85fb4402dc2df4fb9d58ba2739c1bed62bbf56d8115c64a5e",
+      "translation_sha256": "a83fe1a2412104d343b2a208c4a538b4d7ef165d56177b5450462fa995111dc6",
+      "before": null,
+      "after": "将一个怪物暂时囚禁于银墙之中。囚禁持续时间随祈祷技能提高而延长。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Sanctuary ability",
+      "action": "new_translation",
+      "source_sha256": "0f8ee9b78a82d7898758eeec9a90ef5beab4ff1d22b69264d27f3588e08fba6d",
+      "translation_sha256": "778ca129ca8aaee8cdd673bc68fd42947bf22f4a2634015114971ebcac41956d",
+      "before": null,
+      "after": "将使用者周围短暂化为不可违逆的律法领域。只要身在庇护所内，就不会受到他人伤害，也无法伤害他人。\n\n怀有敌意的生物无法进入庇护所；庇护所形成时已在附近的敌对生物会被迫逃离。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Cure All Mutations ability",
+      "action": "new_translation",
+      "source_sha256": "7d18f57e71acb0c981bb75463a546de975aaf5be9387d163da33d0f8d786c667",
+      "translation_sha256": "b92f510b44642330f5d129bf27eec336839c1ea2729171b4672927cc1a985e06",
+      "before": null,
+      "after": "治愈你的所有变异，但只能使用一次。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Divine Shield ability",
+      "action": "new_translation",
+      "source_sha256": "d8869d3893d1a8d576af8a0d92bf0c3cb7133b6370ff9421fd60d8b77b1e491e",
+      "translation_sha256": "f4b02d3297b6aad72085f49b3776834c0d056abb45a1c5ae5e1b34bd4a653137",
+      "before": null,
+      "after": "在使用者面前显现一面耀眼的护盾。它由光明神的力量托举，必定能格挡接下来数次原本可以被普通盾牌格挡的攻击。远程攻击会被反射，近战攻击者则有几率被迸发的闪光短暂致盲。\n\n护盾只能格挡有限次数的攻击，随后便会消失；祈祷技能越高，可格挡的次数越多。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Cleansing Flame ability",
+      "action": "new_translation",
+      "source_sha256": "bae0f0d15d5ccc352b8a5447e9359bffd4e6b11ae8f1c8e2f7fd38b0bc534b4f",
+      "translation_sha256": "1d71c33b792786f1a38035d040a032eb7f854c926702ce4ac44db9eaa2ed8f0f",
+      "before": null,
+      "after": "以使用者为中心，引发一场巨大的神怒爆发，对亡灵与恶魔造成严重伤害，也会伤害其他所有敌对生物。爆发威力随祈祷技能提高而增强。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Summon Divine Warrior ability",
+      "action": "new_translation",
+      "source_sha256": "c736eaa43253b12a903dda59ab553d0759134f824dafff5c87f15ed23e831979",
+      "translation_sha256": "f24b06b7868c2006fc5d8da77abfda95cfd7793b8b3060ddd3022ab375e132b3",
+      "before": null,
+      "after": "召唤一位强大的邪恶克星：天使或提婆。其协助时间随祈祷技能提高而延长；若在战斗中立下功勋，光明神还可能赐福，使其停留更久。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Brand Weapon With Holy Wrath ability",
+      "action": "new_translation",
+      "source_sha256": "40c11707cbbf9995a4933a86825eceac02ef893f915b8ba56fc2ecf529895a3b",
+      "translation_sha256": "eb59b4c608660f35a3a14207191a1d0825fcb2e699444835dd6264f760eb1b73",
+      "before": null,
+      "after": "以光明神的神圣愤怒永久赐福一件自选武器。恶魔武器会转化为更强大的神圣武器。此赐福只能使用一次，且不能用于神器武器。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Unearth Wretches ability",
+      "action": "new_translation",
+      "source_sha256": "f4ba8289683176858743c178900ceffe362f1ca40a528ecb4d0683722a4a73e4",
+      "translation_sha256": "7f4c3e150a707db0834d26f155b408a8d0b1f35e7b7c362069c73b00f0243f10",
+      "before": null,
+      "after": "从奇库巴库哈的亡者之城唤来濒死者，为各种死灵法术提供充足素材。数量与质量取决于死灵系魔法技能。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Sign of Ruin ability",
+      "action": "new_translation",
+      "source_sha256": "a2cae412473f9dcfbb6c811c4734cccec18bada323dbc5768d2338ad562604b1",
+      "translation_sha256": "a2cae412473f9dcfbb6c811c4734cccec18bada323dbc5768d2338ad562604b1",
+      "before": null,
+      "after": "[[Sign of Ruin spell]]\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Brand Weapon With Pain ability",
+      "action": "new_translation",
+      "source_sha256": "38e9b5d0bd3b5ce0bbb1f6f84d650834336f591f19ce33589ea53fd580ede205",
+      "translation_sha256": "eff44d9cdc9b0d64fb70672ac6dca714b6b16e41032fd5f6f618e987d9e23fe1",
+      "before": null,
+      "after": "以痛苦本身的精髓永久浸染一件自选武器，不能用于神器武器。此赐福与最强大死灵法术的知识只能二选一，且只能领取一次。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Receive Forbidden Knowledge ability",
+      "action": "new_translation",
+      "source_sha256": "116b8ac222a9842cd1aa2a83aacce9ce9d412e1c7e8596404f938ade24a742f3",
+      "translation_sha256": "1d987ad6f1a986366bf82b02f2987cd86c0d4602d2a226b7168c132a1bbf8319",
+      "before": null,
+      "after": "授予你最强大而阴险的死灵法术知识：鬼魂缠身、博格尼奥的复生术、虫群寄生和死亡之门。此赐福与赋予武器痛苦印记只能二选一，且只能领取一次。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Recall Undead Harvest ability",
+      "action": "new_translation",
+      "source_sha256": "c5d64ca5205c696380a04daa558e3fe95b98f2c4ac07f6e8c9be614b86dc7ad7",
+      "translation_sha256": "9df335d08f453e8950c863ff11ade351efed603d6ce42548379930c311afde97",
+      "before": null,
+      "after": "将你的亡灵追随者从地下城的任何地方召回身边。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Light the Black Torch ability",
+      "action": "new_translation",
+      "source_sha256": "39fff9acd5f68d79050461e16cba168ca21810da985499d913a8576abfcdc1fd",
+      "translation_sha256": "5c3e434b288b1e46feeda80dae262cc395c6c0aefea8d571c33f2af275563ee0",
+      "before": null,
+      "after": "高举黑炬，呼唤伊莱德莱姆努尔将其点燃，标志着你对当前地下城楼层的征服正式开始。只有黑炬燃烧期间的击杀才会得到伊莱德莱姆努尔赐予的虔诚。\n\n已获得一些神恩的人会得到临时亡灵仆从，协助展开征服。经验丰富、尤其虔诚的人会获得更强的仆从。\n\n伊莱德莱姆努尔不给第二次机会：离开当前楼层时，黑炬就会熄灭，而每层永远只能点燃一次。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Hurl Torchlight ability",
+      "action": "new_translation",
+      "source_sha256": "abf8f78fe4bdcdfdad1ea1c7a1f7f38880b1313665bad75d2207d0ef7911a0d3",
+      "translation_sha256": "7650093d5caa33aa3c8d7084f763bf8b902db02567aae3f3b49b6dec6d9b3e01",
+      "before": null,
+      "after": "从黑炬中掷出一股幽影之火，对活物、恶魔和神圣生物造成无法抵抗的伤害。爆发中的己方亡灵仆从会短暂得到强化，而伊莱德莱姆努尔的信徒不会受到伤害。伤害随祈祷技能提高而增加。\n\n此能力仅在黑炬点燃时可用，且每层的使用次数有限。每层可用次数随虔诚提高而增加；击杀有独特名字的敌人，以其非凡灵魂为黑炬添火，也会额外获得一次使用机会。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Bind Soul ability",
+      "action": "new_translation",
+      "source_sha256": "d7a517ecf9934c345496c5f2e46bb75c5bbfb6f85880d702a479a7d2d2ed0b9f",
+      "translation_sha256": "35967e1e2764c855ed653b4023527fc9cf1384f77c98ca2262585b486b7b13d3",
+      "before": null,
+      "after": "尝试束缚一个活物、神圣生物或恶魔的灵魂，使其永远为你效力。若目标怪物在离开你的视野前被杀死，就会作为受缚灵魂归来，保留生前的装备、法术和能力。\n\n只能以伤势较轻的生物为目标。为防止其灵魂逃逸而集中精神，会消耗使用者当前生命的 1/3，只有杀死目标后才会返还。若过程完成前目标离开你的视野，尝试就会彻底失败。\n\n受缚灵魂的生命取决于使用者的祈祷技能。它会随束缚者上下楼梯，也可从其他楼层召回。\n\n同时只能束缚一个灵魂。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Fathomless Shackles ability",
+      "action": "new_translation",
+      "source_sha256": "81aa4a6d0773a1c035919239609d2fefe74d940edbbd85e960ede1dc439fd820",
+      "translation_sha256": "13d91d79dbaaa4a348edea326e8e5162e18fb69dae0f455a5d78330e4e445c33",
+      "before": null,
+      "after": "以伊莱德莱姆努尔不可挣脱的掌控笼罩使用者周围。只要你留在这片亵渎的庇护领域内，其中所有敌对生物都会被定在原地，其生命力也会不断被吸取，用来恢复你的生命。与盟友隔离的受害者会更快地受到伤害。\n\n影响范围会逐渐缩小，旧领域完全消失前，无法创造新的领域。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Heroism ability",
+      "action": "new_translation",
+      "source_sha256": "72342a5878a2e4c173435303132909a567b34c77ba23a0b4bb7b9996c453d84c",
+      "translation_sha256": "4567d7df4e98a2326fec11e654fc956020d0ae7099ac569fa847fc79e8f7d32d",
+      "before": null,
+      "after": "暂时提高你的所有进攻与防御战斗技能。持续时间随祈祷技能提高而延长。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Finesse ability",
+      "action": "new_translation",
+      "source_sha256": "522ae5f3b708241c31dcebfcbe9d785dc09992e37f757c419127ac27e2072218",
+      "translation_sha256": "55cf82cc75f81a60efadb17c7c8bcc13f58dbf64e2be28bac31d0572237db222",
+      "before": null,
+      "after": "大幅提高你的战斗速度。持续时间随祈祷技能提高而延长。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Duel ability",
+      "action": "new_translation",
+      "source_sha256": "f424b070d610b874310d4881146bea3c5fb3336f1a685d48d53be5876c5c850d",
+      "translation_sha256": "3fa905adc13fe8d78a8bfb89ec55f63c54cf4e9dfc510ec371ec8ae8dbc41c91",
+      "before": null,
+      "after": "让你与一位配得上的对手单独决斗。成功后，你与被挑战者会被传送至奥格瓦如的竞技场，战至一方死亡。只有获胜或被杀，才能离开。\n\n决斗开始时，会恢复你已损失生命的一半。获胜后，奥格瓦如会将你的生命与魔力恢复到发起挑战前的数值，让你转瞬间摆脱决斗中受到的伤害。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Receive Weapon ability",
+      "action": "new_translation",
+      "source_sha256": "e8a8159b7052c13d56748d1f14bfd561633adcd6ddf6f2b3ebceb85541067e94",
+      "translation_sha256": "f2ee74948cf00158b7a113184522f8bf8d1370908bede7c3fe9a489cdd2da443",
+      "before": null,
+      "after": "从四件武器中选择并获得一件。此赐福只能领取一次。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Receive Armour ability",
+      "action": "new_translation",
+      "source_sha256": "d12959ab7f6e836e8673bcdc4ada1b2259b296fff05d140e2a3c71667fee622e",
+      "translation_sha256": "5284f0de8f24595fac90bfff3b49de41de344ed12293e3c4226cd59b34e10c40",
+      "before": null,
+      "after": "从四件防具中选择并获得一件。此赐福只能领取一次。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Unleash Destruction ability",
+      "action": "new_translation",
+      "source_sha256": "f77f0a830491f71608ccff267341d2a19167fcf765c496fa1c8b2f5cbb2cd097",
+      "translation_sha256": "1692cb6370111aa3e22a0a3d86bddd6cd2b691911a03d89d53f6a875c49928b2",
+      "before": null,
+      "after": "向目标生物引导一股地狱能量：{{\n    if you.get_base_mutation_level(\"Gehenna destruction\") == 1 then\n        return \"贯穿火焰、岩浆（受欣嫩谷影响）、闪电或负能量\"\n    elseif you.get_base_mutation_level(\"Cocytus destruction\") == 1 then\n        return \"贯穿寒冰（受悲叹河影响）、寒冷、闪电或负能量\"\n    elseif you.get_base_mutation_level(\"Tartarus destruction\") == 1 then\n        return \"贯穿火焰、寒冷、毁灭（受塔尔塔罗斯影响）或负能量\"\n    elseif you.get_base_mutation_level(\"Dis destruction\") == 1 then\n        return \"贯穿火焰、寒冷、闪电、强酸或金属碎片（后两者受冥府影响）\"\n    else\n        return \"火焰、寒冷、闪电或负能量\"\n    end\n}}。伤害和命中率随祈祷技能提高而增加。\n",
+      "lua_text_indices": [
+        1,
+        3,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "key": "Infernal Servant ability",
+      "action": "new_translation",
+      "source_sha256": "e6f66ad7653221c7e797addb741ee25a361d087d18bf6292d88400dde7d3f36d",
+      "translation_sha256": "9e6d96e6bfd074a6e716d5be691f87619e0bffe5ea351e1d62b8f4f251c6986d",
+      "before": null,
+      "after": "从地狱远处召来恶魔，以你的鲜血将其束缚为仆从。祈祷技能较低时，只能召唤较弱的魔鬼；祈祷技能高超者则可能召来强大的恶魔，甚至刽子手。\n\n当心，混沌军队惯于内斗，仪式有时会在召来仆从的同时，也引来一只敌对恶魔。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Brand Self ability",
+      "action": "new_translation",
+      "source_sha256": "061f87bf70faafab898815beba8e03687b6946bf124a7fbaa8b2c3d4f2592665",
+      "translation_sha256": "80a9601538b873a04568a859e443f1b05b7a751141ee227e0e6bbc977be0ab59",
+      "before": null,
+      "after": "在自身永久刻下地狱烙印，让肉体与灵魂永受污染，为毁灭者效力。\n\n只要你继续信奉马科列布，此烙印就会赋予你以下力量：\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Infernal Legion ability",
+      "action": "new_translation",
+      "source_sha256": "4394e25b7fe4df1dd7beac7590e76bd531eaa156805bbec8c897f8503b0a4ca5",
+      "translation_sha256": "a5841475c2f0e15c8c5ff0dc10f31333db1f5b43c93a3818a5235f21b3bc6fe1",
+      "before": null,
+      "after": "以自己的身体为通道，将混沌大军释放到世间。短时间内，只要附近有可供战斗的目标，使用者身边就会不断显现较弱的恶魔。单个恶魔虽停留短暂，混沌军团整体却几乎无穷无尽。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Globe of Annihilation ability",
+      "action": "new_translation",
+      "source_sha256": "2df78442a0d4aecedf374e429217507ef76483beab7ddd10df0f6507af25294b",
+      "translation_sha256": "28d11966baad0cd940a2550a8815fa6550e74d74188be34a927ad6f9b4d43e61",
+      "before": null,
+      "after": "发射一颗翻腾着强烈毁灭力量的球体，其力量来自{{\n    if you.get_base_mutation_level(\"Gehenna destruction\") == 1 then\n        return \"欣嫩谷无尽的烈火。\"\n    elseif you.get_base_mutation_level(\"Cocytus destruction\") == 1 then\n        return \"悲叹河冰封的荒原。\"\n    elseif you.get_base_mutation_level(\"Tartarus destruction\") == 1 then\n        return \"塔尔塔罗斯哀嚎的悲恸。\"\n    elseif you.get_base_mutation_level(\"Dis destruction\") == 1 then\n        return \"冥府无情的恶意。\"\n    else\n        return \"地狱本身。\"\n    end\n}}\n\n球体在移动中不断积蓄力量，并尝试追踪指定目标，但其移动和转向都受相当大的惯性影响。撞到生物或其他障碍物时，它会引发一场猛烈的{{\n    if you.get_base_mutation_level(\"Gehenna destruction\") == 1 then\n        return \"火焰或岩浆\"\n    elseif you.get_base_mutation_level(\"Cocytus destruction\") == 1 then\n        return \"寒冷或寒冰\"\n    elseif you.get_base_mutation_level(\"Tartarus destruction\") == 1 then\n        return \"负能量或毁灭\"\n    elseif you.get_base_mutation_level(\"Dis destruction\") == 1 then\n        return \"强酸或金属碎片\"\n    else\n        return \"地狱能量\"\n    end\n}}爆炸，爆炸半径取决于移动距离。\n\n你自身不会受到这场爆炸的伤害。\n",
+      "lua_text_indices": [
+        1,
+        3,
+        5,
+        7,
+        8,
+        10,
+        12,
+        14,
+        16,
+        17
+      ]
+    },
+    {
+      "key": "Vessel of Slaughter ability",
+      "action": "new_translation",
+      "source_sha256": "8c1d059d08b99208c3657d2d7ed3785495357e9055fac4efab8a7c67a29ac085",
+      "translation_sha256": "492bb51ea582fa495af3ba849b87ea7b424c1b88bf2a521e5db3db12119a48a9",
+      "before": null,
+      "after": "与毁灭者缔结血契，以危险代价换取暂时的巨大力量。\n\n血契缔结的瞬间，你周围会发生大规模天谴爆炸，你也会化为恶魔化身，获得恶魔抗性、不可撼动的意志，使击杀带来的治疗翻倍，并使受到的所有伤害减少 1/3。此外，造成的所有伤害也会得到加成，增幅与你使用此能力时的伤势成正比。\n\n变形结束时，你会被拖入血肉熔炉，被迫迎战一波又一波恶魔，直到马科列布认为你的债已还清。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Channel Magic ability",
+      "action": "new_translation",
+      "source_sha256": "0ba0655992d2d8d9f81eca55d0af773b3ed82cd210981dde1fb693bd4c47ea44",
+      "translation_sha256": "897aae960db382237413c7a235ed1b0768462fa7f6fce979c82eca4465ece56b",
+      "before": null,
+      "after": "大幅提高使用者的魔力恢复速度，持续时间随祈祷技能提高而延长。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Forget Spell ability",
+      "action": "new_translation",
+      "source_sha256": "a527899821f5b7b4cbf18e5fc995c570d7c35ca5638ebdb789c6eaf0f1529f65",
+      "translation_sha256": "f4f4889a639496a2d0759e280d689c447cae6992da0a0a8727e70f531c6ff196",
+      "before": null,
+      "after": "从记忆中移除一个已知法术，腾出空间学习其他法术。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Divine Exegesis ability",
+      "action": "new_translation",
+      "source_sha256": "c55f647a912b3d537bafe2a4c2913a80de1c2ef0f2e44925571aa839cb4ce16e",
+      "translation_sha256": "d61cb52f3fdc87b45988ad907dd9cf44438720684ab3eb79798a2ced1b0e38f0",
+      "before": null,
+      "after": "从法术库中施放任意法术，保证成功。你会获得基于祈祷技能的法术强度加成，其效果比同等级的法术相关技能训练高出 50%。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Berserk ability",
+      "action": "corrected",
+      "source_sha256": "cb8194062ac2bc042883a4ddf2817b5ce4bc1f502337e0ad9328825f0bc0abb7",
+      "translation_sha256": "2a17073d69d1f84be2e595ba111458f9eca0ffd6049bbe17b6361e4b47d3fa17",
+      "before": "使使用者进入狂暴。狂暴暂时提高生命、速度和近战伤害。在战斗之外会迅速结束，但连续击杀可能延长持续时间。狂暴期间，除移动和近战之外几乎无法进行其他动作。狂暴结束后，使用者会被减速，且短时间内无法再次狂暴。\n",
+      "after": "使使用者进入狂暴。狂暴暂时提高生命、速度和近战伤害。在战斗之外会迅速结束，但连续击杀可能延长持续时间。狂暴期间，除移动和近战之外几乎无法进行其他动作。狂暴结束后，使用者会陷入缓慢状态，且短时间内无法再次狂暴。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Trog's Hand ability",
+      "action": "new_translation",
+      "source_sha256": "debeb8650514fc5ae13af25ed2e0e483db351a87832f8b3bc57049f3cdff41b5",
+      "translation_sha256": "e58a48397fb96289f232f15b8fc2fd3e5a01e59daa87af416b388b812776ef98",
+      "before": null,
+      "after": "获得强大的生命恢复能力，可与其他所有来源叠加，甚至对原本无法恢复生命的人也有效。同时强化使用者的意志，抵御多种魔法效果。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Brothers in Arms ability",
+      "action": "new_translation",
+      "source_sha256": "a50c5591ee1ada96ec6afb9b3fd3f4e6ddb13a9c8d684a1e1f2af4791a5d87be",
+      "translation_sha256": "04618bc73640c163cf7b9487fc1f717694e163c09bfe559c7bc4b699ae84e25c",
+      "before": null,
+      "after": "召唤体型巨大、怒不可遏的盟友，大肆破坏。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Purification ability",
+      "action": "new_translation",
+      "source_sha256": "2acc4c0ed16828f37f1a73f7e9b72ecdfc8575194b3551e83631a4ae920e1d96",
+      "translation_sha256": "ba9f883f03f5f26f1d1590e29a31e5bde0de73c3a9d81a07837b805b7087192b",
+      "before": null,
+      "after": "清除你体内的毒素、混乱、缓慢、石化、虚弱和疾病，并完全恢复因吸能而损失的生命上限。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Heal Other ability",
+      "action": "new_translation",
+      "source_sha256": "a0c68fbfca8dc444a7e249a7a61255958a686e96c222c1e093d939bb833c7a58",
+      "translation_sha256": "3b46a88a5a39519c0ca519736ce482da06b4f0cec92aa34130f0f47c01d95afb",
+      "before": null,
+      "after": "中等幅度治疗自己以外的一个生物，治疗量取决于祈祷技能。对敌对怪物使用时，会尝试使其转为中立。对活物最有效，亡灵更难安抚，恶魔则更难；有智慧的生物也更难安抚。\n\n死去冒险者的幽灵与恶魔领主怒意过盛，无法安抚；无心智生物不具备足够的智慧，也无法安抚。睡着的怪物同样无法安抚。\n\n无论安抚成功与否，投入的虔诚与魔力都会消耗。成功时，怪物会受到治疗，你获得其全部经验值；失败时，怪物不受影响，你也一无所获。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Heal Self ability",
+      "action": "new_translation",
+      "source_sha256": "d47558e2bd45a752fb9c8b10d9096674275b84f810f4e728d98f8caa1c6ce40a",
+      "translation_sha256": "7c6f6a9ec47affc6a5e42dd751310e2a5c979b39aaf50aead213438c4eaadd09",
+      "before": null,
+      "after": "恢复中等数量的生命，恢复量取决于祈祷技能。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Divine Vigour ability",
+      "action": "new_translation",
+      "source_sha256": "c2a6f272110aa545a9f82ce43364dfbf969438f3865036b8db8d57445dd57280",
+      "translation_sha256": "e5eb0cb2318cfd4e0c13d626e0e5144b876c2216d920a4b8124b0e672ca048dd",
+      "before": null,
+      "after": "大幅提高生命与魔力上限，增幅取决于祈祷技能。当前生命与魔力也会按比例提高。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Depart the Abyss ability",
+      "action": "new_translation",
+      "source_sha256": "243d830f893d8841032179c702ddb35e71adae189198ab876b323cc1af86c669",
+      "translation_sha256": "7787e174c7b0941e4afc5ae5c785fd025246d89b093380649f70de6ef5214d50",
+      "before": null,
+      "after": "将你传送出深渊，回到进入深渊前的位置。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Banish ability",
+      "action": "new_translation",
+      "source_sha256": "924e16ca6b593d16552c363be14c7a23064eef608669afbf9eabddb181a86bc8",
+      "translation_sha256": "9d861cf9228c98db38e17548d3e9eaa6619c3c4f1918c3c783aba1247e6999a8",
+      "before": null,
+      "after": "尝试将一个生物放逐至深渊。成功时，你会获得一些虔诚及其全部经验值。即使目标抵抗了放逐，与深渊擦身而过也会使其发生有害变异并变得虚弱。祈祷技能越高，放逐越难抵抗。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Corrupt ability",
+      "action": "new_translation",
+      "source_sha256": "12b7f7758e362f21bfa376996c1557debf35cfbee2ef9bd9a1290da3eea12bd0",
+      "translation_sha256": "11d3b75c6baeb42b82dbf1c7cabe793c29ad569ed0098469b6ab3d795df40123",
+      "before": null,
+      "after": "在当前楼层释放深渊能量，使其腐化。附近区域的面貌会改变，并打开通道，放出一心破坏的深渊生物。无法用于已腐化的楼层或深渊本身。影响范围随祈祷技能提高而扩大。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Enter the Abyss ability",
+      "action": "new_translation",
+      "source_sha256": "45fb6dbd2e7a06496bf94f6c5a1f845721ed7880a7b67a02bd955384f6f80ef0",
+      "translation_sha256": "59aa303e9993eff3d348658ed67ce27f4fa42bc7e7a8ee8cecd88735d9665f68",
+      "before": null,
+      "after": "立即将你传送至卢戈努的领域。仅仅发动此能力所需的努力，就会使你的生命大幅损耗。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Brand Weapon With Distortion ability",
+      "action": "new_translation",
+      "source_sha256": "d80511e40bf247612c5f7af94a7843cfdc240941106a1a98de4c3884c0688f63",
+      "translation_sha256": "5e3167adb7f00841909b5177bcdba6386a681fccfef853244728c0d181c57faa",
+      "before": null,
+      "after": "以局部扭曲力场永久腐化一件自选近战武器。此赐福只能使用一次，且不能用于神器武器。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Draw ability",
+      "action": "new_translation",
+      "source_sha256": "34c609759612744a4044e86dd9a40bf856976455d0e6eb35cbf279d8f8ba7eef",
+      "translation_sha256": "3f6627ee2c02965a8d30bf129dfdec50c4ab9713085ce1cb8ce0262b571a220a",
+      "before": null,
+      "after": "从一副力量牌组中抽取一张牌。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Triple Draw ability",
+      "action": "new_translation",
+      "source_sha256": "a169062191d29f4a79665af0818ac65cb92332b2b8fb3b59f66014637ffce4c0",
+      "translation_sha256": "035d5b42115ebbd033a66682db3996db613b55ebd03e8bb93f0481fc7a91f004",
+      "before": null,
+      "after": "从任意牌组抽取三张牌，选择其中一张打出，弃掉另外两张。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Deal Four ability",
+      "action": "new_translation",
+      "source_sha256": "5dbff9019c892508b00c333c68efa16849e41a26ffe00bbfe47aca456cd15a1e",
+      "translation_sha256": "a04da1ecc5edf5b2032f8e2b32770bb93bbe963426a2146d79fa3f6cf31dbe3f",
+      "before": null,
+      "after": "用通常抽取一张牌所需的时间，从一副牌组中连续打出四张牌。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Stack Five ability",
+      "action": "new_translation",
+      "source_sha256": "b4d9bfe42e8f3325ea0c1073510db854426fa1fd0d9488f047855c90baaaa565",
+      "translation_sha256": "7914782eb2b407340077db9d1b0e00782cef2b855f259232427e4741eb5dd3f5",
+      "before": null,
+      "after": "从自选的牌组中抽取五张牌，并按任意顺序排列。之后可按选定顺序依次抽取。再次使用此能力会弃掉当前叠好的牌。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Smiting ability",
+      "action": "new_translation",
+      "source_sha256": "a2686bb27af4c35b29bccaa2f81b6d688958081be32e557d46483a6c12be75c2",
+      "translation_sha256": "a661374a99fbbaf6ad44d5903b8c715779cf73d7503def4ff2596b00459f4ce7",
+      "before": null,
+      "after": "[[Smiting spell]] 神罚的威力随祈祷技能提高而增强。\n\n比欧弗不允许你在神圣试炼中直接用此能力对付另一位使徒。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Recall Apostles ability",
+      "action": "new_translation",
+      "source_sha256": "a9221544900e3378a9a85f3268931f23fd19bb0efd3359a7a215d4382c8e4851",
+      "translation_sha256": "1d0b9c05b27a92a1774358ea6a623c0e092cd1bbbdda7f1e8e50620f0aaa75a3",
+      "before": null,
+      "after": "将你的使徒从地下城的任何地方召回身边。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Dismiss Apostle ability",
+      "action": "new_translation",
+      "source_sha256": "8ea9cfafb0a1f5c53044ba5584b28f5a56412542c37784b6e83e69901d09d175",
+      "translation_sha256": "0b1cf3cd54c48ae9fa2e32da965f1464a7b1ba7a8c9a66d730ea0a3be6d27922",
+      "before": null,
+      "after": "解除这位使徒对你的侍奉，让其以比欧弗之名外出行善。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Recruit Apostle ability",
+      "action": "new_translation",
+      "source_sha256": "517d8243a7fe1524dd8bd696734fb705d23658d919b80b7eadab7b2e59967804",
+      "translation_sha256": "bb3ef6ac2b1deb110c02fbe2542c706b3a9dc916d7847b23a51d337e77340c24",
+      "before": null,
+      "after": "为一位被击败的使徒施行膏礼，接纳其成为永久追随者。他们会随你穿行楼层、共赴险境，甘愿为信仰与同族献出生命。\n\n若他们死去，在你获得足够虔诚后，比欧弗终会将其复活。杀死所有可能参与导致使徒死亡的敌人、令比欧弗满意，可大幅加快这一过程。\n\n同时最多可有 3 位追随者随行，但你可自由遣散旧追随者，邀请新人。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Blood for Blood ability",
+      "action": "new_translation",
+      "source_sha256": "5b9f132fbd469709fcb0136f4f7c931386315684d9395068a2cdc1e9ed4f2fd5",
+      "translation_sha256": "d1f640edca59d0a6d81e79543e700685e141d7039d6bd5c96c4e7b8ee82b61a4",
+      "before": null,
+      "after": "恳求比欧弗赐你一支军队，以鲜血复仇。使用者身边会立即出现兽人盟友，随后还会不断从四面八方赶来更多援军。祷告持续时间相当长，但视野内没有敌人后，会加快结束。\n\n只有站在一位使徒的尸体上时才能使用；每次使徒死亡最多使用一次。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Wall of Briars ability",
+      "action": "new_translation",
+      "source_sha256": "0378cec25501de5499ddb4a7f4bd746c02656740a59f7dfe3381a311438b100d",
+      "translation_sha256": "bdc63d3a15ef7eb053a7e2f52514eb6f96ec47dad0ce5e06ca8212ffe97e311d",
+      "before": null,
+      "after": "在你周围长出短暂存在的荆棘丛。攻击荆棘丛的怪物会被尖刺伤害。祈祷技能会提高荆棘丛的生命。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Grow Ballistomycete ability",
+      "action": "new_translation",
+      "source_sha256": "c54e7e5560535bedc24661fda5513a892d91b123a408ac9bbbff004ac5aa3de4",
+      "translation_sha256": "5fffcf1f6dc258b2e008638951a115a71a1d7ca302ad3010a65a127a02bb3f4c",
+      "before": null,
+      "after": "在选定位置培育一株短暂存在的弹道真菌。它会不时释放孢子，迅速追踪敌人后猛烈爆炸，伤害并混乱爆炸中的所有活物。\n\n祈祷技能会提高弹道真菌的生命与存在时间，也会增加爆炸孢子的伤害。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Overgrow ability",
+      "action": "new_translation",
+      "source_sha256": "b4419923a59459755c7feb04acfabd2fb61694fd902afc17140e4890a30f9fab",
+      "translation_sha256": "3eb4410f5cdd76209cd6a4a8194d81ef97103db33e09b3106636ed7a64aa6faa",
+      "before": null,
+      "after": "永久摧毁一个墙体类结构，并在原处长出短暂存在的植物盟友。即使树木也会为支持费德哈的意志而牺牲生命；只有真正不可摧毁的墙壁不受此力量影响。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Grow Oklob ability",
+      "action": "new_translation",
+      "source_sha256": "f98937d3624ecb2ab759ef6717aee862d74e93e92ee6cba23787347592a0acfa",
+      "translation_sha256": "1856b25e8e5ac1fe537f55b6ac515da9263056aeb7e15b96d7dd7d5c8490e78e",
+      "before": null,
+      "after": "在选定位置培育一株短暂存在的奥克罗布。它会向敌人喷射腐蚀性强酸，是一种危险的植物。\n\n祈祷技能会提高奥克罗布的生命、存在时间及喷酸频率。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Bend Time ability",
+      "action": "new_translation",
+      "source_sha256": "67704b4d5a6064cfa3a310003794e6bd0184b90ecf3b340d5a87a7b8891c960d",
+      "translation_sha256": "fffc3cf95b2f103476faddf7a587e118412135e2d479289566697b204be39789",
+      "before": null,
+      "after": "尝试使与你相邻的所有生物减速。祈祷技能越高，越难抵抗。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Temporal Distortion ability",
+      "action": "new_translation",
+      "source_sha256": "d0ea3eda5cd11f57d04eb585748c4ab3ddad3b7c6b3b37b7e90f5752dc972a8c",
+      "translation_sha256": "5ed218cd98c3a8217dd3447aa245dc4de27ba2b82331c8debfbb47da7dad3b35",
+      "before": null,
+      "after": "扭曲时间流动，使怪物相对于你向未来跳跃。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Slouch ability",
+      "action": "new_translation",
+      "source_sha256": "316d6422da32b250d607d8d615f99ca26918ed956f8cb0624fef0122384ec9b4",
+      "translation_sha256": "feba7380422e7122d9f575b40a8b1d97fd4257e54eb694439cf881c54e75ceae",
+      "before": null,
+      "after": "伤害视野内所有移动速度比你快的生物。速度差越大，伤害越高。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Step From Time ability",
+      "action": "new_translation",
+      "source_sha256": "852bcf941290928ee2d0af6f42b08412e7c64fab0827b013286665b708df05d2",
+      "translation_sha256": "02c64f57c9c842f84d03e64c9f25ec64fdd4ec2cc655c81658cc7fee9e998426",
+      "before": null,
+      "after": "使你完全脱离时间流。时间仍照常流逝，怪物会游荡离去，有时甚至重新入睡。一段时间后，你会以离去那一瞬间的状态归来。\n\n祈祷技能越高，你离去的时间长到足以让警觉怪物重新入睡的可能性就越大。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Slimify ability",
+      "action": "new_translation",
+      "source_sha256": "0c9ce3b9cd2483364db81e4f51bcbb693d3cb3851f4f53fa132a088f855f23c6",
+      "translation_sha256": "bc97b7cb50b47384d197989a816105d55226b2acfc569423e2ed4e10f4fab7ea",
+      "before": null,
+      "after": "为所持武器或双拳覆上黏液，使下一个被命中的活物或有实体的亡灵怪物转化为中立黏液生物。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Oozemancy ability",
+      "action": "new_translation",
+      "source_sha256": "d8b92a025ab1a378e44612d549aba5ad244de9fbce1b5a28837751c0f2781844",
+      "translation_sha256": "d60d887acd400e1d2d401c179afaf99d26531ba2479999a759b755dfbc3f9b65",
+      "before": null,
+      "after": "从周围的地下城墙壁唤出酸性黏液，根据敌人持续相邻的黏液墙数量对其造成伤害。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Curse Item ability",
+      "action": "new_translation",
+      "source_sha256": "867c8f33b56038ccd94d1dddb5a83285af023a6fd7bed684a341bcbd8c5aface",
+      "translation_sha256": "62fa7373053c238d920df8b04bcb6854424aea4acd3cd3574a42fd4667a06540",
+      "before": null,
+      "after": "诅咒一件选定的已装备物品，使其与穿戴者绑定，直到诅咒与物品一同被摧毁。受诅咒的物品无法再附魔或修改。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Shatter The Chains ability",
+      "action": "new_translation",
+      "source_sha256": "56ca90f9463c64164e3ad07c8e85f0d662546183b0c1bdf4a6c83d7ed377fe2e",
+      "translation_sha256": "a25092fda3abda701cdde44af551ce2c034b7a6e8f352c2ee2eddbdb51014915",
+      "before": null,
+      "after": "摧毁一件选定的受诅咒已装备物品，解除穿戴者身上的诅咒。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Shadowslip ability",
+      "action": "new_translation",
+      "source_sha256": "8e7bfdabd7c1812faa37188340693e1bc4fa630734f33d139e580c7c2d3fa4e8",
+      "translation_sha256": "0415e270f55c2e802ac585c511aae3b903e1f1c290c868de7423106ea1ce52dc",
+      "before": null,
+      "after": "立即与你的影子交换位置（影子必须处于活动状态），并使视野内所有敌人分不清你与影子。原本关注你的敌人会转而只盯着影子，数回合后才会察觉错误；若它们成功摧毁影子，幻象会提前结束。\n\n效果持续时间，以及使用后影子立即获得的耐久提升，都随祈祷技能提高而增加。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Aphotic Marionette ability",
+      "action": "new_translation",
+      "source_sha256": "56899d75014979e79f7e818e272e1008ae12963c10832a988d5a857024c13dc4",
+      "translation_sha256": "70167a7e914b41123c915d34fb384a66fc231fc61b5a9a53818ed937b4f699ab",
+      "before": null,
+      "after": "抓住另一个生物的影子，如同使用自己的法术与能力一般，将其法术与能力迅速倾泻向随机敌人。以此方式召来的生物归你所有，原本作用于其自身的许多有益效果也会转而施加给你。你完全不会受到这些法术与能力造成的伤害。\n\n只能用于拥有合适法术、且当前能有效施放这些法术的生物。此过程会使目标的影子变得过于黯淡，无法再次抓取；对一个目标成功使用后，就永远不能再次对其使用。\n\n（并非所有法术都能以此方式施放；无法使用的法术在查看时会标有感叹号。）\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Primordial Nightfall ability",
+      "action": "new_translation",
+      "source_sha256": "6d8f2f90780a5eebb7b9b8b2e9851123c62f68a752fc4423ce7f19bd14505854",
+      "translation_sha256": "26ac49a3103d0de659ec5de48547cec47aef5dc4989025a34453e87191061984",
+      "before": null,
+      "after": "唤来星辰尚未在天空燃起前的夜晚，以无法穿透的黑暗吞没周围。使用者的视野半径会降至零，使敌人无法追踪你或瞄准你使用能力，随后在效果持续期间缓慢恢复正常。你的潜行也会提高。\n\n效果完全结束前无法再次调用，因为即使创世之初的第一夜，最终也必须让位于白昼。\n\n祈祷技能会延长效果持续时间。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Potion Petition ability",
+      "action": "new_translation",
+      "source_sha256": "ec7cd63f3ceb16cc75c3d45338bf4f6e2b9977076ccc79d2e4cd8801154af1ac",
+      "translation_sha256": "d9551c63c6403d0c1a7a0a73a8f762466d44e598e0d7db7be35b48a79bdfced0",
+      "before": null,
+      "after": "请求哥萨戈出售一组药水的效果。（效果会立即、直接施加给请求者，而不是像普通药水那样提供或饮用。）哥萨戈每次会给出三套价格不同的选择。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Call Merchant ability",
+      "action": "new_translation",
+      "source_sha256": "d68840c402dae91755a2647ee0935436783848844437389072a618c39b0f74d8",
+      "translation_sha256": "b3fcf95f18e6a36a1ba6435bbecd24f63ba93e5cb0ee593ce886762ef955ca55",
+      "before": null,
+      "after": "向商人提供资金，帮助其在你所在的位置开店。资助的店铺越多，开店费用越高。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Bribe Branch ability",
+      "action": "new_translation",
+      "source_sha256": "c073075d478b685f7a536cb03c31deceff4c7af54d67491dbcb4f92065ffdf70",
+      "translation_sha256": "1bd61868fa1866268dd5a23e815ec7c15f77c13440f4cb49a975586a753836f3",
+      "before": null,
+      "after": "付给哥萨戈 3000 金币，用于贿赂当前分支的居民；只有存在智慧居民的分支才能贿赂。那些怪物可能不再愿意与你战斗，越强大的居民越可能接受贿赂；更少数会加入你的队伍，但不会离开原来的分支。接受贿赂的敌人会消耗剩余贿赂资金。资金耗尽后，尚未成为盟友的受贿敌人会转为冷漠。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Upheaval ability",
+      "action": "new_translation",
+      "source_sha256": "8927641a5497edaa07051532d8ad0fdb4e82ff7cfb8436c12c4d51fef0337740",
+      "translation_sha256": "0429f20cd84cb4f1f5e3fb84a105019f0b7666389452b65375fbf6af6445c2da",
+      "before": null,
+      "after": "召来大自然的力量，以岩浆、冰、风或碎石轰击一小片区域。爆发不会伤害你，也不会伤害你显现出的元素生物。祈祷技能会提高伤害并扩大影响范围。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Elemental Force ability",
+      "action": "new_translation",
+      "source_sha256": "998c886bee65faf855975eb3d9704eb7b280f1f8c232981deba5deb2a431e460",
+      "translation_sha256": "6fd9b91b183a378e3de84ab10eece8c909e268cc4382f3ca3cf29abd6644bb87",
+      "before": null,
+      "after": "将你的元素云雾凝聚成友善的元素生物。祈祷技能会提高一次使用最多能创造的元素生物数量。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Disaster Area ability",
+      "action": "new_translation",
+      "source_sha256": "6a2b24314027cf5c09143619086131ebfd7b09ea771c1bbb37f650314ea0071e",
+      "translation_sha256": "84b57b9e55d070a3b0ab9165bea695372cf6cc7eba1b7dedb25990ef7de78539",
+      "before": null,
+      "after": "以强大的自然力量轰击你周围整片区域。祈祷技能会提高伤害并扩大影响范围。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Draw Out Power ability",
+      "action": "new_translation",
+      "source_sha256": "c9198782a5ef4c874be9aab764e6194d333dcfd73b8f38e1fb4f07a422e40693",
+      "translation_sha256": "0c20d560977e463eed85f2c91ebe5e743c7310ad2d4ee5eb3bdc11d859d41b42",
+      "before": null,
+      "after": "激发内在力量，恢复生命与魔力，并解除身心受到的外部束缚，包括网、蛛网、绞缠、石化、缓慢和混乱。生命与魔力恢复量随虔诚提高而增加。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Power Leap ability",
+      "action": "new_translation",
+      "source_sha256": "b2596d0676d82e6f2becdace93c965ec5231b597c814cf71f264a2fd324ea8f8",
+      "translation_sha256": "1434bc368c4c7a1becb7d9cab8c4c074a3a1ea64c026779d178024e1e5b4241d",
+      "before": null,
+      "after": "以惊人速度跃向目标位置，落地时引发爆炸，伤害所有相邻敌人。伤害随虔诚和经验等级提高而增加。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Apocalypse ability",
+      "action": "new_translation",
+      "source_sha256": "4ec9fcf7b11d5247157b0f5afa532662249ef9c61f9b5ad380fdecf37bcc7fda",
+      "translation_sha256": "060893a90a0b92619c9993f8d475eadcf4cd295fc1a55acab9c986d0c3189729",
+      "before": null,
+      "after": "向敌人揭示入的真理，对视野内所有敌人造成严重伤害。受影响的生物可能麻痹、减速，或受到反魔法干扰。伤害随虔诚和经验等级提高而增加。\n",
+      "lua_text_indices": [],
+      "mechanics_review": "god-abil.cc:_apply_apocalypse applies ENCH_ANTIMAGIC; not an MP drain"
+    },
+    {
+      "key": "Sacrifice Purity ability",
+      "action": "new_translation",
+      "source_sha256": "5248bc5f04ede143006d74bc4e44927b0a31af905689c81a3dab5fc2525fc913",
+      "translation_sha256": "21d5b72b72c818e718b00f761c108a983c7ec1563a35bdaaac567f3e70156738",
+      "before": null,
+      "after": "牺牲身心的纯洁，造成一种变异。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Sacrifice Words ability",
+      "action": "new_translation",
+      "source_sha256": "9a8433cfb166e123a6825e70e2d7ede17564fe7ec6e689163b4603c71aa93fda",
+      "translation_sha256": "5e2249009f0b4982bf9f55e0e0ba1d1f4cdfd0a65097cc0780aa992339799e55",
+      "before": null,
+      "after": "牺牲在战斗中使用魔法卷轴的能力，除非身受重伤。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Sacrifice Drink ability",
+      "action": "new_translation",
+      "source_sha256": "a2f4cd90e1bddf90fb9a325d34fc21934b4c2204c9abbdeb9fbe2c92cb5b4f62",
+      "translation_sha256": "b795528dceba8a1a7705fcf0edc9eff03c3f2ae9b77521f5d460bb4f22f91cc5",
+      "before": null,
+      "after": "牺牲在战斗中饮用药水的能力，除非身受重伤。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Sacrifice Essence ability",
+      "action": "new_translation",
+      "source_sha256": "e09e62385935402b2502d7e2f47a29dfe6b82052f51e6322136645316d209aba",
+      "translation_sha256": "34d8ac822d41070d287a2b35f9d471004bdb3e3f27fd505cbcff851274b307d0",
+      "before": null,
+      "after": "牺牲魔法精华，造成一种变异。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Sacrifice Health ability",
+      "action": "new_translation",
+      "source_sha256": "d9dc195da7b38a4778f1240f42671dcf57dc125d21b627b572b663d0ee35425f",
+      "translation_sha256": "2b62fba4b921e085837e96dfc812dc3ba5f02f55f19346abc496c978d72c1406",
+      "before": null,
+      "after": "牺牲身体健康，造成一种变异。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Sacrifice Stealth ability",
+      "action": "new_translation",
+      "source_sha256": "cfc51f21761edb7920792560ec926ea15adbf3e079cec4ed289dd982e85a9c90",
+      "translation_sha256": "422cef5757e4fd3d44697422febbc75bd93039ad3d33eb7e6bbc7f0a50988131",
+      "before": null,
+      "after": "牺牲潜行，使敌人总能注意到你，并使潜行技能无法拥有任何等级。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Sacrifice Forms ability",
+      "action": "new_translation",
+      "source_sha256": "6b6c80aa5d5e3855269797ebb53ae9f8e12f264fb435c7522a4ecbf20215256c",
+      "translation_sha256": "41086bf7d824b8097b04c82cdbed78e823294927960da363192c6248a8d2e298",
+      "before": null,
+      "after": "牺牲形态，使你无法主动改变形态，并使变形术技能无法拥有任何等级。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Sacrifice Artifice ability",
+      "action": "new_translation",
+      "source_sha256": "34df29e55ebca4083c016951c97b6bd9476e5b798124621fc69c6c6a0cb26492",
+      "translation_sha256": "5396951761a85ad8bc63e0587c091d5caeb24d889d8d482bfd7db6329e7ad320",
+      "before": null,
+      "after": "牺牲发动任何魔法物品的能力，并使唤发技能无法拥有任何等级。\n\n这包括魔杖及其他使用唤发技能的物品；也就是说，*不*影响长距攻击武器、变形护符和神塔小雕像。这也会使魔法法杖的近战效果大幅减弱。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Sacrifice Love ability",
+      "action": "new_translation",
+      "source_sha256": "9874890811e378173dc814a47f47959ca4ea3e8931a6020e235a8f9e02a14687",
+      "translation_sha256": "f0843c87e25a19ed3ec20a79c15973e09740e5dc3d826594000c88923c7376e3",
+      "before": null,
+      "after": "牺牲友爱，使所有生物都变得敌对，甚至包括你创造的生物。只有作为法术残留、不会独立行动的怪物，例如毁灭之球和幽魂武器，仍可保持友善。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Sacrifice Courage ability",
+      "action": "new_translation",
+      "source_sha256": "5eb418062d5d8b1f255ba0d415715ff44e3bd2216c87fb7b5936cf39dabdc3f1",
+      "translation_sha256": "5a0dc412103c2410da308e7a52e82b5a41f80639f2eb176d0ce201409035c88b",
+      "before": null,
+      "after": "牺牲勇气，使你对危险怪物心生恐惧。这些怪物会令你惊骇，从而降低法术强度，以及战斗中的命中与伤害能力。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Sacrifice Arcana ability",
+      "action": "new_translation",
+      "source_sha256": "5fa29d6bbe9eb2f86ae7374f696f886cbd38589c3fd5368d262d6e96cedcb995",
+      "translation_sha256": "7705f84239fb4cffdb8975e5b2193ca3ff9f721668e105238e02fe097ebcd641",
+      "before": null,
+      "after": "牺牲奥秘，使你失去使用某些魔法学派的能力，并使这些学派的技能无法拥有任何等级。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Sacrifice Nimbleness ability",
+      "action": "new_translation",
+      "source_sha256": "c1e062776b264d334f095baa7d107a92f68385987ceaa39c59509697d58b4d51",
+      "translation_sha256": "3bdd67b5206fb44771f2e21e7f51dec2903e6f9068ae6b9828a61a8efa88c4c5",
+      "before": null,
+      "after": "牺牲灵巧，使闪避技能无法拥有任何等级。若你无法训练防具，此牺牲的价值更高。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Sacrifice Durability ability",
+      "action": "new_translation",
+      "source_sha256": "1351caa1e333a0f02c12c63477de8e29b62184a0a016edbb5c8f13176f74de40",
+      "translation_sha256": "c7ad0e95a83fb4be73d86a70718e2c1df1d6e90028199a0c9b0d9adb37f7136c",
+      "before": null,
+      "after": "牺牲坚韧，使防具技能无法拥有任何等级。若你无法训练闪避，此牺牲的价值更高。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Sacrifice a Hand ability",
+      "action": "new_translation",
+      "source_sha256": "28fdc247f909e5d6683c6ea49f59253115b47f2929ca62fe6a5e5a784fb24e1d",
+      "translation_sha256": "e0087c93825e6035ae3735d0b6be108572fab3392f5184486c80877f99d386ac",
+      "before": null,
+      "after": "牺牲一只手，使你无法使用盾牌{{\n    if you.race() ~= \"Formicid\" then\n        return \"和双手武器\"\n    end\n}}，并少戴一枚戒指。\n",
+      "lua_text_indices": [
+        1
+      ]
+    },
+    {
+      "key": "Sacrifice Experience ability",
+      "action": "new_translation",
+      "source_sha256": "516b4218adc01a017bdda75c9042f1bdebc5622c08fec815c1790278d5a5644c",
+      "translation_sha256": "f6783fb95f8646ffd5f16b806c11a9b40bc8f221433d965a32e6c9f7012f0964",
+      "before": null,
+      "after": "牺牲一部分过去的经验，立即失去一个等级，并使所能达到的等级上限降低一级。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Sacrifice Skill ability",
+      "action": "new_translation",
+      "source_sha256": "4755f470a5b663bf9027b87768d6ad3517379f46c436e9c86efc5f8187a5b3d1",
+      "translation_sha256": "1a386ce44137c583756219180d23a474acec47aba2ec6750ae77dffe7dca2a72",
+      "before": null,
+      "after": "牺牲技能，使所有技能的天资降低一级。这很可能导致已训练的技能等级下降。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Sacrifice an Eye ability",
+      "action": "new_translation",
+      "source_sha256": "e40223fcb5ddeb5477249ae12dc660b0bc85858bf65d31ed554b68a43b760fa3",
+      "translation_sha256": "4bc05d0504da85e010a57f493a86a94863c189da90ad28331d2aa6414a26439e",
+      "before": null,
+      "after": "牺牲一只眼，使你更难命中目标。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Sacrifice Resistance ability",
+      "action": "new_translation",
+      "source_sha256": "4f177c354e7a81ad9b3ba986bc187103aeac48b029d6ad9edfcb5004bcbf4b68",
+      "translation_sha256": "3060b958f589b573cba6c9d5f9759cfeeff7232acf65bf7f8a7b6910a937577c",
+      "before": null,
+      "after": "牺牲对极端温度的抵抗力，使你更容易受到火焰与寒冷伤害。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Reject Sacrifices ability",
+      "action": "new_translation",
+      "source_sha256": "6a1c4e629c2ef32b38255581de229dc030ec98d9676b7c339c329ecef68b8b54",
+      "translation_sha256": "21e2bce404cfe269efd2bee60b078d5b1418dc9555dd453136a1b2b63d304d21",
+      "before": null,
+      "after": "拒绝当前提供的所有牺牲选项。这样做会让入花更长时间，评估你是否准备好再次牺牲。只要仍有未处理的牺牲选项，入就不会提供新的选项。\n\n每次连续拒绝都会显著延长等待时间。接受一次牺牲，会将等待时间重置为标准长度。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Stomp ability",
+      "action": "new_translation",
+      "source_sha256": "879f0dca5531314841da9855c9436d2766c3f24115b02a2226f8c3f39050b7ea",
+      "translation_sha256": "ff9f8d7d64fd33a03af8e3ff8ea95e3b58d8fe405359159d5175ff1ea147b8ca",
+      "before": null,
+      "after": "随舞步节奏用力践踏，对所有相邻生物发出冲击波。冲击波造成其当前生命一定比例的伤害，另加随祈祷技能提高而增加的伤害。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Line Pass ability",
+      "action": "new_translation",
+      "source_sha256": "ff123cdc92c54de61cd29e3a6e9c8c67e544002f3cd10ffe0a750d5bb8ae0e14",
+      "translation_sha256": "dda1082b61641f7d26219f37065410bf5325d71dfa1c7901ed33074dec026210",
+      "before": null,
+      "after": "以超人的速度穿过一条连续排列的生物，抵达新位置。被穿过的生物会短暂混乱，持续时间随祈祷技能提高而延长。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Grand Finale ability",
+      "action": "new_translation",
+      "source_sha256": "9587040ca7993cd2fe2dcb385abab8fb997c317c1cf6ca38a9eee8334841cb2a",
+      "translation_sha256": "3c2dca5d632adb3d7a5d776a678e8d55094a2dac93b0c4db20de1252d2dfb024",
+      "before": null,
+      "after": "在情感与肉体上融入目标，随后从其体内迸出，将其猛烈撕裂，立即杀死。信徒的虔诚与祈祷技能越高，此能力越容易使用。\n\n阿斯卡亚某些更暴烈的教派认为，未曾施行此仪式的人还算不上真正的信徒。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Renounce Religion ability",
+      "action": "retained_after_review",
+      "source_sha256": "e830c35907ba897da7b12a6f34d5f8bc7cf51abb024a8a6d11dcb2e0ae4ee64d",
+      "translation_sha256": "a7820684e37d0aa6409b8339712e6de95154e64692a10b853e4e9f1411be69fd",
+      "before": "放弃你的信仰，离开当前神祇，通常还会激怒这位神祇。\n",
+      "after": "放弃你的信仰，离开当前神祇，通常还会激怒这位神祇。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Convert to Beogh ability",
+      "action": "new_translation",
+      "source_sha256": "88f4558cb3856a00e6bf134cf301450b149443fbd25d2faf73eaf362727433cd",
+      "translation_sha256": "ce33b9bc457ac646220702b694f9206f6cfc917b8704eb04c20af086d55be182",
+      "before": null,
+      "after": "宣誓效忠洞穴兽人之神比欧弗。这位神要求所有不信者都必须死，但新信徒必须得到宽恕并被接纳。当心，未见证你皈依的兽人可能仍然敌对，直到你建立声望！\n\n其他所有神祇都憎恨比欧弗，不会轻易原谅背弃信仰。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Donate Gold ability",
+      "action": "new_translation",
+      "source_sha256": "8885247a440eee1c552e13b722a38381023a1ebf7be6c1e25b7162ccd26d30a6",
+      "translation_sha256": "37ad0c2813168c017bce44b25fa0d65579e56cf73103c0c0909dcef7cbcdfe27",
+      "before": null,
+      "after": "将一半金币捐给辛，使虔诚随时间逐渐增加。总增幅取决于捐献规模。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Recall Ancestor ability",
+      "action": "new_translation",
+      "source_sha256": "018c3c1b544f8d2272bee0ae35ad3346616a94773176a62aadffc454128ada7a",
+      "translation_sha256": "bb696eb2dfbb2d2934fedc6b245cd817208894d4f2fd9fcc56c6136ff7454c34",
+      "before": null,
+      "after": "将你的先祖从地下城的任何地方召回身边。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Idealise ability",
+      "action": "new_translation",
+      "source_sha256": "78ff167302c2cb457ab291353eccd4927f62271689b1f40ade4c232383d5aaf3",
+      "translation_sha256": "7b19aee9951dfba95e50ebdc440929ca3ab76dc1b6a350c654af1cb4065c9d21",
+      "before": null,
+      "after": "使先祖恢复为你心目中最完美的模样。其伤势会被遗忘，完美的光辉充盈其身，短暂而显著地提高力量、施法能力与护甲值。治疗效果与理想化持续时间都随祈祷技能提高而改善。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Transference ability",
+      "action": "new_translation",
+      "source_sha256": "90fcc68f2e663b7baede74201bb6168248260c14b98f9d10647de98859c19fba",
+      "translation_sha256": "024173df9fe4e01cc9fb36d6b178ebac3a8aa7697bbff29b53c0fea103939bb7",
+      "before": null,
+      "after": "迫使目标生物穿过记忆领域，与先祖交换位置。\n\n虔诚较高时，目标附近的生物会受到吸能，程度取决于祈祷技能。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Ancestor Life: Knight ability",
+      "action": "new_translation",
+      "source_sha256": "b6a67ee3e5f7d64ecac038ad73625b14f81024e022a31166f1b6cb047b67b8d5",
+      "translation_sha256": "8f2a7e92c5239c818ab7adc51370a5c03cc19e2f51810ea98a9b2b451b03c5ca",
+      "before": null,
+      "after": "将先祖记作一位骑士，一位防御出众的强大近战斗士。此选择永久生效，无法撤销。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Ancestor Life: Battlemage ability",
+      "action": "new_translation",
+      "source_sha256": "9b629469e0eda7f5060385532a3b31a11d9b1ef7d4b1dcebe55887881cd27485",
+      "translation_sha256": "d19a42a8d25f3bc8052da7ad23a93ccca86874cf9546d8f21b32ca1455f0f0ba",
+      "before": null,
+      "after": "将先祖记作一位战斗法师，一位能以近战与塑能魔法持续猛攻的战士。此选择永久生效，无法撤销。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Ancestor Life: Hexer ability",
+      "action": "new_translation",
+      "source_sha256": "219d1a34acabef663825b59c2d803ccbe72e95aa702f98b2389d5ad428bf0d9d",
+      "translation_sha256": "8191aa58444fb130f7e530dff1192597e58e2ee783e6c8a344b8eac14a2bdda4",
+      "before": null,
+      "after": "将先祖记作一位妖术师，一位能以迅捷刀法与削弱法术制敌的狡黠游荡者。此选择永久生效，无法撤销。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Ancestor Identity ability",
+      "action": "new_translation",
+      "source_sha256": "3ee502f05fef4e3d8182c9dccf61d5d49dd532afd28a3822631471ea1fca5ed5",
+      "translation_sha256": "694445a2813ac2ed238cabd9132ab62b40f21ae05cba7e90927c54e3bccc611f",
+      "before": null,
+      "after": "回忆先祖希望人们如何称呼自己，修正其名字与性别。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Wall Jump ability",
+      "action": "new_translation",
+      "source_sha256": "8607091f7d5dc65e885bc2a47fbc267a4e7900b061f77f2a7bf31e4af36cb368",
+      "translation_sha256": "db517060d9028b1de45d25d7c27db72568f67ddd33ab63641d9084b6f4b41e2e",
+      "before": null,
+      "after": "蹬踏相邻墙壁跃向敌人，攻击落点周围所有敌人。整个动作耗时两个回合。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Serpent's Lash ability",
+      "action": "new_translation",
+      "source_sha256": "79e8258b9cb9a235e7252d0e5d9d6894f9944866a43f8785400abd72adcfd3cc",
+      "translation_sha256": "9d4a713e34e99d71747f7eb50d4dc058328b5366da4819f9ee5b500d91bd33db",
+      "before": null,
+      "after": "使你以超自然速度移动，让最多两格距离的普通移动瞬间完成。在腾蛇鞭效果下进行的武术攻击伤害更高，并且必定命中。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Heavenly Storm ability",
+      "action": "new_translation",
+      "source_sha256": "07fbca2e8a157ce5afcce935ec157009d7d15fb4fa55e9047c1dacd226ee5df9",
+      "translation_sha256": "1e81a8b4065868d848f92d7188456df3007fe3be3fbee3f57aba2405b9045f4b",
+      "before": null,
+      "after": "召来一场天界云雾风暴。风暴持续期间，你的闪避值、战斗命中率与伤害都会大幅提高，以武术攻击命中敌人可继续提高这些加成。风暴会随时间减弱，加成降至零时便会消散。天界云雾会阻止隐形，并遮蔽风暴外生物的视线。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Fiery Armour ability",
+      "action": "new_translation",
+      "source_sha256": "90453d284c29c2a1b5bf7f19e2bd2577848858b7d06fd0a989bc4743d770bb94",
+      "translation_sha256": "cb59cec5821f537fc37ffab4e55e41d39a0d7b2a94c7a2e7e7f9ac80c2916efe",
+      "before": null,
+      "after": "以火焰护住身体，提供 +7 护甲值，并灼伤胆敢近战攻击你的敌人。火焰会燃烧很长时间才熄灭。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Foxfire Swarm ability",
+      "action": "new_translation",
+      "source_sha256": "adb68b256a1c84d15db0403bca87f7d005ee15c1fc7b18992456f904bc828357",
+      "translation_sha256": "d281af596af6584052ce6af4bd5b89360e6def6db82c1d0aa7d97537bec0a54a",
+      "before": null,
+      "after": "在你四周唤出一群活焰。它们会迅速追逐最近的怪物，并灼烧目标。若无法抵达目标，或你与其交换位置，它们就会无害地消散。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Rising Flame ability",
+      "action": "new_translation",
+      "source_sha256": "ce2f6d79aae41bbe1c902ec51f20e7d8cbcd54b719360892b76d9321c984fbb6",
+      "translation_sha256": "00ff46141a09c8adb8c98a8fcd8f3952cf2e58dfd990cd1daaefeac7b89539c1",
+      "before": null,
+      "after": "使你向上飘浮；短暂等待伊格尼斯积蓄足够力量后，将你轰穿天花板，送往上一层。此能力只能使用一次。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Hop ability",
+      "action": "retained_after_review",
+      "source_sha256": "7129234c714711989323a8896a5ef89935f71e4bdf065e84358df58f0c9b8375",
+      "translation_sha256": "4308963eb0650b641b318df10e951efa34434e1987f9db13f0c7ae2740f3f580",
+      "before": "向选定目的地跳跃，在附近某处落地。使用后，需要经过一段不移动的时间才能再次跳跃；施法、攻击等其他动作不受此限制。\n",
+      "after": "向选定目的地跳跃，在附近某处落地。使用后，需要经过一段不移动的时间才能再次跳跃；施法、攻击等其他动作不受此限制。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Blinkbolt ability",
+      "action": "new_translation",
+      "source_sha256": "a378170c447a07c9c1a55f9f712de79bb0014b3672a4801e81f950e084e8c8b8",
+      "translation_sha256": "085f1b9214c22725ed82bc31b4fae192189a113e49c1ff98ec781f2191fdbf4b",
+      "before": null,
+      "after": "使使用者化为活体闪电，射向选定怪物，对路径上的一切造成电击伤害，并在闪电终点重新现身。使用后，短时间内无法再次使用此能力。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Siphon Essence ability",
+      "action": "new_translation",
+      "source_sha256": "3e6bc60a0284e01bfd28e74a00b585684f50de6432fa2b1b52bf6a6f2d9efc5b",
+      "translation_sha256": "3d3854a7152b1a597c8ff80a870aaf27214792d824e76b54205cd6bee0897efa",
+      "before": null,
+      "after": "折磨附近的活物敌人，使其生命减半。施加的痛苦会治疗使用者，治疗量取决于变形术技能。使用后，短时间内无法再次使用此能力。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Evoke the Sceptre of Asmodeus ability",
+      "action": "new_translation",
+      "source_sha256": "e92565d3283da3548cadc66e6ff1b41a0166abe4ec32e46d3e086777e9ac6793",
+      "translation_sha256": "7f5a1b7aa2d2406475b125e47dcbfa234ade9749a3c3c59332428c67a9b6b671",
+      "before": null,
+      "after": "借助阿斯蒙蒂斯的力量，召来地狱的火焰恶魔。召来的恶魔只能暂时保持友善，最终会在消失前变为敌对。成功率随唤发技能提高而增加，且只有持用阿斯蒙蒂斯的权杖时才能使用此能力。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Evoke Damnation ability",
+      "action": "new_translation",
+      "source_sha256": "de62037ddd747d96f189939a23083a64b0b25f768f177228ee91bcf7be48f235",
+      "translation_sha256": "c81447a1b0d9a8ad6e2fa181169bf06b785c96cc00f72ba560aedae54125823f",
+      "before": null,
+      "after": "以天谴轰击目标敌人。这股邪恶力量会伤害目标及其相邻生物，不受护甲值或抗性等任何防护手段影响。不过，某些生物完全不受天谴伤害，通常是那些自己也能调用这种力量的生物。此能力的威力随唤发技能提高而增强。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Evoke the Staff of Olgreb ability",
+      "action": "new_translation",
+      "source_sha256": "7529c9543200d5f9412fa2396da4bc857fa46269f8448b70f9357d2b13d34907",
+      "translation_sha256": "594c9eca7661126674a1f4ef8a6ee9699c8414ec507a86cd1f8d4cee42d0a0c8",
+      "before": null,
+      "after": "使施法者散发剧毒能量，在光环持续期间，不断使视野内所有目标中毒。此能力的威力随唤发技能提高而增强，且只有持用奥格雷布之杖时才能使用。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Jump ability",
+      "action": "new_translation",
+      "source_sha256": "6afd3645f0a84be73fbf4efc1e22651584396760604d89d2c52abd22f73782c9",
+      "translation_sha256": "4463fb087f4714638b9b69a70bc78e84f584b1cc30dea68273ca7a634d52f8b6",
+      "before": null,
+      "after": "转瞬间跃过空中。虽然无法控制落点，动作却极其突然灵巧，以至于在你能再次行动前，没有怪物能命中你，许多怪物甚至会完全失去你的踪迹。\n\n每次使用后，都必须短暂恢复才能再次使用。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Watery Grave ability",
+      "action": "new_translation",
+      "source_sha256": "c57c0038376be78fcf16cddbca5de495407a0d5d104ac45ac0f77383a34886bd",
+      "translation_sha256": "961bd30d8badcafee3a52fc4199c5495f665b637377060a751b4883b8d07e7fa",
+      "before": null,
+      "after": "使你附近的所有水域化为汹涌潮水，尝试淹没站在其中或其上方的每个敌人。需要空气呼吸的目标还会进入淹水状态，在数回合内无法施放受静默影响的法术，并受到少量窒息伤害。\n\n使用后，你必须获得经验值，才能恢复足够的力量再次使用此能力。\n",
+      "lua_text_indices": []
+    },
+    {
+      "key": "Bestial Takedown ability",
+      "action": "new_translation",
+      "source_sha256": "f0394e9b6100e5da880e3ec0badf7bcfe85d9bb68397ff89b5c150d2b02d26e3",
+      "translation_sha256": "e5d70b1396d1f974a30553a19451c61b152a6d4eb74f9d066a710237bbf96a33",
+      "before": null,
+      "after": "释放捕食本能的全部力量，跃向一个恐惧的敌人，并发动凶猛的近战攻击。此攻击获得基于变形术技能的伤害倍率。若杀死目标，随后必定会进行一次嚎叫。\n\n只能选择处于恐惧状态、且至少有一个相邻格可供占据的敌人为目标。\n",
+      "lua_text_indices": []
+    }
+  ],
+  "additional_reviewed_reference": {
+    "source": "descript/spells.txt",
+    "key": "sign of ruin spell",
+    "source_sha256": "c3bc8b2dfb3e49fa8ffae05e35f3e47960ca8a14e396f187949c95e440c7c22f",
+    "translation_sha256": "365f4a7f27c27b9b7221d3c39b35ef70cb75db6f0a8207447b83e7c3f66e0588"
+  },
+  "english_sha256": "9b1210a08f6b785633118f1549b98631ce17c8b04341193c0ad5b703c70c6546"
+}

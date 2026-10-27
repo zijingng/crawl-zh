@@ -1,0 +1,65 @@
+{
+  "baseline": "0.34.1",
+  "platform": "Windows / MSYS2 MINGW64 / local Tiles",
+  "font_configuration": "五组 Consolas 主字体 + 微软雅黑后备字体，18 号",
+  "date": "2026-10-20",
+  "delivered_executable_sha256": "335e8b8c0a5133ee90b61294a9e17e0792016ce12adb8a0c6bb1476233e5f54d",
+  "automated": {
+    "cpp_test_cases": 5,
+    "cpp_assertions": 70,
+    "catalogue_python_tests": 8,
+    "textdb_python_tests": 4,
+    "lua_branches": 7,
+    "build": "passed"
+  },
+  "gui_checks": [
+    {
+      "module": "角色创建",
+      "status": "observed",
+      "result": "27 个种族名称、分组和选择提示正常显示；人类与机甲哥布林说明的中文连续文本换行已修复并复查。背景逐项选择未穷举。"
+    },
+    {
+      "module": "HUD",
+      "status": "observed",
+      "result": "生命/魔力、力智敏、噪声、时间标题正常；AC/EV/SH、称号、地名等保留原缩写或英文。"
+    },
+    {
+      "module": "技能",
+      "status": "observed",
+      "result": "技能名、数值列、自动/手动开关、目标和帮助入口正常；战斗说明标题与已校对正文匹配。"
+    },
+    {
+      "module": "背包与装备说明",
+      "status": "observed",
+      "result": "分类标题与装备栏位正常。最终构建的鳞甲窗口：已校对正文、基础护甲值/累赘值、附魔上限、搜索前缀标题及 (t)/(d)/(=)/(i) 操作提示正常；预览属性变化仍为原英文。"
+    },
+    {
+      "module": "能力",
+      "status": "observed",
+      "result": "狂战士能力菜单标题、消耗/失败率列与切换说明正常。能力名称和成本细项仍可能为英文。"
+    },
+    {
+      "module": "法术库",
+      "status": "observed",
+      "result": "记忆/说明/隐藏/显示页提示、流派/失败率/等级标题、法术容量及退出提示正常。未实际执行记忆或施法动作。"
+    },
+    {
+      "module": "帮助",
+      "status": "observed",
+      "result": "法术库帮助的完整中文正文、颜色、Tab/Shift-Tab/Ctrl-F/Enter 和 auto_hide_spells 等标记可读。其他 7 个主题未逐窗口穷举。"
+    },
+    {
+      "module": "英文",
+      "status": "observed",
+      "result": "独立英文配置启动后，HUD、技能名称、训练开关、帮助和启动提示保持英文。"
+    }
+  ],
+  "not_run": [
+    "窄窗口与其他 DPI/字号的全量检查",
+    "27 种族/26 背景逐个完成创建",
+    "实际升级、恐惧、38 项状态及全部能力效果触发",
+    "保存、退出、切换语言后读取同一存档的完整流程",
+    "所有帮助主题、背包分页、目标编辑与名称搜索组合",
+    "Console、WebTiles 和其他操作系统"
+  ]
+}

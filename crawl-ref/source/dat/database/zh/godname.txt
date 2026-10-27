@@ -1,3 +1,4 @@
+# Generated from localization/zh_CN/textdb.po; do not edit.
 %%%%
 Zin lastname
 
@@ -5,11 +6,11 @@ Zin lastname
 %%%%
 Yredelemnul lastname
 
-黑暗神伊莱德莱姆努尔
+堕落者伊莱德莱姆努尔
 %%%%
 Okawaru lastname
 
-战争之主奥卡瓦鲁
+战争之主奥格瓦如
 %%%%
 Makhleb lastname
 
@@ -17,7 +18,7 @@ Makhleb lastname
 %%%%
 Sif Muna lastname
 
-学识之主席夫·穆纳
+学识守护者席夫·穆纳
 %%%%
 Trog lastname
 
@@ -29,39 +30,39 @@ Elyvilon lastname
 %%%%
 Lugonu lastname
 
-无形之神卢格努
+无形者卢戈努
 %%%%
 Beogh lastname
 
-强盗比欧弗
+牧者比欧弗
 %%%%
 Fedhas lastname
 
-费德哈·莽动
+费德哈·玛达什
 %%%%
 Cheibriados lastname
 
-深思者切布理亚多
+沉思者切布理亚多
 %%%%
 Ashenzari lastname
 
-束缚者艾申扎利
+受缚者艾申扎利
 %%%%
 Dithmenos lastname
 
-隐没者迪斯姆诺
+隐匿者迪斯姆诺
 %%%%
 Nemelex Xobeh lastname
 
-杂耍者尼姆雷斯・索布
+诡术者尼姆雷斯・索布
 %%%%
 Gozag lastname
 
-贪婪者哥萨戈·亿·赛格斯
+贪婪者哥萨戈·伊姆·萨戈兹
 %%%%
 Qazlal lastname
 
-兴风者卡兹拉尔
+风暴使者卡兹拉尔
 %%%%
 Ru lastname
 
@@ -73,27 +74,27 @@ Pakellas lastname
 %%%%
 Uskayaw lastname
 
-狂欢者乌斯卡亚
+狂欢者阿斯卡亚
 %%%%
 Hepliaklqana lastname
 
-遗忘者惠普利亚卡纳
+被遗忘者惠普利亚卡纳
 %%%%
 Ignis lastname
 
-伊格尼斯，曳焰
+伊格尼斯，垂死之焰
 %%%%
 Wu Jian lastname
 
-无间门派
+武剑会
 %%%%
 Xom lastname
 
 w:280
-混沌之主佐姆
+混沌之神佐姆
 
 w:20
-混沌神佐姆
+混沌者佐姆
 
 w:5
 随机之主佐姆
@@ -102,68 +103,67 @@ w:5
 随机数之神佐姆
 
 w:5
-年长的混沌神佐姆
+远古混沌神佐姆
 
-谲诈之主佐姆
-
-w:5
-不定之主佐姆
+诡诈者佐姆
 
 w:5
-无常之主佐姆
-
-重门之主佐姆
-
-任性之主佐姆
+难以预测的佐姆
 
 w:5
-血腥的奇想之主佐姆
+不可预测的佐姆
+
+千门之主佐姆
+
+反复无常的佐姆
 
 w:5
-强施的奇想之主佐姆
+血染奇想的佐姆
+
+w:5
+强施奇想的佐姆
 
 冷幽默之主佐姆
 
 w:5
-恶意的咯咯笑之主佐姆
+恶意窃笑的佐姆
 
 w:5
-恶毒的咯咯笑之主佐姆
+恶毒窃笑的佐姆
 
 w:2
-深意之主佐姆
+意图玄奥的佐姆
 
 w:2
-妙意之主佐姆
+意图不可言说的佐姆
 
 w:2
-随意之主佐姆
+意图易变的佐姆
 
 w:2
-肆意之主佐姆
+意图急转的佐姆
 
 w:2
-隐意之主佐姆
+意图不明的佐姆
 
-易变之主佐姆
+善变者佐姆
 
-意图不详之主佐姆
+意向不详的佐姆
 
 w:4
 佐姆大师
 
 w:2
-佐姆大师，佐姆罗姆叮咚
+佐姆大师，佐姆阿罗姆叮咚
 
 w:2
-佐姆大师，乐子神佐姆
+佐姆大师，佐姆欢乐秀
 
 w:2
-佐姆大师，佐姆佐姆与鲍姆，布拉娜范娜与佛姆
+佐姆大师，佐姆佐姆波鲍姆，香蕉法娜弗佛姆
 
 w:5
-混乱之源佐姆
+动荡之源佐姆
 
 w:5
-间断之源佐姆
-%%%%
+断续之源佐姆

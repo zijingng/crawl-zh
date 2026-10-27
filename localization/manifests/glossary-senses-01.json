@@ -1,0 +1,369 @@
+{
+  "batch": "glossary-senses-01",
+  "terms": 1707,
+  "changed": 60,
+  "before_sha256": "d6ed4c7b21a3b98dc809f70fcde14a09ddf6ce7cf6315aad10d9a6b83c7647de",
+  "after_sha256": "92bf553f99af5641c1425d31753540e1fe182bfaa5129a4a140ce70d9d27d999",
+  "changes": [
+    {
+      "term": "animate",
+      "before": "活化",
+      "after": "活化/活的",
+      "context": "赋予生命的动作用活化。animate flames 等形容词表示活的或活焰。完整 Animate 系法术名优先。"
+    },
+    {
+      "term": "aptitude",
+      "before": "技能天资",
+      "after": "技能天资/天资",
+      "context": "技能表或独立标签用技能天资。普通叙述如 aptitude for magic 用魔法天资。弃用资质，不以斜杠重新收录旧译。"
+    },
+    {
+      "term": "Armour",
+      "before": "防具",
+      "after": "防具/护身",
+      "context": "装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+    },
+    {
+      "term": "blink",
+      "before": "闪烁",
+      "after": "闪烁/闪现/眨眼",
+      "context": "位移效果优先用闪烁。普通快速显现可用闪现，眨眼为生理动作。完整法术名优先，不改动英文控制字。"
+    },
+    {
+      "term": "book",
+      "before": "魔法书",
+      "after": "魔法书/书/手册",
+      "context": "含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+    },
+    {
+      "term": "Brand",
+      "before": "印记",
+      "after": "印记/烙印",
+      "context": "武器魔法属性统一用印记。烙在实体上的标记或动作按语境用烙印。"
+    },
+    {
+      "term": "character",
+      "before": "角色",
+      "after": "角色/字符/性格",
+      "context": "玩家或游戏人物用角色。键位、文本编码用字符。人物性情用性格。"
+    },
+    {
+      "term": "Conjurations",
+      "before": "塑能系魔法",
+      "after": "塑能系魔法/魔法",
+      "context": "学派或技能用塑能系魔法。泛指施展的魔法时可用魔法，不把普通复数名词强制改成技能标签。"
+    },
+    {
+      "term": "Console",
+      "before": "字符版",
+      "after": "字符版/控制台/终端",
+      "context": "游戏显示模式用字符版。系统控制台或终端按上下文用对应词。条件标签保留英文。"
+    },
+    {
+      "term": "damnation",
+      "before": "天谴",
+      "after": "天谴/诅咒",
+      "context": "无视抗性的伤害机制用天谴。place of damnation 等宗教或叙事修辞可用诅咒。Hurl Damnation 等完整历史专名以专条为准。"
+    },
+    {
+      "term": "Depths",
+      "before": "地底",
+      "after": "地底/深处",
+      "context": "分支专名用地底。the depths of the dungeon 等普通深度描述用深处，不额外引入地底分支。"
+    },
+    {
+      "term": "Dexterity",
+      "before": "敏捷",
+      "after": "敏捷/灵巧",
+      "context": "Dex 属性用敏捷。普通身手描述可用灵巧。"
+    },
+    {
+      "term": "drain",
+      "before": "吸能",
+      "after": "吸能/吸取/消耗",
+      "context": "负能量或生命上限机制用吸能。吸血、汲取资源用吸取。维持法术耗费魔力用消耗。"
+    },
+    {
+      "term": "draining",
+      "before": "吸能",
+      "after": "吸能/汲取/耗损",
+      "context": "印记、攻击效果或状态用吸能。叙述生命获取用汲取。使用物品付出生命代价用耗损。"
+    },
+    {
+      "term": "exit",
+      "before": "出口",
+      "after": "出口/退出/离开",
+      "context": "地点或设施用出口。菜单命令用退出。离开区域的动作用离开。"
+    },
+    {
+      "term": "Fighting",
+      "before": "战斗",
+      "after": "战斗/作战/格斗",
+      "context": "技能标签固定用战斗。普通动作按句意用作战或格斗。"
+    },
+    {
+      "term": "floor",
+      "before": "地面",
+      "after": "地面/楼层/地板/向下取整",
+      "context": "物理表面按语境用地面或地板。地下城深度用楼层。math.floor 为向下取整函数，代码标识符保留英文。"
+    },
+    {
+      "term": "gateway",
+      "before": "入口",
+      "after": "入口/传送门/出口",
+      "context": "强调进入功能时用入口。连接区域的设施可用传送门。强调离开当前位置时用出口。"
+    },
+    {
+      "term": "hunger",
+      "before": "饥饿值",
+      "after": "饥饿值/饥饿/渴望",
+      "context": "旧版机制数值用饥饿值。生理状态用饥饿。hunger for power/life 为渴望，不暗示当前存在饥饿机制。"
+    },
+    {
+      "term": "Intelligence",
+      "before": "智力",
+      "after": "智力/智慧/心智",
+      "context": "Int 属性用智力。生物认知、保有意识等叙述用智慧或心智。"
+    },
+    {
+      "term": "manual",
+      "before": "手册",
+      "after": "手册/手动",
+      "context": "可学习技能的物品用手册。技能训练模式等形容词用手动。"
+    },
+    {
+      "term": "passage",
+      "before": "通道",
+      "after": "通道/穿行/流逝",
+      "context": "空间路径用通道。动作可用穿行。passage of time 用时间流逝。"
+    },
+    {
+      "term": "school",
+      "before": "魔法学派",
+      "after": "魔法学派/流派",
+      "context": "法术分类用魔法学派，也可在连续说明中简称流派。"
+    },
+    {
+      "term": "Shield",
+      "before": "格挡值",
+      "after": "格挡值/盾牌/保护",
+      "context": "SH 属性用格挡值。装备名词 shield 用盾牌。shield 作动词用保护，不改写物品种类。"
+    },
+    {
+      "term": "Shields",
+      "before": "盾牌",
+      "after": "盾牌/保护",
+      "context": "技能或装备复数用盾牌。shields 作第三人称动词表示保护。"
+    },
+    {
+      "term": "slug",
+      "before": "鼻涕虫",
+      "after": "鼻涕虫/弹丸",
+      "context": "生物用鼻涕虫。手铳等射出的金属 slug 用弹丸。"
+    },
+    {
+      "term": "staff",
+      "before": "法杖",
+      "after": "法杖/工作人员",
+      "context": "武器用法杖。maintenance staff 等人员集合用工作人员。"
+    },
+    {
+      "term": "Strength",
+      "before": "力量",
+      "after": "力量/强度/威力",
+      "context": "Str 属性用力量。法术、效果或攻击的 strength 按语境用强度或威力。"
+    },
+    {
+      "term": "Temple",
+      "before": "众神殿",
+      "after": "众神殿/神庙/庙宇",
+      "context": "分支简称用众神殿。泛指某位神祇的建筑用神庙或庙宇。"
+    },
+    {
+      "term": "Tiles",
+      "before": "图形版",
+      "after": "图形版/图块/方格",
+      "context": "与 Console 对举的客户端模式用图形版。资源图像用图块。地图位置的 tiles 用方格。条件标签保留英文。"
+    },
+    {
+      "term": "turn",
+      "before": "回合",
+      "after": "回合/转向/变成/轮流",
+      "context": "时间单位用回合。动词及 in turn、turn into 等短语按句意选择转向、变成、轮流等译法。"
+    },
+    {
+      "term": "Vaults",
+      "before": "宝库",
+      "after": "宝库/密室/跃起",
+      "context": "分支专名用宝库。地图 vaults 用密室。vaults off a wall 作动词表示蹬墙跃起。"
+    },
+    {
+      "term": "Will",
+      "before": "意志",
+      "after": "意志/将会/会",
+      "context": "属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+    },
+    {
+      "term": "noise",
+      "before": "噪音",
+      "after": "噪音/声音/巨响",
+      "context": "机制、标题及数值用噪音。具体可听声响按语境用声音或巨响，不强制把研磨声等改为噪音。"
+    },
+    {
+      "term": "evoke",
+      "before": "唤发",
+      "after": "唤发/发动/使用",
+      "context": "技能与唤发物品的专用操作用唤发。泛指发动效果或使用物品时可按句意译。"
+    },
+    {
+      "term": "Slow",
+      "before": "缓慢术",
+      "after": "缓慢术/减速/缓慢/迟缓",
+      "context": "法术标题用缓慢术。施加状态用减速。普通动作或反应用缓慢、迟缓。"
+    },
+    {
+      "term": "Petrify",
+      "before": "石化术",
+      "after": "石化术/石化",
+      "context": "法术标题用石化术。逐渐变成石头的过程或状态用石化。"
+    },
+    {
+      "term": "Charm",
+      "before": "魅惑术",
+      "after": "魅惑术/护符/符印",
+      "context": "法术用魅惑术。普通实体 charm 按作用用护符或符印，不与变形护符种类混同。"
+    },
+    {
+      "term": "Pain",
+      "before": "痛苦术",
+      "after": "痛苦术/痛苦",
+      "context": "法术标题用痛苦术。卡牌、武器印记或普通感受用痛苦，完整物品专名优先。"
+    },
+    {
+      "term": "Freeze",
+      "before": "冰冻",
+      "after": "冰冻/冻结/冻伤",
+      "context": "能力或法术名保留冰冻。结成冰用冻结。攻击动词造成寒冷伤害可用冻伤。"
+    },
+    {
+      "term": "Shatter",
+      "before": "粉碎术",
+      "after": "粉碎术/打碎/震碎",
+      "context": "高等级法术标题用粉碎术。普通破坏动作用打碎。神器独立效果可用震碎，不能一律当作施放粉碎术。"
+    },
+    {
+      "term": "Dispersal",
+      "before": "分散术",
+      "after": "分散术/分散",
+      "context": "法术标题用分散术。普通分散动作或效果用分散。分散陷阱按完整专名。"
+    },
+    {
+      "term": "Paralyse",
+      "before": "麻痹术",
+      "after": "麻痹术/麻痹",
+      "context": "法术标题用麻痹术。造成暂时无法行动的状态说明用麻痹。"
+    },
+    {
+      "term": "Might",
+      "before": "强力术",
+      "after": "强力术/可能/力量",
+      "context": "法术或能力标题保留强力术。情态动词 might 表示可能。名词 might 表示力量或威力。"
+    },
+    {
+      "term": "Mesmerise",
+      "before": "迷魂术",
+      "after": "迷魂术/迷住/迷惑",
+      "context": "法术标题用迷魂术。声音吸引等动作描述可用迷住或迷惑，但实际状态效果须准确说明。"
+    },
+    {
+      "term": "Ensnare",
+      "before": "蛛网缠缚",
+      "after": "蛛网缠缚/束缚/诱捕",
+      "context": "法术或蛛网效果用蛛网缠缚。普通捆束动作用束缚。捕食动作可用诱捕。"
+    },
+    {
+      "term": "Gloom",
+      "before": "幽暗",
+      "after": "幽暗/愁苦",
+      "context": "暗处或对应魔法用幽暗。花朵枯死等情绪修辞可用愁苦。"
+    },
+    {
+      "term": "Discord",
+      "before": "不和之音",
+      "after": "不和之音/Discord",
+      "context": "法术标题用不和之音。社区软件 Discord 保留产品名。"
+    },
+    {
+      "term": "Iceblast",
+      "before": "冰爆术",
+      "after": "冰爆术/冰爆",
+      "context": "法术标题用冰爆术。wand of iceblast 为冰爆魔杖，复合物品名省略术字。"
+    },
+    {
+      "term": "Dream Dust",
+      "before": "梦尘术",
+      "after": "梦尘术/梦尘",
+      "context": "法术标题用梦尘术。绵羊毛上或空气中的实际颗粒用梦尘。"
+    },
+    {
+      "term": "Flight",
+      "before": "飞行术",
+      "after": "飞行术/飞行/一群",
+      "context": "完整法术标题用飞行术。移动能力或状态用飞行。a flight of butterflies 指一群蝴蝶。"
+    },
+    {
+      "term": "Infusion",
+      "before": "灌注术",
+      "after": "灌注术/灌注/补充",
+      "context": "法术标题用灌注术。向物品灌入魔力用灌注。魔力药水提供能量用补充。"
+    },
+    {
+      "term": "Recall",
+      "before": "召回术",
+      "after": "召回术/召回",
+      "context": "法术标题用召回术。召回先祖、法球等动作用召回。Word of Recall 使用完整专名召回真言。"
+    },
+    {
+      "term": "Regeneration",
+      "before": "再生术",
+      "after": "再生术/再生/恢复",
+      "context": "法术标题用再生术。状态或生命再生机制用再生。普通恢复过程按句意表达。"
+    },
+    {
+      "term": "Resurrect",
+      "before": "复活术",
+      "after": "复活术/复活",
+      "context": "法术标题用复活术。神祇让使徒重新存活的动作用复活。"
+    },
+    {
+      "term": "Sacrifice",
+      "before": "献祭",
+      "after": "献祭/牺牲/祭仪",
+      "context": "献祭选项与能力用献祭。付出代价或失去能力用牺牲。叙事中的献神仪式可用祭仪。"
+    },
+    {
+      "term": "Ring of Thunder",
+      "before": "雷霆之环",
+      "after": "雷霆之环/一圈雷云",
+      "context": "能力专名用雷霆之环。怪物周围雷云的外观叙述用一圈雷云。"
+    },
+    {
+      "term": "the Depths",
+      "before": "地底",
+      "after": "地底/深处",
+      "context": "分支专名用地底。普通地点的纵深描述用深处。"
+    },
+    {
+      "term": "Arena",
+      "before": "奥格瓦如竞技场",
+      "after": "奥格瓦如竞技场/竞技场",
+      "context": "奥格瓦如的分支用奥格瓦如竞技场。怪物模拟模式或一般场地用竞技场。Gauntlet 依其完整专名。"
+    },
+    {
+      "term": "the Arena",
+      "before": "奥格瓦如竞技场",
+      "after": "奥格瓦如竞技场/竞技场",
+      "context": "奥格瓦如的分支用奥格瓦如竞技场。怪物模拟模式或泛指场地用竞技场。"
+    }
+  ]
+}

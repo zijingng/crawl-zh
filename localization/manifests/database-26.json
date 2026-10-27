@@ -1,0 +1,203 @@
+{
+  "source": "database/monspeak.txt",
+  "entries": [
+    {
+      "key": "crystal guardian",
+      "context": "textdb:database/monspeak.txt:crystal guardian",
+      "source_sha256": "3a7e3632c6fccf600a118e441dcf39f26d1db239530312650b1a5052c0eab918",
+      "review_status": "reviewed",
+      "review_batch": "database-26"
+    },
+    {
+      "key": "death cob",
+      "context": "textdb:database/monspeak.txt:death cob",
+      "source_sha256": "dd05a22ffa9a5f72e649b10ec9e08bcb6fe81a2ee4d12f11a1e72dfd55a15811",
+      "review_status": "reviewed",
+      "review_batch": "database-26"
+    },
+    {
+      "key": "death yak",
+      "context": "textdb:database/monspeak.txt:death yak",
+      "source_sha256": "18e95f2ae85b34f034a959093f69427faaca54761b6b93e5148ecbdf734a5949",
+      "review_status": "reviewed",
+      "review_batch": "database-26"
+    },
+    {
+      "key": "deep elf high priest",
+      "context": "textdb:database/monspeak.txt:deep elf high priest",
+      "source_sha256": "dcb124f20b25c05db6313fba771dfad16ef2762e1b679e2ac69201395f6c8b1b",
+      "review_status": "reviewed",
+      "review_batch": "database-26",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_high_priest_",
+          "source_sha256": "83db7e37d61e2c95ecd1cc9a7ecce6a4987874c66287ceade3b9a816675a7a5e",
+          "translation_sha256": "83db7e37d61e2c95ecd1cc9a7ecce6a4987874c66287ceade3b9a816675a7a5e"
+        }
+      ]
+    },
+    {
+      "key": "deep elf sorcerer",
+      "context": "textdb:database/monspeak.txt:deep elf sorcerer",
+      "source_sha256": "c773ff4f61150988cbc1d810e8eefa3599a4426dc3b6ed85b91de3a883865a79",
+      "review_status": "reviewed",
+      "review_batch": "database-26",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_wizard_",
+          "source_sha256": "6ce3c2a162afbb074b878d49fb96bd60ed416a7bbc0301f402c3aeb4a4565125",
+          "translation_sha256": "6ce3c2a162afbb074b878d49fb96bd60ed416a7bbc0301f402c3aeb4a4565125"
+        }
+      ]
+    },
+    {
+      "key": "dream sheep",
+      "context": "textdb:database/monspeak.txt:dream sheep",
+      "source_sha256": "46ec2842a02f32a9ed22c579993a80b8ae664b429fd15c0e232e7e717a50c9d4",
+      "review_status": "reviewed",
+      "review_batch": "database-26"
+    },
+    {
+      "key": "default electric golem",
+      "context": "textdb:database/monspeak.txt:default electric golem",
+      "source_sha256": "99ecb519cc112fdfc30ded01f0995fe3ccd00d580288cfa0d5f67072f82fe9c6",
+      "review_status": "reviewed",
+      "review_batch": "database-26"
+    },
+    {
+      "key": "erythrospite",
+      "context": "textdb:database/monspeak.txt:erythrospite",
+      "source_sha256": "1c1e5aebc7ae0af524e044e93163f2cbe52ded9d8e299de6c83e17b4642ecf2b",
+      "review_status": "reviewed",
+      "review_batch": "database-26"
+    },
+    {
+      "key": "frilled lizard",
+      "context": "textdb:database/monspeak.txt:frilled lizard",
+      "source_sha256": "cf341bd3b5d31979d694e1ee2f8f5af4838b4a8a6f252a212ca9aa19abb8de99",
+      "review_status": "reviewed",
+      "review_batch": "database-26"
+    },
+    {
+      "key": "crimson imp",
+      "context": "textdb:database/monspeak.txt:crimson imp",
+      "source_sha256": "23fa4819beb98472def605bc466b2f94959d826aaf6551055625223bed92a240",
+      "review_status": "reviewed",
+      "review_batch": "database-26",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_hostile_imp_",
+          "source_sha256": "004c9ef883573bb89bdf6864a45057a879f255e4271f3a4e5c376b48d418eccb",
+          "translation_sha256": "004c9ef883573bb89bdf6864a45057a879f255e4271f3a4e5c376b48d418eccb"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_says_imp_taunt_",
+          "source_sha256": "d325d9be57cdb15fb06f03b0b678206ca92c7c75d16851af6e08aa367c3137ed",
+          "translation_sha256": "99c5ba345fd47f77a10347b55733dfdb7a60b499363c4cd867c09eb5fc25e625"
+        }
+      ]
+    },
+    {
+      "key": "iron imp",
+      "context": "textdb:database/monspeak.txt:iron imp",
+      "source_sha256": "23fa4819beb98472def605bc466b2f94959d826aaf6551055625223bed92a240",
+      "review_status": "reviewed",
+      "review_batch": "database-26",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_hostile_imp_",
+          "source_sha256": "004c9ef883573bb89bdf6864a45057a879f255e4271f3a4e5c376b48d418eccb",
+          "translation_sha256": "004c9ef883573bb89bdf6864a45057a879f255e4271f3a4e5c376b48d418eccb"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_says_imp_taunt_",
+          "source_sha256": "d325d9be57cdb15fb06f03b0b678206ca92c7c75d16851af6e08aa367c3137ed",
+          "translation_sha256": "99c5ba345fd47f77a10347b55733dfdb7a60b499363c4cd867c09eb5fc25e625"
+        }
+      ]
+    },
+    {
+      "key": "shadow imp",
+      "context": "textdb:database/monspeak.txt:shadow imp",
+      "source_sha256": "23fa4819beb98472def605bc466b2f94959d826aaf6551055625223bed92a240",
+      "review_status": "reviewed",
+      "review_batch": "database-26",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_hostile_imp_",
+          "source_sha256": "004c9ef883573bb89bdf6864a45057a879f255e4271f3a4e5c376b48d418eccb",
+          "translation_sha256": "004c9ef883573bb89bdf6864a45057a879f255e4271f3a4e5c376b48d418eccb"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_says_imp_taunt_",
+          "source_sha256": "d325d9be57cdb15fb06f03b0b678206ca92c7c75d16851af6e08aa367c3137ed",
+          "translation_sha256": "99c5ba345fd47f77a10347b55733dfdb7a60b499363c4cd867c09eb5fc25e625"
+        }
+      ]
+    },
+    {
+      "key": "white imp",
+      "context": "textdb:database/monspeak.txt:white imp",
+      "source_sha256": "23fa4819beb98472def605bc466b2f94959d826aaf6551055625223bed92a240",
+      "review_status": "reviewed",
+      "review_batch": "database-26",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_hostile_imp_",
+          "source_sha256": "004c9ef883573bb89bdf6864a45057a879f255e4271f3a4e5c376b48d418eccb",
+          "translation_sha256": "004c9ef883573bb89bdf6864a45057a879f255e4271f3a4e5c376b48d418eccb"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_says_imp_taunt_",
+          "source_sha256": "d325d9be57cdb15fb06f03b0b678206ca92c7c75d16851af6e08aa367c3137ed",
+          "translation_sha256": "99c5ba345fd47f77a10347b55733dfdb7a60b499363c4cd867c09eb5fc25e625"
+        }
+      ]
+    },
+    {
+      "key": "default ice statue",
+      "context": "textdb:database/monspeak.txt:default ice statue",
+      "source_sha256": "d1d54ebb63481bf1de2db32ef3ef42ff5ff898be13254f3c724dd275112fad54",
+      "review_status": "reviewed",
+      "review_batch": "database-26"
+    },
+    {
+      "key": "kobold blastminer",
+      "context": "textdb:database/monspeak.txt:kobold blastminer",
+      "source_sha256": "1fdbc541f90db6b780ed54aa3e153e29258c84e2aa70c91b240d67bf5bb62e30",
+      "review_status": "reviewed",
+      "review_batch": "database-26"
+    },
+    {
+      "key": "Killer Klown",
+      "context": "textdb:database/monspeak.txt:killer klown",
+      "source_sha256": "94e8185a2af49160ca942e7b4a4ced2b82b51979837db5f890ccd437fb7b54dd",
+      "review_status": "reviewed",
+      "review_batch": "database-26",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_killer_klown_common_",
+          "source_sha256": "4738ca1ac16ab00be63a2f29004610013d63e252ac8f07d0f61a47c3b5a2345b",
+          "translation_sha256": "db3c5b6afb229b15886a6bf0cd104eb026795b082cff18a2176674baaaad905a"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_killer_klown_rare_",
+          "source_sha256": "d0f578c03579f087b6bd08f50a47c4a6c9af2671a7d681dfdd62cccd5dd29c3a",
+          "translation_sha256": "5566bf72eb46782f0389946c008cef335167891786d002f847d6d18e12332a24"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "source_segments": 252,
+  "effective_keys": 251,
+  "translated_segments": 252,
+  "duplicate_keys": {
+    "+los mutation": 2
+  },
+  "missing": [],
+  "textdb_validation": true,
+  "source_unchanged": true,
+  "runtime_duplicate_policy": "database.cc _add_entry uses DBM_REPLACE; later entry wins",
+  "runtime_file_changed": false
+}

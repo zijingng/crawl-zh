@@ -1,0 +1,18 @@
+{
+  "batch": "source-d-05",
+  "date": "2026-10-22",
+  "messages": 3205,
+  "catalogue_matches": 3205,
+  "missing_messages": [],
+  "stale_dependencies": [],
+  "top_level_d_files": 65,
+  "scope_complete": false,
+  "limitation": "Cross-module dynamic item/spell restrictions and unknown saved/custom titles may still fall back to whole English prose. Remaining D display paths require continued review. No in-game visual smoke test.",
+  "new_messages": 405,
+  "native_test_cases": 48,
+  "native_assertions": 32481,
+  "python_test_cases": 27,
+  "title_glossary_exact_matches": 30,
+  "title_placeholders_preserved": true,
+  "whitespace_check": "passed"
+}

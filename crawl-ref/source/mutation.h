@@ -9,6 +9,7 @@
 #include <vector>
 
 #include "bane-type.h"
+#include "i18n.h"
 #include "mutation-type.h"
 #include "transformation.h"
 #include "externs.h"
@@ -57,9 +58,9 @@ bool mut_is_compatible(mutation_type mut, bool base_only = false);
 
 void display_mutations();
 string describe_mutations(bool center_title);
-string terse_mutation_list();
-string get_mutation_desc(mutation_type mut);
-string get_mutation_tags(mutation_type mut);
+string terse_mutation_list(bool display = false);
+string get_mutation_desc(mutation_type mut, bool display = false);
+string get_mutation_tags(mutation_type mut, bool display = false);
 
 int get_mutation_cap(mutation_type mut);
 void validate_mutations(bool debug_msg=false);
@@ -79,6 +80,10 @@ string mut_upgrade_summary(mutation_type mut);
 int mutation_max_levels(mutation_type mut);
 string mutation_desc(mutation_type which_mutat, int level = -1,
                           bool colour = false, bool is_sacrifice = false);
+// Display-only counterpart; canonical mutation_desc remains English.
+string mutation_display_desc(mutation_type which_mutat, int level = -1,
+                            bool colour = false, bool is_sacrifice = false,
+                            bool *translated = nullptr);
 
 void roll_demonspawn_mutations();
 
@@ -112,3 +117,7 @@ int xl_to_remove_bane(bane_type bane, int mult = 100);
 bool skill_has_dilettante_penalty(skill_type skill);
 
 void maybe_apply_bane_to_monster(monster& mons);
+
+string bane_display_name(bane_type bane);
+ui_arg bane_display_arg(bane_type bane);
+string bane_display_desc(bane_type bane);

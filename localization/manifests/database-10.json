@@ -1,0 +1,101 @@
+{
+  "baseline": "0.34.1",
+  "source": "crawl-ref/source/dat/database/wpnnoise.txt",
+  "entries": [
+    {
+      "key": "_real_song_no_tension_",
+      "context": "textdb:database/wpnnoise.txt:_real_song_no_tension_",
+      "source_sha256": "8b16fbb4316d130eeba31bf51d90673d162ff59da54edf6f22e0581326681ec0",
+      "translation_sha256": "f981dab559a5d237f8ee079ac331deea33771e4565a9bffefd7befbaa2f6c62a",
+      "review_status": "reviewed",
+      "candidates": 21
+    },
+    {
+      "key": "_real_song_low_tension_",
+      "context": "textdb:database/wpnnoise.txt:_real_song_low_tension_",
+      "source_sha256": "a88109faf47cdecf3d635e7a5f3070b2ebddf745681ba3e8662d1051e0466a26",
+      "translation_sha256": "46fabf4eb253b76d2435c8426415d2abfd4988e3b6c22e2aa88a28780cfbb696",
+      "review_status": "reviewed",
+      "candidates": 45
+    },
+    {
+      "key": "_real_song_low-high_tension_",
+      "context": "textdb:database/wpnnoise.txt:_real_song_low-high_tension_",
+      "source_sha256": "93dfb87ba828f390ea9087d66326361cc8a936f6c24a9338241dc30a7c832a32",
+      "translation_sha256": "6f432eefc78a016ceb4f45520653e2c290428d2406a94877840a9756ef62e435",
+      "review_status": "reviewed",
+      "candidates": 25
+    },
+    {
+      "key": "_real_song_high_tension_",
+      "context": "textdb:database/wpnnoise.txt:_real_song_high_tension_",
+      "source_sha256": "26f5ddeaedcc1413aced834b9055d037ec82a8d11828f8b4005fd1cbde961f17",
+      "translation_sha256": "c7e830b6a6c2e447b71dcb2d2b6d45d030148d456c9cd291d1b260db0f4b5fc1",
+      "review_status": "reviewed",
+      "candidates": 9
+    },
+    {
+      "key": "singing sword no_tension",
+      "context": "textdb:database/wpnnoise.txt:singing sword no_tension",
+      "source_sha256": "440fe62c18b44fe5a03e651d67e2ed00fbffdc6fc908ab4fd89050002a63dfe6",
+      "translation_sha256": "440fe62c18b44fe5a03e651d67e2ed00fbffdc6fc908ab4fd89050002a63dfe6",
+      "review_status": "reviewed",
+      "candidates": 7
+    },
+    {
+      "key": "singing sword low_tension",
+      "context": "textdb:database/wpnnoise.txt:singing sword low_tension",
+      "source_sha256": "27b5bcc54964eb67068093886b29a2bc297cd7154b081a11bd267b2563e5d461",
+      "translation_sha256": "27b5bcc54964eb67068093886b29a2bc297cd7154b081a11bd267b2563e5d461",
+      "review_status": "reviewed",
+      "candidates": 8
+    },
+    {
+      "key": "singing sword high_tension",
+      "context": "textdb:database/wpnnoise.txt:singing sword high_tension",
+      "source_sha256": "8bd5538abcc4bce93b4e13986490dc9930a53ef3f2d75790d00275bf129ca3c3",
+      "translation_sha256": "8bd5538abcc4bce93b4e13986490dc9930a53ef3f2d75790d00275bf129ca3c3",
+      "review_status": "reviewed",
+      "candidates": 7
+    },
+    {
+      "key": "singing sword SCREAM",
+      "context": "textdb:database/wpnnoise.txt:singing sword scream",
+      "source_sha256": "3560de075ff9806f5c9cad35b184824249de5e777a01be4b9f5e921d03ed22c3",
+      "translation_sha256": "3560de075ff9806f5c9cad35b184824249de5e777a01be4b9f5e921d03ed22c3",
+      "review_status": "reviewed",
+      "candidates": 1
+    }
+  ],
+  "reviewed_this_batch": 8,
+  "candidates": 123,
+  "cumulative_reviewed": 64,
+  "legacy_unreviewed_keys": [
+    "_scream_"
+  ],
+  "english_source_unchanged": true,
+  "unselected_entries_unchanged": true,
+  "runtime_adapter": "strict paired item_noise; unreviewed or missing components use whole canonical English",
+  "source_dependencies": [
+    {
+      "source": "crawl-ref/source/shout.cc",
+      "sha256": "44b09fc986a05a3ce51fd3b87e9d1df55ccbe97c4cc992b6c9a5499c6d19f943"
+    },
+    {
+      "source": "crawl-ref/source/art-func.h",
+      "sha256": "1f1ba35edebffe93f042e26071999b9c4958321e88e7d69c6107517af57666b5"
+    },
+    {
+      "source": "crawl-ref/source/item-name.cc",
+      "sha256": "65eb258d7a4e68a9680a3f0bed7dc2667da057e8d8adc1559349c51a2db24c5e"
+    },
+    {
+      "source": "crawl-ref/source/item-noise-display.h",
+      "sha256": "0c673b48c959eda7e6f05f15b923d76c863faf743d77e7bc7c19d571f0d84fc0"
+    },
+    {
+      "source": "crawl-ref/source/database.cc",
+      "sha256": "64083d02f53e7d92891f442b9fb58adf1812bae030e1b2b143e960b056f8dc9e"
+    }
+  ]
+}

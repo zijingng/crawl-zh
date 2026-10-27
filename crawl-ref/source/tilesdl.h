@@ -224,7 +224,8 @@ public:
 protected:
     void reconfigure_fonts();
     FontWrapper* load_font(const char *font_file, int font_size,
-                  bool default_on_fail, bool use_cached=true);
+                  bool default_on_fail, bool use_cached=true,
+                  const string &fallback_file="");
 
     bool m_map_mode_enabled;
 
@@ -285,6 +286,7 @@ protected:
     struct font_info
     {
         string name;
+        string fallback_name;
         int size;
         FontWrapper *font;
     };

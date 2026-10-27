@@ -1,0 +1,40 @@
+{
+  "glossary_sha256": "5ea382702e0d86c7e1fcad03e64a1c7d079f42a2a2f6af24949e155eae9dc885",
+  "looked_up": [
+    "boulder beetle",
+    "blink frog",
+    "blink",
+    "leap",
+    "hop"
+  ],
+  "hits": [
+    {
+      "Term": "blink",
+      "Translation": "闪烁/闪现/眨眼",
+      "Part of Speech": "verb",
+      "Variants": "",
+      "Note": "\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】位移效果优先用闪烁。普通快速显现可用闪现，眨眼为生理动作。完整法术名优先，不改动英文控制字。"
+    },
+    {
+      "Term": "Hop",
+      "Translation": "跳跃",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+    },
+    {
+      "Term": "blink frog",
+      "Translation": "闪烁蛙",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "boulder beetle",
+      "Translation": "巨石甲虫",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    }
+  ]
+}

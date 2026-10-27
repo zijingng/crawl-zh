@@ -18,6 +18,10 @@ clean distclean:
 	done
 	rm -rf $(PREFIX)
 
+# Enable UTF matching as an opt-in capability; ordinary regexes retain byte mode.
+# Ctrl+F selects UTF mode only for Chinese queries in the Chinese locale.
+pcre: export CFLAGS += -DSUPPORT_UTF
+
 $(SUBDIRS):
 	@if [ ! -x $@ ]; then \
 	    echo "**********************************************************"; \

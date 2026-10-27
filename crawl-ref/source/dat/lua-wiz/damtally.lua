@@ -79,7 +79,26 @@ function damt.show()
     out = out .. "<green>, per-mons avg: </green><lightgreen>" ..
                      string.format("%1.1f", dam/cnt) .. "</lightgreen>"
   end
-  crawl.mpr(out)
+  local shown = crawl.ui_format("lua.ui",
+      "<green>Turns: </green><lightgreen>%s</lightgreen><green>, time: </green><lightgreen>%s</lightgreen><green>, damage: </green><lightgreen>%s</lightgreen>",
+      "", tostring(you.turns()-damt.turns), string.format("%1.1f", t/10), tostring(dam))
+  local function append_metric(source, value)
+    local part = crawl.ui_format("lua.ui", source, "", value)
+    shown = shown ~= "" and part ~= "" and shown .. part or ""
+  end
+  if t > 0 then
+    append_metric("<green>, dpt: </green><lightgreen>%s</lightgreen>",
+                  string.format("%1.1f", dam*10/t))
+  end
+  if m > 0 then
+    append_metric("<green>, dpm: </green><lightgreen>%s</lightgreen>",
+                  string.format("%1.1f", dam/m))
+  end
+  if cnt > 0 then
+    append_metric("<green>, per-mons avg: </green><lightgreen>%s</lightgreen>",
+                  string.format("%1.1f", dam/cnt))
+  end
+  crawl.mpr(shown ~= "" and shown or out)
 end
 
 function ready()

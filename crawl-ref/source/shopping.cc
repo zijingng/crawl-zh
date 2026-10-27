@@ -4,6 +4,7 @@
 **/
 
 #include "AppHdr.h"
+#include "s-display.h"
 
 #include "shopping.h"
 
@@ -23,6 +24,7 @@
 #include "god-wrath.h"
 #include "invent.h"
 #include "item-name.h"
+#include "i18n.h"
 #include "item-prop.h"
 #include "item-status-flag-type.h"
 #include "items.h"
@@ -953,6 +955,20 @@ static shopping_order operator++(shopping_order &x)
     return x;
 }
 
+// Saved descriptions remain canonical. Unknown old portal descriptions fall back.
+static ui_arg _s_thing_arg(const CrawlHashTable &thing, bool with_position = true)
+{
+    const ui_arg name = ShoppingList::thing_is_item(thing)
+        ? ui_item_arg(ShoppingList::get_thing_item(thing))
+        : ui_text_arg("s.saved.description", ShoppingList::get_thing_desc(thing));
+    if (!with_position) return name;
+    const level_pos pos = ShoppingList::thing_pos(thing);
+    const ui_arg location = pos.id == level_id::current()
+        ? ui_text_arg("s.shop", "this level") : ui_literal_arg(pos.id.describe());
+    const string text = ui_render("s.shop", "%s on %s", "", {name, location});
+    return {text, !text.empty()};
+}
+
 class ShopMenu : public InvMenu
 {
     friend class ShopEntry;
@@ -1015,6 +1031,18 @@ class ShopEntry : public InvEntry
         const string keystr = colour_to_str(keycol);
         const string itemstr =
             colour_to_str(menu_colour(text, item_prefix(*item, false), tag, false));
+        const char *pattern = " <%s>%c %c </%s><%s>%4d gold   %s%s</%s>";
+        ui_translation_group translated({{"display.shop", pattern},
+                                         {"display.shop", " (unknown)"}});
+        string displayed;
+        if (translated.available() && try_item_display_name(*item, displayed, false, false))
+            return make_stringf(translated.get("display.shop", pattern),
+                                keystr.c_str(), hotkeys[0],
+                                selected() ? '+' : on_list ? '$' : '-',
+                                keystr.c_str(), itemstr.c_str(), cost,
+                                displayed.c_str(),
+                                shop_item_unknown(*item) ? translated.get("display.shop", " (unknown)") : "",
+                                itemstr.c_str());
         return make_stringf(" <%s>%c %c </%s><%s>%4d gold   %s%s</%s>",
                             keystr.c_str(),
                             hotkeys[0],
@@ -1064,8 +1092,9 @@ ShopMenu::ShopMenu(shop_struct& _shop, const level_pos& _pos, bool _can_purchase
     bought_indices = {};
     update_help();
 
-    set_title("Welcome to " + shop_name(shop) + "! What would you "
-              "like to do?");
+    ui_arg name;
+    const string original_name = shop_name(shop, &name);
+    set_title(ui_render("s.shop", "Welcome to %s! What would you like to do?", "Welcome to " + original_name + "! What would you like to do?", {name}));
 }
 
 void ShopMenu::init_entries()
@@ -1158,6 +1187,26 @@ void ShopMenu::update_help()
                          (you.gold - total_cost != 1) ? "s" : "");
     }
     top_line += "</yellow>";
+    const string original_top = top_line;
+    ui_arg balance = ui_literal_arg("");
+    if (total_cost > you.gold)
+    {
+        const int largest = max_cost(true);
+        balance = voucher && total_cost - largest <= you.gold
+            ? ui_arg{ui_render("s.shop", " Purchasing will use your shop voucher and %s gold.", "",
+                {ui_literal_arg(to_string(total_cost - largest))}), true}
+            : ui_arg{ui_render("s.shop", " You are short %s gold for the purchase.", "",
+                {ui_literal_arg(to_string(total_cost - you.gold))}), true};
+        balance.available = !balance.text.empty();
+    }
+    else if (total_cost)
+    {
+        balance.text = ui_render("s.shop", " After the purchase, you will have %s gold.", "",
+            {ui_literal_arg(to_string(you.gold - total_cost))});
+        balance.available = !balance.text.empty();
+    }
+    top_line = ui_render("s.shop", "<yellow>You have %s gold%s.%s</yellow>", original_top,
+        {ui_literal_arg(to_string(you.gold)), s_clause_arg(voucher ? " and a voucher" : ""), balance});
 
     // Ensure length >= 80ch, which prevents the local tiles menu from resizing
     // as the player selects/deselects entries. Blegh..
@@ -1198,6 +1247,27 @@ void ShopMenu::update_help()
                                   + " put item on shopping list");
 
 
+    const string original_help = m;
+    const ui_arg display_action = s_clause_arg(no_action ? "" : menu_action == ACT_EXAMINE ? "describe"
+        : from_shopping_list ? "buy shopping list" : "buy marked items");
+    ui_arg mode = !can_purchase ? ui_literal_arg("") : s_clause_arg(menu_action == ACT_EXECUTE
+        ? "<w>buy</w>|examine items" : "buy|<w>examine</w> items");
+    if (can_purchase && mode.available)
+        mode.text = menu_keyhelp_cmd(CMD_MENU_CYCLE_MODE) + " " + mode.text;
+    m = ui_render("s.shop.help",
+        "%s exit  %s  %s %s\n[/] sort (%s)  %s", original_help,
+        {ui_literal_arg(menu_keyhelp_cmd(CMD_MENU_EXIT)), mode,
+         ui_literal_arg(hyphenated_hotkey_letters(item_count(), 'a')),
+         s_clause_arg(menu_action == ACT_EXECUTE ? "mark item for purchase" : "examine item"),
+         s_clause_arg(shopping_order_names[order]), ui_literal_arg("")});
+    // Remaining command placeholders are fixed appendages in the same group.
+    ui_translation_group help_group({{"s.shop.help", "%s exit  %s  %s %s\n[/] sort (%s)  %s"},
+        {"s.shop.help", "%s %s; %s put item on shopping list"}});
+    if (m != original_help && help_group.available())
+        m += ui_render("s.shop.help", "%s %s; %s put item on shopping list", "",
+            {ui_literal_arg(action_key), display_action, ui_literal_arg(hyphenated_hotkey_letters(item_count(), 'A'))});
+    else
+        m = original_help;
     const string col = colour_to_str(channel_to_colour(MSGCH_PROMPT));
     if (outside_items)
     {
@@ -1208,7 +1278,9 @@ void ShopMenu::update_help()
       (int) bought_indices.size() == outside_items ? "them"
                                                    : "some of them",
             col.c_str()));
-        set_more(outside + formatted_string::parse_string(top_line + m));
+        const string shown_outside = ui_render("s.shop", "<%s>I'll put %s outside for you.</%s>\n", outside.to_colour_string(),
+            {ui_literal_arg(col), s_clause_arg(bought_indices.size() == 1 ? "it" : (int)bought_indices.size() == outside_items ? "them" : "some of them"), ui_literal_arg(col)});
+        set_more(formatted_string::parse_string(shown_outside) + formatted_string::parse_string(top_line + m));
     }
     else
         set_more(formatted_string::parse_string(top_line + m));
@@ -1265,7 +1337,7 @@ void ShopMenu::purchase_selected()
         if (!have_voucher() || cost - max_cost(buying_from_list) > you.gold)
         {
             more = formatted_string::parse_string(make_stringf(
-                    "<%s>You don't have enough money.</%s>\n",
+                    ui_translate("s.shop", "<%s>You don't have enough money.</%s>\n"),
                     col.c_str(),
                     col.c_str()));
             more += old_more;
@@ -1281,6 +1353,11 @@ void ShopMenu::purchase_selected()
                too_expensive ? "This will use your shop voucher." : "",
                Options.easy_confirm == easy_confirm_type::none ? "Y" : "y",
                col.c_str()));
+    more = formatted_string::parse_string(ui_render("s.shop",
+        "<%s>Purchase items%s for %s gold? %s (%s/N)</%s>\n", more.to_colour_string(),
+        {ui_literal_arg(col), s_clause_arg(buying_from_list ? " in shopping list" : ""),
+         ui_literal_arg(to_string(cost)), s_clause_arg(too_expensive ? "This will use your shop voucher." : ""),
+         ui_literal_arg(Options.easy_confirm == easy_confirm_type::none ? "Y" : "y"), ui_literal_arg(col)}));
     more += old_more;
     update_more();
     if (!yesno(nullptr, true, 'n', false, false, true))
@@ -1537,12 +1614,13 @@ void shop()
     }
 
     shop_struct& shop = *shop_at(you.pos());
-    const string shopname = shop_name(shop);
+    ui_arg display_shopname;
+    const string shopname = shop_name(shop, &display_shopname);
 
     // Quick out, if no inventory
     if (shop.stock.empty())
     {
-        mprf("%s appears to be closed.", shopname.c_str());
+        mpr(ui_render("s.log", "%s appears to be closed.", make_stringf("%s appears to be closed.", shopname.c_str()), {display_shopname}));
         destroy_shop_at(you.pos());
         return;
     }
@@ -1574,9 +1652,9 @@ void shop()
     redraw_screen();
     update_screen();
     if (menu.bought_something)
-        mprf("Thank you for shopping at %s!", shopname.c_str());
+        mpr(ui_render("s.log", "Thank you for shopping at %s!", make_stringf("Thank you for shopping at %s!", shopname.c_str()), {display_shopname}));
     if (any_on_list)
-        mpr("You can access your shopping list by pressing '$'.");
+        mpr(ui_translate("s.ui", "You can access your shopping list by pressing '$'."));
 }
 
 void shop(shop_struct& shop, const level_pos& pos)
@@ -1659,7 +1737,7 @@ static const char *_shop_type_suffix(shop_type type, const coord_def &where)
     return suffixnames[(where.x + where.y) % ARRAYSZ(suffixnames)];
 }
 
-string shop_name(const shop_struct& shop)
+string shop_name(const shop_struct& shop, ui_arg *display)
 {
     const shop_type type = shop.type;
 
@@ -1668,17 +1746,22 @@ string shop_name(const shop_struct& shop)
 #if TAG_MAJOR_VERSION == 34
     // xref ShopInfo::load
     if (shop.shop_name == " ")
+    {
+        if (display) *display = ui_text_arg("s.shop.type", shop.shop_type_name);
         return shop.shop_type_name;
+    }
 #endif
+    string owner = shop.shop_name;
     if (!shop.shop_name.empty())
-        sh_name += apostrophise(shop.shop_name) + " ";
+        sh_name += apostrophise(owner) + " ";
     else
     {
         uint32_t seed = static_cast<uint32_t>(shop.keeper_name[0])
             | (static_cast<uint32_t>(shop.keeper_name[1]) << 8)
             | (static_cast<uint32_t>(shop.keeper_name[1]) << 16);
 
-        sh_name += apostrophise(make_name(seed)) + " ";
+        owner = make_name(seed);
+        sh_name += apostrophise(owner) + " ";
     }
 
     if (!shop.shop_type_name.empty())
@@ -1695,6 +1778,18 @@ string shop_name(const shop_struct& shop)
             sh_name += " " + sh_suffix;
     }
 
+    if (display)
+    {
+        const ui_arg type_name = ui_text_arg("s.shop.type", shop.shop_type_name.empty()
+            ? shop_type_name(type) : shop.shop_type_name);
+        const string suffix = shop.shop_suffix_name.empty()
+            ? _shop_type_suffix(type, shop.pos) : shop.shop_suffix_name;
+        const ui_arg ending = suffix.empty() ? ui_literal_arg("")
+            : ui_text_arg("s.shop.suffix", suffix);
+        const string shown = ui_render("s.shop", "%s's %s %s", "",
+            {ui_literal_arg(owner), type_name, ending});
+        *display = {shown, !shown.empty()};
+    }
     return sh_name;
 }
 
@@ -1805,8 +1900,7 @@ bool ShoppingList::add_thing(const item_def &item, int cost,
 
     if (!find_thing(item, pos).empty()) // TODO: this check isn't working?
     {
-        ui::error(make_stringf("%s is already on the shopping list.",
-             item.name(DESC_THE).c_str()));
+        ui::error(ui_render("s.shop", "%s is already on the shopping list.", make_stringf("%s is already on the shopping list.", item.name(DESC_THE).c_str()), {ui_item_arg(item)}));
         return false;
     }
 
@@ -2022,10 +2116,9 @@ bool ShoppingList::cull_identical_items(const item_def& item, int cost)
                 continue;
             thing[REPLACE_PROMPTED_KEY] = (bool) true;
 
-            string prompt =
-                make_stringf("Shopping list: replace %dgp %s with cheaper "
+            string prompt = ui_render("s.log", "Shopping list: replace %s gold %s with a cheaper one? (Y/n)", make_stringf("Shopping list: replace %dgp %s with cheaper "
                              "one? (Y/n)", list_cost,
-                             describe_thing(thing).c_str());
+                             describe_thing(thing).c_str()), {ui_literal_arg(to_string(list_cost)), _s_thing_arg(thing)});
 
             if (yesno(prompt.c_str(), true, 'y', false))
             {
@@ -2043,22 +2136,20 @@ bool ShoppingList::cull_identical_items(const item_def& item, int cost)
                 continue;
             thing[REMOVE_PROMPTED_KEY] = (bool) true;
 
-            string prompt = make_stringf("Shopping list: remove %s? (Y/n)",
-                                         describe_thing(thing, DESC_A).c_str());
+            string prompt = ui_render("s.log", "Shopping list: remove %s? (Y/n)", make_stringf("Shopping list: remove %s? (Y/n)",
+                                         describe_thing(thing, DESC_A).c_str()), {_s_thing_arg(thing)});
 
             if (yesno(prompt.c_str(), true, 'y', false))
             {
                 to_del.push_back(listed);
-                mprf("Shopping list: removing %s",
-                     describe_thing(thing, DESC_A).c_str());
+                mpr(ui_render("s.log", "Shopping list: removing %s", make_stringf("Shopping list: removing %s", describe_thing(thing, DESC_A).c_str()), {_s_thing_arg(thing)}));
             }
             else
                 canned_msg(MSG_OK);
         }
         else
         {
-            mprf("Shopping list: removing %s",
-                 describe_thing(thing, DESC_A).c_str());
+            mpr(ui_render("s.log", "Shopping list: removing %s", make_stringf("Shopping list: removing %s", describe_thing(thing, DESC_A).c_str()), {_s_thing_arg(thing)}));
             to_del.push_back(listed);
         }
     }
@@ -2164,8 +2255,7 @@ void ShoppingList::spells_added_to_library(const vector<spell_type>& spells, boo
         for (auto idx : indices_to_del)
         {
             ASSERT_RANGE(idx, 0, list->size());
-            mprf("Shopping list: removing %s",
-                describe_thing((*list)[idx], DESC_A).c_str());
+            mpr(ui_render("s.log", "Shopping list: removing %s", make_stringf("Shopping list: removing %s", describe_thing((*list)[idx], DESC_A).c_str()), {_s_thing_arg((*list)[idx])}));
         }
     }
     del_thing_at_indices(indices_to_del);
@@ -2294,6 +2384,7 @@ void ShoppingList::gold_changed(int old_amount, int new_amount)
         ASSERT(min_unbuyable_idx < list->size());
 
         vector<string> descs;
+        ui_arg display_descs{"", true};
         for (unsigned int i = min_unbuyable_idx; i < list->size(); i++)
         {
             const CrawlHashTable &thing = (*list)[i];
@@ -2316,12 +2407,19 @@ void ShoppingList::gold_changed(int old_amount, int new_amount)
             desc += describe_thing(thing, DESC_A);
 
             descs.push_back(desc);
+            const ui_arg verb = s_clause_arg(thing.exists(SHOPPING_THING_VERB_KEY)
+                ? thing[SHOPPING_THING_VERB_KEY].get_string() : "buy");
+            const ui_arg name = _s_thing_arg(thing);
+            display_descs.available = display_descs.available && verb.available && name.available;
+            if (!display_descs.text.empty()) display_descs.text += "，或";
+            display_descs.text += verb.text + name.text;
         }
         ASSERT(!descs.empty());
 
-        mpr_comma_separated_list("You now have enough gold to ", descs,
-                                 ", or ");
-        mpr("You can access your shopping list by pressing '$'.");
+        const string display = ui_render("s.shop", "You now have enough gold to %s", "", {display_descs});
+        if (!display.empty()) mpr(display);
+        else mpr_comma_separated_list("You now have enough gold to ", descs, ", or ");
+        mpr(ui_translate("s.ui", "You can access your shopping list by pressing '$'."));
 
         // Our gold has changed, maybe we can buy different things now.
         refresh();
@@ -2351,32 +2449,34 @@ public:
         string s = make_stringf("<yellow>You have %d gold pieces%s</yellow>\n"
                                 "<lightgrey>", you.gold,
                                 voucher ? " and a voucher." : "");
+        s = ui_render("s.shop", "<yellow>You have %s gold pieces%s</yellow>\n<lightgrey>", s,
+            {ui_literal_arg(to_string(you.gold)), s_clause_arg(voucher ? " and a voucher." : "")});
 
         if (view_only)
-            s += "Choose to examine item  ";
+            s += ui_translate("s.shop", "Choose to examine item  ");
         else
         {
             s += menu_keyhelp_cmd(CMD_MENU_CYCLE_MODE);
             switch (menu_action)
             {
             case ACT_EXECUTE:
-                s += " <w>travel</w>|examine|delete";
+                s += ui_translate("s.shop", " <w>travel</w>|examine|delete");
                 break;
             case ACT_EXAMINE:
-                s += " travel|<w>examine</w>|delete";
+                s += ui_translate("s.shop", " travel|<w>examine</w>|delete");
                 break;
             default:
-                s += " travel|examine|<w>delete</w>";
+                s += ui_translate("s.shop", " travel|examine|<w>delete</w>");
                 break;
             }
 
-            s += " items    ";
+            s += ui_translate("s.shop", " items    ");
         }
         if (items.size() > 0)
         {
             // could be dropped if there's ever more interesting hotkeys
             s += hyphenated_hotkey_letters(items.size(), 'a')
-                    + " choose item</lightgray>";
+                    + string(ui_translate("s.shop", " choose item</lightgray>"));
         }
         return pad_more_with_esc(s);
     }
@@ -2394,10 +2494,9 @@ formatted_string ShoppingListMenu::calc_title()
     const int total_cost = you.props[SHOPPING_LIST_COST_KEY];
 
     fs.textcolour(title->colour);
-    fs.cprintf("Shopping list: %d %s%s, total cost %d gold pieces",
-                title->quantity, title->text.c_str(),
-                title->quantity > 1 ? "s" : "",
-                total_cost);
+    const string original = make_stringf("Shopping list: %d %s%s, total cost %d gold pieces",
+        title->quantity, title->text.c_str(), title->quantity > 1 ? "s" : "", total_cost);
+    fs.cprintf("%s", ui_render("s.log", "Shopping list: %s items, total cost %s gold pieces", original, {ui_literal_arg(to_string(title->quantity)), ui_literal_arg(to_string(total_cost))}).c_str());
 
     return fs;
 }
@@ -2427,7 +2526,7 @@ void ShoppingList::fill_out_menu(Menu& shopmenu)
         const bool unknown = thing_is_item(thing)
                              && shop_item_unknown(get_thing_item(thing));
 
-        const string etitle =
+        const string original_title =
             make_stringf(
                 "%*s%5d gold  %s%s",
                 longest,
@@ -2436,6 +2535,9 @@ void ShoppingList::fill_out_menu(Menu& shopmenu)
                 name_thing(thing, DESC_A).c_str(),
                 unknown ? " (unknown)" : "");
 
+        const string etitle = ui_render("s.shop.row", "%s %s gold  %s%s", original_title,
+            {ui_literal_arg(describe_thing_pos(thing)), ui_literal_arg(to_string(cost)),
+             _s_thing_arg(thing, false), s_clause_arg(unknown ? " (unknown)" : "")});
         MenuEntry *me = new MenuEntry(etitle, MEL_ITEM, 1, hotkey);
         me->data = &thing;
 
@@ -2522,6 +2624,8 @@ void ShoppingList::display(bool view_only)
                    make_stringf("Travel to: %s\nYou cannot afford this item; travel there "
                                 "anyway? (y/N)",
                                 describe_thing(*thing, DESC_A).c_str());
+                prompt = ui_render("s.shop", "Travel to: %s\nYou cannot afford this item; travel there anyway? (y/N)", prompt,
+                    {_s_thing_arg(*thing)});
                 clrscr();
                 if (!yesno(prompt.c_str(), true, 'n'))
                     return true;
@@ -2546,7 +2650,7 @@ void ShoppingList::display(bool view_only)
 
             if (this->list->empty())
             {
-                mpr("Your shopping list is now empty.");
+                mpr(ui_translate("s.ui", "Your shopping list is now empty."));
                 return false;
             }
 

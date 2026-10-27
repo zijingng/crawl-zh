@@ -1,0 +1,131 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "selected": [
+    {
+      "source": "database/randbook.txt",
+      "key": "random_book_title",
+      "english": "w:15\nthe @_book_plant_animal_@\n\nw:20\n@_number_or_qualifier_@ @_thing_names_@\n\nw:4\nthe @_profession_name_@\n\nw:13\n@_philosophy_or_science_@\n\nw:8\n@_wacky_armour_name_@\n\nw:2\n@_destiny_name_@\n\nw:6\n@_place_name_@\n\nw:1\n@_magic_name_@\n\nw:4\n@_substance_name_@\n\nw:2\n@_power_name_@\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "book",
+          "Translation": "魔法书/书/手册",
+          "Part of Speech": "noun",
+          "Variants": "book of",
+          "Note": "【使用约束】book of 是组合前缀，不是完整法术书名；不得把所有 book 都补成魔法书。\n【语境补充 2026-10-21】含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+        },
+        {
+          "Term": "plant",
+          "Translation": "植物",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "xom_book_title",
+      "english": "w:30\n@random_book_title@\n\n@_chaos_name_@\n\nw:1\n@_game_name_@\n\nw:2\n@player_death@\n\nw:8\n@_wacky_armour_name_@\n\nw:1\n@_politics_name_armour_@\n\nw:5\n@_power_name_@\n\nw:3\n@_discomfort_and_inaction_@\n\nw:3\n@_discomfort_weapon_@\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "book",
+          "Translation": "魔法书/书/手册",
+          "Part of Speech": "noun",
+          "Variants": "book of",
+          "Note": "【使用约束】book of 是组合前缀，不是完整法术书名；不得把所有 book 都补成魔法书。\n【语境补充 2026-10-21】含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "chaos",
+          "Translation": "混沌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "_book_plant_animal_",
+      "english": "w:1\n@_jewellery_animal_@\n\nw:1\n@_critter_name_@\n\nw:1\n@_plant_name_@\n\nw:6\n@_weapon_animal_@\n\n@_armour_animal_@\n",
+      "hits": [
+        {
+          "Term": "Armour",
+          "Translation": "防具/护身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "Term": "plant",
+          "Translation": "植物",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "book_name",
+      "english": "w:9\n@book_noun@ of\n\nw:4\n@_book_noun_on_@ on\n",
+      "hits": [
+        {
+          "Term": "book",
+          "Translation": "魔法书/书/手册",
+          "Part of Speech": "noun",
+          "Variants": "book of",
+          "Note": "【使用约束】book of 是组合前缀，不是完整法术书名；不得把所有 book 都补成魔法书。\n【语境补充 2026-10-21】含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+        }
+      ]
+    },
+    {
+      "source": "database/randbook.txt",
+      "key": "book_noun",
+      "english": "Almanac\n\nAnthology\n\nAtlas\n\nBook\n\nCatalogue\n\nCodex\n\nCompendium\n\nCompilation\n\nCyclopedia\n\nDirectory\n\nElucidation\n\nEncyclopedia\n\nFolio\n\nGrimoire\n\nHandbook\n\nIncunable\n\nIncunabulum\n\nOctavo\n\nOmnibus\n\nPapyrus\n\nPrecepts\n\nQuarto\n\nSecrets\n\nSpellbook\n\nTome\n\nVellum\n\nVolume\n",
+      "hits": [
+        {
+          "Term": "book",
+          "Translation": "魔法书/书/手册",
+          "Part of Speech": "noun",
+          "Variants": "book of",
+          "Note": "【使用约束】book of 是组合前缀，不是完整法术书名；不得把所有 book 都补成魔法书。\n【语境补充 2026-10-21】含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+        },
+        {
+          "Term": "spellbook",
+          "Translation": "魔法书",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    }
+  ]
+}

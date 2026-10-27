@@ -130,6 +130,8 @@ struct stash_search_result
     // Text that describes this search result - usually the name of
     // the first matching item in the stash or the name of the shop.
     string match;
+    string display_match;
+    bool display_available = false;
 
     // A string to use for a primary sort, if different from just `match`.
     string primary_sort;
@@ -333,5 +335,16 @@ vector<item_def> item_list_in_stash(const coord_def& pos);
 string userdef_annotate_item(const char *s, const item_def *item);
 string stash_annotate_item(const char *s, const item_def *item);
 
+// Optional Chinese search/display aliases; canonical Lua annotations stay intact.
+string stash_prefix_aliases(const string &annotations, bool menu = false);
+string stash_item_aliases(const item_def &item, const string &annotations);
+string stash_search_haystack(const string &english, const string &aliases,
+                             const base_pattern &query);
+string stash_search_pattern(const string &query, bool regex_leaf = false);
+
 #define STASH_LUA_SEARCH_ANNOTATE "ch_stash_search_annotate_item"
 #define STASH_LUA_DUMP_ANNOTATE   "ch_stash_dump_annotate_item"
+
+struct ui_arg;
+struct level_id;
+ui_arg stash_level_arg(const level_id &level);

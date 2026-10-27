@@ -1,0 +1,55 @@
+{
+  "batch": "manual-aptitudes-01",
+  "documents": {
+    "crawl_manual.txt": {
+      "source_sha256": "b45cdf81bfeff09913c3dee6c7a27742e664e85b34fe44d8f6ef661ce013a0a6",
+      "translation_sha256": "49390f2d78ff8324d5597df8a4e5e5728545adf7e04fbb34a54481d0eac14d37",
+      "source_lines": 3251,
+      "translated_lines": 2282,
+      "max_display_columns": 78,
+      "literal_percent_keys_preserved": 10,
+      "english_source_unchanged": true
+    },
+    "aptitudes.txt": {
+      "source_sha256": "f5753ccab19540fb4155ff91766e38fb669a1c01cfb0bbfe3fc73b50d92892ec",
+      "translation_sha256": "bf2feefeee0d42712e9cf281759a6739b730e2191fee16a3c2a97c015834c403",
+      "source_lines": 174,
+      "translated_lines": 171,
+      "max_display_columns": 76,
+      "literal_percent_keys_preserved": 36,
+      "english_source_unchanged": true
+    }
+  },
+  "glossary_hits": 296,
+  "existing_translation_references": 39,
+  "manual_sections": {
+    "a": 30,
+    "b": 61,
+    "c": 148,
+    "d": 245,
+    "e": 415,
+    "f": 445,
+    "g": 486,
+    "h": 713,
+    "i": 749,
+    "j": 776,
+    "k": 797,
+    "l": 824,
+    "m": 883,
+    "n": 907,
+    "1": 1034,
+    "2": 1350,
+    "3": 1485,
+    "4": 1580,
+    "5": 2127,
+    "6": 2238
+  },
+  "aptitude_data": {
+    "rows": 105,
+    "values": 1155,
+    "preserved": true
+  },
+  "python_tests": 33,
+  "native_tests": 2,
+  "native_assertions": 153
+}

@@ -1,0 +1,221 @@
+{
+  "entries": 26,
+  "changed": 16,
+  "checks": [
+    "当前英文逐条语义核对",
+    "背景名称与术语表和实际界面目录三方一致",
+    "起始装备、法术、条件与英文一致",
+    "规范键、英文原文与英文回退保留"
+  ],
+  "review": [
+    {
+      "key": "Air Elementalist",
+      "display_name": "气元素使",
+      "source_sha256": "1ad1bcf1dd77c52e8892edc25d474061f48aae497a1c4405321684bc811f0854",
+      "before": "气元素使已经学会电击术（Shock）。它们的电系魔法能伤害成群的敌人，气系法术则能帮助战斗或逃脱。\n",
+      "after": "气元素使已经学会电击。他们的电系魔法能伤害成群的敌人，气系法术则能帮助战斗或逃脱。\n",
+      "changed": true
+    },
+    {
+      "key": "Artificer",
+      "display_name": "修补匠",
+      "source_sha256": "c33ef9caabc13a1c59ac97c9e2890fe3b47a5d21c769725bfefdd14dd4a2d12a",
+      "before": "修补匠起始携带几根魔杖和一根棍棒。它们需要在魔杖耗尽之前找到更好的武器和护甲。\n",
+      "after": "修补匠起始携带几根魔杖和一根棍棒。他们需要在魔杖耗尽之前找到更好的武器和护甲。\n",
+      "changed": true
+    },
+    {
+      "key": "Berserker",
+      "display_name": "狂战士",
+      "source_sha256": "26b2ad338627da55565e0e08b49a80b02a0fa1ae75cd1f4dbcaa9eb6b5cfd7f9",
+      "before": "狂战士信奉憎恶魔法的狂怒之神特洛格。初期几乎没有什么能阻挡暴怒的狂战士，除了狂妄自大。\n",
+      "after": "狂战士信奉憎恶魔法的狂怒之神特洛格。初期几乎没有什么能阻挡暴怒的狂战士，除了狂妄自大。\n",
+      "changed": false
+    },
+    {
+      "key": "Brigand",
+      "display_name": "强盗",
+      "source_sha256": "63f04d71fa5ed651b1a4913146288bd2c03f46ee774573e9f93d45792a27570e",
+      "before": "强盗携带毒镖和少量危险的箭毒镖。\n",
+      "after": "强盗携带毒镖和少量危险的箭毒镖。\n",
+      "changed": false
+    },
+    {
+      "key": "Chaos Knight",
+      "display_name": "混沌骑士",
+      "source_sha256": "b1b013718b16afa83ff540c2dd008896ab9590f52a53a684aa25e7f00460e14f",
+      "before": "混沌骑士是喜怒无常的佐姆的玩物，始终受这位神祇变幻莫测的心情摆布。\n",
+      "after": "混沌骑士是喜怒无常的佐姆的玩物，始终受这位神祇变幻莫测的心情摆布。\n",
+      "changed": false
+    },
+    {
+      "key": "Cinder Acolyte",
+      "display_name": "余烬侍僧",
+      "source_sha256": "d8fb0fb9f4a6ac721cb0bf3b8a5e08dfab419d24ec8a1988e7140206c3ed1124",
+      "before": "余烬侍僧信奉伊格尼斯，不断汲取这位垂死神祇的火焰，直至其燃烧殆尽。它们兼具近战和火系魔法能力。\n",
+      "after": "余烬侍僧信奉伊格尼斯，不断汲取这位垂死神祇的火焰，直至其燃烧殆尽。他们兼具近战和火系魔法能力。\n",
+      "changed": true
+    },
+    {
+      "key": "Conjurer",
+      "display_name": "塑能师",
+      "source_sha256": "8d1b45c1e3cfbbf93855c3ce6055d577098784d39c5f1374ac5e0d43b2f32c26",
+      "before": "塑能师起始掌握魔法飞镖（Magic Dart），还能学习其他非元素法术，可靠地轰击敌人。\n",
+      "after": "塑能师起始掌握魔法飞弹，还能学习其他非元素法术，可靠地轰击敌人。\n",
+      "changed": true
+    },
+    {
+      "key": "Delver",
+      "display_name": "探地者",
+      "source_sha256": "554e5ae8f5fb0e88fc69b3867e4f40b5cd85816f5e9129d8a0f75915f41ff9a2",
+      "before": "探险者从地表下五层开始冒险。一套强力魔法物品能帮助它们在向上的危险旅途中生存。\n",
+      "after": "探地者从地表下五层开始冒险。一套强力魔法物品能帮助他们在向上的危险旅途中生存。\n",
+      "changed": true
+    },
+    {
+      "key": "Earth Elementalist",
+      "display_name": "土元素使",
+      "source_sha256": "0f770b21d9f7946105c9f48923a9836c5dafb47c57cb4d32c2ca7170b88c4222",
+      "before": "土元素使掌握沙暴术（Sandblast），以后还能学习更多土系法术，既可巧妙刺杀，也可强行轰击。\n",
+      "after": "土元素使掌握沙爆，以后还能学习更多土系法术，既可巧妙刺杀，也可强行轰击。\n",
+      "changed": true
+    },
+    {
+      "key": "Enchanter",
+      "display_name": "妖术师",
+      "source_sha256": "0a6a36cc80fc793322cb030c46abef4fc2f749969d4beb33ced3fcca754d6855",
+      "before": "妖术师掌握多种能让敌人失去行动能力的妖术，并配有附魔匕首和隐形药水。\n",
+      "after": "妖术师掌握多种能让敌人失去行动能力的妖术，并配有附魔匕首和隐形药水。\n",
+      "changed": false
+    },
+    {
+      "key": "Fighter",
+      "display_name": "战士",
+      "source_sha256": "0fc17540f7068a213d2042d8a92cecc1477f9b28ab939c156be4ea13e2e13c94",
+      "before": "战士起始配有护甲、盾牌、自选武器和力量药水。\n",
+      "after": "战士起始配有护甲、盾牌、自选武器和力量药水。\n",
+      "changed": false
+    },
+    {
+      "key": "Fire Elementalist",
+      "display_name": "火元素使",
+      "source_sha256": "0adbf2b470f9a6cb668e894f043dfd7eee3a9fa71465ef5639a8c68591f7b8ad",
+      "before": "火元素使已经学会狐火术（Foxfire）。它们起始的其他法术同样侧重火焰与爆炸造成的毁灭。\n",
+      "after": "火元素使已经学会狐火。他们起始的其他法术同样侧重火焰与爆炸造成的毁灭。\n",
+      "changed": true
+    },
+    {
+      "key": "Gladiator",
+      "display_name": "角斗士",
+      "source_sha256": "7cf772c87ec779d1d72d9279a67a8a1a902feadb7597f898f1d2ce776fa0f8ff",
+      "before": "角斗士身穿轻甲、手持自选武器，携带少量投掷武器和投网，随时准备进入竞技场。\n",
+      "after": "角斗士身穿轻甲、手持自选武器，携带少量投掷武器和投网，随时准备进入竞技场。\n",
+      "changed": false
+    },
+    {
+      "key": "Hedge Wizard",
+      "display_name": "野法师",
+      "source_sha256": "0dea86191f2adf74f6c041d0f6e32790a791d9ac508f88333b0d600ca9715315",
+      "before": "野法师是魔法多面手，擅长用各种手段阻挠敌人、取得战场优势。\n",
+      "after": "野法师是魔法多面手，擅长用各种手段阻挠敌人、取得战场优势。\n",
+      "changed": false
+    },
+    {
+      "key": "Hunter",
+      "display_name": "猎手",
+      "source_sha256": "9e08ecaae4491db142d1bad848bee0423a16d1017825f3d4128ce49f3b1c22d7",
+      "before": "猎人携带短弓、轻甲和蝴蝶卷轴。\n",
+      "after": "猎手携带短弓、轻甲和蝴蝶卷轴。\n",
+      "changed": true
+    },
+    {
+      "key": "Hexslinger",
+      "display_name": "妖术射手",
+      "source_sha256": "f4502efa8cb80944c0aee9e9ec38a9ecb18602ecd257030b927d6bbae2b44fcb",
+      "before": "咒缚射手携带投石索，利用妖术让敌人更容易受到远程攻击的伤害。\n",
+      "after": "妖术射手携带投石索，利用妖术让敌人更容易受到远程攻击的伤害。\n",
+      "changed": true
+    },
+    {
+      "key": "Ice Elementalist",
+      "display_name": "冰元素使",
+      "source_sha256": "e0e1acee4818568380ada603ac7d6918107fc80e4947b6c03c7e55f6b8ef66ab",
+      "before": "冰元素使起始掌握冰冻术（Freeze）。后续法术攻防兼备，但可能限制自身移动。\n",
+      "after": "冰元素使起始掌握冰冻。后续法术攻防兼备，但可能限制自身移动。\n",
+      "changed": true
+    },
+    {
+      "key": "Monk",
+      "display_name": "武僧",
+      "source_sha256": "f5602a8a4bfe777047e50c4f93bebc53e2f274036babdb3eba5312f8c5c214a9",
+      "before": "武僧起始携带自选的简单武器、光明宝珠和一瓶神圣琼浆药水，首次信奉神祇时能获得额外虔诚。\n",
+      "after": "武僧起始携带自选的简单武器、光明宝珠和一瓶神圣琼浆药水，首次信奉神祇时能获得额外虔诚。\n",
+      "changed": false
+    },
+    {
+      "key": "Necromancer",
+      "display_name": "死灵法师",
+      "source_sha256": "ecd4b46be67829fc51e1f637d1e1d13b6d4b795f9adcbb491e3c52d1435ef4f0",
+      "before": "死灵法师起始掌握灵魂碎裂（Soul Splinter）。最终，它们能够将死者变为盟友，并汲取生者的生命力恢复自身。\n",
+      "after": "死灵法师起始掌握灵魂碎裂。最终，他们能够将死者变为盟友，并汲取生者的生命力恢复自身。\n",
+      "changed": true
+    },
+    {
+      "key": "Reaver",
+      "display_name": "掠夺者",
+      "source_sha256": "c81ec9cd60bf4148b0706af277fc4e8810370a34a2cac6c6bfb092eb295d35df",
+      "before": "掠夺者起始携带自选武器，并能在需要时用致命魔法辅助作战。它们起始掌握死亡之吻（Kiss of Death）。\n",
+      "after": "掠夺者起始携带自选武器，并能在需要时用致命魔法辅助作战。他们起始掌握死亡之吻。\n",
+      "changed": true
+    },
+    {
+      "key": "Summoner",
+      "display_name": "召唤师",
+      "source_sha256": "8e22d5b1d97d818d5efb924f596c075407581be5dad9b2d62c0f8a5a76661b6e",
+      "before": "召唤师一开始就能施放召唤小型哺乳动物（Summon Small Mammal），法术库中还有召唤更强大、更奇异盟友的法术。\n",
+      "after": "召唤师一开始就能施放召唤小型哺乳动物，法术库中还有召唤更强大、更奇异盟友的法术。\n",
+      "changed": true
+    },
+    {
+      "key": "Forgewright",
+      "display_name": "锻造师",
+      "source_sha256": "9b0626ae55150d090a0fcf737b0e7736338985ce5cd41e358568c21b638de1c2",
+      "before": "锻造师专精于创造炮台和机械伙伴，与自己并肩作战。\n",
+      "after": "锻造师是专精于创造炮台和机械伙伴的法师，能让这些造物与自己并肩作战。\n",
+      "changed": true
+    },
+    {
+      "key": "Shapeshifter",
+      "display_name": "变形者",
+      "source_sha256": "9319f317e680fb1a11ec3bf6b4efa07e26f69a8c7ded3da7a998f0795583b416",
+      "before": "变形者用变形护符改变自身形态，牺牲护甲来换取强大的近战能力，徒手战斗时尤其如此。\n",
+      "after": "变形者用变形护符改变自身形态，牺牲护甲来换取强大的近战能力，徒手战斗时尤其如此。\n",
+      "changed": false
+    },
+    {
+      "key": "Alchemist",
+      "display_name": "炼金术士",
+      "source_sha256": "343aacddfe6d85be52f6386d8d6031b883024f5905b4a57f67008d00b2e81aea",
+      "before": "炼金术士起始掌握剧毒蒸气（Poisonous Vapours），其魔法对易受毒素影响的敌人十分有效。\n",
+      "after": "炼金术士起始掌握毒气，其魔法对易受毒素影响的敌人十分有效。\n",
+      "changed": true
+    },
+    {
+      "key": "Wanderer",
+      "display_name": "漫游者",
+      "source_sha256": "fe9f2c373b8a64237c463797bde335144293cb1f110d19dd05044a0038a232fe",
+      "before": "流浪者以随机的装备和技能开始冒险。\n",
+      "after": "漫游者以随机的装备和技能开始冒险。\n",
+      "changed": true
+    },
+    {
+      "key": "Warper",
+      "display_name": "位移术士",
+      "source_sha256": "bdee4106bebc4103a5c3368e4c95627f1a53c0e5386ae6cd93efccb5db289817",
+      "before": "位移术士起始携带自选武器、闪烁卷轴和离散飞镖，法术库中还有一些位移系法术。\n",
+      "after": "位移术士起始携带自选武器、闪烁卷轴和离散飞镖，法术库中还有一些位移系法术。\n",
+      "changed": false
+    }
+  ],
+  "chinese_only": true
+}

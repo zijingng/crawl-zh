@@ -101,7 +101,7 @@ function TimedMessaging:emit_message(cm, msg)
       return
     end
 
-    crawl.mpr(util.expand_entity(self.entity, msg), self:channel())
+    crawl.mpr(util.display_message(self.entity, msg), self:channel())
   end
 end
 
@@ -142,6 +142,18 @@ function TimedMessaging:range_adjective(cm, thing)
   end
 end
 
+function TimedMessaging:display_noisemaker(cm)
+  local adj = self:choose_range_adjective(self:player_distance(cm))
+  local name = crawl.ui_name("lua.entity", self.noisemaker)
+  if not name then return nil end
+  local pattern = adj == "$F" and "" or crawl.ui_name("lua.distance", adj)
+  if not pattern then return nil end
+  local shown = crawl.ui_format("lua.ui", "the %s %s", "", pattern, name)
+  -- Distant forms do not contain $F in the original but still need the name.
+  if shown == "" then return nil end
+  return shown
+end
+
 function TimedMessaging:say_message(cm, dur)
   if dur <= 100 then
     self:emit_message(nil, self.finalmsg)
@@ -154,8 +166,12 @@ function TimedMessaging:say_message(cm, dur)
   self:proc_ranges(self.ranges, dur,
                    function (chk)
                      self:emit_message(nil,
+                                       crawl.ui_format("lua.ui", "You hear the %s%s of %s.",
                                        "You hear the " .. chk[2] .. self.verb
-                                       .. " of " .. noisemaker .. ".")
+                                       .. " of " .. noisemaker .. ".",
+                                       chk[2] == "" and "" or chk[2] == "" and "" or crawl.ui_name("lua.pace", chk[2]),
+                                       crawl.ui_name("lua.sound", self.verb),
+                                       self:display_noisemaker(cm)))
                    end)
 
   self:proc_ranges(self.messages, dur,

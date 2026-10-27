@@ -1,4 +1,5 @@
 #include "AppHdr.h"
+#include "m-display.h"
 
 #include "mon-aura.h"
 
@@ -42,16 +43,24 @@ static const vector<mon_aura_data> aura_map =
         ENCH_SLOW, 1, true, DUR_SLOW, TORPOR_SLOWED_KEY,
          [](const actor& targ, const monster&) { return !targ.stasis();},
          [](const monster& source)
-            {  mprf("Being near %s leaves you feeling lethargic.",
-                        source.name(DESC_THE).c_str());
+            {  mprf("%s", ([&]() -> string {
+                const string _m0 = source.name(DESC_THE);
+                const string _original = make_stringf("Being near %s leaves you feeling lethargic.", _m0.c_str());
+                if (!m_display_active("m.log.110", "Being near %s leaves you feeling lethargic.")) return _original;
+                return ui_render("m.log.110", "Being near %s leaves you feeling lethargic.", _original, {m_actor_arg(source)});
+            })().c_str());
             }},
 
     {MONS_OPHAN,
         ENCH_NONE, 1, true, DUR_SENTINEL_MARK, OPHAN_MARK_KEY,
          nullptr,
          [](const monster& source)
-            {  mprf("%s gaze reveals you to all!",
-                        source.name(DESC_ITS).c_str());
+            {  mprf("%s", ([&]() -> string {
+                const string _m0 = source.name(DESC_ITS);
+                const string _original = make_stringf("%s gaze reveals you to all!", _m0.c_str());
+                if (!m_display_active("m.log.111", "%s gaze reveals you to all!")) return _original;
+                return ui_render("m.log.111", "%s gaze reveals you to all!", _original, {m_actor_arg(source)});
+            })().c_str());
             }},
 
     {MONS_MARTYRED_SHADE,

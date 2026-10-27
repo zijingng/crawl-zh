@@ -1,4 +1,5 @@
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "god-passive.h"
 
@@ -379,7 +380,7 @@ void jiyva_eat_offlevel_items()
                 dprf("Eating %s on %s",
                      si->name(DESC_PLAIN).c_str(), lid.describe().c_str());
 
-                mpr("You hear a distant slurping noise.");
+                mpr(ui_translate("g.message", "You hear a distant slurping noise."));
                 item_was_destroyed(*si);
                 destroy_item(si.index());
             }
@@ -499,7 +500,12 @@ void ash_id_item(item_def& item, bool silent)
         item.props.erase(NEEDS_AUTOPICKUP_KEY);
 
     if (!silent)
-        mprf_nocap("%s", item.name(DESC_INVENTORY_EQUIP).c_str());
+    {
+        const string original = item.name(DESC_INVENTORY_EQUIP);
+        string display;
+        mprf_nocap("%s", try_item_display_name(item, display, true, true)
+            ? display.c_str() : original.c_str());
+    }
 
     seen_item(item);
 }
@@ -801,31 +807,30 @@ void qazlal_element_adapt(beam_type flavour, int strength)
 
     if (what != BEAM_FIRE && you.duration[DUR_QAZLAL_FIRE_RES])
     {
-        mprf(MSGCH_DURATION, "Your resistance to fire fades away.");
+        mprf(MSGCH_DURATION, "%s", ui_translate("g.message", "Your resistance to fire fades away."));
         you.duration[DUR_QAZLAL_FIRE_RES] = 0;
     }
 
     if (what != BEAM_COLD && you.duration[DUR_QAZLAL_COLD_RES])
     {
-        mprf(MSGCH_DURATION, "Your resistance to cold fades away.");
+        mprf(MSGCH_DURATION, "%s", ui_translate("g.message", "Your resistance to cold fades away."));
         you.duration[DUR_QAZLAL_COLD_RES] = 0;
     }
 
     if (what != BEAM_ELECTRICITY && you.duration[DUR_QAZLAL_ELEC_RES])
     {
-        mprf(MSGCH_DURATION, "Your resistance to electricity fades away.");
+        mprf(MSGCH_DURATION, "%s", ui_translate("g.message", "Your resistance to electricity fades away."));
         you.duration[DUR_QAZLAL_ELEC_RES] = 0;
     }
 
     if (what != BEAM_MISSILE && you.duration[DUR_QAZLAL_AC])
     {
-        mprf(MSGCH_DURATION, "Your resistance to physical damage fades away.");
+        mprf(MSGCH_DURATION, "%s", ui_translate("g.message", "Your resistance to physical damage fades away."));
         you.duration[DUR_QAZLAL_AC] = 0;
         you.redraw_armour_class = true;
     }
 
-    mprf(MSGCH_GOD, "You feel %sprotected from %s.",
-         you.duration[dur] > 0 ? "more " : "", descript.c_str());
+    mprf(MSGCH_GOD, "%s", ui_render("g.message", "You feel %sprotected from %s.", make_stringf("You feel %sprotected from %s.", you.duration[dur] > 0 ? "more " : "", descript.c_str()), {ui_text_arg("g.protection", you.duration[dur] > 0 ? "more" : "new"), ui_text_arg("g.protection", descript)}).c_str());
 
     // was scaled by 10 * strength. But the strength parameter is used so inconsistently that
     // it seems like a constant would be better, based on the typical value of 2.
@@ -1862,7 +1867,7 @@ void wu_jian_trigger_serpents_lash(bool wall_jump)
     if (you.attribute[ATTR_SERPENTS_LASH] == 0)
     {
         you.increase_duration(DUR_EXHAUSTED, 12 + random2(5));
-        mpr("Your supernatural speed expires.");
+        mpr(ui_translate("g.message", "Your supernatural speed expires."));
     }
 }
 
@@ -1906,7 +1911,7 @@ void wu_jian_end_heavenly_storm()
     you.duration[DUR_HEAVENLY_STORM] = 0;
     you.redraw_evasion = true;
     invalidate_agrid(true);
-    mprf(MSGCH_GOD, "The heavenly storm settles.");
+    mprf(MSGCH_GOD, "%s", ui_translate("g.message", "The heavenly storm settles."));
 }
 
 bool wu_jian_has_momentum(wu_jian_attack_type attack_type)
@@ -1966,11 +1971,8 @@ static bool _wu_jian_lunge(coord_def old_pos, coord_def new_pos,
     int dmg_mult = 0;
     const int number_of_attacks = _wu_jian_number_of_attacks(dmg_mult, false);
 
-    mprf("You lunge%s at %s%s.",
-            wu_jian_has_momentum(WU_JIAN_ATTACK_LUNGE) ?
-                " with incredible momentum" : "",
-            mons->name(DESC_THE).c_str(),
-            number_of_attacks > 1 ? ", in a flurry of attacks" : "");
+    mpr(ui_render("g.message", "You lunge%s at %s%s.", make_stringf("You lunge%s at %s%s.", wu_jian_has_momentum(WU_JIAN_ATTACK_LUNGE) ?
+                " with incredible momentum" : "", mons->name(DESC_THE).c_str(), number_of_attacks > 1 ? ", in a flurry of attacks" : ""), {(wu_jian_has_momentum(WU_JIAN_ATTACK_LUNGE) ? ui_text_arg("g.martial", " with incredible momentum") : ui_literal_arg("")), ui_actor_arg(*mons), (number_of_attacks > 1 ? ui_text_arg("g.martial", ", in a flurry of attacks") : ui_literal_arg(""))}));
 
     count_action(CACT_ATTACK, ATTACK_LUNGE);
 
@@ -2025,11 +2027,8 @@ static bool _wu_jian_whirlwind(coord_def old_pos, coord_def new_pos,
 
         int dmg_mult = 0;
         const int number_of_attacks = _wu_jian_number_of_attacks(dmg_mult, false);
-        mprf("You spin and attack %s%s%s.",
-                mons->name(DESC_THE).c_str(),
-                number_of_attacks > 1 ? " repeatedly" : "",
-                wu_jian_has_momentum(WU_JIAN_ATTACK_WHIRLWIND) ?
-                    ", with incredible momentum" : "");
+        mpr(ui_render("g.message", "You spin and attack %s%s%s.", make_stringf("You spin and attack %s%s%s.", mons->name(DESC_THE).c_str(), number_of_attacks > 1 ? " repeatedly" : "", wu_jian_has_momentum(WU_JIAN_ATTACK_WHIRLWIND) ?
+                    ", with incredible momentum" : ""), {ui_actor_arg(*mons), (number_of_attacks > 1 ? ui_text_arg("g.martial", " repeatedly") : ui_literal_arg("")), (wu_jian_has_momentum(WU_JIAN_ATTACK_WHIRLWIND) ? ui_text_arg("g.martial", ", with incredible momentum") : ui_literal_arg(""))}));
 
         count_action(CACT_ATTACK, ATTACK_WHIRLWIND);
 
@@ -2121,11 +2120,8 @@ void wu_jian_wall_jump_effects()
         // Twice the attacks as Wall Jump spends twice the time
         int dmg_mult = 0;
         const int number_of_attacks = _wu_jian_number_of_attacks(dmg_mult, true);
-        mprf("You %sattack %s from above%s.",
-                number_of_attacks > 1 ? "repeatedly " : "",
-                target->name(DESC_THE).c_str(),
-                wu_jian_has_momentum(WU_JIAN_ATTACK_WALL_JUMP) ?
-                    ", with incredible momentum" : "");
+        mpr(ui_render("g.message", "You %sattack %s from above%s.", make_stringf("You %sattack %s from above%s.", number_of_attacks > 1 ? "repeatedly " : "", target->name(DESC_THE).c_str(), wu_jian_has_momentum(WU_JIAN_ATTACK_WALL_JUMP) ?
+                    ", with incredible momentum" : ""), {(number_of_attacks > 1 ? ui_text_arg("g.martial", "repeatedly ") : ui_literal_arg("")), ui_actor_arg(*target), (wu_jian_has_momentum(WU_JIAN_ATTACK_WALL_JUMP) ? ui_text_arg("g.martial", ", with incredible momentum") : ui_literal_arg(""))}));
 
         for (int i = 0; i < number_of_attacks; i++)
         {
@@ -2348,7 +2344,7 @@ void makhleb_execution_activate()
 {
     string talk = getSpeakString("Makhleb executioner chatter");
     mprf(MSGCH_TALK, "<lightred>%s</lightred>", talk.c_str());
-    mprf(MSGCH_DURATION, "A whirlwind of blades manifests around you!");
+    mprf(MSGCH_DURATION, "%s", ui_translate("g.message", "A whirlwind of blades manifests around you!"));
 
     you.duration[DUR_EXECUTION] = random_range(50, 70);
 #ifdef USE_TILE

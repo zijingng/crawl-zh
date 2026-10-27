@@ -1,0 +1,37 @@
+{
+  "batch": "morgue-collectibles-01",
+  "native_test_cases": 12,
+  "native_assertions": 3934,
+  "python_tests": 33,
+  "new_reviewed_ui_keys": 4,
+  "covered": [
+    "welcome_spam and dungeon descent and Halloween plus three referenced word groups",
+    "garden patch",
+    "all enum-defined rune gem and Orb of Zot pickup records, new and legacy",
+    "generic named Pan lord discovery and defeat",
+    "27 portal identities and four named Pan lord realms, typed and exact legacy notes"
+  ],
+  "fallback_checks": [
+    "English mode",
+    "unknown collectible names",
+    "unknown portal names",
+    "modified location parameters",
+    "damaged item snapshots"
+  ],
+  "invariants": [
+    "canonical Note::describe unchanged",
+    "note serialization stable across display languages",
+    "original collectible names and identification preserved",
+    "canonical welcome selection and RNG equal in 768 paired seed cases",
+    "English morgue paths and .lst output retained"
+  ],
+  "actual_english_morgue_sha256": {
+    "native-collectibles.txt": "5cd4bcc8cfb3ae8867b2b80c4fad5447d4adba72ea7fa6e660725da89258cc91",
+    "native-collectibles-en.txt": "5cd4bcc8cfb3ae8867b2b80c4fad5447d4adba72ea7fa6e660725da89258cc91",
+    "native-collectibles-language-en.txt": "5cd4bcc8cfb3ae8867b2b80c4fad5447d4adba72ea7fa6e660725da89258cc91"
+  },
+  "chinese_morgue_fixture": ".term-audit\\morgue-collectibles-runtime\\native-collectibles.zh.txt",
+  "windows_tiles_executable_sha256": "f8359b256a0fbe770a62f7ab7aba951de97955e8561ea23aa43833f4fe35104b",
+  "build": "passed",
+  "diff_check": "passed"
+}

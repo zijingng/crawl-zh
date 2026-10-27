@@ -1,6 +1,7 @@
 #include "AppHdr.h"
 
 #include "branch.h"
+#include "i18n.h"
 #include "branch-data.h"
 
 #include "item-name.h"
@@ -338,6 +339,10 @@ string branch_noise_desc(branch_type br)
             desc += "unnaturally silent: sounds travel farther here.";
     }
 
+    if (!desc.empty())
+        return ui_render("b.branch", noise > 0
+            ? "This branch is noisy: sounds don't travel as far here."
+            : "This branch is unnaturally silent: sounds travel farther here.", desc, {});
     return desc;
 }
 
@@ -366,6 +371,22 @@ string branch_rune_desc(branch_type br, bool remaining_only)
                             rune_names.size() > 1 ? "s" : "");
     }
 
+    if (!desc.empty())
+    {
+        vector<string> names;
+        bool complete = true;
+        for (rune_type rune : branches[br].runes)
+        {
+            if (remaining_only && you.runes[rune])
+                continue;
+            const ui_arg name = ui_text_arg("display.item",
+                string(rune_type_name(rune)) + " rune of Zot");
+            complete = complete && name.available;
+            names.push_back(name.text);
+        }
+        desc = ui_render("b.branch", "This branch contains %s.", desc,
+            {{join_strings(names.begin(), names.end(), "、"), complete}});
+    }
     return desc;
 }
 
@@ -393,4 +414,11 @@ void lock_vaults()
 void unlock_vaults()
 {
     you.props.erase(VAULTS_LOCKED_KEY);
+}
+
+// Display names only: parser, saves, Lua and JSON continue using branches[].
+const char *branch_display_name(branch_type br, bool long_name)
+{
+    const char *name = long_name ? branches[br].longname : branches[br].shortname;
+    return ui_translate("b.branch.name", name);
 }

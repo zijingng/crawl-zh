@@ -1,0 +1,534 @@
+{
+  "baseline": "0.34.1",
+  "batch": "phase3-static-03",
+  "glossary_sha256": "2c2041390a82e14b9a05b05bd5de2db212369f05cdb2862461ffad562765d81f",
+  "textdb_new": 54,
+  "entries": [
+    {
+      "source": "descript/gods.txt",
+      "key": "Ashenzari",
+      "context": "textdb:descript/gods.txt:ashenzari",
+      "source_sha256": "0b6d1414fd415a6458b44505c228cc42ecfaaa9f9cabd63bae11ddf9c283bfd2",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Beogh",
+      "context": "textdb:descript/gods.txt:beogh",
+      "source_sha256": "216cfc4cdc5f7994ddd71bfc259d4009cdd2bc86e0dc0f49bfe19730497016f4",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Cheibriados",
+      "context": "textdb:descript/gods.txt:cheibriados",
+      "source_sha256": "d0aba868e2f47d888750eeb8bee133db01c480f785bc54c56c5635e4493f4a7f",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Dithmenos",
+      "context": "textdb:descript/gods.txt:dithmenos",
+      "source_sha256": "b683e551f997252f8087aa9d55222f210f756b0013f283b78b6c3b866edeee32",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Elyvilon",
+      "context": "textdb:descript/gods.txt:elyvilon",
+      "source_sha256": "ca7cbc2cf50cb7fca53aadca326a0798c5cf91e4bded3e3af89e120c6006b40e",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Fedhas",
+      "context": "textdb:descript/gods.txt:fedhas",
+      "source_sha256": "93380b83757f7c638bac9ed10a9b9565fca2f4f740e4a33d5c88a638f4f0a4d2",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Gozag",
+      "context": "textdb:descript/gods.txt:gozag",
+      "source_sha256": "9059bbfccebec1629e781e9a114a525a710cc115d5511f825ddc0206cde5efa4",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Hepliaklqana",
+      "context": "textdb:descript/gods.txt:hepliaklqana",
+      "source_sha256": "c0cbb9b1ae67b842ba3cbd1778b7cb1dba3ce03b22c5095f522037e9de903f92",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Ignis",
+      "context": "textdb:descript/gods.txt:ignis",
+      "source_sha256": "cf25b8547806f16d5d909aaa62b3b9ad7bf14fd1eaf1b27e0d490c65f7601777",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Jiyva",
+      "context": "textdb:descript/gods.txt:jiyva",
+      "source_sha256": "648a61b499b56fd9e685bfb206040ef5722145a0c6dbc383b412203b75707014",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Kikubaaqudgha",
+      "context": "textdb:descript/gods.txt:kikubaaqudgha",
+      "source_sha256": "37699401c27d9871653afe0bce6af50aefd81c3b3b1f5e47a925cb02a4e4d7cd",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Lugonu",
+      "context": "textdb:descript/gods.txt:lugonu",
+      "source_sha256": "eb2b200b9431d820c2255ac4f02c6eb342362ca8f7147f7dac547ef5b5a4f807",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Makhleb",
+      "context": "textdb:descript/gods.txt:makhleb",
+      "source_sha256": "946da2b1b48ce767aa132691664f5b361855e138a604754951fba66f34da0870",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Nemelex Xobeh",
+      "context": "textdb:descript/gods.txt:nemelex xobeh",
+      "source_sha256": "9f46f956b4e4ea7360dc850cdcfa89f494e7f4e30d35b45714e73bcf0d484a1a",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Okawaru",
+      "context": "textdb:descript/gods.txt:okawaru",
+      "source_sha256": "ba32f2f84b216f88746dab5132a8c44fb66783fd290b96dd19c91adee1c89d94",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Pakellas",
+      "context": "textdb:descript/gods.txt:pakellas",
+      "source_sha256": "a5c2ce5291174c5f450c8d915905ec4212980cb346501263fe0a39cc3ebe5e17",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Qazlal",
+      "context": "textdb:descript/gods.txt:qazlal",
+      "source_sha256": "2648869a6b8afdb60eb41486f833881e5700b63ee0042dd544ac9f4bf2f3a4b3",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Ru",
+      "context": "textdb:descript/gods.txt:ru",
+      "source_sha256": "2de27ffd5c9b47db5e5d93e2bad65b56e7da1a164cdbe55ec07a1bc487f74b20",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Sif Muna",
+      "context": "textdb:descript/gods.txt:sif muna",
+      "source_sha256": "cd6fbd3383077a5a820786c1f4ee3eae20b4a6e1bff99a0291dc01ad4e206b29",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "the Shining One",
+      "context": "textdb:descript/gods.txt:the shining one",
+      "source_sha256": "151c697a1db193479cd4da07abf4a601e231108589d4c81dfe90a78365a1c418",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Trog",
+      "context": "textdb:descript/gods.txt:trog",
+      "source_sha256": "f63abf059ec7c4f8e75e6526d97094af4d2bd2af0d23129f54bbbc9617a24256",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Uskayaw",
+      "context": "textdb:descript/gods.txt:uskayaw",
+      "source_sha256": "43709bb6857e128f116ca33b860bc948654826b5caaa13642b86af10152bd1c5",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Vehumet",
+      "context": "textdb:descript/gods.txt:vehumet",
+      "source_sha256": "58fab7e7c2d35e074815005ea3b45ad618b4aab9f8dbaf94a29945d9e1363ac6",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Wu Jian",
+      "context": "textdb:descript/gods.txt:wu jian",
+      "source_sha256": "b0d534c0622376c6493eed516fe25e435d904f3afb467de9778f68ffb8cb3192",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Xom",
+      "context": "textdb:descript/gods.txt:xom",
+      "source_sha256": "a42ef91126a1158552f7464b9cb8695f972d41f641948b3a6f8e30720913c67e",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Yredelemnul",
+      "context": "textdb:descript/gods.txt:yredelemnul",
+      "source_sha256": "5515b3617754d357fdfe3b764f38d28a96a3a6d7879867eddd6a49ebb33c83ac",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Zin",
+      "context": "textdb:descript/gods.txt:zin",
+      "source_sha256": "7b160ae7a0218605f9817f4e7af9f762f408b99cef4dfbbe41b12e149192aecc",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Ashenzari powers",
+      "context": "textdb:descript/gods.txt:ashenzari powers",
+      "source_sha256": "9c84aded2b9185c1ac71ce0b9dd619dc780accef205a55efa580a650fc4cedd7",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Beogh powers",
+      "context": "textdb:descript/gods.txt:beogh powers",
+      "source_sha256": "29e48c60f07082a44ef9b30b548ff56ff4932ac675d9012c87996a1a56113934",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Cheibriados powers",
+      "context": "textdb:descript/gods.txt:cheibriados powers",
+      "source_sha256": "32d6f00305e4491ffc8d1b67ac802b14311c776e21d69bc661aca71ea17b502c",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Dithmenos powers",
+      "context": "textdb:descript/gods.txt:dithmenos powers",
+      "source_sha256": "7dd118f776e420df2b60c55df8412f5d664a69e24c534fc8b718e8374a225773",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Elyvilon powers",
+      "context": "textdb:descript/gods.txt:elyvilon powers",
+      "source_sha256": "3ac02131c9950db77446eb00cb75fb57d3b42252a45445ddd1eb790e35673fd4",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Fedhas powers",
+      "context": "textdb:descript/gods.txt:fedhas powers",
+      "source_sha256": "db2abc5b24994d401cfa3537666654c731e97eb70c3cf768f868e47e180afecd",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Gozag powers",
+      "context": "textdb:descript/gods.txt:gozag powers",
+      "source_sha256": "55b9705f79469c7c93186b4149685ee41f1e88589cdc4e4c28de567a292fed76",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Hepliaklqana powers",
+      "context": "textdb:descript/gods.txt:hepliaklqana powers",
+      "source_sha256": "5129d7c819e063508a53295aa78460a597c5824548a92bb4ed5a461c0695af97",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Ignis powers",
+      "context": "textdb:descript/gods.txt:ignis powers",
+      "source_sha256": "3e2e54fed873db0a00e138e6d41a8b35e7f1d38d6bf1cdbfee560ca802f75855",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Jiyva powers",
+      "context": "textdb:descript/gods.txt:jiyva powers",
+      "source_sha256": "1d3147e889308b376ce583b84d600d5629db3dfb5e3d9be0e04bacf869a6aac8",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Kikubaaqudgha powers",
+      "context": "textdb:descript/gods.txt:kikubaaqudgha powers",
+      "source_sha256": "7578c01952a625d616bb0baa6f188ab4dbb7820035366a6ad7f1d9d7c83d56fb",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Lugonu powers",
+      "context": "textdb:descript/gods.txt:lugonu powers",
+      "source_sha256": "ff6f44d622b1b4b4fbdf1144e399fc1ae4bdc2c8fa9f78327960be6b5586375d",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Makhleb powers",
+      "context": "textdb:descript/gods.txt:makhleb powers",
+      "source_sha256": "f418ddd2d6396a3f391bca3d23856f762bc80abd8ca4bfe84f4471bfe7fc6eeb",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Nemelex Xobeh powers",
+      "context": "textdb:descript/gods.txt:nemelex xobeh powers",
+      "source_sha256": "7e959e21fe696432dc19d4881513435121f30723bc53d4f094c9f71a5e015667",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Okawaru powers",
+      "context": "textdb:descript/gods.txt:okawaru powers",
+      "source_sha256": "37be7af9098ba9c6dfe059836404b389af5afb134bf50484c577213e353524fc",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Pakellas powers",
+      "context": "textdb:descript/gods.txt:pakellas powers",
+      "source_sha256": "2ce9517a94358117c09c271d0ee5ce650fc190aa5fdf23d68017e18830a350cc",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Qazlal powers",
+      "context": "textdb:descript/gods.txt:qazlal powers",
+      "source_sha256": "16bd2bd53a390c6179cee10261d9bed8ff343ec008d265dfa7e91bcb18f4f0f8",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Ru powers",
+      "context": "textdb:descript/gods.txt:ru powers",
+      "source_sha256": "99575b7a027d04ed6f49ed1782c4676f7cc12d2d2675d31ceda6f544f62f4309",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Sif Muna powers",
+      "context": "textdb:descript/gods.txt:sif muna powers",
+      "source_sha256": "b860c09415b54677b6d6e5a14a9ffcd2850d03de8186247562dc61691f223ca8",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "the Shining One powers",
+      "context": "textdb:descript/gods.txt:the shining one powers",
+      "source_sha256": "0715b478e5f3950a74eac2b1adb29156047f7fc08b926c8dbce229857100f54d",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Trog powers",
+      "context": "textdb:descript/gods.txt:trog powers",
+      "source_sha256": "806b194f7e57e4cd0cdb3981667dd9a9fe90d0f738fa92a0c2a6f86b70522c9a",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Uskayaw powers",
+      "context": "textdb:descript/gods.txt:uskayaw powers",
+      "source_sha256": "2fc1c00089539b7051acb88a3f45dd1848ceb3592d0b13bbf3a6c31c608f2dfb",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Vehumet powers",
+      "context": "textdb:descript/gods.txt:vehumet powers",
+      "source_sha256": "d8eec0d5faee04c8ac8bb171bdb07952c3210cabfaa1c8f63bb47dfdfa3d98ed",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Wu Jian powers",
+      "context": "textdb:descript/gods.txt:wu jian powers",
+      "source_sha256": "bc2afa6d861649f149c772a3c3371814bfbbe7e7425e234a9b90793ede35a8cb",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Xom powers",
+      "context": "textdb:descript/gods.txt:xom powers",
+      "source_sha256": "591998358547e5880dc8c92461a17c479042068ad3989a52f43adc83321be3a1",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Yredelemnul powers",
+      "context": "textdb:descript/gods.txt:yredelemnul powers",
+      "source_sha256": "096f4df8d47af3ad766de339e147e98c3dfc3858b844f22ebe676571d7eae88c",
+      "review_status": "reviewed",
+      "review_batch": "glossary-audit-01"
+    },
+    {
+      "source": "descript/gods.txt",
+      "key": "Zin powers",
+      "context": "textdb:descript/gods.txt:zin powers",
+      "source_sha256": "87bf3ac097c870f0b1da745f019dbaa9f2ef747d6b779798ab5dde5e2b616cd7",
+      "review_status": "reviewed",
+      "review_batch": "phase3-static-03"
+    }
+  ],
+  "spell_display_names": {
+    "Berserker Rage": "狂暴之怒",
+    "Magic Dart": "魔法飞弹",
+    "Blink": "闪烁",
+    "Shock": "电击",
+    "Freeze": "冰冻",
+    "Sandblast": "沙爆",
+    "Foxfire": "狐火",
+    "Poisonous Vapours": "毒气",
+    "Kiss of Death": "死亡之吻",
+    "Soul Splinter": "灵魂碎裂",
+    "Summon Small Mammal": "召唤小型哺乳动物",
+    "Apportation": "牵引术",
+    "Ignite Poison": "燃毒术",
+    "Sting": "毒刺",
+    "Construct Spike Launcher": "构造尖刺发射器",
+    "Kinetic Grapnel": "动能钩索",
+    "Launch Clockwork Bee": "启动发条蜂",
+    "Jinxbite": "厄咒之啮",
+    "Sigil of Binding": "束缚印记",
+    "Ensorcelled Hibernation": "魔法冬眠",
+    "Confusing Touch": "混乱之触",
+    "Tukima's Dance": "图基玛之舞",
+    "Searing Ray": "灼热射线",
+    "Fulminant Prism": "爆裂棱晶",
+    "Iskenderun's Mystic Blast": "伊斯肯德伦的秘法冲击",
+    "Scorch": "焦灼",
+    "Inner Flame": "内燃",
+    "Flame Wave": "火焰波",
+    "Static Discharge": "静电释放",
+    "Swiftness": "迅捷术",
+    "Airstrike": "空气打击",
+    "Passwall": "穿墙术",
+    "Stone Arrow": "石箭术",
+    "Petrify": "石化术",
+    "Grave Claw": "坟墓之爪",
+    "Vampiric Draining": "吸血",
+    "Animate Dead": "操纵死尸",
+    "Call Imp": "召唤小恶魔",
+    "Call Canine Familiar": "召唤犬类使魔",
+    "Summon Ice Beast": "召唤冰兽",
+    "Summon Seismosaurus Egg": "召唤震龙蛋",
+    "Forge Blazeheart Golem": "锻造焰心魔像",
+    "Lesser Beckoning": "次级牵引",
+    "Momentum Strike": "动量打击",
+    "Vhi's Electric Charge": "维的闪电冲锋",
+    "Mephitic Cloud": "恶臭云雾",
+    "Mercury Arrow": "水银箭",
+    "Olgreb's Toxic Radiance": "奥格雷布的剧毒光辉",
+    "Sticky Flame": "黏附火焰",
+    "Frozen Ramparts": "冰霜壁垒",
+    "Ozocubu's Armour": "奥佐库布的护甲",
+    "Hailstorm": "冰雹风暴",
+    "Brom's Barrelling Boulder": "布罗姆的滚滚巨石",
+    "Volatile Blastmotes": "不稳定爆炸微粒",
+    "Dimensional Bullseye": "空间靶心",
+    "Cause Fear": "恐惧术",
+    "Teleport Other": "传送他者",
+    "Rending Blade": "撕裂之刃",
+    "Maxwell's Portable Piledriver": "麦克斯韦的便携打桩机",
+    "Curse of Agony": "剧痛诅咒",
+    "Forge Lightning Spire": "锻造闪电尖塔",
+    "Gloom": "幽暗",
+    "Eringya's Surprising Crocodile": "艾琳佳的惊奇鳄鱼"
+  },
+  "god_display_names": {
+    "Ashenzari": "艾申扎利",
+    "Beogh": "比欧弗",
+    "Cheibriados": "切布理亚多",
+    "Dithmenos": "迪斯姆诺",
+    "Elyvilon": "艾利维隆",
+    "Fedhas": "费德哈",
+    "Gozag": "哥萨戈",
+    "Hepliaklqana": "惠普利亚卡纳",
+    "Ignis": "伊格尼斯",
+    "Jiyva": "吉瓦",
+    "Kikubaaqudgha": "奇库巴库哈",
+    "Lugonu": "卢戈努",
+    "Makhleb": "马科列布",
+    "Nemelex Xobeh": "尼姆雷斯・索布",
+    "Okawaru": "奥格瓦如",
+    "Pakellas": "帕克拉斯",
+    "Qazlal": "卡兹拉尔",
+    "Ru": "入",
+    "Sif Muna": "席夫·穆纳",
+    "the Shining One": "光明神",
+    "Trog": "特洛戈",
+    "Uskayaw": "阿斯卡亚",
+    "Vehumet": "维胡梅特",
+    "Wu Jian": "武剑会",
+    "Xom": "佐姆",
+    "Yredelemnul": "伊莱德莱姆努尔",
+    "Zin": "辛"
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "entries": [
+    {
+      "key": "general appearance",
+      "context": "textdb:database/randname.txt:general appearance",
+      "source_sha256": "be6c1ed5b778926ea5bb64baf6f7827c72dc56c79d55b345946c14745c2e7b3d",
+      "review_status": "reviewed",
+      "review_batch": "database-42",
+      "dependencies": []
+    },
+    {
+      "key": "weapon appearance",
+      "context": "textdb:database/randname.txt:weapon appearance",
+      "source_sha256": "0a7968205ad72df4a87bab3ea3b7a0656a3dcc7c7170f6d53eb1a3067086d313",
+      "review_status": "reviewed",
+      "review_batch": "database-42",
+      "dependencies": [
+        {
+          "source": "database/randname.txt",
+          "key": "general appearance",
+          "source_sha256": "be6c1ed5b778926ea5bb64baf6f7827c72dc56c79d55b345946c14745c2e7b3d",
+          "translation_sha256": "b8646f0f61dfaf7cf79dba718c1f357b7e07e1ffbc3e387abf2a59ea9bf19619"
+        }
+      ]
+    },
+    {
+      "key": "robe appearance",
+      "context": "textdb:database/randname.txt:robe appearance",
+      "source_sha256": "0e2f9b48d25399a2fe33972206a93fd35f85b475421e7bfae7bb016b84a6b183",
+      "review_status": "reviewed",
+      "review_batch": "database-42",
+      "dependencies": []
+    },
+    {
+      "key": "body armour appearance",
+      "context": "textdb:database/randname.txt:body armour appearance",
+      "source_sha256": "1d61f6eb20c6d99ef46ddf397b853cb6a3fc766337e30a1854f1cd584724b4b3",
+      "review_status": "reviewed",
+      "review_batch": "database-42",
+      "dependencies": [
+        {
+          "source": "database/randname.txt",
+          "key": "_gemstone_",
+          "source_sha256": "36240deec15a0af9bc35179f6d0b4d993a6fda2fd0d8873b19e9fc10a142122b",
+          "translation_sha256": "67b265012ce4ada6f4bf9d537e5212e69e1c3ac084f516ea71e3f9d622180905"
+        },
+        {
+          "source": "database/randname.txt",
+          "key": "armour appearance",
+          "source_sha256": "f182d2a3418f816a2c3ec4877042d6eb5cce61ea4349eca95412c892b1596c5a",
+          "translation_sha256": "b0f8d6cbf26d9b3ff32cd3c33a51600b18051d2144e29e52a20199723a445857"
+        }
+      ]
+    },
+    {
+      "key": "armour appearance",
+      "context": "textdb:database/randname.txt:armour appearance",
+      "source_sha256": "f182d2a3418f816a2c3ec4877042d6eb5cce61ea4349eca95412c892b1596c5a",
+      "review_status": "reviewed",
+      "review_batch": "database-42",
+      "dependencies": [
+        {
+          "source": "database/randname.txt",
+          "key": "general appearance",
+          "source_sha256": "be6c1ed5b778926ea5bb64baf6f7827c72dc56c79d55b345946c14745c2e7b3d",
+          "translation_sha256": "b8646f0f61dfaf7cf79dba718c1f357b7e07e1ffbc3e387abf2a59ea9bf19619"
+        }
+      ]
+    },
+    {
+      "key": "_gemstone_",
+      "context": "textdb:database/randname.txt:_gemstone_",
+      "source_sha256": "36240deec15a0af9bc35179f6d0b4d993a6fda2fd0d8873b19e9fc10a142122b",
+      "review_status": "reviewed",
+      "review_batch": "database-42",
+      "dependencies": []
+    },
+    {
+      "key": "_jewellery appearance_",
+      "context": "textdb:database/randname.txt:_jewellery appearance_",
+      "source_sha256": "1096208ee5ea12b46b950c6f69f4594b35483b3954e590dc2c75a29ccc2a459a",
+      "review_status": "reviewed",
+      "review_batch": "database-42",
+      "dependencies": []
+    },
+    {
+      "key": "_ring material_",
+      "context": "textdb:database/randname.txt:_ring material_",
+      "source_sha256": "f3ae833dd1a6c7e8345eeec64a3ec9bf614e2878e449d344d14aae678dfbd5d6",
+      "review_status": "reviewed",
+      "review_batch": "database-42",
+      "dependencies": []
+    },
+    {
+      "key": "_amulet material_",
+      "context": "textdb:database/randname.txt:_amulet material_",
+      "source_sha256": "1351408226548392706086fe30fa519341b83eb5da2cb32d8b1543cec9255ade",
+      "review_status": "reviewed",
+      "review_batch": "database-42",
+      "dependencies": []
+    },
+    {
+      "key": "ring appearance",
+      "context": "textdb:database/randname.txt:ring appearance",
+      "source_sha256": "f8e43955452049712304e291abd5706ab33a7817b75f7dca015a9673ce1b43cb",
+      "review_status": "reviewed",
+      "review_batch": "database-42",
+      "dependencies": [
+        {
+          "source": "database/randname.txt",
+          "key": "_jewellery appearance_",
+          "source_sha256": "1096208ee5ea12b46b950c6f69f4594b35483b3954e590dc2c75a29ccc2a459a",
+          "translation_sha256": "e6cb778e6d0e6f7eb27cac1526952dc0c8a38824ac0af3536466d67c54c1036f"
+        },
+        {
+          "source": "database/randname.txt",
+          "key": "_ring material_",
+          "source_sha256": "f3ae833dd1a6c7e8345eeec64a3ec9bf614e2878e449d344d14aae678dfbd5d6",
+          "translation_sha256": "0f2749bb896e0410e59d2d2f398cfaaae070fc0b8dbdf03478da46f01f911d55"
+        }
+      ]
+    },
+    {
+      "key": "amulet appearance",
+      "context": "textdb:database/randname.txt:amulet appearance",
+      "source_sha256": "77bb3647a6e348e17d66a9399727839347cfa6cbea1b4028c376ca4525c86623",
+      "review_status": "reviewed",
+      "review_batch": "database-42",
+      "dependencies": [
+        {
+          "source": "database/randname.txt",
+          "key": "_amulet material_",
+          "source_sha256": "1351408226548392706086fe30fa519341b83eb5da2cb32d8b1543cec9255ade",
+          "translation_sha256": "b837affb0fa386698bf367fbd452a6c3d64bb1537fa652d8527cb948adff1866"
+        },
+        {
+          "source": "database/randname.txt",
+          "key": "_jewellery appearance_",
+          "source_sha256": "1096208ee5ea12b46b950c6f69f4594b35483b3954e590dc2c75a29ccc2a459a",
+          "translation_sha256": "e6cb778e6d0e6f7eb27cac1526952dc0c8a38824ac0af3536466d67c54c1036f"
+        }
+      ]
+    },
+    {
+      "key": "book appearance",
+      "context": "textdb:database/randbook.txt:book appearance",
+      "source_sha256": "9695ecb8dcb6d9f6a72a5cf9c0c4c3f9e9ab96a9405de177789201a05937a967",
+      "review_status": "reviewed",
+      "review_batch": "database-42",
+      "dependencies": [
+        {
+          "source": "database/randbook.txt",
+          "key": "_book_adjective_",
+          "source_sha256": "cbe45b4dc5330e4f686093d5979653c6f30bc2b4a5be1612b197085d9f3f0e46",
+          "translation_sha256": "18754e4c8110fcbc900eaf53599b482015fe7724c98c674370cafbe7755fbfdf"
+        }
+      ]
+    },
+    {
+      "key": "book_noun",
+      "context": "textdb:database/randbook.txt:book_noun",
+      "source_sha256": "a14accaf0d6d1a7c8e038bc75c5e4cfc7e82784b68175c064ef58a4209c7b9ad",
+      "review_status": "reviewed",
+      "review_batch": "database-42",
+      "dependencies": []
+    },
+    {
+      "key": "_book_noun_on_",
+      "context": "textdb:database/randbook.txt:_book_noun_on_",
+      "source_sha256": "c3d8d56897715535c32fdc55ff144b9425dca4653195e4743d2900a45d815634",
+      "review_status": "reviewed",
+      "review_batch": "database-42",
+      "dependencies": []
+    },
+    {
+      "key": "_book_adjective_",
+      "context": "textdb:database/randbook.txt:_book_adjective_",
+      "source_sha256": "cbe45b4dc5330e4f686093d5979653c6f30bc2b4a5be1612b197085d9f3f0e46",
+      "review_status": "reviewed",
+      "review_batch": "database-42",
+      "dependencies": []
+    }
+  ],
+  "candidates": {
+    "general appearance": 24,
+    "weapon appearance": 10,
+    "robe appearance": 31,
+    "body armour appearance": 5,
+    "armour appearance": 8,
+    "_gemstone_": 22,
+    "_jewellery appearance_": 26,
+    "_ring material_": 23,
+    "_amulet material_": 23,
+    "ring appearance": 1,
+    "amulet appearance": 1,
+    "book appearance": 1,
+    "book_noun": 27,
+    "_book_noun_on_": 29,
+    "_book_adjective_": 78
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "glossary_sha256": "5ea382702e0d86c7e1fcad03e64a1c7d079f42a2a2f6af24949e155eae9dc885",
+  "terms": [
+    "Minotaur",
+    "Fighter",
+    "tarantella",
+    "Fighting",
+    "rock wall",
+    "floor",
+    "wizard mode",
+    "inventory",
+    "Dungeon Sprint",
+    "Dungeon Descent",
+    "Tutorial",
+    "Arena",
+    "Jiyva"
+  ],
+  "term_hits": [
+    {
+      "Term": "Fighter",
+      "Translation": "战士",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【现行清单】已与 0.34.1 的背景名称清单对应。来源：dat/jobs/fighter.yaml。"
+    },
+    {
+      "Term": "Fighting",
+      "Translation": "战斗/作战/格斗",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】物理战斗通用技能，亦增加生命上限；与 Unarmed Combat（徒手格斗）区分。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。\n【语境补充 2026-10-21】技能标签固定用战斗。普通动作按句意用作战或格斗。"
+    },
+    {
+      "Term": "floor",
+      "Translation": "地面/楼层/地板/向下取整",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【语境补充 2026-10-21】物理表面按语境用地面或地板。地下城深度用楼层。math.floor 为向下取整函数，代码标识符保留英文。"
+    },
+    {
+      "Term": "Inventory",
+      "Translation": "物品栏",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Jiyva",
+      "Translation": "吉瓦",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "吉瓦是统治软泥怪的混沌古神。\n【现行神祇】名称由 god_name_jiyva 单独生成，随机后缀不能当作另一位神祇。来源：religion.cc。"
+    },
+    {
+      "Term": "tarantella",
+      "Translation": "塔兰泰拉",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Minotaur",
+      "Translation": "牛头人",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/minotaur.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Dungeon Sprint",
+      "Translation": "地下城冲刺",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/模式】独立挑战模式；原表 meat/部分怪物名可能来自此模式。 来源：newgame.cc。"
+    },
+    {
+      "Term": "Arena",
+      "Translation": "奥格瓦如竞技场/竞技场",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 分支名称】来源：branch-data.h；Arena（规范缩写 Arena）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。\n【语境补充 2026-10-21】奥格瓦如的分支用奥格瓦如竞技场。怪物模拟模式或一般场地用竞技场。Gauntlet 依其完整专名。"
+    },
+    {
+      "Term": "wizard mode",
+      "Translation": "巫师模式",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 模式名称】用户指定译名；wizard commands 译为巫师命令。保留英文规范名、配置与内部标识，仅用于中文显示。"
+    }
+  ],
+  "baseline": {
+    "Makefile": "99c0ede947da1d329a7d07ce5ceb13db995f04e5545c884416d63de1d86f1944",
+    "main.cc": "ae1cea342ab21f4592af2c7f0c84782dba96e144254608311e72bb3fb9ecfef0",
+    "newgame.cc": "f4895b064fa3a8d6b9e5e5aa7d76ed6c0f4cacb9ded75f181c81b2b02428242f",
+    "newgame.h": "73c27a6a1032770c3626df8e1caf0e443f2d5a547b4248dd77acddc864f0edb7",
+    "startup.cc": "77c705c0e554d40d13b8e8e6b2a5fe19a1f42ebb06ff22b4ea0e18bb634d5a96",
+    "lookup-help.cc": "c3cf5c98fa91f1d3fcd3cf845d98907ccb9754432ba47a07b995d329c944ca62",
+    "tilereg-inv.cc": "7937f7588a6ad0b257989160a4cfa042c906f127548bbc053b604720da82fd41",
+    "tilereg-dgn.cc": "92c0eec4e456b8a44dfab3238ffac67a432b5f214cb9b370779cd7858e6e8961",
+    "directn.cc": "48815448e7b997b44695f73aa3c9a58432cb57785400759b01fb794771016a21",
+    "l-crawl.cc": "fa7d6f57c6cdd931ce092088ce97e80a6a5e372d8132b65dd65cdaa32b4b1769",
+    "shout.cc": "ae5e3dba691e118b166a232abbc20ea061c12903cdb69c8280bf89f5b6b44dd1",
+    "mon-util.cc": "bdcab0576b8fe5dd52b4f3b5437a7aff199b45893c82a01b8eb2cc62d8bc2e25",
+    "mon-util.h": "aeaac93796697501882146ae68e2d816f1484383bd59228cbd26f35392aaf943",
+    "database.cc": "f98eb791595d76ebd4e1c2593c278aded52af51cbd3925fb6f0b6c8c3cb40944",
+    "database.h": "2e0525981157de6ddd1d1804f3bb59db873cc3498858667fe1ed349ebb4f0605",
+    "dat/clua/autofight.lua": "7c03c3b8f32e1ee8c1ad61d6687cf8700e979862994e8f27edec804d5ca8fecc",
+    "dat/clua/automagic.lua": "e872573b6408ac95b99a70e09a129bddb1f8f1c310ef3481dc5cd5857b3195ee",
+    "i18n.cc": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+  }
+}

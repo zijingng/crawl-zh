@@ -1,0 +1,123 @@
+{
+  "entries": [
+    {
+      "key": "_jewellery_animal_",
+      "context": "textdb:database/rand_all.txt:_jewellery_animal_",
+      "source_sha256": "746c9af215f74d8381d15783835ad81fb1c507646344fcc96fbe0c4ba496e77b",
+      "review_status": "reviewed",
+      "review_batch": "database-43",
+      "dependencies": []
+    },
+    {
+      "key": "_jewellery_special_name_",
+      "context": "textdb:database/rand_all.txt:_jewellery_special_name_",
+      "source_sha256": "05b701851d68d933706216a8ce82343d64bf6e4990b5da13160c8be324374353",
+      "review_status": "reviewed",
+      "review_batch": "database-43",
+      "dependencies": []
+    },
+    {
+      "key": "_suspicion_no_conflict_name_",
+      "context": "textdb:database/rand_all.txt:_suspicion_no_conflict_name_",
+      "source_sha256": "1c4a601bbf21cbfe2b118c6d7bfec8206360c41dc508184091156547ae59371f",
+      "review_status": "reviewed",
+      "review_batch": "database-43",
+      "dependencies": []
+    },
+    {
+      "key": "_time_name_",
+      "context": "textdb:database/rand_all.txt:_time_name_",
+      "source_sha256": "f89eb51a0b6d7934e541debeb836e6f099f47e5b2f5bddaeeb72ce92612bb288",
+      "review_status": "reviewed",
+      "review_batch": "database-43",
+      "dependencies": []
+    },
+    {
+      "key": "_sky_colour_name_",
+      "context": "textdb:database/rand_all.txt:_sky_colour_name_",
+      "source_sha256": "e61b399284de8f09020fb263b4f373f152f7d99881c87bf6b20f75e8dabd86e4",
+      "review_status": "reviewed",
+      "review_batch": "database-43",
+      "dependencies": []
+    },
+    {
+      "key": "_virtue_name_",
+      "context": "textdb:database/rand_all.txt:_virtue_name_",
+      "source_sha256": "e7fb759c1ef8e5e3f1dfc525b04c140b7040f79d696841b6d8e2bc47ee59c79d",
+      "review_status": "reviewed",
+      "review_batch": "database-43",
+      "dependencies": []
+    },
+    {
+      "key": "_vice_name_",
+      "context": "textdb:database/rand_all.txt:_vice_name_",
+      "source_sha256": "e7120ee43536b49f2d49e1bc2c12721b6fa1a86901055dcf3218ed3f010e8769",
+      "review_status": "reviewed",
+      "review_batch": "database-43",
+      "dependencies": []
+    },
+    {
+      "key": "_destiny_name_",
+      "context": "textdb:database/rand_all.txt:_destiny_name_",
+      "source_sha256": "452c08201eca71558bfdf410bba03b392efc3c128d85cb32453da5f4a4b86475",
+      "review_status": "reviewed",
+      "review_batch": "database-43",
+      "dependencies": []
+    },
+    {
+      "key": "_number_or_qualifier_",
+      "context": "textdb:database/rand_all.txt:_number_or_qualifier_",
+      "source_sha256": "d5791dacc3035a667565d135f95f437f82443e87ec03a9fb59355a8e5d90474d",
+      "review_status": "reviewed",
+      "review_batch": "database-43",
+      "dependencies": []
+    },
+    {
+      "key": "_thing_names_",
+      "context": "textdb:database/rand_all.txt:_thing_names_",
+      "source_sha256": "dd533c7a9d5cf3af145446c7a3135e0208b98d2dc047e8e3e140c5832f104332",
+      "review_status": "reviewed",
+      "review_batch": "database-43",
+      "dependencies": []
+    },
+    {
+      "key": "_verbing_",
+      "context": "textdb:database/rand_all.txt:_verbing_",
+      "source_sha256": "e31bb74db7ef220665f59bbc418ba4c208f46a302f6ab52b81bcb572e1b49f36",
+      "review_status": "reviewed",
+      "review_batch": "database-43",
+      "dependencies": []
+    },
+    {
+      "key": "_adjective_",
+      "context": "textdb:database/rand_all.txt:_adjective_",
+      "source_sha256": "82750aefa1ce7b3fe16d3418f0ab5acfe924c5f1d75595bc03276eeea166ff7f",
+      "review_status": "reviewed",
+      "review_batch": "database-43",
+      "dependencies": []
+    },
+    {
+      "key": "_fruit_name_",
+      "context": "textdb:database/rand_all.txt:_fruit_name_",
+      "source_sha256": "fb8f5b05c5efc69410d3984d3cc8a02c33c68e4c570b2d3c94f794329028011e",
+      "review_status": "reviewed",
+      "review_batch": "database-43",
+      "dependencies": []
+    }
+  ],
+  "candidates": {
+    "_jewellery_animal_": 5,
+    "_jewellery_special_name_": 13,
+    "_suspicion_no_conflict_name_": 10,
+    "_time_name_": 30,
+    "_sky_colour_name_": 7,
+    "_virtue_name_": 20,
+    "_vice_name_": 26,
+    "_destiny_name_": 7,
+    "_number_or_qualifier_": 71,
+    "_thing_names_": 99,
+    "_verbing_": 88,
+    "_adjective_": 112,
+    "_fruit_name_": 35
+  }
+}

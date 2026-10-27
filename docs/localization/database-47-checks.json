@@ -1,0 +1,21 @@
+{
+  "batch": 47,
+  "new_reviewed_keys": 54,
+  "new_candidates": 838,
+  "randbook_reviewed_keys": 72,
+  "randbook_source_keys": 72,
+  "python_tests_passed": 32,
+  "native_test_cases_passed": 12,
+  "native_assertions_passed": 222055,
+  "native_seconds": 2.409,
+  "final_data_proofread_test": {
+    "cases": 1,
+    "assertions": 6023,
+    "seconds": 0.164
+  },
+  "windows_tiles_build": "passed",
+  "english_source_unchanged": true,
+  "previous_translations_unchanged": true,
+  "english_fallback_and_rng_checks": "passed",
+  "gui_visual_test": false
+}

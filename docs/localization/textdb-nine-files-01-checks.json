@@ -1,0 +1,100 @@
+{
+  "batch": "textdb-nine-files-01",
+  "entries": 1997,
+  "reference_only_aliases": 137,
+  "files": {
+    "descript/egos.txt": {
+      "english_keys": 80,
+      "reviewed_exported": 80,
+      "duplicate_source_keys": [],
+      "actions": {
+        "new_translation": 80
+      }
+    },
+    "descript/monstatus.txt": {
+      "english_keys": 139,
+      "reviewed_exported": 139,
+      "duplicate_source_keys": [
+        "damage-immune at range monstatus"
+      ],
+      "actions": {
+        "new_translation": 139
+      }
+    },
+    "database/godname.txt": {
+      "english_keys": 23,
+      "reviewed_exported": 23,
+      "duplicate_source_keys": [],
+      "actions": {
+        "retained_after_review": 6,
+        "corrected": 17
+      }
+    },
+    "descript/passives.txt": {
+      "english_keys": 20,
+      "reviewed_exported": 20,
+      "duplicate_source_keys": [],
+      "actions": {
+        "corrected": 18,
+        "retained_after_review": 2
+      }
+    },
+    "descript/unrand.txt": {
+      "english_keys": 140,
+      "reviewed_exported": 140,
+      "duplicate_source_keys": [],
+      "actions": {
+        "retained_after_review": 89,
+        "corrected": 44,
+        "new_translation": 7
+      }
+    },
+    "descript/features.txt": {
+      "english_keys": 290,
+      "reviewed_exported": 290,
+      "duplicate_source_keys": [],
+      "actions": {
+        "retained_after_review": 204,
+        "corrected": 38,
+        "new_translation": 48
+      }
+    },
+    "descript/hints.txt": {
+      "english_keys": 116,
+      "reviewed_exported": 116,
+      "duplicate_source_keys": [],
+      "actions": {
+        "corrected": 21,
+        "new_translation": 95
+      }
+    },
+    "descript/monsters.txt": {
+      "english_keys": 724,
+      "reviewed_exported": 724,
+      "duplicate_source_keys": [],
+      "actions": {
+        "retained_after_review": 518,
+        "corrected": 118,
+        "new_translation": 88
+      }
+    },
+    "descript/quotes.txt": {
+      "english_keys": 465,
+      "reviewed_exported": 465,
+      "duplicate_source_keys": [],
+      "actions": {
+        "new_translation": 463,
+        "corrected": 2
+      }
+    }
+  },
+  "all_textdb_exported": 3038,
+  "english_files_unchanged": true,
+  "glossary_matches_reviewed_revision": true,
+  "canonical_keys_identical": true,
+  "po_and_export_identical": true,
+  "lua_control_placeholders_references_weights_validated": true,
+  "python_tests_passed": 21,
+  "lua_cases_passed": 111,
+  "gui_visual_review": false
+}

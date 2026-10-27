@@ -1,0 +1,58 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "selected": [
+    {
+      "key": "_suck_up_noun_",
+      "source": "voivode\n\nmaster\n\nruler\n\nban\n\nmagnate\n\ngentle{{ return you.genus() }}\n",
+      "hits": []
+    },
+    {
+      "key": "_saint roka rival_",
+      "source": "@The_monster@ shouts @at_foe@, \"You dare challenge my right as the Messiah?\"\n\n@The_monster@ shouts @at_foe@, \"There can only be one messiah: ME!\"\n\n@The_monster@ despairs @at_foe@, \"False prophets abound here!\"\n\n@The_monster@ shouts, \"Orcs, take notice: this deceiver is a mere {{ return you.race() }}!\"\n",
+      "hits": [
+        {
+          "Term": "Saint Roka",
+          "Translation": "圣徒罗卡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_hostile_orc_beogh_believer_speech_common_",
+      "source": "@The_monster@ mutters @at_foe@, \"You're NOT the saviour of the Orcs.\"\n\n@The_monster@ grumbles @at_foe@, \"You're not even a proper Orc...\"\n\n@The_monster@ @_orc_says_to_foe_@, \"How could Beogh possibly choose you?\"\n\n@The_monster@ mutters something uncomplimentary.\n\n@The_monster@ @_orc_says_to_foe_@, \"Beogh will surely punish you for your arrogance!\"\n\n@The_monster@ grunts @at_foe@, \"You, the messiah? You don't even look the part!\"\n\n@The_monster@ @_orc_says_to_foe_@, \"The messiah will not be a {{ return you.race() }}!\"\n\n@The_monster@ @_orc_says_to_foe_@, \"The messiah will be a true Orc!\"\n\n@The_monster@ @_shouts_@ @at_foe@, \"Die, @_orc_heathen_@!\"\n\n@The_monster@ @_shouts_@, \"Die, @foe_name@, for besmirching Beogh's name!\"\n\nVISUAL:@The_monster@ grimaces.\n",
+      "hits": [
+        {
+          "Term": "Beogh",
+          "Translation": "比欧弗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "Term": "hostile",
+          "Translation": "敌对",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    }
+  ],
+  "legacy_overlay_present": true
+}

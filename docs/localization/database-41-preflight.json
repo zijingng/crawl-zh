@@ -1,0 +1,38 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "selected": [
+    {
+      "source": "database/gizmo.txt",
+      "key": "gizmo_adjective",
+      "english": "ablative\n\nactuated\n\nadeledicnander\n\nalternating\n\naluminium\n\nambifacient\n\nannular\n\narticulated\n\narticulation\n\nasymmetric\n\nautomatic\n\nauxiliary\n\naxial\n\naxillary\n\nbackup\n\nbarescent\n\nbesselheim\n\nbifurcated\n\nbismuth\n\ncarbon\n\ncatherimine\n\ncoaxial\n\ncobalt\n\ncompression\n\ncontinuous\n\ncontrol\n\ncosinusoidal\n\ncoronal\n\ncurrent\n\ncyclic\n\ndeplenerated\n\ndifferential\n\ndiffraction\n\ndiffusion\n\ndilustel\n\ndipole\n\ndirectional\n\ndistributed\n\ndynamic\n\nelastic\n\nelectric\n\nemergency\n\nendiom\n\nenergy\n\nengrammatic\n\nexperimental\n\nexponential\n\nfeedback\n\nflux\n\nfriscalating\n\ngalvanic\n\ngizmonic\n\ngraphite\n\ngrounded\n\nharmonic\n\nhorizontal\n\nhydraulic\n\nilludium\n\nimpulse\n\ninduction\n\ninertial\n\ninterpolated\n\ninverse\n\niridium\n\niterative\n\nlaminar\n\nlateral\n\nliminal\n\nlinear\n\nlithium\n\nlogarithmic\n\nmagnetic\n\nmanestic\n\nmetallic\n\nmodal\n\nmodial\n\nmolybdenum\n\nmorphic\n\nneodymium\n\nnominal\n\nnondeterministic\n\noscillating\n\npanandermic\n\npermeable\n\npersonal\n\nphase\n\npilot\n\npipusoidal\n\nplastic\n\npneumatic\n\npolar\n\npolarised\n\npower\n\nprefabulated\n\npreliminary\n\npressurised\n\nprimary\n\nprismatic\n\nradial\n\nreactive\n\nreciprocating\n\nrecursive\n\nremote\n\nresonant\n\nreticulated\n\nreverberating\n\nrotary\n\nrotating\n\nsecondary\n\nshock\n\nsinusoidal\n\nsonic\n\nspiral\n\nspurving\n\nstatic\n\nstepdown\n\nstochastic\n\nstrionic\n\nsymmetric\n\nsynclastic\n\nsynthetic\n\ntangential\n\ntertiary\n\ntest\n\ntorque\n\ntrial\n\ntungsten\n\ntuning\n\ntwisted\n\nutility\n\nvacuum\n\nvanadium\n\nvariable\n\nvectored\n\nvertical\n\nvoltage\n\nvoltaic\n\n@gizmo_modifier@axial\n\n@gizmo_modifier@bolic\n\n@gizmo_modifier@boloid\n\n@gizmo_modifier@choric\n\n@gizmo_modifier@controlled\n\n@gizmo_modifier@coptic\n\n@gizmo_modifier@coupled\n\n@gizmo_modifier@current\n\n@gizmo_modifier@cyclic\n\n@gizmo_modifier@dermic\n\n@gizmo_modifier@dynamic\n\n@gizmo_modifier@faceted\n\n@gizmo_modifier@functional\n\n@gizmo_modifier@genic\n\n@gizmo_modifier@grade\n\n@gizmo_modifier@graphic\n\n@gizmo_modifier@gravic\n\n@gizmo_modifier@lytic\n\n@gizmo_modifier@matic\n\n@gizmo_modifier@metric\n\n@gizmo_modifier@meric\n\n@gizmo_modifier@phasic\n\n@gizmo_modifier@scopic\n\n@gizmo_modifier@static\n\n@gizmo_modifier@strophic\n\n@gizmo_modifier@thetic\n\n@gizmo_modifier@tonic\n\n@gizmo_modifier@topic\n\n@gizmo_modifier@tronic\n\n@gizmo_modifier@tropic\n\n",
+      "hits": [
+        {
+          "Term": "Shock",
+          "Translation": "电击术/电击",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【名称统一】法术名称采用“电击术”；实体、伤害、状态或普通动词按语境使用原有译法，不给一般效果描述机械加“术”。"
+        },
+        {
+          "Term": "Energy",
+          "Translation": "能量",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "source": "database/gizmo.txt",
+      "key": "gizmo_noun",
+      "english": "accumulator\n\nactuator\n\namplidyne\n\namplifier\n\napparatus\n\narray\n\nassembler\n\nassembly\n\nattenuator\n\nbalancer\n\nballast\n\nbattery\n\nbearing\n\nbooster\n\nbracket\n\nbushing\n\nbypass\n\ncam\n\ncamshaft\n\ncapacitor\n\ncapsule\n\ncarburettor\n\ncatchulator\n\nchamber\n\ncircuit\n\ncirculator\n\ncoil\n\ncollator\n\ncollimator\n\ncommutator\n\ncomparator\n\ncompensator\n\nconditioner\n\nconductor\n\nconduit\n\nconnector\n\nconstructor\n\ncontroller\n\nconverter\n\ncore\n\ncorrelator\n\ncrankshaft\n\ndemodulator\n\ndevice\n\ndiode\n\ndistributor\n\ndongle\n\ndoodad\n\ndrive\n\ndriveshaft\n\ndynamo\n\neffector\n\nencabulator\n\nengine\n\nequaliser\n\nescapement\n\nfilament\n\nfilter\n\nflange\n\nframe\n\nfrob\n\nfrobnicator\n\nfrobnitz\n\ngasket\n\ngauge\n\ngenerator\n\ngonkulator\n\ngovernor\n\ngrammeter\n\ngrating\n\ngribbin\n\ngrid\n\ngrommet\n\ngyre\n\nhopper\n\nimpeller\n\ninducer\n\ninfundibulum\n\ninitiator\n\ninjector\n\ninstantiator\n\nintegrator\n\ninterface\n\ninterocitor\n\ninverter\n\niterator\n\nlinkage\n\nloader\n\nmarzlevane\n\nmatrix\n\nmesh\n\nmeter\n\nmodulator\n\nmodule\n\nmotor\n\nnacelle\n\nnode\n\nnozzle\n\noscillator\n\nphasor\n\npinion\n\npivot\n\nplating\n\nplug\n\nport\n\nprocessor\n\npump\n\npylon\n\nramjet\n\nreceiver\n\nrectifier\n\nregulator\n\nrelay\n\nresonator\n\nrig\n\nrod\n\nrotor\n\nsamoflange\n\nscanner\n\nscope\n\nsensor\n\nshaft\n\nsheave\n\nshunt\n\nsolenoid\n\nspandrel\n\nspanner\n\nspline\n\nspring\n\nsprocket\n\nstabiliser\n\nstator\n\nstridulator\n\nsubstantiator\n\nsubsystem\n\nsuspension\n\nswitch\n\nsynthesiser\n\ntensor\n\nthrottle\n\ntoroid\n\ntransducer\n\ntransformer\n\ntransistor\n\ntransmission\n\ntransmogrifier\n\ntransponder\n\ntransponster\n\ntrapovaloid\n\ntrunnion\n\ntube\n\nturbine\n\nvalve\n\nvariator\n\nvaristor\n\nvolterator\n\nwaneshaft\n\nwaveguide\n\nwheel\n\nwhirligig\n\nwidget\n\n@gizmo_modifier@corder\n\n@gizmo_modifier@cycler\n\n@gizmo_modifier@former\n\n@gizmo_modifier@lator\n\n@gizmo_modifier@lyser\n\n@gizmo_modifier@sorter\n\n@gizmo_modifier@stat\n\n@gizmo_modifier@tron\n\n@gizmo_modifier@vator\n\n",
+      "hits": []
+    },
+    {
+      "source": "database/gizmo.txt",
+      "key": "gizmo_modifier",
+      "english": "aero\n\nalgo\n\nallo\n\nambi\n\namphi\n\nana\n\naniso\n\nannulo\n\nante\n\nanti\n\napeiro\n\nastro\n\nauto\n\nauxo\n\nbargle\n\nbaro\n\nbaryo\n\nbathy\n\nbeepo\n\nbenzo\n\nbi\n\nbingo\n\nbio\n\nbogo\n\ncalli\n\ncata\n\nceno\n\nchiro\n\nchromo\n\nchrono\n\ncircum\n\ncis\n\ncombi\n\ncompu\n\ncontra\n\ncounter\n\ncross\n\ncryo\n\ncyclo\n\ndeca\n\ndemi\n\ndextro\n\ndi\n\ndia\n\ndingle\n\ndodeca\n\necto\n\neigen\n\neka\n\nelectro\n\nenantio\n\nendo\n\nepi\n\nexa\n\nexo\n\nferro\n\nflexi\n\nfluoro\n\ngalvano\n\ngeo\n\ngiga\n\ngobbo\n\ngonio\n\ngyro\n\nhecto\n\nhelico\n\nhemi\n\nhepta\n\nhetero\n\nhexa\n\nholo\n\nhomeo\n\nhomo\n\nhydro\n\nhygro\n\nhyper\n\nhypo\n\nicosa\n\nidio\n\ninfra\n\ninsta\n\ninter\n\nintra\n\nintro\n\nipsi\n\niso\n\nkilo\n\nkine\n\nkineto\n\nlatero\n\nlevo\n\nlitho\n\nludo\n\nlyso\n\nmacro\n\nmagico\n\nmagneto\n\nmagni\n\nmanu\n\nmaxi\n\nmecha\n\nmechano\n\nmedio\n\nmega\n\nmegalo\n\nmero\n\nmeso\n\nmeta\n\nmetro\n\nmicro\n\nmnemo\n\nmono\n\nmorpho\n\nmulti\n\nmyria\n\nmyxo\n\nnega\n\nneo\n\nneuro\n\nnico\n\nnitro\n\nnona\n\nnulli\n\nocto\n\nomni\n\noneiro\n\northo\n\nosmo\n\nover\n\noxy\n\npano\n\npara\n\npenta\n\nperi\n\npeta\n\npetro\n\nphono\n\nphospho\n\nphoto\n\nphysio\n\npiezo\n\nplaco\n\npoly\n\nposi\n\npost\n\npotentio\n\npre\n\npreter\n\npro\n\nproto\n\npseudo\n\npsychro\n\npyro\n\nquadro\n\nquasi\n\nradio\n\nrecti\n\nreticulo\n\nretro\n\nrhabdo\n\nrheo\n\nroto\n\nsemi\n\nsepta\n\nsesqui\n\nsinistro\n\nspectro\n\nsphero\n\nspiro\n\nstereo\n\nstrato\n\nsub\n\nsuper\n\nsupra\n\nsynchro\n\ntachy\n\ntechno\n\ntele\n\ntera\n\ntetra\n\nthago\n\nthauma\n\ntheo\n\nthermo\n\ntopo\n\ntrans\n\ntri\n\nturbo\n\nultra\n\nunder\n\nuni\n\nvario\n\nvibro\n\nvisco\n\nvitreo\n\nvolu\n\nxeno\n\nxero\n\nxylo\n\nzotto\n\nzygo\n\nzymo\n",
+      "hits": []
+    }
+  ]
+}

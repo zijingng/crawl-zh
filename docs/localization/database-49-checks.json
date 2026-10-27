@@ -1,0 +1,223 @@
+{
+  "batch": 49,
+  "new_keys": 8,
+  "new_candidates": 124,
+  "randname_reviewed_keys": 19,
+  "randname_total_keys": 33,
+  "english_source_unchanged": true,
+  "previous_translations_unchanged": true,
+  "python_tests_passed": 32,
+  "native_unique_cases_passed_after_focused_rerun": 7,
+  "new_case_assertions": 1119,
+  "related_native_seconds": 2.104,
+  "windows_tiles_build": "passed",
+  "gui_visual_test": false,
+  "files": [
+    {
+      "file": "colourname.txt",
+      "source_keys": 9,
+      "exported_keys": 9,
+      "missing_keys": []
+    },
+    {
+      "file": "decorlines.txt",
+      "source_keys": 132,
+      "exported_keys": 132,
+      "missing_keys": []
+    },
+    {
+      "file": "FAQ.txt",
+      "source_keys": 38,
+      "exported_keys": 38,
+      "missing_keys": []
+    },
+    {
+      "file": "gizmo.txt",
+      "source_keys": 3,
+      "exported_keys": 3,
+      "missing_keys": []
+    },
+    {
+      "file": "godname.txt",
+      "source_keys": 23,
+      "exported_keys": 23,
+      "missing_keys": []
+    },
+    {
+      "file": "godspeak.txt",
+      "source_keys": 193,
+      "exported_keys": 193,
+      "missing_keys": []
+    },
+    {
+      "file": "graffiti.txt",
+      "source_keys": 58,
+      "exported_keys": 58,
+      "missing_keys": []
+    },
+    {
+      "file": "help.txt",
+      "source_keys": 13,
+      "exported_keys": 13,
+      "missing_keys": []
+    },
+    {
+      "file": "insult.txt",
+      "source_keys": 33,
+      "exported_keys": 33,
+      "missing_keys": []
+    },
+    {
+      "file": "miscast.txt",
+      "source_keys": 33,
+      "exported_keys": 33,
+      "missing_keys": []
+    },
+    {
+      "file": "miscname.txt",
+      "source_keys": 10,
+      "exported_keys": 10,
+      "missing_keys": []
+    },
+    {
+      "file": "monflee.txt",
+      "source_keys": 1,
+      "exported_keys": 1,
+      "missing_keys": []
+    },
+    {
+      "file": "monname.txt",
+      "source_keys": 52,
+      "exported_keys": 0,
+      "missing_keys": [
+        "_arabic_female_name_",
+        "_arabic_male_name_",
+        "_aztec_female_name_",
+        "_aztec_male_name_",
+        "_beogh_name_",
+        "_bland_female_name_",
+        "_bland_male_name_",
+        "_brazilian_female_name_",
+        "_brazilian_male_name_",
+        "_cantonese_female_name_",
+        "_cantonese_male_name_",
+        "_egyptian_female_name_",
+        "_egyptian_male_name_",
+        "_german_female_name_",
+        "_german_male_name_",
+        "_hispanic_female_name_",
+        "_hispanic_male_name_",
+        "_irish_female_name_",
+        "_irish_male_name_",
+        "_japanese_female_name_",
+        "_japanese_male_name_",
+        "_korean_female_name_",
+        "_korean_male_name_",
+        "_mesopotamian_female_name_",
+        "_mesopotamian_male_name_",
+        "_orc_priest_name_",
+        "_orc_warrior_name_",
+        "_orc_wizard_name_",
+        "_orcish_name_",
+        "_other_orcish_name_",
+        "_roman_female_name_",
+        "_roman_male_name_",
+        "_sikh_female_name_",
+        "_sikh_male_name_",
+        "_slavic_female_name_",
+        "_slavic_male_name_",
+        "_thai_female_name_",
+        "_thai_male_name_",
+        "_west_european_female_name_",
+        "_west_european_male_name_",
+        "_zulu_female_name_",
+        "_zulu_male_name_",
+        "ancestor female name",
+        "ancestor male name",
+        "ancestor name",
+        "any orc name",
+        "bland name",
+        "orc apostle priest name",
+        "orc apostle warrior name",
+        "orc apostle wizard name",
+        "orc name",
+        "steelspirit name"
+      ]
+    },
+    {
+      "file": "monspeak.txt",
+      "source_keys": 731,
+      "exported_keys": 731,
+      "missing_keys": []
+    },
+    {
+      "file": "monspell.txt",
+      "source_keys": 262,
+      "exported_keys": 262,
+      "missing_keys": []
+    },
+    {
+      "file": "montitle.txt",
+      "source_keys": 86,
+      "exported_keys": 86,
+      "missing_keys": []
+    },
+    {
+      "file": "rand_all.txt",
+      "source_keys": 18,
+      "exported_keys": 18,
+      "missing_keys": []
+    },
+    {
+      "file": "rand_arm.txt",
+      "source_keys": 19,
+      "exported_keys": 19,
+      "missing_keys": []
+    },
+    {
+      "file": "rand_wpn.txt",
+      "source_keys": 45,
+      "exported_keys": 45,
+      "missing_keys": []
+    },
+    {
+      "file": "randbook.txt",
+      "source_keys": 72,
+      "exported_keys": 72,
+      "missing_keys": []
+    },
+    {
+      "file": "randname.txt",
+      "source_keys": 33,
+      "exported_keys": 19,
+      "missing_keys": [
+        "armour",
+        "jewellery",
+        "okawaru armour",
+        "okawaru body armour",
+        "okawaru robe",
+        "okawaru weapon",
+        "talisman",
+        "trog weapon",
+        "weapon",
+        "xom armour",
+        "xom body armour",
+        "xom jewellery",
+        "xom robe",
+        "xom weapon"
+      ]
+    },
+    {
+      "file": "shout.txt",
+      "source_keys": 93,
+      "exported_keys": 93,
+      "missing_keys": []
+    },
+    {
+      "file": "wpnnoise.txt",
+      "source_keys": 65,
+      "exported_keys": 65,
+      "missing_keys": []
+    }
+  ]
+}

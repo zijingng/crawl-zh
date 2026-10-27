@@ -1,0 +1,120 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "entries": [
+    {
+      "key": "_speaking_low_tension_",
+      "source": "@The_weapon@ shouts, \"Live by the sword, die by the sword!\"\n\nw:1\n@The_weapon@ shouts, \"Lie [by|to] the sword, die by the sword!\"\n\n@The_weapon@ realises, \"If we kill all of them, no-one will be listening!\"\n\n@The_weapon@ sighs, \"How I wish you were a better fighter.\"\n\n@The_weapon@ comments on your fighting techniques.\n\n@The_weapon@ compares you unfavourably to its previous owner.\n\n@The_weapon@ complains, \"This is a chore.\"\n\n@The_weapon@ judges, \"You're not an artist, at best an artisan.\"\n\n@The_weapon@ says, \"They will have to pry me from your cold, dead hands.\"\n\n@The_weapon@ moans, \"By {{ if you.god() == \"No God\" then return \"my blade\"\nelse return \"@player_god@\"; end }}, you are such a [coward|dastard|craven|faintheart|poltroon|wuss].\"\n\n@The_weapon@ wonders, \"Who is more incompetent - you or the opposition?\"\n\n@The_weapon@ utters, \"Their cries, their tears, I cannot stand it anymore.\"\n\n@The_weapon@ says, \"Will you forgive me a little stab on the side?\"\n\n@The_weapon@ says, \"Your kiss, my thrill, your miss, my kill.\"\n\n@The_weapon@ boasts, \"My voice can shatter a wine glass. My blade can shatter a human skull.\"\n\n",
+      "hits": [
+        {
+          "Term": "Fighter",
+          "Translation": "战士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的背景名称清单对应。来源：dat/jobs/fighter.yaml。"
+        },
+        {
+          "Term": "Fighting",
+          "Translation": "战斗/作战/格斗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】物理战斗通用技能，亦增加生命上限；与 Unarmed Combat（徒手格斗）区分。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。\n【语境补充 2026-10-21】技能标签固定用战斗。普通动作按句意用作战或格斗。"
+        },
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Human",
+          "Translation": "人类",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/human.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "Shatter",
+          "Translation": "粉碎术/打碎/震碎",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】高等级法术标题用粉碎术。普通破坏动作用打碎。神器独立效果可用震碎，不能一律当作施放粉碎术。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Glass",
+          "Translation": "玻璃",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "_speaking_high_tension_",
+      "source": "@The_weapon@ yells, \"I hereby consecrate these halls WITH BLOOD!\"\n\n@The_weapon@ shouts, \"Lose my temper? Nonsense! My steel will be strong forever!\"\n\n@The_weapon@ shouts, \"Cut 'em off! All their little heads at once!\"\n\n@The_weapon@ shouts, \"Kill 'em all and let {{ if you.god() == \"No God\" then\nreturn \"@_godless_sorter_@\"; else return \"@player_god@\"; end }} sort them out!\"\n\n@The_weapon@ shouts, \"Screaming and crying is the perfect accompaniment.\"\n\n@The_weapon@ shouts, \"I'll make piano strings from your guts!\"\n\n@The_weapon@ shouts, \"Oh, the @_glorious_@ feeling of steel cutting flesh.\"\n\n@The_weapon@ shouts, \"I just love to dig into intestines.\"\n\n@The_weapon@ @_screams_@, \"Among all these lost souls, we reign supreme!\"\n\n@The_weapon@ shouts, \"Die. Die. Die!\"\n\n@The_weapon@ shouts, \"You shall lie beneath the ground but I, I will glint in the sun!\"\n\nw:1\n@The_weapon@ shouts, \"Born from this womb, sliced by this blade!\"\n\n@The_weapon@ @_screams_@, \"When this war is won, I will wage the next one.\"\n\n@The_weapon@ @_screams_@, \"Blade-deep in blood!\"\n\n@The_weapon@ @_screams_@, \"I revel, I sever!\"\n\n@The_weapon@ @_screams_@, \"All those pillows!\"\n\n@The_weapon@ @_screams_@, \"No rest until they move no more!\"\n\n@The_weapon@ @_screams_@, \"As long as they die, we live!\"\n\n@The_weapon@ @_screams_@, \"The future is bloody!\"\n\nw:1\n@The_weapon@ @_screams_@, \"The bloody future is ours!\"\n\n@The_weapon@ @_screams_@, \"Dismember the living, dismember the dead!\"\n\n@The_weapon@ @_screams_@, \"We will celebrate on a pile of carcasses!\"\n\n@The_weapon@ @_screams_@, \"@player_name@, you will [dine|feast] on fine @_corpses_@ today!\"\n\n@The_weapon@ @_screams_@, \"Go for the jugular!\"\n\n@The_weapon@ @_screams_@, \"My instinct to kill is stronger than their will to live!\"\n\n@The_weapon@ @_screams_@, \"I am covered in blood! It feels so good!\"\n\n@The_weapon@ @_screams_@, \"Aah! This piece of @_body_part_@ is stuck to me. Wipe it off!\"\n\n@The_weapon@ @_screams_@, \"My edge gets dull! My edge gets dull!\"\n\n@The_weapon@ @_screams_@, \"Don't stick me into that one, please.\"\n\n@The_weapon@ @_screams_@, \"My victories add up!\"\n\nw:1\n@The_weapon@ @_screams_@, \"Blood as far as the eye can see! Blood for all eternity!\"\n\nw:1\n@The_weapon@ @_screams_@, \"Blood must spurt and blood must flow! Blood must gush from every foe!\"\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "Dig",
+          "Translation": "挖掘术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "screaming",
+          "Translation": "尖叫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：尖叫。"
+        },
+        {
+          "Term": "strong",
+          "Translation": "强壮",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：强壮。"
+        }
+      ]
+    },
+    {
+      "key": "_godless_sorter_",
+      "source": "w:5\nfate\n\nw:5\nthe lot\n\nworms\n\nthe godless void\n\nw:1\nautolysis\n\nw:4\nputrefaction\n",
+      "hits": []
+    }
+  ]
+}

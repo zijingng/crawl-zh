@@ -1,0 +1,11 @@
+{
+  "new_lua_results": 8,
+  "previous_exported_rows_unchanged": 738,
+  "english_lua_unchanged": true,
+  "cpp_runtime_unchanged": true,
+  "python_tests": 32,
+  "native_tests": 161,
+  "assertions": 1224248,
+  "tiles_build_success": true,
+  "export_filter_test_passed": true
+}

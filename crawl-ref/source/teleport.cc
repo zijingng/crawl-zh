@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "t-display.h"
+#include "stringutil.h"
 
 #include "teleport.h"
 
@@ -257,7 +259,7 @@ void monster_teleport(monster* mons, bool instan, bool silent, bool away_from_pl
         if (was_seen)
             simple_monster_message(*mons, " reappears nearby!");
         else
-            mprf("%s appears out of thin air!", mons->name(DESC_A).c_str());
+            mprf("%s", ui_render("t.log", "%s appears out of thin air!", make_stringf("%s appears out of thin air!", mons->name(DESC_A).c_str()), {ui_actor_arg(*mons)}).c_str());
     }
 
     // Leave a purple cloud.

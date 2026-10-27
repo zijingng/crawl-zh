@@ -1,0 +1,54 @@
+{
+  "lua_results": [
+    {
+      "source": "database/godspeak.txt",
+      "context": "textdb-lua-fragment:database/godspeak.txt",
+      "english": "teddy bear",
+      "keys": [
+        "_xom_plaything_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "source": "database/godspeak.txt",
+      "context": "textdb-lua-fragment:database/godspeak.txt",
+      "english": "toy",
+      "keys": [
+        "_xom_plaything_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "source": "database/godspeak.txt",
+      "context": "textdb-lua-fragment:database/godspeak.txt",
+      "english": "plaything",
+      "keys": [
+        "_xom_plaything_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "source": "database/wpnnoise.txt",
+      "context": "textdb-lua-fragment:database/wpnnoise.txt",
+      "english": "my blade",
+      "keys": [
+        "_speaking_low_tension_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    },
+    {
+      "source": "database/wpnnoise.txt",
+      "context": "textdb-lua-fragment:database/wpnnoise.txt",
+      "english": "@player_god@",
+      "keys": [
+        "_speaking_low_tension_"
+      ],
+      "review_status": "reviewed",
+      "kind": "fragment"
+    }
+  ]
+}

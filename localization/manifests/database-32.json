@@ -1,0 +1,142 @@
+{
+  "source": "database/monspeak.txt",
+  "entries": [
+    {
+      "key": "cherub",
+      "context": "textdb:database/monspeak.txt:cherub",
+      "source_sha256": "956b57676f9f8d66f832f0d846b1ae3a93e7884bb5a878f825df3fcb44fba6e0",
+      "review_status": "reviewed",
+      "review_batch": "database-32"
+    },
+    {
+      "key": "zin angel",
+      "context": "textdb:database/monspeak.txt:zin angel",
+      "source_sha256": "4bb08e053d386b5e4959fe30b61706550ee07f986dc1eea515be8045e3da8bff",
+      "review_status": "reviewed",
+      "review_batch": "database-32",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_axioms_of_law_",
+          "source_sha256": "65152e9e013f73ffabff0a24b7675c3df3904b26fe10f017de30a268927d74dd",
+          "translation_sha256": "9c4e85084b5eb9ac7136c167355f2038eb4b345d77ce4777bf6bc86ea5889e3e"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_important_subject_",
+          "source_sha256": "8a52b8759e6c446621a4b93b23d070d09e096e8c31acd1b2dbe67a470cb7c51b",
+          "translation_sha256": "21dab7d7e41f77e4f210f64d779e043b2fe875b287c832502f715c57fbb786b9"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_lecture_modifier_",
+          "source_sha256": "838db1979e9f9ea20149238fc1458e585376d6b87636e00b1ddb2993989870ae",
+          "translation_sha256": "88f20b327e4ebe78de4034c9b98f38e0bcd09a5f8eb8075cf0ff92bca26857c4"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_recite_subject_",
+          "source_sha256": "350ce16a1210c77fc57dad82310cd427e503d7c6ba7df802660f7a802c30bb16",
+          "translation_sha256": "24a0b40f0ada0ae179d66c26ed8426a81e487ffad13447d819ba56f5c53f94da"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_recite_what_",
+          "source_sha256": "86d7fd8e5928b98373910fd2a76a73a682d1f589528d4f6cde2d8439da638207",
+          "translation_sha256": "45c778a85ff14cf0a536266d70ee2542f43c6d8625dc6e2e7f87c6fd12873268"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_recites_start_",
+          "source_sha256": "96e6fe18fa939bddac51ac1f015461f1132dd54d55e050798ba4d11eefc8bfb2",
+          "translation_sha256": "955f0e2021569a9a4fa70b68e651feb77f276c193f794219352c1d2a20f76bf6"
+        }
+      ]
+    },
+    {
+      "key": "_recites_start_",
+      "context": "textdb:database/monspeak.txt:_recites_start_",
+      "source_sha256": "96e6fe18fa939bddac51ac1f015461f1132dd54d55e050798ba4d11eefc8bfb2",
+      "review_status": "reviewed",
+      "review_batch": "database-32"
+    },
+    {
+      "key": "_recite_what_",
+      "context": "textdb:database/monspeak.txt:_recite_what_",
+      "source_sha256": "86d7fd8e5928b98373910fd2a76a73a682d1f589528d4f6cde2d8439da638207",
+      "review_status": "reviewed",
+      "review_batch": "database-32"
+    },
+    {
+      "key": "_lecture_modifier_",
+      "context": "textdb:database/monspeak.txt:_lecture_modifier_",
+      "source_sha256": "838db1979e9f9ea20149238fc1458e585376d6b87636e00b1ddb2993989870ae",
+      "review_status": "reviewed",
+      "review_batch": "database-32"
+    },
+    {
+      "key": "_recite_subject_",
+      "context": "textdb:database/monspeak.txt:_recite_subject_",
+      "source_sha256": "350ce16a1210c77fc57dad82310cd427e503d7c6ba7df802660f7a802c30bb16",
+      "review_status": "reviewed",
+      "review_batch": "database-32",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_axioms_of_law_",
+          "source_sha256": "65152e9e013f73ffabff0a24b7675c3df3904b26fe10f017de30a268927d74dd",
+          "translation_sha256": "9c4e85084b5eb9ac7136c167355f2038eb4b345d77ce4777bf6bc86ea5889e3e"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_important_subject_",
+          "source_sha256": "8a52b8759e6c446621a4b93b23d070d09e096e8c31acd1b2dbe67a470cb7c51b",
+          "translation_sha256": "21dab7d7e41f77e4f210f64d779e043b2fe875b287c832502f715c57fbb786b9"
+        }
+      ]
+    },
+    {
+      "key": "confused zin angel",
+      "context": "textdb:database/monspeak.txt:confused zin angel",
+      "source_sha256": "ee29fd3b70fd31b83ffdd73aca24a24458a687bfbd829315391bd16f889be038",
+      "review_status": "reviewed",
+      "review_batch": "database-32",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_important_subject_",
+          "source_sha256": "8a52b8759e6c446621a4b93b23d070d09e096e8c31acd1b2dbe67a470cb7c51b",
+          "translation_sha256": "21dab7d7e41f77e4f210f64d779e043b2fe875b287c832502f715c57fbb786b9"
+        }
+      ]
+    },
+    {
+      "key": "silenced zin angel",
+      "context": "textdb:database/monspeak.txt:silenced zin angel",
+      "source_sha256": "6c1a95c64ff483c41fffcd4a6f0001ffc4bd2d1d450400a90c9eaa2784bf9d3e",
+      "review_status": "reviewed",
+      "review_batch": "database-32"
+    },
+    {
+      "key": "deformed humanoid",
+      "context": "textdb:database/monspeak.txt:deformed humanoid",
+      "source_sha256": "c5737190c52e349b3221fcb209794cb54bd74ab324e66711e8f08691972efca9",
+      "review_status": "reviewed",
+      "review_batch": "database-32"
+    },
+    {
+      "key": "Gozag bribe",
+      "context": "textdb:database/monspeak.txt:gozag bribe",
+      "source_sha256": "d87d3bfc5bcf0d1e0a39f5d7826d4e92f7b30114d5bd1e736086527423e413cc",
+      "review_status": "reviewed",
+      "review_batch": "database-32"
+    },
+    {
+      "key": "Gozag permabribe",
+      "context": "textdb:database/monspeak.txt:gozag permabribe",
+      "source_sha256": "330d9c01d431e5b486d5b9f74ad0d7ecf3bd2540ba8ab4106650e20bc4640e92",
+      "review_status": "reviewed",
+      "review_batch": "database-32"
+    }
+  ]
+}

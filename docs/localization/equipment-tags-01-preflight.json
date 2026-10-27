@@ -1,0 +1,1130 @@
+{
+  "glossary_sha256": "d0189d13323ac31dd90c2654a5363043b25c85094ba3a4de5aa0eea54eaf0fd7",
+  "property_keys": [
+    "AC",
+    "EV",
+    "Str",
+    "Int",
+    "Dex",
+    "rF",
+    "rC",
+    "rElec",
+    "rPois",
+    "rN",
+    "Will",
+    "SInv",
+    "+Inv",
+    "Fly",
+    "+Blink",
+    "+Rage",
+    "*Noise",
+    "-Cast",
+    "*Tele",
+    "-Tele",
+    "*Rage",
+    "Hungry",
+    "^Contam",
+    "Acc",
+    "Slay",
+    "*Curse",
+    "Stlth",
+    "MP",
+    "Delay",
+    "HP",
+    "Clar",
+    "BAcc",
+    "BDam",
+    "RMsl",
+    "+Fog",
+    "Regen",
+    "SustAt",
+    "nupgr",
+    "rCorr",
+    "rMut",
+    "+Twstr",
+    "*Corrode",
+    "^Drain",
+    "*Slow",
+    "^Fragile",
+    "SH",
+    "Harm",
+    "Rampage",
+    "Archmagi",
+    "Conj",
+    "Hexes",
+    "Summ",
+    "Necro",
+    "Tloc",
+    "Tmut",
+    "Fire",
+    "Ice",
+    "Air",
+    "Earth",
+    "Alch",
+    "Acrobat",
+    "RegenMP",
+    "Wiz",
+    "Forge",
+    "*Silence",
+    "Bane"
+  ],
+  "base_egos": [
+    {
+      "enum": "SPARM_FIRE_RESISTANCE",
+      "short": "rF+",
+      "verbose": "fire resistance",
+      "existing": "火焰抗性"
+    },
+    {
+      "enum": "SPARM_COLD_RESISTANCE",
+      "short": "rC+",
+      "verbose": "cold resistance",
+      "existing": "寒冷抗性"
+    },
+    {
+      "enum": "SPARM_POISON_RESISTANCE",
+      "short": "rPois",
+      "verbose": "poison resistance",
+      "existing": "毒素抗性"
+    },
+    {
+      "enum": "SPARM_SEE_INVISIBLE",
+      "short": "SInv",
+      "verbose": "see invisible",
+      "existing": "看破隐形"
+    },
+    {
+      "enum": "SPARM_INVISIBILITY",
+      "short": "+Inv",
+      "verbose": "invisibility",
+      "existing": "隐形"
+    },
+    {
+      "enum": "SPARM_STRENGTH",
+      "short": "Str+3",
+      "verbose": "strength",
+      "existing": "力量"
+    },
+    {
+      "enum": "SPARM_DEXTERITY",
+      "short": "Dex+3",
+      "verbose": "dexterity",
+      "existing": "敏捷"
+    },
+    {
+      "enum": "SPARM_INTELLIGENCE",
+      "short": "Int+3",
+      "verbose": "intelligence",
+      "existing": "智力"
+    },
+    {
+      "enum": "SPARM_PONDEROUSNESS",
+      "short": "Ponderous",
+      "verbose": "ponderousness",
+      "existing": "笨重"
+    },
+    {
+      "enum": "SPARM_FLYING",
+      "short": "Fly",
+      "verbose": "flying",
+      "existing": "飞行"
+    },
+    {
+      "enum": "SPARM_WILLPOWER",
+      "short": "Will+",
+      "verbose": "willpower",
+      "existing": "意志"
+    },
+    {
+      "enum": "SPARM_PROTECTION",
+      "short": "AC+3",
+      "verbose": "protection",
+      "existing": "防护"
+    },
+    {
+      "enum": "SPARM_STEALTH",
+      "short": "Stlth+",
+      "verbose": "stealth",
+      "existing": "潜行"
+    },
+    {
+      "enum": "SPARM_RESISTANCE",
+      "short": "rC+ rF+",
+      "verbose": "resistance",
+      "existing": "抗性"
+    },
+    {
+      "enum": "SPARM_POSITIVE_ENERGY",
+      "short": "rN+",
+      "verbose": "positive energy",
+      "existing": "正能量"
+    },
+    {
+      "enum": "SPARM_ARCHMAGI",
+      "short": "Archmagi",
+      "verbose": "the Archmagi",
+      "existing": "大法师"
+    },
+    {
+      "enum": "SPARM_CORROSION_RESISTANCE",
+      "short": "rCorr",
+      "verbose": "corrosion resistance",
+      "existing": "腐蚀抗性"
+    },
+    {
+      "enum": "SPARM_REFLECTION",
+      "short": "Reflect",
+      "verbose": "reflection",
+      "existing": "反射"
+    },
+    {
+      "enum": "SPARM_SPIRIT_SHIELD",
+      "short": "Spirit",
+      "verbose": "spirit shield",
+      "existing": "灵魂护盾"
+    },
+    {
+      "enum": "SPARM_HURLING",
+      "short": "Hurl",
+      "verbose": "hurling",
+      "existing": "投掷"
+    },
+    {
+      "enum": "SPARM_REPULSION",
+      "short": "Repulsion",
+      "verbose": "repulsion",
+      "existing": "排斥"
+    },
+    {
+      "enum": "SPARM_HARM",
+      "short": "Harm",
+      "verbose": "harm",
+      "existing": "伤害"
+    },
+    {
+      "enum": "SPARM_SHADOWS",
+      "short": "Shadows",
+      "verbose": "shadows",
+      "existing": "阴影"
+    },
+    {
+      "enum": "SPARM_RAMPAGING",
+      "short": "Rampage",
+      "verbose": "rampaging",
+      "existing": "横冲直撞"
+    },
+    {
+      "enum": "SPARM_INFUSION",
+      "short": "Infuse",
+      "verbose": "infusion",
+      "existing": "灌注"
+    },
+    {
+      "enum": "SPARM_LIGHT",
+      "short": "Light",
+      "verbose": "light",
+      "existing": "轻盈"
+    },
+    {
+      "enum": "SPARM_RAGE",
+      "short": "*Rage",
+      "verbose": "wrath",
+      "existing": "愤怒"
+    },
+    {
+      "enum": "SPARM_MAYHEM",
+      "short": "Mayhem",
+      "verbose": "mayhem",
+      "existing": "混战"
+    },
+    {
+      "enum": "SPARM_GUILE",
+      "short": "Guile",
+      "verbose": "guile",
+      "existing": "狡诈"
+    },
+    {
+      "enum": "SPARM_ENERGY",
+      "short": "Energy",
+      "verbose": "energy",
+      "existing": "能量"
+    },
+    {
+      "enum": "SPARM_SNIPING",
+      "short": "Snipe",
+      "verbose": "sniping",
+      "existing": "狙击"
+    },
+    {
+      "enum": "SPARM_ICE",
+      "short": "Ice",
+      "verbose": "ice",
+      "existing": "冰"
+    },
+    {
+      "enum": "SPARM_FIRE",
+      "short": "Fire",
+      "verbose": "fire",
+      "existing": "火"
+    },
+    {
+      "enum": "SPARM_AIR",
+      "short": "Air",
+      "verbose": "air",
+      "existing": "气"
+    },
+    {
+      "enum": "SPARM_EARTH",
+      "short": "Earth",
+      "verbose": "earth",
+      "existing": "土"
+    },
+    {
+      "enum": "SPARM_ARCHERY",
+      "short": "Archery",
+      "verbose": "archery",
+      "existing": "箭术"
+    },
+    {
+      "enum": "SPARM_COMMAND",
+      "short": "Command",
+      "verbose": "command",
+      "existing": "统御"
+    },
+    {
+      "enum": "SPARM_DEATH",
+      "short": "Death",
+      "verbose": "death",
+      "existing": "死亡"
+    },
+    {
+      "enum": "SPARM_RESONANCE",
+      "short": "Resonance",
+      "verbose": "resonance",
+      "existing": "共鸣"
+    },
+    {
+      "enum": "SPARM_PARRYING",
+      "short": "Parrying",
+      "verbose": "parrying",
+      "existing": "招架"
+    },
+    {
+      "enum": "SPARM_GLASS",
+      "short": "Glass",
+      "verbose": "glass",
+      "existing": "玻璃"
+    },
+    {
+      "enum": "SPARM_PYROMANIA",
+      "short": "Pyromania",
+      "verbose": "pyromania",
+      "existing": "纵火"
+    },
+    {
+      "enum": "SPARM_STARDUST",
+      "short": "Stardust",
+      "verbose": "stardust",
+      "existing": "星尘"
+    },
+    {
+      "enum": "SPARM_MESMERISM",
+      "short": "Mesmerism",
+      "verbose": "mesmerism",
+      "existing": "迷魂"
+    },
+    {
+      "enum": "SPARM_ATTUNEMENT",
+      "short": "Attunement",
+      "verbose": "attunement",
+      "existing": "调谐"
+    },
+    {
+      "enum": "SPARM_FIRE_RESISTANCE",
+      "short": "rF+",
+      "verbose": "fire resistance",
+      "existing": "火焰抗性"
+    },
+    {
+      "enum": "SPARM_COLD_RESISTANCE",
+      "short": "rC+",
+      "verbose": "cold resistance",
+      "existing": "寒冷抗性"
+    },
+    {
+      "enum": "SPARM_POISON_RESISTANCE",
+      "short": "rPois",
+      "verbose": "poison resistance",
+      "existing": "毒素抗性"
+    },
+    {
+      "enum": "SPARM_SEE_INVISIBLE",
+      "short": "SInv",
+      "verbose": "see invisible",
+      "existing": "看破隐形"
+    },
+    {
+      "enum": "SPARM_INVISIBILITY",
+      "short": "+Inv",
+      "verbose": "invisibility",
+      "existing": "隐形"
+    },
+    {
+      "enum": "SPARM_STRENGTH",
+      "short": "Str+3",
+      "verbose": "strength",
+      "existing": "力量"
+    },
+    {
+      "enum": "SPARM_DEXTERITY",
+      "short": "Dex+3",
+      "verbose": "dexterity",
+      "existing": "敏捷"
+    },
+    {
+      "enum": "SPARM_INTELLIGENCE",
+      "short": "Int+3",
+      "verbose": "intelligence",
+      "existing": "智力"
+    },
+    {
+      "enum": "SPARM_PONDEROUSNESS",
+      "short": "Ponderous",
+      "verbose": "ponderousness",
+      "existing": "笨重"
+    },
+    {
+      "enum": "SPARM_FLYING",
+      "short": "Fly",
+      "verbose": "flying",
+      "existing": "飞行"
+    },
+    {
+      "enum": "SPARM_WILLPOWER",
+      "short": "Will+",
+      "verbose": "willpower",
+      "existing": "意志"
+    },
+    {
+      "enum": "SPARM_PROTECTION",
+      "short": "AC+3",
+      "verbose": "protection",
+      "existing": "防护"
+    },
+    {
+      "enum": "SPARM_STEALTH",
+      "short": "Stlth+",
+      "verbose": "stealth",
+      "existing": "潜行"
+    },
+    {
+      "enum": "SPARM_RESISTANCE",
+      "short": "rC+ rF+",
+      "verbose": "resistance",
+      "existing": "抗性"
+    },
+    {
+      "enum": "SPARM_POSITIVE_ENERGY",
+      "short": "rN+",
+      "verbose": "positive energy",
+      "existing": "正能量"
+    },
+    {
+      "enum": "SPARM_ARCHMAGI",
+      "short": "Archmagi",
+      "verbose": "the Archmagi",
+      "existing": "大法师"
+    },
+    {
+      "enum": "SPARM_CORROSION_RESISTANCE",
+      "short": "rCorr",
+      "verbose": "corrosion resistance",
+      "existing": "腐蚀抗性"
+    },
+    {
+      "enum": "SPARM_REFLECTION",
+      "short": "Reflect",
+      "verbose": "reflection",
+      "existing": "反射"
+    },
+    {
+      "enum": "SPARM_SPIRIT_SHIELD",
+      "short": "Spirit",
+      "verbose": "spirit shield",
+      "existing": "灵魂护盾"
+    },
+    {
+      "enum": "SPARM_HURLING",
+      "short": "Hurl",
+      "verbose": "hurling",
+      "existing": "投掷"
+    },
+    {
+      "enum": "SPARM_REPULSION",
+      "short": "Repulsion",
+      "verbose": "repulsion",
+      "existing": "排斥"
+    },
+    {
+      "enum": "SPARM_HARM",
+      "short": "Harm",
+      "verbose": "harm",
+      "existing": "伤害"
+    },
+    {
+      "enum": "SPARM_SHADOWS",
+      "short": "Shadows",
+      "verbose": "shadows",
+      "existing": "阴影"
+    },
+    {
+      "enum": "SPARM_RAMPAGING",
+      "short": "Rampage",
+      "verbose": "rampaging",
+      "existing": "横冲直撞"
+    },
+    {
+      "enum": "SPARM_INFUSION",
+      "short": "Infuse",
+      "verbose": "infusion",
+      "existing": "灌注"
+    },
+    {
+      "enum": "SPARM_LIGHT",
+      "short": "Light",
+      "verbose": "light",
+      "existing": "轻盈"
+    },
+    {
+      "enum": "SPARM_RAGE",
+      "short": "*Rage",
+      "verbose": "wrath",
+      "existing": "愤怒"
+    },
+    {
+      "enum": "SPARM_MAYHEM",
+      "short": "Mayhem",
+      "verbose": "mayhem",
+      "existing": "混战"
+    },
+    {
+      "enum": "SPARM_GUILE",
+      "short": "Guile",
+      "verbose": "guile",
+      "existing": "狡诈"
+    },
+    {
+      "enum": "SPARM_ENERGY",
+      "short": "Energy",
+      "verbose": "energy",
+      "existing": "能量"
+    },
+    {
+      "enum": "SPARM_SNIPING",
+      "short": "Snipe",
+      "verbose": "sniping",
+      "existing": "狙击"
+    },
+    {
+      "enum": "SPARM_ICE",
+      "short": "Ice",
+      "verbose": "ice",
+      "existing": "冰"
+    },
+    {
+      "enum": "SPARM_FIRE",
+      "short": "Fire",
+      "verbose": "fire",
+      "existing": "火"
+    },
+    {
+      "enum": "SPARM_AIR",
+      "short": "Air",
+      "verbose": "air",
+      "existing": "气"
+    },
+    {
+      "enum": "SPARM_EARTH",
+      "short": "Earth",
+      "verbose": "earth",
+      "existing": "土"
+    },
+    {
+      "enum": "SPARM_ARCHERY",
+      "short": "Archery",
+      "verbose": "archery",
+      "existing": "箭术"
+    },
+    {
+      "enum": "SPARM_COMMAND",
+      "short": "Command",
+      "verbose": "command",
+      "existing": "统御"
+    },
+    {
+      "enum": "SPARM_DEATH",
+      "short": "Death",
+      "verbose": "death",
+      "existing": "死亡"
+    },
+    {
+      "enum": "SPARM_RESONANCE",
+      "short": "Resonance",
+      "verbose": "resonance",
+      "existing": "共鸣"
+    },
+    {
+      "enum": "SPARM_PARRYING",
+      "short": "Parrying",
+      "verbose": "parrying",
+      "existing": "招架"
+    },
+    {
+      "enum": "SPARM_GLASS",
+      "short": "Glass",
+      "verbose": "glass",
+      "existing": "玻璃"
+    },
+    {
+      "enum": "SPARM_PYROMANIA",
+      "short": "Pyromania",
+      "verbose": "pyromania",
+      "existing": "纵火"
+    },
+    {
+      "enum": "SPARM_STARDUST",
+      "short": "Stardust",
+      "verbose": "stardust",
+      "existing": "星尘"
+    },
+    {
+      "enum": "SPARM_MESMERISM",
+      "short": "Mesmerism",
+      "verbose": "mesmerism",
+      "existing": "迷魂"
+    },
+    {
+      "enum": "SPARM_ATTUNEMENT",
+      "short": "Attunement",
+      "verbose": "attunement",
+      "existing": "调谐"
+    },
+    {
+      "enum": "RING_PROTECTION",
+      "short": "AC",
+      "verbose": "protection",
+      "existing": "防护"
+    },
+    {
+      "enum": "RING_PROTECTION_FROM_FIRE",
+      "short": "rF+",
+      "verbose": "protection from fire",
+      "existing": "protection from fire"
+    },
+    {
+      "enum": "RING_POISON_RESISTANCE",
+      "short": "rPois",
+      "verbose": "poison resistance",
+      "existing": "毒素抗性"
+    },
+    {
+      "enum": "RING_PROTECTION_FROM_COLD",
+      "short": "rC+",
+      "verbose": "protection from cold",
+      "existing": "protection from cold"
+    },
+    {
+      "enum": "RING_SLAYING",
+      "short": "Slay",
+      "verbose": "slaying",
+      "existing": "slaying"
+    },
+    {
+      "enum": "RING_SEE_INVISIBLE",
+      "short": "sInv",
+      "verbose": "see invisible",
+      "existing": "看破隐形"
+    },
+    {
+      "enum": "RING_RESIST_CORROSION",
+      "short": "rCorr",
+      "verbose": "resist corrosion",
+      "existing": "resist corrosion"
+    },
+    {
+      "enum": "RING_EVASION",
+      "short": "EV",
+      "verbose": "evasion",
+      "existing": "evasion"
+    },
+    {
+      "enum": "RING_STEALTH",
+      "short": "Stlth+",
+      "verbose": "stealth",
+      "existing": "潜行"
+    },
+    {
+      "enum": "RING_STRENGTH",
+      "short": "Str",
+      "verbose": "strength",
+      "existing": "力量"
+    },
+    {
+      "enum": "RING_DEXTERITY",
+      "short": "Dex",
+      "verbose": "dexterity",
+      "existing": "敏捷"
+    },
+    {
+      "enum": "RING_INTELLIGENCE",
+      "short": "Int",
+      "verbose": "intelligence",
+      "existing": "智力"
+    },
+    {
+      "enum": "RING_WIZARDRY",
+      "short": "Wiz",
+      "verbose": "wizardry",
+      "existing": "wizardry"
+    },
+    {
+      "enum": "RING_MAGICAL_POWER",
+      "short": "MP+9",
+      "verbose": "magical power",
+      "existing": "magical power"
+    },
+    {
+      "enum": "RING_FLIGHT",
+      "short": "Fly",
+      "verbose": "flight",
+      "existing": "flight"
+    },
+    {
+      "enum": "RING_POSITIVE_ENERGY",
+      "short": "rN+",
+      "verbose": "positive energy",
+      "existing": "正能量"
+    },
+    {
+      "enum": "RING_WILLPOWER",
+      "short": "Will+",
+      "verbose": "willpower",
+      "existing": "意志"
+    },
+    {
+      "enum": "AMU_MANA_REGENERATION",
+      "short": "RegenMP",
+      "verbose": "magic regeneration",
+      "existing": "magic regeneration"
+    },
+    {
+      "enum": "AMU_ACROBAT",
+      "short": "Acrobat",
+      "verbose": "the acrobat",
+      "existing": "the acrobat"
+    },
+    {
+      "enum": "AMU_GUARDIAN_SPIRIT",
+      "short": "Spirit",
+      "verbose": "guardian spirit",
+      "existing": "guardian spirit"
+    },
+    {
+      "enum": "AMU_FAITH",
+      "short": "Faith",
+      "verbose": "faith",
+      "existing": "faith"
+    },
+    {
+      "enum": "AMU_REFLECTION",
+      "short": "Reflect",
+      "verbose": "reflection",
+      "existing": "反射"
+    },
+    {
+      "enum": "AMU_REGENERATION",
+      "short": "Regen",
+      "verbose": "regeneration",
+      "existing": "regeneration"
+    },
+    {
+      "enum": "AMU_WILDSHAPE",
+      "short": "Wildshape",
+      "verbose": "wildshape",
+      "existing": "wildshape"
+    },
+    {
+      "enum": "AMU_CHEMISTRY",
+      "short": "Chemistry",
+      "verbose": "chemistry",
+      "existing": "chemistry"
+    },
+    {
+      "enum": "AMU_DISSIPATION",
+      "short": "Dissipate",
+      "verbose": "dissipation",
+      "existing": "dissipation"
+    },
+    {
+      "enum": "RING_PROTECTION",
+      "short": "AC",
+      "verbose": "protection",
+      "existing": "防护"
+    },
+    {
+      "enum": "RING_PROTECTION_FROM_FIRE",
+      "short": "rF+",
+      "verbose": "protection from fire",
+      "existing": "protection from fire"
+    },
+    {
+      "enum": "RING_POISON_RESISTANCE",
+      "short": "rPois",
+      "verbose": "poison resistance",
+      "existing": "毒素抗性"
+    },
+    {
+      "enum": "RING_PROTECTION_FROM_COLD",
+      "short": "rC+",
+      "verbose": "protection from cold",
+      "existing": "protection from cold"
+    },
+    {
+      "enum": "RING_SLAYING",
+      "short": "Slay",
+      "verbose": "slaying",
+      "existing": "slaying"
+    },
+    {
+      "enum": "RING_SEE_INVISIBLE",
+      "short": "sInv",
+      "verbose": "see invisible",
+      "existing": "看破隐形"
+    },
+    {
+      "enum": "RING_RESIST_CORROSION",
+      "short": "rCorr",
+      "verbose": "resist corrosion",
+      "existing": "resist corrosion"
+    },
+    {
+      "enum": "RING_EVASION",
+      "short": "EV",
+      "verbose": "evasion",
+      "existing": "evasion"
+    },
+    {
+      "enum": "RING_STEALTH",
+      "short": "Stlth+",
+      "verbose": "stealth",
+      "existing": "潜行"
+    },
+    {
+      "enum": "RING_STRENGTH",
+      "short": "Str",
+      "verbose": "strength",
+      "existing": "力量"
+    },
+    {
+      "enum": "RING_DEXTERITY",
+      "short": "Dex",
+      "verbose": "dexterity",
+      "existing": "敏捷"
+    },
+    {
+      "enum": "RING_INTELLIGENCE",
+      "short": "Int",
+      "verbose": "intelligence",
+      "existing": "智力"
+    },
+    {
+      "enum": "RING_WIZARDRY",
+      "short": "Wiz",
+      "verbose": "wizardry",
+      "existing": "wizardry"
+    },
+    {
+      "enum": "RING_MAGICAL_POWER",
+      "short": "MP+9",
+      "verbose": "magical power",
+      "existing": "magical power"
+    },
+    {
+      "enum": "RING_FLIGHT",
+      "short": "Fly",
+      "verbose": "flight",
+      "existing": "flight"
+    },
+    {
+      "enum": "RING_POSITIVE_ENERGY",
+      "short": "rN+",
+      "verbose": "positive energy",
+      "existing": "正能量"
+    },
+    {
+      "enum": "RING_WILLPOWER",
+      "short": "Will+",
+      "verbose": "willpower",
+      "existing": "意志"
+    },
+    {
+      "enum": "AMU_MANA_REGENERATION",
+      "short": "RegenMP",
+      "verbose": "magic regeneration",
+      "existing": "magic regeneration"
+    },
+    {
+      "enum": "AMU_ACROBAT",
+      "short": "Acrobat",
+      "verbose": "the acrobat",
+      "existing": "the acrobat"
+    },
+    {
+      "enum": "AMU_GUARDIAN_SPIRIT",
+      "short": "Spirit",
+      "verbose": "guardian spirit",
+      "existing": "guardian spirit"
+    },
+    {
+      "enum": "AMU_FAITH",
+      "short": "Faith",
+      "verbose": "faith",
+      "existing": "faith"
+    },
+    {
+      "enum": "AMU_REFLECTION",
+      "short": "Reflect",
+      "verbose": "reflection",
+      "existing": "反射"
+    },
+    {
+      "enum": "AMU_REGENERATION",
+      "short": "Regen",
+      "verbose": "regeneration",
+      "existing": "regeneration"
+    },
+    {
+      "enum": "AMU_WILDSHAPE",
+      "short": "Wildshape",
+      "verbose": "wildshape",
+      "existing": "wildshape"
+    },
+    {
+      "enum": "AMU_CHEMISTRY",
+      "short": "Chemistry",
+      "verbose": "chemistry",
+      "existing": "chemistry"
+    },
+    {
+      "enum": "AMU_DISSIPATION",
+      "short": "Dissipate",
+      "verbose": "dissipation",
+      "existing": "dissipation"
+    }
+  ],
+  "glossary_hits": [
+    {
+      "Term": "AC",
+      "Translation": "护甲值",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】与 Armour（防具技能/防具）区分；缩写在 HUD 可保留 AC。 来源：dat/descript/skills.txt。"
+    },
+    {
+      "Term": "Dexterity",
+      "Translation": "敏捷/灵巧",
+      "Part of Speech": "noun",
+      "Variants": "Dex",
+      "Note": "三大基础属性之一\n【语境补充 2026-10-21】Dex 属性用敏捷。普通身手描述可用灵巧。"
+    },
+    {
+      "Term": "evasion",
+      "Translation": "闪避值",
+      "Part of Speech": "noun",
+      "Variants": "EV",
+      "Note": "【0.34.1 修订】属性 EV；与 Dodging（闪避技能）区分。 来源：dat/descript/skills.txt。"
+    },
+    {
+      "Term": "Hexes",
+      "Translation": "妖术系魔法",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】区分敌对魔法学派与物品诅咒，也与 hexer（妖术师）统一。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+    },
+    {
+      "Term": "Intelligence",
+      "Translation": "智力/智慧/心智",
+      "Part of Speech": "noun",
+      "Variants": "Int",
+      "Note": "三大基础属性之一\n【语境补充 2026-10-21】Int 属性用智力。生物认知、保有意识等叙述用智慧或心智。"
+    },
+    {
+      "Term": "rC",
+      "Translation": "冰抗/寒冷抗性",
+      "Part of Speech": "noun",
+      "Variants": "cold resistance",
+      "Note": "【0.34.1 修订】属性是 cold resistance；与火抗成对，紧凑物品属性保留 rC。 来源：player.cc。\n【2026-10-25 面板统一】斜杠依次表示简称/全称；角色抗性面板与怪物描述面板使用全称，物品紧凑属性、配置及规范英文键保持不变。"
+    },
+    {
+      "Term": "rF",
+      "Translation": "火抗/火焰抗性",
+      "Part of Speech": "noun",
+      "Variants": "fire resistance",
+      "Note": "【0.34.1 修订】紧凑物品属性保留 rF。 来源：player.cc。\n【2026-10-25 面板统一】斜杠依次表示简称/全称；角色抗性面板与怪物描述面板使用全称，物品紧凑属性、配置及规范英文键保持不变。"
+    },
+    {
+      "Term": "rPois",
+      "Translation": "毒抗/毒素抗性",
+      "Part of Speech": "noun",
+      "Variants": "poison resistance",
+      "Note": "【0.34.1 修订】首选译法统一；紧凑物品属性保留 rPois；具体界面只显示对应语境的一个译法。 来源：player.cc。\n【2026-10-25 面板统一】斜杠依次表示简称/全称；角色抗性面板与怪物描述面板使用全称，物品紧凑属性、配置及规范英文键保持不变。"
+    },
+    {
+      "Term": "SInv",
+      "Translation": "看破隐形",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】与 ring of see invisible 统一；不表示驱散隐形。 来源：player.cc。"
+    },
+    {
+      "Term": "stealth",
+      "Translation": "潜行",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "一种技能\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+    },
+    {
+      "Term": "Strength",
+      "Translation": "力量/强度/威力",
+      "Part of Speech": "noun",
+      "Variants": "Str",
+      "Note": "三大基础属性之一\n【语境补充 2026-10-21】Str 属性用力量。法术、效果或攻击的 strength 按语境用强度或威力。"
+    },
+    {
+      "Term": "SH",
+      "Translation": "格挡值",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/属性】与 Shields（盾牌技能）、shield（盾牌物品）区分。 来源：player.cc。"
+    },
+    {
+      "Term": "willpower",
+      "Translation": "意志",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/属性】抵抗部分魔法效果，与火抗/冰抗等抗性区分。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "Will",
+      "Translation": "意志/将会/会",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+    },
+    {
+      "Term": "rN",
+      "Translation": "负能抗性/负能量抗性",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/HUD缩写】区别生命恢复和吸能状态。 来源：player.cc。\n【2026-10-25 面板统一】斜杠依次表示简称/全称；角色抗性面板与怪物描述面板使用全称，物品紧凑属性、配置及规范英文键保持不变。"
+    },
+    {
+      "Term": "rElec",
+      "Translation": "电抗/电击抗性",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/HUD缩写】闪电/电击抗性。 来源：player.cc。\n【2026-10-25 面板统一】斜杠依次表示简称/全称；角色抗性面板与怪物描述面板使用全称，物品紧凑属性、配置及规范英文键保持不变。"
+    },
+    {
+      "Term": "rCorr",
+      "Translation": "腐蚀抗性",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/HUD缩写】区分酸伤害及腐蚀状态的具体规则。 来源：player.cc。"
+    },
+    {
+      "Term": "slaying",
+      "Translation": "杀戮",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/装备属性】属性加成，具体命中和伤害适用范围以机制为准。 来源：item-name.cc。"
+    },
+    {
+      "Term": "invisibility",
+      "Translation": "隐形",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/状态】不是 stealth 潜行技能。 来源：duration-data.h。\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "Flight",
+      "Translation": "飞行术/飞行/一群",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】完整法术标题用飞行术。移动能力或状态用飞行。a flight of butterflies 指一群蝴蝶。"
+    },
+    {
+      "Term": "Infusion",
+      "Translation": "灌注术/灌注/补充",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用灌注术。向物品灌入魔力用灌注。魔力药水提供能量用补充。"
+    },
+    {
+      "Term": "Regeneration",
+      "Translation": "再生术/再生/恢复",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用再生术。状态或生命再生机制用再生。普通恢复过程按句意表达。\n【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：再生。"
+    },
+    {
+      "Term": "See Invisible",
+      "Translation": "看破隐形",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：看破隐形。"
+    },
+    {
+      "Term": "Wrath",
+      "Translation": "神怒",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+    },
+    {
+      "Term": "poison resistance",
+      "Translation": "毒素抗性",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：毒素抗性。"
+    },
+    {
+      "Term": "fire resistance",
+      "Translation": "火焰抗性",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：火焰抗性。"
+    },
+    {
+      "Term": "cold resistance",
+      "Translation": "寒冷抗性",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：寒冷抗性。"
+    },
+    {
+      "Term": "magic regeneration",
+      "Translation": "魔力再生",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：魔力再生。"
+    },
+    {
+      "Term": "faith",
+      "Translation": "信仰",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：信仰。"
+    }
+  ]
+}

@@ -14,6 +14,8 @@
 
 using std::vector;
 
+struct ui_arg;
+
 extern const struct coord_def Compass[9];
 
 bool mons_is_irrelevant(const monster* mon);
@@ -32,7 +34,7 @@ vector<monster* > get_nearby_monsters(bool want_move = false,
 
 bool i_feel_safe(bool announce = false, bool want_move = false,
                  bool just_monsters = false, bool check_dist = true,
-                 int range = -1, string* reason = nullptr);
+                 int range = -1, string* reason = nullptr, ui_arg* display_reason = nullptr);
 
 bool can_rest_here(bool announce = false);
 

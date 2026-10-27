@@ -1,0 +1,744 @@
+[
+  {
+    "file": "ui-scissor.h",
+    "line": 10,
+    "english": "ui.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.cc",
+    "line": 6,
+    "english": "AppHdr.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.cc",
+    "line": 13,
+    "english": "ui.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.cc",
+    "line": 14,
+    "english": "cio.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.cc",
+    "line": 15,
+    "english": "macro.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.cc",
+    "line": 16,
+    "english": "state.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.cc",
+    "line": 17,
+    "english": "tileweb.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.cc",
+    "line": 18,
+    "english": "unicode.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.cc",
+    "line": 19,
+    "english": "libutil.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.cc",
+    "line": 20,
+    "english": "windowmanager.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.cc",
+    "line": 21,
+    "english": "ui-scissor.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.cc",
+    "line": 24,
+    "english": "glwrapper.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.cc",
+    "line": 25,
+    "english": "tilebuf.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.cc",
+    "line": 26,
+    "english": "tilepick-p.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.cc",
+    "line": 27,
+    "english": "tile-player-flag-cut.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.cc",
+    "line": 33,
+    "english": "syscalls.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.cc",
+    "line": 34,
+    "english": "output.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.cc",
+    "line": 35,
+    "english": "stringutil.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.cc",
+    "line": 36,
+    "english": "view.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.cc",
+    "line": 456,
+    "english": "msg",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 456,
+    "english": "ui-state-sync",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 457,
+    "english": "widget_id",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 458,
+    "english": "from_webtiles",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 459,
+    "english": "generation_id",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 875,
+    "english": "\n",
+    "disposition": "retain",
+    "reason": "换行、勾选、颜色标记或动画符号"
+  },
+  {
+    "file": "ui.cc",
+    "line": 998,
+    "english": "%s",
+    "disposition": "retain",
+    "reason": "通用格式占位符，内容由调用方提供"
+  },
+  {
+    "file": "ui.cc",
+    "line": 1500,
+    "english": "msg",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 1500,
+    "english": "ui-scroller-scroll",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 1503,
+    "english": "from_webtiles",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 1504,
+    "english": "scroll",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 1791,
+    "english": "X",
+    "disposition": "retain",
+    "reason": "换行、勾选、颜色标记或动画符号"
+  },
+  {
+    "file": "ui.cc",
+    "line": 1864,
+    "english": "checked",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 1869,
+    "english": "checked",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 1966,
+    "english": "%s",
+    "disposition": "retain",
+    "reason": "通用格式占位符，内容由调用方提供"
+  },
+  {
+    "file": "ui.cc",
+    "line": 2078,
+    "english": "%s",
+    "disposition": "retain",
+    "reason": "通用格式占位符，内容由调用方提供"
+  },
+  {
+    "file": "ui.cc",
+    "line": 2366,
+    "english": "text",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 2367,
+    "english": "cursor",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 2372,
+    "english": "text",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 2880,
+    "english": "unreachable, type %d",
+    "disposition": "retain",
+    "reason": "调试／技术诊断"
+  },
+  {
+    "file": "ui.cc",
+    "line": 3053,
+    "english": "generation_id",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 3060,
+    "english": "has_focus",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 3064,
+    "english": "widget_id",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 3091,
+    "english": "%*s",
+    "disposition": "retain",
+    "reason": "通用格式占位符，内容由调用方提供"
+  },
+  {
+    "file": "ui.cc",
+    "line": 3461,
+    "english": "title",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 3462,
+    "english": "bar_text",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 3463,
+    "english": "status",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 3464,
+    "english": "progress-bar",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 3486,
+    "english": "status",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 3487,
+    "english": "bar_text",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 3489,
+    "english": "progress-bar",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 3518,
+    "english": "/o/",
+    "disposition": "retain",
+    "reason": "换行、勾选、颜色标记或动画符号"
+  },
+  {
+    "file": "ui.cc",
+    "line": 3518,
+    "english": "\\o\\",
+    "disposition": "retain",
+    "reason": "换行、勾选、颜色标记或动画符号"
+  },
+  {
+    "file": "ui.cc",
+    "line": 3522,
+    "english": "<lightmagenta>",
+    "disposition": "retain",
+    "reason": "换行、勾选、颜色标记或动画符号"
+  },
+  {
+    "file": "ui.cc",
+    "line": 3522,
+    "english": "</lightmagenta>",
+    "disposition": "retain",
+    "reason": "换行、勾选、颜色标记或动画符号"
+  },
+  {
+    "file": "ui.cc",
+    "line": 3549,
+    "english": "msg",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 3549,
+    "english": "ui-state-sync",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 3550,
+    "english": "has_focus",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 3551,
+    "english": "widget_id",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 3552,
+    "english": "from_webtiles",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.cc",
+    "line": 3553,
+    "english": "generation_id",
+    "disposition": "retain",
+    "reason": "协议／布局标识，保留规范值"
+  },
+  {
+    "file": "ui.h",
+    "line": 11,
+    "english": "format.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.h",
+    "line": 12,
+    "english": "KeymapContext.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.h",
+    "line": 13,
+    "english": "state.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.h",
+    "line": 14,
+    "english": "rltiles/tiledef-gui.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.h",
+    "line": 15,
+    "english": "tilefont.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.h",
+    "line": 16,
+    "english": "unwind.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.h",
+    "line": 17,
+    "english": "cio.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.h",
+    "line": 19,
+    "english": "tilebuf.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.h",
+    "line": 20,
+    "english": "tiledgnbuf.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.h",
+    "line": 21,
+    "english": "tiledoll.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.h",
+    "line": 22,
+    "english": "tilesdl.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.h",
+    "line": 25,
+    "english": "tileweb.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.h",
+    "line": 26,
+    "english": "json.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "ui.h",
+    "line": 119,
+    "english": "Region(x=",
+    "disposition": "retain",
+    "reason": "调试／技术诊断"
+  },
+  {
+    "file": "ui.h",
+    "line": 119,
+    "english": ", y=",
+    "disposition": "retain",
+    "reason": "调试／技术诊断"
+  },
+  {
+    "file": "ui.h",
+    "line": 120,
+    "english": "w=",
+    "disposition": "retain",
+    "reason": "调试／技术诊断"
+  },
+  {
+    "file": "ui.h",
+    "line": 120,
+    "english": ", h=",
+    "disposition": "retain",
+    "reason": "调试／技术诊断"
+  },
+  {
+    "file": "uncancel.cc",
+    "line": 7,
+    "english": "AppHdr.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "uncancel.cc",
+    "line": 9,
+    "english": "mpr.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "uncancel.cc",
+    "line": 10,
+    "english": "uncancel.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "uncancel.cc",
+    "line": 12,
+    "english": "acquire.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "uncancel.cc",
+    "line": 13,
+    "english": "decks.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "uncancel.cc",
+    "line": 14,
+    "english": "god-abil.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "uncancel.cc",
+    "line": 15,
+    "english": "item-use.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "uncancel.cc",
+    "line": 16,
+    "english": "libutil.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "uncancel.cc",
+    "line": 17,
+    "english": "state.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "uncancel.cc",
+    "line": 18,
+    "english": "tag-version.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "uncancel.cc",
+    "line": 19,
+    "english": "unwind.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "uncancel.cc",
+    "line": 45,
+    "english": "Running uncancel type=%d arg=%d",
+    "disposition": "retain",
+    "reason": "调试／技术诊断"
+  },
+  {
+    "file": "uncancel.h",
+    "line": 9,
+    "english": "uncancellable-type.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "uncancellable-type.h",
+    "line": 3,
+    "english": "tag-version.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "unicode-wrap.h",
+    "line": 3,
+    "english": "unicode.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "unicode-wrap.h",
+    "line": 4,
+    "english": "format.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "unicode-wrap.h",
+    "line": 16,
+    "english": "\n",
+    "disposition": "retain",
+    "reason": "换行、勾选、颜色标记或动画符号"
+  },
+  {
+    "file": "unicode.cc",
+    "line": 7,
+    "english": "AppHdr.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "unicode.cc",
+    "line": 9,
+    "english": "unicode.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "unicode.cc",
+    "line": 17,
+    "english": "syscalls.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  },
+  {
+    "file": "unicode.cc",
+    "line": 266,
+    "english": "r",
+    "disposition": "retain",
+    "reason": "编码字节／文件模式／技术诊断"
+  },
+  {
+    "file": "unicode.cc",
+    "line": 279,
+    "english": "»¿",
+    "disposition": "retain",
+    "reason": "编码字节／文件模式／技术诊断"
+  },
+  {
+    "file": "unicode.cc",
+    "line": 283,
+    "english": "ÿ",
+    "disposition": "retain",
+    "reason": "编码字节／文件模式／技术诊断"
+  },
+  {
+    "file": "unicode.cc",
+    "line": 287,
+    "english": "þ\u0000\u0000",
+    "disposition": "retain",
+    "reason": "编码字节／文件模式／技术诊断"
+  },
+  {
+    "file": "unicode.cc",
+    "line": 289,
+    "english": "ÿþ",
+    "disposition": "retain",
+    "reason": "编码字节／文件模式／技术诊断"
+  },
+  {
+    "file": "unicode.cc",
+    "line": 293,
+    "english": "\u0000þÿ",
+    "disposition": "retain",
+    "reason": "编码字节／文件模式／技术诊断"
+  },
+  {
+    "file": "unicode.cc",
+    "line": 431,
+    "english": "FileLineInput had a bad bom_type (%d)",
+    "disposition": "retain",
+    "reason": "编码字节／文件模式／技术诊断"
+  },
+  {
+    "file": "unicode.cc",
+    "line": 436,
+    "english": "r",
+    "disposition": "retain",
+    "reason": "编码字节／文件模式／技术诊断"
+  },
+  {
+    "file": "unique-creature-list-type.h",
+    "line": 3,
+    "english": "monster-type.h",
+    "disposition": "retain",
+    "reason": "头文件路径"
+  }
+]

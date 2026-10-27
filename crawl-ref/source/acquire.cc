@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "misc-display.h"
+#include "i18n.h"
 
 #include "acquire.h"
 
@@ -1046,7 +1048,7 @@ static bool _do_book_acquirement(item_def &book, int agent)
 static int _failed_acquirement(bool quiet)
 {
     if (!quiet)
-        mpr("The demon of the infinite void smiles upon you.");
+        mpr(ui_translate("a.acquire", "The demon of the infinite void smiles upon you."));
     return NON_ITEM;
 }
 
@@ -1467,6 +1469,20 @@ class AcquireEntry : public InvEntry
             colour_to_str(menu_colour(text, item_prefix(*item), tag, false));
         const string gold_text = item->base_type == OBJ_GOLD
             ? make_stringf(" (you have %d gold)", you.gold) : "";
+        const char *pattern = " <%s>%c %c </%s><%s>%s%s</%s>";
+        ui_translation_group translated;
+        if (item->base_type == OBJ_GOLD)
+            translated.require("display.acquire", " (you have %d gold)");
+        string displayed;
+        if (translated.available() && try_item_display_name(*item, displayed, false, false))
+        {
+            const string balance = item->base_type == OBJ_GOLD
+                ? make_stringf(translated.get("display.acquire", " (you have %d gold)"), you.gold) : "";
+            return make_stringf(pattern,
+                                keystr.c_str(), hotkeys[0], selected() ? '+' : '-',
+                                keystr.c_str(), itemstr.c_str(), displayed.c_str(),
+                                balance.c_str(), itemstr.c_str());
+        }
         return make_stringf(" <%s>%c %c </%s><%s>%s%s</%s>",
                             keystr.c_str(),
                             hotkeys[0],
@@ -1502,9 +1518,9 @@ AcquireMenu::AcquireMenu(CrawlVector &aitems, string ikey,
     init_entries();
 
     if (is_gizmo)
-        set_title("Choose a gizmo to assemble.");
+        set_title(ui_translate("a.acquire", "Choose a gizmo to assemble."));
     else
-        set_title("Choose an item to acquire.");
+        set_title(ui_translate("a.acquire", "Choose an item to acquire."));
 }
 
 static void _create_acquirement_item(item_def &item, string items_key,
@@ -1541,8 +1557,10 @@ static void _create_acquirement_item(item_def &item, string items_key,
         {
             if (you.inv[i].base_type == OBJ_GIZMOS)
             {
-                mprf("You assemble %s and install it in your exoskeleton!",
-                     item.name(DESC_A).c_str());
+                mprf("%s", ui_render("a.acquire", "You assemble %s and install it in your exoskeleton!",
+                make_stringf("You assemble %s and install it in your exoskeleton!",
+                     item.name(DESC_A).c_str()),
+                {ui_item_arg(item)}).c_str());
                 equip_item(SLOT_GIZMO, i, false);
                 break;
             }
@@ -1606,6 +1624,13 @@ string AcquireMenu::get_keyhelp(bool) const
                entry.text.c_str(),
                Options.easy_confirm == easy_confirm_type::none ? "Y" : "y",
                col.c_str());
+        help = ui_render("a.acquire",
+            is_gizmo ? "<%s>Assemble %s? (%s/N)</%s>\n"
+                     : "<%s>Acquire %s? (%s/N)</%s>\n",
+            help, {ui_literal_arg(col),
+                   ui_item_arg(*static_cast<item_def*>(entry.data)),
+                   ui_literal_arg(Options.easy_confirm == easy_confirm_type::none ? "Y" : "y"),
+                   ui_literal_arg(col)});
     }
     else
         help = "\n";
@@ -1619,11 +1644,11 @@ string AcquireMenu::get_keyhelp(bool) const
         //[Esc/R-Click] exit
         "<lightgrey>%s%s  %s %s</lightgrey>",
         menu_keyhelp_cmd(CMD_MENU_CYCLE_MODE).c_str(),
-        menu_action == ACT_EXECUTE ? " <w>assemble</w>|examine gizmo" :
-                                     " assemble|<w>examine</w> gizmo",
+        menu_action == ACT_EXECUTE ? ui_translate("a.acquire", " <w>assemble</w>|examine gizmo") :
+                                     ui_translate("a.acquire", " assemble|<w>examine</w> gizmo"),
         hyphenated_hotkey_letters(item_count(), 'a').c_str(),
-        menu_action == ACT_EXECUTE ? "select gizmo to assemble"
-                                   : "examine gizmo");
+        menu_action == ACT_EXECUTE ? ui_translate("a.acquire", "select gizmo to assemble")
+                                   : ui_translate("a.acquire", "examine gizmo"));
     }
     else
     {
@@ -1632,11 +1657,11 @@ string AcquireMenu::get_keyhelp(bool) const
             //[Esc/R-Click] exit
             "<lightgrey>%s%s  %s %s</lightgrey>",
             menu_keyhelp_cmd(CMD_MENU_CYCLE_MODE).c_str(),
-            menu_action == ACT_EXECUTE ? " <w>acquire</w>|examine items" :
-                                        " acquire|<w>examine</w> items",
+            menu_action == ACT_EXECUTE ? ui_translate("a.acquire", " <w>acquire</w>|examine items") :
+                                        ui_translate("a.acquire", " acquire|<w>examine</w> items"),
             hyphenated_hotkey_letters(item_count(), 'a').c_str(),
-            menu_action == ACT_EXECUTE ? "select item for acquirement"
-                                    : "examine item");
+            menu_action == ACT_EXECUTE ? ui_translate("a.acquire", "select item for acquirement")
+                                    : ui_translate("a.acquire", "examine item"));
     }
     return pad_more_with_esc(help);
 }
@@ -1940,8 +1965,8 @@ static string _generate_gizmo_name()
 {
     string name;
 
-    string noun = getMiscString("gizmo_noun");
-    string modifier = getMiscString("gizmo_modifier");
+    string noun = getMiscString("gizmo_noun", "", true);
+    string modifier = getMiscString("gizmo_modifier", "", true);
 
     // Chance of serial number name
     if (one_chance_in(3))
@@ -1955,7 +1980,7 @@ static string _generate_gizmo_name()
     // Use adjective
     else
     {
-        string adj = getMiscString("gizmo_adjective");
+        string adj = getMiscString("gizmo_adjective", "", true);
 
         // 50% chance of modifier, applied to either noun or adjective
         if (coinflip())
@@ -2002,7 +2027,7 @@ bool coglin_invent_gizmo()
 {
     if (inv_count(INVENT_GEAR) >= MAX_GEAR)
     {
-        mpr("You don't have room to hold a gizmo! Drop something first.");
+        mpr(ui_translate("a.acquire", "You don't have room to hold a gizmo! Drop something first."));
         return false;
     }
 
@@ -2043,7 +2068,11 @@ void coglin_announce_gizmo_name()
     CrawlVector& names = you.props[COGLIN_GIZMO_NAMES_KEY].get_vector();
     string name = _generate_gizmo_name();
     names.push_back(name);
+    string display_name;
+    const bool translated = try_gizmo_display_name(name, display_name);
 
-    mprf("Your brain swirls with designs for %s. You just need some more time...",
-         article_a(name).c_str());
+    mprf("%s", ui_render("a.acquire", "Your brain swirls with designs for %s. You just need some more time...",
+                make_stringf("Your brain swirls with designs for %s. You just need some more time...",
+         article_a(name).c_str()),
+                {ui_arg{display_name, translated}}).c_str());
 }

@@ -1,0 +1,93 @@
+[
+  {
+    "file": "crawl-ref/source/object-class-type.h",
+    "scope": "Canonical object/selector/operation enum declarations; no display prose",
+    "sha256": "f5f956ae6a8d71213b98930bfb06cf98d240c5f5daf4f64fff4da235fc14e477",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/object-selector-type.h",
+    "scope": "Canonical object/selector/operation enum declarations; no display prose",
+    "sha256": "a6b568100c2ca9d3cd459af47a26f08a491f7ccfeb8d72f27a3ec9f5b2dad9da",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/operation-types.h",
+    "scope": "Canonical object/selector/operation enum declarations; no display prose",
+    "sha256": "c32c0cf1a59ef15dceb5e1568d5da539229ec2338519f661745d22058a9e2d7a",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/options.h",
+    "scope": "Settings data and option/parser identifiers; internal assertion diagnostics retained",
+    "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/orb-type.h",
+    "scope": "Orb pickup/translocation warnings and god intervention; canonical identifiers and chapter state preserved",
+    "sha256": "58779b3c734d011124af456ee8a83ec3e5f0d8ad20246ab3294877fdcaf744aa",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/orb.cc",
+    "scope": "Orb pickup/translocation warnings and god intervention; canonical identifiers and chapter state preserved",
+    "sha256": "215705386549163a4492d444ab986ce4f1f8ee13b9d048b076a423b8a62b5a24",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/orb.h",
+    "scope": "Orb pickup/translocation warnings and god intervention; canonical identifiers and chapter state preserved",
+    "sha256": "c9aa6224d30ba49516ebf9c50fb7fa107a2d3c4bdaf832c322dc8ba95eed3bd5",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/ouch.cc",
+    "scope": "Damage/resistance/mutation/elemental feedback, summoning and god death messages; damage/RNG/kill causes/notes preserved",
+    "sha256": "e418e7e26e383ad694d5a8017f5ae9c01ebd329d52e2d2023b2b9eff47c71d8f",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/ouch.h",
+    "scope": "Damage/resistance/mutation/elemental feedback, summoning and god death messages; damage/RNG/kill causes/notes preserved",
+    "sha256": "c4c3891562f99c70de7132cb2bd70b55cb35bfd94a536b2f8099fd51b3f57996",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/outer-menu.cc",
+    "scope": "Generic rendering, text handoff, interaction and JSON serialization; caller-authored display text and protocol keys preserved",
+    "sha256": "032c23ab73158fc5ceae7ea3070a8f535a5b89088536af3393f07da874b61619",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/outer-menu.h",
+    "scope": "Generic rendering, text handoff, interaction and JSON serialization; caller-authored display text and protocol keys preserved",
+    "sha256": "6aec6e02c39b6cc14eff6a797f5fa0c9af04545dca87b46d55addb400c60df97",
+    "new": false,
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/output.cc",
+    "scope": "HUD and complete overview, equipment, resistances, passives, runes and monster list; UTF-8 truncation and typed form metadata",
+    "sha256": "43f1289a175754e2c356d0417650c6fc1d7b264a2d82160176b7e4d93cb2cbec",
+    "new": false,
+    "changed": true
+  },
+  {
+    "file": "crawl-ref/source/output.h",
+    "scope": "HUD and complete overview, equipment, resistances, passives, runes and monster list; UTF-8 truncation and typed form metadata",
+    "sha256": "ab86e970fb33465b54683bb432fe64011e4486861ffd186e868201162ec1ddd1",
+    "new": false,
+    "changed": true
+  }
+]

@@ -1,0 +1,864 @@
+{
+  "entries": [
+    {
+      "key": "random_book_title",
+      "context": "textdb:database/randbook.txt:random_book_title",
+      "source_sha256": "97e052d2318597654b7d889480791c0069568def34e951323ffdcf787b39a0ca",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": [
+        {
+          "source": "database/randbook.txt",
+          "key": "_book_plant_animal_",
+          "source_sha256": "60df03f36bcee77301c232f6bb842578ca7a0c3effebfcfada29605e17314135",
+          "translation_sha256": "60df03f36bcee77301c232f6bb842578ca7a0c3effebfcfada29605e17314135"
+        },
+        {
+          "source": "database/rand_all.txt",
+          "key": "_destiny_name_",
+          "source_sha256": "452c08201eca71558bfdf410bba03b392efc3c128d85cb32453da5f4a4b86475",
+          "translation_sha256": "7e342c2f0c690d097ce2322390b8c2098aef2f5f2f1b1f615b8003f75a51c78c"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_magic_name_",
+          "source_sha256": "e833151880d0be625decfd55ce105a3a3606839aa94d081f6bf0655083376e66",
+          "translation_sha256": "96d784ce58899fd24676e28d3e81374f64ec45ba4d62cbec39b2fc28d4da03eb"
+        },
+        {
+          "source": "database/rand_all.txt",
+          "key": "_number_or_qualifier_",
+          "source_sha256": "d5791dacc3035a667565d135f95f437f82443e87ec03a9fb59355a8e5d90474d",
+          "translation_sha256": "c85937a2c57a5c8db7c0081807864e6d8d39afef66273f3fa04a19c18e71f277"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_philosophy_or_science_",
+          "source_sha256": "dac7011dbb23a2aac6d286c719753b985084e2096d3782aea72cdf3b51c4c1eb",
+          "translation_sha256": "dac7011dbb23a2aac6d286c719753b985084e2096d3782aea72cdf3b51c4c1eb"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_place_name_",
+          "source_sha256": "f36d793dcbdf366622fc52c395520df38db3dc8d6bf595dc080d765a7e075987",
+          "translation_sha256": "247e7e8b752ca682518d9fa44afd3765edd5e2ce99be9dcbac0b49abf8486e27"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_power_name_",
+          "source_sha256": "899a48eb344433cac461bfd7c8bb07d4d6c8d85eaf1e37a5de69ed2fbcc16f0e",
+          "translation_sha256": "c2bab8d874622bb39638ee871571548d24f8c3d9d17e4982d0a9106ed520a97a"
+        },
+        {
+          "source": "database/rand_arm.txt",
+          "key": "_profession_name_",
+          "source_sha256": "5ac9522b135e5bae7e9ac3c9906ee9ab4684840bcb13d246e701703b01cda5b5",
+          "translation_sha256": "9f01098ba0014f36270064da309b76004733110ce1ea63a909ff7aeca07251dc"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_substance_name_",
+          "source_sha256": "4bf84b347ada22ab98cd2eb992be8432b0bf272874d5c3363a934787ed9d522c",
+          "translation_sha256": "8bbf105641a7a44e5ac9d2b1cda42774b7d4236815773615be925544cf7c4f8c"
+        },
+        {
+          "source": "database/rand_all.txt",
+          "key": "_thing_names_",
+          "source_sha256": "dd533c7a9d5cf3af145446c7a3135e0208b98d2dc047e8e3e140c5832f104332",
+          "translation_sha256": "49f56c62c89b616dd109304e78e32adc133676425880446e2df267e751eafcbc"
+        },
+        {
+          "source": "database/rand_arm.txt",
+          "key": "_wacky_armour_name_",
+          "source_sha256": "6485e764474a148d43d79d4a4bf30fdb84273e694859da883bb132829615118a",
+          "translation_sha256": "b7a27f35950ab39086ad28a98c1e55ccc0e46074740b4959d8c7fce4f6d0a903"
+        }
+      ]
+    },
+    {
+      "key": "_book_plant_animal_",
+      "context": "textdb:database/randbook.txt:_book_plant_animal_",
+      "source_sha256": "60df03f36bcee77301c232f6bb842578ca7a0c3effebfcfada29605e17314135",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": [
+        {
+          "source": "database/rand_arm.txt",
+          "key": "_armour_animal_",
+          "source_sha256": "d106842d2983834c9c1a513db95881879de4a3c26263af3e99cb582f832c79fb",
+          "translation_sha256": "1c73a086409a8d1bc998a754a4b9c6c3b37addd08315b142c0b918925f781377"
+        },
+        {
+          "source": "database/rand_arm.txt",
+          "key": "_critter_name_",
+          "source_sha256": "ad5188034de0abdb191e9c95dce2f725e2b4529fc6284724b7bc18f379be4532",
+          "translation_sha256": "0b857011fd97e5e6580eb0c5ccf66a3c3f2c70f905b4edf0d11a7c802f6e5e9f"
+        },
+        {
+          "source": "database/rand_all.txt",
+          "key": "_jewellery_animal_",
+          "source_sha256": "746c9af215f74d8381d15783835ad81fb1c507646344fcc96fbe0c4ba496e77b",
+          "translation_sha256": "a0c6279d763dce43858b237aab6934f018dbb6355b10e4ae291909660bcf2f4e"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_plant_name_",
+          "source_sha256": "0a2bed5ea876bff01e6a3ceb494a02e562608037557bbfc033c1b682df2e88ab",
+          "translation_sha256": "3d04c85cfcab499a51ca16415062175104837beebeeb969858e46edb88b2629a"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_weapon_animal_",
+          "source_sha256": "fec0a77cdc1be1406b57cbb9d387322c203852230d078f09b011d6691747ee3b",
+          "translation_sha256": "ec2282f94ab1a2f67e700ec58bf3ecc2e9327d9a886af2d128c337048c7cf918"
+        }
+      ]
+    },
+    {
+      "key": "xom_book_title",
+      "context": "textdb:database/randbook.txt:xom_book_title",
+      "source_sha256": "72219fa2c325fa0185cbcb2277e86d0ad19ae6ea50832599e1b4baef3fb48956",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": [
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_chaos_name_",
+          "source_sha256": "12aab0f2d0ac37ce1cc8ea344e3da8db7922788b29a2c86c49c79ae64b8ee3f9",
+          "translation_sha256": "349b0b7a95020b53fd8ed10dfbaf8116cb901cee9359e7ccf51722acdff0eb69"
+        },
+        {
+          "source": "database/rand_arm.txt",
+          "key": "_discomfort_and_inaction_",
+          "source_sha256": "08fea3482ce691b62bd78fdec029b6c0e29a9c619aea8aa0e3147e680f498990",
+          "translation_sha256": "0bde384706c83569c6cc6b1c569da02f1f0c47d8c628f9c9c96e9035da9abbf0"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_discomfort_weapon_",
+          "source_sha256": "bd4a5af200c83d52b62044cb3aa2c08e18906d2987563b751269625351f7b569",
+          "translation_sha256": "9bdfc8aeb1562d14b298473db6e3fd71cddbc4993ae2557dfa9b2dbe074b9205"
+        },
+        {
+          "source": "database/rand_arm.txt",
+          "key": "_game_name_",
+          "source_sha256": "f87df275184687bb62fd6017a5d0431353370f35174519aa1a865b91e0d21dfb",
+          "translation_sha256": "cd8e5cdd988c711f5f7304f3de745d7dc3095019e7b69d9cd9f39d90fb37aad2"
+        },
+        {
+          "source": "database/rand_arm.txt",
+          "key": "_politics_name_armour_",
+          "source_sha256": "85e1aac2afdf6c4ab5fc240f4e828f4360707e37031e02362bb6cf9b7da1d295",
+          "translation_sha256": "099d51675ff27aa58f76c0fe3087149c38b658d195578c41ec4f45e3d37cf6f8"
+        },
+        {
+          "source": "database/rand_wpn.txt",
+          "key": "_power_name_",
+          "source_sha256": "899a48eb344433cac461bfd7c8bb07d4d6c8d85eaf1e37a5de69ed2fbcc16f0e",
+          "translation_sha256": "c2bab8d874622bb39638ee871571548d24f8c3d9d17e4982d0a9106ed520a97a"
+        },
+        {
+          "source": "database/rand_arm.txt",
+          "key": "_wacky_armour_name_",
+          "source_sha256": "6485e764474a148d43d79d4a4bf30fdb84273e694859da883bb132829615118a",
+          "translation_sha256": "b7a27f35950ab39086ad28a98c1e55ccc0e46074740b4959d8c7fce4f6d0a903"
+        },
+        {
+          "source": "database/randbook.txt",
+          "key": "random_book_title",
+          "source_sha256": "97e052d2318597654b7d889480791c0069568def34e951323ffdcf787b39a0ca",
+          "translation_sha256": "7633e02dcba6909fa37385725da11fda2a3b518692d7b25d91755eafafe19416"
+        }
+      ]
+    },
+    {
+      "key": "_the_book_magic_",
+      "context": "textdb:database/randbook.txt:_the_book_magic_",
+      "source_sha256": "67d9b686d882c14a0a77db32095a29ecf9717ec6c04bc364616a55919ce8fb42",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": [
+        {
+          "source": "database/randbook.txt",
+          "key": "_book_magic_",
+          "source_sha256": "059e958012b9af6ed706cf43c116af44973366cad1caf5e478a416f4a4bb123c",
+          "translation_sha256": "2b9e446a950e657049bbd318a76a25c5a6a9c6aa938b9a405ff3c52853c6477e"
+        },
+        {
+          "source": "database/randbook.txt",
+          "key": "_occult_adjective_",
+          "source_sha256": "ba6b45600d30f7b148a451760dd2060fbe438fdc0941eb72d44d1a204ee176bf",
+          "translation_sha256": "b63c3df961b6154765c8cd87ef07ac5c1c97eef51e566637611eaeb6b181c206"
+        }
+      ]
+    },
+    {
+      "key": "_book_magic_",
+      "context": "textdb:database/randbook.txt:_book_magic_",
+      "source_sha256": "059e958012b9af6ed706cf43c116af44973366cad1caf5e478a416f4a4bb123c",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": [
+        {
+          "source": "database/randbook.txt",
+          "key": "_occult_adjective_",
+          "source_sha256": "ba6b45600d30f7b148a451760dd2060fbe438fdc0941eb72d44d1a204ee176bf",
+          "translation_sha256": "b63c3df961b6154765c8cd87ef07ac5c1c97eef51e566637611eaeb6b181c206"
+        }
+      ]
+    },
+    {
+      "key": "_occult_adjective_",
+      "context": "textdb:database/randbook.txt:_occult_adjective_",
+      "source_sha256": "ba6b45600d30f7b148a451760dd2060fbe438fdc0941eb72d44d1a204ee176bf",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "_beginners_",
+      "context": "textdb:database/randbook.txt:_beginners_",
+      "source_sha256": "3c4db0eaca891541338503f4b24c0f079fbd2788cd466fbecd302426562e0fbc",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "starting level book",
+      "context": "textdb:database/randbook.txt:starting level book",
+      "source_sha256": "cc93fb8b7ac6efd4eb9140dc05d8bb8310ed114adf7eb324f135c1d9f4fd1313",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": [
+        {
+          "source": "database/randbook.txt",
+          "key": "_beginners_",
+          "source_sha256": "3c4db0eaca891541338503f4b24c0f079fbd2788cd466fbecd302426562e0fbc",
+          "translation_sha256": "b61ccfba3f18536aecf4cbaa1ebd1d3b15c0a944925aad8fd939753503098e42"
+        },
+        {
+          "source": "database/randbook.txt",
+          "key": "_book_magic_",
+          "source_sha256": "059e958012b9af6ed706cf43c116af44973366cad1caf5e478a416f4a4bb123c",
+          "translation_sha256": "2b9e446a950e657049bbd318a76a25c5a6a9c6aa938b9a405ff3c52853c6477e"
+        },
+        {
+          "source": "database/randbook.txt",
+          "key": "_the_book_magic_",
+          "source_sha256": "67d9b686d882c14a0a77db32095a29ecf9717ec6c04bc364616a55919ce8fb42",
+          "translation_sha256": "4e462346fb0c3c8e9a2a2aa9ef47c4b127692ff5d0631752adaf669f402ff09d"
+        },
+        {
+          "source": "database/randbook.txt",
+          "key": "book_name",
+          "source_sha256": "fb2b2cda78db24eee4b50b15a060300aaf31ab569f5190cded04d21c36219884",
+          "translation_sha256": "5368e2c4f57105b102caa40a03898a73f2db8df8c14615d2de34b0deeb8ca8f5"
+        }
+      ]
+    },
+    {
+      "key": "easy level book",
+      "context": "textdb:database/randbook.txt:easy level book",
+      "source_sha256": "73db6a74e638bfac6644e258b2a18ef2a6f504e9ea8e0536b64fe19e266faba3",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": [
+        {
+          "source": "database/randbook.txt",
+          "key": "_book_magic_",
+          "source_sha256": "059e958012b9af6ed706cf43c116af44973366cad1caf5e478a416f4a4bb123c",
+          "translation_sha256": "2b9e446a950e657049bbd318a76a25c5a6a9c6aa938b9a405ff3c52853c6477e"
+        },
+        {
+          "source": "database/randbook.txt",
+          "key": "_the_book_magic_",
+          "source_sha256": "67d9b686d882c14a0a77db32095a29ecf9717ec6c04bc364616a55919ce8fb42",
+          "translation_sha256": "4e462346fb0c3c8e9a2a2aa9ef47c4b127692ff5d0631752adaf669f402ff09d"
+        },
+        {
+          "source": "database/randbook.txt",
+          "key": "book_name",
+          "source_sha256": "fb2b2cda78db24eee4b50b15a060300aaf31ab569f5190cded04d21c36219884",
+          "translation_sha256": "5368e2c4f57105b102caa40a03898a73f2db8df8c14615d2de34b0deeb8ca8f5"
+        }
+      ]
+    },
+    {
+      "key": "moderate level book",
+      "context": "textdb:database/randbook.txt:moderate level book",
+      "source_sha256": "d2336784b2e57abee4fff57c0e41f496f8d37c3fbb13b3a7d19cc51b9c6697cc",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": [
+        {
+          "source": "database/randbook.txt",
+          "key": "_book_magic_",
+          "source_sha256": "059e958012b9af6ed706cf43c116af44973366cad1caf5e478a416f4a4bb123c",
+          "translation_sha256": "2b9e446a950e657049bbd318a76a25c5a6a9c6aa938b9a405ff3c52853c6477e"
+        },
+        {
+          "source": "database/randbook.txt",
+          "key": "_the_book_magic_",
+          "source_sha256": "67d9b686d882c14a0a77db32095a29ecf9717ec6c04bc364616a55919ce8fb42",
+          "translation_sha256": "4e462346fb0c3c8e9a2a2aa9ef47c4b127692ff5d0631752adaf669f402ff09d"
+        },
+        {
+          "source": "database/randbook.txt",
+          "key": "book_name",
+          "source_sha256": "fb2b2cda78db24eee4b50b15a060300aaf31ab569f5190cded04d21c36219884",
+          "translation_sha256": "5368e2c4f57105b102caa40a03898a73f2db8df8c14615d2de34b0deeb8ca8f5"
+        },
+        {
+          "source": "database/randbook.txt",
+          "key": "book_noun",
+          "source_sha256": "a14accaf0d6d1a7c8e038bc75c5e4cfc7e82784b68175c064ef58a4209c7b9ad",
+          "translation_sha256": "1e52b86da6af68c89ca0088b367325ee37b6185aab28792db944f69c55cd0a9f"
+        }
+      ]
+    },
+    {
+      "key": "_powerful_caster_",
+      "context": "textdb:database/randbook.txt:_powerful_caster_",
+      "source_sha256": "00a9848ff9d6b5d76a919736cdf3291142edf00ca0bbdf7317dbc042f36dd611",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "_the_powerful_caster_",
+      "context": "textdb:database/randbook.txt:_the_powerful_caster_",
+      "source_sha256": "5ca0b345239ddaa805ef61bf7dc944c9658726dd36ba851d0dff3b26ba42a53f",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": [
+        {
+          "source": "database/randbook.txt",
+          "key": "_powerful_caster_",
+          "source_sha256": "00a9848ff9d6b5d76a919736cdf3291142edf00ca0bbdf7317dbc042f36dd611",
+          "translation_sha256": "74ce11114a5a7a931432fab7d8031b308e022e9e9ae97a62b5662e331dda8a2a"
+        }
+      ]
+    },
+    {
+      "key": "_last_or_lost_",
+      "context": "textdb:database/randbook.txt:_last_or_lost_",
+      "source_sha256": "79a3b9f8b0a6e1c15beed87b464b91729df26a3590381ef29cf4a5ea21ad2902",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "_testament_noun_",
+      "context": "textdb:database/randbook.txt:_testament_noun_",
+      "source_sha256": "5f06ff968a69dc32e87cbdb372ab0c7c950586f9749b652831ce9bcf4aa55e5c",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "_difficult level book owner_",
+      "context": "textdb:database/randbook.txt:_difficult level book owner_",
+      "source_sha256": "1d41ae49003df5b4f1756d8242667c16949724ffaacf60e0e208027cc8a6394f",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": [
+        {
+          "source": "database/randbook.txt",
+          "key": "_book_magic_",
+          "source_sha256": "059e958012b9af6ed706cf43c116af44973366cad1caf5e478a416f4a4bb123c",
+          "translation_sha256": "2b9e446a950e657049bbd318a76a25c5a6a9c6aa938b9a405ff3c52853c6477e"
+        },
+        {
+          "source": "database/randbook.txt",
+          "key": "_book_noun_on_",
+          "source_sha256": "c3d8d56897715535c32fdc55ff144b9425dca4653195e4743d2900a45d815634",
+          "translation_sha256": "eb185d565d2f107e380c5d6211b3608cc0ca9478a949437ea4c280412ab3e2c0"
+        },
+        {
+          "source": "database/randbook.txt",
+          "key": "_last_or_lost_",
+          "source_sha256": "79a3b9f8b0a6e1c15beed87b464b91729df26a3590381ef29cf4a5ea21ad2902",
+          "translation_sha256": "cdf77ed52d7e53e54e4ff16eacacba01abf63a47dd5a83db6c72acf05ef53262"
+        },
+        {
+          "source": "database/randbook.txt",
+          "key": "_the_book_magic_",
+          "source_sha256": "67d9b686d882c14a0a77db32095a29ecf9717ec6c04bc364616a55919ce8fb42",
+          "translation_sha256": "4e462346fb0c3c8e9a2a2aa9ef47c4b127692ff5d0631752adaf669f402ff09d"
+        },
+        {
+          "source": "database/randbook.txt",
+          "key": "book_name",
+          "source_sha256": "fb2b2cda78db24eee4b50b15a060300aaf31ab569f5190cded04d21c36219884",
+          "translation_sha256": "5368e2c4f57105b102caa40a03898a73f2db8df8c14615d2de34b0deeb8ca8f5"
+        },
+        {
+          "source": "database/randbook.txt",
+          "key": "book_noun",
+          "source_sha256": "a14accaf0d6d1a7c8e038bc75c5e4cfc7e82784b68175c064ef58a4209c7b9ad",
+          "translation_sha256": "1e52b86da6af68c89ca0088b367325ee37b6185aab28792db944f69c55cd0a9f"
+        }
+      ]
+    },
+    {
+      "key": "difficult level book",
+      "context": "textdb:database/randbook.txt:difficult level book",
+      "source_sha256": "98a2be2543e93d9b5a252d79e9084604f9076c30eaf764241b06259f15d939c6",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": [
+        {
+          "source": "database/randbook.txt",
+          "key": "_difficult level book owner_",
+          "source_sha256": "1d41ae49003df5b4f1756d8242667c16949724ffaacf60e0e208027cc8a6394f",
+          "translation_sha256": "f97ac3de92b839280eb5890ee4d98a0ec737d4423d4b68bd34e20c07339f383c"
+        },
+        {
+          "source": "database/randbook.txt",
+          "key": "_last_or_lost_",
+          "source_sha256": "79a3b9f8b0a6e1c15beed87b464b91729df26a3590381ef29cf4a5ea21ad2902",
+          "translation_sha256": "cdf77ed52d7e53e54e4ff16eacacba01abf63a47dd5a83db6c72acf05ef53262"
+        },
+        {
+          "source": "database/randbook.txt",
+          "key": "_occult_adjective_",
+          "source_sha256": "ba6b45600d30f7b148a451760dd2060fbe438fdc0941eb72d44d1a204ee176bf",
+          "translation_sha256": "b63c3df961b6154765c8cd87ef07ac5c1c97eef51e566637611eaeb6b181c206"
+        },
+        {
+          "source": "database/randbook.txt",
+          "key": "_testament_noun_",
+          "source_sha256": "5f06ff968a69dc32e87cbdb372ab0c7c950586f9749b652831ce9bcf4aa55e5c",
+          "translation_sha256": "f9ef795b8c71cac77923b5747a71203e19bbd750073250e6e83736c3ce9b5572"
+        },
+        {
+          "source": "database/randbook.txt",
+          "key": "_the_book_magic_",
+          "source_sha256": "67d9b686d882c14a0a77db32095a29ecf9717ec6c04bc364616a55919ce8fb42",
+          "translation_sha256": "4e462346fb0c3c8e9a2a2aa9ef47c4b127692ff5d0631752adaf669f402ff09d"
+        },
+        {
+          "source": "database/randbook.txt",
+          "key": "_the_powerful_caster_",
+          "source_sha256": "5ca0b345239ddaa805ef61bf7dc944c9658726dd36ba851d0dff3b26ba42a53f",
+          "translation_sha256": "145f9dc146e3cde2445e971e4bdd4e52e2d968ad95cb33c90dee6586aea25db1"
+        },
+        {
+          "source": "database/randbook.txt",
+          "key": "book_noun",
+          "source_sha256": "a14accaf0d6d1a7c8e038bc75c5e4cfc7e82784b68175c064ef58a4209c7b9ad",
+          "translation_sha256": "1e52b86da6af68c89ca0088b367325ee37b6185aab28792db944f69c55cd0a9f"
+        }
+      ]
+    },
+    {
+      "key": "air adj",
+      "context": "textdb:database/randbook.txt:air adj",
+      "source_sha256": "d1f959a85adfc69d79bd1e20a68fce35d5907264e76c305b4a998792bdb8eea9",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "conjuration adj",
+      "context": "textdb:database/randbook.txt:conjuration adj",
+      "source_sha256": "b842787c66f634da9348f041c0f58f522c47a2c33d5615286d6ba128c709e46f",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "earth adj",
+      "context": "textdb:database/randbook.txt:earth adj",
+      "source_sha256": "5b0a2b5c3bd0e772263ac82880943d598694af2b6df554a438282111136ed26c",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "fire adj",
+      "context": "textdb:database/randbook.txt:fire adj",
+      "source_sha256": "0ad590060218e4801a541f6a2f8b143bd4241367f2fa160624dd34597d737416",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "hexes adj",
+      "context": "textdb:database/randbook.txt:hexes adj",
+      "source_sha256": "751da6b933ba716c01b0ee73b0b55cf8cc9c5a2413903231f5e9133a9bfbfbf5",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "ice adj",
+      "context": "textdb:database/randbook.txt:ice adj",
+      "source_sha256": "09b8beea8b1690fe283a29709d4fa8dc1a84e5d007b2ebf2941716649d8061ac",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "necromancy adj",
+      "context": "textdb:database/randbook.txt:necromancy adj",
+      "source_sha256": "e1dcac590d76cd01ba6a2deaf0db25c8c53edb3947d3e24b799ffb7b3865bc6c",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "alchemy adj",
+      "context": "textdb:database/randbook.txt:alchemy adj",
+      "source_sha256": "48cf63a0a069f1de9d7628692a82d466947d0bb72088e3538084ed62f5c94799",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "summoning adj",
+      "context": "textdb:database/randbook.txt:summoning adj",
+      "source_sha256": "c8384a7f1f0a92c9c1c666695d9f2b2538e7cb2fde17449a329fc961ab8cf091",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "translocation adj",
+      "context": "textdb:database/randbook.txt:translocation adj",
+      "source_sha256": "6a9ecfa93e2a3c496fe4981c27f74aff6dd5a5a5673062abe9200fef015190ea",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "forgecraft adj",
+      "context": "textdb:database/randbook.txt:forgecraft adj",
+      "source_sha256": "9f932b85d802980b1748d9aa1cab44718ea4f689e865705fede60d38230fbb4c",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "highlevel conjuration earth owner",
+      "context": "textdb:database/randbook.txt:highlevel conjuration earth owner",
+      "source_sha256": "a8de09e218f26eea8574fa605a1adc7495b095e32e8b8a7bf00c693eafa844fa",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": [
+        {
+          "source": "database/randbook.txt",
+          "key": "conjuration earth owner",
+          "source_sha256": "fc751b3128a7ffede48f2eb21d0010cff9fcbef07aae0895ac16544cad6fad7e",
+          "translation_sha256": "bc4ff87f47bc3260a0250f142a8695a466b203a7b4194dbffcd6cb450f99c2fb"
+        }
+      ]
+    },
+    {
+      "key": "conjuration earth owner",
+      "context": "textdb:database/randbook.txt:conjuration earth owner",
+      "source_sha256": "fc751b3128a7ffede48f2eb21d0010cff9fcbef07aae0895ac16544cad6fad7e",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "highlevel conjuration fire owner",
+      "context": "textdb:database/randbook.txt:highlevel conjuration fire owner",
+      "source_sha256": "5090025b9b4a3e29b3689b6880618a4bec4c0a3bd00ff13efe35932f1caaff17",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "highlevel conjuration necromancy owner",
+      "context": "textdb:database/randbook.txt:highlevel conjuration necromancy owner",
+      "source_sha256": "eb1125f6a1e44fad44b2a2424b1ccb6dbce6c602ee55517ae68c2b970f3f418a",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "highlevel conjuration summoning owner",
+      "context": "textdb:database/randbook.txt:highlevel conjuration summoning owner",
+      "source_sha256": "54e6f734a7b3e7264c71658c923de803fb42214d0e4dddefc3a0786a7bac203d",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "alchemy earth owner",
+      "context": "textdb:database/randbook.txt:alchemy earth owner",
+      "source_sha256": "f1f0a3691a02201ea1e2944dfc3c2a03c1777ac7332790605da2df7adc533bf1",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "highlevel earth summoning owner",
+      "context": "textdb:database/randbook.txt:highlevel earth summoning owner",
+      "source_sha256": "23003066fd5e0b37c6550ea3790693586ffc3c13c903a0f0def170a88052d1b2",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "highlevel fire summoning owner",
+      "context": "textdb:database/randbook.txt:highlevel fire summoning owner",
+      "source_sha256": "e95c662a7dcd9521a1c191f3fa9504805019fcde57f771b3b56e8e7a57872b05",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "fire ice owner",
+      "context": "textdb:database/randbook.txt:fire ice owner",
+      "source_sha256": "5c6135a89234a4c39047eb8df8b5cf59423ab2f06d7ccfcee74ba3154de3827a",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "highlevel alchemy necromancy owner",
+      "context": "textdb:database/randbook.txt:highlevel alchemy necromancy owner",
+      "source_sha256": "914868036977e454a420e298dee81b4ca1314ccbbf7da9563d64aa2a6f8c23e3",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "alchemy necromancy owner",
+      "context": "textdb:database/randbook.txt:alchemy necromancy owner",
+      "source_sha256": "9a4f6311092990e19ca74dabd230291691f0bd8f7042cb33e914f7fc0a593b8b",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "highlevel conjuration owner",
+      "context": "textdb:database/randbook.txt:highlevel conjuration owner",
+      "source_sha256": "dfa9bebd2fb1dcb37ccfeb0165f475fc75af8f0d5c5673df5dd6bbb43f7ca5da",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": [
+        {
+          "source": "database/randbook.txt",
+          "key": "conjuration owner",
+          "source_sha256": "9f42fb19f457d362dfead1698f2b0013af46e0df4e1c9b3156380c2ede1f17c2",
+          "translation_sha256": "414c19b32ddd47aa7fe2001c5a23a7ec699233c3833c571b2defbc13dd065a9a"
+        }
+      ]
+    },
+    {
+      "key": "conjuration owner",
+      "context": "textdb:database/randbook.txt:conjuration owner",
+      "source_sha256": "9f42fb19f457d362dfead1698f2b0013af46e0df4e1c9b3156380c2ede1f17c2",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "highlevel earth owner",
+      "context": "textdb:database/randbook.txt:highlevel earth owner",
+      "source_sha256": "fb942874ffecd04191de18487a0a61f5a90fab2ea2f4a8e008fbd760f47a6ef4",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": [
+        {
+          "source": "database/randbook.txt",
+          "key": "earth owner",
+          "source_sha256": "9610b56101c8c9b5248f624af05490c3fc166e81dda7a08c08f646bb0762fea3",
+          "translation_sha256": "6d9d23f2b9e364cb42d11545c8e94b4f2bf2fd55bdf2a048d672080803d4d39b"
+        }
+      ]
+    },
+    {
+      "key": "earth owner",
+      "context": "textdb:database/randbook.txt:earth owner",
+      "source_sha256": "9610b56101c8c9b5248f624af05490c3fc166e81dda7a08c08f646bb0762fea3",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "highlevel fire owner",
+      "context": "textdb:database/randbook.txt:highlevel fire owner",
+      "source_sha256": "5090025b9b4a3e29b3689b6880618a4bec4c0a3bd00ff13efe35932f1caaff17",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "ice owner",
+      "context": "textdb:database/randbook.txt:ice owner",
+      "source_sha256": "a7fb181b78075a13c9f3825cd44afff80663e3d9690782ae7e8d6aba16c6f405",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "air owner",
+      "context": "textdb:database/randbook.txt:air owner",
+      "source_sha256": "fa7a5c651a457cefa48b62af34181f35402c83c7f9054c785d88f667f591b0f9",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "highlevel necromancy owner",
+      "context": "textdb:database/randbook.txt:highlevel necromancy owner",
+      "source_sha256": "0e2486f67acae4db7ef5e608d1e92e005e6491dcc6dcd9243874d606bbeeed7f",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": [
+        {
+          "source": "database/randbook.txt",
+          "key": "necromancy owner",
+          "source_sha256": "1f279d947b40d759ff2ead408216f67e030ddf5881b4bda844124c4951a427a9",
+          "translation_sha256": "436ba875f6e4b899b4220748adb6b37576fd42d7d54facbddf17f3900b869aa7"
+        }
+      ]
+    },
+    {
+      "key": "necromancy owner",
+      "context": "textdb:database/randbook.txt:necromancy owner",
+      "source_sha256": "1f279d947b40d759ff2ead408216f67e030ddf5881b4bda844124c4951a427a9",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "highlevel alchemy owner",
+      "context": "textdb:database/randbook.txt:highlevel alchemy owner",
+      "source_sha256": "438699798f155aeccb67720665d41bd3c4a527ed047b6aec32777dc7a4834a36",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": [
+        {
+          "source": "database/randbook.txt",
+          "key": "alchemy owner",
+          "source_sha256": "e9758ee1771e9b45b94f0a66278c86414a8d48db85a0004a75c0fd21ce97411c",
+          "translation_sha256": "0d76770678c94679bd854718df5122b6ccc63ed8cde2e67e2904884872234e5c"
+        }
+      ]
+    },
+    {
+      "key": "alchemy owner",
+      "context": "textdb:database/randbook.txt:alchemy owner",
+      "source_sha256": "e9758ee1771e9b45b94f0a66278c86414a8d48db85a0004a75c0fd21ce97411c",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "highlevel summoning owner",
+      "context": "textdb:database/randbook.txt:highlevel summoning owner",
+      "source_sha256": "2d6c12221a2f744edba87378c7b415afbdcc563f7d14afb6c5802aa72fad6a53",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": [
+        {
+          "source": "database/randbook.txt",
+          "key": "summoning owner",
+          "source_sha256": "327ef08e26f911feab546f66f5fe6850fb36d17bdc51c24f5e5e4461859b47d5",
+          "translation_sha256": "f926951452b5a7b032a83d43a473d9b5370966defc47f5ffffed00bfa9647ae1"
+        }
+      ]
+    },
+    {
+      "key": "summoning owner",
+      "context": "textdb:database/randbook.txt:summoning owner",
+      "source_sha256": "327ef08e26f911feab546f66f5fe6850fb36d17bdc51c24f5e5e4461859b47d5",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "highlevel translocation owner",
+      "context": "textdb:database/randbook.txt:highlevel translocation owner",
+      "source_sha256": "d797ccbd97b50bdbe55e7455cbf3a61acc27c506981c70a05f127fd2c44749b6",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": [
+        {
+          "source": "database/randbook.txt",
+          "key": "translocation owner",
+          "source_sha256": "a759d41b71eb853838cdae5721d33a4065c18e3c5213ea7397b84b3077a3450e",
+          "translation_sha256": "52c7375bdf03e710a6e88e5679818c89704e85a16839904b7ae9798f9e230273"
+        }
+      ]
+    },
+    {
+      "key": "translocation owner",
+      "context": "textdb:database/randbook.txt:translocation owner",
+      "source_sha256": "a759d41b71eb853838cdae5721d33a4065c18e3c5213ea7397b84b3077a3450e",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    },
+    {
+      "key": "hexes owner",
+      "context": "textdb:database/randbook.txt:hexes owner",
+      "source_sha256": "9943409c367b004e8dad25ff4a3e2a4a8c882f02fb603446a88a43c4ea91d8d4",
+      "review_status": "reviewed",
+      "review_batch": "database-47",
+      "dependencies": []
+    }
+  ],
+  "candidates": {
+    "random_book_title": 10,
+    "_book_plant_animal_": 5,
+    "xom_book_title": 9,
+    "_the_book_magic_": 16,
+    "_book_magic_": 28,
+    "_occult_adjective_": 27,
+    "_beginners_": 11,
+    "starting level book": 25,
+    "easy level book": 21,
+    "moderate level book": 19,
+    "_powerful_caster_": 22,
+    "_the_powerful_caster_": 14,
+    "_last_or_lost_": 2,
+    "_testament_noun_": 10,
+    "_difficult level book owner_": 15,
+    "difficult level book": 6,
+    "air adj": 39,
+    "conjuration adj": 44,
+    "earth adj": 38,
+    "fire adj": 46,
+    "hexes adj": 54,
+    "ice adj": 41,
+    "necromancy adj": 54,
+    "alchemy adj": 55,
+    "summoning adj": 39,
+    "translocation adj": 36,
+    "forgecraft adj": 70,
+    "highlevel conjuration earth owner": 2,
+    "conjuration earth owner": 2,
+    "highlevel conjuration fire owner": 3,
+    "highlevel conjuration necromancy owner": 2,
+    "highlevel conjuration summoning owner": 3,
+    "alchemy earth owner": 2,
+    "highlevel earth summoning owner": 2,
+    "highlevel fire summoning owner": 2,
+    "fire ice owner": 2,
+    "highlevel alchemy necromancy owner": 2,
+    "alchemy necromancy owner": 2,
+    "highlevel conjuration owner": 7,
+    "conjuration owner": 3,
+    "highlevel earth owner": 2,
+    "earth owner": 6,
+    "highlevel fire owner": 3,
+    "ice owner": 2,
+    "air owner": 4,
+    "highlevel necromancy owner": 4,
+    "necromancy owner": 5,
+    "highlevel alchemy owner": 2,
+    "alchemy owner": 5,
+    "highlevel summoning owner": 4,
+    "summoning owner": 2,
+    "highlevel translocation owner": 2,
+    "translocation owner": 3,
+    "hexes owner": 4
+  }
+}

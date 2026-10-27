@@ -1,4 +1,5 @@
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "ng-input.h"
 
@@ -20,6 +21,10 @@ formatted_string opening_screen()
     "<yellow>Hello, welcome to " CRAWL " " + string(Version::Long) + "!</yellow>\n"
     "<brown>" CRAWL_COPYRIGHT;
 
+    const string original = msg;
+    msg = ui_render("n.ui", "<yellow>Hello, welcome to %s %s!</yellow>\n<brown>%s",
+        original, {ui_literal_arg(CRAWL), ui_literal_arg(Version::Long),
+                   ui_literal_arg(CRAWL_COPYRIGHT)});
     return formatted_string::parse_string(msg);
 }
 
@@ -53,6 +58,22 @@ formatted_string options_read_status()
             msg += "not found";
         msg += "; using defaults.</lightred>";
     }
+
+    if (!f.error())
+    {
+#ifdef DGAMELAUNCH
+        const string filename = Options.basefilename;
+#else
+        const string filename = Options.filename;
+#endif
+        msg = ui_render("n.ui", "<lightgrey>Options read from \"%s\".</lightgrey>",
+            msg, {ui_literal_arg(filename)});
+    }
+    else if (!Options.filename.empty())
+        msg = ui_render("n.ui", "<lightred>Options file \"%s\" is not readable; using defaults.</lightred>",
+            msg, {ui_literal_arg(Options.filename)});
+    else
+        msg = ui_render("n.ui", "<lightred>Options file not found; using defaults.</lightred>", msg, {});
 
     msg += "\n";
 

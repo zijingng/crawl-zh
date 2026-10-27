@@ -20,12 +20,23 @@
 #include "message.h"
 #include "mon-death.h"
 #include "monster.h"
+#include "options.h"
 #include "mon-util.h"
 #include "religion.h"
 #include "skills.h"
 #include "state.h"
 #include "stringutil.h"
 #include "view.h"
+
+// Keep the selected English and Chinese together through all prefix retries.
+// The null-pointer path retains the original English database lookup.
+static string _lookup_speech(const string &key, textdb_speech *speech)
+{
+    if (!speech)
+        return getSpeakString(key, true);
+    *speech = getPairedCastString(key);
+    return speech->english;
+}
 
 // Try the exact key lookup along with the entire prefix list.
 // If that fails, start ignoring hostile/religion/branch/silence, in that order,
@@ -37,7 +48,7 @@ static string __try_exact_string(const vector<string> &prefixes,
                                  bool ignore_related  = false,
                                  bool ignore_religion = false,
                                  bool ignore_branch   = false,
-                                 bool ignore_silenced = false)
+                                 bool ignore_silenced = false, textdb_speech *speech = nullptr)
 {
     bool hostile  = false;
     bool related  = false;
@@ -86,37 +97,37 @@ static string __try_exact_string(const vector<string> &prefixes,
         prefix += prefixes[i];
         prefix += " ";
     }
-    msg = getSpeakString(prefix + key);
+    msg = _lookup_speech(prefix + key, speech);
 
     if (msg.empty())
     {
         if (hostile) // skip hostile
-            msg = __try_exact_string(prefixes, key, true);
+            msg = __try_exact_string(prefixes, key, true, false, false, false, false, speech);
         else if (related)
         {
             if (branch) // skip hostile and branch
-                msg = __try_exact_string(prefixes, key, true, false, false, true);
+                msg = __try_exact_string(prefixes, key, true, false, false, true, false, speech);
             else if (religion) // skip hostile and religion
             {
                 msg = __try_exact_string(prefixes, key, true, false, true,
-                                         ignore_branch);
+                                         ignore_branch, false, speech);
             }
             else // skip hostile and related
-                msg = __try_exact_string(prefixes, key, true, true);
+                msg = __try_exact_string(prefixes, key, true, true, false, false, false, speech);
         }
         else if (religion) // skip hostile, related and religion
         {
             if (branch && coinflip()) // skip hostile, related and branch
-                msg = __try_exact_string(prefixes, key, true, true, false, true);
+                msg = __try_exact_string(prefixes, key, true, true, false, true, false, speech);
             else // skip hostile, related and religion
-                msg = __try_exact_string(prefixes, key, true, true, true);
+                msg = __try_exact_string(prefixes, key, true, true, true, false, false, speech);
         }
         else if (branch) // skip hostile, related, religion and branch
-            msg = __try_exact_string(prefixes, key, true, true, true, true);
+            msg = __try_exact_string(prefixes, key, true, true, true, true, false, speech);
         // 50% use non-verbal monster speech,
         // 50% try for more general silenced monster message instead
         else if (silenced && coinflip()) // skip all
-            msg = __try_exact_string(prefixes, key, true, true, true, true, true);
+            msg = __try_exact_string(prefixes, key, true, true, true, true, true, speech);
     }
     return msg;
 }
@@ -171,14 +182,14 @@ static string _try_exact_string(const vector<string> &prefixes,
                                 bool ignore_related  = false,
                                 bool ignore_religion = false,
                                 bool ignore_branch   = false,
-                                bool ignore_silenced = false)
+                                bool ignore_silenced = false, textdb_speech *speech = nullptr)
 {
     string msg;
     for (int tries = 0; tries < 10; tries++)
     {
         msg =
             __try_exact_string(prefixes, key, ignore_hostile, ignore_related,
-                               ignore_religion, ignore_branch, ignore_silenced);
+                               ignore_religion, ignore_branch, ignore_silenced, speech);
 
         // If the first message was non-empty and discarded then discard
         // all subsequent empty messages, so as to not replace an
@@ -209,10 +220,10 @@ static string __get_speak_string(const vector<string> &prefixes,
                                  const string &key,
                                  bool no_player, bool no_foe,
                                  bool no_foe_name, bool no_god,
-                                 bool unseen)
+                                 bool unseen, textdb_speech *speech = nullptr)
 {
     string msg = _try_exact_string(prefixes, key, no_player, no_foe,
-                                   no_foe_name, no_god, unseen);
+                                   no_foe_name, no_god, unseen, false, false, false, false, false, speech);
 
     if (!msg.empty())
         return msg;
@@ -230,7 +241,7 @@ static string __get_speak_string(const vector<string> &prefixes,
                     prefix += prefixes[j] + " ";
                     prefix += prefixes[k] + " ";
 
-                    msg = getSpeakString("default " + prefix + key);
+                    msg = _lookup_speech("default " + prefix + key, speech);
 
                     if (!msg.empty())
                         return msg;
@@ -246,7 +257,7 @@ static string __get_speak_string(const vector<string> &prefixes,
                 prefix  = prefixes[i] + " ";
                 prefix += prefixes[j] + " ";
 
-                msg = getSpeakString("default " + prefix + key);
+                msg = _lookup_speech("default " + prefix + key, speech);
 
                 if (!msg.empty())
                     return msg;
@@ -260,7 +271,7 @@ static string __get_speak_string(const vector<string> &prefixes,
         {
             prefix  = prefixes[i] + " ";
 
-            msg = getSpeakString("default " + prefix + key);
+            msg = _lookup_speech("default " + prefix + key, speech);
 
             if (!msg.empty())
                 return msg;
@@ -268,7 +279,7 @@ static string __get_speak_string(const vector<string> &prefixes,
     }
 
     // No prefixes
-    msg = getSpeakString("default " + key);
+    msg = _lookup_speech("default " + key, speech);
 
     return msg;
 }
@@ -278,7 +289,7 @@ static string _get_speak_string(const vector<string> &prefixes,
                                 const monster* mons,
                                 bool no_player, bool no_foe,
                                 bool no_foe_name, bool no_god,
-                                bool unseen)
+                                bool unseen, textdb_speech *speech = nullptr)
 {
     if (you.hp <= 0)
         key += " triumphant";
@@ -304,7 +315,7 @@ static string _get_speak_string(const vector<string> &prefixes,
     {
         msg =
             __get_speak_string(prefixes, key, no_player, no_foe,
-                               no_foe_name, no_god, unseen);
+                               no_foe_name, no_god, unseen, speech);
 
         // If the first message was non-empty and discarded then discard
         // all subsequent empty messages, so as to not replace an
@@ -476,6 +487,8 @@ bool mons_speaks(monster* mons)
             return false;
     }
 
+    textdb_speech selected_speech;
+    textdb_speech *speech = Options.language == lang_t::ZH ? &selected_speech : nullptr;
     vector<string> prefixes;
     if (mons->neutral())
     {
@@ -610,13 +623,13 @@ bool mons_speaks(monster* mons)
             with_skill.push_back(ghost_skill);
             msg = _get_speak_string(with_skill, "player ghost", mons,
                                     no_player, no_foe, no_foe_name, no_god,
-                                    unseen);
+                                    unseen, speech);
         }
         if (msg.empty())
         {
             msg = _get_speak_string(prefixes, "player ghost", mons,
                                     no_player, no_foe, no_foe_name, no_god,
-                                    unseen);
+                                    unseen, speech);
         }
     }
     else if (mons->type == MONS_PANDEMONIUM_LORD)
@@ -625,7 +638,7 @@ bool mons_speaks(monster* mons)
         // "pandemonium lord" instead.
         msg = _get_speak_string(prefixes, "pandemonium lord", mons,
                                 no_player, no_foe, no_foe_name, no_god,
-                                unseen);
+                                unseen, speech);
     }
     else
     {
@@ -634,7 +647,7 @@ bool mons_speaks(monster* mons)
             msg = _get_speak_string(prefixes,
                                      mons->props[DBNAME_KEY].get_string(),
                                      mons, no_player, no_foe, no_foe_name,
-                                     no_god, unseen);
+                                     no_god, unseen, speech);
 
             if (msg.empty())
             {
@@ -645,7 +658,7 @@ bool mons_speaks(monster* mons)
                 msg = _get_speak_string(faux_prefixes,
                                      mons->props[DBNAME_KEY].get_string(),
                                      mons, no_player, no_foe, no_foe_name,
-                                     no_god, unseen);
+                                     no_god, unseen, speech);
             }
         }
 
@@ -656,14 +669,14 @@ bool mons_speaks(monster* mons)
         {
             msg = _get_speak_string(prefixes, mons->name(DESC_PLAIN),
                                     mons, no_player, no_foe, no_foe_name,
-                                    no_god, unseen);
+                                    no_god, unseen, speech);
         }
 
         if (msg.empty())
         {
             msg = _get_speak_string(prefixes, mons->base_name(DESC_PLAIN),
                                     mons, no_player, no_foe, no_foe_name,
-                                    no_god, unseen);
+                                    no_god, unseen, speech);
         }
     }
 
@@ -674,7 +687,7 @@ bool mons_speaks(monster* mons)
         msg = _get_speak_string(prefixes,
                        mons_type_name(mons_genus(mons->type), DESC_PLAIN),
                        mons, no_player, no_foe, no_foe_name, no_god,
-                       unseen);
+                       unseen, speech);
     }
 
     // __NONE means to be silent, and __NEXT means to try the next,
@@ -707,7 +720,7 @@ bool mons_speaks(monster* mons)
         key += mons_base_char(mons->type);
         key += "'";
         msg = _get_speak_string(prefixes, key, mons, no_player, no_foe,
-                                no_foe_name, no_god, unseen);
+                                no_foe_name, no_god, unseen, speech);
     }
 
     if (msg == "__NONE")
@@ -726,7 +739,7 @@ bool mons_speaks(monster* mons)
     {
         msg = _get_speak_string(prefixes, get_mon_shape_str(shape), mons,
                                 no_player, no_foe, no_foe_name, no_god,
-                                unseen);
+                                unseen, speech);
     }
 
     if (msg == "__NONE")
@@ -749,7 +762,7 @@ bool mons_speaks(monster* mons)
             msg = _get_speak_string(prefixes,
                                     get_mon_shape_str(MON_SHAPE_HUMANOID_TAILED),
                                     mons, no_player, no_foe, no_foe_name,
-                                    no_god, unseen);
+                                    no_god, unseen, speech);
 
             // Only be silent if both tailed and winged return __NONE.
             if (msg.empty() || msg == "__NONE" || msg == "__NEXT")
@@ -758,7 +771,7 @@ bool mons_speaks(monster* mons)
                 msg2 = _get_speak_string(prefixes,
                                          get_mon_shape_str(MON_SHAPE_HUMANOID_WINGED),
                                          mons, no_player, no_foe,
-                                         no_foe_name, no_god, unseen);
+                                         no_foe_name, no_god, unseen, speech);
 
                 if (msg == "__NONE" && msg2 == "__NONE")
                 {
@@ -780,7 +793,7 @@ bool mons_speaks(monster* mons)
             msg = _get_speak_string(prefixes,
                                     get_mon_shape_str(MON_SHAPE_HUMANOID),
                                     mons, no_player, no_foe, no_foe_name,
-                                    no_god, unseen);
+                                    no_god, unseen, speech);
         }
     }
     if (msg.empty() || msg == "__NONE")
@@ -800,7 +813,7 @@ bool mons_speaks(monster* mons)
         return false;
     }
 
-    return mons_speaks_msg(mons, msg, MSGCH_TALK, silence);
+    return mons_speaks_msg(mons, msg, MSGCH_TALK, silence, "", speech);
 }
 
 bool invalid_msg(const monster &mon, string msg)
@@ -824,7 +837,8 @@ bool invalid_msg(const monster &mon, string msg)
 }
 
 bool mons_speaks_msg(monster* mons, const string &msg,
-                     const msg_channel_type def_chan, bool silence)
+                     const msg_channel_type def_chan, bool silence,
+                     const string &display, textdb_speech *speech)
 {
     if (!you.see_cell(mons->pos()))
         return false;
@@ -832,7 +846,9 @@ bool mons_speaks_msg(monster* mons, const string &msg,
     mon_acting mact(mons);
 
     // We have a speech string, now parse and act on it.
-    const string _msg = do_mon_str_replacements(msg, *mons);
+    const string english = do_mon_str_replacements(msg, *mons, -1, speech);
+    const string _msg = speech ? speech->text()
+        : Options.language == lang_t::ZH && !display.empty() ? display : english;
     const vector<string> lines = split_string("\n", _msg);
 
     bool noticed = false;       // Any messages actually printed?

@@ -1,0 +1,88 @@
+[
+  {
+    "context": "o.ui",
+    "english": "Your condensation shield dissipates!",
+    "translation": "你的凝结护盾消散了！",
+    "issues": [
+      {
+        "term": "Shield",
+        "expected": "格挡值/盾牌/保护",
+        "accepted_translations": [
+          "格挡值",
+          "盾牌",
+          "保护"
+        ],
+        "spans": [
+          [
+            18,
+            24
+          ]
+        ]
+      }
+    ],
+    "resolution": "Reviewed in context: complete proper names override component matches; agony is ordinary pain, and constrained HUD AC/SH captions use 甲/挡 while the overview spells out 护甲值/格挡值."
+  },
+  {
+    "context": "o.ui",
+    "english": "You writhe in agony!",
+    "translation": "你痛苦地扭动着！",
+    "issues": [
+      {
+        "term": "Agony",
+        "expected": "剧痛术",
+        "accepted_translations": [
+          "剧痛术"
+        ],
+        "spans": [
+          [
+            14,
+            19
+          ]
+        ]
+      }
+    ],
+    "resolution": "Reviewed in context: complete proper names override component matches; agony is ordinary pain, and constrained HUD AC/SH captions use 甲/挡 while the overview spells out 护甲值/格挡值."
+  },
+  {
+    "context": "o.label",
+    "english": "AC:",
+    "translation": "甲:",
+    "issues": [
+      {
+        "term": "AC",
+        "expected": "护甲值",
+        "accepted_translations": [
+          "护甲值"
+        ],
+        "spans": [
+          [
+            0,
+            2
+          ]
+        ]
+      }
+    ],
+    "resolution": "Reviewed in context: complete proper names override component matches; agony is ordinary pain, and constrained HUD AC/SH captions use 甲/挡 while the overview spells out 护甲值/格挡值."
+  },
+  {
+    "context": "o.label",
+    "english": "SH:",
+    "translation": "挡:",
+    "issues": [
+      {
+        "term": "SH",
+        "expected": "格挡值",
+        "accepted_translations": [
+          "格挡值"
+        ],
+        "spans": [
+          [
+            0,
+            2
+          ]
+        ]
+      }
+    ],
+    "resolution": "Reviewed in context: complete proper names override component matches; agony is ordinary pain, and constrained HUD AC/SH captions use 甲/挡 while the overview spells out 护甲值/格挡值."
+  }
+]

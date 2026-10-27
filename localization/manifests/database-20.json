@@ -1,0 +1,3189 @@
+{
+  "baseline": "0.34.1",
+  "source": "database/monspeak.txt",
+  "entries": [
+    {
+      "key": "Xom Crazy Yiuf",
+      "context": "textdb:database/monspeak.txt:xom crazy yiuf",
+      "source_sha256": "d76df68989afb693b545ba55bf2d999ae5f735fc41cd3e1b08320634552976e9",
+      "review_status": "reviewed",
+      "review_batch": "database-20"
+    },
+    {
+      "key": "orb Crazy Yiuf",
+      "context": "textdb:database/monspeak.txt:orb crazy yiuf",
+      "source_sha256": "c4ed99671f66097925360307006f6397762fba5983880aed6c8bd2bb3eded205",
+      "review_status": "reviewed",
+      "review_batch": "database-20"
+    },
+    {
+      "key": "confused Crazy Yiuf",
+      "context": "textdb:database/monspeak.txt:confused crazy yiuf",
+      "source_sha256": "d0f3a04a865d59f1e08644b16cc98d0b0cf6ba6c60506556bb7a8769198a035c",
+      "review_status": "reviewed",
+      "review_batch": "database-20"
+    },
+    {
+      "key": "Dissolution",
+      "context": "textdb:database/monspeak.txt:dissolution",
+      "source_sha256": "3f5222359c27fdc5aa9df93d37d7e1908f734fdf2e56a0cda4670d0de2b57a20",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_dissolution_common_",
+          "source_sha256": "42286794a2bae1752606cc64a3813a55958844e584a11b0688943276f458a707",
+          "translation_sha256": "ce9ab8bb118753d3d825ad519465e5efb2e302c1089e8c12b2235961154c2689"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_dissolution_speech_",
+          "source_sha256": "1aa31ed27c0841cfa4fce5df0d994478f9769287f3cbb854ea22fce942e58b7e",
+          "translation_sha256": "29adbcdab5115760c718acd3d0733e6fadc9a100e8603bd3fc19a43d1d4f9699"
+        }
+      ]
+    },
+    {
+      "key": "_dissolution_common_",
+      "context": "textdb:database/monspeak.txt:_dissolution_common_",
+      "source_sha256": "42286794a2bae1752606cc64a3813a55958844e584a11b0688943276f458a707",
+      "review_status": "reviewed",
+      "review_batch": "database-20"
+    },
+    {
+      "key": "_dissolution_speech_",
+      "context": "textdb:database/monspeak.txt:_dissolution_speech_",
+      "source_sha256": "1aa31ed27c0841cfa4fce5df0d994478f9769287f3cbb854ea22fce942e58b7e",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_dissolution_rare_",
+          "source_sha256": "86a45514f493631f4fc9e3daf9f9bcc06dd1a472d12dd98ad93fc3f6f287240d",
+          "translation_sha256": "9a12ea69e165627e57c9b3cda3fce9cdb79992aac96ed8278065c727bef69aa0"
+        }
+      ]
+    },
+    {
+      "key": "_dissolution_rare_",
+      "context": "textdb:database/monspeak.txt:_dissolution_rare_",
+      "source_sha256": "86a45514f493631f4fc9e3daf9f9bcc06dd1a472d12dd98ad93fc3f6f287240d",
+      "review_status": "reviewed",
+      "review_batch": "database-20"
+    },
+    {
+      "key": "Temple Donald",
+      "context": "textdb:database/monspeak.txt:temple donald",
+      "source_sha256": "a001c8ed912cb337f065aff97268a13784ef6081480a98371336c7c652c838c4",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Orc Donald",
+      "context": "textdb:database/monspeak.txt:orc donald",
+      "source_sha256": "d04d1b9d057f9692a49e7ae9f021bec7ba9cc5711e287592b658094a49bfaea2",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Elf Donald",
+      "context": "textdb:database/monspeak.txt:elf donald",
+      "source_sha256": "4eddfcfabbf38420f6a80941f8efb31b7918a8ad65cb73798bb8af13445ac7fe",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Swamp Donald",
+      "context": "textdb:database/monspeak.txt:swamp donald",
+      "source_sha256": "c3e7954ba945f78b738d2da236c7aedf95068d08b378b6e87cd07f3b7e29508a",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Shoals Donald",
+      "context": "textdb:database/monspeak.txt:shoals donald",
+      "source_sha256": "cc8e15e8fb0c73e7d3dc92796a18ba93c8953210d7c9d7ce5385dd0de0ca0938",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Spider Donald",
+      "context": "textdb:database/monspeak.txt:spider donald",
+      "source_sha256": "e11b4571c60b7d084d3a45cfb24746f9a5a1e5f9cf441f10cec2bd2cd1710e0e",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Slime Donald",
+      "context": "textdb:database/monspeak.txt:slime donald",
+      "source_sha256": "f086822dc815b69c7a76db15bc6bbbd2bc40cdcfcb0cac4e8ddedbb09bdfccec",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Snake Donald",
+      "context": "textdb:database/monspeak.txt:snake donald",
+      "source_sha256": "530947e0f17756f0087f1d3f3b8fe5c449c09d57ec36d0397f8c995a935ffa38",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Vaults Donald",
+      "context": "textdb:database/monspeak.txt:vaults donald",
+      "source_sha256": "9fde481b839b244ca59cf096c336241ac7e9ea63989ff0ffcb526e32ce69bd41",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Crypt Donald",
+      "context": "textdb:database/monspeak.txt:crypt donald",
+      "source_sha256": "f22e90e75f7dfa16f194e17c55f7718799955d5e8da6377bd1d6c99708182f64",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Abyss Donald",
+      "context": "textdb:database/monspeak.txt:abyss donald",
+      "source_sha256": "cd44d8dad432648040ba2391f4ac716f16b05020d4b0f79572fb9cee85d62a64",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Zot Donald",
+      "context": "textdb:database/monspeak.txt:zot donald",
+      "source_sha256": "fbfab51f13c1a3c573281a57208cc0e2809aafca275fa36653b498167cc633a0",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "orb Donald",
+      "context": "textdb:database/monspeak.txt:orb donald",
+      "source_sha256": "7ae0fb5e0ad43b1ad1649862283520f392f2e109919227171222c256a0247777",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Zin Donald",
+      "context": "textdb:database/monspeak.txt:zin donald",
+      "source_sha256": "7d0f4c767bdcc22f45703eb443594d0b8e09bfafff1b5b6355bb95a4eb74ca23",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "the Shining One Donald",
+      "context": "textdb:database/monspeak.txt:the shining one donald",
+      "source_sha256": "1106d1b103881b3ead8a1ea861550629593dc84138b09ee038c447c3f1c9a6dd",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Kikubaaqudgha Donald",
+      "context": "textdb:database/monspeak.txt:kikubaaqudgha donald",
+      "source_sha256": "d003147055040399c0f7f13fb07d8002909b59a2f293e6b02ceac875a7542a52",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "friendly Yredelemnul Donald",
+      "context": "textdb:database/monspeak.txt:friendly yredelemnul donald",
+      "source_sha256": "665ecbb15126dc4701e0ba09110113ba8579291760e73ea057620f67164fbf7a",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_yredelemnul_donald_",
+          "source_sha256": "ad62e02e02ed67bd0fe0f0d2584bf9cd8aec67e44bdd26529d54858bd189c8be",
+          "translation_sha256": "5224e5e1baf328214cd3730d3ff6fbacd06f67c68ebda9ed39204731b1551b75"
+        }
+      ]
+    },
+    {
+      "key": "Yredelemnul Donald",
+      "context": "textdb:database/monspeak.txt:yredelemnul donald",
+      "source_sha256": "60623acc618c5ca2ffdfc94212e6701ceb3a353ca2451f64daa2f8368b18a8f6",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_yredelemnul_donald_",
+          "source_sha256": "ad62e02e02ed67bd0fe0f0d2584bf9cd8aec67e44bdd26529d54858bd189c8be",
+          "translation_sha256": "5224e5e1baf328214cd3730d3ff6fbacd06f67c68ebda9ed39204731b1551b75"
+        }
+      ]
+    },
+    {
+      "key": "_yredelemnul_Donald_",
+      "context": "textdb:database/monspeak.txt:_yredelemnul_donald_",
+      "source_sha256": "ad62e02e02ed67bd0fe0f0d2584bf9cd8aec67e44bdd26529d54858bd189c8be",
+      "review_status": "reviewed",
+      "review_batch": "database-20"
+    },
+    {
+      "key": "Okawaru Donald",
+      "context": "textdb:database/monspeak.txt:okawaru donald",
+      "source_sha256": "f280a6f05b56420b47229ba50bb422ce49992761d10c9645098a4f3be6fc9b04",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Makhleb Donald",
+      "context": "textdb:database/monspeak.txt:makhleb donald",
+      "source_sha256": "8163134103496a3c523d79b6440919a0b9a4f2a62e9b21f3ea5e4a799533f4b4",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Sif Muna Donald",
+      "context": "textdb:database/monspeak.txt:sif muna donald",
+      "source_sha256": "8c110fec72416f6c8b484fcf2afd5053912dd1e019b9d41ac9ebeadedcf7d1ce",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Trog Donald",
+      "context": "textdb:database/monspeak.txt:trog donald",
+      "source_sha256": "7e86d0464a65f8013064fe179ff4cbb038b1cff7fa07b80da0196e8472f5a27b",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Nemelex Xobeh Donald",
+      "context": "textdb:database/monspeak.txt:nemelex xobeh donald",
+      "source_sha256": "a2dbdaf6d0a39503f8836935d85ec9647a22bc1fcfd5d702908f25442551858e",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Elyvilon Donald",
+      "context": "textdb:database/monspeak.txt:elyvilon donald",
+      "source_sha256": "51893e93fffc6f58c024df6ebf78731ba851357fea38da223ac60d5b0817beb4",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Lugonu Donald",
+      "context": "textdb:database/monspeak.txt:lugonu donald",
+      "source_sha256": "c008774c97a222284ec969a1c482d90397012237de1c13b8a143d903cfdf520d",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Beogh Donald",
+      "context": "textdb:database/monspeak.txt:beogh donald",
+      "source_sha256": "4ce62cd14232368fca13cab241a762b2c01d5ae5c2695f43398633556c4170b5",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Ignis Donald",
+      "context": "textdb:database/monspeak.txt:ignis donald",
+      "source_sha256": "678c7e992466047e3eb8adf82f6ff769bd72df24d95646f1f9171af68143767f",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Jiyva Donald",
+      "context": "textdb:database/monspeak.txt:jiyva donald",
+      "source_sha256": "4b91a1d8aaa2f89062dae9d453a405cf6fd34707af63c18ae1d4b14845e8a813",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Fedhas Donald",
+      "context": "textdb:database/monspeak.txt:fedhas donald",
+      "source_sha256": "1daea1acbfe82d7998cbe08ce15cd2f73a18a9b6e3da03cefd1bb536de423dc5",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Cheibriados Donald",
+      "context": "textdb:database/monspeak.txt:cheibriados donald",
+      "source_sha256": "792afb0a6bf95437c8542d0351f1dd203821b222ce3ba696c1debf9f42f0d494",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Xom Donald",
+      "context": "textdb:database/monspeak.txt:xom donald",
+      "source_sha256": "469e6795cd5d4b3bf617429da1767208a3ae5432bcfd8ee07a5424f32eb33a41",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Vehumet Donald",
+      "context": "textdb:database/monspeak.txt:vehumet donald",
+      "source_sha256": "55a7d47e116366eceed8e3da67401b2aa21d56f3a1002d674bd546dff3148a25",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Ashenzari Donald",
+      "context": "textdb:database/monspeak.txt:ashenzari donald",
+      "source_sha256": "c568cf4378aae5ea6a6583dbc2f5d4db1b05ddf324c426522d26e6caebaafd33",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Dithmenos Donald",
+      "context": "textdb:database/monspeak.txt:dithmenos donald",
+      "source_sha256": "3adde04d0f535cb8c7c3710da4f51162f488ccee1e4d0463333135a5d2dbd0ab",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Gozag Donald",
+      "context": "textdb:database/monspeak.txt:gozag donald",
+      "source_sha256": "4cfbbbb412a61366642ea8ef33343976b260b57a38ef22da8489c5ac633e77ac",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Qazlal Donald",
+      "context": "textdb:database/monspeak.txt:qazlal donald",
+      "source_sha256": "78283c8f92a1426cdd1a770dfc888a600fb042d19986ade385c639d4913acec9",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Ru Donald",
+      "context": "textdb:database/monspeak.txt:ru donald",
+      "source_sha256": "493aa51bf642fb05f82512812bf9f7b4c9e95a5ddca1da60db31ce6417f238b0",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Pakellas Donald",
+      "context": "textdb:database/monspeak.txt:pakellas donald",
+      "source_sha256": "0d1e76d86c4e3ebe4618cbf3868c6336e402a1dbe1cebc8bc6beef76a4dec4cb",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Hepliaklqana Donald",
+      "context": "textdb:database/monspeak.txt:hepliaklqana donald",
+      "source_sha256": "02e24186eca9912c31f7e5c25705c679267eb3e0e9a432bc99296e2010c1b644",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Uskayaw Donald",
+      "context": "textdb:database/monspeak.txt:uskayaw donald",
+      "source_sha256": "ee0c00becc9d5041acfc6bca7e7bf247180770b8f3eb21cd48d6005ed4141e3c",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "Wu Jian Donald",
+      "context": "textdb:database/monspeak.txt:wu jian donald",
+      "source_sha256": "88edfc21fcd35681c78cc8f2233c16e7f6f1806b08517148e1c9972caabe04c1",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "No God Donald",
+      "context": "textdb:database/monspeak.txt:no god donald",
+      "source_sha256": "7c03cf5c273312a759fbfc1c2436cc759c2e6877f80e7cc0d4db9be5adc8f56c",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "_generic_Donald_",
+      "context": "textdb:database/monspeak.txt:_generic_donald_",
+      "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+      "review_status": "reviewed",
+      "review_batch": "database-20"
+    },
+    {
+      "key": "friendly Donald",
+      "context": "textdb:database/monspeak.txt:friendly donald",
+      "source_sha256": "3a67e89d7f704063cc232976863c5e0f31626992ba791451d7123fad52765d52",
+      "review_status": "reviewed",
+      "review_batch": "database-20",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_donald_",
+          "source_sha256": "78365670f31ce5edf90ee233a143e7c43652b951e081b2f283edc2a71c767f06",
+          "translation_sha256": "bc9374fb77fb308d779349312003115e1a30727d426c7a7798e5eb4b2ef9aa9a"
+        }
+      ]
+    },
+    {
+      "key": "default hostile confused Donald",
+      "context": "textdb:database/monspeak.txt:default hostile confused donald",
+      "source_sha256": "928a36c2a6774a35389f2c361d390efa9e41888ffc7772c4039e34de8f42b2a0",
+      "review_status": "reviewed",
+      "review_batch": "database-20"
+    },
+    {
+      "key": "Donald marionette",
+      "context": "textdb:database/monspeak.txt:donald marionette",
+      "source_sha256": "8adccad3792e79b139962681c09b5b91fedf2363c13c6022d7645bba44a65600",
+      "review_status": "reviewed",
+      "review_batch": "database-20"
+    },
+    {
+      "key": "Donald riddle",
+      "context": "textdb:database/monspeak.txt:donald riddle",
+      "source_sha256": "b2917ffb0afbd763324d0ca53dfe9e6103b3acb3d82f3932d17814948872d9ec",
+      "review_status": "reviewed",
+      "review_batch": "database-20"
+    },
+    {
+      "key": "Donald killed",
+      "context": "textdb:database/monspeak.txt:donald killed",
+      "source_sha256": "c3ea436a980f891a11e60f669d745b49c0c5f85406c66a9d355d581bc291516d",
+      "review_status": "reviewed",
+      "review_batch": "database-20"
+    },
+    {
+      "key": "Donald banished",
+      "context": "textdb:database/monspeak.txt:donald banished",
+      "source_sha256": "4e9f98e960d9f5f900491962f547838142e90d20379866fffb34d244cc2e5a65",
+      "review_status": "reviewed",
+      "review_batch": "database-20"
+    },
+    {
+      "key": "Donald triumphant",
+      "context": "textdb:database/monspeak.txt:donald triumphant",
+      "source_sha256": "1625bbb9f9e500926e36cc8158d5e5243641ac30bd73a11fcb2503b84686c5fb",
+      "review_status": "reviewed",
+      "review_batch": "database-20"
+    },
+    {
+      "key": "default '4'",
+      "context": "textdb:database/monspeak.txt:default '4'",
+      "source_sha256": "b7ae17ed5ea60cdd51238cee36defa88b10de8cb721438915bc87208bd45b280",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "default '5'",
+      "context": "textdb:database/monspeak.txt:default '5'",
+      "source_sha256": "b7ae17ed5ea60cdd51238cee36defa88b10de8cb721438915bc87208bd45b280",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "friendly '5'",
+      "context": "textdb:database/monspeak.txt:friendly '5'",
+      "source_sha256": "50dad19c91f287dafc3983aa81eb1edbd79a98a75b2c930a27c1122fe4cf22b0",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_friendly_imp_",
+          "source_sha256": "6de4c7b255d5058fb8da4cfd0eefdaa9e0f66a59e5e889b16615da278683f39d",
+          "translation_sha256": "6de4c7b255d5058fb8da4cfd0eefdaa9e0f66a59e5e889b16615da278683f39d"
+        }
+      ]
+    },
+    {
+      "key": "default player ghost",
+      "context": "textdb:database/monspeak.txt:default player ghost",
+      "source_sha256": "b7ae17ed5ea60cdd51238cee36defa88b10de8cb721438915bc87208bd45b280",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "silenced player ghost",
+      "context": "textdb:database/monspeak.txt:silenced player ghost",
+      "source_sha256": "75ecc90b2f1e79bbb2bf5ef66628fecd95b256dc64215c1a6beeefeb0191bacc",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Fighting player ghost",
+      "context": "textdb:database/monspeak.txt:fighting player ghost",
+      "source_sha256": "cd821aeb4ddf2e850ebd81a00fb4c0eb05b67b69f8bc30f5be0b98eaacbd3aa5",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Short Blades player ghost",
+      "context": "textdb:database/monspeak.txt:short blades player ghost",
+      "source_sha256": "fb944fc883e583baf88693ea37f99ca4101f3db1b141eec50841191a62de10db",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Long Blades player ghost",
+      "context": "textdb:database/monspeak.txt:long blades player ghost",
+      "source_sha256": "2029c9566b9acd040bdaf385dc569c4563d34e32ffaa51cf099e4c7fc4021174",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Axes player ghost",
+      "context": "textdb:database/monspeak.txt:axes player ghost",
+      "source_sha256": "cbc65bd8c31390a48aa2c997fcaa93cdc2d5f8f8d377ad5b726f02e6f87b8329",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Maces & Flails player ghost",
+      "context": "textdb:database/monspeak.txt:maces & flails player ghost",
+      "source_sha256": "27c475e6b662e3822e22b8c470f69467fc2738ddd61af324400f372b20a8baa6",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Polearms player ghost",
+      "context": "textdb:database/monspeak.txt:polearms player ghost",
+      "source_sha256": "7f9203b1b236741fbc00a4e728ecf607d5292fe1cac40085f589ff7eddd6ce3d",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Staves player ghost",
+      "context": "textdb:database/monspeak.txt:staves player ghost",
+      "source_sha256": "900e3fb8c6cc9553e5fab384a5f62ae83d29f00a17c720a52a6a7efcebf6e7b1",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Slings player ghost",
+      "context": "textdb:database/monspeak.txt:slings player ghost",
+      "source_sha256": "ee4cf7dec2c5efd6b61872dced12b731bb057bc800a3c133f2c5df5f6458bce3",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_ranged_",
+          "source_sha256": "59ce95f6b56ea464478ea94ecbde637b90c785a42ab8d8423e6c1cc3b69fd14e",
+          "translation_sha256": "7c7a99604039c47fde13806290919a3204dd805af873830b8b78b4c94c30405f"
+        }
+      ]
+    },
+    {
+      "key": "Ranged Weapons player ghost",
+      "context": "textdb:database/monspeak.txt:ranged weapons player ghost",
+      "source_sha256": "9d20cb053278bb6bcfe40e15a29fa3bd06db0212ff6ef4f1f18b133a64b247a2",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_ranged_",
+          "source_sha256": "59ce95f6b56ea464478ea94ecbde637b90c785a42ab8d8423e6c1cc3b69fd14e",
+          "translation_sha256": "7c7a99604039c47fde13806290919a3204dd805af873830b8b78b4c94c30405f"
+        }
+      ]
+    },
+    {
+      "key": "Crossbows player ghost",
+      "context": "textdb:database/monspeak.txt:crossbows player ghost",
+      "source_sha256": "aed77a8f0ee06800cd5f6aa2987bbd6a0425f22f06b5eb0fed4ec99df2370c3f",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_ranged_",
+          "source_sha256": "59ce95f6b56ea464478ea94ecbde637b90c785a42ab8d8423e6c1cc3b69fd14e",
+          "translation_sha256": "7c7a99604039c47fde13806290919a3204dd805af873830b8b78b4c94c30405f"
+        }
+      ]
+    },
+    {
+      "key": "Throwing player ghost",
+      "context": "textdb:database/monspeak.txt:throwing player ghost",
+      "source_sha256": "22b25eff53bf73496eff602e70f7a3ae8e81f59fb146688f4340e543d7e6e794",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_ranged_",
+          "source_sha256": "59ce95f6b56ea464478ea94ecbde637b90c785a42ab8d8423e6c1cc3b69fd14e",
+          "translation_sha256": "7c7a99604039c47fde13806290919a3204dd805af873830b8b78b4c94c30405f"
+        }
+      ]
+    },
+    {
+      "key": "Armour player ghost",
+      "context": "textdb:database/monspeak.txt:armour player ghost",
+      "source_sha256": "a4a7fa67ed4e83b0835706d539f774b1b81d396548aea80aa278a3694095aa9a",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Dodging player ghost",
+      "context": "textdb:database/monspeak.txt:dodging player ghost",
+      "source_sha256": "4476052103869146b453860c0ebb8e4ebfe390184c92fb4d1f51d780c980e1d9",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Stealth player ghost",
+      "context": "textdb:database/monspeak.txt:stealth player ghost",
+      "source_sha256": "891d8079ff0637ec00454599bb3eff219d9476060933001efcdd18210ad3af04",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Shields player ghost",
+      "context": "textdb:database/monspeak.txt:shields player ghost",
+      "source_sha256": "fce511d40080db67f3d1eba6ff29c28d640a794594b37bbf89438eb23e350976",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Unarmed Combat player ghost",
+      "context": "textdb:database/monspeak.txt:unarmed combat player ghost",
+      "source_sha256": "45a371a6726748f5514e1c04535dd21170319ea5fb0f32fccdbcb2d02633cb3d",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Spellcasting player ghost",
+      "context": "textdb:database/monspeak.txt:spellcasting player ghost",
+      "source_sha256": "34dbefb219e561b4e8221870294acf1dfda007343164b391c7af3e02c8202467",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Conjurations player ghost",
+      "context": "textdb:database/monspeak.txt:conjurations player ghost",
+      "source_sha256": "4f9159bf0660ee47a29e6dfe8cceb367d2df45f4306e08fcfd462d0af5009045",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Hexes player ghost",
+      "context": "textdb:database/monspeak.txt:hexes player ghost",
+      "source_sha256": "683d32634647212a0431fa783a6ad0291d561ebf20d17cb5f651de6a930349d6",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Summonings player ghost",
+      "context": "textdb:database/monspeak.txt:summonings player ghost",
+      "source_sha256": "615fbd53f5f16197b9c0c498a2f3673ba0cadae4ca879379a939a7a035bd5ad2",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Necromancy player ghost",
+      "context": "textdb:database/monspeak.txt:necromancy player ghost",
+      "source_sha256": "863eb1707a980dc77509dd03572691bdcb3066964225321b53cb87cd938ff146",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Translocations player ghost",
+      "context": "textdb:database/monspeak.txt:translocations player ghost",
+      "source_sha256": "9791d597e11fea2a172c18c9686acdc27de4771603aa2f5aa07389ec58e3abd8",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Fire Magic player ghost",
+      "context": "textdb:database/monspeak.txt:fire magic player ghost",
+      "source_sha256": "870a2bc1e2c05d289c2e8eb687f4a90d24de90a250feb775f1b68a569a18bab8",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Ice Magic player ghost",
+      "context": "textdb:database/monspeak.txt:ice magic player ghost",
+      "source_sha256": "60d0678fab79eca4f93da49f01ee06d8a34e17cce1384ecd227402f115513844",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Air Magic player ghost",
+      "context": "textdb:database/monspeak.txt:air magic player ghost",
+      "source_sha256": "d2056abfc780119e00e766a4ce0c9d13c89c97f83f6cec20f3ffaa7f820e2799",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Earth Magic player ghost",
+      "context": "textdb:database/monspeak.txt:earth magic player ghost",
+      "source_sha256": "e0cab1eaf2a7cc2692b0785af6d5823d79b589dfc58725161558d1d0c472e876",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Alchemy player ghost",
+      "context": "textdb:database/monspeak.txt:alchemy player ghost",
+      "source_sha256": "ade68b87012a110037e2636d24e5a4cb9a60faaf5c2180d6c839c037173965fc",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Invocations player ghost",
+      "context": "textdb:database/monspeak.txt:invocations player ghost",
+      "source_sha256": "629d69d75fab8e221a0c122b31be64a5a573c911e2b8e02258941d6bc696ae38",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Evocations player ghost",
+      "context": "textdb:database/monspeak.txt:evocations player ghost",
+      "source_sha256": "e58be6fa677a3479bd048fb25c3cc65b52b64d69346dda15f0000db43e60dfdb",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Shapeshifting player ghost",
+      "context": "textdb:database/monspeak.txt:shapeshifting player ghost",
+      "source_sha256": "c048b7d9a3a6dea0779aa5372f3e8d56abc734643b50f101d07422ffb42b42e6",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_form_",
+          "source_sha256": "4f81e50d525b560c6acbf0579b7e70076b1a3123d669f746325564bcd92d894d",
+          "translation_sha256": "1d841af5d953ab574eb836da8442b11769465438caa0c70dd47a64a8b81138c6"
+        }
+      ]
+    },
+    {
+      "key": "Forgecraft player ghost",
+      "context": "textdb:database/monspeak.txt:forgecraft player ghost",
+      "source_sha256": "e67e08259e50efb188d82b1b171a45a3942610ca81f8bf3092f73fe20470a24b",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Ashenzari player ghost",
+      "context": "textdb:database/monspeak.txt:ashenzari player ghost",
+      "source_sha256": "6e55e7adf9fa988f512b7a249a61ec22a254b1414f62f21fb6e8abab7c06d543",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Beogh player ghost",
+      "context": "textdb:database/monspeak.txt:beogh player ghost",
+      "source_sha256": "a8d22ec9c0574f6da6177220f5f938b9537232516074c5ed96204c80099e581f",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Cheibriados player ghost",
+      "context": "textdb:database/monspeak.txt:cheibriados player ghost",
+      "source_sha256": "0b772eaae50c49b66652fcff1e8c82250393aa12ad830e51219f92bceb809cf5",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Dithmenos player ghost",
+      "context": "textdb:database/monspeak.txt:dithmenos player ghost",
+      "source_sha256": "3de44c96aae0df46a3385d770c88107a5f541902afb5df26ecb58f123ea68de2",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Elyvilon player ghost",
+      "context": "textdb:database/monspeak.txt:elyvilon player ghost",
+      "source_sha256": "5ef560c7310971dcd455906117910a8d8022f862e7815ca7911fa5fd44ef7588",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Fedhas player ghost",
+      "context": "textdb:database/monspeak.txt:fedhas player ghost",
+      "source_sha256": "2cdcfc751a8acf70433cf646917d2efd424abee7f81d8de2a9ca139850cc00c8",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Gozag player ghost",
+      "context": "textdb:database/monspeak.txt:gozag player ghost",
+      "source_sha256": "dd7e27957e88febd972963c1faa00a30afa698b65e20e68e40047e121e6686cc",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Hepliaklqana player ghost",
+      "context": "textdb:database/monspeak.txt:hepliaklqana player ghost",
+      "source_sha256": "9c64bc2b9961ccf2a23d9d933f45f052c295cdf0a98529b96187eb0305b0c428",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Ignis player ghost",
+      "context": "textdb:database/monspeak.txt:ignis player ghost",
+      "source_sha256": "306295873eb49d4a3f6d85b19f4a61ee1850a6cac75a79a11009f47cf7cce275",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Jiyva player ghost",
+      "context": "textdb:database/monspeak.txt:jiyva player ghost",
+      "source_sha256": "d9f62d059e8be914c0de08c7ccd0bcf6011723914f968abc03039efc64a7b256",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Kikubaaqudgha player ghost",
+      "context": "textdb:database/monspeak.txt:kikubaaqudgha player ghost",
+      "source_sha256": "0d76878d53afab0bdff3335c5cd53a200d3e60d584475a8b582c9d10046f9b7a",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Lugonu player ghost",
+      "context": "textdb:database/monspeak.txt:lugonu player ghost",
+      "source_sha256": "0b2411623c7d423ded49fcb63d361914fdf91c971580e2df9e29779e38e0c4c2",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Makhleb player ghost",
+      "context": "textdb:database/monspeak.txt:makhleb player ghost",
+      "source_sha256": "2c1c96dd626ed886b8e0f27fdbe709b0f8d9a0d1b5ac8ac29b8891fcef77c3b4",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Nemelex Xobeh player ghost",
+      "context": "textdb:database/monspeak.txt:nemelex xobeh player ghost",
+      "source_sha256": "e4ee70fc87dbec710a2707222867e33ef81a8bc834252fd058d53789fbf50057",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Okawaru player ghost",
+      "context": "textdb:database/monspeak.txt:okawaru player ghost",
+      "source_sha256": "f3c09a077f883da6bdf453d6b80bd081c9fceec768cbd952ff370253a27220f6",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Pakellas player ghost",
+      "context": "textdb:database/monspeak.txt:pakellas player ghost",
+      "source_sha256": "6d0dcd792f28e358ef2aac4568d9152b787aedfb74fe03ff8c54463f06d5bc5a",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Qazlal player ghost",
+      "context": "textdb:database/monspeak.txt:qazlal player ghost",
+      "source_sha256": "537c85724adbc7c504650fade1f5cb19d0e67347208064d94cdfbb97b6466a7c",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Ru player ghost",
+      "context": "textdb:database/monspeak.txt:ru player ghost",
+      "source_sha256": "897eae720126203f5fb2ac44676a6d381566db62f369db94497b0187746b4e5c",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Sif Muna player ghost",
+      "context": "textdb:database/monspeak.txt:sif muna player ghost",
+      "source_sha256": "1512a1bbe2b369394c8796af6e3d3b77aaac188aeedb76e62ad4377083d0f72f",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "The Shining One player ghost",
+      "context": "textdb:database/monspeak.txt:the shining one player ghost",
+      "source_sha256": "861202e3011e274798ffbe95bb55d36f6884922a0395cffc4eaaa164a571dbdb",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Trog player ghost",
+      "context": "textdb:database/monspeak.txt:trog player ghost",
+      "source_sha256": "b0851fc0a132bedb468f9b5049e87f4483e16125b6a5dc2286e6f56477fcfb06",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Uskayaw player ghost",
+      "context": "textdb:database/monspeak.txt:uskayaw player ghost",
+      "source_sha256": "02a9640cda353332469617a7065dfbc3bb9b3e1e5c48a826258fcbdcf3840ba9",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Vehumet player ghost",
+      "context": "textdb:database/monspeak.txt:vehumet player ghost",
+      "source_sha256": "574788b929db91220234285af1b2bc152b7e714bbae4e09ca9f51bfe0a79ab60",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Wu Jian player ghost",
+      "context": "textdb:database/monspeak.txt:wu jian player ghost",
+      "source_sha256": "925d7870f0cef8fc25ec01b3b369a89a3232c383c21aaa6fa3e2e960a697c725",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Xom player ghost",
+      "context": "textdb:database/monspeak.txt:xom player ghost",
+      "source_sha256": "93c1b14a4635d6b79f279727dba72743695c90d77c1995bb847bb70e0f23efbd",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_laughs_",
+          "source_sha256": "0d303156f9f4d1703d1b84ffd2f12cd421580373034f5c4e7d660f7c0425ec55",
+          "translation_sha256": "bd9e3f710a9bdc4efd5bd52978def17d10bce1fe6bd3f4bda0740615b3714ab0"
+        }
+      ]
+    },
+    {
+      "key": "Yredelemnul player ghost",
+      "context": "textdb:database/monspeak.txt:yredelemnul player ghost",
+      "source_sha256": "26271817db75683d69b18cc788e53685d1d83e2825a6f7e133a24b2429c7e008",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Zin player ghost",
+      "context": "textdb:database/monspeak.txt:zin player ghost",
+      "source_sha256": "be5a8b00e96edf2c8038391c17dd1c7669788537909339877d855a1618cdb304",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "_generic_ranged_",
+      "context": "textdb:database/monspeak.txt:_generic_ranged_",
+      "source_sha256": "59ce95f6b56ea464478ea94ecbde637b90c785a42ab8d8423e6c1cc3b69fd14e",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "_form_",
+      "context": "textdb:database/monspeak.txt:_form_",
+      "source_sha256": "4f81e50d525b560c6acbf0579b7e70076b1a3123d669f746325564bcd92d894d",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "_laughs_",
+      "context": "textdb:database/monspeak.txt:_laughs_",
+      "source_sha256": "0d303156f9f4d1703d1b84ffd2f12cd421580373034f5c4e7d660f7c0425ec55",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "player ghost",
+      "context": "textdb:database/monspeak.txt:player ghost",
+      "source_sha256": "52b59ce6554b1f81469e1c93c9f96e8ad6c9d0441eb74d6d19da13996360a191",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_player_ghost_common_",
+          "source_sha256": "c200c684f1013d2e20a24afe220e5a813c121e52a605d59a89fd4d4410f55554",
+          "translation_sha256": "192103279379a9bd3aa407778dd3b2d40afae1cf5462408e8b80176084cc3e82"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_player_ghost_medium_",
+          "source_sha256": "437f4dde47ddd92922437aa28c1c91a691272e5777b43c28df20f60d62fae4ef",
+          "translation_sha256": "95f39aa3071216a0d05c9da0fcde4ce0b2120d8d48380aa698071298bc74979f"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_player_ghost_rare_",
+          "source_sha256": "a0cbb49ea489de93a57a6df526c551f51c191e1d453d100e0a5e0d69c0492b47",
+          "translation_sha256": "0bd3e12020b0715eb8516331b72d215e2152d37af075a1fd383d4a2d13232eb7"
+        }
+      ]
+    },
+    {
+      "key": "_player_ghost_common_",
+      "context": "textdb:database/monspeak.txt:_player_ghost_common_",
+      "source_sha256": "c200c684f1013d2e20a24afe220e5a813c121e52a605d59a89fd4d4410f55554",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_wails_",
+          "source_sha256": "0f2cb5be8f67a5e224a80c599d680e77b1bb513ba02c3ac7a6cbbbb8034d924b",
+          "translation_sha256": "3c2e6ef5aa72965e8381da59409e28625560bf115bb6d458338bf1da7b619116"
+        }
+      ]
+    },
+    {
+      "key": "_player_ghost_medium_",
+      "context": "textdb:database/monspeak.txt:_player_ghost_medium_",
+      "source_sha256": "437f4dde47ddd92922437aa28c1c91a691272e5777b43c28df20f60d62fae4ef",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_wails_",
+          "source_sha256": "0f2cb5be8f67a5e224a80c599d680e77b1bb513ba02c3ac7a6cbbbb8034d924b",
+          "translation_sha256": "3c2e6ef5aa72965e8381da59409e28625560bf115bb6d458338bf1da7b619116"
+        }
+      ]
+    },
+    {
+      "key": "_player_ghost_rare_",
+      "context": "textdb:database/monspeak.txt:_player_ghost_rare_",
+      "source_sha256": "a0cbb49ea489de93a57a6df526c551f51c191e1d453d100e0a5e0d69c0492b47",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_wails_",
+          "source_sha256": "0f2cb5be8f67a5e224a80c599d680e77b1bb513ba02c3ac7a6cbbbb8034d924b",
+          "translation_sha256": "3c2e6ef5aa72965e8381da59409e28625560bf115bb6d458338bf1da7b619116"
+        }
+      ]
+    },
+    {
+      "key": "Aizul",
+      "context": "textdb:database/monspeak.txt:aizul",
+      "source_sha256": "8d13a9ab9a331062b127181c4d8b66a8a72085f113eae57f6596c59ecdc6c03f",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_aizul_common_",
+          "source_sha256": "cbbd0bae011a2146e9b608e8a1164c9ed32a7a0a4452fb7ce876cbdfb865b6b6",
+          "translation_sha256": "785fbe800dd031e8ff2df88288b7f6cde01a07606f9786ac4b6539438bae09e6"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_aizul_rare_",
+          "source_sha256": "b60d22d1aec850645089eb17a57f43b92a7f3800f6c8733945d43472a4265701",
+          "translation_sha256": "e2b63d2dbfaae217977a6f2be52405bcf50293a6a251b32c59859f6607407b45"
+        }
+      ]
+    },
+    {
+      "key": "_Aizul_common_",
+      "context": "textdb:database/monspeak.txt:_aizul_common_",
+      "source_sha256": "cbbd0bae011a2146e9b608e8a1164c9ed32a7a0a4452fb7ce876cbdfb865b6b6",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "_Aizul_rare_",
+      "context": "textdb:database/monspeak.txt:_aizul_rare_",
+      "source_sha256": "b60d22d1aec850645089eb17a57f43b92a7f3800f6c8733945d43472a4265701",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Agnes",
+      "context": "textdb:database/monspeak.txt:agnes",
+      "source_sha256": "d6a7676436b22c49efa5cdc22887f87aa8e1ebde62e7496daf65e8177bd43698",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_agnes_common_",
+          "source_sha256": "226d41040680919d9f5f5f588d71d56c1cd714a76513b6d8ff2a6f0dfd9851ba",
+          "translation_sha256": "313b12ccd31566814a8827e17215a34b97c7dd8cef5358ea5778e3a143bafba3"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_agnes_rare_",
+          "source_sha256": "584eccccb0db081f00de1dea69b452c49024b9f0c0e066d6123c1bb7041d82f2",
+          "translation_sha256": "b89fad42b8ead8b8133e5add8ace67c646f576a46d1e4f5bbf5c7cf9a6aa89e7"
+        }
+      ]
+    },
+    {
+      "key": "_Agnes_common_",
+      "context": "textdb:database/monspeak.txt:_agnes_common_",
+      "source_sha256": "226d41040680919d9f5f5f588d71d56c1cd714a76513b6d8ff2a6f0dfd9851ba",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "_Agnes_rare_",
+      "context": "textdb:database/monspeak.txt:_agnes_rare_",
+      "source_sha256": "584eccccb0db081f00de1dea69b452c49024b9f0c0e066d6123c1bb7041d82f2",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Agnes triumphant",
+      "context": "textdb:database/monspeak.txt:agnes triumphant",
+      "source_sha256": "09bf88580f58319ed27c7b750ad138b5616144d5c22bca81b35f30ae0dfb08d1",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Antaeus",
+      "context": "textdb:database/monspeak.txt:antaeus",
+      "source_sha256": "dd346a403c661c10fc439b11e83cfdfa8bcd409317cddcb12ef4df5028ca4a14",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_hell_lord_taunt_",
+          "source_sha256": "4785ed946afd17c18e8df5bb5a59fafdeaf464b4648b97f5488c7ffff2eb3528",
+          "translation_sha256": "129874487f461491a599e5f2e7164156ef50e13dff01a676771ed89cb84c7b6a"
+        }
+      ]
+    },
+    {
+      "key": "Antaeus triumphant",
+      "context": "textdb:database/monspeak.txt:antaeus triumphant",
+      "source_sha256": "d63bb5690f5a12414775486dea8a2ecbf4c5e1ad00b774e4a2803a3e999c70f9",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Amaemon",
+      "context": "textdb:database/monspeak.txt:amaemon",
+      "source_sha256": "9de839edd294f7942578e78549042af9ad6e3d487e1d2b5f28cc3e4c26ede684",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_amaemon_common_",
+          "source_sha256": "c8ec98363e23a029333513737a25d3007bd9d39ad5ced740a60678dd35c038c4",
+          "translation_sha256": "ce563deff9d88884743c587daaa883e00a0072fbe59654477a8ec47eed03d3fe"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_amaemon_rare_",
+          "source_sha256": "c5ba21721ea9d1aaf822acc3e323470f8c11d870a74788d689e3512b599894ba",
+          "translation_sha256": "161aaab7a15dc189e32469c4a85ba19414d7123919662c13adc5831b7d69e82f"
+        }
+      ]
+    },
+    {
+      "key": "_Amaemon_common_",
+      "context": "textdb:database/monspeak.txt:_amaemon_common_",
+      "source_sha256": "c8ec98363e23a029333513737a25d3007bd9d39ad5ced740a60678dd35c038c4",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "_Amaemon_rare_",
+      "context": "textdb:database/monspeak.txt:_amaemon_rare_",
+      "source_sha256": "c5ba21721ea9d1aaf822acc3e323470f8c11d870a74788d689e3512b599894ba",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Arachne",
+      "context": "textdb:database/monspeak.txt:arachne",
+      "source_sha256": "03342be50a6263c3a149d3b1e59d0ea08c77c8f60bbac7cb29748c032c3873df",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Arachne triumphant",
+      "context": "textdb:database/monspeak.txt:arachne triumphant",
+      "source_sha256": "c065d5a9420e133f6ea343a0a64841e087b2e246e313c58347ec1083a4770749",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Asterion",
+      "context": "textdb:database/monspeak.txt:asterion",
+      "source_sha256": "196a0bfd64b7203ea6750207ab00bb73a4180b10b876902317765164d953505c",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_asterion_common_",
+          "source_sha256": "c704065645180afa6397b45b16fef21b0dd8642b768ae7e6c78b6134324e2fd8",
+          "translation_sha256": "fb6cbfd680edaf110275ce4b2076f6e1df39e4b258ffab0c2b9d05d195936482"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_asterion_rare_",
+          "source_sha256": "5e9b8c7d495a8eed20b611a8454c7d0b2cae86da0a2fb46133db9e71184bf7e5",
+          "translation_sha256": "7336f9af8f192ec1db31e4ab0a5195f60dfb319681714b8d437a0c358693a35b"
+        }
+      ]
+    },
+    {
+      "key": "_Asterion_common_",
+      "context": "textdb:database/monspeak.txt:_asterion_common_",
+      "source_sha256": "c704065645180afa6397b45b16fef21b0dd8642b768ae7e6c78b6134324e2fd8",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "_Asterion_rare_",
+      "context": "textdb:database/monspeak.txt:_asterion_rare_",
+      "source_sha256": "5e9b8c7d495a8eed20b611a8454c7d0b2cae86da0a2fb46133db9e71184bf7e5",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Asterion triumphant",
+      "context": "textdb:database/monspeak.txt:asterion triumphant",
+      "source_sha256": "9b448bf1543bba5be26874da9b9cb82999d1f166111c1e5141068793561f7734",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Azrael",
+      "context": "textdb:database/monspeak.txt:azrael",
+      "source_sha256": "77662169c7cad10fda01e107b245707c8d3161e11258d311adb2fc81c2a4c425",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_azrael_common_",
+          "source_sha256": "a66e8dab89de17c2b59696ce9fdabab6ad47e9768b091ab7f6c2436f5626e9ca",
+          "translation_sha256": "52751df23e33d5307c8809505148b5e6d3e7b35e1c358740fe435fc2ad6a23b1"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_azrael_rare_",
+          "source_sha256": "25ff3c0b96230bb73800163e0c0947f15491a72061b99abb5715293c255a1470",
+          "translation_sha256": "8162553fbecc67a78de93442cb0b3ccf969ea2de83bd0e8b302f297e3b5f9cda"
+        }
+      ]
+    },
+    {
+      "key": "_Azrael_common_",
+      "context": "textdb:database/monspeak.txt:_azrael_common_",
+      "source_sha256": "a66e8dab89de17c2b59696ce9fdabab6ad47e9768b091ab7f6c2436f5626e9ca",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "_Azrael_rare_",
+      "context": "textdb:database/monspeak.txt:_azrael_rare_",
+      "source_sha256": "25ff3c0b96230bb73800163e0c0947f15491a72061b99abb5715293c255a1470",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_player_arms_",
+          "source_sha256": "89af3d3b99339dea3d1f4a1177b3d790d44a0ac79ca2b4598c707ea8bdeb7f42",
+          "translation_sha256": "89af3d3b99339dea3d1f4a1177b3d790d44a0ac79ca2b4598c707ea8bdeb7f42"
+        }
+      ]
+    },
+    {
+      "key": "_player_arms_",
+      "context": "textdb:database/monspeak.txt:_player_arms_",
+      "source_sha256": "89af3d3b99339dea3d1f4a1177b3d790d44a0ac79ca2b4598c707ea8bdeb7f42",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Bai Suzhen",
+      "context": "textdb:database/monspeak.txt:bai suzhen",
+      "source_sha256": "456e5b8989db4cb56c76361ab8a85edd848b3ca815093e3062b8b2c3da693924",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_bai_suzhen_common_",
+          "source_sha256": "1a2b92dec204b413337dd07e872d53e5b81626f989dfae167b67561f11d394d2",
+          "translation_sha256": "ade7518bcf9e5ebfa79b01cb47f7ea6d3ec08b4c327a5825bb5ba74ffdb9ba8a"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_bai_suzhen_rare_",
+          "source_sha256": "e352cd1f2976d9dbc3a94fac2db61da44020bbfe49cf5abe23ac5f836e84ea1c",
+          "translation_sha256": "dba2b88e34bb296c621ae7403ec370ab9df86acdb54cdcd9003cdccc5d3e4ffc"
+        }
+      ]
+    },
+    {
+      "key": "_Bai_Suzhen_common_",
+      "context": "textdb:database/monspeak.txt:_bai_suzhen_common_",
+      "source_sha256": "1a2b92dec204b413337dd07e872d53e5b81626f989dfae167b67561f11d394d2",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "_Bai_Suzhen_rare_",
+      "context": "textdb:database/monspeak.txt:_bai_suzhen_rare_",
+      "source_sha256": "e352cd1f2976d9dbc3a94fac2db61da44020bbfe49cf5abe23ac5f836e84ea1c",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Blorkula the orcula",
+      "context": "textdb:database/monspeak.txt:blorkula the orcula",
+      "source_sha256": "853e6825d7cfc1c63575a1a2d56408d33ae735251c9aa530495a638380971bd7",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_blorkula_common_",
+          "source_sha256": "8fb85de1e490d34eddd6fc94eb89a87078418c88b3d1d177f31162a49a2d0ea9",
+          "translation_sha256": "fc57744268561caabb4ebca9ed743585775d8186c80f5003227e1e34e49f6c0f"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_blorkula_rare_",
+          "source_sha256": "eea7a38fbfe62de125941a5a8f47f3b4653152fabe045494c1d2280c97c88a66",
+          "translation_sha256": "e311144c3820d6839261dbcef9310c2bcc732f2d63ae708417ee3d8be08d759b"
+        }
+      ]
+    },
+    {
+      "key": "Blorkula the orcula triumphant",
+      "context": "textdb:database/monspeak.txt:blorkula the orcula triumphant",
+      "source_sha256": "42401ec86f2fb7b98e2ee59fa0786aa2f0c44c81e8d80707e28bbe648066e1be",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "_blorkula_colour_",
+      "context": "textdb:database/monspeak.txt:_blorkula_colour_",
+      "source_sha256": "05439cf942bda9b4423d8035c476a82d5c3268f96447e4fb6c7054676e7c22ae",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/colourname.txt",
+          "key": "misc_colour",
+          "source_sha256": "f0ce39152cfe11a50957fb4ebe6647e9ff351e2c92ea8d81603818c02470cbb1",
+          "translation_sha256": "437c972b52ac747af13ec557cf922b7aa9dc08cc1ab1948dc7b56fe40e39b682"
+        },
+        {
+          "source": "database/colourname.txt",
+          "key": "rainbow_colour",
+          "source_sha256": "832fbdb911738f6f01f1a6a1b817a55f9336ffaec51805ddf09b05c5c68d1bc0",
+          "translation_sha256": "e02c243199d41b502cc9b5f204f077bff6a38d5a21c8788739f052d3b778b105"
+        }
+      ]
+    },
+    {
+      "key": "_Blorkula_common_",
+      "context": "textdb:database/monspeak.txt:_blorkula_common_",
+      "source_sha256": "8fb85de1e490d34eddd6fc94eb89a87078418c88b3d1d177f31162a49a2d0ea9",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_blorkula_colour_",
+          "source_sha256": "05439cf942bda9b4423d8035c476a82d5c3268f96447e4fb6c7054676e7c22ae",
+          "translation_sha256": "05439cf942bda9b4423d8035c476a82d5c3268f96447e4fb6c7054676e7c22ae"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_generic_orc_speech_",
+          "source_sha256": "074b98ec91eec59245a3e63402329c2250fa3e3d0e27ff30d6e70ff9dbb11557",
+          "translation_sha256": "9411b0c811abeba2b0ad7365519324beaeb50f610575b3af871e2c914577b5a3"
+        }
+      ]
+    },
+    {
+      "key": "_Blorkula_rare_",
+      "context": "textdb:database/monspeak.txt:_blorkula_rare_",
+      "source_sha256": "eea7a38fbfe62de125941a5a8f47f3b4653152fabe045494c1d2280c97c88a66",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_blorkula_colour_",
+          "source_sha256": "05439cf942bda9b4423d8035c476a82d5c3268f96447e4fb6c7054676e7c22ae",
+          "translation_sha256": "05439cf942bda9b4423d8035c476a82d5c3268f96447e4fb6c7054676e7c22ae"
+        }
+      ]
+    },
+    {
+      "key": "Blorkula the orcula killed",
+      "context": "textdb:database/monspeak.txt:blorkula the orcula killed",
+      "source_sha256": "47036793e975ddf6f74299fce7fdbded80d30aac4b38869f7226715e709e847e",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Boris",
+      "context": "textdb:database/monspeak.txt:boris",
+      "source_sha256": "16664cf51ffd4835ad9f01109c6c81310084c6aad04aafdc82f85b2452a32607",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_boris_common_",
+          "source_sha256": "79cf2fac3ea5c6346fc65cd0c60021435fb9e80869f32123f35048dd82968d5a",
+          "translation_sha256": "82d8f4c0d889637d94b9383e8a0bc727ece6d485c521ea82f6d0770bb2fdf744"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_boris_medium_",
+          "source_sha256": "08529349e542f8387793e48b724d602595e31afeaad6e7c8d842e430cbca255f",
+          "translation_sha256": "aa10bed5a00d60646753618af70263e092f6ecd3b716a5c0e08bb2b73ce68fef"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_boris_rare_",
+          "source_sha256": "d38830611e4c6043bd093febb1d57345a3601c69c7e4309b064c46923d0e05a8",
+          "translation_sha256": "4ba0cdf53c822447d70f83f07f75edde04767a924c4398eabb8bbc3be1a03068"
+        }
+      ]
+    },
+    {
+      "key": "_Boris_common_",
+      "context": "textdb:database/monspeak.txt:_boris_common_",
+      "source_sha256": "79cf2fac3ea5c6346fc65cd0c60021435fb9e80869f32123f35048dd82968d5a",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_fake_spell_effect_",
+          "source_sha256": "380464f55b9a7bf1d86c712a29175383c1f116c7de15cf3b594b16536711dd96",
+          "translation_sha256": "db1862a67e30c63a2527d69d5a9a757b91df5b960cab1347494821a0e556f932"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_wizard_common_spell_",
+          "source_sha256": "25fc51866d2ca8be4f9f62871e7e25c788ccb807376bb4e48d6a63d0cb02a5e1",
+          "translation_sha256": "ef06ec4593c1e72ed06052015a923fc39fb9f4484033a23075e5e8eb0f7d8a38"
+        }
+      ]
+    },
+    {
+      "key": "_Boris_medium_",
+      "context": "textdb:database/monspeak.txt:_boris_medium_",
+      "source_sha256": "08529349e542f8387793e48b724d602595e31afeaad6e7c8d842e430cbca255f",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "_Boris_rare_",
+      "context": "textdb:database/monspeak.txt:_boris_rare_",
+      "source_sha256": "d38830611e4c6043bd093febb1d57345a3601c69c7e4309b064c46923d0e05a8",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Boris killed",
+      "context": "textdb:database/monspeak.txt:boris killed",
+      "source_sha256": "1a16a036b07f3606f3661bb9bd2785ea99552cbc8f82da27052b292ad08c7e58",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_boris_return_common_",
+          "source_sha256": "34107d2982337671af249591bc0254e7c9710804d3710774a87edd6d1eaba3e9",
+          "translation_sha256": "197d97f0d08d66fbaf92bff97dc5524d81d20449f3e479e03495f5f8fd2465e1"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_boris_return_rare_",
+          "source_sha256": "0c0aad2ade3fa6b6d98f50a2aabd7d915ec4e2f4958796974bed524e73cc5c9a",
+          "translation_sha256": "18c64ad888c0e4c1848c1761277f0a2d6ddd79cfc6197c3226ee5930a6763d56"
+        }
+      ]
+    },
+    {
+      "key": "_Boris_return_common_",
+      "context": "textdb:database/monspeak.txt:_boris_return_common_",
+      "source_sha256": "34107d2982337671af249591bc0254e7c9710804d3710774a87edd6d1eaba3e9",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "_Boris_return_rare_",
+      "context": "textdb:database/monspeak.txt:_boris_return_rare_",
+      "source_sha256": "0c0aad2ade3fa6b6d98f50a2aabd7d915ec4e2f4958796974bed524e73cc5c9a",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Boris timeout",
+      "context": "textdb:database/monspeak.txt:boris timeout",
+      "source_sha256": "64b19dc2ef2910929bbb67debbe7bb786206e69ad8bce2843ac8c6820b3a42fb",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "friendly Boris timeout",
+      "context": "textdb:database/monspeak.txt:friendly boris timeout",
+      "source_sha256": "e7656a8e55659ed885be5866756a897887c3fce049d1903c94774a474824700c",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "boris timeout",
+          "source_sha256": "64b19dc2ef2910929bbb67debbe7bb786206e69ad8bce2843ac8c6820b3a42fb",
+          "translation_sha256": "972eb5da613887da7f4d196284ca2dfe8482f94062750a5452f2d4b3b29d9f9c"
+        }
+      ]
+    },
+    {
+      "key": "Boris triumphant",
+      "context": "textdb:database/monspeak.txt:boris triumphant",
+      "source_sha256": "d6f1be4cea0473c05ca596d484b4ce77b6826505d98e6d0c64a5c7b127103dbb",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Boris riddle",
+      "context": "textdb:database/monspeak.txt:boris riddle",
+      "source_sha256": "b1128d4446d75f76af0c22450d8fc6180ef73fcf89c14fc74e40c576485d3260",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Cassandra",
+      "context": "textdb:database/monspeak.txt:cassandra",
+      "source_sha256": "52bd3c3507b4b233d22b474751e8a65330654f7f25a96bc932c76264636d3129",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Cassandra triumphant",
+      "context": "textdb:database/monspeak.txt:cassandra triumphant",
+      "source_sha256": "6e183815b53b6f1f538adfd188c89eb7b2ad95d98214439f70824f3daae45cea",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Cassandra killed",
+      "context": "textdb:database/monspeak.txt:cassandra killed",
+      "source_sha256": "10ad7a567a46db41f6e62dfa4684371ebba8d2fe05d5c8bfb1c4921ae35f8ff6",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "friendly Cassandra",
+      "context": "textdb:database/monspeak.txt:friendly cassandra",
+      "source_sha256": "59a5c2962bf35d710704f4704d6d72a5fb11021fa5fb938cda643a0d331fa4c2",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Chuck",
+      "context": "textdb:database/monspeak.txt:chuck",
+      "source_sha256": "3dc449c044b154eb638336427b667320fc6c5d76962acfc4c117fc80553a845f",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_chuck_generic_",
+          "source_sha256": "00ebcb0ef7e7eb7ba467818831b3d63ade8cf0749d75055c79d35f8cfc7ce6eb",
+          "translation_sha256": "4cf3b5b58a529184e71951d43dedb3884971e2a7862a84963669af8df27d0e17"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_chuck_rare_",
+          "source_sha256": "6c57e92db8dcf67fe75b9e6be156197d499d1fd528ea25b4ea5c7022a8227cca",
+          "translation_sha256": "c2813c71ef1588ba83240bdca62f16344e22c762ff70e28ee5865868028026de"
+        }
+      ]
+    },
+    {
+      "key": "_chuck_generic_",
+      "context": "textdb:database/monspeak.txt:_chuck_generic_",
+      "source_sha256": "00ebcb0ef7e7eb7ba467818831b3d63ade8cf0749d75055c79d35f8cfc7ce6eb",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "_chuck_rare_",
+      "context": "textdb:database/monspeak.txt:_chuck_rare_",
+      "source_sha256": "6c57e92db8dcf67fe75b9e6be156197d499d1fd528ea25b4ea5c7022a8227cca",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "Crazy Yiuf",
+      "context": "textdb:database/monspeak.txt:crazy yiuf",
+      "source_sha256": "50653056d9e6faa5f0480dbf7613c3d0feb28fe67f8b2b134033abe27f7404a2",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_crazy_yiuf_speech_",
+          "source_sha256": "71b8db8097c505e46daa56231d8235b2be78f039914933388cf780170ec7d3df",
+          "translation_sha256": "04d7f1d356112f4baab33853abc74e9b076bd002933027bd66605027c774e14c"
+        }
+      ]
+    },
+    {
+      "key": "_orc_shouts_",
+      "context": "textdb:database/monspeak.txt:_orc_shouts_",
+      "source_sha256": "e62386813b20d71ee140690ae683dcfed934e7ab454b900b32a2e044e5736a42",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_shouts_",
+          "source_sha256": "82905179e411b95af8411ee9a9cd2ec14e46cd56dfe133d9ce19d630b492508a",
+          "translation_sha256": "04a1ce1d7878f119796b9e3173d6909a493d2654680db1e77f66e338852eb381"
+        }
+      ]
+    },
+    {
+      "key": "_loudly_or_repeatedly_",
+      "context": "textdb:database/monspeak.txt:_loudly_or_repeatedly_",
+      "source_sha256": "d88af7e58fec4045a569b48eb5fd9f3ce3931af28501dad17f98cd7668c64fdd",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "_orc_modifier_",
+      "context": "textdb:database/monspeak.txt:_orc_modifier_",
+      "source_sha256": "fbce70943ff9d7077e98e607acb312eb317044d923cb4dda29120be2e115c9b3",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "_generic_orc_speech_",
+      "context": "textdb:database/monspeak.txt:_generic_orc_speech_",
+      "source_sha256": "074b98ec91eec59245a3e63402329c2250fa3e3d0e27ff30d6e70ff9dbb11557",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_loudly_or_repeatedly_",
+          "source_sha256": "d88af7e58fec4045a569b48eb5fd9f3ce3931af28501dad17f98cd7668c64fdd",
+          "translation_sha256": "cd1b5e701028a8f2b0c277a3c90c8b9b49eac7695c2bb14e74444f99bdb33c9f"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_orc_modifier_",
+          "source_sha256": "fbce70943ff9d7077e98e607acb312eb317044d923cb4dda29120be2e115c9b3",
+          "translation_sha256": "b9ed38291fd2ab5953e2509c0b292fa6e4b95a7bf27eadc1e8c6235dcf3572c3"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_orc_shouts_",
+          "source_sha256": "e62386813b20d71ee140690ae683dcfed934e7ab454b900b32a2e044e5736a42",
+          "translation_sha256": "ed470a11ab981587f5f2dcb5ee1ccd77de06faa564a002c548892bea73399103"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_shouts_",
+          "source_sha256": "82905179e411b95af8411ee9a9cd2ec14e46cd56dfe133d9ce19d630b492508a",
+          "translation_sha256": "04a1ce1d7878f119796b9e3173d6909a493d2654680db1e77f66e338852eb381"
+        }
+      ]
+    },
+    {
+      "key": "_crazy_yiuf_speech_",
+      "context": "textdb:database/monspeak.txt:_crazy_yiuf_speech_",
+      "source_sha256": "71b8db8097c505e46daa56231d8235b2be78f039914933388cf780170ec7d3df",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_crazy_yiuf_sentence_",
+          "source_sha256": "3b57cb2d65e598240a716e3df5d6ae8376cd498d08b443f069b9bf1bc14b17ec",
+          "translation_sha256": "c5cc20f5ed4dcefbf31ac2edf3ee6f96380c6b22b57856115eddaa889861de73"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_crazy_yiuf_speech_verbs_",
+          "source_sha256": "ceb18d0c462e7023c0c58d126b37e00d1ed4591df8b748e9690436f63466da2a",
+          "translation_sha256": "2291d7f418b710640b683eaa6c9bc6e0ff64dee81676799cd7270b94dda8bf92"
+        }
+      ]
+    },
+    {
+      "key": "_crazy_yiuf_speech_verbs_",
+      "context": "textdb:database/monspeak.txt:_crazy_yiuf_speech_verbs_",
+      "source_sha256": "ceb18d0c462e7023c0c58d126b37e00d1ed4591df8b748e9690436f63466da2a",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "_crazy_yiuf_sentence_",
+      "context": "textdb:database/monspeak.txt:_crazy_yiuf_sentence_",
+      "source_sha256": "3b57cb2d65e598240a716e3df5d6ae8376cd498d08b443f069b9bf1bc14b17ec",
+      "review_status": "reviewed",
+      "review_batch": "database-19",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_crazy_yiuf_wordlist1_",
+          "source_sha256": "b5937527e3544e56417b5cabb9cdfac7918d015dfffb8fd8e916ec21f6b41cc5",
+          "translation_sha256": "b97f948b042e53a6116ba2faa3f5e7469caec3b77368d0d6a271e7added086cc"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_crazy_yiuf_wordlist2_",
+          "source_sha256": "001bfea5222701bedb62239d43dbbb296616d0f3a8e2796f6b558ec0540c0bb1",
+          "translation_sha256": "2b418b60dde348c3d65a42c35952b7d8849f1cc4bcef386303a097ced417f062"
+        }
+      ]
+    },
+    {
+      "key": "_crazy_yiuf_wordlist1_",
+      "context": "textdb:database/monspeak.txt:_crazy_yiuf_wordlist1_",
+      "source_sha256": "b5937527e3544e56417b5cabb9cdfac7918d015dfffb8fd8e916ec21f6b41cc5",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "_crazy_yiuf_wordlist2_",
+      "context": "textdb:database/monspeak.txt:_crazy_yiuf_wordlist2_",
+      "source_sha256": "001bfea5222701bedb62239d43dbbb296616d0f3a8e2796f6b558ec0540c0bb1",
+      "review_status": "reviewed",
+      "review_batch": "database-19"
+    },
+    {
+      "key": "_shouts_",
+      "context": "textdb:database/monspeak.txt:_shouts_",
+      "source_sha256": "82905179e411b95af8411ee9a9cd2ec14e46cd56dfe133d9ce19d630b492508a",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_yells_",
+      "context": "textdb:database/monspeak.txt:_yells_",
+      "source_sha256": "a3705e89559acc2c86d3a0e848bc3cd0085d46bcd36ff66edfa19a59ed96f284",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_wails_",
+      "context": "textdb:database/monspeak.txt:_wails_",
+      "source_sha256": "0f2cb5be8f67a5e224a80c599d680e77b1bb513ba02c3ac7a6cbbbb8034d924b",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_begs_",
+      "context": "textdb:database/monspeak.txt:_begs_",
+      "source_sha256": "5486323d0b16eb17b4b819a0a0ec0ee4c2b7869d4bab5adee915d116ab6f5ed0",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_mutters_",
+      "context": "textdb:database/monspeak.txt:_mutters_",
+      "source_sha256": "c9ca2aafbcf3525e6f1ba07423133530a0a0d65f8db08d24e9b69a7d7310fbc3",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_pointless_",
+      "context": "textdb:database/monspeak.txt:_pointless_",
+      "source_sha256": "7d6d4fb2ae32255db8c1be14a45e29d354cf35c7268f040792776fb1dbf40696",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_high_priest_",
+      "context": "textdb:database/monspeak.txt:_high_priest_",
+      "source_sha256": "83db7e37d61e2c95ecd1cc9a7ecce6a4987874c66287ceade3b9a816675a7a5e",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_high_priest_common_",
+          "source_sha256": "5ee1b1c24257f5483e245193d602ad36533ba3af2f1f441cce6f7490fa01577b",
+          "translation_sha256": "fa75a39436a147295d15148b9af5e0ff062e4f6cf4cfbf30e65966c00cfc6e6b"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_high_priest_medium_",
+          "source_sha256": "d04a4dc7cf0d773cd22b49924253c1d70780ffc8289818f7b22180627be2718b",
+          "translation_sha256": "c072757e39e366210ec2c9334e9ea029fcf88f98276f5401f485934269ceae47"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_high_priest_rare_",
+          "source_sha256": "45eb4548bcbfb2d2ef8d69079dd6fb038c75af627f93aef6b9cc79e49ed7acd1",
+          "translation_sha256": "c179ed18ccd8924cf96eed8954f37fcc55673955260083a851bb0d18bf2243bc"
+        }
+      ]
+    },
+    {
+      "key": "_high_priest_common_",
+      "context": "textdb:database/monspeak.txt:_high_priest_common_",
+      "source_sha256": "5ee1b1c24257f5483e245193d602ad36533ba3af2f1f441cce6f7490fa01577b",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_high_priest_medium_",
+      "context": "textdb:database/monspeak.txt:_high_priest_medium_",
+      "source_sha256": "d04a4dc7cf0d773cd22b49924253c1d70780ffc8289818f7b22180627be2718b",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_high_priest_rare_",
+      "context": "textdb:database/monspeak.txt:_high_priest_rare_",
+      "source_sha256": "45eb4548bcbfb2d2ef8d69079dd6fb038c75af627f93aef6b9cc79e49ed7acd1",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_mercenary_guard_",
+      "context": "textdb:database/monspeak.txt:_mercenary_guard_",
+      "source_sha256": "9596005301780fbcf1df3136944b6957f43f6f83257a45600d54660e30ade202",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_mercenary_guard_common_",
+          "source_sha256": "dbdf8e31c18538ad0ca701815c19c47de0284ece5b80f218e506af7f370686ce",
+          "translation_sha256": "08eb3cdcd207f6c4010276a338c487b8ba2d7494ed59ea22daf023a0df25cdc0"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_mercenary_guard_medium_",
+          "source_sha256": "48630b3108c33a3682062740b2c0071b6a1ae1aae4e54dc7725ebe1a28fc29b2",
+          "translation_sha256": "f1e1c6f7214505a2edfa2bb3cefa61f4e4540c2c285fc459982ed4f098658edc"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_mercenary_guard_rare_",
+          "source_sha256": "3304b702552f5920cac9aead3a373fbb8aa9dde9d18c015e0cf079347d523b51",
+          "translation_sha256": "db2d51eb75ade85a0a4785c3d7bf9e73a2234298db3cf8b5960167f8e862f6fa"
+        }
+      ]
+    },
+    {
+      "key": "_mercenary_guard_common_",
+      "context": "textdb:database/monspeak.txt:_mercenary_guard_common_",
+      "source_sha256": "dbdf8e31c18538ad0ca701815c19c47de0284ece5b80f218e506af7f370686ce",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_mercenary_guard_medium_",
+      "context": "textdb:database/monspeak.txt:_mercenary_guard_medium_",
+      "source_sha256": "48630b3108c33a3682062740b2c0071b6a1ae1aae4e54dc7725ebe1a28fc29b2",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_mercenary_guard_rare_",
+      "context": "textdb:database/monspeak.txt:_mercenary_guard_rare_",
+      "source_sha256": "3304b702552f5920cac9aead3a373fbb8aa9dde9d18c015e0cf079347d523b51",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_wizard_",
+      "context": "textdb:database/monspeak.txt:_wizard_",
+      "source_sha256": "6ce3c2a162afbb074b878d49fb96bd60ed416a7bbc0301f402c3aeb4a4565125",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_fake_spell_effect_",
+          "source_sha256": "380464f55b9a7bf1d86c712a29175383c1f116c7de15cf3b594b16536711dd96",
+          "translation_sha256": "db1862a67e30c63a2527d69d5a9a757b91df5b960cab1347494821a0e556f932"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_wizard_common_spell_",
+          "source_sha256": "25fc51866d2ca8be4f9f62871e7e25c788ccb807376bb4e48d6a63d0cb02a5e1",
+          "translation_sha256": "ef06ec4593c1e72ed06052015a923fc39fb9f4484033a23075e5e8eb0f7d8a38"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_wizard_medium_",
+          "source_sha256": "35c752015584328428b23794118ddab0c2bb273a4ce401054a97d9f31e225b03",
+          "translation_sha256": "5c47a8cd9c501f0a9a9b717a4583202634f189a6526adfcdfe0592e45e598504"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_wizard_rare_",
+          "source_sha256": "a727b71385ec2d77ec370e3abdf1cc1a027283e6f3580fbda6f40a7d9ff694a2",
+          "translation_sha256": "ce59be8810bf520777660859c12bbafe130488054ecbd49a126f495cf16c3f4b"
+        }
+      ]
+    },
+    {
+      "key": "_wizard_common_spell_",
+      "context": "textdb:database/monspeak.txt:_wizard_common_spell_",
+      "source_sha256": "25fc51866d2ca8be4f9f62871e7e25c788ccb807376bb4e48d6a63d0cb02a5e1",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_fake_spell_effect_",
+      "context": "textdb:database/monspeak.txt:_fake_spell_effect_",
+      "source_sha256": "380464f55b9a7bf1d86c712a29175383c1f116c7de15cf3b594b16536711dd96",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_wizard_medium_",
+      "context": "textdb:database/monspeak.txt:_wizard_medium_",
+      "source_sha256": "35c752015584328428b23794118ddab0c2bb273a4ce401054a97d9f31e225b03",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_wizard_rare_",
+      "context": "textdb:database/monspeak.txt:_wizard_rare_",
+      "source_sha256": "a727b71385ec2d77ec370e3abdf1cc1a027283e6f3580fbda6f40a7d9ff694a2",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_friendly_imp_",
+      "context": "textdb:database/monspeak.txt:_friendly_imp_",
+      "source_sha256": "6de4c7b255d5058fb8da4cfd0eefdaa9e0f66a59e5e889b16615da278683f39d",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_friendly_imp_common_",
+          "source_sha256": "eb2406712d7d69b39de114f8186d7cc2a095bb85c8ee2b3fe16d4abbd2b8e888",
+          "translation_sha256": "b2a8cf6389819b6191f825e3c99474b4547ec289e95e74344e23756c6662bb83"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_friendly_imp_rare_",
+          "source_sha256": "ff5cd6c320d3aaae7f404b83acb52a3754e2ab94ca62a89b32f40a648c94ea81",
+          "translation_sha256": "fb9a023ddcde410bac9b78ae2cc1f977791c47f30310f864c1f2eb5fb99ddaef"
+        }
+      ]
+    },
+    {
+      "key": "_friendly_imp_common_",
+      "context": "textdb:database/monspeak.txt:_friendly_imp_common_",
+      "source_sha256": "eb2406712d7d69b39de114f8186d7cc2a095bb85c8ee2b3fe16d4abbd2b8e888",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_friendly_imp_rare_",
+      "context": "textdb:database/monspeak.txt:_friendly_imp_rare_",
+      "source_sha256": "ff5cd6c320d3aaae7f404b83acb52a3754e2ab94ca62a89b32f40a648c94ea81",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_friendly_imp_greeting",
+      "context": "textdb:database/monspeak.txt:_friendly_imp_greeting",
+      "source_sha256": "940b3ff2f22326017b67b7b56fbe81d010f33fb08918ee9da20c53723cd9db30",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_cause_or_spread_",
+          "source_sha256": "458769f5622b95397378f000ca6e755fcedd6093ca8ce02e51ea5a12674227bc",
+          "translation_sha256": "ae8ad8abeaa5903dd92f69e13ddb31d88d172a0ed017802c6fc87ade4d700a74"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_mayhem_",
+          "source_sha256": "01f025d75b2b82df6158be5c6e491773ed4c29580dc1ae249238d7f3536c108c",
+          "translation_sha256": "15b11e13d545ecb21ec719de4b95b3b2e73283eba1d7fa82508f8371f7b95b83"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_suck_up_address_",
+          "source_sha256": "f4c90e04ec65dd1d1d11ad58db4825d0f7063894bd1e4c05b1a9708ba96cc7f7",
+          "translation_sha256": "9e1bdc4ba05634f38678d8e82926dd3ba58e0833d80ec77005729fe82b48d851"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_suck_up_adj1_",
+          "source_sha256": "d21ff19cd7d007c739cdd24211eabf492c5e64cb71040e4bc00d0c253184d0b5",
+          "translation_sha256": "cc49ecad88890a9f950b15cd5faa6e0adba77998a976902849f56ead2ea0ad1a"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_suck_up_adj2_",
+          "source_sha256": "2a311de090711d17dd05ddc939b4f4d422d2f5012c1c54d9a3adfb5e154d3bea",
+          "translation_sha256": "e90862fd9747fe131305e39a67d0815d12b730bca44d3b01c62f6be18c444f0f"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_suck_up_noun_",
+          "source_sha256": "823f7a1a84dcce826801c20bf8e4491e1b2cc0cee6e3e327da39c45fac5b3d28",
+          "translation_sha256": "59dba556f1d0da8a7feabec54352cef770b3a1c7fef1dfcba89f6aa1c8e7dbf9"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_truckle_",
+          "source_sha256": "be6d4fa4cd0a868e17159c55125121d4db5536adfd8c74e667d4d1cd84f228dc",
+          "translation_sha256": "afce7d2e5db3e700576950f381264b790823ac22524938fea4b1a2d5dc1b32e0"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_vassalage_",
+          "source_sha256": "3413c4f930f00b3418c803e55633fe624ee3eb1a33618a39c238d7e7f6ce80fb",
+          "translation_sha256": "8d90ad2715d74ccfd106a7ad9405813e59b071d56425fb8ae60c453ceb452b1f"
+        }
+      ]
+    },
+    {
+      "key": "_cause_or_spread_",
+      "context": "textdb:database/monspeak.txt:_cause_or_spread_",
+      "source_sha256": "458769f5622b95397378f000ca6e755fcedd6093ca8ce02e51ea5a12674227bc",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_mayhem_",
+      "context": "textdb:database/monspeak.txt:_mayhem_",
+      "source_sha256": "01f025d75b2b82df6158be5c6e491773ed4c29580dc1ae249238d7f3536c108c",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_truckle_",
+      "context": "textdb:database/monspeak.txt:_truckle_",
+      "source_sha256": "be6d4fa4cd0a868e17159c55125121d4db5536adfd8c74e667d4d1cd84f228dc",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_vassalage_",
+      "context": "textdb:database/monspeak.txt:_vassalage_",
+      "source_sha256": "3413c4f930f00b3418c803e55633fe624ee3eb1a33618a39c238d7e7f6ce80fb",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_suck_up_address_",
+      "context": "textdb:database/monspeak.txt:_suck_up_address_",
+      "source_sha256": "f4c90e04ec65dd1d1d11ad58db4825d0f7063894bd1e4c05b1a9708ba96cc7f7",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_suck_up_adj1_",
+      "context": "textdb:database/monspeak.txt:_suck_up_adj1_",
+      "source_sha256": "d21ff19cd7d007c739cdd24211eabf492c5e64cb71040e4bc00d0c253184d0b5",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_suck_up_adj2_",
+      "context": "textdb:database/monspeak.txt:_suck_up_adj2_",
+      "source_sha256": "2a311de090711d17dd05ddc939b4f4d422d2f5012c1c54d9a3adfb5e154d3bea",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_suck_up_noun_",
+      "context": "textdb:database/monspeak.txt:_suck_up_noun_",
+      "source_sha256": "823f7a1a84dcce826801c20bf8e4491e1b2cc0cee6e3e327da39c45fac5b3d28",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_hostile_imp_",
+      "context": "textdb:database/monspeak.txt:_hostile_imp_",
+      "source_sha256": "004c9ef883573bb89bdf6864a45057a879f255e4271f3a4e5c376b48d418eccb",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_hostile_imp_common_",
+          "source_sha256": "f32d56faa803e62a7515b5f43d9cd16acc27f81ff0b6fb5d632b171d9e56c271",
+          "translation_sha256": "6ae0228b453407c46443c0bddd39295648270c9a0b76cc3c0bab57a063650c99"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_hostile_imp_rare_",
+          "source_sha256": "fef8af3bb8714cbad623d070b1a0247505cf9cf9d23329fdbe2f95bf727aabb1",
+          "translation_sha256": "01c373802679d133c3bf51872fc03e038be4dbf81526b33f08ed44ffcc82c1c4"
+        }
+      ]
+    },
+    {
+      "key": "_hostile_imp_common_",
+      "context": "textdb:database/monspeak.txt:_hostile_imp_common_",
+      "source_sha256": "f32d56faa803e62a7515b5f43d9cd16acc27f81ff0b6fb5d632b171d9e56c271",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_hostile_imp_rare_",
+      "context": "textdb:database/monspeak.txt:_hostile_imp_rare_",
+      "source_sha256": "fef8af3bb8714cbad623d070b1a0247505cf9cf9d23329fdbe2f95bf727aabb1",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_hell_lord_taunt_",
+      "context": "textdb:database/monspeak.txt:_hell_lord_taunt_",
+      "source_sha256": "4785ed946afd17c18e8df5bb5a59fafdeaf464b4648b97f5488c7ffff2eb3528",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/insult.txt",
+          "key": "demon_taunt",
+          "source_sha256": "b6d1df37b6f67c9a8e2a3f967ea3255e76dce7a3d96d5073a3cf9b5813e1e3aa",
+          "translation_sha256": "a61eecee93501b9d722f9dba2bb3b709a45dbe600cb348a3b1f42778232fd33e"
+        }
+      ]
+    },
+    {
+      "key": "_demon_taunt_",
+      "context": "textdb:database/monspeak.txt:_demon_taunt_",
+      "source_sha256": "4785ed946afd17c18e8df5bb5a59fafdeaf464b4648b97f5488c7ffff2eb3528",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/insult.txt",
+          "key": "demon_taunt",
+          "source_sha256": "b6d1df37b6f67c9a8e2a3f967ea3255e76dce7a3d96d5073a3cf9b5813e1e3aa",
+          "translation_sha256": "a61eecee93501b9d722f9dba2bb3b709a45dbe600cb348a3b1f42778232fd33e"
+        }
+      ]
+    },
+    {
+      "key": "_says_imp_taunt_",
+      "context": "textdb:database/monspeak.txt:_says_imp_taunt_",
+      "source_sha256": "d325d9be57cdb15fb06f03b0b678206ca92c7c75d16851af6e08aa367c3137ed",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/insult.txt",
+          "key": "imp_taunt",
+          "source_sha256": "fd6ac71456eec8c34ed900a368e36682abd6746c2468bb901354e0895c52178a",
+          "translation_sha256": "c9719093235eb8e23d0f8746845860b36b836edd1956c86115c9e47a3055bb69"
+        }
+      ]
+    },
+    {
+      "key": "default stupid friendly humanoid",
+      "context": "textdb:database/monspeak.txt:default stupid friendly humanoid",
+      "source_sha256": "b7ae17ed5ea60cdd51238cee36defa88b10de8cb721438915bc87208bd45b280",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default stupid fleeing humanoid",
+      "context": "textdb:database/monspeak.txt:default stupid fleeing humanoid",
+      "source_sha256": "b7ae17ed5ea60cdd51238cee36defa88b10de8cb721438915bc87208bd45b280",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default stupid silenced humanoid",
+      "context": "textdb:database/monspeak.txt:default stupid silenced humanoid",
+      "source_sha256": "b7ae17ed5ea60cdd51238cee36defa88b10de8cb721438915bc87208bd45b280",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default stupid confused humanoid",
+      "context": "textdb:database/monspeak.txt:default stupid confused humanoid",
+      "source_sha256": "b7ae17ed5ea60cdd51238cee36defa88b10de8cb721438915bc87208bd45b280",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default silenced confused humanoid",
+      "context": "textdb:database/monspeak.txt:default silenced confused humanoid",
+      "source_sha256": "1327f80628eb9f5b49b6784a465ce20899e9a95f7e8843910eea45f928a45868",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default fleeing silenced humanoid",
+      "context": "textdb:database/monspeak.txt:default fleeing silenced humanoid",
+      "source_sha256": "f0067abd84275b1c3836df482c413cb18bb582116648e9f8c462aedd8cb40559",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_fleeing_silenced_common_",
+          "source_sha256": "b890b31546644d9b41b87f86c1886bf676f428fd11858233ef46db3f0e41151d",
+          "translation_sha256": "539af659f933f4dfe4d7ff991db7bd21f2df666445d973e80081b71e725da9fa"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_fleeing_silenced_rare_",
+          "source_sha256": "831d14435639d9c22b2781c1b7322cd7c6d52ab2cd262b2acbaaad4241a6220c",
+          "translation_sha256": "d4bca3f0428d2bd79920ec07771a92cec080ff222c58bc316f7bff3f9d93cac3"
+        }
+      ]
+    },
+    {
+      "key": "_fleeing_silenced_common_",
+      "context": "textdb:database/monspeak.txt:_fleeing_silenced_common_",
+      "source_sha256": "b890b31546644d9b41b87f86c1886bf676f428fd11858233ef46db3f0e41151d",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_fleeing_silenced_rare_",
+      "context": "textdb:database/monspeak.txt:_fleeing_silenced_rare_",
+      "source_sha256": "831d14435639d9c22b2781c1b7322cd7c6d52ab2cd262b2acbaaad4241a6220c",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default friendly silenced humanoid",
+      "context": "textdb:database/monspeak.txt:default friendly silenced humanoid",
+      "source_sha256": "e18eacb3b895717e360eb9275c59ea328effc167e50b109146ca604db2fbf6e7",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_friendly_silenced_common_",
+          "source_sha256": "cae5a7f34b034dc308ec960c2f519225820e2da6aa2187e8d325d2134d2ec346",
+          "translation_sha256": "5b2e1bc87d3b311609a79072332eb70f0ca131ef8e4af4872dc5899c3abdbf70"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_friendly_silenced_rare_",
+          "source_sha256": "a66f8430e0cd435dd72ea942f05a1b32c6b3c581e22cb7acc027c4a56d7dfccb",
+          "translation_sha256": "69a2cf0d721565a6a66969d93dfc0f65045f621e4d6bb814111ad5e2df98461e"
+        }
+      ]
+    },
+    {
+      "key": "_friendly_silenced_common_",
+      "context": "textdb:database/monspeak.txt:_friendly_silenced_common_",
+      "source_sha256": "cae5a7f34b034dc308ec960c2f519225820e2da6aa2187e8d325d2134d2ec346",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_friendly_silenced_rare_",
+      "context": "textdb:database/monspeak.txt:_friendly_silenced_rare_",
+      "source_sha256": "a66f8430e0cd435dd72ea942f05a1b32c6b3c581e22cb7acc027c4a56d7dfccb",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default silenced humanoid",
+      "context": "textdb:database/monspeak.txt:default silenced humanoid",
+      "source_sha256": "c2d8648b6af94b000b05a7363a7d079ed295da8ade619a283c1017af6fe7e93a",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_silenced_humanoid_common_",
+          "source_sha256": "77ba96957b3513cafe14eb5ce0124c175d9048e5ed389d522dfd416b01447d53",
+          "translation_sha256": "a25f283f9b5aff35eb4c9eb2e228f66ba818275819261ef48af7b892e70b91ea"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_silenced_humanoid_rare_",
+          "source_sha256": "71523022bd1a0641fd4088c30dd332eb7e608d932fcdea3a84063ee251e28176",
+          "translation_sha256": "591843b47d8a13abff77c58580b6d49875323d228a86af96d1037eb562b61193"
+        }
+      ]
+    },
+    {
+      "key": "_silenced_humanoid_common_",
+      "context": "textdb:database/monspeak.txt:_silenced_humanoid_common_",
+      "source_sha256": "77ba96957b3513cafe14eb5ce0124c175d9048e5ed389d522dfd416b01447d53",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_silenced_humanoid_rare_",
+      "context": "textdb:database/monspeak.txt:_silenced_humanoid_rare_",
+      "source_sha256": "71523022bd1a0641fd4088c30dd332eb7e608d932fcdea3a84063ee251e28176",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default friendly confused humanoid",
+      "context": "textdb:database/monspeak.txt:default friendly confused humanoid",
+      "source_sha256": "15492f156251fda8af9376e1b8d257a9317cf339fba37e272325828bdef4a74b",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_friendly_confused_common_",
+          "source_sha256": "9ef6d7eb135c34856f4357088e59c02d6657c3aaa6f5948f856ad4cf24d3bd27",
+          "translation_sha256": "1727225ed4aac48011365f1be5bcc5890ccf2389dd5620a436a825c4cd1e27c6"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_friendly_confused_medium_",
+          "source_sha256": "4938ea589081c0b7b86b0e274b8620fa3d6780697ae15e72a6d2ad37261b79a2",
+          "translation_sha256": "b68e6850c6b7ab4f925c6d9d22334d4e5873d7c528ea324d0a339e8899eba34e"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_friendly_confused_rare_",
+          "source_sha256": "5897206a4ded52963747e0e4eaec78a17ef63a32071cc86530c015194053dc04",
+          "translation_sha256": "cc555054f3fb0a50004376dd1a5444f07d4b16c5e6c2cac54758fac5a3536b3c"
+        }
+      ]
+    },
+    {
+      "key": "_friendly_confused_common_",
+      "context": "textdb:database/monspeak.txt:_friendly_confused_common_",
+      "source_sha256": "9ef6d7eb135c34856f4357088e59c02d6657c3aaa6f5948f856ad4cf24d3bd27",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_friendly_confused_medium_",
+      "context": "textdb:database/monspeak.txt:_friendly_confused_medium_",
+      "source_sha256": "4938ea589081c0b7b86b0e274b8620fa3d6780697ae15e72a6d2ad37261b79a2",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_friendly_confused_rare_",
+      "context": "textdb:database/monspeak.txt:_friendly_confused_rare_",
+      "source_sha256": "5897206a4ded52963747e0e4eaec78a17ef63a32071cc86530c015194053dc04",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default confused humanoid",
+      "context": "textdb:database/monspeak.txt:default confused humanoid",
+      "source_sha256": "6bb0e7ec0dbd6af4ed5cb92e0cc548f1e8df651c4d964090f6d423bba929c797",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_confused_humanoid_common_",
+          "source_sha256": "98899d30e4e34f953830a651c160cbe9dd578c1d37b2aae5024f13c1589f8070",
+          "translation_sha256": "e413cb32bc5a1a62814329e63d203ecea9dde2ed0ed109f4451cb1f0a4dc4802"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_confused_humanoid_medium_",
+          "source_sha256": "4f4a2331e943d6aa5cee8dad6125dbe0dde1286e3a6fe98aab0416b2c803a731",
+          "translation_sha256": "1ee43610977a0054de17aab0394cccd87e4f51892da8128c5d413d341c201c54"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_confused_humanoid_rare_",
+          "source_sha256": "3588caee903a768f419b0ed0737da535a1bf8aceb8795a204fd402102c0d343e",
+          "translation_sha256": "dde3fd6b7de712fcab63d2ace42a1b256a6484c4602b8bdc231d3025b30cf43f"
+        }
+      ]
+    },
+    {
+      "key": "_confused_humanoid_common_",
+      "context": "textdb:database/monspeak.txt:_confused_humanoid_common_",
+      "source_sha256": "98899d30e4e34f953830a651c160cbe9dd578c1d37b2aae5024f13c1589f8070",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_confused_humanoid_medium_",
+      "context": "textdb:database/monspeak.txt:_confused_humanoid_medium_",
+      "source_sha256": "4f4a2331e943d6aa5cee8dad6125dbe0dde1286e3a6fe98aab0416b2c803a731",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_confused_humanoid_rare_",
+      "context": "textdb:database/monspeak.txt:_confused_humanoid_rare_",
+      "source_sha256": "3588caee903a768f419b0ed0737da535a1bf8aceb8795a204fd402102c0d343e",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default friendly fleeing humanoid",
+      "context": "textdb:database/monspeak.txt:default friendly fleeing humanoid",
+      "source_sha256": "01a5241f8bc956ada22411297ba4215acda45f1c4b2ae79d5b61812677455d48",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_friendly_fleeing_common_",
+          "source_sha256": "c4e96dfbba8e4ba3a0835561fecf19b8a146a3ff86f341ca763ac2291f736b0a",
+          "translation_sha256": "c004c94993fb2532bd992788054a3529e291d453ae70a20bbb642f1993c0a5d1"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_friendly_fleeing_rare_",
+          "source_sha256": "470580f72c69ef8cb82a3da55a64e6b1aebe0ec0074bab36183e9a4f8cb2ee8b",
+          "translation_sha256": "d9c323f0b244d448feb63c3731d22e2742d09a098f4953ab8821b3cf26a7c31f"
+        }
+      ]
+    },
+    {
+      "key": "_friendly_fleeing_common_",
+      "context": "textdb:database/monspeak.txt:_friendly_fleeing_common_",
+      "source_sha256": "c4e96dfbba8e4ba3a0835561fecf19b8a146a3ff86f341ca763ac2291f736b0a",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_friendly_fleeing_rare_",
+      "context": "textdb:database/monspeak.txt:_friendly_fleeing_rare_",
+      "source_sha256": "470580f72c69ef8cb82a3da55a64e6b1aebe0ec0074bab36183e9a4f8cb2ee8b",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_shouts_",
+          "source_sha256": "82905179e411b95af8411ee9a9cd2ec14e46cd56dfe133d9ce19d630b492508a",
+          "translation_sha256": "04a1ce1d7878f119796b9e3173d6909a493d2654680db1e77f66e338852eb381"
+        }
+      ]
+    },
+    {
+      "key": "default fleeing humanoid",
+      "context": "textdb:database/monspeak.txt:default fleeing humanoid",
+      "source_sha256": "2b0bd954ea2e35fb57591b2d36801f4046c1a21ada3dd13f89908c6ff2747c38",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_fleeing_humanoid_common_",
+          "source_sha256": "25303f5b3b82f68f6b2bd0f47e3419e8bde2566f656e4744c056fe04449d925a",
+          "translation_sha256": "b04e174d0e5c16f4120f760f9499512a676460faa9159401ee74ec5de78a2705"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_fleeing_humanoid_rare_",
+          "source_sha256": "1ec5eb43ece9aec63821fd1c51d2475edd4681f526d7656105f3cc84b166413a",
+          "translation_sha256": "2613a0a2dc18e46afd0dae2df35ec21dcc8901cda5b6070115923fd5291f2889"
+        }
+      ]
+    },
+    {
+      "key": "_fleeing_humanoid_common_",
+      "context": "textdb:database/monspeak.txt:_fleeing_humanoid_common_",
+      "source_sha256": "25303f5b3b82f68f6b2bd0f47e3419e8bde2566f656e4744c056fe04449d925a",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_begs_",
+          "source_sha256": "5486323d0b16eb17b4b819a0a0ec0ee4c2b7869d4bab5adee915d116ab6f5ed0",
+          "translation_sha256": "03d34230fcb1a66d4ff8ab3d4a707ac04c7492bbdbe39964dfc1047a9cd49c9f"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_yells_",
+          "source_sha256": "a3705e89559acc2c86d3a0e848bc3cd0085d46bcd36ff66edfa19a59ed96f284",
+          "translation_sha256": "f943936559a221813977e91924dc48a97ca243d029ea7978b1c37c52a7b0fa23"
+        }
+      ]
+    },
+    {
+      "key": "_fleeing_humanoid_rare_",
+      "context": "textdb:database/monspeak.txt:_fleeing_humanoid_rare_",
+      "source_sha256": "1ec5eb43ece9aec63821fd1c51d2475edd4681f526d7656105f3cc84b166413a",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_begs_",
+          "source_sha256": "5486323d0b16eb17b4b819a0a0ec0ee4c2b7869d4bab5adee915d116ab6f5ed0",
+          "translation_sha256": "03d34230fcb1a66d4ff8ab3d4a707ac04c7492bbdbe39964dfc1047a9cd49c9f"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_mutters_",
+          "source_sha256": "c9ca2aafbcf3525e6f1ba07423133530a0a0d65f8db08d24e9b69a7d7310fbc3",
+          "translation_sha256": "2874cd79885ec2a7c400b6211416fe830a19a5b1748501ab4a5986ed54ac80c8"
+        }
+      ]
+    },
+    {
+      "key": "_friendly_family_",
+      "context": "textdb:database/monspeak.txt:_friendly_family_",
+      "source_sha256": "13dc54cf8e3c83b24d03058789140351c1f14f71ff08ad8b2cfa675582a55a53",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default friendly related humanoid",
+      "context": "textdb:database/monspeak.txt:default friendly related humanoid",
+      "source_sha256": "2ae08ff0bc9dfd15c6791888be1ee79866a58b9e5d526235c94193b6396cf66f",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_friendly_family_",
+          "source_sha256": "13dc54cf8e3c83b24d03058789140351c1f14f71ff08ad8b2cfa675582a55a53",
+          "translation_sha256": "21a6d460613ff7d6122f590bdfd0839ccdafca4f6ed8c5806460ffe82c838196"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "default friendly humanoid",
+          "source_sha256": "c20c75c08a015b7ebaff285975022b9f02deb622a530d6813675f6185e3d312d",
+          "translation_sha256": "c20c75c08a015b7ebaff285975022b9f02deb622a530d6813675f6185e3d312d"
+        }
+      ]
+    },
+    {
+      "key": "default friendly humanoid",
+      "context": "textdb:database/monspeak.txt:default friendly humanoid",
+      "source_sha256": "c20c75c08a015b7ebaff285975022b9f02deb622a530d6813675f6185e3d312d",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_friendly_humanoid_common_",
+          "source_sha256": "d371b3c2f9247e673402fdfe926d8ef357aef099353e804388bcf205fe7ca399",
+          "translation_sha256": "07e3ba12a497e53d10873013a3537b2a5b9e063248a15fbfc469c00fb746c937"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_friendly_humanoid_medium_",
+          "source_sha256": "a2a4839c37991a96fbd93a96ef32dc91a9308f09adeaf25a0277f9fe5fa70e6b",
+          "translation_sha256": "485be2b1b58ec7e5805fc10f4fd100c1c2e2b80a4e70fd506877fcfee65c5040"
+        },
+        {
+          "source": "database/monspeak.txt",
+          "key": "_friendly_humanoid_rare_",
+          "source_sha256": "d3257bc13f128bee79e835de5482d197692454bd4a6dc5e0352b5dcca1d6690d",
+          "translation_sha256": "6db072b53579e4ca28eaaa1459234e0cbbec34b464f44f3acbbea0ad52c23999"
+        }
+      ]
+    },
+    {
+      "key": "_friendly_humanoid_common_",
+      "context": "textdb:database/monspeak.txt:_friendly_humanoid_common_",
+      "source_sha256": "d371b3c2f9247e673402fdfe926d8ef357aef099353e804388bcf205fe7ca399",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_friendly_humanoid_medium_",
+      "context": "textdb:database/monspeak.txt:_friendly_humanoid_medium_",
+      "source_sha256": "a2a4839c37991a96fbd93a96ef32dc91a9308f09adeaf25a0277f9fe5fa70e6b",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "_friendly_humanoid_rare_",
+      "context": "textdb:database/monspeak.txt:_friendly_humanoid_rare_",
+      "source_sha256": "d3257bc13f128bee79e835de5482d197692454bd4a6dc5e0352b5dcca1d6690d",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "hound",
+      "context": "textdb:database/monspeak.txt:hound",
+      "source_sha256": "dc4a1895d9a330bd88716372270b1b12122142c9a2fadcecfd580200e46b66d1",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "friendly hound",
+      "context": "textdb:database/monspeak.txt:friendly hound",
+      "source_sha256": "253272f2523ffd5df20343070d8441198dc3b106b959e852e3686e282d5cf1aa",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "hound",
+          "source_sha256": "dc4a1895d9a330bd88716372270b1b12122142c9a2fadcecfd580200e46b66d1",
+          "translation_sha256": "654302c206f697a727dfdc776079589b64aacd282848ab4c73ce26f00f54a0d2"
+        }
+      ]
+    },
+    {
+      "key": "friendly Shoals hound",
+      "context": "textdb:database/monspeak.txt:friendly shoals hound",
+      "source_sha256": "1743da7e8ccb63a8259e3f81e7080665c47f11299d5835de2816d9aa621182d7",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "friendly hound",
+          "source_sha256": "253272f2523ffd5df20343070d8441198dc3b106b959e852e3686e282d5cf1aa",
+          "translation_sha256": "ee6b6c1d603e660db5396ea32b97096b7664b910fb9a0c338d939f50305e2117"
+        }
+      ]
+    },
+    {
+      "key": "default insect",
+      "context": "textdb:database/monspeak.txt:default insect",
+      "source_sha256": "7e041526e869927c8563f1bd669b7ff53641a5e6e2b9f719b6a8ed41086bf21d",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default confused insect",
+      "context": "textdb:database/monspeak.txt:default confused insect",
+      "source_sha256": "8b3fcd003611be7afb95ebe6baa02f46555a1e2c4ea0138650f5468c5dec67c2",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default confused winged insect",
+      "context": "textdb:database/monspeak.txt:default confused winged insect",
+      "source_sha256": "df99e97e0879a5225c32d0c2dd46cd8986037db82b1f3c32dce506e318205f48",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default confused arachnid",
+      "context": "textdb:database/monspeak.txt:default confused arachnid",
+      "source_sha256": "e155e8e1c0946dce0606b7f3eeac7c600af644a927aacc9d86b835eaf5d7f7d8",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "centipede",
+      "context": "textdb:database/monspeak.txt:centipede",
+      "source_sha256": "7e041526e869927c8563f1bd669b7ff53641a5e6e2b9f719b6a8ed41086bf21d",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default confused centipede",
+      "context": "textdb:database/monspeak.txt:default confused centipede",
+      "source_sha256": "8002c4376f8392ce5966071c4d3771deac1cc848147ad1370d1c6c14b8706090",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default confused 'b'",
+      "context": "textdb:database/monspeak.txt:default confused 'b'",
+      "source_sha256": "70d1f618f4c7a678854f9c8846c3910da7c89c81d44a0d549d43a4eb6b8c3ee8",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default 'cap-G'",
+      "context": "textdb:database/monspeak.txt:default 'cap-g'",
+      "source_sha256": "05106e9cd3cd52c3075c462beef225827b92785db5081f9042b130ef12f55159",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default 'cap-J'",
+      "context": "textdb:database/monspeak.txt:default 'cap-j'",
+      "source_sha256": "e05ff7bb958c55b9f9fd45450c2f9b506fa2d6965d160c81d41ac75d6e267dcc",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "'l'",
+      "context": "textdb:database/monspeak.txt:'l'",
+      "source_sha256": "c53e1f18ff611197d5f166f6e48422e8d2967fea94ec557964efc1df761d9d7e",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "'r'",
+      "context": "textdb:database/monspeak.txt:'r'",
+      "source_sha256": "7363d5e9e6e2d4239f9144559aee3c90eecd3f4748fc25c8230c3c93dd90d95d",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default confused 'r'",
+      "context": "textdb:database/monspeak.txt:default confused 'r'",
+      "source_sha256": "a06398553d7f0c3a65641b3c6b12d5da8c929340f14f288a7ad8d3d3480568f3",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default confused 'y'",
+      "context": "textdb:database/monspeak.txt:default confused 'y'",
+      "source_sha256": "93167932dc2a9e66ea7c4614bb02937defd23bbaac3d3ac5911afb28b07ab05e",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default silenced confused 'y'",
+      "context": "textdb:database/monspeak.txt:default silenced confused 'y'",
+      "source_sha256": "f6b76e1c256341b8ee6422a40b3cb41688783a69e672e8453f8039bbca9d7744",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default '8'",
+      "context": "textdb:database/monspeak.txt:default '8'",
+      "source_sha256": "b7ae17ed5ea60cdd51238cee36defa88b10de8cb721438915bc87208bd45b280",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "elephant slug",
+      "context": "textdb:database/monspeak.txt:elephant slug",
+      "source_sha256": "8bcd986572132f7dbf9df1b262819530f6b327a0317b16ea4ab2374ddacd0d9b",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default confused moth",
+      "context": "textdb:database/monspeak.txt:default confused moth",
+      "source_sha256": "f2d2042a3a001ea7641c7e13f4b71fde17623a3ab603cf03373e8940ac752b0e",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "default confused winged insect",
+          "source_sha256": "df99e97e0879a5225c32d0c2dd46cd8986037db82b1f3c32dce506e318205f48",
+          "translation_sha256": "13c16b3112f9d39044e8ff2d5494db073c6d0af1f7563ac55f2a15056578bede"
+        }
+      ]
+    },
+    {
+      "key": "'&'",
+      "context": "textdb:database/monspeak.txt:'&'",
+      "source_sha256": "6ebf33e08f2f5dd592ce046de2551d78a3921b6ccf417e52c593381f520ae6cc",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_demon_taunt_",
+          "source_sha256": "4785ed946afd17c18e8df5bb5a59fafdeaf464b4648b97f5488c7ffff2eb3528",
+          "translation_sha256": "129874487f461491a599e5f2e7164156ef50e13dff01a676771ed89cb84c7b6a"
+        }
+      ]
+    },
+    {
+      "key": "'1'",
+      "context": "textdb:database/monspeak.txt:'1'",
+      "source_sha256": "6ebf33e08f2f5dd592ce046de2551d78a3921b6ccf417e52c593381f520ae6cc",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_demon_taunt_",
+          "source_sha256": "4785ed946afd17c18e8df5bb5a59fafdeaf464b4648b97f5488c7ffff2eb3528",
+          "translation_sha256": "129874487f461491a599e5f2e7164156ef50e13dff01a676771ed89cb84c7b6a"
+        }
+      ]
+    },
+    {
+      "key": "'2'",
+      "context": "textdb:database/monspeak.txt:'2'",
+      "source_sha256": "6ebf33e08f2f5dd592ce046de2551d78a3921b6ccf417e52c593381f520ae6cc",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_demon_taunt_",
+          "source_sha256": "4785ed946afd17c18e8df5bb5a59fafdeaf464b4648b97f5488c7ffff2eb3528",
+          "translation_sha256": "129874487f461491a599e5f2e7164156ef50e13dff01a676771ed89cb84c7b6a"
+        }
+      ]
+    },
+    {
+      "key": "'3'",
+      "context": "textdb:database/monspeak.txt:'3'",
+      "source_sha256": "6ebf33e08f2f5dd592ce046de2551d78a3921b6ccf417e52c593381f520ae6cc",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_demon_taunt_",
+          "source_sha256": "4785ed946afd17c18e8df5bb5a59fafdeaf464b4648b97f5488c7ffff2eb3528",
+          "translation_sha256": "129874487f461491a599e5f2e7164156ef50e13dff01a676771ed89cb84c7b6a"
+        }
+      ]
+    },
+    {
+      "key": "'4'",
+      "context": "textdb:database/monspeak.txt:'4'",
+      "source_sha256": "6ebf33e08f2f5dd592ce046de2551d78a3921b6ccf417e52c593381f520ae6cc",
+      "review_status": "reviewed",
+      "review_batch": "database-18",
+      "dependencies": [
+        {
+          "source": "database/monspeak.txt",
+          "key": "_demon_taunt_",
+          "source_sha256": "4785ed946afd17c18e8df5bb5a59fafdeaf464b4648b97f5488c7ffff2eb3528",
+          "translation_sha256": "129874487f461491a599e5f2e7164156ef50e13dff01a676771ed89cb84c7b6a"
+        }
+      ]
+    },
+    {
+      "key": "default '&'",
+      "context": "textdb:database/monspeak.txt:default '&'",
+      "source_sha256": "b7ae17ed5ea60cdd51238cee36defa88b10de8cb721438915bc87208bd45b280",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default '1'",
+      "context": "textdb:database/monspeak.txt:default '1'",
+      "source_sha256": "b7ae17ed5ea60cdd51238cee36defa88b10de8cb721438915bc87208bd45b280",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default '2'",
+      "context": "textdb:database/monspeak.txt:default '2'",
+      "source_sha256": "b7ae17ed5ea60cdd51238cee36defa88b10de8cb721438915bc87208bd45b280",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    },
+    {
+      "key": "default '3'",
+      "context": "textdb:database/monspeak.txt:default '3'",
+      "source_sha256": "b7ae17ed5ea60cdd51238cee36defa88b10de8cb721438915bc87208bd45b280",
+      "review_status": "reviewed",
+      "review_batch": "database-18"
+    }
+  ]
+}

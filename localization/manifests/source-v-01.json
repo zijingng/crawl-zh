@@ -1,0 +1,987 @@
+{
+  "baseline": "0.34.1",
+  "batch": "source-v-01",
+  "messages": [
+    {
+      "context": "v.ui",
+      "english": "Press 'a' to toggle all layers. Press any other key to exit.",
+      "translation": "按 'a' 切换全部图层。按其他任意键退出。",
+      "module": "view.cc",
+      "kind": "text",
+      "review_status": "reviewed",
+      "review_batch": "source-v-01",
+      "source_sha256": "4e1f55ce7dd87624b652ee47496b3c11fc8dfe5001b28b39cfdf56276000f310",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/branch.h",
+          "sha256": "1a1cac560e73b0c84497afc9bbdea1e2ff5c3a6f0baac3f5d2c3e50a71b0a230"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/message.cc",
+          "sha256": "0372d4daf4bf44ad02ed5f7004ab994e444e95a952f7988f6941844bc755b67e"
+        },
+        {
+          "source": "crawl-ref/source/message.h",
+          "sha256": "712be76880b9435425bac32eb1d663f9c97d3b99b75758e81066eced91f81e08"
+        },
+        {
+          "source": "crawl-ref/source/options.h",
+          "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "1749507ba809fb4b18f6f68bf0c8dd7753ba090bbf34f6f158d2327131204acc"
+        },
+        {
+          "source": "crawl-ref/source/travel.h",
+          "sha256": "f8729cbab3248d27a3ac7ec1fddc35d5ec28cdd494d000044688708ee6dd5435"
+        },
+        {
+          "source": "crawl-ref/source/unicode.cc",
+          "sha256": "083001deaa013dc50f9de1c1c054fe881cddb01d97d75ffff9b5d43758522aad"
+        },
+        {
+          "source": "crawl-ref/source/unicode.h",
+          "sha256": "7f268bb303dc38b9ea981ebb9f1d6ed4c89d9efd6d895f32a3f1b26dc71e9942"
+        },
+        {
+          "source": "crawl-ref/source/version.cc",
+          "sha256": "205801718e252576234f26e3846e451f6e20e8a93b57b436f7e16abb497375b6"
+        },
+        {
+          "source": "crawl-ref/source/version.h",
+          "sha256": "94249708cd01065b86fe40181567504c23b9d247208a5c25a40f3eee70237043"
+        },
+        {
+          "source": "crawl-ref/source/view.cc",
+          "sha256": "3dbf5cbf0d318494471205799372762c3d28154ae78d5ff078cf4674cbec3e02"
+        },
+        {
+          "source": "crawl-ref/source/view.h",
+          "sha256": "172ae3339e7da9cd7543e19371b16a5b0259d4bb67e468ba5650d3de62315d99"
+        },
+        {
+          "source": "crawl-ref/source/viewmap.cc",
+          "sha256": "297be188e13ce77b590f121e3fc617eda50f42b6f03e3730f4f72135f54f8bfb"
+        },
+        {
+          "source": "crawl-ref/source/viewmap.h",
+          "sha256": "5e99cabf30359cf3e0b88240aa6b2c6b8f2070f73d463a98a535c45a0b17d4f0"
+        }
+      ]
+    },
+    {
+      "context": "v.ui",
+      "english": "Restoring view layers.",
+      "translation": "正在恢复显示图层。",
+      "module": "view.cc",
+      "kind": "text",
+      "review_status": "reviewed",
+      "review_batch": "source-v-01",
+      "source_sha256": "1b78ae5c1e4378473d967a645ac191f8cf25a6433476b96e8b47ff536d429c71",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/branch.h",
+          "sha256": "1a1cac560e73b0c84497afc9bbdea1e2ff5c3a6f0baac3f5d2c3e50a71b0a230"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/message.cc",
+          "sha256": "0372d4daf4bf44ad02ed5f7004ab994e444e95a952f7988f6941844bc755b67e"
+        },
+        {
+          "source": "crawl-ref/source/message.h",
+          "sha256": "712be76880b9435425bac32eb1d663f9c97d3b99b75758e81066eced91f81e08"
+        },
+        {
+          "source": "crawl-ref/source/options.h",
+          "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "1749507ba809fb4b18f6f68bf0c8dd7753ba090bbf34f6f158d2327131204acc"
+        },
+        {
+          "source": "crawl-ref/source/travel.h",
+          "sha256": "f8729cbab3248d27a3ac7ec1fddc35d5ec28cdd494d000044688708ee6dd5435"
+        },
+        {
+          "source": "crawl-ref/source/unicode.cc",
+          "sha256": "083001deaa013dc50f9de1c1c054fe881cddb01d97d75ffff9b5d43758522aad"
+        },
+        {
+          "source": "crawl-ref/source/unicode.h",
+          "sha256": "7f268bb303dc38b9ea981ebb9f1d6ed4c89d9efd6d895f32a3f1b26dc71e9942"
+        },
+        {
+          "source": "crawl-ref/source/version.cc",
+          "sha256": "205801718e252576234f26e3846e451f6e20e8a93b57b436f7e16abb497375b6"
+        },
+        {
+          "source": "crawl-ref/source/version.h",
+          "sha256": "94249708cd01065b86fe40181567504c23b9d247208a5c25a40f3eee70237043"
+        },
+        {
+          "source": "crawl-ref/source/view.cc",
+          "sha256": "3dbf5cbf0d318494471205799372762c3d28154ae78d5ff078cf4674cbec3e02"
+        },
+        {
+          "source": "crawl-ref/source/view.h",
+          "sha256": "172ae3339e7da9cd7543e19371b16a5b0259d4bb67e468ba5650d3de62315d99"
+        },
+        {
+          "source": "crawl-ref/source/viewmap.cc",
+          "sha256": "297be188e13ce77b590f121e3fc617eda50f42b6f03e3730f4f72135f54f8bfb"
+        },
+        {
+          "source": "crawl-ref/source/viewmap.h",
+          "sha256": "5e99cabf30359cf3e0b88240aa6b2c6b8f2070f73d463a98a535c45a0b17d4f0"
+        }
+      ]
+    },
+    {
+      "context": "v.ui",
+      "english": "(Press <w>?</w> for help)",
+      "translation": "（按 <w>?</w> 查看帮助）",
+      "module": "viewmap.cc",
+      "kind": "text",
+      "review_status": "reviewed",
+      "review_batch": "source-v-01",
+      "source_sha256": "3f10e7822b6147db68f5482f23cd10c159d997ec13bee251824842c431b82e7e",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/branch.h",
+          "sha256": "1a1cac560e73b0c84497afc9bbdea1e2ff5c3a6f0baac3f5d2c3e50a71b0a230"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/message.cc",
+          "sha256": "0372d4daf4bf44ad02ed5f7004ab994e444e95a952f7988f6941844bc755b67e"
+        },
+        {
+          "source": "crawl-ref/source/message.h",
+          "sha256": "712be76880b9435425bac32eb1d663f9c97d3b99b75758e81066eced91f81e08"
+        },
+        {
+          "source": "crawl-ref/source/options.h",
+          "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "1749507ba809fb4b18f6f68bf0c8dd7753ba090bbf34f6f158d2327131204acc"
+        },
+        {
+          "source": "crawl-ref/source/travel.h",
+          "sha256": "f8729cbab3248d27a3ac7ec1fddc35d5ec28cdd494d000044688708ee6dd5435"
+        },
+        {
+          "source": "crawl-ref/source/unicode.cc",
+          "sha256": "083001deaa013dc50f9de1c1c054fe881cddb01d97d75ffff9b5d43758522aad"
+        },
+        {
+          "source": "crawl-ref/source/unicode.h",
+          "sha256": "7f268bb303dc38b9ea981ebb9f1d6ed4c89d9efd6d895f32a3f1b26dc71e9942"
+        },
+        {
+          "source": "crawl-ref/source/version.cc",
+          "sha256": "205801718e252576234f26e3846e451f6e20e8a93b57b436f7e16abb497375b6"
+        },
+        {
+          "source": "crawl-ref/source/version.h",
+          "sha256": "94249708cd01065b86fe40181567504c23b9d247208a5c25a40f3eee70237043"
+        },
+        {
+          "source": "crawl-ref/source/view.cc",
+          "sha256": "3dbf5cbf0d318494471205799372762c3d28154ae78d5ff078cf4674cbec3e02"
+        },
+        {
+          "source": "crawl-ref/source/view.h",
+          "sha256": "172ae3339e7da9cd7543e19371b16a5b0259d4bb67e468ba5650d3de62315d99"
+        },
+        {
+          "source": "crawl-ref/source/viewmap.cc",
+          "sha256": "297be188e13ce77b590f121e3fc617eda50f42b6f03e3730f4f72135f54f8bfb"
+        },
+        {
+          "source": "crawl-ref/source/viewmap.h",
+          "sha256": "5e99cabf30359cf3e0b88240aa6b2c6b8f2070f73d463a98a535c45a0b17d4f0"
+        }
+      ]
+    },
+    {
+      "context": "v.ui",
+      "english": "Level map wiped.",
+      "translation": "楼层地图已抹除。",
+      "module": "viewmap.cc",
+      "kind": "text",
+      "review_status": "reviewed",
+      "review_batch": "source-v-01",
+      "source_sha256": "059c14de5f8a280511ebee7de1f263f456e5fa6d8ccc6422082f654037173a73",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/branch.h",
+          "sha256": "1a1cac560e73b0c84497afc9bbdea1e2ff5c3a6f0baac3f5d2c3e50a71b0a230"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/message.cc",
+          "sha256": "0372d4daf4bf44ad02ed5f7004ab994e444e95a952f7988f6941844bc755b67e"
+        },
+        {
+          "source": "crawl-ref/source/message.h",
+          "sha256": "712be76880b9435425bac32eb1d663f9c97d3b99b75758e81066eced91f81e08"
+        },
+        {
+          "source": "crawl-ref/source/options.h",
+          "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "1749507ba809fb4b18f6f68bf0c8dd7753ba090bbf34f6f158d2327131204acc"
+        },
+        {
+          "source": "crawl-ref/source/travel.h",
+          "sha256": "f8729cbab3248d27a3ac7ec1fddc35d5ec28cdd494d000044688708ee6dd5435"
+        },
+        {
+          "source": "crawl-ref/source/unicode.cc",
+          "sha256": "083001deaa013dc50f9de1c1c054fe881cddb01d97d75ffff9b5d43758522aad"
+        },
+        {
+          "source": "crawl-ref/source/unicode.h",
+          "sha256": "7f268bb303dc38b9ea981ebb9f1d6ed4c89d9efd6d895f32a3f1b26dc71e9942"
+        },
+        {
+          "source": "crawl-ref/source/version.cc",
+          "sha256": "205801718e252576234f26e3846e451f6e20e8a93b57b436f7e16abb497375b6"
+        },
+        {
+          "source": "crawl-ref/source/version.h",
+          "sha256": "94249708cd01065b86fe40181567504c23b9d247208a5c25a40f3eee70237043"
+        },
+        {
+          "source": "crawl-ref/source/view.cc",
+          "sha256": "3dbf5cbf0d318494471205799372762c3d28154ae78d5ff078cf4674cbec3e02"
+        },
+        {
+          "source": "crawl-ref/source/view.h",
+          "sha256": "172ae3339e7da9cd7543e19371b16a5b0259d4bb67e468ba5650d3de62315d99"
+        },
+        {
+          "source": "crawl-ref/source/viewmap.cc",
+          "sha256": "297be188e13ce77b590f121e3fc617eda50f42b6f03e3730f4f72135f54f8bfb"
+        },
+        {
+          "source": "crawl-ref/source/viewmap.h",
+          "sha256": "5e99cabf30359cf3e0b88240aa6b2c6b8f2070f73d463a98a535c45a0b17d4f0"
+        }
+      ]
+    },
+    {
+      "context": "v.ui",
+      "english": "Level map cleared.",
+      "translation": "楼层地图已清除。",
+      "module": "viewmap.cc",
+      "kind": "text",
+      "review_status": "reviewed",
+      "review_batch": "source-v-01",
+      "source_sha256": "5967f3fbc15c2cb73ba3dfd42ccdef423b38ad89ee58de807c6f1e60ba659d0b",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/branch.h",
+          "sha256": "1a1cac560e73b0c84497afc9bbdea1e2ff5c3a6f0baac3f5d2c3e50a71b0a230"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/message.cc",
+          "sha256": "0372d4daf4bf44ad02ed5f7004ab994e444e95a952f7988f6941844bc755b67e"
+        },
+        {
+          "source": "crawl-ref/source/message.h",
+          "sha256": "712be76880b9435425bac32eb1d663f9c97d3b99b75758e81066eced91f81e08"
+        },
+        {
+          "source": "crawl-ref/source/options.h",
+          "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "1749507ba809fb4b18f6f68bf0c8dd7753ba090bbf34f6f158d2327131204acc"
+        },
+        {
+          "source": "crawl-ref/source/travel.h",
+          "sha256": "f8729cbab3248d27a3ac7ec1fddc35d5ec28cdd494d000044688708ee6dd5435"
+        },
+        {
+          "source": "crawl-ref/source/unicode.cc",
+          "sha256": "083001deaa013dc50f9de1c1c054fe881cddb01d97d75ffff9b5d43758522aad"
+        },
+        {
+          "source": "crawl-ref/source/unicode.h",
+          "sha256": "7f268bb303dc38b9ea981ebb9f1d6ed4c89d9efd6d895f32a3f1b26dc71e9942"
+        },
+        {
+          "source": "crawl-ref/source/version.cc",
+          "sha256": "205801718e252576234f26e3846e451f6e20e8a93b57b436f7e16abb497375b6"
+        },
+        {
+          "source": "crawl-ref/source/version.h",
+          "sha256": "94249708cd01065b86fe40181567504c23b9d247208a5c25a40f3eee70237043"
+        },
+        {
+          "source": "crawl-ref/source/view.cc",
+          "sha256": "3dbf5cbf0d318494471205799372762c3d28154ae78d5ff078cf4674cbec3e02"
+        },
+        {
+          "source": "crawl-ref/source/view.h",
+          "sha256": "172ae3339e7da9cd7543e19371b16a5b0259d4bb67e468ba5650d3de62315d99"
+        },
+        {
+          "source": "crawl-ref/source/viewmap.cc",
+          "sha256": "297be188e13ce77b590f121e3fc617eda50f42b6f03e3730f4f72135f54f8bfb"
+        },
+        {
+          "source": "crawl-ref/source/viewmap.h",
+          "sha256": "5e99cabf30359cf3e0b88240aa6b2c6b8f2070f73d463a98a535c45a0b17d4f0"
+        }
+      ]
+    },
+    {
+      "context": "v.ui",
+      "english": "Remembered map restored.",
+      "translation": "已恢复记忆中的地图。",
+      "module": "viewmap.cc",
+      "kind": "text",
+      "review_status": "reviewed",
+      "review_batch": "source-v-01",
+      "source_sha256": "4deb5993eeace999cda8f34bea8bd6ae00102538babbf7c1d54124d801f9bc45",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/branch.h",
+          "sha256": "1a1cac560e73b0c84497afc9bbdea1e2ff5c3a6f0baac3f5d2c3e50a71b0a230"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/message.cc",
+          "sha256": "0372d4daf4bf44ad02ed5f7004ab994e444e95a952f7988f6941844bc755b67e"
+        },
+        {
+          "source": "crawl-ref/source/message.h",
+          "sha256": "712be76880b9435425bac32eb1d663f9c97d3b99b75758e81066eced91f81e08"
+        },
+        {
+          "source": "crawl-ref/source/options.h",
+          "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "1749507ba809fb4b18f6f68bf0c8dd7753ba090bbf34f6f158d2327131204acc"
+        },
+        {
+          "source": "crawl-ref/source/travel.h",
+          "sha256": "f8729cbab3248d27a3ac7ec1fddc35d5ec28cdd494d000044688708ee6dd5435"
+        },
+        {
+          "source": "crawl-ref/source/unicode.cc",
+          "sha256": "083001deaa013dc50f9de1c1c054fe881cddb01d97d75ffff9b5d43758522aad"
+        },
+        {
+          "source": "crawl-ref/source/unicode.h",
+          "sha256": "7f268bb303dc38b9ea981ebb9f1d6ed4c89d9efd6d895f32a3f1b26dc71e9942"
+        },
+        {
+          "source": "crawl-ref/source/version.cc",
+          "sha256": "205801718e252576234f26e3846e451f6e20e8a93b57b436f7e16abb497375b6"
+        },
+        {
+          "source": "crawl-ref/source/version.h",
+          "sha256": "94249708cd01065b86fe40181567504c23b9d247208a5c25a40f3eee70237043"
+        },
+        {
+          "source": "crawl-ref/source/view.cc",
+          "sha256": "3dbf5cbf0d318494471205799372762c3d28154ae78d5ff078cf4674cbec3e02"
+        },
+        {
+          "source": "crawl-ref/source/view.h",
+          "sha256": "172ae3339e7da9cd7543e19371b16a5b0259d4bb67e468ba5650d3de62315d99"
+        },
+        {
+          "source": "crawl-ref/source/viewmap.cc",
+          "sha256": "297be188e13ce77b590f121e3fc617eda50f42b6f03e3730f4f72135f54f8bfb"
+        },
+        {
+          "source": "crawl-ref/source/viewmap.h",
+          "sha256": "5e99cabf30359cf3e0b88240aa6b2c6b8f2070f73d463a98a535c45a0b17d4f0"
+        }
+      ]
+    },
+    {
+      "context": "v.ui",
+      "english": "No remembered map.",
+      "translation": "没有记忆中的地图。",
+      "module": "viewmap.cc",
+      "kind": "text",
+      "review_status": "reviewed",
+      "review_batch": "source-v-01",
+      "source_sha256": "e963f450c7c4797926033693e8422bf02c02606d5b84760a250840c4ddd802cb",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/branch.h",
+          "sha256": "1a1cac560e73b0c84497afc9bbdea1e2ff5c3a6f0baac3f5d2c3e50a71b0a230"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/message.cc",
+          "sha256": "0372d4daf4bf44ad02ed5f7004ab994e444e95a952f7988f6941844bc755b67e"
+        },
+        {
+          "source": "crawl-ref/source/message.h",
+          "sha256": "712be76880b9435425bac32eb1d663f9c97d3b99b75758e81066eced91f81e08"
+        },
+        {
+          "source": "crawl-ref/source/options.h",
+          "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "1749507ba809fb4b18f6f68bf0c8dd7753ba090bbf34f6f158d2327131204acc"
+        },
+        {
+          "source": "crawl-ref/source/travel.h",
+          "sha256": "f8729cbab3248d27a3ac7ec1fddc35d5ec28cdd494d000044688708ee6dd5435"
+        },
+        {
+          "source": "crawl-ref/source/unicode.cc",
+          "sha256": "083001deaa013dc50f9de1c1c054fe881cddb01d97d75ffff9b5d43758522aad"
+        },
+        {
+          "source": "crawl-ref/source/unicode.h",
+          "sha256": "7f268bb303dc38b9ea981ebb9f1d6ed4c89d9efd6d895f32a3f1b26dc71e9942"
+        },
+        {
+          "source": "crawl-ref/source/version.cc",
+          "sha256": "205801718e252576234f26e3846e451f6e20e8a93b57b436f7e16abb497375b6"
+        },
+        {
+          "source": "crawl-ref/source/version.h",
+          "sha256": "94249708cd01065b86fe40181567504c23b9d247208a5c25a40f3eee70237043"
+        },
+        {
+          "source": "crawl-ref/source/view.cc",
+          "sha256": "3dbf5cbf0d318494471205799372762c3d28154ae78d5ff078cf4674cbec3e02"
+        },
+        {
+          "source": "crawl-ref/source/view.h",
+          "sha256": "172ae3339e7da9cd7543e19371b16a5b0259d4bb67e468ba5650d3de62315d99"
+        },
+        {
+          "source": "crawl-ref/source/viewmap.cc",
+          "sha256": "297be188e13ce77b590f121e3fc617eda50f42b6f03e3730f4f72135f54f8bfb"
+        },
+        {
+          "source": "crawl-ref/source/viewmap.h",
+          "sha256": "5e99cabf30359cf3e0b88240aa6b2c6b8f2070f73d463a98a535c45a0b17d4f0"
+        }
+      ]
+    },
+    {
+      "context": "v.ui",
+      "english": "You can't annotate this level.",
+      "translation": "你无法给这一层添加注释。",
+      "module": "viewmap.cc",
+      "kind": "text",
+      "review_status": "reviewed",
+      "review_batch": "source-v-01",
+      "source_sha256": "a3a444b307431632722fd6f4cc1ae8a4d172996d5b60ae4f2a841ae6e04da029",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/branch.h",
+          "sha256": "1a1cac560e73b0c84497afc9bbdea1e2ff5c3a6f0baac3f5d2c3e50a71b0a230"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/message.cc",
+          "sha256": "0372d4daf4bf44ad02ed5f7004ab994e444e95a952f7988f6941844bc755b67e"
+        },
+        {
+          "source": "crawl-ref/source/message.h",
+          "sha256": "712be76880b9435425bac32eb1d663f9c97d3b99b75758e81066eced91f81e08"
+        },
+        {
+          "source": "crawl-ref/source/options.h",
+          "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "1749507ba809fb4b18f6f68bf0c8dd7753ba090bbf34f6f158d2327131204acc"
+        },
+        {
+          "source": "crawl-ref/source/travel.h",
+          "sha256": "f8729cbab3248d27a3ac7ec1fddc35d5ec28cdd494d000044688708ee6dd5435"
+        },
+        {
+          "source": "crawl-ref/source/unicode.cc",
+          "sha256": "083001deaa013dc50f9de1c1c054fe881cddb01d97d75ffff9b5d43758522aad"
+        },
+        {
+          "source": "crawl-ref/source/unicode.h",
+          "sha256": "7f268bb303dc38b9ea981ebb9f1d6ed4c89d9efd6d895f32a3f1b26dc71e9942"
+        },
+        {
+          "source": "crawl-ref/source/version.cc",
+          "sha256": "205801718e252576234f26e3846e451f6e20e8a93b57b436f7e16abb497375b6"
+        },
+        {
+          "source": "crawl-ref/source/version.h",
+          "sha256": "94249708cd01065b86fe40181567504c23b9d247208a5c25a40f3eee70237043"
+        },
+        {
+          "source": "crawl-ref/source/view.cc",
+          "sha256": "3dbf5cbf0d318494471205799372762c3d28154ae78d5ff078cf4674cbec3e02"
+        },
+        {
+          "source": "crawl-ref/source/view.h",
+          "sha256": "172ae3339e7da9cd7543e19371b16a5b0259d4bb67e468ba5650d3de62315d99"
+        },
+        {
+          "source": "crawl-ref/source/viewmap.cc",
+          "sha256": "297be188e13ce77b590f121e3fc617eda50f42b6f03e3730f4f72135f54f8bfb"
+        },
+        {
+          "source": "crawl-ref/source/viewmap.h",
+          "sha256": "5e99cabf30359cf3e0b88240aa6b2c6b8f2070f73d463a98a535c45a0b17d4f0"
+        }
+      ]
+    },
+    {
+      "context": "v.layers",
+      "english": "Select layers to display:\n<%s>(m)onsters</%s>|<%s>(p)layer</%s>|<%s>(i)tems</%s>|<%s>(c)louds</%s>",
+      "translation": "选择显示图层：\n<%s>怪物(m)</%s>|<%s>玩家(p)</%s>|<%s>物品(i)</%s>|<%s>云雾(c)</%s>",
+      "module": "view.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-v-01",
+      "source_sha256": "3d84a5810927f924c6e102020c808a3a1bcfc81c0ff60cfa617791e909f7a518",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/branch.h",
+          "sha256": "1a1cac560e73b0c84497afc9bbdea1e2ff5c3a6f0baac3f5d2c3e50a71b0a230"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/message.cc",
+          "sha256": "0372d4daf4bf44ad02ed5f7004ab994e444e95a952f7988f6941844bc755b67e"
+        },
+        {
+          "source": "crawl-ref/source/message.h",
+          "sha256": "712be76880b9435425bac32eb1d663f9c97d3b99b75758e81066eced91f81e08"
+        },
+        {
+          "source": "crawl-ref/source/options.h",
+          "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "1749507ba809fb4b18f6f68bf0c8dd7753ba090bbf34f6f158d2327131204acc"
+        },
+        {
+          "source": "crawl-ref/source/travel.h",
+          "sha256": "f8729cbab3248d27a3ac7ec1fddc35d5ec28cdd494d000044688708ee6dd5435"
+        },
+        {
+          "source": "crawl-ref/source/unicode.cc",
+          "sha256": "083001deaa013dc50f9de1c1c054fe881cddb01d97d75ffff9b5d43758522aad"
+        },
+        {
+          "source": "crawl-ref/source/unicode.h",
+          "sha256": "7f268bb303dc38b9ea981ebb9f1d6ed4c89d9efd6d895f32a3f1b26dc71e9942"
+        },
+        {
+          "source": "crawl-ref/source/version.cc",
+          "sha256": "205801718e252576234f26e3846e451f6e20e8a93b57b436f7e16abb497375b6"
+        },
+        {
+          "source": "crawl-ref/source/version.h",
+          "sha256": "94249708cd01065b86fe40181567504c23b9d247208a5c25a40f3eee70237043"
+        },
+        {
+          "source": "crawl-ref/source/view.cc",
+          "sha256": "3dbf5cbf0d318494471205799372762c3d28154ae78d5ff078cf4674cbec3e02"
+        },
+        {
+          "source": "crawl-ref/source/view.h",
+          "sha256": "172ae3339e7da9cd7543e19371b16a5b0259d4bb67e468ba5650d3de62315d99"
+        },
+        {
+          "source": "crawl-ref/source/viewmap.cc",
+          "sha256": "297be188e13ce77b590f121e3fc617eda50f42b6f03e3730f4f72135f54f8bfb"
+        },
+        {
+          "source": "crawl-ref/source/viewmap.h",
+          "sha256": "5e99cabf30359cf3e0b88240aa6b2c6b8f2070f73d463a98a535c45a0b17d4f0"
+        }
+      ]
+    },
+    {
+      "context": "v.layers",
+      "english": "Select layers to display:\n<%s>(m)onsters</%s>|<%s>(p)layer</%s>|<%s>(i)tems</%s>|<%s>(c)louds</%s>|<%s>monster (w)eapons</%s>|<%s>monster (h)ealth</%s>",
+      "translation": "选择显示图层：\n<%s>怪物(m)</%s>|<%s>玩家(p)</%s>|<%s>物品(i)</%s>|<%s>云雾(c)</%s>|<%s>怪物武器(w)</%s>|<%s>怪物生命(h)</%s>",
+      "module": "view.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-v-01",
+      "source_sha256": "6833708dfe3378cddf80fd39e58a366e24b3ee47d015e5dff0cfa4723159b34c",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/branch.h",
+          "sha256": "1a1cac560e73b0c84497afc9bbdea1e2ff5c3a6f0baac3f5d2c3e50a71b0a230"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/message.cc",
+          "sha256": "0372d4daf4bf44ad02ed5f7004ab994e444e95a952f7988f6941844bc755b67e"
+        },
+        {
+          "source": "crawl-ref/source/message.h",
+          "sha256": "712be76880b9435425bac32eb1d663f9c97d3b99b75758e81066eced91f81e08"
+        },
+        {
+          "source": "crawl-ref/source/options.h",
+          "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "1749507ba809fb4b18f6f68bf0c8dd7753ba090bbf34f6f158d2327131204acc"
+        },
+        {
+          "source": "crawl-ref/source/travel.h",
+          "sha256": "f8729cbab3248d27a3ac7ec1fddc35d5ec28cdd494d000044688708ee6dd5435"
+        },
+        {
+          "source": "crawl-ref/source/unicode.cc",
+          "sha256": "083001deaa013dc50f9de1c1c054fe881cddb01d97d75ffff9b5d43758522aad"
+        },
+        {
+          "source": "crawl-ref/source/unicode.h",
+          "sha256": "7f268bb303dc38b9ea981ebb9f1d6ed4c89d9efd6d895f32a3f1b26dc71e9942"
+        },
+        {
+          "source": "crawl-ref/source/version.cc",
+          "sha256": "205801718e252576234f26e3846e451f6e20e8a93b57b436f7e16abb497375b6"
+        },
+        {
+          "source": "crawl-ref/source/version.h",
+          "sha256": "94249708cd01065b86fe40181567504c23b9d247208a5c25a40f3eee70237043"
+        },
+        {
+          "source": "crawl-ref/source/view.cc",
+          "sha256": "3dbf5cbf0d318494471205799372762c3d28154ae78d5ff078cf4674cbec3e02"
+        },
+        {
+          "source": "crawl-ref/source/view.h",
+          "sha256": "172ae3339e7da9cd7543e19371b16a5b0259d4bb67e468ba5650d3de62315d99"
+        },
+        {
+          "source": "crawl-ref/source/viewmap.cc",
+          "sha256": "297be188e13ce77b590f121e3fc617eda50f42b6f03e3730f4f72135f54f8bfb"
+        },
+        {
+          "source": "crawl-ref/source/viewmap.h",
+          "sha256": "5e99cabf30359cf3e0b88240aa6b2c6b8f2070f73d463a98a535c45a0b17d4f0"
+        }
+      ]
+    },
+    {
+      "context": "v.map",
+      "english": "Level %s of %s",
+      "translation": "第%s层（%s）",
+      "module": "viewmap.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-v-01",
+      "source_sha256": "691a7350e0d548f41ca5da15416a8697a9c9efcc4692a15219ccd7cf1ce0c695",
+      "source_dependencies": [
+        {
+          "source": "crawl-ref/source/branch-data.h",
+          "sha256": "c954eca4c1f3cc9cbec6ef0c71955a073dc33b522fa17eee4587f071dc1c8313"
+        },
+        {
+          "source": "crawl-ref/source/branch.cc",
+          "sha256": "0d486c82576070ee616addc1a5188f8dc7c4ae0c4a2010ee269933d9122df17e"
+        },
+        {
+          "source": "crawl-ref/source/branch.h",
+          "sha256": "1a1cac560e73b0c84497afc9bbdea1e2ff5c3a6f0baac3f5d2c3e50a71b0a230"
+        },
+        {
+          "source": "crawl-ref/source/i18n.cc",
+          "sha256": "e48e21b9479f596a0f89c6ff83d4b81650d380277166f7648fc8a21da7b79c95"
+        },
+        {
+          "source": "crawl-ref/source/i18n.h",
+          "sha256": "6b999f9553179ed63442a842ed01b2773d330ee5a04baac06a312c9f56dea4a1"
+        },
+        {
+          "source": "crawl-ref/source/message.cc",
+          "sha256": "0372d4daf4bf44ad02ed5f7004ab994e444e95a952f7988f6941844bc755b67e"
+        },
+        {
+          "source": "crawl-ref/source/message.h",
+          "sha256": "712be76880b9435425bac32eb1d663f9c97d3b99b75758e81066eced91f81e08"
+        },
+        {
+          "source": "crawl-ref/source/options.h",
+          "sha256": "94782811750a884e2660a650311d836c2e10c7dfdb24e008164dd8be9a90497b"
+        },
+        {
+          "source": "crawl-ref/source/travel.cc",
+          "sha256": "1749507ba809fb4b18f6f68bf0c8dd7753ba090bbf34f6f158d2327131204acc"
+        },
+        {
+          "source": "crawl-ref/source/travel.h",
+          "sha256": "f8729cbab3248d27a3ac7ec1fddc35d5ec28cdd494d000044688708ee6dd5435"
+        },
+        {
+          "source": "crawl-ref/source/unicode.cc",
+          "sha256": "083001deaa013dc50f9de1c1c054fe881cddb01d97d75ffff9b5d43758522aad"
+        },
+        {
+          "source": "crawl-ref/source/unicode.h",
+          "sha256": "7f268bb303dc38b9ea981ebb9f1d6ed4c89d9efd6d895f32a3f1b26dc71e9942"
+        },
+        {
+          "source": "crawl-ref/source/version.cc",
+          "sha256": "205801718e252576234f26e3846e451f6e20e8a93b57b436f7e16abb497375b6"
+        },
+        {
+          "source": "crawl-ref/source/version.h",
+          "sha256": "94249708cd01065b86fe40181567504c23b9d247208a5c25a40f3eee70237043"
+        },
+        {
+          "source": "crawl-ref/source/view.cc",
+          "sha256": "3dbf5cbf0d318494471205799372762c3d28154ae78d5ff078cf4674cbec3e02"
+        },
+        {
+          "source": "crawl-ref/source/view.h",
+          "sha256": "172ae3339e7da9cd7543e19371b16a5b0259d4bb67e468ba5650d3de62315d99"
+        },
+        {
+          "source": "crawl-ref/source/viewmap.cc",
+          "sha256": "297be188e13ce77b590f121e3fc617eda50f42b6f03e3730f4f72135f54f8bfb"
+        },
+        {
+          "source": "crawl-ref/source/viewmap.h",
+          "sha256": "5e99cabf30359cf3e0b88240aa6b2c6b8f2070f73d463a98a535c45a0b17d4f0"
+        }
+      ]
+    }
+  ],
+  "shared_dependency_rechecks": [
+    {
+      "source": "crawl-ref/source/viewmap.cc",
+      "before": "43380fe6e412f3462372c90c0fb7fdc64333e9b527c9d469e0417559620b1f7c",
+      "after": "297be188e13ce77b590f121e3fc617eda50f42b6f03e3730f4f72135f54f8bfb"
+    },
+    {
+      "source": "crawl-ref/source/viewmap.cc",
+      "before": "43380fe6e412f3462372c90c0fb7fdc64333e9b527c9d469e0417559620b1f7c",
+      "after": "297be188e13ce77b590f121e3fc617eda50f42b6f03e3730f4f72135f54f8bfb"
+    },
+    {
+      "source": "crawl-ref/source/viewmap.cc",
+      "before": "43380fe6e412f3462372c90c0fb7fdc64333e9b527c9d469e0417559620b1f7c",
+      "after": "297be188e13ce77b590f121e3fc617eda50f42b6f03e3730f4f72135f54f8bfb"
+    },
+    {
+      "source": "crawl-ref/source/viewmap.cc",
+      "before": "43380fe6e412f3462372c90c0fb7fdc64333e9b527c9d469e0417559620b1f7c",
+      "after": "297be188e13ce77b590f121e3fc617eda50f42b6f03e3730f4f72135f54f8bfb"
+    },
+    {
+      "source": "crawl-ref/source/viewmap.cc",
+      "before": "43380fe6e412f3462372c90c0fb7fdc64333e9b527c9d469e0417559620b1f7c",
+      "after": "297be188e13ce77b590f121e3fc617eda50f42b6f03e3730f4f72135f54f8bfb"
+    },
+    {
+      "source": "crawl-ref/source/viewmap.cc",
+      "before": "43380fe6e412f3462372c90c0fb7fdc64333e9b527c9d469e0417559620b1f7c",
+      "after": "297be188e13ce77b590f121e3fc617eda50f42b6f03e3730f4f72135f54f8bfb"
+    },
+    {
+      "source": "crawl-ref/source/viewmap.cc",
+      "before": "43380fe6e412f3462372c90c0fb7fdc64333e9b527c9d469e0417559620b1f7c",
+      "after": "297be188e13ce77b590f121e3fc617eda50f42b6f03e3730f4f72135f54f8bfb"
+    },
+    {
+      "source": "crawl-ref/source/viewmap.cc",
+      "before": "43380fe6e412f3462372c90c0fb7fdc64333e9b527c9d469e0417559620b1f7c",
+      "after": "297be188e13ce77b590f121e3fc617eda50f42b6f03e3730f4f72135f54f8bfb"
+    },
+    {
+      "source": "crawl-ref/source/viewmap.cc",
+      "before": "43380fe6e412f3462372c90c0fb7fdc64333e9b527c9d469e0417559620b1f7c",
+      "after": "297be188e13ce77b590f121e3fc617eda50f42b6f03e3730f4f72135f54f8bfb"
+    },
+    {
+      "source": "crawl-ref/source/viewmap.cc",
+      "before": "43380fe6e412f3462372c90c0fb7fdc64333e9b527c9d469e0417559620b1f7c",
+      "after": "297be188e13ce77b590f121e3fc617eda50f42b6f03e3730f4f72135f54f8bfb"
+    },
+    {
+      "source": "crawl-ref/source/viewmap.cc",
+      "before": "43380fe6e412f3462372c90c0fb7fdc64333e9b527c9d469e0417559620b1f7c",
+      "after": "297be188e13ce77b590f121e3fc617eda50f42b6f03e3730f4f72135f54f8bfb"
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 #include "AppHdr.h"
+#include "t-display.h"
 
 #ifdef USE_TILE_LOCAL
 
@@ -50,6 +51,8 @@ void SpellRegion::draw_tag()
     const string failure = failure_rate_to_string(raw_spell_fail(spell));
     string desc = make_stringf("%d MP    %s    (%s)", spell_mana(spell),
                                spell_title(spell), failure.c_str());
+    desc = ui_render("t.tiles.row", "%s MP    %s    (%s)", desc,
+        {ui_literal_arg(to_string(spell_mana(spell))), ui_text_arg("display.spell", spell_title(spell)), ui_literal_arg(failure)});
     draw_desc(desc.c_str());
 }
 
@@ -87,8 +90,8 @@ bool SpellRegion::update_tab_tip_text(string &tip, bool active)
     const char *prefix2 = active ? "" : "          ";
 
     tip = make_stringf("%s%s\n%s%s",
-                       prefix1, "Display memorised spells",
-                       prefix2, "Cast spells");
+                       prefix1, ui_translate("t.tiles", "Display memorised spells"),
+                       prefix2, ui_translate("t.tiles", "Cast spells"));
 
     return true;
 }
@@ -114,6 +117,8 @@ bool SpellRegion::update_tip_text(string& tip)
 
     tip += "\n[R-Click] Describe (%)";
     cmd.push_back(CMD_DISPLAY_SPELLS);
+    // Translate the complete tooltip before expanding command placeholders.
+    tip = ui_translate("t.tiles.tooltip", tip.c_str());
     insert_commands(tip, cmd);
 
     return true;

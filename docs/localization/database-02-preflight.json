@@ -1,0 +1,1546 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "files": {
+    "colourname.txt": [
+      {
+        "key": "rainbow_colour",
+        "source_sha256": "832fbdb911738f6f01f1a6a1b817a55f9336ffaec51805ddf09b05c5c68d1bc0",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "misc_colour",
+        "source_sha256": "f0ce39152cfe11a50957fb4ebe6647e9ff351e2c92ea8d81603818c02470cbb1",
+        "hits": [
+          {
+            "Term": "Hunter",
+            "Translation": "猎手",
+            "Part of Speech": "noun",
+            "Variants": "Hu",
+            "Note": "【现行清单】已与 0.34.1 的背景名称清单对应。来源：dat/jobs/hunter.yaml。"
+          },
+          {
+            "Term": "Forest",
+            "Translation": "魔法森林",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 分支名称】来源：branch-data.h；Forest（规范缩写 Forest）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+          },
+          {
+            "Term": "rust",
+            "Translation": "锈尘",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_RUST；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+          },
+          {
+            "Term": "dragon",
+            "Translation": "龙",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "goblin",
+            "Translation": "地精",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Fire",
+            "Translation": "火焰强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "Earth",
+            "Translation": "大地强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          },
+          {
+            "Term": "silver",
+            "Translation": "白银",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "mono_colour",
+        "source_sha256": "390b6f03392564cd7afb0d462a8b330bb9c030b7e514d5bf82aa178804779223",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "any_colour",
+        "source_sha256": "767c6fe96e4d8cc8f2424a243c7f22a5de6978c9881aa57f8ae93623fa08e95b",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "any_pattern",
+        "source_sha256": "36831222af88cdae4ad612530698c0d887165fc97ca33d154b698d95e68ede5f",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "glowing_adj",
+        "source_sha256": "174e0ee05e812b2e78f661b94638fd43a22a6819d79e7066dd0a359bda2b5a2b",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "any_glowing_colour",
+        "source_sha256": "9b94ad4a75905e8903edf42a7f682d1796e43cfa32dd9a4ba3fea9d3d2f0928a",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "any_colour_pattern",
+        "source_sha256": "7f7011de3ba32bdb34e00dce90d6fdf1ba8206bca8487fa29976fbe5c441fbaf",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "any_glowing_colour_pattern",
+        "source_sha256": "d81d0efb2c3a6236f1924f9c58fec6693df1b80906282bfc8df6eaa56aefc84b",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      }
+    ],
+    "shout.txt": [
+      {
+        "key": "__BUGGY",
+        "source_sha256": "f217f6996948f667058d755cf87b513aa83d73f57c6f3643bd7b5fa047b48f41",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__SHOUT",
+        "source_sha256": "ba87586f1e67fcb9147631a12802a5af178731af35cee1744a82d4cf4a0f88e3",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__SHOUT seen",
+        "source_sha256": "d906615fe93a20f1caee88ded4deed602c50357d6b4e53f11219d25e4bd1fbe2",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__BARK unseen",
+        "source_sha256": "259bb9d6fea90b4d7ec7a1cbd9af7112e03d5273dc8c482feb934c5454d1da11",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__BARK seen",
+        "source_sha256": "ed1a32bc24d71327d702871bcab3fe55bfc83f4774c41fc87c517d65252598d4",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__HOWL unseen",
+        "source_sha256": "a8329275b79817022b87afbd9160468e9fefe7c240430fd06ed0cf0910d6c3b6",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__HOWL seen",
+        "source_sha256": "4073db11219b2537d3b1eabee711d875ce09e4dc49e7d975cfc40a6f548782db",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__TWO_SHOUTS unseen",
+        "source_sha256": "f1f60028fb601dbef673daa35dbde371abc1f6ed89831e6aae4f6fadfc5d18d4",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__TWO_SHOUTS seen",
+        "source_sha256": "2c8c07c0397a06b77cfc40b0f3db36996758575f79cad904286ec62cad48ee99",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__ROAR unseen",
+        "source_sha256": "7134d198ed912668e94f9826244c22fe0448351efe5c44dfd950fcf8f2702b54",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__ROAR seen",
+        "source_sha256": "f63119e859e88ccf0d889059288ffb97e7b5c71aabf3f4a57050443070da23ee",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__SCREAM unseen",
+        "source_sha256": "9e584cd30f2f7708b11229719cba8eb1650a6a9b4fccb9d4fb52189b3252be02",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__SCREAM seen",
+        "source_sha256": "4421ffca0d304772a7c80145e2e1e8fdab23f41eaecaf006079d783edeea9d7d",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__BELLOW unseen",
+        "source_sha256": "50107cd3255c48f2a1c250732b9515550b05c6fc329bff5f12e7b5e9abd8757c",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__BELLOW seen",
+        "source_sha256": "eee2f068968c72c9d3ee0cc3fad7f72d44ae2e1e411225c31569e624dd3faf83",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__BLEAT unseen",
+        "source_sha256": "f64a3e6a5d0678c0ea0d8e5dfeb74af5123e565932653102bda9d965bc6c3928",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__BLEAT seen",
+        "source_sha256": "37d26b8dd139dc7be584bda42de0403cc885aa65da064899ca22f8420e6ef233",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__TRUMPET unseen",
+        "source_sha256": "ec816d72cc8600a0dbd6d39bfd1095c8b9f104fb0063f3cd17113a2cc95a9c66",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__TRUMPET seen",
+        "source_sha256": "c5bad5d105214dbd311e498d820c908c9b2fec2c896e6335ef57dd3e7d9b1323",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__SCREECH unseen",
+        "source_sha256": "42c10e72246bea1f8796f2569d8de21147fb34bc79be9c0aa152c35f79206744",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__SCREECH seen",
+        "source_sha256": "defef2eb08429cad11e275d36ce36b6e02dccd66a1a36867e77483a206e0d3ea",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__BUZZ unseen",
+        "source_sha256": "1c85266294516d85fe9f27af826f763f33033f33af00c540e9bcac542d3e3509",
+        "hits": [
+          {
+            "Term": "noise",
+            "Translation": "噪音/声音/巨响",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/战斗机制】影响听觉警觉，不同于画面显示延迟。 来源：shout.cc。\n【语境补充 2026-10-21】机制、标题及数值用噪音。具体可听声响按语境用声音或巨响，不强制把研磨声等改为噪音。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__BUZZ seen",
+        "source_sha256": "a676be32d2062688fcda07185399214d9c80cc757554a79a69965ff5464d8a00",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__MOAN unseen",
+        "source_sha256": "16b784a96d124b4235725b91039bc943c534add4f4bf0bdd6b4b9eb40c3e2806",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__MOAN seen",
+        "source_sha256": "00487803fbaf4cffb39b3f51ced911723c684daa0fcb8207aeeb90d5f9d05c97",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__GURGLE unseen",
+        "source_sha256": "3a7e5e295876fe9ac3adf91f673e1f1ae5ade98d4e0f9ef639e697c15c1184db",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__GURGLE seen",
+        "source_sha256": "c499f8259bf086696369c5e167cb605cdc1a64f16e3a3644a6624fd03811e4a0",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__CROAK unseen",
+        "source_sha256": "a9ce94ad36706dc3330e7ad94485607430125adad206f46368aeb6b7f8d266a8",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__CROAK seen",
+        "source_sha256": "d380cce5c10bc9b3782782383f5c0b77c502ee8e7d73cb7d3654455a782d7bc4",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__GROWL unseen",
+        "source_sha256": "e8e853a042987f1f19dcf1071777a80829c6fc3d6b99ba7d9eb646fe1ff1b9af",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__GROWL seen",
+        "source_sha256": "bb42528fdf66eff0829ae031f616954449cea60c011ba3e3bc39e9ae4318cef3",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__HISS unseen",
+        "source_sha256": "35ea649a50c2ff18e579b1945613e386ca7aead953c8d1bfaea1bed1fc375ab4",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__HISS seen",
+        "source_sha256": "51137be874817b17d3aa8075f8eb524187aa0d896c6865dfaf4a2bd80c8d3ef5",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__SKITTER unseen",
+        "source_sha256": "d8cf2a33dc7d992a4eed76cfc62ead40a4acbc2d8849c692af5e315c2e67d624",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__SKITTER seen",
+        "source_sha256": "3422d39095265dd69649f6de5ee3944acea14588dfd883fd6a5c776fab0d9dee",
+        "hits": [],
+        "existing_reviewed_contexts": [
+          "fix.shout"
+        ]
+      },
+      {
+        "key": "__FAINT_SKITTER unseen",
+        "source_sha256": "c3271a5f4b4eb31167a962c79b3970df585b92a6c7286882efe0a9a72ee13623",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__FAINT_SKITTER seen",
+        "source_sha256": "9a0f601dd61cf0c6847d2f1bc2de9c9524c419246790675b748c946af43d533a",
+        "hits": [],
+        "existing_reviewed_contexts": [
+          "fix.shout"
+        ]
+      },
+      {
+        "key": "__SQUEAL unseen",
+        "source_sha256": "e9c3796b09d9904dc58e9ee3c89dffa76c2a6b25a52cbd59e0b836e4a2366623",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__SQUEAL seen",
+        "source_sha256": "6ef41e8869dde4123ee99d8f55a715933b095523181bcf99cc63d0f7620b9120",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__DEMON_TAUNT",
+        "source_sha256": "6a644c259b1652657b59b649b325a8f8f60e74548dad42ae6c14d8d495f63b86",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__CHERUB seen",
+        "source_sha256": "b5f90ff96aa1493c4eae07a4bfbda5e86b08816e4424c4abcea6bcf19496aa7a",
+        "hits": [
+          {
+            "Term": "cherub",
+            "Translation": "智天使",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Human",
+            "Translation": "人类",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/human.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__CHERUB unseen",
+        "source_sha256": "d1f071c4d18b2d3a163ec2303384107791331f0e30a19071e3f2f5da6f6dfc49",
+        "hits": [
+          {
+            "Term": "cherub",
+            "Translation": "智天使",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__LOUD_ROAR unseen",
+        "source_sha256": "aa252521edf54d1f04389f76c104e2afcb8c9492195162beadf746ad53e87420",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__LOUD_ROAR seen",
+        "source_sha256": "891d53405d41c2423a4c4f91c60beba30e34002896a651fbce95239c82b80dd0",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__RUSTLE unseen",
+        "source_sha256": "a4e89190ca45843871c9bd8ce8979f0db2e5a7b48f2c44fb54dbcc72466cc419",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__RUSTLE seen",
+        "source_sha256": "dead404d1e75669e36f5618ef93cfa849fdfa6c5600b7119b22bc8f370d65cfb",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__SQUEAK unseen",
+        "source_sha256": "09986bf2aaad92f94e41f488d27d7d132f4989ad7438b8ee1505b4348f4667db",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__SQUEAK seen",
+        "source_sha256": "ff12d1853b6a7a984cc47b0904a48c14b4c03f8f56dd6d5bbca1c1ff7eedac02",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__CAW seen",
+        "source_sha256": "662a56037d212f8add2a93db1604f44c4dd4aede6668deb501d18f9d60b84db9",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__CAW unseen",
+        "source_sha256": "39a0efe24e43d0e06b7b3bec04f3dbfe8dddf6aecc1fb53bcdad4fee347bc6bf",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__LAUGH seen",
+        "source_sha256": "350c64180c0b20a15ace7d853d71ddb4ad1fefaca1b153fae16ced331689b695",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "__LAUGH unseen",
+        "source_sha256": "830bb90a62b567fac0337c6638d37b7c025e81a418329751855070f4cc2307c9",
+        "hits": [
+          {
+            "Term": "maniacal",
+            "Translation": "疯狂的",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "player ghost",
+        "source_sha256": "b773790b2a686622ba3d0a886185825b4751803164b3a0f03c403d1a07e853a8",
+        "hits": [
+          {
+            "Term": "ghost",
+            "Translation": "鬼魂",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player ghost",
+            "Translation": "玩家幽灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "Fighter player ghost",
+        "source_sha256": "7b06a656d89f06e5b33aad533a05c7a4be03cc89b0839776cc527eb975666944",
+        "hits": [
+          {
+            "Term": "Fighter",
+            "Translation": "战士",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【现行清单】已与 0.34.1 的背景名称清单对应。来源：dat/jobs/fighter.yaml。"
+          },
+          {
+            "Term": "ghost",
+            "Translation": "鬼魂",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player ghost",
+            "Translation": "玩家幽灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "Hedge Wizard player ghost",
+        "source_sha256": "7b06a656d89f06e5b33aad533a05c7a4be03cc89b0839776cc527eb975666944",
+        "hits": [
+          {
+            "Term": "ghost",
+            "Translation": "鬼魂",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "wizard",
+            "Translation": "巫师",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "Hedge Wizard",
+            "Translation": "野法师",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/hedge-wizard.yaml。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player ghost",
+            "Translation": "玩家幽灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "Gladiator player ghost",
+        "source_sha256": "7b06a656d89f06e5b33aad533a05c7a4be03cc89b0839776cc527eb975666944",
+        "hits": [
+          {
+            "Term": "ghost",
+            "Translation": "鬼魂",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Gladiator",
+            "Translation": "角斗士",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/gladiator.yaml。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player ghost",
+            "Translation": "玩家幽灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "Necromancer player ghost",
+        "source_sha256": "7b06a656d89f06e5b33aad533a05c7a4be03cc89b0839776cc527eb975666944",
+        "hits": [
+          {
+            "Term": "ghost",
+            "Translation": "鬼魂",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Necromancer",
+            "Translation": "死灵法师",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/necromancer.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player ghost",
+            "Translation": "玩家幽灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "Brigand player ghost",
+        "source_sha256": "7b06a656d89f06e5b33aad533a05c7a4be03cc89b0839776cc527eb975666944",
+        "hits": [
+          {
+            "Term": "ghost",
+            "Translation": "鬼魂",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Brigand",
+            "Translation": "强盗",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/brigand.yaml。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player ghost",
+            "Translation": "玩家幽灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "Berserker player ghost",
+        "source_sha256": "7b06a656d89f06e5b33aad533a05c7a4be03cc89b0839776cc527eb975666944",
+        "hits": [
+          {
+            "Term": "ghost",
+            "Translation": "鬼魂",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Berserker",
+            "Translation": "狂战士",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/berserker.yaml。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player ghost",
+            "Translation": "玩家幽灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "Hunter player ghost",
+        "source_sha256": "7b06a656d89f06e5b33aad533a05c7a4be03cc89b0839776cc527eb975666944",
+        "hits": [
+          {
+            "Term": "ghost",
+            "Translation": "鬼魂",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Hunter",
+            "Translation": "猎手",
+            "Part of Speech": "noun",
+            "Variants": "Hu",
+            "Note": "【现行清单】已与 0.34.1 的背景名称清单对应。来源：dat/jobs/hunter.yaml。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player ghost",
+            "Translation": "玩家幽灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "Conjurer player ghost",
+        "source_sha256": "7b06a656d89f06e5b33aad533a05c7a4be03cc89b0839776cc527eb975666944",
+        "hits": [
+          {
+            "Term": "ghost",
+            "Translation": "鬼魂",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Conjurer",
+            "Translation": "塑能师",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/conjurer.yaml。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player ghost",
+            "Translation": "玩家幽灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "Enchanter player ghost",
+        "source_sha256": "7b06a656d89f06e5b33aad533a05c7a4be03cc89b0839776cc527eb975666944",
+        "hits": [
+          {
+            "Term": "ghost",
+            "Translation": "鬼魂",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Enchanter",
+            "Translation": "妖术师",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/enchanter.yaml。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player ghost",
+            "Translation": "玩家幽灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "Fire Elementalist player ghost",
+        "source_sha256": "7b06a656d89f06e5b33aad533a05c7a4be03cc89b0839776cc527eb975666944",
+        "hits": [
+          {
+            "Term": "Elementalist",
+            "Translation": "元素使",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "ghost",
+            "Translation": "鬼魂",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Fire Elementalist",
+            "Translation": "火元素使",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/fire-elementalist.yaml。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player ghost",
+            "Translation": "玩家幽灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Fire",
+            "Translation": "火焰强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "Ice Elementalist player ghost",
+        "source_sha256": "7b06a656d89f06e5b33aad533a05c7a4be03cc89b0839776cc527eb975666944",
+        "hits": [
+          {
+            "Term": "Elementalist",
+            "Translation": "元素使",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "ghost",
+            "Translation": "鬼魂",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Ice Elementalist",
+            "Translation": "冰元素使",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/ice-elementalist.yaml。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player ghost",
+            "Translation": "玩家幽灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Ice",
+            "Translation": "寒冰强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "Summoner player ghost",
+        "source_sha256": "7b06a656d89f06e5b33aad533a05c7a4be03cc89b0839776cc527eb975666944",
+        "hits": [
+          {
+            "Term": "ghost",
+            "Translation": "鬼魂",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Summoner",
+            "Translation": "召唤师",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/summoner.yaml。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player ghost",
+            "Translation": "玩家幽灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "Air Elementalist player ghost",
+        "source_sha256": "7b06a656d89f06e5b33aad533a05c7a4be03cc89b0839776cc527eb975666944",
+        "hits": [
+          {
+            "Term": "Elementalist",
+            "Translation": "元素使",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "ghost",
+            "Translation": "鬼魂",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Air Elementalist",
+            "Translation": "气元素使",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/air-elementalist.yaml。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player ghost",
+            "Translation": "玩家幽灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Air",
+            "Translation": "空气强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "Earth Elementalist player ghost",
+        "source_sha256": "7b06a656d89f06e5b33aad533a05c7a4be03cc89b0839776cc527eb975666944",
+        "hits": [
+          {
+            "Term": "Elementalist",
+            "Translation": "元素使",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": ""
+          },
+          {
+            "Term": "ghost",
+            "Translation": "鬼魂",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Earth Elementalist",
+            "Translation": "土元素使",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/earth-elementalist.yaml。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player ghost",
+            "Translation": "玩家幽灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Earth",
+            "Translation": "大地强化",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "Alchemist player ghost",
+        "source_sha256": "7b06a656d89f06e5b33aad533a05c7a4be03cc89b0839776cc527eb975666944",
+        "hits": [
+          {
+            "Term": "ghost",
+            "Translation": "鬼魂",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Alchemist",
+            "Translation": "炼金术士",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/alchemist.yaml。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player ghost",
+            "Translation": "玩家幽灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "Chaos Knight player ghost",
+        "source_sha256": "7b06a656d89f06e5b33aad533a05c7a4be03cc89b0839776cc527eb975666944",
+        "hits": [
+          {
+            "Term": "ghost",
+            "Translation": "鬼魂",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Chaos Knight",
+            "Translation": "混沌骑士",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/chaos-knight.yaml。"
+          },
+          {
+            "Term": "knight",
+            "Translation": "骑士",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player ghost",
+            "Translation": "玩家幽灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "chaos",
+            "Translation": "混沌",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "Shapeshifter player ghost",
+        "source_sha256": "7b06a656d89f06e5b33aad533a05c7a4be03cc89b0839776cc527eb975666944",
+        "hits": [
+          {
+            "Term": "ghost",
+            "Translation": "鬼魂",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Shapeshifter",
+            "Translation": "变形者",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/shapeshifter.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player ghost",
+            "Translation": "玩家幽灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "Monk player ghost",
+        "source_sha256": "7b06a656d89f06e5b33aad533a05c7a4be03cc89b0839776cc527eb975666944",
+        "hits": [
+          {
+            "Term": "ghost",
+            "Translation": "鬼魂",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Monk",
+            "Translation": "武僧",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/monk.yaml。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player ghost",
+            "Translation": "玩家幽灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "Warper player ghost",
+        "source_sha256": "7b06a656d89f06e5b33aad533a05c7a4be03cc89b0839776cc527eb975666944",
+        "hits": [
+          {
+            "Term": "ghost",
+            "Translation": "鬼魂",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Warper",
+            "Translation": "位移术士",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/warper.yaml。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player ghost",
+            "Translation": "玩家幽灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "Wanderer player ghost",
+        "source_sha256": "7b06a656d89f06e5b33aad533a05c7a4be03cc89b0839776cc527eb975666944",
+        "hits": [
+          {
+            "Term": "ghost",
+            "Translation": "鬼魂",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Wanderer",
+            "Translation": "漫游者",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/wanderer.yaml。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player ghost",
+            "Translation": "玩家幽灵",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "'&'",
+        "source_sha256": "aa07b3353738e55af94d6a80ccb80eca822a375cc17b4b735b4a6c3a5e7ab79c",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "'cap-G'",
+        "source_sha256": "1350da07892e41e81ffdc1b8a7cdfd795e047e323dab46c10a7657bca05e5d61",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "'cap-J'",
+        "source_sha256": "ce692a309e5fbb62c9b28a9c8c0514d4f26eadd1a100a0085f957a97e963679d",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "giant slug",
+        "source_sha256": "76c1e5243be80346faed0c0e53235b0729fa36bb0610f8b944b21350367087ea",
+        "hits": [
+          {
+            "Term": "slug",
+            "Translation": "鼻涕虫/弹丸",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【语境补充 2026-10-21】生物用鼻涕虫。手铳等射出的金属 slug 用弹丸。"
+          },
+          {
+            "Term": "giant",
+            "Translation": "巨人",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "ballistomycete spore",
+        "source_sha256": "738ee42c977b7098f5efe25aa4a54fd9f77aea94b3d68add71ecf021ab738e29",
+        "hits": [
+          {
+            "Term": "ballistomycete",
+            "Translation": "弹道真菌",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "ballistomycete spore",
+            "Translation": "弹道真菌孢子",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "glowing orange brain",
+        "source_sha256": "590a995b0a359582ec9429214e742bf9838e84c7e4138813a4a5621cbdda4d6f",
+        "hits": [
+          {
+            "Term": "glowing orange brain",
+            "Translation": "发光橙色大脑",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "imp",
+        "source_sha256": "690b24610226c702bf7fb39b00e25063b17fea635580ae63011e86e4ebf7bd61",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "moth of wrath",
+        "source_sha256": "3a68211e657a5724735993ba51d451f023e3cbc66a4c7b99eda1a7e73aa9e116",
+        "hits": [
+          {
+            "Term": "moth",
+            "Translation": "蛾",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "moth of wrath",
+            "Translation": "愤怒之蛾",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "Wrath",
+            "Translation": "神怒",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "iron imp",
+        "source_sha256": "725a261e60eb5dc5a3334477e52ddb9af901a69ac8c202010ec19cd1eb5010fd",
+        "hits": [
+          {
+            "Term": "iron imp",
+            "Translation": "铁小鬼",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "shadow imp",
+        "source_sha256": "725a261e60eb5dc5a3334477e52ddb9af901a69ac8c202010ec19cd1eb5010fd",
+        "hits": [
+          {
+            "Term": "shadow",
+            "Translation": "影",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "shadow imp",
+            "Translation": "阴影小恶魔",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "white imp",
+        "source_sha256": "725a261e60eb5dc5a3334477e52ddb9af901a69ac8c202010ec19cd1eb5010fd",
+        "hits": [
+          {
+            "Term": "white imp",
+            "Translation": "白色小恶魔",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "Polyphemus",
+        "source_sha256": "cc5aab3151c8c45f770cff620b1c11c1641a1b1f34dd96b5028483384bcce217",
+        "hits": [
+          {
+            "Term": "Polyphemus",
+            "Translation": "波吕斐摩斯",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "Player sphinx riddle lines",
+        "source_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "hits": [
+          {
+            "Term": "sphinx",
+            "Translation": "斯芬克斯",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          },
+          {
+            "Term": "player",
+            "Translation": "玩家",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "_riddle_adj_",
+        "source_sha256": "7f67d1694639fc3f1ee45b9a1da81da6986c5ee625b7713add03707c2eb2f75c",
+        "hits": [
+          {
+            "Term": "clever",
+            "Translation": "聪颖",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：聪颖。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "_riddle_fail_acknowledged_",
+        "source_sha256": "bc15c8f65e9c18d0e3b7129f21d0024728623b7a7d3303c361955454cda55c67",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "_riddle_fail_general_",
+        "source_sha256": "4d05514b0d842e23429d385035496ecc3361e57e3576a29501ca37803c0ab32c",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "_riddle_prefix_",
+        "source_sha256": "32ca0d747accc81e43068fd0a0a90011d5112ea69efc980ad9caea78f289d709",
+        "hits": [],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "Sphinx riddle success",
+        "source_sha256": "a139c4ab8a935502e4f44c8443d7b0ab0861c09ed1caae56bfd2e92a10a3fdf2",
+        "hits": [
+          {
+            "Term": "sphinx",
+            "Translation": "斯芬克斯",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "Sphinx riddle failure",
+        "source_sha256": "405eb58bbd8e91c2d87bed7ccf364ca87a1570c8ddd2f4660973bea02fa3ff78",
+        "hits": [
+          {
+            "Term": "sphinx",
+            "Translation": "斯芬克斯",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      },
+      {
+        "key": "Sphinx riddle failure acknowledged",
+        "source_sha256": "a8b8552c0924a39d644583c6cc26732585719faa309d3a07482f0516555aaa17",
+        "hits": [
+          {
+            "Term": "sphinx",
+            "Translation": "斯芬克斯",
+            "Part of Speech": "noun",
+            "Variants": "",
+            "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+          }
+        ],
+        "existing_reviewed_contexts": []
+      }
+    ]
+  }
+}

@@ -59,6 +59,26 @@ void formatted_scroller::scroll_to_end()
     m_scroll_dirty = true;
 }
 
+// Tiles clips text by formatted operation. Keep one physical line per text
+// operation, so scrolling a long Chinese file submits only visible glyphs.
+formatted_string scroller_linewise_text(const formatted_string &text)
+{
+    formatted_string result;
+    for (const auto &op : text.ops)
+    {
+        if (op.type != FSOP_TEXT) { result.ops.push_back(op); continue; }
+        size_t start = 0;
+        while (start < op.text.size())
+        {
+            const size_t newline = op.text.find('\n', start);
+            const size_t end = newline == string::npos ? op.text.size() : newline + 1;
+            result += op.text.substr(start, end - start);
+            start = end;
+        }
+    }
+    return result;
+}
+
 int formatted_scroller::show()
 {
     auto vbox = make_shared<Box>(Widget::VERT);
@@ -88,7 +108,9 @@ int formatted_scroller::show()
     m_scroller->expand_v = true;
 #endif
     auto text = make_shared<Text>();
-    formatted_string c = formatted_string::parse_string(contents.to_colour_string(LIGHTGRAY));
+    formatted_string c = (m_flags & FS_LINEWISE_TEXT)
+        ? scroller_linewise_text(contents)
+        : formatted_string::parse_string(contents.to_colour_string(LIGHTGRAY));
     text->set_text(c);
     text->set_highlight_pattern(highlight, true);
     text->set_wrap_text(!(m_flags & FS_PREWRAPPED_TEXT));
@@ -116,7 +138,8 @@ int formatted_scroller::show()
         if (m_contents_dirty)
         {
             m_contents_dirty = false;
-            text->set_text(contents);
+            text->set_text((m_flags & FS_LINEWISE_TEXT)
+                ? scroller_linewise_text(contents) : contents);
 #ifdef USE_TILE_WEB
             tiles.json_open_object();
             tiles.json_write_string("text", contents.to_colour_string(LIGHTGRAY));

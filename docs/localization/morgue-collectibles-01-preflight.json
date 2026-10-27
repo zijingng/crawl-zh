@@ -1,0 +1,96 @@
+{
+  "queries": [
+    "Orb of Zot",
+    "rune",
+    "gem",
+    "Pandemonium",
+    "garden",
+    "Lehudib",
+    "Rutra"
+  ],
+  "hits": [
+    {
+      "Term": "one-way gate leading to the halls of Pandemonium",
+      "Translation": "通往魔窟大厅的单向门",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Orb of Zot",
+      "Translation": "佐特宝珠",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "你玩这游戏的原因，MacGuffin"
+    },
+    {
+      "Term": "Pandemonium",
+      "Translation": "魔窟",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "rune-carved clear stone wall",
+      "Translation": "刻有符文的透明石墙",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 修订】clear 在此是可透视的墙体，不是清晰程度。 来源：feature-data.h。"
+    },
+    {
+      "Term": "rune-carved stone wall",
+      "Translation": "刻有符文的岩石墙",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    },
+    {
+      "Term": "Lehudib's Crystal Spear",
+      "Translation": "雷胡迪布的水晶矛",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+    },
+    {
+      "Term": "glaive of Prune",
+      "Translation": "普鲁恩偃月刀",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+    },
+    {
+      "Term": "pandemonium lord",
+      "Translation": "魔窟领主",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "Gem status",
+      "Translation": "宝石",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：宝石。"
+    },
+    {
+      "Term": "Gem (*) status",
+      "Translation": "宝石（本分支仍完整）",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 状态名称】来源：dat/descript/status.txt；lookup-help.cc 的 l.lookup.name。规范英文键保留，用于 TextDB 查询；中文仅用于显示。界面名称：宝石（本分支仍完整）。"
+    }
+  ],
+  "history": [
+    "ui.po lua.portal.name",
+    "textdb.po database/miscname.txt welcome_spam",
+    "textdb.po descript/features.txt A garden patch",
+    "ui.po n.note"
+  ],
+  "compatibility_term": {
+    "english": "glittering gem",
+    "glossary_match": false,
+    "history_match": false,
+    "translation": "璀璨宝石",
+    "reason": "GEM_ORC 的兼容旧版名称；与 shining gem（闪耀宝石）区分。"
+  }
+}

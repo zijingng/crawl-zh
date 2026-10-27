@@ -1,0 +1,80 @@
+[
+  {
+    "file": "crawl-ref/source/ui-scissor.h",
+    "scope": "裁剪区域栈与显示几何；没有独立文案。",
+    "sha256": "97aed56c6e5935b5304c2e969daa7bcc1720724d073f61195ed9da6ab2693e40",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/ui.cc",
+    "scope": "通用文字／输入／弹窗／进度条渲染；文字由调用方提供。保留协议键、格式占位符、复选框和进度动画符号；不可达事件类型为技术诊断。",
+    "sha256": "f956541a5404b5dab357a74ff370cc226d350422c36e02519032c56923c978b5",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/ui.h",
+    "scope": "UI 类型、布局、事件与控件声明；Region 坐标输出是技术描述，不是游戏文案。",
+    "sha256": "1d4a81bfa37a0fd0b56d7c944d94f429f9960ce79719f02253cf3ca9700b9acf",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/uncancel.cc",
+    "scope": "恢复被强制保存中断的抽牌、叠牌、神祇与物品交互；实际文案由相应业务函数产生。本文件仅有 dprf 调试信息。",
+    "sha256": "0bd366f3c883defd6e7bdc7ba4089b4f255322ad35cf54182e486be6974a7efa",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/uncancel.h",
+    "scope": "恢复交互接口和包装函数；无独立文案。",
+    "sha256": "f36a92648a227976701f159a1860cf3a3b27f562186e7da2d9ad4ac5235caa7e",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/uncancellable-type.h",
+    "scope": "恢复操作的内部枚举；不可翻译。",
+    "sha256": "fd41b9b69b63e49cb176d1db0f7b865d72eee7419710a7a55300b4f82027b023",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/undead-state-type.h",
+    "scope": "亡灵状态内部枚举；不可翻译。",
+    "sha256": "975e8db84b8ad55fccdedaaa97148dae3cd4684ce25bf023f7b221b087a7519a",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/unicode-wrap.h",
+    "scope": "既有中文换行边界、标点和格式操作；无待译文案。",
+    "sha256": "ff397f08829fe1afef25abda36a70a1f72117a76c7a679bcf03b4ce2a493d315",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/unicode.cc",
+    "scope": "Unicode 编解码、显示宽度、文件编码检测和行读取；BOM 字节、文件模式不可改，异常编码类型保留技术诊断。",
+    "sha256": "083001deaa013dc50f9de1c1c054fe881cddb01d97d75ffff9b5d43758522aad",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/unicode.h",
+    "scope": "Unicode 与编码读取接口声明；无独立文案。",
+    "sha256": "7f268bb303dc38b9ea981ebb9f1d6ed4c89d9efd6d895f32a3f1b26dc71e9942",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/unique-creature-list-type.h",
+    "scope": "独特怪物列表状态枚举；无显示名称。",
+    "sha256": "693fabe9b9f553ced1200efb3cf1280d0df3734881ee3d9bb28fa377bedad6b8",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/unique-item-status-type.h",
+    "scope": "独特物品状态枚举；无显示名称。",
+    "sha256": "c8411cac62224e7ad82336ae8ebf3faaee617bb99e02c79b73b335f33804c025",
+    "changed": false
+  },
+  {
+    "file": "crawl-ref/source/unwind.h",
+    "scope": "动态作用域值恢复工具；无显示文本。",
+    "sha256": "65329cebe371dce727a482824d244d7f4cdb6d6248915f862f40ef6ef0ae6ccf",
+    "changed": false
+  }
+]

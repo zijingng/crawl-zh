@@ -48,6 +48,13 @@ public:
     coord_def aim;
     const actor* agent;
     string why_not;
+    // Display metadata is ephemeral; validators still expose canonical English.
+    string display_why_not() const;
+    bool fail(const string &original, const string &display = "");
+private:
+    string display_failure;
+    string display_failure_source;
+public:
     bool obeys_mesmerise; // whether the rendering of ranges should take into account mesmerise effects
 
     virtual bool set_aim(coord_def a);

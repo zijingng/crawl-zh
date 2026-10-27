@@ -1,0 +1,1025 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "selected": [
+    {
+      "key": "_shouts_",
+      "source": "shouts\n\nyells\n\nroars\n",
+      "hits": []
+    },
+    {
+      "key": "_yells_",
+      "source": "yells\n\nwails\n\ncries\n\nscreams\n\nhowls\n",
+      "hits": []
+    },
+    {
+      "key": "_wails_",
+      "source": "wails\n\nshouts\n\nsays\n\nscreams\n\nshrieks\n",
+      "hits": []
+    },
+    {
+      "key": "_begs_",
+      "source": "begs\n\npleads\n\nw:3\nsupplicates\n\nw:1\nsupplicates abjectly\n",
+      "hits": []
+    },
+    {
+      "key": "_mutters_",
+      "source": "mutters\n\nmumbles\n\nw:2\nsusurrates\n",
+      "hits": []
+    },
+    {
+      "key": "_pointless_",
+      "source": "pointless\n\nsenseless\n\nuseless\n",
+      "hits": []
+    },
+    {
+      "key": "_high_priest_",
+      "source": "@_high_priest_common_@\n\nw:5\n@_high_priest_medium_@\n\nw:1\n@_high_priest_rare_@\n",
+      "hits": []
+    },
+    {
+      "key": "_high_priest_common_",
+      "source": "@The_monster@ prays.\n\n@The_monster@ mumbles some strange prayers.\n\n@The_monster@ intones a terrible prayer.\n\n@The_monster@ starts to sing a prayer.\n",
+      "hits": []
+    },
+    {
+      "key": "_high_priest_medium_",
+      "source": "VISUAL:@The_monster@ performs a strange gesture.\n\n@The_monster@ shouts @at_foe@, \"You are a heretic and must be destroyed!\"\n\n@The_monster@ says @to_foe@, \"You will make a fine sacrifice.\"\n\n@The_monster@ shouts @at_foe@, \"You must be punished!\"\n\n@The_monster@ says @to_foe@, \"All sinners must die.\"\n\n@The_monster@ says @to_foe@, \"Oblivion to the unbeliever.\"\n",
+      "hits": [
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "Sacrifice",
+          "Translation": "献祭/牺牲/祭仪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】献祭选项与能力用献祭。付出代价或失去能力用牺牲。叙事中的献神仪式可用祭仪。"
+        }
+      ]
+    },
+    {
+      "key": "_high_priest_rare_",
+      "source": "@The_monster@ says @to_foe@, \"Right in the middle of my sermon, too.\"\n\n@The_monster@ says @to_foe@, \"The wages of sin are death, you know.\"\n\n@The_monster@ whispers @to_foe@, \"I'll spare you if you take my job.\"\n\n@The_monster@ whispers @to_foe@, \"Deep inside, it's sometimes so empty.\"\n\n@The_monster@ says @to_foe@, \"The wrath of @my_God@ will be yours.\"\n\n@The_monster@ says @to_foe@, \"Taste sacred energy, fool.\"\n\n@The_monster@ says @to_foe@, \"Your suffering will cleanse you of your heresy.\"\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "Wrath",
+          "Translation": "神怒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Energy",
+          "Translation": "能量",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "_mercenary_guard_",
+      "source": "@_mercenary_guard_common_@\n\nw:5\n@_mercenary_guard_medium_@\n\nw:1\n@_mercenary_guard_rare_@\n",
+      "hits": []
+    },
+    {
+      "key": "_mercenary_guard_common_",
+      "source": "VISUAL:@The_monster@ looks very unfriendly.\n\nVISUAL:@The_monster@ grins evilly.\n\n@The_monster@ screams @at_foe@, \"One false step and I'll kill you.\"\n\n@The_monster@ screams @at_foe@, \"I'm going to kill you! Now!\"\n\n@The_monster@ shouts, \"You will never get the ORB!\" @player_only@\n\n@The_monster@ says @to_foe@, \"No trespassing is allowed here.\"\n\n@The_monster@ says @to_foe@, \"Drop everything you've found here and return home.\"\n\n@The_monster@ says @to_foe@, \"Return every stolen item!\"\n\n@The_monster@ shouts @at_foe@, \"Intruder!\"\n\n@The_monster@ screams @at_foe@, \"You must be punished!\"\n",
+      "hits": [
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "the Orb",
+          "Translation": "宝珠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        }
+      ]
+    },
+    {
+      "key": "_mercenary_guard_medium_",
+      "source": "@The_monster@ says @to_foe@, \"Now you've reached the end of your journey.\"\n\n@The_monster@ says @to_foe@, \"It's nothing personal.\"\n\n@The_monster@ says @to_foe@, \"Coming here was your last mistake.\"\n\n@The_monster@ says @to_foe@, \"The best offence is a good offence.\"\n\n@The_monster@ shouts @at_foe@, \"Return immediately or I'll kill you!\"\n",
+      "hits": []
+    },
+    {
+      "key": "_mercenary_guard_rare_",
+      "source": "@The_monster@ says, \"A dead adventurer is a good adventurer.\" @player_only@\n\n@The_monster@ shouts @at_foe@, \"It's the end of the party!\"\n\n@The_monster@ shouts @at_foe@, \"Surrender and die!\"\n",
+      "hits": [
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_wizard_",
+      "source": "@_wizard_common_spell_@\n@_fake_spell_effect_@\n\nw:8\n@_wizard_medium_@\n\nw:1\n@_wizard_rare_@\n",
+      "hits": [
+        {
+          "Term": "spell",
+          "Translation": "法术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "wizard",
+          "Translation": "巫师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "_wizard_common_spell_",
+      "source": "@The_monster@ wildly gestures.\n\n@The_monster@ mumbles some strange words.\n\n@The_monster@ howls an incantation.\n",
+      "hits": [
+        {
+          "Term": "spell",
+          "Translation": "法术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "wizard",
+          "Translation": "巫师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "_fake_spell_effect_",
+      "source": "VISUAL:@The_monster@ shimmers violently.\n\nVISUAL:@The_monster@ glows brightly for a moment.\n\nVISUAL:@The_monster_possessive@ @hands@ start to glow.\n\nVISUAL:You feel disoriented. @player_only@\n\nVISUAL:You feel troubled. @player_only@\n",
+      "hits": [
+        {
+          "Term": "spell",
+          "Translation": "法术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_wizard_medium_",
+      "source": "VISUAL:@The_monster@ becomes larger for a moment.\n\nVISUAL:@The_monster_possessive@ eyes start to glow.\n\n@The_monster@ shouts @at_foe@, \"You can't withstand my power!\"\n\n@The_monster@ shouts @at_foe@, \"You are history!\"\n",
+      "hits": [
+        {
+          "Term": "wizard",
+          "Translation": "巫师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "_wizard_rare_",
+      "source": "@The_monster@ says @to_foe@, \"Argatax netranoch dertex.\"\n\n@The_monster@ says @to_foe@, \"Dogrw nutew berg.\"\n\n@The_monster@ shouts @at_foe@, \"Entram moth deg ulag!\"\n",
+      "hits": [
+        {
+          "Term": "wizard",
+          "Translation": "巫师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "moth",
+          "Translation": "蛾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_friendly_imp_",
+      "source": "@_friendly_imp_common_@\n\nw:6\n@_friendly_imp_rare_@\n",
+      "hits": []
+    },
+    {
+      "key": "_friendly_imp_common_",
+      "source": "VISUAL:@The_monster@ jumps up and down with excitement.\n\nVISUAL:@The_monster@ grins impishly at you.\n\nVISUAL:@The_monster@ picks up some beetles from the @surface@ and offers them to you.\n\nVISUAL:@The_monster@ blows smoke rings.\n\n@The_monster@ says, \"OK, boss!\"\n\n@The_monster@ says, \"The Orb is all yours.\"\n\n@The_monster@ says, \"Isn't this more fun with friends?\"\n",
+      "hits": [
+        {
+          "Term": "the Orb",
+          "Translation": "宝珠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        }
+      ]
+    },
+    {
+      "key": "_friendly_imp_rare_",
+      "source": "@The_monster@ says, \"Uh-oh! Wait. OK.\"\n\n@The_monster@ says, \"You're so much nicer than my last boss.\"\n\n@The_monster@ shouts, \"Stay back! It could be a [ploy|trick|gambit|trap]!\"\n\n@The_monster@ shouts, \"Over here! I found it!\"\n\n@The_monster@ says, \"Just tell me who NOT to kill.\"\n",
+      "hits": []
+    },
+    {
+      "key": "_friendly_imp_greeting",
+      "source": "@The_monster@ says, \"I'm here!\"\n\n@The_monster@ says, \"You called?\"\n\n@The_monster@ says, \"Let's @_cause_or_spread_@ @_mayhem_@!\"\n\n@The_monster@ says, \"I @_truckle_@ to your @_vassalage_@, @_suck_up_address_@ @_suck_up_adj1_@ and @_suck_up_adj2_@ @_suck_up_noun_@!\"\n\nw:300\n__NONE\n",
+      "hits": [
+        {
+          "Term": "Mayhem",
+          "Translation": "混战",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "_cause_or_spread_",
+      "source": "cause\n\nspread\n\nsow\n\nraise\n",
+      "hits": []
+    },
+    {
+      "key": "_mayhem_",
+      "source": "mayhem\n\ndestruction\n\nhavoc\n\ndisruption\n",
+      "hits": [
+        {
+          "Term": "Mayhem",
+          "Translation": "混战",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "_truckle_",
+      "source": "truckle\n\ncommit\n\ngive in\n\nbow\n\nyield\n",
+      "hits": []
+    },
+    {
+      "key": "_vassalage_",
+      "source": "vassalage\n\nservice\n\nservitude\n\nfealty\n",
+      "hits": []
+    },
+    {
+      "key": "_suck_up_address_",
+      "source": "O\n\nmy\n",
+      "hits": []
+    },
+    {
+      "key": "_suck_up_adj1_",
+      "source": "grandiloquent\n\nillustrious\n\nmagnificent\n",
+      "hits": []
+    },
+    {
+      "key": "_suck_up_adj2_",
+      "source": "{{\nif you.race() == \"Mummy\" then\n    return \"velvet-covered\"\nelseif you.mutation('beak') > 0 then\n    return \"pearl-beaked\"\nelseif you.transform() == \"death\" then\n    return \"well-preserved\"\nelseif you.transform() == \"statue\" then\n    return \"marble-toed\"\nelseif you.transform() == \"dragon\" then\n    return \"opal-scaled\"\nelseif you.race() == \"Felid\" then\n    return \"pillow-pawed\"\nelseif you.race() == \"Octopode\" then\n    return \"soft-tentacled\"\nelseif you.race() == \"Formicid\" then\n    return \"massive-mandibled\"\nelseif you.race() == \"Poltergeist\" then\n    return \"high-spirited\"\nelseif you.race() == \"Revenant\" then\n    return \"ivory-boned\"\nelse\n    return \"rosy-lipped\"\nend\n}}\n\nawesome\n\ngreatest\n\ngod-like\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "mummy",
+          "Translation": "木乃伊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/mummy.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "mutation",
+          "Translation": "变异",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "revenant",
+          "Translation": "还魂者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】当前同时是可选种族与怪物名；原“鬼火骷髅”仅描述形象，统一为可用于种族界面的名称。 来源：dat/species/revenant.yaml; dat/descript/monsters.txt。\n【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/revenant.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "statue",
+          "Translation": "雕像",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Felid",
+          "Translation": "猫族",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/felid.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Formicid",
+          "Translation": "蚁族",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/formicid.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Octopode",
+          "Translation": "章鱼人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/octopode.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Poltergeist",
+          "Translation": "骚灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/poltergeist.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "dragon",
+          "Translation": "龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "beak",
+          "Translation": "鸟喙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：鸟喙。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "_suck_up_noun_",
+      "source": "voivode\n\nmaster\n\nruler\n\nban\n\nmagnate\n\ngentle{{ return you.genus() }}\n",
+      "hits": []
+    },
+    {
+      "key": "_hostile_imp_",
+      "source": "@_hostile_imp_common_@\n\nw:7\n@_hostile_imp_rare_@\n",
+      "hits": [
+        {
+          "Term": "hostile",
+          "Translation": "敌对",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "_hostile_imp_common_",
+      "source": "@The_monster@ laughs crazily.\n\nVISUAL:@The_monster@ grins evilly.\n\nVISUAL:@The_monster@ lashes @possessive@ tail.\n\nVISUAL:@The_monster@ grinds @possessive@ teeth.\n\nVISUAL:@The_monster@ puffs mist at @foe@.\n",
+      "hits": [
+        {
+          "Term": "hostile",
+          "Translation": "敌对",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "_hostile_imp_rare_",
+      "source": "VISUAL:@The_monster@ spits at @foe@.\n\nVISUAL:@The_monster@ picks up a beetle and eats it.\n\n@The_monster@ sputters.\n\nVISUAL:@The_monster@ disappears for a moment.\n\nVISUAL:@The_monster@ summons a swarm of flies.\n",
+      "hits": [
+        {
+          "Term": "hostile",
+          "Translation": "敌对",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "_hell_lord_taunt_",
+      "source": "@The_monster@ @says@ @to_foe@, \"@demon_taunt@\"\n",
+      "hits": [
+        {
+          "Term": "Hell",
+          "Translation": "地狱",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "_demon_taunt_",
+      "source": "@The_monster@ @says@ @to_foe@, \"@demon_taunt@\"\n",
+      "hits": []
+    },
+    {
+      "key": "_says_imp_taunt_",
+      "source": "@The_monster@ @says@ @to_foe@, \"@imp_taunt@\"\n",
+      "hits": []
+    },
+    {
+      "key": "default stupid friendly humanoid",
+      "source": "__NONE\n",
+      "hits": []
+    },
+    {
+      "key": "default stupid fleeing humanoid",
+      "source": "__NONE\n",
+      "hits": []
+    },
+    {
+      "key": "default stupid silenced humanoid",
+      "source": "__NONE\n",
+      "hits": []
+    },
+    {
+      "key": "default stupid confused humanoid",
+      "source": "__NONE\n",
+      "hits": []
+    },
+    {
+      "key": "default silenced confused humanoid",
+      "source": "w:40\nVISUAL:@The_monster@ gestures wildly.\n\nw:20\nVISUAL:@The_monster@ says something but you don't hear anything.\n\nVISUAL:@The_monster@ looks confused.\n\nVISUAL:@The_monster@ grins evilly.\n\nVISUAL:@The_monster@ smiles happily.\n\nVISUAL:@The_monster@ cries.\n",
+      "hits": []
+    },
+    {
+      "key": "default fleeing silenced humanoid",
+      "source": "@_fleeing_silenced_common_@\n\nw:5\n@_fleeing_silenced_rare_@\n",
+      "hits": []
+    },
+    {
+      "key": "_fleeing_silenced_common_",
+      "source": "VISUAL:@The_monster@ glances furtively about.\n\nVISUAL:@The_monster@ seems to say something.\n",
+      "hits": []
+    },
+    {
+      "key": "_fleeing_silenced_rare_",
+      "source": "VISUAL:@The_monster@ opens @possessive@ mouth, as if shouting.\n\nVISUAL:@The_monster@ frantically looks around.\n\nVISUAL:@The_monster@ ponders the situation.\n",
+      "hits": []
+    },
+    {
+      "key": "default friendly silenced humanoid",
+      "source": "w:6\n@_friendly_silenced_common_@\n\nw:4\n@_friendly_silenced_rare_@\n",
+      "hits": []
+    },
+    {
+      "key": "_friendly_silenced_common_",
+      "source": "VISUAL:@The_monster@ gives you the thumbs up.\n\nVISUAL:@The_monster@ says something you can't hear.\n",
+      "hits": []
+    },
+    {
+      "key": "_friendly_silenced_rare_",
+      "source": "VISUAL:@The_monster@ looks at you.\n\nVISUAL:@The_monster@ waves at you.\n\nVISUAL:@The_monster@ smiles happily.\n\nVISUAL:@The_monster@ jumps up and down, looking for your attention.\n\nVISUAL:@The_monster@ winks at you.\n",
+      "hits": []
+    },
+    {
+      "key": "default silenced humanoid",
+      "source": "w:6\n@_silenced_humanoid_common_@\n\nw:4\n@_silenced_humanoid_rare_@\n\n@The_monster@ stomps in frustration.\n",
+      "hits": []
+    },
+    {
+      "key": "_silenced_humanoid_common_",
+      "source": "VISUAL:@The_monster@ says something but you don't hear anything.\n\nVISUAL:@The_monster@ gestures.\n",
+      "hits": []
+    },
+    {
+      "key": "_silenced_humanoid_rare_",
+      "source": "VISUAL:@The_monster@ gestures obscenely.\n\nVISUAL:@The_monster@ grins.\n\nVISUAL:@The_monster@ looks angry.\n\nVISUAL:@The_monster@ seems to be listening.\n",
+      "hits": []
+    },
+    {
+      "key": "default friendly confused humanoid",
+      "source": "@_friendly_confused_common_@\n\nw:5\n@_friendly_confused_medium_@\n\nw:1\n@_friendly_confused_rare_@\n",
+      "hits": []
+    },
+    {
+      "key": "_friendly_confused_common_",
+      "source": "@The_monster@ screams, \"Help!\"\n\n@The_monster@ shouts, \"What's happening?!\"\n\n@The_monster@ mumbles something.\n\n@The_monster@ laughs crazily.\n\nVISUAL:@The_monster@ cries.\n\nVISUAL:@The_monster@ looks very confused.\n",
+      "hits": []
+    },
+    {
+      "key": "_friendly_confused_medium_",
+      "source": "@The_monster@ giggles crazily.\n\n@The_monster@ screams, \"@player_name@! What's going on?!\"\n\n@The_monster@ prays for help.\n\n@The_monster@ smirks at the air and says, \"Can't catch me!\"\n\nVISUAL:@The_monster@ grins madly.\n\nVISUAL:@The_monster@ ponders the situation.\n\nVISUAL:@The_monster@ stomps to and fro.\n",
+      "hits": [
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Air",
+          "Translation": "空气强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "_friendly_confused_rare_",
+      "source": "@The_monster@ shouts, \"I'm losing control!\"\n\n@The_monster@ shouts, \"Yeah!\"\n\n@The_monster@ sings.\n\n@The_monster@ screams, \"@player_name@! Help!\"\n\n@The_monster@ says, \"@player_name@, I'm a little confused!\"\n\nVISUAL:@The_monster@ seems enamored of @foe@.\n",
+      "hits": [
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "default confused humanoid",
+      "source": "@_confused_humanoid_common_@\n\nw:5\n@_confused_humanoid_medium_@\n\nw:1\n@_confused_humanoid_rare_@\n",
+      "hits": []
+    },
+    {
+      "key": "_confused_humanoid_common_",
+      "source": "w:20\nVISUAL:@The_monster@ gestures wildly.\n\n@The_monster@ shouts, \"What's happening?!\"\n\nVISUAL:@The_monster@ cries.\n\n@The_monster@ laughs crazily.\n\nVISUAL:@The_monster@ grins madly.\n\nVISUAL:@The_monster@ laughs at nothing.\n\nVISUAL:@The_monster@ chortles and stares into space.\n\nVISUAL:@The_monster@ looks very confused.\n\n@The_monster@ mumbles something.\n",
+      "hits": []
+    },
+    {
+      "key": "_confused_humanoid_medium_",
+      "source": "VISUAL:@The_monster@ ponders the situation.\n\n@The_monster@ says, \"I'm a little confused.\"\n\n@The_monster@ asks, \"Where am I?\"\n\n@The_monster@ wonders, \"What am I doing in here?\"\n\n@The_monster@ says, \"Why is everything spinning?\"\n\n@The_monster@ screams, \"I'll kill you anyway!\"\n",
+      "hits": []
+    },
+    {
+      "key": "_confused_humanoid_rare_",
+      "source": "@The_monster@ yells, \"Get them off me!\"\n\n@The_monster@ shouts, \"NO!\"\n\n@The_monster@ howls, \"My nostrils!\"\n\n@The_monster@ shouts, \"YES!\"\n\nVISUAL:@The_monster@ shakes.\n\nVISUAL:@The_monster@ suddenly looks very angry at the Dungeon.\n\n@The_monster@ asks @foe,@ \"Who are you?\"\n\n@The_monster@ asks @foe,@ \"What the hell are we doing here? Hmm, I see...\"\n\n@The_monster@ cries, \"My head! MY HEAD!!!\"\n\n@The_monster@ screams, \"NO! I can't bear this much noise.\"\n",
+      "hits": [
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Hell",
+          "Translation": "地狱",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "noise",
+          "Translation": "噪音/声音/巨响",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/战斗机制】影响听觉警觉，不同于画面显示延迟。 来源：shout.cc。\n【语境补充 2026-10-21】机制、标题及数值用噪音。具体可听声响按语境用声音或巨响，不强制把研磨声等改为噪音。"
+        },
+        {
+          "Term": "the Dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "bear",
+          "Translation": "熊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "default friendly fleeing humanoid",
+      "source": "@_friendly_fleeing_common_@\n\nw:1\n@_friendly_fleeing_rare_@\n",
+      "hits": []
+    },
+    {
+      "key": "_friendly_fleeing_common_",
+      "source": "w:20\nVISUAL:@The_monster@ tries to hide somewhere.\n\n@The_monster@ screams, \"Help!\"\n\n@The_monster@ shouts, \"Cover me!\"\n\n@The_monster@ screams, \"@player_name@! Help me!\"\n\n@The_monster@ prays for help.\n",
+      "hits": [
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_friendly_fleeing_rare_",
+      "source": "@The_monster@ @_shouts_@, \"Wait for me, @player_name@! Could you help me?\"\n\n@The_monster@ cries, \"Don't forget your friends!\"\n\n@The_monster@ shouts, \"Please protect me!\"\n",
+      "hits": [
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "protect",
+          "Translation": "防护",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "default fleeing humanoid",
+      "source": "@_fleeing_humanoid_common_@\n\nw:3\n@_fleeing_humanoid_rare_@\n",
+      "hits": []
+    },
+    {
+      "key": "_fleeing_humanoid_common_",
+      "source": "w:20\nVISUAL:@The_monster@ gives up.\n\nw:20\n@The_monster@ @_yells_@, \"Help!\"\n\nVISUAL:@The_monster@ [almost|nearly] stumbles in trying to escape.\n\n@The_monster@ prays for help.\n\n@The_monster@ cowers, then darts away.\n\n@The_monster@ starts to cry.\n\n@The_monster@ yells at you, \"GO AWAY!\"\n\n@The_monster@ gibbers meaninglessly.\n\n@The_monster@ howls in fear.\n\n@The_monster@ [moans|wails|cries], \"Oh dear! Oh dear!\"\n\n@The_monster@ @_begs_@ @to_foe@, \"Please don't kill me!\"\n\n@The_monster@ begs for mercy.\n\n@The_monster@ cries @to_foe@, \"Mercy!\"\n",
+      "hits": []
+    },
+    {
+      "key": "_fleeing_humanoid_rare_",
+      "source": "@The_monster@ @_begs_@ @to_foe@, \"Why can't we all just get along?\"\n\n@The_monster@ @_mutters_@, \"Damn and blast!\"\n\n@The_monster@ shouts @at_foe@, \"No! I'll never do that again!\"\n\n@The_monster@ [blubbers|cries], \"[Mummeee|Daddeee|Meeeeep|Help meeeeeeee|Eeeeekkkk|Oh nooooooo|Waaaaaa]!\"\n\n@The_monster@ @_begs_@ @to_foe@, \"Please! I have a lot of children!\"\n\nVISUAL:@The_monster@ looks [rattled|scared stiff|petrified].\n\n@The_monster@ weeps quietly.\n\nVISUAL:@The_monster@ looks desperately for an escape route.\n\n@The_monster@ hums to @reflexive@ desperately, trying to keep calm.\n\nVISUAL:@The_monster@ attempts to regain @possessive@ composure.\n\n@The_monster@ @_mutters_@, \"Of all the rotten luck!\"\n\nVISUAL:@The_monster@ tries to recover @possessive@ lost courage.\n",
+      "hits": [
+        {
+          "Term": "petrified",
+          "Translation": "已石化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/状态】完成后的状态。 来源：duration-data.h。"
+        }
+      ]
+    },
+    {
+      "key": "_friendly_family_",
+      "source": "@The_monster@ says, \"I like you, cousin!\"\n\n@The_monster@ says, \"Family always sticks together, @player_name@!\"\n\n@The_monster@ says, \"@player_genus@kind's got to stick together!\"\n\n@The_monster@ shouts, \"@player_genus_plural@ are the best!\"\n\n@The_monster@ says happily, \"You and me, we're family.\"\n",
+      "hits": [
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "default friendly related humanoid",
+      "source": "w:2\n@_friendly_family_@\n\n@default friendly humanoid@\n",
+      "hits": []
+    },
+    {
+      "key": "default friendly humanoid",
+      "source": "w:4\n__NONE\n\n@_friendly_humanoid_common_@\n\nw:4\n@_friendly_humanoid_medium_@\n\nw:1\n@_friendly_humanoid_rare_@\n",
+      "hits": []
+    },
+    {
+      "key": "_friendly_humanoid_common_",
+      "source": "@The_monster@ yells, \"Run! I'll cover you!\"\n\n@The_monster@ shouts @at_foe@, \"Die, monster!\"\n\nVISUAL:@The_monster@ looks at you.\n\nVISUAL:@The_monster@ smiles at you.\n\n@The_monster@ says, \"@player_name@, I like you.\"\n\nVISUAL:@The_monster@ waves at you.\n\n@The_monster@ says, \"Be careful!\"\n\n@The_monster@ says, \"I'll never leave you.\"\n",
+      "hits": [
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_friendly_humanoid_medium_",
+      "source": "@The_monster@ says, \"It's nice to have friends.\"\n\n@The_monster@ says, \"@player_name@, you are my only friend.\"\n\n@The_monster@ shouts, \"No mercy! Kill them all!\"\n\n@The_monster@ says, \"Don't worry. I'm here with you.\"\n\nVISUAL:@The_monster@ smiles happily.\n\n@The_monster@ shouts, \"Beware of monsters!\"\n",
+      "hits": [
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_friendly_humanoid_rare_",
+      "source": "VISUAL:@The_monster@ looks friendly.\n",
+      "hits": []
+    },
+    {
+      "key": "hound",
+      "source": "VISUAL:@The_monster@ [pauses|stops] to sniff the @surface@.\n",
+      "hits": [
+        {
+          "Term": "hound",
+          "Translation": "猎犬",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "friendly hound",
+      "source": "VISUAL:@The_monster@ wags @possessive@ tail.\n\nVISUAL:@The_monster@ barks [happily|excitedly]!\n\nVISUAL:@The_monster@ runs in silly circles!\n\nVISUAL:@The_monster@ looks {{\n  if you.race() == \"Felid\" then\n      return \"down\"\n  else\n     return \"up\"\n  end\n}} at you expectantly.\n\nVISUAL:@The_monster@ scratches @possessive@ ear.\n\nVISUAL:@The_monster@ cocks @possessive@ head sideways at you.\n\nVISUAL:@The_monster@ scratches at a flea.\n\nw:1\nVISUAL:@The_monster@ gnaws at a bone — where's that from?\n\n@hound@\n",
+      "hits": [
+        {
+          "Term": "Felid",
+          "Translation": "猫族",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/felid.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "hound",
+          "Translation": "猎犬",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "friendly shoals hound",
+      "source": "w:50\n@friendly hound@\n\nVISUAL:@The_monster@ [plays|frolics] in the surf!\n\n{{\nif you.can_smell() then\n    return \"VISUAL:A distinct wet dog smell emanates from @the_monster@.\"\nelse\n    return \"VISUAL:@The_monster@ motions as if to dry @reflexive@ off on you.\"\nend\n}}\n\nw:1\nVISUAL:@The_monster@ hopefully picks up a piece of driftwood and looks at you.\n",
+      "hits": [
+        {
+          "Term": "Shoals",
+          "Translation": "海滩",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "hound",
+          "Translation": "猎犬",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "default insect",
+      "source": "VISUAL:@The_monster@ waves @possessive@ antennae.\n",
+      "hits": [
+        {
+          "Term": "antennae",
+          "Translation": "触角",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：触角。"
+        }
+      ]
+    },
+    {
+      "key": "default confused insect",
+      "source": "VISUAL:@The_monster@ wildly waves @possessive@ antennae.\n\nVISUAL:@The_monster@ seems to be having trouble coordinating all six of @possessive@ legs.\n",
+      "hits": [
+        {
+          "Term": "antennae",
+          "Translation": "触角",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：触角。"
+        }
+      ]
+    },
+    {
+      "key": "default confused winged insect",
+      "source": "VISUAL:@The_monster@ flutters around in erratic circles.\n\nVISUAL:@The_monster@ wildly waves @possessive@ antennae.\n\nVISUAL:@The_monster@ wobbles in @possessive@ flight.\n",
+      "hits": [
+        {
+          "Term": "Flight",
+          "Translation": "飞行术/飞行/一群",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】完整法术标题用飞行术。移动能力或状态用飞行。a flight of butterflies 指一群蝴蝶。"
+        },
+        {
+          "Term": "antennae",
+          "Translation": "触角",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：触角。"
+        }
+      ]
+    },
+    {
+      "key": "default confused arachnid",
+      "source": "VISUAL:@The_monster@ seems to be having trouble coordinating all eight of @possessive@ legs.\n",
+      "hits": []
+    },
+    {
+      "key": "centipede",
+      "source": "VISUAL:@The_monster@ waves @possessive@ antennae.\n",
+      "hits": [
+        {
+          "Term": "antennae",
+          "Translation": "触角",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：触角。"
+        }
+      ]
+    },
+    {
+      "key": "default confused centipede",
+      "source": "VISUAL:@The_monster@ seems to be having trouble coordinating @possessive@ many legs.\n\nVISUAL:@The_monster@ wildly waves @possessive@ antennae.\n",
+      "hits": [
+        {
+          "Term": "antennae",
+          "Translation": "触角",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：触角。"
+        }
+      ]
+    },
+    {
+      "key": "default confused 'b'",
+      "source": "VISUAL:@The_monster@ flutters around in erratic circles.\n",
+      "hits": []
+    },
+    {
+      "key": "default 'cap-g'",
+      "source": "VISUAL:@The_monster@ pulsates ominously.\n",
+      "hits": []
+    },
+    {
+      "key": "default 'cap-j'",
+      "source": "VISUAL:@The_monster@ jiggles.\n",
+      "hits": []
+    },
+    {
+      "key": "'l'",
+      "source": "@The_monster@ hisses menacingly.\n",
+      "hits": []
+    },
+    {
+      "key": "'r'",
+      "source": "VISUAL:@The_monster@ twitches @possessive@ whiskers.\n",
+      "hits": []
+    },
+    {
+      "key": "default confused 'r'",
+      "source": "VISUAL:@The_monster@ runs around in a circle.\n",
+      "hits": []
+    },
+    {
+      "key": "default confused 'y'",
+      "source": "SOUND:@The_monster@ buzzes around in tight circles.\n",
+      "hits": []
+    },
+    {
+      "key": "default silenced confused 'y'",
+      "source": "VISUAL:@The_monster@ flies around in tight circles.\n",
+      "hits": []
+    },
+    {
+      "key": "default '8'",
+      "source": "__NONE\n",
+      "hits": []
+    },
+    {
+      "key": "elephant slug",
+      "source": "VISUAL:@The_monster@ briefly extends @possessive@ eye-stalks.\n",
+      "hits": [
+        {
+          "Term": "slug",
+          "Translation": "鼻涕虫/弹丸",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【语境补充 2026-10-21】生物用鼻涕虫。手铳等射出的金属 slug 用弹丸。"
+        },
+        {
+          "Term": "elephant",
+          "Translation": "大象",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "elephant slug",
+          "Translation": "象蛞蝓",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "default confused moth",
+      "source": "@default confused winged insect@\n",
+      "hits": [
+        {
+          "Term": "moth",
+          "Translation": "蛾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "'&'",
+      "source": "@_demon_taunt_@\n",
+      "hits": []
+    },
+    {
+      "key": "'1'",
+      "source": "@_demon_taunt_@\n",
+      "hits": []
+    },
+    {
+      "key": "'2'",
+      "source": "@_demon_taunt_@\n",
+      "hits": []
+    },
+    {
+      "key": "'3'",
+      "source": "@_demon_taunt_@\n",
+      "hits": []
+    },
+    {
+      "key": "'4'",
+      "source": "@_demon_taunt_@\n",
+      "hits": []
+    },
+    {
+      "key": "default '&'",
+      "source": "__NONE\n",
+      "hits": []
+    },
+    {
+      "key": "default '1'",
+      "source": "__NONE\n",
+      "hits": []
+    },
+    {
+      "key": "default '2'",
+      "source": "__NONE\n",
+      "hits": []
+    },
+    {
+      "key": "default '3'",
+      "source": "__NONE\n",
+      "hits": []
+    }
+  ],
+  "legacy_overlay_present": false
+}

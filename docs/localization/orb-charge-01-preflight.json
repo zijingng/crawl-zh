@@ -1,0 +1,72 @@
+{
+  "glossary_sha256": "5ea382702e0d86c7e1fcad03e64a1c7d079f42a2a2f6af24949e155eae9dc885",
+  "looked_up": [
+    "orb spider",
+    "rF",
+    "rC",
+    "rCorr",
+    "rN",
+    "rNeg",
+    "fire resistance",
+    "cold resistance",
+    "negative energy resistance"
+  ],
+  "hits": [
+    {
+      "Term": "rC",
+      "Translation": "冰抗",
+      "Part of Speech": "noun",
+      "Variants": "cold resistance",
+      "Note": "【0.34.1 修订】属性是 cold resistance；与火抗成对，HUD 保留 rC。 来源：player.cc。"
+    },
+    {
+      "Term": "rF",
+      "Translation": "火抗",
+      "Part of Speech": "noun",
+      "Variants": "fire resistance",
+      "Note": "【0.34.1 修订】HUD 可保留 rF。 来源：player.cc。"
+    },
+    {
+      "Term": "rN",
+      "Translation": "负能量抗性",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/HUD缩写】区别生命恢复和吸能状态。 来源：player.cc。"
+    },
+    {
+      "Term": "rCorr",
+      "Translation": "腐蚀抗性",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/HUD缩写】区分酸伤害及腐蚀状态的具体规则。 来源：player.cc。"
+    },
+    {
+      "Term": "orb spider",
+      "Translation": "球蛛",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+    },
+    {
+      "Term": "fire resistance",
+      "Translation": "火焰抗性",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：火焰抗性。"
+    },
+    {
+      "Term": "cold resistance",
+      "Translation": "寒冷抗性",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：寒冷抗性。"
+    },
+    {
+      "Term": "negative energy resistance",
+      "Translation": "负能量抗性",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：负能量抗性。"
+    }
+  ]
+}

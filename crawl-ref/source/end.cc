@@ -4,6 +4,7 @@
  **/
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "end.h"
 
@@ -132,7 +133,7 @@ bool fatal_error_notification(string error_msg)
     tiles.send_exit_reason("error", error_msg);
 #endif
 
-    ui::error(error_msg, "Fatal error:", true);
+    ui::error(error_msg, ui_translate("e.end", "Fatal error:"), true);
     return true;
 }
 
@@ -226,7 +227,7 @@ NORETURN void screen_end_game(string text, game_exit exit)
     delete_files();
 
     if (!text.empty())
-        ui::message(text, "", "<cyan>Hit any key to exit...</cyan>", true);
+        ui::message(text, "", ui_translate("e.end", "<cyan>Hit any key to exit...</cyan>"), true);
 
     game_ended(exit); // TODO: is this the right exit condition?
 }
@@ -312,7 +313,7 @@ NORETURN void end_game(scorefile_entry &se)
 
     string fname = morgue_name(you.your_name, se.get_death_time());
     if (!dump_char(fname, true, true, &se))
-        mpr("Char dump unsuccessful! Sorry about that.");
+        mpr(ui_translate("e.end", "Char dump unsuccessful! Sorry about that."));
 #ifdef USE_TILE_WEB
     else
         tiles.send_dump_info("morgue", fname);
@@ -352,7 +353,8 @@ NORETURN void end_game(scorefile_entry &se)
     tile->set_margin_for_sdl(0, 10, 0, 0);
     title_hbox->add_child(std::move(tile));
 #endif
-    string goodbye_title = make_stringf("Goodbye, %s.", you.your_name.c_str());
+    string goodbye_title = ui_render("e.end", "Goodbye, %s.",
+        make_stringf("Goodbye, %s.", you.your_name.c_str()), {ui_literal_arg(you.your_name)});
     title_hbox->add_child(make_shared<Text>(goodbye_title));
     title_hbox->set_cross_alignment(Widget::CENTER);
     title_hbox->set_margin_for_sdl(0, 0, 20, 0);
@@ -364,12 +366,14 @@ NORETURN void end_game(scorefile_entry &se)
     string goodbye_msg;
     goodbye_msg += "    "; // Space padding where # would go in list format
 
-    string hiscore = hiscores_format_single_long(se, true);
+    string hiscore = hiscores_format_single_long(se, true, true);
 
     goodbye_msg += hiscore;
 
-    goodbye_msg += make_stringf("\nBest Crawlers - %s\n",
-            crawl_state.game_type_name().c_str());
+    const string game_type = crawl_state.game_type_name();
+    goodbye_msg += ui_render("e.end", "\nBest Crawlers - %s\n",
+        make_stringf("\nBest Crawlers - %s\n", game_type.c_str()),
+        {game_type.empty() ? ui_literal_arg("") : ui_text_arg("e.end.game", game_type)});
 
 #ifdef USE_TILE_LOCAL
         const int line_height = in_headless_mode() ? 1 : tiles.get_crt_font()->char_height();
@@ -399,6 +403,13 @@ NORETURN void end_game(scorefile_entry &se)
     string morgue_dir = make_stringf("\nYou can find your morgue file in the \n'%s'\n directory.",
 # endif
             morgue_directory().c_str());
+    morgue_dir = ui_render("e.end",
+# ifndef __ANDROID__
+        "\nYou can find your morgue file in the '%s' directory.",
+# else
+        "\nYou can find your morgue file in the \n'%s'\n directory.",
+# endif
+        morgue_dir, {ui_literal_arg(morgue_directory())});
     vbox->add_child(make_shared<Text>(formatted_string::parse_string(morgue_dir)));
 #endif
 

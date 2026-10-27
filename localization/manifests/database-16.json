@@ -1,0 +1,758 @@
+{
+  "baseline": "0.34.1",
+  "source": "crawl-ref/source/dat/database/graffiti.txt",
+  "entries": [
+    {
+      "key": "_graffiti_author_any_",
+      "context": "textdb:database/graffiti.txt:_graffiti_author_any_",
+      "source_sha256": "4b51953baf303f95b544ae7070623c80e6306b927737b95afc4b4025b87eb37a",
+      "review_status": "reviewed",
+      "review_batch": "database-16",
+      "dependencies": [
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_author_bland_",
+          "source_sha256": "e43ad93de870e7e2dc6da680da943bb371ae7080969079cb3991321bf2e67b1f",
+          "translation_sha256": "a7a5be7ab280a556535ad4cba504f338383469f956b4e861d7f33bad62fdfd4d"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_author_orc_",
+          "source_sha256": "768a3064f8980f65b38740baf80e98c4f5e274be15c902dd7115394d8ddfa0ee",
+          "translation_sha256": "aa7db2992502c982903fc5ec4bc264e51de4eae00d0e46b012a64277be57129b"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_rare_graffiti_author_any_",
+          "source_sha256": "d3ba51aa5e4113c74af7677e262ae1872dbf50a0b8b74b9cff4e3ea1f986cb33",
+          "translation_sha256": "d3ba51aa5e4113c74af7677e262ae1872dbf50a0b8b74b9cff4e3ea1f986cb33"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_author_any_changeable_",
+      "context": "textdb:database/graffiti.txt:_graffiti_author_any_changeable_",
+      "source_sha256": "ea86cede5df602b6d551e2ddf02b2dad8684842aabd9dbacf5feb87123ad4cf0",
+      "review_status": "reviewed",
+      "review_batch": "database-16",
+      "dependencies": [
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_author_bland_",
+          "source_sha256": "e43ad93de870e7e2dc6da680da943bb371ae7080969079cb3991321bf2e67b1f",
+          "translation_sha256": "a7a5be7ab280a556535ad4cba504f338383469f956b4e861d7f33bad62fdfd4d"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_author_any_changeable_non-randgen_",
+      "context": "textdb:database/graffiti.txt:_graffiti_author_any_changeable_non-randgen_",
+      "source_sha256": "b70642ea8a1e7290664b2f1faf001eea9f8237bbfe46afeae9345d1512235fe4",
+      "review_status": "reviewed",
+      "review_batch": "database-16",
+      "dependencies": [
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_author_bland_",
+          "source_sha256": "e43ad93de870e7e2dc6da680da943bb371ae7080969079cb3991321bf2e67b1f",
+          "translation_sha256": "a7a5be7ab280a556535ad4cba504f338383469f956b4e861d7f33bad62fdfd4d"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_author_any_non-orc_",
+      "context": "textdb:database/graffiti.txt:_graffiti_author_any_non-orc_",
+      "source_sha256": "6ea9992a3d8e20b1b28015906917f904e57f51fd5362de76f893d361dffaab80",
+      "review_status": "reviewed",
+      "review_batch": "database-16",
+      "dependencies": [
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_author_bland_",
+          "source_sha256": "e43ad93de870e7e2dc6da680da943bb371ae7080969079cb3991321bf2e67b1f",
+          "translation_sha256": "a7a5be7ab280a556535ad4cba504f338383469f956b4e861d7f33bad62fdfd4d"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_rare_graffiti_author_any_non-orc_",
+          "source_sha256": "8b7c5b23a7c70afd3100f63247130d59befedf396c1e35f04d90027a21ac08ed",
+          "translation_sha256": "8b7c5b23a7c70afd3100f63247130d59befedf396c1e35f04d90027a21ac08ed"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_author_bland_",
+      "context": "textdb:database/graffiti.txt:_graffiti_author_bland_",
+      "source_sha256": "e43ad93de870e7e2dc6da680da943bb371ae7080969079cb3991321bf2e67b1f",
+      "review_status": "reviewed",
+      "review_batch": "database-16"
+    },
+    {
+      "key": "_graffiti_author_orc_",
+      "context": "textdb:database/graffiti.txt:_graffiti_author_orc_",
+      "source_sha256": "768a3064f8980f65b38740baf80e98c4f5e274be15c902dd7115394d8ddfa0ee",
+      "review_status": "reviewed",
+      "review_batch": "database-16"
+    },
+    {
+      "key": "_rare_graffiti_author_any_",
+      "context": "textdb:database/graffiti.txt:_rare_graffiti_author_any_",
+      "source_sha256": "d3ba51aa5e4113c74af7677e262ae1872dbf50a0b8b74b9cff4e3ea1f986cb33",
+      "review_status": "reviewed",
+      "review_batch": "database-16",
+      "dependencies": [
+        {
+          "source": "database/graffiti.txt",
+          "key": "_rare_graffiti_author_god_",
+          "source_sha256": "a6375a87b54ff29645ea060c00d3df1683f9c0af87e845f2916ab29f6c91ee97",
+          "translation_sha256": "94e77d695ddae289e248a525d0e717f0ca82b32bb5ad40f9ad6c09e795160694"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_rare_graffiti_author_orc_",
+          "source_sha256": "f308f12d9f20e114e96d8ca7246d48ee46569a6fc69aaca4c5e54055705c753c",
+          "translation_sha256": "e12282b0c3b1ce4baed15d563d9dec0ca59ca0ca7abb524ba05f8c4379cc8847"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_rare_graffiti_author_ordinary_",
+          "source_sha256": "10066d0ae0df36dc014efd5924278d1972d5f484eed3e31c0fc0db900a078229",
+          "translation_sha256": "b4e9e87d068bea6ceb0b4fa99cdf07021a2f7c1610f022d4b2f17c54a8d26bd0"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_rare_graffiti_author_title_",
+          "source_sha256": "a58555cc0c9df75505fbae0a4b8bee5596a18a9a9d7be5fa4b831c8242208a41",
+          "translation_sha256": "d35b63cd88c73c2e06d3d58d863852e672ab97097af8e476cf5b2a61de6a17fb"
+        }
+      ]
+    },
+    {
+      "key": "_rare_graffiti_author_any_non-orc_",
+      "context": "textdb:database/graffiti.txt:_rare_graffiti_author_any_non-orc_",
+      "source_sha256": "8b7c5b23a7c70afd3100f63247130d59befedf396c1e35f04d90027a21ac08ed",
+      "review_status": "reviewed",
+      "review_batch": "database-16",
+      "dependencies": [
+        {
+          "source": "database/graffiti.txt",
+          "key": "_rare_graffiti_author_god_",
+          "source_sha256": "a6375a87b54ff29645ea060c00d3df1683f9c0af87e845f2916ab29f6c91ee97",
+          "translation_sha256": "94e77d695ddae289e248a525d0e717f0ca82b32bb5ad40f9ad6c09e795160694"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_rare_graffiti_author_ordinary_",
+          "source_sha256": "10066d0ae0df36dc014efd5924278d1972d5f484eed3e31c0fc0db900a078229",
+          "translation_sha256": "b4e9e87d068bea6ceb0b4fa99cdf07021a2f7c1610f022d4b2f17c54a8d26bd0"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_rare_graffiti_author_title_",
+          "source_sha256": "a58555cc0c9df75505fbae0a4b8bee5596a18a9a9d7be5fa4b831c8242208a41",
+          "translation_sha256": "d35b63cd88c73c2e06d3d58d863852e672ab97097af8e476cf5b2a61de6a17fb"
+        }
+      ]
+    },
+    {
+      "key": "_rare_graffiti_author_god_",
+      "context": "textdb:database/graffiti.txt:_rare_graffiti_author_god_",
+      "source_sha256": "a6375a87b54ff29645ea060c00d3df1683f9c0af87e845f2916ab29f6c91ee97",
+      "review_status": "reviewed",
+      "review_batch": "database-16"
+    },
+    {
+      "key": "_rare_graffiti_author_orc_",
+      "context": "textdb:database/graffiti.txt:_rare_graffiti_author_orc_",
+      "source_sha256": "f308f12d9f20e114e96d8ca7246d48ee46569a6fc69aaca4c5e54055705c753c",
+      "review_status": "reviewed",
+      "review_batch": "database-16"
+    },
+    {
+      "key": "_rare_graffiti_author_ordinary_",
+      "context": "textdb:database/graffiti.txt:_rare_graffiti_author_ordinary_",
+      "source_sha256": "10066d0ae0df36dc014efd5924278d1972d5f484eed3e31c0fc0db900a078229",
+      "review_status": "reviewed",
+      "review_batch": "database-16"
+    },
+    {
+      "key": "_rare_graffiti_author_title_",
+      "context": "textdb:database/graffiti.txt:_rare_graffiti_author_title_",
+      "source_sha256": "a58555cc0c9df75505fbae0a4b8bee5596a18a9a9d7be5fa4b831c8242208a41",
+      "review_status": "reviewed",
+      "review_batch": "database-16"
+    },
+    {
+      "key": "_graffiti_type_with_signature_maybe_",
+      "context": "textdb:database/graffiti.txt:_graffiti_type_with_signature_maybe_",
+      "source_sha256": "42654777a60a8c475a6d80122b09a300739847b19019f410accfc15eabc986ad",
+      "review_status": "reviewed",
+      "review_batch": "database-16",
+      "dependencies": [
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_author_any_",
+          "source_sha256": "4b51953baf303f95b544ae7070623c80e6306b927737b95afc4b4025b87eb37a",
+          "translation_sha256": "4b51953baf303f95b544ae7070623c80e6306b927737b95afc4b4025b87eb37a"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_type_",
+          "source_sha256": "366849c579961008f01d867f225db5e457096b36e53fe24c4079b34a03441b48",
+          "translation_sha256": "cc2f0dfd7249b293d04fd215cc58bfec52e6ec46037f72f0d46d93031d8fb64c"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_type_with_signature_maybe_non-orc_",
+      "context": "textdb:database/graffiti.txt:_graffiti_type_with_signature_maybe_non-orc_",
+      "source_sha256": "10f7e0eed9dddf8111ff572e99fd213d0a16ff1375cc442eb86aa0209616b81f",
+      "review_status": "reviewed",
+      "review_batch": "database-16",
+      "dependencies": [
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_author_any_non-orc_",
+          "source_sha256": "6ea9992a3d8e20b1b28015906917f904e57f51fd5362de76f893d361dffaab80",
+          "translation_sha256": "6ea9992a3d8e20b1b28015906917f904e57f51fd5362de76f893d361dffaab80"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_type_",
+          "source_sha256": "366849c579961008f01d867f225db5e457096b36e53fe24c4079b34a03441b48",
+          "translation_sha256": "cc2f0dfd7249b293d04fd215cc58bfec52e6ec46037f72f0d46d93031d8fb64c"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_type_with_signature_maybe_orc_",
+      "context": "textdb:database/graffiti.txt:_graffiti_type_with_signature_maybe_orc_",
+      "source_sha256": "3c18212852b2fc9426551a270876592136360e17392e2c8c6aa034b5aee27127",
+      "review_status": "reviewed",
+      "review_batch": "database-16",
+      "dependencies": [
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_author_orc_",
+          "source_sha256": "768a3064f8980f65b38740baf80e98c4f5e274be15c902dd7115394d8ddfa0ee",
+          "translation_sha256": "aa7db2992502c982903fc5ec4bc264e51de4eae00d0e46b012a64277be57129b"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_type_",
+          "source_sha256": "366849c579961008f01d867f225db5e457096b36e53fe24c4079b34a03441b48",
+          "translation_sha256": "cc2f0dfd7249b293d04fd215cc58bfec52e6ec46037f72f0d46d93031d8fb64c"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_advertisement_",
+      "context": "textdb:database/graffiti.txt:_graffiti_advertisement_",
+      "source_sha256": "3a2ebc8ab33cb099d753951ff76de6e36ed7d4461c6043c81106e2e5d10119c0",
+      "review_status": "reviewed",
+      "review_batch": "database-16",
+      "dependencies": [
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_author_any_",
+          "source_sha256": "4b51953baf303f95b544ae7070623c80e6306b927737b95afc4b4025b87eb37a",
+          "translation_sha256": "4b51953baf303f95b544ae7070623c80e6306b927737b95afc4b4025b87eb37a"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_class_any_",
+          "source_sha256": "839d98c893542f9c7c1347fecd23dbf9d32ab79d4df3a68ece39566a0ed2e625",
+          "translation_sha256": "839d98c893542f9c7c1347fecd23dbf9d32ab79d4df3a68ece39566a0ed2e625"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_mass_meeting_ordinary_",
+          "source_sha256": "1144c43241d19b388ac411487e88117cdbaf8638feba0aab67d5d80c26158617",
+          "translation_sha256": "1d15985529d4f9799d10ad580d69d616c90f2f5676cd9d4b9d969d5a2d330eb4"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_mass_meeting_religious_",
+          "source_sha256": "8b912ae8137b71d13ab5f24eb4881488e74f9700ec76a74e1c99cc617ad38e0b",
+          "translation_sha256": "1a47c9ef8509593539f2db71d0831e342aed0fb48b8d51be0edb319cd25056f1"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_changed_names_",
+      "context": "textdb:database/graffiti.txt:_graffiti_changed_names_",
+      "source_sha256": "34c933d9d3861a52decb9cb0a96ed586d8ff6342629541489bbe668c61a4f4a0",
+      "review_status": "reviewed",
+      "review_batch": "database-16",
+      "dependencies": [
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_author_any_changeable_",
+          "source_sha256": "ea86cede5df602b6d551e2ddf02b2dad8684842aabd9dbacf5feb87123ad4cf0",
+          "translation_sha256": "ea86cede5df602b6d551e2ddf02b2dad8684842aabd9dbacf5feb87123ad4cf0"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_author_any_changeable_non-randgen_",
+          "source_sha256": "b70642ea8a1e7290664b2f1faf001eea9f8237bbfe46afeae9345d1512235fe4",
+          "translation_sha256": "b70642ea8a1e7290664b2f1faf001eea9f8237bbfe46afeae9345d1512235fe4"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_author_orc_",
+          "source_sha256": "768a3064f8980f65b38740baf80e98c4f5e274be15c902dd7115394d8ddfa0ee",
+          "translation_sha256": "aa7db2992502c982903fc5ec4bc264e51de4eae00d0e46b012a64277be57129b"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_rare_graffiti_author_any_",
+          "source_sha256": "d3ba51aa5e4113c74af7677e262ae1872dbf50a0b8b74b9cff4e3ea1f986cb33",
+          "translation_sha256": "d3ba51aa5e4113c74af7677e262ae1872dbf50a0b8b74b9cff4e3ea1f986cb33"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_changed_or_compared_religions_",
+      "context": "textdb:database/graffiti.txt:_graffiti_changed_or_compared_religions_",
+      "source_sha256": "afb16a56e051055d6c5a75e7fdf423c7e5682229d271ead12d032178a7998350",
+      "review_status": "reviewed",
+      "review_batch": "database-16",
+      "dependencies": [
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_author_any_",
+          "source_sha256": "4b51953baf303f95b544ae7070623c80e6306b927737b95afc4b4025b87eb37a",
+          "translation_sha256": "4b51953baf303f95b544ae7070623c80e6306b927737b95afc4b4025b87eb37a"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_hailed_god_",
+          "source_sha256": "a88fcbddac0814292d9f3542a79535a4ff34953d310b1cf11204494eb2fbb867",
+          "translation_sha256": "fbfb0d18dd1e6563a43061035a70f04ab4be669de2f66498b1fae9360d41bd02"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_religion_better_or_worse_",
+          "source_sha256": "665b787d79da4c451824d5b5cf1dce986115987056d8f0d04e46e0b0e6b273b6",
+          "translation_sha256": "4df2c365a82a0526f8b37ff91e162ef38e3d0951f836d8b8c0de38cbfd9f2a44"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_class_any_",
+      "context": "textdb:database/graffiti.txt:_graffiti_class_any_",
+      "source_sha256": "839d98c893542f9c7c1347fecd23dbf9d32ab79d4df3a68ece39566a0ed2e625",
+      "review_status": "reviewed",
+      "review_batch": "database-16",
+      "dependencies": [
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_class_master_",
+          "source_sha256": "e43951ce80228df71d36133c712c48a88d94a73e150eb8fb10f6d5ec4f2d2277",
+          "translation_sha256": "aee0c8117060652f440fca201d8c93d0115850a8a05be6ec6127572bb2895b10"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_class_remedial_",
+          "source_sha256": "a6ec055901dc6389286e675c6a19668c5822d36a6b1c128d7afd15ea57758d59",
+          "translation_sha256": "9ce01e8fa27ca89c3ba4b80c43f97f668412d3e004f78db4885e1aca4c9979e9"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_class_remedial_",
+      "context": "textdb:database/graffiti.txt:_graffiti_class_remedial_",
+      "source_sha256": "a6ec055901dc6389286e675c6a19668c5822d36a6b1c128d7afd15ea57758d59",
+      "review_status": "reviewed",
+      "review_batch": "database-16",
+      "dependencies": [
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_professor_",
+          "source_sha256": "64cc5c375fc5eff4298f56790af31b3ef4b0ab7c010ff494460c3b7683bed155",
+          "translation_sha256": "79680e8167ec0c8445f8501b276bfd2dcc08d938dab1a03d5d4c85bf1d6d32ed"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_professor_evocations_type_",
+          "source_sha256": "d4dceed989796079b01b951f6a82113cefa0066d60504ad34b6c939f7df2171e",
+          "translation_sha256": "5bee7579dfb66f82e7a88ca9d5925c82088c2e5b990a37d9dc27dee0a971352e"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_professor_invocations_type_",
+          "source_sha256": "ec0b8dcdd6bd60f930c4db106c262980ee3cfac461f45e1415692514af9407cf",
+          "translation_sha256": "c5fa401f945c9681176135bd869b1b49471f145c88eb7655d709f8e4cf791e2a"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_professor_magic_type_",
+          "source_sha256": "d103008d1f62e0b36b5ea8e22269963514ffd547bc5191d4e1cc14052ff10fd2",
+          "translation_sha256": "2f872c1d14b898424fa038a0e6570f16fd50be89e941b72ff95d3f51df5cb8f9"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_professor_mundane_type_",
+          "source_sha256": "baccbbc441b400d1e7f653cf01313137f72ddc732b8e8962b1a4edce62da961b",
+          "translation_sha256": "3892be4a112972918f562ef90040bb227d6df9c961acdc2d811e422b030f84bb"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_professor_necromancy_type_",
+          "source_sha256": "d13538d9601100a119d98928a14277889df8df4aacf2ba900bd04fd45d107a07",
+          "translation_sha256": "71fa4cced89fb5eee39e25339ce4f5893cf942e222b9a6ea8cc14f54aa29fbbc"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_professor_shapeshifting_type_",
+          "source_sha256": "af83d96eefbb42081a70888c439385e44f806a5e3bae52d7961ff684cedb56ac",
+          "translation_sha256": "73140361c7fb3884333854fce30f8f838fa52c3329ae10813a52d6f76831a1e2"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_duplicate_",
+      "context": "textdb:database/graffiti.txt:_graffiti_duplicate_",
+      "source_sha256": "e97a0f583df2bb388e4c5ece31f33f05a11246ecd3750669e47ab7b12ba5bd89",
+      "review_status": "reviewed",
+      "review_batch": "database-16"
+    },
+    {
+      "key": "_graffiti_fight_",
+      "context": "textdb:database/graffiti.txt:_graffiti_fight_",
+      "source_sha256": "8b1c0f194e1f4c8f10d5e091a5857135f9e6484afa9528db99057fceb48af63d",
+      "review_status": "reviewed",
+      "review_batch": "database-16",
+      "dependencies": [
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_author_any_",
+          "source_sha256": "4b51953baf303f95b544ae7070623c80e6306b927737b95afc4b4025b87eb37a",
+          "translation_sha256": "4b51953baf303f95b544ae7070623c80e6306b927737b95afc4b4025b87eb37a"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_hailed_god_",
+      "context": "textdb:database/graffiti.txt:_graffiti_hailed_god_",
+      "source_sha256": "a88fcbddac0814292d9f3542a79535a4ff34953d310b1cf11204494eb2fbb867",
+      "review_status": "reviewed",
+      "review_batch": "database-16",
+      "dependencies": [
+        {
+          "source": "database/graffiti.txt",
+          "key": "_rare_graffiti_author_god_",
+          "source_sha256": "a6375a87b54ff29645ea060c00d3df1683f9c0af87e845f2916ab29f6c91ee97",
+          "translation_sha256": "94e77d695ddae289e248a525d0e717f0ca82b32bb5ad40f9ad6c09e795160694"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_happened_reason_",
+      "context": "textdb:database/graffiti.txt:_graffiti_happened_reason_",
+      "source_sha256": "3495e1017dd6b2bde47aead4e62a264e4752c4d5cf55e2671185b2ba26cc97b1",
+      "review_status": "reviewed",
+      "review_batch": "database-16",
+      "dependencies": [
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_author_any_",
+          "source_sha256": "4b51953baf303f95b544ae7070623c80e6306b927737b95afc4b4025b87eb37a",
+          "translation_sha256": "4b51953baf303f95b544ae7070623c80e6306b927737b95afc4b4025b87eb37a"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_mass_meeting_ordinary_",
+      "context": "textdb:database/graffiti.txt:_graffiti_mass_meeting_ordinary_",
+      "source_sha256": "1144c43241d19b388ac411487e88117cdbaf8638feba0aab67d5d80c26158617",
+      "review_status": "reviewed",
+      "review_batch": "database-16"
+    },
+    {
+      "key": "_graffiti_mass_meeting_religious_",
+      "context": "textdb:database/graffiti.txt:_graffiti_mass_meeting_religious_",
+      "source_sha256": "8b912ae8137b71d13ab5f24eb4881488e74f9700ec76a74e1c99cc617ad38e0b",
+      "review_status": "reviewed",
+      "review_batch": "database-16"
+    },
+    {
+      "key": "_graffiti_obscenities_",
+      "context": "textdb:database/graffiti.txt:_graffiti_obscenities_",
+      "source_sha256": "5608e38370e505fa1b799c97bc7409b820f27ae8b6fbc060e30db23714df6bbd",
+      "review_status": "reviewed",
+      "review_batch": "database-16"
+    },
+    {
+      "key": "_graffiti_professor_",
+      "context": "textdb:database/graffiti.txt:_graffiti_professor_",
+      "source_sha256": "64cc5c375fc5eff4298f56790af31b3ef4b0ab7c010ff494460c3b7683bed155",
+      "review_status": "reviewed",
+      "review_batch": "database-16",
+      "dependencies": [
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_author_any_changeable_",
+          "source_sha256": "ea86cede5df602b6d551e2ddf02b2dad8684842aabd9dbacf5feb87123ad4cf0",
+          "translation_sha256": "ea86cede5df602b6d551e2ddf02b2dad8684842aabd9dbacf5feb87123ad4cf0"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_author_orc_",
+          "source_sha256": "768a3064f8980f65b38740baf80e98c4f5e274be15c902dd7115394d8ddfa0ee",
+          "translation_sha256": "aa7db2992502c982903fc5ec4bc264e51de4eae00d0e46b012a64277be57129b"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_rare_graffiti_author_any_",
+          "source_sha256": "d3ba51aa5e4113c74af7677e262ae1872dbf50a0b8b74b9cff4e3ea1f986cb33",
+          "translation_sha256": "d3ba51aa5e4113c74af7677e262ae1872dbf50a0b8b74b9cff4e3ea1f986cb33"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_professor_evocations_type_",
+      "context": "textdb:database/graffiti.txt:_graffiti_professor_evocations_type_",
+      "source_sha256": "d4dceed989796079b01b951f6a82113cefa0066d60504ad34b6c939f7df2171e",
+      "review_status": "reviewed",
+      "review_batch": "database-16"
+    },
+    {
+      "key": "_graffiti_professor_invocations_type_",
+      "context": "textdb:database/graffiti.txt:_graffiti_professor_invocations_type_",
+      "source_sha256": "ec0b8dcdd6bd60f930c4db106c262980ee3cfac461f45e1415692514af9407cf",
+      "review_status": "reviewed",
+      "review_batch": "database-16"
+    },
+    {
+      "key": "_graffiti_professor_magic_type_",
+      "context": "textdb:database/graffiti.txt:_graffiti_professor_magic_type_",
+      "source_sha256": "d103008d1f62e0b36b5ea8e22269963514ffd547bc5191d4e1cc14052ff10fd2",
+      "review_status": "reviewed",
+      "review_batch": "database-16"
+    },
+    {
+      "key": "_graffiti_professor_mundane_type_",
+      "context": "textdb:database/graffiti.txt:_graffiti_professor_mundane_type_",
+      "source_sha256": "baccbbc441b400d1e7f653cf01313137f72ddc732b8e8962b1a4edce62da961b",
+      "review_status": "reviewed",
+      "review_batch": "database-16"
+    },
+    {
+      "key": "_graffiti_professor_necromancy_type_",
+      "context": "textdb:database/graffiti.txt:_graffiti_professor_necromancy_type_",
+      "source_sha256": "d13538d9601100a119d98928a14277889df8df4aacf2ba900bd04fd45d107a07",
+      "review_status": "reviewed",
+      "review_batch": "database-16"
+    },
+    {
+      "key": "_graffiti_professor_shapeshifting_type_",
+      "context": "textdb:database/graffiti.txt:_graffiti_professor_shapeshifting_type_",
+      "source_sha256": "af83d96eefbb42081a70888c439385e44f806a5e3bae52d7961ff684cedb56ac",
+      "review_status": "reviewed",
+      "review_batch": "database-16"
+    },
+    {
+      "key": "_graffiti_relative_or_quality_",
+      "context": "textdb:database/graffiti.txt:_graffiti_relative_or_quality_",
+      "source_sha256": "b1f98c11626e003e8885d44e71c7431715dc5cad4a30bb8b8401006272d22e99",
+      "review_status": "reviewed",
+      "review_batch": "database-16"
+    },
+    {
+      "key": "_graffiti_religion_non-orc_",
+      "context": "textdb:database/graffiti.txt:_graffiti_religion_non-orc_",
+      "source_sha256": "ce7894b8cf5712a8f4bd0512c84a79cca55414c42378f635defef9dae19e9fd7",
+      "review_status": "reviewed",
+      "review_batch": "database-16"
+    },
+    {
+      "key": "_graffiti_religion_not_non-orc_or_orc_",
+      "context": "textdb:database/graffiti.txt:_graffiti_religion_not_non-orc_or_orc_",
+      "source_sha256": "48fd3bcd721a3bfac05b4ef15ce693ef023f1d3e2d9e8a99ac3cbf5a1e9fab66",
+      "review_status": "reviewed",
+      "review_batch": "database-16",
+      "dependencies": [
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_hailed_god_",
+          "source_sha256": "a88fcbddac0814292d9f3542a79535a4ff34953d310b1cf11204494eb2fbb867",
+          "translation_sha256": "fbfb0d18dd1e6563a43061035a70f04ab4be669de2f66498b1fae9360d41bd02"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_religion_orc_",
+      "context": "textdb:database/graffiti.txt:_graffiti_religion_orc_",
+      "source_sha256": "ee59077e6b0f0306d027397e2c5002784eb68bedb454a55e967b05c7aa548e49",
+      "review_status": "reviewed",
+      "review_batch": "database-16"
+    },
+    {
+      "key": "_graffiti_rumour_",
+      "context": "textdb:database/graffiti.txt:_graffiti_rumour_",
+      "source_sha256": "0792d7a830ebf0a5a5e2d6ec78af4558f90a05c30d5c4a2f9a06bfbb027c23fd",
+      "review_status": "reviewed",
+      "review_batch": "database-16"
+    },
+    {
+      "key": "_graffiti_short_saying_",
+      "context": "textdb:database/graffiti.txt:_graffiti_short_saying_",
+      "source_sha256": "a005c847770b4a5b84601b75a06b6c0d47e490cd92acd955eccfec93f97ea00e",
+      "review_status": "reviewed",
+      "review_batch": "database-16",
+      "dependencies": [
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_author_any_",
+          "source_sha256": "4b51953baf303f95b544ae7070623c80e6306b927737b95afc4b4025b87eb37a",
+          "translation_sha256": "4b51953baf303f95b544ae7070623c80e6306b927737b95afc4b4025b87eb37a"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_changed_names_",
+          "source_sha256": "34c933d9d3861a52decb9cb0a96ed586d8ff6342629541489bbe668c61a4f4a0",
+          "translation_sha256": "6920d12a70034869c9eea6ab5c9861d82a2832b40367549241a40cdc6ef42085"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_changed_or_compared_religions_",
+          "source_sha256": "afb16a56e051055d6c5a75e7fdf423c7e5682229d271ead12d032178a7998350",
+          "translation_sha256": "392feae883087e560037db595ac11843d3529f2ced73d70faf4ce7cbafb4215a"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_duplicate_",
+          "source_sha256": "e97a0f583df2bb388e4c5ece31f33f05a11246ecd3750669e47ab7b12ba5bd89",
+          "translation_sha256": "115cedc34cefecefa157b6fa8fca7f53f0af17e1a128b09db4cb8d360dbd0c6b"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_happened_reason_",
+          "source_sha256": "3495e1017dd6b2bde47aead4e62a264e4752c4d5cf55e2671185b2ba26cc97b1",
+          "translation_sha256": "d5ab3ffc198d26490c1aabb18fcc8a1aec864679ed9d28918c7954884f14f52e"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_life_or_death_",
+          "source_sha256": "ae74f57eba1ba4c12701e60e49c99d4d2fa384633e588a0df0e2d567ca0008b1",
+          "translation_sha256": "324ab26ff28400c8131aee7a9bc9acadff52fee88a1ae9d54cb4389dc21015c6"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_loves_or_hates_",
+          "source_sha256": "3995903e2c5dc0861e1e9bfb4bef8bd310cfc65a8fd8f06e18d1a1a8604ab9e6",
+          "translation_sha256": "79002295c999d8398025d6f99b7e6a9c5303afa0146589bb6d4655456cc84df7"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_relative_or_quality_",
+          "source_sha256": "b1f98c11626e003e8885d44e71c7431715dc5cad4a30bb8b8401006272d22e99",
+          "translation_sha256": "d19b6fec4cb268a280c68fe68171b59eac4a3b806618a7de342e3c335b7e8d68"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_vengeance_",
+          "source_sha256": "5797b0b7b164baed260bfc791dfe4c7533dbec5132e497b6cd489ddf2517f6cc",
+          "translation_sha256": "7f64bf244cd27203614a6aa1db9ff4de36dde9a9418145f9f9673db6a81abff9"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_wares_quality_",
+          "source_sha256": "00ce45e26c01e62d84ffcbaabe008854802a84f0ffd939033a9a6156e2ddeca2",
+          "translation_sha256": "e76337abf03a1b3d74c53fb67fd480c14d980706f937dca2058fb0096651d29c"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_species_",
+      "context": "textdb:database/graffiti.txt:_graffiti_species_",
+      "source_sha256": "a98ebf60acdaaa74455c00b3265cdbfab562df87d51db6ea03e82c3ed0364d8f",
+      "review_status": "reviewed",
+      "review_batch": "database-16"
+    },
+    {
+      "key": "_graffiti_unique_comment_",
+      "context": "textdb:database/graffiti.txt:_graffiti_unique_comment_",
+      "source_sha256": "49ff75f54a81eb87ed6417ac155f17ecdbb7054248cd5dfbe516dac367020281",
+      "review_status": "reviewed",
+      "review_batch": "database-16"
+    },
+    {
+      "key": "_graffiti_unreadable_",
+      "context": "textdb:database/graffiti.txt:_graffiti_unreadable_",
+      "source_sha256": "0839a15ba9cb129c4039e1f619d0659d2ca7af87ed524e61c40c8395a362a854",
+      "review_status": "reviewed",
+      "review_batch": "database-16",
+      "dependencies": [
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_author_any_",
+          "source_sha256": "4b51953baf303f95b544ae7070623c80e6306b927737b95afc4b4025b87eb37a",
+          "translation_sha256": "4b51953baf303f95b544ae7070623c80e6306b927737b95afc4b4025b87eb37a"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_hailed_god_",
+          "source_sha256": "a88fcbddac0814292d9f3542a79535a4ff34953d310b1cf11204494eb2fbb867",
+          "translation_sha256": "fbfb0d18dd1e6563a43061035a70f04ab4be669de2f66498b1fae9360d41bd02"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_writing_type_",
+          "source_sha256": "155177e24bd3cd02b8291bf442087de1286cdeef2c81c0e6215c3432d3ee803c",
+          "translation_sha256": "d74dc8f6c9fd6e839accc984af9a1b291443280b3b09f492621d8a72fb0aef92"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_vengeance_",
+      "context": "textdb:database/graffiti.txt:_graffiti_vengeance_",
+      "source_sha256": "5797b0b7b164baed260bfc791dfe4c7533dbec5132e497b6cd489ddf2517f6cc",
+      "review_status": "reviewed",
+      "review_batch": "database-16",
+      "dependencies": [
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_author_any_",
+          "source_sha256": "4b51953baf303f95b544ae7070623c80e6306b927737b95afc4b4025b87eb37a",
+          "translation_sha256": "4b51953baf303f95b544ae7070623c80e6306b927737b95afc4b4025b87eb37a"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_author_orc_",
+          "source_sha256": "768a3064f8980f65b38740baf80e98c4f5e274be15c902dd7115394d8ddfa0ee",
+          "translation_sha256": "aa7db2992502c982903fc5ec4bc264e51de4eae00d0e46b012a64277be57129b"
+        },
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_vengeance_reason_",
+          "source_sha256": "039a8509c38f42d18350da30f0d737b861784bb36cb106032be69dadead9013f",
+          "translation_sha256": "0eaa912b733ac27dbfb1c2c9beb79026f3c709cee40b5a876db082f0999fc3a9"
+        }
+      ]
+    },
+    {
+      "key": "_graffiti_vengeance_reason_",
+      "context": "textdb:database/graffiti.txt:_graffiti_vengeance_reason_",
+      "source_sha256": "039a8509c38f42d18350da30f0d737b861784bb36cb106032be69dadead9013f",
+      "review_status": "reviewed",
+      "review_batch": "database-16",
+      "dependencies": [
+        {
+          "source": "database/graffiti.txt",
+          "key": "_graffiti_author_any_",
+          "source_sha256": "4b51953baf303f95b544ae7070623c80e6306b927737b95afc4b4025b87eb37a",
+          "translation_sha256": "4b51953baf303f95b544ae7070623c80e6306b927737b95afc4b4025b87eb37a"
+        }
+      ]
+    }
+  ],
+  "reviewed_this_batch": 45,
+  "candidates": 317,
+  "cumulative_reviewed": 58,
+  "existing_translation_keys_rechecked": 13,
+  "english_source_unchanged": true,
+  "runtime_adapter": "paired decoration gods and skills; unchanged canonical name renderer; whole English for unavailable components",
+  "whole_file_export": "localization/manifests/textdb-phase3.json"
+}

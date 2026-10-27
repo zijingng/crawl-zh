@@ -4,6 +4,10 @@
 **/
 
 #include "AppHdr.h"
+#include "monster.h"
+#include "mon-info.h"
+#include "s-display.h"
+#include "i18n.h"
 
 #include "spl-util.h"
 
@@ -370,22 +374,18 @@ bool add_spell_to_memory(spell_type spell)
         }
 
     if (you.num_turns)
-        mprf("Spell assigned to '%c'.", index_to_letter(letter_j));
+        mprf(ui_translate("s.ui", "Spell assigned to '%c'."), index_to_letter(letter_j));
 
     // A hint, for those who may not be aware.
     if (spell == SPELL_SPELLSPARK_SERVITOR)
     {
-        mprf(MSGCH_TUTORIAL,
-             "(You may use Imbue Servitor from the <w>%s</w>bility menu to change "
-             "which spell your servitor casts.)",
-                command_to_string(CMD_USE_ABILITY).c_str());
+        mprf(MSGCH_TUTORIAL, "%s", ui_render("s.log", "(You may use Imbue Servitor from the <w>%s</w>bility menu to change which spell your servitor casts.)", make_stringf("(You may use Imbue Servitor from the <w>%s</w>bility menu to change "
+             "which spell your servitor casts.)", command_to_string(CMD_USE_ABILITY).c_str()), {ui_literal_arg(command_to_string(CMD_USE_ABILITY))}).c_str());
     }
     else if (spell == SPELL_PLATINUM_PARAGON)
     {
-        mprf(MSGCH_TUTORIAL,
-             "(You may use Imprint Weapon from the <w>%s</w>bility menu to change "
-             "which weapon your Paragon wields.)",
-                command_to_string(CMD_USE_ABILITY).c_str());
+        mprf(MSGCH_TUTORIAL, "%s", ui_render("s.log", "(You may use Imprint Weapon from the <w>%s</w>bility menu to change which weapon your Paragon wields.)", make_stringf("(You may use Imprint Weapon from the <w>%s</w>bility menu to change "
+             "which weapon your Paragon wields.)", command_to_string(CMD_USE_ABILITY).c_str()), {ui_literal_arg(command_to_string(CMD_USE_ABILITY))}).c_str());
     }
     // Give a free charge upon learning this spell for the first time, so the
     // player can actually use it immediately.
@@ -430,7 +430,7 @@ bool del_spell_from_memory_by_slot(int slot)
 
     spell_skills(you.spells[slot], you.skills_to_hide);
 
-    mprf("Your memory of %s unravels.", spell_title(you.spells[slot]));
+    mprf("%s", ui_render("s.log", "Your memory of %s unravels.", make_stringf("Your memory of %s unravels.", spell_title(you.spells[slot])), {ui_text_arg("display.spell", spell_title(you.spells[slot]))}).c_str());
 
     you.spells[slot] = SPELL_NO_SPELL;
 
@@ -636,6 +636,11 @@ int count_bits(uint64_t bits)
 const char *spell_title(spell_type spell)
 {
     return _seekspell(spell)->title;
+}
+
+const char *spell_display_title(spell_type spell)
+{
+    return ui_translate("display.spell", spell_title(spell));
 }
 
 // FUNCTION APPLICATORS: Idea from Juho Snellman <jsnell@lyseo.edu.ouka.fi>
@@ -2157,3 +2162,68 @@ bool spell_was_form(spell_type spell)
     return form_spells.count(spell);
 }
 #endif
+
+// Known names (for mesmerisers/fearmongers) match name(..., true) callers.
+ui_arg s_known_actor_arg(const actor &who)
+{
+    if (who.is_player()) return ui_text_arg("log.actor", "you");
+    ui_arg name;
+    name.available = monster_info(who.as_monster(), MILEV_NAME).try_display_name(name.text);
+    return name;
+}
+
+ui_arg s_feature_arg(dungeon_feature_type feature)
+{
+    ui_arg name;
+    name.available = try_feature_display_name(feature, NUM_TRAPS, name.text);
+    return name;
+}
+
+ui_arg s_feature_at_arg(const coord_def &where)
+{
+    ui_arg name;
+    name.available = try_feature_display_at(where, false, name.text);
+    return name;
+}
+
+ui_arg s_actor_list_arg(const vector<monster*> &actors)
+{
+    ui_arg list{"", true};
+    for (const monster *who : actors)
+    {
+        const ui_arg name = ui_actor_arg(*who);
+        list.available = list.available && name.available;
+        if (!list.text.empty()) list.text += "、";
+        list.text += name.text;
+    }
+    return list;
+}
+
+ui_arg s_spell_list_arg(const vector<spell_type> &spells)
+{
+    ui_arg list{"", true};
+    for (spell_type spell : spells)
+    {
+        const ui_arg name = ui_text_arg("display.spell", spell_title(spell));
+        list.available = list.available && name.available;
+        if (!list.text.empty()) list.text += "、";
+        list.text += name.text;
+    }
+    return list;
+}
+
+ui_arg s_spell_schools_arg(spell_type spell)
+{
+    ui_arg result{"", true};
+    for (const auto school : spschools_type::range())
+    {
+        if (!spell_typematch(spell, school)) continue;
+        const skill_type skill = spell_type2skill(school);
+        if (skill == SK_NONE) return {"", false};
+        const ui_arg name = ui_text_arg("display.skill", skill_name(skill));
+        result.available = result.available && name.available;
+        if (!result.text.empty()) result.text += "/";
+        result.text += name.text;
+    }
+    return result;
+}

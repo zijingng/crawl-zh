@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "s-display.h"
+#include "i18n.h"
 
 #include "spl-summoning.h"
 
@@ -18,6 +20,7 @@
 #include "coordit.h"
 #include "corpse.h"
 #include "database.h"
+#include "misc-display.h"
 #include "delay.h"
 #include "directn.h"
 #include "dungeon.h"
@@ -207,7 +210,7 @@ spret cast_summon_small_mammal(int pow, bool fail)
     if (monster* mons = create_monster(_pal_data(mon, summ_dur(3), SPELL_SUMMON_SMALL_MAMMAL)))
     {
         if (you.can_see(*mons))
-            mprf("%s appears in a puff of smoke.", mons->name(DESC_A).c_str());
+            mprf("%s", ui_render("s.log", "%s appears in a puff of smoke.", make_stringf("%s appears in a puff of smoke.", mons->name(DESC_A).c_str()), {ui_actor_arg(*mons)}).c_str());
     }
     else
         canned_msg(MSG_NOTHING_HAPPENS);
@@ -243,7 +246,7 @@ spret cast_call_canine_familiar(int pow, bool fail)
 
     if (old_dog && !you.can_see(*old_dog))
     {
-        mprf(MSGCH_PROMPT, "Your familiar is too far away to imbue with magic.");
+        mprf(MSGCH_PROMPT, "%s", ui_translate("log.spl-summoning", "Your familiar is too far away to imbue with magic."));
         return spret::abort;
     }
 
@@ -268,7 +271,7 @@ spret cast_call_canine_familiar(int pow, bool fail)
         dog->ghost->init_inugami_from_player(pow);
         dog->ghost_demon_init();
 
-        mpr("You call for your canine familiar and it appears with a howl!");
+        mpr(ui_translate("log.spl-summoning", "You call for your canine familiar and it appears with a howl!"));
         you.props[CANINE_FAMILIAR_MID].get_int() = dog->mid;
     }
     // If it's active, instead heal and boost its next attack.
@@ -276,8 +279,8 @@ spret cast_call_canine_familiar(int pow, bool fail)
     {
         // Heal familiar and make its next attack (within the new few turns,
         // so that you don't just prebuff for this) an instant cleave.
-        mpr("You imbue your familiar with magical energy and its fangs glint"
-            " viciously.");
+        mpr(ui_translate("log.spl-summoning", "You imbue your familiar with magical energy and its fangs glint"
+            " viciously."));
 
         old_dog->heal(random_range(5, 9) + div_rand_round(pow, 5));
         old_dog->del_ench(ENCH_POISON);
@@ -307,7 +310,7 @@ spret cast_summon_cactus(int pow, bool fail)
     if (monster* mons = create_monster(mg))
     {
         if (you.can_see(*mons))
-            mpr("A prickly colossus appears in a rush of desert wind.");
+            mpr(ui_translate("log.spl-summoning", "A prickly colossus appears in a rush of desert wind."));
     }
 
     else
@@ -322,7 +325,7 @@ spret cast_awaken_armour(int pow, bool fail)
     if (armour == nullptr)
     {
         // I don't think we can ever reach this line, but let's be safe.
-        mpr("You aren't wearing any armour!");
+        mpr(ui_translate("log.spl-summoning", "You aren't wearing any armour!"));
         return spret::abort;
     }
 
@@ -349,7 +352,7 @@ spret cast_awaken_armour(int pow, bool fail)
         return spret::success;
     }
 
-    mprf("You draw out an echo of %s.", armour->name(DESC_YOUR).c_str());
+    mprf("%s", ui_render("s.log", "You draw out an echo of %s.", make_stringf("You draw out an echo of %s.", armour->name(DESC_YOUR).c_str()), {ui_item_arg(*armour)}).c_str());
 
     item_def &fake_armour = env.item[mitm_slot];
     fake_armour.clear();
@@ -372,7 +375,7 @@ spret cast_summon_ice_beast(int pow, bool fail)
     ice_beast.hd = (3 + div_rand_round(pow, 13));
 
     if (create_monster(ice_beast))
-        mpr("A chill wind blows around you.");
+        mpr(ui_translate("log.spl-summoning", "A chill wind blows around you."));
     else
         canned_msg(MSG_NOTHING_HAPPENS);
 
@@ -401,9 +404,7 @@ spret cast_monstrous_menagerie(monster* caster, int pow)
 
     if (you.can_see(*beast))
     {
-        mprf("%s %s %s!", caster->name(DESC_THE).c_str(),
-                          caster->conj_verb("summon").c_str(),
-                          mons_type_name(type, DESC_A).c_str());
+        mprf("%s", ui_render("s.log", "%s summons %s!", make_stringf("%s %s %s!", caster->name(DESC_THE).c_str(), caster->conj_verb("summon").c_str(), mons_type_name(type, DESC_A).c_str()), {ui_actor_arg(*caster), ui_text_arg("display.monster", mons_type_name(type, DESC_PLAIN))}).c_str());
     }
     else
         canned_msg(MSG_NOTHING_HAPPENS);
@@ -442,14 +443,12 @@ spret cast_sphinx_sisters(const actor& caster, int pow, bool fail)
 
     if (marauder && guardian && you.can_see(*marauder) && you.can_see(*guardian))
     {
-        mprf("A pair of sphinxes answers %s call!",
-                    caster.name(DESC_ITS).c_str());
+        mprf("%s", ui_render("s.log", "A pair of sphinxes answers %s call!", make_stringf("A pair of sphinxes answers %s call!", caster.name(DESC_ITS).c_str()), {ui_actor_arg(caster)}).c_str());
     }
     else if (marauder && you.can_see(*marauder) || guardian && you.can_see(*guardian))
     {
         const monster* sphinx = marauder ? marauder : guardian;
-        mprf("%s answers %s call!", sphinx->name(DESC_A).c_str(),
-                                    caster.name(DESC_ITS).c_str());
+        mprf("%s", ui_render("s.log", "%s answers %s call!", make_stringf("%s answers %s call!", sphinx->name(DESC_A).c_str(), caster.name(DESC_ITS).c_str()), {ui_actor_arg(*sphinx), ui_actor_arg(caster)}).c_str());
     }
     else if (you.can_see(caster))
         canned_msg(MSG_NOTHING_HAPPENS);
@@ -474,7 +473,7 @@ spret cast_summon_hydra(actor *caster, int pow, bool fail)
     if (monster *hydra = create_monster(mg))
     {
         if (you.see_cell(hydra->pos()))
-            mprf("%s appears.", hydra->name(DESC_A).c_str());
+            mprf("%s", ui_render("s.log", "%s appears.", make_stringf("%s appears.", hydra->name(DESC_A).c_str()), {ui_actor_arg(*hydra)}).c_str());
     }
     else if (caster->is_player())
         canned_msg(MSG_NOTHING_HAPPENS);
@@ -509,7 +508,7 @@ spret cast_dragon_call(int pow, bool fail)
 
     fail_check();
 
-    mpr("You call out to the draconic realm, and the dragon horde roars back!");
+    mpr(ui_translate("log.spl-summoning", "You call out to the draconic realm, and the dragon horde roars back!"));
     noisy(spell_effect_noise(SPELL_DRAGON_CALL), you.pos());
 
     you.duration[DUR_DRAGON_CALL] = (15 + div_rand_round(pow, 5) + random2(15))
@@ -551,8 +550,8 @@ static void _place_dragon()
         // remains, as the player might soon have enough again.
         if (!enough_mp(mp_cost, true))
         {
-            mpr("A dragon tries to answer your call, but you don't have enough "
-                "magical power!");
+            mpr(ui_translate("log.spl-summoning", "A dragon tries to answer your call, but you don't have enough "
+                "magical power!"));
             return;
         }
 
@@ -564,7 +563,7 @@ static void _place_dragon()
 
         pay_mp(mp_cost);
         if (you.see_cell(dragon->pos()))
-            mpr("A dragon arrives to answer your call!");
+            mpr(ui_translate("log.spl-summoning", "A dragon arrives to answer your call!"));
         finalize_mp_cost();
 
         // The dragon is allowed to act immediately here
@@ -663,7 +662,7 @@ spret cast_summon_dragon(actor *caster, int pow, bool fail)
                 _summon_data(*caster, mon, summ_dur(6), SPELL_SUMMON_DRAGON)))
         {
             if (you.see_cell(dragon->pos()))
-                mpr("A dragon appears.");
+                mpr(ui_translate("log.spl-summoning", "A dragon appears."));
             success = true;
         }
     }
@@ -685,7 +684,7 @@ spret cast_summon_mana_viper(int pow, bool fail)
     viper.hd = (7 + div_rand_round(pow, 12));
 
     if (create_monster(viper))
-        mpr("A mana viper appears with a sibilant hiss.");
+        mpr(ui_translate("log.spl-summoning", "A mana viper appears with a sibilant hiss."));
     else
         canned_msg(MSG_NOTHING_HAPPENS);
 
@@ -808,7 +807,7 @@ bool summon_holy_warrior(int pow, bool punish)
     summon->flags |= MF_ATT_CHANGE_ATTEMPT;
 
     if (!punish)
-        mpr("You are momentarily dazzled by a brilliant light.");
+        mpr(ui_translate("log.spl-summoning", "You are momentarily dazzled by a brilliant light."));
 
     return true;
 }
@@ -833,7 +832,7 @@ spret cast_summon_holy_warrior(int pow, bool fail)
  **/
 static bool _fail_tukimas()
 {
-    mpr("You can't see a target there!");
+    mpr(ui_translate("log.spl-summoning", "You can't see a target there!"));
     return false; // Waste the turn - no anti-invis tech
 }
 
@@ -876,9 +875,7 @@ static bool _check_tukima_validity(const actor *target)
         bool plural = true;
         const string hand = target->hand_name(true, &plural);
 
-        mprf("%s %s %s.",
-             apostrophise(target->name(DESC_THE)).c_str(),
-             hand.c_str(), conjugate_verb("twitch", plural).c_str());
+        mprf("%s", ui_render("s.log", "%s %s twitch.", make_stringf("%s %s %s.", apostrophise(target->name(DESC_THE)).c_str(), hand.c_str(), conjugate_verb("twitch", plural).c_str()), {ui_actor_arg(*target), s_anatomy_arg(hand)}).c_str());
 
         return false;
     }
@@ -895,9 +892,7 @@ static bool _check_tukima_validity(const actor *target)
         }
         else
         {
-            mprf("%s vibrate%s crazily for a second.",
-                 wpn->name(DESC_THE).c_str(),
-                 wpn->quantity > 1 ? "" : "s");
+            mprf("%s", ui_render("s.log", "%s vibrates crazily for a second.", make_stringf("%s vibrate%s crazily for a second.", wpn->name(DESC_THE).c_str(), wpn->quantity > 1 ? "" : "s"), {ui_item_arg(*wpn)}).c_str());
         }
         return false;
     }
@@ -931,7 +926,7 @@ static void _animate_weapon(int pow, actor* target)
 
     if (!mons)
     {
-        mprf("%s twitches for a moment.", wpn->name(DESC_THE).c_str());
+        mprf("%s", ui_render("s.log", "%s twitches for a moment.", make_stringf("%s twitches for a moment.", wpn->name(DESC_THE).c_str()), {ui_item_arg(*wpn)}).c_str());
         return;
     }
 
@@ -939,7 +934,7 @@ static void _animate_weapon(int pow, actor* target)
     mons->foe = target->mindex();
 
     // We are successful. Unwield the weapon, removing any wield effects.
-    mprf("%s dances into the air!", wpn->name(DESC_THE).c_str());
+    mprf("%s", ui_render("s.log", "%s dances into the air!", make_stringf("%s dances into the air!", wpn->name(DESC_THE).c_str()), {ui_item_arg(*wpn)}).c_str());
 
     monster * const montarget = target->as_monster();
     const int primary_weap = montarget->inv[MSLOT_WEAPON];
@@ -1021,7 +1016,7 @@ spret cast_conjure_ball_lightning(int pow, bool fail)
     }
 
     if (success)
-        mpr("You create some ball lightning!");
+        mpr(ui_translate("log.spl-summoning", "You create some ball lightning!"));
     else
         canned_msg(MSG_NOTHING_HAPPENS);
 
@@ -1055,7 +1050,7 @@ spret cast_forge_lightning_spire(int pow, bool fail)
     monster* mons = create_monster(spire);
 
     if (mons && !silenced(mons->pos()))
-        mpr("An electric hum fills the air.");
+        mpr(ui_translate("log.spl-summoning", "An electric hum fills the air."));
     else
         canned_msg(MSG_NOTHING_HAPPENS);
 
@@ -1077,7 +1072,7 @@ spret cast_forge_blazeheart_golem(int pow, bool fail)
 
     if (mons)
     {
-        mpr("You bind the heart of a blast furnace in slag iron.");
+        mpr(ui_translate("log.spl-summoning", "You bind the heart of a blast furnace in slag iron."));
 
         // Give an extra turn of grace period on the turn it is summoned.
         mons->blazeheart_heat = 4;
@@ -1105,7 +1100,7 @@ spret cast_call_imp(int pow, bool fail)
     mgen_data imp_data = _pal_data(MONS_CERULEAN_IMP, summ_dur(3), SPELL_CALL_IMP);
     if (monster *imp = create_monster(imp_data))
     {
-        mpr("A tiny devil pulls itself out of the air.");
+        mpr(ui_translate("log.spl-summoning", "A tiny devil pulls itself out of the air."));
         imp->weapon()->plus = pow/10 - 4;
         _monster_greeting(imp, "_friendly_imp_greeting");
     }
@@ -1142,9 +1137,9 @@ spret summon_butterflies()
         return spret::abort;
 
     if (silenced(you.pos()))
-        mpr("Somewhere, a butterfly flaps its wings.");
+        mpr(ui_translate("log.spl-summoning", "Somewhere, a butterfly flaps its wings."));
     else
-        mpr("You hear the flapping of tiny wings.");
+        mpr(ui_translate("log.spl-summoning", "You hear the flapping of tiny wings."));
 
     bool success = false;
     // push away further-away things first, so middle ones don't get stuck
@@ -1202,7 +1197,7 @@ spret summon_shadow_creatures()
     if (stop_summoning_prompt())
         return spret::abort;
 
-    mpr("Wisps of shadow whirl around you...");
+    mpr(ui_translate("log.spl-summoning", "Wisps of shadow whirl around you..."));
 
     int num = roll_dice(2, 2);
     int num_created = 0;
@@ -1245,7 +1240,7 @@ spret summon_shadow_creatures()
     }
 
     if (!num_created)
-        mpr("The shadows disperse without effect.");
+        mpr(ui_translate("log.spl-summoning", "The shadows disperse without effect."));
 
     return spret::success;
 }
@@ -1362,8 +1357,8 @@ void create_malign_gateway(coord_def point, beh_type beh, string cause,
     set_terrain_changed(point);
 
     noisy(spell_effect_noise(SPELL_MALIGN_GATEWAY), point);
-    mprf(MSGCH_WARN, "The dungeon shakes, a horrible noise fills the air, "
-                     "and a portal to some otherworldly place is opened!");
+    mprf(MSGCH_WARN, "%s", ui_translate("log.spl-summoning", "The dungeon shakes, a horrible noise fills the air, "
+                     "and a portal to some otherworldly place is opened!"));
 }
 
 spret cast_malign_gateway(actor * caster, int pow, bool fail, bool test)
@@ -1412,7 +1407,7 @@ spret cast_summon_horrible_things(int pow, bool fail)
     if (one_chance_in(4))
     {
         // if someone deletes the db, no message is ok
-        mpr(getMiscString("summon_horrible_things"));
+        mpr(getPairedMiscString("summon_horrible_things").text());
         doom_cost += random_range(6, 10);
     }
 
@@ -1445,7 +1440,7 @@ spret cast_summon_horrible_things(int pow, bool fail)
     if (!count)
         canned_msg(MSG_NOTHING_HAPPENS);
     else
-        mpr("You open a gateway and unleash terrible monstrosities upon the world.");
+        mpr(ui_translate("log.spl-summoning", "You open a gateway and unleash terrible monstrosities upon the world."));
 
     return spret::success;
 }
@@ -1544,7 +1539,7 @@ spret cast_summon_forest(actor* caster, int pow, bool fail, bool test)
         }
     }
 
-    mpr("A forested plane collides here with a resounding crunch!");
+    mpr(ui_translate("log.spl-summoning", "A forested plane collides here with a resounding crunch!"));
     noisy(spell_effect_noise(SPELL_SUMMON_FOREST), caster->pos());
 
     mgen_data dryad_data = _pal_data(MONS_DRYAD, 1, SPELL_SUMMON_FOREST);
@@ -1589,12 +1584,12 @@ spret cast_haunt(int pow, const coord_def& where, bool fail)
     if (m == nullptr)
     {
         fail_check();
-        mpr("An evil force gathers, but it quickly dissipates.");
+        mpr(ui_translate("log.spl-summoning", "An evil force gathers, but it quickly dissipates."));
         return spret::success; // still losing a turn
     }
     else if (m->wont_attack())
     {
-        mpr("You cannot haunt those who bear you no hostility.");
+        mpr(ui_translate("log.spl-summoning", "You cannot haunt those who bear you no hostility."));
         return spret::abort;
     }
 
@@ -1626,13 +1621,13 @@ spret cast_haunt(int pow, const coord_def& where, bool fail)
 
     if (success > 1)
     {
-        mpr(friendly ? "Insubstantial figures form in the air."
-                     : "You sense hostile presences.");
+        mpr(ui_translate("s.summon", friendly ? "Insubstantial figures form in the air."
+                     : "You sense hostile presences."));
     }
     else if (success)
     {
-        mpr(friendly ? "An insubstantial figure forms in the air."
-                     : "You sense a hostile presence.");
+        mpr(ui_translate("s.summon", friendly ? "An insubstantial figure forms in the air."
+                     : "You sense a hostile presence."));
     }
     else
     {
@@ -1658,11 +1653,10 @@ spret cast_martyrs_knell(const actor* caster, int pow, bool fail)
     if (shade)
     {
         if (caster->is_player())
-            mpr("You call forth a shade to shield your allies.");
+            mpr(ui_translate("log.spl-summoning", "You call forth a shade to shield your allies."));
         else if (you.can_see(*shade))
         {
-            mprf("%s calls forth a shade to shield themselves.",
-                 caster->name(DESC_THE).c_str());
+            mprf("%s", ui_render("s.log", "%s calls forth a shade to shield themselves.", make_stringf("%s calls forth a shade to shield themselves.", caster->name(DESC_THE).c_str()), {ui_actor_arg(*caster)}).c_str());
         }
 
         mons_update_aura(*shade);
@@ -1780,10 +1774,7 @@ void init_servitor(monster* servitor, actor* caster, int pow)
 
     if (you.can_see(*caster))
     {
-        mprf("%s %s a servant imbued with %s destructive magic!",
-             caster->name(DESC_THE).c_str(),
-             caster->conj_verb("forge").c_str(),
-             caster->pronoun(PRONOUN_POSSESSIVE).c_str());
+        mprf("%s", ui_render("s.log", "%s forges a servant imbued with their destructive magic!", make_stringf("%s %s a servant imbued with %s destructive magic!", caster->name(DESC_THE).c_str(), caster->conj_verb("forge").c_str(), caster->pronoun(PRONOUN_POSSESSIVE).c_str()), {ui_actor_arg(*caster)}).c_str());
     }
     else
         simple_monster_message(*servitor, " appears!");
@@ -1891,11 +1882,11 @@ spret cast_battlesphere(actor* agent, int pow, bool fail)
 
         if (recalled)
         {
-            mpr("You recall your battlesphere and imbue it with additional"
-                " charge.");
+            mpr(ui_translate("log.spl-summoning", "You recall your battlesphere and imbue it with additional"
+                " charge."));
         }
         else
-            mpr("You imbue your battlesphere with additional charge.");
+            mpr(ui_translate("log.spl-summoning", "You imbue your battlesphere with additional charge."));
 
         battlesphere->battlecharge = min(20, (int) battlesphere->battlecharge
                                               + random_range(6, 10));
@@ -1923,7 +1914,7 @@ spret cast_battlesphere(actor* agent, int pow, bool fail)
             agent->props[BATTLESPHERE_KEY].get_int() = battlesphere->mid;
 
             if (agent->is_player())
-                mpr("You conjure a globe of magical energy.");
+                mpr(ui_translate("log.spl-summoning", "You conjure a globe of magical energy."));
             else
             {
                 if (you.can_see(*agent) && you.can_see(*battlesphere))
@@ -1966,14 +1957,14 @@ void end_battlesphere(monster* mons, bool killed)
             {
                 if (mons->battlecharge == 0)
                 {
-                    mpr("Your battlesphere expends the last of its energy"
-                        " and dissipates.");
+                    mpr(ui_translate("log.spl-summoning", "Your battlesphere expends the last of its energy"
+                        " and dissipates."));
                 }
                 else
-                    mpr("Your battlesphere wavers and loses cohesion.");
+                    mpr(ui_translate("log.spl-summoning", "Your battlesphere wavers and loses cohesion."));
             }
             else
-                mpr("You feel your bond with your battlesphere wane.");
+                mpr(ui_translate("log.spl-summoning", "You feel your bond with your battlesphere wane."));
         }
         else if (you.can_see(*mons))
             simple_monster_message(*mons, " dissipates.");
@@ -2050,8 +2041,7 @@ static void _fire_battlesphere(monster* battlesphere, bolt& beam)
 
     if (you.can_see(*battlesphere))
     {
-        mprf("%s fires at %s!", battlesphere->name(DESC_THE).c_str(),
-                                actor_at(beam.target)->name(DESC_THE).c_str());
+        mprf("%s", ui_render("s.log", "%s fires at %s!", make_stringf("%s fires at %s!", battlesphere->name(DESC_THE).c_str(), actor_at(beam.target)->name(DESC_THE).c_str()), {ui_actor_arg(*battlesphere), ui_actor_arg(*actor_at(beam.target))}).c_str());
     }
     beam.fire();
 
@@ -2184,14 +2174,14 @@ spret cast_fulminating_prism(actor* caster, int pow, const coord_def& where,
         > spell_range(SPELL_FULMINANT_PRISM, caster, pow))
     {
         if (caster->is_player())
-            mpr("That's too far away.");
+            mpr(ui_translate("log.spl-summoning", "That's too far away."));
         return spret::abort;
     }
 
     if (cell_is_solid(where))
     {
         if (caster->is_player())
-            mpr("You can't conjure that within a solid object!");
+            mpr(ui_translate("log.spl-summoning", "You can't conjure that within a solid object!"));
         return spret::abort;
     }
 
@@ -2201,7 +2191,7 @@ spret cast_fulminating_prism(actor* caster, int pow, const coord_def& where,
         if (caster->can_see(*victim))
         {
             if (caster->is_player())
-                mpr("You can't place the prism on a creature.");
+                mpr(ui_translate("log.spl-summoning", "You can't place the prism on a creature."));
             return spret::abort;
         }
 
@@ -2213,8 +2203,7 @@ spret cast_fulminating_prism(actor* caster, int pow, const coord_def& where,
         {
             if (you.can_see(*victim))
             {
-                mprf("%s %s.", victim->name(DESC_THE).c_str(),
-                               victim->conj_verb("twitch").c_str());
+                mprf("%s", ui_render("s.log", "%s twitches.", make_stringf("%s %s.", victim->name(DESC_THE).c_str(), victim->conj_verb("twitch").c_str()), {ui_actor_arg(*victim)}).c_str());
             }
             else
                 canned_msg(MSG_GHOSTLY_OUTLINE);
@@ -2242,15 +2231,11 @@ spret cast_fulminating_prism(actor* caster, int pow, const coord_def& where,
     {
         if (caster->observable())
         {
-            mprf("%s %s a prism of %s energy!",
-                 caster->name(DESC_THE).c_str(),
-                 caster->conj_verb("conjure").c_str(),
-                 is_shadow ? "shadowy" : "explosive");
+            mprf("%s", ui_render("s.log", "%s conjures a prism of %s energy!", make_stringf("%s %s a prism of %s energy!", caster->name(DESC_THE).c_str(), caster->conj_verb("conjure").c_str(), is_shadow ? "shadowy" : "explosive"), {ui_actor_arg(*caster), s_clause_arg(is_shadow ? "shadowy" : "explosive")}).c_str());
         }
         else if (you.can_see(*prism))
         {
-            mprf("A prism of %s energy appears from nowhere!",
-                 is_shadow ? "shadowy" : "explosive");
+            mprf("%s", ui_render("s.log", "A prism of %s energy appears from nowhere!", make_stringf("A prism of %s energy appears from nowhere!", is_shadow ? "shadowy" : "explosive"), {s_clause_arg(is_shadow ? "shadowy" : "explosive")}).c_str());
         }
 
         // This looks silly, but prevents the even sillier-looking situation of
@@ -2436,7 +2421,7 @@ spret cast_infestation(int pow, bolt &beam, bool fail)
     fail_check();
 
     _setup_infestation(beam, pow);
-    mpr("You call forth a plague of scarabs!");
+    mpr(ui_translate("log.spl-summoning", "You call forth a plague of scarabs!"));
     beam.explode();
 
     return spret::success;
@@ -2666,7 +2651,7 @@ static bool _create_briar_patch(coord_def& target)
 
     if (create_monster(mgen))
     {
-        mpr("A briar patch grows up from the ground.");
+        mpr(ui_translate("log.spl-summoning", "A briar patch grows up from the ground."));
         return true;
     }
 
@@ -2697,7 +2682,7 @@ void fedhas_wall_of_briars()
 
     if (adjacent.empty())
     {
-        mpr("Something you can't see blocks your briars from growing!");
+        mpr(ui_translate("log.spl-summoning", "Something you can't see blocks your briars from growing!"));
         return;
     }
 
@@ -2721,7 +2706,7 @@ static void _overgrow_wall(const coord_def &pos)
 
     if (monster_at(pos))
     {
-        mprf("Something unseen blocks growth in %s.", what.c_str());
+        mprf("%s", ui_render("s.log", "Something unseen blocks growth in %s.", make_stringf("Something unseen blocks growth in %s.", what.c_str()), {s_feature_arg(feat)}).c_str());
         return;
     }
 
@@ -2738,12 +2723,11 @@ static void _overgrow_wall(const coord_def &pos)
                         summ_dur(min(3 + you.skill_rdiv(SK_INVOCATIONS, 1, 5), 6)));
     if (const monster* const plant = create_monster(mgen))
     {
-        mprf("%s is torn apart as %s grows in its place.", what.c_str(),
-                plant->name(DESC_A).c_str());
+        mprf("%s", ui_render("s.log", "%s is torn apart as %s grows in its place.", make_stringf("%s is torn apart as %s grows in its place.", what.c_str(), plant->name(DESC_A).c_str()), {s_feature_arg(feat), ui_actor_arg(*plant)}).c_str());
     }
     // XXX: Maybe try to make this revert the terrain if a monster isn't placed.
     else
-        mprf("%s falls apart, but nothing grows.", what.c_str());
+        mprf("%s", ui_render("s.log", "%s falls apart, but nothing grows.", make_stringf("%s falls apart, but nothing grows.", what.c_str()), {s_feature_arg(feat)}).c_str());
 }
 
 spret fedhas_overgrow(bool fail)
@@ -2756,7 +2740,7 @@ spret fedhas_overgrow(bool fail)
     args.range = LOS_RADIUS;
     args.just_looking = false;
     args.needs_path = false;
-    args.top_prompt = "Aiming: <white>Overgrow</white>";
+    args.top_prompt = ui_translate("s.aim", "Aiming: <white>Overgrow</white>");
     dist sdirect;
     direction(sdirect, args);
     if (!sdirect.isValid)
@@ -2774,13 +2758,13 @@ spret fedhas_grow_ballistomycete(const coord_def& target, bool fail)
 {
     if (grid_distance(target, you.pos()) > 2 || !in_bounds(target))
     {
-        mpr("That's too far away.");
+        mpr(ui_translate("log.spl-summoning", "That's too far away."));
         return spret::abort;
     }
 
     if (!monster_habitable_grid(MONS_BALLISTOMYCETE, target))
     {
-        mpr("You can't grow a ballistomycete there.");
+        mpr(ui_translate("log.spl-summoning", "You can't grow a ballistomycete there."));
         return spret::abort;
     }
 
@@ -2789,14 +2773,14 @@ spret fedhas_grow_ballistomycete(const coord_def& target, bool fail)
     {
         if (you.can_see(*mons))
         {
-            mpr("That space is already occupied.");
+            mpr(ui_translate("log.spl-summoning", "That space is already occupied."));
             return spret::abort;
         }
 
         fail_check();
 
         // invisible monster
-        mpr("Something you can't see occupies that space!");
+        mpr(ui_translate("log.spl-summoning", "Something you can't see occupies that space!"));
         return spret::success;
     }
 
@@ -2810,7 +2794,7 @@ spret fedhas_grow_ballistomycete(const coord_def& target, bool fail)
                         summ_dur(min(3 + you.skill_rdiv(SK_INVOCATIONS, 1, 5), 6)));
 
     if (create_monster(mgen))
-        mpr("A ballistomycete grows from the ground.");
+        mpr(ui_translate("log.spl-summoning", "A ballistomycete grows from the ground."));
     else
         canned_msg(MSG_NOTHING_HAPPENS);
 
@@ -2821,13 +2805,13 @@ spret fedhas_grow_oklob(const coord_def& target, bool fail)
 {
     if (grid_distance(target, you.pos()) > 2 || !in_bounds(target))
     {
-        mpr("That's too far away.");
+        mpr(ui_translate("log.spl-summoning", "That's too far away."));
         return spret::abort;
     }
 
     if (!monster_habitable_grid(MONS_OKLOB_PLANT, target))
     {
-        mpr("You can't grow an oklob plant there.");
+        mpr(ui_translate("log.spl-summoning", "You can't grow an oklob plant there."));
         return spret::abort;
     }
 
@@ -2836,14 +2820,14 @@ spret fedhas_grow_oklob(const coord_def& target, bool fail)
     {
         if (you.can_see(*mons))
         {
-            mpr("That space is already occupied.");
+            mpr(ui_translate("log.spl-summoning", "That space is already occupied."));
             return spret::abort;
         }
 
         fail_check();
 
         // invisible monster
-        mpr("Something you can't see is occupying that space!");
+        mpr(ui_translate("log.spl-summoning", "Something you can't see is occupying that space!"));
         return spret::success;
     }
 
@@ -2857,7 +2841,7 @@ spret fedhas_grow_oklob(const coord_def& target, bool fail)
                         summ_dur(min(3 + you.skill_rdiv(SK_INVOCATIONS, 1, 5), 6)));
 
     if (create_monster(mgen))
-        mpr("An oklob plant grows from the ground.");
+        mpr(ui_translate("log.spl-summoning", "An oklob plant grows from the ground."));
     else
         canned_msg(MSG_NOTHING_HAPPENS);
 
@@ -2971,7 +2955,7 @@ spret cast_foxfire(actor &agent, int pow, bool fail, bool marshlight)
 
     if (agent.is_player() && !see_space)
     {
-        mpr("There is not enough space to conjure foxfire!");
+        mpr(ui_translate("log.spl-summoning", "There is not enough space to conjure foxfire!"));
         return spret::abort;
     }
 
@@ -2990,10 +2974,7 @@ spret cast_foxfire(actor &agent, int pow, bool fail, bool marshlight)
 
     if (created && you.see_cell(agent.pos()))
     {
-        mprf("%s conjure%s some %s!",
-             agent.name(DESC_THE).c_str(),
-             agent.is_monster() ? "s" : "",
-             marshlight ? "marshlight" : "foxfire");
+        mprf("%s", ui_render("s.log", "%s conjures some %s!", make_stringf("%s conjure%s some %s!", agent.name(DESC_THE).c_str(), agent.is_monster() ? "s" : "", marshlight ? "marshlight" : "foxfire"), {ui_actor_arg(agent), ui_text_arg("display.monster", marshlight ? "marshlight" : "foxfire")}).c_str());
     }
     else if (agent.is_player())
         canned_msg(MSG_NOTHING_HAPPENS);
@@ -3018,12 +2999,12 @@ spret foxfire_swarm()
     }
     if (created)
     {
-        mpr("Flames leap up around you!");
+        mpr(ui_translate("log.spl-summoning", "Flames leap up around you!"));
         return spret::success;
     }
     if (!unknown_unseen)
     {
-        mpr("There's no space to create foxfire here.");
+        mpr(ui_translate("log.spl-summoning", "There's no space to create foxfire here."));
         return spret::abort;
     }
     canned_msg(MSG_NOTHING_HAPPENS);
@@ -3082,7 +3063,7 @@ bool summon_swarm_clone(const monster& agent, coord_def target_pos)
     if (monster* spawn = create_monster(mg))
     {
         if (you.can_see(*spawn))
-            mprf("Another %s is drawn to the feast!", spawn->name(DESC_PLAIN).c_str());
+            mprf("%s", ui_render("s.log", "Another %s is drawn to the feast!", make_stringf("Another %s is drawn to the feast!", spawn->name(DESC_PLAIN).c_str()), {ui_actor_arg(*spawn)}).c_str());
         return true;
     }
 
@@ -3120,10 +3101,7 @@ spret summon_spiders(monster &agent, int pow)
 
     if (created && you.see_cell(agent.pos()))
     {
-        mprf("%s %s %s!",
-             agent.name(DESC_THE).c_str(),
-             agent.conj_verb("summon").c_str(),
-             created > 1 ? "spiders" : "a spider");
+        mprf("%s", ui_render("s.log", "%s summons %s spiders!", make_stringf("%s %s %s!", agent.name(DESC_THE).c_str(), agent.conj_verb("summon").c_str(), created > 1 ? "spiders" : "a spider"), {ui_actor_arg(agent), s_clause_arg(created > 1 ? "some" : "one")}).c_str());
     }
 
     return spret::success;
@@ -3149,7 +3127,7 @@ spret cast_broms_barrelling_boulder(actor& agent, coord_def targ, int pow, bool 
     // For unseen invisble enemies
     if (actor_at(pos))
     {
-        mpr("Something unseen is already there!");
+        mpr(ui_translate("log.spl-summoning", "Something unseen is already there!"));
         return spret::success;
     }
 
@@ -3183,8 +3161,7 @@ spret cast_broms_barrelling_boulder(actor& agent, coord_def targ, int pow, bool 
 
     if (you.can_see(*boulder))
     {
-        mprf("%s send%s a boulder barrelling forward!",
-            agent.name(DESC_THE).c_str(), agent.is_player() ? "" : "s");
+        mprf("%s", ui_render("s.log", "%s sends a boulder barrelling forward!", make_stringf("%s send%s a boulder barrelling forward!", agent.name(DESC_THE).c_str(), agent.is_player() ? "" : "s"), {ui_actor_arg(agent)}).c_str());
     }
 
     // Let the boulder roll one space immediately.
@@ -3228,14 +3205,13 @@ spret cast_simulacrum(coord_def target, int pow, bool fail)
 
     if (!mons_can_be_spectralised(*mons))
     {
-        mpr("You can't make simulacra of that!");
+        mpr(ui_translate("log.spl-summoning", "You can't make simulacra of that!"));
         return spret::abort;
     }
 
     fail_check();
 
-    mprf("You sublimate a sliver of %s essence and reconstitute it in ice.",
-         apostrophise(mons->name(DESC_THE)).c_str());
+    mprf("%s", ui_render("s.log", "You sublimate a sliver of %s essence and reconstitute it in ice.", make_stringf("You sublimate a sliver of %s essence and reconstitute it in ice.", apostrophise(mons->name(DESC_THE)).c_str()), {ui_actor_arg(*mons)}).c_str());
 
     int num_simulacra = 2;
     if (x_chance_in_y(pow, 200))
@@ -3327,15 +3303,11 @@ spret cast_hoarfrost_cannonade(const actor& agent, int pow, bool fail)
 
     if (num_seen > 1)
     {
-        mprf("%s sculpt%s a pair of cannons out of ice!",
-             agent.name(DESC_THE).c_str(),
-             agent.is_player() ? ""  : "s");
+        mprf("%s", ui_render("s.log", "%s sculpts a pair of cannons out of ice!", make_stringf("%s sculpt%s a pair of cannons out of ice!", agent.name(DESC_THE).c_str(), agent.is_player() ? ""  : "s"), {ui_actor_arg(agent)}).c_str());
     }
     else if (num_seen == 1)
     {
-        mprf("%s sculpt%s a cannon out of ice!",
-             agent.name(DESC_THE).c_str(),
-             agent.is_player() ? ""  : "s");
+        mprf("%s", ui_render("s.log", "%s sculpts a cannon out of ice!", make_stringf("%s sculpt%s a cannon out of ice!", agent.name(DESC_THE).c_str(), agent.is_player() ? ""  : "s"), {ui_actor_arg(agent)}).c_str());
     }
     else
         canned_msg(MSG_NOTHING_HAPPENS);
@@ -3386,12 +3358,12 @@ spret cast_hellfire_mortar(const actor& agent, bolt& beam, int pow, bool fail)
         monster* mon = monster_at(beam.path_taken[0]);
         if (mon && you.can_see(*mon))
         {
-            mprf("%s is in the way!", mon->name(DESC_THE).c_str());
+            mprf("%s", ui_render("s.log", "%s is in the way!", make_stringf("%s is in the way!", mon->name(DESC_THE).c_str()), {ui_actor_arg(*mon)}).c_str());
             return spret::abort;
         }
         else if (len == 0 && !mon)
         {
-            mpr("There's no room!");
+            mpr(ui_translate("log.spl-summoning", "There's no room!"));
             return spret::abort;
         }
     }
@@ -3402,7 +3374,7 @@ spret cast_hellfire_mortar(const actor& agent, bolt& beam, int pow, bool fail)
     if (actor_at(beam.path_taken[0]))
     {
         if (agent.is_player())
-            mpr("Something prevents your mortar from forming!");
+            mpr(ui_translate("log.spl-summoning", "Something prevents your mortar from forming!"));
         return spret::success;
     }
 
@@ -3451,7 +3423,7 @@ spret cast_hellfire_mortar(const actor& agent, bolt& beam, int pow, bool fail)
     if (!cannon)
     {
         if (agent.is_player())
-            mpr("Something prevents your mortar from forming!");
+            mpr(ui_translate("log.spl-summoning", "Something prevents your mortar from forming!"));
         return spret::success;
     }
 
@@ -3463,8 +3435,8 @@ spret cast_hellfire_mortar(const actor& agent, bolt& beam, int pow, bool fail)
         path.push_back(pos);
     }
 
-    mprf("With a deafening crack, the ground splits apart in the path of %s "
-        "chthonic artillery!", agent.name(DESC_ITS).c_str());
+    mprf("%s", ui_render("s.log", "With a deafening crack, the ground splits apart in the path of %s chthonic artillery!", make_stringf("With a deafening crack, the ground splits apart in the path of %s "
+        "chthonic artillery!", agent.name(DESC_ITS).c_str()), {ui_actor_arg(agent)}).c_str());
 
     if (agent.is_player())
         you.duration[DUR_HELLFIRE_MORTAR_COOLDOWN] = dur;
@@ -3483,8 +3455,7 @@ bool make_soul_wisp(const actor& agent, actor& victim)
     {
         if (agent.is_player() && victim.observable())
         {
-            mprf("A fragment of %s is already outside their body!",
-                    victim.name(DESC_THE).c_str());
+            mprf("%s", ui_render("s.log", "A fragment of %s is already outside their body!", make_stringf("A fragment of %s is already outside their body!", victim.name(DESC_THE).c_str()), {ui_actor_arg(victim)}).c_str());
         }
         return false;
     }
@@ -3502,9 +3473,7 @@ bool make_soul_wisp(const actor& agent, actor& victim)
     {
         if (you.see_cell(victim.pos()))
         {
-            mprf("A fragment of %s soul is dislodged from %s body.",
-                    victim.name(DESC_ITS).c_str(),
-                    victim.pronoun(PRONOUN_POSSESSIVE).c_str());
+            mprf("%s", ui_render("s.log", "A fragment of %s soul is dislodged from their body.", make_stringf("A fragment of %s soul is dislodged from %s body.", victim.name(DESC_ITS).c_str(), victim.pronoun(PRONOUN_POSSESSIVE).c_str()), {ui_actor_arg(victim)}).c_str());
 
         }
 
@@ -3522,7 +3491,7 @@ bool make_soul_wisp(const actor& agent, actor& victim)
         if (agent.is_player()
             && !find_habitable_spot_near(victim.pos(), MONS_SOUL_WISP, 1, mg.pos, 0, &you))
         {
-            mpr("There's no room for the soul wisp to form!");
+            mpr(ui_translate("log.spl-summoning", "There's no room for the soul wisp to form!"));
         }
         else
             canned_msg(MSG_NOTHING_HAPPENS);
@@ -3564,7 +3533,7 @@ void handle_clockwork_bee_spell(int turn)
 {
     if (turn < 4)
     {
-        mpr("You continue winding your clockwork bee...");
+        mpr(ui_translate("log.spl-summoning", "You continue winding your clockwork bee..."));
         return;
     }
 
@@ -3596,7 +3565,7 @@ void launch_clockwork_bee(const actor& agent)
             mg.hd = 5 + div_rand_round(calc_spell_power(SPELL_CLOCKWORK_BEE), 20);
             if (monster* bee = create_monster(mg))
             {
-                mprf("Without a target, your clockwork bee falls to the ground.");
+                mprf("%s", ui_translate("log.spl-summoning", "Without a target, your clockwork bee falls to the ground."));
 
                 // Still remember our original target, just in case it merely
                 // ducked out of sight for a moment and the player wants to
@@ -3609,8 +3578,8 @@ void launch_clockwork_bee(const actor& agent)
                 // Unable to create inert bee, probably the player was flying
                 // over deep water / lava. Rather than try to work out what
                 // happened, just self destruct.
-                mprf("Without a target and with nowhere to land, your clockwork "
-                     "bee falls apart in a shower of cogs and coils.");
+                mprf("%s", ui_translate("log.spl-summoning", "Without a target and with nowhere to land, your clockwork "
+                     "bee falls apart in a shower of cogs and coils."));
 
                 for (fair_adjacent_iterator ai(you.pos()); ai; ++ai)
                 {
@@ -3645,9 +3614,7 @@ void launch_clockwork_bee(const actor& agent)
 
         if (you.can_see(*bee))
         {
-            mprf("With a metallic buzz, %s clockwork bee launches itself at %s.",
-                 agent.name(DESC_ITS).c_str(),
-                 targ->name(DESC_THE).c_str());
+            mprf("%s", ui_render("s.log", "With a metallic buzz, %s clockwork bee launches itself at %s.", make_stringf("With a metallic buzz, %s clockwork bee launches itself at %s.", agent.name(DESC_ITS).c_str(), targ->name(DESC_THE).c_str()), {ui_actor_arg(agent), ui_actor_arg(*targ)}).c_str());
         }
 
         bee->speed_increment = 80;
@@ -3655,7 +3622,7 @@ void launch_clockwork_bee(const actor& agent)
         bee->props[CLOCKWORK_BEE_TARGET].get_int() = targ->mid;
     }
     else if (agent.is_player())
-        mpr("Your bee fails to deploy!");
+        mpr(ui_translate("log.spl-summoning", "Your bee fails to deploy!"));
 }
 
 spret cast_clockwork_bee(coord_def target, bool fail)
@@ -3666,18 +3633,18 @@ spret cast_clockwork_bee(coord_def target, bool fail)
 
     if (!targ || !you.can_see(*targ))
     {
-        mpr("You see nothing there to target.");
+        mpr(ui_translate("log.spl-summoning", "You see nothing there to target."));
         return spret::abort;
     }
     else if (targ->wont_attack())
     {
-        mpr("Your bee can only target hostiles.");
+        mpr(ui_translate("log.spl-summoning", "Your bee can only target hostiles."));
         return spret::abort;
     }
 
     you.props[CLOCKWORK_BEE_TARGET].get_int() = targ->mid;
 
-    mprf("You lock target on %s and prepare to deploy your bee.", targ->name(DESC_THE).c_str());
+    mprf("%s", ui_render("s.log", "You lock target on %s and prepare to deploy your bee.", make_stringf("You lock target on %s and prepare to deploy your bee.", targ->name(DESC_THE).c_str()), {ui_actor_arg(*targ)}).c_str());
     start_channelling_spell(SPELL_CLOCKWORK_BEE, "continue winding your bee", false);
 
     // Remove any existing bee
@@ -3686,7 +3653,7 @@ spret cast_clockwork_bee(coord_def target, bool fail)
         if (mi->was_created_by(you, SPELL_CLOCKWORK_BEE))
         {
             if (you.can_see(**mi))
-                mprf("Your existing bee falls apart.");
+                mprf("%s", ui_translate("log.spl-summoning", "Your existing bee falls apart."));
             monster_die(**mi, KILL_RESET, NON_MONSTER, true);
         }
     }
@@ -3698,8 +3665,7 @@ void clockwork_bee_go_dormant(monster& bee)
 {
     if (you.can_see(bee))
     {
-        mprf("%s clockwork bee winds down and falls to the ground.",
-             bee.summoner == MID_PLAYER ? "Your" : "The");
+        mprf("%s", ui_render("s.log", "%s clockwork bee winds down and falls to the ground.", make_stringf("%s clockwork bee winds down and falls to the ground.", bee.summoner == MID_PLAYER ? "Your" : "The"), {s_clause_arg(bee.summoner == MID_PLAYER ? "Your" : "The")}).c_str());
     }
 
     int old_hd = bee.get_experience_level();
@@ -3728,7 +3694,7 @@ bool clockwork_bee_recharge(actor& agent, monster& bee)
     if (agent.berserk())
     {
         if (agent.is_player())
-            mpr("If you tried to rewind gears in your present state, you'd only break them.");
+            mpr(ui_translate("log.spl-summoning", "If you tried to rewind gears in your present state, you'd only break them."));
         return false;
     }
 
@@ -3739,8 +3705,8 @@ bool clockwork_bee_recharge(actor& agent, monster& bee)
     {
         if (agent.is_player())
         {
-            mpr("You need a visible target to rewind your bee! "
-                "(Use ctrl+direction or * direction to deconstruct it instead.)");
+            mpr(ui_translate("log.spl-summoning", "You need a visible target to rewind your bee! "
+                "(Use ctrl+direction or * direction to deconstruct it instead.)"));
         }
         return false;
     }
@@ -3749,18 +3715,14 @@ bool clockwork_bee_recharge(actor& agent, monster& bee)
     {
         if (!enough_mp(1, true))
         {
-            mpr("You lack sufficient magical power to recharge your bee.");
+            mpr(ui_translate("log.spl-summoning", "You lack sufficient magical power to recharge your bee."));
             return false;
         }
         pay_mp(1);
         finalize_mp_cost();
     }
 
-    mprf("%s wind%s %s clockwork bee back up and it locks its sights upon %s!",
-         agent.name(DESC_THE).c_str(),
-         agent.is_player() ? "" : "s",
-         agent.pronoun(PRONOUN_POSSESSIVE).c_str(),
-         targ->name(DESC_THE).c_str());
+    mprf("%s", ui_render("s.log", "%s winds their clockwork bee back up and it locks its sights upon %s!", make_stringf("%s wind%s %s clockwork bee back up and it locks its sights upon %s!", agent.name(DESC_THE).c_str(), agent.is_player() ? "" : "s", agent.pronoun(PRONOUN_POSSESSIVE).c_str(), targ->name(DESC_THE).c_str()), {ui_actor_arg(agent), ui_actor_arg(*targ)}).c_str());
     int old_max_hp = bee.max_hit_points;
     int old_hp = bee.hit_points;
     int old_hd = bee.get_experience_level();
@@ -3789,9 +3751,7 @@ void clockwork_bee_pick_new_target(monster& bee)
        clockwork_bee_go_dormant(bee);
     else
     {
-        mprf("%s clockwork bee locks its sights upon %s.",
-                agent ? agent->pronoun(PRONOUN_POSSESSIVE).c_str() : "Someone's",
-                targ->name(DESC_THE).c_str());
+        mprf("%s", ui_render("s.log", "%s clockwork bee locks its sights upon %s.", make_stringf("%s clockwork bee locks its sights upon %s.", agent ? agent->pronoun(PRONOUN_POSSESSIVE).c_str() : "Someone's", targ->name(DESC_THE).c_str()), {agent ? ui_actor_arg(*agent) : ui_text_arg("log.actor", "someone"), ui_actor_arg(*targ)}).c_str());
         bee.add_ench(mon_enchant(ENCH_HAUNTING, targ, INFINITE_DURATION));
         bee.props[CLOCKWORK_BEE_TARGET].get_int() = targ->mid;
     }
@@ -3852,7 +3812,7 @@ spret cast_diamond_sawblades(int power, bool fail)
     // going to make a sawblade.
     if (spots.empty())
     {
-        mpr("You try to forge sawblades, but something it already there!");
+        mpr(ui_translate("log.spl-summoning", "You try to forge sawblades, but something it already there!"));
         return spret::success;
     }
 
@@ -3876,9 +3836,9 @@ spret cast_diamond_sawblades(int power, bool fail)
     }
 
     if (spots.size() == 1)
-        mpr("You forge a whirling saw of razor-sharp crystal.");
+        mpr(ui_translate("log.spl-summoning", "You forge a whirling saw of razor-sharp crystal."));
     else
-        mpr("You forge whirling saws of razor-sharp crystal.");
+        mpr(ui_translate("log.spl-summoning", "You forge whirling saws of razor-sharp crystal."));
 
     return spret::success;
 }
@@ -3959,7 +3919,7 @@ spret cast_surprising_crocodile(actor& agent, const coord_def& targ, int pow, bo
     string msg = surprising_crocodile_unusable_reason(agent, targ, true);
     if (!msg.empty())
     {
-        mpr("Something unseen prevents your spell from working!");
+        mpr(ui_translate("log.spl-summoning", "Something unseen prevents your spell from working!"));
         return spret::success;
     }
 
@@ -3998,9 +3958,7 @@ spret cast_surprising_crocodile(actor& agent, const coord_def& targ, int pow, bo
 
     if (you.can_see(agent))
     {
-        mprf("A crocodile bursts forth beneath %s and grabs %s in its jaws!",
-                agent.name(DESC_THE).c_str(),
-                victim->name(DESC_THE).c_str());
+        mprf("%s", ui_render("s.log", "A crocodile bursts forth beneath %s and grabs %s in its jaws!", make_stringf("A crocodile bursts forth beneath %s and grabs %s in its jaws!", agent.name(DESC_THE).c_str(), victim->name(DESC_THE).c_str()), {ui_actor_arg(agent), ui_actor_arg(*victim)}).c_str());
     }
 
     // Perform the drag silently, before the actual attack (so that it will
@@ -4021,10 +3979,7 @@ spret cast_surprising_crocodile(actor& agent, const coord_def& targ, int pow, bo
 
     if (you.can_see(agent))
     {
-        mprf("%s dismount%s %s crocodile.",
-             agent.name(DESC_THE).c_str(),
-             agent.is_player() ? "" : "s",
-             agent.pronoun(PRONOUN_POSSESSIVE).c_str());
+        mprf("%s", ui_render("s.log", "%s dismounts their crocodile.", make_stringf("%s dismount%s %s crocodile.", agent.name(DESC_THE).c_str(), agent.is_player() ? "" : "s", agent.pronoun(PRONOUN_POSSESSIVE).c_str()), {ui_actor_arg(agent)}).c_str());
     }
 
     // Make the temporary water (after the movement, so we don't get slash
@@ -4090,7 +4045,7 @@ static void _paragon_tempest(const coord_def& target)
         view_clear_overlays();
     }
 
-    mprf("Your paragon expends all of its energy in an overwhelming flurry of blows!");
+    mprf("%s", ui_translate("log.spl-summoning", "Your paragon expends all of its energy in an overwhelming flurry of blows!"));
     for (monster* mon : targs)
     {
         melee_attack atk(paragon, mon);
@@ -4148,7 +4103,7 @@ spret cast_platinum_paragon(const coord_def& target, int pow, bool fail)
         return spret::success;
     }
 
-    mpr("You craft a gleaming metal champion and it leaps into the fray!");
+    mpr(ui_translate("log.spl-summoning", "You craft a gleaming metal champion and it leaps into the fray!"));
     you.duration[DUR_PARAGON_ACTIVE] = 1;
 
     // Grab our imprinted weapon
@@ -4214,7 +4169,7 @@ void paragon_attack_trigger()
     if (!targ)
         return;
 
-    mpr("Your paragon attacks with you!");
+    mpr(ui_translate("log.spl-summoning", "Your paragon attacks with you!"));
     fight_melee(paragon, targ);
     paragon->speed_increment += paragon->action_energy(EUT_ATTACK);
     you.did_trigger(DID_PARAGON);
@@ -4247,9 +4202,9 @@ void paragon_charge_up(monster& paragon)
     if (new_charge > old_charge)
     {
         if (new_charge == 2)
-            mprf(MSGCH_DURATION, "Your paragon has reached its maximum power!");
+            mprf(MSGCH_DURATION, "%s", ui_translate("log.spl-summoning", "Your paragon has reached its maximum power!"));
         else if (new_charge == 1)
-            mprf(MSGCH_DURATION, "Your paragon is now ready to unleash a masterful attack.");
+            mprf(MSGCH_DURATION, "%s", ui_translate("log.spl-summoning", "Your paragon is now ready to unleash a masterful attack."));
     }
 }
 
@@ -4275,7 +4230,7 @@ spret cast_walking_alembic(const actor& agent, int pow, bool fail)
     if (monster* mon = create_monster(mg))
     {
         if (you.can_see(*mon))
-            mpr("A lumbering aparatus takes shape within a cloud of fumes.");
+            mpr(ui_translate("log.spl-summoning", "A lumbering aparatus takes shape within a cloud of fumes."));
 
         mon->number = random_range(4, 6);
     }
@@ -4289,12 +4244,12 @@ static void _do_player_potion()
 {
     if (player_in_branch(BRANCH_COCYTUS))
     {
-        mpr("The potion freezes solid before it can reach you!");
+        mpr(ui_translate("log.spl-summoning", "The potion freezes solid before it can reach you!"));
         return;
     }
     else if (!you.can_drink())
     {
-        mpr("You sigh wistfully at the memory of the taste.");
+        mpr(ui_translate("log.spl-summoning", "You sigh wistfully at the memory of the taste."));
         return;
     }
 
@@ -4322,7 +4277,7 @@ static void _do_player_potion()
 
     potion_type potion = *random_choose_weighted(weights);
 
-    mprf("Mmmm... tastes like %s.", potion_type_name(potion));
+    mprf("%s", ui_render("s.log", "Mmmm... tastes like %s.", make_stringf("Mmmm... tastes like %s.", potion_type_name(potion)), {ui_text_arg("s.potion.flavour", potion_type_name(potion))}).c_str());
 
     if (you.has_mutation(MUT_DRUNKEN_BRAWLING) && oni_likes_potion(potion))
         oni_drunken_swing();
@@ -4332,8 +4287,7 @@ static void _do_player_potion()
         const int amu = you.wearing(OBJ_JEWELLERY, AMU_CHEMISTRY, false, true);
         if (amu)
         {
-            mprf("You extract %smagical energy from the potion.",
-                 amu > 1 ? "even more " : "");
+            mprf("%s", ui_render("s.log", "You extract %smagical energy from the potion.", make_stringf("You extract %smagical energy from the potion.", amu > 1 ? "even more " : ""), {s_clause_arg(amu > 1 ? "even more " : "")}).c_str());
             inc_mp(random_range(5, 9) * amu);
         }
     }
@@ -4378,7 +4332,7 @@ void alembic_brew_potion(monster& mons)
         if (grid_distance(you.pos(), mons.pos()) <= 3)
             _do_player_potion();
         else
-            mpr("But you're too far away!");
+            mpr(ui_translate("log.spl-summoning", "But you're too far away!"));
     }
 
     int num_potions = 5;
@@ -4418,8 +4372,7 @@ spret cast_monarch_bomb(const actor& agent, int pow, bool fail)
     {
         if (you.can_see(*mon))
         {
-            mprf("%s construct%s an explosive harbinger and set it loose.",
-                 agent.name(DESC_THE).c_str(), agent.is_player() ? "" : "s");
+            mprf("%s", ui_render("s.log", "%s constructs an explosive harbinger and sets it loose.", make_stringf("%s construct%s an explosive harbinger and set it loose.", agent.name(DESC_THE).c_str(), agent.is_player() ? "" : "s"), {ui_actor_arg(agent)}).c_str());
         }
 
         mon->number = 5 + div_rand_round(pow, 50);
@@ -4444,7 +4397,7 @@ bool monarch_deploy_bomblet(monster& original, const coord_def& target,
     if (create_monster(mg))
     {
         if (!quiet && you.can_see(original))
-            mprf("%s deploys a bomblet.", original.name(DESC_THE).c_str());
+            mprf("%s", ui_render("s.log", "%s deploys a bomblet.", make_stringf("%s deploys a bomblet.", original.name(DESC_THE).c_str()), {ui_actor_arg(original)}).c_str());
 
         return true;
     }
@@ -4489,10 +4442,7 @@ spret monarch_detonation(const actor& agent, int pow, bool fail)
 
     if (you.can_see(agent))
     {
-        mprf("%s command%s %s explosives to detonate!",
-                agent.name(DESC_THE).c_str(),
-                agent.is_player() ? "" : "s",
-                agent.pronoun(PRONOUN_POSSESSIVE).c_str());
+        mprf("%s", ui_render("s.log", "%s commands their explosives to detonate!", make_stringf("%s command%s %s explosives to detonate!", agent.name(DESC_THE).c_str(), agent.is_player() ? "" : "s", agent.pronoun(PRONOUN_POSSESSIVE).c_str()), {ui_actor_arg(agent)}).c_str());
     }
 
     for (coord_def spot : spots)
@@ -4624,7 +4574,7 @@ spret cast_splinterfrost_shell(const actor& agent, const coord_def& aim,
     }
 
     if (num_created > 0)
-        mprf("You construct a shell of ice in front of yourself.");
+        mprf("%s", ui_translate("log.spl-summoning", "You construct a shell of ice in front of yourself."));
     else
         canned_msg(MSG_NOTHING_HAPPENS);
 
@@ -4670,7 +4620,7 @@ spret cast_summon_seismosaurus_egg(const actor& agent, int pow, bool fail)
 
     if (monster* mons = create_monster(egg))
     {
-        mpr("A rock-encrusted egg appears nearby and begins to stir.");
+        mpr(ui_translate("log.spl-summoning", "A rock-encrusted egg appears nearby and begins to stir."));
         mons->add_ench(mon_enchant(ENCH_HATCHING, &agent, random_range(6, 9)));
 
         // Mark all terrain in range.
@@ -4699,13 +4649,12 @@ spret cast_phalanx_beetle(const actor& agent, int pow, bool fail)
     {
         if (agent.is_player())
         {
-            mpr("You forge a skittering defender to stand by your side.");
+            mpr(ui_translate("log.spl-summoning", "You forge a skittering defender to stand by your side."));
             you.props[PHALANX_BARRIER_POWER_KEY] = 400 + pow * 3;
         }
         else if (you.can_see(agent))
         {
-            mprf("%s forges a skittering defender to stand by %s side.",
-                 agent.name(DESC_THE).c_str(), agent.pronoun(PRONOUN_POSSESSIVE).c_str());
+            mprf("%s", ui_render("s.log", "%s forges a skittering defender to stand by their side.", make_stringf("%s forges a skittering defender to stand by %s side.", agent.name(DESC_THE).c_str(), agent.pronoun(PRONOUN_POSSESSIVE).c_str()), {ui_actor_arg(agent)}).c_str());
         }
         mons_update_aura(*mons);
     }
@@ -4740,7 +4689,7 @@ spret cast_rending_blade(int pow, bool fail)
 
     if (monster* mon = create_monster(blade))
     {
-        mpr("You condense your magic into a crackling blade!");
+        mpr(ui_translate("log.spl-summoning", "You condense your magic into a crackling blade!"));
         you.props[RENDING_BLADE_MP_KEY].get_int() = you.magic_points;
         mon->props[RENDING_BLADE_POWER_KEY] = _rending_blade_power(pow);
         pay_mp(you.magic_points);

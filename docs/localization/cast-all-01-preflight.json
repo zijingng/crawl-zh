@@ -1,0 +1,4743 @@
+{
+  "glossary_sha256": "95cc9538a701536b1581f31834203bbbb3160668ec622f7862f43921be96fdb1",
+  "entries": [
+    {
+      "key": "Airstrike cast",
+      "source": "@The_monster@ waves @possessive@ @arms@ in wide circles.\n",
+      "hits": [
+        {
+          "Term": "Airstrike",
+          "Translation": "空气打击",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "unseen Airstrike cast",
+      "source": "You hear blowing wind.\n",
+      "hits": [
+        {
+          "Term": "Airstrike",
+          "Translation": "空气打击",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Blinkbolt cast",
+      "source": "@The_monster@ bursts into living lightning!\n",
+      "hits": [
+        {
+          "Term": "Blinkbolt",
+          "Translation": "闪现雷击",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "unseen Blinkbolt cast",
+      "source": "Living lightning bursts into view!\n",
+      "hits": [
+        {
+          "Term": "Blinkbolt",
+          "Translation": "闪现雷击",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "branch summon cast prefix",
+      "source": "@The_monster@ calls forth creatures from\n",
+      "hits": []
+    },
+    {
+      "key": "Call Lost Souls cast",
+      "source": "@The_monster@ beckons forth restless souls!\n",
+      "hits": [
+        {
+          "Term": "Call Lost Souls",
+          "Translation": "呼唤迷失灵魂",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Call of Chaos cast",
+      "source": "@The_monster@ calls on the powers of chaos!\n",
+      "hits": [
+        {
+          "Term": "Call of Chaos",
+          "Translation": "混沌呼唤",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "unseen Call of Chaos cast",
+      "source": "@The_something@ calls on the powers of chaos!\n",
+      "hits": [
+        {
+          "Term": "Call of Chaos",
+          "Translation": "混沌呼唤",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Call Down Lightning cast",
+      "source": "Electricity crackles from @the_monster_possessive@ apparatus.\n",
+      "hits": [
+        {
+          "Term": "Call Down Lightning",
+          "Translation": "召引雷电",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Cantrip cast",
+      "source": "@The_monster@ casts a cantrip, but nothing happens.\n\n@The_monster@ begins to cast a cantrip, but forgets the words!\n\n@The_monster@ miscasts a cantrip.\n\n@The_monster@ looks braver for a moment.\n\n@The_monster@ looks encouraged for a moment.\n\n@The_monster@ looks satisfied for a moment.\n",
+      "hits": [
+        {
+          "Term": "Cantrip",
+          "Translation": "魔法戏法",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Conjure Living Spells cast",
+      "source": "@The_monster@ erupts in a flurry of living spells!\n",
+      "hits": [
+        {
+          "Term": "Conjure Living Spells",
+          "Translation": "造出活体法术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Creeping Frost cast",
+      "source": "@The_monster@ calls freezing cold from the walls.\n",
+      "hits": [
+        {
+          "Term": "Creeping Frost",
+          "Translation": "蔓延寒霜",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Divine Armament cast",
+      "source": "@The_monster@ beseeches @My_God@ to grant them a weapon.\n",
+      "hits": [
+        {
+          "Term": "Divine Armament",
+          "Translation": "神圣武装",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Druid's Call cast",
+      "source": "@The_monster@ calls out to the beasts of the wild!\n",
+      "hits": [
+        {
+          "Term": "Druid's Call",
+          "Translation": "德鲁伊的呼唤",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Eruption cast",
+      "source": "@The_monster@ rends the earth beneath @target@!\n",
+      "hits": [
+        {
+          "Term": "Eruption",
+          "Translation": "喷发术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Grasping Roots cast",
+      "source": "@The_monster@ reaches out to the roots within the earth.\n",
+      "hits": [
+        {
+          "Term": "Grasping Roots",
+          "Translation": "攫握根须",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Grasping Roots natural cast",
+      "source": "@The_monster@ runs its roots beneath @target@!\n",
+      "hits": [
+        {
+          "Term": "Grasping Roots",
+          "Translation": "攫握根须",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Harpoon Shot cast",
+      "source": "@The_monster@ fires a harpoon shot @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "Harpoon Shot",
+          "Translation": "鱼叉射击",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Hellfire Court cast",
+      "source": "@The_monster@ calls forth @possessive@ servants.\n",
+      "hits": [
+        {
+          "Term": "Hellfire Court",
+          "Translation": "地狱火宫廷",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Hellfire Mortar cast",
+      "source": "@The_monster@ blasts a torrent of magma @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "Hellfire Mortar",
+          "Translation": "地狱火迫击炮",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Hoarfrost Bullet cast",
+      "source": "@The_monster@ fires a salvo of icy shards.\n",
+      "hits": [
+        {
+          "Term": "Hoarfrost Bullet",
+          "Translation": "白霜弹",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Hoarfrost Bullet cast finale",
+      "source": "@The_monster@ launches the last of @reflexive@ @at@ @target@ with a shrill rumble.\n",
+      "hits": [
+        {
+          "Term": "Hoarfrost Bullet",
+          "Translation": "白霜弹",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Holy Flames cast",
+      "source": "@The_monster@ calls forth blessed flames!\n",
+      "hits": [
+        {
+          "Term": "Holy Flames",
+          "Translation": "神圣火焰",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "unseen Holy Flames cast",
+      "source": "Blessed flames are called forth!\n",
+      "hits": [
+        {
+          "Term": "Holy Flames",
+          "Translation": "神圣火焰",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Launch Bomblet cast",
+      "source": "@The_monster@ launches a bomblet.\n",
+      "hits": [
+        {
+          "Term": "Launch Bomblet",
+          "Translation": "发射子炸弹",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "bomblet",
+          "Translation": "子炸弹",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Legendary Destruction cast",
+      "source": "@Major Destruction cast@\n",
+      "hits": [
+        {
+          "Term": "Legendary Destruction",
+          "Translation": "传奇毁灭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Major Destruction",
+          "Translation": "强力毁灭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Major Destruction cast",
+      "source": "@The_monster@ conjures a destructive force in the name of @possessive_God@!\n",
+      "hits": [
+        {
+          "Term": "Major Destruction",
+          "Translation": "强力毁灭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Mara Summon cast",
+      "source": "@The_monster@ weaves an illusion.\n\n@The_monster@ shimmers.\n",
+      "hits": [
+        {
+          "Term": "Mara Summon",
+          "Translation": "玛拉召唤术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Mara",
+          "Translation": "玛拉",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "unseen Mara summon cast",
+      "source": "Something weaves an illusion!\n",
+      "hits": [
+        {
+          "Term": "Mara Summon",
+          "Translation": "玛拉召唤术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Mara",
+          "Translation": "玛拉",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Orb of Destruction orb spider cast",
+      "source": "@The_monster@ weaves a glowing orb of energy.\n",
+      "hits": [
+        {
+          "Term": "Orb of Destruction",
+          "Translation": "毁灭之球",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "orb spider",
+          "Translation": "球蛛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "spider",
+          "Translation": "蜘蛛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Orb of Destruction cast",
+      "source": "@The_monster@ conjures a glowing orb.\n\n@The_monster@ conjures an orb of pure magic.\n\n@The_monster@ launches a ball of destructive magic.\n",
+      "hits": [
+        {
+          "Term": "Orb of Destruction",
+          "Translation": "毁灭之球",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "unseen Orb of Destruction cast",
+      "source": "@The_something@ conjures a glowing orb.\n",
+      "hits": [
+        {
+          "Term": "Orb of Destruction",
+          "Translation": "毁灭之球",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Phantom Blitz cast",
+      "source": "@The_monster@ weaves a phantasmal image and fires it @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "phantom",
+          "Translation": "幻影",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Phantom Blitz",
+          "Translation": "幻影闪击",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "unseen Phantom Blitz cast",
+      "source": "@The_something@ weaves a phantasmal image and casts it forth!\n",
+      "hits": [
+        {
+          "Term": "phantom",
+          "Translation": "幻影",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Phantom Blitz",
+          "Translation": "幻影闪击",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Phantom Mirror cast",
+      "source": "@The_monster@ weaves an illusion.\n",
+      "hits": [
+        {
+          "Term": "phantom",
+          "Translation": "幻影",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "phantom mirror",
+          "Translation": "幻影镜",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Pyroclastic Surge cast",
+      "source": "@The_monster@ calls gouts of flame from the lava!\n",
+      "hits": [
+        {
+          "Term": "Pyroclastic Surge",
+          "Translation": "火山碎屑涌流",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "flame",
+          "Translation": "火焰",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_FIRE；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        }
+      ]
+    },
+    {
+      "key": "Shadow Shot cast",
+      "source": "@The_monster@ fires @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "shadow",
+          "Translation": "影",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Shadow Shot",
+          "Translation": "暗影射击",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Siphon Essence cast",
+      "source": "@The_monster@ draws nearby souls into @reflexive@!\n",
+      "hits": [
+        {
+          "Term": "Siphon Essence",
+          "Translation": "汲取精华",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Symbol of Torment cast",
+      "source": "@The_monster@ calls on the powers of darkness!\n",
+      "hits": [
+        {
+          "Term": "torment",
+          "Translation": "折磨",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Symbol of Torment",
+          "Translation": "折磨符印",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Darkness",
+          "Translation": "黑暗术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "unseen Symbol of Torment cast",
+      "source": "@The_something@ calls on the powers of darkness!\n",
+      "hits": [
+        {
+          "Term": "torment",
+          "Translation": "折磨",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "Symbol of Torment",
+          "Translation": "折磨符印",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Darkness",
+          "Translation": "黑暗术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Sheza's Dance cast",
+      "source": "@The_monster@ sends weapons flying into battle!\n\n@The_monster@ gestures, and weapons take to the air!\n",
+      "hits": [
+        {
+          "Term": "Sheza",
+          "Translation": "西泽",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Sheza's Dance",
+          "Translation": "希扎之舞",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Sojourning Bolt cast",
+      "source": "@The_monster@ breathes a rupture in space-time @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "Sojourning Bolt",
+          "Translation": "暂驻箭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Sticks to Snakes cast",
+      "source": "@The_monster@ drops twin branches, and they both wriggle to life!\n",
+      "hits": [
+        {
+          "Term": "Sticks to Snakes",
+          "Translation": "化杖为蛇",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Sticky Flame cast",
+      "source": "@The_monster@ sprays @target@ with liquid fire.\n",
+      "hits": [
+        {
+          "Term": "Sticky Flame",
+          "Translation": "黏附火焰",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "flame",
+          "Translation": "火焰",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_FIRE；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        }
+      ]
+    },
+    {
+      "key": "Stunning Burst cast",
+      "source": "@The_monster@ fires a burst of electricity @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "Stunning Burst",
+          "Translation": "震慑爆发",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Throw Bolas cast",
+      "source": "@The_monster@ hurls a bolas @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "throw",
+          "Translation": "投掷",
+          "Part of Speech": "verb",
+          "Variants": "",
+          "Note": "【0.34.1 修订】本条是动作动词；独立补充 Throwing 技能，不把普通 throwing 自动视为技能名。 来源：skills.cc。\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Throw Bolas",
+          "Translation": "投掷流星索",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Throw Klown Pie cast",
+      "source": "@The_monster@ pies @target@ viciously!\n",
+      "hits": [
+        {
+          "Term": "throw",
+          "Translation": "投掷",
+          "Part of Speech": "verb",
+          "Variants": "",
+          "Note": "【0.34.1 修订】本条是动作动词；独立补充 Throwing 技能，不把普通 throwing 自动视为技能名。 来源：skills.cc。\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Throw Klown Pie",
+          "Translation": "投掷小丑馅饼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Vhi's Electrolunge cast",
+      "source": "@The_monster@ charges forward with an electric crackle.\n",
+      "hits": [
+        {
+          "Term": "Vhi's Electrolunge",
+          "Translation": "维伊的电光突刺",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Wind Blast cast",
+      "source": "@The_monster@ conjures a fierce blast of wind!\n",
+      "hits": [
+        {
+          "Term": "Wind Blast",
+          "Translation": "狂风冲击",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Word of Recall cast",
+      "source": "@The_monster@ begins to recite a word of recall!\n",
+      "hits": [
+        {
+          "Term": "Word of Recall",
+          "Translation": "召回真言",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Recall",
+          "Translation": "召回术/召回",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用召回术。召回先祖、法球等动作用召回。Word of Recall 使用完整专名召回真言。"
+        },
+        {
+          "Term": "Recite",
+          "Translation": "诵经",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Siren Song cast",
+      "source": "__NONE\n",
+      "hits": [
+        {
+          "Term": "Siren Song",
+          "Translation": "塞壬之歌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Avatar Song cast",
+      "source": "__NONE\n",
+      "hits": [
+        {
+          "Term": "Avatar Song",
+          "Translation": "化身之歌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Seal Doors cast",
+      "source": "__NONE\n",
+      "hits": [
+        {
+          "Term": "Seal Doors",
+          "Translation": "封闭门扉",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "_unseen_breath_cast_",
+      "source": "You hear a roar.\n",
+      "hits": []
+    },
+    {
+      "key": "_unseen_spit_cast_",
+      "source": "You hear a spitting sound.\n",
+      "hits": []
+    },
+    {
+      "key": "Spit Acid cast",
+      "source": "@The_monster@ spits acid @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "Spit Acid",
+          "Translation": "喷吐酸液",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "unseen Spit Acid cast",
+      "source": "@_unseen_spit_cast_@\n",
+      "hits": [
+        {
+          "Term": "Spit Acid",
+          "Translation": "喷吐酸液",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Acid Splash cast",
+      "source": "@The_monster@ spits acid @at@ @target@.\n",
+      "hits": []
+    },
+    {
+      "key": "unseen Acid Splash cast",
+      "source": "@_unseen_spit_cast_@\n",
+      "hits": []
+    },
+    {
+      "key": "Battlecry cast",
+      "source": "@The_monster@ roars a battlecry!\n",
+      "hits": [
+        {
+          "Term": "Battlecry",
+          "Translation": "战吼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Bolt of Draining natural cast",
+      "source": "@The_monster@ breathes @beam@ @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "draining",
+          "Translation": "吸能/汲取/耗损",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】与 drain 统一；作为武器印记或负能量效果时按场景表达，不机械译为流失。 来源：dat/descript/egos.txt。\n【语境补充 2026-10-21】印记、攻击效果或状态用吸能。叙述生命获取用汲取。使用物品付出生命代价用耗损。"
+        },
+        {
+          "Term": "Bolt of Draining",
+          "Translation": "吸取箭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Cold Breath cast",
+      "source": "@The_monster@ breathes @beam@ @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "Cold Breath",
+          "Translation": "寒冷吐息",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "unseen Cold Breath cast",
+      "source": "@_unseen_breath_cast_@\n",
+      "hits": [
+        {
+          "Term": "Cold Breath",
+          "Translation": "寒冷吐息",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Chilling Breath cast",
+      "source": "@The_monster@ breathes @beam@ @at@ @target@.\n",
+      "hits": []
+    },
+    {
+      "key": "unseen Chilling Breath cast",
+      "source": "@_unseen_breath_cast_@\n",
+      "hits": []
+    },
+    {
+      "key": "Electrical Bolt cast",
+      "source": "@The_monster@ shoots out a bolt of @beam@ @at@ @target@!\n",
+      "hits": [
+        {
+          "Term": "Electrical Bolt",
+          "Translation": "电击箭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Ensnare natural cast",
+      "source": "@The_monster@ expels a string of sticky webbing.\n",
+      "hits": [
+        {
+          "Term": "Ensnare",
+          "Translation": "蛛网缠缚/束缚/诱捕",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术或蛛网效果用蛛网缠缚。普通捆束动作用束缚。捕食动作可用诱捕。"
+        }
+      ]
+    },
+    {
+      "key": "unseen Ensnare natural cast",
+      "source": "A string of sticky webbing shoots out from thin air.\n",
+      "hits": [
+        {
+          "Term": "Ensnare",
+          "Translation": "蛛网缠缚/束缚/诱捕",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术或蛛网效果用蛛网缠缚。普通捆束动作用束缚。捕食动作可用诱捕。"
+        }
+      ]
+    },
+    {
+      "key": "Fire Breath cast",
+      "source": "@The_monster@ breathes @beam@ @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "Fire Breath",
+          "Translation": "火焰吐息",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "unseen Fire Breath cast",
+      "source": "@_unseen_breath_cast_@\n",
+      "hits": [
+        {
+          "Term": "Fire Breath",
+          "Translation": "火焰吐息",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Freeze cast",
+      "source": "@The_monster@ freezes @target@.\n",
+      "hits": [
+        {
+          "Term": "Freeze",
+          "Translation": "冰冻术/冰冻/冻结/冻伤",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】能力或法术名保留冰冻。结成冰用冻结。攻击动词造成寒冷伤害可用冻伤。\n【名称统一】法术名称采用“冰冻术”；实体、伤害、状态或普通动词按语境使用原有译法，不给一般效果描述机械加“术”。"
+        }
+      ]
+    },
+    {
+      "key": "Lightning Bolt natural cast",
+      "source": "@The_monster@ breathes @beam@ @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "Lightning Bolt",
+          "Translation": "闪电箭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Petrifying Cloud cast",
+      "source": "@The_monster@ breathes a plume of calcifying dust @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "petrifying",
+          "Translation": "正在石化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/状态】过程状态。 来源：duration-data.h。"
+        },
+        {
+          "Term": "Petrifying Cloud",
+          "Translation": "石化云雾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "calcifying dust",
+          "Translation": "钙化粉尘",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_PETRIFY；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        }
+      ]
+    },
+    {
+      "key": "Poisonous Cloud natural cast",
+      "source": "@The_monster@ breathes @beam@ @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "Poisonous Cloud",
+          "Translation": "毒云术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Quicksilver Bolt natural cast",
+      "source": "@The_monster@ breathes @beam@ @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "Quicksilver Bolt",
+          "Translation": "水银箭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Searing Breath cast",
+      "source": "@The_monster@ breathes @beam@ @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "Searing Breath",
+          "Translation": "灼热吐息",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "unseen Searing Breath cast",
+      "source": "@_unseen_breath_cast_@\n",
+      "hits": [
+        {
+          "Term": "Searing Breath",
+          "Translation": "灼热吐息",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Slug Dart cast",
+      "source": "@The_monster@ launches a dart @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "dart",
+          "Translation": "飞镖",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "slug",
+          "Translation": "鼻涕虫/弹丸",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【语境补充 2026-10-21】生物用鼻涕虫。手铳等射出的金属 slug 用弹丸。"
+        },
+        {
+          "Term": "Slug Dart",
+          "Translation": "蛞蝓镖",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Spit Lava cast",
+      "source": "@The_monster@ spits lava @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "Spit Lava",
+          "Translation": "喷吐熔岩",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Spit Poison cast",
+      "source": "@The_monster@ spits poison @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "poison",
+          "Translation": "毒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/伤害/状态】poisoned 表中毒，poison resistance 表毒抗。 来源：duration-data.h。"
+        },
+        {
+          "Term": "Spit Poison",
+          "Translation": "喷吐毒液",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：喷吐毒液。"
+        }
+      ]
+    },
+    {
+      "key": "unseen Spit Poison cast",
+      "source": "@_unseen_spit_cast_@\n",
+      "hits": [
+        {
+          "Term": "poison",
+          "Translation": "毒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/伤害/状态】poisoned 表中毒，poison resistance 表毒抗。 来源：duration-data.h。"
+        },
+        {
+          "Term": "Spit Poison",
+          "Translation": "喷吐毒液",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：喷吐毒液。"
+        }
+      ]
+    },
+    {
+      "key": "Splinterspray cast",
+      "source": "@The_monster@ hurls a spray of @beam@ @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "Splinterspray",
+          "Translation": "碎片喷射",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Steam Ball natural cast",
+      "source": "@The_monster@ breathes @beam@ @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "Steam Ball",
+          "Translation": "蒸汽球",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "steam",
+          "Translation": "蒸汽",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_STEAM；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        }
+      ]
+    },
+    {
+      "key": "Paralysis Gaze cast",
+      "source": "@The_monster@ gazes piercingly through @target@!\n",
+      "hits": [
+        {
+          "Term": "paralysis",
+          "Translation": "麻痹",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/状态】状态名，区别动词 paralyze/paralyse。 来源：duration-data.h。"
+        },
+        {
+          "Term": "Paralysis Gaze",
+          "Translation": "麻痹凝视",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Volley of Thorns cast",
+      "source": "@The_monster@ fires a volley of thorns @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "Volley of Thorns",
+          "Translation": "荆棘齐射",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Warning Cry cast",
+      "source": "@The_monster@ howls a warning cry!\n",
+      "hits": [
+        {
+          "Term": "Warning Cry",
+          "Translation": "警告呼喊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "unseen Warning Cry cast",
+      "source": "You hear a loud warning cry!\n",
+      "hits": [
+        {
+          "Term": "Warning Cry",
+          "Translation": "警告呼喊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Weakening Gaze cast",
+      "source": "@The_monster@ gazes fiercely through @target@!\n",
+      "hits": [
+        {
+          "Term": "Weakening Gaze",
+          "Translation": "虚弱凝视",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Woodweal cast",
+      "source": "@The_monster@ touches a tree and draws upon its vitality.\n",
+      "hits": [
+        {
+          "Term": "Woodweal",
+          "Translation": "林木疗愈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Seismic Stomp cast",
+      "source": "@The_monster@ stomps @possessive@ heavy feet.\n",
+      "hits": [
+        {
+          "Term": "Seismic Stomp",
+          "Translation": "地震践踏",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Stomp",
+          "Translation": "践踏",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Hurl Torchlight cast",
+      "source": "@The_monster@ raises the black torch.\n",
+      "hits": [
+        {
+          "Term": "Hurl Torchlight",
+          "Translation": "投掷炬光",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Landbreaker natural cast",
+      "source": "@The_monster@ fractures the ground with @possessive@ footsteps.\n",
+      "hits": [
+        {
+          "Term": "Landbreaker",
+          "Translation": "裂地术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Ensnare Arachne cast",
+      "source": "@The_monster@ points @possessive@ staff @at@ @target@, shooting a stream of webbing.\n\n@The_monster_possessive@ staff shoots out a stream of webbing.\n",
+      "hits": [
+        {
+          "Term": "staff",
+          "Translation": "法杖/工作人员",
+          "Part of Speech": "noun",
+          "Variants": "staff of",
+          "Note": "【使用约束】魔法装备上下文使用法杖，普通木棍和 Staves 技能要分开处理。\n【语境补充 2026-10-21】武器用法杖。maintenance staff 等人员集合用工作人员。"
+        },
+        {
+          "Term": "Ensnare",
+          "Translation": "蛛网缠缚/束缚/诱捕",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术或蛛网效果用蛛网缠缚。普通捆束动作用束缚。捕食动作可用诱捕。"
+        },
+        {
+          "Term": "Arachne",
+          "Translation": "阿拉克涅",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "unseen Ensnare Arachne cast",
+      "source": "A stream of webbing shoots out from thin air.\n",
+      "hits": [
+        {
+          "Term": "Ensnare",
+          "Translation": "蛛网缠缚/束缚/诱捕",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术或蛛网效果用蛛网缠缚。普通捆束动作用束缚。捕食动作可用诱捕。"
+        },
+        {
+          "Term": "Arachne",
+          "Translation": "阿拉克涅",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "March of Sorrows Boris cast",
+      "source": "@The_monster@ [casts|pitches] forth @possessive@ victims' sorrows.\n\nw:5\n@The_monster@ rolls out @possessive@ victims' [laments|suffering].\n",
+      "hits": [
+        {
+          "Term": "March of Sorrows",
+          "Translation": "悲伤行军",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Boris",
+          "Translation": "鲍里斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Doomsaying Cassandra cast",
+      "source": "@The_monster@ says, \"I have seen your future, @player_name@! Turn back before you are forced to see it for yourself!\"\n",
+      "hits": [
+        {
+          "Term": "turn",
+          "Translation": "回合/转向/变成/轮流",
+          "Part of Speech": "noun",
+          "Variants": "turns",
+          "Note": "【版本/语境】回合/动作叙述用语；不是固定时间单位 aut，动作耗时可不同。 来源：player-act.cc。\n【语境补充 2026-10-21】时间单位用回合。动词及 in turn、turn into 等短语按句意选择转向、变成、轮流等译法。"
+        },
+        {
+          "Term": "Doomsaying",
+          "Translation": "厄运预言",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Cassandra",
+          "Translation": "卡珊德拉",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Cantrip Dissolution cast",
+      "source": "@The_monster@ gurgles to an absent god.\n\n@The_monster@ jiggles mournfully.\n\n@The_monster@ wobbles aimlessly.\n\n@The_monster@ says, \"Become one with my sorrow!\"\n\nw:1\n@The_monster@ asks, \"Why have you forsaken me @My_God@?\"\n",
+      "hits": [
+        {
+          "Term": "god",
+          "Translation": "神",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Cantrip",
+          "Translation": "魔法戏法",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Dissolution",
+          "Translation": "溶解者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Summon Eyeballs Dissolution cast",
+      "source": "@The_monster@ gurgles deeply, a call to fellow slimes.\n\n@The_monster@ says, \"@My_God@ sees all!\"\n",
+      "hits": [
+        {
+          "Term": "Summon Eyeballs",
+          "Translation": "召唤眼球",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Dissolution",
+          "Translation": "溶解者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "eyeballs",
+          "Translation": "眼球",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：眼球。"
+        }
+      ]
+    },
+    {
+      "key": "Dissolution cast",
+      "source": "@The_monster@ gurgles deeply.\n",
+      "hits": [
+        {
+          "Term": "Dissolution",
+          "Translation": "溶解者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Frances cast",
+      "source": "@The_monster@ mutters in a terrible tongue.\n\n@The_monster@ whispers indecipherable words.\n\n@The_monster@ chants phrases taken from a devil's mouth.\n\n@The_monster@ screams a word of power!\n",
+      "hits": [
+        {
+          "Term": "Frances",
+          "Translation": "弗朗西丝",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Cantrip Gastronok cast",
+      "source": "@The_monster@ bubbles merrily.\n\nVISUAL:@The_monster@ glows a brilliant shade of cerise.\n\nVISUAL:@The_monster@ wobbles crazily.\n\nVISUAL:@The_monster_possessive@ eyestalks stretch out, then return to normal size.\n\nYou wobble.\n\nYou take on a slight green cast.\n\nYou feel briefly sluggish.\n\nYou feel a sudden, passing aversion to salt.\n\nw:5\nYou feel a sudden urge to swivel your nonexistent eyestalks around.\n",
+      "hits": [
+        {
+          "Term": "Cantrip",
+          "Translation": "魔法戏法",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "salt",
+          "Translation": "盐尘",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_SALT；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        },
+        {
+          "Term": "Gastronok",
+          "Translation": "加斯特罗诺克",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Gastronok cast targeted",
+      "source": "@The_monster@ looks @at@ @target@ while chanting.\n\n@The_monster@ looks @at@ @target@ and mumbles some strange words.\n\n@The_monster@ casts a spell @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "spell",
+          "Translation": "法术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Gastronok",
+          "Translation": "加斯特罗诺克",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Gastronok cast",
+      "source": "@The_monster_possessive@ eyestalks quiver as @subjective@ mumbles some strange words.\n\n@The_monster@ chants a spell, wobbling all the while.\n\n@The_monster@ mumbles some strange words.\n\n@The_monster@ casts a spell.\n",
+      "hits": [
+        {
+          "Term": "spell",
+          "Translation": "法术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Gastronok",
+          "Translation": "加斯特罗诺克",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Geryon cast",
+      "source": "@The_monster@ winds a great silver horn.\n",
+      "hits": [
+        {
+          "Term": "Geryon",
+          "Translation": "革律翁",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "unseen Geryon cast",
+      "source": "You hear a weird and mournful sound.\n",
+      "hits": [
+        {
+          "Term": "Geryon",
+          "Translation": "革律翁",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "weird",
+          "Translation": "奇怪的",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "Smiting Jeremiah cast",
+      "source": "@The_monster@ lets out a twisted cry.\n\n@The_monster@ mumbles a slurred invocation.\n\nVISUAL:@The_monster@ throws @possessive@ arms up pleadingly.\n\n@The_monster@ cries, \"Fearful master, protect me!\"\n\n@The_monster@ shouts, \"O dreadful one, destroy my foe!\"\n",
+      "hits": [
+        {
+          "Term": "Smiting",
+          "Translation": "神罚",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Jeremiah",
+          "Translation": "耶利米",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Mennas cast",
+      "source": "VISUAL:@The_monster@ gestures frantically.\n",
+      "hits": [
+        {
+          "Term": "Mennas",
+          "Translation": "门纳斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Vanquished Vanguard Nergalle cast",
+      "source": "@The_monster@ calls out: \"@orc name@, @orc name@, @orc name@ - to me!\"\n\n@The_monster@ cries out, \"Spectres! Fight for the home you helped make!\"\n",
+      "hits": [
+        {
+          "Term": "Vanquished Vanguard",
+          "Translation": "败亡先锋",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Nergalle",
+          "Translation": "内尔加勒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "orc",
+          "Translation": "兽人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Primal Wave Norris cast",
+      "source": "@The_monster@ invokes the aid of something beyond life against @target@.\n\n@The_monster@ calmly calls forth the wrath of something past death upon @target@.\n\n@The_monster@ prays to the universe for peace to reach @target@.\n",
+      "hits": [
+        {
+          "Term": "Primal Wave",
+          "Translation": "原初巨浪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Norris",
+          "Translation": "诺里斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Wrath",
+          "Translation": "神怒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        }
+      ]
+    },
+    {
+      "key": "Antimagic Gaze Norris cast",
+      "source": "Something numinous underneath @the_monster_possessive@ waves suddenly gazes at @target@.\n\n@The_monster_possessive@ eyes shimmer, overwhelming @target@ with visions from beyond.\n",
+      "hits": [
+        {
+          "Term": "Antimagic Gaze",
+          "Translation": "反魔法凝视",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Norris",
+          "Translation": "诺里斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Roxanne cast",
+      "source": "@sphinx cast@\n",
+      "hits": [
+        {
+          "Term": "sphinx",
+          "Translation": "斯芬克斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Roxanne",
+          "Translation": "罗克珊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "silent Berserker Rage Rupert cast",
+      "source": "@The_monster@ flies into a rage!\n",
+      "hits": [
+        {
+          "Term": "Berserker",
+          "Translation": "狂战士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/berserker.yaml。"
+        },
+        {
+          "Term": "Berserker Rage",
+          "Translation": "狂暴之怒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Rupert",
+          "Translation": "鲁珀特",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Berserker Rage Rupert cast",
+      "source": "@The_monster@ roars madly and goes into a rage!\n",
+      "hits": [
+        {
+          "Term": "Berserker",
+          "Translation": "狂战士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/berserker.yaml。"
+        },
+        {
+          "Term": "Berserker Rage",
+          "Translation": "狂暴之怒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Rupert",
+          "Translation": "鲁珀特",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Rupert cast targeted",
+      "source": "@The_monster@ roars wildly @at@ @target@.\n\n@The_monster@ yells loudly @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "Rupert",
+          "Translation": "鲁珀特",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Vv cast",
+      "source": "VISUAL:@The_monster@ gestures sharply.\n\nVISUAL:@The_monster@ stamps @possessive@ foot.\n\nVISUAL:@The_monster@ slams @possessive@ palms together.\n\nw:3\nVISUAL:@The_monster@ makes an elaborate arcing motion.\n",
+      "hits": [
+        {
+          "Term": "Vv",
+          "Translation": "薇薇",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "unseen Vv cast",
+      "source": "You hear the sound of rock striking rock.\n",
+      "hits": [
+        {
+          "Term": "Striking",
+          "Translation": "打击术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Vv",
+          "Translation": "薇薇",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Hellfire Mortar Wiglaf cast",
+      "source": "VISUAL:@The_monster@ slams @possessive@ weapon against the ground.\n\n@The_monster@ shouts @at@ @foe@, \"Taste the blood o the mountain!\"\n\n@The_monster@ roars @at@ @foe@, \"Let me show ye whit a REAL cannon looks like!\"\n",
+      "hits": [
+        {
+          "Term": "Hellfire Mortar",
+          "Translation": "地狱火迫击炮",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Wiglaf",
+          "Translation": "威格拉夫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Paralyse Xtahua cast",
+      "source": "@The_monster@ roars overwhelmingly @at@ @target@!\n\n@The_monster@ thunders ferociously @at@ @target@!\n",
+      "hits": [
+        {
+          "Term": "Paralyse",
+          "Translation": "麻痹术/麻痹",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用麻痹术。造成暂时无法行动的状态说明用麻痹。"
+        },
+        {
+          "Term": "Xtahua",
+          "Translation": "克塔华",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "basilisk cast targeted",
+      "source": "@floating eye cast targeted@\n",
+      "hits": [
+        {
+          "Term": "floating eye",
+          "Translation": "浮眼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "basilisk",
+          "Translation": "蛇怪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "basilisk cast",
+      "source": "@floating eye cast@\n",
+      "hits": [
+        {
+          "Term": "floating eye",
+          "Translation": "浮眼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "basilisk",
+          "Translation": "蛇怪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "bes kemwar cast",
+      "source": "@The_monster@ writhes about, and something writhes within @target@.\n",
+      "hits": [
+        {
+          "Term": "bes kemwar",
+          "Translation": "贝斯凯姆瓦尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Airstrike blizzard demon cast",
+      "source": "@The_monster@ lashes out with icy intensity.\n\n@The_monster@ gestures with frozen lightning.\n\n@The_monster@ waves @possessive@ @arms@ in writhing circles.\n",
+      "hits": [
+        {
+          "Term": "Airstrike",
+          "Translation": "空气打击",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "blizzard demon",
+          "Translation": "暴雪恶魔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "silent blizzard demon cast",
+      "source": "@The_monster@ lashes out with icy intensity.\n\n@The_monster@ gestures with frozen lightning.\n",
+      "hits": [
+        {
+          "Term": "blizzard demon",
+          "Translation": "暴雪恶魔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "blizzard demon cast",
+      "source": "@The_monster@ crackles with melancholic malice.\n\n@The_monster@ roars with sorrowful spite.\n",
+      "hits": [
+        {
+          "Term": "blizzard demon",
+          "Translation": "暴雪恶魔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "bombardier beetle cast",
+      "source": "@The_monster@ sprays incendiary fluid @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "bombardier beetle",
+          "Translation": "喷炮甲虫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "March of Sorrows bone dragon cast",
+      "source": "@The_monster@ breathes [collective despair|endless sorrows] @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "bone dragon",
+          "Translation": "骨龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "March of Sorrows",
+          "Translation": "悲伤行军",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "dragon",
+          "Translation": "龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "brain worm cast",
+      "source": "@The_monster_possessive@ bulging head throbs.\n\n@The_monster_possessive@ throbbing head pulsates.\n",
+      "hits": [
+        {
+          "Term": "worm",
+          "Translation": "蠕虫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "brain worm",
+          "Translation": "脑虫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "burial acolyte cast",
+      "source": "@The_monster@ [drones|recites] a funeral chant.\n",
+      "hits": [
+        {
+          "Term": "burial acolyte",
+          "Translation": "丧葬侍僧",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Battlecry cherub cast",
+      "source": "@The_monster@ sings a powerful hymn!\n",
+      "hits": [
+        {
+          "Term": "cherub",
+          "Translation": "智天使",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Battlecry",
+          "Translation": "战吼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Beckoning Gale chonchon cast",
+      "source": "@The_monster@ chants while flapping @possessive@ wings @at@ @target@.\n\nw:5\n@The_monster@ screeches @at@ @target@ while spinning and swirling.\n",
+      "hits": [
+        {
+          "Term": "Beckoning Gale",
+          "Translation": "招引狂风",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "chonchon",
+          "Translation": "琼琼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "cognitogaunt cast",
+      "source": "@The_monster@ glimmers violently.\n",
+      "hits": [
+        {
+          "Term": "cognitogaunt",
+          "Translation": "噬识者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "clockroach cast",
+      "source": "@The_monster@ sprays sand from its hourglass @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "clockroach",
+          "Translation": "发条蟑螂",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "crystal echidna cast targeted",
+      "source": "@The_monster@ flicks its quills @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "crystal echidna",
+          "Translation": "水晶针鼹",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Crystallising Shot crystal guardian cast",
+      "source": "@The_monster@ fires a shard of @reflexive@ @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "crystal guardian",
+          "Translation": "水晶守卫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Crystallising Shot",
+          "Translation": "结晶射击",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "culicivora cast targeted",
+      "source": "@The_monster@ chitters @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "culicivora",
+          "Translation": "食蚊者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "curse skull cast",
+      "source": "@The_monster@ rattles @possessive@ jaw.\n",
+      "hits": [
+        {
+          "Term": "curse skull",
+          "Translation": "诅咒头骨",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "silent curse skull cast",
+      "source": "@The_monster@ rattles @possessive@ jaw silently.\n",
+      "hits": [
+        {
+          "Term": "curse skull",
+          "Translation": "诅咒头骨",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "unseen curse skull cast",
+      "source": "You hear the clattering of teeth.\n",
+      "hits": [
+        {
+          "Term": "curse skull",
+          "Translation": "诅咒头骨",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Minor Healing dryad cast",
+      "source": "@The_monster@ draws upon the vitality of nature.\n",
+      "hits": [
+        {
+          "Term": "dryad",
+          "Translation": "德律阿得斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "minor",
+          "Translation": "较小的",
+          "Part of Speech": "adj",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Minor Healing",
+          "Translation": "轻度治疗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "dryad cast",
+      "source": "@The_monster@ calls out to the forest.\n",
+      "hits": [
+        {
+          "Term": "dryad",
+          "Translation": "德律阿得斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Forest",
+          "Translation": "魔法森林",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Forest（规范缩写 Forest）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        }
+      ]
+    },
+    {
+      "key": "eidolon cast targeted",
+      "source": "@The_monster@ stares piercingly @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "eidolon",
+          "Translation": "幻灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Lightning Bolt electric golem cast",
+      "source": "@The_monster@ hurls @beam@ @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "electric golem",
+          "Translation": "电魔像",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Lightning Bolt",
+          "Translation": "闪电箭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "golem",
+          "Translation": "魔像",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Primal Wave elemental wellspring cast",
+      "source": "A torrent of water rises up through @the_monster@!\n",
+      "hits": [
+        {
+          "Term": "elemental wellspring",
+          "Translation": "元素源泉",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Primal Wave",
+          "Translation": "原初巨浪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "elemental",
+          "Translation": "元素生物",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Summon Water Elementals elemental wellspring cast",
+      "source": "Water spirits pour forth from @the_monster@!\n",
+      "hits": [
+        {
+          "Term": "elemental wellspring",
+          "Translation": "元素源泉",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Summon Water Elementals",
+          "Translation": "召唤水元素",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "elemental",
+          "Translation": "元素生物",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "eye of draining cast",
+      "source": "@The_monster@ smirks and gazes @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "draining",
+          "Translation": "吸能/汲取/耗损",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】与 drain 统一；作为武器印记或负能量效果时按场景表达，不机械译为流失。 来源：dat/descript/egos.txt。\n【语境补充 2026-10-21】印记、攻击效果或状态用吸能。叙述生命获取用汲取。使用物品付出生命代价用耗损。"
+        },
+        {
+          "Term": "eye of draining",
+          "Translation": "吸能之眼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "flayed ghost cast",
+      "source": "@The_monster@ stares @at@ @foe@ with tortured malice.\n\n@The_monster@ cries, \"Suffer as I suffered!\"\n\n@The_monster@ cries, \"Feel what I felt!\"\n",
+      "hits": [
+        {
+          "Term": "flayed ghost",
+          "Translation": "剥皮鬼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "ghost",
+          "Translation": "鬼魂",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "silent flayed ghost cast",
+      "source": "@The_monster@ moans in silent anguish.\n\n@The_monster@ stares @at@ @foe@ with tortured malice.\n",
+      "hits": [
+        {
+          "Term": "flayed ghost",
+          "Translation": "剥皮鬼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "ghost",
+          "Translation": "鬼魂",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Anguish",
+          "Translation": "痛楚术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "formless jellyfish cast",
+      "source": "@The_monster@ shimmers eerily.\n",
+      "hits": [
+        {
+          "Term": "formless jellyfish",
+          "Translation": "无形水母",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "formless",
+          "Translation": "无形之身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：无形之身。"
+        }
+      ]
+    },
+    {
+      "key": "Summon Mortal Champion fravashi cast",
+      "source": "@The_monster@ beckons forth its champion.\n",
+      "hits": [
+        {
+          "Term": "Summon Mortal Champion",
+          "Translation": "召唤凡人勇士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "fravashi",
+          "Translation": "法拉瓦希",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Stone Arrow gargoyle cast",
+      "source": "@The_monster@ hurls a @beam@ @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "arrow",
+          "Translation": "箭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "gargoyle",
+          "Translation": "石像鬼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/gargoyle.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Stone Arrow",
+          "Translation": "石箭术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "ghost moth cast",
+      "source": "@The_monster@ looks around.\n",
+      "hits": [
+        {
+          "Term": "ghost",
+          "Translation": "鬼魂",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "ghost moth",
+          "Translation": "幽灵蛾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "moth",
+          "Translation": "蛾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "ghost moth cast targeted",
+      "source": "@The_monster@ stares @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "ghost",
+          "Translation": "鬼魂",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "ghost moth",
+          "Translation": "幽灵蛾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "moth",
+          "Translation": "蛾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "unseen ghost moth cast targeted",
+      "source": "You feel you are being watched by something. @player_only@\n",
+      "hits": [
+        {
+          "Term": "ghost",
+          "Translation": "鬼魂",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "ghost moth",
+          "Translation": "幽灵蛾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "moth",
+          "Translation": "蛾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "glowing orange brain cast",
+      "source": "@The_monster@ pulsates.\n",
+      "hits": [
+        {
+          "Term": "glowing orange brain",
+          "Translation": "发光橙色大脑",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "golden eye cast targeted",
+      "source": "@The_monster@ blinks @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "golden eye",
+          "Translation": "黄金眼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "guardian serpent cast targeted",
+      "source": "@The_monster@ coils @reflexive@ and waves @possessive@ upper body @at@ @target@.\n\n@The_monster@ gestures with @possessive@ tail @at@ @target@.\n\nw:3\n@The_monster@ weaves intricate patterns with the tip of @possessive@ tongue.\n",
+      "hits": [
+        {
+          "Term": "guardian serpent",
+          "Translation": "守卫蛇",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "guardian serpent cast",
+      "source": "@The_monster@ casts a spell.\n",
+      "hits": [
+        {
+          "Term": "spell",
+          "Translation": "法术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "guardian serpent",
+          "Translation": "守卫蛇",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Fireball hell hog cast",
+      "source": "@The_monster@ breathes @beam@ @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "Hell",
+          "Translation": "地狱",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Fireball",
+          "Translation": "火球术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "hell hog",
+          "Translation": "地狱猪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "hog",
+          "Translation": "猪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Beckoning Gale hippogriff cast",
+      "source": "@The_monster@ flaps @possessive@ wings @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "Beckoning Gale",
+          "Translation": "招引狂风",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "hippogriff",
+          "Translation": "骏鹰",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Warning Cry hippogriff cast",
+      "source": "@The_monster@ screeches a warning cry!\n",
+      "hits": [
+        {
+          "Term": "Warning Cry",
+          "Translation": "警告呼喊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "hippogriff",
+          "Translation": "骏鹰",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "unseen Warning Cry howler monkey cast",
+      "source": "You hear a tremendous hooting and howling!\n",
+      "hits": [
+        {
+          "Term": "howler monkey",
+          "Translation": "吼猴",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Warning Cry",
+          "Translation": "警告呼喊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Warning Cry howler monkey cast",
+      "source": "@The_monster@ hoots and howls with incredible vigour!\n",
+      "hits": [
+        {
+          "Term": "howler monkey",
+          "Translation": "吼猴",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Warning Cry",
+          "Translation": "警告呼喊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Blink Range ironbound thunderhulk cast",
+      "source": "Strange energies crackle from @the_monster_possessive@ apparatus.\n",
+      "hits": [
+        {
+          "Term": "blink",
+          "Translation": "闪烁/闪现/眨眼",
+          "Part of Speech": "verb",
+          "Variants": "",
+          "Note": "\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】位移效果优先用闪烁。普通快速显现可用闪现，眨眼为生理动作。完整法术名优先，不改动英文控制字。"
+        },
+        {
+          "Term": "Blink Range",
+          "Translation": "闪现至远处",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "ironbound thunderhulk",
+          "Translation": "铁缚雷霆巨汉",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "kobold blastminer cast targeted",
+      "source": "@The_monster@ blasts @possessive@ cannon @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "kobold",
+          "Translation": "狗头人",
+          "Part of Speech": "noun",
+          "Variants": "kobolds",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/kobold.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "kobold blastminer",
+          "Translation": "狗头人爆破矿工",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Awaken Flesh kobold fleshcrafter cast",
+      "source": "@The_monster@ cackles and gestures.\n\n@The_monster@ chants and writhes.\n",
+      "hits": [
+        {
+          "Term": "kobold",
+          "Translation": "狗头人",
+          "Part of Speech": "noun",
+          "Variants": "kobolds",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/kobold.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Awaken Flesh",
+          "Translation": "唤醒血肉",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "kobold fleshcrafter",
+          "Translation": "狗头人血肉工匠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Bolt of Flesh kobold fleshcrafter cast",
+      "source": "@The_monster@ weaves a wave of flesh @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "kobold",
+          "Translation": "狗头人",
+          "Part of Speech": "noun",
+          "Variants": "kobolds",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/kobold.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Bolt of Flesh",
+          "Translation": "血肉箭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "kobold fleshcrafter",
+          "Translation": "狗头人血肉工匠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "laughing skull cast",
+      "source": "@The_monster@ cackles spitefully.\n\n@The_monster@ gibbers with scorn.\n\n@The_monster@ lets out a vicious peal of laughter.\n",
+      "hits": [
+        {
+          "Term": "laughing skull",
+          "Translation": "狂笑头骨",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "silent laughing skull cast",
+      "source": "@The_monster@ mockingly cackles in silence.\n\n@The_monster@ violently rattles with glee.\n",
+      "hits": [
+        {
+          "Term": "silence",
+          "Translation": "沉默",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/状态】与噪音属性区分。 来源：duration-data.h。\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "laughing skull",
+          "Translation": "狂笑头骨",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "unseen laughing skull cast",
+      "source": "You hear spiteful cackling.\n\nYou hear scornful gibbering.\n",
+      "hits": [
+        {
+          "Term": "laughing skull",
+          "Translation": "狂笑头骨",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "manticore cast",
+      "source": "@The_monster@ flicks @possessive@ tail.\n",
+      "hits": [
+        {
+          "Term": "manticore",
+          "Translation": "蝎尾狮",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Bolt of Magma molten gargoyle cast",
+      "source": "@The_monster@ blasts magma @at@ @target@!\n",
+      "hits": [
+        {
+          "Term": "gargoyle",
+          "Translation": "石像鬼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/gargoyle.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Bolt of Magma",
+          "Translation": "熔岩箭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "molten gargoyle",
+          "Translation": "熔岩石像鬼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "orange crystal statue cast",
+      "source": "@The_monster@ glitters.\n",
+      "hits": [
+        {
+          "Term": "orange crystal statue",
+          "Translation": "橙水晶雕像",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "statue",
+          "Translation": "雕像",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "orange crystal statue cast targeted",
+      "source": "@The_monster@ fixes @possessive@ piercing gaze on @target@.\n",
+      "hits": [
+        {
+          "Term": "orange crystal statue",
+          "Translation": "橙水晶雕像",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "statue",
+          "Translation": "雕像",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "orb of fire cast",
+      "source": "@The_monster@ glows yellow.\n\n@The_monster@ glows bright magenta.\n\n@The_monster@ glows deep purple.\n\n@The_monster@ glows red.\n\n@The_monster@ emits a lurid red light.\n",
+      "hits": [
+        {
+          "Term": "orb of fire",
+          "Translation": "火焰之球",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "orb of entropy cast",
+      "source": "w:20\n@The_monster@ [pulses|vibrates].\n\n@The_monster@ gnaws at the world.\n\n@The_monster@ eats away at reality.\n\nExistence decays around @the_monster@.\n",
+      "hits": [
+        {
+          "Term": "orb of entropy",
+          "Translation": "熵之球",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "orb of winter cast",
+      "source": "@The_monster@ glitters with frost.\n\n@The_monster@ swirls like a blizzard.\n\nw:30\n@The_monster@ glows [icy blue|with a pale light|sapphire].\n",
+      "hits": [
+        {
+          "Term": "orb of winter",
+          "Translation": "寒冬之球",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "obsidian statue cast",
+      "source": "@The_monster_possessive@ eyes glow briefly.\n",
+      "hits": [
+        {
+          "Term": "statue",
+          "Translation": "雕像",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "obsidian statue",
+          "Translation": "黑曜石雕像",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Bolt of Fire ophan cast",
+      "source": "@The_monster@ harnesses the cleansing power of fire!\n",
+      "hits": [
+        {
+          "Term": "Bolt of Fire",
+          "Translation": "火焰箭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "ophan",
+          "Translation": "座天使",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "unseen Bolt of Fire ophan cast",
+      "source": "Something harnesses the cleansing power of fire!\n",
+      "hits": [
+        {
+          "Term": "Bolt of Fire",
+          "Translation": "火焰箭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "ophan",
+          "Translation": "座天使",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Force Lance polterguardian cast",
+      "source": "@The_monster@ focuses its will @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "Force Lance",
+          "Translation": "力场长枪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "polterguardian",
+          "Translation": "骚灵守卫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Ghostly Fireball revenant cast",
+      "source": "@The_monster@ lashes out with ghostly flames.\n",
+      "hits": [
+        {
+          "Term": "revenant",
+          "Translation": "还魂者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】当前同时是可选种族与怪物名；原“鬼火骷髅”仅描述形象，统一为可用于种族界面的名称。 来源：dat/species/revenant.yaml; dat/descript/monsters.txt。\n【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/revenant.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Fireball",
+          "Translation": "火球术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Ghostly Fireball",
+          "Translation": "幽魂火球",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Spectral Cloud revenant cast",
+      "source": "@The_monster@ conjures spectral mists around @target@.\n",
+      "hits": [
+        {
+          "Term": "revenant",
+          "Translation": "还魂者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】当前同时是可选种族与怪物名；原“鬼火骷髅”仅描述形象，统一为可用于种族界面的名称。 来源：dat/species/revenant.yaml; dat/descript/monsters.txt。\n【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/revenant.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Spectral Cloud",
+          "Translation": "幽魂云雾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Dispel Undead revenant cast",
+      "source": "@The_monster@ gestures violently @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "revenant",
+          "Translation": "还魂者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】当前同时是可选种族与怪物名；原“鬼火骷髅”仅描述形象，统一为可用于种族界面的名称。 来源：dat/species/revenant.yaml; dat/descript/monsters.txt。\n【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/revenant.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "undead",
+          "Translation": "亡灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】指不死生物类别，并不表示无法被杀死。 来源：mon-util.cc。"
+        },
+        {
+          "Term": "Dispel Undead",
+          "Translation": "驱散亡灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Blink Away revenant cast",
+      "source": "__NONE\n",
+      "hits": [
+        {
+          "Term": "blink",
+          "Translation": "闪烁/闪现/眨眼",
+          "Part of Speech": "verb",
+          "Variants": "",
+          "Note": "\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】位移效果优先用闪烁。普通快速显现可用闪现，眨眼为生理动作。完整法术名优先，不改动英文控制字。"
+        },
+        {
+          "Term": "revenant",
+          "Translation": "还魂者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】当前同时是可选种族与怪物名；原“鬼火骷髅”仅描述形象，统一为可用于种族界面的名称。 来源：dat/species/revenant.yaml; dat/descript/monsters.txt。\n【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/revenant.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Blink Away",
+          "Translation": "闪现脱离",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Battlecry satyr cast",
+      "source": "@The_monster@ plays a rousing melody on @possessive@ pipes!\n",
+      "hits": [
+        {
+          "Term": "satyr",
+          "Translation": "萨堤尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Battlecry",
+          "Translation": "战吼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Cause Fear satyr cast",
+      "source": "@The_monster@ plays a frightful melody on @possessive@ pipes!\n",
+      "hits": [
+        {
+          "Term": "satyr",
+          "Translation": "萨堤尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Cause Fear",
+          "Translation": "恐惧术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Sleep satyr cast",
+      "source": "@The_monster@ plays a lulling melody on @possessive@ pipes!\n",
+      "hits": [
+        {
+          "Term": "satyr",
+          "Translation": "萨堤尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Sleep",
+          "Translation": "睡眠术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Injury Mirror screaming refraction cast",
+      "source": "@The_monster@ shines with woeful anguish.\n\n@The_monster@ rattles its vertebrae in radiant agony.\n",
+      "hits": [
+        {
+          "Term": "Injury Mirror",
+          "Translation": "伤害之镜",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Agony",
+          "Translation": "剧痛术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Anguish",
+          "Translation": "痛楚术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "screaming refraction",
+          "Translation": "尖啸折光体",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "screaming",
+          "Translation": "尖叫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：尖叫。"
+        }
+      ]
+    },
+    {
+      "key": "Lee's Rapid Deconstruction screaming refraction cast",
+      "source": "An echo of @the_monster@ flickers and hopelessly wails @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "Lee's Rapid Deconstruction",
+          "Translation": "李氏快速解构术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "screaming refraction",
+          "Translation": "尖啸折光体",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "screaming",
+          "Translation": "尖叫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：尖叫。"
+        }
+      ]
+    },
+    {
+      "key": "scrub nettle cast targeted",
+      "source": "@The_monster@ launches toxic spines @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "scrub nettle",
+          "Translation": "灌丛荨麻",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Warning Cry seraph cast",
+      "source": "@The_monster@ shouts a warning to @possessive@ allies!\n",
+      "hits": [
+        {
+          "Term": "seraph",
+          "Translation": "炽天使",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Warning Cry",
+          "Translation": "警告呼喊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "unseen Warning Cry seraph cast",
+      "source": "You hear a loud warning shout!\n",
+      "hits": [
+        {
+          "Term": "seraph",
+          "Translation": "炽天使",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Warning Cry",
+          "Translation": "警告呼喊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Invisibility shadowghast cast",
+      "source": "@The_monster@ slips into darkness.\n",
+      "hits": [
+        {
+          "Term": "invisibility",
+          "Translation": "隐形",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/状态】不是 stealth 潜行技能。 来源：duration-data.h。\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Darkness",
+          "Translation": "黑暗术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "shadowghast",
+          "Translation": "阴影怨魂",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Throw Icicle shard shrike cast",
+      "source": "@The_monster@ spits a shard of ice @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "shard shrike",
+          "Translation": "碎片伯劳鸟",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】将部首字符“⻦”改为正常汉字“鸟”。 来源：dat/descript/monsters.txt。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "throw",
+          "Translation": "投掷",
+          "Part of Speech": "verb",
+          "Variants": "",
+          "Note": "【0.34.1 修订】本条是动作动词；独立补充 Throwing 技能，不把普通 throwing 自动视为技能名。 来源：skills.cc。\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Throw Icicle",
+          "Translation": "投掷冰锥",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Confuse sphinx marauder cast",
+      "source": "@The_monster@ roars a[n obscure| perplexing] riddle with a strange tongue.\n",
+      "hits": [
+        {
+          "Term": "confuse",
+          "Translation": "混乱",
+          "Part of Speech": "verb",
+          "Variants": "",
+          "Note": "confusion\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "sphinx",
+          "Translation": "斯芬克斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "sphinx marauder",
+          "Translation": "斯芬克斯掠夺者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Vex sphinx marauder cast",
+      "source": "@The_monster@ screeches a[n impossible| nonsensical| cliché] riddle in a mystic tongue.\n",
+      "hits": [
+        {
+          "Term": "sphinx",
+          "Translation": "斯芬克斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Vex",
+          "Translation": "恼乱术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "sphinx marauder",
+          "Translation": "斯芬克斯掠夺者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Smiting guardian sphinx cast",
+      "source": "@The_monster@ mutters an ancient curse @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "sphinx",
+          "Translation": "斯芬克斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Smiting",
+          "Translation": "神罚",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "guardian sphinx",
+          "Translation": "守卫斯芬克斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Paralysis guardian sphinx cast",
+      "source": "@The_monster@ whispers a [stupefying|staggering] mystic riddle.\n",
+      "hits": [
+        {
+          "Term": "sphinx",
+          "Translation": "斯芬克斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "paralysis",
+          "Translation": "麻痹",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/状态】状态名，区别动词 paralyze/paralyse。 来源：duration-data.h。"
+        },
+        {
+          "Term": "guardian sphinx",
+          "Translation": "守卫斯芬克斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "sphinx cast",
+      "source": "@The_monster@ mumbles some strange words.\n\n@The_monster@ casts a spell.\n",
+      "hits": [
+        {
+          "Term": "spell",
+          "Translation": "法术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "sphinx",
+          "Translation": "斯芬克斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Electrical Bolt shock serpent cast",
+      "source": "@The_monster@ discharges a tendril of electricity.\n",
+      "hits": [
+        {
+          "Term": "Shock",
+          "Translation": "电击术/电击",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【名称统一】法术名称采用“电击术”；实体、伤害、状态或普通动词按语境使用原有译法，不给一般效果描述机械加“术”。"
+        },
+        {
+          "Term": "Electrical Bolt",
+          "Translation": "电击箭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "shock serpent",
+          "Translation": "电击蛇",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "sun moth cast",
+      "source": "@The_monster_possessive@ wings beat fiercely.\n",
+      "hits": [
+        {
+          "Term": "moth",
+          "Translation": "蛾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "sun moth",
+          "Translation": "太阳蛾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Rebounding Blaze thermic dynamo cast",
+      "source": "A wild whirl of fire shoots out from @the_monster@ @at@ @target@.\n\n@The_monster@ overcharges @reflexive@ and releases excess heat @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "Rebounding Blaze",
+          "Translation": "回弹烈焰",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "thermic dynamo",
+          "Translation": "热能发电机",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Rebounding Chill thermic dynamo cast",
+      "source": "A wild whirl of ice shoots out from @the_monster@ @at@ @target@.\n\n@The_monster@ overflows with ice and vents excess cold @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "Rebounding Chill",
+          "Translation": "回弹寒流",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "thermic dynamo",
+          "Translation": "热能发电机",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "unseen thermic dynamo cast",
+      "source": "You hear a violent whirl.\n",
+      "hits": [
+        {
+          "Term": "thermic dynamo",
+          "Translation": "热能发电机",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "thrashing horror cast",
+      "source": "@The_monster@ churns violently!\n",
+      "hits": [
+        {
+          "Term": "thrashing horror",
+          "Translation": "狂舞恐怖",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "undertaker cast targeted",
+      "source": "@The_monster@ reaches out for @target@.\n",
+      "hits": [
+        {
+          "Term": "undertaker",
+          "Translation": "殡葬师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Flashing Balestra undying armoury cast",
+      "source": "A weapon leaps out from @the_monster@ and lunges @at@ @target@!\n",
+      "hits": [
+        {
+          "Term": "Flashing Balestra",
+          "Translation": "闪光跃刺",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "undying armoury",
+          "Translation": "不死军械库",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Death Rattle ushabti cast",
+      "source": "@The_monster@ shakes and rattles.\n",
+      "hits": [
+        {
+          "Term": "Death Rattle",
+          "Translation": "死亡喉鸣",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "ushabti",
+          "Translation": "沙布提俑",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Warning Cry ushabti cast",
+      "source": "@The_monster@ shakes and rattles deafeningly!\n",
+      "hits": [
+        {
+          "Term": "Warning Cry",
+          "Translation": "警告呼喊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "ushabti",
+          "Translation": "沙布提俑",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "unseen Warning Cry ushabti cast",
+      "source": "You hear a deafening rattling sound!\n",
+      "hits": [
+        {
+          "Term": "Warning Cry",
+          "Translation": "警告呼喊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "ushabti",
+          "Translation": "沙布提俑",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "ushabti cast targeted",
+      "source": "@The_monster@ gestures stiffly @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "ushabti",
+          "Translation": "沙布提俑",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "unseen Warning Cry vault sentinel cast",
+      "source": "You hear a note loudly blown on a horn!\n",
+      "hits": [
+        {
+          "Term": "vault sentinel",
+          "Translation": "宝库哨兵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Warning Cry",
+          "Translation": "警告呼喊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Warning Cry vault sentinel cast",
+      "source": "@The_monster@ blows a loud note on a signal horn!\n",
+      "hits": [
+        {
+          "Term": "vault sentinel",
+          "Translation": "宝库哨兵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Warning Cry",
+          "Translation": "警告呼喊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Metal Splinters war gargoyle cast",
+      "source": "@The_monster@ launches @beam@ @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "gargoyle",
+          "Translation": "石像鬼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/gargoyle.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "war gargoyle",
+          "Translation": "战争石像鬼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Metal Splinters",
+          "Translation": "金属碎片",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "weeping skull cast",
+      "source": "@The_monster@ [unleashes|releases] gushing sobs.\n\n@The_monster_possessive@ misery [bubbles over|overflows].\n",
+      "hits": [
+        {
+          "Term": "weeping skull",
+          "Translation": "哭泣头骨",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "silent weeping skull cast",
+      "source": "@The_monster_possessive@ misery [bubbles over|overflows].\n",
+      "hits": [
+        {
+          "Term": "weeping skull",
+          "Translation": "哭泣头骨",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "unseen weeping skull cast",
+      "source": "You hear gushing sobs.\n",
+      "hits": [
+        {
+          "Term": "weeping skull",
+          "Translation": "哭泣头骨",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Airstrike wind drake cast",
+      "source": "@The_monster@ flaps @possessive@ wings @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "wind drake",
+          "Translation": "风亚龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Airstrike",
+          "Translation": "空气打击",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "drake",
+          "Translation": "幼龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Wind Blast wind drake cast",
+      "source": "@The_monster@ exhales a fierce blast of wind!\n",
+      "hits": [
+        {
+          "Term": "wind drake",
+          "Translation": "风亚龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Wind Blast",
+          "Translation": "狂风冲击",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "drake",
+          "Translation": "幼龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Corrupting Pulse wretched star cast",
+      "source": "@The_monster@ pulses with an eldritch light!\n",
+      "hits": [
+        {
+          "Term": "Corrupting Pulse",
+          "Translation": "腐化脉冲",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "wretched star",
+          "Translation": "悲惨之星",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "wretched star cast",
+      "source": "@The_monster@ glows turbulently.\n",
+      "hits": [
+        {
+          "Term": "wretched star",
+          "Translation": "悲惨之星",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Grave Claw vampire bloodprince cast",
+      "source": "@The_monster@ reaches out @possessive@ hand.\n\n@The_monster@ snaps @possessive@ fingers.\n",
+      "hits": [
+        {
+          "Term": "vampire",
+          "Translation": "吸血鬼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【版本/语境】怪物译名保留；玩家种族已废弃。 来源：dat/species/deprecated-vampire.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Grave Claw",
+          "Translation": "坟墓之爪",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "vampire bloodprince",
+          "Translation": "吸血鬼血亲王",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Ravenous Swarm vampire bloodprince cast",
+      "source": "@The_monster@ unfurls @possessive@ wings.\n\n@The_monster@ spreads @possessive@ arms wide.\n",
+      "hits": [
+        {
+          "Term": "vampire",
+          "Translation": "吸血鬼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【版本/语境】怪物译名保留；玩家种族已废弃。 来源：dat/species/deprecated-vampire.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Ravenous Swarm",
+          "Translation": "饥饿虫群",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "vampire bloodprince",
+          "Translation": "吸血鬼血亲王",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Dominate Undead vampire bloodprince cast",
+      "source": "@The_monster@ exerts the full weight of @possessive@ authority.\n\n@The_monster@ compels the dead to obey.\n\n@The_monster@ whispers, \"Kneel.\"\n",
+      "hits": [
+        {
+          "Term": "undead",
+          "Translation": "亡灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】指不死生物类别，并不表示无法被杀死。 来源：mon-util.cc。"
+        },
+        {
+          "Term": "vampire",
+          "Translation": "吸血鬼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【版本/语境】怪物译名保留；玩家种族已废弃。 来源：dat/species/deprecated-vampire.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Dominate Undead",
+          "Translation": "支配亡灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "vampire bloodprince",
+          "Translation": "吸血鬼血亲王",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "Manifold Assault natural cast",
+      "source": "@The_monster@ seems to occupy many places at once.\n",
+      "hits": [
+        {
+          "Term": "Manifold Assault",
+          "Translation": "多重突袭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Acid Ball nascent plasmodium cast",
+      "source": "@The_monster@ squirts acid @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "Acid Ball",
+          "Translation": "酸液球",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "nascent plasmodium",
+          "Translation": "初生原质体",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "angel cast targeted",
+      "source": "@The_monster@ calls down the wrath of @possessive_God@ upon @target@.\n",
+      "hits": [
+        {
+          "Term": "angel",
+          "Translation": "天使",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Wrath",
+          "Translation": "神怒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        }
+      ]
+    },
+    {
+      "key": "crab cast targeted",
+      "source": "@The_monster@ breathes @beam@ @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "crab",
+          "Translation": "蟹",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "dragon cast targeted",
+      "source": "@The_monster@ breathes @beam@ @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "dragon",
+          "Translation": "龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "dragon cast",
+      "source": "@The_monster@ roars!\n",
+      "hits": [
+        {
+          "Term": "dragon",
+          "Translation": "龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "unseen dragon cast",
+      "source": "You hear a roar.\n",
+      "hits": [
+        {
+          "Term": "dragon",
+          "Translation": "龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "drake cast targeted",
+      "source": "@dragon cast targeted@\n",
+      "hits": [
+        {
+          "Term": "dragon",
+          "Translation": "龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "drake",
+          "Translation": "幼龙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "floating eye cast targeted",
+      "source": "@The_monster@ gazes @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "floating eye",
+          "Translation": "浮眼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "floating eye cast",
+      "source": "@The_monster@ looks around.\n",
+      "hits": [
+        {
+          "Term": "floating eye",
+          "Translation": "浮眼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "unseen floating eye cast targeted",
+      "source": "You feel something staring at you. @player_only@\n",
+      "hits": [
+        {
+          "Term": "floating eye",
+          "Translation": "浮眼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "living spell cast",
+      "source": "@The_monster@ casts @reflexive@ @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "spell",
+          "Translation": "法术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "living spell",
+          "Translation": "活体法术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "raven cast",
+      "source": "@The_monster@ stares into @foe_possessive@ soul.\n",
+      "hits": [
+        {
+          "Term": "raven",
+          "Translation": "渡鸦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "malmutate zykzyl cast",
+      "source": "@The_monster@ seethes with envy of @foe_possessive@ form.\n",
+      "hits": [
+        {
+          "Term": "Malmutate",
+          "Translation": "恶性突变",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "zykzyl",
+          "Translation": "兹克兹尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "enfeeble zykzyl cast",
+      "source": "@The_monster@ overflows with resentment.\n",
+      "hits": [
+        {
+          "Term": "Enfeeble",
+          "Translation": "衰弱术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "zykzyl",
+          "Translation": "兹克兹尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "bolt of flesh zykzyl cast",
+      "source": "@The_monster@ hurls a piece of @reflexive@ @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "Bolt of Flesh",
+          "Translation": "血肉箭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "zykzyl",
+          "Translation": "兹克兹尔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "ostracise cast",
+      "source": "@The_monster@ freezes your soul cold.\n",
+      "hits": [
+        {
+          "Term": "Ostracise",
+          "Translation": "放逐术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "polymorphed wizard cast targeted",
+      "source": "@The_monster@ casts a spell @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "spell",
+          "Translation": "法术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "wizard",
+          "Translation": "巫师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "polymorphed wizard cast",
+      "source": "@The_monster@ casts a spell.\n",
+      "hits": [
+        {
+          "Term": "spell",
+          "Translation": "法术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "wizard",
+          "Translation": "巫师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "polymorphed unseen wizard cast",
+      "source": "You hear some strange, mumbled words.\n",
+      "hits": [
+        {
+          "Term": "wizard",
+          "Translation": "巫师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "Haste Other priest cast",
+      "source": "@The_monster@ calls upon @possessive_God@ to speed up @target@.\n",
+      "hits": [
+        {
+          "Term": "haste",
+          "Translation": "疾速",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/状态】与旧敏捷药水提升属性的效果区分。 来源：duration-data.h。\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "Haste Other",
+          "Translation": "加速他者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "speed",
+          "Translation": "快速",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：快速。"
+        }
+      ]
+    },
+    {
+      "key": "Heal Other priest cast",
+      "source": "@The_monster@ calls upon @possessive_God@ to heal @target@.\n",
+      "hits": [
+        {
+          "Term": "Heal Other",
+          "Translation": "治疗他者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Might Other priest cast",
+      "source": "@The_monster@ calls upon @possessive_God@ to strengthen @target@.\n",
+      "hits": [
+        {
+          "Term": "Might",
+          "Translation": "强力术/可能/力量",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术或能力标题保留强力术。情态动词 might 表示可能。名词 might 表示力量或威力。"
+        },
+        {
+          "Term": "Might Other",
+          "Translation": "强化他者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Malign Offering priest cast",
+      "source": "@The_monster@ utters a dark prayer and points @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "Malign Offering",
+          "Translation": "恶意献祭",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "Blink magical cast",
+      "source": "__NONE\n",
+      "hits": [
+        {
+          "Term": "blink",
+          "Translation": "闪烁/闪现/眨眼",
+          "Part of Speech": "verb",
+          "Variants": "",
+          "Note": "\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】位移效果优先用闪烁。普通快速显现可用闪现，眨眼为生理动作。完整法术名优先，不改动英文控制字。"
+        }
+      ]
+    },
+    {
+      "key": "priest cast targeted",
+      "source": "@The_monster@ calls down the wrath of @possessive_God@ upon @target@.\n\n@The_monster@ mumbles some strange prayers to @possessive_God@ against @target@.\n\n@The_monster@ invokes the aid of @possessive_God@ against @target@.\n",
+      "hits": [
+        {
+          "Term": "Wrath",
+          "Translation": "神怒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        }
+      ]
+    },
+    {
+      "key": "priest cast",
+      "source": "@The_monster@ prays to @possessive_God@.\n\n@The_monster@ mumbles some strange prayers to @possessive_God@.\n\n@The_monster@ utters an invocation to @possessive_God@.\n",
+      "hits": []
+    },
+    {
+      "key": "unseen priest cast targeted",
+      "source": "You hear @something@ call down the wrath of @a_God@ upon @target@.\n\nYou hear @something@ mumble some strange prayers to @a_God@ against @target@.\n\nYou hear @something@ invoke the aid of @a_God@ against @target@.\n",
+      "hits": [
+        {
+          "Term": "Wrath",
+          "Translation": "神怒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        }
+      ]
+    },
+    {
+      "key": "unseen priest cast",
+      "source": "You hear some strange, mumbled prayers to @a_God@.\n",
+      "hits": []
+    },
+    {
+      "key": "non-humanoid wizard cast targeted",
+      "source": "@The_monster@ stares @at@ @target@ and mumbles some strange words.\n\n@The_monster@ casts a spell @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "spell",
+          "Translation": "法术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "wizard",
+          "Translation": "巫师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "non-humanoid wizard cast",
+      "source": "@The_monster@ mumbles some strange words.\n\n@The_monster@ casts a spell.\n",
+      "hits": [
+        {
+          "Term": "spell",
+          "Translation": "法术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "wizard",
+          "Translation": "巫师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "unseen non-humanoid wizard cast",
+      "source": "You hear some strange, mumbled words.\n",
+      "hits": [
+        {
+          "Term": "wizard",
+          "Translation": "巫师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "wizard cast targeted",
+      "source": "@The_monster@ gestures @at@ @target@ while chanting.\n\n@The_monster@ points @at@ @target@ and mumbles some strange words.\n\n@The_monster@ casts a spell @at@ @target@.\n",
+      "hits": [
+        {
+          "Term": "spell",
+          "Translation": "法术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "wizard",
+          "Translation": "巫师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "wizard cast",
+      "source": "@The_monster@ gestures wildly while chanting.\n\n@The_monster@ mumbles some strange words.\n\n@The_monster@ casts a spell.\n",
+      "hits": [
+        {
+          "Term": "spell",
+          "Translation": "法术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "wizard",
+          "Translation": "巫师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "unseen wizard cast",
+      "source": "You hear some strange, mumbled words.\n",
+      "hits": [
+        {
+          "Term": "wizard",
+          "Translation": "巫师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "magical cast targeted",
+      "source": "@The_monster@ gestures @at@ @target@.\n",
+      "hits": []
+    },
+    {
+      "key": "magical cast",
+      "source": "@The_monster@ gestures.\n",
+      "hits": []
+    },
+    {
+      "key": "beam catchall cast",
+      "source": "@The_monster@ throws @beam@ @at@ @target@.\n",
+      "hits": []
+    }
+  ],
+  "duplicate_keys": [],
+  "additional_terms": {
+    "looked_up": [
+      "memorising",
+      "Imbue Servitor",
+      "Imprint Weapon",
+      "Shaft Self",
+      "Jessica",
+      "entropy weaver",
+      "protean progenitor",
+      "talons",
+      "hooves",
+      "claws",
+      "antennae",
+      "pseudopods",
+      "tentacles"
+    ],
+    "hits": [
+      {
+        "Term": "Shaft Self",
+        "Translation": "自陷竖井",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+      },
+      {
+        "Term": "Imbue Servitor",
+        "Translation": "灌注仆从",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+      },
+      {
+        "Term": "Imprint Weapon",
+        "Translation": "铭刻武器",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+      },
+      {
+        "Term": "Jessica",
+        "Translation": "杰西卡",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+      },
+      {
+        "Term": "entropy weaver",
+        "Translation": "熵织者",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+      },
+      {
+        "Term": "protean progenitor",
+        "Translation": "万变始祖",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+      },
+      {
+        "Term": "claws",
+        "Translation": "利爪",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：利爪。"
+      },
+      {
+        "Term": "hooves",
+        "Translation": "蹄足",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：蹄足。"
+      },
+      {
+        "Term": "antennae",
+        "Translation": "触角",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：触角。"
+      },
+      {
+        "Term": "talons",
+        "Translation": "趾爪",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：趾爪。"
+      },
+      {
+        "Term": "pseudopods",
+        "Translation": "伪足",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：伪足。"
+      },
+      {
+        "Term": "tentacles",
+        "Translation": "触手",
+        "Part of Speech": "noun",
+        "Variants": "",
+        "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：触手。"
+      }
+    ],
+    "context_notes": "Body-part hooves uses descriptive 蹄; the glossary 蹄足 entry names a mutation. Talons uses 趾爪. Proper monster names come from the existing canonical name catalogue."
+  }
+}

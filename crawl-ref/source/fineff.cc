@@ -5,6 +5,8 @@
 **/
 
 #include "AppHdr.h"
+#include "attack.h"
+#include "i18n.h"
 
 #include "fineff.h"
 
@@ -358,12 +360,14 @@ public:
     bool mergeable(const final_effect&) const override { return false; }
     void fire() override;
 
-    infestation_death_fineff(coord_def pos, const string& _name)
-        : final_effect(0, 0, pos), name(_name)
+    infestation_death_fineff(coord_def pos, const string& _name,
+                            const string& _display_name)
+        : final_effect(0, 0, pos), name(_name), display_name(_display_name)
     {
     }
 protected:
     string name;
+    string display_name;
 };
 
 class make_derived_undead_fineff : public final_effect
@@ -713,9 +717,10 @@ void schedule_avoided_death_fineff(monster* mons)
     _schedule_final_effect(new avoided_death_fineff(mons, realhp));
 }
 
-void schedule_infestation_death_fineff(coord_def pos, const string& name)
+void schedule_infestation_death_fineff(coord_def pos, const string& name,
+                                     const string& display_name)
 {
-    _schedule_final_effect(new infestation_death_fineff(pos, name));
+    _schedule_final_effect(new infestation_death_fineff(pos, name, display_name));
 }
 
 void schedule_make_derived_undead_fineff(coord_def pos, mgen_data mg, int xl,
@@ -1008,11 +1013,12 @@ void mirror_damage_fineff::fire()
                                    defender()->as_monster() : nullptr;
         if (reflector)
         {
-            mprf("%s reflects your damage back at you!",
-                 reflector->name(DESC_THE).c_str());
+            mpr(ui_render("f.message", "%s reflects your damage back at you!",
+                make_stringf("%s reflects your damage back at you!",
+                 reflector->name(DESC_THE).c_str()), {ui_actor_arg(*reflector)}));
         }
         else
-            mpr("Your damage is reflected back at you!");
+            mpr(ui_translate("f.message", "Your damage is reflected back at you!"));
         ouch(damage, KILLED_BY_MIRROR_DAMAGE);
     }
     else
@@ -1146,26 +1152,35 @@ void trj_spawn_fineff::fire()
     if (trj)
     {
         const string monnam = trj->name(DESC_THE);
-        mprf("%s shudders%s.", monnam.c_str(),
-             spawned >= 5 ? " alarmingly" :
-             spawned >= 3 ? " violently" :
-             spawned > 1 ? " vigorously" : "");
+        const char *degree = spawned >= 5 ? " alarmingly" :
+            spawned >= 3 ? " violently" : spawned > 1 ? " vigorously" : "";
+        const char *pattern = spawned >= 5 ? "%s shudders alarmingly."
+            : spawned >= 3 ? "%s shudders violently."
+            : spawned > 1 ? "%s shudders vigorously." : "%s shudders.";
+        mpr(ui_render("f.message", pattern,
+            make_stringf("%s shudders%s.", monnam.c_str(), degree),
+            {ui_actor_arg(*trj)}));
 
         if (spawned == 1)
-            mprf("%s spits out another jelly.", monnam.c_str());
+            mpr(ui_render("f.message", "%s spits out another jelly.",
+                make_stringf("%s spits out another jelly.", monnam.c_str()),
+                {ui_actor_arg(*trj)}));
         else
         {
-            mprf("%s spits out %s more jellies.",
-                 monnam.c_str(),
-                 number_in_words(spawned).c_str());
+            mpr(ui_render("f.message", "%s spits out %s more jellies.",
+                make_stringf("%s spits out %s more jellies.", monnam.c_str(),
+                             number_in_words(spawned).c_str()),
+                {ui_actor_arg(*trj), ui_literal_arg(to_string(spawned))}));
         }
     }
     else if (spawned == 1)
-        mpr("One of the Royal Jelly's fragments survives.");
+        mpr(ui_translate("f.message", "One of the Royal Jelly's fragments survives."));
     else
     {
-        mprf("The dying Royal Jelly spits out %s more jellies.",
-             number_in_words(spawned).c_str());
+        mpr(ui_render("f.message", "The dying Royal Jelly spits out %s more jellies.",
+            make_stringf("The dying Royal Jelly spits out %s more jellies.",
+                         number_in_words(spawned).c_str()),
+            {ui_literal_arg(to_string(spawned))}));
     }
 }
 
@@ -1310,18 +1325,23 @@ void shock_discharge_fineff::fire()
     const actor *serpent = defender();
     if (serpent && you.can_see(*serpent))
     {
-        mprf("%s %s discharges%s, shocking %s%s",
-             serpent->name(DESC_ITS).c_str(),
-             shock_source.c_str(),
-             power < 4 ? "" : " violently",
-             oppressor.name(DESC_THE).c_str(),
-             attack_strength_punctuation(final_dmg).c_str());
+        const string original = make_stringf("%s %s discharges%s, shocking %s%s",
+            serpent->name(DESC_ITS).c_str(), shock_source.c_str(),
+            power < 4 ? "" : " violently", oppressor.name(DESC_THE).c_str(),
+            attack_strength_punctuation(final_dmg).c_str());
+        // shock_source also goes into the English death record below.
+        mpr(shock_source != "electric aura" ? original : ui_render("f.message",
+            power < 4 ? "%s electric aura discharges, shocking %s%s"
+                      : "%s electric aura discharges violently, shocking %s%s",
+            original, {ui_actor_arg(*serpent), ui_actor_arg(oppressor),
+                       ui_attack_punctuation(attack_strength_punctuation(final_dmg))}));
     }
     else if (you.can_see(oppressor))
     {
-        mprf("The air sparks with electricity, shocking %s%s",
-             oppressor.name(DESC_THE).c_str(),
-             attack_strength_punctuation(final_dmg).c_str());
+        mpr(ui_render("f.message", "The air sparks with electricity, shocking %s%s",
+            make_stringf("The air sparks with electricity, shocking %s%s",
+                oppressor.name(DESC_THE).c_str(), attack_strength_punctuation(final_dmg).c_str()),
+            {ui_actor_arg(oppressor), ui_attack_punctuation(attack_strength_punctuation(final_dmg))}));
     }
 
     bolt beam;
@@ -1384,9 +1404,10 @@ void explosion_fineff::fire()
             act->move_to(newpos, MV_DEFAULT, true);
             if (you.can_see(*act))
             {
-                mprf("%s %s knocked back by the blast.",
+                mpr(ui_render("f.message", "%s is knocked back by the blast.",
+                make_stringf("%s %s knocked back by the blast.",
                      act->name(DESC_THE).c_str(),
-                     act->conj_verb("are").c_str());
+                     act->conj_verb("are").c_str()), {ui_actor_arg(*act)}));
             }
             act->finalise_movement();
         }
@@ -1428,9 +1449,9 @@ void rakshasa_clone_fineff::fire()
 
     if (you.can_see(*rakshasa))
     {
-        mprf(MSGCH_MONSTER_SPELL,
-             "The injured %s weaves a defensive illusion!",
-             rakshasa->name(DESC_PLAIN).c_str());
+        mprf(MSGCH_MONSTER_SPELL, "%s", ui_render("f.message", "The injured %s weaves a defensive illusion!",
+                make_stringf("The injured %s weaves a defensive illusion!",
+             rakshasa->name(DESC_PLAIN).c_str()), {ui_actor_arg(*rakshasa)}).c_str());
     }
 }
 
@@ -1478,8 +1499,10 @@ void infestation_death_fineff::fire()
     {
         if (you.see_cell(posn) || you.can_see(*scarab))
         {
-            mprf("%s bursts from %s!", scarab->name(DESC_A, true).c_str(),
-                                       name.c_str());
+            mpr(ui_render("f.message", "%s bursts from %s!",
+                make_stringf("%s bursts from %s!", scarab->name(DESC_A, true).c_str(),
+                             name.c_str()),
+                {ui_actor_arg(*scarab), {display_name, !display_name.empty()}}));
         }
     }
 }
@@ -1563,11 +1586,12 @@ void mummy_death_curse_fineff::fire()
         return;
 
     if (victim->is_player())
-        mprf(MSGCH_MONSTER_SPELL, "You feel extremely nervous for a moment...");
+        mprf(MSGCH_MONSTER_SPELL, "%s", ui_translate("f.message", "You feel extremely nervous for a moment..."));
     else if (you.can_see(*victim))
     {
-        mprf(MSGCH_MONSTER_SPELL, "A malignant aura surrounds %s.",
-             victim->name(DESC_THE).c_str());
+        mprf(MSGCH_MONSTER_SPELL, "%s", ui_render("f.message", "A malignant aura surrounds %s.",
+                make_stringf("A malignant aura surrounds %s.",
+             victim->name(DESC_THE).c_str()), {ui_actor_arg(*victim)}).c_str());
     }
     // The real mummy is dead, but we pass along a cached copy save at the time
     // they died (for morgue purposes)
@@ -1711,9 +1735,11 @@ void stardust_fineff::fire()
         return;
 
     if (is_star_jelly)
-        mprf("A flurry of magic pours from %s injured body!", agent->name(DESC_ITS).c_str());
+        mpr(ui_render("f.message", "A flurry of magic pours from %s injured body!",
+                make_stringf("A flurry of magic pours from %s injured body!", agent->name(DESC_ITS).c_str()), {ui_actor_arg(*agent)}));
     else
-        mprf("%s orb unleashes a flurry of shooting stars!", agent->name(DESC_ITS).c_str());
+        mpr(ui_render("f.message", "%s orb unleashes a flurry of shooting stars!",
+                make_stringf("%s orb unleashes a flurry of shooting stars!", agent->name(DESC_ITS).c_str()), {ui_actor_arg(*agent)}));
 
     count = is_star_jelly ? max_stars : min(max_stars, count + 1);
     const int foe = agent->is_player() ? int{MHITYOU} : agent->as_monster()->foe;
@@ -1766,7 +1792,7 @@ void pyromania_fineff::fire()
     exp.source = you.pos();
     exp.ex_size = 3;
 
-    mpr("Your orb flickers with a hungry flame!");
+    mpr(ui_translate("f.message", "Your orb flickers with a hungry flame!"));
     exp.explode(true, true);
 }
 
@@ -1785,7 +1811,7 @@ void celebrant_bloodrite_fineff::fire()
     if (targs.empty())
         return;
 
-    mpr("You consecrate your suffering and invoke the rites of blood!");
+    mpr(ui_translate("f.message", "You consecrate your suffering and invoke the rites of blood!"));
 
     // Set cooldown before firing, in case we recieve damage during the volley
     // (eg: via reflected projectiles) that would trigger this again.

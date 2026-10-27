@@ -4,6 +4,9 @@
  */
 
 #include "AppHdr.h"
+#include "m-display.h"
+#include "i18n.h"
+#include "item-name.h"
 
 #include "melee-attack.h"
 
@@ -247,9 +250,13 @@ bool melee_attack::handle_phase_attempted()
     {
         if (you.see_cell(attack_position))
         {
-            mprf("%s strikes at %s from the darkness!",
-                 attacker->name(DESC_THE, true).c_str(),
-                 defender->name(DESC_THE).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = attacker->name(DESC_THE, true);
+                const string _m1 = defender->name(DESC_THE);
+                const string _original = make_stringf("%s strikes at %s from the darkness!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.013", "%s strikes at %s from the darkness!")) return _original;
+                return ui_render("m.log.013", "%s strikes at %s from the darkness!", _original, {m_actor_arg(*attacker), m_actor_arg(*defender)});
+            })().c_str());
         }
         to_hit = AUTOMATIC_HIT;
         needs_message = false;
@@ -271,7 +278,7 @@ bool melee_attack::handle_phase_attempted()
             flat_dmg_bonus = random_range(0, 3);
             defender->as_monster()->del_ench(ENCH_KINETIC_GRAPNEL, true);
             if (attacker->is_player())
-                mpr("The grapnel guides your strike.");
+                mpr(ui_translate("log.melee-attack", "The grapnel guides your strike."));
         }
     }
 
@@ -312,10 +319,14 @@ void melee_attack::handle_phase_blocked()
         {
             if (you.see_cell(defender->pos()))
             {
-                mprf("%s turn%s aside %s attack!",
-                        defender->name(DESC_THE).c_str(),
-                        defender->is_monster() ? "s" : "",
-                        attacker->name(DESC_ITS).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = defender->name(DESC_THE);
+                const string _m1 = defender->is_monster() ? "s" : "";
+                const string _m2 = attacker->name(DESC_ITS);
+                const string _original = make_stringf("%s turn%s aside %s attack!", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.014", "%s turn%s aside %s attack!")) return _original;
+                return ui_render("m.log.014", "%s turn%s aside %s attack!", _original, {m_actor_arg(*defender), {"", true}, m_actor_arg(*attacker)});
+            })().c_str());
                 needs_block_message = false;
             }
 
@@ -331,11 +342,15 @@ void melee_attack::handle_phase_blocked()
 
     if (needs_block_message)
     {
-        mprf("%s %s %s attack.",
-                 defender_name(false).c_str(),
-                 defender->conj_verb("block").c_str(),
-                 attacker == defender ? "its own"
-                                      : atk_name(DESC_ITS).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = defender_name(false);
+                const string _m1 = defender->conj_verb("block");
+                const string _m2 = attacker == defender ? "its own"
+                                      : atk_name(DESC_ITS);
+                const string _original = make_stringf("%s %s %s attack.", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.015", "%s %s %s attack.")) return _original;
+                return ui_render("m.log.015", "%s %s %s attack.", _original, {m_actor_arg(*defender), {"", true}, m_actor_arg(*attacker)});
+            })().c_str());
     }
 
     if (defender->is_player() && you.duration[DUR_DIVINE_SHIELD]
@@ -346,8 +361,12 @@ void melee_attack::handle_phase_blocked()
                                         random_range(3, 5) * BASELINE_DELAY))
             && need_msg)
         {
-            mprf("%s is struck blind by the light of your shield.",
-                    attacker->name(DESC_THE).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = attacker->name(DESC_THE);
+                const string _original = make_stringf("%s is struck blind by the light of your shield.", _m0.c_str());
+                if (!m_display_active("m.log.016", "%s is struck blind by the light of your shield.")) return _original;
+                return ui_render("m.log.016", "%s is struck blind by the light of your shield.", _original, {m_actor_arg(*attacker)});
+            })().c_str());
         }
     }
 
@@ -371,7 +390,13 @@ void melee_attack::handle_phase_dodged()
             player_warn_miss();
         else
         {
-            mprf("%s%s misses %s.",
+            string translated;
+            const char *source = "%s%s misses %s.";
+            if (try_ui_melee_miss(source, *attacker, *defender,
+                                  evasion_margin_adverb(), nullptr, translated))
+                mpr(translated);
+            else
+                mprf(source,
                  atk_name(DESC_THE).c_str(),
                  evasion_margin_adverb().c_str(),
                  defender_name(true).c_str());
@@ -409,7 +434,7 @@ void melee_attack::handle_phase_dodged()
                 {
                     you.track_reprisal(REPRISAL_HEADBUTT, attacker->mid);
 
-                    mpr("You furiously retaliate!");
+                    mpr(ui_translate("log.melee-attack", "You furiously retaliate!"));
                     melee_attack headbutt(&you, attacker);
                     headbutt.player_aux_setup(UNAT_HEADBUTT);
                     headbutt.player_aux_apply(UNAT_HEADBUTT);
@@ -591,9 +616,13 @@ void melee_attack::try_parry_disarm()
         item_def *wpn = defender->as_monster()->disarm();
         if (wpn)
         {
-            mprf("You knock %s out of %s grip!",
-                wpn->name(DESC_THE).c_str(),
-                defender->name(DESC_ITS).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = wpn->name(DESC_THE);
+                const string _m1 = defender->name(DESC_ITS);
+                const string _original = make_stringf("You knock %s out of %s grip!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.017", "You knock %s out of %s grip!")) return _original;
+                return ui_render("m.log.017", "You knock %s out of %s grip!", _original, {ui_item_arg(*wpn), m_actor_arg(*defender)});
+            })().c_str());
         }
     }
 }
@@ -619,16 +648,24 @@ void melee_attack::do_vampire_lifesteal()
 
         if (can_heal && !can_enthrall)
         {
-            mprf("You sink your fangs into %s and drink %s %s.",
-                    mon->name(DESC_THE, true).c_str(),
-                    mon->pronoun(PRONOUN_POSSESSIVE).c_str(),
-                    mon->blood_name().c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = mon->name(DESC_THE, true);
+                const string _m1 = mon->pronoun(PRONOUN_POSSESSIVE);
+                const string _m2 = mon->blood_name();
+                const string _original = make_stringf("You sink your fangs into %s and drink %s %s.", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.018", "You sink your fangs into %s and drink %s %s.")) return _original;
+                return ui_render("m.log.018", "You sink your fangs into %s and drink %s %s.", _original, {m_actor_arg(*mon), {"", true}, m_clause_arg(_m2)});
+            })().c_str());
         }
         else if (can_enthrall)
         {
-            mprf("You sink your fangs into %s and drain %s dry!",
-                    mon->name(DESC_THE, true).c_str(),
-                    mon->pronoun(PRONOUN_OBJECTIVE).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = mon->name(DESC_THE, true);
+                const string _m1 = mon->pronoun(PRONOUN_OBJECTIVE);
+                const string _original = make_stringf("You sink your fangs into %s and drain %s dry!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.019", "You sink your fangs into %s and drain %s dry!")) return _original;
+                return ui_render("m.log.019", "You sink your fangs into %s and drain %s dry!", _original, {m_actor_arg(*mon), ui_literal_arg("")});
+            })().c_str());
 
             // Mark to possibly raise this monster as an ally.
             if (stab_attempt)
@@ -665,13 +702,17 @@ void melee_attack::handle_concussion_brand()
             special_damage = random2(damage_done) * 3 / 4 + 1;
             if (needs_message)
             {
-                mprf("%s crush%s %s against the %s%s",
-                        attacker->name(DESC_THE).c_str(),
-                        attacker->is_monster() ? "es" : "",
-                        defender->name(DESC_THE).c_str(),
-                        feat_is_wall(env.grid(back)) ? "wall"
-                                                    : raw_feature_description(back).c_str(),
-                        attack_strength_punctuation(special_damage).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = attacker->name(DESC_THE);
+                const string _m1 = attacker->is_monster() ? "es" : "";
+                const string _m2 = defender->name(DESC_THE);
+                const string _m3 = feat_is_wall(env.grid(back)) ? "wall"
+                                                    : raw_feature_description(back);
+                const string _m4 = attack_strength_punctuation(special_damage);
+                const string _original = make_stringf("%s crush%s %s against the %s%s", _m0.c_str(), _m1.c_str(), _m2.c_str(), _m3.c_str(), _m4.c_str());
+                if (!m_display_active("m.log.020", "%s crush%s %s against the %s%s")) return _original;
+                return ui_render("m.log.020", "%s crush%s %s against the %s%s", _original, {m_actor_arg(*attacker), {"", true}, m_actor_arg(*defender), m_feature_arg(back), ui_attack_punctuation(_m4)});
+            })().c_str());
             }
             inflict_damage(special_damage);
         }
@@ -699,7 +740,7 @@ static void _apply_flux_contam(monster &m)
         string msg = make_stringf(" shudders as magic cascades through %s%s",
                                   m.pronoun(PRONOUN_OBJECTIVE).c_str(),
                                   attack_strength_punctuation(dam).c_str());
-        simple_monster_message(m, msg.c_str());
+        m_monster_event(m, msg.c_str(), "%s shudders as magic cascades through %s%s", {m_actor_arg(m), ui_arg{"", true}, ui_attack_punctuation(attack_strength_punctuation(dam))});
         if (dam)
         {
             m.hurt(&you, dam, BEAM_MMISSILE, KILLED_BY_BEAM /*eh*/);
@@ -724,12 +765,12 @@ static void _apply_flux_contam(monster &m)
 
     if (energy <= 0)
     {
-        mprf(MSGCH_DURATION, "The last of your unstable energy dissipates and "
-                             "you return to your previous form.");
+        mprf(MSGCH_DURATION, "%s", ui_translate("log.melee-attack", "The last of your unstable energy dissipates and "
+                             "you return to your previous form."));
         return_to_default_form();
     }
     else if (above_warning && energy < FLUX_ENERGY_WARNING)
-        mprf(MSGCH_DURATION, "You feel the transmutational energy in your body is nearly expended.");
+        mprf(MSGCH_DURATION, "%s", ui_translate("log.melee-attack", "You feel the transmutational energy in your body is nearly expended."));
 }
 
 void melee_attack::maybe_do_mesmerism()
@@ -747,7 +788,12 @@ void melee_attack::maybe_do_mesmerism()
     const int max_dur = defender->is_player() ? 5 + you.skill_rdiv(SK_EVOCATIONS, 1, 5)
                                               : 3 + defender->get_hit_dice() / 4;
 
-    mprf("%s orb emits a pulse of dizzying energy.", defender->name(DESC_ITS).c_str());
+    mprf("%s", ([&]() -> string {
+                const string _m0 = defender->name(DESC_ITS);
+                const string _original = make_stringf("%s orb emits a pulse of dizzying energy.", _m0.c_str());
+                if (!m_display_active("m.log.021", "%s orb emits a pulse of dizzying energy.")) return _original;
+                return ui_render("m.log.021", "%s orb emits a pulse of dizzying energy.", _original, {m_actor_arg(*defender)});
+            })().c_str());
     draw_ring_animation(defender->pos(), radius, LIGHTMAGENTA, MAGENTA, true, 30);
 
     for (radius_iterator ri(defender->pos(), radius, C_SQUARE, LOS_NO_TRANS); ri; ++ri)
@@ -801,7 +847,12 @@ static void _grow_mushrooms(const monster& mon)
     }
 
     if (created)
-        mprf("Mushrooms sprout behind %s.", mon.name(DESC_THE).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = mon.name(DESC_THE);
+                const string _original = make_stringf("Mushrooms sprout behind %s.", _m0.c_str());
+                if (!m_display_active("m.log.022", "Mushrooms sprout behind %s.")) return _original;
+                return ui_render("m.log.022", "Mushrooms sprout behind %s.", _original, {m_actor_arg(mon)});
+            })().c_str());
 }
 
 /* An attack has been determined to have hit something
@@ -908,12 +959,24 @@ bool melee_attack::handle_phase_hit()
     {
         if (needs_message)
         {
+            const string plain_verb = attacker->is_player()
+                ? attack_verb : mons_attack_verb();
             attack_verb = attacker->is_player()
                                     ? attack_verb
-                                    : attacker->conj_verb(mons_attack_verb());
+                                    : attacker->conj_verb(plain_verb);
 
             // TODO: Clean this up if possible, checking atype for do / does is ugly
-            mprf("%s %s %s but %s no damage.",
+            const char *source = "%s %s %s but %s no damage.";
+            ui_translation_group group({{"log.melee", source},
+                                        {"log.attack.verb", plain_verb.c_str()}});
+            string subject, target;
+            if (group.available() && try_ui_actor_name(*attacker, subject)
+                && try_ui_actor_name(*defender, target))
+                mprf(group.get("log.melee", source), subject.c_str(),
+                     group.get("log.attack.verb", plain_verb.c_str()),
+                     target.c_str(), "");
+            else
+                mprf(source,
                 attacker->name(DESC_THE).c_str(),
                 attack_verb.c_str(),
                 defender_name(true).c_str(),
@@ -962,10 +1025,14 @@ bool melee_attack::handle_phase_hit()
         if (needs_message && special_damage)
         {
             tileidx_t dummy;
-            mprf("%s and strikes %s%s",
-                 airstrike_intensity_display(spaces, dummy).c_str(),
-                 defender->name(DESC_THE).c_str(),
-                 attack_strength_punctuation(special_damage).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = airstrike_intensity_display(spaces, dummy);
+                const string _m1 = defender->name(DESC_THE);
+                const string _m2 = attack_strength_punctuation(special_damage);
+                const string _original = make_stringf("%s and strikes %s%s", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.023", "%s and strikes %s%s")) return _original;
+                return ui_render("m.log.023", "%s and strikes %s%s", _original, {m_clause_arg(_m0), m_actor_arg(*defender), ui_attack_punctuation(_m2)});
+            })().c_str());
         }
 
         inflict_damage(special_damage);
@@ -988,7 +1055,12 @@ bool melee_attack::handle_phase_hit()
             && mons_has_attacks(*defender->as_monster(), false)
             && coinflip())
         {
-            mprf("%s is engulfed in spores.", defender->name(DESC_THE).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = defender->name(DESC_THE);
+                const string _original = make_stringf("%s is engulfed in spores.", _m0.c_str());
+                if (!m_display_active("m.log.024", "%s is engulfed in spores.")) return _original;
+                return ui_render("m.log.024", "%s is engulfed in spores.", _original, {m_actor_arg(*defender)});
+            })().c_str());
             defender->weaken(&you, 3);
         }
     }
@@ -1084,9 +1156,13 @@ bool melee_attack::handle_phase_damaged()
         && !you.duration[DUR_SHROUD_TIMEOUT] && one_chance_in(4))
     {
         you.duration[DUR_SHROUD_TIMEOUT] = 100 + random2(damage_done) * 10;
-        mprf("your slimy shroud breaks as it bends %s attack away%s",
-                     atk_name(DESC_ITS).c_str(),
-                     attack_strength_punctuation(damage_done).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = atk_name(DESC_ITS);
+                const string _m1 = attack_strength_punctuation(damage_done);
+                const string _original = make_stringf("your slimy shroud breaks as it bends %s attack away%s", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.025", "your slimy shroud breaks as it bends %s attack away%s")) return _original;
+                return ui_render("m.log.025", "your slimy shroud breaks as it bends %s attack away%s", _original, {m_actor_arg(*attacker), ui_attack_punctuation(_m1)});
+            })().c_str());
         did_hit = false;
         damage_done = 0;
         return false;
@@ -1145,22 +1221,30 @@ static void _devour(monster &victim)
     // Sometimes, one's eyes are larger than one's stomach-mouth.
     const int size_delta = victim.body_size(PSIZE_BODY)
                             - you.body_size(PSIZE_BODY);
-    mprf("You devour %s%s!",
-         size_delta <= 0 ? "" :
+    mprf("%s", ([&]() -> string {
+                const string _m0 = size_delta <= 0 ? "" :
          size_delta <= 1 ? "half of " :
-                           "a chunk of ",
-         victim.name(DESC_THE).c_str());
+                           "a chunk of ";
+                const string _m1 = victim.name(DESC_THE);
+                const string _original = make_stringf("You devour %s%s!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.026", "You devour %s%s!")) return _original;
+                return ui_render("m.log.026", "You devour %s%s!", _original, {m_clause_arg(_m0), m_actor_arg(victim)});
+            })().c_str());
 
     // give a clearer message for eating invisible things
     if (!you.can_see(victim))
     {
-        mprf("It tastes like %s.",
-             mons_type_name(mons_genus(victim.type), DESC_PLAIN).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = mons_type_name(mons_genus(victim.type), DESC_PLAIN);
+                const string _original = make_stringf("It tastes like %s.", _m0.c_str());
+                if (!m_display_active("m.log.027", "It tastes like %s.")) return _original;
+                return ui_render("m.log.027", "It tastes like %s.", _original, {m_monster_type_arg(mons_genus(victim.type))});
+            })().c_str());
         // this could be the actual creature name, but it feels more
         // 'flavourful' this way??
     }
     if (victim.has_ench(ENCH_STICKY_FLAME))
-        mpr("Spicy!");
+        mpr(ui_translate("m.ui", "Spicy!"));
 
     // Devour the corpse.
     victim.props[NEVER_CORPSE_KEY] = true;
@@ -1208,11 +1292,15 @@ static void _consider_devouring(monster &defender)
     if (defender.is_shapeshifter())
     {
         // handle this carefully, so the player knows what's going on
-        mprf("You spit out %s as %s %s & %s in your maw!",
-             defender.name(DESC_THE).c_str(),
-             defender.pronoun(PRONOUN_SUBJECTIVE).c_str(),
-             conjugate_verb("twist", defender.pronoun_plurality()).c_str(),
-             conjugate_verb("change", defender.pronoun_plurality()).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = defender.name(DESC_THE);
+                const string _m1 = defender.pronoun(PRONOUN_SUBJECTIVE);
+                const string _m2 = conjugate_verb("twist", defender.pronoun_plurality());
+                const string _m3 = conjugate_verb("change", defender.pronoun_plurality());
+                const string _original = make_stringf("You spit out %s as %s %s & %s in your maw!", _m0.c_str(), _m1.c_str(), _m2.c_str(), _m3.c_str());
+                if (!m_display_active("m.log.028", "You spit out %s as %s %s & %s in your maw!")) return _original;
+                return ui_render("m.log.028", "You spit out %s as %s %s & %s in your maw!", _original, {m_actor_arg(defender), ui_literal_arg(""), ui_literal_arg(""), ui_literal_arg("")});
+            })().c_str());
         return;
     }
 
@@ -1230,7 +1318,7 @@ static void _handle_werewolf_kill_bonus(const monster& victim, bool takedown)
     int& power = you.props[WEREFURY_KEY].get_int();
     if (!you.duration[DUR_WEREFURY])
     {
-        mpr("You revel in your kill!");
+        mpr(ui_translate("log.melee-attack", "You revel in your kill!"));
         power = div_rand_round(get_form()->get_werefury_kill_bonus() * 3 / 2, 10);
     }
     else
@@ -1246,12 +1334,12 @@ static void _handle_werewolf_kill_bonus(const monster& victim, bool takedown)
     {
         if (you.is_silenced())
         {
-            mpr("You raise your head to howl, but no sound comes out.");
+            mpr(ui_translate("log.melee-attack", "You raise your head to howl, but no sound comes out."));
             return;
         }
 
         const int howl_power = get_form()->get_howl_power();
-        mpr("You let out a blood-chilling howl!");
+        mpr(ui_translate("log.melee-attack", "You let out a blood-chilling howl!"));
         draw_ring_animation(you.pos(), you.current_vision, DARKGRAY, 0, true, 10);
         for (monster_near_iterator mi(you.pos()); mi; ++mi)
         {
@@ -1259,7 +1347,12 @@ static void _handle_werewolf_kill_bonus(const monster& victim, bool takedown)
                 && mi->can_feel_fear(true) && !mi->has_ench(ENCH_FEAR)
                 && mi->check_willpower(&you, howl_power) <= 0)
             {
-                mprf("%s freezes in fear!", mi->name(DESC_THE).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = mi->name(DESC_THE);
+                const string _original = make_stringf("%s freezes in fear!", _m0.c_str());
+                if (!m_display_active("m.log.029", "%s freezes in fear!")) return _original;
+                return ui_render("m.log.029", "%s freezes in fear!", _original, {m_actor_arg(*mi)});
+            })().c_str());
                 int dur = random_range(40, 70);
                 mi->add_ench(mon_enchant(ENCH_FEAR, &you, dur));
                 mi->add_ench(mon_enchant(ENCH_BOUND, &you, dur));
@@ -1804,8 +1897,11 @@ bool melee_attack::attack()
     if (attacker->is_player() && defender &&
         you.afraid_of(defender->as_monster()) && one_chance_in(3))
     {
-        mprf("You attempt to attack %s, but flinch away in fear!",
-             defender->name(DESC_THE).c_str());
+        const string original = make_stringf("You attempt to attack %s, but flinch away in fear!",
+                                             defender->name(DESC_THE).c_str());
+        mprf("%s", ui_render("combat.fear.actor",
+             "You attempt to attack %s, but flinch away in fear!", original,
+             {m_actor_arg(*defender)}).c_str());
 
         bool success = false;
         success |= handle_phase_multihit();
@@ -1884,8 +1980,13 @@ bool melee_attack::attack()
 
     if (is_sunder && !cleaving && is_sundering_weapon() && you.can_see(*attacker))
     {
-        mprf("%s %s flashes viciously!", attacker->name(DESC_ITS).c_str(),
-                                         weapon->name(DESC_PLAIN).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = attacker->name(DESC_ITS);
+                const string _m1 = weapon->name(DESC_PLAIN);
+                const string _original = make_stringf("%s %s flashes viciously!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.030", "%s %s flashes viciously!")) return _original;
+                return ui_render("m.log.030", "%s %s flashes viciously!", _original, {m_actor_arg(*attacker), ui_item_arg(*weapon)});
+            })().c_str());
         draw_ring_animation(attacker->pos(), 2, WHITE, WHITE, true, 25, TILE_BOLT_SUNDERING);
     }
 
@@ -2040,7 +2141,7 @@ public:
     virtual bool is_usable() const {return false; };
     virtual int get_base_chance() const { return chance; }
     virtual bool xl_based_chance() const { return true; }
-    virtual string describe() const;
+    virtual string describe(bool display = false) const;
 protected:
     const int damage;
     // Per-attack trigger percent, before accounting for XL.
@@ -2528,8 +2629,13 @@ bool melee_attack::player_aux_test_hit()
         return true;
     }
 
-    mprf("Your %s misses %s.", aux_attack.c_str(),
-         defender->name(DESC_THE).c_str());
+    mprf("%s", ([&]() -> string {
+                const string _m0 = aux_attack;
+                const string _m1 = defender->name(DESC_THE);
+                const string _original = make_stringf("Your %s misses %s.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.031", "Your %s misses %s.")) return _original;
+                return ui_render("m.log.031", "Your %s misses %s.", _original, {m_clause_arg(_m0), m_actor_arg(*defender)});
+            })().c_str());
 
     return false;
 }
@@ -2646,10 +2752,14 @@ bool melee_attack::player_aux_apply(unarmed_attack_type atk)
             player_announce_aux_hit(atk);
         else
         {
-            mprf("You %s %s%s.",
-                    aux_verb.c_str(),
-                    defender->name(DESC_THE).c_str(),
-                    you.can_see(*defender) ? ", but do no damage" : "");
+            mprf("%s", ([&]() -> string {
+                const string _m0 = aux_verb;
+                const string _m1 = defender->name(DESC_THE);
+                const string _m2 = you.can_see(*defender) ? ", but do no damage" : "";
+                const string _original = make_stringf("You %s %s%s.", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.032", "You %s %s%s.")) return _original;
+                return ui_render("m.log.032", "You %s %s%s.", _original, {m_clause_arg(_m0), m_actor_arg(*defender), m_clause_arg(_m2)});
+            })().c_str());
         }
 
         if (atk == UNAT_MEDUSA_STINGER)
@@ -2674,8 +2784,12 @@ bool melee_attack::player_aux_apply(unarmed_attack_type atk)
             {
                 if (defender->strip_willpower(&you, random_range(4, 8), true))
                 {
-                    mprf("You sap %s willpower!",
-                         defender->as_monster()->pronoun(PRONOUN_POSSESSIVE).c_str());
+                    mprf("%s", ([&]() -> string {
+                const string _m0 = defender->as_monster()->pronoun(PRONOUN_POSSESSIVE);
+                const string _original = make_stringf("You sap %s willpower!", _m0.c_str());
+                if (!m_display_active("m.log.033", "You sap %s willpower!")) return _original;
+                return ui_render("m.log.033", "You sap %s willpower!", _original, {m_actor_arg(*defender)});
+            })().c_str());
                 }
             }
 
@@ -2686,9 +2800,13 @@ bool melee_attack::player_aux_apply(unarmed_attack_type atk)
 
                 antimagic_affects_defender(damage_done * 32);
 
-                mprf("You drain %s %s.",
-                     defender->as_monster()->pronoun(PRONOUN_POSSESSIVE).c_str(),
-                     spell_user ? "magic" : "power");
+                mprf("%s", ([&]() -> string {
+                const string _m0 = defender->as_monster()->pronoun(PRONOUN_POSSESSIVE);
+                const string _m1 = spell_user ? "magic" : "power";
+                const string _original = make_stringf("You drain %s %s.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.034", "You drain %s %s.")) return _original;
+                return ui_render("m.log.034", "You drain %s %s.", _original, {m_actor_arg(*defender), m_clause_arg(_m1)});
+            })().c_str());
 
                 if (you.magic_points != you.max_magic_points
                     && !defender->is_summoned()
@@ -2701,7 +2819,7 @@ bool melee_attack::player_aux_apply(unarmed_attack_type atk)
                                   * drain);
                     if (drain)
                     {
-                        mpr("You feel invigorated.");
+                        mpr(ui_translate("log.melee-attack", "You feel invigorated."));
                         inc_mp(drain);
                     }
                 }
@@ -2729,19 +2847,32 @@ bool melee_attack::player_aux_apply(unarmed_attack_type atk)
 
 void melee_attack::player_announce_aux_hit(unarmed_attack_type atk)
 {
-    mprf("%s %s %s%s%s",
-         atk == UNAT_MEDUSA_STINGER ? "Your tendrils" : "You",
-         aux_verb.c_str(),
-         defender->name(DESC_THE).c_str(),
-         debug_damage_number().c_str(),
-         attack_strength_punctuation(damage_done).c_str());
+    mprf("%s", ([&]() -> string {
+                const string _m0 = atk == UNAT_MEDUSA_STINGER ? "Your tendrils" : "You";
+                const string _m1 = aux_verb;
+                const string _m2 = defender->name(DESC_THE);
+                const string _m3 = debug_damage_number();
+                const string _m4 = attack_strength_punctuation(damage_done);
+                const string _original = make_stringf("%s %s %s%s%s", _m0.c_str(), _m1.c_str(), _m2.c_str(), _m3.c_str(), _m4.c_str());
+                if (!m_display_active("m.log.035", "%s %s %s%s%s")) return _original;
+                return ui_render("m.log.035", "%s %s %s%s%s", _original, {m_clause_arg(_m0), m_clause_arg(_m1), m_actor_arg(*defender), {_m3, true}, ui_attack_punctuation(_m4)});
+            })().c_str());
 }
 
 void melee_attack::player_warn_miss()
 {
     did_hit = false;
 
-    mprf("You%s miss %s%s.",
+    string translated;
+    const char *source = "You%s miss %s%s.";
+    if (try_ui_melee_miss(source, *attacker, *defender, evasion_margin_adverb(),
+                          weapon && you.offhand_weapon() ? weapon : nullptr, translated))
+    {
+        mpr(translated);
+        return;
+    }
+
+    mprf(source,
          evasion_margin_adverb().c_str(),
          defender->name(DESC_THE).c_str(),
          weapon_desc().c_str());
@@ -3107,8 +3238,12 @@ void melee_attack::sear_defender()
 
     if (needs_message && visible_effect)
     {
-        mprf("%s fire resistance is stripped away!",
-             def_name(DESC_ITS).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = def_name(DESC_ITS);
+                const string _original = make_stringf("%s fire resistance is stripped away!", _m0.c_str());
+                if (!m_display_active("m.log.036", "%s fire resistance is stripped away!")) return _original;
+                return ui_render("m.log.036", "%s fire resistance is stripped away!", _original, {m_actor_arg(*defender)});
+            })().c_str());
     }
 }
 
@@ -3169,7 +3304,7 @@ bool melee_attack::consider_decapitation(int dam)
     if (damage_brand == SPWPN_FLAMING)
     {
         if (defender_visible)
-            mpr("The flame cauterises the wound!");
+            mpr(ui_translate("log.melee-attack", "The flame cauterises the wound!"));
         return false;
     }
 
@@ -3291,10 +3426,14 @@ void melee_attack::decapitate()
     {
         if (defender_visible)
         {
-            mprf("%s %s %s last head off!",
-                 atk_name(DESC_THE).c_str(),
-                 attacker->conj_verb(verb).c_str(),
-                 apostrophise(defender_name(true)).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = atk_name(DESC_THE);
+                const string _m1 = attacker->conj_verb(verb);
+                const string _m2 = apostrophise(defender_name(true));
+                const string _original = make_stringf("%s %s %s last head off!", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.037", "%s %s %s last head off!")) return _original;
+                return ui_render("m.log.037", "%s %s %s last head off!", _original, {m_actor_arg(*attacker), ui_text_arg("m.verb", verb), m_actor_arg(*defender)});
+            })().c_str());
         }
 
         if (!defender->is_summoned())
@@ -3311,10 +3450,14 @@ void melee_attack::decapitate()
 
     if (defender_visible)
     {
-        mprf("%s %s one of %s heads off!",
-             atk_name(DESC_THE).c_str(),
-             attacker->conj_verb(verb).c_str(),
-             apostrophise(defender_name(true)).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = atk_name(DESC_THE);
+                const string _m1 = attacker->conj_verb(verb);
+                const string _m2 = apostrophise(defender_name(true));
+                const string _original = make_stringf("%s %s one of %s heads off!", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.038", "%s %s one of %s heads off!")) return _original;
+                return ui_render("m.log.038", "%s %s one of %s heads off!", _original, {m_actor_arg(*attacker), ui_text_arg("m.verb", verb), m_actor_arg(*defender)});
+            })().c_str());
     }
 
     defender->as_monster()->num_heads--;
@@ -3341,7 +3484,8 @@ void melee_attack::attacker_sustain_passive_damage()
     const int dmg = resist_adjust_damage(attacker, BEAM_ACID, roll_dice(1, 5));
 
     if (attacker->is_player())
-        mpr(you.hands_act("burn", "!"));
+        mpr(ui_render("m.clause", "Your %s burn!", you.hands_act("burn", "!"),
+                {ui_text_arg("a.bodypart", you.hand_name(true))}));
     else
     {
         simple_monster_message(*attacker->as_monster(),
@@ -3370,8 +3514,9 @@ int melee_attack::staff_damage(stave_type staff) const
     return apply_defender_ac(preac, 0, staff_ac_check(staff));
 }
 
-string melee_attack::staff_message(stave_type staff, int dam) const
+string melee_attack::staff_message(stave_type staff, int dam, bool display) const
 {
+    const string original = ([&]() -> string {
     switch (staff)
     {
     case STAFF_AIR:
@@ -3428,6 +3573,35 @@ string melee_attack::staff_message(stave_type staff, int dam) const
     default:
         return "Something buggy happens! Please report this.";
     }
+
+    })();
+    if (!display || !ui_translation_group().available()) return original;
+    const ui_arg punctuation = ui_attack_punctuation(attack_strength_punctuation(dam));
+    switch (staff)
+    {
+    case STAFF_AIR:
+        return ui_render("m.staff", "%s %s electrocuted%s", original,
+                         {m_actor_arg(*defender), {"", true}, punctuation});
+    case STAFF_COLD:
+        return ui_render("m.staff", "%s freeze%s %s%s", original,
+                         {m_actor_arg(*attacker), {"", true}, m_actor_arg(*defender), punctuation});
+    case STAFF_EARTH:
+        return ui_render("m.staff", "The ground beneath %s fractures%s", original,
+                         {m_actor_arg(*defender), punctuation});
+    case STAFF_FIRE:
+        return ui_render("m.staff", "%s burn%s %s%s", original,
+                         {m_actor_arg(*attacker), {"", true}, m_actor_arg(*defender), punctuation});
+    case STAFF_ALCHEMY:
+        return ui_render("m.staff", "%s envenom%s %s%s", original,
+                         {m_actor_arg(*attacker), {"", true}, m_actor_arg(*defender), punctuation});
+    case STAFF_NECROMANCY:
+        return ui_render("m.staff", "%s %s as negative energy consumes %s%s", original,
+                         {m_actor_arg(*defender), {"", true}, {"", true}, punctuation});
+    case STAFF_CONJURATION:
+        return ui_render("m.staff", "%s %s %s%s", original,
+                         {m_actor_arg(*attacker), {"", true}, m_actor_arg(*defender), punctuation});
+    default: return original;
+    }
 }
 
 bool melee_attack::apply_staff_damage()
@@ -3458,7 +3632,7 @@ bool melee_attack::apply_staff_damage()
             maybe_melt_player_enchantments(flavour, dam);
 
         if (needs_message)
-            mpr(staff_message(staff, dam));
+            mpr(staff_message(staff, dam, true));
     }
 
     dprf(DIAG_COMBAT, "Staff damage to %s: %d, flavour: %d",
@@ -3476,7 +3650,7 @@ bool melee_attack::apply_staff_damage()
     if (you.wearing_ego(OBJ_ARMOUR, SPARM_ATTUNEMENT)
         && you.magic_points < you.max_magic_points)
     {
-        mpr("You draw in some of the released energy.");
+        mpr(ui_translate("log.melee-attack", "You draw in some of the released energy."));
         inc_mp(1 + one_chance_in(3) + one_chance_in(3));
     }
 
@@ -3621,6 +3795,60 @@ string melee_attack::charge_desc()
 
 }
 
+// Consume the already chosen attack verb. In particular, do not roll a second
+// monster attack verb just to find out whether a translation is available.
+bool try_ui_melee_hit(const char *source, const actor &attacker, const actor &defender,
+                                 const string &verb, const string &degree,
+                                 const item_def *weapon, bool charged,
+                                 bool distant, bool stealth,
+                                 const string &debug, const string &punctuation,
+                                 string &output)
+{
+    const bool player = attacker.is_player();
+    const ui_arg display_punctuation = ui_attack_punctuation(punctuation);
+    ui_translation_group group({{"log.melee", source},
+                                {"log.attack.verb", verb.c_str()}});
+    if (!degree.empty())
+        group.require("log.attack.degree", degree.c_str());
+    if (weapon)
+        group.require("log.attack.detail", " with %s");
+    if (charged)
+        group.require("log.attack.detail", " and electrocute");
+    if (distant)
+        group.require("log.attack.detail", " from afar");
+    if (stealth)
+        group.require("log.attack.detail", "stealthily ");
+    if (!group.available() || !display_punctuation.available)
+        return false;
+
+    string target, subject, weapon_name;
+    if (!try_ui_actor_name(defender, target)
+        || (!player && !try_ui_actor_name(attacker, subject))
+        || (weapon && !try_item_display_name(*weapon, weapon_name, false, false)))
+        return false;
+    string details;
+    if (distant)
+        details += group.get("log.attack.detail", " from afar");
+    if (weapon)
+        details += make_stringf(group.get("log.attack.detail", " with %s"),
+                                weapon_name.c_str());
+    const string shock = charged
+        ? group.get("log.attack.detail", " and electrocute") : "";
+    const string adverb = stealth
+        ? group.get("log.attack.detail", "stealthily ") : "";
+    if (player)
+        output = make_stringf(group.get("log.melee", source),
+                    group.get("log.attack.verb", verb.c_str()), target.c_str(),
+                    degree.empty() ? "" : group.get("log.attack.degree", degree.c_str()),
+                    details.c_str(), shock.c_str(), debug.c_str(), display_punctuation.text.c_str());
+    else
+        output = make_stringf(group.get("log.melee", source),
+                    subject.c_str(), adverb.c_str(),
+                    group.get("log.attack.verb", verb.c_str()), target.c_str(),
+                    shock.c_str(), debug.c_str(), details.c_str(), display_punctuation.text.c_str());
+    return true;
+}
+
 void melee_attack::announce_hit()
 {
     if (!needs_message || attk_flavour == AF_CRUSH)
@@ -3628,12 +3856,29 @@ void melee_attack::announce_hit()
 
     if (attacker->is_monster())
     {
-        mprf("%s %s%s %s%s%s%s%s",
+        const char *source = "%s %s%s %s%s%s%s%s";
+        const string verb = mons_attack_verb();
+        string translated;
+        const bool stealth = is_special_mon_stab
+            && attacker->as_monster()->has_ench(ENCH_VAMPIRE_THRALL);
+        if (try_ui_melee_hit(source, *attacker, *defender, verb, "",
+                you.can_see(*attacker) && weapon
+                    && !mons_class_is_animated_weapon(attacker->type) ? weapon : nullptr,
+                charge_pow && defender->res_elec() <= 0,
+                you.can_see(*attacker)
+                    && (attack_position - defender->pos()).rdist() > 1,
+                stealth, debug_damage_number(),
+                attack_strength_punctuation(damage_done), translated))
+        {
+            mpr(translated);
+            return;
+        }
+        mprf(source,
              atk_name(DESC_THE).c_str(),
              is_special_mon_stab
                 && attacker->as_monster()->has_ench(ENCH_VAMPIRE_THRALL)
                     ? "stealthily " : "",
-             attacker->conj_verb(mons_attack_verb()).c_str(),
+             attacker->conj_verb(verb).c_str(),
              defender_name(true).c_str(),
              charge_desc().c_str(),
              debug_damage_number().c_str(),
@@ -3642,13 +3887,23 @@ void melee_attack::announce_hit()
     }
     else
     {
+        const char *source = "You %s %s%s%s%s%s%s";
+        string translated;
+        if (try_ui_melee_hit(source, *attacker, *defender, attack_verb, verb_degree,
+                weapon && you.offhand_weapon() ? weapon : nullptr,
+                charge_pow && defender->res_elec() <= 0, false, false,
+                debug_damage_number(), attack_strength_punctuation(damage_done), translated))
+        {
+            mpr(translated);
+            return;
+        }
         if (!verb_degree.empty() && verb_degree[0] != ' '
             && verb_degree[0] != ',' && verb_degree[0] != '\'')
         {
             verb_degree = " " + verb_degree;
         }
 
-        mprf("You %s %s%s%s%s%s%s",
+        mprf(source,
              attack_verb.c_str(),
              defender->name(DESC_THE).c_str(), verb_degree.c_str(),
              weapon_desc().c_str(),
@@ -3682,9 +3937,13 @@ bool melee_attack::mons_do_poison()
 
     if (needs_message)
     {
-        mprf("%s poisons %s!",
-                atk_name(DESC_THE).c_str(),
-                defender_name(true).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = atk_name(DESC_THE);
+                const string _m1 = defender_name(true);
+                const string _original = make_stringf("%s poisons %s!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.039", "%s poisons %s!")) return _original;
+                return ui_render("m.log.039", "%s poisons %s!", _original, {m_actor_arg(*attacker), m_actor_arg(*defender)});
+            })().c_str());
     }
 
     return true;
@@ -3868,10 +4127,14 @@ void melee_attack::mons_apply_attack_flavour(attack_flavour flavour)
 
         if (needs_message && base_damage)
         {
-            mprf("%s %s engulfed in flames%s",
-                 defender_name(false).c_str(),
-                 defender->conj_verb("are").c_str(),
-                 attack_strength_punctuation(special_damage).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = defender_name(false);
+                const string _m1 = defender->conj_verb("are");
+                const string _m2 = attack_strength_punctuation(special_damage);
+                const string _original = make_stringf("%s %s engulfed in flames%s", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.040", "%s %s engulfed in flames%s")) return _original;
+                return ui_render("m.log.040", "%s %s engulfed in flames%s", _original, {m_actor_arg(*defender), ui_literal_arg(""), ui_attack_punctuation(_m2)});
+            })().c_str());
 
             _print_resist_messages(defender, base_damage, BEAM_FIRE);
         }
@@ -3888,11 +4151,15 @@ void melee_attack::mons_apply_attack_flavour(attack_flavour flavour)
 
         if (needs_message && base_damage)
         {
-            mprf("%s %s %s%s",
-                 atk_name(DESC_THE).c_str(),
-                 attacker->conj_verb("freeze").c_str(),
-                 defender_name(true).c_str(),
-                 attack_strength_punctuation(special_damage).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = atk_name(DESC_THE);
+                const string _m1 = attacker->conj_verb("freeze");
+                const string _m2 = defender_name(true);
+                const string _m3 = attack_strength_punctuation(special_damage);
+                const string _original = make_stringf("%s %s %s%s", _m0.c_str(), _m1.c_str(), _m2.c_str(), _m3.c_str());
+                if (!m_display_active("m.log.041", "%s %s %s%s")) return _original;
+                return ui_render("m.log.041", "%s %s %s%s", _original, {m_actor_arg(*attacker), ui_text_arg("m.verb", "freeze"), m_actor_arg(*defender), ui_attack_punctuation(_m3)});
+            })().c_str());
 
             _print_resist_messages(defender, base_damage, BEAM_COLD);
         }
@@ -3909,11 +4176,15 @@ void melee_attack::mons_apply_attack_flavour(attack_flavour flavour)
 
         if (needs_message && base_damage)
         {
-            mprf("%s %s %s%s",
-                 atk_name(DESC_THE).c_str(),
-                 attacker->conj_verb("shock").c_str(),
-                 defender_name(true).c_str(),
-                 attack_strength_punctuation(special_damage).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = atk_name(DESC_THE);
+                const string _m1 = attacker->conj_verb("shock");
+                const string _m2 = defender_name(true);
+                const string _m3 = attack_strength_punctuation(special_damage);
+                const string _original = make_stringf("%s %s %s%s", _m0.c_str(), _m1.c_str(), _m2.c_str(), _m3.c_str());
+                if (!m_display_active("m.log.042", "%s %s %s%s")) return _original;
+                return ui_render("m.log.042", "%s %s %s%s", _original, {m_actor_arg(*attacker), ui_text_arg("m.verb", "shock"), m_actor_arg(*defender), ui_attack_punctuation(_m3)});
+            })().c_str());
 
             _print_resist_messages(defender, base_damage, BEAM_ELECTRICITY);
         }
@@ -3941,10 +4212,14 @@ void melee_attack::mons_apply_attack_flavour(attack_flavour flavour)
                 attacker->heal(healed);
                 if (needs_message)
                 {
-                    mprf("%s %s vitality from %s injuries!",
-                         atk_name(DESC_THE).c_str(),
-                         attacker->conj_verb("draw").c_str(),
-                         def_name(DESC_ITS).c_str());
+                    mprf("%s", ([&]() -> string {
+                const string _m0 = atk_name(DESC_THE);
+                const string _m1 = attacker->conj_verb("draw");
+                const string _m2 = def_name(DESC_ITS);
+                const string _original = make_stringf("%s %s vitality from %s injuries!", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.043", "%s %s vitality from %s injuries!")) return _original;
+                return ui_render("m.log.043", "%s %s vitality from %s injuries!", _original, {m_actor_arg(*attacker), ui_literal_arg(""), m_actor_arg(*defender)});
+            })().c_str());
                 }
             }
         }
@@ -3974,9 +4249,13 @@ void melee_attack::mons_apply_attack_flavour(attack_flavour flavour)
 
             if (defender_visible)
             {
-                mprf("%s %s engulfed in a cloud of dizzying spores!",
-                     defender->name(DESC_THE).c_str(),
-                     defender->conj_verb("are").c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = defender->name(DESC_THE);
+                const string _m1 = defender->conj_verb("are");
+                const string _original = make_stringf("%s %s engulfed in a cloud of dizzying spores!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.044", "%s %s engulfed in a cloud of dizzying spores!")) return _original;
+                return ui_render("m.log.044", "%s %s engulfed in a cloud of dizzying spores!", _original, {m_actor_arg(*defender), ui_literal_arg("")});
+            })().c_str());
             }
         }
 
@@ -3984,9 +4263,13 @@ void melee_attack::mons_apply_attack_flavour(attack_flavour flavour)
         {
             if (attk_type != AT_SPORE && defender_visible)
             {
-                mprf("%s %s afflicted by dizzying energies!",
-                     defender->name(DESC_THE).c_str(),
-                     defender->conj_verb("are").c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = defender->name(DESC_THE);
+                const string _m1 = defender->conj_verb("are");
+                const string _original = make_stringf("%s %s afflicted by dizzying energies!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.045", "%s %s afflicted by dizzying energies!")) return _original;
+                return ui_render("m.log.045", "%s %s afflicted by dizzying energies!", _original, {m_actor_arg(*defender), ui_literal_arg("")});
+            })().c_str());
             }
             defender->confuse(attacker,
                               1 + random2(3+attacker->get_hit_dice()));
@@ -4007,9 +4290,13 @@ void melee_attack::mons_apply_attack_flavour(attack_flavour flavour)
         {
             if (defender_visible)
             {
-                mprf("%s %s skewered by barbed spikes.",
-                     defender->name(DESC_THE).c_str(),
-                     defender->conj_verb("are").c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = defender->name(DESC_THE);
+                const string _m1 = defender->conj_verb("are");
+                const string _original = make_stringf("%s %s skewered by barbed spikes.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.046", "%s %s skewered by barbed spikes.")) return _original;
+                return ui_render("m.log.046", "%s %s skewered by barbed spikes.", _original, {m_actor_arg(*defender), ui_literal_arg("")});
+            })().c_str());
             }
             defender->as_monster()->add_ench(mon_enchant(ENCH_BARBS, attacker,
                                         random_range(5, 7) * BASELINE_DELAY, 1));
@@ -4021,7 +4308,7 @@ void melee_attack::mons_apply_attack_flavour(attack_flavour flavour)
         // Doesn't affect the poison-immune.
         if (defender->is_player() && you.duration[DUR_DIVINE_STAMINA] > 0)
         {
-            mpr("Your divine stamina protects you from poison!");
+            mpr(ui_translate("log.melee-attack", "Your divine stamina protects you from poison!"));
             break;
         }
         if (defender->res_poison() >= 3)
@@ -4038,7 +4325,7 @@ void melee_attack::mons_apply_attack_flavour(attack_flavour flavour)
         // Doesn't affect the poison-immune.
         if (defender->is_player() && you.duration[DUR_DIVINE_STAMINA] > 0)
         {
-            mpr("Your divine stamina protects you from poison!");
+            mpr(ui_translate("log.melee-attack", "Your divine stamina protects you from poison!"));
             break;
         }
         else if (defender->res_poison() >= 3)
@@ -4085,10 +4372,14 @@ void melee_attack::mons_apply_attack_flavour(attack_flavour flavour)
 
         if (needs_message)
         {
-            mprf("%s %s %s!",
-                 atk_name(DESC_THE).c_str(),
-                 attacker->conj_verb("infuriate").c_str(),
-                 defender_name(true).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = atk_name(DESC_THE);
+                const string _m1 = attacker->conj_verb("infuriate");
+                const string _m2 = defender_name(true);
+                const string _original = make_stringf("%s %s %s!", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.047", "%s %s %s!")) return _original;
+                return ui_render("m.log.047", "%s %s %s!", _original, {m_actor_arg(*attacker), ui_text_arg("m.verb", "infuriate"), m_actor_arg(*defender)});
+            })().c_str());
         }
 
         defender->go_berserk(false);
@@ -4112,11 +4403,15 @@ void melee_attack::mons_apply_attack_flavour(attack_flavour flavour)
 
         if (needs_message && special_damage)
         {
-            mprf("%s %s %s%s",
-                 atk_name(DESC_THE).c_str(),
-                 attacker->conj_verb("sear").c_str(),
-                 defender_name(true).c_str(),
-                 attack_strength_punctuation(special_damage).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = atk_name(DESC_THE);
+                const string _m1 = attacker->conj_verb("sear");
+                const string _m2 = defender_name(true);
+                const string _m3 = attack_strength_punctuation(special_damage);
+                const string _original = make_stringf("%s %s %s%s", _m0.c_str(), _m1.c_str(), _m2.c_str(), _m3.c_str());
+                if (!m_display_active("m.log.048", "%s %s %s%s")) return _original;
+                return ui_render("m.log.048", "%s %s %s%s", _original, {m_actor_arg(*attacker), ui_text_arg("m.verb", "sear"), m_actor_arg(*defender), ui_attack_punctuation(_m3)});
+            })().c_str());
         }
         break;
 
@@ -4130,11 +4425,15 @@ void melee_attack::mons_apply_attack_flavour(attack_flavour flavour)
 
         if (needs_message && special_damage)
         {
-            mprf("%s %s %s%s",
-                 atk_name(DESC_THE).c_str(),
-                 attacker->conj_verb("sear").c_str(),
-                 defender_name(true).c_str(),
-                 attack_strength_punctuation(special_damage).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = atk_name(DESC_THE);
+                const string _m1 = attacker->conj_verb("sear");
+                const string _m2 = defender_name(true);
+                const string _m3 = attack_strength_punctuation(special_damage);
+                const string _original = make_stringf("%s %s %s%s", _m0.c_str(), _m1.c_str(), _m2.c_str(), _m3.c_str());
+                if (!m_display_active("m.log.049", "%s %s %s%s")) return _original;
+                return ui_render("m.log.049", "%s %s %s%s", _original, {m_actor_arg(*attacker), ui_text_arg("m.verb", "sear"), m_actor_arg(*defender), ui_attack_punctuation(_m3)});
+            })().c_str());
         }
         break;
     }
@@ -4157,10 +4456,14 @@ void melee_attack::mons_apply_attack_flavour(attack_flavour flavour)
 
             if (you.can_see(*attacker) || you.can_see(*defender))
             {
-                mprf("%s drains %s %s.",
-                     attacker->name(DESC_THE).c_str(),
-                     defender->pronoun(PRONOUN_POSSESSIVE).c_str(),
-                     spell_user ? "magic" : "power");
+                mprf("%s", ([&]() -> string {
+                const string _m0 = attacker->name(DESC_THE);
+                const string _m1 = defender->pronoun(PRONOUN_POSSESSIVE);
+                const string _m2 = spell_user ? "magic" : "power";
+                const string _original = make_stringf("%s drains %s %s.", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.050", "%s drains %s %s.")) return _original;
+                return ui_render("m.log.050", "%s drains %s %s.", _original, {m_actor_arg(*attacker), m_actor_arg(*defender), m_clause_arg(_m2)});
+            })().c_str());
             }
 
             monster* vine = attacker->as_monster();
@@ -4193,10 +4496,14 @@ void melee_attack::mons_apply_attack_flavour(attack_flavour flavour)
 
         if (needs_message)
         {
-            mprf("%s %s %s.",
-                 atk_name(DESC_THE).c_str(),
-                 attacker->conj_verb("grab").c_str(),
-                 defender_name(true).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = atk_name(DESC_THE);
+                const string _m1 = attacker->conj_verb("grab");
+                const string _m2 = defender_name(true);
+                const string _original = make_stringf("%s %s %s.", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.051", "%s %s %s.")) return _original;
+                return ui_render("m.log.051", "%s %s %s.", _original, {m_actor_arg(*attacker), ui_text_arg("m.verb", "grab"), m_actor_arg(*defender)});
+            })().c_str());
         }
         attacker->start_constricting(*defender, CONSTRICT_MELEE);
         // if you got grabbed, interrupt stair climb and passwall
@@ -4223,10 +4530,14 @@ void melee_attack::mons_apply_attack_flavour(attack_flavour flavour)
 
         if (needs_message && special_damage)
         {
-            mprf("%s %s %s!",
-                    atk_name(DESC_THE).c_str(),
-                    attacker->conj_verb("burn").c_str(),
-                    defender_name(true).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = atk_name(DESC_THE);
+                const string _m1 = attacker->conj_verb("burn");
+                const string _m2 = defender_name(true);
+                const string _original = make_stringf("%s %s %s!", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.052", "%s %s %s!")) return _original;
+                return ui_render("m.log.052", "%s %s %s!", _original, {m_actor_arg(*attacker), ui_text_arg("m.verb", "burn"), m_actor_arg(*defender)});
+            })().c_str());
 
             _print_resist_messages(defender, special_damage, BEAM_FIRE);
         }
@@ -4260,11 +4571,15 @@ void melee_attack::mons_apply_attack_flavour(attack_flavour flavour)
 
             if (needs_message)
             {
-                mprf("%s %s %s%s",
-                    atk_name(DESC_THE).c_str(),
-                    attacker->conj_verb("drown").c_str(),
-                    defender_name(true).c_str(),
-                    attack_strength_punctuation(special_damage).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = atk_name(DESC_THE);
+                const string _m1 = attacker->conj_verb("drown");
+                const string _m2 = defender_name(true);
+                const string _m3 = attack_strength_punctuation(special_damage);
+                const string _original = make_stringf("%s %s %s%s", _m0.c_str(), _m1.c_str(), _m2.c_str(), _m3.c_str());
+                if (!m_display_active("m.log.053", "%s %s %s%s")) return _original;
+                return ui_render("m.log.053", "%s %s %s%s", _original, {m_actor_arg(*attacker), ui_text_arg("m.verb", "drown"), m_actor_arg(*defender), ui_attack_punctuation(_m3)});
+            })().c_str());
             }
         }
         break;
@@ -4294,7 +4609,7 @@ void melee_attack::mons_apply_attack_flavour(attack_flavour flavour)
                           attacker->get_hit_dice() * 12))
         {
             if (needs_message)
-                mpr("A spider bursts forth from the wound!");
+                mpr(ui_translate("log.melee-attack", "A spider bursts forth from the wound!"));
         }
         break;
     }
@@ -4307,8 +4622,12 @@ void melee_attack::mons_apply_attack_flavour(attack_flavour flavour)
         {
             if (needs_message)
             {
-                mprf("Faint brimstone surges around %s!",
-                    defender_name(true).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = defender_name(true);
+                const string _original = make_stringf("Faint brimstone surges around %s!", _m0.c_str());
+                if (!m_display_active("m.log.054", "Faint brimstone surges around %s!")) return _original;
+                return ui_render("m.log.054", "Faint brimstone surges around %s!", _original, {m_actor_arg(*defender)});
+            })().c_str());
             }
         }
         break;
@@ -4348,9 +4667,13 @@ void melee_attack::mons_apply_attack_flavour(attack_flavour flavour)
 
             if (defender_visible)
             {
-                mprf("%s %s engulfed in a cloud of soporific spores!",
-                     defender->name(DESC_THE).c_str(),
-                     defender->conj_verb("are").c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = defender->name(DESC_THE);
+                const string _m1 = defender->conj_verb("are");
+                const string _original = make_stringf("%s %s engulfed in a cloud of soporific spores!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.055", "%s %s engulfed in a cloud of soporific spores!")) return _original;
+                return ui_render("m.log.055", "%s %s engulfed in a cloud of soporific spores!", _original, {m_actor_arg(*defender), ui_literal_arg("")});
+            })().c_str());
             }
         }
         defender->put_to_sleep(attacker, random_range(3, 5) * BASELINE_DELAY);
@@ -4386,8 +4709,12 @@ void melee_attack::mons_apply_attack_flavour(attack_flavour flavour)
                     }
                     else
                     {
-                        mprf(MSGCH_DANGER, "You %s!",
-                            initial ? "start to liquefy" : "liquefy further");
+                        mprf(MSGCH_DANGER, "%s", ([&]() -> string {
+                const string _m0 = initial ? "start to liquefy" : "liquefy further";
+                const string _original = make_stringf("You %s!", _m0.c_str());
+                if (!m_display_active("m.log.056", "You %s!")) return _original;
+                return ui_render("m.log.056", "You %s!", _original, {m_clause_arg(_m0)});
+            })().c_str());
                     }
                 }
             }
@@ -4397,7 +4724,12 @@ void melee_attack::mons_apply_attack_flavour(attack_flavour flavour)
     case AF_ALEMBIC:
     {
         if (needs_message)
-            mprf("%s vents fumes.", attacker->name(DESC_THE).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = attacker->name(DESC_THE);
+                const string _original = make_stringf("%s vents fumes.", _m0.c_str());
+                if (!m_display_active("m.log.057", "%s vents fumes.")) return _original;
+                return ui_render("m.log.057", "%s vents fumes.", _original, {m_actor_arg(*attacker)});
+            })().c_str());
 
         int dur = random_range(3, 7);
         place_cloud(CLOUD_POISON, defender->pos(), dur, attacker);
@@ -4442,10 +4774,14 @@ void melee_attack::mons_apply_attack_flavour(attack_flavour flavour)
             // respecting the mechanic will get quite bodied. Hrm.
             tileidx_t generic = TILE_BOLT_DEFAULT_WHITE;
 
-            mprf("%s and strikes %s%s",
-                 airstrike_intensity_display(spaces, generic).c_str(),
-                 defender->name(DESC_THE).c_str(),
-                 attack_strength_punctuation(special_damage).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = airstrike_intensity_display(spaces, generic);
+                const string _m1 = defender->name(DESC_THE);
+                const string _m2 = attack_strength_punctuation(special_damage);
+                const string _original = make_stringf("%s and strikes %s%s", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.058", "%s and strikes %s%s")) return _original;
+                return ui_render("m.log.058", "%s and strikes %s%s", _original, {m_clause_arg(_m0), m_actor_arg(*defender), ui_attack_punctuation(_m2)});
+            })().c_str());
         }
         break;
     }
@@ -4491,14 +4827,14 @@ void melee_attack::mons_apply_attack_flavour(attack_flavour flavour)
                                         8 + attacker->get_hit_dice());
         const bool caused_bane = defender->doom(amount);
         if (!caused_bane && defender->is_player())
-            mpr("Your doom draws closer.");
+            mpr(ui_translate("log.melee-attack", "Your doom draws closer."));
         break;
     }
 
     }
 
     if (needs_message && !special_damage_message.empty())
-        mpr(special_damage_message);
+        mpr(ui_translate("m.ui", string(special_damage_message).c_str()));
 
     if (special_damage > 0 && defender->alive())
     {
@@ -4592,8 +4928,12 @@ void melee_attack::mons_do_eyeball_confusion()
 
         if (mon->check_willpower(&you, ench_pow) <= 0)
         {
-            mprf("The eyeballs on your body gaze at %s.",
-                 mon->name(DESC_THE).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = mon->name(DESC_THE);
+                const string _original = make_stringf("The eyeballs on your body gaze at %s.", _m0.c_str());
+                if (!m_display_active("m.log.059", "The eyeballs on your body gaze at %s.")) return _original;
+                return ui_render("m.log.059", "The eyeballs on your body gaze at %s.", _original, {m_actor_arg(*mon)});
+            })().c_str());
 
             if (!mon->clarity())
                 mon->add_ench(mon_enchant(ENCH_CONFUSION, &you, 30 + random2(100)));
@@ -4612,9 +4952,13 @@ void melee_attack::mons_do_tendril_disarm()
         item_def* mons_wpn = mon->disarm();
         if (mons_wpn)
         {
-            mprf("Your tendrils lash around %s %s and pull it to the ground!",
-                 apostrophise(mon->name(DESC_THE)).c_str(),
-                 mons_wpn->name(DESC_PLAIN).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = apostrophise(mon->name(DESC_THE));
+                const string _m1 = mons_wpn->name(DESC_PLAIN);
+                const string _original = make_stringf("Your tendrils lash around %s %s and pull it to the ground!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.060", "Your tendrils lash around %s %s and pull it to the ground!")) return _original;
+                return ui_render("m.log.060", "Your tendrils lash around %s %s and pull it to the ground!", _original, {m_actor_arg(*mon), ui_item_arg(*mons_wpn)});
+            })().c_str());
         }
     }
 }
@@ -4681,11 +5025,16 @@ void melee_attack::do_spines()
                 return;
             if (you.can_see(*defender) || attacker->is_player())
             {
-                mprf("%s %s struck by %s %s.", attacker->name(DESC_THE).c_str(),
-                     attacker->conj_verb("are").c_str(),
-                     defender->name(DESC_ITS).c_str(),
-                     defender->type == MONS_BRIAR_PATCH ? "thorns"
-                                                        : "spines");
+                mprf("%s", ([&]() -> string {
+                const string _m0 = attacker->name(DESC_THE);
+                const string _m1 = attacker->conj_verb("are");
+                const string _m2 = defender->name(DESC_ITS);
+                const string _m3 = defender->type == MONS_BRIAR_PATCH ? "thorns"
+                                                        : "spines";
+                const string _original = make_stringf("%s %s struck by %s %s.", _m0.c_str(), _m1.c_str(), _m2.c_str(), _m3.c_str());
+                if (!m_display_active("m.log.061", "%s %s struck by %s %s.")) return _original;
+                return ui_render("m.log.061", "%s %s struck by %s %s.", _original, {m_actor_arg(*attacker), {"", true}, m_actor_arg(*defender), m_clause_arg(_m3)});
+            })().c_str());
             }
             attacker->hurt(defender, hurt, BEAM_MISSILE, KILLED_BY_SPINES);
         }
@@ -4719,9 +5068,13 @@ void melee_attack::do_foul_flame()
 
             dprf(DIAG_COMBAT, "Foul flame damage: raw_dmg %d, dmg %d", raw_dmg,
                  dmg);
-            mprf("%s is seared by the foul flame within you%s",
-                 attacker->name(DESC_THE).c_str(),
-                 attack_strength_punctuation(dmg).c_str());
+            mprf("%s", ([&]() -> string {
+                const string _m0 = attacker->name(DESC_THE);
+                const string _m1 = attack_strength_punctuation(dmg);
+                const string _original = make_stringf("%s is seared by the foul flame within you%s", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.062", "%s is seared by the foul flame within you%s")) return _original;
+                return ui_render("m.log.062", "%s is seared by the foul flame within you%s", _original, {m_actor_arg(*attacker), ui_attack_punctuation(_m1)});
+            })().c_str());
 
             // ...until now, since we know damage was done.
             mons_adjust_flavoured(mon, beam, raw_dmg);
@@ -4746,7 +5099,7 @@ void melee_attack::emit_foul_stench()
 
         if (damage_done > 0 && x_chance_in_y(mut * 3 - 1, 20))
         {
-            mpr("You emit a cloud of foul miasma!");
+            mpr(ui_translate("log.melee-attack", "You emit a cloud of foul miasma!"));
             place_cloud(CLOUD_MIASMA, mon->pos(), 5 + random2(6), &you);
         }
     }
@@ -4774,7 +5127,7 @@ void melee_attack::do_starlight()
 
         string msg = *random_iterator(dazzle_msgs);
         msg = do_mon_str_replacements(msg, *attacker->as_monster(), S_SILENT);
-        mpr(msg);
+        mpr(ui_translate("m.ui", string(msg).c_str()));
     }
 }
 
@@ -4787,8 +5140,13 @@ void melee_attack::riposte()
 {
     if (you.see_cell(defender->pos()))
     {
-        mprf("%s riposte%s.", defender->name(DESC_THE).c_str(),
-             defender->is_player() ? "" : "s");
+        mprf("%s", ([&]() -> string {
+                const string _m0 = defender->name(DESC_THE);
+                const string _m1 = defender->is_player() ? "" : "s";
+                const string _original = make_stringf("%s riposte%s.", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.063", "%s riposte%s.")) return _original;
+                return ui_render("m.log.063", "%s riposte%s.", _original, {m_actor_arg(*defender), {"", true}});
+            })().c_str());
     }
     melee_attack attck(defender, attacker, 0, effective_attack_number + 1);
     attck.is_riposte = true;
@@ -4874,16 +5232,24 @@ bool melee_attack::do_knockback(bool slippery)
         {
             if (defender->is_constricted())
             {
-                mprf("%s %s held in place!",
-                     defender_name(false).c_str(),
-                     defender->conj_verb("are").c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = defender_name(false);
+                const string _m1 = defender->conj_verb("are");
+                const string _original = make_stringf("%s %s held in place!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.064", "%s %s held in place!")) return _original;
+                return ui_render("m.log.064", "%s %s held in place!", _original, {m_actor_arg(*defender), ui_literal_arg("")});
+            })().c_str());
             }
             else if (!slippery)
             {
-                mprf("%s %s %s ground!",
-                     defender_name(false).c_str(),
-                     defender->conj_verb("hold").c_str(),
-                     defender->pronoun(PRONOUN_POSSESSIVE).c_str());
+                mprf("%s", ([&]() -> string {
+                const string _m0 = defender_name(false);
+                const string _m1 = defender->conj_verb("hold");
+                const string _m2 = defender->pronoun(PRONOUN_POSSESSIVE);
+                const string _original = make_stringf("%s %s %s ground!", _m0.c_str(), _m1.c_str(), _m2.c_str());
+                if (!m_display_active("m.log.065", "%s %s %s ground!")) return _original;
+                return ui_render("m.log.065", "%s %s %s ground!", _original, {m_actor_arg(*defender), ui_literal_arg(""), ui_literal_arg("")});
+            })().c_str());
             }
         }
 
@@ -4897,9 +5263,13 @@ bool melee_attack::do_knockback(bool slippery)
         const string verb = slippery ? "slip" :
                          can_stumble ? "stumble"
                                      : "are shoved";
-        mprf("%s %s backwards!",
-             defender_name(false).c_str(),
-             defender->conj_verb(verb).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = defender_name(false);
+                const string _m1 = defender->conj_verb(verb);
+                const string _original = make_stringf("%s %s backwards!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.066", "%s %s backwards!")) return _original;
+                return ui_render("m.log.066", "%s %s backwards!", _original, {m_actor_arg(*defender), ui_text_arg("m.verb", verb)});
+            })().c_str());
     }
 
     // Schedule following _before_ actually trampling -- if the defender
@@ -4950,9 +5320,13 @@ bool melee_attack::do_drag()
     // We should be okay to move, then.
     if (needs_message)
     {
-        mprf("%s drags %s backwards!",
-             attacker->name(DESC_THE).c_str(),
-             defender_name(true).c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = attacker->name(DESC_THE);
+                const string _m1 = defender_name(true);
+                const string _original = make_stringf("%s drags %s backwards!", _m0.c_str(), _m1.c_str());
+                if (!m_display_active("m.log.067", "%s drags %s backwards!")) return _original;
+                return ui_render("m.log.067", "%s drags %s backwards!", _original, {m_actor_arg(*attacker), m_actor_arg(*defender)});
+            })().c_str());
     }
 
     // Only move the attacker back if the defender was already adjacent and we
@@ -5173,7 +5547,7 @@ bool melee_attack::is_sundering_weapon() const
     return damage_brand == SPWPN_SUNDERING;
 }
 
-string mut_aux_attack_desc(mutation_type mut)
+string mut_aux_attack_desc(mutation_type mut, bool display)
 {
     // XXX: dedup with _extra_aux_attack()
     switch (mut)
@@ -5181,42 +5555,44 @@ string mut_aux_attack_desc(mutation_type mut)
     case MUT_HOOVES:
     case MUT_TALONS:
     case MUT_TENTACLE_SPIKE:
-        return AUX_KICK.describe();
+        return AUX_KICK.describe(display);
     case MUT_BEAK:
-        return AUX_PECK.describe();
+        return AUX_PECK.describe(display);
     case MUT_HORNS:
-        return AUX_HEADBUTT.describe();
+        return AUX_HEADBUTT.describe(display);
     case MUT_STINGER:
     case MUT_ARMOURED_TAIL:
     case MUT_WEAKNESS_STINGER:
     case MUT_MERTAIL:
-        return AUX_TAIL.describe();
+        return AUX_TAIL.describe(display);
     case MUT_ACIDIC_BITE:
     case MUT_ANTIMAGIC_BITE:
     case MUT_FANGS:
-        return AUX_BITE.describe();
+        return AUX_BITE.describe(display);
     case MUT_PSEUDOPODS:
-        return AUX_PSEUDOPODS.describe();
+        return AUX_PSEUDOPODS.describe(display);
     case MUT_DEMONIC_TOUCH:
-        return AUX_TOUCH.describe();
+        return AUX_TOUCH.describe(display);
     case MUT_REFLEXIVE_HEADBUTT:
-        return make_stringf("\nTrigger chance:  %d%%\n"
-                              "Base damage:     %d\n\n",
-                            _minotaur_headbutt_chance(),
-                            AUX_HEADBUTT.get_damage(false));
+        {
+            const int chance = _minotaur_headbutt_chance();
+            const int damage = AUX_HEADBUTT.get_damage(false);
+            const string original = make_stringf("\nTrigger chance:  %d%%\nBase damage:     %d\n\n", chance, damage);
+            return display ? ui_render("m.aux", "\nTrigger chance:  %s%%\nBase damage:     %s\n\n", original,
+                {ui_literal_arg(to_string(chance)), ui_literal_arg(to_string(damage))}) : original;
+        }
     case MUT_MAKHLEB_MARK_EXECUTION:
-        return AUX_EXECUTIONER_BLADE.describe();
+        return AUX_EXECUTIONER_BLADE.describe(display);
     default:
         return "";
     }
 }
 
-static string _desc_aux(int chance, int dam)
+static string _desc_aux(int chance, int dam, bool display = false)
 {
-    return make_stringf("\nTrigger chance:  %d%%\n"
-                          "Base damage:     %d",
-                        chance,
-                        dam);
+    const string original = make_stringf("\nTrigger chance:  %d%%\nBase damage:     %d", chance, dam);
+    return display ? ui_render("m.aux", "\nTrigger chance:  %s%%\nBase damage:     %s", original,
+        {ui_literal_arg(to_string(chance)), ui_literal_arg(to_string(dam))}) : original;
 }
 
 string aux_attack_desc(unarmed_attack_type unat, int force_damage)
@@ -5229,9 +5605,9 @@ string aux_attack_desc(unarmed_attack_type unat, int force_damage)
     return _desc_aux(aux->get_chance(), dam);
 }
 
-string AuxAttackType::describe() const
+string AuxAttackType::describe(bool display) const
 {
-    return _desc_aux(get_chance(), get_damage(false)) + "\n\n";
+    return _desc_aux(get_chance(), get_damage(false), display) + "\n\n";
 }
 
 vector<string> get_player_aux_names()
@@ -5283,7 +5659,7 @@ bool coglin_spellmotor_attack()
         return false;
 
     melee_attack attk(&you, targs[random2(targs.size())]);
-    mpr("Your spellmotor activates!");
+    mpr(ui_translate("log.melee-attack", "Your spellmotor activates!"));
     attk.launch_attack_set();
 
     count_action(CACT_ATTACK, ATTACK_SPELLMOTOR);
@@ -5351,13 +5727,19 @@ bool spellclaws_attack(int spell_level)
 
     // Save name first, in case the monster dies from the attack.
     string targ_name = best_victim->name(DESC_THE);
+    const ui_arg targ_display = m_actor_arg(*best_victim);
     attk.launch_attack_set();
 
     count_action(CACT_ATTACK, ATTACK_SPELLCLAWS);
 
     if (you.duration[DUR_ENKINDLED] && you.hp < you.hp_max)
     {
-        mprf("You rip the existence from %s to re-knit yourself!", targ_name.c_str());
+        mprf("%s", ([&]() -> string {
+                const string _m0 = targ_name;
+                const string _original = make_stringf("You rip the existence from %s to re-knit yourself!", _m0.c_str());
+                if (!m_display_active("m.log.068", "You rip the existence from %s to re-knit yourself!")) return _original;
+                return ui_render("m.log.068", "You rip the existence from %s to re-knit yourself!", _original, {targ_display});
+            })().c_str());
         you.heal(attk.total_damage_done * 3 / 4);
     }
 

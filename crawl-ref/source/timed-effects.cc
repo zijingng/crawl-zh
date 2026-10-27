@@ -4,6 +4,8 @@
 **/
 
 #include "AppHdr.h"
+#include "t-display.h"
+#include "i18n.h"
 
 #include "timed-effects.h"
 
@@ -84,8 +86,7 @@ static void _apply_contam_over_time()
 // Bad effects from magic contamination.
 static void _magic_contamination_effects()
 {
-    mprf(MSGCH_WARN, "Your body shudders with the violent release "
-                     "of wild energies!");
+    mprf(MSGCH_WARN, "%s", ui_translate("t.ui", "Your body shudders with the violent release of wild energies!"));
 
     const bool severe = you.magic_contamination >= 2000;
 
@@ -137,8 +138,7 @@ static void _check_contamination_effects(int /*time_delta*/)
     {
         if (is_sanctuary(you.pos()))
         {
-            mprf(MSGCH_GOD, "Your body momentarily shudders from a surge of wild "
-                            "energies until Zin's power calms it.");
+            mprf(MSGCH_GOD, "%s", ui_translate("t.ui", "Your body momentarily shudders from a surge of wild energies until Zin's power calms it."));
         }
         else
             _magic_contamination_effects();
@@ -202,9 +202,7 @@ static void _jiyva_effects(int /*time_delta*/)
                     simple_god_message(" gurgles merrily.");
                     break;
                 case 1:
-                    mprf(MSGCH_SOUND, "You hear %s splatter%s.",
-                         total_jellies > 1 ? "a series of" : "a",
-                         total_jellies > 1 ? "s" : "");
+                    mprf(MSGCH_SOUND, "%s", ui_render("t.log", "You hear %s splatters.", make_stringf("You hear %s splatter%s.", total_jellies > 1 ? "a series of" : "a", total_jellies > 1 ? "s" : ""), {t_clause_arg(total_jellies > 1 ? "a series of" : "a")}).c_str());
                     break;
                 case 2:
                     simple_god_message(" says: Divide and consume!");
@@ -230,7 +228,7 @@ static void _evolve(int /*time_delta*/)
         return;
     set_evolution_mut_xp(malignant);
 
-    mpr("You feel a genetic drift.");
+    mpr(ui_translate("t.ui", "You feel a genetic drift."));
     const mutation_type typ = malignant ? RANDOM_BAD_MUTATION : RANDOM_GOOD_MUTATION;
     const char* const reason = malignant ? "hidden defects" : "hidden potential";
     if (!mutate(typ, reason, false, false, false, false, MUTCLASS_NORMAL))
@@ -312,7 +310,7 @@ static void _maybe_mortality_summon()
 
     if (created)
     {
-        mprf("Death has come for you....");
+        mprf("%s", ui_translate("t.ui", "Death has come for you...."));
         you.props[MORTALITY_TIME_KEY] = you.elapsed_time + random_range(2250, 4500);
     }
 }
@@ -362,7 +360,7 @@ static void _bane_triggers(int /*time_delta*/)
         if (seen)
         {
             flash_tile(mon->pos(), LIGHTBLUE, 150);
-            mprf("%s shimmers and splits apart.", mon->name(DESC_THE).c_str());
+            mprf("%s", ui_render("t.log", "%s shimmers and splits apart.", make_stringf("%s shimmers and splits apart.", mon->name(DESC_THE).c_str()), {ui_actor_arg(*mon)}).c_str());
         }
     }
 
@@ -711,24 +709,21 @@ static void _drop_tomb(const coord_def& pos, bool premature, bool zin)
     if (count)
     {
         if (seen_change && !zin)
-            mprf("The walls disappear%s!", premature ? " prematurely" : "");
+            mprf("%s", ui_render("t.log", "The walls disappear%s!", make_stringf("The walls disappear%s!", premature ? " prematurely" : ""), {t_clause_arg(premature ? " prematurely" : "")}).c_str());
         else if (seen_change && zin)
         {
-            mprf("Zin %s %s %s.",
-                 (mon) ? "releases"
-                       : "dismisses",
-                 (mon) ? mon->name(DESC_THE).c_str()
-                       : "the silver walls,",
-                 (mon) ? make_stringf("from %s prison",
+            mprf("%s", ui_render("t.log", "Zin releases %s.", make_stringf("Zin %s %s %s.", (mon) ? "releases"
+                       : "dismisses", (mon) ? mon->name(DESC_THE).c_str()
+                       : "the silver walls,", (mon) ? make_stringf("from %s prison",
                              mon->pronoun(PRONOUN_POSSESSIVE).c_str()).c_str()
-                       : "but there is nothing inside them");
+                       : "but there is nothing inside them"), {mon ? ui_arg{ui_render("t.log", "releases %s from prison", "", {ui_actor_arg(*mon)}), ui_actor_arg(*mon).available && ui_text_arg("t.log", "releases %s from prison").available} : ui_text_arg("t.clause", "dismisses the empty silver walls")}).c_str());
         }
         else
         {
             if (!silenced(you.pos()))
-                mprf(MSGCH_SOUND, "You hear a deep rumble.");
+                mprf(MSGCH_SOUND, "%s", ui_translate("t.ui", "You hear a deep rumble."));
             else
-                mpr("You feel the ground shudder.");
+                mpr(ui_translate("t.ui", "You feel the ground shudder."));
         }
     }
 }
@@ -872,9 +867,9 @@ void timeout_binding_sigils()
     }
 
     if (num_seen > 1)
-        mprf(MSGCH_DURATION, "Your binding sigils disappear.");
+        mprf(MSGCH_DURATION, "%s", ui_translate("t.ui", "Your binding sigils disappear."));
     else if (num_seen > 0)
-        mprf(MSGCH_DURATION, "Your binding sigil disappears.");
+        mprf(MSGCH_DURATION, "%s", ui_translate("t.ui", "Your binding sigil disappears."));
 }
 
 void end_terrain_change(terrain_change_type type)
@@ -891,7 +886,7 @@ void end_terrain_change(terrain_change_type type)
 
 void end_enkindled_status()
 {
-    mprf(MSGCH_DURATION, "Your flames quiet as the last of your memories are burnt away.");
+    mprf(MSGCH_DURATION, "%s", ui_translate("t.ui", "Your flames quiet as the last of your memories are burnt away."));
     you.duration[DUR_ENKINDLED] = 0;
     you.props.erase(ENKINDLE_CHARGES_KEY);
 }
@@ -976,14 +971,14 @@ void timeout_terrain_changes(int duration, bool force)
     }
 
     if (num_seen[TERRAIN_CHANGE_DOOR_SEAL] > 1)
-        mpr("The runic seals fade away.");
+        mpr(ui_translate("t.ui", "The runic seals fade away."));
     else if (num_seen[TERRAIN_CHANGE_DOOR_SEAL] > 0)
-        mpr("The runic seal fades away.");
+        mpr(ui_translate("t.ui", "The runic seal fades away."));
 
     if (num_seen[TERRAIN_CHANGE_BINDING_SIGIL] > 1)
-        mprf(MSGCH_DURATION, "Your binding sigils disappear.");
+        mprf(MSGCH_DURATION, "%s", ui_translate("t.ui", "Your binding sigils disappear."));
     else if (num_seen[TERRAIN_CHANGE_BINDING_SIGIL] > 0)
-        mprf(MSGCH_DURATION, "Your binding sigil disappears.");
+        mprf(MSGCH_DURATION, "%s", ui_translate("t.ui", "Your binding sigil disappears."));
 }
 
 ////////////////////////////////////////////////////////////////////////////

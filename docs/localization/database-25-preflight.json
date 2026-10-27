@@ -1,0 +1,1125 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "selected": [
+    {
+      "key": "alderking",
+      "source": "VISUAL:@The_monster@ beckons and sways in an unseen wind.\n\nVISUAL:@The_monster_possessive@ foilage glows and foams.\n\n@The_monster@ says, \"If you're unwilling to [dance|bow], then I'll see you out.\" @player_only@\n\nw:20\n__NONE\n",
+      "hits": [
+        {
+          "Term": "alderking",
+          "Translation": "桤木之王",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "alderking triumphant",
+      "source": "@The_monster@ vanishes in a satisfied sigh of withering leaves.\n",
+      "hits": [
+        {
+          "Term": "alderking",
+          "Translation": "桤木之王",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "bennu",
+      "source": "VISUAL:@The_monster_possessive@ plumage briefly flares with an otherworldly flame.\n\nVISUAL:@The_monster@ jubilantly flits about.\n",
+      "hits": [
+        {
+          "Term": "bennu",
+          "Translation": "贝努",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "flame",
+          "Translation": "火焰",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_FIRE；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        },
+        {
+          "Term": "otherworldly",
+          "Translation": "异界之身",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：异界之身。"
+        }
+      ]
+    },
+    {
+      "key": "bennu killed",
+      "source": "@_Bennu_death_@\n",
+      "hits": [
+        {
+          "Term": "bennu",
+          "Translation": "贝努",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "_bennu_death_",
+      "source": "VISUAL:@The_monster@ renews @reflexive@ in a burst of flame!\n",
+      "hits": [
+        {
+          "Term": "bennu",
+          "Translation": "贝努",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "flame",
+          "Translation": "火焰",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_FIRE；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "bennu permanently killed",
+      "source": "VISUAL:@The_monster@, emptied of spiritual energy, fades out from this realm.\n",
+      "hits": [
+        {
+          "Term": "bennu",
+          "Translation": "贝努",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Energy",
+          "Translation": "能量",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "confused bennu killed",
+      "source": "@Bennu killed@\n",
+      "hits": [
+        {
+          "Term": "bennu",
+          "Translation": "贝努",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "confused bennu permanently killed",
+      "source": "@Bennu permanently killed@\n",
+      "hits": [
+        {
+          "Term": "bennu",
+          "Translation": "贝努",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "brain worm",
+      "source": "VISUAL:@The_monster@ drips [complex|unknown] stolen formulae onto the @surface@.\n\nVISUAL:@The_monster@ is briefly caught in foreign memories of distant [stars|lands|kingdoms].\n\nVISUAL:@The_monster@ twitches its length with the pilfered instincts of [wings|pincers|fins].\n\n",
+      "hits": [
+        {
+          "Term": "worm",
+          "Translation": "蠕虫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "brain worm",
+          "Translation": "脑虫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "sewer brain worm",
+      "source": "w:30\n@brain worm@\n\nVISUAL:@The_monster@ stares [perplexed|with bemusement] at its reflection in a puddle.\n",
+      "hits": [
+        {
+          "Term": "worm",
+          "Translation": "蠕虫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Sewer",
+          "Translation": "下水道",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/区域】特殊入口区域。 来源：dat/descript/branches.txt。"
+        },
+        {
+          "Term": "brain worm",
+          "Translation": "脑虫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "bullfrog",
+      "source": "@The_monster@ swells and bulges.\n\n@The_monster@ releases a deep croak.\n\n@The_monster@ snags a nearby @_frog_food_@ with @possessive@ tongue.\n",
+      "hits": [
+        {
+          "Term": "bullfrog",
+          "Translation": "牛蛙",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "chaos spawn",
+      "source": "VISUAL:@The_monster@ grows dozens of eye stalks in order to get a better look at @foe@.\n\nVISUAL:@The_monster@ splatters into many small globs of multi-coloured light, then recombines.\n\nVISUAL:@The_monster@ briefly grows a face disturbingly similar to your own.\n\n@The_monster@ ululates chillingly with @possessive@ many mouths.\n\n@The_monster@ gibbers incoherently in a cacophony of voices.\n",
+      "hits": [
+        {
+          "Term": "Cacophony",
+          "Translation": "不谐狂响",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+        },
+        {
+          "Term": "chaos spawn",
+          "Translation": "混沌衍体",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Light",
+          "Translation": "轻盈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "chaos",
+          "Translation": "混沌",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "catoblepas",
+      "source": "@The_monster@ roars fiercely, eyes lowered.\n\n@The_monster@ stomps with a crash on the @surface@.\n\nVISUAL:@The_monster@ smashes @possessive@ foot into the @surface@.\n\nVISUAL:@The_monster@ rams the @surface@ with @possessive@ head heavily.\n\n@The_monster@ breathes in.\n\n@The_monster@ snuffles in challenge.\n",
+      "hits": [
+        {
+          "Term": "catoblepas",
+          "Translation": "卡托布莱帕斯",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "cognitogaunt",
+      "source": "VISUAL:@The_monster@ shines with the incandescence of long-dead nights.\n\nw:20\n@The_monster@ grumbles constantly over the stars not yet being right.\n\n@The_monster@ mumbles about the follies of mortal constellations.\n\n@The_monster@ mutters ill rumours of the current state of the heavens.\n\n@The_monster@ muses over how flesh is wasted on mortals.\n\n@The_monster@ marvels to itself over the thinness of mortal minds.\n\n@The_monster@ mocks the topics of the next astral concord.\n\nw:1\n@The_monster@ writhes with frustration over not yet finding solutions for supernovas.\n\n@The_monster@ growls that the stars belong to nobody but the stars.\n\n@The_monster@ gripes about being made of rot and starlight.\n\n@The_monster@ grouses that life is wasted on the living.\n",
+      "hits": [
+        {
+          "Term": "rot",
+          "Translation": "腐烂",
+          "Part of Speech": "noun",
+          "Variants": "rotting",
+          "Note": ""
+        },
+        {
+          "Term": "Nobody",
+          "Translation": "无名氏",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "cognitogaunt",
+          "Translation": "噬识者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "silenced cognitogaunt",
+      "source": "VISUAL:@The_monster@ shines with the incandescence of long-dead nights.\n",
+      "hits": [
+        {
+          "Term": "cognitogaunt",
+          "Translation": "噬识者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "friendly cognitogaunt",
+      "source": "@cognitogaunt@\n",
+      "hits": [
+        {
+          "Term": "cognitogaunt",
+          "Translation": "噬识者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "crystal guardian",
+      "source": "VISUAL:@The_monster@ glitters, immutable and inevitable, in the dim dungeon light.\n\nw:5\nVISUAL:You see your fractured reflection in @the_monster@ contort and writhe. @player_only@\n",
+      "hits": [
+        {
+          "Term": "crystal guardian",
+          "Translation": "水晶守卫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Light",
+          "Translation": "轻盈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "death cob",
+      "source": "w:1\nThe death cob makes a corny joke.\n\nw:1999\n__NONE\n",
+      "hits": [
+        {
+          "Term": "death cob",
+          "Translation": "死亡玉米棒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "death yak",
+      "source": "@yak@\n",
+      "hits": [
+        {
+          "Term": "death yak",
+          "Translation": "死亡牦牛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "yak",
+          "Translation": "牦牛",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "deep elf high priest",
+      "source": "@_high_priest_@\n",
+      "hits": [
+        {
+          "Term": "Deep Elf",
+          "Translation": "地底精灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/deep-elf.yaml。"
+        },
+        {
+          "Term": "deep elf high priest",
+          "Translation": "地底精灵大祭司",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "elf",
+          "Translation": "精灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "deep elf sorcerer",
+      "source": "@_wizard_@\n",
+      "hits": [
+        {
+          "Term": "wizard",
+          "Translation": "巫师",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Deep Elf",
+          "Translation": "地底精灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/deep-elf.yaml。"
+        },
+        {
+          "Term": "deep elf sorcerer",
+          "Translation": "地底精灵术士",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "elf",
+          "Translation": "精灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "dream sheep",
+      "source": "@The_monster@ \"Baaaas\" balefully.\n\n@The_monster@ \"Baaaas\" sleepily.\n",
+      "hits": [
+        {
+          "Term": "dream sheep",
+          "Translation": "梦羊",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "default electric golem",
+      "source": "SOUND:@The_monster@ crackles and sizzles.\n",
+      "hits": [
+        {
+          "Term": "electric golem",
+          "Translation": "电魔像",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "golem",
+          "Translation": "魔像",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "erythrospite",
+      "source": "VISUAL:@The_monster@ throbs to the beat of your heart.\n",
+      "hits": [
+        {
+          "Term": "erythrospite",
+          "Translation": "猩红怨体",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "frilled lizard",
+      "source": "@The_monster@ unfolds @possessive@ giant frill.\n\n@The_monster@ hisses @at_foe@.\n",
+      "hits": [
+        {
+          "Term": "frilled lizard",
+          "Translation": "伞蜥",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "giant",
+          "Translation": "巨人",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "crimson imp",
+      "source": "w:1\n@_says_imp_taunt_@\n\nw:2\n@_hostile_imp_@\n",
+      "hits": [
+        {
+          "Term": "hostile",
+          "Translation": "敌对",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "crimson imp",
+          "Translation": "绯红小恶魔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "iron imp",
+      "source": "w:1\n@_says_imp_taunt_@\n\nw:2\n@_hostile_imp_@\n",
+      "hits": [
+        {
+          "Term": "hostile",
+          "Translation": "敌对",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "iron imp",
+          "Translation": "铁小鬼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "shadow imp",
+      "source": "w:1\n@_says_imp_taunt_@\n\nw:2\n@_hostile_imp_@\n",
+      "hits": [
+        {
+          "Term": "hostile",
+          "Translation": "敌对",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "shadow",
+          "Translation": "影",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "shadow imp",
+          "Translation": "阴影小恶魔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "white imp",
+      "source": "w:1\n@_says_imp_taunt_@\n\nw:2\n@_hostile_imp_@\n",
+      "hits": [
+        {
+          "Term": "hostile",
+          "Translation": "敌对",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "white imp",
+          "Translation": "白色小恶魔",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "default ice statue",
+      "source": "VISUAL:@The_monster@ glitters chillingly in the dim dungeon light.\n",
+      "hits": [
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "statue",
+          "Translation": "雕像",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "ice statue",
+          "Translation": "冰雕像",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Ice",
+          "Translation": "寒冰强化",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        },
+        {
+          "Term": "Light",
+          "Translation": "轻盈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "kobold blastminer",
+      "source": "VISUAL:@The_monster@ bats away at the thin smoke enveloping @possessive@ cannon.\n\nVISUAL:@The_monster_possessive@ cannon shakes and flares with a red glow.\n\nw:20\n__NONE\n",
+      "hits": [
+        {
+          "Term": "kobold",
+          "Translation": "狗头人",
+          "Part of Speech": "noun",
+          "Variants": "kobolds",
+          "Note": "【现行清单】已与 0.34.1 的种族名称清单对应。来源：dat/species/kobold.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "bats",
+          "Translation": "蝙蝠群",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_BATS；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        },
+        {
+          "Term": "kobold blastminer",
+          "Translation": "狗头人爆破矿工",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "killer klown",
+      "source": "@_Killer_Klown_common_@\n\nw:5\n@_Killer_Klown_rare_@\n",
+      "hits": [
+        {
+          "Term": "Killer Klown",
+          "Translation": "杀戮小丑",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_killer_klown_common_",
+      "source": "@The_monster@ giggles crazily.\n\n@The_monster@ laughs merrily.\n\nVISUAL:@The_monster@ beckons to @foe@.\n\nVISUAL:@The_monster@ does a flip.\n\nVISUAL:@The_monster@ does a somersault.\n\nVISUAL:@The_monster@ smiles at @foe@.\n\nVISUAL:@The_monster@ grins with merry abandon.\n\nVISUAL:@The_monster@ pulls ten torches off @possessive@ hat and starts juggling.\n\nVISUAL:@The_monster@ sprays water @at_foe@.\n\n@The_monster@ howls with blood-lust!\n",
+      "hits": [
+        {
+          "Term": "hat",
+          "Translation": "帽子",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        }
+      ]
+    },
+    {
+      "key": "_killer_klown_rare_",
+      "source": "@The_monster@ honks.\n\nVISUAL:@The_monster@ pantomimes @foe_possessive@ execution.\n\nVISUAL:@The_monster@ pokes out @possessive@ tongue.\n\nVISUAL:@The_monster@ grows four more heads, takes them off and juggles!\n\nVISUAL:@The_monster@ skips for a moment.\n\n@The_monster@ says @to_foe@, \"Come and play with me!\"\n\n@The_monster@ says, \"Trust me, I'm a doctor.\"\n",
+      "hits": []
+    },
+    {
+      "key": "killer klown triumphant",
+      "source": "VISUAL:@The_monster@ begins to take a bow, but slips on a banana peel.\n\n@The_monster@ honks, delighted.\n\nVISUAL:@The_monster@ begins to tie you into a balloon animal.\n",
+      "hits": [
+        {
+          "Term": "Killer Klown",
+          "Translation": "杀戮小丑",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "laughing skull",
+      "source": "@The_monster@ @_laughs_@ at the inevitable fate of oblivion.\n\n@The_monster@ @_laughs_@ at how history will forget everyone present.\n\n@The_monster@ @_laughs_@ at the Dungeon's lack of mercy or dignity.\n\n@The_monster@ @_laughs_@ at the inescapable nature of violence.\n\n__NONE\n",
+      "hits": [
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Will",
+          "Translation": "意志/将会/会",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "Term": "the Dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "laughing skull",
+          "Translation": "狂笑头骨",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "friendly laughing skull",
+      "source": "@laughing skull@\n\n__NONE\n",
+      "hits": [
+        {
+          "Term": "laughing skull",
+          "Translation": "狂笑头骨",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "laughing skull triumphant",
+      "source": "@The_monster@ crumbles to pieces from sheer joy.\n",
+      "hits": [
+        {
+          "Term": "pieces",
+          "Translation": "碎片",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "laughing skull",
+          "Translation": "狂笑头骨",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "moth of wrath",
+      "source": "VISUAL:@The_monster@ angrily waves @possessive@ antennae.\n",
+      "hits": [
+        {
+          "Term": "moth",
+          "Translation": "蛾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "moth of wrath",
+          "Translation": "愤怒之蛾",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Wrath",
+          "Translation": "神怒",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "Term": "antennae",
+          "Translation": "触角",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：触角。"
+        }
+      ]
+    },
+    {
+      "key": "obsidian bat",
+      "source": "VISUAL:@The_monster@ flits into the dungeon's darkness for a moment.\n\nw:40\n__NONE\n",
+      "hits": [
+        {
+          "Term": "bat",
+          "Translation": "蝙蝠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Darkness",
+          "Translation": "黑暗术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "the Dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "obsidian bat",
+          "Translation": "黑曜石蝠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "default obsidian statue",
+      "source": "VISUAL:@The_monster@ slips into the dungeon's darkness for a moment.\n",
+      "hits": [
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "statue",
+          "Translation": "雕像",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Darkness",
+          "Translation": "黑暗术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "the Dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "Term": "obsidian statue",
+          "Translation": "黑曜石雕像",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "default orange crystal statue",
+      "source": "VISUAL:@The_monster@ glitters topaz in the dim dungeon light.\n",
+      "hits": [
+        {
+          "Term": "dungeon",
+          "Translation": "地下城",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "orange crystal statue",
+          "Translation": "橙水晶雕像",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "statue",
+          "Translation": "雕像",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Light",
+          "Translation": "轻盈",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "default hoarfrost cannon",
+      "source": "VISUAL:Water drips from @the_monster_possessive@ barrel.\n\nVISUAL:A cold fog rises from @the_monster@.\n\n@The_monster@ makes a faint grinding noise.\n",
+      "hits": [
+        {
+          "Term": "noise",
+          "Translation": "噪音/声音/巨响",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/战斗机制】影响听觉警觉，不同于画面显示延迟。 来源：shout.cc。\n【语境补充 2026-10-21】机制、标题及数值用噪音。具体可听声响按语境用声音或巨响，不强制把研磨声等改为噪音。"
+        },
+        {
+          "Term": "hoarfrost cannon",
+          "Translation": "白霜炮",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "nekomata",
+      "source": "{{\n  if you.race() == \"Felid\" then\n    return '@The_monster@ grumbles @to_foe@, \"Young upstarts should know their place.\"'\n  else\n    return 'VISUAL:@The_monster@ examines your form and snarls in deep contempt.'\n  end\n}} @player_only@\n\n{{\n  if you.race() == \"Felid\" then\n    return [[@The_monster@ sighs and remarks, \"You haven't even grown your second tail yet.\"]]\n  elseif you.skill(\"Spellcasting\") >= 5 then\n    return 'VISUAL:@The_monster@ scoffs at your paltry magic.'\n  else\n    return 'VISUAL:@The_monster@ regards your strength with dismissive scorn.'\n  end\n}} @player_only@\n\n{{\n  if you.race() == \"Felid\" then\n    return '@The_monster@ advises @to_foe@, \"Grace and deceit. The only things anyone needs.\"'\n  else\n    return 'VISUAL:@The_monster@ briefly ignores you to bat at some conjured hitodama.'\n  end\n}} @player_only@\n\nw:1\n@The_monster@ states, \"It's not just demons who despoil everything they cannot have.\"\n",
+      "hits": [
+        {
+          "Term": "bat",
+          "Translation": "蝙蝠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "skill",
+          "Translation": "技能",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Spellcasting",
+          "Translation": "施法",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "Term": "Strength",
+          "Translation": "力量/强度/威力",
+          "Part of Speech": "noun",
+          "Variants": "Str",
+          "Note": "三大基础属性之一\n【语境补充 2026-10-21】Str 属性用力量。法术、效果或攻击的 strength 按语境用强度或威力。"
+        },
+        {
+          "Term": "Felid",
+          "Translation": "猫族",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/felid.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "nekomata",
+          "Translation": "猫又",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "protean progenitor",
+      "source": "VISUAL:@The_monster_possessive@ form [briefly |][ripples|wavers] with deep exhaustion.\n\nVISUAL:@The_monster_possessive@ [three nested|six fanged|nine smoking] eyes blink slowly.\n\nVISUAL:@The_monster@ [glitters|crackles], [sighs|grumbles], and [beckons|stomps].\n\nVISUAL:@The_monster@ unfurls and squashes hidden [antennae|spinnerets|pseudopods].\n\nw:20\n__NONE\n",
+      "hits": [
+        {
+          "Term": "blink",
+          "Translation": "闪烁/闪现/眨眼",
+          "Part of Speech": "verb",
+          "Variants": "",
+          "Note": "\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】位移效果优先用闪烁。普通快速显现可用闪现，眨眼为生理动作。完整法术名优先，不改动英文控制字。"
+        },
+        {
+          "Term": "protean progenitor",
+          "Translation": "万变始祖",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "antennae",
+          "Translation": "触角",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：触角。"
+        },
+        {
+          "Term": "pseudopods",
+          "Translation": "伪足",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：伪足。"
+        }
+      ]
+    },
+    {
+      "key": "friendly protean progenitor",
+      "source": "@protean progenitor@\n\nw:30\n__NONE\n",
+      "hits": [
+        {
+          "Term": "protean progenitor",
+          "Translation": "万变始祖",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "raven",
+      "source": "w:100\n__NONE\n\nw:2\n@The_monster@ caws, \"Nevermore!\"\n",
+      "hits": [
+        {
+          "Term": "raven",
+          "Translation": "渡鸦",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "reaper",
+      "source": "@The_monster@ whispers, \"Time's up, @foe_name@!\"\n\nVISUAL:@The_monster@ beckons to @foe@.\n\nVISUAL:@The_monster@ smiles without lips.\n\n@The_monster@ shouts @at_foe@, \"I have come for you, @foe_name@!\"\n\n@The_monster@ shouts @at_foe@, \"Death awaits you!\"\n\n@The_monster@ says @to_foe@, \"Everyone has to die sometime, and your time is now.\"\n\nVISUAL:@The_monster@ draws a finger across @possessive@ throat.\n\n@The_monster@ shouts @at_foe@, \"You must die NOW!\"\n\n@The_monster@ shouts @at_foe@, \"Die, @foe_name@!\"\n",
+      "hits": [
+        {
+          "Term": "reaper",
+          "Translation": "收割者",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "Death",
+          "Translation": "死亡",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+        }
+      ]
+    },
+    {
+      "key": "silenced silent spectre",
+      "source": "VISUAL:@The_monster@ gestures at you to be quiet.\n\nVISUAL:@The_monster@ flutters as if in a wind.\n\nVISUAL:@The_monster@ stares at you with @possessive@ ghostly eyes.\n\nVISUAL:@The_monster@ fades in and out of visibility.\n\nVISUAL:@The_monster@ flickers into the darkness.\n\nVISUAL:@The_monster@ grins at you slowly.\n",
+      "hits": [
+        {
+          "Term": "Darkness",
+          "Translation": "黑暗术",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "silent spectre",
+          "Translation": "寂静幽灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "spectre",
+          "Translation": "幽灵",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    }
+  ],
+  "legacy_overlay_present": true
+}

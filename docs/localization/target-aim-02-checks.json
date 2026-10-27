@@ -1,0 +1,39 @@
+{
+  "batch": "target-aim-02",
+  "build": {
+    "windows_tiles": "passed",
+    "exe_bytes": 27793908,
+    "exe_sha256": "23cec14223d5eb4e058f7db65c351eb2fc41be3978dc92ee3797fa3b0be1a8f5"
+  },
+  "native": {
+    "cases": 7,
+    "assertions": 863,
+    "passed": true
+  },
+  "python": {
+    "cases": 33,
+    "passed": true
+  },
+  "new_reviewed_templates": 2,
+  "status_table_rows_tested": 132,
+  "root_causes": [
+    "Compact describe_to_hit display returned empty unconditionally",
+    "An empty callback description was treated as a missing component",
+    "Equipment attitude display performed static lookups on dynamic and possessive monster attributes"
+  ],
+  "coverage": [
+    "Bow, thrown stone, melee and auxiliary headbutt",
+    "Blind and normal, compact and verbose",
+    "All listed monster statuses and wound levels on living/nonliving/nameless revenant types",
+    "Real spell callback filters: Stone Arrow, Momentum Strike, Electric Charge, Slow and Sticky Flame",
+    "Unknown custom monster names and nonempty callback text retain complete English rows"
+  ],
+  "invariants": [
+    "Canonical English streams and full monster bodies unchanged",
+    "No probability recalculation for the second language",
+    "RNG state unchanged",
+    "Callback executes once per production row",
+    "Unknown components retain canonical English prefix and body with markup"
+  ],
+  "limitation": "No live keyboard/UI session was performed; tests exercise the same production target-body composer and callbacks."
+}

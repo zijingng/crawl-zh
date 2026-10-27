@@ -108,6 +108,8 @@ public:
 
 // Private Methods
 protected:
+    // Canonical noun for presentation only; never used for damage attribution.
+    string ui_damage_source;
     virtual void init_attack(int attack_number);
 
     /* Attack Phases */
@@ -200,3 +202,7 @@ private:
 };
 
 string attack_strength_punctuation(int dmg);
+
+struct ui_arg;
+// Display argument only: the canonical English punctuation stays unchanged.
+ui_arg ui_attack_punctuation(const string &canonical);

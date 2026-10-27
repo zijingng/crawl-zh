@@ -4,6 +4,9 @@
 **/
 
 #include "AppHdr.h"
+#include "target-display.h"
+#include "s-display.h"
+#include "i18n.h"
 
 #include "spl-cast.h"
 
@@ -20,6 +23,7 @@
 #include "colour.h"
 #include "coordit.h"
 #include "database.h"
+#include "artefact-speech.h"
 #include "describe.h"
 #include "directn.h"
 #include "english.h"
@@ -87,7 +91,7 @@
 static int _spell_enhancement(spell_type spell);
 static int _apply_enhancement(const int initial_power,
                               const int enhancer_levels);
-static string _spell_failure_rate_description(spell_type spell);
+static string _spell_failure_rate_description(spell_type spell, bool translated = false);
 
 void surge_power(const int enhanced)
 {
@@ -98,11 +102,9 @@ void surge_power(const int enhanced)
                                 (enhanced ==  2) ? "strong" :
                                 (enhanced  >  2) ? "huge"
                                                  : "";
-        mprf("You feel %s %s",
-             !modifier.length() ? "a"
-                                : article_a(modifier).c_str(),
-             (enhanced < 0) ? "numb sensation."
-                            : "surge of power!");
+        mprf("%s", ui_render("s.log", "You feel %s %s", make_stringf("You feel %s %s", !modifier.length() ? "a"
+                                : article_a(modifier).c_str(), (enhanced < 0) ? "numb sensation."
+                            : "surge of power!"), {s_clause_arg(modifier), s_clause_arg(enhanced < 0 ? "numb sensation." : "surge of power!")}).c_str());
     }
 }
 
@@ -111,9 +113,7 @@ void surge_power_wand(const int mp_cost)
     if (mp_cost)
     {
         const bool slight = mp_cost < 3;
-        mprf("You feel a %ssurge of power%s",
-             slight ? "slight " : "",
-             slight ? "."      : "!");
+        mprf("%s", ui_render("s.log", "You feel a %ssurge of power%s", make_stringf("You feel a %ssurge of power%s", slight ? "slight " : "", slight ? "."      : "!"), {s_clause_arg(slight ? "slight " : ""), ui_literal_arg(slight ? "。" : "！")}).c_str());
     }
 }
 
@@ -130,11 +130,12 @@ static string _spell_base_description(spell_type spell, bool transient)
 
     desc << "<" << colour_to_str(highlight) << ">" << left;
 
-    // spell name
-    desc << chop_string(spell_title(spell), 32);
-
-    // spell schools
-    desc << spell_schools_string(spell);
+    // The name and schools form one display row.
+    const ui_arg name = ui_text_arg("display.spell", spell_title(spell));
+    const ui_arg schools = s_spell_schools_arg(spell);
+    const bool display_row = name.available && schools.available;
+    desc << chop_string(display_row ? name.text : spell_title(spell), 32);
+    desc << (display_row ? schools.text : spell_schools_string(spell));
 
     const int so_far = strwidth(desc.str()) - (strwidth(colour_to_str(highlight))+2);
     if (so_far < 58)
@@ -168,8 +169,11 @@ static string _spell_extra_description(spell_type spell, bool transient)
 
     desc << "<" << colour_to_str(highlight) << ">" << left;
 
-    // spell name
-    desc << chop_string(spell_title(spell), 32);
+    const string canonical_noise = spell_noise_string(spell, 10);
+    const ui_arg name = ui_text_arg("display.spell", spell_title(spell));
+    const ui_arg noise = ui_text_arg("s.noise", canonical_noise);
+    const bool display_row = name.available && noise.available;
+    desc << chop_string(display_row ? name.text : spell_title(spell), 32);
 
     // spell power, spell range, noise
     const string rangestring = spell_range_string(spell);
@@ -178,7 +182,7 @@ static string _spell_extra_description(spell_type spell, bool transient)
     desc << chop_string(spell_power_string(spell), 10)
          << chop_string(damagestring.length() ? damagestring : "N/A", 10)
          << chop_string(rangestring, 8)
-         << chop_string(spell_noise_string(spell, 10), 14);
+         << chop_string(display_row ? noise.text : canonical_noise, 14);
 
     desc << "</" << colour_to_str(highlight) <<">";
 
@@ -273,14 +277,20 @@ int list_spells(bool toggle_with_I, bool transient, bool viewing,
     const string real_action = viewing ? "describe" : action;
 
     SpellMenu spell_menu;
-    const string titlestring = make_stringf("%-25.25s",
-            make_stringf("Your spells (%s)", real_action.c_str()).c_str());
+    const ui_translation_group title_text({
+        {"phase3.spl-cast", "Your spells (%s)"},
+        {"spell.action", real_action.c_str()}
+    });
+    const string titlestring = title_text.available()
+        ? chop_string(make_stringf(title_text.get("phase3.spl-cast", "Your spells (%s)"),
+                                  title_text.get("spell.action", real_action.c_str())), 25)
+        : make_stringf("%-25.25s", make_stringf("Your spells (%s)", real_action.c_str()).c_str());
 
     {
         ToggleableMenuEntry* me =
             new ToggleableMenuEntry(
-                titlestring + "           Type                      Failure  Level  ",
-                titlestring + "           Power     Damage    Range   Noise         ",
+                titlestring + ui_translate("phase3.spl-cast", "           Type                      Failure  Level  "),
+                titlestring + ui_translate("phase3.spl-cast", "           Power     Damage    Range   Noise         "),
                 MEL_TITLE);
         spell_menu.set_title(me, true, true);
     }
@@ -290,9 +300,13 @@ int list_spells(bool toggle_with_I, bool transient, bool viewing,
     spell_menu.add_toggle_from_command(CMD_MENU_CYCLE_MODE);
     spell_menu.add_toggle_from_command(CMD_MENU_CYCLE_MODE_REVERSE);
 
-    string more_str = make_stringf("<lightgrey>Select a spell to %s</lightgrey>",
-        real_action.c_str());
-    string help_desc = make_stringf("   [<w>?</w>] help    ");
+    const ui_translation_group action_text({
+        {"phase3.spl-cast", "<lightgrey>Select a spell to %s</lightgrey>"},
+        {"spell.action", real_action.c_str()}
+    });
+    string more_str = make_stringf(action_text.get("phase3.spl-cast", "<lightgrey>Select a spell to %s</lightgrey>"),
+        action_text.get("spell.action", real_action.c_str()));
+    string help_desc = ui_translate("phase3.spl-cast", "   [<w>?</w>] help    ");
     string toggle_desc = menu_keyhelp_cmd(CMD_MENU_CYCLE_MODE);
     if (toggle_with_I)
     {
@@ -300,7 +314,7 @@ int list_spells(bool toggle_with_I, bool transient, bool viewing,
         spell_menu.add_toggle_key('I');
         toggle_desc += "/[<w>I</w>]";
     }
-    toggle_desc += " toggle spell headers";
+    toggle_desc += ui_translate("phase3.spl-cast", " toggle spell headers");
     more_str = pad_more_with_esc(more_str + help_desc + toggle_desc);
     spell_menu.set_more(formatted_string::parse_string(more_str));
     // TODO: should allow toggling between execute and examine
@@ -721,7 +735,7 @@ bool can_cast_spells(bool quiet)
     if (you.duration[DUR_NO_CAST])
     {
         if (!quiet)
-            mpr("You are unable to access your magic!");
+            mpr(ui_translate("log.spl-cast", "You are unable to access your magic!"));
         return false;
     }
 
@@ -729,7 +743,7 @@ bool can_cast_spells(bool quiet)
     if (you.no_cast())
     {
         if (!quiet)
-            mpr("Something interferes with your magic!");
+            mpr(ui_translate("log.spl-cast", "Something interferes with your magic!"));
         return false;
     }
 
@@ -743,7 +757,7 @@ bool can_cast_spells(bool quiet)
     if (you.confused())
     {
         if (!quiet)
-            mpr("You're too confused to cast spells.");
+            mpr(ui_translate("phase3.spl-cast", "You're too confused to cast spells."));
         return false;
     }
 
@@ -751,7 +765,7 @@ bool can_cast_spells(bool quiet)
     {
         if (!quiet)
         {
-            mprf("You cannot cast spells while %s!", player_silenced_reason());
+            mprf("%s", ui_render("s.log", "You cannot cast spells while %s!", make_stringf("You cannot cast spells while %s!", player_silenced_reason()), {s_clause_arg(player_silenced_reason())}).c_str());
             // included in default force_more_message
         }
         return false;
@@ -795,15 +809,14 @@ static void _handle_energy_orb(int cost, spret cast_result)
         int drain = !targs.empty() ? random_range(1, 3) + targs.size() / 2 : 0;
 
         if (targs.empty())
-            mpr("Magical energy flows into your mind!");
+            mpr(ui_translate("log.spl-cast", "Magical energy flows into your mind!"));
         else
-            mprf("Magical energy flows from %s into your mind!",
-                 describe_monsters_condensed(targs).c_str());
+            mprf("%s", ui_render("s.log", "Magical energy flows from %s into your mind!", make_stringf("Magical energy flows from %s into your mind!", describe_monsters_condensed(targs).c_str()), {s_actor_list_arg(targs)}).c_str());
         inc_mp(cost + drain);
     }
     else
     {
-        mpr("Magical energy flows into your mind!");
+        mpr(ui_translate("log.spl-cast", "Magical energy flows into your mind!"));
         inc_mp(cost, true);
     }
     did_god_conduct(DID_WIZARDLY_ITEM, 10);
@@ -823,7 +836,7 @@ static void _majin_speak(spell_type spell)
     const int level = spell_difficulty(spell);
     const bool weak = level <= 4;
     const string lookup = weak ? "majin-bo cast weak" : "majin-bo cast";
-    const string msg = "A voice whispers, \"" + getSpeakString(lookup) + "\"";
+    const string msg = quoted_artefact_speech(lookup);
     mprf(MSGCH_TALK, "%s", msg.c_str());
 }
 
@@ -936,15 +949,27 @@ spret cast_a_spell(bool check_range, spell_type spell, dist *_target,
                 if (you.last_cast_spell == SPELL_NO_SPELL
                     || !Options.enable_recast_spell)
                 {
-                    mprf(MSGCH_PROMPT, "Cast which spell? (? or * to list) ");
+                    mprf(MSGCH_PROMPT, "%s", ui_translate("phase3.spl-cast", "Cast which spell? (? or * to list) "));
                 }
                 else
                 {
-                    mprf(MSGCH_PROMPT, "Casting: <w>%s</w> <lightgrey>(%s)</lightgrey>",
+                    const spell_type last = you.last_cast_spell;
+                    ui_translation_group group({
+                        {"log.cast", "Casting: <w>%s</w> <lightgrey>(%s)</lightgrey>"},
+                        {"display.spell", spell_title(last)},
+                        {"log.cast", "<%s>%s</%s>; <%s>%s</%s> risk of failure"},
+                        {"log.cast.severity", fail_severity_adjs[fail_severity(last)]}});
+                    if (group.available())
+                        mprf(MSGCH_PROMPT,
+                             group.get("log.cast", "Casting: <w>%s</w> <lightgrey>(%s)</lightgrey>"),
+                             group.get("display.spell", spell_title(last)),
+                             _spell_failure_rate_description(last, true).c_str());
+                    else
+                        mprf(MSGCH_PROMPT, "Casting: <w>%s</w> <lightgrey>(%s)</lightgrey>",
                                        spell_title(you.last_cast_spell),
                                        _spell_failure_rate_description(you.last_cast_spell).c_str());
-                    mprf(MSGCH_PROMPT, "Confirm with . or Enter, or press "
-                                       "? or * to list all spells.");
+                    mprf(MSGCH_PROMPT, "%s", ui_translate("log.spl-cast", "Confirm with . or Enter, or press "
+                                       "? or * to list all spells."));
                 }
 
                 keyin = numpad_to_regular(get_ch());
@@ -986,7 +1011,7 @@ spret cast_a_spell(bool check_range, spell_type spell, dist *_target,
         }
         else if (!isaalpha(keyin))
         {
-            mpr("You don't know that spell.");
+            mpr(ui_translate("phase3.spl-cast", "You don't know that spell."));
             crawl_state.zero_turns_taken();
             return spret::abort;
         }
@@ -996,7 +1021,7 @@ spret cast_a_spell(bool check_range, spell_type spell, dist *_target,
 
     if (spell == SPELL_NO_SPELL)
     {
-        mpr("You don't know that spell.");
+        mpr(ui_translate("phase3.spl-cast", "You don't know that spell."));
         crawl_state.zero_turns_taken();
         return spret::abort;
     }
@@ -1005,7 +1030,7 @@ spret cast_a_spell(bool check_range, spell_type spell, dist *_target,
     const auto reason = casting_uselessness_reason(spell, true);
     if (!reason.empty())
     {
-        mpr(reason);
+        mpr(ui_translate("s.reason", reason.c_str()));
         crawl_state.zero_turns_taken();
         return spret::abort;
     }
@@ -1014,8 +1039,8 @@ spret cast_a_spell(bool check_range, spell_type spell, dist *_target,
     {
         // Abort if there are no hostiles within range, but flash the range
         // markers for a short while.
-        mpr("You can't see any susceptible monsters within range! "
-            "(Use <w>Z</w> to cast anyway.)");
+        mpr(ui_translate("log.spl-cast", "You can't see any susceptible monsters within range! "
+            "(Use <w>Z</w> to cast anyway.)"));
 
         if ((Options.use_animations & UA_RANGE) && Options.darken_beyond_range)
         {
@@ -1031,8 +1056,7 @@ spret cast_a_spell(bool check_range, spell_type spell, dist *_target,
         && !crawl_state.disables[DIS_CONFIRMATIONS])
     {
         // None currently dock just piety, right?
-        if (!yesno("Casting this spell will place you under penance. "
-                   "Really cast?", true, 'n'))
+        if (!yesno(ui_translate("s.ui", "Casting this spell will place you under penance. Really cast?"), true, 'n'))
         {
             canned_msg(MSG_OK);
             crawl_state.zero_turns_taken();
@@ -1137,7 +1161,7 @@ static void _spellcasting_side_effects(spell_type spell, god_type god,
     {
         if (you.duration[DUR_SAP_MAGIC] && !fake_spell)
         {
-            mprf(MSGCH_WARN, "You lose access to your magic!");
+            mprf(MSGCH_WARN, "%s", ui_translate("log.spl-cast", "You lose access to your magic!"));
             you.increase_duration(DUR_NO_CAST, 3 + random2(3));
         }
 
@@ -1222,7 +1246,7 @@ static bool _spellcasting_aborted(spell_type spell, bool fake_spell)
 
     if (!msg.empty())
     {
-        mpr(msg);
+        mpr(ui_translate("s.reason", msg.c_str()));
         return true;
     }
 
@@ -1236,6 +1260,7 @@ static bool _spellcasting_aborted(spell_type spell, bool fake_spell)
                 continue;
 
             string prompt = "Really cast " + string(name) + "?";
+            prompt = ui_render("s.log", "Really cast %s?", prompt, {ui_text_arg("display.spell", name)});
             if (!yesno(prompt.c_str(), false, 'n'))
             {
                 canned_msg(MSG_OK);
@@ -1254,8 +1279,7 @@ static bool _spellcasting_aborted(spell_type spell, bool fake_spell)
     {
         if (failure_rate_to_int(raw_spell_fail(spell)) == 100)
         {
-            mprf(MSGCH_WARN, "It is impossible to cast this spell "
-                    "(100%% risk of failure)!");
+            mprf(MSGCH_WARN, "%s", make_stringf(ui_translate("s.ui", "It is impossible to cast this spell (100%% risk of failure)!")).c_str());
             return true;
         }
 
@@ -1266,6 +1290,7 @@ static bool _spellcasting_aborted(spell_type spell, bool fake_spell)
                                      severity > 1 ? "!" : ".");
 
         prompt = make_stringf("%s Continue anyway?", prompt.c_str());
+        prompt = ui_render("s.log", "The spell is %s to miscast (%s risk of failure)%s Continue anyway?", prompt, {s_clause_arg(fail_severity_adjs[severity]), ui_literal_arg(failure_rate), ui_literal_arg(severity > 1 ? "！" : "。")});
         if (!yesno(prompt.c_str(), false, 'n'))
         {
             canned_msg(MSG_OK);
@@ -1697,7 +1722,7 @@ static vector<string> _desc_hit_chance(const monster_info& mi, int acc)
     ostringstream result;
     describe_hit_chance(hit_pct, result, nullptr, false,
                         you.pos().distance_from(mi.pos));
-    return vector<string>{result.str()};
+    return vector<string>{target_description_render("s.target", "%s%% to hit%s", result.str(), {ui_literal_arg(to_string(hit_pct)), s_clause_arg(you.duration[DUR_BLIND] ? " at this distance" : "")})};
 }
 
 vector<string> desc_beam_hit_chance(const monster_info& mi, targeter* hitfunc)
@@ -1719,28 +1744,28 @@ static vector<string> _desc_plasma_hit_chance(const monster_info& mi, int powc)
     ostringstream result;
     describe_hit_chance(hit_pct, result, nullptr, false,
                         you.pos().distance_from(mi.pos));
-    return vector<string>{make_stringf("2x%s", result.str().c_str())};
+    return vector<string>{target_description_render("s.target", "2x%s%% to hit%s", make_stringf("2x%s", result.str().c_str()), {ui_literal_arg(to_string(hit_pct)), s_clause_arg(you.duration[DUR_BLIND] ? " at this distance" : "")})};
 }
 
 static vector<string> _desc_intoxicate_chance(const monster_info& mi,
                                               targeter* hitfunc, int pow)
 {
     if (hitfunc && !hitfunc->affects_monster(mi))
-        return vector<string>{"not susceptible"};
+        return vector<string>{target_description_text("s.target", "not susceptible")};
 
     int conf_pct = 40 + pow / 3;
 
     if (get_resist(mi.resists(), MR_RES_POISON) >= 1)
         conf_pct =  conf_pct / 3;
 
-    return vector<string>{make_stringf("chance to confuse: %d%%", conf_pct)};
+    return vector<string>{target_description_format("s.target", "chance to confuse: %d%%", conf_pct)};
 }
 
 static vector<string> _desc_englaciate_chance(const monster_info& mi,
                                               targeter* hitfunc, int pow)
 {
     if (hitfunc && !hitfunc->affects_monster(mi))
-        return vector<string>{"not susceptible"};
+        return vector<string>{target_description_text("s.target", "not susceptible")};
 
     const int outcomes = pow * pow * pow;
     const int target   = 3 * mi.hd - 2;
@@ -1763,21 +1788,21 @@ static vector<string> _desc_englaciate_chance(const monster_info& mi,
     else
         fail_pct = 100;
 
-    return vector<string>{make_stringf("chance to slow: %d%%", 100 - fail_pct)};
+    return vector<string>{target_description_format("s.target", "chance to slow: %d%%", 100 - fail_pct)};
 }
 
 static vector<string> _desc_gloom_chance(const monster_info& mi, int pow)
 {
     if (mons_res_blind(mi.type))
-        return vector<string>{"not susceptible"};
+        return vector<string>{target_description_text("s.target", "not susceptible")};
 
-    return vector<string>{make_stringf("chance to blind: %d%%", gloom_success_chance(pow, mi.hd))};
+    return vector<string>{target_description_format("s.target", "chance to blind: %d%%", gloom_success_chance(pow, mi.hd))};
 }
 
 static vector<string> _desc_airstrike_bonus(const monster_info& mi)
 {
     const int empty_spaces = airstrike_space_around(mi.pos, false);
-    return vector<string>{make_stringf("empty space bonus: %d/8", empty_spaces)};
+    return vector<string>{target_description_format("s.target", "empty space bonus: %d/8", empty_spaces)};
 }
 
 static vector<string> _desc_mercury_weak_chance(const monster_info& mi)
@@ -1785,25 +1810,25 @@ static vector<string> _desc_mercury_weak_chance(const monster_info& mi)
     if (mi.is(MB_NO_ATTACKS))
         return vector<string>{};
 
-    return vector<string>{make_stringf("chance to weaken: %d%%",
+    return vector<string>{target_description_format("s.target", "chance to weaken: %d%%",
                             get_mercury_weaken_chance(mi.hd))};
 }
 
 static vector<string> _desc_warp_space_chance(int pow)
 {
-    return vector<string>{make_stringf("chance to blink: %d%%",
+    return vector<string>{target_description_format("s.target", "chance to blink: %d%%",
                             get_warp_space_chance(pow))};
 }
 
 static vector<string> _desc_meph_chance(const monster_info& mi)
 {
     if (get_resist(mi.resists(), MR_RES_POISON) >= 1 || mi.is(MB_CLARITY))
-        return vector<string>{"not susceptible"};
+        return vector<string>{target_description_text("s.target", "not susceptible")};
 
     int pct_chance = 2;
     if (mi.hd < MEPH_HD_CAP)
         pct_chance = 100 - (100 * mi.hd / MEPH_HD_CAP);
-    return vector<string>{make_stringf("chance to affect: %d%%", pct_chance)};
+    return vector<string>{target_description_format("s.target", "chance to affect: %d%%", pct_chance)};
 }
 
 static vector<string> _desc_hailstorm_hit_chance(const monster_info& mi, int pow)
@@ -1829,15 +1854,16 @@ static vector<string> _desc_electric_charge_hit_chance(const monster_info& mi)
     ostringstream result;
     // Pass in our own attack and specify distance 1 so we get correct to-hit
     // for where the attack *will* be from
-    describe_to_hit(mi, result, nullptr, false, &attk, 1);
-    desc.emplace_back(result.str());
+    string display;
+    describe_to_hit(mi, result, nullptr, false, &attk, 1, &display);
+    desc.emplace_back(target_description_text(result.str(), {display, !display.empty()}));
     return desc;
 }
 
 static vector<string> _desc_insubstantial(const monster_info& mi, string desc)
 {
     if (mons_class_flag(mi.type, M_INSUBSTANTIAL))
-        return vector<string>{desc};
+        return vector<string>{target_description_text("s.target", desc.c_str())};
 
     return vector<string>{};
 }
@@ -1845,7 +1871,7 @@ static vector<string> _desc_insubstantial(const monster_info& mi, string desc)
 static vector<string> _desc_vampiric_draining_valid(const monster_info& mi)
 {
     if (mi.mb.get(MB_CANT_DRAIN))
-        return vector<string>{"not susceptible"};
+        return vector<string>{target_description_text("s.target", "not susceptible")};
 
     return vector<string>{};
 }
@@ -1853,9 +1879,9 @@ static vector<string> _desc_vampiric_draining_valid(const monster_info& mi)
 static vector<string> _desc_rimeblight_valid(const monster_info& mi)
 {
     if (mi.is(MB_RIMEBLIGHT))
-        return vector<string>{"already infected"};
+        return vector<string>{target_description_text("s.target", "already infected")};
     else if (mons_class_is_peripheral(mi.type))
-        return vector<string>{"not susceptible"};
+        return vector<string>{target_description_text("s.target", "not susceptible")};
 
     return vector<string>{};
 }
@@ -1864,13 +1890,13 @@ static vector<string> _desc_dispersal_chance(const monster_info& mi, int pow)
 {
     const int wl = mi.willpower();
     if (mons_class_is_stationary(mi.type))
-        return vector<string>{"stationary"};
+        return vector<string>{target_description_text("s.target", "stationary")};
 
     if (wl == WILL_INVULN)
-        return vector<string>{"will blink"};
+        return vector<string>{target_description_text("s.target", "will blink")};
 
     const int success = hex_success_chance(wl, pow, 100);
-    return vector<string>{make_stringf("chance to teleport: %d%%", success)};
+    return vector<string>{target_description_format("s.target", "chance to teleport: %d%%", success)};
 }
 
 static vector<string> _desc_enfeeble_chance(const monster_info& mi, int pow)
@@ -1885,22 +1911,24 @@ static vector<string> _desc_enfeeble_chance(const monster_info& mi, int pow)
         base_effects.push_back("diminish spells");
     if (!base_effects.empty())
     {
-        all_effects.push_back("will " +
-            comma_separated_line(base_effects.begin(), base_effects.end()));
+        const string original = "will " + comma_separated_line(base_effects.begin(), base_effects.end());
+        const char *source = base_effects.size() == 2 ? "will inflict weakness, and diminish spells"
+            : !mi.is(MB_NO_ATTACKS) ? "will inflict weakness" : "will diminish spells";
+        all_effects.push_back(target_description_render("s.target", source, original, {}));
     }
     if (wl != WILL_INVULN)
     {
         const int success = hex_success_chance(wl, pow, 100);
-        all_effects.push_back(make_stringf("chance to daze and blind: %d%%", success));
+        all_effects.push_back(target_description_format("s.target", "chance to daze and blind: %d%%", success));
     }
 
     if (all_effects.empty())
-        return vector<string>{"not susceptible"};
+        return vector<string>{target_description_text("s.target", "not susceptible")};
 
     return all_effects;
 }
 
-static string _mon_threat_string(const CrawlStoreValue &mon_store)
+static string _mon_threat_string(const CrawlStoreValue &mon_store, ui_arg *display)
 {
     monster dummy;
     dummy.type = static_cast<monster_type>(mon_store.get_int());
@@ -1908,7 +1936,8 @@ static string _mon_threat_string(const CrawlStoreValue &mon_store)
 
     int col;
     string desc;
-    monster_info(&dummy).to_string(1, desc, col, true, nullptr, false);
+    monster_info information(&dummy);
+    information.to_string(1, desc, col, true, nullptr, false, false);
 
     // Ghost demons need their underlying monster name. Without this,
     // we'll get e.g. a specific ugly thing colour based on what the
@@ -1919,6 +1948,15 @@ static string _mon_threat_string(const CrawlStoreValue &mon_store)
 
     const string col_name = colour_to_str(col);
 
+    if (display)
+    {
+        ui_arg name;
+        if (mons_is_ghost_demon(dummy.type))
+            name = ui_text_arg("display.monster", get_monster_data(dummy.type)->name);
+        else
+            name.available = monster_info(&dummy, MILEV_NAME).try_display_name(name.text);
+        *display = {"<" + col_name + ">" + name.text + "</" + col_name + ">", name.available};
+    }
     return "<" + col_name + ">" + article_a(desc) + "</" + col_name + ">";
 }
 
@@ -1929,9 +1967,9 @@ vector<string> desc_wl_success_chance(const monster_info& mi, int pow,
     targeter_beam* beam_hitf = dynamic_cast<targeter_beam*>(hitfunc);
     int wl = mi.willpower();
     if (wl == WILL_INVULN)
-        return vector<string>{"infinite will"};
+        return vector<string>{target_description_text("s.target", "infinite will")};
     if (hitfunc && !hitfunc->affects_monster(mi))
-        return vector<string>{"not susceptible"};
+        return vector<string>{target_description_text("s.target", "not susceptible")};
     wl = apply_willpower_bypass(you, wl);
     vector<string> descs;
     if (beam_hitf && beam_hitf->beam.flavour == BEAM_POLYMORPH)
@@ -1939,25 +1977,34 @@ vector<string> desc_wl_success_chance(const monster_info& mi, int pow,
         // Polymorph has a special effect on ugly things and shapeshifters that
         // does not require passing an WL check.
         if (mi.type == MONS_UGLY_THING || mi.type == MONS_VERY_UGLY_THING)
-            return vector<string>{"will change colour"};
+            return vector<string>{target_description_text("s.target", "will change colour")};
         if (mi.is(MB_SHAPESHIFTER))
-            return vector<string>{"will change shape"};
+            return vector<string>{target_description_text("s.target", "will change shape")};
         if (mi.type == MONS_SLIME_CREATURE && mi.slime_size > 1)
-            descs.push_back("will probably split");
+            descs.push_back(target_description_text("s.target", "will probably split"));
 
         // list out the normal poly set
         if (!mi.props.exists(POLY_SET_KEY))
-            return vector<string>{"not susceptible"};
+            return vector<string>{target_description_text("s.target", "not susceptible")};
         const CrawlVector &set = mi.props[POLY_SET_KEY].get_vector();
         if (set.size() <= 0)
-            return vector<string>{"not susceptible"};
-        descs.push_back("will become "
-                        + comma_separated_fn(set.begin(), set.end(),
-                                             _mon_threat_string, ", or "));
+            return vector<string>{target_description_text("s.target", "not susceptible")};
+        ui_arg names{"", true};
+        const string original_names = comma_separated_fn(set.begin(), set.end(),
+            [&](const CrawlStoreValue &value)
+            {
+                ui_arg shown;
+                const string canonical = _mon_threat_string(value, &shown);
+                names.available = names.available && shown.available;
+                if (!names.text.empty()) names.text += "，或";
+                names.text += shown.text;
+                return canonical;
+            }, ", or ");
+        descs.push_back(target_description_render("s.target", "will become %s", "will become " + original_names, {names}));
     }
 
     const int success = hex_success_chance(wl, pow, 100);
-    descs.push_back(make_stringf("chance to affect: %d%%", success));
+    descs.push_back(target_description_format("s.target", "chance to affect: %d%%", success));
 
     return descs;
 }
@@ -1965,7 +2012,7 @@ vector<string> desc_wl_success_chance(const monster_info& mi, int pow,
 static vector<string> _desc_beckoning_valid(const monster_info& mi)
 {
     if (!can_beckon(mi))
-        return vector<string>{"not susceptible"};
+        return vector<string>{target_description_text("s.target", "not susceptible")};
 
     return vector<string>{};
 }
@@ -1986,7 +2033,7 @@ public:
 
     string get_error() override
     {
-        return err;
+        return ui_translate("s.reason", err.c_str());
     }
 
     // TODO: provide useful errors for specific targets via get_monster_desc?
@@ -2228,6 +2275,27 @@ spret your_spells(spell_type spell, int powc, bool actual_spell,
                                   GRAVE_CLAW_MAX_CHARGES);
         }
 
+        ui_arg failure{"", true};
+        if (actual_spell)
+        {
+            ui_translation_group rate({{"log.cast", "<%s>%s</%s>; <%s>%s</%s> risk of failure"},
+                {"log.cast.severity", fail_severity_adjs[fail_severity(spell)]},
+                {"s.aim", " <lightgrey>(%s)</lightgrey>"}});
+            failure.available = rate.available();
+            failure.text = rate.available() ? ui_render("s.aim", " <lightgrey>(%s)</lightgrey>", "",
+                {ui_literal_arg(_spell_failure_rate_description(spell, true))}) : "";
+        }
+        ui_arg charges{"", true};
+        if (spell == SPELL_GRAVE_CLAW)
+        {
+            charges.text = ui_render("s.aim", "<lightgrey> (%s/%s uses available)</lightgrey>", "",
+                {ui_literal_arg(to_string(you.props[GRAVE_CLAW_CHARGES_KEY].get_int())),
+                 ui_literal_arg(to_string(GRAVE_CLAW_MAX_CHARGES))});
+            charges.available = !charges.text.empty();
+        }
+        title = ui_render("s.aim", "%s: <%s>%s</%s>%s%s", title,
+            {ui_text_arg("s.aim.verb", verb), ui_literal_arg(spell_title_color),
+             ui_text_arg("display.spell", spell_title(spell)), ui_literal_arg(spell_title_color), failure, charges});
         spell_targeting_behaviour beh(spell);
 
         direction_chooser_args args;
@@ -2236,7 +2304,7 @@ spret your_spells(spell_type spell, int powc, bool actual_spell,
         args.mode = targ;
         args.range = range;
         args.needs_path = needs_path;
-        args.target_prefix = prompt;
+        args.target_prefix = prompt; // translate together with the target description
         args.top_prompt = title;
         args.behaviour = &beh;
 
@@ -2270,7 +2338,7 @@ spret your_spells(spell_type spell, int powc, bool actual_spell,
         if (testbits(flags, spflag::not_self) && target->isMe())
         {
             if (spell == SPELL_TELEPORT_OTHER)
-                mpr("Sorry, this spell works on others only.");
+                mpr(ui_translate("log.spl-cast", "Sorry, this spell works on others only."));
             else
                 canned_msg(MSG_UNTHINKING_ACT);
 
@@ -2302,7 +2370,7 @@ spret your_spells(spell_type spell, int powc, bool actual_spell,
         if (!you_worship(GOD_SIF_MUNA)
             && you.penance[GOD_SIF_MUNA] && one_chance_in(20))
         {
-            god_speaks(GOD_SIF_MUNA, "You feel a surge of divine spite.");
+            god_speaks(GOD_SIF_MUNA, ui_translate("s.ui", "You feel a surge of divine spite."));
 
             // This will cause failure and increase the miscast effect.
             spfl = -you.penance[GOD_SIF_MUNA];
@@ -2402,7 +2470,13 @@ spret your_spells(spell_type spell, int powc, bool actual_spell,
     {
         if (actual_spell)
         {
-            mprf("You miscast %s.", spell_title(spell));
+            ui_translation_group group({{"log.cast", "You miscast %s."},
+                                        {"display.spell", spell_title(spell)}});
+            if (group.available())
+                mprf(group.get("log.cast", "You miscast %s."),
+                     group.get("display.spell", spell_title(spell)));
+            else
+                mprf("%s", ui_render("s.log", "You miscast %s.", make_stringf("You miscast %s.", spell_title(spell)), {ui_text_arg("display.spell", spell_title(spell))}).c_str());
             flush_input_buffer(FLUSH_ON_FAILURE);
             learned_something_new(HINT_SPELL_MISCAST);
             miscast_effect(spell, fail);
@@ -2823,7 +2897,7 @@ static spret _do_cast(spell_type spell, int powc, const dist& spd,
         };
 
         if (!fail)
-            mpr(breath_message[spell].c_str());
+            mpr(ui_translate("s.breath", breath_message[spell].c_str()));
     }
     break;
 
@@ -2848,7 +2922,7 @@ static spret _do_cast(spell_type spell, int powc, const dist& spd,
     default:
         if (spell_removed(spell))
         {
-            mprf("Sorry, the spell '%s' is gone!", spell_title(spell));
+            mprf("%s", ui_render("s.log", "Sorry, the spell '%s' is gone!", make_stringf("Sorry, the spell '%s' is gone!", spell_title(spell)), {ui_text_arg("display.spell", spell_title(spell))}).c_str());
             return spret::abort;
         }
         break;
@@ -3034,12 +3108,20 @@ string spell_failure_rate_string(spell_type spell, bool terse)
     }
 }
 
-static string _spell_failure_rate_description(spell_type spell)
+static string _spell_failure_rate_description(spell_type spell, bool translated)
 {
     const string failure = failure_rate_to_string(raw_spell_fail(spell));
     const char *severity_adj = fail_severity_adjs[fail_severity(spell)];
     const string colour = colour_to_str(failure_rate_colour(spell));
     const char *col = colour.c_str();
+
+    ui_translation_group group({
+        {"log.cast", "<%s>%s</%s>; <%s>%s</%s> risk of failure"},
+        {"log.cast.severity", severity_adj}});
+    if (translated && group.available())
+        return make_stringf(group.get("log.cast", "<%s>%s</%s>; <%s>%s</%s> risk of failure"),
+                            col, group.get("log.cast.severity", severity_adj), col,
+                            col, failure.c_str(), col);
 
     return make_stringf("<%s>%s</%s>; <%s>%s</%s> risk of failure",
             col, severity_adj, col, col, failure.c_str(), col);
@@ -3396,7 +3478,7 @@ void do_demonic_magic(int pow, int rank)
     if (rank < 1)
         return;
 
-    mpr("Malevolent energies surge around you.");
+    mpr(ui_translate("log.spl-cast", "Malevolent energies surge around you."));
 
     for (radius_iterator ri(you.pos(), rank, C_SQUARE, LOS_NO_TRANS, true); ri; ++ri)
     {
@@ -3428,6 +3510,7 @@ void start_channelling_spell(spell_type spell, string reminder_msg, bool do_effe
     if (!reminder_msg.empty())
     {
         string msg = "(Press <w>%</w> to " + reminder_msg + ".)";
+        msg = ui_translate("s.channel.reminder", msg.c_str());
         insert_commands(msg, { CMD_WAIT });
         mpr(msg);
     }
@@ -3461,8 +3544,7 @@ void handle_channelled_spell()
     if ((spell == SPELL_FLAME_WAVE || spell == SPELL_SEARING_RAY)
         && turn > 1 && !enough_mp(1, true))
     {
-        mprf("Without enough magic to sustain it, your %s dissipates.",
-             spell_title(spell));
+        mprf("%s", ui_render("s.log", "Without enough magic to sustain it, your %s dissipates.", make_stringf("Without enough magic to sustain it, your %s dissipates.", spell_title(spell)), {ui_text_arg("display.spell", spell_title(spell))}).c_str());
         stop_channelling_spells(true);
         return;
     }
@@ -3503,19 +3585,19 @@ void stop_channelling_spells(bool quiet)
     switch (spell)
     {
         case SPELL_FLAME_WAVE:
-            mpr("You stop channelling waves of flame.");
+            mpr(ui_translate("log.spl-cast", "You stop channelling waves of flame."));
             break;
 
         case SPELL_SEARING_RAY:
-            mpr("You stop channelling your searing ray.");
+            mpr(ui_translate("log.spl-cast", "You stop channelling your searing ray."));
             break;
 
         case SPELL_MAXWELLS_COUPLING:
-            mpr("The insufficient charge dissipates harmlessly.");
+            mpr(ui_translate("log.spl-cast", "The insufficient charge dissipates harmlessly."));
             break;
 
         case SPELL_CLOCKWORK_BEE:
-            mpr("You stop assembling your clockwork bee.");
+            mpr(ui_translate("log.spl-cast", "You stop assembling your clockwork bee."));
             break;
 
         default:
@@ -3535,7 +3617,7 @@ bool warn_about_contam_cost(int max_contam)
     const int mul = you.has_mutation(MUT_CONTAMINATION_SUSCEPTIBLE) ? 2 : 1;
 
     if (you.magic_contamination + (max_contam * mul) >= 1000)
-        return !yesno("Casting this now could dangerously contaminate you. Continue?", true, 'n');
+        return !yesno(ui_translate("s.ui", "Casting this now could dangerously contaminate you. Continue?"), true, 'n');
 
     return false;
 }

@@ -10,6 +10,7 @@
 #include "stash.h"
 
 void overview_clear();
+string annotation_branch_choice(branch_type branch);
 
 void seen_notable_thing(dungeon_feature_type which_thing, const coord_def& pos);
 bool move_notable_thing(const coord_def& orig, const coord_def& dest);
@@ -33,7 +34,7 @@ void remove_unique_annotation(monster* mons);
 
 string get_level_annotation(level_id li = level_id::current(),
                             bool skip_excl = false, bool skip_uniq = false,
-                            bool use_colour = false, int colour = LIGHTRED);
+                            bool use_colour = false, int colour = LIGHTRED, bool display = false);
 
 bool level_annotation_has(string str, level_id li = level_id::current());
 

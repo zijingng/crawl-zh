@@ -1,0 +1,1315 @@
+{
+  "glossary_sha256": "5b0e7563973cc4449b02977ed1d7b4cfb7f9aa33877063cff3f665c99ff50965",
+  "files": [
+    {
+      "file": "wcwidth.cc",
+      "sha256": "1203147019fa3c697388f59a30ad9b1d5cc5a4544affb55e13a3e1301eba9307",
+      "hits": [
+        {
+          "term": "AC",
+          "translation": "护甲值",
+          "note": "【0.34.1 修订】与 Armour（防具技能/防具）区分；缩写在 HUD 可保留 AC。 来源：dat/descript/skills.txt。"
+        },
+        {
+          "term": "character",
+          "translation": "角色/字符/性格",
+          "note": "【语境补充 2026-10-21】玩家或游戏人物用角色。键位、文本编码用字符。人物性情用性格。"
+        },
+        {
+          "term": "max",
+          "translation": "最大值",
+          "note": "【0.34.1 修订】通用上限词，不限于 HP/MP；reserves 表储备，不是 maximum 同义词。 来源：player.cc。"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会",
+          "note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        }
+      ]
+    },
+    {
+      "file": "windowmanager-sdl.cc",
+      "sha256": "5360ebcfbfad95f1617eaedde31e602fe4b348ba55d0ef8af92f70fb6f628260",
+      "hits": [
+        {
+          "term": "max",
+          "translation": "最大值",
+          "note": "【0.34.1 修订】通用上限词，不限于 HP/MP；reserves 表储备，不是 maximum 同义词。 来源：player.cc。"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格",
+          "note": "【语境补充 2026-10-21】与 Console 对举的客户端模式用图形版。资源图像用图块。地图位置的 tiles 用方格。条件标签保留英文。"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流",
+          "note": "【版本/语境】回合/动作叙述用语；不是固定时间单位 aut，动作耗时可不同。 来源：player-act.cc。\n【语境补充 2026-10-21】时间单位用回合。动词及 in turn、turn into 等短语按句意选择转向、变成、轮流等译法。"
+        },
+        {
+          "term": "weird",
+          "translation": "奇怪的",
+          "note": ""
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会",
+          "note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        }
+      ]
+    },
+    {
+      "file": "windowmanager-sdl.h",
+      "sha256": "a7f1ee8b275325c31995013dc4c736f3893ff027ac79f846bc48bad057b8ea74",
+      "hits": []
+    },
+    {
+      "file": "windowmanager.h",
+      "sha256": "e047290cb0fe47ace8b2ee2349b5b5246ef9f361fbfc47f910a4e70a0c67f74c",
+      "hits": [
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格",
+          "note": "【语境补充 2026-10-21】与 Console 对举的客户端模式用图形版。资源图像用图块。地图位置的 tiles 用方格。条件标签保留英文。"
+        },
+        {
+          "term": "silence",
+          "translation": "沉默",
+          "note": "【0.34.1 补充/状态】与噪音属性区分。 来源：duration-data.h。\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "file": "wiz-dgn.cc",
+      "sha256": "d9b026b107d09535c7f3e6214a2f9544179713c92cbf7389168abe412a661c07",
+      "hits": [
+        {
+          "term": "ability",
+          "translation": "能力",
+          "note": "【0.34.1 修订】与 skill（技能）区分；包括神赐、种族及其他主动能力。 来源：ability.cc。"
+        },
+        {
+          "term": "Abyss",
+          "translation": "深渊",
+          "note": ""
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城",
+          "note": ""
+        },
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开",
+          "note": "【0.34.1 修订】名词用出口；命令动词用退出，按上下文处理，不把两者拼成一条输出。 来源：feature-data.h。\n【语境补充 2026-10-21】地点或设施用出口。菜单命令用退出。离开区域的动作用离开。"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整",
+          "note": "【语境补充 2026-10-21】物理表面按语境用地面或地板。地下城深度用楼层。math.floor 为向下取整函数，代码标识符保留英文。"
+        },
+        {
+          "term": "gate",
+          "translation": "门",
+          "note": ""
+        },
+        {
+          "term": "god",
+          "translation": "神",
+          "note": ""
+        },
+        {
+          "term": "Pandemonium",
+          "translation": "魔窟",
+          "note": ""
+        },
+        {
+          "term": "shop",
+          "translation": "商店",
+          "note": ""
+        },
+        {
+          "term": "Temple",
+          "translation": "众神殿/神庙/庙宇",
+          "note": "【语境补充 2026-10-21】分支简称用众神殿。泛指某位神祇的建筑用神庙或庙宇。"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格",
+          "note": "【语境补充 2026-10-21】与 Console 对举的客户端模式用图形版。资源图像用图块。地图位置的 tiles 用方格。条件标签保留英文。"
+        },
+        {
+          "term": "Vaults",
+          "translation": "宝库/密室/跃起",
+          "note": "【语境补充 2026-10-21】分支专名用宝库。地图 vaults 用密室。vaults off a wall 作动词表示蹬墙跃起。"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师",
+          "note": ""
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术或能力标题保留强力术。情态动词 might 表示可能。名词 might 表示力量或威力。"
+        },
+        {
+          "term": "the Abyss",
+          "translation": "深渊",
+          "note": "【0.34.1 分支名称】来源：branch-data.h；Abyss（规范缩写 Abyss）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "term": "player",
+          "translation": "玩家",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "speed",
+          "translation": "快速",
+          "note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：快速。"
+        }
+      ]
+    },
+    {
+      "file": "wiz-dgn.h",
+      "sha256": "ef8752de9bc5479c45414ab8d8bb13676cf6993ddb917e20434d55f1bfca5dda",
+      "hits": [
+        {
+          "term": "dungeon",
+          "translation": "地下城",
+          "note": ""
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师",
+          "note": ""
+        },
+        {
+          "term": "player",
+          "translation": "玩家",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "file": "wiz-dump.cc",
+      "sha256": "222745b8230a467c746ed8f00b7087497216828ae10871bac0324b28334ce9eb",
+      "hits": [
+        {
+          "term": "AC",
+          "translation": "护甲值",
+          "note": "【0.34.1 修订】与 Armour（防具技能/防具）区分；缩写在 HUD 可保留 AC。 来源：dat/descript/skills.txt。"
+        },
+        {
+          "term": "artefact",
+          "translation": "神器",
+          "note": ""
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印",
+          "note": "【0.34.1 修订】武器特殊效果类别；不等同附魔数值。旧备注列举的来源并非当前版本的完整有效清单。 来源：dat/descript/egos.txt。\n【版本/语境】完整印记名需按当前 egos 和物品名称核对，不能机械把所有品牌字义用于武器。 来源：dat/descript/egos.txt。\n【语境补充 2026-10-21】武器魔法属性统一用印记。烙在实体上的标记或动作按语境用烙印。"
+        },
+        {
+          "term": "character",
+          "translation": "角色/字符/性格",
+          "note": "【语境补充 2026-10-21】玩家或游戏人物用角色。键位、文本编码用字符。人物性情用性格。"
+        },
+        {
+          "term": "Cheibriados",
+          "translation": "切布理亚多",
+          "note": "审慎之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "term": "Dodging",
+          "translation": "闪避",
+          "note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城",
+          "note": ""
+        },
+        {
+          "term": "god",
+          "translation": "神",
+          "note": ""
+        },
+        {
+          "term": "randart",
+          "translation": "随机神器",
+          "note": ""
+        },
+        {
+          "term": "rC",
+          "translation": "冰抗",
+          "note": "【0.34.1 修订】属性是 cold resistance；与火抗成对，HUD 保留 rC。 来源：player.cc。"
+        },
+        {
+          "term": "rF",
+          "translation": "火抗",
+          "note": "【0.34.1 修订】HUD 可保留 rF。 来源：player.cc。"
+        },
+        {
+          "term": "rPois",
+          "translation": "毒抗",
+          "note": "【0.34.1 修订】首选译法统一；HUD 可保留 rPois，不在正式显示中列多个候选。 来源：player.cc。"
+        },
+        {
+          "term": "SInv",
+          "translation": "看破隐形",
+          "note": "【0.34.1 修订】与 ring of see invisible 统一；不表示驱散隐形。 来源：player.cc。"
+        },
+        {
+          "term": "skill",
+          "translation": "技能",
+          "note": ""
+        },
+        {
+          "term": "species",
+          "translation": "种族",
+          "note": ""
+        },
+        {
+          "term": "stats",
+          "translation": "属性",
+          "note": "Str，Int，Dex，AC，EV，SH，HP，MP"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师",
+          "note": ""
+        },
+        {
+          "term": "SH",
+          "translation": "格挡值",
+          "note": "【0.34.1 补充/属性】与 Shields（盾牌技能）、shield（盾牌物品）区分。 来源：player.cc。"
+        },
+        {
+          "term": "rN",
+          "translation": "负能量抗性",
+          "note": "【0.34.1 补充/HUD缩写】区别生命恢复和吸能状态。 来源：player.cc。"
+        },
+        {
+          "term": "rElec",
+          "translation": "电抗",
+          "note": "【0.34.1 补充/HUD缩写】闪电/电击抗性。 来源：player.cc。"
+        },
+        {
+          "term": "rCorr",
+          "translation": "腐蚀抗性",
+          "note": "【0.34.1 补充/HUD缩写】区分酸伤害及腐蚀状态的具体规则。 来源：player.cc。"
+        },
+        {
+          "term": "piety",
+          "translation": "虔诚",
+          "note": "【0.34.1 补充/神祇机制】神祇资源，不等同经验值。 来源：religion.cc。"
+        },
+        {
+          "term": "player",
+          "translation": "玩家",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "faith",
+          "translation": "信仰",
+          "note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：信仰。"
+        }
+      ]
+    },
+    {
+      "file": "wiz-dump.h",
+      "sha256": "eb3c5446cc3a8a96bb258d19b32b8db970b3493624c9b632f9d17cb99de3ee71",
+      "hits": [
+        {
+          "term": "character",
+          "translation": "角色/字符/性格",
+          "note": "【语境补充 2026-10-21】玩家或游戏人物用角色。键位、文本编码用字符。人物性情用性格。"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "file": "wiz-fsim.cc",
+      "sha256": "17981e14778f3ffe3ef0a8fcb98434c736fda77e89a9d5e3b5db92b2d4df8309",
+      "hits": [
+        {
+          "term": "AC",
+          "translation": "护甲值",
+          "note": "【0.34.1 修订】与 Armour（防具技能/防具）区分；缩写在 HUD 可保留 AC。 来源：dat/descript/skills.txt。"
+        },
+        {
+          "term": "accuracy",
+          "translation": "命中率",
+          "note": ""
+        },
+        {
+          "term": "evasion",
+          "translation": "闪避值",
+          "note": "【0.34.1 修订】属性 EV；与 Dodging（闪避技能）区分。 来源：dat/descript/skills.txt。"
+        },
+        {
+          "term": "Fighting",
+          "translation": "战斗/作战/格斗",
+          "note": "【0.34.1 修订】物理战斗通用技能，亦增加生命上限；与 Unarmed Combat（徒手格斗）区分。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。\n【语境补充 2026-10-21】技能标签固定用战斗。普通动作按句意用作战或格斗。"
+        },
+        {
+          "term": "skill",
+          "translation": "技能",
+          "note": ""
+        },
+        {
+          "term": "species",
+          "translation": "种族",
+          "note": ""
+        },
+        {
+          "term": "Strength",
+          "translation": "力量/强度/威力",
+          "note": "三大基础属性之一\n【语境补充 2026-10-21】Str 属性用力量。法术、效果或攻击的 strength 按语境用强度或威力。"
+        },
+        {
+          "term": "throw",
+          "translation": "投掷",
+          "note": "【0.34.1 修订】本条是动作动词；独立补充 Throwing 技能，不把普通 throwing 自动视为技能名。 来源：skills.cc。\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "term": "weird",
+          "translation": "奇怪的",
+          "note": ""
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师",
+          "note": ""
+        },
+        {
+          "term": "Throwing",
+          "translation": "投掷",
+          "note": "【0.34.1 补充/现行技能】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/descript/skills.txt。"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会",
+          "note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "term": "Roll",
+          "translation": "翻滚",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "term": "Melee",
+          "translation": "近战",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "term": "Arena",
+          "translation": "奥格瓦如竞技场/竞技场",
+          "note": "【0.34.1 分支名称】来源：branch-data.h；Arena（规范缩写 Arena）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。\n【语境补充 2026-10-21】奥格瓦如的分支用奥格瓦如竞技场。怪物模拟模式或一般场地用竞技场。Gauntlet 依其完整专名。"
+        },
+        {
+          "term": "the Arena",
+          "translation": "奥格瓦如竞技场/竞技场",
+          "note": "【0.34.1 分支名称】来源：branch-data.h；Arena（规范缩写 Arena）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。\n【语境补充 2026-10-21】奥格瓦如的分支用奥格瓦如竞技场。怪物模拟模式或泛指场地用竞技场。"
+        },
+        {
+          "term": "player",
+          "translation": "玩家",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "speed",
+          "translation": "快速",
+          "note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：快速。"
+        }
+      ]
+    },
+    {
+      "file": "wiz-fsim.h",
+      "sha256": "7b4a7512c310cfefb4e1b55f641b0afcad8128dbacf2fbb043c22d67f2e60e25",
+      "hits": [
+        {
+          "term": "accuracy",
+          "translation": "命中率",
+          "note": ""
+        },
+        {
+          "term": "stats",
+          "translation": "属性",
+          "note": "Str，Int，Dex，AC，EV，SH，HP，MP"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师",
+          "note": ""
+        },
+        {
+          "term": "player",
+          "translation": "玩家",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "file": "wiz-item.cc",
+      "sha256": "075e9726b01570d9fc563f7036f14a27778f02632b7039c2994d57a70127c5c8",
+      "hits": [
+        {
+          "term": "animate",
+          "translation": "活化/活的",
+          "note": "【0.34.1 修订】单一首选译法；动词按宾语可用“赋予生命”，不将多个候选一起显示。 来源：dat/descript/spells.txt。\n【语境补充 2026-10-21】赋予生命的动作用活化。animate flames 等形容词表示活的或活焰。完整 Animate 系法术名优先。"
+        },
+        {
+          "term": "Armour",
+          "translation": "防具/护身",
+          "note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "term": "artefact",
+          "translation": "神器",
+          "note": ""
+        },
+        {
+          "term": "background",
+          "translation": "背景",
+          "note": "【0.34.1 修订】角色创建的起始背景，不是固定职业成长系统。 来源：dat/jobs/*.yaml。"
+        },
+        {
+          "term": "book",
+          "translation": "魔法书/书/手册",
+          "note": "【使用约束】book of 是组合前缀，不是完整法术书名；不得把所有 book 都补成魔法书。\n【语境补充 2026-10-21】含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印",
+          "note": "【0.34.1 修订】武器特殊效果类别；不等同附魔数值。旧备注列举的来源并非当前版本的完整有效清单。 来源：dat/descript/egos.txt。\n【版本/语境】完整印记名需按当前 egos 和物品名称核对，不能机械把所有品牌字义用于武器。 来源：dat/descript/egos.txt。\n【语境补充 2026-10-21】武器魔法属性统一用印记。烙在实体上的标记或动作按语境用烙印。"
+        },
+        {
+          "term": "corpse",
+          "translation": "尸体",
+          "note": ""
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城",
+          "note": ""
+        },
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开",
+          "note": "【0.34.1 修订】名词用出口；命令动词用退出，按上下文处理，不把两者拼成一条输出。 来源：feature-data.h。\n【语境补充 2026-10-21】地点或设施用出口。菜单命令用退出。离开区域的动作用离开。"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整",
+          "note": "【语境补充 2026-10-21】物理表面按语境用地面或地板。地下城深度用楼层。math.floor 为向下取整函数，代码标识符保留英文。"
+        },
+        {
+          "term": "Geryon",
+          "translation": "革律翁",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "god",
+          "translation": "神",
+          "note": ""
+        },
+        {
+          "term": "horn of Geryon",
+          "translation": "革律翁号角",
+          "note": ""
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏",
+          "note": ""
+        },
+        {
+          "term": "max",
+          "translation": "最大值",
+          "note": "【0.34.1 修订】通用上限词，不限于 HP/MP；reserves 表储备，不是 maximum 同义词。 来源：player.cc。"
+        },
+        {
+          "term": "Orb of Zot",
+          "translation": "佐特宝珠",
+          "note": "你玩这游戏的原因，MacGuffin"
+        },
+        {
+          "term": "randart",
+          "translation": "随机神器",
+          "note": ""
+        },
+        {
+          "term": "school",
+          "translation": "魔法学派/流派",
+          "note": "【版本/语境】魔法学派泛称；具体技能名称使用独立术语。 来源：dat/descript/skills.txt。\n【语境补充 2026-10-21】法术分类用魔法学派，也可在连续说明中简称流派。"
+        },
+        {
+          "term": "shop",
+          "translation": "商店",
+          "note": ""
+        },
+        {
+          "term": "skill",
+          "translation": "技能",
+          "note": ""
+        },
+        {
+          "term": "species",
+          "translation": "种族",
+          "note": ""
+        },
+        {
+          "term": "spell",
+          "translation": "法术",
+          "note": ""
+        },
+        {
+          "term": "staff",
+          "translation": "法杖/工作人员",
+          "note": "【使用约束】魔法装备上下文使用法杖，普通木棍和 Staves 技能要分开处理。\n【语境补充 2026-10-21】武器用法杖。maintenance staff 等人员集合用工作人员。"
+        },
+        {
+          "term": "stats",
+          "translation": "属性",
+          "note": "Str，Int，Dex，AC，EV，SH，HP，MP"
+        },
+        {
+          "term": "Staves",
+          "translation": "棍杖",
+          "note": "【0.34.1 修订】技能包含棍棒及法杖的近战使用；staff 作为魔法装备仍译法杖。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流",
+          "note": "【版本/语境】回合/动作叙述用语；不是固定时间单位 aut，动作耗时可不同。 来源：player-act.cc。\n【语境补充 2026-10-21】时间单位用回合。动词及 in turn、turn into 等短语按句意选择转向、变成、轮流等译法。"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师",
+          "note": ""
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特",
+          "note": ""
+        },
+        {
+          "term": "Draconian",
+          "translation": "龙人",
+          "note": "【0.34.1 补充/现行种族】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/species/draconian-base.yaml。\n【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会",
+          "note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术或能力标题保留强力术。情态动词 might 表示可能。名词 might 表示力量或威力。"
+        },
+        {
+          "term": "player",
+          "translation": "玩家",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "the Orb",
+          "translation": "宝珠",
+          "note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "term": "float",
+          "translation": "飘浮",
+          "note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：飘浮。"
+        }
+      ]
+    },
+    {
+      "file": "wiz-item.h",
+      "sha256": "6fe8aa4d198c09f2d9c8a6388ebac8d23327dabb9034f807334902f40daadcbc",
+      "hits": [
+        {
+          "term": "wizard",
+          "translation": "巫师",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "file": "wiz-mon.cc",
+      "sha256": "e2870dfa89ba4594f4debb2844897f3aae81b7550f660b2fc8cf5ac3b820b2d1",
+      "hits": [
+        {
+          "term": "Abyss",
+          "translation": "深渊",
+          "note": ""
+        },
+        {
+          "term": "AC",
+          "translation": "护甲值",
+          "note": "【0.34.1 修订】与 Armour（防具技能/防具）区分；缩写在 HUD 可保留 AC。 来源：dat/descript/skills.txt。"
+        },
+        {
+          "term": "Brand",
+          "translation": "印记/烙印",
+          "note": "【0.34.1 修订】武器特殊效果类别；不等同附魔数值。旧备注列举的来源并非当前版本的完整有效清单。 来源：dat/descript/egos.txt。\n【版本/语境】完整印记名需按当前 egos 和物品名称核对，不能机械把所有品牌字义用于武器。 来源：dat/descript/egos.txt。\n【语境补充 2026-10-21】武器魔法属性统一用印记。烙在实体上的标记或动作按语境用烙印。"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城",
+          "note": ""
+        },
+        {
+          "term": "evasion",
+          "translation": "闪避值",
+          "note": "【0.34.1 修订】属性 EV；与 Dodging（闪避技能）区分。 来源：dat/descript/skills.txt。"
+        },
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开",
+          "note": "【0.34.1 修订】名词用出口；命令动词用退出，按上下文处理，不把两者拼成一条输出。 来源：feature-data.h。\n【语境补充 2026-10-21】地点或设施用出口。菜单命令用退出。离开区域的动作用离开。"
+        },
+        {
+          "term": "ghost",
+          "translation": "鬼魂",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "god",
+          "translation": "神",
+          "note": ""
+        },
+        {
+          "term": "hostile",
+          "translation": "敌对",
+          "note": ""
+        },
+        {
+          "term": "miscast",
+          "translation": "施法失误",
+          "note": "【0.34.1 修订】区分普通施法失败与其可能产生的 miscast 效果；失败率本身用 failure rate。 来源：spl-cast.cc。"
+        },
+        {
+          "term": "school",
+          "translation": "魔法学派/流派",
+          "note": "【版本/语境】魔法学派泛称；具体技能名称使用独立术语。 来源：dat/descript/skills.txt。\n【语境补充 2026-10-21】法术分类用魔法学派，也可在连续说明中简称流派。"
+        },
+        {
+          "term": "species",
+          "translation": "种族",
+          "note": ""
+        },
+        {
+          "term": "spell",
+          "translation": "法术",
+          "note": ""
+        },
+        {
+          "term": "stats",
+          "translation": "属性",
+          "note": "Str，Int，Dex，AC，EV，SH，HP，MP"
+        },
+        {
+          "term": "stealth",
+          "translation": "潜行",
+          "note": "一种技能\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格",
+          "note": "【语境补充 2026-10-21】与 Console 对举的客户端模式用图形版。资源图像用图块。地图位置的 tiles 用方格。条件标签保留英文。"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流",
+          "note": "【版本/语境】回合/动作叙述用语；不是固定时间单位 aut，动作耗时可不同。 来源：player-act.cc。\n【语境补充 2026-10-21】时间单位用回合。动词及 in turn、turn into 等短语按句意选择转向、变成、轮流等译法。"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师",
+          "note": ""
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特",
+          "note": ""
+        },
+        {
+          "term": "Summoner",
+          "translation": "召唤师",
+          "note": "【0.34.1 补充/现行背景】中文为本项目建议译名；英文名称和版本存在性已核对。 来源：dat/jobs/summoner.yaml。"
+        },
+        {
+          "term": "willpower",
+          "translation": "意志",
+          "note": "【0.34.1 补充/属性】抵抗部分魔法效果，与火抗/冰抗等抗性区分。 来源：dat/descript/items.txt。"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会",
+          "note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "term": "spell level",
+          "translation": "法术等级",
+          "note": "【0.34.1 补充/法术属性】区别法术强度、技能等级和施法成功率。 来源：spl-cast.cc。"
+        },
+        {
+          "term": "Polymorph",
+          "translation": "变形术",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "term": "Sleep",
+          "translation": "睡眠术",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "term": "the Abyss",
+          "translation": "深渊",
+          "note": "【0.34.1 分支名称】来源：branch-data.h；Abyss（规范缩写 Abyss）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "term": "Arena",
+          "translation": "奥格瓦如竞技场/竞技场",
+          "note": "【0.34.1 分支名称】来源：branch-data.h；Arena（规范缩写 Arena）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。\n【语境补充 2026-10-21】奥格瓦如的分支用奥格瓦如竞技场。怪物模拟模式或一般场地用竞技场。Gauntlet 依其完整专名。"
+        },
+        {
+          "term": "the Arena",
+          "translation": "奥格瓦如竞技场/竞技场",
+          "note": "【0.34.1 分支名称】来源：branch-data.h；Arena（规范缩写 Arena）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。\n【语境补充 2026-10-21】奥格瓦如的分支用奥格瓦如竞技场。怪物模拟模式或泛指场地用竞技场。"
+        },
+        {
+          "term": "player",
+          "translation": "玩家",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "Wrath",
+          "translation": "神怒",
+          "note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "term": "speed",
+          "translation": "快速",
+          "note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：快速。"
+        }
+      ]
+    },
+    {
+      "file": "wiz-mon.h",
+      "sha256": "0ff18709e6bf17da0700db30a65e7087f20dc45ac445b76d3e4ebb8d3137e38c",
+      "hits": [
+        {
+          "term": "wizard",
+          "translation": "巫师",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "file": "wiz-you.cc",
+      "sha256": "c5409b718b5615c305dc4b549c6af56e753d7b03ff8767db3d81424a56736f39",
+      "hits": [
+        {
+          "term": "Abyss",
+          "translation": "深渊",
+          "note": ""
+        },
+        {
+          "term": "Ashenzari",
+          "translation": "艾申扎利",
+          "note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "term": "book",
+          "translation": "魔法书/书/手册",
+          "note": "【使用约束】book of 是组合前缀，不是完整法术书名；不得把所有 book 都补成魔法书。\n【语境补充 2026-10-21】含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+        },
+        {
+          "term": "exit",
+          "translation": "出口/退出/离开",
+          "note": "【0.34.1 修订】名词用出口；命令动词用退出，按上下文处理，不把两者拼成一条输出。 来源：feature-data.h。\n【语境补充 2026-10-21】地点或设施用出口。菜单命令用退出。离开区域的动作用离开。"
+        },
+        {
+          "term": "experience",
+          "translation": "经验值",
+          "note": ""
+        },
+        {
+          "term": "god",
+          "translation": "神",
+          "note": ""
+        },
+        {
+          "term": "gold piece",
+          "translation": "金币",
+          "note": ""
+        },
+        {
+          "term": "Gozag",
+          "translation": "哥萨戈",
+          "note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "term": "hydra",
+          "translation": "海德拉",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "Jiyva",
+          "translation": "吉瓦",
+          "note": "吉瓦是统治软泥怪的混沌古神。\n【现行神祇】名称由 god_name_jiyva 单独生成，随机后缀不能当作另一位神祇。来源：religion.cc。"
+        },
+        {
+          "term": "max",
+          "translation": "最大值",
+          "note": "【0.34.1 修订】通用上限词，不限于 HP/MP；reserves 表储备，不是 maximum 同义词。 来源：player.cc。"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异",
+          "note": ""
+        },
+        {
+          "term": "mutations",
+          "translation": "变异",
+          "note": ""
+        },
+        {
+          "term": "Qazlal",
+          "translation": "卡兹拉尔",
+          "note": "风暴之神\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "term": "Ru",
+          "translation": "入",
+          "note": "牺牲与内在力量之神\n【版本/语境】专名沿用原译“入”，不是单词“进入”；献祭祭坛组合用“入神”。 来源：dat/descript/gods.txt。\n【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "term": "shadow",
+          "translation": "影",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "skill",
+          "translation": "技能",
+          "note": ""
+        },
+        {
+          "term": "species",
+          "translation": "种族",
+          "note": ""
+        },
+        {
+          "term": "spell",
+          "translation": "法术",
+          "note": ""
+        },
+        {
+          "term": "stats",
+          "translation": "属性",
+          "note": "Str，Int，Dex，AC，EV，SH，HP，MP"
+        },
+        {
+          "term": "Strength",
+          "translation": "力量/强度/威力",
+          "note": "三大基础属性之一\n【语境补充 2026-10-21】Str 属性用力量。法术、效果或攻击的 strength 按语境用强度或威力。"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格",
+          "note": "【语境补充 2026-10-21】与 Console 对举的客户端模式用图形版。资源图像用图块。地图位置的 tiles 用方格。条件标签保留英文。"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师",
+          "note": ""
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆",
+          "note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特",
+          "note": ""
+        },
+        {
+          "term": "piety",
+          "translation": "虔诚",
+          "note": "【0.34.1 补充/神祇机制】神祇资源，不等同经验值。 来源：religion.cc。"
+        },
+        {
+          "term": "penance",
+          "translation": "赎罪",
+          "note": "【0.34.1 补充/神祇机制】神祇惩戒/欠罪语境，不等同退出信仰后的全部神罚。 来源：religion.cc。"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术或能力标题保留强力术。情态动词 might 表示可能。名词 might 表示力量或威力。"
+        },
+        {
+          "term": "Sacrifice",
+          "translation": "献祭/牺牲/祭仪",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】献祭选项与能力用献祭。付出代价或失去能力用牺牲。叙事中的献神仪式可用祭仪。"
+        },
+        {
+          "term": "player",
+          "translation": "玩家",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "Wrath",
+          "translation": "神怒",
+          "note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        }
+      ]
+    },
+    {
+      "file": "wiz-you.h",
+      "sha256": "e6009f55d2faefc3266d3ec2f9b9f9fd25f9ec537559690562f3d204f6c741ca",
+      "hits": [
+        {
+          "term": "skill",
+          "translation": "技能",
+          "note": ""
+        },
+        {
+          "term": "species",
+          "translation": "种族",
+          "note": ""
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师",
+          "note": ""
+        },
+        {
+          "term": "player",
+          "translation": "玩家",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "file": "wizard-option-type.h",
+      "sha256": "989e881de804feded8577d7169043ca701c710d19ec02787a89497f44cdd6b26",
+      "hits": [
+        {
+          "term": "character",
+          "translation": "角色/字符/性格",
+          "note": "【语境补充 2026-10-21】玩家或游戏人物用角色。键位、文本编码用字符。人物性情用性格。"
+        },
+        {
+          "term": "player",
+          "translation": "玩家",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "file": "wizard.cc",
+      "sha256": "44f116a452e52ac43677b59ee906368c975ba29556e6d0f05ed081418b065558",
+      "hits": [
+        {
+          "term": "Abyss",
+          "translation": "深渊",
+          "note": ""
+        },
+        {
+          "term": "blink",
+          "translation": "闪烁/闪现/眨眼",
+          "note": "\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】位移效果优先用闪烁。普通快速显现可用闪现，眨眼为生理动作。完整法术名优先，不改动英文控制字。"
+        },
+        {
+          "term": "character",
+          "translation": "角色/字符/性格",
+          "note": "【语境补充 2026-10-21】玩家或游戏人物用角色。键位、文本编码用字符。人物性情用性格。"
+        },
+        {
+          "term": "confuse",
+          "translation": "混乱",
+          "note": "confusion\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "term": "Console",
+          "translation": "字符版/控制台/终端",
+          "note": "【0.34.1 修订】DCSS 版本类型，与 Tiles（图形版）成对；命令行控制台本身按上下文另译。 来源：Makefile。\n【语境补充 2026-10-21】游戏显示模式用字符版。系统控制台或终端按上下文用对应词。条件标签保留英文。"
+        },
+        {
+          "term": "dungeon",
+          "translation": "地下城",
+          "note": ""
+        },
+        {
+          "term": "experience",
+          "translation": "经验值",
+          "note": ""
+        },
+        {
+          "term": "explore mode",
+          "translation": "探索模式",
+          "note": ""
+        },
+        {
+          "term": "ghost",
+          "translation": "鬼魂",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "god",
+          "translation": "神",
+          "note": ""
+        },
+        {
+          "term": "Inventory",
+          "translation": "物品栏",
+          "note": ""
+        },
+        {
+          "term": "Jiyva",
+          "translation": "吉瓦",
+          "note": "吉瓦是统治软泥怪的混沌古神。\n【现行神祇】名称由 god_name_jiyva 单独生成，随机后缀不能当作另一位神祇。来源：religion.cc。"
+        },
+        {
+          "term": "mutation",
+          "translation": "变异",
+          "note": ""
+        },
+        {
+          "term": "Orb of Zot",
+          "translation": "佐特宝珠",
+          "note": "你玩这游戏的原因，MacGuffin"
+        },
+        {
+          "term": "randart",
+          "translation": "随机神器",
+          "note": ""
+        },
+        {
+          "term": "Shoals",
+          "translation": "海滩",
+          "note": ""
+        },
+        {
+          "term": "shop",
+          "translation": "商店",
+          "note": ""
+        },
+        {
+          "term": "skill",
+          "translation": "技能",
+          "note": ""
+        },
+        {
+          "term": "species",
+          "translation": "种族",
+          "note": ""
+        },
+        {
+          "term": "spell",
+          "translation": "法术",
+          "note": ""
+        },
+        {
+          "term": "staircase",
+          "translation": "楼梯",
+          "note": ""
+        },
+        {
+          "term": "stats",
+          "translation": "属性",
+          "note": "Str，Int，Dex，AC，EV，SH，HP，MP"
+        },
+        {
+          "term": "Tiles",
+          "translation": "图形版/图块/方格",
+          "note": "【语境补充 2026-10-21】与 Console 对举的客户端模式用图形版。资源图像用图块。地图位置的 tiles 用方格。条件标签保留英文。"
+        },
+        {
+          "term": "turn",
+          "translation": "回合/转向/变成/轮流",
+          "note": "【版本/语境】回合/动作叙述用语；不是固定时间单位 aut，动作耗时可不同。 来源：player-act.cc。\n【语境补充 2026-10-21】时间单位用回合。动词及 in turn、turn into 等短语按句意选择转向、变成、轮流等译法。"
+        },
+        {
+          "term": "Vaults",
+          "translation": "宝库/密室/跃起",
+          "note": "【语境补充 2026-10-21】分支专名用宝库。地图 vaults 用密室。vaults off a wall 作动词表示蹬墙跃起。"
+        },
+        {
+          "term": "wizard",
+          "translation": "巫师",
+          "note": ""
+        },
+        {
+          "term": "Xom",
+          "translation": "佐姆",
+          "note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        },
+        {
+          "term": "Zot",
+          "translation": "佐特",
+          "note": ""
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会",
+          "note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "term": "piety",
+          "translation": "虔诚",
+          "note": "【0.34.1 补充/神祇机制】神祇资源，不等同经验值。 来源：religion.cc。"
+        },
+        {
+          "term": "Polymorph",
+          "translation": "变形术",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "term": "Freeze",
+          "translation": "冰冻术/冰冻/冻结/冻伤",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】能力或法术名保留冰冻。结成冰用冻结。攻击动词造成寒冷伤害可用冻伤。\n【名称统一】法术名称采用“冰冻术”；实体、伤害、状态或普通动词按语境使用原有译法，不给一般效果描述机械加“术”。"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术或能力标题保留强力术。情态动词 might 表示可能。名词 might 表示力量或威力。"
+        },
+        {
+          "term": "Controlled Blink",
+          "translation": "受控闪现",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "term": "Sacrifice",
+          "translation": "献祭/牺牲/祭仪",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】献祭选项与能力用献祭。付出代价或失去能力用牺牲。叙事中的献神仪式可用祭仪。"
+        },
+        {
+          "term": "Banish",
+          "translation": "放逐",
+          "note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+        },
+        {
+          "term": "the Dungeon",
+          "translation": "地下城",
+          "note": "【0.34.1 分支名称】来源：branch-data.h；Dungeon（规范缩写 D）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "term": "the Abyss",
+          "translation": "深渊",
+          "note": "【0.34.1 分支名称】来源：branch-data.h；Abyss（规范缩写 Abyss）。包含旧版兼容分支。英文名和缩写仍用于配置、Lua、存档及查询。Gauntlet 与奥格瓦如的 Arena 是不同分支。"
+        },
+        {
+          "term": "player",
+          "translation": "玩家",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "term": "Wrath",
+          "translation": "神怒",
+          "note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        },
+        {
+          "term": "speed",
+          "translation": "快速",
+          "note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：快速。"
+        }
+      ]
+    },
+    {
+      "file": "wizard.h",
+      "sha256": "d5772e762783b1b51d48dc573c8ce1bb48fed13a6ae5f80b19d73259084f528d",
+      "hits": [
+        {
+          "term": "wizard",
+          "translation": "巫师",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "file": "worley.cc",
+      "sha256": "46b7f1d48dd1d12c8c32761205973e6edf2418e80e3dd2f0b5b4e0e4cb5e1af1",
+      "hits": [
+        {
+          "term": "book",
+          "translation": "魔法书/书/手册",
+          "note": "【使用约束】book of 是组合前缀，不是完整法术书名；不得把所有 book 都补成魔法书。\n【语境补充 2026-10-21】含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+        },
+        {
+          "term": "floor",
+          "translation": "地面/楼层/地板/向下取整",
+          "note": "【语境补充 2026-10-21】物理表面按语境用地面或地板。地下城深度用楼层。math.floor 为向下取整函数，代码标识符保留英文。"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会",
+          "note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "term": "noise",
+          "translation": "噪音/声音/巨响",
+          "note": "【0.34.1 补充/战斗机制】影响听觉警觉，不同于画面显示延迟。 来源：shout.cc。\n【语境补充 2026-10-21】机制、标题及数值用噪音。具体可听声响按语境用声音或巨响，不强制把研磨声等改为噪音。"
+        },
+        {
+          "term": "Slow",
+          "translation": "缓慢术/减速/缓慢/迟缓",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用缓慢术。施加状态用减速。普通动作或反应用缓慢、迟缓。"
+        },
+        {
+          "term": "Might",
+          "translation": "强力术/可能/力量",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术或能力标题保留强力术。情态动词 might 表示可能。名词 might 表示力量或威力。"
+        },
+        {
+          "term": "speed",
+          "translation": "快速",
+          "note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：快速。"
+        }
+      ]
+    },
+    {
+      "file": "worley.h",
+      "sha256": "7982c57618d50b84c1dbfbee75e65a71024075d9a135ccf70c1fd876570fb47e",
+      "hits": [
+        {
+          "term": "book",
+          "translation": "魔法书/书/手册",
+          "note": "【使用约束】book of 是组合前缀，不是完整法术书名；不得把所有 book 都补成魔法书。\n【语境补充 2026-10-21】含法术的书籍用魔法书。泛指书籍用书。明确指技能手册时用手册。"
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会",
+          "note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        },
+        {
+          "term": "noise",
+          "translation": "噪音/声音/巨响",
+          "note": "【0.34.1 补充/战斗机制】影响听觉警觉，不同于画面显示延迟。 来源：shout.cc。\n【语境补充 2026-10-21】机制、标题及数值用噪音。具体可听声响按语境用声音或巨响，不强制把研磨声等改为噪音。"
+        },
+        {
+          "term": "speed",
+          "translation": "快速",
+          "note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：快速。"
+        }
+      ]
+    },
+    {
+      "file": "wu-jian-attack-type.h",
+      "sha256": "9e07c15525da1ae926488a015deaca7f68c9da14e408b219a9631ed8ebaee6d8",
+      "hits": []
+    }
+  ]
+}

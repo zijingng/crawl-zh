@@ -1,0 +1,186 @@
+{
+  "glossary_sha256": "29c069cf415112261336a424167b9f3f4b05cf4e234a0c569d68f590ff7b5e01",
+  "entries": [
+    {
+      "key": "noisy weapon",
+      "source": "w:30\n@_weapon_chatter_@\n\nw:28\n@weapon_noises@\n\nw:2\n@_instrumental_noises_@\n\nw:20\nSOUND:You hear @weapon_noise@\n\n",
+      "hits": [
+        {
+          "Term": "noise",
+          "Translation": "噪音/声音/巨响",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/战斗机制】影响听觉警觉，不同于画面显示延迟。 来源：shout.cc。\n【语境补充 2026-10-21】机制、标题及数值用噪音。具体可听声响按语境用声音或巨响，不强制把研磨声等改为噪音。"
+        }
+      ]
+    },
+    {
+      "key": "_weapon_chatter_",
+      "source": "@Your_weapon@ shouts, \"Whoopee!\"\n\n@Your_weapon@ argues with itself.\n\n@Your_weapon@ complains about the scenery.\n\n@Your_weapon@ says, \"I'm bored.\"\n\n@Your_weapon@ shouts out instructions!\n\n@Your_weapon@ says, \"Ssh! Did you hear that?\"\n\n@Your_weapon@ cheers you on.\n\n@Your_weapon@ intones a prayer.\n\n@Your_weapon@ calls out a warning!\n\n@Your_weapon@ chatters happily.\n\n@Your_weapon@ recites a poem.\n\n@Your_weapon@ prattles on and on.\n\n@Your_weapon@ inquires about your family.\n\n@Your_weapon@ comments on the weather.\n\n@Your_weapon@ regales you with its life story.\n\n@Your_weapon@ speaks gibberish.\n\n@Your_weapon@ raves incoherently.\n\n@Your_weapon@ shouts, \"Help!\"\n\n@Your_weapon@ cracks jokes of [questionable|doubtful|juvenile] humour.\n\n@Your_weapon@ dwells on sagas on the [glory of old|days of yore].\n\n@Your_weapon@ belts out, \"Dying in battle is most honourable!\"\n\n@Your_weapon@ [proudly|gleefully] confesses its [misdeeds|atrocities].\n\nw:30\n@_rare_chatter_@\n",
+      "hits": []
+    },
+    {
+      "key": "_rare_chatter_",
+      "source": "@Your_weapon@ shouts, \"This level is mine! Um, ours.\"\n\n@Your_weapon@ cries, \"Don't ditch me yet! I promise to be forever silent.\"\n\n@Your_weapon@ groans, \"That's what you call fighting?\"\n\n@Your_weapon@ shouts, \"Left! No, no, right!\".\n\n@Your_weapon@ says, \"Why don't you say something for a change?\"\n\n@Your_weapon@ asks, \"Did you take a vow of silence?\"\n\n@Your_weapon@ says, \"You can tell me everything! I can keep a secret!\"\n\n@Your_weapon@ asks, \"Do you need to see the manual?\"\n\n@Your_weapon@ asks, \"Have you heard of the Orb of Zot?\"\n\n@Your_weapon@ moans, \"I feel dizzy.\"\n\n@Your_weapon@ says, \"We'll split the gold! Fifty-fifty!\"\n\n@Your_weapon@ says, \"You're pretty alright, for @a_player_genus@.\"\n\n@Your_weapon@ sighs, \"I'm going to miss you when you're dead, @player_name@.\"\n\n",
+      "hits": [
+        {
+          "Term": "Fighting",
+          "Translation": "战斗/作战/格斗",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 修订】物理战斗通用技能，亦增加生命上限；与 Unarmed Combat（徒手格斗）区分。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。\n【语境补充 2026-10-21】技能标签固定用战斗。普通动作按句意用作战或格斗。"
+        },
+        {
+          "Term": "manual",
+          "Translation": "手册/手动",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【版本/语境】训练技能用手册，非游戏操作帮助。 来源：dat/descript/items.txt。\n【语境补充 2026-10-21】可学习技能的物品用手册。技能训练模式等形容词用手动。"
+        },
+        {
+          "Term": "Orb of Zot",
+          "Translation": "佐特宝珠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "你玩这游戏的原因，MacGuffin"
+        },
+        {
+          "Term": "Zot",
+          "Translation": "佐特",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "silence",
+          "Translation": "沉默",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/状态】与噪音属性区分。 来源：duration-data.h。\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "Term": "player",
+          "Translation": "玩家",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        },
+        {
+          "Term": "the Orb",
+          "Translation": "宝珠",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        }
+      ]
+    },
+    {
+      "key": "weapon_noises",
+      "source": "w:80\n@Your_weapon@ [cackles|giggles|gurgles|sighs|snorts|warbles|wails|whimpers].\n\nw:50\n@Your_weapon@ [coughs|swears|yawns][| loudly| noisily].\n\nw:40\n@Your_weapon@ [burps|cheers|hollers|yelps|sneezes][| loudly]!\n\nw:30\n@Your_weapon@ makes a [horrible|deep, guttural|tutting] noise.\n\nw:20\n@Your_weapon@ makes a [deep moaning|popping] sound.\n\nw:20\n@Your_weapon@ goes [tick-tock.|snicker-snack!]\n\nw:20\n@Your_weapon@ howls [like a wolf.|with laughter!]\n\nw:20\n@Your_weapon@ [erupts|suddenly bursts] into laughter!\n\nw:20\n@Your_weapon@ gives off a [wolf whistle|sizzling sound].\n\nw:20\n@Your_weapon@ lets out a [mournful sigh.|whoop!]\n\n@Your_weapon@ laughs crazily.\n\n@Your_weapon@ growls menacingly.\n\n@Your_weapon@ sputters and hisses.\n\n@Your_weapon@ pants and wheezes.\n\n@Your_weapon@ barks abruptly.\n\n@Your_weapon@ screams hysterically.\n\n@Your_weapon@ hiccups loudly.\n\n@Your_weapon@ starts to sob noisily.\n\n@Your_weapon@ yells in some weird language.\n\n@Your_weapon@ cries out!\n\n@Your_weapon@ burbles away merrily.\n\n@Your_weapon@ suddenly shrieks!\n\n@Your_weapon@ whistles innocently.\n\n@Your_weapon@ parrots the noises around you.\n",
+      "hits": [
+        {
+          "Term": "weird",
+          "Translation": "奇怪的",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "noise",
+          "Translation": "噪音/声音/巨响",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/战斗机制】影响听觉警觉，不同于画面显示延迟。 来源：shout.cc。\n【语境补充 2026-10-21】机制、标题及数值用噪音。具体可听声响按语境用声音或巨响，不强制把研磨声等改为噪音。"
+        },
+        {
+          "Term": "wolf",
+          "Translation": "狼",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ]
+    },
+    {
+      "key": "_instrumental_noises_",
+      "source": "@Your_weapon@ makes a sound as if to clear its throat.\n\n@Your_weapon@ makes a twanging sound.\n\nw:20\n@Your_weapon@ chimes [melodiously|harmoniously].\n\nw:20\n@Your_weapon@ imitates [a saxophone|the bagpipes].\n\n@Your_weapon@ tinkles.\n\n@Your_weapon@ rings like a bell.\n\n@Your_weapon@ emits a flourish of trumpets.\n\n@Your_weapon@ tootles away.\n\n@Your_weapon@ buzzes like a kazoo.\n\n@Your_weapon@ chimes like a gong.\n\n@Your_weapon@ applauds itself.\n\n@Your_weapon@ goes toot-toot!\n\n@Your_weapon@ does a drum roll.\n",
+      "hits": [
+        {
+          "Term": "Roll",
+          "Translation": "翻滚",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ]
+    },
+    {
+      "key": "weapon_noise",
+      "source": "a shout.\n\nan angry hiss.\n\na high-pitched scream!\n\na roar!\n\na hideous shriek!\n\na piteous moan.\n\na screech!\n\na bellow!\n\na loud, deep croak!\n\nan angry buzzing noise.\n\na splashing noise.\n\na sizzling sound.\n\na loud clanging noise!\n\na grinding noise.\n\na mighty clap of thunder!\n\na hideous screaming!\n\na bark!\n\na rumbling sound.\n\na crunching sound.\n\na distant \"Zot\"!\n\nthe distant roaring of an enraged frog.\n\na knock.\n\na voice calling your name.\n\na very strange noise.\n\nsomeone snoring.\n\nsomeone calling for help!\n\nstrange voices.\n\nmaniacal laughter.\n\nsnatches of song.\n\na twanging sound.\n\nthe buzz of a distant kazoo.\n\nthe chiming of a distant gong.\n\nthe tinkle of an enormous bell.\n\nan echo.\n\nthe wailing of sirens.\n\na flourish of trumpets!\n\na strangely pleasant explosion.\n\ndistant weeping.\n\na muffled joke.\n\n\n\n",
+      "hits": [
+        {
+          "Term": "maniacal",
+          "Translation": "疯狂的",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "Zot",
+          "Translation": "佐特",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": ""
+        },
+        {
+          "Term": "noise",
+          "Translation": "噪音/声音/巨响",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 补充/战斗机制】影响听觉警觉，不同于画面显示延迟。 来源：shout.cc。\n【语境补充 2026-10-21】机制、标题及数值用噪音。具体可听声响按语境用声音或巨响，不强制把研磨声等改为噪音。"
+        },
+        {
+          "Term": "thunder",
+          "Translation": "雷霆",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_STORM；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        },
+        {
+          "Term": "screaming",
+          "Translation": "尖叫",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：尖叫。"
+        }
+      ]
+    },
+    {
+      "key": "singing sword silenced",
+      "source": "VISUAL:@The_weapon@ struggles and turns.\n\nVISUAL:@The_weapon@ looks @_exasperated_@.\n\nVISUAL:@The_weapon@ makes a [sad|disoriented|forlorn|hopeless] impression.\n\nw:5\nVISUAL:@The_weapon@ sulks.\n\nw:1\nVISUAL:@The_weapon@ seems to emit steam.\n\nw:1\nVISUAL:@The_weapon@ turns @_crimson_@.\n\n",
+      "hits": [
+        {
+          "Term": "Singing Sword",
+          "Translation": "歌唱之剑",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 固定神器名称】来源：art-data.txt。含旧版兼容物品；保留规范英文名用于查询、配置和 Lua，中文仅用于显示。"
+        },
+        {
+          "Term": "steam",
+          "Translation": "蒸汽",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_STEAM；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        },
+        {
+          "Term": "forlorn",
+          "Translation": "被遗弃",
+          "Part of Speech": "noun",
+          "Variants": "",
+          "Note": "【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：被遗弃。"
+        }
+      ]
+    }
+  ]
+}

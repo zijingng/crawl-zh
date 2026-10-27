@@ -1,0 +1,69 @@
+{
+  "source": "database/monspeak.txt",
+  "lua_results": [
+    {
+      "context": "textdb-lua:database/monspeak.txt",
+      "english": "@The_monster@ screams @at_foe@, \"Me learn from your wands next!\" @player_only@",
+      "keys": [
+        "_ijyb_common_"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "context": "textdb-lua:database/monspeak.txt",
+      "english": "@The_monster@ screams @at_foe@, \"You look like good test subject!\" @player_only@",
+      "keys": [
+        "_ijyb_common_"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "context": "textdb-lua:database/monspeak.txt",
+      "english": "@The_monster@ shouts, \"I *knew* mine was better!\"",
+      "keys": [
+        "sprozz triumphant"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "context": "textdb-lua:database/monspeak.txt",
+      "english": "@The_monster@ says, \"Progress like this can't be stopped by anyone!\"",
+      "keys": [
+        "sprozz triumphant"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "context": "textdb-lua:database/monspeak.txt",
+      "english": "@The_monster@ screams @at_foe@, \"Your tough hide won't protect you!\" @player_only@",
+      "keys": [
+        "_terence_rare_"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "context": "textdb-lua:database/monspeak.txt",
+      "english": "@The_monster@ screams @at_foe@, \"Your supposed skill won't protect you!\" @player_only@",
+      "keys": [
+        "_terence_rare_"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "context": "textdb-lua:database/monspeak.txt",
+      "english": "@The_monster@ screams @at_foe@, \"Where's your elephant now?!\" @player_only@",
+      "keys": [
+        "_terence_rare_"
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "context": "textdb-lua:database/monspeak.txt",
+      "english": "@The_monster@ screams @at_foe@, \"Where's your power now?!\" @player_only@",
+      "keys": [
+        "_terence_rare_"
+      ],
+      "review_status": "reviewed"
+    }
+  ]
+}

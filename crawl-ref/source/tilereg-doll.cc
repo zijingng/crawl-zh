@@ -1,4 +1,5 @@
 #include "AppHdr.h"
+#include "t-display.h"
 
 #ifdef USE_TILE_LOCAL
 
@@ -210,9 +211,9 @@ void DollEditRegion::render()
     m_cur_buf.draw();
 
     // Add text.
-    const char *part_name = "(none)";
+    const char *part_name = ui_translate("t.tiles", "(none)");
     if (m_part_idx == TILEP_SHOW_EQUIP)
-        part_name = "(show equip)";
+        part_name = ui_translate("t.tiles", "(show equip)");
     else if (m_part_idx)
         part_name = tile_player_name(m_part_idx);
 
@@ -228,7 +229,9 @@ void DollEditRegion::render()
     m_font_buf.add(item_str, VColour::white, item_name_x, item_name_y);
 
     string doll_name;
-    doll_name = make_stringf("Doll index %d / %d", m_doll_idx, NUM_MAX_DOLLS - 1);
+    doll_name = ui_render("t.doll", "Doll index %s / %s",
+        make_stringf("Doll index %d / %d", m_doll_idx, NUM_MAX_DOLLS - 1),
+        {ui_literal_arg(to_string(m_doll_idx)), ui_literal_arg(to_string(NUM_MAX_DOLLS - 1))});
     float doll_name_x = left_gutter * 32.0f;
     float doll_name_y = (doll_line + 1) * 32.0f;
     m_font_buf.add(doll_name, VColour::white, doll_name_x, doll_name_y);
@@ -239,7 +242,8 @@ void DollEditRegion::render()
         "Custom Doll",
         "Job Defaults"
     };
-    doll_name = make_stringf("Doll Mode: %s", mode_name[m_mode]);
+    doll_name = ui_render("t.doll", "Doll Mode: %s", make_stringf("Doll Mode: %s", mode_name[m_mode]),
+        {ui_text_arg("t.tiles", mode_name[m_mode])});
     doll_name_y += m_font->char_height() * 2.0f;
     m_font_buf.add(doll_name, VColour::white, doll_name_x, doll_name_y);
 
@@ -285,6 +289,11 @@ void DollEditRegion::render()
             info_str = make_stringf("%2s%9s: (none)", sel, cat_name[i]);
         else
             info_str = make_stringf("%2s%9s: %3d/%3d", sel, cat_name[i], disp, maxp);
+        const ui_arg value = part == TILEP_SHOW_EQUIP ? ui_text_arg("t.tiles", "(show equip)")
+            : !part ? ui_text_arg("t.tiles", "(none)")
+                    : ui_literal_arg(make_stringf("%3d/%3d", disp, maxp));
+        info_str = ui_render("t.doll", "%s%s: %s", info_str,
+            {ui_literal_arg(sel), ui_text_arg("t.doll.category", cat_name[i]), value});
         m_font_buf.add(info_str, VColour::white, info_x, info_y);
         info_y += m_font->char_height();
     }
@@ -296,22 +305,22 @@ void DollEditRegion::render()
         const float start_y = doll_name_y + height * 3;
         const float start_x = 0;
         m_font_buf.add(
-            "Change parts       left/right              Confirm choice      Enter",
+            ui_translate("t.tiles", "Change parts       left/right              Confirm choice      Enter"),
             VColour::white, start_x, start_y);
         m_font_buf.add(
-            "Change category    up/down                 Copy doll           Ctrl-C",
+            ui_translate("t.tiles", "Change category    up/down                 Copy doll           Ctrl-C"),
             VColour::white, start_x, start_y + height * 1);
         m_font_buf.add(
-            "Change doll        0-9, Shift + arrows     Paste copied doll   Ctrl-V",
+            ui_translate("t.tiles", "Change doll        0-9, Shift + arrows     Paste copied doll   Ctrl-V"),
             VColour::white, start_x, start_y + height * 2);
         m_font_buf.add(
-            "Change doll mode   m                       Randomise doll      Ctrl-R",
+            ui_translate("t.tiles", "Change doll mode   m                       Randomise doll      Ctrl-R"),
             VColour::white, start_x, start_y + height * 3);
         m_font_buf.add(
-            "Save menu          Escape, Ctrl-S          Toggle equipment    *",
+            ui_translate("t.tiles", "Save menu          Escape, Ctrl-S          Toggle equipment    *"),
             VColour::white, start_x, start_y + height * 4);
         m_font_buf.add(
-            "Quit menu          q, Ctrl-Q",
+            ui_translate("t.tiles", "Quit menu          q, Ctrl-Q"),
             VColour::white, start_x, start_y + height * 5);
     }
 
@@ -388,7 +397,7 @@ void DollEditRegion::run()
 
     auto vbox = make_shared<Box>(Widget::VERT);
     vbox->set_cross_alignment(Widget::CENTER);
-    auto title = make_shared<Text>(formatted_string("Doll Editor", YELLOW));
+    auto title = make_shared<Text>(formatted_string(ui_translate("t.tiles", "Doll Editor"), YELLOW));
     title->set_margin_for_sdl(0, 0, 20, 0);
     vbox->add_child(std::move(title));
     vbox->add_child(doll_ui);

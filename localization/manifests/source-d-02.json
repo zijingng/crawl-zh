@@ -1,0 +1,2720 @@
+{
+  "batch": "source-d-02",
+  "baseline": "0.34.1",
+  "glossary_sha256": "32e8fa0c6ef1afbeedab054fdbc40300480be1e77efeaadba578f17ac88775f7",
+  "preflight_files": 56,
+  "messages": [
+    {
+      "context": "d.training",
+      "english": "Your (base) skill: %s",
+      "translation": "你的基础技能等级：%s",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "skill",
+          "translation": "技能",
+          "note": ""
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.training",
+      "english": "Your skill: %s",
+      "translation": "你的技能等级：%s",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "skill",
+          "translation": "技能",
+          "note": ""
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.training",
+      "english": "; use <white>(s)</white> to set %s as a target for %s.",
+      "translation": "；按 <white>(s)</white> 将%s设为%s的训练目标。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.training",
+      "english": "At 100% training you reach %s in the equivalent of %s XLs.",
+      "translation": "将全部训练分配给此技能时，达到%s级需要相当于%s个经验等级的经验。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.training",
+      "english": "At 100% training you reach %s in about %s XLs.",
+      "translation": "将全部训练分配给此技能时，达到%s级约需提升%s个经验等级。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.training",
+      "english": "At current training (%s%%) you reach %s in the equivalent of %s XLs.",
+      "translation": "按当前训练比例（%s%%），达到%s级需要相当于%s个经验等级的经验。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.training",
+      "english": "At current training (%s%%) you reach %s in about %s XLs.",
+      "translation": "按当前训练比例（%s%%），达到%s级约需提升%s个经验等级。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.training",
+      "english": "At a training level of %s%% you would reach %s in the equivalent of %s XLs.",
+      "translation": "若将训练比例设为%s%%，达到%s级需要相当于%s个经验等级的经验。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.training",
+      "english": "At a training level of %s%% you would reach %s in about %s XLs.",
+      "translation": "若将训练比例设为%s%%，达到%s级约需提升%s个经验等级。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "This weapon requires one pair of %s.",
+      "translation": "这件武器需要用一对%s持用。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "This weapon requires two pairs of %s.",
+      "translation": "这件武器需要用两对%s持用。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "This weapon requires one %s.",
+      "translation": "这件武器需要用单%s持用。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "This weapon requires two %s.",
+      "translation": "这件武器需要用双%s持用。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "%s falls into the %s category. ",
+      "translation": "%s属于%s类武器。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "This weapon falls into the %s category. ",
+      "translation": "这件武器属于%s类。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "It has an extended reach. ",
+      "translation": "它的攻击距离较远。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "It has an extended reach (target with [<white>v</white>]). ",
+      "translation": "它的攻击距离较远（按 [<white>v</white>] 选择目标）。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "It hits all enemies adjacent to the wielder. ",
+      "translation": "它会攻击持用者身边的所有敌人。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "It hits all enemies adjacent to the wielder, dealing less damage to those not targeted. ",
+      "translation": "它会攻击持用者身边的所有敌人，但对非主要目标造成的伤害较低。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "It is extremely good for stabbing helpless or unaware enemies. ",
+      "translation": "它极其适合刺杀无法反抗或毫无防备的敌人。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "It is good for stabbing helpless or unaware enemies. ",
+      "translation": "它适合刺杀无法反抗或毫无防备的敌人。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "Your inability to study %s prevents you from drawing on the full power of this staff in melee.\n\n",
+      "translation": "你无法研习%s，因此近战时无法发挥这根法杖的全部威力。\n\n",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "staff",
+          "translation": "法杖/工作人员",
+          "note": "【使用约束】魔法装备上下文使用法杖，普通木棍和 Staves 技能要分开处理。\n【语境补充 2026-10-21】武器用法杖。maintenance staff 等人员集合用工作人员。"
+        },
+        {
+          "term": "Melee",
+          "translation": "近战",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "Wearing heavy armour would reduce your attack speed with this weapon.",
+      "translation": "穿戴沉重的防具会降低你使用这件武器时的攻击速度。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "Armour",
+          "translation": "防具/护身",
+          "note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "%s slows your attacks with this weapon by %s.",
+      "translation": "%s使你使用这件武器时的攻击延迟增加%s。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "Your heavy armour slows your attacks with this weapon by %s.",
+      "translation": "你沉重的防具使你使用这件武器时的攻击延迟增加%s。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "Armour",
+          "translation": "防具/护身",
+          "note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "%s slightly slows your attacks with this weapon.",
+      "translation": "%s使你使用这件武器时的攻击速度略微降低。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "Your heavy armour slightly slows your attacks with this weapon.",
+      "translation": "你沉重的防具使你使用这件武器时的攻击速度略微降低。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "Armour",
+          "translation": "防具/护身",
+          "note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment.field",
+      "english": "AC",
+      "translation": "护甲值",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "AC",
+          "translation": "护甲值",
+          "note": "【0.34.1 修订】与 Armour（防具技能/防具）区分；缩写在 HUD 可保留 AC。 来源：dat/descript/skills.txt。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment.field",
+      "english": "EV",
+      "translation": "闪避值",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment.field",
+      "english": "SH",
+      "translation": "格挡值",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "SH",
+          "translation": "格挡值",
+          "note": "【0.34.1 补充/属性】与 Shields（盾牌技能）、shield（盾牌物品）区分。 来源：player.cc。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment.type",
+      "english": "weapon",
+      "translation": "武器",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment.type",
+      "english": "staff",
+      "translation": "法杖",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "staff",
+          "translation": "法杖/工作人员",
+          "note": "【使用约束】魔法装备上下文使用法杖，普通木棍和 Staves 技能要分开处理。\n【语境补充 2026-10-21】武器用法杖。maintenance staff 等人员集合用工作人员。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment.type",
+      "english": "armour",
+      "translation": "防具",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "Armour",
+          "translation": "防具/护身",
+          "note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment.type",
+      "english": "amulet",
+      "translation": "护身符",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment.type",
+      "english": "ring",
+      "translation": "戒指",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment.type",
+      "english": "jewellery",
+      "translation": "首饰",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment.type",
+      "english": "talisman",
+      "translation": "护符",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "talisman",
+          "translation": "变形护符",
+          "note": "【0.34.1 补充/物品类别】用于 Shapeshifting，不能与佩戴的 amulet（护身符）混用。 来源：dat/descript/items.txt。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "Your %s would remain unchanged.",
+      "translation": "你的%s将保持不变。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "Your %s would increase by %s (%s -> %s).",
+      "translation": "你的%s将提高%s（%s → %s）。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "Your %s would decrease by %s (%s -> %s).",
+      "translation": "你的%s将降低%s（%s → %s）。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "If you remove this %s:",
+      "translation": "如果卸下这件%s：",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "If you transformed using this talisman:",
+      "translation": "如果使用这枚护符变形：",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "talisman",
+          "translation": "变形护符",
+          "note": "【0.34.1 补充/物品类别】用于 Shapeshifting，不能与佩戴的 amulet（护身符）混用。 来源：dat/descript/items.txt。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "If you were wearing this ring:",
+      "translation": "如果戴上这枚戒指：",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "If you switch to wielding this weapon in your main hand:",
+      "translation": "如果改用主手持用这件武器：",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "If you switch to wielding this %s:",
+      "translation": "如果改为持用这件%s：",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "If you switch to wearing this %s:",
+      "translation": "如果改为穿戴这件%s：",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "Your spell failure would worsen trivially.",
+      "translation": "你的施法失败率将略微提高。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "spell",
+          "translation": "法术",
+          "note": ""
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "Your spell failure would improve trivially.",
+      "translation": "你的施法失败率将略微降低。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "spell",
+          "translation": "法术",
+          "note": ""
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "Your spell failure would worsen by up to %s%% (press '!' for details).",
+      "translation": "你的施法失败率将提高至多%s%%（按 '!' 查看详情）。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "spell",
+          "translation": "法术",
+          "note": ""
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "Your spell failure would improve by up to %s%% (press '!' for details).",
+      "translation": "你的施法失败率将降低至多%s%%（按 '!' 查看详情）。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "spell",
+          "translation": "法术",
+          "note": ""
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "If you removed this item, your spell failure would worsen:\n",
+      "translation": "如果卸下这件物品，你的施法失败率将提高：\n",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "spell",
+          "translation": "法术",
+          "note": ""
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "If you removed this item, your spell failure would improve:\n",
+      "translation": "如果卸下这件物品，你的施法失败率将降低：\n",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "spell",
+          "translation": "法术",
+          "note": ""
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "If you equipped this item, your spell failure would worsen:\n",
+      "translation": "如果装备上这件物品，你的施法失败率将提高：\n",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "spell",
+          "translation": "法术",
+          "note": ""
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "If you equipped this item, your spell failure would improve:\n",
+      "translation": "如果装备上这件物品，你的施法失败率将降低：\n",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "spell",
+          "translation": "法术",
+          "note": ""
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": " (level %d/%d)",
+      "translation": "（等级 %d/%d）",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.damage",
+      "english": "your enemies will bleed and die for %s.",
+      "translation": "你的敌人将为%s流血而死。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "Will",
+          "translation": "意志/将会/会",
+          "note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.damage",
+      "english": "%s (Base %s x %s%% (%s) x %s%% (%s)%s)%s.",
+      "translation": "%s（基础 %s × %s%%（%s）× %s%%（%s）%s）%s。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.damage",
+      "english": "Str",
+      "translation": "力量",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.damage",
+      "english": "Dex",
+      "translation": "敏捷",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.damage",
+      "english": "Skill",
+      "translation": "技能",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "skill",
+          "translation": "技能",
+          "note": ""
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.damage",
+      "english": "Fight",
+      "translation": "战斗",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.damage",
+      "english": "Thrw",
+      "translation": "投掷",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.damage",
+      "english": "UC",
+      "translation": "徒手",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.damage",
+      "english": "Hvy",
+      "translation": "重型",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.damage",
+      "english": "Ench + Slay",
+      "translation": "附魔 + 杀戮",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.damage",
+      "english": "Ench",
+      "translation": "附魔",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.damage",
+      "english": "Slay",
+      "translation": "杀戮",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "%s (level %s/%s)",
+      "translation": "%s（等级 %s/%s）",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.bane",
+      "english": "\nYour %s, %s, and %s are currently affected.\n",
+      "translation": "\n你的%s、%s和%s目前受到影响。\n",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.bane",
+      "english": "This bane usually lasts a very long time.",
+      "translation": "这项厄咒通常会持续极长时间。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.bane",
+      "english": "This bane usually lasts a long time.",
+      "translation": "这项厄咒通常会持续较长时间。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.bane",
+      "english": "This bane usually lasts a moderate length of time.",
+      "translation": "这项厄咒通常会持续中等长度的时间。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.bane",
+      "english": "This bane usually lasts a short length of time.",
+      "translation": "这项厄咒通常只会持续较短时间。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.bane",
+      "english": "\n<lightmagenta>This bane will be lifted from you when you gain another %s XLs worth of experience.</lightmagenta>",
+      "translation": "\n<lightmagenta>再获得相当于%s个经验等级的经验后，你就能摆脱这项厄咒。</lightmagenta>",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "experience",
+          "translation": "经验值",
+          "note": ""
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会",
+          "note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "\n\nSpell refund chance: %d%% (max %d%%)",
+      "translation": "\n\n施法返还几率：%d%%（最高 %d%%）",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "max",
+          "translation": "最大值",
+          "note": "【0.34.1 修订】通用上限词，不限于 HP/MP；reserves 表储备，不是 maximum 同义词。 来源：player.cc。"
+        },
+        {
+          "term": "spell",
+          "translation": "法术",
+          "note": ""
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "\n\nEnemy Willpower: -%d (max -%d)",
+      "translation": "\n\n敌人意志：-%d（最高 -%d）",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "max",
+          "translation": "最大值",
+          "note": "【0.34.1 修订】通用上限词，不限于 HP/MP；reserves 表储备，不是 maximum 同义词。 来源：player.cc。"
+        },
+        {
+          "term": "willpower",
+          "translation": "意志",
+          "note": "【0.34.1 补充/属性】抵抗部分魔法效果，与火抗/冰抗等抗性区分。 来源：dat/descript/items.txt。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "\n\nVitrify chance: %d%% (max %d%%)",
+      "translation": "\n\n玻璃化几率：%d%%（最高 %d%%）",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "max",
+          "translation": "最大值",
+          "note": "【0.34.1 修订】通用上限词，不限于 HP/MP；reserves 表储备，不是 maximum 同义词。 来源：player.cc。"
+        },
+        {
+          "term": "Vitrify",
+          "translation": "玻璃化",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "\n\nExplosion chance: %d%% (max %d%%)\nExplosion damage: %dd%d (max %dd%d)\n",
+      "translation": "\n\n爆炸几率：%d%%（最高 %d%%）\n爆炸伤害：%dd%d（最高 %dd%d）\n",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "max",
+          "translation": "最大值",
+          "note": "【0.34.1 修订】通用上限词，不限于 HP/MP；reserves 表储备，不是 maximum 同义词。 来源：player.cc。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.cards",
+      "english": "%s goes to deal, but finds you have enough %s cards.",
+      "translation": "%s正要发牌，却发现你的%s已经足够了。",
+      "module": "decks.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "decks.cc"
+    },
+    {
+      "context": "d.draconian",
+      "english": "It has %s scales. ",
+      "translation": "它长着%s的鳞片。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "\n\nWith your current SH, it has a %s%% chance to reflect attacks against your willpower and other normally unblockable effects.",
+      "translation": "\n\n按你当前的格挡值，它有%s%%几率反射针对意志的攻击，以及其他通常无法格挡的效果。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "SH",
+          "translation": "格挡值",
+          "note": "【0.34.1 补充/属性】与 Shields（盾牌技能）、shield（盾牌物品）区分。 来源：player.cc。"
+        },
+        {
+          "term": "willpower",
+          "translation": "意志",
+          "note": "【0.34.1 补充/属性】抵抗部分魔法效果，与火抗/冰抗等抗性区分。 来源：dat/descript/items.txt。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.square",
+      "english": "This square %s.",
+      "translation": "此处%s。",
+      "module": "directn.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "directn.cc"
+    },
+    {
+      "context": "d.square.state",
+      "english": "lies inside a sanctuary",
+      "translation": "位于圣域内",
+      "module": "directn.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "sanctuary",
+          "translation": "庇护所",
+          "note": ""
+        }
+      ],
+      "preflight_source": "directn.cc"
+    },
+    {
+      "context": "d.square.state",
+      "english": "is shrouded in silence",
+      "translation": "笼罩着沉默",
+      "module": "directn.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "silence",
+          "translation": "沉默",
+          "note": "【0.34.1 补充/状态】与噪音属性区分。 来源：duration-data.h。\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ],
+      "preflight_source": "directn.cc"
+    },
+    {
+      "context": "d.square.state",
+      "english": "is lit by a halo",
+      "translation": "被光环照亮",
+      "module": "directn.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "directn.cc"
+    },
+    {
+      "context": "d.square.state",
+      "english": "is wreathed by an umbra",
+      "translation": "笼罩着暗影光环",
+      "module": "directn.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "directn.cc"
+    },
+    {
+      "context": "d.square.state",
+      "english": "is liquefied",
+      "translation": "地面已液化",
+      "module": "directn.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "liquefied",
+          "translation": "液化的",
+          "note": ""
+        }
+      ],
+      "preflight_source": "directn.cc"
+    },
+    {
+      "context": "d.square.state",
+      "english": "is covered in magical glow",
+      "translation": "笼罩着魔法光芒",
+      "module": "directn.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "directn.cc"
+    },
+    {
+      "context": "d.square.state",
+      "english": "is bathed in translocational energy",
+      "translation": "充盈着移位能量",
+      "module": "directn.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "translocational energy",
+          "translation": "位移能量",
+          "note": "【0.34.1 云名】来源：crawl-ref/source/cloud.cc。CLOUD_TLOC_ENERGY；包括短名及详细显示形式，兼容旧版条目。规范英文继续用于 Lua、TextDB 查询、解析和伤害归因，仅显示时翻译。"
+        }
+      ],
+      "preflight_source": "directn.cc"
+    },
+    {
+      "context": "d.square.state",
+      "english": "within Yredelemnul's grip",
+      "translation": "处于伊莱德莱姆努尔的掌控之下",
+      "module": "directn.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "Yredelemnul",
+          "translation": "伊莱德莱姆努尔",
+          "note": "【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
+        }
+      ],
+      "preflight_source": "directn.cc"
+    },
+    {
+      "context": "d.square.state",
+      "english": "is covered in acidic slime",
+      "translation": "覆盖着酸性黏液",
+      "module": "directn.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "directn.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "\nChaotic:   ",
+      "translation": "\n混沌：     ",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "It is cumbersome to wear, and slightly impedes the evasion, spellcasting ability, and attack speed of the wearer. These penalties are reduced by the wearer's Shields skill and Strength; mastering Shields eliminates penalties.",
+      "translation": "它穿戴起来很笨重，会略微妨碍穿戴者的闪避、施法和攻击速度。盾牌技能与力量会减轻这些惩罚；精通盾牌技能后，惩罚会完全消除。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "ability",
+          "translation": "能力",
+          "note": "【0.34.1 修订】与 skill（技能）区分；包括神赐、种族及其他主动能力。 来源：ability.cc。"
+        },
+        {
+          "term": "evasion",
+          "translation": "闪避值",
+          "note": "【0.34.1 修订】属性 EV；与 Dodging（闪避技能）区分。 来源：dat/descript/skills.txt。"
+        },
+        {
+          "term": "Shields",
+          "translation": "盾牌/保护",
+          "note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。\n【语境补充 2026-10-21】技能或装备复数用盾牌。shields 作第三人称动词表示保护。"
+        },
+        {
+          "term": "skill",
+          "translation": "技能",
+          "note": ""
+        },
+        {
+          "term": "Spellcasting",
+          "translation": "施法",
+          "note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "term": "Strength",
+          "translation": "力量/强度/威力",
+          "note": "三大基础属性之一\n【语境补充 2026-10-21】Str 属性用力量。法术、效果或攻击的 strength 按语境用强度或威力。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "It is cumbersome to wear, and greatly impedes the evasion, spellcasting ability, and attack speed of the wearer. These penalties are reduced by the wearer's Shields skill and Strength; mastering Shields eliminates penalties.",
+      "translation": "它穿戴起来很笨重，会大幅妨碍穿戴者的闪避、施法和攻击速度。盾牌技能与力量会减轻这些惩罚；精通盾牌技能后，惩罚会完全消除。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "ability",
+          "translation": "能力",
+          "note": "【0.34.1 修订】与 skill（技能）区分；包括神赐、种族及其他主动能力。 来源：ability.cc。"
+        },
+        {
+          "term": "evasion",
+          "translation": "闪避值",
+          "note": "【0.34.1 修订】属性 EV；与 Dodging（闪避技能）区分。 来源：dat/descript/skills.txt。"
+        },
+        {
+          "term": "Shields",
+          "translation": "盾牌/保护",
+          "note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。\n【语境补充 2026-10-21】技能或装备复数用盾牌。shields 作第三人称动词表示保护。"
+        },
+        {
+          "term": "skill",
+          "translation": "技能",
+          "note": ""
+        },
+        {
+          "term": "Spellcasting",
+          "translation": "施法",
+          "note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "term": "Strength",
+          "translation": "力量/强度/威力",
+          "note": "三大基础属性之一\n【语境补充 2026-10-21】Str 属性用力量。法术、效果或攻击的 strength 按语境用强度或威力。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "It is cumbersome to wear, and impedes the evasion, spellcasting ability, and attack speed of the wearer. These penalties are reduced by the wearer's Shields skill and Strength; mastering Shields eliminates penalties.",
+      "translation": "它穿戴起来很笨重，会妨碍穿戴者的闪避、施法和攻击速度。盾牌技能与力量会减轻这些惩罚；精通盾牌技能后，惩罚会完全消除。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "ability",
+          "translation": "能力",
+          "note": "【0.34.1 修订】与 skill（技能）区分；包括神赐、种族及其他主动能力。 来源：ability.cc。"
+        },
+        {
+          "term": "evasion",
+          "translation": "闪避值",
+          "note": "【0.34.1 修订】属性 EV；与 Dodging（闪避技能）区分。 来源：dat/descript/skills.txt。"
+        },
+        {
+          "term": "Shields",
+          "translation": "盾牌/保护",
+          "note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。\n【语境补充 2026-10-21】技能或装备复数用盾牌。shields 作第三人称动词表示保护。"
+        },
+        {
+          "term": "skill",
+          "translation": "技能",
+          "note": ""
+        },
+        {
+          "term": "Spellcasting",
+          "translation": "施法",
+          "note": "【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "term": "Strength",
+          "translation": "力量/强度/威力",
+          "note": "三大基础属性之一\n【语境补充 2026-10-21】Str 属性用力量。法术、效果或攻击的 strength 按语境用强度或威力。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "Your current strength and Armour skill slows attacks with missile weapons (like %s) by %s.",
+      "translation": "按你当前的力量与防具技能，防具会使你使用%s等远程武器时的攻击延迟增加%s。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "Armour",
+          "translation": "防具/护身",
+          "note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "term": "skill",
+          "translation": "技能",
+          "note": ""
+        },
+        {
+          "term": "Strength",
+          "translation": "力量/强度/威力",
+          "note": "三大基础属性之一\n【语境补充 2026-10-21】Str 属性用力量。法术、效果或攻击的 strength 按语境用强度或威力。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "Your current strength and Armour skill slows attacks with missile weapons (like %s) only slightly.",
+      "translation": "按你当前的力量与防具技能，防具会使你使用%s等远程武器时的攻击速度略微降低。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "Armour",
+          "translation": "防具/护身",
+          "note": "【统一术语】防御装备大类及 Armour 技能均译“防具”；body armour 译“躯干防具”；AC 为“护甲值”。具体物品使用皮甲、锁子甲、板甲等名称。\n【语境补充 2026-10-21】装备大类与技能统一用防具。armour oneself 作动词用护身。body armour 仍用躯干防具，AC 仍用护甲值。具体皮甲、锁子甲、板甲等依完整专名。"
+        },
+        {
+          "term": "skill",
+          "translation": "技能",
+          "note": ""
+        },
+        {
+          "term": "Strength",
+          "translation": "力量/强度/威力",
+          "note": "三大基础属性之一\n【语境补充 2026-10-21】Str 属性用力量。法术、效果或攻击的 strength 按语境用强度或威力。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "acid damage",
+      "translation": "酸蚀伤害",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "blink self",
+      "translation": "自身闪烁",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "blink",
+          "translation": "闪烁/闪现/眨眼",
+          "note": "\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】位移效果优先用闪烁。普通快速显现可用闪现，眨眼为生理动作。完整法术名优先，不改动英文控制字。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "blink together with the defender",
+      "translation": "与目标一同闪烁",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "blink",
+          "translation": "闪烁/闪现/眨眼",
+          "note": "\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】位移效果优先用闪烁。普通快速显现可用闪现，眨眼为生理动作。完整法术名优先，不改动英文控制字。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "cold damage",
+      "translation": "寒冷伤害",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "cause confusion",
+      "translation": "造成混乱",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "confusion",
+          "translation": "混乱",
+          "note": "【0.34.1 补充/状态】状态名，区别动词 confuse。 来源：duration-data.h。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "drain life",
+      "translation": "吸取生命",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "drain",
+          "translation": "吸能/吸取/消耗",
+          "note": "【0.34.1 修订】吸能状态与负能量、属性降低并非同一概念；具体消息区分吸取 HP、MP、最大 HP 等。 来源：dat/descript/status.txt; player.cc。\n【语境补充 2026-10-21】负能量或生命上限机制用吸能。吸血、汲取资源用吸取。维持法术耗费魔力用消耗。"
+        },
+        {
+          "term": "Drain Life",
+          "translation": "吸取生命",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "drain health from the living",
+      "translation": "吸取活物生命",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "drain",
+          "translation": "吸能/吸取/消耗",
+          "note": "【0.34.1 修订】吸能状态与负能量、属性降低并非同一概念；具体消息区分吸取 HP、MP、最大 HP 等。 来源：dat/descript/status.txt; player.cc。\n【语境补充 2026-10-21】负能量或生命上限机制用吸能。吸血、汲取资源用吸取。维持法术耗费魔力用消耗。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "drain speed",
+      "translation": "吸取速度",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "drain",
+          "translation": "吸能/吸取/消耗",
+          "note": "【0.34.1 修订】吸能状态与负能量、属性降低并非同一概念；具体消息区分吸取 HP、MP、最大 HP 等。 来源：dat/descript/status.txt; player.cc。\n【语境补充 2026-10-21】负能量或生命上限机制用吸能。吸血、汲取资源用吸取。维持法术耗费魔力用消耗。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "drain magic",
+      "translation": "吸取魔力",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "drain",
+          "translation": "吸能/吸取/消耗",
+          "note": "【0.34.1 修订】吸能状态与负能量、属性降低并非同一概念；具体消息区分吸取 HP、MP、最大 HP 等。 来源：dat/descript/status.txt; player.cc。\n【语境补充 2026-10-21】负能量或生命上限机制用吸能。吸血、汲取资源用吸取。维持法术耗费魔力用消耗。"
+        },
+        {
+          "term": "Drain Magic",
+          "translation": "吸取魔力",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "drain speed and health",
+      "translation": "吸取速度与生命",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "drain",
+          "translation": "吸能/吸取/消耗",
+          "note": "【0.34.1 修订】吸能状态与负能量、属性降低并非同一概念；具体消息区分吸取 HP、MP、最大 HP 等。 来源：dat/descript/status.txt; player.cc。\n【语境补充 2026-10-21】负能量或生命上限机制用吸能。吸血、汲取资源用吸取。维持法术耗费魔力用消耗。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "electric damage",
+      "translation": "电击伤害",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "fire damage",
+      "translation": "火焰伤害",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "remove fire resistance",
+      "translation": "消除火焰抗性",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "poison and momentary paralysis",
+      "translation": "中毒与短暂麻痹",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "paralysis",
+          "translation": "麻痹",
+          "note": "【0.34.1 补充/状态】状态名，区别动词 paralyze/paralyse。 来源：duration-data.h。"
+        },
+        {
+          "term": "poison",
+          "translation": "毒",
+          "note": "【0.34.1 补充/伤害/状态】poisoned 表中毒，poison resistance 表毒抗。 来源：duration-data.h。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "poison and paralysis/slowing",
+      "translation": "中毒与麻痹或减速",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "paralysis",
+          "translation": "麻痹",
+          "note": "【0.34.1 补充/状态】状态名，区别动词 paralyze/paralyse。 来源：duration-data.h。"
+        },
+        {
+          "term": "poison",
+          "translation": "毒",
+          "note": "【0.34.1 补充/伤害/状态】poisoned 表中毒，poison resistance 表毒抗。 来源：duration-data.h。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "poison",
+      "translation": "中毒",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "poison",
+          "translation": "毒",
+          "note": "【0.34.1 补充/伤害/状态】poisoned 表中毒，poison resistance 表毒抗。 来源：duration-data.h。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "strong poison",
+      "translation": "剧毒",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "poison",
+          "translation": "毒",
+          "note": "【0.34.1 补充/伤害/状态】poisoned 表中毒，poison resistance 表毒抗。 来源：duration-data.h。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "distortion",
+      "translation": "扭曲",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "drive defenders berserk",
+      "translation": "使目标狂暴",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "berserk",
+          "translation": "狂暴",
+          "note": "【0.34.1 补充/状态】与背景 Berserker（狂战士）区分。 来源：duration-data.h。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "chaos",
+      "translation": "混沌",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "steal items",
+      "translation": "偷取物品",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "begin ongoing constriction",
+      "translation": "开始持续绞缠",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "extra damage to undead/demons",
+      "translation": "对亡灵与恶魔造成额外伤害",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "undead",
+          "translation": "亡灵",
+          "note": "【0.34.1 修订】指不死生物类别，并不表示无法被杀死。 来源：mon-util.cc。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "extra pain damage to the living",
+      "translation": "对活物造成额外痛苦伤害",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "Pain",
+          "translation": "痛苦术/痛苦",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术标题用痛苦术。卡牌、武器印记或普通感受用痛苦，完整物品专名优先。\n【0.34.1 卡牌名称】来源：decks.cc 的 card_name()；对照 dat/descript/cards.txt 校对。英文冠词保留在规范名中，中文不另译冠词；显示加“牌”时采用同一名称。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "ensnare with webbing",
+      "translation": "用蛛网困住目标",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "Ensnare",
+          "translation": "蛛网缠缚/束缚/诱捕",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。\n【语境补充 2026-10-21】法术或蛛网效果用蛛网缠缚。普通捆束动作用束缚。捕食动作可用诱捕。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "flood the defender's lungs",
+      "translation": "使目标肺部进水",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "reduce willpower",
+      "translation": "降低意志",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "willpower",
+          "translation": "意志",
+          "note": "【0.34.1 补充/属性】抵抗部分魔法效果，与火抗/冰抗等抗性区分。 来源：dat/descript/items.txt。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "increased damage when unseen",
+      "translation": "未被看见时伤害提高",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "drowning damage",
+      "translation": "溺水伤害",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "cause corrosion",
+      "translation": "造成腐蚀",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "corrosion",
+          "translation": "腐蚀",
+          "note": "【0.34.1 补充/状态】区别腐蚀抗性。 来源：duration-data.h。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "knock back the defender",
+      "translation": "击退目标",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "cause weakness",
+      "translation": "造成虚弱",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "embed barbs",
+      "translation": "嵌入倒刺",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "summon a spider",
+      "translation": "召唤蜘蛛",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "spider",
+          "translation": "蜘蛛",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "become enraged on drawing blood",
+      "translation": "见血后狂暴",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "induce sleep",
+      "translation": "使目标入睡",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "Sleep",
+          "translation": "睡眠术",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "swoops behind the defender beforehand",
+      "translation": "先俯冲到目标身后",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "slips behind the defender beforehand",
+      "translation": "先绕到目标身后",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "drag the defender backwards",
+      "translation": "将目标向后拖动",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "extra damage, especially to the good",
+      "translation": "造成额外伤害，对善良生物尤为有效",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "summon demonic beasts",
+      "translation": "召唤恶魔野兽",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "summon more of itself",
+      "translation": "召唤更多同类",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "vent poison clouds",
+      "translation": "喷出毒雾",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "poison",
+          "translation": "毒",
+          "note": "【0.34.1 补充/伤害/状态】poisoned 表中毒，poison resistance 表毒抗。 来源：duration-data.h。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "deploy bomblets",
+      "translation": "部署子炸弹",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "open air damage",
+      "translation": "空旷处伤害",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "drain, daze, or confuse",
+      "translation": "吸能、眩晕或混乱",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "confuse",
+          "translation": "混乱",
+          "note": "confusion\n【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        },
+        {
+          "term": "drain",
+          "translation": "吸能/吸取/消耗",
+          "note": "【0.34.1 修订】吸能状态与负能量、属性降低并非同一概念；具体消息区分吸取 HP、MP、最大 HP 等。 来源：dat/descript/status.txt; player.cc。\n【语境补充 2026-10-21】负能量或生命上限机制用吸能。吸血、汲取资源用吸取。维持法术耗费魔力用消耗。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "random ugly thing damage",
+      "translation": "随机丑陋之物伤害",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "ugly thing",
+          "translation": "丑陋之物",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "inflict doom",
+      "translation": "施加厄运",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "slowly slimify the target",
+      "translation": "使目标逐渐黏液化",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "Slimify",
+          "translation": "黏液化",
+          "note": "【0.34.1 能力名称】来源：ability.cc；保留英文规范名用于配置、Lua 与数据库键，中文仅用于显示。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.effect",
+      "english": "diminish the target's spells",
+      "translation": "削弱目标的法术",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.name",
+      "english": "Spore",
+      "translation": "孢子",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.name",
+      "english": "Tentacle",
+      "translation": "触手",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "tentacle",
+          "translation": "触手",
+          "note": "【0.34.1 怪物显示名】来源：mon-data.h（由 dat/mons 生成）及 mon-info.cc。规范英文用于存档、Lua、查询；中文仅用于显示。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.name",
+      "english": "Tail",
+      "translation": "尾部",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.name",
+      "english": "Trunk",
+      "translation": "象鼻",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.name",
+      "english": "Pounce",
+      "translation": "扑击",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.name",
+      "english": "Hit",
+      "translation": "打击",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.name",
+      "english": "Bite",
+      "translation": "啮咬",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.name",
+      "english": "Sting",
+      "translation": "蜇刺",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "Sting",
+          "translation": "毒刺",
+          "note": "【0.34.1 法术名称】来源：crawl-ref/source/spl-data.h。含玩家法术、怪物专用、内部及旧版兼容条目；有定义不等于可由玩家学习。英文为规范名称；中文为统一译名。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.name",
+      "english": "Touch",
+      "translation": "触碰",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.name",
+      "english": "Engulf",
+      "translation": "吞没",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.name",
+      "english": "Claw",
+      "translation": "爪击",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.name",
+      "english": "Peck",
+      "translation": "啄击",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.name",
+      "english": "Headbutt",
+      "translation": "头槌",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.name",
+      "english": "Punch",
+      "translation": "拳击",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.name",
+      "english": "Kick",
+      "translation": "踢击",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.name",
+      "english": "Gore",
+      "translation": "顶撞",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.name",
+      "english": "Constrict",
+      "translation": "绞缠",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.name",
+      "english": "Trample",
+      "translation": "践踏",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.name",
+      "english": "Snap closed",
+      "translation": "咬合",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.name",
+      "english": "Splash",
+      "translation": "泼溅",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack.name",
+      "english": "Shoot",
+      "translation": "射击",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack",
+      "english": "%s (max %s each)",
+      "translation": "%s（每次最多%s）",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "max",
+          "translation": "最大值",
+          "note": "【0.34.1 修订】通用上限词，不限于 HP/MP；reserves 表储备，不是 maximum 同义词。 来源：player.cc。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack",
+      "english": "%s (max %s)",
+      "translation": "%s（最多%s）",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "max",
+          "translation": "最大值",
+          "note": "【0.34.1 修订】通用上限词，不限于 HP/MP；reserves 表储备，不是 maximum 同义词。 来源：player.cc。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack",
+      "english": "%s (max %s damage)",
+      "translation": "%s（最多%s点伤害）",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "max",
+          "translation": "最大值",
+          "note": "【0.34.1 修订】通用上限词，不限于 HP/MP；reserves 表储备，不是 maximum 同义词。 来源：player.cc。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack",
+      "english": "%s (%s-%s dam)",
+      "translation": "%s（%s—%s点伤害）",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack",
+      "english": "%s (if damage dealt)",
+      "translation": "%s（造成伤害时）",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack",
+      "english": "Reaches very far",
+      "translation": "攻击距离极远",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack",
+      "english": "Reaches from afar",
+      "translation": "远距离攻击",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack",
+      "english": "Cleaves from afar",
+      "translation": "远距离横扫",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack",
+      "english": "%s: %s",
+      "translation": "%s：%s",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.attack",
+      "english": "%s x %s",
+      "translation": "%s次%s",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "\n\nIt falls into the 'Staves' category. ",
+      "translation": "\n\n它属于法杖类武器。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "Staves",
+          "translation": "棍杖",
+          "note": "【0.34.1 修订】技能包含棍棒及法杖的近战使用；staff 作为魔法装备仍译法杖。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "It is surrounded by a blinding glow.",
+      "translation": "它周围笼罩着刺目欲盲的光芒。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "It is surrounded by a dazzling glow.",
+      "translation": "它周围笼罩着耀眼的光芒。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "It is surrounded by a bright glow.",
+      "translation": "它周围笼罩着明亮的光芒。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "It is surrounded by a gentle glow.",
+      "translation": "它周围笼罩着柔和的光芒。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "Charges: %s. Once all charges have been used, this device is rendered temporarily inert. However, it recharges as you gain experience.",
+      "translation": "充能次数：%s。所有充能耗尽后，这件装置会暂时失效，但会随着你获得经验而恢复充能。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "experience",
+          "translation": "经验值",
+          "note": ""
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "Once activated, this device is rendered temporarily inert. However, it recharges as you gain experience.",
+      "translation": "这件装置使用后会暂时失效，但会随着你获得经验而恢复充能。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "experience",
+          "translation": "经验值",
+          "note": ""
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "\n\nAdditional devices of the same type can be combined with it to improve the rate at which it recharges.",
+      "translation": "\n\n可以将其他同类装置与它合并，提高充能恢复速度。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "\n\nIncreasing your evocations skill will improve the rate at which it recharges.",
+      "translation": "\n\n提高唤发技能可以加快它的充能恢复。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "Evocations",
+          "translation": "唤发",
+          "note": "【0.34.1 修订】技能而非魔法物品；影响魔杖和其他可唤发物品的强度或成功率，当前说明不含提高 MP 上限。 来源：dat/descript/skills.txt。\n【现行清单】已与 0.34.1 的技能名称清单对应。来源：dat/descript/skills.txt。"
+        },
+        {
+          "term": "skill",
+          "translation": "技能",
+          "note": ""
+        },
+        {
+          "term": "Will",
+          "translation": "意志/将会/会",
+          "note": "【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。\n【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "\n\nIt is a %s potion.",
+      "translation": "\n\n这是一种%s的药水。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [
+        {
+          "term": "potion",
+          "translation": "药水",
+          "note": ""
+        }
+      ],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "\n\nIt is a %s scroll.",
+      "translation": "\n\n这是一种%s的卷轴。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "\n\n%s disapproves of the use of such an item.",
+      "translation": "\n\n%s不赞成使用这类物品。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "%s: %s",
+      "translation": "%s：%s",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    },
+    {
+      "context": "d.equipment",
+      "english": "\nIt has a curse which improves the following skills:\n%s.",
+      "translation": "\n它受到诅咒，会增强以下技能：\n%s。",
+      "module": "describe.cc",
+      "kind": "template",
+      "review_status": "reviewed",
+      "review_batch": "source-d-02",
+      "glossary_hits": [],
+      "preflight_source": "describe.cc"
+    }
+  ],
+  "scope_complete": false,
+  "matching": "先检查源文件的术语命中；此处聚合本条英文相关的 Term 命中供审阅，短词须按语境判断，不作机械替换。",
+  "remaining": [
+    "describe.cc: demon procedural description, some item usability and cancellation/origin prose, attack damage details and additional monster prose",
+    "directn.cc: terrain names and coverings, monster equipment and observation composites",
+    "decks.cc: canonical summary consumed by religion.cc and remaining composite details",
+    "describe-god.cc: Xom favour and remaining external helper output"
+  ]
+}

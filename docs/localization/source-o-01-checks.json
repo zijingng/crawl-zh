@@ -1,0 +1,21 @@
+{
+  "batch": "source-o-01",
+  "date": "2026-10-24",
+  "reviewed_messages": 194,
+  "catalogue_matches": 194,
+  "missing_messages": [],
+  "stale_dependencies": [],
+  "original_top_level_o_files": 13,
+  "current_top_level_o_files": 13,
+  "windows_tiles_build": true,
+  "native_cases": 83,
+  "native_assertions": 181226,
+  "python_tests": 28,
+  "limitations": [
+    "Arbitrary Lua script messages and public Lua name/key results remain controlled by existing script semantics; no global translation interception.",
+    "Missing typed names, paragraphs or source fingerprints cause complete row/sentence English fallback.",
+    "Canonical form/unarmed names, equipment-slot parser, kill causes, note values, chapter state and RNG retain upstream semantics.",
+    "Technical/debug assertions, wizard diagnostics, opaque custom Orb messages and protocol/configuration identifiers preserve original data.",
+    "No in-game visual smoke test; Windows Tiles only."
+  ]
+}

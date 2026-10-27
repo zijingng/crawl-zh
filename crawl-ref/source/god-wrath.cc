@@ -4,6 +4,7 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "god-wrath.h"
 
@@ -380,13 +381,13 @@ static bool _cheibriados_retribution()
     {
         if (you.hp >= (you.hp_max * 3 / 4))
         {
-            mprf(MSGCH_DANGER, "You lose track of time!");
+            mprf(MSGCH_DANGER, "%s", ui_translate("g.message", "You lose track of time!"));
             you.put_to_sleep(nullptr, random_range(5, 10) * BASELINE_DELAY);
             dec_penance(god, 1);
         }
         else
         {
-            mprf(MSGCH_DANGER, "The world leaves you behind!");
+            mprf(MSGCH_DANGER, "%s", ui_translate("g.message", "The world leaves you behind!"));
             dec_haste_player(10000);
             slow_player(81 + random2(10));
         }
@@ -652,8 +653,8 @@ static bool _kikubaaqudgha_retribution()
 {
     // death/necromancy theme
     const god_type god = GOD_KIKUBAAQUDGHA;
-    god_speaks(god, coinflip() ? "You hear Kikubaaqudgha cackling."
-                               : "Kikubaaqudgha's malice focuses upon you.");
+    god_speaks(god, coinflip() ? ui_translate("g.message", "You hear Kikubaaqudgha cackling.")
+                               : ui_translate("g.message", "Kikubaaqudgha's malice focuses upon you."));
 
     if (wrath_tension_check(true))
     {
@@ -673,7 +674,7 @@ static bool _kikubaaqudgha_retribution()
         int doom_pow = random_range(35, 50);
 
         if (!(you.attribute[ATTR_DOOM] + doom_pow >= 100))
-            mprf(MSGCH_DANGER, "Your doom draws closer.");
+            mprf(MSGCH_DANGER, "%s", ui_translate("g.message", "Your doom draws closer."));
 
         you.doom(doom_pow);
     }
@@ -1125,7 +1126,7 @@ static bool _nemelex_retribution()
 static void _jiyva_mutate_player()
 {
     const god_type god = GOD_JIYVA;
-    god_speaks(god, "You feel Jiyva alter your body.");
+    god_speaks(god, ui_translate("g.message", "You feel Jiyva alter your body."));
 
     const int mutations = 1 + random2(3);
     for (int i = 0; i < mutations; ++i)
@@ -1138,7 +1139,7 @@ static void _jiyva_mutate_player()
 static void _jiyva_contaminate()
 {
     const god_type god = GOD_JIYVA;
-    god_speaks(god, "Mutagenic energy floods into your body!");
+    god_speaks(god, ui_translate("g.message", "Mutagenic energy floods into your body!"));
     contaminate_player(random2(you.penance[god] * 100));
 }
 
@@ -1173,8 +1174,8 @@ static void _jiyva_summon_slimes()
             success = true;
     }
 
-    god_speaks(god, success ? "Some slimes ooze up out of the ground!"
-                            : "The ground quivers slightly.");
+    god_speaks(god, success ? ui_translate("g.message", "Some slimes ooze up out of the ground!")
+                            : ui_translate("g.message", "The ground quivers slightly."));
 }
 
 /**
@@ -1203,7 +1204,7 @@ static bool _jiyva_retribution()
  */
 static void _fedhas_transform()
 {
-    god_speaks(GOD_FEDHAS, "Fedhas booms out: Become one with the cycle of life!");
+    god_speaks(GOD_FEDHAS, ui_translate("g.message", "Fedhas booms out: Become one with the cycle of life!"));
 
     const transformation form = random_choose(transformation::fungus,
                                               transformation::tree);
@@ -1275,7 +1276,7 @@ static bool _fedhas_summon_plants()
 
     if (oklob_count > 1)
     {
-        god_speaks(god, "Plants grow around you in an ominous manner.");
+        god_speaks(god, ui_translate("g.message", "Plants grow around you in an ominous manner."));
         return false;
     }
 
@@ -1353,7 +1354,7 @@ static bool _dithmenos_retribution()
 
         if (coinflip())
         {
-            mpr("You feel lethargic.");
+            mpr(ui_translate("g.message", "You feel lethargic."));
             you.increase_duration(DUR_SLOW, random_range(10, 20), 100);
         }
 
@@ -1376,7 +1377,7 @@ static bool _dithmenos_retribution()
     case 2:
     {
         // This is possibly kind of underwhelming?
-        god_speaks(god, "You feel overwhelmed by the shadows around you.");
+        god_speaks(god, ui_translate("g.message", "You feel overwhelmed by the shadows around you."));
         you.put_to_sleep(nullptr, random_range(5, 10) * BASELINE_DELAY);
         break;
     }
@@ -1463,7 +1464,7 @@ static void _qazlal_elemental_vulnerability()
     if (banes.empty())
     {
         bane_type bane = random_choose(BANE_HEATSTROKE, BANE_SNOW_BLINDNESS, BANE_ELECTROSPASM);
-        mprf(MSGCH_WARN, "Your %s grows more durable.", bane_name(bane).c_str());
+        mprf(MSGCH_WARN, "%s", ui_render("g.message", "Your %s grows more durable.", make_stringf("Your %s grows more durable.", bane_name(bane).c_str()), {bane_display_arg(bane)}).c_str());
         you.banes[bane] += 1000;
     }
     else
@@ -1662,6 +1663,19 @@ static vector<monster*> _ignis_champion_targets()
     return chosen;
 }
 
+static ui_arg _wrath_monsters_display(const vector<monster*> &monsters)
+{
+    vector<string> names;
+    bool available = true;
+    for (const monster *mon : monsters)
+    {
+        const ui_arg name = ui_actor_arg(*mon);
+        available &= name.available;
+        names.push_back(name.text);
+    }
+    return {join_strings(names.begin(), names.end(), "、"), available};
+}
+
 static bool _ignis_champion()
 {
     vector<monster*> mons = _ignis_champion_targets();
@@ -1673,12 +1687,16 @@ static bool _ignis_champion()
     simple_god_message(make_stringf(" anoints %s as %s of "
                                     "vengeance!", multimonster_name_string(mons).c_str(),
                                     mons.size() > 1 ? "instruments" : "an instrument").c_str(),
-                                    false, GOD_IGNIS);
+                                    false, GOD_IGNIS,
+        ui_render("g.wrath", "%s anoints %s as instruments of vengeance!", "",
+            {ui_text_arg("display.god", god_name(GOD_IGNIS)), _wrath_monsters_display(mons)}));
 
     // Describe the effect on the monsters.
-    mprf("%s %s shrouded in protective flame, covering ground quickly, and attacking fiercely!",
-         mons.size() == 1 ? mons[0]->name(DESC_THE).c_str() : "The monsters",
-         mons.size() == 1 ? "is" : "are");
+    mpr(ui_render("g.wrath", "%s is shrouded in protective flame, covering ground quickly, and attacking fiercely!",
+        make_stringf("%s %s shrouded in protective flame, covering ground quickly, and attacking fiercely!",
+            mons.size() == 1 ? mons[0]->name(DESC_THE).c_str() : "The monsters",
+            mons.size() == 1 ? "is" : "are"),
+        {mons.size() == 1 ? ui_actor_arg(*mons[0]) : ui_text_arg("g.common", "The monsters")}));
 
     for (monster* mon : mons)
     {
@@ -1720,7 +1738,9 @@ static bool _uskayaw_retribution()
         {
             simple_god_message(make_stringf(" drives %s into a dance frenzy!",
                                      mon->name(DESC_THE).c_str()).c_str(),
-                                     false, god);
+                                     false, god,
+                ui_render("g.wrath", "%s drives %s into a dance frenzy!", "",
+                    {ui_text_arg("display.god", god_name(god)), ui_actor_arg(*mon)}));
             mon->go_berserk(true);
             return true;
         }
@@ -1821,13 +1841,13 @@ bool divine_retribution(god_type god, bool no_bonus, bool force)
         {
             if (!you.confused())
             {
-                mprf(MSGCH_WARN, "The divine experience confuses you!");
+                mprf(MSGCH_WARN, "%s", ui_translate("g.message", "The divine experience confuses you!"));
                 confuse_player(5 + random2(3));
             }
         }
         else
         {
-            mprf(MSGCH_WARN, "The divine experience drains your vigour!");
+            mprf(MSGCH_WARN, "%s", ui_translate("g.message", "The divine experience drains your vigour!"));
             slow_player(10 + random2(5));
         }
     }

@@ -1,0 +1,34 @@
+{
+  "reviewed_this_batch": 45,
+  "candidates": 317,
+  "source_keys": 58,
+  "exported_keys": 58,
+  "remaining_keys": [],
+  "runtime_variants": 1,
+  "baseline_matching_dependency_refresh": {
+    "mon-util.cc": 10116,
+    "directn.cc": 10478,
+    "database.cc": 4521,
+    "decor-display.h": 161
+  },
+  "runtime_limits": [
+    "Raw RANDGEN names keep whole English; canonical personal names retain their spelling.",
+    "Upstream unresolved @graffiti_author_any@ is preserved and triggers whole-English fallback."
+  ],
+  "structure_and_po_keys": 58,
+  "english_data_unchanged": true,
+  "original_name_renderer_unchanged": true,
+  "isolated_dependency_rejections": {
+    "_graffiti_duplicate_": "source_changed",
+    "_graffiti_short_saying_": "dependency_changed",
+    "any_graffiti": "dependency_changed"
+  },
+  "python_tests": 29,
+  "native_tests": 155,
+  "native_assertions": 592201,
+  "windows_tiles_build": "passed",
+  "executable": "crawl-ref/source/crawl.exe",
+  "executable_sha256": "fe9400ab05e9efbbd4a6485c4441dd5c93a2f811ae358b9bd3441748b99c50dc",
+  "visual_game_test": "not run",
+  "existing_translation_keys_rechecked": 13
+}

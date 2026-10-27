@@ -1,0 +1,254 @@
+{
+  "glossary_sha256": "95cc9538a701536b1581f31834203bbbb3160668ec622f7862f43921be96fdb1",
+  "looked_up": [
+    "quill talisman",
+    "inkwell talisman",
+    "protean talisman",
+    "rimehorn talisman",
+    "spider talisman",
+    "wellspring talisman",
+    "scarab talisman",
+    "medusa talisman",
+    "spore talisman",
+    "maw talisman",
+    "serpent talisman",
+    "eel talisman",
+    "blade talisman",
+    "lupine talisman",
+    "fortress talisman",
+    "granite talisman",
+    "hive talisman",
+    "dragon-coil talisman",
+    "riddle talisman",
+    "sanguine talisman",
+    "talisman of death",
+    "storm talisman",
+    "brightly glowing",
+    "smoking",
+    "scorched",
+    "twisted",
+    "shimmering",
+    "warped",
+    "transparent",
+    "translucent",
+    "encrusted",
+    "pitted",
+    "slimy",
+    "polished",
+    "fine",
+    "incandescent",
+    "ancient",
+    "faintly glowing",
+    "steaming",
+    "dazzling",
+    "masterwork",
+    "smouldering",
+    "glimmering",
+    "buzzing",
+    "fading",
+    "blackened",
+    "non-descript",
+    "talisman",
+    "short sword",
+    "weapon",
+    "hit",
+    "bite"
+  ],
+  "hits": [
+    {
+      "Term": "quill talisman",
+      "Translation": "棘刺护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "inkwell talisman",
+      "Translation": "墨池护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "protean talisman",
+      "Translation": "万变护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "rimehorn talisman",
+      "Translation": "霜角护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "spider talisman",
+      "Translation": "蜘蛛护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "wellspring talisman",
+      "Translation": "涌泉护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "scarab talisman",
+      "Translation": "圣甲虫护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "medusa talisman",
+      "Translation": "美杜莎护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "spore talisman",
+      "Translation": "孢子护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "maw talisman",
+      "Translation": "巨口护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "serpent talisman",
+      "Translation": "巨蛇护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "eel talisman",
+      "Translation": "鳗鱼护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "blade talisman",
+      "Translation": "刃手护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "lupine talisman",
+      "Translation": "狼形护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "fortress talisman",
+      "Translation": "堡垒护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "granite talisman",
+      "Translation": "花岗岩护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "hive talisman",
+      "Translation": "蜂巢护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "dragon-coil talisman",
+      "Translation": "盘龙护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "riddle talisman",
+      "Translation": "谜语护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "sanguine talisman",
+      "Translation": "鲜血护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "talisman of death",
+      "Translation": "死亡护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "storm talisman",
+      "Translation": "风暴护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品】现行英文说明键已核对；新增中文为项目建议译名。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "talisman",
+      "Translation": "变形护符",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": "【0.34.1 补充/物品类别】用于 Shapeshifting，不能与佩戴的 amulet（护身符）混用。 来源：dat/descript/items.txt。"
+    },
+    {
+      "Term": "short sword",
+      "Translation": "短剑",
+      "Part of Speech": "noun",
+      "Variants": "",
+      "Note": ""
+    }
+  ],
+  "appearance_descriptors": {
+    "brightly glowing": "明亮发光的",
+    "smoking": "冒烟的",
+    "scorched": "烧焦的",
+    "twisted": "扭绞的",
+    "shimmering": "微光闪烁的",
+    "warped": "扭曲的",
+    "transparent": "透明的",
+    "translucent": "半透明的",
+    "encrusted": "结壳的",
+    "pitted": "麻点斑驳的",
+    "slimy": "黏滑的",
+    "polished": "抛光的",
+    "fine": "精美的",
+    "incandescent": "炽亮的",
+    "ancient": "古老的",
+    "faintly glowing": "微微发光的",
+    "steaming": "冒蒸气的",
+    "dazzling": "耀眼的",
+    "masterwork": "大师制作的",
+    "smouldering": "阴燃的",
+    "glimmering": "隐约闪光的",
+    "buzzing": "嗡鸣的",
+    "fading": "褪色的",
+    "blackened": "熏黑的",
+    "non-descript": "平平无奇的"
+  }
+}
