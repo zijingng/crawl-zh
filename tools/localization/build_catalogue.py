@@ -9,6 +9,7 @@ import gettext
 import hashlib
 import json
 from pathlib import Path
+from python_compat import pgettext, is_relative_to
 import re
 import shutil
 import subprocess
@@ -54,7 +55,7 @@ def generate(manifest, po, output):
                 path = (source_root / source).resolve()
                 dependency_hashes[source] = (
                     hashlib.sha256(path.read_bytes()).hexdigest()
-                    if path.is_relative_to(source_root) and path.is_file()
+                    if is_relative_to(path, source_root) and path.is_file()
                     else None)
             if (dependency_hashes[source] is None
                     or dependency_hashes[source] != dependency['sha256']):
@@ -62,7 +63,7 @@ def generate(manifest, po, output):
                 break
         if not dependencies_current:
             continue
-        chinese = translations.pgettext(*key)
+        chinese = pgettext(translations, *key)
         if not chinese or chinese == entry['english']:
             continue
         # msgfmt checks c-format entries; also reject lost colour tags and

@@ -2,6 +2,7 @@
 import argparse
 import json
 from pathlib import Path
+from python_compat import pgettext
 from build_textdb import ROOT, digest, load_po
 
 
@@ -23,7 +24,7 @@ def generate(manifest, po, root=ROOT):
             reason = 'unreviewed'
         elif key not in translations._catalog:
             reason = 'missing_or_fuzzy'
-        target = translations.pgettext(entry['context'], english) if reason == 'reviewed' else english
+        target = pgettext(translations, entry['context'], english) if reason == 'reviewed' else english
         outputs.append((root/relative.parent/'zh'/relative.name, target+'\n',
                         {'source':entry['source'], 'status':reason}))
     # All documents must validate before any output is replaced.

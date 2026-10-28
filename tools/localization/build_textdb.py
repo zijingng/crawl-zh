@@ -10,6 +10,7 @@ import gettext
 import hashlib
 import json
 from pathlib import Path
+from python_compat import pgettext, is_relative_to
 import re
 import shutil
 import subprocess
@@ -162,7 +163,7 @@ def generate(manifest, po, data=DATA, report=None):
                                              source_root, dependency_hashes):
                 reason = 'code_changed'
             else:
-                target = translations.pgettext(entry['context'], current[1])
+                target = pgettext(translations, entry['context'], current[1])
                 if not target or entry['context'] + '\x04' + current[1] not in translations._catalog:
                     reason = 'missing_or_fuzzy'
                 else:
@@ -216,7 +217,7 @@ def generate(manifest, po, data=DATA, report=None):
             source = literal['english']
             if '\n' in source or '\r' in source:
                 raise ValueError('Lua result lookup key must be a single line')
-            target = translations.pgettext(literal['context'], source)
+            target = pgettext(translations, literal['context'], source)
             if (literal.get('review_status') != 'reviewed'
                     or literal['context']+'\x04'+source not in translations._catalog):
                 continue
@@ -289,7 +290,7 @@ def code_dependencies_match(dependencies, source_root, hashes):
         if source not in hashes:
             path = (source_root/source).resolve()
             hashes[source] = (hashlib.sha256(path.read_bytes()).hexdigest()
-                              if path.is_relative_to(source_root) and path.is_file() else None)
+                              if is_relative_to(path, source_root) and path.is_file() else None)
         if hashes[source] != dependency['sha256']:
             return False
     return True
