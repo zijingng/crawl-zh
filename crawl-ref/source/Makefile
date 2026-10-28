@@ -334,7 +334,9 @@ all: greet check-fonts $(GAME) docs webserver
 # Export only reviewed, source-matching TextDB entries. Always check so deleted
 # outputs and upstream text edits cannot leave stale Chinese files behind.
 .PHONY: textdb-zh
-textdb-zh:
+# Help export reads generated quickstart.txt, crawl_manual.txt and aptitudes.txt.
+# Build those first, including on clean checkouts and parallel builds.
+textdb-zh: docs
 	$(QUIET_PYTHON)$(PYTHON) ../../tools/localization/build_textdb.py
 	$(QUIET_PYTHON)$(PYTHON) ../../tools/localization/build_help_documents.py
 
