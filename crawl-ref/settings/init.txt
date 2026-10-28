@@ -1,4 +1,6 @@
 ##### Crawl Init file ###############################################
+language = zh
+
 # For descriptions of all options, as well as some more in-depth information
 # on setting them, consult the file
 #    options_guide.txt
