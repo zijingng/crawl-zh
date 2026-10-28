@@ -11,6 +11,7 @@
 #include "catch_amalgamated.hpp"
 
 #include "format.h"
+#include "files.h"
 #include "scroller.h"
 #include "command.h"
 #include "stash.h"
@@ -10034,16 +10035,29 @@ TEST_CASE("Collectible morgue file exports keep canonical English paths and bili
     notes.push_back(Note(NOTE_MESSAGE,0,0,"Entered Rutra's Hidden Sanctum"));
     unwind_var<vector<Note>> list(note_list,notes);
     const auto next=rng::peek_uint64();
-    REQUIRE(dump_char("native-collectibles",true));
+    bool localized_written = false;
+    REQUIRE(dump_char("native-collectibles",true,false,nullptr,true,&localized_written));
+    CHECK(localized_written);
     const auto read=[&](const string &name){std::ifstream f(morgue_directory()+name);return string(std::istreambuf_iterator<char>(f),std::istreambuf_iterator<char>());};
     const string english=read("native-collectibles.txt"),chinese=read("native-collectibles.zh.txt");
     CHECK(english.find("Got ")!=string::npos);CHECK(english.find("Entered Lehudib's Moon Base")!=string::npos);
     CHECK(chinese.find("Got ")==string::npos);CHECK(chinese.find("the pandemonium lord")==string::npos);
     CHECK(chinese.find("佐特宝珠")!=string::npos);CHECK(chinese.find("符文")!=string::npos);CHECK(chinese.find("宝石")!=string::npos);
     CHECK(chinese.find("雷胡迪布的月球基地")!=string::npos);CHECK(chinese.find("鲁特拉的隐秘圣所")!=string::npos);
-    REQUIRE(dump_char("native-collectibles-en",true,false,nullptr,false));
+    REQUIRE(dump_char("native-collectibles-en",true,false,nullptr,false,&localized_written));
+    CHECK_FALSE(localized_written);
     CHECK(read("native-collectibles-en.txt")==english);
-    Options.language=lang_t::EN;REQUIRE(dump_char("native-collectibles-language-en",true));
+    // Block only the optional Chinese path; canonical output must still succeed.
+    string blocked = morgue_directory() + "native-collectibles-blocked.zh.txt";
+    REQUIRE(check_mkdir("test Chinese dump failure", &blocked, true));
+    localized_written = true;
+    REQUIRE(dump_char("native-collectibles-blocked",true,false,nullptr,true,&localized_written));
+    CHECK_FALSE(localized_written);
+    CHECK(read("native-collectibles-blocked.txt")==english);
+    localized_written = true;
+    Options.language=lang_t::EN;
+    REQUIRE(dump_char("native-collectibles-language-en",true,false,nullptr,true,&localized_written));
+    CHECK_FALSE(localized_written);
     CHECK(read("native-collectibles-language-en.txt")==english);
     CHECK(rng::peek_uint64()==next);
 }

@@ -762,13 +762,17 @@ void TilesFramework::send_exit_reason(const string& type, const string& message)
     finish_message();
 }
 
-void TilesFramework::send_dump_info(const string& type, const string& filename)
+void TilesFramework::send_dump_info(const string& type, const string& filename,
+                                    bool localized)
 {
     write_message("*");
     write_message("{\"msg\":\"dump\",\"type\":\"");
     write_message_escaped(type);
     write_message("\",\"filename\":\"");
     write_message_escaped(strip_filename_unsafe_chars(filename));
+    // Append our fixed suffix after sanitizing the player-controlled basename.
+    if (localized)
+        write_message(".zh");
     write_message("\"}");
     finish_message();
 }

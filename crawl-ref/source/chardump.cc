@@ -216,8 +216,10 @@ static dump_params _get_dump(bool full_id = false,
 }
 
 bool dump_char(const string &fname, bool quiet, bool full_id,
-               const scorefile_entry *se, bool localized)
+               const scorefile_entry *se, bool localized, bool *localized_written)
 {
+    if (localized_written)
+        *localized_written = false;
     const dump_params english = _get_dump(full_id, se);
     if (!_write_dump(fname, english, quiet))
         return false;
@@ -235,8 +237,13 @@ bool dump_char(const string &fname, bool quiet, bool full_id,
             const bool closed = fclose(file) == 0;
             if (!written || !closed)
                 mprf(MSGCH_ERROR, ui_translate("morgue.file", "Error writing Chinese character file '%s'."), path.c_str());
-            else if (!quiet)
-                mprf(ui_translate("morgue.file", "Chinese character file written to '%s'."), path.c_str());
+            else
+            {
+                if (localized_written)
+                    *localized_written = true;
+                if (!quiet)
+                    mprf(ui_translate("morgue.file", "Chinese character file written to '%s'."), path.c_str());
+            }
         }
         else
             mprf(MSGCH_ERROR, ui_translate("c.chardump", "Error opening file '%s'"), path.c_str());

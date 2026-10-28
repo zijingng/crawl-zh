@@ -2432,15 +2432,24 @@ void process_command(command_type cmd, command_type prev_cmd)
 #endif
     case CMD_SHOW_CHARACTER_DUMP:
     case CMD_CHARACTER_DUMP:
-        if (!dump_char(you.your_name))
+    {
+        bool localized_written = false;
+        if (!dump_char(you.your_name, false, false, nullptr, true, &localized_written))
             mpr(ui_translate("m.ui", "Char dump unsuccessful! Sorry about that."));
 #ifdef USE_TILE_WEB
         else
+        {
             tiles.send_dump_info("command", you.your_name);
+            // The existing server/client append .txt. A second ordinary dump
+            // notification therefore links to the success-confirmed .zh.txt.
+            if (localized_written)
+                tiles.send_dump_info("command", you.your_name, true);
+        }
 #endif
         if (cmd == CMD_SHOW_CHARACTER_DUMP)
             display_char_dump();
         break;
+    }
 
         // Travel commands.
     case CMD_FIX_WAYPOINT:      travel_cache.add_waypoint(); break;

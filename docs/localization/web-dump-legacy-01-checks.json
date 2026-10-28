@@ -1,0 +1,14 @@
+{
+  "python_tests": 43,
+  "native_test_cases": 1,
+  "native_assertions": 22,
+  "native_build": "passed",
+  "real_sender_and_sanitizer_cpp11": "passed",
+  "unchanged_server_adapter": "passed",
+  "unchanged_chat_dump_handler": "passed",
+  "server_production_files_changed": false,
+  "new_protocol_fields": false,
+  "english_paths_preserved": true,
+  "reviewed_dependency_mismatches": 0,
+  "linux_webtiles_build": "not performed locally"
+}
