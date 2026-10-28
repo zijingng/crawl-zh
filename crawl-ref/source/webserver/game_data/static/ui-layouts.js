@@ -749,6 +749,8 @@ function ($, comm, client, ui, enums, cr, util, scroller, main, gui, player, opt
     function formatted_scroller(desc)
     {
         var $popup = $(".templates > .formatted-scroller").clone();
+        // Match the native scroller. Missing flags from older games retain preformatting.
+        $popup.toggleClass("wrap-text", desc.wrap_text === true);
         var $body = $popup.children(".body");
         var body_html = util.formatted_string_to_html(desc.text);
         if (desc.highlight !== "")

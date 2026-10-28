@@ -187,3 +187,5 @@ f／v／z 瞄准回退修复：[本轮记录](target-aim-02.md)，补齐简短�
 Windows／Linux 换行与生成数据导致译文回退的问题见 [跨平台校验修复](lf-portability-01.md)。
 
 WebTiles HUD、快捷栏和新增语言字段见 [显示翻译与英文回退](web-hud-01.md)。
+
+Ctrl+F 与巫师模式 &m 帮助在 WebTiles 中的窗口宽度见 [网页帮助换行修复](web-help-wrap-01.md)。

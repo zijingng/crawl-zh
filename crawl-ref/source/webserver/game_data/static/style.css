@@ -920,6 +920,26 @@ canvas {
     display: block;
 }
 
+/* Only flow-text scrollers wrap; tables and maps keep their preformatted layout.
+ * Account for the popup's 100px margins and 46px padding/borders/outline. */
+.formatted-scroller.wrap-text {
+    width: 80ch;
+    max-width: calc(100vw - 146px);
+    min-width: 0;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
+}
+.formatted-scroller.wrap-text > .body {
+    min-width: 0;
+}
+
+@media screen and (max-height: 780px) {
+    .formatted-scroller.wrap-text {
+        max-width: calc(100vw - 86px);
+    }
+}
+
 .formatted-scroller > .header {
     margin-bottom: 10px;
 }
