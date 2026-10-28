@@ -5,9 +5,37 @@ function ($, comm) {
     var options = null;
     var listeners = $.Callbacks();
 
+    function is_chinese()
+    {
+        return !!options && options.language === "zh";
+    }
+
+    function text(english)
+    {
+        var translations = options && options.ui_text;
+        return is_chinese() && translations
+            && Object.prototype.hasOwnProperty.call(translations, english)
+            && typeof translations[english] === "string" && translations[english]
+            ? translations[english] : english;
+    }
+
+    function display(english, translated)
+    {
+        return is_chinese() && typeof translated === "string" && translated
+            ? translated : english;
+    }
+
+    function translate_labels()
+    {
+        $("[data-webtiles-text]").each(function () {
+            $(this).text(text($(this).attr("data-webtiles-text")));
+        });
+    }
+
     function clear_options()
     {
         options = null;
+        translate_labels();
     }
 
     function get_option(name)
@@ -60,6 +88,8 @@ function ($, comm) {
         set_option(data.name, data.value);
     };
 
+    listeners.add(translate_labels);
+
     window.set_option = set_option;
 
     comm.register_handlers({
@@ -68,6 +98,8 @@ function ($, comm) {
     });
 
     return {
+        text: text,
+        display: display,
         get: get_option,
         set: set_option,
         send: send_option,

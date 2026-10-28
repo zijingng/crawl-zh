@@ -9771,6 +9771,11 @@ TEST_CASE("Wording HUD names preserve canonical duration metadata and English fa
         REQUIRE(fill_status_info(status,original));
         REQUIRE(fill_status_display_info(status,shown));
         CHECK(shown.light_text==(status==DUR_LOWERED_WL?"意志减半":"禁读"));
+        status_info web_display;
+        REQUIRE(fill_status_display_info(status,web_display,&original));
+        CHECK(web_display.light_text==shown.light_text);
+        CHECK(web_display.short_text==shown.short_text);
+        CHECK(web_display.long_text==shown.long_text);
         CHECK(shown.light_colour==original.light_colour);
         REQUIRE(fill_status_info(status,after));
         CHECK(after.light_text==original.light_text);CHECK(after.short_text==original.short_text);
@@ -9778,6 +9783,10 @@ TEST_CASE("Wording HUD names preserve canonical duration metadata and English fa
         Options.language=lang_t::EN;
         REQUIRE(fill_status_display_info(status,shown));
         CHECK(shown.light_text==original.light_text);CHECK(shown.long_text==original.long_text);
+        REQUIRE(fill_status_display_info(status,web_display,&original));
+        CHECK(web_display.light_text==original.light_text);
+        CHECK(web_display.short_text==original.short_text);
+        CHECK(web_display.long_text==original.long_text);
         Options.language=lang_t::ZH;
     }
     CHECK(rng::peek_uint64()==next);

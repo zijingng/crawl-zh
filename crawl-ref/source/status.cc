@@ -210,9 +210,11 @@ static void _describe_channelled_spell(status_info& inf);
 
 // Presentation is separate because Lua and cancellation logic consume the
 // canonical English status adjectives, including the " (expiring)" suffix.
-bool fill_status_display_info(int status, status_info &inf)
+bool fill_status_display_info(int status, status_info &inf, const status_info *canonical)
 {
-    if (!fill_status_info(status, inf))
+    if (canonical)
+        inf = *canonical;
+    else if (!fill_status_info(status, inf))
         return false;
     if (status == STATUS_MANUAL && !inf.long_text.empty())
     {

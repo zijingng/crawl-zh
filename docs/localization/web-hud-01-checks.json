@@ -1,0 +1,21 @@
+{
+  "ui-sample.json": {
+    "reviewed": 23116,
+    "mismatches": 0
+  },
+  "textdb-phase3.json": {
+    "reviewed": 5748,
+    "mismatches": 0
+  },
+  "hud_captions": 34,
+  "python_tests": 38,
+  "native_cases": 1,
+  "native_assertions": 39,
+  "node_hud_regression": "passed",
+  "javascript_syntax": "passed",
+  "windows_native_build": "passed",
+  "linux_webtiles_build": "not available locally",
+  "new_reviewed_web_ui_entries": 15,
+  "canonical_fields_preserved": true,
+  "english_fallback": true
+}

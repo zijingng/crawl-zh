@@ -157,25 +157,33 @@ function ($, comm, client, cr, enums, options, player, icons, gui, main,
         }
         $tooltip.css({top: y + 10 + "px",
                      left: x + 10 + "px"});
-        if (slot == -2)
+        function line(english)
         {
-            $tooltip.html("<span>Left click: minimize</span><br />"
-                          + "<span>Right click: open settings</span>");
+            return $("<span>").text(options.text(english));
         }
+        $tooltip.empty();
+        if (slot == -2)
+            $tooltip.append(line("Left click: minimize"), "<br />",
+                            line("Right click: open settings"));
         else if (slot == -1 && game.get_input_mode() == enums.mouse_mode.COMMAND)
-            $tooltip.html("<span>Left click: show main menu</span>");
+            $tooltip.append(line("Left click: show main menu"));
         else
         {
             var item = filtered_inv[slot];
-            $tooltip.empty().text(String.fromCharCode(item.letter) + " - ");
+            $tooltip.text(String.fromCharCode(item.letter) + " - ");
             $tooltip.append(player.inventory_item_desc(item.slot));
             if (game.get_input_mode() == enums.mouse_mode.COMMAND)
             {
                 if (item.action_verb)
-                    $tooltip.append("<br /><span>Left click: "
-                                    + item.action_verb.toLowerCase()
-                                    + "</span>");
-                $tooltip.append("<br /><span>Right click: describe</span>");
+                {
+                    // A missing verb translation keeps the entire instruction English.
+                    var translated = options.display("", item.action_verb_display);
+                    var prefix = options.text("Left click:");
+                    $tooltip.append("<br />", $("<span>").text(translated && prefix !== "Left click:"
+                        ? prefix + " " + translated
+                        : "Left click: " + item.action_verb.toLowerCase()));
+                }
+                $tooltip.append("<br />", line("Right click: describe"));
             }
         }
         $tooltip.show();

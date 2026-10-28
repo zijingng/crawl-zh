@@ -101708,3 +101708,93 @@ msgstr "苍白龙人"
 msgctxt "o.monster.attitude"
 msgid "%s %s"
 msgstr "%s的%s"
+
+#. WebTiles display only; English retained for missing/old client fields.
+#: crawl-ref/source/initfile.cc
+msgctxt "web.ui"
+msgid "*EXPLORE*"
+msgstr "*探索*"
+
+#. WebTiles display only; English retained for missing/old client fields.
+#: crawl-ref/source/initfile.cc
+msgctxt "web.ui"
+msgid "*WIZARD*"
+msgstr "*巫师*"
+
+#. WebTiles display only; English retained for missing/old client fields.
+#: crawl-ref/source/initfile.cc
+msgctxt "web.ui"
+msgid "Left click: minimize"
+msgstr "左键：最小化"
+
+#. WebTiles display only; English retained for missing/old client fields.
+#: crawl-ref/source/initfile.cc
+msgctxt "web.ui"
+msgid "Right click: open settings"
+msgstr "右键：打开设置"
+
+#. WebTiles display only; English retained for missing/old client fields.
+#: crawl-ref/source/initfile.cc
+msgctxt "web.ui"
+msgid "Left click: show main menu"
+msgstr "左键：显示主菜单"
+
+#. WebTiles display only; English retained for missing/old client fields.
+#: crawl-ref/source/initfile.cc
+msgctxt "web.ui"
+msgid "Left click:"
+msgstr "左键："
+
+#. WebTiles display only; English retained for missing/old client fields.
+#: crawl-ref/source/initfile.cc
+msgctxt "web.ui"
+msgid "Right click: describe"
+msgstr "右键：查看说明"
+
+#. WebTiles display only; English retained for missing/old client fields.
+#: crawl-ref/source/initfile.cc
+msgctxt "web.ui"
+msgid "Orientation:"
+msgstr "排列方向："
+
+#. WebTiles display only; English retained for missing/old client fields.
+#: crawl-ref/source/initfile.cc
+msgctxt "web.ui"
+msgid "horizontal"
+msgstr "横向"
+
+#. WebTiles display only; English retained for missing/old client fields.
+#: crawl-ref/source/initfile.cc
+msgctxt "web.ui"
+msgid "vertical"
+msgstr "纵向"
+
+#. WebTiles display only; English retained for missing/old client fields.
+#: crawl-ref/source/initfile.cc
+msgctxt "web.ui"
+msgid "Scale, %:"
+msgstr "缩放比例，%："
+
+#. WebTiles display only; English retained for missing/old client fields.
+#: crawl-ref/source/initfile.cc
+msgctxt "web.ui"
+msgid "Font size, px:"
+msgstr "字号，像素："
+
+#. WebTiles display only; English retained for missing/old client fields.
+#: crawl-ref/source/initfile.cc
+msgctxt "web.ui"
+msgid "reset"
+msgstr "重置"
+
+#. WebTiles display only; English retained for missing/old client fields.
+#: crawl-ref/source/initfile.cc
+msgctxt "web.ui"
+msgid "Minimize"
+msgstr "最小化"
+
+#. WebTiles display only; English retained for missing/old client fields.
+#: crawl-ref/source/initfile.cc
+msgctxt "web.ui"
+msgid "Close"
+msgstr "关闭"

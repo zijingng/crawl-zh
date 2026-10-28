@@ -102,7 +102,7 @@ function ($, comm, client, enums, map_knowledge, messages, options, util) {
             noise_cat = "blank";
             // I couldn't get this to work just directly putting the text in #stats_noise_bar,
             // because clearing the text later will adjust the span width.
-            $("#stats_noise_status").text("Silenced");
+            $("#stats_noise_status").text(options.text("Silenced"));
         } else {
             $("#stats_noise_status").text("");
         }
@@ -159,9 +159,9 @@ function ($, comm, client, enums, map_knowledge, messages, options, util) {
         var item = player.inv[index];
         var elem = $("<span>");
         if (parens)
-            elem.text("(" + item.name + ")");
+            elem.text("(" + options.display(item.name, item.name_display) + ")");
         else
-            elem.text(item.name);
+            elem.text(options.display(item.name, item.name_display));
         if (item.col != -1 && item.col != null)
             elem.addClass("fg" + item.col);
         return elem;
@@ -175,7 +175,7 @@ function ($, comm, client, enums, map_knowledge, messages, options, util) {
         if (wielded == -1)
         {
             elem = $("<span>");
-            elem.text(player.unarmed_attack);
+            elem.text(options.display(player.unarmed_attack, player.unarmed_attack_display));
             elem.addClass("fg" + player.unarmed_attack_colour);
         }
         else
@@ -190,7 +190,7 @@ function ($, comm, client, enums, map_knowledge, messages, options, util) {
     function quiver()
     {
         // any use for player.quiver_available any more?
-        return util.formatted_string_to_html(player.quiver_desc);
+        return util.formatted_string_to_html(options.display(player.quiver_desc, player.quiver_desc_display));
     }
 
     player.has_status_light = function (status_light, col)
@@ -388,19 +388,19 @@ function ($, comm, client, enums, map_knowledge, messages, options, util) {
      */
     function update_stats_pane()
     {
-        $("#stats_titleline").text(player.name
-                                    + (player.title[0] === "," ? "" : " ")
-                                    + player.title);
-        $("#stats_wizmode").text(player.wizard ? "*WIZARD*" : player.explore ? "*EXPLORE*" : "");
+        var titleline = player.name + (player.title[0] === "," ? "" : " ") + player.title;
+        $("#stats_titleline").text(options.display(titleline, player.title_line_display));
+        $("#stats_wizmode").text(player.wizard ? options.text("*WIZARD*") : player.explore ? options.text("*EXPLORE*") : "");
 
         // Setup species
         // TODO: Move to a proper initialisation task
         if ($("#stats").attr("data-species") != player.species)
             $("#stats").attr("data-species", player.species);
 
-        var species_god = player.species;
+        var species_god = options.display(player.species, player.species_display);
         if (player.god != "")
-            species_god += " of " + player.god;
+            species_god = options.display(player.species + " of " + player.god,
+                                          player.species_god_display);
         if (player.god == "Xom")
         {
             if (player.piety_rank >=0)
@@ -425,7 +425,7 @@ function ($, comm, client, enums, map_knowledge, messages, options, util) {
 
         if (player.god == "Gozag")
         {
-            $("#stats_gozag_gold_label").text(" Gold: ");
+            $("#stats_gozag_gold_label").text(" " + options.text("Gold:") + " ");
             $("#stats_gozag_gold_label").css("padding-left", "0.5em");
             $("#stats_gozag_gold").text(player.gold);
         } else {
@@ -443,7 +443,7 @@ function ($, comm, client, enums, map_knowledge, messages, options, util) {
             $("#stats_" + simple_stats[i]).text(player[simple_stats[i]]);
 
         $("#stats_hpline > .stats_caption").text(
-            (player.real_hp_max != player.hp_max) ? "HP:" : "Health:");
+            (player.real_hp_max != player.hp_max) ? options.text("HP:") : options.text("Health:"));
 
         if (player.real_hp_max != player.hp_max)
             $("#stats_real_hp_max").text("(" + player.real_hp_max + ")");
@@ -480,19 +480,19 @@ function ($, comm, client, enums, map_knowledge, messages, options, util) {
 
         if (options.get("show_game_time") === true)
         {
-            $("#stats_time_caption").text("Time:");
+            $("#stats_time_caption").text(options.text("Time:"));
             $("#stats_time").text((player.time / 10.0).toFixed(1));
         }
         else
         {
-            $("#stats_time_caption").text("Turn:");
+            $("#stats_time_caption").text(options.text("Turn:"));
             $("#stats_time").text(player.turn);
         }
 
         if (player.time_delta)
             $("#stats_time").append(" (" + (player.time_delta / 10.0).toFixed(1) + ")");
 
-        var place_desc = player.place;
+        var place_desc = options.display(player.place, player.place_display);
         if (player.depth) place_desc += ":" + player.depth;
         $("#stats_place").text(place_desc);
 
@@ -505,10 +505,10 @@ function ($, comm, client, enums, map_knowledge, messages, options, util) {
             let status = $("<span>");
             status.addClass("status_light");
             status.addClass("fg" + status_inf.col);
-            status.text(status_inf.light);
+            status.text(options.display(status_inf.light, status_inf.light_display));
             status.on("mouseenter mousemove", ev => {
                 tooltip.css({top: ev.pageY + "px"});
-                tooltip.html(util.formatted_string_to_html(status_inf.desc));
+                tooltip.html(util.formatted_string_to_html(options.display(status_inf.desc, status_inf.desc_display)));
                 tooltip.show();
             });
             status.on("mouseleave", ev => tooltip.hide());
@@ -612,6 +612,8 @@ function ($, comm, client, enums, map_knowledge, messages, options, util) {
         .on("game_init.player", function () {
             $.extend(player, {
                 name: "", god: "", title: "", species: "",
+                title_line_display: "", species_display: "", species_god_display: "",
+                place_display: "", unarmed_attack_display: "", quiver_desc_display: "",
                 hp: 0, hp_max: 0, real_hp_max: 0, poison_survival: 0,
                 mp: 0, mp_max: 0, dd_real_mp_max: 0,
                 ac: 0, ev: 0, sh: 0,

@@ -12,6 +12,7 @@
 #include "AppHdr.h"
 
 #include "initfile.h"
+#include "i18n.h"
 
 #include "json.h"
 #include "json-wrapper.h"
@@ -5503,6 +5504,58 @@ static void _write_minimap_colours()
 void game_options::write_webtiles_options(const string& name)
 {
     tiles.json_open_object(name);
+
+
+    // Effective game language, not the browser locale or an unparsed rc value.
+    tiles.json_write_string("language", language == lang_t::ZH ? "zh" : "en");
+    // Reuse the desktop catalogue; the browser never maintains a second translation.
+    const struct { const char *key; const char *context; const char *source; } captions[] = {
+        {"HP:", "o.label", "HP: "},
+        {"Health:", "phase3.output", "Health: "},
+        {"Magic:", "phase3.output", "Magic:  "},
+        {"AC:", "o.label", "AC:"},
+        {"EV:", "o.label", "EV:"},
+        {"SH:", "o.label", "SH:"},
+        {"XL:", "o.label", "XL: "},
+        {"Next:", "o.label", "Next: "},
+        {"Noise:", "phase3.output", "Noise: "},
+        {"Str:", "phase3.output", "Str:"},
+        {"Int:", "phase3.output", "Int:"},
+        {"Dex:", "phase3.output", "Dex:"},
+        {"Doom:", "o.label", "Doom: "},
+        {"Contam:", "o.label", "Contam: "},
+        {"Place:", "o.label", "Place: "},
+        {"Time:", "phase3.output", "Time:"},
+        {"Turn:", "phase3.output", "Turn:"},
+        {"Silenced", "o.label", "Silenced  "},
+        {"Gold:", "o.label", "Gold:"},
+        {"*EXPLORE*", "web.ui", "*EXPLORE*"},
+        {"*WIZARD*", "web.ui", "*WIZARD*"},
+        {"Left click: minimize", "web.ui", "Left click: minimize"},
+        {"Right click: open settings", "web.ui", "Right click: open settings"},
+        {"Left click: show main menu", "web.ui", "Left click: show main menu"},
+        {"Left click:", "web.ui", "Left click:"},
+        {"Right click: describe", "web.ui", "Right click: describe"},
+        {"Orientation:", "web.ui", "Orientation:"},
+        {"horizontal", "web.ui", "horizontal"},
+        {"vertical", "web.ui", "vertical"},
+        {"Scale, %:", "web.ui", "Scale, %:"},
+        {"Font size, px:", "web.ui", "Font size, px:"},
+        {"reset", "web.ui", "reset"},
+        {"Minimize", "web.ui", "Minimize"},
+        {"Close", "web.ui", "Close"},
+    };
+    tiles.json_open_object("ui_text");
+    for (const auto &entry : captions)
+    {
+        const ui_arg text = ui_text_arg(entry.context, entry.source);
+        if (text.available)
+        {
+            string caption = text.text;
+            tiles.json_write_string(entry.key, trim_string(caption));
+        }
+    }
+    tiles.json_close_object();
 
     _write_colour_list(hp_colour, "hp_colour");
     _write_colour_list(mp_colour, "mp_colour");

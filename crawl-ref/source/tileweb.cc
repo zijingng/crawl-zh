@@ -4,6 +4,7 @@
 #ifdef USE_TILE_WEB
 
 #include "tileweb.h"
+#include "i18n.h"
 
 #include <cerrno>
 #include <cstdarg>
@@ -1055,18 +1056,19 @@ template<class T> static bool _update_int(bool force, T& current, T next,
         return false;
 }
 
-static bool _update_statuses(player_info& c)
+static bool _update_statuses(player_info& c, vector<unsigned int> &status_ids)
 {
     bool changed = false;
     unsigned int counter = 0;
     status_info inf;
     for (unsigned int status = 0; status <= STATUS_LAST_STATUS; ++status)
     {
-        if (!fill_status_display_info(status, inf)) // this will reset inf itself
+        if (!fill_status_info(status, inf)) // Keep English keys for frontend rules.
             continue;
 
         if (!inf.light_text.empty() || !inf.short_text.empty())
         {
+            status_ids.push_back(status);
             if (!changed)
             {
                 // up until now, c.status has not changed. Does this dur differ
@@ -1141,6 +1143,14 @@ void TilesFramework::_send_player(bool force_full)
     _update_string(force_full, c.name, you.your_name, "name");
     _update_string(force_full, c.job_title, filtered_lang(player_title()),
                    "title");
+    // Display-only additions: canonical fields remain available to client logic.
+    const skill_type title_skill = best_skill(SK_FIRST_SKILL, SK_LAST_SKILL);
+    ui_arg title_display;
+    skill_title_by_rank(title_skill, get_skill_rank(you.skills[title_skill]),
+        you.species, you.base_stats[STAT_DEX], you.base_stats[STAT_STR],
+        you.base_stats[STAT_INT], you.religion, you.raw_piety, true, &title_display);
+    json_write_string("title_line_display", ui_render("o.title", "%s the %s", "",
+        {ui_literal_arg(you.your_name), title_display}));
     _update_int(force_full, c.wizard, you.wizard, "wizard");
     _update_int(force_full, c.explore, you.explore, "explore");
     _update_string(force_full, c.species, player_species_name(),
@@ -1151,6 +1161,23 @@ void TilesFramework::_send_player(bool force_full)
     else if (!you_worship(GOD_NO_GOD))
         god = god_name(you.religion);
     _update_string(force_full, c.god, god, "god");
+    const ui_arg species_display = ui_text_arg("display.creation", player_species_name());
+    const ui_arg god_display = ui_text_arg("display.god", god_name(you.religion));
+    json_write_string("species_display", species_display.available ? species_display.text : "");
+    // Keep the full species/religion expression English if any part is unavailable.
+    string species_god_display;
+    if (species_display.available)
+    {
+        if (god.empty())
+            species_god_display = species_display.text;
+        else
+        {
+            const string suffix = ui_render("o.title", " of %s", "", {god_display});
+            if (!suffix.empty())
+                species_god_display = species_display.text + suffix;
+        }
+    }
+    json_write_string("species_god_display", species_god_display);
     _update_int(force_full, c.under_penance, (bool) player_under_penance(), "penance");
     int prank = 0;
     if (you_worship(GOD_XOM))
@@ -1246,6 +1273,8 @@ void TilesFramework::_send_player(bool force_full)
         }
     }
     _update_string(force_full, c.place, short_name, "place");
+    const ui_arg place_display = ui_text_arg("b.branch.name", branches[place.branch].shortname);
+    json_write_string("place_display", place_display.available ? place_display.text : "");
     _update_int(force_full, c.depth, brdepth[place.branch] > 1 ? you.depth : 0, "depth");
 
     if (m_origin.equals(-1, -1))
@@ -1260,15 +1289,21 @@ void TilesFramework::_send_player(bool force_full)
         c.position = pos;
     }
 
-    if (force_full || _update_statuses(c))
+    vector<unsigned int> status_ids;
+    const bool statuses_changed = _update_statuses(c, status_ids);
+    if (force_full || statuses_changed)
     {
         json_open_array("status");
-        for (const status_info &status : c.status)
+        for (size_t i = 0; i < c.status.size(); ++i)
         {
+            const status_info &status = c.status[i];
+            status_info display;
+            fill_status_display_info(status_ids[i], display, &status);
             json_open_object();
             if (!status.light_text.empty())
             {
                 json_write_string("light", status.light_text);
+                json_write_string("light_display", display.light_text);
                 // split off any extra info, e.g. counts for things like Zot
                 // and Flay. (Status db descriptions never have spaces.)
                 string dbname = split_string(" ", status.light_text, true, true, 1)[0];
@@ -1281,7 +1316,8 @@ void TilesFramework::_send_player(bool force_full)
                 if (status.short_text.find(" (expiring)") != std::string::npos)
                     dbdesc += " (expiring)";
 
-                json_write_string("desc", dbdesc.size() ? dbdesc : ui_translate("t.tiles", "No description found"));
+                json_write_string("desc", dbdesc.size() ? dbdesc : "No description found");
+                json_write_string("desc_display", display.long_text);
             }
             if (!status.short_text.empty())
                 json_write_string("text", status.short_text);
@@ -1314,6 +1350,11 @@ void TilesFramework::_send_player(bool force_full)
                 you.quiver_action.get()->quiver_description().to_colour_string(LIGHTGRAY),
                 "quiver_desc");
 
+    bool quiver_translated = false;
+    const auto quiver_display = you.quiver_action.get()->quiver_description(false, &quiver_translated);
+    json_write_string("quiver_desc_display", quiver_translated
+        ? quiver_display.to_colour_string(LIGHTGRAY) : "");
+
     item_def* weapon = you.weapon();
     item_def* offhand = you.offhand_weapon();
     _update_int(force_full, c.weapon_index, (int8_t) (weapon ? weapon->link : -1), "weapon_index");
@@ -1322,6 +1363,8 @@ void TilesFramework::_send_player(bool force_full)
 
     _update_string(force_full, c.unarmed_attack,
                    you.unarmed_attack_name(), "unarmed_attack");
+    const ui_arg unarmed_display = get_form()->uc_attack_display_arg(you.unarmed_attack_name());
+    json_write_string("unarmed_attack_display", unarmed_display.available ? unarmed_display.text : "");
     _update_int(force_full, c.unarmed_attack_colour,
                 (uint8_t) get_form()->uc_colour, "unarmed_attack_colour");
     _update_int(force_full, c.quiver_available,
@@ -1447,6 +1490,9 @@ void TilesFramework::_send_item(item_def& current, const item_def& next,
             || xp_evoker_changed)
         {
             json_write_string("name", name);
+            string display;
+            json_write_string("name_display", try_item_display_name(next, display, false, false)
+                ? display : "");
         }
 
         // -1 in this field means don't show. *note*: showing in the action
@@ -1497,7 +1543,16 @@ void TilesFramework::_send_item(item_def& current, const item_def& next,
             auto action = quiver::slot_to_action(current.link);
             // TODO: does this stay in sync? Do anything with enabledness?
             if (action && action->is_valid())
+            {
                 json_write_string("action_verb", action->quiver_verb());
+                const ui_arg verb = ui_text_arg("q.verb", action->quiver_verb());
+                json_write_string("action_verb_display", verb.available ? verb.text : "");
+            }
+            else
+            {
+                json_write_string("action_verb", "");
+                json_write_string("action_verb_display", "");
+            }
         }
     }
 }
