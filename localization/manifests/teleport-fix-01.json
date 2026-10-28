@@ -41,7 +41,7 @@
         },
         {
           "source": "crawl-ref/source/mon-data.h",
-          "sha256": "3160f2f72b25a1e0702cfad6031092a6688aff8b8ab928acb781165875670f2b"
+          "sha256": "05d759350f64fe22d26eb27b2897267d2bf907bab6fc1a2f74b5029136761b83"
         }
       ]
     },
@@ -85,7 +85,7 @@
         },
         {
           "source": "crawl-ref/source/mon-data.h",
-          "sha256": "3160f2f72b25a1e0702cfad6031092a6688aff8b8ab928acb781165875670f2b"
+          "sha256": "05d759350f64fe22d26eb27b2897267d2bf907bab6fc1a2f74b5029136761b83"
         }
       ]
     },
@@ -129,7 +129,7 @@
         },
         {
           "source": "crawl-ref/source/mon-data.h",
-          "sha256": "3160f2f72b25a1e0702cfad6031092a6688aff8b8ab928acb781165875670f2b"
+          "sha256": "05d759350f64fe22d26eb27b2897267d2bf907bab6fc1a2f74b5029136761b83"
         }
       ]
     }

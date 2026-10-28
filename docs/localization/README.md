@@ -183,3 +183,5 @@ f／v／z 瞄准回退修复：[本轮记录](target-aim-02.md)，补齐简短�
 随机作者书名、魔窟领主记录语序及麻痹／变异来源见 [修复记录](morgue-status-books-01.md)。
 
 暂缓旧条目说明、可见怪物列表及有色龙人玩家名称见 [修复记录](species-monster-list-01.md)。
+
+Windows／Linux 换行与生成数据导致译文回退的问题见 [跨平台校验修复](lf-portability-01.md)。

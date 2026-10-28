@@ -505,7 +505,7 @@ def main():
 
     text += load_template(args.templatedir, 'footer.txt')
 
-    with open(args.form_data, 'w') as f:
+    with open(args.form_data, 'w', encoding='utf-8', newline='\n') as f:
         f.write(text)
 
 if __name__ == '__main__':

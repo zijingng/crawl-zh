@@ -166,7 +166,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -379,7 +379,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -592,7 +592,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -805,7 +805,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -1018,7 +1018,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -1231,7 +1231,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -1450,7 +1450,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -1663,7 +1663,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -1876,7 +1876,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -2089,7 +2089,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -2302,7 +2302,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -2515,7 +2515,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -2728,7 +2728,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -2947,7 +2947,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -3166,7 +3166,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -3379,7 +3379,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -3598,7 +3598,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -3817,7 +3817,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -4036,7 +4036,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -4255,7 +4255,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -4474,7 +4474,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -4693,7 +4693,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -4912,7 +4912,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -5125,7 +5125,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -5338,7 +5338,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -5551,7 +5551,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -5770,7 +5770,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -5989,7 +5989,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -6202,7 +6202,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -6415,7 +6415,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -6628,7 +6628,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",
@@ -6841,7 +6841,7 @@
         },
         {
           "source": "crawl-ref/source/species-data.h",
-          "sha256": "4983882f515c07952aff8507e37522623e8372d15ce919e8782498f7a2f1883a"
+          "sha256": "08420f1a4c1174c0e7bb5017bea57f89d90f3e5ae35865a074da739528056043"
         },
         {
           "source": "crawl-ref/source/species.cc",

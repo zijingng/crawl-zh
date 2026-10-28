@@ -223,7 +223,7 @@ def species_flags(flags):
         out.add(enumify(f, SPECIES_FLAG_ENUM))
     if not out:
         out.add('SPF_NONE')
-    return ' | '.join(out)
+    return ' | '.join(sorted(out))
 
 
 def undead_type(type):
@@ -352,12 +352,12 @@ def generate_species_type_data(s):
 def maybe_write(filename, text):
     """Write `text` to `filename`, but only if the file would be created or changed"""
     if os.path.exists(filename):
-        with open(filename, 'r') as f:
+        with open(filename, 'r', encoding='utf-8', newline='') as f:
             cur = f.read()
         if cur == text:
             return
 
-    with open(filename, 'w') as f:
+    with open(filename, 'w', encoding='utf-8', newline='\n') as f:
         f.write(text)
 
 

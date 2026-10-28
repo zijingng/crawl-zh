@@ -1,0 +1,12 @@
+{
+  "generated_headers_utf8_lf": 9,
+  "generator_output_semantics_unchanged": true,
+  "hash_seed_independent": true,
+  "lf_crlf_exports_identical": true,
+  "textdb_entries": 5748,
+  "ui_sha256": "746c9b13c1b87e1575c08176c84e385c029c680ede0ddb5c50cd0ca5158497ab",
+  "runtime_translation_content_unchanged": true,
+  "python_tests": 38,
+  "manifest_changes_only_dependency_hashes": true,
+  "migrated_dependency_pins": 36711
+}

@@ -1,6 +1,7 @@
 """Catalogue integration checks. Run with the same Python/PATH as the build."""
 import importlib.util
 import hashlib
+from source_hash import text_file_sha256
 import json
 from pathlib import Path
 import subprocess
@@ -14,6 +15,31 @@ spec.loader.exec_module(catalogue)
 
 
 class CatalogueTest(unittest.TestCase):
+    def test_lf_and_crlf_dependencies_export_the_same_catalogue(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            folder = root/'localization/manifests'
+            folder.mkdir(parents=True)
+            source = root/'generated.h'
+            manifest, po, output = folder/'ui.json', root/'ui.po', root/'catalogue.h'
+            source.write_bytes(b'reviewed\ncode\n')
+            entry = {'context':'test', 'english':'Original', 'review_status':'reviewed',
+                     'source_dependencies':[{'source':'generated.h',
+                                             'sha256':text_file_sha256(source)}]}
+            manifest.write_text(json.dumps({'messages':[entry]}), encoding='utf-8')
+            po.write_text('msgid ""\nmsgstr ""\n'
+                          '"Content-Type: text/plain; charset=UTF-8\\n"\n\n'
+                          'msgctxt "test"\nmsgid "Original"\nmsgstr "译文"\n', encoding='utf-8')
+            catalogue.generate(manifest, po, output)
+            expected = output.read_bytes()
+            self.assertIn('译文', expected.decode('utf-8'))
+            source.write_bytes(b'reviewed\r\ncode\r\n')
+            catalogue.generate(manifest, po, output)
+            self.assertEqual(output.read_bytes(), expected)
+            source.write_bytes(b'changed\r\ncode\r\n')
+            catalogue.generate(manifest, po, output)
+            self.assertNotIn('译文', output.read_text(encoding='utf-8'))
+
     def test_textdb_prose_cannot_be_duplicated_into_ui(self):
         entry={'context':'mon.cast.speech','english':'A database message.',
                'review_status':'reviewed'}
@@ -24,7 +50,7 @@ class CatalogueTest(unittest.TestCase):
             root = Path(directory)
             source = root/'message.cc'
             source.write_text('reviewed code\n', encoding='utf-8')
-            digest = hashlib.sha256(source.read_bytes()).hexdigest()
+            digest = text_file_sha256(source)
             folder = root/'localization/manifests'
             folder.mkdir(parents=True)
             manifest = folder/'ui.json'
@@ -74,7 +100,7 @@ class CatalogueTest(unittest.TestCase):
             entry = {'context':'log.test', 'english':'Original %s',
                      'review_status':'reviewed', 'source_dependencies':[
                          {'source':'message.cc',
-                          'sha256':hashlib.sha256(source.read_bytes()).hexdigest()}]}
+                          'sha256':text_file_sha256(source)}]}
             manifest.write_text(json.dumps({'messages':[entry]}), encoding='utf-8')
             po.write_text('msgid ""\nmsgstr ""\n'
                           '"Content-Type: text/plain; charset=UTF-8\\n"\n\n'

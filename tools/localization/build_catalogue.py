@@ -14,6 +14,7 @@ import re
 import shutil
 import subprocess
 import tempfile
+from source_hash import text_file_sha256
 
 
 def generate(manifest, po, output):
@@ -54,7 +55,7 @@ def generate(manifest, po, output):
             if source not in dependency_hashes:
                 path = (source_root / source).resolve()
                 dependency_hashes[source] = (
-                    hashlib.sha256(path.read_bytes()).hexdigest()
+                    text_file_sha256(path)
                     if is_relative_to(path, source_root) and path.is_file()
                     else None)
             if (dependency_hashes[source] is None

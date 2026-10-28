@@ -15,6 +15,7 @@ import re
 import shutil
 import subprocess
 import tempfile
+from source_hash import text_file_sha256
 
 ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / 'crawl-ref/source/dat'
@@ -289,7 +290,7 @@ def code_dependencies_match(dependencies, source_root, hashes):
         source = dependency['source']
         if source not in hashes:
             path = (source_root/source).resolve()
-            hashes[source] = (hashlib.sha256(path.read_bytes()).hexdigest()
+            hashes[source] = (text_file_sha256(path)
                               if is_relative_to(path, source_root) and path.is_file() else None)
         if hashes[source] != dependency['sha256']:
             return False

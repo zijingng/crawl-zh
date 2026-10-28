@@ -1,0 +1,2 @@
+# Keep source and localization text portable; binary assets remain binary.
+* text=auto eol=lf
