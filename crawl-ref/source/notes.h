@@ -5,6 +5,7 @@
 
 #pragma once
 
+#include <functional>
 #include <string>
 #include <vector>
 #include <cstdio>
@@ -85,8 +86,8 @@ struct Note
         type(t), first(f), second(s), name(n), desc(d), screen(sc) {}
     void save(writer& outf) const;
     void load(reader& inf);
-    string describe(bool when = true, bool where = true, bool what = true) const;
-    string display_describe(bool when = true, bool where = true, bool what = true) const;
+    string describe(bool when = true, bool where = true, bool what = true,
+                    bool localized = false) const;
     bool hidden() const;
     void check_milestone() const;
 
@@ -98,21 +99,21 @@ struct Note
     string name;
     string desc;
     string screen;
-};
+    // Completed event-time bodies; original typed fields remain canonical.
+    string english;
+    string chinese;
 
-// Canonical English plus typed snapshots for optional localized display.
-Note make_starting_note(const string &name, species_type species, job_type job);
-Note make_xp_level_note(int level, int hp, int maxhp, int mp, int maxmp);
-Note make_version_note(const string &before, const string &after);
-Note make_feature_note(const coord_def &where);
-Note make_identified_item_note(const item_def &item, const string &description);
-Note make_obtained_item_note(const item_def &item, int time_left);
-Note make_location_note(const string &original, const string &kind, const string &name);
+private:
+    string chinese_at_event() const;
+    friend void take_note(const Note&, bool, const std::function<string()> &);
+};
 
 extern vector<Note> note_list;
 void activate_notes(bool active);
 bool notes_are_active();
-void take_note(const Note& note, bool force = false);
+// The optional renderer runs once, in Chinese, while event context is alive.
+void take_note(const Note& note, bool force = false,
+               const std::function<string()> &translate = {});
 void save_notes(writer&);
 void load_notes(reader&);
 void make_user_note();

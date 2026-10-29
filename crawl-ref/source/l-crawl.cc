@@ -800,7 +800,16 @@ static int crawl_take_note(lua_State *ls)
 {
     const char* msg = luaL_checkstring(ls, 1);
     if (lua_gettop(ls) >= 3)
-        take_note(make_location_note(msg, luaL_checkstring(ls, 2), luaL_checkstring(ls, 3)));
+    {
+        const string kind = luaL_checkstring(ls, 2), name = luaL_checkstring(ls, 3);
+        take_note(Note(NOTE_MESSAGE, 0, 0, msg), false, [&] {
+            if (kind == "portal" && msg == "Entered " + name)
+                return ui_render("n.note", "Entered %s", "", {ui_text_arg("lua.portal.name", name)});
+            if (kind == "realm" && msg == "Entered the realm of " + name + ".")
+                return ui_render("n.note", "Entered the realm of %s.", "", {ui_text_arg("display.monster", name)});
+            return string();
+        });
+    }
     else
         take_note(Note(NOTE_MESSAGE, 0, 0, msg));
     return 0;

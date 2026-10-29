@@ -241,7 +241,16 @@ bool bless_weapon(god_type god, brand_type brand, colour_t colour)
     you.redraw_armour_class = true; // protection,
     you.redraw_evasion = true;      // or evasion
     const string desc = old_name + " " + _god_blessing_description(god);
-    take_note(make_identified_item_note(wpn, desc));
+    take_note(Note(NOTE_ID_ITEM, 0, 0, wpn.name(DESC_A), desc), false, [&] {
+            const string original_origin = desc;
+            if (original_origin.empty())
+                return ui_render("n.note", "Identified %s", "", {ui_item_arg(wpn)});
+            string origin = item_origin_description(wpn);
+            if (origin == original_origin + ".") return string();
+            if (ends_with(origin, "。")) origin.resize(origin.size() - string("。").size());
+            return ui_render("n.note", "Identified %s (%s)", "",
+                {ui_item_arg(wpn), ui_literal_arg(origin)});
+        });
     wpn.flags |= ISFLAG_NOTED_ID;
     wpn.props[FORCED_ITEM_COLOUR_KEY] = colour;
 

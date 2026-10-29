@@ -36,6 +36,7 @@
 #include "stringutil.h"
 #include "tag-version.h"
 #include "unicode.h"
+#include "unwind.h"
 #include "view.h"
 
 #define NOTES_VERSION_NUMBER 1002
@@ -203,244 +204,7 @@ static bool _is_noteworthy(const Note& note)
     return true;
 }
 
-Note make_starting_note(const string &name, species_type race, job_type job)
-{
-    const string original = name + " the " + species::name(race) + " "
-        + get_job_name(job) + " began the quest for the Orb.";
-    return Note(NOTE_MESSAGE, race, job, original, "morgue-start-v1\n" + name);
-}
-
-Note make_xp_level_note(int level, int hp, int maxhp, int mp, int maxmp)
-{
-    xlog_fields fields;
-    fields.add_field("hp", "%d", hp); fields.add_field("mhp", "%d", maxhp);
-    fields.add_field("mp", "%d", mp); fields.add_field("mmp", "%d", maxmp);
-    return Note(NOTE_XP_LEVEL_CHANGE, level, 0,
-        make_stringf("HP: %d/%d MP: %d/%d", hp, maxhp, mp, maxmp),
-        "morgue-xp-v1\n" + fields.xlog_line());
-}
-
-Note make_version_note(const string &before, const string &after)
-{
-    xlog_fields fields;
-    fields.add_field("before", "%s", before.c_str());
-    fields.add_field("after", "%s", after.c_str());
-    return Note(NOTE_MESSAGE, 0, 0,
-        make_stringf("Upgraded the game from %s to %s", before.c_str(), after.c_str()),
-        "morgue-version-v1\n" + fields.xlog_line());
-}
-
-static string _item_note_marker()
-{
-    return "morgue-item-v1:" + to_string(TAG_MAJOR_VERSION) + ":"
-        + to_string(TAG_MINOR_VERSION) + "\n";
-}
-
-Note make_identified_item_note(const item_def &item, const string &description)
-{
-    Note note(NOTE_ID_ITEM, 0, 0, item.name(DESC_A), description);
-    item_def snapshot = item;
-    snapshot.pos = ITEM_IN_INVENTORY; snapshot.link = 0; snapshot.slot = 'a';
-    if (!snapshot.is_valid(true)) return note;
-    vector<unsigned char> bytes; auto output = writer(&bytes);
-    marshallItem(output, snapshot, true);
-    // screen is an existing short-string field; only user notes display it.
-    if (bytes.size() > 15000) return note;
-    const char *digits = "0123456789abcdef";
-    note.screen = _item_note_marker();
-    for (auto byte : bytes)
-    { note.screen += digits[byte >> 4]; note.screen += digits[byte & 15]; }
-    return note;
-}
-
-static bool _item_from_note(const Note &note, item_def &item)
-{
-    const string marker = _item_note_marker();
-    if (!starts_with(note.screen, marker)) return false;
-    const string hex = note.screen.substr(marker.size());
-    if (hex.empty() || hex.size() % 2 || hex.size() > 30000) return false;
-    vector<unsigned char> bytes;
-    for (size_t i = 0; i < hex.size(); i += 2)
-    {
-        const auto digit = [](char c) -> int {
-            return c >= '0' && c <= '9' ? c - '0'
-                 : c >= 'a' && c <= 'f' ? c - 'a' + 10 : -1;
-        };
-        const int a = digit(hex[i]), b = digit(hex[i + 1]);
-        if (a < 0 || b < 0) return false;
-        bytes.push_back((a << 4) | b);
-    }
-    try
-    {
-        auto input = reader(bytes, TAG_MINOR_VERSION); input.set_safe_read(true);
-        unmarshallItem(input, item);
-        return item.is_valid(true) && item.name(DESC_A) == note.name;
-    }
-    catch (const short_read_exception &) { return false; }
-}
-
-Note make_obtained_item_note(const item_def &item, int time_left)
-{
-    Note note = make_identified_item_note(item, origin_desc(item));
-    note.type = NOTE_GET_ITEM;
-    note.first = time_left;
-    return note;
-}
-
-static string _location_note_english(const string &kind, const string &name)
-{
-    if (name.empty()) return "";
-    if (kind == "portal") return "Entered " + name;
-    if (kind == "realm") return "Entered the realm of " + name + ".";
-    return "";
-}
-
-Note make_location_note(const string &original, const string &kind, const string &name)
-{
-    Note note(NOTE_MESSAGE, 0, 0, original);
-    if (original != _location_note_english(kind, name)) return note;
-    xlog_fields fields;
-    fields.add_field("kind", "%s", kind.c_str());
-    fields.add_field("name", "%s", name.c_str());
-    note.desc = "morgue-location-v1\n" + fields.xlog_line();
-    return note;
-}
-
-static string _location_note_display(const string &kind, const string &name)
-{
-    if (kind == "portal")
-        return ui_render("n.note", "Entered %s", "",
-                         {ui_text_arg("lua.portal.name", name)});
-    if (kind == "realm")
-        return ui_render("n.note", "Entered the realm of %s.", "",
-                         {ui_text_arg("display.monster", name)});
-    return "";
-}
-
-// Old collectible notes have no item snapshot. Match the full canonical name
-// against this finite set of typed collectibles; never parse an English noun.
-static ui_arg _legacy_collectible_note_name(const string &name)
-{
-    for (auto base : {OBJ_RUNES, OBJ_GEMS, OBJ_ORBS})
-    {
-        const int count = base == OBJ_RUNES ? NUM_RUNE_TYPES
-                        : base == OBJ_GEMS ? NUM_GEM_TYPES : 1;
-        for (int sub = 0; sub < count; ++sub)
-        {
-            item_def item;
-            item.base_type = base; item.sub_type = sub; item.quantity = 1;
-            item.flags = ISFLAG_IDENTIFIED;
-            if (item.name(DESC_A) == name) return ui_item_arg(item);
-        }
-    }
-    return {"", false};
-}
-
-Note make_feature_note(const coord_def &where)
-{
-    const auto feat = env.map_knowledge(where).feat();
-    const auto trap = env.map_knowledge(where).trap();
-    xlog_fields fields;
-    fields.add_field("raw", "%s", feature_description_at(where, false, DESC_PLAIN).c_str());
-    if (feat == DNGN_ENTER_SHOP)
-    {
-        const shop_struct *shop = shop_at(where, true);
-        if (shop)
-        {
-            fields.add_field("type", "%d", shop->type);
-            fields.add_field("x", "%d", shop->pos.x); fields.add_field("y", "%d", shop->pos.y);
-            fields.add_field("owner", "%s", shop->shop_name.c_str());
-            fields.add_field("typename", "%s", shop->shop_type_name.c_str());
-            fields.add_field("suffix", "%s", shop->shop_suffix_name.c_str());
-            for (int i = 0; i < 3; ++i)
-                fields.add_field("seed" + to_string(i), "%d", shop->keeper_name[i]);
-        }
-    }
-    return Note(NOTE_SEEN_FEAT, feat, trap, feature_description_at(where, false, DESC_A) + ".",
-                "morgue-feature-v1\n" + fields.xlog_line());
-}
-
-// Exact compatibility matches for portal notes written before typed metadata.
-// Only English identities are listed here; translations stay in lua.portal.name.
-static string _legacy_location_note_display(const string &original)
-{
-    for (const char *name : {
-        "The Chambers of the Cloud Mage",
-        "The Hall of the Hellbinder",
-        "Doroklohe's Tomb",
-        "Cigotuvi's Fleshworks",
-        "Iskenderun's Mystic Tower",
-        "Zonguldrok's Shrine",
-        "Wucad Mu's Monastery",
-        "The Roulette of Golubria",
-        "Lehudib's Moon Base",
-        "Eringya's Formal Garden",
-        "Maxwell's Workshop",
-        "Yara's Duelist Academy",
-        "Borgnjor's Mausoleum",
-        "Tukima's Studio",
-        "Alistair's Party Mansion",
-        "The Name-Rending Infernalists' Reservoir",
-        "Ozocubu's Refrigerator",
-        "The Storm Queen's Palace Crash-Site",
-        "Leda's Sunken Stockpile",
-        "Eringya's Secret Bog",
-        "Rutra's Hidden Sanctum",
-        "The Dread Knight's Derelict Chapel",
-        "The First Justicar's Armoury",
-        "The Octopus King's Forgotten Garden",
-        "The Lost Hoard of Erebora",
-        "a devouring Rift",
-        "an orange crystal hatchery"})
-        if (original == _location_note_english("portal", name))
-            return _location_note_display("portal", name);
-    for (const char *name : {"Mnoleg", "Lom Lobon", "Cerebov", "Gloorx Vloq"})
-        if (original == _location_note_english("realm", name))
-            return _location_note_display("realm", name);
-    return "";
-}
-
-static ui_arg _feature_note_name(const Note &note)
-{
-    const string marker = "morgue-feature-v1\n";
-    if (!starts_with(note.desc, marker) || note.first < 0 || note.first >= NUM_FEATURES
-        || (note.second != TRAP_UNASSIGNED
-            && (note.second < 0 || note.second >= NUM_TRAPS))) return {"", false};
-    const auto feat = static_cast<dungeon_feature_type>(note.first);
-    const auto trap = static_cast<trap_type>(note.second);
-    const xlog_fields fields(note.desc.substr(marker.size()));
-    const string raw = fields.str_field("raw");
-    if (raw.empty()) return {"", false};
-    if (feat == DNGN_ENTER_SHOP)
-    {
-        for (const string &key : {string("type"), string("x"), string("y"), string("seed0"), string("seed1"), string("seed2")})
-            if (fields.str_field(key) != to_string(fields.int_field(key))) return {"", false};
-        const int type = fields.int_field("type"), x = fields.int_field("x"), y = fields.int_field("y");
-        if (type < 0 || type >= NUM_SHOPS || x < 0 || y < 0 || x >= GXM || y >= GYM) return {"", false};
-        shop_struct shop; shop.type = static_cast<shop_type>(type); shop.pos = coord_def(x, y);
-        shop.shop_name = fields.str_field("owner"); shop.shop_type_name = fields.str_field("typename");
-        shop.shop_suffix_name = fields.str_field("suffix");
-        for (int i = 0; i < 3; ++i)
-        {
-            const int seed = fields.int_field("seed" + to_string(i));
-            if (seed < 0 || seed > 255) return {"", false};
-            shop.keeper_name[i] = seed;
-        }
-        ui_arg shown;
-        const string canonical = shop_name(shop, &shown);
-        if (raw != canonical || note.name != canonical + ".") return {"", false};
-        return shown;
-    }
-    const auto dtype = feat == DNGN_FLOOR ? DESC_THE : DESC_A;
-    if (note.name != thing_do_grammar(dtype, raw, feat == DNGN_TRAP_ZOT) + ".") return {"", false};
-    const ui_arg exact = ui_text_arg("d.feature.name", raw);
-    if (exact.available) return exact;
-    if (raw != feature_description(feat, trap, "", DESC_PLAIN)) return {"", false};
-    string shown; const bool available = try_feature_display_name(feat, trap, shown);
-    return {shown, available};
-}
-
-string Note::describe(bool when, bool where, bool what) const
+string Note::describe(bool when, bool where, bool what, bool localized) const
 {
     ostringstream result;
 
@@ -449,9 +213,21 @@ string Note::describe(bool when, bool where, bool what) const
 
     if (where)
     {
-        result << "| "
-               << chop_string(place.describe(), MAX_NOTE_PLACE_LEN)
+        string location = place.describe();
+        const bool display = localized && Options.language == lang_t::ZH;
+        if (display && place.is_valid())
+            location = ui_render("morgue.place", "%s:%s", location,
+                {ui_text_arg("b.branch.name", branches[place.branch].shortname),
+                 ui_literal_arg(to_string(place.depth))});
+        result << "| " << chop_string(location, display ? 14 : MAX_NOTE_PLACE_LEN)
                << " | ";
+    }
+
+    if (what && !english.empty())
+    {
+        result << (localized && Options.language == lang_t::ZH && !chinese.empty()
+                   ? chinese : english);
+        return result.str();
     }
 
     if (what)
@@ -766,24 +542,10 @@ static ui_arg _n_note_source(const string &text)
     return {"", false};
 }
 
-static ui_arg _n_disabled_source(const Note &note)
+string Note::chinese_at_event() const
 {
-    const string marker = "morgue-pan-source-v1\n";
-    if (starts_with(note.desc, marker))
-    {
-        if (note.name.empty() || note.desc.substr(marker.size()) != note.name)
-            return {"", false};
-        const string shown = ui_render("n.note", "%s the pandemonium lord", "",
-                                       {ui_generated_name_arg(note.name)});
-        return {shown, !shown.empty()};
-    }
-    return _n_note_source(note.name);
-}
-
-string Note::display_describe(bool when, bool where, bool what) const
-{
-    const string original = describe(when, where, what);
-    if (!what || !ui_translation_group({{"n.note", "Xom revived you"}}).available())
+    const string original = describe(false, false);
+    if (!ui_translation_group({{"n.note", "Xom revived you"}}).available())
         return original;
     ui_arg n = _n_note_text(name);
     // The note type supplies the identity of a randomly named Pan lord.
@@ -807,33 +569,8 @@ string Note::display_describe(bool when, bool where, bool what) const
     switch (type)
     {
     case NOTE_HP_CHANGE:
-    {
-        ui_arg reason = n;
-        const string marker = "morgue-damage-v1\n";
-        const string unseen = "morgue-damage-unseen-v1\n";
-        if (starts_with(desc, marker))
-        {
-            scorefile_entry score;
-            const string raw = desc.substr(marker.size());
-            if (raw.empty() || !score.parse(raw)
-                || score.death_description(scorefile_entry::DDV_TERSE) != name)
-                return original;
-            const string translated = score.display_damage_description();
-            if (translated == name) return original;
-            reason = ui_literal_arg(translated);
-        }
-        else if (starts_with(desc, unseen))
-        {
-            const string number = desc.substr(unseen.size());
-            const xlog_fields fields("dam=" + number);
-            if (number != to_string(fields.int_field("dam"))
-                || name != "something (" + number + ")") return original;
-            const string text = render("something (%s)", {ui_literal_arg(number)});
-            reason = {text, !text.empty()};
-        }
-        shown = render("HP: %s/%s [%s]", {f, s, reason});
+        shown = render("HP: %s/%s [%s]", {f, s, n});
         break;
-    }
     case NOTE_XOM_REVIVAL:
         shown = render("Xom revived you", {});
         break;
@@ -847,27 +584,8 @@ string Note::display_describe(bool when, bool where, bool what) const
         shown = render("Reached %s max magic points", {f});
         break;
     case NOTE_XP_LEVEL_CHANGE:
-    {
-        ui_arg stats = n;
-        const string marker = "morgue-xp-v1\n";
-        if (starts_with(desc, marker))
-        {
-            const xlog_fields fields(desc.substr(marker.size()));
-            for (const char *key : {"hp", "mhp", "mp", "mmp"})
-                if (fields.str_field(key) != to_string(fields.int_field(key)))
-                    return original;
-            const int hp = fields.int_field("hp"), maxhp = fields.int_field("mhp");
-            const int mp = fields.int_field("mp"), maxmp = fields.int_field("mmp");
-            if (name != make_stringf("HP: %d/%d MP: %d/%d", hp, maxhp, mp, maxmp))
-                return original;
-            const string text = render("HP: %s/%s MP: %s/%s",
-                {ui_literal_arg(to_string(hp)), ui_literal_arg(to_string(maxhp)),
-                 ui_literal_arg(to_string(mp)), ui_literal_arg(to_string(maxmp))});
-            stats = {text, !text.empty()};
-        }
-        shown = render("Reached XP level %s. %s", {f, stats});
+        shown = render("Reached XP level %s. %s", {f, n});
         break;
-    }
     case NOTE_DUNGEON_LEVEL_CHANGE:
         if (!desc.empty()) shown = d.available ? d.text : "";
         else if (place.is_valid())
@@ -897,41 +615,13 @@ string Note::display_describe(bool when, bool where, bool what) const
                 {ui_text_arg("display.god", god_name(static_cast<god_type>(first))), n});
         break;
     case NOTE_ID_ITEM:
-    {
-        ui_arg item_name = n, origin = d;
-        if (starts_with(screen, "morgue-item-v1:"))
-        {
-            item_def item;
-            if (!_item_from_note(*this, item)) return original;
-            item_name = ui_item_arg(item);
-            if (!desc.empty())
-            {
-                if (desc != origin_desc(item)) return original;
-                string translated = item_origin_description(item);
-                if (translated == desc + ".") return original;
-                if (ends_with(translated, "。")) translated.resize(translated.size() - string("。").size());
-                origin = ui_literal_arg(translated);
-            }
-        }
-        shown = desc.empty() ? render("Identified %s", {item_name})
-            : render("Identified %s (%s)", {item_name, origin});
+        shown = desc.empty() ? render("Identified %s", {n})
+            : render("Identified %s (%s)", {n, d});
         break;
-    }
     case NOTE_GET_ITEM:
-    {
-        ui_arg item_name = n;
-        if (starts_with(screen, "morgue-item-v1:"))
-        {
-            item_def item;
-            if (!_item_from_note(*this, item)) return original;
-            item_name = ui_item_arg(item);
-        }
-        else if (!item_name.available)
-            item_name = _legacy_collectible_note_name(name);
-        shown = first == 0 ? render("Got %s", {item_name})
-            : render("Got %s with %s turns to spare", {item_name, ui_literal_arg(to_string((first + 9) / 10))});
+        shown = first == 0 ? render("Got %s", {n})
+            : render("Got %s with %s turns to spare", {n, ui_literal_arg(to_string((first + 9) / 10))});
         break;
-    }
     case NOTE_ACQUIRE_ITEM:
         shown = render("Acquired %s", {n});
         break;
@@ -984,12 +674,8 @@ string Note::display_describe(bool when, bool where, bool what) const
         shown = render("Lost bane: %s", {bane_display_arg(static_cast<bane_type>(first))});
         break;
     case NOTE_SEEN_FEAT:
-    {
-        const ui_arg feature = starts_with(desc, "morgue-feature-v1\n") ? _feature_note_name(*this) : n;
-        shown = starts_with(desc, "morgue-feature-v1\n")
-            ? render("Found %s.", {feature}) : render("Found %s", {feature});
+        shown = render("Found %s", {n});
         break;
-    }
     case NOTE_FEAT_MIMIC:
         shown = render("%s was a mimic.", {n});
         break;
@@ -1000,11 +686,11 @@ string Note::display_describe(bool when, bool where, bool what) const
     {
         ostringstream turns;
         turns << setprecision(2) << first / 10.0f;
-        shown = render("Paralysed by %s for %s turns", {_n_disabled_source(*this), ui_literal_arg(turns.str())});
+        shown = render("Paralysed by %s for %s turns", {_n_note_source(name), ui_literal_arg(turns.str())});
         break;
     }
     case NOTE_VEXED:
-        shown = render("Vexed by %s for %s turns", {_n_disabled_source(*this), f});
+        shown = render("Vexed by %s for %s turns", {_n_note_source(name), f});
         break;
     case NOTE_RECRUITED_APOSTLE:
         shown = render("Anointed %s the %s as your apostle", {n, d});
@@ -1054,76 +740,17 @@ string Note::display_describe(bool when, bool where, bool what) const
         shown = render("Activated a boundless tesseract", {});
         break;
     case NOTE_DEATH:
-    {
-        const string normal = "morgue-score-normal-v1\n";
-        const string verbose = "morgue-score-verbose-v1\n";
-        const bool full = starts_with(desc, verbose);
-        if (!full && !starts_with(desc, normal))
-        {
-            shown = ui_text_arg("n.note.text", name).text;
-            break;
-        }
-        scorefile_entry score;
-        string raw = desc.substr(full ? verbose.size() : normal.size());
-        while (!raw.empty() && (raw.back() == '\n' || raw.back() == '\r'))
-            raw.pop_back();
-        if (raw.empty() || !score.parse(raw)) return original;
-        const auto verbosity = full ? scorefile_entry::DDV_VERBOSE
-                                    : scorefile_entry::DDV_NORMAL;
-        // Metadata must reproduce the complete original snapshot before use.
-        if (score.death_description(verbosity) != name) return original;
-        shown = score.display_death_description(verbosity);
+        shown = ui_text_arg("n.note.text", name).text;
         break;
-    }
     case NOTE_MESSAGE:
-    {
-        const string start = "morgue-start-v1\n";
-        const string version = "morgue-version-v1\n";
-        if (starts_with(desc, start))
-        {
-            const auto race = static_cast<species_type>(first);
-            if (!species::is_valid(race) || second < 0 || second >= NUM_JOBS)
-                return original;
-            const string player = desc.substr(start.size());
-            const string species_name = species::name(race);
-            const string job = get_job_name(static_cast<job_type>(second));
-            if (name != player + " the " + species_name + " " + job
-                + " began the quest for the Orb.") return original;
-            shown = render("%s the %s %s began the quest for the Orb.",
-                {ui_literal_arg(player), ui_text_arg("display.creation", species_name),
-                 ui_text_arg("display.creation", job)});
-        }
-        else if (starts_with(desc, version))
-        {
-            const xlog_fields fields(desc.substr(version.size()));
-            const string before = fields.str_field("before"), after = fields.str_field("after");
-            if (before.empty() || after.empty() || name != make_stringf(
-                "Upgraded the game from %s to %s", before.c_str(), after.c_str()))
-                return original;
-            shown = render("Upgraded the game from %s to %s",
-                {ui_literal_arg(before), ui_literal_arg(after)});
-        }
-        else if (starts_with(desc, "morgue-location-v1\n"))
-        {
-            const xlog_fields fields(desc.substr(string("morgue-location-v1\n").size()));
-            const string kind = fields.str_field("kind"), place_name = fields.str_field("name");
-            if (name != _location_note_english(kind, place_name)) return original;
-            shown = _location_note_display(kind, place_name);
-        }
-        else
-        {
-            const ui_arg text = ui_text_arg("n.note.message", name);
-            if (text.available) shown = text.text;
-            else shown = _legacy_location_note_display(name);
-        }
+        shown = ui_text_arg("n.note.message", name).text;
         break;
-    }
     case NOTE_USER_NOTE:
     default:
         return original;
     }
     if (shown.empty()) return original;
-    return describe(when, where, false) + shown;
+    return shown;
 }
 
 bool Note::hidden() const
@@ -1189,6 +816,8 @@ void Note::save(writer& outf) const
     marshallString4(outf, name);
     marshallString4(outf, desc);
     marshallString(outf, screen);
+    marshallString4(outf, english);
+    marshallString4(outf, chinese);
 }
 
 void Note::load(reader& inf)
@@ -1211,6 +840,14 @@ void Note::load(reader& inf)
 #else
     screen = unmarshallString(inf);
 #endif
+    english.clear();
+    chinese.clear();
+    if (inf.getMinorVersion() >= TAG_MINOR_BILINGUAL_NOTES)
+    {
+        unmarshallString4(inf, english);
+        unmarshallString4(inf, chinese);
+    }
+
 
 }
 
@@ -1221,11 +858,25 @@ bool notes_are_active()
     return notes_active;
 }
 
-void take_note(const Note& note, bool force)
+void take_note(const Note& note, bool force, const std::function<string()> &translate)
 {
     if (notes_active && (force || _is_noteworthy(note)))
     {
-        note_list.push_back(note);
+        Note saved = note;
+        {
+            unwind_var<lang_t> language(Options.language, lang_t::EN);
+            unwind_var<const char *> language_name(Options.lang_name, nullptr);
+            saved.english.clear();
+            saved.english = saved.describe(false, false);
+        }
+        {
+            unwind_var<lang_t> language(Options.language, lang_t::ZH);
+            unwind_var<const char *> language_name(Options.lang_name, "zh");
+            saved.chinese = translate ? translate() : saved.chinese_at_event();
+        }
+        // Empty/unsupported translations preserve the complete English body.
+        if (saved.chinese == saved.english) saved.chinese.clear();
+        note_list.push_back(saved);
         note.check_milestone();
     }
 }

@@ -171,7 +171,16 @@ static bool _randart_display_title(const item_def &item, string &title)
     if (proper.empty() || proper.find_first_of("\r\n") != string::npos)
         return false;
     string translated;
-    title = try_randart_title(proper, translated, you.your_name) ? translated : proper;
+    if (try_randart_title(proper, translated, you.your_name))
+        title = translated;
+    else if (!you.your_name.empty() && (proper == you.your_name
+             || starts_with(proper, you.your_name + "'s ")))
+        title = proper; // A player identity is literal text, not a generated name.
+    else
+    {
+        const ui_arg spoken = ui_generated_name_arg(proper);
+        title = spoken.available ? spoken.text : proper;
+    }
     return true;
 }
 

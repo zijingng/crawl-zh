@@ -1032,7 +1032,7 @@ static void _sdump_notes(dump_params &par)
         if (_dump_display)
             prefix = make_stringf("%6d | %s | ", note.turn,
                 chop_string(_dump_level_name(note.place, note.place.describe()), 14).c_str());
-        string suffix = _dump_display ? note.display_describe(false, false, true)
+        string suffix = _dump_display ? note.describe(false, false, true, true)
                                       : note.describe(false, false, true);
         if (suffix.empty())
             continue;
@@ -1580,7 +1580,9 @@ static void _sdump_hiscore(dump_params &par)
     if (!par.se)
         return;
 
-    string hiscore = hiscores_format_single_long(*(par.se), true, _dump_display);
+    string hiscore = _dump_display
+        ? par.se->display_hiscore_line(scorefile_entry::DDV_VERBOSE, par.se->killer())
+        : hiscores_format_single_long(*(par.se), true, false);
     trim_string(hiscore);
     par.text += hiscore;
     par.text += "\n\n";
@@ -2268,16 +2270,17 @@ void display_notes()
     scr.set_more();
     const string tag = "notes";
     scr.set_tag(tag);
-    _add_text(scr, tag, ui_translate("c.chardump", _dump_text("Turn   | Place    | Note\n")));
+    _add_text(scr, tag, ui_translate("morgue.notes", "Turn   | Place    | Note\n"));
     for (const Note &note : note_list)
     {
         if (note.hidden())
             continue;
-        string prefix = note.describe(true, true, false);
-        string suffix = note.display_describe(false, false, true);
+        string prefix = note.describe(true, true, false, true);
+        string suffix = note.describe(false, false, true, true);
         if (suffix.empty())
             continue;
-        int spaceleft = 80 - prefix.length() - 1; // Use 100 cols
+        const int prefix_width = strwidth(prefix);
+        int spaceleft = 80 - prefix_width - 1; // Use 100 cols
         if (spaceleft <= 0)
             return;
 
@@ -2289,7 +2292,7 @@ void display_notes()
         auto colour = _add_text(scr, tag, prefix + parts[0] + "\n");
         for (unsigned int j = 1; j < parts.size(); ++j)
         {
-            auto str = string(prefix.length()-2, ' ') + "| " + parts[j] + "\n";
+            auto str = string(prefix_width-2, ' ') + "| " + parts[j] + "\n";
             scr.add_formatted_string(formatted_string(str, colour));
         }
     }

@@ -7,6 +7,18 @@
 #include "message.h"
 #include "actor.h"
 
+// The caller keeps the complete canonical warning for missing components.
+inline string m_confused_move_prompt(const string &original, bool stationary,
+                                     const ui_arg &nearby, const ui_arg &expiry,
+                                     bool penance)
+{
+    return ui_render("m.confused", "While confused and next to %s%s, are you sure you want to %s?%s",
+        original, {nearby, expiry,
+            ui_text_arg("m.confused", stationary ? "swing wildly" : "stumble around"),
+            penance ? ui_text_arg("p.clause", " This could place you under penance!")
+                    : ui_literal_arg("")});
+}
+
 // Display-only helpers. Canonical formatting is evaluated once by the caller.
 inline string m_ice_move_prompt(const vector<string> &effects, const string &original)
 {

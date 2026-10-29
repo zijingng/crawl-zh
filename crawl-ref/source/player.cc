@@ -16,6 +16,7 @@
 #include <cstdlib>
 #include <cstring>
 #include <sstream>
+#include <iomanip>
 
 #include "ability.h"
 #include "abyss.h"
@@ -2788,9 +2789,13 @@ static void _gain_and_note_hp_mp()
     const int note_maxhp = get_real_hp(false, true);
     const int note_maxmp = get_real_mp(false);
 
-    take_note(make_xp_level_note(you.experience_level,
-        min(you.hp, note_maxhp), note_maxhp,
-        min(you.magic_points, note_maxmp), note_maxmp));
+    take_note(Note(NOTE_XP_LEVEL_CHANGE, you.experience_level, 0,
+        make_stringf("HP: %d/%d MP: %d/%d", min(you.hp, note_maxhp), note_maxhp, min(you.magic_points, note_maxmp), note_maxmp)), false, [&] {
+        const string stats = ui_render("n.note", "HP: %s/%s MP: %s/%s", "",
+            {ui_literal_arg(to_string(min(you.hp, note_maxhp))), ui_literal_arg(to_string(note_maxhp)), ui_literal_arg(to_string(min(you.magic_points, note_maxmp))), ui_literal_arg(to_string(note_maxmp))});
+        return stats.empty() ? string() : ui_render("n.note", "Reached XP level %s. %s", "",
+            {ui_literal_arg(to_string(you.experience_level)), ui_literal_arg(stats)});
+    });
 }
 
 static int _rest_trigger_level(int max)
@@ -7446,16 +7451,25 @@ void player::confuse(actor */*who*/, int str)
  * @param str The number of turns the paralysis will last (plus 5 aut).
  * @param source Description of the source of the paralysis.
  */
-// Snapshot an opaque Pan lord name while its actor identity is still known.
-// Canonical disabling messages and durations stay in the existing note fields.
-static Note _disabled_actor_note(NOTE_TYPES type, int duration, const string &source, const actor *who)
+static void _take_disabled_note(NOTE_TYPES type, int duration, const string &source, const actor *who)
 {
-    Note note(type, duration, 0, source);
     const monster *mon = who ? who->as_monster() : nullptr;
     if (mon && mon->type == MONS_PANDEMONIUM_LORD
         && !mon->mname.empty() && source == mon->mname)
-        note.desc = "morgue-pan-source-v1\n" + source;
-    return note;
+    {
+        take_note(Note(type, duration, 0, source), false, [&] {
+            const string name = ui_render("n.note", "%s the pandemonium lord", "",
+                {ui_generated_name_arg(source)});
+            if (name.empty()) return string();
+            ostringstream turns;
+            if (type == NOTE_PARALYSIS) turns << setprecision(2) << duration / 10.0f;
+            else turns << duration;
+            return ui_render("n.note", type == NOTE_PARALYSIS
+                ? "Paralysed by %s for %s turns" : "Vexed by %s for %s turns", "",
+                {ui_literal_arg(name), ui_literal_arg(turns.str())});
+        });
+    }
+    else take_note(Note(type, duration, 0, source));
 }
 
 void player::paralyse(const actor *who, int str, string source)
@@ -7495,7 +7509,7 @@ void player::paralyse(const actor *who, int str, string source)
 
     if (!source.empty())
     {
-        take_note(_disabled_actor_note(NOTE_PARALYSIS, you.duration[DUR_PARALYSIS], source, who));
+        _take_disabled_note(NOTE_PARALYSIS, you.duration[DUR_PARALYSIS], source, who);
         // use the real name here even for invisible monsters
         props[DISABLED_BY_KEY] = use_actor_name ? who->name(DESC_A, true)
                                                : source;
@@ -7577,7 +7591,7 @@ bool player::vex(const actor* who, int dur, string source, string special_msg)
         source = who->name(DESC_A);
     if (!source.empty())
     {
-        take_note(_disabled_actor_note(NOTE_VEXED, dur, source, who));
+        _take_disabled_note(NOTE_VEXED, dur, source, who);
         props[DISABLED_BY_KEY] = use_actor_name ? who->name(DESC_A, true)
                                                : source;
     }

@@ -792,7 +792,13 @@ static void _god_greeting_message(bool game_start)
 static void _take_starting_note()
 {
     ostringstream notestr;
-    take_note(make_starting_note(you.your_name, you.species, you.char_class));
+    take_note(Note(NOTE_MESSAGE, 0, 0,
+        you.your_name + " the " + species::name(you.species) + " "
+        + get_job_name(you.char_class) + " began the quest for the Orb."), false, [&] {
+        return ui_render("n.note", "%s the %s %s began the quest for the Orb.", "",
+            {ui_literal_arg(you.your_name), ui_text_arg("display.creation", species::name(you.species)),
+             ui_text_arg("display.creation", get_job_name(you.char_class))});
+    });
     mark_milestone("begin", "began the quest for the Orb.");
 
     notestr.str("");
@@ -814,8 +820,13 @@ static void _take_starting_note()
     else if (you.char_class == JOB_WANDERER)
         _wanderer_note_equipment();
 
-    take_note(make_xp_level_note(you.experience_level, you.hp, you.hp_max,
-                                you.magic_points, you.max_magic_points));
+    take_note(Note(NOTE_XP_LEVEL_CHANGE, you.experience_level, 0,
+        make_stringf("HP: %d/%d MP: %d/%d", you.hp, you.hp_max, you.magic_points, you.max_magic_points)), false, [&] {
+        const string stats = ui_render("n.note", "HP: %s/%s MP: %s/%s", "",
+            {ui_literal_arg(to_string(you.hp)), ui_literal_arg(to_string(you.hp_max)), ui_literal_arg(to_string(you.magic_points)), ui_literal_arg(to_string(you.max_magic_points))});
+        return stats.empty() ? string() : ui_render("n.note", "Reached XP level %s. %s", "",
+            {ui_literal_arg(to_string(you.experience_level)), ui_literal_arg(stats)});
+    });
 }
 
 static void _startup_hints_mode()

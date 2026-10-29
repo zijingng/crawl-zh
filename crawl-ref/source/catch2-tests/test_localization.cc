@@ -89,6 +89,7 @@
 #include "output.h"
 #include "melee-attack.h"
 #include "map-cell.h"
+#include "map-knowledge.h"
 #include "tags.h"
 #include "p-display.h"
 #include "player-stats.h"
@@ -119,6 +120,22 @@
 #include "travel.h"
 #include "explore-stop-options.h"
 #include <fstream>
+
+// Capture through the production event path, retaining existing history only
+// for source identity. New cases below verify that reads never regenerate text.
+static Note _recorded_note(const Note &note, const std::function<string()> &translate = {})
+{
+    const bool active = notes_are_active();
+    activate_notes(true);
+    // Preserve original storage too: some fixtures pass a reference into it.
+    vector<Note> history = note_list;
+    note_list.swap(history);
+    take_note(note, true, translate);
+    const Note saved = note_list.back();
+    note_list.swap(history);
+    activate_notes(active);
+    return saved;
+}
 
 TEST_CASE("Reported UI save summaries and welcome text translate typed roles without renaming saves", "[localization]")
 {
@@ -2442,7 +2459,7 @@ TEST_CASE("Unidentified item names never use hidden types and artefact names ret
     sword.props[ARTEFACT_NAME_KEY] = "short sword of Identity";
     const string original = sword.name(DESC_A, false);
     REQUIRE(try_item_display_name(sword, first, false, false));
-    CHECK(first.find("+4 短剑「Identity」") == 0);
+    CHECK(first.find("+4 短剑「" + ui_generated_name_arg("Identity").text + "」") == 0);
     CHECK(first.find("!w") != string::npos);
     CHECK(sword.name(DESC_A, false) == original);
 }
@@ -2471,7 +2488,10 @@ TEST_CASE("Randart display titles omit the cached base and naming delimiters wit
         const auto state = rng::peek_uint64();
         string shown;
         REQUIRE(try_item_display_name(cloak, shown, false, false));
-        CHECK(shown.find("-1 披风「" + entry.second + "」") == 0);
+        string expected;
+        if (!try_randart_title(entry.second, expected, you.your_name))
+            expected = ui_generated_name_arg(entry.second).text;
+        CHECK(shown.find("-1 披风「" + expected + "」") == 0);
         CHECK(shown.find("!w") != string::npos);
         CHECK(get_artefact_name(cloak) == entry.first);
         CHECK(cloak.name(DESC_A, false) == original);
@@ -5355,14 +5375,14 @@ TEST_CASE("N typed notes preserve canonical records and whole-row English fallba
     {
         const string original = note.describe(false, false, true);
         Options.language = lang_t::EN;
-        CHECK(note.display_describe(false, false, true) == original);
+        CHECK(_recorded_note(note).describe(false, false, true, true) == original);
         Options.language = lang_t::ZH;
         INFO(original);
-        CHECK(note.display_describe(false, false, true) != original);
+        CHECK(_recorded_note(note).describe(false, false, true, true) != original);
         CHECK(note.describe(false, false, true) == original);
-        CHECK(note.display_describe(true, true, false) == note.describe(true, true, false));
+        CHECK(_recorded_note(note).describe(true, true, false, true) == note.describe(true, true, false, true));
         Options.language = lang_t::EN;
-        CHECK(note.display_describe(false, false, true) == original);
+        CHECK(_recorded_note(note).describe(false, false, true, true) == original);
     }
     Options.language = lang_t::ZH;
     for (NOTE_TYPES type : {NOTE_SEEN_MONSTER, NOTE_ID_ITEM, NOTE_GOD_GIFT,
@@ -5371,26 +5391,26 @@ TEST_CASE("N typed notes preserve canonical records and whole-row English fallba
     {
         Note note(type, type == NOTE_GET_MUTATION ? MUT_TOUGH_SKIN : 1, 1,
                   "unavailable canonical snapshot", "unavailable description");
-        CHECK(note.display_describe() == note.describe());
+        CHECK(_recorded_note(note).describe(true, true, true, true) == note.describe(true, true, true, true));
     }
     for (NOTE_TYPES type : {NOTE_USER_NOTE, NOTE_MESSAGE, NOTE_DEATH})
     {
         Note note(type, 0, 0, "player/script text 中文 English");
-        CHECK(note.display_describe() == note.describe());
+        CHECK(_recorded_note(note).describe(true, true, true, true) == note.describe(true, true, true, true));
     }
     CHECK(rng::peek_uint64() == random_state);
 }
 
-TEST_CASE("N note display does not change serialization", "[localization]")
+TEST_CASE("N event-time note reads do not change serialization", "[localization]")
 {
     unwind_var<lang_t> language(Options.language, lang_t::EN);
-    Note note(NOTE_GAIN_LIFE, 2);
+    Note note = _recorded_note(Note(NOTE_GAIN_LIFE, 2));
     vector<unsigned char> before;
     auto canonical = writer(&before);
     note.save(canonical);
     const string original = note.describe();
     Options.language = lang_t::ZH;
-    CHECK(note.display_describe() != original);
+    CHECK(note.describe(true, true, true, true) != original);
     vector<unsigned char> after;
     auto displayed = writer(&after);
     note.save(displayed);
@@ -5399,9 +5419,9 @@ TEST_CASE("N note display does not change serialization", "[localization]")
     Note loaded;
     loaded.load(input);
     CHECK(loaded.describe() == original);
-    CHECK(loaded.display_describe() == note.display_describe());
+    CHECK(loaded.describe(true, true, true, true) == note.describe(true, true, true, true));
     Options.language = lang_t::EN;
-    CHECK(loaded.display_describe() == original);
+    CHECK(loaded.describe(true, true, true, true) == original);
 }
 
 TEST_CASE("O monster list uses typed names without English articles", "[localization]")
@@ -7825,6 +7845,7 @@ TEST_CASE("Morgue sections isolate canonical English and localize live and dead 
     sword.orig_place = level_id(BRANCH_DUNGEON, 2);
     Note note(NOTE_GAIN_SKILL, SK_FIGHTING, 3);
     note.place = level_id(BRANCH_DUNGEON, 2); note.turn = 23;
+    note = _recorded_note(note);
     note_list.push_back(note);
     you.action_count.clear();
     count_action(CACT_MELEE, WPN_LONG_SWORD);
@@ -7847,7 +7868,7 @@ TEST_CASE("Morgue sections isolate canonical English and localize live and dead 
     CHECK(shown.find("long sword") == string::npos);
     CHECK(shown.find("突刺") != string::npos);
     CHECK(shown.find("屠戮") != string::npos);
-    CHECK(shown.find(note.display_describe(false, false, true)) != string::npos);
+    CHECK(shown.find(_recorded_note(note).describe(false, false, true, true)) != string::npos);
     CHECK(shown.find(get_form()->display_description()) != string::npos);
     scorefile_entry dead;
     const string obituary = character_dump_text(true, false, &dead);
@@ -8518,84 +8539,6 @@ TEST_CASE("Morgue vault locations keep canonical map identifiers and explicit En
     CHECK(rng::peek_uint64()==random);
 }
 
-TEST_CASE("Morgue death records translate exact components and preserve complete fallback", "[localization]")
-{
-    init_properties(); init_monsters(); init_mut_index(); init_duration_index();
-    unwind_var<lang_t> language(Options.language, lang_t::ZH);
-    unwind_var<int> paralysis(you.duration[DUR_PARALYSIS], 0);
-    unwind_var<int> petrified(you.duration[DUR_PETRIFIED], 0);
-    unwind_var<int> sleep(you.duration[DUR_SLEEP], 0);
-    unwind_var<int> vexed(you.duration[DUR_VEXED], 0);
-    const string common = "v=0.34.1:sc=42:name=Tester:race=Human:cls=Fighter:char=HuFi:xl=5:title=Fighter:br=D:lvl=2:hp=-4:mhp=10:mmhp=10:dam=8:start=20261023080000S:end=20261023090000S:dur=60:";
-    const auto next = rng::peek_uint64();
-    for (const string fields : {"ktyp=mon:killer=an orc:kaux=a short sword",
-                                "ktyp=mon:killer=an orc:kaux=a +0 short sword",
-                                "ktyp=beam:killer=Jessica:kaux=puff of flame",
-                                "ktyp=constriction:killer=a ball python",
-                                "ktyp=pois:killer=an adder",
-                                "ktyp=cloud:kaux=flame"})
-    {
-        scorefile_entry score; REQUIRE(score.parse(common + fields + ":turn=10\n"));
-        const string raw = score.raw_string();
-        for (auto verbosity : {scorefile_entry::DDV_NORMAL, scorefile_entry::DDV_VERBOSE,
-                               scorefile_entry::DDV_TERSE, scorefile_entry::DDV_ONELINE})
-        {
-            const string original = score.death_description(verbosity);
-            const string shown = score.display_death_description(verbosity);
-            CAPTURE(fields, original, shown);
-            CHECK(shown != original);
-            CHECK(shown.find("killed") == string::npos);
-            Options.language = lang_t::EN;
-            CHECK(score.display_death_description(verbosity) == original);
-            Options.language = lang_t::ZH;
-        }
-        Note note(NOTE_DEATH, -4, 10, score.death_description(scorefile_entry::DDV_NORMAL),
-            "morgue-score-normal-v1\n" + raw);
-        CHECK(note.display_describe(false, false) == score.display_death_description(scorefile_entry::DDV_NORMAL));
-        CHECK(note.describe(false, false) == score.death_description(scorefile_entry::DDV_NORMAL));
-        vector<unsigned char> saved;
-        auto output = writer(&saved); note.save(output);
-        auto input = reader(saved, TAG_MINOR_VERSION); Note restored; restored.load(input);
-        CHECK(restored.describe(false, false) == note.describe(false, false));
-        CHECK(restored.display_describe(false, false) == note.display_describe(false, false));
-        vector<unsigned char> after; auto again = writer(&after); note.save(again);
-        CHECK(saved == after);
-        Note old_note(NOTE_DEATH, -4, 10, note.name);
-        CHECK(old_note.display_describe(false, false) == old_note.describe(false, false));
-        note.name = "Historical text does not match the metadata";
-        CHECK(note.display_describe(false, false) == note.describe(false, false));
-        CHECK(score.raw_string() == raw);
-        unwind_var<vector<string>> order(Options.dump_order, {"hiscore", "notes"});
-        unwind_var<vector<Note>> notes(note_list, {restored});
-        unwind_var<string> directory(Options.morgue_dir, "../../../.term-audit/morgue-03-runtime");
-        const string filename = fields.find("ktyp=mon") == 0 ? "native-death-melee"
-            : fields.find("ktyp=beam") == 0 ? "native-death-beam"
-            : fields.find("ktyp=pois") == 0 ? "native-death-poison"
-            : fields.find("ktyp=cloud") == 0 ? "native-death-cloud" : "native-death-constriction";
-        REQUIRE(dump_char(filename, true, false, &score));
-        auto read_file = [&](const string &suffix) {
-            std::ifstream file(morgue_directory() + filename + suffix);
-            return string(std::istreambuf_iterator<char>(file), std::istreambuf_iterator<char>());
-        };
-        CHECK(read_file(".txt").find(score.death_description(scorefile_entry::DDV_NORMAL)) != string::npos);
-        CHECK(read_file(".zh.txt").find(score.display_death_description(scorefile_entry::DDV_NORMAL)) != string::npos);
-    }
-    for (const string fields : {"ktyp=mon:killer=an unknown upstream creature",
-                                "ktyp=mon:killer=an orc:kaux=a +99 unknown weapon",
-                                "ktyp=beam:killer=Jessica:kaux=unknown future beam",
-                                "ktyp=mon:killer=an orc:kpath=summoned by somebody"})
-    {
-        scorefile_entry score; REQUIRE(score.parse(common + fields + ":turn=10\n"));
-        CHECK(score.display_death_description(scorefile_entry::DDV_VERBOSE)
-              == score.death_description(scorefile_entry::DDV_VERBOSE));
-    }
-    scorefile_entry disabled; REQUIRE(disabled.parse(common + "ktyp=mon:killer=an orc:turn=10\n"));
-    you.duration[DUR_PETRIFIED] = 10;
-    CHECK(disabled.display_death_description(scorefile_entry::DDV_VERBOSE)
-          == disabled.death_description(scorefile_entry::DDV_VERBOSE));
-    CHECK(rng::peek_uint64() == next);
-}
-
 TEST_CASE("Morgue high scores prefer Chinese files with linewise UTF8 and English fallback", "[localization]")
 {
     unwind_var<lang_t> language(Options.language, lang_t::ZH);
@@ -8632,212 +8575,6 @@ TEST_CASE("Morgue high scores prefer Chinese files with linewise UTF8 and Englis
     REQUIRE(read_morgue_display(base, shown)); CHECK(shown.tostring() == english);
     REQUIRE(std::remove((path + ".txt").c_str()) == 0);
     CHECK_FALSE(read_morgue_display(base, shown));
-}
-
-TEST_CASE("Morgue starting and level notes keep English snapshots and translate typed records", "[localization]")
-{
-    init_properties(); init_monsters(); init_mut_index(); init_duration_index();
-    unwind_var<lang_t> language(Options.language, lang_t::ZH);
-    unwind_var<const char *> lang(Options.lang_name, "zh");
-    unwind_var<species_type> species(you.species, SP_HUMAN);
-    unwind_var<job_type> job(you.char_class, JOB_FIGHTER);
-    unwind_var<decltype(you.save)> save(you.save, nullptr);
-    unwind_var<vector<Note>> notes(note_list, {});
-    unwind_var<vector<string>> order(Options.dump_order, {"notes"});
-    unwind_var<string> directory(Options.morgue_dir, "../../../.term-audit/morgue-04-runtime");
-    const auto next = rng::peek_uint64();
-    const auto start = make_starting_note("Ceneedgh", SP_MINOTAUR, JOB_FIGHTER);
-    CHECK(start.describe(false, false) == "Ceneedgh the Minotaur Fighter began the quest for the Orb.");
-    CHECK(start.display_describe(false, false).find("牛头人战士") != string::npos);
-    CHECK(start.display_describe(false, false).find("佐特宝珠") != string::npos);
-    CHECK(start.display_describe(false, false).find("Ceneedgh") != string::npos);
-    // Character state changes must never rewrite the historical starting race/job.
-    CHECK(you.species == SP_HUMAN);
-    vector<Note> fixtures = {start, make_xp_level_note(1, 19, 19, 0, 0),
-        make_xp_level_note(2, 27, 27, 1, 1), make_xp_level_note(3, -1, 33, 0, 2),
-        make_version_note("0.34.0:local", "0.34.1:zh"),
-        Note(NOTE_MESSAGE, 0, 0, "You started the game in wizard mode."),
-        Note(NOTE_MESSAGE, 0, 0, "Entered wizard mode."),
-        Note(NOTE_MESSAGE, 0, 0, "Entered explore mode."),
-        Note(NOTE_MESSAGE, 0, 0, "Voluntarily entered the Abyss."),
-        Note(NOTE_MESSAGE, 0, 0, "Took an exit into the Abyss."),
-        Note(NOTE_MESSAGE, 0, 0, "Escaped the Abyss"),
-        Note(NOTE_MESSAGE, 0, 0, "Escaped Pandemonium"),
-        Note(NOTE_MESSAGE, 0, 0, "Escaped into the Abyss"),
-        Note(NOTE_MESSAGE, 0, 0, "Glimpsed the power of Zot.")};
-    for (const auto &note : fixtures)
-    {
-        const string english = note.describe(false, false);
-        const string chinese = note.display_describe(false, false);
-        CAPTURE(english, chinese);
-        CHECK(chinese != english);
-        vector<unsigned char> bytes; auto output = writer(&bytes); note.save(output);
-        auto input = reader(bytes, TAG_MINOR_VERSION); Note restored; restored.load(input);
-        CHECK(restored.describe(false, false) == english);
-        CHECK(restored.display_describe(false, false) == chinese);
-        vector<unsigned char> after; auto second = writer(&after); note.save(second);
-        CHECK(bytes == after);
-        Options.language = lang_t::EN;
-        CHECK(note.display_describe(false, false) == english);
-        Options.language = lang_t::ZH;
-    }
-    CHECK(fixtures[1].name == "HP: 19/19 MP: 0/0");
-    CHECK(fixtures[1].display_describe(false, false).find("生命值：19/19，魔力值：0/0") != string::npos);
-    CHECK(fixtures[2].display_describe(false, false).find("经验等级达到2") != string::npos);
-    CHECK(fixtures[4].display_describe(false, false).find("0.34.0:local") != string::npos);
-    vector<Note> fallback = {Note(NOTE_XP_LEVEL_CHANGE, 2, 0, "HP: 27/27 MP: 1/1"),
-        Note(NOTE_MESSAGE, 0, 0, start.name), Note(NOTE_MESSAGE, 0, 0, "custom script message")};
-    auto invalid = start; invalid.first = NUM_SPECIES; fallback.push_back(invalid);
-    invalid = start; invalid.second = NUM_JOBS; fallback.push_back(invalid);
-    invalid = start; invalid.name += " modified"; fallback.push_back(invalid);
-    invalid = fixtures[1]; invalid.name = "HP: 999/999 MP: 0/0"; fallback.push_back(invalid);
-    invalid = fixtures[1]; invalid.desc = "morgue-xp-v1\nhp=19:mhp=19:mp=0"; fallback.push_back(invalid);
-    invalid = fixtures[1]; invalid.desc = "morgue-xp-v1\nhp=19x:mhp=19:mp=0:mmp=0"; fallback.push_back(invalid);
-    invalid = fixtures[4]; invalid.name += " extra"; fallback.push_back(invalid);
-    fallback.emplace_back(NOTE_USER_NOTE, 0, 0, "Entered wizard mode.");
-    for (const auto &note : fallback)
-        CHECK(note.display_describe(false, false) == note.describe(false, false));
-    note_list = fixtures;
-    for (size_t i = 0; i < note_list.size(); ++i)
-    { note_list[i].turn = int(i); note_list[i].place = level_id(BRANCH_DUNGEON, 1); }
-    const string english = character_dump_text();
-    const string chinese = character_dump_text(true);
-    CHECK(english.find("began the quest for the Orb.") != string::npos);
-    CHECK(english.find("Reached XP level 2. HP: 27/27 MP: 1/1") != string::npos);
-    CHECK(chinese.find("Reached XP level") == string::npos);
-    CHECK(chinese.find("began the quest") == string::npos);
-    CHECK(chinese.find("生命值：27/27，魔力值：1/1") != string::npos);
-    CHECK(character_dump_text() == english);
-    REQUIRE(dump_char("native-start-levels", true));
-    formatted_string displayed;
-    REQUIRE(read_morgue_display("native-start-levels", displayed));
-    CHECK(displayed.tostring() == chinese);
-    Options.language = lang_t::EN;
-    REQUIRE(read_morgue_display("native-start-levels", displayed));
-    CHECK(displayed.tostring() == english);
-    CHECK(rng::peek_uint64() == next);
-}
-
-TEST_CASE("Morgue elemental deaths retain sources effects and whole English fallback", "[localization]")
-{
-    init_properties(); init_monsters(); init_mut_index(); init_duration_index();
-    unwind_var<lang_t> language(Options.language, lang_t::ZH);
-    unwind_var<const char *> lang(Options.lang_name, "zh");
-    unwind_var<int> paralysis(you.duration[DUR_PARALYSIS], 0);
-    unwind_var<int> stone(you.duration[DUR_PETRIFIED], 0);
-    unwind_var<int> sleep(you.duration[DUR_SLEEP], 0);
-    unwind_var<int> vexed(you.duration[DUR_VEXED], 0);
-    unwind_var<decltype(you.save)> save(you.save, nullptr);
-    unwind_var<vector<string>> order(Options.dump_order, {"hiscore", "notes"});
-    unwind_var<vector<Note>> notes(note_list, {});
-    unwind_var<string> directory(Options.morgue_dir, "../../../.term-audit/morgue-05-runtime");
-    const string common = "v=0.34.1:sc=42:name=Plog:race=Human:cls=Fighter:char=HuFi:xl=2:title=Fighter:br=D:lvl=1:hp=-1:mhp=21:mmhp=21:dam=4:start=20261023080000S:end=20261023090000S:dur=60:";
-    const auto next = rng::peek_uint64();
-    for (const string fields : {"ktyp=freezing:killer=an endoplasm", "ktyp=freezing",
-        "ktyp=burning:killer=Jessica:kaux=sticky flame", "ktyp=burning",
-        "ktyp=draining:killer=a wraith:kaux=negative energy", "ktyp=draining:kaux=negative energy",
-        "ktyp=rotting:killer=a necrophage:kaux=poison", "ktyp=rotting",
-        "ktyp=blinking:killer=an orc:kaux=magic dart", "ktyp=acid:killer=an acid blob",
-        "ktyp=collision:killer=an ogre:kaux=a freezing wraith"})
-    {
-        scorefile_entry score; REQUIRE(score.parse(common + fields + ":turn=316\n"));
-        const string raw = score.raw_string();
-        for (auto verbosity : {scorefile_entry::DDV_NORMAL, scorefile_entry::DDV_VERBOSE,
-                               scorefile_entry::DDV_TERSE, scorefile_entry::DDV_ONELINE})
-        {
-            const string original = score.death_description(verbosity);
-            const string shown = score.display_death_description(verbosity);
-            CAPTURE(fields, original, shown);
-            CHECK(shown != original);
-            Options.language = lang_t::EN;
-            CHECK(score.display_death_description(verbosity) == original);
-            Options.language = lang_t::ZH;
-        }
-        CHECK(score.raw_string() == raw);
-        Note death(NOTE_DEATH, -1, 21, score.death_description(scorefile_entry::DDV_NORMAL),
-            "morgue-score-normal-v1\n" + raw);
-        CHECK(death.display_describe(false, false) == score.display_death_description(scorefile_entry::DDV_NORMAL));
-        if (fields == "ktyp=freezing:killer=an endoplasm")
-        {
-            const string shown = score.display_death_description(scorefile_entry::DDV_VERBOSE);
-            CHECK(shown.find("原生胶体") != string::npos); CHECK(shown.find("冻死") != string::npos);
-            Note hp(NOTE_HP_CHANGE, 1, 21, score.death_description(scorefile_entry::DDV_TERSE),
-                "morgue-damage-v1\n" + score.death_cause_snapshot());
-            note_list = {hp, death};
-            for (auto &note : note_list) { note.turn = 316; note.place = level_id(BRANCH_DUNGEON, 1); }
-            REQUIRE(dump_char("native-frozen", true, false, &score));
-            formatted_string file; REQUIRE(read_morgue_display("native-frozen", file));
-            CHECK(file.tostring().find("Frozen") == string::npos);
-            CHECK(file.tostring().find("frozen") == string::npos);
-            CHECK(file.tostring().find("生命值：1/21［冻伤（4 点伤害）］") != string::npos);
-        }
-        if (fields == "ktyp=burning:killer=Jessica:kaux=sticky flame")
-        {
-            const string shown = score.display_death_description(scorefile_entry::DDV_VERBOSE);
-            CHECK(shown.find("杰西卡") != string::npos); CHECK(shown.find("黏附火焰") != string::npos);
-            CHECK(shown.find("4 点伤害") != string::npos);
-        }
-    }
-    for (const string fields : {"ktyp=freezing:killer=an unknown future monster",
-        "ktyp=burning:killer=Jessica:kaux=unknown flame effect",
-        "ktyp=draining:killer=a wraith:kaux=unknown draining effect",
-        "ktyp=rotting:killer=a necrophage:kaux=unknown source",
-        "ktyp=collision:killer=unknown pusher:kaux=a freezing wraith",
-        "ktyp=freezing:killer=an endoplasm:kpath=summoned by unknown"})
-    {
-        scorefile_entry score; REQUIRE(score.parse(common + fields + ":turn=316\n"));
-        CHECK(score.display_death_description(scorefile_entry::DDV_VERBOSE)
-              == score.death_description(scorefile_entry::DDV_VERBOSE));
-    }
-    CHECK(rng::peek_uint64() == next);
-}
-
-TEST_CASE("Morgue nonlethal damage records use injury words and canonical compact snapshots", "[localization]")
-{
-    init_properties(); init_monsters(); init_mut_index(); init_duration_index();
-    unwind_var<lang_t> language(Options.language, lang_t::ZH);
-    const auto next = rng::peek_uint64();
-    for (const char *kind : {"freezing", "burning", "draining", "rotting", "acid", "curare", "barbs",
-                            "mirror_damage", "falling_down_stairs", "falling_through_gate"})
-    {
-        scorefile_entry score;
-        REQUIRE(score.parse(string("ktyp=") + kind + ":dam=2:turn=1"));
-        const string original = score.death_description(scorefile_entry::DDV_TERSE);
-        const string translated = score.display_damage_description();
-        CAPTURE(kind, original, translated);
-        CHECK(translated != original); CHECK(translated.find("死") == string::npos);
-        Note hp(NOTE_HP_CHANGE, 1, 21, original, "morgue-damage-v1\n" + score.death_cause_snapshot());
-        const string shown = hp.display_describe(false, false);
-        CHECK(shown.find("生命值：1/21") == 0);
-        CHECK(shown.find(translated) != string::npos);
-        vector<unsigned char> bytes; auto output = writer(&bytes); hp.save(output);
-        auto input = reader(bytes, TAG_MINOR_VERSION); Note restored; restored.load(input);
-        CHECK(restored.display_describe(false, false) == shown);
-        CHECK(restored.describe(false, false) == hp.describe(false, false));
-        Options.language = lang_t::EN;
-        CHECK(hp.display_describe(false, false) == hp.describe(false, false));
-        Options.language = lang_t::ZH;
-        auto broken = hp; broken.name += " unknown clause";
-        CHECK(broken.display_describe(false, false) == broken.describe(false, false));
-    }
-    // Exercise the live damage-only constructor: no character/skill initialization.
-    scorefile_entry minimal(2, MID_NOBODY, KILLED_BY_FREEZING, nullptr, true);
-    const string snapshot = minimal.death_cause_snapshot();
-    CHECK(snapshot.find("name=") == string::npos);
-    scorefile_entry replay; REQUIRE(replay.parse(snapshot));
-    CHECK(replay.death_description(scorefile_entry::DDV_TERSE)
-          == minimal.death_description(scorefile_entry::DDV_TERSE));
-    Note unseen(NOTE_HP_CHANGE, 1, 21, "something (2)", "morgue-damage-unseen-v1\n2");
-    CHECK(unseen.display_describe(false, false).find("某种来源（2 点伤害）") != string::npos);
-    unseen.desc += "x";
-    CHECK(unseen.display_describe(false, false) == unseen.describe(false, false));
-    Note old(NOTE_HP_CHANGE, 1, 21, "frozen (2)");
-    CHECK(old.display_describe(false, false) == old.describe(false, false));
-    scorefile_entry extra; REQUIRE(extra.parse("ktyp=mon:killer=an orc:kaux=unknown weapon:dam=4:turn=1"));
-    Note unknown(NOTE_HP_CHANGE, 1, 21, extra.death_description(scorefile_entry::DDV_TERSE),
-        "morgue-damage-v1\n" + extra.death_cause_snapshot());
-    CHECK(unknown.display_describe(false, false) == unknown.describe(false, false));
-    CHECK(rng::peek_uint64() == next);
 }
 
 TEST_CASE("Target compact hit chances cover melee missiles blindness and auxiliary attacks", "[localization]")
@@ -8968,101 +8705,6 @@ TEST_CASE("Target actual callbacks compose compact attacks spell chances and abs
     canonical = monster_target_description(mi, &behavior, shown);
     CHECK_FALSE(shown.available);
     CHECK(target_prompt_display("Aim", canonical, shown, true) == "Aim: <lightgrey>" + canonical + "</lightgrey>");
-    CHECK(rng::peek_uint64() == next);
-}
-
-TEST_CASE("Reported four gaps translate feature and identified item note snapshots", "[localization]")
-{
-    init_properties(); init_monsters(); init_mut_index(); init_duration_index();
-    init_show_table(); init_feat_desc_cache();
-    unwind_var<bool> on_level(you.on_current_level, false);
-    unwind_var<lang_t> language(Options.language, lang_t::ZH);
-    unwind_var<species_type> species(you.species, SP_HUMAN);
-    unwind_var<transformation> form(you.form, transformation::none);
-    unwind_var<decltype(brdepth)> depths(brdepth);
-    for (int i = 0; i < NUM_BRANCHES; ++i) brdepth[i] = branches[i].numlevels;
-    const coord_def cell(12,12);
-    unwind_var<dungeon_feature_type> terrain(env.grid(cell), DNGN_FOUNTAIN_BLUE);
-    unwind_var<unsigned int> vault_id(env.level_map_ids(cell), INVALID_MAP_INDEX);
-    unwind_var<map_cell> memory(env.map_knowledge(cell));
-    unwind_var<decltype(env.shop)> shops(env.shop);
-    const auto next = rng::peek_uint64();
-    vector<Note> notes;
-    for (auto feat : {DNGN_FOUNTAIN_BLUE, DNGN_ENTER_LAIR, DNGN_STONE_STAIRS_DOWN_I})
-    {
-        env.grid(cell) = feat; env.map_knowledge(cell).set_feature(feat);
-        const Note note = make_feature_note(cell);
-        CAPTURE(feat, note.name, note.display_describe(false, false));
-        CHECK(note.name == feature_description_at(cell, false, DESC_A) + ".");
-        CHECK(note.display_describe(false, false).find("发现") == 0);
-        CHECK(note.display_describe(false, false) != note.describe(false, false));
-        notes.push_back(note);
-    }
-    shop_struct shop; shop.pos = cell; shop.type = SHOP_ARMOUR_ANTIQUE;
-    shop.shop_name = "Iloema Urghi"; shop.keeper_name.init(0);
-    env.shop[cell] = shop; env.grid(cell) = DNGN_ENTER_SHOP;
-    env.map_knowledge(cell).set_feature(DNGN_ENTER_SHOP);
-    const Note found_shop = make_feature_note(cell);
-    CHECK(found_shop.display_describe(false, false).find("古董防具") != string::npos);
-    notes.push_back(found_shop);
-    item_def item; item.base_type = OBJ_JEWELLERY; item.sub_type = RING_PROTECTION;
-    item.rnd = 1; item.quantity = 1; item.plus = 3; item.flags = ISFLAG_IDENTIFIED;
-    item.pos = ITEM_IN_INVENTORY; item.link = 0; item.slot = 'a';
-    item.orig_place = level_id(BRANCH_DUNGEON, 3);
-    const Note identified = make_identified_item_note(item, origin_desc(item));
-    REQUIRE_FALSE(identified.screen.empty());
-    CAPTURE(identified.name, identified.desc, identified.display_describe(false, false));
-    CHECK(identified.display_describe(false, false).find("鉴定") != string::npos);
-    CHECK(identified.display_describe(false, false).find("戒指") != string::npos);
-    CHECK(identified.display_describe(false, false).find("地下城") != string::npos);
-    CHECK(identified.display_describe(false, false).find("Identified") == string::npos);
-    notes.push_back(identified);
-    item_def randart = item;
-    { rng::subgenerator isolated(1223, 4556); REQUIRE(make_item_randart(randart, true)); }
-    const Note random_identified = make_identified_item_note(randart, origin_desc(randart));
-    REQUIRE_FALSE(random_identified.screen.empty());
-    CHECK(random_identified.display_describe(false, false).find("Identified") == string::npos);
-    CHECK(random_identified.display_describe(false, false).find("戒指") != string::npos);
-    notes.push_back(random_identified);
-    const auto prior = get_unique_item_status(UNRAND_SINGING_SWORD);
-    item_def unrand; unrand.quantity = 1;
-    { rng::subgenerator isolated(1223, 4556); REQUIRE(make_item_unrandart(unrand, UNRAND_SINGING_SWORD)); }
-    set_unique_item_status(unrand, prior);
-    unrand.flags |= ISFLAG_IDENTIFIED; unrand.orig_place = level_id(BRANCH_DUNGEON, 3);
-    const Note unique_identified = make_identified_item_note(unrand, origin_desc(unrand));
-    REQUIRE_FALSE(unique_identified.screen.empty());
-    CHECK(unique_identified.display_describe(false, false).find("Identified") == string::npos);
-    CHECK(unique_identified.display_describe(false, false).find("歌唱之剑") != string::npos);
-    notes.push_back(unique_identified);
-    item.plus = 9;
-    CHECK(identified.display_describe(false, false).find("+3") != string::npos);
-    for (const auto &note : notes)
-    {
-        vector<unsigned char> saved; auto output = writer(&saved); note.save(output);
-        auto input = reader(saved, TAG_MINOR_VERSION); Note restored; restored.load(input);
-        CHECK(restored.describe(false, false) == note.describe(false, false));
-        CHECK(restored.display_describe(false, false) == note.display_describe(false, false));
-        Options.language = lang_t::EN;
-        CHECK(restored.display_describe(false, false) == note.describe(false, false));
-        Options.language = lang_t::ZH;
-    }
-    auto broken = identified; broken.screen.pop_back();
-    CHECK(broken.display_describe(false, false) == broken.describe(false, false));
-    broken = identified; broken.name += " custom";
-    CHECK(broken.display_describe(false, false) == broken.describe(false, false));
-    broken = found_shop; broken.name += " custom";
-    CHECK(broken.display_describe(false, false) == broken.describe(false, false));
-    unwind_var<vector<Note>> list(note_list, notes);
-    unwind_var<vector<string>> order(Options.dump_order, {"notes"});
-    unwind_var<string> directory(Options.morgue_dir, "../../../.term-audit/reported-four-gaps-runtime");
-    unwind_var<decltype(you.save)> save(you.save, nullptr);
-    REQUIRE(dump_char("native-feature-identification", true));
-    formatted_string displayed; REQUIRE(read_morgue_display("native-feature-identification", displayed));
-    CHECK(displayed.tostring().find("Found ") == string::npos);
-    CHECK(displayed.tostring().find("Identified ") == string::npos);
-    CHECK(displayed.tostring().find("古董防具") != string::npos);
-    Note old_item(NOTE_ID_ITEM, 0, 0, identified.name, identified.desc);
-    CHECK(old_item.display_describe(false, false) == old_item.describe(false, false));
     CHECK(rng::peek_uint64() == next);
 }
 
@@ -9934,38 +9576,6 @@ TEST_CASE("Reported fourteen look handles Lua markers without evaluating them tw
     CHECK(get_square_desc(cell).find("unknown authored terrain")!=string::npos);
 }
 
-TEST_CASE("Collectible morgue notes translate all new and legacy rune gem and orb records", "[localization]")
-{
-    init_properties();init_monsters();init_mut_index();
-    unwind_var<lang_t> language(Options.language,lang_t::ZH);
-    const auto next=rng::peek_uint64();
-    for(auto base:{OBJ_RUNES,OBJ_GEMS,OBJ_ORBS})
-    for(int sub=0;sub<(base==OBJ_RUNES?NUM_RUNE_TYPES:base==OBJ_GEMS?NUM_GEM_TYPES:1);++sub)
-    {
-        item_def item;item.base_type=base;item.sub_type=sub;item.quantity=1;item.rnd=1;
-        item.flags=ISFLAG_IDENTIFIED;item.pos=ITEM_IN_INVENTORY;item.link=0;item.slot='a';
-        const int time=base==OBJ_GEMS?121:0;
-        const string canonical=item.name(DESC_A);
-        vector<Note> notes{Note(NOTE_GET_ITEM,time,0,canonical,origin_desc(item)),make_obtained_item_note(item,time)};
-        REQUIRE_FALSE(notes.back().screen.empty());
-        for(const auto &note:notes)
-        {
-            const string original=note.describe(false,false);const string shown=note.display_describe(false,false);
-            CAPTURE(base,sub,original,shown);CHECK(shown!=original);CHECK(shown.find("Got ")==string::npos);
-            if(time)CHECK(shown.find("13")!=string::npos);
-            vector<unsigned char> bytes;auto out=writer(&bytes);note.save(out);
-            auto input=reader(bytes,TAG_MINOR_VERSION);Note restored;restored.load(input);
-            CHECK(restored.describe(false,false)==original);CHECK(restored.display_describe(false,false)==shown);
-            Options.language=lang_t::EN;CHECK(restored.display_describe(false,false)==original);Options.language=lang_t::ZH;
-            vector<unsigned char> after;auto again=writer(&after);note.save(again);CHECK(bytes==after);
-        }
-        auto broken=notes.back();broken.screen.pop_back();CHECK(broken.display_describe(false,false)==broken.describe(false,false));
-        CHECK(item.name(DESC_A)==canonical);
-    }
-    Note unknown(NOTE_GET_ITEM,0,0,"an unknown collectible");CHECK(unknown.display_describe(false,false)==unknown.describe(false,false));
-    CHECK(rng::peek_uint64()==next);
-}
-
 TEST_CASE("Collectible morgue notes retain random Pan lord names and translate their typed role", "[localization]")
 {
     unwind_var<lang_t> language(Options.language,lang_t::ZH);
@@ -9973,54 +9583,13 @@ TEST_CASE("Collectible morgue notes retain random Pan lord names and translate t
     for(auto type:{NOTE_SEEN_MONSTER,NOTE_DEFEAT_MONSTER})
     {
         Note note(type,MONS_PANDEMONIUM_LORD,0,name,type==NOTE_DEFEAT_MONSTER?"killed":"");
-        const string original=note.describe(false,false),shown=note.display_describe(false,false);
+        const string original=note.describe(false,false),shown=_recorded_note(note).describe(false,false, true, true);
         CAPTURE(original,shown);CHECK(shown!=original);CHECK(shown.find(ui_generated_name_arg(name).text)!=string::npos);
         CHECK(shown.find("魔窟领主")!=string::npos);CHECK(shown.find("pandemonium lord")==string::npos);
-        Options.language=lang_t::EN;CHECK(note.display_describe(false,false)==original);Options.language=lang_t::ZH;
+        Options.language=lang_t::EN;CHECK(_recorded_note(note).describe(false,false, true, true)==original);Options.language=lang_t::ZH;
     }
     Note unknown(NOTE_SEEN_MONSTER,MONS_ORC,0,"Unreviewed custom species");
-    CHECK(unknown.display_describe(false,false)==unknown.describe(false,false));
-}
-
-TEST_CASE("Collectible morgue notes translate portal identities and legacy records without parsing English", "[localization]")
-{
-    unwind_var<lang_t> language(Options.language,lang_t::ZH);
-    for(const string name:{"Lehudib's Moon Base","Rutra's Hidden Sanctum","The Name-Rending Infernalists' Reservoir"})
-    {
-        const string original="Entered "+name;
-        Note typed=make_location_note(original,"portal",name),legacy(NOTE_MESSAGE,0,0,original);
-        const string shown=typed.display_describe(false,false);CHECK(shown!=original);CHECK(shown==legacy.display_describe(false,false));
-        vector<unsigned char> bytes;auto out=writer(&bytes);typed.save(out);auto input=reader(bytes,TAG_MINOR_VERSION);Note restored;restored.load(input);
-        CHECK(restored.display_describe(false,false)==shown);CHECK(restored.describe(false,false)==original);
-        Options.language=lang_t::EN;CHECK(restored.display_describe(false,false)==original);Options.language=lang_t::ZH;
-        typed.name+=" modified";CHECK(typed.display_describe(false,false)==typed.describe(false,false));
-    }
-    for(const string name:{"Mnoleg","Lom Lobon","Cerebov","Gloorx Vloq"})
-    {
-        const string original="Entered the realm of "+name+".";
-        auto typed=make_location_note(original,"realm",name);Note legacy(NOTE_MESSAGE,0,0,original);
-        CHECK(typed.display_describe(false,false)!=original);CHECK(typed.display_describe(false,false)==legacy.display_describe(false,false));
-    }
-    for(const string name:{"An unreviewed portal","Lehudib's Moon Base extra"})
-    {
-        const string original="Entered "+name;const auto typed=make_location_note(original,"portal",name);
-        CHECK(typed.display_describe(false,false)==original);Note legacy(NOTE_MESSAGE,0,0,original);CHECK(legacy.display_describe(false,false)==original);
-    }
-    CHECK(make_location_note("Edited note","portal","Lehudib's Moon Base").desc.empty());
-}
-
-TEST_CASE("Collectible morgue Lua note API stores canonical location metadata", "[localization]")
-{
-    unwind_var<lang_t> language(Options.language,lang_t::ZH);
-    unwind_var<vector<Note>> list(note_list,{});
-    struct Active{bool old=notes_are_active();Active(){activate_notes(true);}~Active(){activate_notes(old);}} active;
-    std::unique_ptr<lua_State,decltype(&lua_close)> state(luaL_newstate(),lua_close);REQUIRE(state);
-    lua_State *ls=state.get();luaL_openlibs(ls);cluaopen_crawl(ls);
-    REQUIRE(luaL_dostring(ls,"crawl.take_note(\"Entered Lehudib's Moon Base\", 'portal', \"Lehudib's Moon Base\"); crawl.take_note('Entered the realm of Mnoleg.', 'realm', 'Mnoleg'); crawl.take_note('Unreviewed user note')")==0);
-    REQUIRE(note_list.size()==3);CHECK(starts_with(note_list[0].desc,"morgue-location-v1\n"));
-    CHECK(note_list[0].display_describe(false,false)=="进入了雷胡迪布的月球基地");
-    CHECK(note_list[1].display_describe(false,false).find("Mnoleg")==string::npos);
-    CHECK(note_list[2].display_describe(false,false)=="Unreviewed user note");
+    CHECK(_recorded_note(unknown).describe(false,false, true, true)==unknown.describe(false,false));
 }
 
 TEST_CASE("Collectible morgue welcome goal messages keep every canonical random choice", "[localization]")
@@ -10042,81 +9611,6 @@ TEST_CASE("Collectible morgue welcome goal messages keep every canonical random 
     CHECK(found);CHECK(string(ui_translate("d.feature.name","garden patch"))=="花圃");
 }
 
-TEST_CASE("Collectible morgue file exports keep canonical English paths and bilingual notes", "[localization]")
-{
-    init_properties();init_monsters();init_mut_index();init_duration_index();
-    unwind_var<lang_t> language(Options.language,lang_t::ZH);
-    unwind_var<const char*> lang(Options.lang_name,"zh");
-    unwind_var<bool> level(you.on_current_level,false);
-    unwind_var<decltype(you.save)> save(you.save,nullptr);
-    unwind_var<vector<string>> order(Options.dump_order,{"notes"});
-    unwind_var<string> directory(Options.morgue_dir,"../../../.term-audit/morgue-collectibles-runtime");
-    vector<Note> notes;
-    for(auto base:{OBJ_RUNES,OBJ_GEMS,OBJ_ORBS})
-    {
-        item_def item;item.base_type=base;item.sub_type=0;item.quantity=1;item.rnd=1;
-        item.flags=ISFLAG_IDENTIFIED;item.pos=ITEM_IN_INVENTORY;item.link=0;item.slot='a';
-        notes.push_back(make_obtained_item_note(item,base==OBJ_GEMS?121:0));
-    }
-    notes.push_back(Note(NOTE_SEEN_MONSTER,MONS_PANDEMONIUM_LORD,0,"Zadaohuo"));
-    notes.push_back(make_location_note("Entered Lehudib's Moon Base","portal","Lehudib's Moon Base"));
-    notes.push_back(Note(NOTE_MESSAGE,0,0,"Entered Rutra's Hidden Sanctum"));
-    unwind_var<vector<Note>> list(note_list,notes);
-    const auto next=rng::peek_uint64();
-    bool localized_written = false;
-    REQUIRE(dump_char("native-collectibles",true,false,nullptr,true,&localized_written));
-    CHECK(localized_written);
-    const auto read=[&](const string &name){std::ifstream f(morgue_directory()+name);return string(std::istreambuf_iterator<char>(f),std::istreambuf_iterator<char>());};
-    const string english=read("native-collectibles.txt"),chinese=read("native-collectibles.zh.txt");
-    CHECK(english.find("Got ")!=string::npos);CHECK(english.find("Entered Lehudib's Moon Base")!=string::npos);
-    CHECK(chinese.find("Got ")==string::npos);CHECK(chinese.find("the pandemonium lord")==string::npos);
-    CHECK(chinese.find("佐特宝珠")!=string::npos);CHECK(chinese.find("符文")!=string::npos);CHECK(chinese.find("宝石")!=string::npos);
-    CHECK(chinese.find("雷胡迪布的月球基地")!=string::npos);CHECK(chinese.find("鲁特拉的隐秘圣所")!=string::npos);
-    REQUIRE(dump_char("native-collectibles-en",true,false,nullptr,false,&localized_written));
-    CHECK_FALSE(localized_written);
-    CHECK(read("native-collectibles-en.txt")==english);
-    // Block only the optional Chinese path; canonical output must still succeed.
-    string blocked = morgue_directory() + "native-collectibles-blocked.zh.txt";
-    REQUIRE(check_mkdir("test Chinese dump failure", &blocked, true));
-    localized_written = true;
-    REQUIRE(dump_char("native-collectibles-blocked",true,false,nullptr,true,&localized_written));
-    CHECK_FALSE(localized_written);
-    CHECK(read("native-collectibles-blocked.txt")==english);
-    localized_written = true;
-    Options.language=lang_t::EN;
-    REQUIRE(dump_char("native-collectibles-language-en",true,false,nullptr,true,&localized_written));
-    CHECK_FALSE(localized_written);
-    CHECK(read("native-collectibles-language-en.txt")==english);
-    CHECK(rng::peek_uint64()==next);
-}
-
-TEST_CASE("Morgue status books place Pan lord roles inside the actor and preserve old sources", "[localization]")
-{
-    init_properties();init_monsters();init_mut_index();
-    unwind_var<lang_t> language(Options.language,lang_t::ZH);
-    vector<Note> notes{Note(NOTE_SEEN_MONSTER,MONS_PANDEMONIUM_LORD,0,"Ylod Wia"),
-        Note(NOTE_SEEN_MONSTER,MONS_PANDEMONIUM_LORD,0,"Fubb")};
-    unwind_var<vector<Note>> list(note_list,notes);
-    CHECK(notes[0].display_describe(false,false)=="遇见魔窟领主" + ui_generated_name_arg("Ylod Wia").text);
-    Note kill(NOTE_DEFEAT_MONSTER,MONS_PANDEMONIUM_LORD,0,"Ylod Wia","killed");
-    CHECK(kill.display_describe(false,false)=="杀死魔窟领主" + ui_generated_name_arg("Ylod Wia").text);
-    Note paralysis(NOTE_PARALYSIS,45,0,"Fubb");
-    CHECK(paralysis.display_describe(false,false)=="被魔窟领主" + ui_generated_name_arg("Fubb").text + "麻痹，持续4.5回合");
-    Note vex(NOTE_VEXED,4,0,"Fubb");CHECK(vex.display_describe(false,false)!=vex.describe(false,false));
-    Note mutation(NOTE_GET_MUTATION,MUT_FANGS,3,"Fubb");CHECK(mutation.display_describe(false,false)!=mutation.describe(false,false));
-    for(const auto &note:vector<Note>{notes[0],kill,paralysis,vex,mutation})
-    {
-        const string original=note.describe(false,false),shown=note.display_describe(false,false);
-        vector<unsigned char> bytes;auto out=writer(&bytes);note.save(out);auto input=reader(bytes,TAG_MINOR_VERSION);Note restored;restored.load(input);
-        CHECK(restored.display_describe(false,false)==shown);CHECK(restored.describe(false,false)==original);
-        Options.language=lang_t::EN;CHECK(restored.display_describe(false,false)==original);Options.language=lang_t::ZH;
-    }
-    note_list.clear();CHECK(paralysis.display_describe(false,false)==paralysis.describe(false,false));
-    paralysis.desc="morgue-pan-source-v1\nFubb";
-    CHECK(paralysis.display_describe(false,false)=="被魔窟领主" + ui_generated_name_arg("Fubb").text + "麻痹，持续4.5回合");
-    paralysis.name="another source";CHECK(paralysis.display_describe(false,false)==paralysis.describe(false,false));
-}
-
 TEST_CASE("Morgue status books cover every mutation level and species growth source", "[localization]")
 {
     init_properties();init_monsters();init_mut_index();
@@ -10130,25 +9624,25 @@ TEST_CASE("Morgue status books cover every mutation level and species growth sou
         for(auto type:{NOTE_GET_MUTATION,NOTE_LOSE_MUTATION,NOTE_PERM_MUTATION})
         {
             Note note(type,id,type==NOTE_LOSE_MUTATION?level-1:level,"Vine Stalker growth");
-            const string original=note.describe(false,false),shown=note.display_describe(false,false);
+            const string original=note.describe(false,false),shown=_recorded_note(note).describe(false,false, true, true);
             CAPTURE(id,level,type,original,shown);CHECK(shown!=original);CHECK(shown.find("Vine Stalker")==string::npos);
             CHECK(shown.find("Gained mutation")==string::npos);CHECK(shown.find("藤蔓人的成长")!=string::npos);
-            Options.language=lang_t::EN;CHECK(note.display_describe(false,false)==original);Options.language=lang_t::ZH;++checked;
+            Options.language=lang_t::EN;CHECK(_recorded_note(note).describe(false,false, true, true)==original);Options.language=lang_t::ZH;++checked;
         }
     }
     CHECK(checked>500);
     for(auto species:species::get_all_species())
     {
         Note note(NOTE_GET_MUTATION,MUT_FANGS,3,species::name(species)+" growth");
-        CAPTURE(species,note.describe(false,false));CHECK(note.display_describe(false,false)!=note.describe(false,false));
+        CAPTURE(species,note.describe(false,false));CHECK(_recorded_note(note).describe(false,false, true, true)!=note.describe(false,false));
     }
     for(const char *reason:{"demonic ancestry","potion of mutation","hidden defects","hidden potential","hidden defects expressed",
         "hidden potential expressed","wizard power","mutagenic glow","Jiyva's grace","Makhleb's blessing","Xom's mischief",
         "Xom's grace","Xom's lifesaving","Ru sacrifice","Equipping an artefact","the wrath of Zin","the darkness of Dithmenos"})
     {
-        Note note(NOTE_GET_MUTATION,MUT_FANGS,3,reason);CAPTURE(reason);CHECK(note.display_describe(false,false)!=note.describe(false,false));
+        Note note(NOTE_GET_MUTATION,MUT_FANGS,3,reason);CAPTURE(reason);CHECK(_recorded_note(note).describe(false,false, true, true)!=note.describe(false,false));
     }
-    Note unknown(NOTE_GET_MUTATION,MUT_FANGS,3,"unreviewed upstream reason");CHECK(unknown.display_describe(false,false)==unknown.describe(false,false));
+    Note unknown(NOTE_GET_MUTATION,MUT_FANGS,3,"unreviewed upstream reason");CHECK(_recorded_note(unknown).describe(false,false, true, true)==unknown.describe(false,false));
     CHECK(rng::peek_uint64()==next);
 }
 
@@ -10164,12 +9658,12 @@ TEST_CASE("Morgue status books preserve typed random book authors and canonical 
     book.flags|=ISFLAG_IDENTIFIED;book.props[BOOK_TITLED_KEY]=true;
     book.props[ARTEFACT_NAME_KEY]="Jusinoud's Precepts of Stones";
     const string original=book.name(DESC_PLAIN);const auto next=rng::peek_uint64();string shown;
-    REQUIRE(try_item_display_name(book,shown,false,false));CHECK(shown=="Jusinoud的石块之训诫");
+    REQUIRE(try_item_display_name(book,shown,false,false));CHECK(shown==ui_generated_name_arg("Jusinoud").text+"的石块之训诫");
     CHECK(book.name(DESC_PLAIN)==original);CHECK(book.props[ARTEFACT_NAME_KEY].get_string()=="Jusinoud's Precepts of Stones");
     CHECK_FALSE(try_randbook_title("Jusinoud's Precepts of Stones",shown));
     REQUIRE(try_randbook_title("Jusinoud's Precepts of Stones",shown,"",true));
     CHECK_FALSE(try_randbook_title("Jusinoud's Precepts of Unknown Future School",shown,"",true));
-    REQUIRE(try_randbook_title("Jusinoud's Elementary Magic",shown,"",true));CHECK(shown=="Jusinoud的初等魔法");
+    REQUIRE(try_randbook_title("Jusinoud's Elementary Magic",shown,"",true));CHECK(shown==ui_generated_name_arg("Jusinoud").text+"的初等魔法");
     Options.language=lang_t::EN;CHECK_FALSE(try_item_display_name(book,shown,false,false));CHECK(book.name(DESC_PLAIN)==original);
     CHECK(rng::peek_uint64()==next);
 }
@@ -10184,6 +9678,7 @@ TEST_CASE("Morgue status books export corrected role source and mutation records
     unwind_var<vector<Note>> list(note_list,{Note(NOTE_SEEN_MONSTER,MONS_PANDEMONIUM_LORD,0,"Fubb"),
         Note(NOTE_PARALYSIS,45,0,"Fubb"),Note(NOTE_GET_MUTATION,MUT_FANGS,3,"Vine Stalker growth"),
         Note(NOTE_DEFEAT_MONSTER,MONS_PANDEMONIUM_LORD,0,"Ylod Wia","killed")});
+    for (auto &note : note_list) note = _recorded_note(note);
     const auto next=rng::peek_uint64();REQUIRE(dump_char("native-status-books",true));
     const auto read=[&](const string &name){std::ifstream f(morgue_directory()+name);return string(std::istreambuf_iterator<char>(f),std::istreambuf_iterator<char>());};
     const string en=read("native-status-books.txt"),zh=read("native-status-books.zh.txt");
@@ -10510,12 +10005,12 @@ TEST_CASE("Generated names localize scrolls Pan lords shops and notes without ch
     REQUIRE(lord.try_display_name(shown)); CHECK(shown.find("富布")!=string::npos);
     CHECK(shown.find("Fubb")==string::npos); CHECK(lord.full_name()==original);
     Note note(NOTE_SEEN_MONSTER,MONS_PANDEMONIUM_LORD,0,"Fubb");
-    CHECK(note.display_describe(false,false).find("富布")!=string::npos);
+    CHECK(_recorded_note(note).describe(false,false, true, true).find("富布")!=string::npos);
     CHECK(note.name=="Fubb");
     // A randomly generated identity that happens to equal a fixed dictionary
     // key must still agree between the actor and its typed encounter note.
     Note collision(NOTE_SEEN_MONSTER,MONS_PANDEMONIUM_LORD,0,"Zin");
-    CHECK(collision.display_describe(false,false).find(ui_generated_name_arg("Zin").text)!=string::npos);
+    CHECK(_recorded_note(collision).describe(false,false, true, true).find(ui_generated_name_arg("Zin").text)!=string::npos);
     monster_info ghost(MONS_PLAYER_GHOST); ghost.mname="Fubb";
     REQUIRE(ghost.try_display_name(shown)); CHECK(shown.find("Fubb")!=string::npos);
     shop_struct shop; shop.type=SHOP_WEAPON; shop.keeper_name.init(0);
@@ -10526,7 +10021,7 @@ TEST_CASE("Generated names localize scrolls Pan lords shops and notes without ch
     CHECK(display.text.find("Fubb")!=string::npos); // authored names stay literal
     Options.language=lang_t::EN;
     CHECK_FALSE(lord.try_display_name(shown));
-    CHECK(note.display_describe(false,false)==note.describe(false,false));
+    CHECK(_recorded_note(note).describe(false,false, true, true)==note.describe(false,false));
     CHECK(rng::peek_uint64()==state);
 }
 
@@ -10571,4 +10066,595 @@ TEST_CASE("Movement warnings cover species gait and special movement verbs with 
     CHECK(ui_render("p.prompt","Really %s into that cloud of %s?",unknown,
         {ui_text_arg("p.move","unknown upstream gait"),ui_text_arg("c.cloud.name","flame")})==unknown);
     CHECK(rng::peek_uint64()==state);
+}
+
+
+TEST_CASE("Event-time bilingual notes freeze both bodies once independently of UI language", "[localization][bilingual-notes]")
+{
+    init_properties(); init_monsters(); init_mut_index();
+    unwind_var<lang_t> language(Options.language);
+    unwind_var<const char *> lang(Options.lang_name, "en");
+    unwind_var<vector<Note>> notes(note_list, {});
+    const auto next = rng::peek_uint64();
+    for (auto selected : {lang_t::EN, lang_t::ZH})
+    {
+        Options.language = selected;
+        string context = "事件发生时的正文";
+        int calls = 0;
+        Note saved = _recorded_note(Note(NOTE_MESSAGE, 0, 0, "Canonical event body"), [&] {
+            ++calls;
+            CHECK(Options.language == lang_t::ZH);
+            return context;
+        });
+        CHECK(calls == 1);
+        CHECK(Options.language == selected);
+        CHECK(string(Options.lang_name) == "en");
+        CHECK(saved.name == "Canonical event body");
+        CHECK(saved.desc.empty()); CHECK(saved.screen.empty());
+        CHECK(saved.english == "Canonical event body");
+        CHECK(saved.chinese == context);
+        context = "场景已经改变";
+        // Mutating typed context cannot rewrite an already recorded event.
+        saved.name = "Different live text";
+        saved.first = 999;
+        for (int read = 0; read < 5; ++read)
+        {
+            Options.language = lang_t::ZH;
+            CHECK(saved.describe(false, false, true, true) == "事件发生时的正文");
+            CHECK(saved.describe(false, false) == "Canonical event body");
+            Options.language = lang_t::EN;
+            CHECK(saved.describe(false, false, true, true) == "Canonical event body");
+        }
+        CHECK(calls == 1);
+        vector<unsigned char> bytes; auto output = writer(&bytes); saved.save(output);
+        auto input = reader(bytes, TAG_MINOR_VERSION); Note loaded; loaded.load(input);
+        Options.language = lang_t::ZH;
+        CHECK(loaded.describe(false, false, true, true) == "事件发生时的正文");
+        CHECK(loaded.describe(false, false) == "Canonical event body");
+        CHECK(loaded.describe(true, true, false, true) == loaded.describe(true, true, false, true));
+        CHECK(calls == 1);
+    }
+    CHECK(rng::peek_uint64() == next);
+}
+
+TEST_CASE("Event-time bilingual notes persist complete fallback and preserve user screenshots", "[localization][bilingual-notes]")
+{
+    unwind_var<lang_t> language(Options.language, lang_t::EN);
+    unwind_var<vector<Note>> notes(note_list, {});
+    const string screenshot = "<white>@ 用户截图</white>";
+    const Note user = _recorded_note(Note(NOTE_USER_NOTE, 0, 0, "用户原话 English", "", screenshot));
+    CHECK(user.screen == screenshot);
+    for (const Note &saved : {
+        _recorded_note(Note(NOTE_MESSAGE, 0, 0, "Unknown future event")),
+        _recorded_note(Note(NOTE_MESSAGE, 0, 0, "Incomplete event"), [] { return string(); }),
+        _recorded_note(Note(NOTE_MESSAGE, 0, 0, "Identical event"), [] { return string("Identical event"); }),
+        user})
+    {
+        Options.language = lang_t::ZH;
+        CHECK(saved.describe(false, false, true, true) == saved.describe(false, false));
+        vector<unsigned char> bytes; auto output = writer(&bytes); saved.save(output);
+        auto input = reader(bytes, TAG_MINOR_VERSION); Note restored; restored.load(input);
+        CHECK(restored.describe() == saved.describe());
+        CHECK(restored.describe(false, false, true, true) == saved.describe(false, false));
+        CHECK(restored.screen == saved.screen);
+    }
+    // Old upstream note layout is read as English only, with no reconstruction.
+    vector<unsigned char> bytes; auto output = writer(&bytes);
+    marshallInt(output, NOTE_MESSAGE); marshallInt(output, 7);
+    level_id(BRANCH_DUNGEON, 1).save(output);
+    marshallInt(output, 0); marshallInt(output, 0);
+    marshallString4(output, "Original historical event");
+    marshallString4(output, ""); marshallString(output, "");
+    auto input = reader(bytes, TAG_MINOR_BILINGUAL_NOTES - 1);
+    Note old; old.load(input);
+    CHECK(old.english.empty()); CHECK(old.chinese.empty());
+    CHECK(old.describe(false, false, true, true) == "Original historical event");
+    const bool active = notes_are_active(); activate_notes(false);
+    int calls = 0;
+    take_note(Note(NOTE_MESSAGE, 0, 0, "not recorded"), true, [&] { ++calls; return string(); });
+    activate_notes(active);
+    CHECK(calls == 0);
+}
+
+TEST_CASE("Event-time bilingual notes retain death and injury coverage without score snapshots", "[localization][bilingual-notes]")
+{
+    init_properties(); init_monsters(); init_mut_index(); init_duration_index();
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    unwind_var<vector<Note>> notes(note_list, {});
+    unwind_var<int> paralysis(you.duration[DUR_PARALYSIS], 0);
+    unwind_var<int> petrified(you.duration[DUR_PETRIFIED], 0);
+    unwind_var<int> sleep(you.duration[DUR_SLEEP], 0);
+    unwind_var<int> vexed(you.duration[DUR_VEXED], 0);
+    const string common = "v=0.34.1:sc=42:name=Tester:race=Human:cls=Fighter:char=HuFi:xl=5:title=Fighter:br=D:lvl=2:hp=-4:mhp=21:mmhp=21:dam=4:start=20261023080000S:end=20261023090000S:dur=60:";
+    const auto next = rng::peek_uint64();
+    for (const string fields : {"ktyp=mon:killer=an orc:kaux=a +0 short sword",
+        "ktyp=beam:killer=Jessica:kaux=puff of flame", "ktyp=constriction:killer=a ball python",
+        "ktyp=pois:killer=an adder", "ktyp=cloud:kaux=flame",
+        "ktyp=freezing:killer=an endoplasm", "ktyp=freezing",
+        "ktyp=burning:killer=Jessica:kaux=sticky flame", "ktyp=burning",
+        "ktyp=draining:killer=a wraith:kaux=negative energy", "ktyp=draining:kaux=negative energy",
+        "ktyp=rotting:killer=a necrophage:kaux=poison", "ktyp=rotting",
+        "ktyp=blinking:killer=an orc:kaux=magic dart", "ktyp=acid:killer=an acid blob",
+        "ktyp=collision:killer=an ogre:kaux=a freezing wraith"})
+    {
+        scorefile_entry score; REQUIRE(score.parse(common + fields + ":turn=10\n"));
+        const string raw = score.raw_string();
+        for (auto verbosity : {scorefile_entry::DDV_NORMAL, scorefile_entry::DDV_VERBOSE,
+                               scorefile_entry::DDV_TERSE, scorefile_entry::DDV_ONELINE})
+        {
+            const string english = score.death_description(verbosity);
+            const string chinese = score.display_death_description(verbosity);
+            CAPTURE(fields, english, chinese);
+            CHECK(chinese != english);
+            const Note saved = _recorded_note(Note(NOTE_DEATH, -4, 21, english), [&] {
+                return score.display_death_description(verbosity);
+            });
+            CHECK(saved.desc.empty()); CHECK(saved.screen.empty());
+            CHECK(saved.describe(false, false) == english);
+            CHECK(saved.describe(false, false, true, true) == chinese);
+            vector<unsigned char> bytes; auto output = writer(&bytes); saved.save(output);
+            auto input = reader(bytes, TAG_MINOR_VERSION); Note restored; restored.load(input);
+            CHECK(restored.describe(false, false, true, true) == chinese);
+            Options.language = lang_t::EN;
+            CHECK(restored.describe(false, false, true, true) == english);
+            CHECK(score.display_death_description(verbosity) == english);
+            Options.language = lang_t::ZH;
+        }
+        CHECK(score.raw_string() == raw);
+    }
+    for (const string fields : {"ktyp=mon:killer=an unknown upstream creature",
+        "ktyp=mon:killer=an orc:kaux=a +99 unknown weapon",
+        "ktyp=beam:killer=Jessica:kaux=unknown future beam",
+        "ktyp=mon:killer=an orc:kpath=summoned by somebody"})
+    {
+        scorefile_entry score; REQUIRE(score.parse(common + fields + ":turn=10\n"));
+        const Note saved = _recorded_note(Note(NOTE_DEATH, 0, 0,
+            score.death_description(scorefile_entry::DDV_VERBOSE)), [&] {
+            return score.display_death_description(scorefile_entry::DDV_VERBOSE);
+        });
+        CHECK(saved.chinese.empty());
+        CHECK(saved.describe(false, false, true, true) == saved.describe(false, false));
+    }
+    for (const string fields : {"ktyp=freezing", "ktyp=burning", "ktyp=draining", "ktyp=rotting"})
+    {
+        scorefile_entry score; REQUIRE(score.parse(common + fields + ":turn=10\n"));
+        const string reason = score.display_damage_description();
+        CHECK(reason != score.death_description(scorefile_entry::DDV_TERSE));
+        const Note saved = _recorded_note(Note(NOTE_HP_CHANGE, 1, 21,
+            score.death_description(scorefile_entry::DDV_TERSE)), [&] {
+            return ui_render("n.note", "HP: %s/%s [%s]", "",
+                {ui_literal_arg("1"), ui_literal_arg("21"), ui_literal_arg(reason)});
+        });
+        CHECK(saved.describe(false, false, true, true).find(reason) != string::npos);
+        CHECK(saved.desc.empty()); CHECK(saved.screen.empty());
+    }
+    CHECK(rng::peek_uint64() == next);
+}
+
+TEST_CASE("Event-time bilingual notes capture actual Lua location events once", "[localization][bilingual-notes]")
+{
+    unwind_var<lang_t> language(Options.language, lang_t::EN);
+    unwind_var<vector<Note>> notes(note_list, {});
+    const bool active = notes_are_active(); activate_notes(true);
+    struct Restore { bool active; ~Restore() { activate_notes(active); } } restore{active};
+    std::unique_ptr<lua_State, decltype(&lua_close)> state(luaL_newstate(), lua_close);
+    REQUIRE(state); lua_State *ls = state.get(); luaL_openlibs(ls); cluaopen_crawl(ls);
+    REQUIRE(luaL_dostring(ls,
+        "crawl.take_note('Entered Lehudib\\'s Moon Base', 'portal', 'Lehudib\\'s Moon Base');"
+        "crawl.take_note('Entered the realm of Mnoleg.', 'realm', 'Mnoleg');"
+        "crawl.take_note('Unreviewed user note');") == 0);
+    REQUIRE(note_list.size() == 3);
+    Options.language = lang_t::ZH;
+    CHECK(note_list[0].describe(false, false, true, true) == "进入了雷胡迪布的月球基地");
+    CHECK(note_list[1].describe(false, false, true, true).find("Mnoleg") == string::npos);
+    CHECK(note_list[2].describe(false, false, true, true) == "Unreviewed user note");
+    for (const auto &note : note_list) { CHECK(note.desc.empty()); CHECK(note.screen.empty()); }
+}
+
+TEST_CASE("Event-time bilingual notes export frozen bodies through canonical and Chinese morgue paths", "[localization][bilingual-notes]")
+{
+    init_properties(); init_monsters(); init_mut_index(); init_duration_index();
+    unwind_var<lang_t> language(Options.language, lang_t::EN);
+    unwind_var<const char *> lang(Options.lang_name, nullptr);
+    unwind_var<bool> level(you.on_current_level, false);
+    unwind_var<decltype(you.save)> save(you.save, nullptr);
+    unwind_var<vector<Note>> notes(note_list, {});
+    unwind_var<vector<string>> order(Options.dump_order, {"notes"});
+    unwind_var<string> directory(Options.morgue_dir, "../../../.term-audit/note-event-runtime");
+    note_list.push_back(_recorded_note(Note(NOTE_SEEN_MONSTER, MONS_PANDEMONIUM_LORD, 0, "Fubb")));
+    note_list.push_back(_recorded_note(Note(NOTE_MESSAGE, 0, 0, "Frozen event"), [] { return string("已经完成的中文记录"); }));
+    vector<unsigned char> bytes; auto output = writer(&bytes); save_notes(output);
+    note_list.clear(); auto input = reader(bytes, TAG_MINOR_VERSION); load_notes(input);
+    REQUIRE(note_list.size() == 2);
+    Options.language = lang_t::ZH;
+    bool written = false;
+    REQUIRE(dump_char("native-event-notes", true, false, nullptr, true, &written));
+    CHECK(written);
+    const auto read = [&](const string &file) { std::ifstream f(morgue_directory() + file);
+        return string(std::istreambuf_iterator<char>(f), std::istreambuf_iterator<char>()); };
+    const string en = read("native-event-notes.txt"), zh = read("native-event-notes.zh.txt");
+    CHECK(en.find("Encountered Fubb the pandemonium lord") != string::npos);
+    CHECK(en.find("Frozen event") != string::npos);
+    CHECK(en.find("已经完成的中文记录") == string::npos);
+    CHECK(zh.find("已经完成的中文记录") != string::npos);
+    CHECK(zh.find("遇见魔窟领主富布") != string::npos);
+    REQUIRE(dump_char("native-event-notes-explicit-en", true, false, nullptr, false));
+    CHECK(read("native-event-notes-explicit-en.txt") == en);
+    Options.language = lang_t::EN;
+    REQUIRE(dump_char("native-event-notes-language-en", true, false, nullptr, true, &written));
+    CHECK_FALSE(written);
+    CHECK(read("native-event-notes-language-en.txt") == en);
+}
+
+
+TEST_CASE("Event-time bilingual notes capture real seen features without retaining the scene", "[localization][bilingual-notes]")
+{
+    init_properties(); init_mut_index(); init_show_table(); init_feat_desc_cache();
+    unwind_var<lang_t> language(Options.language, lang_t::EN);
+    unwind_var<vector<Note>> notes(note_list, {});
+    unwind_var<bool> level(you.on_current_level, false);
+    const bool active = notes_are_active(); activate_notes(true);
+    struct Restore { bool value; ~Restore() { activate_notes(value); } } restore{active};
+    const coord_def cell(12, 12);
+    unwind_var<dungeon_feature_type> terrain(env.grid(cell), DNGN_ENTER_LAIR);
+    unwind_var<map_cell> knowledge(env.map_knowledge(cell));
+    unwind_var<unsigned int> vault_id(env.level_map_ids(cell), INVALID_MAP_INDEX);
+    env.map_knowledge(cell) = map_cell();
+    env.map_knowledge(cell).set_feature(DNGN_ENTER_LAIR);
+    set_terrain_seen(cell);
+    REQUIRE(note_list.size() == 1);
+    const string english = note_list.back().describe(false, false);
+    CHECK(english.find("Found ") == 0);
+    CHECK(note_list.back().desc.empty()); CHECK(note_list.back().screen.empty());
+    Options.language = lang_t::ZH;
+    const string chinese = note_list.back().describe(false, false, true, true);
+    CHECK(chinese.find("发现") == 0);
+    CHECK(chinese != english);
+    env.grid(cell) = DNGN_FLOOR;
+    env.map_knowledge(cell).set_feature(DNGN_FLOOR);
+    CHECK(note_list.back().describe(false, false, true, true) == chinese);
+    CHECK(note_list.back().describe(false, false) == english);
+}
+
+TEST_CASE("Event-time bilingual notes capture real identified artefacts without an item snapshot", "[localization][bilingual-notes]")
+{
+    init_properties(); init_monsters(); init_mut_index();
+    unwind_var<lang_t> language(Options.language, lang_t::EN);
+    unwind_var<vector<Note>> notes(note_list, {});
+    const bool active = notes_are_active(); activate_notes(true);
+    struct Restore { bool value; ~Restore() { activate_notes(value); } } restore{active};
+    item_def item;
+    item.base_type = OBJ_WEAPONS; item.sub_type = WPN_LONG_SWORD;
+    item.quantity = 1; item.plus = 3;
+    item.orig_place = level_id(BRANCH_DUNGEON, 2);
+    REQUIRE(make_item_randart(item, true));
+    item.flags &= ~ISFLAG_IDENTIFIED;
+    identify_item(item);
+    REQUIRE(note_list.size() == 1);
+    const Note saved = note_list.back();
+    CHECK(saved.type == NOTE_ID_ITEM);
+    CHECK(saved.screen.empty());
+    CHECK(saved.desc == origin_desc(item));
+    CHECK(saved.english.find("Identified ") == 0);
+    Options.language = lang_t::ZH;
+    const string shown = saved.describe(false, false, true, true);
+    CHECK(shown.find("鉴定") == 0);
+    CHECK(shown.find("长剑") != string::npos);
+    item.clear();
+    CHECK(saved.describe(false, false, true, true) == shown);
+    CHECK(saved.describe(false, false) == saved.english);
+    vector<unsigned char> bytes; auto output = writer(&bytes); saved.save(output);
+    auto input = reader(bytes, TAG_MINOR_VERSION); Note restored; restored.load(input);
+    CHECK(restored.describe(false, false, true, true) == shown);
+}
+
+
+TEST_CASE("Flower and related decorative floor names localize actual square descriptions", "[localization][flower-confusion]")
+{
+    init_show_table(); init_feat_desc_cache();
+    unwind_var<lang_t> language(Options.language, lang_t::EN);
+    unwind_var<bool> level(you.on_current_level, false);
+    const coord_def cell(12, 12);
+    unwind_var<int> floor_item(env.igrid(cell), NON_ITEM);
+    unwind_var<dungeon_feature_type> terrain(env.grid(cell), DNGN_DECORATIVE_FLOOR);
+    unwind_var<map_cell> knowledge(env.map_knowledge(cell));
+    unwind_var<unsigned int> vault_id(env.level_map_ids(cell), env.level_vaults.size());
+    struct Cleanup { size_t n; ~Cleanup() { env.level_vaults.resize(n); } } cleanup{env.level_vaults.size()};
+    env.level_vaults.emplace_back(new vault_placement);
+    auto &renames = env.level_vaults.back()->map.feat_renames;
+    env.map_knowledge(cell) = map_cell();
+    env.map_knowledge(cell).set_feature(DNGN_DECORATIVE_FLOOR);
+    const auto next = rng::peek_uint64();
+    for (const char *name : {"flower patch", "garden patch", "floral vase", "mourning vase",
+        "broken floral vase", "orcish standard", "infernal standard", "caliginous standard",
+        "fur brush", "set of bottled spirits", "djembe set", "skull pike", "mop and bucket",
+        "bloodied mop and bucket", "weapon-inlaid floor"})
+    {
+        renames[DNGN_DECORATIVE_FLOOR] = name;
+        Options.language = lang_t::EN;
+        const string original = get_square_desc(cell);
+        CHECK(original.find(name) != string::npos);
+        Options.language = lang_t::ZH;
+        const ui_arg shown_name = ui_text_arg("d.feature.name", name);
+        REQUIRE(shown_name.available);
+        const string shown = get_square_desc(cell);
+        CAPTURE(name, original, shown);
+        CHECK(shown != original);
+        CHECK(shown.find(name) == string::npos);
+        CHECK(shown.find(shown_name.text) != string::npos);
+        CHECK(feature_description_at(cell, false, DESC_PLAIN) == name);
+    }
+    renames[DNGN_DECORATIVE_FLOOR] = "unknown future decoration";
+    Options.language = lang_t::EN; const string original = get_square_desc(cell);
+    Options.language = lang_t::ZH;
+    // The unknown description row stays English; the shared mouse hint can translate.
+    CHECK(get_square_desc(cell).find(original.substr(0, original.find("\n"))) == 0);
+    string untouched = "sentinel";
+    CHECK_FALSE(try_feature_display_at(cell, false, untouched));
+    CHECK(untouched == "sentinel");
+    CHECK(rng::peek_uint64() == next);
+}
+
+TEST_CASE("Confused movement confirmations localize hydras hazards and stationary swings atomically", "[localization][flower-confusion]")
+{
+    init_monsters();
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    const auto next = rng::peek_uint64();
+    monster_info hydra(MONS_HYDRA); hydra.num_heads = 8;
+    string name; REQUIRE(hydra.try_display_name(name));
+    CHECK(name == "八头海德拉");
+    const string original = "Are you sure you want to stumble around while confused and next to your eight-headed hydra?";
+    const ui_arg ally = {string("你的") + name, true};
+    const string shown = m_confused_move_prompt(original, false, ally, ui_literal_arg(""), false);
+    CHECK(shown == "你正处于混乱状态，紧邻你的八头海德拉。确定要踉跄乱走吗？");
+    for (bool stationary : {false, true})
+    for (bool penance : {false, true})
+    {
+        const string text = m_confused_move_prompt(original, stationary, ally, ui_literal_arg(""), penance);
+        CHECK(text.find(stationary ? "胡乱挥击" : "踉跄乱走") != string::npos);
+        CHECK((text.find("神罚") != string::npos) == penance);
+        for (const char *terrain : {"lava", "deep water"})
+        for (const char *expiry : {" while you are losing your buoyancy", " while your transformation is expiring"})
+        {
+            const string hazard = m_confused_move_prompt(original, stationary,
+                ui_text_arg("m.confused", terrain), ui_text_arg("m.confused", expiry), penance);
+            CHECK(hazard != original);
+            CHECK(hazard.find(terrain) == string::npos);
+            CHECK(hazard.find(expiry) == string::npos);
+        }
+    }
+    CHECK(m_confused_move_prompt(original, false, {"unknown", false}, ui_literal_arg(""), true) == original);
+    CHECK(m_confused_move_prompt(original, false, ally, {"unknown expiry", false}, false) == original);
+    Options.language = lang_t::EN;
+    CHECK(m_confused_move_prompt(original, false, ally, ui_literal_arg(""), true) == original);
+    CHECK(rng::peek_uint64() == next);
+}
+
+
+TEST_CASE("Extended death causes preserve summoner paths status clauses and event-time weapon names", "[localization][death-notes-more]")
+{
+    init_properties(); init_monsters(); init_mut_index(); init_duration_index();
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    unwind_var<vector<Note>> notes(note_list, {});
+    unwind_var<int> paralysis(you.duration[DUR_PARALYSIS], 0);
+    unwind_var<int> petrified(you.duration[DUR_PETRIFIED], 0);
+    unwind_var<int> sleep(you.duration[DUR_SLEEP], 0);
+    unwind_var<int> vexed(you.duration[DUR_VEXED], 0);
+    const string common = "v=0.34.1:sc=42:name=Tester:race=Human:cls=Fighter:char=HuFi:xl=5:title=Fighter:br=D:lvl=2:hp=-10:mhp=21:mmhp=21:dam=14:start=20261023080000S:end=20261023090000S:dur=60:";
+    const auto next = rng::peek_uint64();
+    for (const string fields : {"ktyp=mon:killer=an orc:kaux=a +0 short sword:kpath=summoned by Jessica:ikiller=Jessica",
+        "ktyp=mon:killer=an orc:kpath=animated by Jessica::woven by an orc priest:ikiller=an orc priest",
+        "ktyp=beam:killer=Jessica:kaux=by angry trees", "ktyp=beam:killer=Jessica:kaux=by Freeze",
+        "ktyp=beam:killer=Jessica:kaux=puff of flame",
+        "ktyp=trap:kaux=an alarm trap", "ktyp=targeting:kaux=magic dart",
+        "ktyp=reflect:killer=an orc:kaux=magic dart", "ktyp=bounce:kaux=magic dart",
+        "ktyp=self_aimed:kaux=magic dart", "ktyp=divine_wrath:killer=an orc priest:kaux=magic dart",
+        "ktyp=death curse:killer=a mummy", "ktyp=pois:killer=an adder:kaux=poison"})
+    {
+        scorefile_entry score; REQUIRE(score.parse(common + fields + ":turn=10\n"));
+        const string raw = score.raw_string();
+        for (auto verbosity : {scorefile_entry::DDV_NORMAL, scorefile_entry::DDV_VERBOSE,
+                               scorefile_entry::DDV_TERSE, scorefile_entry::DDV_ONELINE})
+        {
+            const string english = score.death_description(verbosity);
+            const string shown = score.display_death_description(verbosity);
+            CAPTURE(fields, english, shown);
+            CHECK(shown != english);
+            CHECK(shown.find("summoned by") == string::npos);
+            CHECK(shown.find("invoked by") == string::npos);
+            CHECK(shown.find("wielding") == string::npos);
+            Options.language = lang_t::EN;
+            CHECK(score.display_death_description(verbosity) == english);
+            Options.language = lang_t::ZH;
+        }
+        const Note saved = _recorded_note(Note(NOTE_DEATH, -10, 21,
+            score.death_description(scorefile_entry::DDV_VERBOSE)), [&] {
+            return score.display_death_description(scorefile_entry::DDV_VERBOSE);
+        });
+        CHECK(saved.chinese != saved.english);
+        CHECK(saved.desc.empty()); CHECK(saved.screen.empty());
+        CHECK(score.raw_string() == raw);
+    }
+    scorefile_entry score; REQUIRE(score.parse(common + "ktyp=mon:killer=an orc:turn=10\n"));
+    for (duration_type status : {DUR_PARALYSIS, DUR_PETRIFIED, DUR_SLEEP, DUR_VEXED})
+    {
+        unwind_var<int> duration(you.duration[status], 10);
+        const string english = score.death_description(scorefile_entry::DDV_VERBOSE);
+        const Note saved = _recorded_note(Note(NOTE_DEATH, -10, 21, english), [&] {
+            return score.display_death_description(scorefile_entry::DDV_VERBOSE);
+        });
+        CHECK(saved.chinese != english);
+        CHECK(saved.chinese.find("当时") != string::npos);
+        you.duration[status] = 0;
+        CHECK(saved.describe(false, false, true, true).find("当时") != string::npos);
+    }
+    for (const char *path : {"summoned by unknown future actor", "invented by Jessica"})
+    {
+        scorefile_entry unknown;
+        REQUIRE(unknown.parse(common + "ktyp=mon:killer=an orc:kpath=" + path + ":turn=10\n"));
+        CHECK(unknown.display_death_description(scorefile_entry::DDV_VERBOSE) == unknown.death_description(scorefile_entry::DDV_VERBOSE));
+    }
+    CHECK(rng::peek_uint64() == next);
+}
+
+TEST_CASE("Death events translate enchanted killer weapons directly and freeze the result", "[localization][death-notes-more]")
+{
+    init_properties(); init_monsters(); init_mut_index();
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    unwind_var<item_def> weapon(env.item[0]);
+    item_def &item = env.item[0]; item.clear();
+    item.base_type = OBJ_WEAPONS; item.sub_type = WPN_QUARTERSTAFF;
+    item.quantity = 1; item.plus = 4; item.brand = SPWPN_CHAOS; item.flags = ISFLAG_IDENTIFIED;
+    monster mon; mon.type = mon.base_monster = MONS_CRAZY_YIUF;
+    mon.hit_points = mon.max_hit_points = 30; mon.inv[MSLOT_WEAPON] = 0;
+    const string english_name = item.name(DESC_A);
+    scorefile_entry score;
+    REQUIRE(score.parse("v=0.34.1:name=Tester:race=Human:cls=Fighter:xl=5:br=D:lvl=2:hp=-10:mhp=21:dam=14:ktyp=mon:killer=Crazy Yiuf:kaux=" + english_name + ":turn=10\n"));
+    const Note saved = _recorded_note(Note(NOTE_DEATH, -10, 21,
+        score.death_description(scorefile_entry::DDV_VERBOSE)), [&] {
+        return score.display_death_description(scorefile_entry::DDV_VERBOSE, &mon);
+    });
+    CHECK(saved.chinese.find("疯子尤夫") != string::npos);
+    CHECK(saved.chinese.find("+4") != string::npos);
+    CHECK(saved.chinese.find("混沌") != string::npos);
+    CHECK(saved.chinese.find(english_name) == string::npos);
+    CHECK(saved.chinese != saved.english);
+    item.clear();
+    CHECK(saved.describe(false, false, true, true) == saved.chinese);
+    Options.language = lang_t::EN;
+    CHECK(saved.describe(false, false, true, true) == saved.english);
+}
+
+TEST_CASE("Interactive note place prefixes localize branches with character-column widths", "[localization][death-notes-more]")
+{
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    for (branch_type branch : {BRANCH_DUNGEON, BRANCH_LAIR, BRANCH_SWAMP, BRANCH_ZOT, BRANCH_WIZLAB, BRANCH_TROVE})
+    {
+        Note note(NOTE_MESSAGE, 0, 0, "English body");
+        note.place = level_id(branch, 1); note.turn = 123;
+        const string canonical = note.describe(true, true, false);
+        const string prefix = note.describe(true, true, false, true);
+        const ui_arg branch_name = ui_text_arg("b.branch.name", branches[branch].shortname);
+        REQUIRE(branch_name.available);
+        CHECK(prefix.find(branch_name.text) != string::npos);
+        CHECK(prefix != canonical);
+        CHECK(strwidth(prefix) <= 6 + 3 + 14 + 3);
+        CHECK(note.describe(true, true, false) == canonical);
+        Options.language = lang_t::EN;
+        CHECK(note.describe(true, true, false, true) == canonical);
+        Options.language = lang_t::ZH;
+    }
+}
+
+
+TEST_CASE("Low HP notes translate attacks effects and attribution without describing a death", "[localization][hp-randart]")
+{
+    init_properties(); init_monsters(); init_mut_index(); init_duration_index();
+    unwind_var<lang_t> language(Options.language, lang_t::EN);
+    unwind_var<vector<Note>> notes(note_list, {});
+    const string common = "v=0.34.1:name=Tester:race=Human:cls=Fighter:xl=5:br=D:lvl=2:hp=1:mhp=21:dam=4:";
+    const auto next = rng::peek_uint64();
+    for (const string fields : {"ktyp=mon:killer=an orc", "ktyp=mon:killer=an orc:kaux=a +0 short sword",
+        "ktyp=beam:killer=Jessica:kaux=puff of flame", "ktyp=beam:killer=an orc priest:kaux=by Freeze",
+        "ktyp=beam:killer=an orc:kaux=Hit by a stone thrown by an orc",
+        "ktyp=cloud:killer=Jessica:kaux=flame", "ktyp=pois:killer=an adder:kaux=poison",
+        "ktyp=trap:kaux=an alarm trap", "ktyp=headbutt:killer=a minotaur",
+        "ktyp=rolling:killer=a boulder beetle", "ktyp=spines:killer=a red devil",
+        "ktyp=constriction:killer=a ball python", "ktyp=being_thrown:killer=an ogre",
+        "ktyp=collision:killer=an ogre:kaux=a freezing wraith",
+        "ktyp=freezing", "ktyp=burning", "ktyp=draining", "ktyp=rotting:killer=a necrophage:kaux=poison",
+        "ktyp=acid", "ktyp=curare", "ktyp=barbs", "ktyp=disintegration",
+        "ktyp=beogh_smiting", "ktyp=tso_smiting", "ktyp=xom", "ktyp=blinking:killer=Jessica",
+        "ktyp=mon:killer=an orc:kpath=summoned by Jessica:ikiller=Jessica"})
+    {
+        scorefile_entry cause; REQUIRE(cause.parse(common + fields + ":turn=10\n"));
+        const string english = cause.death_description(scorefile_entry::DDV_TERSE);
+        const string raw = cause.raw_string();
+        const Note saved = _recorded_note(Note(NOTE_HP_CHANGE, 1, 21, english), [&] {
+            const string reason = cause.display_damage_description();
+            if (reason == english) return string();
+            return ui_render("n.note", "HP: %s/%s [%s]", "",
+                {ui_literal_arg("1"), ui_literal_arg("21"), ui_literal_arg(reason)});
+        });
+        Options.language = lang_t::ZH;
+        CAPTURE(fields, saved.english, saved.chinese);
+        CHECK_FALSE(saved.chinese.empty());
+        CHECK(saved.chinese.find("生命值：1/21") == 0);
+        CHECK(saved.chinese.find("杀死") == string::npos);
+        CHECK(saved.chinese.find("身亡") == string::npos);
+        CHECK(saved.chinese.find("Killed") == string::npos);
+        vector<unsigned char> bytes; auto out = writer(&bytes); saved.save(out);
+        auto input = reader(bytes, TAG_MINOR_VERSION); Note restored; restored.load(input);
+        CHECK(restored.describe(false, false, true, true) == saved.chinese);
+        Options.language = lang_t::EN;
+        CHECK(restored.describe(false, false, true, true) == saved.english);
+        CHECK(cause.display_damage_description() == english);
+        CHECK(cause.raw_string() == raw);
+    }
+    Options.language = lang_t::ZH;
+    for (const string fields : {"ktyp=beam:killer=Jessica:kaux=unknown future spell",
+        "ktyp=mon:killer=unknown future attacker", "ktyp=rotting:killer=Jessica:kaux=unknown effect",
+        "ktyp=mon:killer=an orc:kpath=summoned by unknown future actor"})
+    {
+        scorefile_entry cause; REQUIRE(cause.parse(common + fields + ":turn=10\n"));
+        CHECK(cause.display_damage_description() == cause.death_description(scorefile_entry::DDV_TERSE));
+    }
+    CHECK(rng::peek_uint64() == next);
+}
+
+TEST_CASE("Randart transliteration preserves stored identity unidentification and player names", "[localization][hp-randart]")
+{
+    init_properties(); init_monsters();
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    item_def item; item.base_type = OBJ_ARMOUR; item.sub_type = ARM_CLOAK; item.quantity = 1;
+    REQUIRE(make_item_randart(item, true)); item.flags |= ISFLAG_IDENTIFIED;
+    item.inscription = "!w 自定义铭文";
+    const auto next = rng::peek_uint64();
+    for (const string title : {"Kittixae", "Fubb", "Deeh", "Ylod Wia", "Terminus"})
+    for (bool quoted : {false, true})
+    {
+        const string cached = quoted ? "cloak \"" + title + "\"" : "cloak of " + title;
+        set_artefact_name(item, cached);
+        const string canonical = item.name(DESC_A);
+        string shown; REQUIRE(try_item_display_name(item, shown, false, false));
+        const ui_arg name = ui_generated_name_arg(title);
+        REQUIRE(name.available);
+        CHECK(shown.find(name.text) != string::npos);
+        CHECK(shown.find(title) == string::npos);
+        CHECK(shown.find("!w 自定义铭文") != string::npos);
+        CHECK(item.props[ARTEFACT_NAME_KEY].get_string() == cached);
+        CHECK(item.name(DESC_A) == canonical);
+        Options.language = lang_t::EN;
+        CHECK_FALSE(try_item_display_name(item, shown, false, false));
+        CHECK(item.name(DESC_A) == canonical);
+        Options.language = lang_t::ZH;
+    }
+    for (int i = 0; i < 128; ++i)
+    {
+        rng::subgenerator generated(987 + i, 0);
+        const string title = make_name();
+        set_artefact_name(item, "cloak of " + title);
+        const string canonical = item.name(DESC_A);
+        const auto untouched_rng = rng::peek_uint64();
+        string shown; REQUIRE(try_item_display_name(item, shown, false, false));
+        string expected;
+        if (!try_randart_title(title, expected, you.your_name)) expected = ui_generated_name_arg(title).text;
+        CHECK(shown.find(expected) != string::npos);
+        CHECK(item.name(DESC_A) == canonical);
+        CHECK(rng::peek_uint64() == untouched_rng);
+    }
+    set_artefact_name(item, "cloak \"Kittixae\"");
+    item.flags &= ~ISFLAG_IDENTIFIED;
+    item.props[ARTEFACT_APPEAR_KEY] = "embroidered cloak";
+    string shown; REQUIRE(try_item_display_name(item, shown, false, false));
+    CHECK(shown.find(ui_generated_name_arg("Kittixae").text) == string::npos);
+    item.flags |= ISFLAG_IDENTIFIED;
+    unwind_var<string> player(you.your_name, "LiteralPlayer");
+    set_artefact_name(item, "cloak of LiteralPlayer");
+    REQUIRE(try_item_display_name(item, shown, false, false));
+    CHECK(shown.find("LiteralPlayer") != string::npos);
+    set_artefact_name(item, "cloak \"Name123\"");
+    REQUIRE(try_item_display_name(item, shown, false, false));
+    CHECK(shown.find("Name123") != string::npos);
+    CHECK(rng::peek_uint64() == next);
 }

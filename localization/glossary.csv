@@ -3150,3 +3150,19 @@
 "hammer","锤子","noun","","【外观／状态】复用现有译名；仅用于显示，规范英文键保持不变。"
 "scythe","长柄镰刀","noun","","【外观／状态】复用现有译名；仅用于显示，规范英文键保持不变。"
 "icy armour","寒冰护甲","noun","","【外观／状态】复用现有译名；仅用于显示，规范英文键保持不变。"
+flower patch,野花丛,noun,,【0.34.1 装饰地形名称】来源：dat/dlua/vault.lua decorative_floor；沿用 dat/descript/features.txt 既有描述，英文地形键保持不变，中文仅用于显示。
+floral vase,插花花瓶,noun,,【0.34.1 装饰地形名称】来源：dat/dlua/vault.lua decorative_floor；沿用 dat/descript/features.txt 既有描述，英文地形键保持不变，中文仅用于显示。
+mourning vase,悼念花瓶,noun,,【0.34.1 装饰地形名称】来源：dat/dlua/vault.lua decorative_floor；沿用 dat/descript/features.txt 既有描述，英文地形键保持不变，中文仅用于显示。
+broken floral vase,破碎的插花花瓶,noun,,【0.34.1 装饰地形名称】来源：dat/dlua/vault.lua decorative_floor；沿用 dat/descript/features.txt 既有描述，英文地形键保持不变，中文仅用于显示。
+orcish standard,兽人旗帜,noun,,【0.34.1 装饰地形名称】来源：dat/dlua/vault.lua decorative_floor；沿用 dat/descript/features.txt 既有描述，英文地形键保持不变，中文仅用于显示。
+infernal standard,地狱旗帜,noun,,【0.34.1 装饰地形名称】来源：dat/dlua/vault.lua decorative_floor；沿用 dat/descript/features.txt 既有描述，英文地形键保持不变，中文仅用于显示。
+caliginous standard,幽暗旗帜,noun,,【0.34.1 装饰地形名称】来源：dat/dlua/vault.lua decorative_floor；沿用 dat/descript/features.txt 既有描述，英文地形键保持不变，中文仅用于显示。
+fur brush,毛刷,noun,,【0.34.1 装饰地形名称】来源：dat/dlua/vault.lua decorative_floor；沿用 dat/descript/features.txt 既有描述，英文地形键保持不变，中文仅用于显示。
+set of bottled spirits,一组瓶装烈酒,noun,,【0.34.1 装饰地形名称】来源：dat/dlua/vault.lua decorative_floor；沿用 dat/descript/features.txt 既有描述，英文地形键保持不变，中文仅用于显示。
+djembe set,手鼓组,noun,,【0.34.1 装饰地形名称】来源：dat/dlua/vault.lua decorative_floor；沿用 dat/descript/features.txt 既有描述，英文地形键保持不变，中文仅用于显示。
+skull pike,骷髅长矛,noun,,【0.34.1 装饰地形名称】来源：dat/dlua/vault.lua decorative_floor；沿用 dat/descript/features.txt 既有描述，英文地形键保持不变，中文仅用于显示。
+mop and bucket,拖把和水桶,noun,,【0.34.1 装饰地形名称】来源：dat/dlua/vault.lua decorative_floor；沿用 dat/descript/features.txt 既有描述，英文地形键保持不变，中文仅用于显示。
+bloodied mop and bucket,染血的拖把和水桶,noun,,【0.34.1 装饰地形名称】来源：dat/dlua/vault.lua decorative_floor；沿用 dat/descript/features.txt 既有描述，英文地形键保持不变，中文仅用于显示。
+weapon-inlaid floor,镶嵌武器的地板,noun,,【0.34.1 装饰地形名称】来源：dat/dlua/vault.lua decorative_floor；沿用 dat/descript/features.txt 既有描述，英文地形键保持不变，中文仅用于显示。
+garden patch,花圃,noun,,【0.34.1 装饰地形名称】来源：dat/dlua/vault.lua decorative_floor；沿用 dat/descript/features.txt 既有描述，英文地形键保持不变，中文仅用于显示。
+"death curse","死亡诅咒","noun","death curses","【0.34.1 死因】沿用现有奇库巴库哈保护说明译名；hiscores.cc 中文显示使用，英文死因与归因字段保持原文。"

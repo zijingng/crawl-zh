@@ -4,6 +4,7 @@
 **/
 
 #include "AppHdr.h"
+#include "i18n.h"
 
 #include "version.h"
 
@@ -80,7 +81,11 @@ void Version::record(string prev)
     {
         you.props[VERSION_HISTORY_PROP].get_vector().push_back(
                                                     CrawlStoreValue(Long));
-        take_note(make_version_note(prev, Long));
+        take_note(Note(NOTE_MESSAGE, 0, 0,
+            make_stringf("Upgraded the game from %s to %s", prev.c_str(), Long)), false, [&] {
+            return ui_render("n.note", "Upgraded the game from %s to %s", "",
+                {ui_literal_arg(prev), ui_literal_arg(string(Long))});
+        });
     }
 }
 

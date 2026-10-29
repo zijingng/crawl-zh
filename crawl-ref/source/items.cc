@@ -1033,7 +1033,16 @@ void identify_item(item_def& item)
         && !(item.flags & (ISFLAG_NOTED_ID)))
     {
         // Make a note of it.
-        take_note(make_identified_item_note(item, origin_desc(item)));
+        take_note(Note(NOTE_ID_ITEM, 0, 0, item.name(DESC_A), origin_desc(item)), false, [&] {
+            const string original_origin = origin_desc(item);
+            if (original_origin.empty())
+                return ui_render("n.note", "Identified %s", "", {ui_item_arg(item)});
+            string origin = item_origin_description(item);
+            if (origin == original_origin + ".") return string();
+            if (ends_with(origin, "。")) origin.resize(origin.size() - string("。").size());
+            return ui_render("n.note", "Identified %s (%s)", "",
+                {ui_item_arg(item), ui_literal_arg(origin)});
+        });
 
         // Sometimes (e.g. shops) you can ID an item before you get it;
         // don't note twice in those cases.
@@ -1231,7 +1240,11 @@ static void _check_note_item(item_def &item)
     if (item_is_collectible(item) || is_artefact(item))
     {
         int v = item.base_type == OBJ_GEMS ? gem_time_left(item.sub_type) : 0;
-        take_note(make_obtained_item_note(item, v));
+        take_note(Note(NOTE_GET_ITEM, v, 0, item.name(DESC_A), origin_desc(item)), false, [&] {
+            return v == 0 ? ui_render("n.note", "Got %s", "", {ui_item_arg(item)})
+                : ui_render("n.note", "Got %s with %s turns to spare", "",
+                    {ui_item_arg(item), ui_literal_arg(to_string((v + 9) / 10))});
+        });
         item.flags |= ISFLAG_NOTED_GET;
 
         // If it's already fully identified when picked up, don't take

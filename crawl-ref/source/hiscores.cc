@@ -1860,7 +1860,7 @@ static ui_arg _score_component(const string &name, bool monster_name = false)
 {
     if (name.empty()) return {"", true};
     for (const char *context : {"h.death.component", "display.monster", "display.item",
-                               "display.spell", "log.projectile.name", "c.cloud.name"})
+                               "display.spell", "display.god", "log.projectile.name", "c.cloud.name"})
     {
         const ui_arg result = ui_text_arg(context, name);
         if (result.available) return result;
@@ -1888,10 +1888,17 @@ static ui_arg _score_component(const string &name, bool monster_name = false)
             item.flags |= ISFLAG_IDENTIFIED;
             if (name == item.name(DESC_A)) return ui_item_arg(item);
         }
+    if (!monster_name)
+        for (int i = 0; i < NUM_MISSILES; ++i)
+        {
+            item_def item; item.base_type = OBJ_MISSILES; item.sub_type = i;
+            item.quantity = 1; item.flags = ISFLAG_IDENTIFIED;
+            if (name == item.name(DESC_A)) return ui_item_arg(item);
+        }
     return {"", false};
 }
 
-string scorefile_entry::display_hiscore_line(death_desc_verbosity verbosity) const
+string scorefile_entry::display_hiscore_line(death_desc_verbosity verbosity, const actor *source) const
 {
     if (Options.language != lang_t::ZH || verbosity == DDV_LOGVERBOSE)
         return hiscore_line(verbosity);
@@ -1984,7 +1991,7 @@ string scorefile_entry::display_hiscore_line(death_desc_verbosity verbosity) con
             }
         }
     }
-    const string death = display_death_description(verbosity);
+    const string death = display_death_description(verbosity, source);
     string time = game_time(verbosity);
     if (verbosity == DDV_VERBOSE)
     {
@@ -2016,16 +2023,68 @@ string scorefile_entry::display_hiscore_line(death_desc_verbosity verbosity) con
     return character + death + place + time;
 }
 
-string scorefile_entry::display_death_description(death_desc_verbosity verbosity) const
+static ui_arg _death_attribution(const string &clause)
+{
+    const ui_arg exact = _score_component(clause, true);
+    if (exact.available) return exact;
+    for (const char *prefix : {"summoned by ", "woven by ", "animated by ", "called from beyond by ",
+         "called by ", "attached to ", "created by ", "led by ", "invoked by "})
+    {
+        if (!starts_with(clause, prefix)) continue;
+        const ui_arg name = _score_component(clause.substr(strlen(prefix)), true);
+        const string shown = ui_render("h.death", (string(prefix) + "%s").c_str(), "", {name});
+        return {shown, !shown.empty()};
+    }
+    return {"", false};
+}
+
+string scorefile_entry::display_death_description(death_desc_verbosity verbosity, const actor *source) const
+{
+    const string original = death_description(verbosity);
+    if (Options.language != lang_t::ZH || verbosity == DDV_LOGVERBOSE) return original;
+    string shown = translated_death_body(verbosity, source);
+    if (shown == original) return original;
+    for (const string &part : _xlog_split_fields(killerpath))
+    {
+        if (part.empty()) continue;
+        const ui_arg attribution = _death_attribution(part);
+        if (!attribution.available) return original;
+        if (verbosity == DDV_VERBOSE) shown += _hiscore_newline_string() + attribution.text;
+    }
+    if (verbosity == DDV_TERSE && !killerpath.empty())
+    {
+        const ui_arg indirect = _score_component(indirectkiller, true);
+        if (!indirect.available) return original;
+        shown += "［" + indirect.text + "］";
+    }
+    const char *status = you.duration[DUR_PARALYSIS] ? "... while paralysed"
+        : you.duration[DUR_PETRIFIED] ? "... while petrified"
+        : you.duration[DUR_SLEEP] ? "... while put to sleep"
+        : you.duration[DUR_VEXED] ? "... while vexed" : nullptr;
+    if (status && verbosity == DDV_VERBOSE)
+    {
+        string condition;
+        if (you.props.exists(DISABLED_BY_KEY))
+            condition = ui_render("h.death", (string(status) + " by %s").c_str(), "",
+                {_score_component(you.props[DISABLED_BY_KEY].get_string(), true)});
+        else
+        {
+            const ui_arg translated = ui_text_arg("h.death", status);
+            if (translated.available) condition = translated.text;
+        }
+        if (condition.empty()) return original;
+        shown += _hiscore_newline_string() + condition;
+    }
+    return shown;
+}
+
+string scorefile_entry::translated_death_body(death_desc_verbosity verbosity, const actor *source_actor) const
 {
     if (Options.language != lang_t::ZH || verbosity == DDV_LOGVERBOSE)
         return death_description(verbosity);
     const bool single = verbosity == DDV_TERSE || verbosity == DDV_ONELINE;
     string death = death_description(verbosity);
-    if (auxkilldata.empty() && death_source_name.empty() && killerpath.empty()
-        && !you.duration[DUR_PARALYSIS] && !you.duration[DUR_PETRIFIED]
-        && !you.duration[DUR_SLEEP]
-        && !you.duration[DUR_VEXED])
+    if (auxkilldata.empty() && death_source_name.empty())
     {
         const char *source = nullptr;
         switch (death_type)
@@ -2144,12 +2203,26 @@ string scorefile_entry::display_death_description(death_desc_verbosity verbosity
         }
     }
 
-    // Do not omit summoner attribution or disabling circumstances from a death.
-    if (!killerpath.empty() || you.duration[DUR_PARALYSIS]
-        || you.duration[DUR_PETRIFIED] || you.duration[DUR_SLEEP]
-        || you.duration[DUR_VEXED]) return death;
-    const ui_arg killer = _score_component(death_source_name, true);
-    const ui_arg cause = _score_component(auxkilldata);
+    ui_arg killer = _score_component(death_source_name, true);
+    ui_arg cause = _score_component(auxkilldata);
+    // Only the event caller supplies a live actor. Never look up a historical
+    // score's MID in the current game or persist an actor/item snapshot.
+    const monster *mon = source_actor ? source_actor->as_monster() : nullptr;
+    if (mon)
+    {
+        const string canonical = mon->full_name(death_type == KILLED_BY_DEATH_EXPLOSION ? DESC_PLAIN : DESC_A);
+        string shown;
+        if (death_source_name == canonical && monster_info(mon, MILEV_NAME).try_display_name(shown))
+            killer = ui_literal_arg(shown);
+        else if (mon->type == MONS_PANDEMONIUM_LORD && death_source_name == canonical + " the pandemonium lord")
+        {
+            shown = ui_render("n.note", "%s the pandemonium lord", "", {ui_generated_name_arg(mon->mname)});
+            killer = {shown, !shown.empty()};
+        }
+        const item_def *weapon = mon->weapon();
+        if (weapon && auxkilldata == weapon->name(DESC_A))
+            cause = ui_item_arg(*weapon);
+    }
     // Elemental/status deaths carry their source separately from the fixed
     // verb. Translate every displayed clause or retain the entire paragraph.
     string elemental;
@@ -2205,6 +2278,67 @@ string scorefile_entry::display_death_description(death_desc_verbosity verbosity
             elemental += _hiscore_newline_string() + pushed;
         }
         break;
+    case KILLED_BY_TRAP:
+        elemental = by("Killed by triggering %s", cause);
+        break;
+    case KILLED_BY_WILD_MAGIC:
+    case KILLED_BY_XOM:
+    case KILLED_BY_SOMETHING:
+    case KILLED_BY_DIVINE_WRATH:
+        if (auxkilldata.empty()) { handled = false; break; }
+        elemental = by("Killed by %s", cause);
+        if (death_type == KILLED_BY_DIVINE_WRATH && !death_source_name.empty())
+        {
+            const string invoked = by("... invoked by %s", killer);
+            if (elemental.empty() || invoked.empty()) return death;
+            if (verbosity == DDV_VERBOSE) elemental += _hiscore_newline_string() + invoked;
+        }
+        break;
+    case KILLED_BY_TARGETING:
+        if (auxkilldata.empty()) { handled = false; break; }
+        elemental = by("Killed themself with a badly aimed %s", cause);
+        break;
+    case KILLED_BY_REFLECTION:
+        if (auxkilldata.empty()) { handled = false; break; }
+        elemental = by("Killed by a reflected %s", cause);
+        if (!death_source_name.empty())
+        {
+            const string reflected = by("... reflected by %s", killer);
+            if (elemental.empty() || reflected.empty()) return death;
+            if (verbosity == DDV_VERBOSE) elemental += _hiscore_newline_string() + reflected;
+        }
+        break;
+    case KILLED_BY_BOUNCE:
+        if (auxkilldata.empty()) { handled = false; break; }
+        elemental = by("Killed themself with a bounced %s", cause);
+        break;
+    case KILLED_BY_SELF_AIMED:
+        if (auxkilldata.empty()) { handled = false; break; }
+        elemental = by("Shot themself with %s", cause);
+        break;
+    case KILLED_BY_FRAILTY:
+        elemental = by("Became unviable by %s", cause);
+        elemental_damage = false;
+        break;
+    case KILLED_BY_DEATH_CURSE:
+        if (auxkilldata.empty()) elemental = by("Slain by %s's death curse", killer);
+        else
+        {
+            elemental = by("Slain by %s", cause);
+            if (!death_source_name.empty())
+            {
+                const string wielder = by("... wielded by %s", killer);
+                if (elemental.empty() || wielder.empty()) return death;
+                if (verbosity == DDV_VERBOSE || verbosity == DDV_NORMAL)
+                    elemental += _hiscore_newline_string() + wielder;
+            }
+        }
+        break;
+    case KILLED_BY_DEATH_EXPLOSION:
+        if (!auxkilldata.empty()) return death;
+        if (death_source_name.empty()) elemental = fixed("Killed by an exploding monster");
+        else elemental = by("Killed by an exploding %s", killer);
+        break;
     default: handled = false; break;
     }
     if (handled)
@@ -2245,14 +2379,33 @@ string scorefile_entry::display_death_description(death_desc_verbosity verbosity
     case KILLED_BY_BEING_THROWN: key = "Thrown by %s"; break;
     case KILLED_BY_CONSTRICTION: key = "Constricted to death by %s"; break;
     case KILLED_BY_POISON:
-        if (!auxkilldata.empty()) return death;
+        if (!auxkilldata.empty())
+        {
+            const string shown = death_source_name.empty()
+                ? ui_render("h.death", "Succumbed to poison (%s)", "", {cause})
+                : ui_render("h.death", "Succumbed to %s's %s", "", {killer, cause});
+            return shown.empty() ? death : (single ? " " : "") + shown;
+        }
         key = "Succumbed to poison from %s"; damage_needed = false; break;
     case KILLED_BY_BEAM:
         // Capitalized aux strings describe complete missile attacks; indirect
         // 'by ...' causes likewise need their own typed adapter.
-        if (auxkilldata.empty() || isupper(auxkilldata[0])
-            || starts_with(auxkilldata, "by ")) return death;
-        key = "Killed from afar by %s"; effect = true; break;
+        if (auxkilldata.empty() || isupper(auxkilldata[0])) return death;
+        if (starts_with(auxkilldata, "by "))
+        {
+            const ui_arg indirect = _score_component(auxkilldata.substr(3));
+            string shown = ui_render("h.death", "Killed by %s", "", {indirect});
+            const string invoked = ui_render("h.death", auxkilldata == "by angry trees"
+                ? "... awakened by %s" : auxkilldata == "by Freeze" ? "... generated by %s"
+                : "... invoked by %s", "", {killer});
+            if (shown.empty() || invoked.empty()) return death;
+            if (verbosity == DDV_VERBOSE) shown += _hiscore_newline_string() + invoked;
+            if (damage > 0 && (verbosity == DDV_VERBOSE || verbosity == DDV_TERSE))
+                shown += ui_render("h.scores", " (%s damage)", "", {ui_literal_arg(to_string(damage))});
+            return (single ? " " : "") + shown;
+        }
+        key = verbosity == DDV_ONELINE ? "Blasted by %s" : "Killed from afar by %s";
+        effect = true; break;
     case KILLED_BY_DISINT:
         key = "Blown up by %s"; effect = !auxkilldata.empty(); break;
     case KILLED_BY_CLOUD:
@@ -2290,27 +2443,10 @@ string scorefile_entry::display_death_description(death_desc_verbosity verbosity
     return shown;
 }
 
-// Minimal canonical snapshot: safe for damage-only entries that have never
-// initialized character, skill, level or game-time score fields.
-string scorefile_entry::death_cause_snapshot() const
-{
-    xlog_fields snapshot;
-    snapshot.add_field("ktyp", "%s", _kill_method_name(kill_method_type(death_type)));
-    snapshot.add_field("killer", "%s", death_source_name.c_str());
-    snapshot.add_field("kaux", "%s", auxkilldata.c_str());
-    snapshot.add_field("kpath", "%s", killerpath.c_str());
-    snapshot.add_field("ikiller", "%s", indirectkiller.c_str());
-    snapshot.add_field("dam", "%d", damage);
-    snapshot.add_field("hp", "%d", final_hp);
-    if (race >= 0 && race < NUM_SPECIES)
-        snapshot.add_field("race", "%s", _species_name(race).c_str());
-    return snapshot.xlog_line();
-}
-
-string scorefile_entry::display_damage_description() const
+string scorefile_entry::display_damage_description(const actor *source) const
 {
     const string original = death_description(DDV_TERSE);
-    if (Options.language != lang_t::ZH || !killerpath.empty()) return original;
+    if (Options.language != lang_t::ZH) return original;
     const char *label = nullptr;
     bool with_damage = false;
     switch (death_type)
@@ -2325,16 +2461,104 @@ string scorefile_entry::display_damage_description() const
     case KILLED_BY_MIRROR_DAMAGE: label = "mirror damage"; with_damage = true; break;
     case KILLED_BY_FALLING_DOWN_STAIRS: label = "fell downstairs"; with_damage = true; break;
     case KILLED_BY_FALLING_THROUGH_GATE: label = "fell through a gate"; with_damage = true; break;
+    case KILLED_BY_DISINT: label = "disintegration"; with_damage = true; break;
+    default: break;
+    }
+    ui_arg killer = _score_component(death_source_name, true);
+    ui_arg cause = _score_component(auxkilldata);
+    // A live event may supply the original attacker and its actual weapon.
+    // The caller has already excluded unseen attackers; no hidden source is queried.
+    const monster *mon = source ? source->as_monster() : nullptr;
+    if (mon)
+    {
+        string shown;
+        const string canonical = mon->full_name(DESC_A);
+        if (death_source_name == canonical && monster_info(mon, MILEV_NAME).try_display_name(shown))
+            killer = ui_literal_arg(shown);
+        else if (mon->type == MONS_PANDEMONIUM_LORD && death_source_name == canonical + " the pandemonium lord")
+        {
+            shown = ui_render("n.note", "%s the pandemonium lord", "", {ui_generated_name_arg(mon->mname)});
+            killer = {shown, !shown.empty()};
+        }
+        const item_def *weapon = mon->weapon();
+        if (weapon && auxkilldata == weapon->name(DESC_A)) cause = ui_item_arg(*weapon);
+    }
+    const auto render = [&](const char *key, initializer_list<ui_arg> args) {
+        return ui_render("h.damage", key, "", args);
+    };
+    string shown;
+    if (label)
+    {
+        const ui_arg injury = ui_text_arg("h.damage", label);
+        if (!injury.available) return original;
+        shown = injury.text;
+        // Rotting is the compact form that explicitly records both suffixes.
+        if (death_type == KILLED_BY_ROTTING)
+        {
+            if ((!auxkilldata.empty() && !cause.available)
+                || (!death_source_name.empty() && !killer.available)) return original;
+            if (!auxkilldata.empty()) shown += "（" + cause.text + "）";
+            if (!death_source_name.empty()) shown += "（" + killer.text + "）";
+        }
+        // These compact English forms omit the attacker/effect too. Keep the
+        // established injury wording rather than substituting a death sentence.
+    }
+    else switch (death_type)
+    {
+    case KILLED_BY_MONSTER:
+        shown = auxkilldata.empty() ? render("Attacked by %s", {killer})
+            : render("Attacked by %s wielding %s", {killer, cause});
+        break;
+    case KILLED_BY_BEAM:
+        if (auxkilldata.empty()) return original;
+        if (isupper(auxkilldata[0]))
+        {
+            const string missile = terse_missile_name();
+            if (missile.empty()) return original;
+            shown = render("Hit by %s from %s", {_score_component(missile), killer});
+            break;
+        }
+        if (starts_with(auxkilldata, "by ")) cause = _score_component(auxkilldata.substr(3));
+        shown = render("%s's %s", {killer, cause});
+        break;
+    case KILLED_BY_CLOUD:
+        shown = death_source_name.empty() ? render("Cloud of %s", {cause})
+            : render("%s's cloud of %s", {killer, cause});
+        break;
+    case KILLED_BY_POISON:
+        shown = death_source_name.empty()
+            ? (auxkilldata.empty() ? render("poison", {}) : render("Poison (%s)", {cause}))
+            : auxkilldata.empty() ? render("Poison from %s", {killer})
+                                 : render("%s's %s", {killer, cause});
+        break;
+    case KILLED_BY_TRAP: shown = render("Triggered %s", {cause}); break;
+    case KILLED_BY_HEADBUTT: shown = render("%s's headbutt", {killer}); break;
+    case KILLED_BY_ROLLING: shown = render("Rolled over by %s", {killer}); break;
+    case KILLED_BY_SPINES: shown = render("%s's spines", {killer}); break;
+    case KILLED_BY_CONSTRICTION: shown = render("Constricted by %s", {killer}); break;
+    case KILLED_BY_BEING_THROWN: shown = render("Thrown by %s", {killer}); break;
+    case KILLED_BY_COLLISION: shown = render("Collided with %s after being knocked back by %s", {_score_component(auxkilldata, true), killer}); break;
+    case KILLED_BY_BLINKING: shown = render("Disjoined by %s", {killer}); break;
+    case KILLED_BY_WILD_MAGIC: shown = auxkilldata.empty() ? render("wild magic", {}) : render("Wild magic (%s)", {cause}); break;
+    case KILLED_BY_XOM: shown = auxkilldata.empty() ? render("Xom's amusement", {}) : render("Xom (%s)", {cause}); break;
+    case KILLED_BY_DIVINE_WRATH: shown = auxkilldata.empty() ? render("divine wrath", {}) : render("Divine wrath (%s)", {cause}); break;
+    case KILLED_BY_TSO_SMITING: shown = render("Smitten by the Shining One", {}); break;
+    case KILLED_BY_BEOGH_SMITING: shown = render("Smitten by Beogh", {}); break;
     default: return original;
     }
-    const string number = with_damage && damage > 0 ? make_stringf(" (%d)", damage) : "";
-    // Never drop a weapon, spell, poison attribution or summoner suffix.
-    if (original != string(label) + number) return original;
-    const ui_arg translated = ui_text_arg("h.damage", label);
-    if (!translated.available) return original;
-    if (number.empty()) return translated.text;
-    return ui_render("h.damage", "%s (%s)", original,
-        {translated, ui_literal_arg(to_string(damage))});
+    if (shown.empty()) return original;
+    // Append every recorded summoner, or reject the complete translation.
+    for (const string &part : _xlog_split_fields(killerpath))
+    {
+        if (part.empty()) continue;
+        const ui_arg attribution = _death_attribution(part);
+        if (!attribution.available) return original;
+        shown += "，" + attribution.text;
+    }
+    if (damage > 0 && (!label || with_damage))
+        return ui_render("h.damage", "%s (%s)", original,
+            {ui_literal_arg(shown), ui_literal_arg(to_string(damage))});
+    return shown;
 }
 
 string scorefile_entry::game_time(death_desc_verbosity verbosity) const

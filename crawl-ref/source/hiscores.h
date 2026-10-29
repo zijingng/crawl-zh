@@ -181,14 +181,13 @@ public:
     bool parse(const string &line);
 
     string hiscore_line(death_desc_verbosity verbosity) const;
-    string display_hiscore_line(death_desc_verbosity verbosity) const;
+    string display_hiscore_line(death_desc_verbosity verbosity, const actor *source = nullptr) const;
 
     string character_description(death_desc_verbosity) const;
     // Full description of death: Killed by an xyz wielding foo
     string death_description(death_desc_verbosity) const;
-    string display_death_description(death_desc_verbosity) const;
-    string display_damage_description() const;
-    string death_cause_snapshot() const;
+    string display_death_description(death_desc_verbosity, const actor *source = nullptr) const;
+    string display_damage_description(const actor *source = nullptr) const;
     string death_place(death_desc_verbosity) const;
     string game_time(death_desc_verbosity) const;
 
@@ -204,6 +203,7 @@ public:
     string long_kill_message() const;
 
 private:
+    string translated_death_body(death_desc_verbosity, const actor *source) const;
     string single_cdesc() const;
     string strip_article_a(const string &s) const;
     string terse_missile_cause() const;

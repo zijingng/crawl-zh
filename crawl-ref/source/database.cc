@@ -1555,7 +1555,11 @@ bool _fixed_level_book_title(const string &canonical, string &display,
             }
         }
         if(named.empty() && has_typed_owner && !who.empty()
-            && who.find_first_of("@{}[]\n\r") == string::npos) named=who;
+            && who.find_first_of("@{}[]\n\r") == string::npos)
+        {
+            const ui_arg spoken = ui_generated_name_arg(who);
+            named = spoken.available ? spoken.text : who;
+        }
         if(!named.empty()) {
             const string title=canonical.substr(possessive+width);
             for(const char *article:{"","The ","A ","An "})
@@ -1796,9 +1800,13 @@ bool try_randbook_title(const string &canonical, string &display, const string &
             if(text.available()) {translated=text.get(context,key.c_str());return true;}
         }
         // The item's existing is_named property supplies the author role.
-        // Preserve an opaque proper name only inside a reviewed title grammar.
+        // Transliterate a typed author only inside a reviewed title grammar.
         if(has_typed_owner && english.find_first_of("@{}[]\n\r")==string::npos)
-        { translated=english;return true; }
+        {
+            const ui_arg spoken = ui_generated_name_arg(english);
+            translated = spoken.available ? spoken.text : english;
+            return true;
+        }
         return false;
     };
     set<string> matches;

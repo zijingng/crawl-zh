@@ -106,3 +106,5 @@ Crawl uses the following open source packages; thanks to their developers:
 * The libpng library, for tiles image loading ([license](crawl-ref/docs/license/libpng-LICENSE.txt)).
 
 Thank you, and have fun crawling!
+
+中文 note 采用[事件发生时生成双语正文](docs/localization/note-event-bilingual.md)；旧的 note 快照与显示时重建路径已移除，缺译整条回退英文。

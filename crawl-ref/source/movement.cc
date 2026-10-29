@@ -333,6 +333,22 @@ bool cancel_confused_move(bool stationary)
         if (penance)
             prompt += " This could place you under penance!";
 
+        ui_arg nearby{"", false}, expiry = ui_literal_arg("");
+        if (dangerous != DNGN_FLOOR)
+        {
+            nearby = ui_text_arg("m.confused", dangerous == DNGN_LAVA ? "lava" : "deep water");
+            expiry = ui_text_arg("m.confused", flight ? " while you are losing your buoyancy"
+                : " while your transformation is expiring");
+        }
+        else if (bad_suff.empty())
+        {
+            const ui_arg name = ui_actor_arg(*bad_mons);
+            const ui_arg relation = ui_text_arg("m.confused", bad_mons->friendly() ? "your"
+                : bad_mons->neutral() ? "neutral" : "non-hostile");
+            nearby = {relation.text + name.text, relation.available && name.available};
+        }
+        prompt = m_confused_move_prompt(prompt, stationary, nearby, expiry, penance);
+
         if (!crawl_state.disables[DIS_CONFIRMATIONS]
             && !yesno(prompt.c_str(), false, 'n'))
         {

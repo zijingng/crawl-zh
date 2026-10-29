@@ -463,8 +463,13 @@ void lose_level()
     calc_hp();
     calc_mp();
 
-    take_note(make_xp_level_note(you.experience_level, you.hp, you.hp_max,
-                               you.magic_points, you.max_magic_points));
+    take_note(Note(NOTE_XP_LEVEL_CHANGE, you.experience_level, 0,
+        make_stringf("HP: %d/%d MP: %d/%d", you.hp, you.hp_max, you.magic_points, you.max_magic_points)), false, [&] {
+        const string stats = ui_render("n.note", "HP: %s/%s MP: %s/%s", "",
+            {ui_literal_arg(to_string(you.hp)), ui_literal_arg(to_string(you.hp_max)), ui_literal_arg(to_string(you.magic_points)), ui_literal_arg(to_string(you.max_magic_points))});
+        return stats.empty() ? string() : ui_render("n.note", "Reached XP level %s. %s", "",
+            {ui_literal_arg(to_string(you.experience_level)), ui_literal_arg(stats)});
+    });
 
     you.redraw_title = true;
     you.redraw_experience = true;
@@ -1456,21 +1461,27 @@ void ouch(int dam, kill_method_type death_type, mid_t source, const char *aux,
             _xom_checks_damage(death_type, dam, source);
 
             // for note taking
-            string damage_desc, damage_snapshot;
             if (!see_source)
             {
-                damage_desc = make_stringf("something (%d)", dam);
-                damage_snapshot = "morgue-damage-unseen-v1\n" + to_string(dam);
+                take_note(Note(NOTE_HP_CHANGE, you.hp, you.hp_max,
+                    make_stringf("something (%d)", dam)), false, [&] {
+                    const string reason = ui_render("n.note", "something (%s)", "",
+                        {ui_literal_arg(to_string(dam))});
+                    return reason.empty() ? string() : ui_render("n.note", "HP: %s/%s [%s]", "",
+                        {ui_literal_arg(to_string(you.hp)), ui_literal_arg(to_string(you.hp_max)), ui_literal_arg(reason)});
+                });
             }
             else
             {
                 const scorefile_entry damage(dam, source, death_type, aux, true);
-                damage_desc = damage.death_description(scorefile_entry::DDV_TERSE);
-                damage_snapshot = "morgue-damage-v1\n" + damage.death_cause_snapshot();
+                take_note(Note(NOTE_HP_CHANGE, you.hp, you.hp_max,
+                    damage.death_description(scorefile_entry::DDV_TERSE)), false, [&] {
+                    const string reason = damage.display_damage_description(damage.killer());
+                    if (reason == damage.death_description(scorefile_entry::DDV_TERSE)) return string();
+                    return ui_render("n.note", "HP: %s/%s [%s]", "",
+                        {ui_literal_arg(to_string(you.hp)), ui_literal_arg(to_string(you.hp_max)), ui_literal_arg(reason)});
+                });
             }
-
-            take_note(Note(NOTE_HP_CHANGE, you.hp, you.hp_max,
-                           damage_desc.c_str(), damage_snapshot));
 
             _handle_poor_constitution(dam);
             _maybe_ru_retribution(dam, source);
@@ -1574,7 +1585,9 @@ void ouch(int dam, kill_method_type death_type, mid_t source, const char *aux,
             {
                 mpr(ui_translate("o.ui", "Thought so."));
                 take_note(Note(NOTE_DEATH, you.hp, you.hp_max,
-                                death_desc.c_str(), "morgue-score-verbose-v1\n" + se.raw_string()), true);
+                                death_desc), true, [&] {
+                    return se.display_death_description(scorefile_entry::DDV_VERBOSE, se.killer());
+                });
                 _wizard_restore_life();
                 take_note(Note(NOTE_DEATH, you.hp, you.hp_max,
                                 "You cheat death using unusual wizardly powers."), true);
@@ -1596,9 +1609,9 @@ void ouch(int dam, kill_method_type death_type, mid_t source, const char *aux,
 
     // Okay, so you're dead.
     take_note(Note(NOTE_DEATH, you.hp, you.hp_max,
-                    se.death_description(scorefile_entry::DDV_NORMAL).c_str(),
-                    "morgue-score-normal-v1\n" + se.raw_string()),
-              true);
+                    se.death_description(scorefile_entry::DDV_NORMAL)), true, [&] {
+        return se.display_death_description(scorefile_entry::DDV_NORMAL, se.killer());
+    });
     if (you.lives && !non_death)
     {
         mark_milestone("death", lowercase_first(se.long_kill_message()).c_str());

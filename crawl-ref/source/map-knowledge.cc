@@ -137,7 +137,12 @@ void set_terrain_seen(const coord_def pos)
             && (!env.map_forgotten
                 || ~(*env.map_forgotten)(pos).flags & MAP_SEEN_FLAG))
         {
-            take_note(make_feature_note(pos));
+            take_note(Note(NOTE_SEEN_FEAT, 0, 0,
+                feature_description_at(pos, false, DESC_A) + "."), false, [&] {
+                string shown;
+                const bool available = try_feature_display_at(pos, false, shown);
+                return ui_render("n.note", "Found %s.", "", {{shown, available}});
+            });
         }
     }
 

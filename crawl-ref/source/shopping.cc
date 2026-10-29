@@ -885,8 +885,10 @@ static bool _purchase(shop_struct& shop, const level_pos& pos, int index,
     }
 
     // Take a note of the purchase.
-    take_note(Note(NOTE_BUY_ITEM, cost, 0,
-                   item.name(DESC_A).c_str()));
+    take_note(Note(NOTE_BUY_ITEM, cost, 0, item.name(DESC_A)), false, [&] {
+        return ui_render("n.note", "Bought %s for %s gold pieces", "",
+            {ui_item_arg(item), ui_literal_arg(to_string(cost))});
+    });
 
     // But take no further similar notes.
     item.flags |= ISFLAG_NOTED_GET;
