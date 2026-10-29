@@ -786,7 +786,7 @@
     "offhand": "副手武器",
     "worn": "已装备",
     "haunted": "附身装备",
-    "quivered": "已备投掷"
+    "quivered": "已备"
   },
   "ui_prompts": {
     "item-use.cc": 17,

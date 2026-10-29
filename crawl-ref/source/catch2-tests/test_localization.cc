@@ -10205,3 +10205,71 @@ TEST_CASE("Species monster list all player species names resolve creation and we
     CHECK(string(ui_translate("display.creation","White Draconian"))=="白龙人");
     Options.language=lang_t::EN;CHECK(string(ui_translate("display.creation","White Draconian"))=="White Draconian");
 }
+
+
+TEST_CASE("Feedback five appendage weapon descriptions preserve canonical English", "[localization]")
+{
+    init_properties(); init_mut_index(); init_duration_index();
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    unwind_var<species_type> race(you.species, SP_COGLIN);
+    unwind_var<god_type> god(you.religion, GOD_NO_GOD);
+    unwind_var<transformation> form(you.form, transformation::none);
+    item_def sword;
+    sword.base_type=OBJ_WEAPONS; sword.sub_type=WPN_SHORT_SWORD;
+    sword.quantity=1; sword.flags=ISFLAG_IDENTIFIED;
+    const auto state=rng::peek_uint64();
+    for (species_type species : {SP_COGLIN, SP_POLTERGEIST, SP_HUMAN, SP_OCTOPODE})
+    {
+        you.species=species;
+        const string original=get_item_description(sword, IDM_MONSTER);
+        CHECK(original.find("It is a one-")!=string::npos);
+        const string shown=get_item_description(sword, IDM_MONSTER, true);
+        CHECK(shown.find("It is a one-")==string::npos);
+        CHECK(shown.find(ui_translate("a.bodypart", species::hand_name(species).c_str()))!=string::npos);
+        CHECK(get_item_description(sword, IDM_MONSTER)==original);
+        Options.language=lang_t::EN;
+        CHECK(get_item_description(sword, IDM_MONSTER, true)==original);
+        Options.language=lang_t::ZH;
+    }
+    CHECK(string(ui_translate("display.item.state","quivered"))=="已备");
+    Options.language=lang_t::EN;
+    CHECK(string(ui_translate("display.item.state","quivered"))=="quivered");
+    CHECK(rng::peek_uint64()==state);
+}
+
+TEST_CASE("Feedback five identification remap messages use display names and English fallback", "[localization]")
+{
+    init_properties(); init_mut_index();
+    unwind_var<lang_t> language(Options.language,lang_t::ZH);
+    unwind_var<decltype(you.inv)> inventory(you.inv);
+    for (auto &item : you.inv) item.clear();
+    unwind_var<char> potion_key(Options.potion_shortcuts[POT_CANCELLATION],'C');
+    unwind_var<char> scroll_key(Options.scroll_shortcuts[SCR_IDENTIFY],'i');
+    const auto state=rng::peek_uint64();
+    for (bool scroll : {false,true})
+    {
+        item_def &item=you.inv[MAX_GEAR];
+        item.clear(); item.base_type=scroll ? OBJ_SCROLLS : OBJ_POTIONS;
+        item.sub_type=scroll ? SCR_IDENTIFY : POT_CANCELLATION;
+        item.quantity=scroll ? 5 : 1; item.flags=ISFLAG_IDENTIFIED;
+        item.pos=ITEM_IN_INVENTORY; item.link=MAX_GEAR;
+        for (auto lang : {lang_t::ZH,lang_t::EN})
+        {
+            Options.language=lang; item.slot=scroll ? 'e' : 'd';
+            clear_message_store();
+            CHECK(auto_assign_item_slot(item)==nullptr);
+            CHECK(item.slot==(scroll ? 'i' : 'C'));
+            const string original=item.name(DESC_INVENTORY);
+            const string message=get_last_messages(10,true);
+            CHECK(message.find(scroll ? "e -> i - " : "d -> C - ")!=string::npos);
+            if (lang==lang_t::ZH)
+            {
+                CHECK(message.find(scroll ? "鉴定卷轴" : "消除药水")!=string::npos);
+                CHECK(message.find(scroll ? "scrolls of identify" : "potion of cancellation")==string::npos);
+            }
+            else
+                CHECK(message.find(original)!=string::npos);
+        }
+    }
+    CHECK(rng::peek_uint64()==state);
+}

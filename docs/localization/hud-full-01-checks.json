@@ -1,0 +1,150 @@
+{
+  "native_tests": 1,
+  "native_assertions": 21,
+  "reviewed_dependency_mismatches": 0,
+  "windows_tiles_build": "passed",
+  "browser": [
+    {
+      "language": "zh",
+      "fields": [
+        {
+          "key": "ac",
+          "label": "护甲:",
+          "value": "123",
+          "passed": true
+        },
+        {
+          "key": "ev",
+          "label": "闪避:",
+          "value": "123",
+          "passed": true
+        },
+        {
+          "key": "sh",
+          "label": "格挡:",
+          "value": "123",
+          "passed": true
+        },
+        {
+          "key": "xl",
+          "label": "等级:",
+          "value": "27",
+          "passed": true
+        },
+        {
+          "key": "str",
+          "label": "力量:",
+          "value": "99",
+          "passed": true
+        },
+        {
+          "key": "int",
+          "label": "智力:",
+          "value": "99",
+          "passed": true
+        },
+        {
+          "key": "dex",
+          "label": "敏捷:",
+          "value": "99",
+          "passed": true
+        }
+      ],
+      "extras": [
+        {
+          "id": "stats_doom",
+          "right": 476.828125,
+          "top": 88,
+          "referenceTop": 88,
+          "passed": true
+        },
+        {
+          "id": "stats_contam",
+          "right": 457.03125,
+          "top": 110,
+          "referenceTop": 110,
+          "passed": true
+        },
+        {
+          "id": "stats_progress",
+          "right": 230.40625,
+          "top": 154,
+          "referenceTop": 154,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "language": "en",
+      "fields": [
+        {
+          "key": "ac",
+          "label": "AC:",
+          "value": "123",
+          "passed": true
+        },
+        {
+          "key": "ev",
+          "label": "EV:",
+          "value": "123",
+          "passed": true
+        },
+        {
+          "key": "sh",
+          "label": "SH:",
+          "value": "123",
+          "passed": true
+        },
+        {
+          "key": "xl",
+          "label": "XL:",
+          "value": "27",
+          "passed": true
+        },
+        {
+          "key": "str",
+          "label": "Str:",
+          "value": "99",
+          "passed": true
+        },
+        {
+          "key": "int",
+          "label": "Int:",
+          "value": "99",
+          "passed": true
+        },
+        {
+          "key": "dex",
+          "label": "Dex:",
+          "value": "99",
+          "passed": true
+        }
+      ],
+      "extras": [
+        {
+          "id": "stats_doom",
+          "right": 474.09375,
+          "top": 88,
+          "referenceTop": 88,
+          "passed": true
+        },
+        {
+          "id": "stats_contam",
+          "right": 474.09375,
+          "top": 110,
+          "referenceTop": 110,
+          "passed": true
+        },
+        {
+          "id": "stats_progress",
+          "right": 217.78125,
+          "top": 154,
+          "referenceTop": 154,
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ]
+}

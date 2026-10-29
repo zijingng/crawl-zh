@@ -15,7 +15,8 @@
 【键与显示】保留英文 status 键；中文仅用于显示。须结合当前灯号和描述确认，不把整条中文写回数据库键。
 【待定位】当前核心 C++/头文件及英文数据范围未找到完整原词。可能是旧词、拼接片段或大小写/词形差异；保留供复核，不据此断定已删除。"
 "Abyss","深渊","noun","",""
-"AC","护甲值","noun","","【0.34.1 修订】与 Armour（防具技能/防具）区分；缩写在 HUD 可保留 AC。 来源：dat/descript/skills.txt。"
+"AC","护甲值/护甲","noun","","【0.34.1 修订】与 Armour（防具技能/防具）区分；缩写在 HUD 可保留 AC。 来源：dat/descript/skills.txt。
+[HUD] 护甲"
 "accidental homicide","意外杀人","noun","",""
 "accuracy","命中率","noun","",""
 "accursed","被诅咒者","noun","","
@@ -1002,7 +1003,8 @@
 【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
 "Ignis","伊格尼斯","noun","","【0.34.1 补充/神祇】垂熄之焰神祇，不能用旧神 Pakellas 替代。 来源：dat/descript/gods.txt。
 【现行神祇】名称已与 0.34.1 god_name 返回值对应；中文专名为项目约定。来源：religion.cc。"
-"SH","格挡值","noun","","【0.34.1 补充/属性】与 Shields（盾牌技能）、shield（盾牌物品）区分。 来源：player.cc。"
+"SH","格挡值/格挡","noun","","【0.34.1 补充/属性】与 Shields（盾牌技能）、shield（盾牌物品）区分。 来源：player.cc。
+[HUD] 格挡"
 "willpower","意志","noun","","【0.34.1 补充/属性】抵抗部分魔法效果，与火抗/冰抗等抗性区分。 来源：dat/descript/items.txt。"
 "Will","意志/将会/会","noun","","【0.34.1 补充/HUD缩写】意志缩写保留时使用 Will；不要替换成旧 MR。 来源：duration-data.h。
 【语境补充 2026-10-21】属性或抗性用意志。助动词 will 表示将来或意愿，按句意译为将会、会，也可省略。"
@@ -2987,7 +2989,8 @@
 "mortality","必死","noun","","【0.34.1 变异名称校对】来源：mutation-data.h、form-data.h、bane-data.h、dat/descript/mutations.txt；规范英文名及 TextDB 键保持不变，中文仅用于显示。此语境名称：必死。"
 "wizard mode","巫师模式","noun","","【0.34.1 模式名称】用户指定译名；wizard commands 译为巫师命令。保留英文规范名、配置与内部标识，仅用于中文显示。"
 "rNeg","负能抗性/负能量抗性","noun","","【2026-10-25 面板统一】斜杠依次表示简称/全称；角色抗性面板与怪物描述面板使用全称，物品紧凑属性显示使用中文简称；配置及规范英文键保持不变。 与物品属性 rN 表示同类负能量抗性；来源：output.cc、describe.cc。"
-"EV","闪避值","noun","","【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
+"EV","闪避值/闪避","noun","","【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。
+[HUD] 闪避"
 "Str","力量","noun","","【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
 "Int","智力","noun","","【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
 "Dex","敏捷","noun","","【0.34.1 装备紧凑词条】来源：artefact.cc、item-name.cc、describe.cc、dat/descript/egos.txt。英文规范键及用户铭文保留；中文仅用于显示，数字、加减号及触发符号按原属性生成。"
@@ -3139,3 +3142,7 @@
 "Will/2","意志减半","noun","","【HUD 状态简称】来源：duration-data.h，DUR_LOWERED_WL；与 Will/2 status 的界面名称一致。【显示用词统一】英文规范键、配置及用户填写的铭文保留原样。"
 "Crawler","地下城冒险者","noun","Crawlers","作为角色及高分榜称谓使用地下城冒险者。【显示用词统一】英文规范键、配置及用户填写的铭文保留原样。"
 "Best Crawlers","地下城冒险者排行榜","noun","","高分榜标题，来源：end.cc。【显示用词统一】英文规范键、配置及用户填写的铭文保留原样。"
+"quivered","已备","noun","","【0.34.1 物品状态】通用备选动作标记，涵盖投掷、施法及唤发等，不限于投掷。英文状态键保持不变。"
+"grasper","抓握器","noun","","【0.34.1 身体部位】机甲哥布林的抓握器；沿用 p.clause 译文，对应 species::hand_name。"
+"tendril","卷须","noun","","【0.34.1 身体部位】骚灵的卷须；沿用 p.clause 译文，对应 species::hand_name。"
+"XL","等级","noun","","[HUD] Experience level. Canonical English field unchanged."

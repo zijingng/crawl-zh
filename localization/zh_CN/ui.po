@@ -25076,7 +25076,7 @@ msgstr "附身装备"
 
 msgctxt "display.item.state"
 msgid "quivered"
-msgstr "已备投掷"
+msgstr "已备"
 
 msgctxt "phase4.item-use"
 msgid "You can't carry that many items."
@@ -26546,19 +26546,19 @@ msgstr "生命:   "
 #: crawl-ref/source/output.cc
 msgctxt "phase3.output"
 msgid "Str:"
-msgstr "力: "
+msgstr "力量: "
 
 #. Reviewed against 0.34.1 and localization/glossary.csv.
 #: crawl-ref/source/output.cc
 msgctxt "phase3.output"
 msgid "Int:"
-msgstr "智: "
+msgstr "智力: "
 
 #. Reviewed against 0.34.1 and localization/glossary.csv.
 #: crawl-ref/source/output.cc
 msgctxt "phase3.output"
 msgid "Dex:"
-msgstr "敏: "
+msgstr "敏捷: "
 
 #. Reviewed against 0.34.1 and localization/glossary.csv.
 #: crawl-ref/source/output.cc
@@ -44757,12 +44757,12 @@ msgstr "这件武器需要用两对%s持用。"
 #, c-format
 msgctxt "d.equipment"
 msgid "This weapon requires one %s."
-msgstr "这件武器需要用单%s持用。"
+msgstr "这件武器需要用一只%s持用。"
 
 #, c-format
 msgctxt "d.equipment"
 msgid "This weapon requires two %s."
-msgstr "这件武器需要用双%s持用。"
+msgstr "这件武器需要用两只%s持用。"
 
 #, c-format
 msgctxt "d.equipment"
@@ -71593,7 +71593,7 @@ msgstr "探索"
 
 msgctxt "o.label"
 msgid "XL: "
-msgstr "级: "
+msgstr "等级: "
 
 msgctxt "o.label"
 msgid "Next: "
@@ -71605,15 +71605,15 @@ msgstr "地点: "
 
 msgctxt "o.label"
 msgid "AC:"
-msgstr "甲:"
+msgstr "护甲:"
 
 msgctxt "o.label"
 msgid "EV:"
-msgstr "闪:"
+msgstr "闪避:"
 
 msgctxt "o.label"
 msgid "SH:"
-msgstr "挡:"
+msgstr "格挡:"
 
 msgctxt "o.label"
 msgid "Stlth"
@@ -101798,3 +101798,13 @@ msgstr "最小化"
 msgctxt "web.ui"
 msgid "Close"
 msgstr "关闭"
+
+#. Canonical species appendage; reuses reviewed p.clause terminology.
+msgctxt "a.bodypart"
+msgid "grasper"
+msgstr "抓握器"
+
+#. Canonical species appendage; reuses reviewed p.clause terminology.
+msgctxt "a.bodypart"
+msgid "tendril"
+msgstr "卷须"

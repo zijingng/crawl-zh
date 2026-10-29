@@ -1,0 +1,25 @@
+{
+  "python_tests": 46,
+  "native_test_cases": 2,
+  "native_assertions": 42,
+  "god_ui_rows": 282,
+  "other_web_regressions": [
+    "HUD",
+    "scroller",
+    "legacy dump links"
+  ],
+  "reviewed_dependency_mismatches": 0,
+  "new_body_part_entries": 2,
+  "quivered": "已备",
+  "version_baseline": "0.34.1",
+  "upstream_baseline_commit": "1eebc1a2892e1c89776a0d7a10691f8dac8d9796",
+  "version_regressions": [
+    "old tags only",
+    "shallow history",
+    "source archive"
+  ],
+  "windows_tiles_build": "passed",
+  "actual_executable_version": "Crawl version 0.34.1-8-g0414a43cdd",
+  "linux_webtiles_build": "not performed locally",
+  "canonical_english_paths_preserved": true
+}

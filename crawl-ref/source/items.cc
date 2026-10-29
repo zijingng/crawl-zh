@@ -2428,7 +2428,12 @@ item_def *auto_assign_item_slot(item_def& item, bool quiet)
         item.slot = _letter_for_consumable(item, false);
 
         if (item.slot != old_slot && !quiet)
-            mprf_nocap("%c -> %s", old_slot, item.name(DESC_INVENTORY).c_str());
+        {
+            string display;
+            const string name = try_item_display_name(item, display, true)
+                                ? display : item.name(DESC_INVENTORY);
+            mprf_nocap("%c -> %s", old_slot, name.c_str());
+        }
         // We return null since the previous item reference wasn't invalidated.
         return nullptr;
     }

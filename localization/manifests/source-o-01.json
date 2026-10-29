@@ -9525,7 +9525,7 @@
     {
       "context": "o.label",
       "english": "XL: ",
-      "translation": "级: ",
+      "translation": "等级: ",
       "module": "output.cc",
       "kind": "template",
       "review_status": "reviewed",
@@ -9933,7 +9933,7 @@
     {
       "context": "o.label",
       "english": "AC:",
-      "translation": "甲:",
+      "translation": "护甲:",
       "module": "output.cc",
       "kind": "template",
       "review_status": "reviewed",
@@ -10069,7 +10069,7 @@
     {
       "context": "o.label",
       "english": "EV:",
-      "translation": "闪:",
+      "translation": "闪避:",
       "module": "output.cc",
       "kind": "template",
       "review_status": "reviewed",
@@ -10205,7 +10205,7 @@
     {
       "context": "o.label",
       "english": "SH:",
-      "translation": "挡:",
+      "translation": "格挡:",
       "module": "output.cc",
       "kind": "template",
       "review_status": "reviewed",

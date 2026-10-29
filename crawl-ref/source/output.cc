@@ -1054,12 +1054,20 @@ static short _get_stat_colour(stat_type stat)
 
 static void _print_stat(stat_type stat, int x, int y)
 {
-    CGOTOXY(x+5, y, GOTO_STAT);
+    static const char *captions[] = {"Str:", "Int:", "Dex:"};
+    const int offset = _is_using_small_layout() ? 5
+        : max(5, strwidth(ui_translate("phase3.output", captions[stat])));
+    CGOTOXY(x+offset, y, GOTO_STAT);
 
     textcolour(_get_stat_colour(stat));
     CPRINTF("%d", you.stat(stat, false));
     if (!_is_using_small_layout())
-        CPRINTF("    ");
+    {
+        // Do not erase the adjacent Doom/Contam caption with longer labels.
+        const int next_column = stat == STAT_INT ? 30 : 32;
+        const int width = strwidth(to_string(you.stat(stat, false)));
+        CPRINTF("%*s", min(4, max(0, next_column - x - offset - width)), "");
+    }
 }
 
 static void _print_stats_doom(int x, int y)
@@ -1131,7 +1139,9 @@ static void _print_stats_ac(int x, int y)
         ac += make_stringf("(%d%%) ", you.gdr_perc(false));
 #endif
     textcolour(text_col);
-    CGOTOXY(x+4, y, GOTO_STAT);
+    const int ac_offset = _is_using_small_layout() ? 4
+        : max(4, strwidth(ui_translate("o.label", "AC:")) + 1);
+    CGOTOXY(x+ac_offset, y, GOTO_STAT);
     CPRINTF("%-12s", ac.c_str());
 
     // SH: (two lines lower)
@@ -1139,7 +1149,9 @@ static void _print_stats_ac(int x, int y)
 
     string sh = make_stringf("%2d ", player_displayed_shield_class());
     textcolour(text_col);
-    CGOTOXY(x+4, y+2, GOTO_STAT);
+    const int sh_offset = _is_using_small_layout() ? 4
+        : max(4, strwidth(ui_translate("o.label", "SH:")) + 1);
+    CGOTOXY(x+sh_offset, y+2, GOTO_STAT);
     CPRINTF("%-12s", sh.c_str());
 
     you.redraw_armour_class = false;
@@ -1147,7 +1159,9 @@ static void _print_stats_ac(int x, int y)
 
 static void _print_stats_ev(int x, int y)
 {
-    CGOTOXY(x+4, y, GOTO_STAT);
+    const int offset = _is_using_small_layout() ? 4
+        : max(4, strwidth(ui_translate("o.label", "EV:")) + 1);
+    CGOTOXY(x+offset, y, GOTO_STAT);
 
     // Color EV based on whether temporary effects are raising or lowering it
     const int bonus = you.evasion_scaled(100) - you.evasion_scaled(100, true);
@@ -1656,13 +1670,15 @@ void print_stats()
     {
         CGOTOXY(1, 8 - rows_hidden, GOTO_STAT);
         textcolour(Options.status_caption_colour);
-        CPRINTF("%s", ui_translate("o.label", "XL: "));
+        const char *xl_caption = ui_translate("o.label", "XL: ");
+        CPRINTF("%s", xl_caption);
         if (_is_using_small_layout())
             CGOTOXY(5, 8, GOTO_STAT);
         textcolour(HUD_VALUE_COLOUR);
         CPRINTF("%2d ", you.experience_level);
         if (you.experience_level >= you.get_max_xl())
-            CPRINTF("%10s", "");
+            CPRINTF("%*s", _is_using_small_layout() ? 10
+                : min(10, max(0, 18 - strwidth(xl_caption) - 3)), "");
         else
         {
             textcolour(Options.status_caption_colour);
@@ -1671,7 +1687,10 @@ void print_stats()
             else
                 CGOTOXY(14, 8, GOTO_STAT);
             textcolour(HUD_VALUE_COLOUR);
-            CPRINTF("%2d%% ", get_exp_progress());
+            const bool tight = !_is_using_small_layout()
+                && strwidth(xl_caption) + 3
+                    + strwidth(ui_translate("o.label", "Next: ")) + 4 > 18;
+            CPRINTF(tight ? "%2d%%" : "%2d%% ", get_exp_progress());
         }
         you.redraw_experience = false;
     }

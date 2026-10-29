@@ -1285,9 +1285,9 @@ GENERATED_FILES := $(GENERATED_HEADERS) art-data.h mi-enum.h \
 
 LANGUAGES = $(filter-out en, $(notdir $(wildcard dat/descript/??)))
 SRC_PKG_BASE  := stone_soup
-SRC_VERSION   := $(shell git describe $(MERGE_BASE) 2>/dev/null || cat util/release_ver)
+SRC_VERSION   := $(shell perl util/source-version.pl $(MERGE_BASE))
 MAJOR_VERSION = $(shell echo "$(SRC_VERSION)"|$(SED) -r 's/-.*//;s/^([^.]+\.[^.]+).*/\1/')
-RECENT_TAG    := $(shell git describe --abbrev=0 $(MERGE_BASE))
+RECENT_TAG    := $(shell perl util/source-version.pl --base-version)
 WINARCH := $(shell $(GXX) -dumpmachine | grep -q x64_64 && echo win64 || echo win32)
 
 export SRC_VERSION
@@ -1354,8 +1354,8 @@ STATICFILES = $(TILEIMAGEFILES:%=webserver/game_data/static/%.png) \
 
 $(TILEINFOJS:%=$(RLTILES)/tileinfo-%.js): build-rltiles
 
-webserver/webtiles/version.txt: .ver
-	@git describe $(MERGE_BASE) > webserver/webtiles/version.txt
+webserver/webtiles/version.txt: .ver util/source-version.pl util/version_base
+	@perl util/source-version.pl $(MERGE_BASE) > webserver/webtiles/version.txt
 
 webserver/game_data/static/%.js: $(RLTILES)/%.js
 	$(QUIET_COPY)$(COPY) $< webserver/game_data/static/
@@ -1471,7 +1471,7 @@ endif
 compflag.h: $(OBJECTS:.o=.cc) main.cc util/gen-cflg.pl .cflags
 	$(QUIET_GEN)util/gen-cflg.pl compflag.h "$(ALL_CFLAGS)" "$(LDFLAGS)" "$(HOST)" "$(ARCH)"
 
-build.h: $(OBJECTS:.o=.cc) main.cc util/gen_ver.pl .ver
+build.h: $(OBJECTS:.o=.cc) main.cc util/gen_ver.pl util/source-version.pl util/version_base .ver
 	$(QUIET_GEN)util/gen_ver.pl $@ $(MERGE_BASE)
 
 version.o: build.h compflag.h
@@ -1984,7 +1984,7 @@ source: removeold prebuildyacc
 		tar xf - -C $(BSRC)contrib/$$x; \
 	  done
 	find build -name .gitignore -execdir rm -f '{}' +
-	git describe $(MERGE_BASE) > $(BSRC)util/release_ver
+	perl util/source-version.pl $(MERGE_BASE) > $(BSRC)util/release_ver
 	cp build/LICENSE build/crawl-ref/LICENSE
 	mv build/crawl-ref build/$(PKG_SRC_DIR)
 

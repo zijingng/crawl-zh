@@ -359,19 +359,23 @@ function ($, comm, client, ui, enums, cr, util, scroller, main, gui, player, opt
                     .addClass("fg"+desc.colour).html(desc.favour);
         var powers_list = desc.powers_list.split("\n").slice(3, -1);
         var $powers = $panes.eq(0).find(".god-powers");
-        var re = /^(<[a-z]*>)?(.*\.) *(\(.*\))?$/;
+        var re = /^(<[a-z]*>)?(.*[.。])\s*(\(.*\)|（.*）)?$/;
         for (var i = 0; i < powers_list.length; i++)
         {
             var matches = powers_list[i].match(re);
-            var colour = (matches.length == 4 && matches[1] === "<darkgrey>")
+            // Translated or future power descriptions need not end in a period.
+            // Keep an unmatched line intact instead of aborting the whole altar UI.
+            var colour = (matches && matches[1] === "<darkgrey>")
                 ? 8 : desc.colour;
-            var power = matches[2], cost = matches[3] || "";
+            var power = matches ? matches[2] : powers_list[i];
+            var cost = matches ? matches[3] || "" : "";
             $powers.append("<div class='power fg"+colour+"'><div>"
-                +power+"</div><div>"+cost+"</div></div>");
+                +util.formatted_string_to_html(power)+"</div><div>"
+                +util.formatted_string_to_html(cost)+"</div></div>");
         }
 
         desc.powers = fmt_body_txt(desc.powers);
-        if (desc.info_table.length !== "")
+        if (desc.info_table)
         {
             desc.powers += "<div class=tbl>"
                             + util.formatted_string_to_html(desc.info_table)

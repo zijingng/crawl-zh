@@ -191,3 +191,7 @@ WebTiles HUD、快捷栏和新增语言字段见 [显示翻译与英文回退](w
 Ctrl+F 与巫师模式 &m 帮助在 WebTiles 中的窗口宽度见 [网页帮助换行修复](web-help-wrap-01.md)。
 
 中文 # 角色文件通过两条原有协议消息提供链接，见 [兼容原服务器的双 morgue 链接](web-dump-legacy-01.md)。
+
+神祇窗口崩溃、抓握器说明、鉴定换字母、已备用词及 Linux 版本号见 [五项反馈修复](web-feedback-05.md)。
+
+护甲、闪避、格挡、等级和基础属性的 HUD 全称及布局调整见 [HUD 标签全称](hud-full-01.md)。
