@@ -5,6 +5,15 @@ function ($, map_knowledge, cr, dungeon_renderer, options, util) {
 
     var monsters, $list, monster_groups, max_rows;
 
+    function monster_list_name(monster, count)
+    {
+        var english = count === 1 ? monster.name : count + " " + monster.plural;
+        var translated = monster.name_display
+            ? (count === 1 ? monster.name_display : count + " × " + monster.name_display)
+            : "";
+        return options.display(english, translated);
+    }
+
     function init()
     {
         monsters = {};
@@ -198,7 +207,7 @@ function ($, map_knowledge, cr, dungeon_renderer, options, util) {
 
             if (monsters.length == 1)
             {
-                group.name_span.text(monsters[0].mon.name);
+                group.name_span.text(monster_list_name(monsters[0].mon, 1));
                 if (options.get("tile_display_mode") == "glyphs")
                 {
                     var map_cell = map_knowledge.get(monsters[0].loc.x, monsters[0].loc.y);
@@ -221,7 +230,7 @@ function ($, map_knowledge, cr, dungeon_renderer, options, util) {
             }
             else
             {
-                group.name_span.text(monsters.length + " " + monsters[0].mon.plural);
+                group.name_span.text(monster_list_name(monsters[0].mon, monsters.length));
                 group.health_span.hide();
             }
 

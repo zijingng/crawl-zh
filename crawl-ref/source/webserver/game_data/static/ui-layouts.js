@@ -198,15 +198,20 @@ function ($, comm, client, ui, enums, cr, util, scroller, main, gui, player, opt
         var prefix = "";
         // makes some assumptions about how this is joined...see describe.cc
         // _actions_desc.
-        if (action_text.endsWith(".")) // could be more elegant...
+        if (action_text.endsWith(".") || action_text.endsWith("。"))
         {
-            suffix = ".";
+            suffix = action_text.slice(-1);
             action_text = action_text.slice(0, -1);
         }
         if (action_text.startsWith("or "))
         {
             prefix = "or ";
             action_text = action_text.substr(3);
+        }
+        if (action_text.startsWith("或"))
+        {
+            prefix = "或";
+            action_text = action_text.substr(1);
         }
         var hotkeys = action_text.match(/\(.\)/); // very inclusive for the key name
         var data_attr = ""
@@ -221,14 +226,11 @@ function ($, comm, client, ui, enums, cr, util, scroller, main, gui, player, opt
     // clickable links.
     function clickify_actions(actions_text)
     {
-        // assumes that the list is joined via ", ", including the final
-        // element. (I.e. this will break without the Oxford comma.)
-        var words = actions_text.split(", ");
-        var linkized = [];
-        words.forEach(function(w) {
-            linkized.push(clickify_action(w));
-        });
-        return linkized.join(", ");
+        // Keep the original delimiters: Chinese lists use ， without spaces.
+        // Each action must own exactly its own hotkey/click target.
+        return actions_text.split(/(,\s*|，)/).map(function(part, index) {
+            return index % 2 ? part : clickify_action(part);
+        }).join("");
     }
 
     function describe_item(desc)
