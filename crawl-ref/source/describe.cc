@@ -1289,11 +1289,11 @@ static string _describe_demon(const string& name, bool flying, colour_t colour)
     const ui_arg wing_part = wings ? ui_text_arg("d.demon.part", wings) : ui_literal_arg("");
     string shown = ui_render("d.demon",
         "One of the many lords of Pandemonium, %s has %s %s and %s.", "",
-        {ui_literal_arg(name), {body_text, !body_text.empty()}, wing_part,
+        {ui_generated_name_arg(name), {body_text, !body_text.empty()}, wing_part,
          ui_text_arg("d.demon.part", head)});
     if (!wings)
         shown = ui_render("d.demon", "One of the many lords of Pandemonium, %s has %s and %s.", "",
-            {ui_literal_arg(name), {body_text, !body_text.empty()}, ui_text_arg("d.demon.part", head)});
+            {ui_generated_name_arg(name), {body_text, !body_text.empty()}, ui_text_arg("d.demon.part", head)});
     if (shown.empty()) return description.str();
     for (const char *extra : {smell, misc})
     {

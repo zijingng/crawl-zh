@@ -202,3 +202,7 @@ WebTiles 宗教标签、技能双宽列对齐、神祇欢迎语、鉴定输出�
 徒手菜单、楼梯右键操作、怪物说明页签、零意志与怪物鼠标提示见 [web-feedback-07](web-feedback-07.md)。
 
 锤子／长柄镰刀未鉴定外观与寒冰护甲／冰霜壁垒移动确认见 [ice-hammer-01](ice-hammer-01.md)。
+
+卷轴标签、随机魔窟领主和自动生成商店主人名的确定性机器音译及英文回退见 [generated-names-01](generated-names-01.md)。
+
+危险移动确认中的种族步态和特殊移动动词补齐见 [movement-verbs-01](movement-verbs-01.md)。

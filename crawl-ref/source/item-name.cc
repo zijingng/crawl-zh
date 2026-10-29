@@ -200,7 +200,12 @@ static bool _try_item_display_name(const item_def &item, string &output,
         {
             const string pattern = tr("display.item.template", "scroll labelled %s");
             if (text.available())
-                name = make_stringf(pattern.c_str(), make_name(item.subtype_rnd, MNAME_SCROLL).c_str());
+            {
+                const string label = make_name(item.subtype_rnd, MNAME_SCROLL);
+                const ui_arg shown = ui_generated_name_arg(label);
+                if (!shown.available) return false;
+                name = make_stringf(pattern.c_str(), shown.text.c_str());
+            }
         }
         else if (is_random_artefact(item))
         {

@@ -1388,7 +1388,11 @@ bool monster_info::try_display_name(string &output) const
     else if (type == MONS_PLAYER_ILLUSION)
         name = wrap("%s's illusion", mname);
     else if (type == MONS_PANDEMONIUM_LORD && !mname.empty())
-        name = wrap("pandemonium lord named %s", mname);
+    {
+        const ui_arg shown = ui_generated_name_arg(mname);
+        if (!shown.available) return false;
+        name = wrap("pandemonium lord named %s", shown.text);
+    }
     else if (type == MONS_DANCING_WEAPON || type == MONS_SPECTRAL_WEAPON
              || type == MONS_HAUNTED_ARMOUR || type == MONS_ARMOUR_ECHO)
     {

@@ -1787,7 +1787,8 @@ string shop_name(const shop_struct& shop, ui_arg *display)
         const ui_arg ending = suffix.empty() ? ui_literal_arg("")
             : ui_text_arg("s.shop.suffix", suffix);
         const string shown = ui_render("s.shop", "%s's %s %s", "",
-            {ui_literal_arg(owner), type_name, ending});
+            {shop.shop_name.empty() ? ui_generated_name_arg(owner) : ui_literal_arg(owner),
+             type_name, ending});
         *display = {shown, !shown.empty()};
     }
     return sh_name;

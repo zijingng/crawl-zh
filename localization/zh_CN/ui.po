@@ -102169,3 +102169,63 @@ msgstr "移动会使你的%s失效。继续吗？"
 msgctxt "d.god"
 msgid "  [<w>J</w>/<w>Enter</w>]: join religion"
 msgstr "  [<w>J</w>/<w>Enter</w>]：信仰此神"
+
+#. Reviewed movement-verbs-01; canonical movement verbs unchanged.
+msgctxt "p.move"
+msgid "stalk"
+msgstr "踱入"
+
+#. Reviewed movement-verbs-01; canonical movement verbs unchanged.
+msgctxt "p.move"
+msgid "float"
+msgstr "飘入"
+
+#. Reviewed movement-verbs-01; canonical movement verbs unchanged.
+msgctxt "p.move"
+msgid "wriggle"
+msgstr "蠕动进入"
+
+#. Reviewed movement-verbs-01; canonical movement verbs unchanged.
+msgctxt "p.move"
+msgid "stride"
+msgstr "大步走进"
+
+#. Reviewed movement-verbs-01; canonical movement verbs unchanged.
+msgctxt "p.move"
+msgid "roll"
+msgstr "翻滚进入"
+
+#. Reviewed movement-verbs-01; canonical movement verbs unchanged.
+msgctxt "p.move"
+msgid "line pass"
+msgstr "以穿阵舞步穿入"
+
+#. Reviewed movement-verbs-01; canonical movement verbs unchanged.
+msgctxt "p.move"
+msgid "transfer"
+msgstr "转移进入"
+
+#. Reviewed movement-verbs-01; canonical movement verbs unchanged.
+msgctxt "p.move"
+msgid "wall jump"
+msgstr "蹬墙跃入"
+
+#. Reviewed movement-verbs-01; canonical movement verbs unchanged.
+msgctxt "p.move"
+msgid "passwall"
+msgstr "穿墙进入"
+
+#. Reviewed movement-verbs-01; canonical movement verbs unchanged.
+msgctxt "p.move"
+msgid "charge"
+msgstr "冲锋进入"
+
+#. Reviewed movement-verbs-01; canonical movement verbs unchanged.
+msgctxt "p.move"
+msgid "potentially stumble back"
+msgstr "可能踉跄后退进入"
+
+#. Reviewed movement-verbs-01; species-specific movement.
+msgctxt "p.move"
+msgid "sprint"
+msgstr "疾跑进入"

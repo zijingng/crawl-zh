@@ -2108,6 +2108,34 @@ TEST_CASE("Equipment restrictions expose Chinese only through the explicit displ
     CHECK(rng::peek_uint64()==state);
 }
 
+TEST_CASE("Pan lord description prose uses transliteration without changing generated anatomy", "[localization]")
+{
+    init_properties(); init_monsters(); init_mut_index();
+    init_duration_index(); init_spell_descs();
+    unwind_var<lang_t> language(Options.language,lang_t::ZH);
+    const auto state=rng::peek_uint64();
+    for(const string name:{"Fubb","Deeh","Ylod Wia"})
+        for(bool flying:{false,true})
+        {
+            monster_info lord(MONS_PANDEMONIUM_LORD);
+            lord.mname=name; lord.ghost_colour=RED;
+            lord.mb.set(MB_AIRBORNE,flying);
+            describe_info chinese; bool stats=false;
+            get_monster_db_desc(lord,chinese,stats);
+            const string display=ui_generated_name_arg(name).text;
+            CHECK(chinese.title.find(display)!=string::npos);
+            CHECK(chinese.body.str().find(display)!=string::npos);
+            CHECK(chinese.body.str().find(name)==string::npos);
+            Options.language=lang_t::EN;
+            describe_info original;get_monster_db_desc(lord,original,stats);
+            CHECK(original.body.str().find(name)!=string::npos);
+            CHECK(original.body.str().find(display)==string::npos);
+            CHECK(lord.mname==name);
+            Options.language=lang_t::ZH;
+        }
+    CHECK(rng::peek_uint64()==state);
+}
+
 TEST_CASE("Actual delay ticks translate memorisation and dressing without changing action names", "[localization]")
 {
     init_properties();
@@ -9694,7 +9722,7 @@ TEST_CASE("Pan encounter summary translates random lords groups and equipment fr
     Options.language=lang_t::ZH;
     {rng::subgenerator sample(9876,5432);chinese=announce(list);CHECK(rng::peek_uint64()==next);}
     CAPTURE(english,chinese);
-    CHECK(chinese.find("你遇到了")!=string::npos);CHECK(chinese.find("Zadaohuo")!=string::npos);
+    CHECK(chinese.find("你遇到了")!=string::npos);CHECK(chinese.find(ui_generated_name_arg("Zadaohuo").text)!=string::npos);
     CHECK(chinese.find("You encounter")==string::npos);CHECK(chinese.find(" is wielding ")==string::npos);
     CHECK(chinese.find("恶魔长鞭")!=string::npos);CHECK(chinese.find("匕首")!=string::npos);
     CHECK(chinese.find("恶魔之刃")!=string::npos);
@@ -9946,7 +9974,7 @@ TEST_CASE("Collectible morgue notes retain random Pan lord names and translate t
     {
         Note note(type,MONS_PANDEMONIUM_LORD,0,name,type==NOTE_DEFEAT_MONSTER?"killed":"");
         const string original=note.describe(false,false),shown=note.display_describe(false,false);
-        CAPTURE(original,shown);CHECK(shown!=original);CHECK(shown.find(name)!=string::npos);
+        CAPTURE(original,shown);CHECK(shown!=original);CHECK(shown.find(ui_generated_name_arg(name).text)!=string::npos);
         CHECK(shown.find("魔窟领主")!=string::npos);CHECK(shown.find("pandemonium lord")==string::npos);
         Options.language=lang_t::EN;CHECK(note.display_describe(false,false)==original);Options.language=lang_t::ZH;
     }
@@ -10069,11 +10097,11 @@ TEST_CASE("Morgue status books place Pan lord roles inside the actor and preserv
     vector<Note> notes{Note(NOTE_SEEN_MONSTER,MONS_PANDEMONIUM_LORD,0,"Ylod Wia"),
         Note(NOTE_SEEN_MONSTER,MONS_PANDEMONIUM_LORD,0,"Fubb")};
     unwind_var<vector<Note>> list(note_list,notes);
-    CHECK(notes[0].display_describe(false,false)=="遇见魔窟领主Ylod Wia");
+    CHECK(notes[0].display_describe(false,false)=="遇见魔窟领主" + ui_generated_name_arg("Ylod Wia").text);
     Note kill(NOTE_DEFEAT_MONSTER,MONS_PANDEMONIUM_LORD,0,"Ylod Wia","killed");
-    CHECK(kill.display_describe(false,false)=="杀死魔窟领主Ylod Wia");
+    CHECK(kill.display_describe(false,false)=="杀死魔窟领主" + ui_generated_name_arg("Ylod Wia").text);
     Note paralysis(NOTE_PARALYSIS,45,0,"Fubb");
-    CHECK(paralysis.display_describe(false,false)=="被魔窟领主Fubb麻痹，持续4.5回合");
+    CHECK(paralysis.display_describe(false,false)=="被魔窟领主" + ui_generated_name_arg("Fubb").text + "麻痹，持续4.5回合");
     Note vex(NOTE_VEXED,4,0,"Fubb");CHECK(vex.display_describe(false,false)!=vex.describe(false,false));
     Note mutation(NOTE_GET_MUTATION,MUT_FANGS,3,"Fubb");CHECK(mutation.display_describe(false,false)!=mutation.describe(false,false));
     for(const auto &note:vector<Note>{notes[0],kill,paralysis,vex,mutation})
@@ -10085,7 +10113,7 @@ TEST_CASE("Morgue status books place Pan lord roles inside the actor and preserv
     }
     note_list.clear();CHECK(paralysis.display_describe(false,false)==paralysis.describe(false,false));
     paralysis.desc="morgue-pan-source-v1\nFubb";
-    CHECK(paralysis.display_describe(false,false)=="被魔窟领主Fubb麻痹，持续4.5回合");
+    CHECK(paralysis.display_describe(false,false)=="被魔窟领主" + ui_generated_name_arg("Fubb").text + "麻痹，持续4.5回合");
     paralysis.name="another source";CHECK(paralysis.display_describe(false,false)==paralysis.describe(false,false));
 }
 
@@ -10160,8 +10188,8 @@ TEST_CASE("Morgue status books export corrected role source and mutation records
     const auto read=[&](const string &name){std::ifstream f(morgue_directory()+name);return string(std::istreambuf_iterator<char>(f),std::istreambuf_iterator<char>());};
     const string en=read("native-status-books.txt"),zh=read("native-status-books.zh.txt");
     CHECK(en.find("Paralysed by Fubb for 4.5 turns")!=string::npos);CHECK(en.find("Gained mutation:")!=string::npos);
-    CHECK(zh.find("遇见魔窟领主Fubb")!=string::npos);CHECK(zh.find("杀死魔窟领主Ylod Wia")!=string::npos);
-    CHECK(zh.find("被魔窟领主Fubb麻痹")!=string::npos);CHECK(zh.find("藤蔓人的成长")!=string::npos);
+    CHECK(zh.find("遇见魔窟领主" + ui_generated_name_arg("Fubb").text)!=string::npos);CHECK(zh.find("杀死魔窟领主" + ui_generated_name_arg("Ylod Wia").text)!=string::npos);
+    CHECK(zh.find("被魔窟领主" + ui_generated_name_arg("Fubb").text + "麻痹")!=string::npos);CHECK(zh.find("藤蔓人的成长")!=string::npos);
     CHECK(zh.find("Paralysed by")==string::npos);CHECK(zh.find("Gained mutation:")==string::npos);
     REQUIRE(dump_char("native-status-books-explicit-en",true,false,nullptr,false));CHECK(read("native-status-books-explicit-en.txt")==en);
     Options.language=lang_t::EN;REQUIRE(dump_char("native-status-books-language-en",true));CHECK(read("native-status-books-language-en.txt")==en);
@@ -10419,4 +10447,128 @@ TEST_CASE("Hammer and scythe discoveries translate visible appearances without i
     custom.props[ITEM_NAME_KEY] = "unknown custom hammer";
     CHECK_FALSE(ui_item_arg(custom).available);
     CHECK(rng::peek_uint64() == state);
+}
+
+TEST_CASE("Generated name transliteration is deterministic display-only and rejects malformed names", "[localization]")
+{
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    const auto state = rng::peek_uint64();
+    CHECK(ui_generated_name_arg("Fubb").text == "富布");
+    CHECK(ui_generated_name_arg("Deeh").text == "迪赫");
+    CHECK(ui_generated_name_arg("Ylod Wia").text == "伊洛德·维阿");
+    CHECK(ui_generated_name_arg("fubb").text == ui_generated_name_arg("Fubb").text);
+    for (const string &bad : {string(""),string("Bad <name>"),string("Name42"),
+         string(" name"),string("name "),string("two  spaces"),string("坏名"),
+         string("line\nbreak"),string(97,'a')})
+    {
+        CHECK_FALSE(ui_generated_name_arg(bad).available);
+        CHECK(ui_generated_name_arg(bad).text == bad);
+    }
+    for (int seed = 0; seed < 1024; ++seed)
+        for (auto mode : {MNAME_DEFAULT, MNAME_SCROLL})
+        {
+            const string original = make_name(seed, mode);
+            const ui_arg shown = ui_generated_name_arg(original);
+            INFO(original);
+            REQUIRE(shown.available);
+            CHECK_FALSE(shown.text.empty());
+            CHECK(shown.text.find_first_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ") == string::npos);
+            CHECK(ui_generated_name_arg(original).text == shown.text);
+            CHECK(make_name(seed, mode) == original);
+            Options.language = lang_t::EN;
+            CHECK_FALSE(ui_generated_name_arg(original).available);
+            CHECK(ui_generated_name_arg(original).text == original);
+            Options.language = lang_t::ZH;
+        }
+    CHECK(rng::peek_uint64() == state);
+}
+
+TEST_CASE("Generated names localize scrolls Pan lords shops and notes without changing identity", "[localization]")
+{
+    init_properties(); init_monsters(); init_mut_index();
+    unwind_var<lang_t> language(Options.language,lang_t::ZH);
+    unwind_var<bool> known(you.type_ids[OBJ_SCROLLS][SCR_IDENTIFY],false);
+    const auto state = rng::peek_uint64();
+    for (int seed = 0; seed < 256; ++seed)
+    {
+        item_def scroll;
+        scroll.base_type=OBJ_SCROLLS; scroll.sub_type=SCR_IDENTIFY;
+        scroll.quantity=1; scroll.subtype_rnd=seed;
+        const string canonical=scroll.name(DESC_A);
+        string shown;
+        REQUIRE(try_item_display_name(scroll,shown));
+        CHECK(shown.find(ui_generated_name_arg(make_name(seed,MNAME_SCROLL)).text)!=string::npos);
+        CHECK(shown.find("鉴定")==string::npos);
+        CHECK(scroll.name(DESC_A)==canonical);
+        Options.language=lang_t::EN;
+        CHECK_FALSE(try_item_display_name(scroll,shown));
+        CHECK(scroll.name(DESC_A)==canonical);
+        Options.language=lang_t::ZH;
+    }
+    monster_info lord(MONS_PANDEMONIUM_LORD); lord.mname="Fubb";
+    string shown; const string original=lord.full_name();
+    REQUIRE(lord.try_display_name(shown)); CHECK(shown.find("富布")!=string::npos);
+    CHECK(shown.find("Fubb")==string::npos); CHECK(lord.full_name()==original);
+    Note note(NOTE_SEEN_MONSTER,MONS_PANDEMONIUM_LORD,0,"Fubb");
+    CHECK(note.display_describe(false,false).find("富布")!=string::npos);
+    CHECK(note.name=="Fubb");
+    // A randomly generated identity that happens to equal a fixed dictionary
+    // key must still agree between the actor and its typed encounter note.
+    Note collision(NOTE_SEEN_MONSTER,MONS_PANDEMONIUM_LORD,0,"Zin");
+    CHECK(collision.display_describe(false,false).find(ui_generated_name_arg("Zin").text)!=string::npos);
+    monster_info ghost(MONS_PLAYER_GHOST); ghost.mname="Fubb";
+    REQUIRE(ghost.try_display_name(shown)); CHECK(shown.find("Fubb")!=string::npos);
+    shop_struct shop; shop.type=SHOP_WEAPON; shop.keeper_name.init(0);
+    ui_arg display; const string shop_en=shop_name(shop,&display);
+    REQUIRE(display.available); CHECK(display.text.find_first_of("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz")==string::npos);
+    CHECK(shop_name(shop)==shop_en);
+    shop.shop_name="Fubb"; shop_name(shop,&display);
+    CHECK(display.text.find("Fubb")!=string::npos); // authored names stay literal
+    Options.language=lang_t::EN;
+    CHECK_FALSE(lord.try_display_name(shown));
+    CHECK(note.display_describe(false,false)==note.describe(false,false));
+    CHECK(rng::peek_uint64()==state);
+}
+
+TEST_CASE("Movement warnings cover species gait and special movement verbs with complete fallback", "[localization]")
+{
+    unwind_var<lang_t> language(Options.language,lang_t::ZH);
+    const auto state=rng::peek_uint64();
+    set<string> verbs={"walk","fly","swim","slither","stride","roll","rampage", "step",
+        "jump","blink","leap","hop","move","line pass","transfer","wall jump",
+        "passwall","charge","potentially stumble back"};
+    for(int i=0;i<NUM_SPECIES;++i)
+    {
+        const auto race=static_cast<species_type>(i);
+        if(species::is_valid(race) && !species::is_removed(race))
+            verbs.insert(walk_verb_to_present(lowercase_first(species::walking_verb(race))));
+    }
+    CHECK(verbs.count("stalk")==1);
+    for(const string &verb:verbs)
+    {
+        INFO(verb);
+        Options.language=lang_t::ZH;
+        const ui_arg action=ui_text_arg("p.move",verb);
+        REQUIRE(action.available);
+        const string original="Really "+verb+" into that cloud of flame?";
+        const string shown=ui_render("p.prompt","Really %s into that cloud of %s?",original,
+            {action,ui_text_arg("c.cloud.name","flame")});
+        CHECK(shown!=original); CHECK(shown.find("Really")==string::npos);
+        CHECK(shown.find(action.text)!=string::npos);
+        CHECK(ui_render("p.prompt","Really %s into that cloud of %s?",original,
+            {action,{"unknown cloud",false}})==original);
+        const string zot="Do you really want to "+verb+" into the Zot trap?";
+        CHECK(ui_render("p.prompt","Do you really want to %s into the Zot trap?",zot,{action})!=zot);
+        const string excluded="Really "+verb+" into a travel-excluded area?";
+        CHECK(ui_render("p.prompt","Excluded movement %s: %s",excluded,
+            {p_clause_arg("will enter"),action})!=excluded);
+        Options.language=lang_t::EN;
+        CHECK(ui_render("p.prompt","Really %s into that cloud of %s?",original,
+            {action,ui_literal_arg("flame")})==original);
+    }
+    Options.language=lang_t::ZH;
+    const string unknown="Really unknown upstream gait into that cloud of flame?";
+    CHECK(ui_render("p.prompt","Really %s into that cloud of %s?",unknown,
+        {ui_text_arg("p.move","unknown upstream gait"),ui_text_arg("c.cloud.name","flame")})==unknown);
+    CHECK(rng::peek_uint64()==state);
 }

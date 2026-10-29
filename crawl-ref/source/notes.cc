@@ -760,7 +760,7 @@ static ui_arg _n_note_source(const string &text)
             && note.first == MONS_PANDEMONIUM_LORD && note.name == text)
         {
             const string shown = ui_render("n.note", "%s the pandemonium lord", "",
-                                           {ui_literal_arg(text)});
+                                           {ui_generated_name_arg(text)});
             return {shown, !shown.empty()};
         }
     return {"", false};
@@ -774,7 +774,7 @@ static ui_arg _n_disabled_source(const Note &note)
         if (note.name.empty() || note.desc.substr(marker.size()) != note.name)
             return {"", false};
         const string shown = ui_render("n.note", "%s the pandemonium lord", "",
-                                       {ui_literal_arg(note.name)});
+                                       {ui_generated_name_arg(note.name)});
         return {shown, !shown.empty()};
     }
     return _n_note_source(note.name);
@@ -789,8 +789,8 @@ string Note::display_describe(bool when, bool where, bool what) const
     // The note type supplies the identity of a randomly named Pan lord.
     // Its saved name is already a literal proper name, not a rendered clause.
     if ((type == NOTE_SEEN_MONSTER || type == NOTE_DEFEAT_MONSTER)
-        && first == MONS_PANDEMONIUM_LORD && !name.empty() && !n.available)
-        n = ui_literal_arg(name);
+        && first == MONS_PANDEMONIUM_LORD && !name.empty())
+        n = ui_generated_name_arg(name);
     if ((type == NOTE_SEEN_MONSTER || type == NOTE_DEFEAT_MONSTER)
         && first == MONS_PANDEMONIUM_LORD)
     {

@@ -37,6 +37,9 @@ struct ui_arg
     std::string text;
     bool available;
 };
+// Only call for typed, procedurally generated proper names, never player input
+// or a rendered English sentence. Does not generate names or consume RNG.
+ui_arg ui_generated_name_arg(const std::string &canonical);
 ui_arg ui_actor_arg(const actor &who);
 ui_arg ui_corrode_source_arg(const actor *source, const std::string &canonical);
 ui_arg ui_knockback_cause_arg(const std::string &canonical);
