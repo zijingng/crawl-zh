@@ -6858,7 +6858,7 @@ static string _build_bar(int value, int scale)
     // Round up.
     const int pips = (value + scale - 1) / scale;
     if (pips <= 0)
-        return "none";
+        return ui_translate("d.monster.stat", "none");
     if (pips > 8) // too many..
         return make_stringf("~%d", pips * scale);
 

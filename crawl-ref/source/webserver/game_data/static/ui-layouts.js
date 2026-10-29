@@ -457,23 +457,26 @@ function ($, comm, client, ui, enums, cr, util, scroller, main, gui, player, opt
         var have_quote = desc.quote !== "";
         var have_status = desc.status !== "";
 
-        var footer0 = "<b class=\"fg15\">Description</b>";
+        const description = options.text("Description");
+        const status = options.text("Status");
+        const quote = options.text("Quote");
+        var footer0 = "<b class=\"fg15\">" + description + "</b>";
         if (have_status)
-            footer0 += " | Status";
+            footer0 += " | " + status;
         if (have_quote)
-            footer0 += " | Quote";
+            footer0 += " | " + quote;
 
-        var footer1 = "Description";
+        var footer1 = description;
         if (have_status)
-            footer1 += " | <b class=\"fg15\">Status</b>";
+            footer1 += " | <b class=\"fg15\">" + status + "</b>";
         if (have_quote)
-            footer1 += " | Quote";
+            footer1 += " | " + quote;
 
-        var footer2 = "Description";
+        var footer2 = description;
         if (have_status)
-            footer2 += " | Status";
+            footer2 += " | " + status;
         if (have_quote)
-            footer2 += " | <b class=\"fg15\">Quote</b>";
+            footer2 += " | <b class=\"fg15\">" + quote + "</b>";
 
         $footer_panes.eq(0).html(footer0);
         $footer_panes.eq(1).html(footer1);

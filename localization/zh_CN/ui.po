@@ -101858,3 +101858,63 @@ msgstr "<lightgray>要射击／投掷／使用哪件物品？</lightgray>"
 msgctxt "t.prompt"
 msgid "<lightgray>Fire/use which item?</lightgray>"
 msgstr "<lightgray>要射击／使用哪件物品？</lightgray>"
+
+#. Reviewed web-feedback-07; existing terminology, canonical English retained.
+msgctxt "web.monster"
+msgid "Description"
+msgstr "说明"
+
+#. Reviewed web-feedback-07; existing terminology, canonical English retained.
+msgctxt "web.monster"
+msgid "Status"
+msgstr "状态"
+
+#. Reviewed web-feedback-07; existing terminology, canonical English retained.
+msgctxt "web.monster"
+msgid "Quote"
+msgstr "引文"
+
+#. Reviewed web-feedback-07; existing terminology, canonical English retained.
+msgctxt "web.monster"
+msgid "Left click: select target"
+msgstr "左键：选择目标"
+
+#. Reviewed web-feedback-07; existing terminology, canonical English retained.
+msgctxt "o.unarmed"
+msgid "Unarmed"
+msgstr "徒手"
+
+#. Reviewed web-feedback-07; existing terminology, canonical English retained.
+msgctxt "d.monster.stat"
+msgid "none"
+msgstr "无"
+
+#. Reviewed web-feedback-07; existing terminology, canonical English retained.
+msgctxt "item.action"
+msgid "(<)go up"
+msgstr "(<)上楼"
+
+#. Reviewed web-feedback-07; existing terminology, canonical English retained.
+msgctxt "item.action"
+msgid "(>)go down"
+msgstr "(>)下楼"
+
+#. Reviewed web-feedback-07; existing terminology, canonical English retained.
+msgctxt "item.action"
+msgid "([)view destination"
+msgstr "([)查看目的地"
+
+#. Reviewed web-feedback-07; existing terminology, canonical English retained.
+msgctxt "item.action"
+msgid "(])view destination"
+msgstr "(])查看目的地"
+
+#. Reviewed web-feedback-07; existing terminology, canonical English retained.
+msgctxt "item.action"
+msgid "(O)pen"
+msgstr "(O)开门"
+
+#. Reviewed web-feedback-07; existing terminology, canonical English retained.
+msgctxt "item.action"
+msgid "(C)lose"
+msgstr "(C)关门"

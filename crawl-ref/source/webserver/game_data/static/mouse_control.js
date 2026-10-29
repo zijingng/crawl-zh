@@ -1,6 +1,6 @@
 define(["jquery", "comm", "./dungeon_renderer", "./tileinfo-gui", "./map_knowledge",
-        "./enums"],
-function ($, comm, dr, gui, map_knowledge, enums) {
+        "./enums", "./options"],
+function ($, comm, dr, gui, map_knowledge, enums, options) {
 
     function handle_cell_click(ev)
     {
@@ -48,7 +48,7 @@ function ($, comm, dr, gui, map_knowledge, enums) {
         if (game.can_target() && map_knowledge.visible(map_cell))
         {
             // XX just looking case has weird behavior
-            text += "Left click: select target";
+            text += options.text("Left click: select target");
         }
         // XX a good left click tooltip for click travel is very hard to
         // construct on the client side...
@@ -61,12 +61,13 @@ function ($, comm, dr, gui, map_knowledge, enums) {
             // tooltip, it's too disruptive otherwise
             if (text)
                 text += "<br>"; // XX something better than <br>s
-            text += "Right click: describe";
+            text += options.text("Right click: describe");
         }
 
         if (text)
             text = "<br><br>" + text;
-        text = map_cell.mon.name + text;
+        const name = options.display(map_cell.mon.name, map_cell.mon.name_display);
+        text = $("<span>").text(name).html() + text;
         show_tooltip(text, ev.pageX + 10, ev.pageY + 10);
     }
 

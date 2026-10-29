@@ -198,3 +198,5 @@ Ctrl+F 与巫师模式 &m 帮助在 WebTiles 中的窗口宽度见 [网页帮助
 # 最新反馈
 
 WebTiles 宗教标签、技能双宽列对齐、神祇欢迎语、鉴定输出及 F 键提示见 [web-feedback-06](web-feedback-06.md)。
+
+徒手菜单、楼梯右键操作、怪物说明页签、零意志与怪物鼠标提示见 [web-feedback-07](web-feedback-07.md)。

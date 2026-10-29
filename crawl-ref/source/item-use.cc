@@ -467,7 +467,8 @@ void UseItemMenu::populate_menu()
     if (show_unarmed())
     {
         const string original_hands = you.unarmed_attack_name("Unarmed");
-        string hands_string = ui_translate("i.ui", original_hands.c_str());
+        const ui_arg attack = get_form()->uc_attack_display_arg(original_hands);
+        string hands_string = attack.available ? attack.text : original_hands;
         if (!you.weapon())
             hands_string += ui_translate("i.ui", " (current attack)");
 

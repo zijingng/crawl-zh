@@ -10322,3 +10322,40 @@ TEST_CASE("Feedback six enchant armour identification and fire prompts", "[local
         CHECK(string(ui_translate("t.prompt", prompt)) == prompt);
     }
 }
+
+TEST_CASE("Feedback seven unarmed menu and monster will preserve English fallback", "[localization]")
+{
+    init_properties(); init_monsters(); init_mut_index();
+    init_duration_index(); init_spell_descs();
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    unwind_var<transformation> form(you.form, transformation::none);
+    const auto random_state = rng::peek_uint64();
+    for (const char *name : {"Unarmed", "Claws", "Teeth and claws", "Tentacles"})
+    {
+        Options.language = lang_t::ZH;
+        const ui_arg shown = get_form()->uc_attack_display_arg(name);
+        CHECK(shown.available);
+        CHECK(shown.text.find(name) == string::npos);
+        Options.language = lang_t::EN;
+        CHECK_FALSE(get_form()->uc_attack_display_arg(name).available);
+    }
+    monster_info rat(MONS_RAT);
+    for (auto lang : {lang_t::ZH, lang_t::EN})
+    {
+        Options.language = lang;
+        describe_info description; bool stats = false;
+        get_monster_db_desc(rat, description, stats);
+        REQUIRE(stats);
+        const string body = formatted_string::parse_string(description.body.str()).tostring();
+        bool found = false;
+        for (const string &row : split_string("\n", body))
+            if (row.find(lang == lang_t::ZH ? "意志" : "Will") != string::npos)
+            {
+                found = true;
+                CHECK(row.find(lang == lang_t::ZH ? "无" : "none") != string::npos);
+                if (lang == lang_t::ZH) CHECK(row.find("none") == string::npos);
+            }
+        CHECK(found);
+    }
+    CHECK(rng::peek_uint64() == random_state);
+}

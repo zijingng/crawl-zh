@@ -5553,6 +5553,10 @@ void game_options::write_webtiles_options(const string& name)
         {"Extra", "web.god", "Extra"},
         {"join religion", "web.god", "join religion"},
         {"Cost", "phase3.skill-menu", "Cost"},
+        {"Description", "web.monster", "Description"},
+        {"Status", "web.monster", "Status"},
+        {"Quote", "web.monster", "Quote"},
+        {"Left click: select target", "web.monster", "Left click: select target"},
     };
     tiles.json_open_object("ui_text");
     for (const auto &entry : captions)
