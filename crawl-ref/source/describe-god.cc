@@ -1358,14 +1358,16 @@ bool describe_god_with_join(god_type which_god)
     {
         Text* label = static_cast<Text*>(child.get());
         formatted_string text = label->get_text();
-        text += formatted_string::parse_string(ui_translate("d.god", "  [<w>J</w>/<w>Enter</w>]: "
-                                               "join"));
+        const auto join = formatted_string::parse_string(ui_translate("d.god",
+            "  [<w>J</w>/<w>Enter</w>]: join"));
+        const auto join_full = formatted_string::parse_string(ui_translate("d.god",
+            "  [<w>J</w>/<w>Enter</w>]: join religion"));
 
         // We assume that a player who has enough gold such that
         // the join fee plus accumulated gold overflows knows what this menu
         // does.
-        if (text.width() + service_fee.length() + 9 <= MIN_COLS)
-            text += " religion";
+        text += text.width() + join_full.width() + strwidth(service_fee) <= MIN_COLS
+            ? join_full : join;
         if (!service_fee.empty())
             text += service_fee;
         label->set_text(text);

@@ -102164,3 +102164,8 @@ msgstr "受诅咒的染色的长柄镰刀"
 msgctxt "m.move.confirm"
 msgid "Your %s will break if you move. Continue?"
 msgstr "移动会使你的%s失效。继续吗？"
+
+#. Reviewed altar-join-01; translate the complete label, preserving keys.
+msgctxt "d.god"
+msgid "  [<w>J</w>/<w>Enter</w>]: join religion"
+msgstr "  [<w>J</w>/<w>Enter</w>]：信仰此神"
