@@ -2503,7 +2503,10 @@ void TilesFramework::put_ucs_string(char32_t *str)
     while (*str)
     {
         if (*str == '\r')
+        {
+            str++;
             continue;
+        }
 
         if (*str == '\n')
         {
@@ -2513,7 +2516,8 @@ void TilesFramework::put_ucs_string(char32_t *str)
         }
         else
         {
-            if (m_print_x >= m_print_area->mx)
+            const int width = max(0, wcwidth(*str));
+            if (m_print_x + width > m_print_area->mx)
             {
                 m_print_x = 0;
                 m_print_y++;
@@ -2525,7 +2529,12 @@ void TilesFramework::put_ucs_string(char32_t *str)
                                             m_print_x, m_print_y);
             }
 
-            m_print_x++;
+            // Match the terminal's column positions for CJK wide glyphs.
+            if (width == 2 && m_print_x + 1 < m_print_area->mx
+                && m_print_y < m_print_area->my)
+                m_print_area->put_character(0, m_print_fg, m_print_bg,
+                                            m_print_x + 1, m_print_y);
+            m_print_x += width;
         }
 
         str++;

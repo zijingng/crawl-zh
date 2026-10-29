@@ -80717,7 +80717,7 @@
     {
       "context": "p.prompt",
       "english": "Berserk while wielding %s?%s",
-      "translation": "真要在持握%s时狂暴吗？%s",
+      "translation": "真要在持用%s时狂暴吗？%s",
       "module": "player.cc",
       "kind": "template",
       "review_status": "reviewed",

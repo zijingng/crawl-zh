@@ -2155,7 +2155,7 @@ msgctxt "textdb:descript/unrand.txt:spear of the botono"
 msgid ""
 "A dark and malign artefact. It increases the potency of hexes cast by anyone\n"
 "unwise enough to risk wielding it.\n"
-msgstr "一把黑暗、邪恶的神器。它能强化那些不理智的要持握它的人施放妖术。\n"
+msgstr "一把黑暗、邪恶的神器。它能强化那些不理智的要持用它的人施放妖术。\n"
 
 msgctxt "textdb:descript/unrand.txt:trident of the octopus king"
 msgid ""
@@ -7865,7 +7865,7 @@ msgid ""
 "weapons, but most prefer to beat their opponents to death with their bare hands.\n"
 msgstr ""
 "一个体形更大，甚至更粗暴的地精。\n"
-"大地精完全有能力持握武器，但大多数更喜欢徒手把他们的敌人打死。\n"
+"大地精完全有能力持用武器，但大多数更喜欢徒手把他们的敌人打死。\n"
 
 msgctxt "textdb:descript/monsters.txt:hog"
 msgid ""
@@ -21584,7 +21584,7 @@ msgid ""
 "even capable of wielding a weapon in their large main claw. Despite all this\n"
 "bulk, they are well-adapted to the water. They can also breathe clouds of rust\n"
 "at the cost of their own HP, which corrode and weaken enemies.\n"
-msgstr "一座用贝壳雕成的微型城垛。它会把佩戴者变成重甲螃蟹，并将所穿的躯干防具融入甲壳。此形态移动缓慢，但防护坚实，甚至能用巨大的主螯持握武器。尽管如此笨重，它仍很适应水中环境。它还可以消耗自身生命，吐出能腐蚀并削弱敌人的锈蚀云雾。\n"
+msgstr "一座用贝壳雕成的微型城垛。它会把佩戴者变成重甲螃蟹，并将所穿的躯干防具融入甲壳。此形态移动缓慢，但防护坚实，甚至能用巨大的主螯持用武器。尽管如此笨重，它仍很适应水中环境。它还可以消耗自身生命，吐出能腐蚀并削弱敌人的锈蚀云雾。\n"
 
 msgctxt "textdb:descript/items.txt:golden dragon scales"
 msgid ""
@@ -22506,7 +22506,7 @@ msgid ""
 "health and natural armour, and is resistant to poison, and immune to torment and\n"
 "drowning. However, it is rooted in place while the transformation lasts, and\n"
 "cannot teleport.\n"
-msgstr "一种能使饮用者变成活动树木的药水，树液化为血液，枝干可以持握武器。这棵树的闪避极低，但生命和天然护甲值提高，具备毒素抗性，并免疫折磨和溺水。然而，变形持续期间会扎根原地，无法传送。\n"
+msgstr "一种能使饮用者变成活动树木的药水，树液化为血液，枝干可以持用武器。这棵树的闪避极低，但生命和天然护甲值提高，具备毒素抗性，并免疫折磨和溺水。然而，变形持续期间会扎根原地，无法传送。\n"
 
 #. Reviewed against 0.34.1, glossary and current mechanism constraints; batch phase3-static-02.
 #: crawl-ref/source/dat/descript/items.txt
@@ -28050,7 +28050,7 @@ msgstr "你的神圣血统使升级时获得的力量、智力和敏捷远超其
 #. 0.34.1 mutations review; canonical key retained.
 msgctxt "textdb:descript/mutations.txt:tentacles mutation"
 msgid "Your gelatinous body has eight tentacles that help you move around in shallow\nor deep water and can be used to constrict enemies while attacking them in\nmelee. Each tentacle can wear a ring, but you need four of them to move around,\nand either two or four tentacles to hold a weapon depending on its size, and\ntwo tentacles to hold a shield.\n\nYour tentacles will try to constrict foes which you attack in melee. (You cannot\nconstrict monsters larger than you.) Independently, you have a two-thirds chance\nof launching a damaging 'squeeze' attack whenever you attack in melee.\n"
-msgstr "你的凝胶身体有八条触手，能帮助你在浅水或深水中移动，也能在近战攻击时绞缠敌人。每条触手都能戴一枚戒指，但你需要四条触手移动；持握武器需要两条或四条，取决于武器大小；持盾牌则需要两条。\n\n触手会尝试绞缠你近战攻击的敌人，但无法绞缠体型比你大的怪物。此外，每次近战攻击都独立有三分之二的概率发动造成伤害的挤压攻击。\n"
+msgstr "你的凝胶身体有八条触手，能帮助你在浅水或深水中移动，也能在近战攻击时绞缠敌人。每条触手都能戴一枚戒指，但你需要四条触手移动；持用武器需要两条或四条，取决于武器大小；持盾牌则需要两条。\n\n触手会尝试绞缠你近战攻击的敌人，但无法绞缠体型比你大的怪物。此外，每次近战攻击都独立有三分之二的概率发动造成伤害的挤压攻击。\n"
 
 #. 0.34.1 mutations review; canonical key retained.
 msgctxt "textdb:descript/mutations.txt:mertail mutation"
@@ -28160,7 +28160,7 @@ msgstr "你借助刻在防具上的符文施法，大幅减少通常所需的复
 #. 0.34.1 mutations review; canonical key retained.
 msgctxt "textdb:descript/mutations.txt:off-hand wielding mutation"
 msgid "You can wield a one-handed weapon in your off-hand, if not wielding a\ntwo-handed weapon or wearing a shield or orb. You will follow up attacks from\nyour primary weapon with your off-hand weapon, with attack delay determined\nby the average of the two. Ranged weapons can only follow attacks by ranged\nweapons, and likewise melee weapons.\n"
-msgstr "没有持握双手武器、盾牌或宝珠时，你可以用副手持握一把单手武器。主手武器攻击后，副手武器会跟进攻击，攻击延迟取两把武器的平均值。远程武器只能跟进远程武器的攻击，近战武器亦然。\n"
+msgstr "没有持用双手武器、盾牌或宝珠时，你可以用副手持用一把单手武器。主手武器攻击后，副手武器会跟进攻击，攻击延迟取两把武器的平均值。远程武器只能跟进远程武器的攻击，近战武器亦然。\n"
 
 #. 0.34.1 mutations review; canonical key retained.
 msgctxt "textdb:descript/mutations.txt:slow wielding mutation"
@@ -28485,7 +28485,7 @@ msgstr "你无法饮用药水。\n"
 #. 0.34.1 mutations review; canonical key retained.
 msgctxt "textdb:descript/mutations.txt:no weapons or thrown items mutation"
 msgid "You are incapable of wielding weapons or throwing items.\n"
-msgstr "你无法持握武器或投掷物品。\n"
+msgstr "你无法持用武器或投掷物品。\n"
 
 #. 0.34.1 mutations review; canonical key retained.
 msgctxt "textdb:descript/mutations.txt:no armour mutation"

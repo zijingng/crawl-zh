@@ -195,3 +195,6 @@ Ctrl+F 与巫师模式 &m 帮助在 WebTiles 中的窗口宽度见 [网页帮助
 神祇窗口崩溃、抓握器说明、鉴定换字母、已备用词及 Linux 版本号见 [五项反馈修复](web-feedback-05.md)。
 
 护甲、闪避、格挡、等级和基础属性的 HUD 全称及布局调整见 [HUD 标签全称](hud-full-01.md)。
+# 最新反馈
+
+WebTiles 宗教标签、技能双宽列对齐、神祇欢迎语、鉴定输出及 F 键提示见 [web-feedback-06](web-feedback-06.md)。

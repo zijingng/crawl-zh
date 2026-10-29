@@ -170278,7 +170278,7 @@
     {
       "context": "m.mutation",
       "english": "You can wield a second weapon in your off-hand.",
-      "translation": "你能够用副手持握第二把武器。",
+      "translation": "你能够用副手持用第二把武器。",
       "module": "mutation-data.h",
       "kind": "template",
       "review_status": "reviewed",
@@ -170506,7 +170506,7 @@
     {
       "context": "m.mutation",
       "english": "It takes a long time for you to wield or remove held weapons.",
-      "translation": "你持握或移除手持武器需要很长时间。",
+      "translation": "你持用或移除手持武器需要很长时间。",
       "module": "mutation-data.h",
       "kind": "template",
       "review_status": "reviewed",
@@ -301615,7 +301615,7 @@
     {
       "context": "m.mutation",
       "english": "You are incapable of wielding weapons or throwing items.",
-      "translation": "你无法持握武器或投掷物品。",
+      "translation": "你无法持用武器或投掷物品。",
       "module": "mutation-data.h",
       "kind": "template",
       "review_status": "reviewed",
@@ -425479,7 +425479,7 @@
     {
       "context": "m.clause",
       "english": "hold",
-      "translation": "持握",
+      "translation": "持用",
       "module": "melee-attack.cc",
       "kind": "template",
       "review_status": "reviewed",

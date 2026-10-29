@@ -30180,7 +30180,7 @@ msgstr "你被树根固定在原地"
 #, c-format
 msgctxt "a.ability.reason"
 msgid "wielding %s"
-msgstr "你正持握着%s"
+msgstr "你正持用着%s"
 
 #. Reviewed source-a-01; canonical English identifiers remain unchanged.
 #: crawl-ref/source/ability.cc
@@ -63173,11 +63173,11 @@ msgstr "你在移动或等待时能够用魔法躲避攻击。"
 
 msgctxt "m.mutation"
 msgid "You can wield a second weapon in your off-hand."
-msgstr "你能够用副手持握第二把武器。"
+msgstr "你能够用副手持用第二把武器。"
 
 msgctxt "m.mutation"
 msgid "It takes a long time for you to wield or remove held weapons."
-msgstr "你持握或移除手持武器需要很长时间。"
+msgstr "你持用或移除手持武器需要很长时间。"
 
 msgctxt "m.mutation"
 msgid "You sometimes pull newly seen creatures towards you."
@@ -65477,7 +65477,7 @@ msgstr "你不再免疫蒸汽的影响。"
 
 msgctxt "m.mutation"
 msgid "You are incapable of wielding weapons or throwing items."
-msgstr "你无法持握武器或投掷物品。"
+msgstr "你无法持用武器或投掷物品。"
 
 msgctxt "m.mutation"
 msgid "You can no longer grasp objects."
@@ -67549,7 +67549,7 @@ msgstr "佩戴"
 
 msgctxt "m.clause"
 msgid "hold"
-msgstr "持握"
+msgstr "持用"
 
 msgctxt "m.clause"
 msgid ", shattering the curse!"
@@ -74382,7 +74382,7 @@ msgstr "你%s%s自动移动禁区，确定吗？"
 #, c-format
 msgctxt "p.prompt"
 msgid "Berserk while wielding %s?%s"
-msgstr "真要在持握%s时狂暴吗？%s"
+msgstr "真要在持用%s时狂暴吗？%s"
 
 #, c-format
 msgctxt "p.prompt"
@@ -101808,3 +101808,53 @@ msgstr "抓握器"
 msgctxt "a.bodypart"
 msgid "tendril"
 msgstr "卷须"
+
+#. Reviewed web-feedback-06; display only, English fallback retained.
+msgctxt "web.god"
+msgid "Title"
+msgstr "称号"
+
+#. Reviewed web-feedback-06; display only, English fallback retained.
+msgctxt "web.god"
+msgid "Favour"
+msgstr "神宠"
+
+#. Reviewed web-feedback-06; display only, English fallback retained.
+msgctxt "web.god"
+msgid "Granted powers"
+msgstr "赐予的力量"
+
+#. Reviewed web-feedback-06; display only, English fallback retained.
+msgctxt "web.god"
+msgid "Overview"
+msgstr "概览"
+
+#. Reviewed web-feedback-06; display only, English fallback retained.
+msgctxt "web.god"
+msgid "Powers"
+msgstr "神力"
+
+#. Reviewed web-feedback-06; display only, English fallback retained.
+msgctxt "web.god"
+msgid "Wrath"
+msgstr "神罚"
+
+#. Reviewed web-feedback-06; display only, English fallback retained.
+msgctxt "web.god"
+msgid "Extra"
+msgstr "补充"
+
+#. Reviewed web-feedback-06; display only, English fallback retained.
+msgctxt "web.god"
+msgid "join religion"
+msgstr "信仰此神"
+
+#. Reviewed web-feedback-06; display only, English fallback retained.
+msgctxt "t.prompt"
+msgid "<lightgray>Fire/throw/use which item?</lightgray>"
+msgstr "<lightgray>要射击／投掷／使用哪件物品？</lightgray>"
+
+#. Reviewed web-feedback-06; display only, English fallback retained.
+msgctxt "t.prompt"
+msgid "<lightgray>Fire/use which item?</lightgray>"
+msgstr "<lightgray>要射击／使用哪件物品？</lightgray>"

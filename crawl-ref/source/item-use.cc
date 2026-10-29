@@ -2459,16 +2459,22 @@ static bool _identify(bool alreadyknown, const string &pre_msg)
 
         const char old_slot = item.slot;
         auto_assign_item_slot(item, true);
+        string display;
+        const string name = try_item_display_name(item, display, true)
+            ? display : menu_colour_item_name(item, DESC_INVENTORY_EQUIP);
         if (item.slot != old_slot)
         {
-            mprf_nocap("%c -> %s", old_slot,
-                        menu_colour_item_name(item, DESC_INVENTORY_EQUIP).c_str());
+            mprf_nocap("%c -> %s", old_slot, name.c_str());
         }
         else
-            mprf_nocap("%s", menu_colour_item_name(item, DESC_INVENTORY_EQUIP).c_str());
+            mprf_nocap("%s", name.c_str());
     }
     else
-        mprf_nocap("%s", menu_colour_item_name(item, DESC_A).c_str());
+    {
+        string display;
+        mprf_nocap("%s", try_item_display_name(item, display)
+            ? display.c_str() : menu_colour_item_name(item, DESC_A).c_str());
+    }
 
     return true;
 }

@@ -2251,7 +2251,8 @@ void simple_god_message(const char *event, bool need_possessive,
 
     const string source = string(need_possessive ? "%s's" : "%s") + event;
     msg = ui_render("log.god", source.c_str(), msg,
-                    {ui_text_arg("display.god", speaker)});
+                    {ui_text_arg("display.god", which_deity == GOD_WU_JIAN
+                        ? speaker : god_name(which_deity))});
     if (Options.language == lang_t::ZH && !display.empty())
         msg = display;
 

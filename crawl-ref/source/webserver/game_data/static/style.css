@@ -603,6 +603,14 @@ canvas {
     width: 80ch;
 }
 
+/* Terminal columns stay aligned even when the CJK fallback font has a
+   different advance from two Latin monospace characters. */
+.webtiles-wide {
+    display: inline-block;
+    width: 2ch;
+    text-align: center;
+}
+
 .progress-bar {
     max-width: 80ch;
     display: -webkit-box;

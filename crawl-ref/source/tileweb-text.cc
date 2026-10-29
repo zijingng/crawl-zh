@@ -84,6 +84,19 @@ void WebTextArea::put_character(char32_t chr, int fg, int bg, int x, int y)
     ASSERT_RANGE(y, 0, my);
     uint8_t col = (fg & 0xf) + (bg << 4);
 
+    const int pos = x + y * mx;
+    // Erasing either half of an old wide character must clear its other half.
+    if (chr != 0 && m_cbuf[pos] == 0 && x > 0)
+    {
+        m_cbuf[pos - 1] = ' ';
+        m_dirty = true;
+    }
+    if (wcwidth(m_cbuf[pos]) == 2 && wcwidth(chr) != 2 && x + 1 < mx)
+    {
+        m_cbuf[pos + 1] = ' ';
+        m_dirty = true;
+    }
+
     if (m_cbuf[x + y * mx] != chr || m_abuf[x + y * mx] != col)
         m_dirty = true;
 
@@ -125,6 +138,10 @@ void WebTextArea::send(bool force)
                 m_old_cbuf[x + y * mx] = chr;
                 m_old_abuf[x + y * mx] = col;
             }
+
+            // A wide glyph already occupies this continuation column in HTML.
+            if (chr == 0)
+                continue;
 
             if (chr != ' ' || ((col >> 4) & 0xF) != 0)
             {
@@ -168,7 +185,11 @@ void WebTextArea::send(bool force)
                 default:
                     char buf[5];
                     buf[wctoutf8(buf, chr)] = 0;
+                    if (wcwidth(chr) == 2)
+                        html += "<span class=\\\"webtiles-wide\\\">";
                     html += buf;
+                    if (wcwidth(chr) == 2)
+                        html += "</span>";
                     break;
                 }
             }

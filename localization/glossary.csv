@@ -3146,3 +3146,4 @@
 "grasper","抓握器","noun","","【0.34.1 身体部位】机甲哥布林的抓握器；沿用 p.clause 译文，对应 species::hand_name。"
 "tendril","卷须","noun","","【0.34.1 身体部位】骚灵的卷须；沿用 p.clause 译文，对应 species::hand_name。"
 "XL","等级","noun","","[HUD] Experience level. Canonical English field unchanged."
+"wield","持用","verb","","用于武器操作；持握统一为持用。"

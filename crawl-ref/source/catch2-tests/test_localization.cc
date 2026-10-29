@@ -10273,3 +10273,52 @@ TEST_CASE("Feedback five identification remap messages use display names and Eng
     }
     CHECK(rng::peek_uint64()==state);
 }
+
+TEST_CASE("Feedback six god messages preserve canonical translation keys", "[localization]")
+{
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    const auto state = rng::peek_uint64();
+    for (auto god : {GOD_SHINING_ONE, GOD_ZIN, GOD_WU_JIAN})
+    {
+        for (const char *event : {" welcomes you!", " welcomes you back!"})
+        {
+            Options.language = lang_t::ZH;
+            clear_message_store();
+            simple_god_message(event, false, god);
+            const string chinese = get_last_messages(10, true);
+            CHECK(chinese.find("欢迎") != string::npos);
+            CHECK(chinese.find("welcomes") == string::npos);
+            if (god == GOD_SHINING_ONE)
+                CHECK(chinese.find("光明神") != string::npos);
+            Options.language = lang_t::EN;
+            clear_message_store();
+            simple_god_message(event, false, god);
+            CHECK(get_last_messages(10, true).find(god_speaker(god) + event) != string::npos);
+        }
+    }
+    CHECK(rng::peek_uint64() == state);
+}
+
+TEST_CASE("Feedback six enchant armour identification and fire prompts", "[localization]")
+{
+    init_properties(); init_mut_index();
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    unwind_var<decltype(you.inv)> inventory(you.inv);
+    for (auto &item : you.inv) item.clear();
+    item_def &item = you.inv[MAX_GEAR];
+    item.base_type = OBJ_SCROLLS; item.sub_type = SCR_ENCHANT_ARMOUR;
+    item.quantity = 1; item.flags = ISFLAG_IDENTIFIED;
+    item.pos = ITEM_IN_INVENTORY; item.link = MAX_GEAR; item.slot = 'a';
+    string display;
+    REQUIRE(try_item_display_name(item, display, true));
+    CHECK(display == "a - 防具附魔卷轴");
+    CHECK(item.name(DESC_INVENTORY) == "a - a scroll of enchant armour");
+    for (const char *prompt : {"<lightgray>Fire/throw/use which item?</lightgray>",
+                              "<lightgray>Fire/use which item?</lightgray>"})
+    {
+        Options.language = lang_t::ZH;
+        CHECK(string(ui_translate("t.prompt", prompt)).find("哪件物品") != string::npos);
+        Options.language = lang_t::EN;
+        CHECK(string(ui_translate("t.prompt", prompt)) == prompt);
+    }
+}

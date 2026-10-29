@@ -5544,6 +5544,15 @@ void game_options::write_webtiles_options(const string& name)
         {"reset", "web.ui", "reset"},
         {"Minimize", "web.ui", "Minimize"},
         {"Close", "web.ui", "Close"},
+        {"Title", "web.god", "Title"},
+        {"Favour", "web.god", "Favour"},
+        {"Granted powers", "web.god", "Granted powers"},
+        {"Overview", "web.god", "Overview"},
+        {"Powers", "web.god", "Powers"},
+        {"Wrath", "web.god", "Wrath"},
+        {"Extra", "web.god", "Extra"},
+        {"join religion", "web.god", "join religion"},
+        {"Cost", "phase3.skill-menu", "Cost"},
     };
     tiles.json_open_object("ui_text");
     for (const auto &entry : captions)

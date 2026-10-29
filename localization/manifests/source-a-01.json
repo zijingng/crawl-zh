@@ -21498,7 +21498,7 @@
     {
       "context": "a.ability.reason",
       "english": "wielding %s",
-      "translation": "你正持握着%s",
+      "translation": "你正持用着%s",
       "module": "ability.cc",
       "kind": "complete_template",
       "review_status": "reviewed",
