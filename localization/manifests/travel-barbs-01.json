@@ -9,7 +9,7 @@
       "source_dependencies": [
         {
           "source": "crawl-ref/source/movement.cc",
-          "sha256": "b2492773eaf824a3d6e8ba9ba4a5b661e8ccd16f1515e49a9ec2b2733890c52d"
+          "sha256": "815b724edcafce347c5fa89254c927547760308f6dc30501e541a6013bb2fdbf"
         }
       ]
     }

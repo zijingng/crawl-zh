@@ -194,6 +194,7 @@ static bool _cancel_ice_move()
         string prompt = "Your "
                         + comma_separated_line(effects.begin(), effects.end())
                         + " will break if you move. Continue?";
+        prompt = m_ice_move_prompt(effects, prompt);
 
         if (!yesno(prompt.c_str(), false, 'n'))
         {

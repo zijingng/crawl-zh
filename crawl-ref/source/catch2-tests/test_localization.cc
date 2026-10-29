@@ -10359,3 +10359,64 @@ TEST_CASE("Feedback seven unarmed menu and monster will preserve English fallbac
     }
     CHECK(rng::peek_uint64() == random_state);
 }
+
+TEST_CASE("Ice movement confirmations translate every effect or fall back as a whole", "[localization]")
+{
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    const auto state = rng::peek_uint64();
+    const vector<vector<string>> lists = {{"icy armour"}, {"frozen ramparts"},
+        {"icy armour", "frozen ramparts"}, {"icy armour", "unknown custom effect"}};
+    for (const auto &effects : lists)
+    {
+        const string original = "Your " + comma_separated_line(effects.begin(), effects.end())
+            + " will break if you move. Continue?";
+        Options.language = lang_t::ZH;
+        const string shown = m_ice_move_prompt(effects, original);
+        if (effects.back() == "unknown custom effect") CHECK(shown == original);
+        else
+        {
+            CHECK(shown.find("继续吗？") != string::npos);
+            if (effects.front() == "icy armour") CHECK(shown.find("寒冰护甲") != string::npos);
+            if (effects.back() == "frozen ramparts") CHECK(shown.find("冰霜壁垒") != string::npos);
+            CHECK(shown.find("Your ") == string::npos);
+        }
+        Options.language = lang_t::EN;
+        CHECK(m_ice_move_prompt(effects, original) == original);
+    }
+    CHECK(rng::peek_uint64() == state);
+}
+
+TEST_CASE("Hammer and scythe discoveries translate visible appearances without identifying them", "[localization]")
+{
+    init_properties(); init_mut_index();
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    const auto state = rng::peek_uint64();
+    for (bool scythe : {false, true})
+        for (int flags : vector<int>{0, ISFLAG_GLOWING, ISFLAG_RUNED, ISFLAG_IDENTIFIED})
+        {
+            item_def item;
+            item.base_type = OBJ_WEAPONS; item.sub_type = scythe ? WPN_HALBERD : WPN_MACE;
+            item.quantity = 1; item.flags = flags; item.plus = 7;
+            item.props[ITEM_NAME_KEY] = scythe ? "scythe" : "hammer";
+            const string original = item.name(DESC_A);
+            Options.language = lang_t::ZH;
+            const ui_arg name = ui_item_arg(item);
+            REQUIRE(name.available);
+            CHECK(name.text.find(scythe ? "长柄镰刀" : "锤子") != string::npos);
+            const string found = ui_render("t.discovery", "Found %s.", "Found " + original + ".", {name});
+            CHECK(found.find("发现") != string::npos);
+            CHECK(found.find("Found ") == string::npos);
+            CHECK(item.name(DESC_A) == original);
+            if (!(flags & ISFLAG_IDENTIFIED)) CHECK(name.text.find("+7") == string::npos);
+            Options.language = lang_t::EN;
+            CHECK_FALSE(ui_item_arg(item).available);
+            CHECK(ui_render("t.discovery", "Found %s.", "Found " + original + ".", {ui_item_arg(item)})
+                == "Found " + original + ".");
+        }
+    Options.language = lang_t::ZH;
+    item_def custom;
+    custom.base_type = OBJ_WEAPONS; custom.sub_type = WPN_MACE; custom.quantity = 1;
+    custom.props[ITEM_NAME_KEY] = "unknown custom hammer";
+    CHECK_FALSE(ui_item_arg(custom).available);
+    CHECK(rng::peek_uint64() == state);
+}

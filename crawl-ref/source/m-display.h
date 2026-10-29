@@ -8,6 +8,21 @@
 #include "actor.h"
 
 // Display-only helpers. Canonical formatting is evaluated once by the caller.
+inline string m_ice_move_prompt(const vector<string> &effects, const string &original)
+{
+    string names;
+    bool complete = true;
+    for (const string &effect : effects)
+    {
+        const ui_arg name = ui_text_arg("d.duration", effect);
+        complete &= name.available;
+        if (!names.empty()) names += "和";
+        names += name.text;
+    }
+    return ui_render("m.move.confirm", "Your %s will break if you move. Continue?",
+        original, {{names, complete}});
+}
+
 inline string m_play_time_display(const string &elapsed, int turns)
 {
     const string count = to_string(turns);

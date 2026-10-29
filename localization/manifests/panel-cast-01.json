@@ -61,7 +61,7 @@
         },
         {
           "source": "crawl-ref/source/m-display.h",
-          "sha256": "8c15a9adb9fa0c8d5cdd3205388ad3d158895c904e669e75c7d8666e2ddb0e2e"
+          "sha256": "dd3632307960423e5ea7802440a7d7ae420ca44f9c92f02d465522ec7269abc9"
         },
         {
           "source": "crawl-ref/source/mon-info-flag-name.h",
@@ -197,7 +197,7 @@
         },
         {
           "source": "crawl-ref/source/m-display.h",
-          "sha256": "8c15a9adb9fa0c8d5cdd3205388ad3d158895c904e669e75c7d8666e2ddb0e2e"
+          "sha256": "dd3632307960423e5ea7802440a7d7ae420ca44f9c92f02d465522ec7269abc9"
         },
         {
           "source": "crawl-ref/source/mon-info-flag-name.h",
@@ -333,7 +333,7 @@
         },
         {
           "source": "crawl-ref/source/m-display.h",
-          "sha256": "8c15a9adb9fa0c8d5cdd3205388ad3d158895c904e669e75c7d8666e2ddb0e2e"
+          "sha256": "dd3632307960423e5ea7802440a7d7ae420ca44f9c92f02d465522ec7269abc9"
         },
         {
           "source": "crawl-ref/source/mon-info-flag-name.h",

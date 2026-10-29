@@ -101918,3 +101918,249 @@ msgstr "(O)开门"
 msgctxt "item.action"
 msgid "(C)lose"
 msgstr "(C)关门"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "great hammer"
+msgstr "巨型锤子"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "great scythe"
+msgstr "巨型长柄镰刀"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "cursed great hammer"
+msgstr "受诅咒的巨型锤子"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "cursed great scythe"
+msgstr "受诅咒的巨型长柄镰刀"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "runed great hammer"
+msgstr "刻符文的巨型锤子"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "runed great scythe"
+msgstr "刻符文的巨型长柄镰刀"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "cursed runed great hammer"
+msgstr "受诅咒的刻符文的巨型锤子"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "cursed runed great scythe"
+msgstr "受诅咒的刻符文的巨型长柄镰刀"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "glowing great hammer"
+msgstr "发光的巨型锤子"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "glowing great scythe"
+msgstr "发光的巨型长柄镰刀"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "cursed glowing great hammer"
+msgstr "受诅咒的发光的巨型锤子"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "cursed glowing great scythe"
+msgstr "受诅咒的发光的巨型长柄镰刀"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "embroidered great hammer"
+msgstr "刺绣的巨型锤子"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "embroidered great scythe"
+msgstr "刺绣的巨型长柄镰刀"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "cursed embroidered great hammer"
+msgstr "受诅咒的刺绣的巨型锤子"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "cursed embroidered great scythe"
+msgstr "受诅咒的刺绣的巨型长柄镰刀"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "shiny great hammer"
+msgstr "闪亮的巨型锤子"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "shiny great scythe"
+msgstr "闪亮的巨型长柄镰刀"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "cursed shiny great hammer"
+msgstr "受诅咒的闪亮的巨型锤子"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "cursed shiny great scythe"
+msgstr "受诅咒的闪亮的巨型长柄镰刀"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "dyed great hammer"
+msgstr "染色的巨型锤子"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "dyed great scythe"
+msgstr "染色的巨型长柄镰刀"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "cursed dyed great hammer"
+msgstr "受诅咒的染色的巨型锤子"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "cursed dyed great scythe"
+msgstr "受诅咒的染色的巨型长柄镰刀"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "hammer"
+msgstr "锤子"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "scythe"
+msgstr "长柄镰刀"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "cursed hammer"
+msgstr "受诅咒的锤子"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "cursed scythe"
+msgstr "受诅咒的长柄镰刀"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "runed hammer"
+msgstr "刻符文的锤子"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "runed scythe"
+msgstr "刻符文的长柄镰刀"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "cursed runed hammer"
+msgstr "受诅咒的刻符文的锤子"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "cursed runed scythe"
+msgstr "受诅咒的刻符文的长柄镰刀"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "glowing hammer"
+msgstr "发光的锤子"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "glowing scythe"
+msgstr "发光的长柄镰刀"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "cursed glowing hammer"
+msgstr "受诅咒的发光的锤子"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "cursed glowing scythe"
+msgstr "受诅咒的发光的长柄镰刀"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "embroidered hammer"
+msgstr "刺绣的锤子"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "embroidered scythe"
+msgstr "刺绣的长柄镰刀"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "cursed embroidered hammer"
+msgstr "受诅咒的刺绣的锤子"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "cursed embroidered scythe"
+msgstr "受诅咒的刺绣的长柄镰刀"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "shiny hammer"
+msgstr "闪亮的锤子"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "shiny scythe"
+msgstr "闪亮的长柄镰刀"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "cursed shiny hammer"
+msgstr "受诅咒的闪亮的锤子"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "cursed shiny scythe"
+msgstr "受诅咒的闪亮的长柄镰刀"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "dyed hammer"
+msgstr "染色的锤子"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "dyed scythe"
+msgstr "染色的长柄镰刀"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "cursed dyed hammer"
+msgstr "受诅咒的染色的锤子"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+msgctxt "display.item.appearance"
+msgid "cursed dyed scythe"
+msgstr "受诅咒的染色的长柄镰刀"
+
+#. Reviewed ice-hammer-01; canonical names and whole-English fallback retained.
+#, c-format
+msgctxt "m.move.confirm"
+msgid "Your %s will break if you move. Continue?"
+msgstr "移动会使你的%s失效。继续吗？"

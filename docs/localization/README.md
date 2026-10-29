@@ -200,3 +200,5 @@ Ctrl+F 与巫师模式 &m 帮助在 WebTiles 中的窗口宽度见 [网页帮助
 WebTiles 宗教标签、技能双宽列对齐、神祇欢迎语、鉴定输出及 F 键提示见 [web-feedback-06](web-feedback-06.md)。
 
 徒手菜单、楼梯右键操作、怪物说明页签、零意志与怪物鼠标提示见 [web-feedback-07](web-feedback-07.md)。
+
+锤子／长柄镰刀未鉴定外观与寒冰护甲／冰霜壁垒移动确认见 [ice-hammer-01](ice-hammer-01.md)。
