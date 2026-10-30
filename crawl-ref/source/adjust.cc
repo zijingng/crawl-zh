@@ -12,6 +12,7 @@
 #include "libutil.h"
 #include "invent.h"
 #include "item-use.h"
+#include "item-name.h"
 #include "items.h"
 #include "macro.h"
 #include "message.h"
@@ -25,6 +26,13 @@
 
 static void _adjust_spell();
 static void _adjust_ability();
+
+static void _print_adjust_item(const item_def &item)
+{
+    string shown;
+    mprf_nocap("%s", try_item_display_name(item, shown, true, true)
+        ? shown.c_str() : item.name(DESC_INVENTORY_EQUIP).c_str());
+}
 
 void adjust()
 {
@@ -80,7 +88,7 @@ void adjust_item(int selector, item_def* to_adjust)
 
         to_adjust = &you.inv[from_slot];
 
-        mprf_nocap("%s", to_adjust->name(DESC_INVENTORY_EQUIP).c_str());
+        _print_adjust_item(*to_adjust);
     }
 
     const int to_slot = prompt_invent_item(ui_translate("a.adjust", "Adjust to which letter? "),
@@ -247,9 +255,9 @@ void swap_inv_slots(item_def& to_adjust, int to_slot, bool verbose)
 
         if (verbose)
         {
-            mprf_nocap("%s", to_adjust.name(DESC_INVENTORY_EQUIP).c_str());
+            _print_adjust_item(to_adjust);
             if (item2)
-                mprf_nocap("%s", item2->name(DESC_INVENTORY_EQUIP).c_str());
+                _print_adjust_item(*item2);
         }
 
         return;
@@ -302,10 +310,10 @@ void swap_inv_slots(item_def& to_adjust, int to_slot, bool verbose)
 
     if (verbose)
     {
-        mprf_nocap("%s", you.inv[to_slot].name(DESC_INVENTORY_EQUIP).c_str());
+        _print_adjust_item(you.inv[to_slot]);
 
         if (you.inv[from_slot].defined())
-            mprf_nocap("%s", you.inv[from_slot].name(DESC_INVENTORY_EQUIP).c_str());
+            _print_adjust_item(you.inv[from_slot]);
     }
 
     if (wield_change)

@@ -28205,7 +28205,7 @@ msgstr "你没有空间携带装置！请先丢下一些东西。"
 #: crawl-ref/source/adjust.cc
 msgctxt "a.adjust"
 msgid "Adjust (g)ear, (s)pells, (a)bilities, (p)otions, sc(r)olls or e(v)ocables? "
-msgstr "调整装备(g)、法术(s)、能力(a)、药水(p)、卷轴(r)还是发动道具(v)？"
+msgstr "调整装备(g)、法术(s)、能力(a)、药水(p)、卷轴(r)还是可发动道具(v)？"
 
 #. Reviewed source-a-01; canonical English identifiers remain unchanged.
 #: crawl-ref/source/adjust.cc

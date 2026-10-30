@@ -46,6 +46,7 @@
 #include "art-enum.h"
 #include "macro.h"
 #include "ability.h"
+#include "adjust.h"
 #include "decks.h"
 #include "describe.h"
 #include "branch.h"
@@ -10656,5 +10657,57 @@ TEST_CASE("Randart transliteration preserves stored identity unidentification an
     set_artefact_name(item, "cloak \"Name123\"");
     REQUIRE(try_item_display_name(item, shown, false, false));
     CHECK(shown.find("Name123") != string::npos);
+    CHECK(rng::peek_uint64() == next);
+}
+
+
+TEST_CASE("Adjusting consumable letters prints both translated item names and preserves English", "[localization][adjust-feedback]")
+{
+    init_properties(); init_monsters();
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    unwind_var<bool> io(crawl_state.io_inited, false);
+    unwind_var<bool> level(you.on_current_level, false);
+    unwind_var<decltype(crawl_state.type)> mode(crawl_state.type, GAME_TYPE_NORMAL);
+    unwind_var<decltype(you.inv)> inventory(you.inv);
+    unwind_var<int> width(crawl_view.msgsz.x, 160);
+    struct Cleanup { ~Cleanup() { clear_message_store(); } } cleanup;
+    for (auto &item : you.inv) item.clear();
+    const auto next = rng::peek_uint64();
+    for (bool scroll : {false, true})
+    {
+        auto &first = you.inv[MAX_GEAR]; auto &second = you.inv[MAX_GEAR + 1];
+        first.clear(); second.clear();
+        for (auto *item : {&first, &second})
+        {
+            item->base_type = scroll ? OBJ_SCROLLS : OBJ_POTIONS;
+            item->quantity = 1; item->flags = ISFLAG_IDENTIFIED;
+            item->pos = ITEM_IN_INVENTORY;
+        }
+        first.sub_type = scroll ? int(SCR_IDENTIFY) : int(POT_CURING);
+        second.sub_type = scroll ? int(SCR_ENCHANT_ARMOUR) : int(POT_HEAL_WOUNDS);
+        first.link = MAX_GEAR; second.link = MAX_GEAR + 1;
+        first.slot = 'a'; second.slot = 'b';
+        for (auto selected : {lang_t::ZH, lang_t::EN})
+        {
+            Options.language = selected;
+            clear_message_store();
+            swap_inv_slots(first, letter_to_index(second.slot), true);
+            const string messages = get_last_messages(10, true);
+            string a, b;
+            if (selected == lang_t::ZH)
+            {
+                REQUIRE(try_item_display_name(first, a, true, true));
+                REQUIRE(try_item_display_name(second, b, true, true));
+                CHECK(messages.find(scroll ? "鉴定" : "治疗") != string::npos);
+                CHECK(messages.find(scroll ? "防具附魔" : "愈伤") != string::npos);
+            }
+            else { a = first.name(DESC_INVENTORY_EQUIP); b = second.name(DESC_INVENTORY_EQUIP); }
+            CAPTURE(messages, a, b);
+            CHECK(messages.find(a) != string::npos);
+            CHECK(messages.find(b) != string::npos);
+            CHECK(first.slot != second.slot);
+            CHECK(first.link == MAX_GEAR); CHECK(second.link == MAX_GEAR + 1);
+        }
+    }
     CHECK(rng::peek_uint64() == next);
 }

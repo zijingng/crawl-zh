@@ -7496,7 +7496,7 @@
     {
       "context": "a.adjust",
       "english": "Adjust (g)ear, (s)pells, (a)bilities, (p)otions, sc(r)olls or e(v)ocables? ",
-      "translation": "调整装备(g)、法术(s)、能力(a)、药水(p)、卷轴(r)还是发动道具(v)？",
+      "translation": "调整装备(g)、法术(s)、能力(a)、药水(p)、卷轴(r)还是可发动道具(v)？",
       "module": "adjust.cc",
       "kind": "display_literal",
       "review_status": "reviewed",
