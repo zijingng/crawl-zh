@@ -265,6 +265,7 @@ static void _do_wizard_command(int wiz_command)
 static void _log_wizmode_entrance()
 {
     scorefile_entry se(INSTANT_DEATH, MID_NOBODY, KILLED_BY_WIZMODE, nullptr);
+    capture_death_text(se);
     logfile_new_entry(se);
 }
 
@@ -406,6 +407,7 @@ void enter_explore_mode()
 
 #ifndef SCORE_WIZARD_CHARACTERS
         scorefile_entry se(INSTANT_DEATH, MID_NOBODY, KILLED_BY_EXPLORING, nullptr);
+        capture_death_text(se);
         logfile_new_entry(se);
 #endif
 

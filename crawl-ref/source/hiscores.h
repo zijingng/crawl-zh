@@ -6,6 +6,7 @@
 #pragma once
 
 #include <vector>
+#include <array>
 
 #include "god-type.h"
 #ifdef USE_TILE_WEB
@@ -181,12 +182,11 @@ public:
     bool parse(const string &line);
 
     string hiscore_line(death_desc_verbosity verbosity) const;
-    string display_hiscore_line(death_desc_verbosity verbosity, const actor *source = nullptr) const;
+    string display_hiscore_line(death_desc_verbosity verbosity) const;
 
     string character_description(death_desc_verbosity) const;
     // Full description of death: Killed by an xyz wielding foo
-    string death_description(death_desc_verbosity) const;
-    string display_death_description(death_desc_verbosity, const actor *source = nullptr) const;
+    string death_description(death_desc_verbosity, bool localized = false) const;
     string display_damage_description(const actor *source = nullptr) const;
     string death_place(death_desc_verbosity) const;
     string game_time(death_desc_verbosity) const;
@@ -203,7 +203,10 @@ public:
     string long_kill_message() const;
 
 private:
-    string translated_death_body(death_desc_verbosity, const actor *source) const;
+    friend struct death_text_event;
+    // Completed text, captured once while the death event and actors still exist.
+    std::array<string, DDV_LOGVERBOSE + 1> death_english;
+    std::array<string, DDV_LOGVERBOSE + 1> death_chinese;
     string single_cdesc() const;
     string strip_article_a(const string &s) const;
     string terse_missile_cause() const;
@@ -226,3 +229,6 @@ private:
 
     void init_from(const scorefile_entry &other);
 };
+
+// Event-time generation only; never called when loading historical scores.
+void capture_death_text(scorefile_entry &entry, const actor *source = nullptr);

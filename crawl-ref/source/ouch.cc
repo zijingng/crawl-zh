@@ -1570,6 +1570,7 @@ void ouch(int dam, kill_method_type death_type, mid_t source, const char *aux,
     // Construct scorefile entry.
     scorefile_entry se(dam, source, death_type, aux, false,
                        death_source_name);
+    capture_death_text(se, se.killer());
 
 #ifdef WIZARD
     if (!non_death)
@@ -1586,7 +1587,7 @@ void ouch(int dam, kill_method_type death_type, mid_t source, const char *aux,
                 mpr(ui_translate("o.ui", "Thought so."));
                 take_note(Note(NOTE_DEATH, you.hp, you.hp_max,
                                 death_desc), true, [&] {
-                    return se.display_death_description(scorefile_entry::DDV_VERBOSE, se.killer());
+                    return se.death_description(scorefile_entry::DDV_VERBOSE, true);
                 });
                 _wizard_restore_life();
                 take_note(Note(NOTE_DEATH, you.hp, you.hp_max,
@@ -1610,7 +1611,7 @@ void ouch(int dam, kill_method_type death_type, mid_t source, const char *aux,
     // Okay, so you're dead.
     take_note(Note(NOTE_DEATH, you.hp, you.hp_max,
                     se.death_description(scorefile_entry::DDV_NORMAL)), true, [&] {
-        return se.display_death_description(scorefile_entry::DDV_NORMAL, se.killer());
+        return se.death_description(scorefile_entry::DDV_NORMAL, true);
     });
     if (you.lives && !non_death)
     {

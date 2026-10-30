@@ -1098,6 +1098,7 @@ TEST_CASE("H scores opt into display without changing stored records", "[localiz
     scorefile_entry record;
     REQUIRE(record.parse("v=0.34.1:sc=42:name=Tester:race=Human:cls=Fighter:char=HuFi:xl=5:title=Fighter:ktyp=quitting:br=D:lvl=2:start=20261023080000S:end=20261023090000S:dur=60:turn=10:hp=4:mhp=10:mmhp=10\n"));
     Options.language = lang_t::EN;
+    capture_death_text(record);
     const string stored = record.raw_string();
     const string original = hiscores_format_single_long(record, true);
     CHECK(hiscores_format_single_long(record, true, true) == original);
@@ -1110,12 +1111,13 @@ TEST_CASE("H scores opt into display without changing stored records", "[localiz
     scorefile_entry historical;
     REQUIRE(historical.parse("v=0.34.1:sc=42:name=Tester:race=Human:cls=Fighter:char=HuFi:xl=5:title=Fighter:ktyp=mon:killer=an orc:kaux=a short sword:dam=8:br=D:lvl=2:start=20261023080000S:end=20261023090000S:dur=60:turn=10:hp=-4:mhp=10:mmhp=10\n"));
     const string canonical_death = historical.death_description(scorefile_entry::DDV_VERBOSE);
-    CHECK(hiscores_format_single_long(historical, true, true).find("兽人") != string::npos);
-    CHECK(hiscores_format_single_long(historical, true, true).find("短剑") != string::npos);
+    CHECK(historical.death_description(scorefile_entry::DDV_VERBOSE, true) == canonical_death);
+    CHECK(hiscores_format_single_long(historical, true, true).find(canonical_death) != string::npos);
     CHECK(hiscores_format_single_long(historical, true).find(canonical_death) != string::npos);
     scorefile_entry winner;
     REQUIRE(winner.parse("v=0.34.1:sc=100:name=Tester:race=Human:cls=Fighter:char=HuFi:xl=27:title=Fighter:ktyp=winning:br=D:lvl=1:nrune=3:fgem=2:igem=1:start=20261023080000S:end=20261023090000S:dur=60:turn=10:hp=4:mhp=10:mmhp=10\n"));
     unwind_var<bool> gems(Options.more_gem_info, true);
+    capture_death_text(winner);
     const string win = hiscores_format_single_long(winner, true, true);
     CHECK(win.find("3 枚符文") != string::npos);
     CHECK(win.find("2 颗宝石") != string::npos);
@@ -10179,16 +10181,17 @@ TEST_CASE("Event-time bilingual notes retain death and injury coverage without s
         "ktyp=collision:killer=an ogre:kaux=a freezing wraith"})
     {
         scorefile_entry score; REQUIRE(score.parse(common + fields + ":turn=10\n"));
+        capture_death_text(score);
         const string raw = score.raw_string();
         for (auto verbosity : {scorefile_entry::DDV_NORMAL, scorefile_entry::DDV_VERBOSE,
                                scorefile_entry::DDV_TERSE, scorefile_entry::DDV_ONELINE})
         {
             const string english = score.death_description(verbosity);
-            const string chinese = score.display_death_description(verbosity);
+            const string chinese = score.death_description(verbosity, true);
             CAPTURE(fields, english, chinese);
             CHECK(chinese != english);
             const Note saved = _recorded_note(Note(NOTE_DEATH, -4, 21, english), [&] {
-                return score.display_death_description(verbosity);
+                return score.death_description(verbosity, true);
             });
             CHECK(saved.desc.empty()); CHECK(saved.screen.empty());
             CHECK(saved.describe(false, false) == english);
@@ -10198,7 +10201,7 @@ TEST_CASE("Event-time bilingual notes retain death and injury coverage without s
             CHECK(restored.describe(false, false, true, true) == chinese);
             Options.language = lang_t::EN;
             CHECK(restored.describe(false, false, true, true) == english);
-            CHECK(score.display_death_description(verbosity) == english);
+            CHECK(score.death_description(verbosity, true) == english);
             Options.language = lang_t::ZH;
         }
         CHECK(score.raw_string() == raw);
@@ -10209,9 +10212,10 @@ TEST_CASE("Event-time bilingual notes retain death and injury coverage without s
         "ktyp=mon:killer=an orc:kpath=summoned by somebody"})
     {
         scorefile_entry score; REQUIRE(score.parse(common + fields + ":turn=10\n"));
+        capture_death_text(score);
         const Note saved = _recorded_note(Note(NOTE_DEATH, 0, 0,
             score.death_description(scorefile_entry::DDV_VERBOSE)), [&] {
-            return score.display_death_description(scorefile_entry::DDV_VERBOSE);
+            return score.death_description(scorefile_entry::DDV_VERBOSE, true);
         });
         CHECK(saved.chinese.empty());
         CHECK(saved.describe(false, false, true, true) == saved.describe(false, false));
@@ -10219,6 +10223,7 @@ TEST_CASE("Event-time bilingual notes retain death and injury coverage without s
     for (const string fields : {"ktyp=freezing", "ktyp=burning", "ktyp=draining", "ktyp=rotting"})
     {
         scorefile_entry score; REQUIRE(score.parse(common + fields + ":turn=10\n"));
+        capture_death_text(score);
         const string reason = score.display_damage_description();
         CHECK(reason != score.death_description(scorefile_entry::DDV_TERSE));
         const Note saved = _recorded_note(Note(NOTE_HP_CHANGE, 1, 21,
@@ -10453,36 +10458,39 @@ TEST_CASE("Extended death causes preserve summoner paths status clauses and even
         "ktyp=death curse:killer=a mummy", "ktyp=pois:killer=an adder:kaux=poison"})
     {
         scorefile_entry score; REQUIRE(score.parse(common + fields + ":turn=10\n"));
+        capture_death_text(score);
         const string raw = score.raw_string();
         for (auto verbosity : {scorefile_entry::DDV_NORMAL, scorefile_entry::DDV_VERBOSE,
                                scorefile_entry::DDV_TERSE, scorefile_entry::DDV_ONELINE})
         {
             const string english = score.death_description(verbosity);
-            const string shown = score.display_death_description(verbosity);
+            const string shown = score.death_description(verbosity, true);
             CAPTURE(fields, english, shown);
             CHECK(shown != english);
             CHECK(shown.find("summoned by") == string::npos);
             CHECK(shown.find("invoked by") == string::npos);
             CHECK(shown.find("wielding") == string::npos);
             Options.language = lang_t::EN;
-            CHECK(score.display_death_description(verbosity) == english);
+            CHECK(score.death_description(verbosity, true) == english);
             Options.language = lang_t::ZH;
         }
         const Note saved = _recorded_note(Note(NOTE_DEATH, -10, 21,
             score.death_description(scorefile_entry::DDV_VERBOSE)), [&] {
-            return score.display_death_description(scorefile_entry::DDV_VERBOSE);
+            return score.death_description(scorefile_entry::DDV_VERBOSE, true);
         });
         CHECK(saved.chinese != saved.english);
         CHECK(saved.desc.empty()); CHECK(saved.screen.empty());
         CHECK(score.raw_string() == raw);
     }
     scorefile_entry score; REQUIRE(score.parse(common + "ktyp=mon:killer=an orc:turn=10\n"));
+        capture_death_text(score);
     for (duration_type status : {DUR_PARALYSIS, DUR_PETRIFIED, DUR_SLEEP, DUR_VEXED})
     {
         unwind_var<int> duration(you.duration[status], 10);
+        capture_death_text(score);
         const string english = score.death_description(scorefile_entry::DDV_VERBOSE);
         const Note saved = _recorded_note(Note(NOTE_DEATH, -10, 21, english), [&] {
-            return score.display_death_description(scorefile_entry::DDV_VERBOSE);
+            return score.death_description(scorefile_entry::DDV_VERBOSE, true);
         });
         CHECK(saved.chinese != english);
         CHECK(saved.chinese.find("当时") != string::npos);
@@ -10493,7 +10501,8 @@ TEST_CASE("Extended death causes preserve summoner paths status clauses and even
     {
         scorefile_entry unknown;
         REQUIRE(unknown.parse(common + "ktyp=mon:killer=an orc:kpath=" + path + ":turn=10\n"));
-        CHECK(unknown.display_death_description(scorefile_entry::DDV_VERBOSE) == unknown.death_description(scorefile_entry::DDV_VERBOSE));
+        capture_death_text(unknown);
+        CHECK(unknown.death_description(scorefile_entry::DDV_VERBOSE, true) == unknown.death_description(scorefile_entry::DDV_VERBOSE));
     }
     CHECK(rng::peek_uint64() == next);
 }
@@ -10511,9 +10520,10 @@ TEST_CASE("Death events translate enchanted killer weapons directly and freeze t
     const string english_name = item.name(DESC_A);
     scorefile_entry score;
     REQUIRE(score.parse("v=0.34.1:name=Tester:race=Human:cls=Fighter:xl=5:br=D:lvl=2:hp=-10:mhp=21:dam=14:ktyp=mon:killer=Crazy Yiuf:kaux=" + english_name + ":turn=10\n"));
+    capture_death_text(score, &mon);
     const Note saved = _recorded_note(Note(NOTE_DEATH, -10, 21,
         score.death_description(scorefile_entry::DDV_VERBOSE)), [&] {
-        return score.display_death_description(scorefile_entry::DDV_VERBOSE, &mon);
+        return score.death_description(scorefile_entry::DDV_VERBOSE, true);
     });
     CHECK(saved.chinese.find("疯子尤夫") != string::npos);
     CHECK(saved.chinese.find("+4") != string::npos);
@@ -10710,4 +10720,118 @@ TEST_CASE("Adjusting consumable letters prints both translated item names and pr
         }
     }
     CHECK(rng::peek_uint64() == next);
+}
+
+
+TEST_CASE("Score death texts persist both languages without live actor or status lookups", "[localization][bilingual-scores]")
+{
+    init_properties(); init_monsters(); init_mut_index(); init_duration_index();
+    unwind_var<lang_t> language(Options.language, lang_t::EN);
+    unwind_var<int> paralysis(you.duration[DUR_PARALYSIS], 10);
+    unwind_var<int> petrified(you.duration[DUR_PETRIFIED], 0);
+    unwind_var<int> sleep(you.duration[DUR_SLEEP], 0);
+    unwind_var<int> vexed(you.duration[DUR_VEXED], 0);
+    unwind_var<item_def> weapon(env.item[0]);
+    auto &item = env.item[0]; item.clear(); item.base_type = OBJ_WEAPONS;
+    item.sub_type = WPN_QUARTERSTAFF; item.quantity = 1; item.plus = 4;
+    item.brand = SPWPN_CHAOS; item.flags = ISFLAG_IDENTIFIED;
+    monster mon; mon.type = mon.base_monster = MONS_CRAZY_YIUF;
+    mon.hit_points = mon.max_hit_points = 30; mon.inv[MSLOT_WEAPON] = 0;
+    scorefile_entry event;
+    REQUIRE(event.parse("v=0.34.1:sc=42:name=Tester:race=Human:cls=Fighter:char=HuFi:xl=5:title=Fighter:br=D:lvl=2:hp=-10:mhp=21:mmhp=21:dam=14:ktyp=mon:killer=Crazy Yiuf:kaux="
+        + item.name(DESC_A) + ":kpath=summoned by Jessica::summoned by Jessica::summoned by Jessica::summoned by Jessica::summoned by Jessica::summoned by Jessica::summoned by Jessica::summoned by Jessica:ikiller=Jessica:turn=10\n"));
+    const auto next = rng::peek_uint64();
+    capture_death_text(event, &mon);
+    CHECK(Options.language == lang_t::EN);
+    const string raw = event.raw_string();
+    CHECK(std::count(raw.begin(), raw.end(), '\n') == 1);
+    CHECK(raw.find("death_en_3=") != string::npos);
+    CHECK(raw.find("death_zh_3=") != string::npos);
+    CHECK(raw.size() > 1500);
+    scorefile_entry restored; REQUIRE(restored.parse(raw));
+    scorefile_entry copied(restored), assigned;
+    assigned = restored;
+    item.clear(); mon.type = MONS_ORC; you.duration[DUR_PARALYSIS] = 0;
+    you.duration[DUR_SLEEP] = 20;
+    for (int i = scorefile_entry::DDV_TERSE; i <= scorefile_entry::DDV_LOGVERBOSE; ++i)
+    {
+        const auto v = static_cast<scorefile_entry::death_desc_verbosity>(i);
+        Options.language = lang_t::ZH;
+        const string english = event.death_description(v);
+        const string chinese = event.death_description(v, true);
+        CAPTURE(i, english, chinese);
+        if (v != scorefile_entry::DDV_LOGVERBOSE)
+        {
+            CHECK(chinese != english);
+            CHECK(chinese.find("疯子尤夫") != string::npos);
+            CHECK(chinese.find("+4") != string::npos);
+            if (v == scorefile_entry::DDV_VERBOSE)
+            {
+                CHECK(chinese.find("当时") != string::npos);
+                CHECK(english.find("while paralysed") != string::npos);
+                CHECK(english.find("while put to sleep") == string::npos);
+            }
+        }
+        for (const auto *entry : {&restored, &copied, &assigned})
+        {
+            CHECK(entry->death_description(v) == english);
+            CHECK(entry->death_description(v, true) == chinese);
+            Options.language = lang_t::EN;
+            CHECK(entry->death_description(v, true) == english);
+            Options.language = lang_t::ZH;
+        }
+    }
+    CHECK(restored.raw_string() == raw);
+    CHECK(rng::peek_uint64() == next);
+
+    // Loading an old record must not invent a Chinese translation.
+    scorefile_entry legacy;
+    REQUIRE(legacy.parse("v=0.34.1:name=Old:ktyp=mon:killer=an orc:kaux=a short sword\n"));
+    CHECK(legacy.death_description(scorefile_entry::DDV_VERBOSE, true)
+          == legacy.death_description(scorefile_entry::DDV_VERBOSE));
+
+    // New upstream names retain the complete English death in either language.
+    scorefile_entry unknown;
+    REQUIRE(unknown.parse("v=0.34.1:name=New:ktyp=mon:killer=an unknown future creature:kaux=an unknown weapon\n"));
+    capture_death_text(unknown);
+    scorefile_entry unknown_loaded; REQUIRE(unknown_loaded.parse(unknown.raw_string()));
+    CHECK(unknown_loaded.death_description(scorefile_entry::DDV_VERBOSE, true)
+          == unknown.death_description(scorefile_entry::DDV_VERBOSE));
+
+    // Text escaping round-trips literal backslashes, colons and physical newlines.
+    scorefile_entry literal;
+    REQUIRE(literal.parse("v=0.34.1:name=Literal:ktyp=mon:killer=an orc:death_en_3=left\\\\n\\nright::end\\r:death_zh_3=中文\\n下一行\\\\n:turn=10\n"));
+    CHECK(literal.death_description(scorefile_entry::DDV_VERBOSE) == "left\\n\nright:end\r");
+    CHECK(literal.death_description(scorefile_entry::DDV_VERBOSE, true) == "中文\n下一行\\n");
+}
+
+TEST_CASE("Morgue generated unknown suffix localizes without changing user inscriptions", "[localization][morgue-unknown]")
+{
+    init_properties();
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    item_def item; item.base_type = OBJ_POTIONS; item.sub_type = POT_CURING;
+    item.quantity = 1; item.flags = ISFLAG_IDENTIFIED;
+    for (const string &literal : {string(), string("unknown"), string("keep unknown,"), string("自定义 unknown")})
+    {
+        item.props.erase("morgue_unknown_inscription");
+        item.inscription = literal;
+        string shown;
+        REQUIRE(try_item_display_name(item, shown));
+        if (!literal.empty()) CHECK(shown.find(literal) != string::npos);
+        add_inscription(item, "unknown");
+        item.props["morgue_unknown_inscription"] = true;
+        const string original = item.name(DESC_A);
+        const string canonical_inscription = item.inscription;
+        REQUIRE(try_item_display_name(item, shown));
+        CHECK(shown.find("未鉴定") != string::npos);
+        if (!literal.empty()) CHECK(shown.find(literal) != string::npos);
+        CHECK(item.name(DESC_A) == original);
+        CHECK(item.inscription == canonical_inscription);
+        Options.language = lang_t::EN;
+        string untouched = "sentinel";
+        CHECK_FALSE(try_item_display_name(item, untouched));
+        CHECK(untouched == "sentinel");
+        CHECK(item.name(DESC_A) == original);
+        Options.language = lang_t::ZH;
+    }
 }

@@ -139,7 +139,23 @@ static string _item_inscription(const item_def &item, bool display = false,
     }
 
     if (!item.inscription.empty())
-        insparts.push_back(item.inscription);
+    {
+        string inscription = item.inscription;
+        if (display && item.props.exists("morgue_unknown_inscription")
+            && item.props["morgue_unknown_inscription"].get_bool()
+            && ends_with(inscription, "unknown"))
+        {
+            const ui_arg label = ui_text_arg("search.tag", "unidentified");
+            if (!label.available)
+            {
+                if (complete) *complete = false;
+                return "";
+            }
+            inscription.replace(inscription.size() - strlen("unknown"),
+                                strlen("unknown"), label.text);
+        }
+        insparts.push_back(inscription);
+    }
 
     if (insparts.empty())
         return "";

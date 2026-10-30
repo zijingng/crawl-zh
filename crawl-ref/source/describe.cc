@@ -4771,7 +4771,15 @@ bool describe_item(item_def &item, function<void (string&)> fixup_desc, bool do_
 
 void inscribe_item(item_def &item)
 {
-    mprf_nocap(MSGCH_EQUIPMENT, "%s", item.name(DESC_INVENTORY).c_str());
+    const auto print_item = [&item]()
+    {
+        string display;
+        mprf_nocap(MSGCH_EQUIPMENT, "%s",
+            try_item_display_name(item, display, true, false)
+                ? display.c_str() : item.name(DESC_INVENTORY).c_str());
+    };
+
+    print_item();
 
     const bool is_inscribed = !item.inscription.empty();
     string prompt = is_inscribed ? ui_translate("phase3.describe", ui_translate("d.describe", "Replace inscription with what? "))
@@ -4797,7 +4805,7 @@ void inscribe_item(item_def &item)
 
     item.inscription = new_inscrip;
 
-    mprf_nocap(MSGCH_EQUIPMENT, "%s", item.name(DESC_INVENTORY).c_str());
+    print_item();
     you.wield_change  = true;
     quiver::set_needs_redraw();
 }

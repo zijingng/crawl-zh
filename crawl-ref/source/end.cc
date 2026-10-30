@@ -305,7 +305,11 @@ NORETURN void end_game(scorefile_entry &se)
 
     for (auto &item : you.inv)
         if (item.defined() && !item.is_identified())
+        {
             add_inscription(item, "unknown");
+            // Distinguish the generated suffix from literal player inscriptions.
+            item.props["morgue_unknown_inscription"] = true;
+        }
 
     identify_inventory();
 

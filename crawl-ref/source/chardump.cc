@@ -1581,7 +1581,7 @@ static void _sdump_hiscore(dump_params &par)
         return;
 
     string hiscore = _dump_display
-        ? par.se->display_hiscore_line(scorefile_entry::DDV_VERBOSE, par.se->killer())
+        ? par.se->display_hiscore_line(scorefile_entry::DDV_VERBOSE)
         : hiscores_format_single_long(*(par.se), true, false);
     trim_string(hiscore);
     par.text += hiscore;
