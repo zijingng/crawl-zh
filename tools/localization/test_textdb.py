@@ -9,6 +9,21 @@ from build_textdb import generate, parse_text, digest, validate
 
 
 class TextDBTest(unittest.TestCase):
+    def test_reviewed_appendix_only_allows_explicit_balanced_presentation_tags(self):
+        source = 'Help @query@\n'
+        target = '<h>中文搜索：</h>\n<w>示例</w> @query@\n'
+        tags = ['<h>', '</h>', '<w>', '</w>']
+        validate(source, target, extra_presentation_tags=tags)
+        with self.assertRaises(ValueError):
+            validate(source, target)
+        for invalid in [tags + ['<tiles>', '</tiles>'], ['<w>'], ['[[other]]']]:
+            with self.assertRaises(ValueError):
+                validate(source, target, extra_presentation_tags=invalid)
+        for altered in [target.replace('@query@', '@other@'), target + '[[other]]',
+                        target + '<tiles>hidden</tiles>', target + '<w>extra</w>']:
+            with self.assertRaises(ValueError):
+                validate(source, altered, extra_presentation_tags=tags)
+
     def test_lua_literals_require_an_exported_reviewed_parent(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);data=root/'data';(data/'database').mkdir(parents=True)

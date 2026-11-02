@@ -1,4 +1,5 @@
 #include "AppHdr.h"
+#include "i18n.h"
 
 #ifdef USE_TILE_LOCAL
 
@@ -280,9 +281,13 @@ bool MapRegion::update_tip_text(string& tip)
     if (mouse_control::current_mode() != MOUSE_MODE_COMMAND)
         return false;
 
-    tip = "[L-Click] Travel / [R-Click] View";
-    if (i_feel_safe())
-        tip += "\n[Shift + L-Click] Autoexplore";
+    const bool safe = i_feel_safe();
+    ui_translation_group text({{"tiles.minimap", "[L-Click] Travel / [R-Click] View"}});
+    if (safe)
+        text.require("tiles.minimap", "\n[Shift + L-Click] Autoexplore");
+    tip = text.get("tiles.minimap", "[L-Click] Travel / [R-Click] View");
+    if (safe)
+        tip += text.get("tiles.minimap", "\n[Shift + L-Click] Autoexplore");
     return true;
 }
 

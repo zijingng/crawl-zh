@@ -52,7 +52,7 @@ def digest(text):
 
 
 def validate(source, target, lua_text_indices=(), source_markup_repairs=(),
-             lua_display_adapters=()):
+             lua_display_adapters=(), extra_presentation_tags=()):
     if any(line.startswith(('%%%%', '#')) for line in target.splitlines()):
         raise ValueError('Translation contains TextDB delimiter/comment')
     weights = re.findall(r'(?m)^w:\d+\s*$', source)
@@ -75,11 +75,21 @@ def validate(source, target, lua_text_indices=(), source_markup_repairs=(),
             raise ValueError('Reviewed markup repair no longer matches source')
         match = matches[repair['occurrence'] - 1]
         markup_source = markup_source[:match.start()] + new + markup_source[match.end():]
+    # A reviewed Chinese-only appendix may add heading/highlight wrappers.
+    # Allow only explicit balanced h/w pairs, never references or backend tags.
+    extra_tags = Counter(extra_presentation_tags)
+    if (set(extra_tags) - {'<h>', '</h>', '<w>', '</w>'}
+            or extra_tags['<h>'] != extra_tags['</h>']
+            or extra_tags['<w>'] != extra_tags['</w>']):
+        raise ValueError('Invalid reviewed presentation tags')
     # Includes, format tags, and doubled angle escapes must survive unchanged.
     for pattern in (r'\[\[[^\]]+\]\]', r'(?<!<)</?[A-Za-z_][^<>\n]*>',
                     r'<<', r'@', r'''@[^@\n'"]+@''', r'\$cmd\[[A-Z_]+\]',
                     r'\$item\[[^\]]+\]|\$[0-9]+', r'(?m)^:nowrap[ \t]*$'):
-        if Counter(re.findall(pattern, markup_source)) != Counter(re.findall(pattern, target)):
+        expected = Counter(re.findall(pattern, markup_source))
+        if pattern == r'(?<!<)</?[A-Za-z_][^<>\n]*>':
+            expected += extra_tags
+        if expected != Counter(re.findall(pattern, target)):
             raise ValueError('Changed TextDB reference/markup')
     blocks = re.findall(r'\{\{(.*?)\}\}', source, re.S)
     translated = re.findall(r'\{\{(.*?)\}\}', target, re.S)
@@ -170,7 +180,8 @@ def generate(manifest, po, data=DATA, report=None):
                 else:
                     validate(current[1], target, entry.get('lua_text_indices', []),
                              entry.get('source_markup_repairs', []),
-                             entry.get('lua_display_adapters', []))
+                             entry.get('lua_display_adapters', []),
+                             entry.get('extra_presentation_tags', []))
                     output += '%%%%\n' + current[0] + '\n\n' + target.rstrip('\n') + '\n'
                     candidates[(relative.as_posix(), key)] = (current[0], target)
                     dependencies[(relative.as_posix(), key)] = entry.get('dependencies', [])

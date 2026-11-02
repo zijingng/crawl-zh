@@ -102687,3 +102687,15 @@ msgstr "%s携带着一件特殊物品：%s。\n"
 msgctxt "d.monster.trait"
 msgid "%s is an unusual item.\n"
 msgstr "%s是一件特殊物品。\n"
+
+#. Reviewed local Tiles minimap tooltip; complete group falls back to English.
+#: crawl-ref/source/tilereg-map.cc
+msgctxt "tiles.minimap"
+msgid "[L-Click] Travel / [R-Click] View"
+msgstr "[左键] 旅行 / [右键] 查看"
+
+#. Reviewed local Tiles minimap tooltip; complete group falls back to English.
+#: crawl-ref/source/tilereg-map.cc
+msgctxt "tiles.minimap"
+msgid "\n[Shift + L-Click] Autoexplore"
+msgstr "\n[Shift + 左键] 自动探索"
