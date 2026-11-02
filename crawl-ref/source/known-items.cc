@@ -222,10 +222,15 @@ protected:
 static bool _try_catalogue_label(const item_def &item, const string &english,
                                  string &output)
 {
-    ui_translation_group category({{"display.item.category", english.c_str()}});
+    // The unseen staff row is typed metadata, independent of changes to
+    // the English class label (e.g. "Magical Staves").
+    const char *category_key = item.base_type == OBJ_STAVES
+        && item.sub_type == get_max_subtype(OBJ_STAVES)
+        ? "unknown staves" : english.c_str();
+    ui_translation_group category({{"display.item.category", category_key}});
     if (category.available())
     {
-        output = category.get("display.item.category", english.c_str());
+        output = category.get("display.item.category", category_key);
         return true;
     }
     ui_translation_group text;

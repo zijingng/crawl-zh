@@ -2643,15 +2643,15 @@ static string _orb_ego_details(special_armour_type ego)
         {
             dice_def base_dam = zap_damage(ZAP_SHOOTING_STAR, stardust_orb_power(0), false, false);
             dice_def max_dam = zap_damage(ZAP_SHOOTING_STAR, stardust_orb_power(0, true), false, false);
-            return make_stringf("\n\nBase shooting star damage: %dd%d (max %dd%d) + 25%% per MP spent"
-                                "\nShooting stars conjured: 1 + 1 per visible enemy, up to %d (%d at max skill)",
+            return make_stringf(ui_translate("d.equipment", "\n\nBase shooting star damage: %dd%d (max %dd%d) + 25%% per MP spent"
+                                "\nShooting stars conjured: 1 + 1 per visible enemy, up to %d (%d at max skill)"),
                                     base_dam.num, base_dam.size,
                                     max_dam.num, max_dam.size,
                                     stardust_orb_max(), stardust_orb_max(true));
         }
 
         case SPARM_MESMERISM:
-            return make_stringf("\n\nMesmerism radius: %d (max %d)", mesmerism_orb_radius(), mesmerism_orb_radius(true));
+            return make_stringf(ui_translate("d.equipment", "\n\nMesmerism radius: %d (max %d)"), mesmerism_orb_radius(), mesmerism_orb_radius(true));
 
         default:
             return "";
@@ -7440,15 +7440,36 @@ static string _monster_stat_description(const monster_info& mi, bool mark_spells
     {
         const vector<string> unusual_items = mi.get_unusual_items();
 
-        result << uppercase_first(pronoun) << " ";
+        ostringstream original;
+        original << uppercase_first(pronoun) << " ";
         (!mons_class_is_animated_weapon(mi.type) ?
-            result << conjugate_verb("have", plural)
+            original << conjugate_verb("have", plural)
                    << " an unusual item: "
                    << comma_separated_line(unusual_items.begin(),
                                            unusual_items.end()) :
-            result << conjugate_verb("are", plural)
+            original << conjugate_verb("are", plural)
                    << " an unusual item")
                << ".\n";
+        vector<string> names;
+        bool available = true;
+        for (unsigned int slot = 0; slot <= MSLOT_LAST_VISIBLE_SLOT; ++slot)
+            if (mi.inv[slot] && item_is_unusual(*mi.inv[slot]))
+            {
+                const ui_arg name = ui_item_arg(*mi.inv[slot]);
+                available &= name.available;
+                names.push_back(name.text);
+            }
+        const ui_arg subject = ui_text_arg("d.monster.pronoun", plural ? "they" : "it");
+        string shown;
+        if (mons_class_is_animated_weapon(mi.type))
+            shown = ui_render("d.monster.trait", "%s is an unusual item.\n", original.str(), {subject});
+        else
+        {
+            const ui_arg equipment{join_strings(names.begin(), names.end(), "、"), available};
+            shown = ui_render("d.monster.trait", "%s has an unusual item: %s.\n", original.str(),
+                              {subject, equipment});
+        }
+        result << shown;
     }
 
     if (!resist_descriptions.empty())
@@ -8564,7 +8585,7 @@ static void _desc_form_resist(TablePrinter& pr, mon_resist_flags resist, int amo
     const int max = (resist == MR_RES_POISON || resist == MR_RES_ELEC || resist == MR_RES_CORR)
                         ? 1 : 3;
     const string desc = desc_resist(amount, max, amount == 3, false);
-    pr.AddCell(_res_name(resist), desc, amount < 0 ? RED : LIGHTGREY);
+    pr.AddCell(ui_translate("o.label", _res_name(resist).c_str()), desc, amount < 0 ? RED : LIGHTGREY);
 }
 
 static void _desc_form_val(TablePrinter& pr, string label, int val)
@@ -8573,6 +8594,22 @@ static void _desc_form_val(TablePrinter& pr, string label, int val)
         return;
 
     pr.AddCell(label, make_stringf("%+d", val).c_str(), val < 0 ? RED : LIGHTGREY);
+}
+
+static string _form_holiness_display(mon_holy_type holiness)
+{
+    const string original = uppercase_first(holiness_description(holiness));
+    vector<string> parts;
+    for (const auto bit : mon_holy_type::range())
+        if (holiness & bit)
+        {
+            const string key = bit == MH_NONLIVING ? "Nonliv."
+                : uppercase_first(single_holiness_description(bit));
+            const ui_arg part = ui_text_arg("d.monster.field", key);
+            if (!part.available) return original;
+            parts.push_back(part.text);
+        }
+    return join_strings(parts.begin(), parts.end(), "、");
 }
 
 static string _describe_talisman_form(transformation form_type)
@@ -8682,14 +8719,15 @@ static string _describe_talisman_form(transformation form_type)
     description << "<white>" << lines[3].to_colour_string() << "<lightgrey>\n";
 
     if (form->holiness)
-        description << ui_translate("d.form", "\nClass: ") << uppercase_first(holiness_description(form->holiness));
+        description << ui_translate("d.form", "\nClass: ") << _form_holiness_display(form->holiness);
 
     // Now add various one-off bits of (generally non-scaling) data after that
     TablePrinter pr(4, 80);
     pr.AddRow();
 
     if (form->size != SIZE_CHARACTER)
-        pr.AddCell(ui_translate("d.form", "Size"), uppercase_first(get_size_adj(form->size)));
+        pr.AddCell(ui_translate("d.form", "Size"),
+                   ui_translate("d.monster.field", uppercase_first(get_size_adj(form->size)).c_str()));
 
     _desc_form_val(pr, ui_translate("d.form", "Str"), form->str_mod);
     _desc_form_val(pr, ui_translate("d.form", "Dex"), form->dex_mod);

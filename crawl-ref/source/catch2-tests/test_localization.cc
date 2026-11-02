@@ -10920,3 +10920,115 @@ TEST_CASE("Actual bazaar feature discovery stores translated marker text once", 
     Options.language = lang_t::EN;
     CHECK(saved.describe(false, false, true, true) == saved.english);
 }
+
+TEST_CASE("Talisman form tables translate classification size and all resistance labels", "[localization][talisman-shop-fields]")
+{
+    init_properties(); init_mut_index();
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    unwind_var<species_type> species(you.species, SP_HUMAN);
+    unwind_var<god_type> religion(you.religion, GOD_NO_GOD);
+    const auto next = rng::peek_uint64();
+    for (int i = 0; i < NUM_TALISMANS; ++i)
+    {
+        item_def item; item.base_type = OBJ_TALISMANS; item.sub_type = i;
+        item.quantity = 1; item.flags = ISFLAG_IDENTIFIED;
+        const string english = get_item_description(item, IDM_DEFAULT);
+        const string shown = get_item_description(item, IDM_DEFAULT, true);
+        CAPTURE(i, english, shown);
+        for (const char *label : {"rPois", "rNeg", "rElec", "Nonliving", "Undead"})
+            CHECK(shown.find(label) == string::npos);
+        if (i == TALISMAN_STATUE)
+        {
+            CHECK(shown.find("非生物") != string::npos);
+            CHECK(shown.find("毒素抗性") != string::npos);
+            CHECK(shown.find("负能量抗性") != string::npos);
+            CHECK(shown.find("电击抗性") != string::npos);
+        }
+        CHECK(get_item_description(item, IDM_DEFAULT) == english);
+        Options.language = lang_t::EN;
+        CHECK(get_item_description(item, IDM_DEFAULT, true) == english);
+        Options.language = lang_t::ZH;
+    }
+    CHECK(rng::peek_uint64() == next);
+}
+
+TEST_CASE("Divine shop owners use existing god translations and preserve canonical shop names", "[localization][talisman-shop-fields]")
+{
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    shop_struct shop; shop.type = SHOP_GENERAL; shop.pos = coord_def(12,12);
+    shop.keeper_name.init(0); shop.shop_type_name = "Purification"; shop.shop_suffix_name = "Station";
+    shop.shop_name = "Zin";
+    ui_arg shown;
+    CHECK(shop_name(shop, &shown) == "Zin's Purification Station");
+    REQUIRE(shown.available);
+    CHECK(shown.text == "辛的净化站点");
+    Options.language = lang_t::EN;
+    CHECK(shop_name(shop, &shown) == "Zin's Purification Station");
+    CHECK_FALSE(shown.available);
+    Options.language = lang_t::ZH;
+    shop.shop_name = "Zinny";
+    const string canonical = shop_name(shop, &shown);
+    REQUIRE(shown.available);
+    CHECK(shown.text == "Zinny的净化站点");
+    CHECK(shop_name(shop) == canonical);
+    shop.shop_type_name = "unknown future shop";
+    shop_name(shop, &shown);
+    CHECK_FALSE(shown.available);
+}
+
+TEST_CASE("Orb numerical details and light ego use glossary names with English fallback", "[localization][unusual-orb]")
+{
+    init_properties(); init_mut_index(); init_spell_descs();
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    for (auto ego : {SPARM_STARDUST, SPARM_MESMERISM, SPARM_LIGHT})
+    {
+        item_def orb; orb.base_type = OBJ_ARMOUR; orb.sub_type = ARM_ORB;
+        orb.quantity = 1; orb.brand = ego; orb.flags = ISFLAG_IDENTIFIED;
+        const string english = get_item_description(orb, IDM_DEFAULT);
+        const string shown = get_item_description(orb, IDM_DEFAULT, true);
+        CAPTURE(ego, english, shown);
+        if (ego == SPARM_STARDUST)
+        {
+            CHECK(english.find("Base shooting star damage:") != string::npos);
+            CHECK(shown.find("流星基础伤害：") != string::npos);
+            CHECK(shown.find("生成流星数：") != string::npos);
+            CHECK(shown.find("25%") != string::npos);
+            CHECK(shown.find("Base shooting star damage:") == string::npos);
+        }
+        else if (ego == SPARM_MESMERISM)
+            CHECK(shown.find("迷魂半径：") != string::npos);
+        else
+        {
+            string name; REQUIRE(try_item_display_name(orb, name));
+            CHECK(name.find("光明") != string::npos);
+            CHECK(name.find("轻盈") == string::npos);
+            CHECK(string(ui_translate("equipment.ego", "Light")) == "光明");
+        }
+        Options.language = lang_t::EN;
+        CHECK(get_item_description(orb, IDM_DEFAULT, true) == english);
+        Options.language = lang_t::ZH;
+    }
+}
+
+TEST_CASE("Monster unusual equipment description translates actual curare darts and preserves English", "[localization][unusual-orb]")
+{
+    init_properties(); init_monsters(); init_mut_index(); init_duration_index(); init_spell_descs();
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    unwind_var<decltype(Options.unusual_monster_items)> patterns(Options.unusual_monster_items);
+    Options.unusual_monster_items.emplace_back("curare");
+    monster_info info(MONS_KOBOLD); info.attitude = ATT_HOSTILE;
+    info.inv[MSLOT_MISSILE].reset(new item_def);
+    item_def &dart = *info.inv[MSLOT_MISSILE];
+    dart.base_type = OBJ_MISSILES; dart.sub_type = MI_DART; dart.quantity = 1;
+    dart.brand = SPMSL_CURARE; dart.flags = ISFLAG_IDENTIFIED;
+    REQUIRE(info.has_unusual_items());
+    describe_info description; bool stats = false;
+    get_monster_db_desc(info, description, stats);
+    CHECK(description.body.str().find("特殊物品") != string::npos);
+    CHECK(description.body.str().find("箭毒") != string::npos);
+    CHECK(description.body.str().find("an unusual item") == string::npos);
+    Options.language = lang_t::EN;
+    describe_info original; get_monster_db_desc(info, original, stats);
+    CHECK(original.body.str().find("It has an unusual item: a curare-tipped dart.") != string::npos);
+    CHECK(dart.name(DESC_A) == "a curare-tipped dart");
+}

@@ -4,6 +4,7 @@
 **/
 
 #include "AppHdr.h"
+#include "religion.h"
 #include "s-display.h"
 
 #include "shopping.h"
@@ -1788,9 +1789,16 @@ string shop_name(const shop_struct& shop, ui_arg *display)
             ? _shop_type_suffix(type, shop.pos) : shop.shop_suffix_name;
         const ui_arg ending = suffix.empty() ? ui_literal_arg("")
             : ui_text_arg("s.shop.suffix", suffix);
+        ui_arg owner_name = shop.shop_name.empty() ? ui_generated_name_arg(owner) : ui_literal_arg(owner);
+        // Authored divine proprietors use the canonical god name, not phonetics.
+        for (int i = GOD_NO_GOD + 1; i < NUM_GODS; ++i)
+            if (!shop.shop_name.empty() && owner == god_name(static_cast<god_type>(i)))
+            {
+                owner_name = ui_text_arg("display.god", owner);
+                break;
+            }
         const string shown = ui_render("s.shop", "%s's %s %s", "",
-            {shop.shop_name.empty() ? ui_generated_name_arg(owner) : ui_literal_arg(owner),
-             type_name, ending});
+            {owner_name, type_name, ending});
         *display = {shown, !shown.empty()};
     }
     return sh_name;

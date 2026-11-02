@@ -24972,7 +24972,7 @@ msgstr "灌注"
 
 msgctxt "display.item.modifier"
 msgid "light"
-msgstr "轻盈"
+msgstr "光明"
 
 msgctxt "display.item.modifier"
 msgid "wrath"
@@ -95580,7 +95580,7 @@ msgstr "灌注"
 
 msgctxt "equipment.ego"
 msgid "Light"
-msgstr "轻盈"
+msgstr "光明"
 
 msgctxt "equipment.ego"
 msgid "Mayhem"
@@ -102659,3 +102659,31 @@ msgstr "通往市集的忽隐忽现的入口"
 msgctxt "h.death.component"
 msgid "combustion breath"
 msgstr "燃烧吐息"
+
+#. Reviewed unusual equipment and orb details; canonical English remains unchanged.
+#: crawl-ref/source/describe.cc
+#, c-format
+msgctxt "d.equipment"
+msgid "\n\nBase shooting star damage: %dd%d (max %dd%d) + 25%% per MP spent\nShooting stars conjured: 1 + 1 per visible enemy, up to %d (%d at max skill)"
+msgstr "\n\n流星基础伤害：%dd%d（最高%dd%d），每消耗1点魔力额外提高25%%\n生成流星数：1＋每个可见敌人1颗，上限%d颗（技能满级时%d颗）"
+
+#. Reviewed unusual equipment and orb details; canonical English remains unchanged.
+#: crawl-ref/source/describe.cc
+#, c-format
+msgctxt "d.equipment"
+msgid "\n\nMesmerism radius: %d (max %d)"
+msgstr "\n\n迷魂半径：%d（最大%d）"
+
+#. Reviewed unusual equipment and orb details; canonical English remains unchanged.
+#: crawl-ref/source/describe.cc
+#, c-format
+msgctxt "d.monster.trait"
+msgid "%s has an unusual item: %s.\n"
+msgstr "%s携带着一件特殊物品：%s。\n"
+
+#. Reviewed unusual equipment and orb details; canonical English remains unchanged.
+#: crawl-ref/source/describe.cc
+#, c-format
+msgctxt "d.monster.trait"
+msgid "%s is an unusual item.\n"
+msgstr "%s是一件特殊物品。\n"

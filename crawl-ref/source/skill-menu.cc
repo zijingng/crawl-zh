@@ -968,8 +968,9 @@ int SkillMenu::read_skill_target(skill_type sk)
     progress->set_highlight_colour(RED);
 
     // for webtiles dialog input
-    progress->set_prompt(make_stringf(ui_translate("phase3.skill-menu", "Enter a skill target for %s: "),
-                                            skill_name(sk)));
+    progress->set_prompt(ui_render("phase3.skill-menu", "Enter a skill target for %s: ",
+        make_stringf("Enter a skill target for %s: ", skill_name(sk)),
+        {ui_text_arg("display.skill", skill_name(sk))}));
     progress->set_tag("skill_target");
 
     edit_result r = progress->edit(&prefill, _keyfun_target_input);
