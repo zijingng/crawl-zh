@@ -53,6 +53,7 @@
 #include "religion.h"
 #include "scroller.h"
 #include "skills.h"
+#include "spl-util.h"
 #include "state.h"
 #include "status.h"
 #include "stringutil.h"
@@ -1926,6 +1927,14 @@ static ui_arg _score_component(const string &name, bool monster_name = false)
         const ui_arg result = ui_text_arg(context, name);
         if (result.available) return result;
     }
+    // Spell titles have a finite canonical lowercase form in beam causes.
+    if (!monster_name)
+        for (int i = 0; i < NUM_SPELLS; ++i)
+        {
+            const auto spell = static_cast<spell_type>(i);
+            if (is_valid_spell(spell) && name == lowercase_string(spell_title(spell)))
+                return ui_text_arg("display.spell", spell_title(spell));
+        }
     if (monster_name)
         for (int i = 0; i < NUM_MONSTERS; ++i)
         {

@@ -49,6 +49,13 @@ class LegacyDumpLinksTest(unittest.TestCase):
             self.assertEqual(calls, [])
             self.assertEqual(server.exit_dump_url, "https://example.test/morgue/Player/Player")
 
+    def test_chinese_death_selects_chinese_exit_link(self):
+        receive, server, calls = self.adapter()
+        receive("morgue-Player-20261102-120000.zh", "morgue")
+        self.assertEqual(server.exit_dump_url,
+                         "https://example.test/morgue/Player/morgue-Player-20261102-120000.zh")
+        self.assertEqual(calls, [])
+
     def test_unconfigured_public_directory_sends_no_link(self):
         receive, server, calls = self.adapter(prefix=None)
         receive("Player")
@@ -84,11 +91,33 @@ public:
         code += function("stringutil.cc", r"string replace_all_of\(") + "\n"
         code += function("stringutil.cc", r"string strip_filename_unsafe_chars\(") + "\n"
         code += function("tileweb.cc", r"void TilesFramework::send_dump_info\(") + "\n"
+        end_source = (root/"end.cc").read_text(encoding="utf-8")
+        start = end_source.index("    bool localized_written = false;", end_source.index("void end_game"))
+        end = end_source.index("    const game_exit exit_reason", start)
+        code += r'''
+#define USE_TILE_WEB
+static bool write_ok, chinese_ok;
+bool dump_char(const string &, bool, bool, const void *, bool, bool *written) {
+    *written = write_ok && chinese_ok;
+    return write_ok;
+}
+const char *ui_translate(const char *, const char *text) { return text; }
+void mpr(const char *) {}
+void death_notification(bool success, bool chinese) {
+    write_ok = success; chinese_ok = chinese;
+    TilesFramework tiles;
+    const string fname = "morgue-Player-20261102-120000";
+    const int se = 0;
+'''
+        code += end_source[start:end] + "\n}\n"
         code += r'''
 int main() {
     TilesFramework tiles;
     tiles.send_dump_info("command", "A.B ;@");
     tiles.send_dump_info("command", "A.B ;@", true);
+    death_notification(false, false);
+    death_notification(true, false);
+    death_notification(true, true);
 }
 '''
         with tempfile.TemporaryDirectory() as tmp:
@@ -98,4 +127,6 @@ int main() {
             lines = subprocess.check_output([str(exe)], text=True).splitlines()
         self.assertEqual([json.loads(line[1:]) for line in lines], [
             {"msg": "dump", "type": "command", "filename": "AB"},
-            {"msg": "dump", "type": "command", "filename": "AB.zh"}])
+            {"msg": "dump", "type": "command", "filename": "AB.zh"},
+            {"msg": "dump", "type": "morgue", "filename": "morgue-Player-20261102-120000"},
+            {"msg": "dump", "type": "morgue", "filename": "morgue-Player-20261102-120000.zh"}])

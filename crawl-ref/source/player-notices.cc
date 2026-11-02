@@ -783,7 +783,27 @@ void seen_monster(monster* mons, bool do_encounter_message)
             name += make_stringf(" (%sshapeshifter)",
                 mons->has_ench(ENCH_GLOWING_SHAPESHIFTER) ? "glowing " : "");
         }
-        take_note(Note(NOTE_SEEN_MONSTER, mons->type, 0, name));
+        take_note(Note(NOTE_SEEN_MONSTER, mons->type, 0, name), false, [&] {
+            // Use the live typed name (heads, undead forms and random names).
+            // The extra short ghost biography needs its own complete adapter.
+            if (mons->type == MONS_PLAYER_GHOST) return string();
+            string display;
+            const bool available = monster_info(mons, MILEV_NAME).try_display_name(display);
+            ui_arg shown{display, available};
+            if (mons->type == MONS_PANDEMONIUM_LORD)
+            {
+                const string qualified = ui_render("n.note", "%s the pandemonium lord", "", {shown});
+                shown = {qualified, !qualified.empty()};
+            }
+            if (mons->flags & MF_KNOWN_SHIFTER)
+            {
+                const ui_arg kind = ui_text_arg("display.monster",
+                    mons->has_ench(ENCH_GLOWING_SHAPESHIFTER) ? "glowing shapeshifter" : "shapeshifter");
+                const string qualified = ui_render("n.note", "%s (%s)", "", {shown, kind});
+                shown = {qualified, !qualified.empty()};
+            }
+            return ui_render("n.note", "Encountered %s", "", {shown});
+        });
     }
 
     if (you.unrand_equipped(UNRAND_WYRMBANE))

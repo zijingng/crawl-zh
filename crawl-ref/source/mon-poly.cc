@@ -4,6 +4,7 @@
 **/
 
 #include "AppHdr.h"
+#include "unwind.h"
 #include "m-display.h"
 
 #include "mon-poly.h"
@@ -625,6 +626,12 @@ bool monster_polymorph(monster* mons, monster_type targetc,
     string old_name_a = mons->full_name(DESC_A);
     string old_name_the = mons->full_name(DESC_THE);
     const ui_arg old_display = m_actor_arg(*mons);
+    const ui_arg old_note_display = [&] {
+        unwind_var<lang_t> language(Options.language, lang_t::ZH);
+        string display;
+        const bool available = monster_info(mons, MILEV_NAME).try_display_name(display);
+        return ui_arg{display, available};
+    }();
     monster_type oldc = mons->type;
 
     if (power != PPT_SLIME && !_valid_morph(mons, targetc))
@@ -678,7 +685,10 @@ bool monster_polymorph(monster* mons, monster_type targetc,
         string new_name = can_see ? mons->full_name(DESC_A)
                                   : "something unseen";
 
-        take_note(Note(NOTE_POLY_MONSTER, 0, 0, old_name_a, new_name));
+        take_note(Note(NOTE_POLY_MONSTER, 0, 0, old_name_a, new_name), false, [&] {
+            return ui_render("n.note", "%s changed into %s", "", {old_note_display,
+                can_see ? ui_actor_arg(*mons) : ui_text_arg("n.note.text", "something unseen")});
+        });
     }
 
     const bool is_invisible = mons->has_ench(ENCH_INVIS) && !mons->friendly();

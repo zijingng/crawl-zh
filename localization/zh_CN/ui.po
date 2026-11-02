@@ -102609,3 +102609,53 @@ msgstr "解体"
 msgctxt "h.damage"
 msgid "Hit by %s from %s"
 msgstr "被%s击中（来自%s）"
+
+#. Reviewed event-time note coverage; canonical English and complete fallback preserved.
+#: crawl-ref/source/main.cc
+#, c-format
+msgctxt "n.note"
+msgid "%s set off with %s."
+msgstr "%s启程时拥有：%s。"
+
+#. Reviewed event-time note coverage; canonical English and complete fallback preserved.
+#: crawl-ref/source/player-notices.cc
+#, c-format
+msgctxt "n.note"
+msgid "%s (%s)"
+msgstr "%s（%s）"
+
+#. Reviewed event-time note coverage; canonical English and complete fallback preserved.
+#: crawl-ref/source/mon-poly.cc
+msgctxt "n.note.text"
+msgid "something unseen"
+msgstr "某个看不见的东西"
+
+#. Reviewed event-time note coverage; canonical English and complete fallback preserved.
+#: crawl-ref/source/hiscores.cc
+msgctxt "h.death.component"
+msgid "nerve-wracking pain"
+msgstr "钻心剧痛"
+
+#. Reviewed event-time note coverage; canonical English and complete fallback preserved.
+#: crawl-ref/source/hiscores.cc
+msgctxt "h.death.component"
+msgid "mindburst bolt"
+msgstr "心灵爆破"
+
+#. Reviewed event-time note coverage; canonical English and complete fallback preserved.
+#: crawl-ref/source/hiscores.cc
+msgctxt "h.death.component"
+msgid "a malign offering"
+msgstr "恶意献祭"
+
+#. Reviewed event-time note coverage; canonical English and complete fallback preserved.
+#: crawl-ref/source/directn.cc
+msgctxt "d.feature.name"
+msgid "flickering gateway to a bazaar"
+msgstr "通往市集的忽隐忽现的入口"
+
+#. Reviewed beam cause; glossary: Combustion Breath.
+#: crawl-ref/source/beam.cc
+msgctxt "h.death.component"
+msgid "combustion breath"
+msgstr "燃烧吐息"

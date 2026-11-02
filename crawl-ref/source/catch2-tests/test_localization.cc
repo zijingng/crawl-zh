@@ -31,6 +31,7 @@
 #include "item-name.h"
 #include "item-use.h"
 #include "player-notices.h"
+#include "mon-death.h"
 #include "ghost.h"
 #include "corpse.h"
 #include "item-prop.h"
@@ -10834,4 +10835,88 @@ TEST_CASE("Morgue generated unknown suffix localizes without changing user inscr
         CHECK(item.name(DESC_A) == original);
         Options.language = lang_t::ZH;
     }
+}
+
+TEST_CASE("Reported note pain sources use finite spell and beam causes with English fallback", "[localization][reported-notes]")
+{
+    init_properties(); init_monsters(); init_mut_index();
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    for (const string cause : {"by nerve-wracking pain", "mindburst bolt", "by dispel undead",
+                               "by vampiric draining", "by a malign offering", "combustion breath"})
+    {
+        scorefile_entry score;
+        REQUIRE(score.parse("v=0.34.1:name=Tester:race=Human:ktyp=beam:killer=Grinder:dam=1:kaux=" + cause + ":turn=10\n"));
+        const string english = score.death_description(scorefile_entry::DDV_TERSE);
+        const string shown = score.display_damage_description();
+        CAPTURE(cause, english, shown);
+        CHECK(shown != english);
+        CHECK(shown.find("格林德") != string::npos);
+        CHECK(shown.find("1 点伤害") != string::npos);
+        Options.language = lang_t::EN;
+        CHECK(score.display_damage_description() == english);
+        Options.language = lang_t::ZH;
+    }
+    scorefile_entry unknown;
+    REQUIRE(unknown.parse("v=0.34.1:ktyp=beam:killer=Grinder:dam=1:kaux=by unknown future pain:turn=10\n"));
+    CHECK(unknown.display_damage_description() == unknown.death_description(scorefile_entry::DDV_TERSE));
+}
+
+TEST_CASE("Actual hydra defeat notes freeze typed head counts in both languages", "[localization][reported-notes]")
+{
+    init_properties(); init_monsters(); init_mut_index();
+    unwind_var<lang_t> language(Options.language, lang_t::EN);
+    unwind_var<vector<Note>> notes(note_list, {});
+    unwind_var<bool> level(you.on_current_level, false);
+    unwind_var<decltype(crawl_state.type)> mode(crawl_state.type, GAME_TYPE_NORMAL);
+    unwind_var<decltype(Options.note_monsters)> patterns(Options.note_monsters);
+    Options.note_monsters.emplace_back("hydra");
+    const bool active = notes_are_active(); activate_notes(true);
+    struct Restore { bool active; ~Restore() { activate_notes(active); } } restore{active};
+    for (int heads : {1, 2, 5, 8, 12})
+    {
+        monster mon; mon.type = mon.base_monster = MONS_HYDRA;
+        mon.num_heads = heads; mon.hit_points = mon.max_hit_points = 50;
+        mon.attitude = ATT_HOSTILE;
+        const size_t before = note_list.size();
+        record_monster_defeat(&mon, KILL_YOU);
+        REQUIRE(note_list.size() == before + 1);
+        const Note &saved = note_list.back();
+        CHECK(saved.english.find("Killed ") == 0);
+        CHECK(saved.chinese.find("海德拉") != string::npos);
+        CHECK(saved.chinese != saved.english);
+        mon.num_heads = 19;
+        Options.language = lang_t::ZH;
+        CHECK(saved.describe(false, false, true, true) == saved.chinese);
+        Options.language = lang_t::EN;
+        CHECK(saved.describe(false, false, true, true) == saved.english);
+    }
+}
+
+TEST_CASE("Actual bazaar feature discovery stores translated marker text once", "[localization][reported-notes]")
+{
+    init_properties(); init_mut_index(); init_show_table(); init_feat_desc_cache();
+    unwind_var<lang_t> language(Options.language, lang_t::EN);
+    unwind_var<vector<Note>> notes(note_list, {});
+    unwind_var<bool> level(you.on_current_level, false);
+    const bool active = notes_are_active(); activate_notes(true);
+    struct Restore { bool active; ~Restore() { activate_notes(active); } } restore{active};
+    const coord_def cell(12, 12);
+    unwind_var<dungeon_feature_type> terrain(env.grid(cell), DNGN_ENTER_BAZAAR);
+    unwind_var<map_cell> knowledge(env.map_knowledge(cell));
+    unwind_var<unsigned int> index(env.level_map_ids(cell), env.level_vaults.size());
+    struct Cleanup { size_t n; ~Cleanup() { env.level_vaults.resize(n); } } cleanup{env.level_vaults.size()};
+    env.level_vaults.emplace_back(new vault_placement);
+    env.level_vaults.back()->map.feat_renames[DNGN_ENTER_BAZAAR] = "flickering gateway to a bazaar";
+    env.map_knowledge(cell) = map_cell();
+    env.map_knowledge(cell).set_feature(DNGN_ENTER_BAZAAR);
+    set_terrain_seen(cell);
+    REQUIRE(note_list.size() == 1);
+    const auto &saved = note_list.back();
+    CHECK(saved.english == "Found a flickering gateway to a bazaar.");
+    CHECK(saved.chinese == "发现通往市集的忽隐忽现的入口。");
+    env.level_vaults.back()->map.feat_renames[DNGN_ENTER_BAZAAR] = "Unknown future portal";
+    Options.language = lang_t::ZH;
+    CHECK(saved.describe(false, false, true, true) == saved.chinese);
+    Options.language = lang_t::EN;
+    CHECK(saved.describe(false, false, true, true) == saved.english);
 }

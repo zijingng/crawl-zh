@@ -316,11 +316,14 @@ NORETURN void end_game(scorefile_entry &se)
     delete_files();
 
     string fname = morgue_name(you.your_name, se.get_death_time());
-    if (!dump_char(fname, true, true, &se))
+    bool localized_written = false;
+    if (!dump_char(fname, true, true, &se, true, &localized_written))
         mpr(ui_translate("e.end", "Char dump unsuccessful! Sorry about that."));
 #ifdef USE_TILE_WEB
     else
-        tiles.send_dump_info("morgue", fname);
+        // A successful Chinese export selects .zh.txt for the exit link;
+        // otherwise keep the existing English morgue link.
+        tiles.send_dump_info("morgue", fname, localized_written);
 #endif
 
     const game_exit exit_reason = _kill_method_to_exit(death_type);

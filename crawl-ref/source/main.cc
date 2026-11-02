@@ -677,6 +677,17 @@ static ui_arg m_known_spells()
     return m_spell_list(spells);
 }
 
+static string _starting_loadout_note(bool equipment, bool known, bool library)
+{
+    vector<ui_arg> parts;
+    if (equipment) parts.push_back(m_start_items());
+    if (known) parts.push_back(m_sentence_arg("the following spells memorised: %s", {m_known_spells()}));
+    if (library) parts.push_back(m_sentence_arg("the following spells available to memorise: %s",
+                                               {m_spell_list(get_sorted_spell_list(true, true))}));
+    return ui_render("n.note", "%s set off with %s.", "",
+                     {ui_literal_arg(you.your_name), m_join_args(parts, "；")});
+}
+
 static void _djinn_announce_spells()
 {
     const string equip_str =_get_equip_str();
@@ -697,7 +708,9 @@ static void _djinn_announce_spells()
             })().c_str());
 
     take_note(Note(NOTE_MESSAGE, 0, 0, you.your_name + " set off with " +
-                                       equip_str + spacer + spell_str + "."));
+                                       equip_str + spacer + spell_str + "."), false, [&] {
+        return _starting_loadout_note(!equip_str.empty(), !spell_str.empty(), false);
+    });
 }
 
 // Announce to the message log and make a note of the player's starting items,
@@ -739,7 +752,9 @@ static void _wanderer_note_equipment()
 
     const string combined_str = you.your_name + " set off with "
                                 + equip_str + spell_str + library_str + ".";
-    take_note(Note(NOTE_MESSAGE, 0, 0, combined_str));
+    take_note(Note(NOTE_MESSAGE, 0, 0, combined_str), false, [&] {
+        return _starting_loadout_note(!equip_str.empty(), !spell_str.empty(), !library_str.empty());
+    });
 }
 
 /**

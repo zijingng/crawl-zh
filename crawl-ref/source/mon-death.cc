@@ -607,13 +607,30 @@ void record_monster_defeat(const monster* mons, killer_type killer)
     if (mons->is_named() && mons->friendly()
         && !mons_is_hepliaklqana_ancestor(mons->type))
     {
-        take_note(Note(NOTE_ALLY_DEATH, 0, 0, mons->name(DESC_PLAIN, true)));
+        take_note(Note(NOTE_ALLY_DEATH, 0, 0, mons->name(DESC_PLAIN, true)), false, [&] {
+            string display;
+            const bool available = monster_info(mons, MILEV_NAME).try_display_name(display);
+            return ui_render("n.note", "Your ally %s died", "", {{display, available}});
+        });
     }
     else if (mons_is_notable(*mons))
     {
         take_note(Note(NOTE_DEFEAT_MONSTER, mons->type, mons->friendly(),
                        mons->full_name(DESC_A).c_str(),
-                       _milestone_kill_verb(killer).c_str()));
+                       _milestone_kill_verb(killer).c_str()), false, [&] {
+            string display;
+            const bool available = monster_info(mons, MILEV_NAME).try_display_name(display);
+            ui_arg shown{display, available};
+            if (mons->type == MONS_PANDEMONIUM_LORD)
+            {
+                const string qualified = ui_render("n.note", "%s the pandemonium lord", "", {shown});
+                shown = {qualified, !qualified.empty()};
+            }
+            const ui_arg verb = ui_text_arg("n.note.text", _milestone_kill_verb(killer));
+            return mons->friendly()
+                ? ui_render("n.note", "%s (ally) was %s", "", {shown, verb})
+                : ui_render("n.note", "%s %s", "", {verb, shown});
+        });
     }
     if (mons->type == MONS_PLAYER_GHOST)
     {
