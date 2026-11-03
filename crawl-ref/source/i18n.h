@@ -40,6 +40,9 @@ struct ui_arg
 // Only call for typed, procedurally generated proper names, never player input
 // or a rendered English sentence. Does not generate names or consume RNG.
 ui_arg ui_generated_name_arg(const std::string &canonical);
+ui_arg ui_monname_arg(const char *root, const std::string &canonical);
+// Only automatic ancestor names are translated; user-given names stay literal.
+ui_arg ui_ancestor_name_arg(const std::string &canonical);
 ui_arg ui_actor_arg(const actor &who);
 ui_arg ui_corrode_source_arg(const actor *source, const std::string &canonical);
 ui_arg ui_knockback_cause_arg(const std::string &canonical);

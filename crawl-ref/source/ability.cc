@@ -2660,7 +2660,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
                 mprf("%s", ui_render("a.ability", "%s is still trapped in memory!",
                 make_stringf("%s is still trapped in memory!",
                      hepliaklqana_ally_name().c_str()),
-                {ui_literal_arg(hepliaklqana_ally_name())}).c_str());
+                {ui_ancestor_name_arg(hepliaklqana_ally_name())}).c_str());
             }
             return false;
         }

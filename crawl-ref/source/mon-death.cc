@@ -4349,15 +4349,16 @@ void elven_twin_died(monster* twin, bool in_transit, killer_type killer, int kil
     // Drop the final '_'.
     key.erase(key.length() - 1);
 
-    string death_message = getSpeakString(key);
+    auto speech = getPairedSpeakString(key);
+    const string &death_message = speech.english;
 
     if (!death_message.empty() && !invalid_msg(*mons, death_message))
     {
         // Check if they can speak or not: they may have been polymorphed.
         if (you.see_cell(mons->pos()) && mons->can_speak())
-            mons_speaks_msg(mons, death_message, MSGCH_TALK, silenced(you.pos()));
+            mons_speaks_msg(mons, death_message, MSGCH_TALK, silenced(you.pos()), "", &speech);
         else if (mons->can_speak())
-            mpr(ui_translate("m.ui", string(death_message).c_str()));
+            mpr(ui_translate("m.ui", speech.text().c_str()));
     }
 
     // Upgrade the spellbook here, as elven_twin_energize

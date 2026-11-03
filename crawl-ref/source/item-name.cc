@@ -141,6 +141,23 @@ static string _item_inscription(const item_def &item, bool display = false,
     if (!item.inscription.empty())
     {
         string inscription = item.inscription;
+        if (display && item.props.exists(WEAPON_NAME_INSCRIPTION_KEY)
+            && item.props[WEAPON_NAME_INSCRIPTION_KEY].get_bool()
+            && item.props.exists(WEAPON_NAME_KEY))
+        {
+            const string original = item.props[WEAPON_NAME_KEY].get_string();
+            if (!original.empty() && (inscription == original
+                || ends_with(inscription, ", " + original)))
+            {
+                const auto shown = ui_monname_arg("steelspirit name", original);
+                if (!shown.available)
+                {
+                    if (complete) *complete = false;
+                    return "";
+                }
+                inscription.replace(inscription.size()-original.size(), original.size(), shown.text);
+            }
+        }
         if (display && item.props.exists("morgue_unknown_inscription")
             && item.props["morgue_unknown_inscription"].get_bool()
             && ends_with(inscription, "unknown"))
@@ -344,6 +361,12 @@ static bool _try_item_display_name(const item_def &item, string &output,
                 && personal == mons_type_name(original, DESC_PLAIN)
                 && !try_monster_type_display_name(original, display_personal))
                 return false;
+            if (original == MONS_ORC_APOSTLE)
+            {
+                const auto shown = ui_monname_arg("any orc name", personal);
+                if (!shown.available) return false;
+                display_personal = shown.text;
+            }
             const string named = tr("display.item.template", "%s named %s");
             if (text.available())
                 name = make_stringf(named.c_str(), name.c_str(), display_personal.c_str());

@@ -4804,6 +4804,7 @@ void inscribe_item(item_def &item)
     }
 
     item.inscription = new_inscrip;
+    item.props.erase(WEAPON_NAME_INSCRIPTION_KEY);
 
     print_item();
     you.wield_change  = true;

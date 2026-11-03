@@ -2560,8 +2560,8 @@ void announce_beogh_conversion_offer()
     {
         if (mons_offers_beogh_conversion_now(*m))
         {
-            mons_speaks_msg(m, getSpeakString("orc_priest_preaching"),
-                            MSGCH_TALK);
+            auto speech = getPairedSpeakString("orc_priest_preaching");
+            mons_speaks_msg(m, speech.english, MSGCH_TALK, false, "", &speech);
 
             ASSERT_RANGE(get_talent(ABIL_CONVERT_TO_BEOGH).hotkey,
                             'A', 'z' + 1);
@@ -2679,7 +2679,7 @@ void beogh_blood_for_blood()
         }
     }
 
-    mpr(ui_render("g.message", "You place your %s atop %s's lifeless body and utter a vengeful prayer.", make_stringf("You place your %s atop %s's lifeless body and utter a vengeful prayer.", you.hand_name(false).c_str(), apostle_name.c_str()), {ui_text_arg("a.bodypart", you.hand_name(false)), ui_literal_arg(apostle_name)}));
+    mpr(ui_render("g.message", "You place your %s atop %s's lifeless body and utter a vengeful prayer.", make_stringf("You place your %s atop %s's lifeless body and utter a vengeful prayer.", you.hand_name(false).c_str(), apostle_name.c_str()), {ui_text_arg("a.bodypart", you.hand_name(false)), ui_monname_arg("any orc name", apostle_name)}));
 
     you.duration[DUR_BLOOD_FOR_BLOOD] = random_range(130, 180) * BASELINE_DELAY;
 
@@ -2710,7 +2710,8 @@ void beogh_blood_for_blood()
             // At least one orc will always speak, but more may also do so
             if (!orc_spoke || one_chance_in(12))
             {
-                mons_speaks_msg(orc, getSpeakString("friendly bfb orc"), MSGCH_TALK);
+                auto speech = getPairedSpeakString("friendly bfb orc");
+                mons_speaks_msg(orc, speech.english, MSGCH_TALK, false, "", &speech);
                 orc_spoke = true;
             }
         }
@@ -2904,9 +2905,9 @@ void beogh_increase_orcification()
     }
 
     // Adjust the message we give to the player's physiology.
-    string msg = species::orcification_msg(you.species);
+    const string msg = species::orcification_msg(you.species);
 
-    mprf(MSGCH_MUTATION, "%s", msg.c_str());
+    mprf(MSGCH_MUTATION, "%s", ui_translate("g.orcification", msg.c_str()));
     you.props[ORCIFICATION_LEVEL_KEY] = 1;
 }
 
@@ -3274,9 +3275,9 @@ spret dithmenos_marionette(monster& target, bool fail)
     mpr(ui_render("g.message", "%s shadow slips away and your performance ends.", make_stringf("%s shadow slips away and your performance ends.", target.name(DESC_ITS).c_str()), {ui_actor_arg(target)}));
 
     // Let the monster complain about what you did to them, in their own way.
-    string msg = getSpeakString(target.name(DESC_PLAIN) + " marionette");
-    if (!msg.empty() && (mons_is_unique(target.type) || one_chance_in(4)))
-        mons_speaks_msg(&target, msg, MSGCH_TALK);
+    auto speech = getPairedSpeakString(target.name(DESC_PLAIN) + " marionette");
+    if (!speech.english.empty() && (mons_is_unique(target.type) || one_chance_in(4)))
+        mons_speaks_msg(&target, speech.english, MSGCH_TALK, false, "", &speech);
 
     return spret::success;
 }
@@ -6174,7 +6175,7 @@ spret hepliaklqana_idealise(bool fail)
     monster *ancestor = monster_by_mid(ancestor_mid);
     if (!ancestor || !you.can_see(*ancestor))
     {
-        mpr(ui_render("g.message", "%s is not nearby!", make_stringf("%s is not nearby!", hepliaklqana_ally_name().c_str()), {ui_literal_arg(hepliaklqana_ally_name())}));
+        mpr(ui_render("g.message", "%s is not nearby!", make_stringf("%s is not nearby!", hepliaklqana_ally_name().c_str()), {ui_ancestor_name_arg(hepliaklqana_ally_name())}));
         return spret::abort;
     }
 
@@ -6263,7 +6264,7 @@ spret hepliaklqana_transference(bool fail)
     monster *ancestor = hepliaklqana_ancestor_mon();
     if (!ancestor || !you.can_see(*ancestor))
     {
-        mpr(ui_render("g.message", "%s is not nearby!", make_stringf("%s is not nearby!", hepliaklqana_ally_name().c_str()), {ui_literal_arg(hepliaklqana_ally_name())}));
+        mpr(ui_render("g.message", "%s is not nearby!", make_stringf("%s is not nearby!", hepliaklqana_ally_name().c_str()), {ui_ancestor_name_arg(hepliaklqana_ally_name())}));
         return spret::abort;
     }
 
@@ -6353,7 +6354,7 @@ static void _hepliaklqana_choose_name()
     const string old_name = hepliaklqana_ally_name();
     string prompt = ui_render("g.wall", "Remember %s name as what? ",
         make_stringf("Remember %s name as what? ", apostrophise(old_name).c_str()),
-        {ui_literal_arg(old_name)});
+        {ui_ancestor_name_arg(old_name)});
 
     char buf[18];
     int ret = msgwin_get_line(prompt, buf, sizeof buf, nullptr, old_name);
@@ -6373,6 +6374,7 @@ static void _hepliaklqana_choose_name()
     }
 
     you.props[HEPLIAKLQANA_ALLY_NAME_KEY] = new_name;
+    you.props.erase(HEPLIAKLQANA_GENERATED_NAME_KEY);
     mpr(ui_render("g.message", "Yes, %s is definitely a better name.", make_stringf("Yes, %s is definitely a better name.", new_name.c_str()), {ui_literal_arg(new_name)}));
     upgrade_hepliaklqana_ancestor(true);
 }
@@ -6391,7 +6393,7 @@ static void _hepliaklqana_choose_gender()
     const string* desc = map_find(gender_map, current_gender);
     ASSERT(desc);
 
-    mprf(MSGCH_PROMPT, "%s", ui_render("g.message", "Was %s a) male, b) female, or c) neither? (Currently %s.)", make_stringf("Was %s a) male, b) female, or c) neither? (Currently %s.)", hepliaklqana_ally_name().c_str(), desc->c_str()), {ui_literal_arg(hepliaklqana_ally_name()), ui_text_arg("g.gender", *desc)}).c_str());
+    mprf(MSGCH_PROMPT, "%s", ui_render("g.message", "Was %s a) male, b) female, or c) neither? (Currently %s.)", make_stringf("Was %s a) male, b) female, or c) neither? (Currently %s.)", hepliaklqana_ally_name().c_str(), desc->c_str()), {ui_ancestor_name_arg(hepliaklqana_ally_name()), ui_text_arg("g.gender", *desc)}).c_str());
 
     int keyin = toalower(get_ch());
     if (!isaalpha(keyin))
@@ -6420,7 +6422,7 @@ static void _hepliaklqana_choose_gender()
     }
 
     you.props[HEPLIAKLQANA_ALLY_GENDER_KEY] = new_gender;
-    mpr(ui_render("g.message", "%s was always %s, you're pretty sure.", make_stringf("%s was always %s, you're pretty sure.", hepliaklqana_ally_name().c_str(), map_find(gender_map, new_gender)->c_str()), {ui_literal_arg(hepliaklqana_ally_name()), ui_text_arg("g.gender", *map_find(gender_map, new_gender))}));
+    mpr(ui_render("g.message", "%s was always %s, you're pretty sure.", make_stringf("%s was always %s, you're pretty sure.", hepliaklqana_ally_name().c_str(), map_find(gender_map, new_gender)->c_str()), {ui_ancestor_name_arg(hepliaklqana_ally_name()), ui_text_arg("g.gender", *map_find(gender_map, new_gender))}));
     upgrade_hepliaklqana_ancestor(true);
 }
 

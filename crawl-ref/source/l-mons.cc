@@ -496,8 +496,9 @@ static int l_mons_do_speak(lua_State *ls)
 
     const char *speech_key = luaL_checkstring(ls, 1);
 
-    mons_speaks_msg(mons, getSpeakString(speech_key), MSGCH_TALK,
-                    silenced(mons->pos()));
+    auto speech = getPairedSpeakString(speech_key);
+    mons_speaks_msg(mons, speech.english, MSGCH_TALK,
+                    silenced(mons->pos()), "", &speech);
 
     return 0;
 }

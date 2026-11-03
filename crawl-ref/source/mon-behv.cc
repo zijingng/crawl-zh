@@ -1302,7 +1302,11 @@ void behaviour_event(monster* mon, mon_event_type event, const actor *src,
             paired_flee = true;
         }
         else
-            msg = getSpeakString(mon->name(DESC_PLAIN) + " flee");
+        {
+            flee_speech = getPairedSpeakString(mon->name(DESC_PLAIN) + " flee");
+            msg = flee_speech.english;
+            paired_flee = true;
+        }
 
         // Assume monsters know where to run from, even if player is
         // invisible.
@@ -1337,7 +1341,9 @@ void behaviour_event(monster* mon, mon_event_type event, const actor *src,
             }
             else if (!mon->is_child_tentacle())
             {
-                msg = getSpeakString(mon->name(DESC_PLAIN) + " cornered");
+                flee_speech = getPairedSpeakString(mon->name(DESC_PLAIN) + " cornered");
+                msg = flee_speech.english;
+                paired_flee = true;
                 if (msg.empty())
                     msg = "PLAIN:Cornered, @the_monster@ turns to fight!";
             }
@@ -1420,7 +1426,10 @@ void behaviour_event(monster* mon, mon_event_type event, const actor *src,
                        paired_flee ? &flee_speech : nullptr);
 
     if (one_chance_in(10) && mons_offers_beogh_conversion_now(*mon))
-        mons_speaks_msg(mon, getSpeakString("orc_priest_preaching"), MSGCH_TALK);
+    {
+        auto speech = getPairedSpeakString("orc_priest_preaching");
+        mons_speaks_msg(mon, speech.english, MSGCH_TALK, false, "", &speech);
+    }
 
     ASSERT(!crawl_state.game_is_arena()
            || mon->foe != MHITYOU && (mon->target.origin() || mon->target != you.pos()));

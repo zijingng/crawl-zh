@@ -34244,22 +34244,22 @@ msgstr "兽人@any orc name@\n"
 #. Reviewed database-16 graffiti; glossary checked before translation.
 msgctxt "textdb:database/graffiti.txt:_rare_graffiti_author_god_"
 msgid "Woog the god\n"
-msgstr "神明Woog\n"
+msgstr "神明沃格\n"
 
 #. Reviewed database-16 graffiti; glossary checked before translation.
 msgctxt "textdb:database/graffiti.txt:_rare_graffiti_author_orc_"
 msgid "Spartorcus the orc\n"
-msgstr "兽人Spartorcus\n"
+msgstr "兽人斯巴托克斯\n"
 
 #. Reviewed database-16 graffiti; glossary checked before translation.
 msgctxt "textdb:database/graffiti.txt:_rare_graffiti_author_ordinary_"
 msgid "Durwent the kobold\n\nZlaz the goblin\n\nFneeb the oni\n\nVethion the elf\n\nFrobof the imp\n"
-msgstr "狗头人Durwent\n\n地精Zlaz\n\n鬼人Fneeb\n\n精灵Vethion\n\n小鬼Frobof\n"
+msgstr "狗头人杜温特\n\n地精兹拉兹\n\n鬼人弗尼布\n\n精灵维西昂\n\n小鬼弗罗博夫\n"
 
 #. Reviewed database-16 graffiti; glossary checked before translation.
 msgctxt "textdb:database/graffiti.txt:_rare_graffiti_author_title_"
 msgid "Kilroy\n\nGarc the Great\n\nPlog the Peerless\n\nDead Wendell\n\nLady Dreamflight\n"
-msgstr "Kilroy\n\n伟大的Garc\n\n无双的Plog\n\n死去的Wendell\n\nDreamflight女士\n"
+msgstr "基尔罗伊\n\n伟大的加尔克\n\n无双的普洛格\n\n死去的温德尔\n\n梦航女士\n"
 
 #. Reviewed database-16 graffiti; glossary checked before translation.
 msgctxt "textdb:database/graffiti.txt:_graffiti_type_with_signature_maybe_"
@@ -34314,7 +34314,7 @@ msgstr "佐姆\n\nw:2\n一位未知神祇\n\nw:1\n@_rare_graffiti_author_god_@\n
 #. Reviewed database-16 graffiti; glossary checked before translation.
 msgctxt "textdb:database/graffiti.txt:_graffiti_happened_reason_"
 msgid "an accident\n\na coincidence\n\na coincidence but @_graffiti_author_any_@ doesn't trust coincidences\n\na cover-up\n\na farce\n\na frame-up\n\na mistake\n\na travesty\n\na warning to others\n\nagainst the will of the gods\n\ncompletely random\n\ndeliberate\n\ndeserved\n\njust\n\nnecessary\n\nno accident\n\nno mistake\n\npart of a larger plot\n\nthe work of the \"Plog\" Conspiracy\n\nself-inflicted\n\nthe will of the gods\n\nuncalled for\n\nundeserved\n\nunjust\n\nunnecessary\n\nunthinkable\n"
-msgstr "一场意外\n\n一个巧合\n\n一个巧合，但@_graffiti_author_any_@不相信巧合\n\n一场掩盖真相的行动\n\n一场闹剧\n\n一场栽赃\n\n一个错误\n\n一场荒唐的歪曲\n\n对其他人的警告\n\n违背众神意志的事\n\n完全随机的\n\n蓄意的\n\n应得的\n\n公正的\n\n必要的\n\n绝非意外\n\n绝非错误\n\n一个更大阴谋的一部分\n\n“Plog”阴谋集团的手笔\n\n自找的\n\n众神的意志\n\n无端的\n\n不该承受的\n\n不公正的\n\n不必要的\n\n不可思议的\n"
+msgstr "一场意外\n\n一个巧合\n\n一个巧合，但@_graffiti_author_any_@不相信巧合\n\n一场掩盖真相的行动\n\n一场闹剧\n\n一场栽赃\n\n一个错误\n\n一场荒唐的歪曲\n\n对其他人的警告\n\n违背众神意志的事\n\n完全随机的\n\n蓄意的\n\n应得的\n\n公正的\n\n必要的\n\n绝非意外\n\n绝非错误\n\n一个更大阴谋的一部分\n\n“普洛格”阴谋集团的手笔\n\n自找的\n\n众神的意志\n\n无端的\n\n不该承受的\n\n不公正的\n\n不必要的\n\n不可思议的\n"
 
 #. Reviewed database-16 graffiti; glossary checked before translation.
 msgctxt "textdb:database/graffiti.txt:_graffiti_mass_meeting_ordinary_"
@@ -34389,12 +34389,12 @@ msgstr "宣扬比欧弗的信仰与真正的兽人精神\n\n宣告比欧弗的�
 #. Reviewed database-16 graffiti; glossary checked before translation.
 msgctxt "textdb:database/graffiti.txt:_graffiti_rumour_"
 msgid "speculating about the powers of the Orb of Zot\n\ntalking about how the Orb of Zot will [save|destroy] everyone and everything\n\ntalking about how everyone is mistaken and the Orb of Zot is really the [Cube|Egg|Pyramid] of Zot\n\ntelling of a secret passageway straight from here to the Orb of Zot\n\ncounting down the days until the world ends\n\nclaiming to know the meaning of [life|unlife]\n\nclaiming to have found the elusive [cave yeti|death quokka|dire dormouse]\n\nalluding to the \"Plog\" Conspiracy and why it hides that word everywhere\n"
-msgstr "猜测佐特宝珠的力量\n\n宣称佐特宝珠将[拯救|毁灭]所有人及一切事物\n\n宣称所有人都搞错了，佐特宝珠其实是佐特[方块|蛋|金字塔]\n\n描述一条从这里直通佐特宝珠的秘密通道\n\n倒数世界末日来临的天数\n\n声称知道[生命|亡灵存在]的意义\n\n声称找到了难觅踪影的[洞穴雪人|死亡短尾矮袋鼠|恐怖睡鼠]\n\n影射“Plog”阴谋集团，以及它为何到处藏着这个词\n"
+msgstr "猜测佐特宝珠的力量\n\n宣称佐特宝珠将[拯救|毁灭]所有人及一切事物\n\n宣称所有人都搞错了，佐特宝珠其实是佐特[方块|蛋|金字塔]\n\n描述一条从这里直通佐特宝珠的秘密通道\n\n倒数世界末日来临的天数\n\n声称知道[生命|亡灵存在]的意义\n\n声称找到了难觅踪影的[洞穴雪人|死亡短尾矮袋鼠|恐怖睡鼠]\n\n影射“普洛格”阴谋集团，以及它为何到处藏着这个词\n"
 
 #. Reviewed database-16 graffiti; glossary checked before translation.
 msgctxt "textdb:database/graffiti.txt:_graffiti_short_saying_"
 msgid "@_graffiti_author_any_@ was here\n\n@_graffiti_author_any_@ @_graffiti_loves_or_hates_@ @_graffiti_author_any_@\n\n@_graffiti_author_any_@ @_graffiti_loves_or_hates_@ @_graffiti_relative_or_quality_@ of @_graffiti_author_any_@\n\n@_graffiti_author_any_@ @_graffiti_life_or_death_@\n\n@_graffiti_author_any_@ sells @_graffiti_wares_quality_@ wares\n\n@_graffiti_author_any_@ steals from @_graffiti_author_any_@\n\nwhat happened to @_graffiti_author_any_@ was @_graffiti_happened_reason_@\n\n@_graffiti_author_any_@ has been replaced by @_graffiti_duplicate_@\n\n@_graffiti_vengeance_@\n\n@_graffiti_changed_or_compared_religions_@\n\nall life begins with \"Plog\" and ends with \"Plog\"\n\nw:2\n@_graffiti_changed_names_@\n"
-msgstr "@_graffiti_author_any_@到此一游\n\n@_graffiti_author_any_@@_graffiti_loves_or_hates_@@_graffiti_author_any_@\n\n@_graffiti_author_any_@@_graffiti_loves_or_hates_@@_graffiti_author_any_@的@_graffiti_relative_or_quality_@\n\n@_graffiti_author_any_@@_graffiti_life_or_death_@\n\n@_graffiti_author_any_@出售@_graffiti_wares_quality_@商品\n\n@_graffiti_author_any_@偷了@_graffiti_author_any_@的东西\n\n@_graffiti_author_any_@的遭遇是@_graffiti_happened_reason_@\n\n@_graffiti_author_any_@已被@_graffiti_duplicate_@取代\n\n@_graffiti_vengeance_@\n\n@_graffiti_changed_or_compared_religions_@\n\n一切生命始于“Plog”，终于“Plog”\n\nw:2\n@_graffiti_changed_names_@\n"
+msgstr "@_graffiti_author_any_@到此一游\n\n@_graffiti_author_any_@@_graffiti_loves_or_hates_@@_graffiti_author_any_@\n\n@_graffiti_author_any_@@_graffiti_loves_or_hates_@@_graffiti_author_any_@的@_graffiti_relative_or_quality_@\n\n@_graffiti_author_any_@@_graffiti_life_or_death_@\n\n@_graffiti_author_any_@出售@_graffiti_wares_quality_@商品\n\n@_graffiti_author_any_@偷了@_graffiti_author_any_@的东西\n\n@_graffiti_author_any_@的遭遇是@_graffiti_happened_reason_@\n\n@_graffiti_author_any_@已被@_graffiti_duplicate_@取代\n\n@_graffiti_vengeance_@\n\n@_graffiti_changed_or_compared_religions_@\n\n一切生命始于“普洛格”，终于“普洛格”\n\nw:2\n@_graffiti_changed_names_@\n"
 
 #. Reviewed database-16 graffiti; glossary checked before translation.
 msgctxt "textdb:database/graffiti.txt:_graffiti_species_"
@@ -40639,3 +40639,263 @@ msgstr "w:5\n@_chaos_name_@\n\nw:5\n佐姆之@_xom_esteem_@\n\nw:2\n佐姆之@di
 msgctxt "textdb:database/randname.txt:xom jewellery"
 msgid "w:5\nof @_chaos_name_@\n\nw:5\nof Xom's @_xom_esteem_@\n\nw:2\nof Xom's @divine_esteem@\n\nw:2\nof @_verbing_@ Xom\n\nw:1\nof @xom_name@\n\nw:1\nof @_game_name_@\n\nw:1\nof @player_death@\n\nw:1\nof @player_doom@\n\nw:300\n@jewellery@\n\n@armour@\n"
 msgstr "w:5\n@_chaos_name_@\n\nw:5\n佐姆之@_xom_esteem_@\n\nw:2\n佐姆之@divine_esteem@\n\nw:2\n@_verbing_@的佐姆\n\nw:1\n@xom_name@\n\nw:1\n@_game_name_@\n\nw:1\n@player_death@\n\nw:1\n@player_doom@\n\nw:300\n@jewellery@\n\n@armour@\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:any orc name"
+msgid "w:1\n@_orc_warrior_name_@\n\nw:1\n@_orc_wizard_name_@\n\nw:1\n@_orc_priest_name_@\n\nw:50\n@orc name@\n"
+msgstr "w:1\n@_orc_warrior_name_@\n\nw:1\n@_orc_wizard_name_@\n\nw:1\n@_orc_priest_name_@\n\nw:50\n@orc name@\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:orc name"
+msgid "w:14\n@_beogh_name_@\n\nw:12\n@_orcish_name_@\n\nw:45\n@_other_orcish_name_@\n"
+msgstr "w:14\n@_beogh_name_@\n\nw:12\n@_orcish_name_@\n\nw:45\n@_other_orcish_name_@\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:orc apostle warrior name"
+msgid "w:1\n@_orc_warrior_name_@\n\nw:50\n@orc name@\n"
+msgstr "w:1\n@_orc_warrior_name_@\n\nw:50\n@orc name@\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:orc apostle wizard name"
+msgid "w:1\n@_orc_wizard_name_@\n\nw:50\n@orc name@\n"
+msgstr "w:1\n@_orc_wizard_name_@\n\nw:50\n@orc name@\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:orc apostle priest name"
+msgid "w:1\n@_orc_priest_name_@\n\nw:50\n@orc name@\n"
+msgstr "w:1\n@_orc_priest_name_@\n\nw:50\n@orc name@\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_orc_warrior_name_"
+msgid "Orconan\n"
+msgstr "兽人柯南\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_orc_wizard_name_"
+msgid "Simorc Magus\n"
+msgstr "术士西莫克\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_orc_priest_name_"
+msgid "Judas\n"
+msgstr "犹大\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_beogh_name_"
+msgid "Arbeogh\n\nBogbarth\n\nBogdan\n\nBogdar\n\nBogbrand\n\nBogfrid\n\nBoghold\n\nBogloth\n\nBogmar\n\nBogric\n\nBogrim\n\nBogwald\n\nBogward\n\nBogwik\n\nKorbok\n\nMarbaugh\n\nMorbeogh\n\nOrbeogh\n\nVorbog\n\nWarbeogh\n"
+msgstr "阿比欧弗\n\n博格巴斯\n\n博格丹\n\n博格达尔\n\n博格布兰德\n\n博格弗里德\n\n博格霍尔德\n\n博格洛斯\n\n博格马尔\n\n博格里克\n\n博格里姆\n\n博格瓦尔德\n\n博格沃德\n\n博格维克\n\n科尔博克\n\n马尔博\n\n莫比欧弗\n\n奥比欧弗\n\n沃尔博格\n\n瓦比欧弗\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_orcish_name_"
+msgid "Alork\n\nBorgk\n\nBoruk\n\nGeork\n\nHorkud\n\nMarbork\n\nMilork\n\nOrcesus\n\nOgrik\n\nOrkidu\n\nOkrist\n\nOreg\n\nOrgrim\n\nOrik\n\nOrkrul\n\nOrkwin\n\nOruk\n\nPellinorc\n\nUrtork\n\nXexorm\n\nZandor\n"
+msgstr "阿洛克\n\n博尔格克\n\n博鲁克\n\n吉奥克\n\n霍尔库德\n\n马尔博克\n\n米洛克\n\n奥尔塞苏斯\n\n奥格里克\n\n奥尔基杜\n\n奥克里斯特\n\n奥雷格\n\n奥格里姆\n\n奥里克\n\n奥尔克鲁尔\n\n奥尔克温\n\n奥鲁克\n\n佩利诺克\n\n乌尔托克\n\n克塞克索姆\n\n赞多尔\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_other_orcish_name_"
+msgid "Agrik\n\nArbolt\n\nArgrim\n\nArkwar\n\nBeowulf\n\nBerold\n\nBenkei\n\nBladwarg\n\nBlodwig\n\nBoderik\n\nBoldo\n\nBolgrim\n\nBorgoth\n\nBorgun\n\nBrandogh\n\nBrun\n\nBrunolf\n\nCreb\n\nDorog\n\nGaratoth\n\nGarbold\n\nGorbash\n\nGorg\n\nGorm\n\nGrimold\n\nHawl\n\nHerok\n\nHilgar\n\nJathrek\n\nJorge\n\nKoronagh\n\nLearuk\n\nLorvak\n\nMargrim\n\nMogdar\n\nMorguth\n\nMorun\n\nMugrim\n\nMurdo\n\nMyglar\n\nNorbak\n\nNordag\n\nOgnian\n\nOlfik\n\nOlfrun\n\nOrtolf\n\nRocco\n\nShobas\n\nSpirok\n\nSyrus\n\nThalvi\n\nThorok\n\nUgbert\n\nUgrim\n\nWardok\n\nWargath\n\nWargrak\n\nWarrok\n\nWorak\n\nWulfoc\n\nZartorak\n\nZorug\n"
+msgstr "阿格里克\n\n阿尔博尔特\n\n阿尔格里姆\n\n阿尔克沃\n\n贝奥武夫\n\n贝罗尔德\n\n弁庆\n\n布拉德瓦格\n\n布洛德维格\n\n博德里克\n\n博尔多\n\n博尔格里姆\n\n博尔戈斯\n\n博尔贡\n\n布兰多格\n\n布伦\n\n布鲁诺尔夫\n\n克雷布\n\n多罗格\n\n加拉托斯\n\n加尔博尔德\n\n戈尔巴什\n\n戈尔格\n\n戈尔姆\n\n格里莫尔德\n\n霍尔\n\n赫罗克\n\n希尔加尔\n\n贾斯雷克\n\n豪尔赫\n\n科罗纳格\n\n利阿鲁克\n\n洛尔瓦克\n\n马尔格里姆\n\n莫格达尔\n\n莫尔古斯\n\n莫伦\n\n穆格里姆\n\n默多\n\n米格拉尔\n\n诺尔巴克\n\n诺尔达格\n\n奥格尼安\n\n奥尔菲克\n\n奥尔弗伦\n\n奥尔托尔夫\n\n罗科\n\n肖巴斯\n\n斯皮罗克\n\n赛勒斯\n\n萨尔维\n\n索罗克\n\n乌格伯特\n\n乌格里姆\n\n沃尔多克\n\n瓦尔加斯\n\n瓦尔格拉克\n\n瓦尔罗克\n\n沃拉克\n\n伍尔福克\n\n扎尔托拉克\n\n佐鲁格\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:ancestor name"
+msgid "@ancestor male name@\n\n@ancestor female name@\n"
+msgstr "@ancestor male name@\n\n@ancestor female name@\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:ancestor male name"
+msgid "@_west_european_male_name_@\n\n@_roman_male_name_@\n\n@_aztec_male_name_@\n\n@_mesopotamian_male_name_@\n\n@_egyptian_male_name_@\n\n@_zulu_male_name_@\n\nw:5\n@_arabic_male_name_@\n\nw:5\n@_slavic_male_name_@\n\nw:2\n@_brazilian_male_name_@\n"
+msgstr "@_west_european_male_name_@\n\n@_roman_male_name_@\n\n@_aztec_male_name_@\n\n@_mesopotamian_male_name_@\n\n@_egyptian_male_name_@\n\n@_zulu_male_name_@\n\nw:5\n@_arabic_male_name_@\n\nw:5\n@_slavic_male_name_@\n\nw:2\n@_brazilian_male_name_@\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:ancestor female name"
+msgid "@_west_european_female_name_@\n\n@_roman_female_name_@\n\n@_aztec_female_name_@\n\n@_mesopotamian_female_name_@\n\n@_egyptian_female_name_@\n\n@_zulu_female_name_@\n\nw:5\n@_arabic_female_name_@\n\nw:5\n@_slavic_female_name_@\n\nw:2\n@_brazilian_female_name_@\n"
+msgstr "@_west_european_female_name_@\n\n@_roman_female_name_@\n\n@_aztec_female_name_@\n\n@_mesopotamian_female_name_@\n\n@_egyptian_female_name_@\n\n@_zulu_female_name_@\n\nw:5\n@_arabic_female_name_@\n\nw:5\n@_slavic_female_name_@\n\nw:2\n@_brazilian_female_name_@\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_west_european_male_name_"
+msgid "Æschere\n\nÆlfric\n\nÆthelred\n\nAylmer\n\nBeorhtric\n\nCenhelm\n\nCynebald\n\nDunstan\n\nEadwine\n\nEideard\n\nErdrick\n\nEsmond\n\nFlorimund\n\nGaiseric\n\nGladwin\n\nHondscioh\n\nHrodric\n\nHrodulf\n\nHrothgar\n\nKenrick\n\nLeofdaeg\n\nLeofric\n\nLeofsige\n\nOsbert\n\nSigurd\n\nTheodoric\n\nUlric\n\nVidar\n\nWigmund\n\nWilburh\n\nWolf\n\nWystan\n"
+msgstr "埃舍雷\n\n埃尔弗里克\n\n埃塞尔雷德\n\n艾尔默\n\n贝奥赫特里克\n\n肯赫尔姆\n\n基内巴尔德\n\n邓斯坦\n\n埃德温\n\n爱德华\n\n埃尔德里克\n\n埃斯蒙德\n\n弗洛里蒙德\n\n盖塞里克\n\n格拉德温\n\n洪德希奥赫\n\n赫罗德里克\n\n赫罗杜尔夫\n\n赫罗斯加尔\n\n肯里克\n\n利奥夫戴格\n\n利奥弗里克\n\n利奥夫西格\n\n奥斯伯特\n\n西格德\n\n狄奥多里克\n\n乌尔里克\n\n维达尔\n\n威格蒙德\n\n威尔伯\n\n伍尔夫\n\n威斯坦\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_roman_male_name_"
+msgid "Appius\n\nGaius\n\nGnaeus\n\nLucius\n\nOctavius\n\nPaullus\n\nPublius\n\nQuintus\n\nSeptimus\n\nServius\n\nSextus\n\nTiberius\n\nTitus\n\n"
+msgstr "阿庇乌斯\n\n盖乌斯\n\n格奈乌斯\n\n卢基乌斯\n\n屋大维\n\n保卢斯\n\n普布利乌斯\n\n昆图斯\n\n塞普蒂穆斯\n\n塞尔维乌斯\n\n塞克斯图斯\n\n提比略\n\n提图斯\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_aztec_male_name_"
+msgid "Cipactli\n\nCuahtemoc\n\nCuetlachtli\n\nHuemac\n\nNecuametl\n\nTenoch\n\nTepiltzin\n\nTlaloc\n\nTochtli\n\nXochipepe\n\nZolin\n\n"
+msgstr "西帕克特利\n\n夸赫特莫克\n\n奎特拉克特利\n\n韦马克\n\n内夸梅特尔\n\n特诺奇\n\n特皮尔津\n\n特拉洛克\n\n托奇特利\n\n索奇佩佩\n\n索林\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_mesopotamian_male_name_"
+msgid "Ahumratum\n\nAkiya\n\nAmmiditana\n\nAmnanu\n\nArammadara\n\nBaqqanum\n\nBelanum\n\nBeli-Ashared\n\nBelshunu\n\nEanasir\n\nIlluratum\n\nIlshubani\n\nImgur-Sin\n\nMarduk-asir\n\nNammahani\n\nNamzu\n\nSagil-Zimu\n\nShatamurrim\n\nSinnashi\n\nTaribatum\n\nUr-Dumizida\n\nYamquzzuhalamma\n\nYayatum\n\nZimri-Dagan\n\n"
+msgstr "阿胡姆拉图姆\n\n阿基亚\n\n阿米迪塔纳\n\n阿姆纳努\n\n阿拉姆马达拉\n\n巴卡努姆\n\n贝拉努姆\n\n贝利·阿沙雷德\n\n贝尔舒努\n\n埃阿纳西尔\n\n伊卢拉图姆\n\n伊尔舒巴尼\n\n伊姆古尔·辛\n\n马尔杜克·阿西尔\n\n纳马哈尼\n\n南祖\n\n萨吉尔·齐穆\n\n沙塔穆里姆\n\n辛纳希\n\n塔里巴图姆\n\n乌尔·杜米齐达\n\n亚姆库祖哈拉马\n\n亚亚图姆\n\n齐姆里·达甘\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_egyptian_male_name_"
+msgid "Aahotepre\n\nAgathocles\n\nAhmose\n\nAkhenaten\n\nAmyrtaeus\n\nAnedjib\n\nAnkherfenedjef\n\nCaesarion\n\nDemetirus\n\nDuaenre\n\nHori\n\nHsekiu\n\nKhabaw\n\nKheti\n\nMerenptah\n\nPaser\n\nPsammuthes\n\nRamose\n\nSenakhtenre\n\nShedsu-nefertum\n\nSi-Tayit\n\nw:1\nSnaaib\n\nSosibius\n\nThamphthis\n\nUdjahorresnet\n\n"
+msgstr "阿霍特普拉\n\n阿加托克利斯\n\n雅赫摩斯\n\n阿肯那顿\n\n阿米尔泰乌斯\n\n阿涅吉布\n\n安赫尔费涅杰夫\n\n恺撒里昂\n\n德米提鲁斯\n\n杜恩拉\n\n霍里\n\n赫塞基乌\n\n卡巴乌\n\n凯提\n\n梅伦普塔\n\n帕塞尔\n\n普萨穆特斯\n\n拉摩斯\n\n塞纳赫滕拉\n\n谢德苏·涅弗尔图姆\n\n西·塔伊特\n\nw:1\n斯纳伊布\n\n索西比乌斯\n\n坦普提斯\n\n乌贾霍尔雷斯内特\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_zulu_male_name_"
+msgid "Ayize\n\nw:1\nBongani\n\nCashile\n\nChakide\n\nChitauli\n\nDube\n\nIngiyab\n\nImpisi\n\nJabu\n\nLondisizwe\n\nManelesi\n\nMsizi\n\nNjabulo\n\nQinisela\n\nSanele\n\nSizwe\n\nThabo\n\nThulani\n\nVusi\n\nXolani\n"
+msgstr "阿伊泽\n\nw:1\n邦加尼\n\n卡希莱\n\n查基德\n\n奇陶利\n\n杜贝\n\n因吉亚布\n\n因皮西\n\n贾布\n\n隆迪西兹韦\n\n马内莱西\n\n姆西齐\n\n恩贾布洛\n\n齐尼塞拉\n\n萨内莱\n\n西兹韦\n\n塔博\n\n图拉尼\n\n武西\n\n索拉尼\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_arabic_male_name_"
+msgid "Arif\n\nFerran\n\nHamal\n\nKateb\n\nLufti\n\nw:1\nRigel\n\nRabi\n\nShunnar\n\nSofian\n\nTawil\n\nw:1\nZero\n"
+msgstr "阿里夫\n\n费兰\n\n哈马尔\n\n卡提卜\n\n卢特菲\n\nw:1\n里格尔\n\n拉比\n\n顺纳尔\n\n苏菲安\n\n塔维尔\n\nw:1\n泽罗\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_slavic_male_name_"
+msgid "Bolek\n\nBor\n\nBranko\n\nDejan\n\nLaslo\n\nw:1\nLech\n\nMilos\n\nMirko\n\nPlamen\n\nPreben\n\nStanko\n\nTihomir\n\nVojtech\n\nWenzel\n\nZdislav\n\nZoran\n"
+msgstr "博莱克\n\n博尔\n\n布兰科\n\n德扬\n\n拉斯洛\n\nw:1\n莱赫\n\n米洛什\n\n米尔科\n\n普拉门\n\n普雷本\n\n斯坦科\n\n蒂霍米尔\n\n沃伊捷赫\n\n文策尔\n\n兹迪斯拉夫\n\n佐兰\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_west_european_female_name_"
+msgid "Ælfthryth\n\nÆlfwynn\n\nÆðelind\n\nAudrea\n\nBealdhild\n\nCyneburga\n\nCynethryth\n\nEadburga\n\nEaldgyð\n\nEdmée\n\nEdwyna\n\nEormenhild\n\nFriðuswiþ\n\nGodgifu\n\nGudrun\n\nKendra\n\nMilburga\n\nSaranna\n\nSolveig\n\nSunngifu\n\nSynnove\n\nWalburga\n\nWilfreda\n\nWynnflæd\n"
+msgstr "埃尔弗里丝\n\n埃尔弗温\n\n埃塞琳德\n\n奥德蕾娅\n\n贝阿尔德希尔德\n\n基内布尔加\n\n基内丝丽丝\n\n埃德布尔加\n\n埃尔德吉丝\n\n埃德梅\n\n埃德温娜\n\n埃奥尔门希尔德\n\n弗里德斯维丝\n\n戈德吉芙\n\n古德伦\n\n肯德拉\n\n米尔布尔加\n\n萨兰娜\n\n索尔维格\n\n桑吉芙\n\n辛诺薇\n\n瓦尔布尔加\n\n威尔弗蕾达\n\n温弗莱德\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_roman_female_name_"
+msgid "Appia\n\nAula\n\nDecima\n\nLucia\n\nMettia\n\nNumeria\n\nOctavia\n\nPublia\n\nSeptima\n\nServia\n\nTertia\n\nTiberia\n\n"
+msgstr "阿庇娅\n\n奥拉\n\n德西玛\n\n卢基娅\n\n梅蒂娅\n\n努梅里娅\n\n屋大维娅\n\n普布利娅\n\n塞普蒂玛\n\n塞尔维娅\n\n特尔蒂娅\n\n提比娅\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_aztec_female_name_"
+msgid "Centenhua\n\nCihuaton\n\nCitlalmina\n\nIzel\n\nNenetl\n\nTeicuih\n\nTlalli\n\nXiloxoch\n\nXiuhtonal\n\nXochitl\n\n"
+msgstr "森滕瓦\n\n西瓦通\n\n西特拉尔米纳\n\n伊泽尔\n\n内内特尔\n\n特伊奎\n\n特拉利\n\n希洛索奇\n\n希乌托纳尔\n\n索奇特尔\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_mesopotamian_female_name_"
+msgid "Amurritum\n\nBelessunu\n\nEalamassi\n\nEnheduana\n\nEshargamelat\n\nIltani\n\nIshtar-belessa\n\nKammani\n\nKu-aya\n\nNakurtum\n\nNindada\n\nShatu-murrim\n\nShiptu\n\nTakurtum\n\nYadidatum\n"
+msgstr "阿穆里图姆\n\n贝莱苏努\n\n埃阿拉马西\n\n恩赫杜安娜\n\n埃沙尔加梅拉特\n\n伊尔塔尼\n\n伊什塔尔·贝莱萨\n\n卡马尼\n\n库·阿娅\n\n纳库尔图姆\n\n宁达达\n\n沙图·穆里姆\n\n希普图\n\n塔库尔图姆\n\n雅迪达图姆\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_egyptian_female_name_"
+msgid "Agathoclea\n\nAhhotep\n\nAnkhesenamen\n\nAmenemopet\n\nArsinoe\n\nArtakama\n\nBintanath\n\nDjefatnebti\n\nHenutmehyt\n\nInhapi\n\nHenutemipet\n\nKeminub\n\nKhenut\n\nMatia\n\nNebetia\n\nNefertari\n"
+msgstr "阿加托克蕾娅\n\n雅赫霍特普\n\n安赫塞娜蒙\n\n阿蒙涅莫佩特\n\n阿尔西诺伊\n\n阿尔塔卡玛\n\n宾特阿娜特\n\n杰法特涅卜提\n\n赫努特梅希特\n\n因哈皮\n\n赫努特米佩特\n\n凯米努布\n\n凯努特\n\n玛蒂娅\n\n涅贝蒂娅\n\n涅菲尔塔莉\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_zulu_female_name_"
+msgid "Busisiwe\n\nFikile\n\nIngwe\n\nKaya\n\nLwandle\n\nMbali\n\nNhalahla\n\nNkonkoni\n\nNolwazi\n\nNomusa\n\nNozipho\n\nNtombi\n\nSimosihle\n\nThoko\n\nZola\n"
+msgstr "布西西韦\n\n菲基莱\n\n因格韦\n\n卡娅\n\n兰德莱\n\n姆巴利\n\n恩哈拉赫拉\n\n恩孔科尼\n\n诺尔瓦齐\n\n诺穆萨\n\n诺齐波\n\n恩通比\n\n西莫西赫莱\n\n托科\n\n佐拉\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_arabic_female_name_"
+msgid "Amala\n\nAra\n\nAtia\n\nCaliana\n\nJaydra\n\nKhalidah\n\nw:5\nManar\n\nMelek\n\nMuriel\n\nOma\n\nQitarah\n\nRabi\n\nRana\n\nShunnareh\n\nWaqi\n\nZada\n\nZayda\n\nZulima\n"
+msgstr "阿玛拉\n\n阿拉\n\n阿蒂娅\n\n卡莉娅娜\n\n杰德拉\n\n哈莉达\n\nw:5\n马纳尔\n\n梅莱克\n\n穆里尔\n\n奥玛\n\n齐塔拉\n\n拉比\n\n拉娜\n\n顺纳蕾\n\n瓦齐\n\n扎达\n\n扎伊达\n\n祖莉玛\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_slavic_female_name_"
+msgid "Bojana\n\nBozena\n\nBozidara\n\nDagmar\n\nDusana\n\nLibusa\n\nw:5\nMarzanna\n\nw:5\nMarzena\n\nMira\n\nMirna\n\nRodica\n\nw:5\nVesna\n\nZarja\n\nZorana\n"
+msgstr "博亚娜\n\n博热娜\n\n博日达拉\n\n达格玛\n\n杜莎娜\n\n莉布莎\n\nw:5\n玛尔扎娜\n\nw:5\n玛尔泽娜\n\n米拉\n\n米尔娜\n\n罗迪卡\n\nw:5\n维斯娜\n\n扎莉娅\n\n佐拉娜\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_brazilian_female_name_"
+msgid "Apolônia\n\nClarinda\n\nEtelvina\n\nJosefina\n\nLaurinda\n\nÚrsula\n"
+msgstr "阿波洛尼娅\n\n克拉琳达\n\n埃特尔维娜\n\n若泽菲娜\n\n劳琳达\n\n乌尔苏拉\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_brazilian_male_name_"
+msgid "Amaro\n\nAnacleto\n\nAníbal\n\nBonifácio\n\nCândido\n\nEpaminondas\n\nEustáquio\n\nHonório\n\nJanuári\n"
+msgstr "阿马鲁\n\n阿纳克莱图\n\n阿尼巴尔\n\n博尼法西奥\n\n坎迪杜\n\n埃帕米农达斯\n\n欧斯塔基奥\n\n奥诺里奥\n\n雅努阿里\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:steelspirit name"
+msgid "w:50\n@ancestor name@\n\nw:1\n@RANDGEN@\n\n\nw:1\n@bland name@\n\n@_cantonese_female_name_@\n\n@_cantonese_male_name_@\n\n@_german_female_name_@\n\n@_german_male_name_@\n\n@_korean_female_name_@\n\n@_korean_male_name_@\n\nw:15\n@_hispanic_female_name_@\n\nw:15\n@_hispanic_male_name_@\n\n@_japanese_female_name_@\n\n@_japanese_male_name_@\n\n@_sikh_female_name_@\n\n@_sikh_male_name_@\n\n@_thai_female_name_@\n\n@_thai_male_name_@\n"
+msgstr "w:50\n@ancestor name@\n\nw:1\n@RANDGEN@\n\n\nw:1\n@bland name@\n\n@_cantonese_female_name_@\n\n@_cantonese_male_name_@\n\n@_german_female_name_@\n\n@_german_male_name_@\n\n@_korean_female_name_@\n\n@_korean_male_name_@\n\nw:15\n@_hispanic_female_name_@\n\nw:15\n@_hispanic_male_name_@\n\n@_japanese_female_name_@\n\n@_japanese_male_name_@\n\n@_sikh_female_name_@\n\n@_sikh_male_name_@\n\n@_thai_female_name_@\n\n@_thai_male_name_@\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:bland name"
+msgid "@_bland_female_name_@\n\n@_bland_male_name_@\n"
+msgstr "@_bland_female_name_@\n\n@_bland_male_name_@\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_bland_female_name_"
+msgid "Abby\n\nBabs\n\nBetsy\n\nCarrie\n\nDeb\n\nIzzy\n\nJen\n\nMia\n\nSue\n\nVera\n"
+msgstr "艾比\n\n芭布斯\n\n贝茜\n\n凯莉\n\n黛布\n\n伊兹\n\n珍\n\n米娅\n\n苏\n\n维拉\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_bland_male_name_"
+msgid "Bill\n\nBob\n\nCal\n\nDave\n\nDoug\n\nJeff\n\nJim\n\nMack\n\nNed\n\nPete\n"
+msgstr "比尔\n\n鲍勃\n\n卡尔\n\n戴夫\n\n道格\n\n杰夫\n\n吉姆\n\n麦克\n\n内德\n\n皮特\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_cantonese_female_name_"
+msgid "Ai\n\nCaihong\n\nChun\n\nHua\n\nJingyi\n\nKun\n\nLan\n\nLi\n\nMei\n\nNing\n\nQing\n\nQiuyue\n\nShu\n\nXiuying\n\nXue\n\nYan\n\nYawen\n\nZhen\n"
+msgstr "爱\n\n彩虹\n\n春\n\n花\n\n静怡\n\n坤\n\n兰\n\n丽\n\n梅\n\n宁\n\n清\n\n秋月\n\n淑\n\n秀英\n\n雪\n\n燕\n\n雅雯\n\n珍\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_cantonese_male_name_"
+msgid "Aiguo\n\nBo\n\nChang\n\nFeng\n\nHaoran\n\nHong\n\nJin\n\nKai\n\nLiang\n\nLin\n\nMing\n\nQiang\n\nQiu\n\nShi\n\nWei\n\nWu\n\nXiang\n\nYuxuan\n\nZihan\n"
+msgstr "爱国\n\n博\n\n昌\n\n峰\n\n浩然\n\n宏\n\n金\n\n凯\n\n梁\n\n林\n\n明\n\n强\n\n秋\n\n石\n\n伟\n\n武\n\n翔\n\n宇轩\n\n子涵\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_german_female_name_"
+msgid "Anneliese\n\nAnnika\n\nAstrid\n\nBerta\n\nBirgit\n\nConstanze\n\nDagmar\n\nEdeltraud\n\nElse\n\nErmengarde\n\nFrauke\n\nFriedl\n\nGerda\n\nGisele\n\nHeidi\n\nHilda\n\nIlse\n\nIngrid\n\nIsolde\n\nJuhanna\n\nKarolin\n\nKatrin\n\nLiesl\n\nLisbeth\n\nMargit\n\nOlga\n\nRenate\n\nSieglinde\n\nSilke\n\nSvenja\n\nTamara\n\nTherese\n\nUlrike\n\nWilhemina\n\nYvonne\n"
+msgstr "安妮莉泽\n\n安妮卡\n\n阿斯特丽德\n\n贝尔塔\n\n比尔吉特\n\n康斯坦策\n\n达格玛\n\n埃德尔特劳德\n\n埃尔泽\n\n埃尔门加德\n\n弗劳克\n\n弗里德尔\n\n格尔达\n\n吉泽尔\n\n海蒂\n\n希尔达\n\n伊尔泽\n\n英格丽德\n\n伊索尔德\n\n尤汉娜\n\n卡罗琳\n\n卡特琳\n\n莉瑟尔\n\n莉斯贝特\n\n玛吉特\n\n奥尔加\n\n雷娜特\n\n齐格琳德\n\n西尔克\n\n斯文娅\n\n塔玛拉\n\n特蕾泽\n\n乌尔里克\n\n威廉明娜\n\n伊冯娜\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_german_male_name_"
+msgid "Adalbert\n\nAlbrecht\n\nArnulf\n\nBastian\n\nBernhard\n\nConrad\n\nDietrich\n\nEgbert\n\nEgon\n\nErnst\n\nFredrik\n\nFritz\n\nGebhard\n\nGilbert\n\nGottfried\n\nGunther\n\nGustav\n\nHans\n\nHeine\n\nHelmut\n\nJakob\n\nJohann\n\nKarl\n\nKaspar\n\nLars\n\nLukas\n\nMagnus\n\nNiklaus\n\nOlaf\n\nOskar\n\nOtto\n\nRaimund\n\nRupprecht\n\nSiegfried\n\nTheobald\n\nTiedemann\n\nUlrich\n\nValter\n\nWaldo\n\nWilfried\n"
+msgstr "阿达尔贝特\n\n阿尔布雷希特\n\n阿尔努尔夫\n\n巴斯蒂安\n\n伯恩哈德\n\n康拉德\n\n迪特里希\n\n埃格伯特\n\n埃贡\n\n恩斯特\n\n弗雷德里克\n\n弗里茨\n\n格布哈德\n\n吉尔伯特\n\n戈特弗里德\n\n君特\n\n古斯塔夫\n\n汉斯\n\n海涅\n\n赫尔穆特\n\n雅各布\n\n约翰\n\n卡尔\n\n卡斯帕尔\n\n拉尔斯\n\n卢卡斯\n\n马格努斯\n\n尼克劳斯\n\n奥拉夫\n\n奥斯卡\n\n奥托\n\n雷蒙德\n\n鲁普雷希特\n\n齐格弗里德\n\n特奥巴尔德\n\n蒂德曼\n\n乌尔里希\n\n瓦尔特\n\n瓦尔多\n\n威尔弗里德\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_hispanic_female_name_"
+msgid "Aida\n\nAdela\n\nAlejandra\n\nAna\n\nAraceli\n\nBianca\n\nCarmen\n\nClara\n\nConsuela\n\nElena\n\nFernanda\n\nFrancisca\n\nGabriela\n\nGloria\n\nInés\n\nIsabel\n\nJacinta\n\nLeticia\n\nLucía\n\nMalena\n\nMaría\n\nMarisol\n\nMiranda\n\nPaloma\n\nSoledad\n\nXimena\n\nYolanda\n"
+msgstr "阿依达\n\n阿德拉\n\n亚历杭德拉\n\n安娜\n\n阿拉塞莉\n\n比安卡\n\n卡门\n\n克拉拉\n\n康苏埃拉\n\n埃莱娜\n\n费尔南达\n\n弗朗西斯卡\n\n加布里埃拉\n\n格洛丽亚\n\n伊内斯\n\n伊莎贝尔\n\n哈辛塔\n\n莱蒂西亚\n\n卢西娅\n\n玛莱娜\n\n玛丽娅\n\n玛丽索尔\n\n米兰达\n\n帕洛玛\n\n索莱达\n\n希梅娜\n\n约兰达\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_hispanic_male_name_"
+msgid "Agustín\n\nArmando\n\nCarlos\n\nCedro\n\nCortez\n\nDiego\n\nEnrique\n\nEsteban\n\nFernando\n\nFrancisco\n\nGuillermo\n\nGustavo\n\nHugo\n\nw:1\nIgnacio\n\nJavier\n\nJosé\n\nJuan\n\nLuis\n\nPancho\n\nRafael\n\nRamón\n\nRaúl\n\nRubén\n\nSalvador\n\nSantiago\n\nSantos\n\nSebastián\n\nTomás\n\nVicente\n"
+msgstr "阿古斯丁\n\n阿曼多\n\n卡洛斯\n\n塞德罗\n\n科尔特斯\n\n迭戈\n\n恩里克\n\n埃斯特班\n\n费尔南多\n\n弗朗西斯科\n\n吉列尔莫\n\n古斯塔沃\n\n乌戈\n\nw:1\n伊格纳西奥\n\n哈维尔\n\n何塞\n\n胡安\n\n路易斯\n\n潘乔\n\n拉斐尔\n\n拉蒙\n\n劳尔\n\n鲁本\n\n萨尔瓦多\n\n圣地亚哥\n\n桑托斯\n\n塞巴斯蒂安\n\n托马斯\n\n比森特\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_irish_female_name_"
+msgid "Áedammair\n\nÁine\n\nAoife\n\nBryna\n\nCaitlin\n\nCaoimhe\n\nCiara\n\nDeidre\n\nDubhchobhlaigh\n\nEithne\n\nFiadh\n\nÍde\n\nMaeve\n\nMáire\n\nNiamh\n\nNóirín\n\nOnóra\n\nÓrlaith\n\nRaghnailt\n\nRóisín\n\nSaoirse\n\nSinéad\n\nSiobhan\n\nSíofra\n\nUasal\n"
+msgstr "艾达梅尔\n\n奥妮\n\n伊芙\n\n布丽娜\n\n凯特琳\n\n基娃\n\n基娅拉\n\n迪尔德丽\n\n杜芙霍莱\n\n埃妮娅\n\n菲娅\n\n伊德\n\n梅芙\n\n莫伊拉\n\n妮芙\n\n诺琳\n\n奥诺拉\n\n奥拉\n\n拉纳尔特\n\n罗欣\n\n瑟莎\n\n希奈德\n\n希沃恩\n\n希芙拉\n\n乌萨尔\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_irish_male_name_"
+msgid "Aodhán\n\nCian\n\nCiarán\n\nColm\n\nCormac\n\nDiarmaid\n\nEamonn\n\nEógan\n\nEoin\n\nFearghal\n\nFiachra\n\nFlann\n\nFothad\n\nMuiredach\n\nNiall\n\nPádraig\n\nRónán\n\nSéamus\n\nw:1\nToirdhealbhach\n"
+msgstr "艾丹\n\n基恩\n\n基兰\n\n科尔姆\n\n科马克\n\n迪尔米德\n\n埃蒙\n\n欧文\n\n欧因\n\n费尔格尔\n\n菲亚赫拉\n\n弗兰\n\n福萨德\n\n穆雷达赫\n\n尼尔\n\n帕德里格\n\n罗南\n\n谢默斯\n\nw:1\n托洛赫\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_japanese_female_name_"
+msgid "Chidori\n\nChisato\n\nEiko\n\nEtsuko\n\nFubuki\n\nFuyuko\n\nHana\n\nHideko\n\nHisae\n\nIo\n\nKaede\n\nKaori\n\nKiko\n\nKoruri\n\nKyoko\n\nMai\n\nMariya\n\nMatsuko\n\nMizue\n\nNatsumi\n\nNodoka\n\nRan\n\nRuka\n\nSachi\n\nSarina\n\nTae\n\nTamao\n\nUmi\n\nYae\n\nYuina\n\nYume\n"
+msgstr "千鸟\n\n千里\n\n荣光\n\n悦子\n\n吹雪\n\n冬子\n\n花\n\n秀子\n\n久惠\n\n伊绪\n\n枫\n\n香织\n\n纪子\n\n小瑠璃\n\n京子\n\n舞\n\n玛莉亚\n\n松子\n\n瑞枝\n\n夏美\n\n和\n\n兰\n\n琉花\n\n幸\n\n纱里奈\n\n泰\n\n玉绪\n\n海\n\n八重\n\n结衣奈\n\n梦\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_japanese_male_name_"
+msgid "Akihito\n\nArashi\n\nAzuma\n\nChikashi\n\nChujiro\n\nDaichi\n\nDaisaku\n\nEiko\n\nEitaro\n\nFumito\n\nFusazane\n\nGenichi\n\nGoro\n\nGota\n\nHachiro\n\nHaruki\n\nHayata\n\nHidetaka\n\nHisao\n\nIchio\n\nIkko\n\nIwao\n\nJoji\n\nJubei\n\nJunzo\n\nKagemori\n\nKanehira\n\nKansuke\n\nKazuki\n\nKenji\n\nKenzo\n\nKiyoto\n\nKyogo\n\nMasaaki\n\nMasataka\n\nMinoru\n\n"
+msgstr "明仁\n\n岚\n\n东\n\n亲\n\n忠次郎\n\n大地\n\n大作\n\n荣光\n\n荣太郎\n\n文人\n\n房实\n\n源一\n\n五郎\n\n吾太\n\n八郎\n\n春树\n\n隼太\n\n英隆\n\n久雄\n\n一雄\n\n一光\n\n岩男\n\n丈司\n\n十兵卫\n\n顺三\n\n景盛\n\n兼平\n\n勘助\n\n一树\n\n健二\n\n健三\n\n清人\n\n京吾\n\n正明\n\n正孝\n\n稔\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_korean_female_name_"
+msgid "Chaewon\n\nChoonhe\n\nEunkyung\n\nGyeongja\n\nHaeun\n\nHwan\n\nIseul\n\nJia\n\nJinae\n\nMinjee\n\nMishil\n\nMyungok\n\nNari\n\nSanghe\n\nSeoyun\n\nYeongsuk\n"
+msgstr "采媛\n\n春姬\n\n恩京\n\n京子\n\n荷恩\n\n焕\n\n露水\n\n芝雅\n\n珍爱\n\n敏智\n\n美室\n\n明玉\n\n娜莉\n\n尚姬\n\n瑞允\n\n英淑\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_korean_male_name_"
+msgid "Bonhwa\n\nByeongho\n\nChinhae\n\nDaeho\n\nDongyul\n\nDoyun\n\nEunwoo\n\nHajoon\n\nJihoo\n\nJuwon\n\nMinjun\n\nSeojun\n\nTae\n\nYejun\n\nYongsun\n"
+msgstr "本华\n\n秉浩\n\n镇海\n\n大浩\n\n东律\n\n度允\n\n银优\n\n河俊\n\n志厚\n\n周元\n\n珉俊\n\n瑞俊\n\n泰\n\n艺俊\n\n永善\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_sikh_female_name_"
+msgid "Ashmeen\n\nAjinder\n\nDeepnoor\n\nGurmehar\n\nHarkiran\n\nIshleen\n\nIshpreet\n\nJasleen\n\nJaspreet\n\nKamaljyot\n\nManveen\n\nNimrit\n\nNoor\n\nRabni\n\nTejnoor\n\nUjjalroop\n\nYashnoor\n"
+msgstr "阿什敏\n\n阿金德尔\n\n迪普努尔\n\n古尔梅哈尔\n\n哈尔基兰\n\n伊什琳\n\n伊什普里特\n\n贾斯琳\n\n贾斯普里特\n\n卡马尔乔特\n\n曼温\n\n尼姆里特\n\n努尔\n\n拉布妮\n\n特杰努尔\n\n乌贾尔鲁普\n\n亚什努尔\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_sikh_male_name_"
+msgid "Agam\n\nAkal\n\nBalvinder\n\nDalbir\n\nEkveer\n\nFatehjeet\n\nImanvir\n\nKulveer\n\nNavbir\n\nParamjit\n\nSurjit\n\nTeghnoor\n\nUttamveer\n\nVikramjeet\n\nZorawar\n"
+msgstr "阿加姆\n\n阿卡尔\n\n巴尔温德尔\n\n达尔比尔\n\n埃克维尔\n\n法特吉特\n\n伊曼维尔\n\n库尔维尔\n\n纳夫比尔\n\n帕拉姆吉特\n\n苏尔吉特\n\n特格努尔\n\n乌塔姆维尔\n\n维克拉姆吉特\n\n佐拉瓦尔\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_thai_female_name_"
+msgid "Bangon\n\nChiraphon\n\nKanchana\n\nKanlaya\n\nKannika\n\nLatda\n\nMalki\n\nNittaya\n\nPrani\n\nSomchit\n\nSukanya\n\nSuphaphon\n\nSuni\n\nThatsani\n\nUrai\n\nWanphen\n\nYuphin\n"
+msgstr "邦翁\n\n吉拉蓬\n\n甘查娜\n\n甘拉雅\n\n甘妮卡\n\n拉达\n\n玛尔基\n\n尼塔雅\n\n帕妮\n\n颂吉\n\n苏甘雅\n\n苏帕蓬\n\n苏妮\n\n塔萨妮\n\n乌莱\n\n婉彭\n\n尤平\n"
+
+#. Reviewed fixed proper name; glossary checked. Names are display-only.
+msgctxt "textdb:database/monname.txt:_thai_male_name_"
+msgid "Anan\n\nAri\n\nArun\n\nBunsong\n\nCharoen\n\nKasem\n\nNarong\n\nPrasit\n\nSomchai\n\nSuchat\n\nSurin\n\nSuthep\n\nWira\n\nUdom\n"
+msgstr "阿南\n\n阿里\n\n阿伦\n\n汶颂\n\n差伦\n\n格森\n\n纳隆\n\n巴实\n\n颂猜\n\n素察\n\n素林\n\n素贴\n\n威拉\n\n乌敦\n"

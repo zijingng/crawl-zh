@@ -5,6 +5,8 @@
 #include <cstring>
 
 #include "i18n-catalogue.h"
+#include "database.h"
+#include "religion-enum.h"
 #include "options.h"
 #include "actor.h"
 #include "item-name.h"
@@ -12,6 +14,21 @@
 #include "mon-info.h"
 #include "player.h"
 #include "stringutil.h"
+
+ui_arg ui_monname_arg(const char *root, const string &canonical)
+{
+    string shown;
+    if (try_monname_display(root, canonical, shown)) return {shown, true};
+    return ui_generated_name_arg(canonical);
+}
+
+ui_arg ui_ancestor_name_arg(const string &canonical)
+{
+    if (!you.props.exists(HEPLIAKLQANA_GENERATED_NAME_KEY)
+        || you.props[HEPLIAKLQANA_GENERATED_NAME_KEY].get_string() != canonical)
+        return ui_literal_arg(canonical);
+    return ui_monname_arg("ancestor name", canonical);
+}
 
 ui_arg ui_generated_name_arg(const string &canonical)
 {

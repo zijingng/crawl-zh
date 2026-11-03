@@ -83,10 +83,10 @@
 
 static void _monster_greeting(monster *mons, const string &key)
 {
-    string msg = getSpeakString(key);
-    if (msg == "__NONE")
-        msg.clear();
-    mons_speaks_msg(mons, msg, MSGCH_TALK, silenced(mons->pos()));
+    auto speech = getPairedSpeakString(key);
+    if (speech.english == "__NONE")
+        speech = textdb_speech();
+    mons_speaks_msg(mons, speech.english, MSGCH_TALK, silenced(mons->pos()), "", &speech);
 }
 
 // combine with MG_AUTOFOE

@@ -702,14 +702,14 @@ string Note::chinese_at_event() const
         shown = render("Offered knowledge of %s by Vehumet.", {ui_text_arg("display.spell", spell_title(static_cast<spell_type>(first)))});
         break;
     case NOTE_ANCESTOR_TYPE:
-        shown = render("Remembered your ancestor %s as %s", {ui_literal_arg(hepliaklqana_ally_name()), n});
+        shown = render("Remembered your ancestor %s as %s", {ui_ancestor_name_arg(hepliaklqana_ally_name()), n});
         break;
 #if TAG_MAJOR_VERSION == 34
     case NOTE_ANCESTOR_SPECIALIZATION:
-        shown = render("Remembered your ancestor %s %s", {ui_literal_arg(hepliaklqana_ally_name()), n});
+        shown = render("Remembered your ancestor %s %s", {ui_ancestor_name_arg(hepliaklqana_ally_name()), n});
         break;
     case NOTE_ANCESTOR_DEATH:
-        shown = render("Remembered your ancestor %s's %s death", {ui_literal_arg(hepliaklqana_ally_name()), n});
+        shown = render("Remembered your ancestor %s's %s death", {ui_ancestor_name_arg(hepliaklqana_ally_name()), n});
         break;
 #endif
     case NOTE_FOUND_UNRAND:

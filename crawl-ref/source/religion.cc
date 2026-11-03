@@ -1787,6 +1787,7 @@ static void _setup_hepliaklqana_ancestor()
                                                  GENDER_FEMALE);
 
         you.props[HEPLIAKLQANA_ALLY_NAME_KEY] = _make_ancestor_name(gender);
+        you.props[HEPLIAKLQANA_GENERATED_NAME_KEY] = hepliaklqana_ally_name();
         you.props[HEPLIAKLQANA_ALLY_GENDER_KEY] = gender;
     }
 }
@@ -2433,7 +2434,7 @@ static void _handle_piety_gain(int old_piety)
                                                 mg.mname.c_str()).c_str(), false, you.religion,
                     ui_render("r.log", "%s forms a fragment of your life essence into the memory of your ancestor, %s!",
                         "",
-                        {ui_text_arg("display.god", god_name(you.religion)), ui_literal_arg(mg.mname)}));
+                        {ui_text_arg("display.god", god_name(you.religion)), ui_ancestor_name_arg(mg.mname)}));
             }
 
             for (const auto& power : get_god_powers(you.religion))

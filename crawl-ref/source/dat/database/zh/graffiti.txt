@@ -91,35 +91,35 @@ w:1
 %%%%
 _rare_graffiti_author_god_
 
-神明Woog
+神明沃格
 %%%%
 _rare_graffiti_author_orc_
 
-兽人Spartorcus
+兽人斯巴托克斯
 %%%%
 _rare_graffiti_author_ordinary_
 
-狗头人Durwent
+狗头人杜温特
 
-地精Zlaz
+地精兹拉兹
 
-鬼人Fneeb
+鬼人弗尼布
 
-精灵Vethion
+精灵维西昂
 
-小鬼Frobof
+小鬼弗罗博夫
 %%%%
 _rare_graffiti_author_title_
 
-Kilroy
+基尔罗伊
 
-伟大的Garc
+伟大的加尔克
 
-无双的Plog
+无双的普洛格
 
-死去的Wendell
+死去的温德尔
 
-Dreamflight女士
+梦航女士
 %%%%
 _pattern_type_
 
@@ -418,7 +418,7 @@ _graffiti_happened_reason_
 
 一个更大阴谋的一部分
 
-“Plog”阴谋集团的手笔
+“普洛格”阴谋集团的手笔
 
 自找的
 
@@ -797,7 +797,7 @@ _graffiti_rumour_
 
 声称找到了难觅踪影的[洞穴雪人|死亡短尾矮袋鼠|恐怖睡鼠]
 
-影射“Plog”阴谋集团，以及它为何到处藏着这个词
+影射“普洛格”阴谋集团，以及它为何到处藏着这个词
 %%%%
 _graffiti_short_saying_
 
@@ -821,7 +821,7 @@ _graffiti_short_saying_
 
 @_graffiti_changed_or_compared_religions_@
 
-一切生命始于“Plog”，终于“Plog”
+一切生命始于“普洛格”，终于“普洛格”
 
 w:2
 @_graffiti_changed_names_@

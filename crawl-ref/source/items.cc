@@ -5184,6 +5184,7 @@ void name_weapon(item_def &item)
     if (!item.inscription.empty())
         item.inscription += ", ";
     item.inscription += name;
+    item.props[WEAPON_NAME_INSCRIPTION_KEY] = true;
 }
 
 string get_weapon_name(const item_def &item, bool full_name)
@@ -5226,7 +5227,7 @@ void maybe_name_weapon(item_def &item, bool silent)
         item_def unnamed = item;
         unnamed.inscription.clear();
         const string named = ui_render("i.items", "%s \"%s\"", "",
-            {ui_item_arg(unnamed), ui_literal_arg(item.props[WEAPON_NAME_KEY].get_string())});
+            {ui_item_arg(unnamed), ui_monname_arg("steelspirit name", item.props[WEAPON_NAME_KEY].get_string())});
         display_name = {named, !named.empty()};
     }
     mpr(ui_render("i.items", new_name ? "You welcome %s into your grasp."
@@ -5242,7 +5243,7 @@ void say_farewell_to_weapon(const item_def &item)
     // TODO: variant messages? (in the database?)
     mpr(ui_render("i.items", "You whisper farewell to %s.",
         make_stringf("You whisper farewell to %s.", name.c_str()),
-        {is_artefact(item) ? ui_item_arg(item) : ui_literal_arg(name)}));
+        {is_artefact(item) ? ui_item_arg(item) : ui_monname_arg("steelspirit name", name)}));
 }
 
 // Returns whether an additional copy of a given item in the player's inventory

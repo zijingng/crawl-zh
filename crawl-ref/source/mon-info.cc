@@ -1281,6 +1281,13 @@ string monster_info::display_name_tag() const
 {
     // Player names and bestowed proper names remain literal, just as in the
     // original compact tag. Unique monster types use their reviewed names.
+    if ((type == MONS_ORC_APOSTLE || mons_is_hepliaklqana_ancestor(type))
+        && has_proper_name())
+    {
+        const ui_arg shown = type == MONS_ORC_APOSTLE
+            ? ui_monname_arg("any orc name", mname) : ui_ancestor_name_arg(mname);
+        return shown.available ? shown.text : mname;
+    }
     if (mons_is_pghost(type) || has_proper_name())
         return mname;
     string shown;
@@ -1475,8 +1482,13 @@ bool monster_info::try_display_name(string &output) const
     if (has_proper_name())
     {
         const string pattern = tr("display.monster.template", "%s the %s");
+        const ui_arg proper = type == MONS_ORC_APOSTLE
+            ? ui_monname_arg("any orc name", mname)
+            : mons_is_hepliaklqana_ancestor(type) ? ui_ancestor_name_arg(mname)
+                                               : ui_literal_arg(mname);
+        if (!proper.available) return false;
         if (text.available())
-            name = make_stringf(pattern.c_str(), mname.c_str(), name.c_str());
+            name = make_stringf(pattern.c_str(), proper.text.c_str(), name.c_str());
     }
     if (!text.available())
         return false;

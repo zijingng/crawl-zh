@@ -610,7 +610,8 @@ void flee_apostle_challenge()
 
 void win_apostle_challenge(monster& apostle)
 {
-    mons_speaks_msg(&apostle, getSpeakString("orc_apostle_yield"), MSGCH_TALK);
+    auto speech = getPairedSpeakString("orc_apostle_yield");
+    mons_speaks_msg(&apostle, speech.english, MSGCH_TALK, false, "", &speech);
     you.duration[DUR_BEOGH_DIVINE_CHALLENGE] = 0;
 
     apostle.del_ench(ENCH_TOUCH_OF_BEOGH);
@@ -715,9 +716,12 @@ bool try_apostle_display_name(int slot, bool with_title, string &output)
     ui_translation_group group;
     if (!group.available())
         return false;
+    const ui_arg shown = apostle.mname.empty() ? ui_literal_arg(name)
+                                               : ui_monname_arg("any orc name", apostle.mname);
+    if (!shown.available) return false;
     if (!with_title)
     {
-        output = name; // Generated proper name, not English grammar.
+        output = shown.text;
         return true;
     }
     const int type = apostle.props[APOSTLE_TYPE_KEY].get_int();
@@ -727,7 +731,7 @@ bool try_apostle_display_name(int slot, bool with_title, string &output)
     group.require("a.ability", "%s, %s");
     if (!title.available || !group.available())
         return false;
-    output = make_stringf(group.get("a.ability", "%s, %s"), name.c_str(),
+    output = make_stringf(group.get("a.ability", "%s, %s"), shown.text.c_str(),
                           title.text.c_str());
     return true;
 }
@@ -858,7 +862,8 @@ void beogh_dismiss_apostle(int slot)
         {
             if (you.can_see(*real))
             {
-                mons_speaks_msg(real, getSpeakString("orc_apostle_dismissed"), MSGCH_TALK);
+                auto speech = getPairedSpeakString("orc_apostle_dismissed");
+                mons_speaks_msg(real, speech.english, MSGCH_TALK, false, "", &speech);
                 place_cloud(CLOUD_TLOC_ENERGY, real->pos(), 1 + random2(3), real);
             }
             remove_companion(real);
@@ -1104,8 +1109,8 @@ void beogh_resurrect_followers(bool end_ostracism_only)
 
                 simple_monster_message(*apostle,
                                 " has fought their way back out of the Abyss!");
-                mons_speaks_msg(apostle,
-                    getSpeakString("orc_apostle_unbanished"), MSGCH_TALK);
+                auto speech = getPairedSpeakString("orc_apostle_unbanished");
+                mons_speaks_msg(apostle, speech.english, MSGCH_TALK, false, "", &speech);
             }
         }
     }
@@ -1240,10 +1245,12 @@ string apostle_short_description(int slot, bool translate)
         const ui_arg title = ui_text_arg("a.apostle.title", apostle_type_names[atype]);
         const ui_arg shown_status = status.empty() ? ui_literal_arg("")
                                                  : ui_text_arg("a.apostle", status);
-        if (!title.available || !shown_status.available)
+        string shown_name;
+        if (!title.available || !shown_status.available
+            || !try_apostle_display_name(slot, false, shown_name))
             return false;
         display = make_stringf(group.get("a.apostle", "%s (<%s>%s</%s>)     %s\n"),
-            apostle.name(DESC_PLAIN, true).c_str(), _apostle_type_colours[atype],
+            shown_name.c_str(), _apostle_type_colours[atype],
             title.text.c_str(), _apostle_type_colours[atype], shown_status.text.c_str());
         display += make_stringf(group.get("a.apostle",
             "HP: %d    AC: %d    Damage:%d (w/weapon)\n"),

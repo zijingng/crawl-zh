@@ -162,13 +162,14 @@ static void _print_converted_orc_speech(const string& key,
                                         monster* mon,
                                         msg_channel_type channel)
 {
-    string msg = getSpeakString("beogh_converted_orc_" + key);
+    auto speech = getPairedSpeakString("beogh_converted_orc_" + key);
 
-    if (!msg.empty())
+    if (!speech.english.empty())
     {
-        msg = do_mon_str_replacements(msg, *mon);
-        strip_channel_prefix(msg, channel);
-        mprf(channel, "%s", msg.c_str());
+        do_mon_str_replacements(speech.english, *mon, -1, &speech);
+        string shown = speech.text();
+        strip_channel_prefix(shown, channel);
+        mprf(channel, "%s", shown.c_str());
     }
 }
 
@@ -338,17 +339,17 @@ void gozag_check_bribe(monster* traitor)
 
     int cost = 0;
 
-    string msg;
+    textdb_speech speech;
 
     if (traitor->props.exists(FRIENDLY_BRIBE_KEY))
     {
         traitor->props.erase(FRIENDLY_BRIBE_KEY);
         traitor->add_ench(mon_enchant(ENCH_FRIENDLY_BRIBED, nullptr,
                                       INFINITE_DURATION));
-        msg = getSpeakString(traitor->name(DESC_DBNAME, true)
+        speech = getPairedSpeakString(traitor->name(DESC_DBNAME, true)
                              + " Gozag permabribe");
-        if (msg.empty())
-            msg = getSpeakString("Gozag permabribe");
+        if (speech.english.empty())
+            speech = getPairedSpeakString("Gozag permabribe");
 
         // Actual allies deduct more gold.
         cost = 2 * base_cost;
@@ -357,20 +358,21 @@ void gozag_check_bribe(monster* traitor)
     {
         traitor->props.erase(NEUTRAL_BRIBE_KEY);
         traitor->add_ench(ENCH_NEUTRAL_BRIBED);
-        msg = getSpeakString(traitor->name(DESC_DBNAME, true)
+        speech = getPairedSpeakString(traitor->name(DESC_DBNAME, true)
                              + " Gozag bribe");
-        if (msg.empty())
-            msg = getSpeakString("Gozag bribe");
+        if (speech.english.empty())
+            speech = getPairedSpeakString("Gozag bribe");
 
         cost = base_cost;
     }
 
-    if (!msg.empty())
+    if (!speech.english.empty())
     {
         msg_channel_type channel = MSGCH_FRIEND_ENCHANT;
-        msg = do_mon_str_replacements(msg, *traitor);
-        strip_channel_prefix(msg, channel);
-        mprf(channel, "%s", msg.c_str());
+        do_mon_str_replacements(speech.english, *traitor, -1, &speech);
+        string shown = speech.text();
+        strip_channel_prefix(shown, channel);
+        mprf(channel, "%s", shown.c_str());
         // !msg.empty means a monster was bribed.
         gozag_deduct_bribe(branch, cost);
     }

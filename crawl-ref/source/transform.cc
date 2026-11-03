@@ -2543,7 +2543,8 @@ void sphinx_check_riddle()
     {
         // Check if a monster would have a specific reaction first, to skip
         // messages about them ignoring you.
-        string mon_msg = getSpeakString(best_mon->name(DESC_PLAIN) + " riddle");
+        auto mon_speech = getPairedSpeakString(best_mon->name(DESC_PLAIN) + " riddle");
+        const string &mon_msg = mon_speech.english;
 
         auto speech = getPairedShoutString(mon_msg.empty() ? "Sphinx riddle failure"
                                                           : "Sphinx riddle failure acknowledged");
@@ -2551,7 +2552,7 @@ void sphinx_check_riddle()
         mpr(speech.text());
 
         if (!mon_msg.empty())
-            mons_speaks_msg(best_mon, mon_msg, MSGCH_TALK);
+            mons_speaks_msg(best_mon, mon_msg, MSGCH_TALK, false, "", &mon_speech);
     }
 
     noisy(you.shout_volume(), you.pos(), MID_PLAYER);

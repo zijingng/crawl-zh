@@ -349,6 +349,7 @@ void TextDB::_regenerate_db()
 static map<string,string> gizmo_adjectives, gizmo_nouns, gizmo_modifiers;
 static bool gizmo_names_loaded = false;
 static map<string,map<string,string>> appearance_words;
+static map<string,map<string,string>> monname_words;
 static map<string,set<string>> book_subjects;
 static map<string,set<string>> book_modifiers, book_owners;
 
@@ -361,6 +362,7 @@ void databaseSystemInit()
 void databaseSystemShutdown()
 {
     appearance_words.clear();
+    monname_words.clear();
     book_subjects.clear();
     book_modifiers.clear();book_owners.clear();
     gizmo_names_loaded = false;
@@ -941,7 +943,8 @@ static textdb_speech _paired_speech(DBM *english, DBM *translated,
     if (++depth > MAX_RECURSION_DEPTH)
         return {"TOO MUCH RECURSION", "", false};
     lowercase(key);
-    // This database namespace contains proper names, not display prose.
+    // Name namespaces use reviewed choices first; missing finite names may use
+    // phonetics, without changing canonical selection or its random stream.
     literal_name = literal_name || (preserve_names
         && (key == "orc name" || key == "any orc name"
             || key == "ancestor name" || key == "bland name"));
@@ -960,16 +963,17 @@ static textdb_speech _paired_speech(DBM *english, DBM *translated,
     const string source((const char*)en.dptr, en.dsize);
     result.english = _chooseStrByWeight(source, -1, &choice, &en_shape);
     datum chinese = _database_fetch(translated, resolved_key);
-    if (literal_name)
-    {
-        result.translated = result.english;
-        result.complete = true;
-    }
-    else if (chinese.dsize > 0)
+    if (chinese.dsize > 0)
     {
         result.translated = _chooseStrByWeight(
             string((const char *)chinese.dptr, chinese.dsize), choice, nullptr, &zh_shape);
         result.complete = en_shape == zh_shape;
+    }
+    else if (literal_name && result.english.find('@') == string::npos)
+    {
+        const auto shown = ui_generated_name_arg(result.english);
+        result.translated = shown.text;
+        result.complete = shown.available;
     }
     else if (_speech_is_alias_chain(result.english))
     {
@@ -1143,7 +1147,59 @@ string getRandMonNameString(const string &montype)
 {
     int num_replacements = 0;
 
-    return _getRandomisedStr(SpeakDB, montype, " name", num_replacements);
+    return _getRandomisedStr(SpeakDB, montype, " name", num_replacements, 0, true);
+}
+
+namespace
+{
+void _collect_monname_choices(const string &key, map<string,string> &words,
+                              set<string> &visited)
+{
+    if (!visited.insert(key).second || !SpeakDB.translation) return;
+    const datum en = _database_fetch(SpeakDB.get(), key);
+    const datum zh = _database_fetch(SpeakDB.translation->get(), key);
+    if (en.dsize <= 0 || zh.dsize <= 0) return;
+    const auto left = split_string("\n\n", string((const char*)en.dptr, en.dsize));
+    const auto right = split_string("\n\n", string((const char*)zh.dptr, zh.dsize));
+    if (left.size() != right.size()) return;
+    for (size_t i = 0; i < left.size(); ++i)
+    {
+        string a = trimmed_string(left[i]), b = trimmed_string(right[i]);
+        if (starts_with(a, "w:"))
+        {
+            const size_t line = a.find('\n');
+            if (line == string::npos || b.substr(0,line+1) != a.substr(0,line+1)) continue;
+            a.erase(0,line+1); b.erase(0,line+1);
+        }
+        if (a.empty() || b.empty()) continue;
+        if (a.front() == '@' && a.back() == '@' && a == b
+            && a.find('@',1) == a.size()-1)
+            _collect_monname_choices(lowercase_string(a.substr(1,a.size()-2)), words, visited);
+        else if (a.find_first_of("@\n{}[]") == string::npos
+                 && b.find_first_of("@\n{}[]") == string::npos)
+            words.emplace(a,b);
+    }
+}
+}
+
+bool try_monname_display(const string &root, const string &canonical, string &display)
+{
+    if (Options.language != lang_t::ZH || !SpeakDB.translation) return false;
+    static const set<string> roots = {"any orc name", "ancestor name", "bland name",
+                                      "steelspirit name"};
+    if (!roots.count(root)) return false;
+    auto found = monname_words.find(root);
+    if (found == monname_words.end())
+    {
+        map<string,string> words;
+        set<string> visited;
+        _collect_monname_choices(root, words, visited);
+        found = monname_words.emplace(root, std::move(words)).first;
+    }
+    const auto word = found->second.find(canonical);
+    if (word == found->second.end()) return false;
+    display = word->second;
+    return true;
 }
 
 /////////////////////////////////////////////////////////////////////////////

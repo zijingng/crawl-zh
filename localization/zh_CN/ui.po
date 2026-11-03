@@ -102827,3 +102827,339 @@ msgstr "佐姆的毁灭之力"
 msgctxt "f.message"
 msgid "%s fragments into a salvo of icicles!"
 msgstr "%s碎裂成一轮冰锥齐射！"
+
+#. Reviewed Beogh orcification display; glossary fangs/antennae checked.
+#: crawl-ref/source/god-abil.cc crawl-ref/source/species-data.h
+msgctxt "g.orcification"
+msgid "Your teeth grow more tusk-like, and your ears lengthen."
+msgstr "你的牙齿变得更像獠牙，耳朵也变长了。"
+
+#. Reviewed Beogh orcification display; glossary fangs/antennae checked.
+#: crawl-ref/source/god-abil.cc crawl-ref/source/species-data.h
+msgctxt "g.orcification"
+msgid "A small pair of tusks begins to pierce through your wrappings."
+msgstr "一对小獠牙开始穿透你的裹尸布。"
+
+#. Reviewed Beogh orcification display; glossary fangs/antennae checked.
+#: crawl-ref/source/god-abil.cc crawl-ref/source/species-data.h
+msgctxt "g.orcification"
+msgid "Your beak becomes more hooked, and the plumage around your ears grows tufted."
+msgstr "你的鸟喙变得更加弯曲，耳边的羽毛也长成了簇状。"
+
+#. Reviewed Beogh orcification display; glossary fangs/antennae checked.
+#: crawl-ref/source/god-abil.cc crawl-ref/source/species-data.h
+msgctxt "g.orcification"
+msgid "Your beak grows more hooked, and small fins emerge from the sides of your head."
+msgstr "你的喙变得更加弯曲，头部两侧也冒出了小鳍。"
+
+#. Reviewed Beogh orcification display; glossary fangs/antennae checked.
+#: crawl-ref/source/god-abil.cc crawl-ref/source/species-data.h
+msgctxt "g.orcification"
+msgid "You feel a divine power chisel tusks from your teeth and sculpt your ears to a sharp point."
+msgstr "你感到一股神力将你的牙齿凿成獠牙，并把耳朵雕成尖形。"
+
+#. Reviewed Beogh orcification display; glossary fangs/antennae checked.
+#: crawl-ref/source/god-abil.cc crawl-ref/source/species-data.h
+msgctxt "g.orcification"
+msgid "Your mandibles take on a glossy white sheen, and your antennae grow pointier."
+msgstr "你的大颚泛起亮白色的光泽，触角也变得更尖了。"
+
+#. Reviewed Beogh orcification display; glossary fangs/antennae checked.
+#: crawl-ref/source/god-abil.cc crawl-ref/source/species-data.h
+msgctxt "g.orcification"
+msgid "A pair of ivory tusks grows out from your maw, and flowers begin to bloom upon you."
+msgstr "一对牙白色的獠牙从你的口中长出，花朵也开始在你身上绽放。"
+
+#. Reviewed Beogh orcification display; glossary fangs/antennae checked.
+#: crawl-ref/source/god-abil.cc crawl-ref/source/species-data.h
+msgctxt "g.orcification"
+msgid "Your teeth grow more tusk-like, and your tympanum bulges."
+msgstr "你的牙齿变得更像獠牙，鼓膜也向外鼓起。"
+
+#. Reviewed Beogh orcification display; glossary fangs/antennae checked.
+#: crawl-ref/source/god-abil.cc crawl-ref/source/species-data.h
+msgctxt "g.orcification"
+msgid "A small pair of spectral tusks begins to grow in your mouth."
+msgstr "一对幽灵般的小獠牙开始在你的口中长出。"
+
+#. Reviewed Beogh orcification display; glossary fangs/antennae checked.
+#: crawl-ref/source/god-abil.cc crawl-ref/source/species-data.h
+msgctxt "g.orcification"
+msgid "A small pair of tusks begins to sprout from your jawbone."
+msgstr "一对小獠牙开始从你的颌骨中长出。"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Orc"
+msgstr "兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "High Orc"
+msgstr "高等兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Deep Orc"
+msgstr "地底兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Sludge Orc"
+msgstr "污泥兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Halflorc"
+msgstr "半身兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Antique Orc"
+msgstr "古代兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Orcobold"
+msgstr "狗头兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Orcish Mummy"
+msgstr "兽人木乃伊"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Nagorc"
+msgstr "娜迦兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Big Orc"
+msgstr "巨型兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Trorc"
+msgstr "巨魔兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Orconian"
+msgstr "龙兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Centorc"
+msgstr "半马兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Spriggorc"
+msgstr "斯普利根兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Minotorc"
+msgstr "牛头兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Demon Orc"
+msgstr "恶魔兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Rotting Orc"
+msgstr "腐尸兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Tengorc"
+msgstr "天狗兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Merforc"
+msgstr "鱼兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Orcula"
+msgstr "吸血兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Deep Dworc"
+msgstr "地底矮兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Orcat"
+msgstr "猫兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Orctopode"
+msgstr "章鱼兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Orcfreeti"
+msgstr "兽人灯灵"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Lava Orc Orc"
+msgstr "熔岩兽人兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Gargorcle"
+msgstr "石像兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Orcmicid"
+msgstr "蚁族兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Orchid Stalker"
+msgstr "兰花潜伏者"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Orcphibian"
+msgstr "蛙兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Hyenorc"
+msgstr "豺狼兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Orcataur"
+msgstr "犰狳兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Mayflyorc"
+msgstr "蜉蝣兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Meteorc"
+msgstr "流星兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Mountain Orc"
+msgstr "山地兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Exo-Orc"
+msgstr "机甲兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Phantasmorc"
+msgstr "幽影兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Skeletorc"
+msgstr "骷髅兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Red Orconian"
+msgstr "红龙兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "White Orconian"
+msgstr "白龙兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Green Orconian"
+msgstr "绿龙兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Yellow Orconian"
+msgstr "黄龙兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Grey Orconian"
+msgstr "灰龙兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Black Orconian"
+msgstr "黑龙兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Purple Orconian"
+msgstr "紫龙兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Mottled Orconian"
+msgstr "斑纹龙兽人"
+
+#. Reviewed Beogh species epithet; canonical species data and saves remain English.
+#: crawl-ref/source/species-data.h crawl-ref/source/species.cc
+msgctxt "display.creation"
+msgid "Pale Orconian"
+msgstr "苍白龙兽人"

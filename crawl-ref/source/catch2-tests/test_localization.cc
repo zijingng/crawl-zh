@@ -72,6 +72,9 @@
 #include "dgn-overview.h"
 #include "transform.h"
 #include "god-abil.h"
+#include "god-companions.h"
+#include "attitude-change.h"
+#include "ghost.h"
 #include "god-conduct.h"
 #include "hints.h"
 #include "hiscores.h"
@@ -3380,7 +3383,7 @@ TEST_CASE("Reviewed graffiti colours and fountain references share one canonical
         rng::subgenerator isolated(seed, 0);
         const auto pair = getPairedMiscString(key);
         CHECK(pair.complete); CHECK(pair.english == expected);
-        CHECK(pair.text() == expected); CHECK(rng::peek_uint64() == next);
+        CHECK(pair.text() != expected); CHECK(rng::peek_uint64() == next);
     }
     int fountain_graffiti = 0;
     for (const char *key : {"default dry_fountain", "default peaceful dry_fountain", "default fountain_blue"})
@@ -11118,4 +11121,358 @@ TEST_CASE("Indirect divine and elemental death effects freeze translated causes 
           == unknown.death_description(scorefile_entry::DDV_VERBOSE));
     CHECK(unknown.display_damage_description() == unknown.death_description(scorefile_entry::DDV_TERSE));
     CHECK(rng::peek_uint64() == next);
+}
+
+TEST_CASE("Scripted Beogh dialogue retains paired choices through actual message rendering", "[localization][beogh-paired-dialogue]")
+{
+    init_properties(); init_monsters(); init_mut_index(); init_duration_index();
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    unwind_var<const char *> lang(Options.lang_name, "zh");
+    unwind_var<string> directory(Options.save_dir, "../../../.term-audit/database-07-runtime/");
+    unwind_var<string> datadir(SysEnv.crawl_dir, ".");
+    unwind_var<bool> io(crawl_state.io_inited, false);
+    unwind_var<bool> arena(crawl_state.arena_suspended, true);
+    unwind_var<int> width(crawl_view.msgsz.x, 240);
+    struct Scope { Scope() { databaseSystemInit(); } ~Scope() { databaseSystemShutdown(); clear_message_store(); } } databases;
+    monster priest; priest.type = priest.base_monster = MONS_ORC_PRIEST;
+    priest.hit_points = priest.max_hit_points = 30; priest.foe = MHITYOU;
+    priest.god = GOD_BEOGH; priest.set_position(coord_def(10,10));
+    for (const string key : {"orc_priest_preaching", "orc_apostle_yield", "orc_apostle_dismissed",
+                             "orc_apostle_unbanished", "friendly bfb orc"})
+    {
+        int translated = 0;
+        for (int seed = 0; seed < 32; ++seed)
+        {
+            string expected; uint64_t next;
+            {
+                rng::subgenerator isolated(seed, 0);
+                expected = do_mon_str_replacements(getSpeakString(key, true), priest);
+                next = rng::peek_uint64();
+            }
+            rng::subgenerator isolated(seed, 0);
+            auto speech = getPairedSpeakString(key);
+            const string selected = speech.english;
+            clear_message_store();
+            mons_speaks_msg(&priest, speech.english, MSGCH_TALK, false, "", &speech);
+            const string log = get_last_messages(10, true);
+            CAPTURE(key, seed, selected, expected, speech.text(), log);
+            CHECK(speech.english == expected);
+            CHECK(rng::peek_uint64() == next);
+            if (speech.text() != expected)
+            {
+                ++translated;
+                CHECK(log.find("@The_monster@") == string::npos);
+                CHECK(log.find("The orc priest") == string::npos);
+            }
+            if (key == "orc_priest_preaching")
+            {
+                CHECK(speech.text() != expected);
+                CHECK(log.find("兽人祭司") != string::npos);
+                CHECK(log.find("Beogh") == string::npos);
+                CHECK(log.find("shouts") == string::npos);
+                CHECK(log.find("threatens") == string::npos);
+            }
+            Options.language = lang_t::EN;
+            CHECK(speech.text() == expected);
+            Options.language = lang_t::ZH;
+        }
+        CHECK(translated > 0);
+    }
+}
+
+TEST_CASE("Beogh orcification messages cover eligible species without changing canonical physiology text", "[localization][beogh-orcification]")
+{
+    init_properties(); init_mut_index();
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    unwind_var<species_type> species(you.species);
+    unwind_var<decltype(you.props)> properties(you.props);
+    unwind_var<bool> io(crawl_state.io_inited, false);
+    unwind_var<bool> level(you.on_current_level, false);
+    unwind_var<int> width(crawl_view.msgsz.x, 200);
+    struct Cleanup { ~Cleanup() { clear_message_store(); } } cleanup;
+    const auto normalize = [](const string &text) {
+        string result;
+        bool space = false;
+        for (char c : text)
+        {
+            if (c == ' ' || c == '\n' || c == '\r' || c == '\t') { space = true; continue; }
+            if (space && !result.empty()) result += ' ';
+            result += c; space = false;
+        }
+        return result;
+    };
+    const auto next = rng::peek_uint64();
+    for (auto race : species::get_all_species())
+    {
+        if (species::mutation_level(race, MUT_FORLORN)) continue;
+        you.species = race;
+        const string canonical = species::orcification_msg(race);
+        CAPTURE(race, canonical);
+        you.props.erase(ORCIFICATION_LEVEL_KEY);
+        clear_message_store();
+        beogh_increase_orcification();
+        const string shown = get_last_messages(10, true);
+        CHECK(normalize(shown).find(normalize(canonical)) == string::npos);
+        CHECK(you.props[ORCIFICATION_LEVEL_KEY].get_int() == 1);
+        CHECK(species::orcification_msg(race) == canonical);
+        REQUIRE(ui_text_arg("g.orcification", canonical).available);
+        Options.language = lang_t::EN;
+        you.props.erase(ORCIFICATION_LEVEL_KEY);
+        clear_message_store();
+        beogh_increase_orcification();
+        CHECK(normalize(get_last_messages(10, true)).find(normalize(canonical)) != string::npos);
+        Options.language = lang_t::ZH;
+        clear_message_store();
+        beogh_increase_orcification();
+        CHECK(you.props[ORCIFICATION_LEVEL_KEY].get_int() == 2);
+        CHECK(get_last_messages(10, true).find("Your orcish features manifest fully.") == string::npos);
+    }
+    CHECK(string(ui_translate("g.orcification", "Unknown future physiology.")) == "Unknown future physiology.");
+    CHECK(rng::peek_uint64() == next);
+}
+
+TEST_CASE("Actual orc conversion reaction and speech keep paired text through printing", "[localization][orc-conversion-display]")
+{
+    init_properties(); init_monsters(); init_mut_index(); init_duration_index();
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    unwind_var<const char *> lang(Options.lang_name, "zh");
+    unwind_var<string> directory(Options.save_dir, "../../../.term-audit/database-07-runtime/");
+    unwind_var<string> datadir(SysEnv.crawl_dir, ".");
+    unwind_var<bool> io(crawl_state.io_inited, false);
+    unwind_var<bool> arena(crawl_state.arena_suspended, true);
+    unwind_var<int> width(crawl_view.msgsz.x, 240);
+    const bool notes_active = notes_are_active(); activate_notes(false);
+    struct Notes { bool active; ~Notes() { activate_notes(active); } } restore_notes{notes_active};
+    struct Scope { Scope() { databaseSystemInit(); } ~Scope() { databaseSystemShutdown(); clear_message_store(); } } databases;
+    for (int seed = 0; seed < 32; ++seed)
+    {
+        string english; uint64_t next = 0;
+        for (auto selected : {lang_t::EN, lang_t::ZH})
+        {
+            rng::subgenerator isolated(seed, 0);
+            Options.language = selected;
+            monster orc; orc.type = orc.base_monster = MONS_ORC;
+            orc.hit_points = orc.max_hit_points = 30; orc.foe = MHITYOU;
+            orc.god = GOD_BEOGH; orc.attitude = ATT_GOOD_NEUTRAL;
+            orc.set_position(coord_def(10,10));
+            clear_message_store();
+            beogh_convert_orc(&orc, conv_t::sight);
+            const string log = get_last_messages(10, true);
+            CAPTURE(seed, log);
+            if (selected == lang_t::EN)
+            {
+                english = log; next = rng::peek_uint64();
+                CHECK(log.find("orc") != string::npos);
+            }
+            else
+            {
+                CHECK(log != english);
+                CHECK(log.find("兽人") != string::npos);
+                CHECK(log.find("stares") == string::npos);
+                CHECK(log.find("I'm so glad") == string::npos);
+                CHECK(log.find("@The_monster@") == string::npos);
+                CHECK(rng::peek_uint64() == next);
+            }
+        }
+    }
+}
+
+TEST_CASE("Orc apostle names prefer reviewed names before phonetics without changing saves", "[localization][orc-apostle-names]")
+{
+    init_properties(); init_monsters(); init_mut_index();
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    unwind_var<const char *> lang(Options.lang_name, "zh");
+    unwind_var<string> savedir(Options.save_dir, "../../../.term-audit/database-07-runtime/");
+    unwind_var<string> datadir(SysEnv.crawl_dir, ".");
+    unwind_var<bool> io(crawl_state.io_inited, false);
+    struct DatabaseScope { DatabaseScope(){databaseSystemInit();} ~DatabaseScope(){databaseSystemShutdown();} } databases;
+    unwind_var<decltype(apostles)> followers(apostles);
+    apostles.clear(); apostles.emplace_back();
+    auto &stored = apostles[0].apostle.mons;
+    stored.type = stored.base_monster = MONS_ORC_APOSTLE;
+    stored.hit_points = stored.max_hit_points = 30;
+    stored.props[APOSTLE_TYPE_KEY] = 0;
+    const auto next = rng::peek_uint64();
+    for (const string raw : {"Arbolt", "Bogrim", "Zin"})
+    {
+        stored.mname = raw;
+        const ui_arg proper = ui_monname_arg("any orc name", raw);
+        REQUIRE(proper.available);
+        monster_info info(MONS_ORC_APOSTLE); info.mname = raw;
+        const string canonical = info.full_name(DESC_A);
+        string full; REQUIRE(info.try_display_name(full));
+        CHECK(full.find(proper.text) != string::npos);
+        CHECK(full.find("兽人使徒") != string::npos);
+        CHECK(full.find(raw) == string::npos);
+        CHECK(info.display_name_tag() == proper.text);
+        CHECK(info.full_name(DESC_A) == canonical);
+        string name; REQUIRE(try_apostle_display_name(0, false, name));
+        CHECK(name == proper.text);
+        REQUIRE(try_apostle_display_name(0, true, name));
+        CHECK(name.find(proper.text) != string::npos);
+        CHECK(get_apostle_name(0) == raw);
+        CHECK(stored.mname == raw);
+        Options.language = lang_t::EN;
+        CHECK(info.display_name_tag() == raw);
+        name = "sentinel"; CHECK_FALSE(try_apostle_display_name(0, false, name));
+        CHECK(name == "sentinel");
+        Options.language = lang_t::ZH;
+    }
+    monster_info custom(MONS_ORC); custom.mname = "Arbolt";
+    CHECK(custom.display_name_tag() == "Arbolt");
+    stored.mname = "Unknown_Name_123";
+    string untouched = "sentinel";
+    CHECK_FALSE(try_apostle_display_name(0, false, untouched));
+    CHECK(untouched == "sentinel");
+    CHECK(rng::peek_uint64() == next);
+}
+
+TEST_CASE("Beogh species epithets cover the HUD and divine titles without changing species data", "[localization][orc-species-epithets]")
+{
+    init_properties(); init_mut_index();
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    unwind_var<species_type> race_scope(you.species);
+    unwind_var<god_type> religion(you.religion, GOD_BEOGH);
+    unwind_var<uint8_t> penance(you.penance[GOD_BEOGH], 0);
+    const auto next = rng::peek_uint64();
+    for (auto race : species::get_all_species())
+    {
+        if (species::mutation_level(race, MUT_FORLORN)) continue;
+        you.species = race;
+        const string canonical = species::orc_name(race);
+        const ui_arg shown = ui_text_arg("display.creation", player_species_name());
+        CAPTURE(race, canonical, shown.text);
+        CHECK(player_species_name() == canonical);
+        REQUIRE(shown.available);
+        CHECK(shown.text != canonical);
+        if (race == SP_MINOTAUR) CHECK(shown.text == "牛头兽人");
+        if (race == SP_TENGU) CHECK(shown.text == "天狗兽人");
+        if (race == SP_OCTOPODE) CHECK(shown.text == "章鱼兽人");
+        for (int piety : {0, 40, 100, 200})
+        {
+            const string english = god_title(GOD_BEOGH, race, piety);
+            const string title = god_display_title(GOD_BEOGH, race, piety);
+            CHECK(title != english);
+            CHECK(god_title(GOD_BEOGH, race, piety) == english);
+            Options.language = lang_t::EN;
+            CHECK(player_species_name() == canonical);
+            CHECK_FALSE(ui_text_arg("display.creation", canonical).available);
+            CHECK(god_display_title(GOD_BEOGH, race, piety) == english);
+            Options.language = lang_t::ZH;
+        }
+        CHECK(species::orc_name(race) == canonical);
+    }
+    CHECK_FALSE(ui_text_arg("display.creation", "Unknown future orc species").available);
+    CHECK(rng::peek_uint64() == next);
+}
+TEST_CASE("Fixed TextDB names preserve choices and canonical identity in both languages", "[localization][monname-reviewed]")
+{
+    init_properties(); init_monsters(); init_mut_index();
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    unwind_var<const char *> lang(Options.lang_name, "zh");
+    unwind_var<string> savedir(Options.save_dir, "../../../.term-audit/database-07-runtime/");
+    unwind_var<string> datadir(SysEnv.crawl_dir, ".");
+    unwind_var<bool> io(crawl_state.io_inited, false);
+    struct DatabaseScope { DatabaseScope(){databaseSystemInit();} ~DatabaseScope(){databaseSystemShutdown();} } databases;
+    const auto english = read_speech_fixture("dat/database/monname.txt");
+    const auto chinese = read_speech_fixture("dat/database/zh/monname.txt");
+    REQUIRE(english.size() == 52); REQUIRE(chinese.size() == english.size());
+    int fixed_choices = 0;
+    for (const auto &entry : english)
+    {
+        const auto left = split_string("\n\n", trimmed_string(entry.second));
+        const auto right = split_string("\n\n", trimmed_string(chinese.at(entry.first)));
+        REQUIRE(left.size() == right.size());
+        for (size_t i = 0; i < left.size(); ++i)
+        {
+            string a = trimmed_string(left[i]), b = trimmed_string(right[i]);
+            if (starts_with(a,"w:")) { a=a.substr(a.find('\n')+1); b=b.substr(b.find('\n')+1); }
+            if (a.find('@') == string::npos)
+            {
+                CAPTURE(entry.first,a,b);
+                CHECK(a != b); CHECK(strwidth(b) < static_cast<int>(b.size()));
+                ++fixed_choices;
+            }
+        }
+        for (int seed = 0; seed < 32; ++seed)
+        {
+            CAPTURE(entry.first,seed);
+            string original; uint64_t next = 0;
+            {
+                rng::subgenerator isolated(seed,0);
+                original = getSpeakString(entry.first,true); next = rng::peek_uint64();
+            }
+            for (auto selected : {lang_t::EN,lang_t::ZH})
+            {
+                Options.language=selected; rng::subgenerator isolated(seed,0);
+                auto paired = getPairedSpeakString(entry.first);
+                CHECK(paired.english == original); CHECK(rng::peek_uint64() == next);
+                if (selected == lang_t::EN) CHECK(paired.text() == original);
+                else { REQUIRE(paired.complete); if (original.find('@') == string::npos) CHECK(paired.text() != original); }
+            }
+        }
+    }
+    CHECK(fixed_choices == 790);
+    Options.language=lang_t::ZH;
+    const auto next = rng::peek_uint64();
+    CHECK(ui_monname_arg("any orc name","Arbolt").text == "阿尔博尔特");
+    CHECK(ui_monname_arg("ancestor name","Æthelred").text == "埃塞尔雷德");
+    CHECK(ui_monname_arg("steelspirit name","Li").text == "丽");
+    CHECK(ui_monname_arg("steelspirit name","Ignacio").text == "伊格纳西奥");
+    CHECK(ui_monname_arg("any orc name","Unlistedname").text == ui_generated_name_arg("Unlistedname").text);
+    string untouched="sentinel"; CHECK_FALSE(try_monname_display("any orc name","Unlistedname",untouched));
+    CHECK(untouched=="sentinel");
+    CHECK_FALSE(ui_monname_arg("any orc name","Invalid_Name").available);
+    CHECK(rng::peek_uint64()==next);
+    // Canonical generation must never read the Chinese overlay, even after it
+    // has been queried for display in the same process.
+    for (const char *root : {"orc apostle warrior", "orc apostle wizard", "orc apostle priest", "ancestor", "steelspirit"})
+    for (int seed=0;seed<32;++seed)
+    {
+        string original; uint64_t next=0;
+        for (auto selected : {lang_t::EN,lang_t::ZH})
+        {
+            Options.language=selected; rng::subgenerator isolated(seed,0);
+            const string name=do_mon_name_replacements(getRandMonNameString(root));
+            if (selected==lang_t::EN) {original=name;next=rng::peek_uint64();}
+            else {CHECK(name==original);CHECK(rng::peek_uint64()==next);}
+        }
+    }
+}
+
+TEST_CASE("Ancestor and steelspirit display respects manual names and inscriptions", "[localization][monname-owners]")
+{
+    init_properties(); init_monsters(); init_mut_index();
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    unwind_var<const char *> lang(Options.lang_name, "zh");
+    unwind_var<string> savedir(Options.save_dir, "../../../.term-audit/database-07-runtime/");
+    unwind_var<string> datadir(SysEnv.crawl_dir, ".");
+    unwind_var<bool> io(crawl_state.io_inited, false);
+    unwind_var<CrawlHashTable> properties(you.props);
+    struct DatabaseScope { DatabaseScope(){databaseSystemInit();} ~DatabaseScope(){databaseSystemShutdown();} } databases;
+    you.props.erase(HEPLIAKLQANA_GENERATED_NAME_KEY);
+    CHECK(ui_ancestor_name_arg("Æthelred").text=="Æthelred");
+    you.props[HEPLIAKLQANA_GENERATED_NAME_KEY]="Æthelred";
+    CHECK(ui_ancestor_name_arg("Æthelred").text=="埃塞尔雷德");
+    CHECK(ui_ancestor_name_arg("My own name").text=="My own name");
+    for (auto type : {MONS_ANCESTOR,MONS_ANCESTOR_KNIGHT,MONS_ANCESTOR_BATTLEMAGE,MONS_ANCESTOR_HEXER})
+    {
+        monster_info info(type);info.mname="Æthelred";
+        CHECK(info.display_name_tag()=="埃塞尔雷德");
+        string shown;REQUIRE(info.try_display_name(shown));CHECK(shown.find("埃塞尔雷德")!=string::npos);
+        CHECK(info.full_name(DESC_PLAIN).find("Æthelred")!=string::npos);
+        Options.language=lang_t::EN;CHECK(info.display_name_tag()=="Æthelred");Options.language=lang_t::ZH;
+    }
+    you.props.erase(HEPLIAKLQANA_GENERATED_NAME_KEY);
+    monster_info custom(MONS_ANCESTOR);custom.mname="Æthelred";
+    CHECK(custom.display_name_tag()=="Æthelred");
+    item_def weapon;weapon.base_type=OBJ_WEAPONS;weapon.sub_type=WPN_SHORT_SWORD;weapon.quantity=1;
+    weapon.flags|=ISFLAG_IDENTIFIED;weapon.props[WEAPON_NAME_KEY]="Li";
+    weapon.props[WEAPON_NAME_INSCRIPTION_KEY]=true;weapon.inscription="!w, Li";
+    string shown; REQUIRE(try_item_display_name(weapon,shown,false,false));
+    CHECK(shown.find("!w, 丽")!=string::npos);CHECK(weapon.inscription=="!w, Li");
+    weapon.props.erase(WEAPON_NAME_INSCRIPTION_KEY);
+    REQUIRE(try_item_display_name(weapon,shown,false,false));CHECK(shown.find("!w, Li")!=string::npos);
+    Options.language=lang_t::EN;CHECK(ui_ancestor_name_arg("Æthelred").text=="Æthelred");
+    CHECK_FALSE(ui_monname_arg("any orc name","Arbolt").available);
 }

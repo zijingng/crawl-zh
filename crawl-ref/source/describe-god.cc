@@ -300,12 +300,14 @@ string god_display_title(god_type god, species_type sp, int piety)
     };
     for (const auto &entry : keys)
         if (string(source).find("@" + entry.first + "@") != string::npos)
-            group.require("d.god.title.component", entry.second.c_str());
+            group.require(entry.first == "Orc" ? "display.creation" : "d.god.title.component",
+                          entry.second.c_str());
     if (!group.available())
         return original;
     map<string, string> values;
     for (const auto &entry : keys)
-        values[entry.first] = group.get("d.god.title.component", entry.second.c_str());
+        values[entry.first] = group.get(entry.first == "Orc" ? "display.creation" : "d.god.title.component",
+                                       entry.second.c_str());
     return replace_keys(group.get("d.god.title", source), values);
 }
 

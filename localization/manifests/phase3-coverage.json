@@ -23407,6 +23407,223 @@
           "status": "reviewed"
         }
       ]
+    },
+    {
+      "source": "database/monname.txt",
+      "source_entries": 52,
+      "exported": 52,
+      "english_fallback": [],
+      "source_duplicate_keys": [],
+      "entries": [
+        {
+          "key": "any orc name",
+          "status": "reviewed"
+        },
+        {
+          "key": "orc name",
+          "status": "reviewed"
+        },
+        {
+          "key": "orc apostle warrior name",
+          "status": "reviewed"
+        },
+        {
+          "key": "orc apostle wizard name",
+          "status": "reviewed"
+        },
+        {
+          "key": "orc apostle priest name",
+          "status": "reviewed"
+        },
+        {
+          "key": "_orc_warrior_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_orc_wizard_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_orc_priest_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_beogh_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_orcish_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_other_orcish_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "ancestor name",
+          "status": "reviewed"
+        },
+        {
+          "key": "ancestor male name",
+          "status": "reviewed"
+        },
+        {
+          "key": "ancestor female name",
+          "status": "reviewed"
+        },
+        {
+          "key": "_west_european_male_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_roman_male_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_aztec_male_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_mesopotamian_male_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_egyptian_male_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_zulu_male_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_arabic_male_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_slavic_male_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_west_european_female_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_roman_female_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_aztec_female_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_mesopotamian_female_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_egyptian_female_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_zulu_female_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_arabic_female_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_slavic_female_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_brazilian_female_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_brazilian_male_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "steelspirit name",
+          "status": "reviewed"
+        },
+        {
+          "key": "bland name",
+          "status": "reviewed"
+        },
+        {
+          "key": "_bland_female_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_bland_male_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_cantonese_female_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_cantonese_male_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_german_female_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_german_male_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_hispanic_female_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_hispanic_male_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_irish_female_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_irish_male_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_japanese_female_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_japanese_male_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_korean_female_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_korean_male_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_sikh_female_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_sikh_male_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_thai_female_name_",
+          "status": "reviewed"
+        },
+        {
+          "key": "_thai_male_name_",
+          "status": "reviewed"
+        }
+      ]
     }
   ]
 }

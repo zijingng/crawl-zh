@@ -189,6 +189,7 @@ bool maybe_identify_base_type(item_def &item);
 int count_movable_items(int obj);
 
 #define WEAPON_NAME_KEY "weapon_name"
+#define WEAPON_NAME_INSCRIPTION_KEY "weapon_name_auto_inscription"
 
 string get_weapon_name(const item_def &item, bool full_name);
 void name_weapon(item_def &item);

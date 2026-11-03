@@ -29,6 +29,8 @@ enum nemelex_gift_types
 
 /// the name of the ally hepliaklqana granted the player
 #define HEPLIAKLQANA_ALLY_NAME_KEY "hepliaklqana_ally_name"
+// Original automatically chosen name; erased on manual rename.
+#define HEPLIAKLQANA_GENERATED_NAME_KEY "hepliaklqana_generated_name"
 /// ancestor gender
 #define HEPLIAKLQANA_ALLY_GENDER_KEY "hepliaklqana_ally_gender"
 /// chosen ancestor class (monster_type)

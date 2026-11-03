@@ -74,6 +74,9 @@ textdb_speech getPairedSpeakString(const string &key);
 textdb_speech getPairedCastString(const string &key);
 textdb_speech getPairedShoutString(const string &key, const string &suffix = "");
 string getRandMonNameString(const string &montype);
+// Reviewed finite name choices, selected without drawing RNG. Output is untouched
+// on failure; callers may then use the generated-name phonetic fallback.
+bool try_monname_display(const string &root, const string &canonical, string &display);
 string getRandNameString(const string &itemtype, const string &suffix = "");
 string getHelpString(const string &topic);
 // untranslated also applies to recursive references; useful when constructing

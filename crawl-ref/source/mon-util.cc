@@ -4859,8 +4859,10 @@ void do_decor_name_replacements(textdb_speech &speech)
         const size_t pos = speech.translated.find(name_marker, display_pos);
         if (pos != string::npos)
         {
-            speech.translated.replace(pos, name_marker.size(), chosen);
-            display_pos = pos + chosen.size();
+            const auto shown = ui_generated_name_arg(chosen);
+            speech.complete = speech.complete && shown.available;
+            speech.translated.replace(pos, name_marker.size(), shown.text);
+            display_pos = pos + shown.text.size();
         }
     }
     auto replace = [&](const char *marker, const string &chosen, const char *context) {
