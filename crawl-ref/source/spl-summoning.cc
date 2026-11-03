@@ -4598,8 +4598,9 @@ bool splinterfrost_block_fragment(monster& block, const coord_def& aim)
     string msg;
     if (you.can_see(block))
     {
-        msg = make_stringf("%s fragments into a salvo of icicles!",
-                            block.name(DESC_THE).c_str());
+        msg = ui_render("f.message", "%s fragments into a salvo of icicles!",
+            make_stringf("%s fragments into a salvo of icicles!", block.name(DESC_THE).c_str()),
+            {ui_actor_arg(block)});
     }
     schedule_splinterfrost_fragment_fineff(beam, msg);
 

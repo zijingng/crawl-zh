@@ -676,6 +676,10 @@ void schedule_explosion_fineff(bolt& beam, string boom, string sanct,
                                const actor* flame_agent,
                                string poof)
 {
+    // Monster messages may already be rendered; fixed queued effects must use
+    // the same reviewed catalogue as immediate beam explosions.
+    boom = ui_translate("b.explosion", boom.c_str());
+    sanct = ui_translate("m.ui", sanct.c_str());
     _schedule_final_effect(new explosion_fineff(beam, boom, sanct,
                                                 typ, flame_agent, poof));
 }

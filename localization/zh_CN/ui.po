@@ -102820,3 +102820,10 @@ msgstr "佐姆的闪电打击"
 msgctxt "h.death.component"
 msgid "Xom's destruction"
 msgstr "佐姆的毁灭之力"
+
+#. Reviewed queued splinterfrost fragmentation; glossary: icicle salvo.
+#: crawl-ref/source/spl-summoning.cc
+#, c-format
+msgctxt "f.message"
+msgid "%s fragments into a salvo of icicles!"
+msgstr "%s碎裂成一轮冰锥齐射！"
