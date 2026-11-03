@@ -2071,12 +2071,15 @@ string scorefile_entry::display_hiscore_line(death_desc_verbosity verbosity) con
             time += _hiscore_newline_string();
     }
     string place = death_place(verbosity);
-    if (!single && !place.empty() && mapdesc.empty()
+    if (!single && !place.empty()
         && branch >= BRANCH_DUNGEON && branch < NUM_BRANCHES)
     {
-        string localized = ui_render("h.scores", "At %s, level %s.", "",
-            {ui_text_arg("b.branch.name", branches[branch].longname),
-             ui_literal_arg(to_string(dlvl))});
+        const ui_arg branch_name = ui_text_arg("b.branch.name", branches[branch].longname);
+        const ui_arg floor = ui_literal_arg(to_string(dlvl));
+        string localized = mapdesc.empty()
+            ? ui_render("h.scores", "At %s, level %s.", "", {branch_name, floor})
+            : ui_render("h.scores", "At %s, level %s (%s).", "",
+                {branch_name, floor, ui_text_arg("n.map", mapdesc)});
         if (!localized.empty())
         {
             if (verbosity == DDV_VERBOSE && death_time

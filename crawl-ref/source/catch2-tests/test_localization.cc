@@ -11032,3 +11032,90 @@ TEST_CASE("Monster unusual equipment description translates actual curare darts 
     CHECK(original.body.str().find("It has an unusual item: a curare-tipped dart.") != string::npos);
     CHECK(dart.name(DESC_A) == "a curare-tipped dart");
 }
+
+TEST_CASE("Morgue sprint map locations reuse map translations and keep complete English fallback", "[localization][morgue-sprint-place]")
+{
+    init_properties(); init_monsters(); init_mut_index();
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    const string common = "v=0.34.1:sc=42:name=Tester:race=Human:cls=Fighter:char=HuFi:xl=5:title=Fighter:ktyp=mon:killer=an orc:br=D:lvl=1:hp=-4:mhp=10:mmhp=10:start=20261103080000S:end=20261103090000S:dur=60:";
+    const vector<string> maps = {"Sprint I: \"Red Sonja\"", "Sprint II: \"The Violet Keep of Menkaure\"",
+        "Sprint III: \"The Ten Rune Challenge\"", "Sprint IV: \"Fedhas' Mad Dash\"",
+        "Sprint V: \"Ziggurat Sprint\"", "Sprint VI: \"Thunderdome\"", "Sprint VII: \"The Pits\"",
+        "Sprint VIII: \"Arena of Blood\"", "Sprint IX: \"|||||||||||||||||||||||||||||\""};
+    for (const string &map : maps)
+    {
+        scorefile_entry score;
+        REQUIRE(score.parse(common + "mapdesc=" + replace_all(map, ":", "::") + ":turn=10\n"));
+        const string raw = score.raw_string();
+        const string english = hiscores_format_single_long(score, true);
+        const string shown = hiscores_format_single_long(score, true, true);
+        const ui_arg title = ui_text_arg("n.map", map);
+        CAPTURE(map, shown);
+        REQUIRE(title.available);
+        CHECK(shown.find(title.text) != string::npos);
+        CHECK(shown.find("位于地下城第 1 层（") != string::npos);
+        CHECK(shown.find(map) == string::npos);
+        CHECK(score.raw_string() == raw);
+        CHECK(hiscores_format_single_long(score, true) == english);
+        Options.language = lang_t::EN;
+        CHECK(hiscores_format_single_long(score, true, true) == english);
+        Options.language = lang_t::ZH;
+    }
+    scorefile_entry custom;
+    REQUIRE(custom.parse(common + "mapdesc=Unknown custom sprint:turn=10\n"));
+    const string place = custom.death_place(scorefile_entry::DDV_VERBOSE);
+    CHECK(hiscores_format_single_long(custom, true, true).find(place) != string::npos);
+}
+
+TEST_CASE("Indirect divine and elemental death effects freeze translated causes and invokers", "[localization][indirect-death-effects]")
+{
+    init_properties(); init_monsters(); init_mut_index(); init_duration_index(); init_spell_descs();
+    unwind_var<lang_t> language(Options.language, lang_t::EN);
+    unwind_var<int> paralysis(you.duration[DUR_PARALYSIS], 0);
+    unwind_var<int> petrified(you.duration[DUR_PETRIFIED], 0);
+    unwind_var<int> sleep(you.duration[DUR_SLEEP], 0);
+    unwind_var<int> vexed(you.duration[DUR_VEXED], 0);
+    const auto next = rng::peek_uint64();
+    const vector<string> causes = {"by divine providence", "by psychic fangs", "by a beckoning gale",
+        "by a resonance strike", "by the raging water", "by frigid sleet", "by the air",
+        "blast of fiery breath", "blast of searing breath", "blast of icy breath", "arc of chain lightning",
+        "by burning poison", "by static electricity", "by torment", "blast of sparks and slag", "the storm"};
+    const string common = "v=0.34.1:sc=42:name=Tester:race=Human:cls=Fighter:char=HuFi:xl=5:title=Fighter:br=D:lvl=2:hp=-5:mhp=21:mmhp=21:dam=11:start=20261103080000S:end=20261103090000S:dur=60:ktyp=beam:killer=an orc priest:kaux=";
+    for (const string &cause : causes)
+    {
+        scorefile_entry event;
+        REQUIRE(event.parse(common + cause + ":turn=10\n"));
+        capture_death_text(event);
+        CHECK(Options.language == lang_t::EN);
+        const string raw = event.raw_string();
+        scorefile_entry loaded; REQUIRE(loaded.parse(raw));
+        for (auto v : {scorefile_entry::DDV_TERSE, scorefile_entry::DDV_ONELINE,
+                       scorefile_entry::DDV_NORMAL, scorefile_entry::DDV_VERBOSE})
+        {
+            const string english = event.death_description(v);
+            Options.language = lang_t::ZH;
+            const string shown = loaded.death_description(v, true);
+            CAPTURE(cause, english, shown);
+            CHECK(shown != english);
+            if (v == scorefile_entry::DDV_VERBOSE)
+            {
+                CHECK(shown.find("兽人祭司") != string::npos);
+                CHECK(shown.find("11") != string::npos);
+                CHECK(shown.find("invoked by") == string::npos);
+                if (cause == "by divine providence") CHECK(shown.find("神罚") != string::npos);
+            }
+            const string injury = event.display_damage_description();
+            CHECK(injury != event.death_description(scorefile_entry::DDV_TERSE));
+            Options.language = lang_t::EN;
+            CHECK(loaded.death_description(v, true) == english);
+        }
+    }
+    scorefile_entry unknown;
+    REQUIRE(unknown.parse(common + "by an unknown upstream effect:turn=10\n"));
+    capture_death_text(unknown);
+    Options.language = lang_t::ZH;
+    CHECK(unknown.death_description(scorefile_entry::DDV_VERBOSE, true)
+          == unknown.death_description(scorefile_entry::DDV_VERBOSE));
+    CHECK(unknown.display_damage_description() == unknown.death_description(scorefile_entry::DDV_TERSE));
+    CHECK(rng::peek_uint64() == next);
+}

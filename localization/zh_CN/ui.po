@@ -102699,3 +102699,124 @@ msgstr "[左键] 旅行 / [右键] 查看"
 msgctxt "tiles.minimap"
 msgid "\n[Shift + L-Click] Autoexplore"
 msgstr "\n[Shift + 左键] 自动探索"
+
+#. Reviewed morgue map location; reuse canonical sprint map display names.
+#: crawl-ref/source/hiscores.cc
+#, c-format
+msgctxt "h.scores"
+msgid "At %s, level %s (%s)."
+msgstr "位于%s第 %s 层（%s）。"
+
+#. Reviewed event-time death/injury cause; glossary and source producer checked.
+#: crawl-ref/source/mon-cast.cc
+msgctxt "h.death.component"
+msgid "divine providence"
+msgstr "神罚"
+
+#. Reviewed event-time death/injury cause; glossary and source producer checked.
+#: crawl-ref/source/mon-cast.cc
+msgctxt "h.death.component"
+msgid "psychic fangs"
+msgstr "心灵獠牙"
+
+#. Reviewed event-time death/injury cause; glossary and source producer checked.
+#: crawl-ref/source/mon-cast.cc
+msgctxt "h.death.component"
+msgid "a beckoning gale"
+msgstr "招引狂风"
+
+#. Reviewed event-time death/injury cause; glossary and source producer checked.
+#: crawl-ref/source/mon-cast.cc
+msgctxt "h.death.component"
+msgid "blast of fiery breath"
+msgstr "火焰吐息冲击"
+
+#. Reviewed event-time death/injury cause; glossary and source producer checked.
+#: crawl-ref/source/mon-cast.cc
+msgctxt "h.death.component"
+msgid "blast of searing breath"
+msgstr "灼热吐息冲击"
+
+#. Reviewed event-time death/injury cause; glossary and source producer checked.
+#: crawl-ref/source/mon-cast.cc
+msgctxt "h.death.component"
+msgid "blast of icy breath"
+msgstr "寒冰吐息冲击"
+
+#. Reviewed event-time death/injury cause; glossary and source producer checked.
+#: crawl-ref/source/mon-cast.cc
+msgctxt "h.death.component"
+msgid "a resonance strike"
+msgstr "共鸣打击"
+
+#. Reviewed event-time death/injury cause; glossary and source producer checked.
+#: crawl-ref/source/mon-cast.cc
+msgctxt "h.death.component"
+msgid "the raging water"
+msgstr "汹涌的水流"
+
+#. Reviewed event-time death/injury cause; glossary and source producer checked.
+#: crawl-ref/source/mon-cast.cc
+msgctxt "h.death.component"
+msgid "frigid sleet"
+msgstr "冰冷的霰粒"
+
+#. Reviewed event-time death/injury cause; glossary and source producer checked.
+#: crawl-ref/source/mon-cast.cc
+msgctxt "h.death.component"
+msgid "the air"
+msgstr "空气打击"
+
+#. Reviewed event-time death/injury cause; glossary and source producer checked.
+#: crawl-ref/source/spl-damage.cc
+msgctxt "h.death.component"
+msgid "arc of chain lightning"
+msgstr "连锁闪电电弧"
+
+#. Reviewed event-time death/injury cause; glossary and source producer checked.
+#: crawl-ref/source/spl-damage.cc
+msgctxt "h.death.component"
+msgid "burning poison"
+msgstr "燃烧的毒素"
+
+#. Reviewed event-time death/injury cause; glossary and source producer checked.
+#: crawl-ref/source/spl-damage.cc
+msgctxt "h.death.component"
+msgid "static electricity"
+msgstr "静电"
+
+#. Reviewed event-time death/injury cause; glossary and source producer checked.
+#: crawl-ref/source/spl-goditem.cc
+msgctxt "h.death.component"
+msgid "torment"
+msgstr "折磨"
+
+#. Reviewed event-time death/injury cause; glossary and source producer checked.
+#: crawl-ref/source/spl-monench.cc
+msgctxt "h.death.component"
+msgid "blast of sparks and slag"
+msgstr "火花与熔渣冲击"
+
+#. Reviewed event-time death/injury cause; glossary and source producer checked.
+#: crawl-ref/source/decks.cc
+msgctxt "h.death.component"
+msgid "the storm"
+msgstr "风暴"
+
+#. Reviewed event-time death/injury cause; glossary and source producer checked.
+#: crawl-ref/source/timed-effects.cc
+msgctxt "h.death.component"
+msgid "a magical explosion"
+msgstr "魔法爆炸"
+
+#. Reviewed event-time death/injury cause; glossary and source producer checked.
+#: crawl-ref/source/xom.cc
+msgctxt "h.death.component"
+msgid "Xom's lightning strike"
+msgstr "佐姆的闪电打击"
+
+#. Reviewed event-time death/injury cause; glossary and source producer checked.
+#: crawl-ref/source/xom.cc
+msgctxt "h.death.component"
+msgid "Xom's destruction"
+msgstr "佐姆的毁灭之力"
