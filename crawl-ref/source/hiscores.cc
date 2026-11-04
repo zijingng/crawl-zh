@@ -1938,8 +1938,8 @@ static ui_arg _score_component(const string &name, bool monster_name = false)
     if (monster_name)
         for (int i = 0; i < NUM_MONSTERS; ++i)
         {
-            if (invalid_monster_index(i)) continue;
             const auto type = static_cast<monster_type>(i);
+            if (invalid_monster_type(type)) continue;
             if (name != mons_type_name(type, DESC_A)
                 && name != mons_type_name(type, DESC_THE)) continue;
             return ui_text_arg("display.monster", mons_type_name(type, DESC_PLAIN));

@@ -10178,6 +10178,7 @@ TEST_CASE("Event-time bilingual notes retain death and injury coverage without s
         "ktyp=beam:killer=Jessica:kaux=puff of flame", "ktyp=constriction:killer=a ball python",
         "ktyp=pois:killer=an adder", "ktyp=cloud:kaux=flame",
         "ktyp=freezing:killer=an endoplasm", "ktyp=freezing",
+        "ktyp=burning:killer=a bombardier beetle",
         "ktyp=burning:killer=Jessica:kaux=sticky flame", "ktyp=burning",
         "ktyp=draining:killer=a wraith:kaux=negative energy", "ktyp=draining:kaux=negative energy",
         "ktyp=rotting:killer=a necrophage:kaux=poison", "ktyp=rotting",
