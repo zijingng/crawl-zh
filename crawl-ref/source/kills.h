@@ -88,9 +88,10 @@ public:
     void save(writer&) const;
     void load(reader&);
 
-    string info() const;
+    string info(bool display = false) const;
 
     string ghost_name;
+    string chinese_name;
     int exp;
     level_id place;
 };
@@ -120,10 +121,12 @@ struct kill_exp
           monnum(MONS_PROGRAM_BUG), modifier(0)
     {
         places.push_back(kg.place);
+        ghost_display = kg.info(true);
     }
 
     // Native display only; canonical desc and Lua accessors remain English.
     string display_description() const;
+    string ghost_display;
 
     // operator< is implemented for a descending sort.
     bool operator < (const kill_exp &b) const

@@ -785,8 +785,6 @@ void seen_monster(monster* mons, bool do_encounter_message)
         }
         take_note(Note(NOTE_SEEN_MONSTER, mons->type, 0, name), false, [&] {
             // Use the live typed name (heads, undead forms and random names).
-            // The extra short ghost biography needs its own complete adapter.
-            if (mons->type == MONS_PLAYER_GHOST) return string();
             string display;
             const bool available = monster_info(mons, MILEV_NAME).try_display_name(display);
             ui_arg shown{display, available};
@@ -800,6 +798,14 @@ void seen_monster(monster* mons, bool do_encounter_message)
                 const ui_arg kind = ui_text_arg("display.monster",
                     mons->has_ench(ENCH_GLOWING_SHAPESHIFTER) ? "glowing shapeshifter" : "shapeshifter");
                 const string qualified = ui_render("n.note", "%s (%s)", "", {shown, kind});
+                shown = {qualified, !qualified.empty()};
+            }
+            if (mons->type == MONS_PLAYER_GHOST)
+            {
+                string biography;
+                const bool has_biography = try_short_ghost_description_display(*mons, biography);
+                const string qualified = ui_render("n.note", "%s (%s)", "",
+                                                   {shown, {biography, has_biography}});
                 shown = {qualified, !qualified.empty()};
             }
             return ui_render("n.note", "Encountered %s", "", {shown});

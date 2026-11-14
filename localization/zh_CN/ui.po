@@ -103163,3 +103163,20 @@ msgstr "斑纹龙兽人"
 msgctxt "display.creation"
 msgid "Pale Orconian"
 msgstr "苍白龙兽人"
+
+#: crawl-ref/source/god-prayer.cc:123
+msgctxt "n.note.message"
+msgid "Prayed at the altar of an unknown god."
+msgstr "在无名神祇的祭坛前祈祷。"
+
+#: crawl-ref/source/describe.cc
+#, c-format
+msgctxt "d.ghost"
+msgid "%s %s %s"
+msgstr "%s%s%s"
+
+#: crawl-ref/source/describe.cc
+#, c-format
+msgctxt "k.kills"
+msgid "The ghost of %s"
+msgstr "%s的幽灵"

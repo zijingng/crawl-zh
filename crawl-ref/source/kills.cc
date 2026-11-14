@@ -62,8 +62,9 @@ string kill_exp::display_description() const
 {
     ui_translation_group text;
     string name;
-    // Old ghost/demon records contain rendered proper descriptions only.
-    // Preserve their entire original line rather than guessing its grammar.
+    if (text.available() && !ghost_display.empty())
+        return ghost_display;
+    // Legacy ghost records and unsupported descriptions retain the original.
     if (!text.available() || monnum == MONS_PROGRAM_BUG
         || !try_monster_type_display_name(monnum, name))
         return desc;
@@ -703,11 +704,32 @@ kill_ghost::kill_ghost(const monster* mon)
     {
         monster_info mi(mon);
         ghost_name = "The ghost of " + get_ghost_description(mi, true);
+        unwind_var<lang_t> language(Options.language, lang_t::ZH);
+        string biography;
+        if (try_ghost_description_display(mi, biography))
+            chinese_name = ui_render("k.kills", "The ghost of %s", "",
+                                     {ui_literal_arg(biography)});
     }
 }
 
-string kill_ghost::info() const
+string kill_ghost::info(bool display) const
 {
+    if (display && Options.language == lang_t::ZH && !chinese_name.empty())
+    {
+        if (Options.dump_kill_places == KDO_NO_PLACES)
+            return chinese_name;
+        if (place.is_valid())
+        {
+            const auto branch = ui_text_arg("b.branch.name", branches[place.branch].shortname);
+            if (branch.available)
+            {
+                string location = branch.text;
+                if (brdepth[place.branch] != 1)
+                    location += ":" + (place.depth ? to_string(place.depth) : string("$"));
+                return chinese_name + "（" + location + "）";
+            }
+        }
+    }
     return ghost_name
            + (Options.dump_kill_places != KDO_NO_PLACES ?
                 " (" + place.describe() + ")" :
@@ -717,6 +739,7 @@ string kill_ghost::info() const
 void kill_ghost::save(writer& outf) const
 {
     marshallString4(outf, ghost_name);
+    marshallString4(outf, chinese_name);
     marshallShort(outf, (unsigned short) exp);
     place.save(outf);
 }
@@ -724,6 +747,9 @@ void kill_ghost::save(writer& outf) const
 void kill_ghost::load(reader& inf)
 {
     unmarshallString4(inf, ghost_name);
+    chinese_name.clear();
+    if (inf.getMinorVersion() >= TAG_MINOR_BILINGUAL_GHOST_KILLS)
+        unmarshallString4(inf, chinese_name);
     exp = unmarshallShort(inf);
 #if TAG_MAJOR_VERSION == 34
     if (inf.getMinorVersion() < TAG_MINOR_PLACE_UNPACK)

@@ -99,6 +99,7 @@ void describe_bane(bane_type bane);
 string bane_long_description(bane_type bane, bool ignore_player = false);
 
 string short_ghost_description(const monster *mon, bool abbrev = false);
+bool try_short_ghost_description_display(const monster &mon, string &output);
 // Display-only ghost prose. Unknown saved/custom titles leave output untouched.
 bool try_ghost_description_display(const monster_info &mi, string &output);
 string get_ghost_description(const monster_info &mi, bool concise = false);

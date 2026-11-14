@@ -8325,6 +8325,18 @@ string short_ghost_description(const monster *mon, bool abbrev)
     return desc;
 }
 
+bool try_short_ghost_description_display(const monster &mon, string &output)
+{
+    const ghost_demon &ghost = *mon.ghost;
+    const string shown = ui_render("d.ghost", "%s %s %s", "",
+        {ui_text_arg("d.ghost.rank", xl_rank_names[ghost_level_to_rank(ghost.xl)]),
+         ui_text_arg("d.god.title.component", species::name(ghost.species)),
+         ui_text_arg("display.creation", get_job_name(ghost.job))});
+    if (shown.empty()) return false;
+    output = shown;
+    return true;
+}
+
 // Describes the current ghost's previous owner. The caller must
 // prepend "The apparition of" or whatever and append any trailing
 // punctuation that's wanted.
@@ -8386,8 +8398,13 @@ bool try_ghost_description_display(const monster_info &mi, string &output)
     ui_arg title{"", false};
     const string reconstructed = skill_title_by_rank(ghost.best_skill, ghost.best_skill_rank,
         ghost.species, sp.d, sp.s, sp.i, ghost.religion, 10 + ghost.xl_rank * 27, false, &title);
-    if (!ghost.title.empty() && ghost.title != reconstructed)
+    if (!ghost.title.empty() && ghost.title != reconstructed
+        && ghost.title != "the " + reconstructed)
+    {
         title = ui_text_arg("d.skill.title", ghost.title);
+        if (!title.available && starts_with(ghost.title, "the "))
+            title = ui_text_arg("d.skill.title", ghost.title.substr(4));
+    }
     const ui_arg rank = ui_text_arg("d.ghost.rank", xl_rank_names[ghost.xl_rank]);
     const ui_arg species = ui_text_arg("d.god.title.component", species::name(ghost.species));
     const ui_arg job = ui_text_arg("display.creation", get_job_name(ghost.job));

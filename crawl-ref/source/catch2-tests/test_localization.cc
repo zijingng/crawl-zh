@@ -1313,6 +1313,48 @@ TEST_CASE("Ghost display retains saved identity and falls back for custom titles
     REQUIRE(shown.find("战士") != string::npos);
     REQUIRE(get_ghost_description(ghost) == canonical);
     REQUIRE(ghost.i_ghost.title == "Warrior");
+    ghost.i_ghost.species = SP_MINOTAUR;
+    ghost.i_ghost.title = "the Covered";
+    REQUIRE(try_ghost_description_display(ghost, shown));
+    CHECK(shown.find("披甲者") != string::npos);
+    CHECK(shown.find("牛头人战士") != string::npos);
+    monster encountered;
+    encountered.type = MONS_PLAYER_GHOST;
+    encountered.ghost.reset(new ghost_demon);
+    encountered.ghost->species = SP_MINOTAUR;
+    encountered.ghost->job = JOB_FIGHTER;
+    encountered.ghost->xl = 5;
+    string biography;
+    REQUIRE(try_short_ghost_description_display(encountered, biography));
+    CHECK(biography.find("牛头人战士") != string::npos);
+
+    unwind_var<kill_dump_options> places(Options.dump_kill_places, KDO_ALL_PLACES);
+    kill_ghost record;
+    record.ghost_name = "The ghost of Tester";
+    record.chinese_name = "Tester的幽灵";
+    record.exp = 1;
+    record.place = level_id(BRANCH_NECROPOLIS, 1);
+    unwind_var<int> depth(brdepth[BRANCH_NECROPOLIS], 1);
+    vector<unsigned char> bytes;
+    auto out = writer(&bytes);
+    record.save(out);
+    auto in = reader(bytes, TAG_MINOR_VERSION);
+    kill_ghost restored;
+    restored.load(in);
+    CHECK(kill_exp(restored).display_description().find("Tester的幽灵（亡者之城") == 0);
+    Options.language = lang_t::EN;
+    CHECK(kill_exp(restored).display_description() == "The ghost of Tester (Necropolis)");
+    Options.language = lang_t::ZH;
+
+    vector<unsigned char> old_bytes;
+    auto old_out = writer(&old_bytes);
+    marshallString4(old_out, record.ghost_name);
+    marshallShort(old_out, record.exp);
+    record.place.save(old_out);
+    auto old_in = reader(old_bytes, TAG_MINOR_BILINGUAL_GHOST_KILLS - 1);
+    restored.load(old_in);
+    CHECK(kill_exp(restored).display_description() == "The ghost of Tester (Necropolis)");
+
     ghost.i_ghost.title = "An unknown custom title";
     shown = "unchanged";
     REQUIRE_FALSE(try_ghost_description_display(ghost, shown));
