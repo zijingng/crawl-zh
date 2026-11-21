@@ -103180,3 +103180,359 @@ msgstr "%s%s%s"
 msgctxt "k.kills"
 msgid "The ghost of %s"
 msgstr "%s的幽灵"
+
+msgctxt "r.power.action"
+msgid "recite Zin's Axioms of Law"
+msgstr "诵读辛的法则公理"
+
+msgctxt "r.power.action"
+msgid "call upon Zin for vitalisation"
+msgstr "祈求辛赐予活力"
+
+msgctxt "r.power.action"
+msgid "call upon Zin to imprison the lawless"
+msgstr "祈求辛囚禁不法者"
+
+msgctxt "r.power.action"
+msgid "call upon Zin to create a sanctuary"
+msgstr "祈求辛创造庇护所"
+
+msgctxt "r.power.action"
+msgid "donate money to Zin"
+msgstr "向辛捐献金钱"
+
+msgctxt "r.power.action"
+msgid "call upon the Shining One for a divine shield"
+msgstr "祈求光明神赐予神圣护盾"
+
+msgctxt "r.power.action"
+msgid "channel blasts of cleansing flame"
+msgstr "引导净化火焰的爆发"
+
+msgctxt "r.power.action"
+msgid "summon a divine warrior"
+msgstr "召唤神圣战士"
+
+msgctxt "r.power.action"
+msgid "bring forth the wretched and dying"
+msgstr "唤来可怜的濒死者"
+
+msgctxt "r.power.action"
+msgid "invoke the sign of ruin"
+msgstr "唤起毁灭征兆"
+
+msgctxt "r.power.action"
+msgid "light the black torch and reap souls in Yredelemnul's name"
+msgstr "点燃黑色火炬，以伊莱德莱姆努尔之名收割灵魂"
+
+msgctxt "r.power.action"
+msgid "recall your undead harvest"
+msgstr "召回收割而来的亡灵"
+
+msgctxt "r.power.action"
+msgid "hurl gouts of umbral torchlight"
+msgstr "投掷成团的暗影炬光"
+
+msgctxt "r.power.action"
+msgid "bind living souls"
+msgstr "束缚活体的灵魂"
+
+msgctxt "r.power.action"
+msgid "engulf your surroundings in Yredelemnul's grip"
+msgstr "用伊莱德莱姆努尔的掌控笼罩周围"
+
+msgctxt "r.power.action"
+msgid "gain magical power from killing"
+msgstr "通过杀敌恢复魔力"
+
+msgctxt "r.power.action"
+msgid "gain great but temporary skills"
+msgstr "暂时获得高超的技艺"
+
+msgctxt "r.power.action"
+msgid "speed up your combat"
+msgstr "加快战斗中的攻击速度"
+
+msgctxt "r.power.action"
+msgid "enter into single combat with a foe"
+msgstr "与一名敌人展开单挑"
+
+msgctxt "r.power.action"
+msgid "gain health from killing"
+msgstr "通过杀敌恢复生命"
+
+msgctxt "r.power.action"
+msgid "unleash Makhleb's destructive might"
+msgstr "释放马科列布的毁灭之力"
+
+msgctxt "r.power.action"
+msgid "summon an infernal servant of Makhleb"
+msgstr "召唤马科列布的地狱仆从"
+
+msgctxt "r.power.action"
+msgid "call upon Sif Muna for magical energy"
+msgstr "祈求席夫·穆纳赐予魔力"
+
+msgctxt "r.power.action"
+msgid "freely open your mind to new spells"
+msgstr "自由地敞开心灵，学习新的法术"
+
+msgctxt "r.power.action"
+msgid "call upon Sif Muna to cast any spell from your library"
+msgstr "祈求席夫·穆纳施放法术库中的任意法术"
+
+msgctxt "r.power.action"
+msgid "go berserk at will"
+msgstr "随时进入狂暴"
+
+msgctxt "r.power.action"
+msgid "call upon Trog for regeneration and willpower"
+msgstr "祈求特洛戈赐予再生与意志力"
+
+msgctxt "r.power.action"
+msgid "call in reinforcements"
+msgstr "召来援军"
+
+msgctxt "r.power.action"
+msgid "draw from decks of power"
+msgstr "从力量牌组中抽牌"
+
+msgctxt "r.power.action"
+msgid "choose one out of three cards"
+msgstr "从三张牌中选取一张"
+
+msgctxt "r.power.action"
+msgid "deal four cards at a time"
+msgstr "一次发出四张牌"
+
+msgctxt "r.power.action"
+msgid "stack five cards from your decks"
+msgstr "从牌组中叠放五张牌"
+
+msgctxt "r.power.action"
+msgid "purify yourself"
+msgstr "净化自身"
+
+msgctxt "r.power.action"
+msgid "heal and attempt to pacify others"
+msgstr "治疗其他生物并尝试使其和平"
+
+msgctxt "r.power.action"
+msgid "provide healing for yourself"
+msgstr "治疗自身"
+
+msgctxt "r.power.action"
+msgid "call upon Elyvilon for divine vigour"
+msgstr "祈求艾利维隆赐予神圣活力"
+
+msgctxt "r.power.action"
+msgid "depart the Abyss"
+msgstr "离开深渊"
+
+msgctxt "r.power.action"
+msgid "banish your foes"
+msgstr "放逐敌人"
+
+msgctxt "r.power.action"
+msgid "corrupt the fabric of space"
+msgstr "腐化空间结构"
+
+msgctxt "r.power.action"
+msgid "gate yourself to the Abyss"
+msgstr "将自己传送至深渊"
+
+msgctxt "r.power.action"
+msgid "smite your foes"
+msgstr "惩击敌人"
+
+msgctxt "r.power.action"
+msgid "recall your apostles"
+msgstr "召回使徒"
+
+msgctxt "r.power.action"
+msgid "rally a vengeful horde"
+msgstr "集结复仇的军团"
+
+msgctxt "r.power.action"
+msgid "walk on water"
+msgstr "在水面行走"
+
+msgctxt "r.power.action"
+msgid "call acidic ooze from nearby walls"
+msgstr "从附近墙壁中唤出酸性黏液"
+
+msgctxt "r.power.action"
+msgid "turn your foes to slime"
+msgstr "将敌人化为黏液"
+
+msgctxt "r.power.action"
+msgid "encircle yourself with summoned briar patches"
+msgstr "召唤荆棘丛环绕自身"
+
+msgctxt "r.power.action"
+msgid "grow a ballistomycete"
+msgstr "培育一株弹道真菌"
+
+msgctxt "r.power.action"
+msgid "transform dungeon walls and trees into plant allies"
+msgstr "将地下城墙壁与树木转化为植物盟友"
+
+msgctxt "r.power.action"
+msgid "grow an oklob plant"
+msgstr "培育一株奥克罗布植物"
+
+msgctxt "r.power.action"
+msgid "bend time to slow others"
+msgstr "扭曲时间，使其他生物减速"
+
+msgctxt "r.power.action"
+msgid "warp the flow of time around you"
+msgstr "扭转周围的时间流动"
+
+msgctxt "r.power.action"
+msgid "inflict damage on those overly hasty"
+msgstr "对过于急躁的生物造成伤害"
+
+msgctxt "r.power.action"
+msgid "step out of the flow of time"
+msgstr "步出时间之流"
+
+msgctxt "r.power.action"
+msgid "mislead enemies by swapping places with your shadow"
+msgstr "与影子交换位置，误导敌人"
+
+msgctxt "r.power.action"
+msgid "unleash an enemy's spells as if they were a marionette"
+msgstr "将敌人当作提线偶，释放其法术"
+
+msgctxt "r.power.action"
+msgid "surround yourself with impenetrable night"
+msgstr "让无法穿透的黑夜环绕自身"
+
+msgctxt "r.power.action"
+msgid "petition Gozag for potion effects"
+msgstr "向哥萨戈请求药水效果"
+
+msgctxt "r.power.action"
+msgid "fund merchants seeking to open stores in the dungeon"
+msgstr "资助打算在地下城开店的商人"
+
+msgctxt "r.power.action"
+msgid "bribe branches to halt enemies' attacks and recruit allies"
+msgstr "贿赂分支，让敌人停止攻击并招募盟友"
+
+msgctxt "r.power.action"
+msgid "call upon nature to destroy your foes"
+msgstr "呼唤自然之力摧毁敌人"
+
+msgctxt "r.power.action"
+msgid "give life to nearby clouds"
+msgstr "赋予附近的云雾生命"
+
+msgctxt "r.power.action"
+msgid "call upon nature's wrath in a wide area around you"
+msgstr "在周围广阔区域唤起自然之怒"
+
+msgctxt "r.power.action"
+msgid "heal your body and restore your magic"
+msgstr "治疗身体并恢复魔力"
+
+msgctxt "r.power.action"
+msgid "gather your power into a mighty leap"
+msgstr "积聚力量，奋力跃出"
+
+msgctxt "r.power.action"
+msgid "wreak a terrible wrath on your foes"
+msgstr "向敌人施以可怖的愤怒"
+
+msgctxt "r.power.action"
+msgid "stomp with the beat"
+msgstr "随着节拍重踏"
+
+msgctxt "r.power.action"
+msgid "pass through a line of other dancers"
+msgstr "穿过一整排其他舞者"
+
+msgctxt "r.power.action"
+msgid "merge with and destroy a victim"
+msgstr "与一个目标融为一体，并将其摧毁"
+
+msgctxt "r.power.action"
+msgid "recall your ancestor"
+msgstr "召回先祖"
+
+msgctxt "r.power.action"
+msgid "remember your ancestor's identity"
+msgstr "忆起先祖的身份"
+
+msgctxt "r.power.action"
+msgid "swap creatures with your ancestor"
+msgstr "交换生物与先祖的位置"
+
+msgctxt "r.power.action"
+msgid "heal and protect your ancestor"
+msgstr "治疗并保护先祖"
+
+msgctxt "r.power.action"
+msgid "perform damaging attacks by moving towards foes"
+msgstr "朝敌人移动以发动伤害性攻击"
+
+msgctxt "r.power.action"
+msgid "lightly attack monsters by moving around them"
+msgstr "绕着怪物移动，对其发动轻击"
+
+msgctxt "r.power.action"
+msgid "perform airborne attacks"
+msgstr "发动腾空攻击"
+
+msgctxt "r.power.action"
+msgid "briefly move at supernatural speeds"
+msgstr "短暂地以超自然速度移动"
+
+msgctxt "r.power.action"
+msgid "summon a storm of heavenly clouds to empower your attacks"
+msgstr "召来天界云雾的风暴，强化你的攻击"
+
+msgctxt "r.power.action"
+msgid "armour yourself in flame"
+msgstr "用火焰保护自身"
+
+msgctxt "r.power.action"
+msgid "call a swarm of foxfires against your foes"
+msgstr "召唤狐火群攻击敌人"
+
+msgctxt "r.power.action"
+msgid "rocket upward and away, once"
+msgstr "向上疾冲并逃离……仅此一次"
+
+msgctxt "r.power.action"
+msgid "forget spells at will"
+msgstr "随意遗忘法术"
+
+msgctxt "r.power.action"
+msgid "stack cards"
+msgstr "叠放卡牌"
+
+msgctxt "r.power.action"
+msgid "depart the Abyss at will"
+msgstr "随意离开深渊"
+
+msgctxt "r.power.action"
+msgid "perform lunging strikes"
+msgstr "施展突刺"
+
+msgctxt "r.power.action"
+msgid "perform spinning attacks"
+msgstr "施展回旋攻击"
+
+msgctxt "r.power.action"
+msgid "move at supernatural speeds"
+msgstr "以超自然的速度移动"
+
+msgctxt "r.power.action"
+msgid "summon a storm of heavenly clouds"
+msgstr "召唤天云风暴"
+
+msgctxt "h.death.component"
+msgid "something"
+msgstr "某物"

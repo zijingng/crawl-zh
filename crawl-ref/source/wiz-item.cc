@@ -5,6 +5,7 @@
 
 #include "AppHdr.h"
 #include "i18n.h"
+#include "i18n-item.h"
 #include "s-display.h"
 
 #include "wiz-item.h"
@@ -361,7 +362,9 @@ void wizard_tweak_object()
             {'a', "plus"}, {'b', "plus2"}, {'c', c_prop}, {'d', "quantity"},
             {'e', "flags"}
         };
-        mprf_nocap("%s", you.inv[item].name(DESC_INVENTORY_EQUIP).c_str());
+        const ui_arg display = ui_inventory_item_arg(you.inv[item], true);
+        mprf_nocap("%s", display.available ? display.text.c_str()
+            : you.inv[item].name(DESC_INVENTORY_EQUIP).c_str());
         auto menu = WizardMenu("Which field (Esc to exit)?", options);
         keyin = menu.run();
 
@@ -635,7 +638,9 @@ void wizard_make_object_randart()
     if (eq != SLOT_UNUSED)
         equip_item(eq, invslot);
 
-    mprf_nocap("%s", item.name(DESC_INVENTORY_EQUIP).c_str());
+    const ui_arg display = ui_inventory_item_arg(item, true);
+    mprf_nocap("%s", display.available ? display.text.c_str()
+        : item.name(DESC_INVENTORY_EQUIP).c_str());
 }
 
 void wizard_identify_pack()

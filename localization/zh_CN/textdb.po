@@ -11817,7 +11817,7 @@ msgid ""
 "A popular legend states that Eringya first demonstrated this spell as the\n"
 "closing remark of a particularly acrimonious debate about wetlands conservation,\n"
 "but most modern scholars consider this apocryphal.\n"
-msgstr "流行传说称，艾琳吉亚首次演示此法术，是在一场关于湿地保护的激烈争论中，用作结束语。不过，多数现代学者认为这只是附会。\n"
+msgstr "流行传说称，艾琳佳首次演示此法术，是在一场关于湿地保护的激烈争论中，用作结束语。不过，多数现代学者认为这只是附会。\n"
 
 msgctxt "textdb:descript/quotes.txt:fire storm spell"
 msgid ""

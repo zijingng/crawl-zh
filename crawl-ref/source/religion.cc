@@ -510,7 +510,7 @@ string god_power::display_text(bool gaining, const char *fmt) const
     if (isupper(str[0]))
         return ui_translate("r.power", str);
     return ui_render("r.power.wrapper", fmt, make_stringf(fmt, str),
-                     {ui_text_arg("d.god.power", str)});
+                     {ui_text_arg("r.power.action", str)});
 }
 
 static void _place_delayed_monsters();

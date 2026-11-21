@@ -183,6 +183,15 @@ static string _item_inscription(const item_def &item, bool display = false,
                                              ", ").c_str());
 }
 
+// Match make_artefact_name's base prefix. A randart's special field may hold
+// an appearance value that coincides with an unrand index; it is not a source
+// of custom unrand type names.
+static string _randart_cached_base_name(const item_def &item)
+{
+    return item.is_type(OBJ_TALISMANS, TALISMAN_DEATH)
+        ? "death talisman" : item_base_name(item);
+}
+
 // The saved randart name includes the exact base prefix added by
 // make_artefact_name, unlike a bare proper name. Read this cached naming record,
 // never an inventory/log string; do not regenerate a name or modify its identity.
@@ -191,7 +200,7 @@ static bool _randart_display_title(const item_def &item, string &title)
     if (!item.props.exists(ARTEFACT_NAME_KEY))
         return false;
     const string cached = item.props[ARTEFACT_NAME_KEY].get_string();
-    const string prefix = get_artefact_base_name(item) + " ";
+    const string prefix = _randart_cached_base_name(item) + " ";
     if (!starts_with(cached, prefix))
         return false; // opaque scripted naming needs its own display adapter
     string proper = cached.substr(prefix.size());
@@ -252,7 +261,7 @@ static bool _try_item_display_name(const item_def &item, string &output,
         else if (is_random_artefact(item))
         {
             const string cached=item.props[ARTEFACT_APPEAR_KEY].get_string();
-            const string cached_base=get_artefact_base_name(item);
+            const string cached_base=_randart_cached_base_name(item);
             // Staff appearances cache only an adjective and a trailing space;
             // name_aux appends the visible noun without exposing the subtype.
             const string base=item.base_type==OBJ_STAVES ? "staff" : cached_base;

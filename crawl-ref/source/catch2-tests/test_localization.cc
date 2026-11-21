@@ -5867,6 +5867,10 @@ TEST_CASE("R every god power switches language while retaining canonical data", 
                 Options.language = lang_t::ZH;
                 const string translated = power.display_text(gaining, wrapper);
                 INFO(str);
+                CHECK(translated.find("你现在可以你可以") == string::npos);
+                CHECK(translated.find("你不能再你可以") == string::npos);
+                CHECK(translated.find("。。") == string::npos);
+                CHECK(translated.find("。了。") == string::npos);
                 if (*str)
                     CHECK(translated != expected);
                 else
@@ -10614,6 +10618,7 @@ TEST_CASE("Low HP notes translate attacks effects and attribution without descri
     const auto next = rng::peek_uint64();
     for (const string fields : {"ktyp=mon:killer=an orc", "ktyp=mon:killer=an orc:kaux=a +0 short sword",
         "ktyp=beam:killer=Jessica:kaux=puff of flame", "ktyp=beam:killer=an orc priest:kaux=by Freeze",
+        "ktyp=beam:killer=something:kaux=magic dart",
         "ktyp=beam:killer=an orc:kaux=Hit by a stone thrown by an orc",
         "ktyp=cloud:killer=Jessica:kaux=flame", "ktyp=pois:killer=an adder:kaux=poison",
         "ktyp=trap:kaux=an alarm trap", "ktyp=headbutt:killer=a minotaur",
@@ -11518,4 +11523,58 @@ TEST_CASE("Ancestor and steelspirit display respects manual names and inscriptio
     REQUIRE(try_item_display_name(weapon,shown,false,false));CHECK(shown.find("!w, Li")!=string::npos);
     Options.language=lang_t::EN;CHECK(ui_ancestor_name_arg("Æthelred").text=="Æthelred");
     CHECK_FALSE(ui_monname_arg("any orc name","Arbolt").available);
+}
+TEST_CASE("Reported jewellery and justicar names localize complete inscriptions", "[localization][reported-names]")
+{
+    init_properties(); init_monsters();
+    unwind_var<lang_t> language(Options.language, lang_t::ZH);
+    item_def ring; ring.base_type = OBJ_JEWELLERY;
+    ring.sub_type = RING_MAGICAL_POWER; ring.quantity = 1;
+    REQUIRE(make_item_randart(ring, true));
+    ring.flags |= ISFLAG_IDENTIFIED;
+    for (int p = 0; p < ARTP_NUM_PROPERTIES; ++p)
+        artefact_set_property(ring, static_cast<artefact_prop_type>(p), 0);
+    artefact_set_property(ring, ARTP_STRENGTH, 4);
+    artefact_set_property(ring, ARTP_CLARITY, 1);
+    set_artefact_name(ring, "ring of Kofuejit");
+    // wzj.cs stores an appearance value that also names a custom-type unrand.
+    ring.subtype_rnd = 309;
+    ring.flags = static_cast<iflags_t>(0x38001201);
+    ring.rnd = 162;
+    ring.props[ARTEFACT_APPEAR_KEY] = "brightly glowing brass ring";
+    unwind_var<decltype(you.inv)> inventory(you.inv);
+    auto &held = you.inv[22];
+    held = ring; held.pos = ITEM_IN_INVENTORY; held.link = 22; held.slot = 'w';
+    const string canonical_inventory = held.name(DESC_INVENTORY_EQUIP);
+    const ui_arg inventory_name = ui_inventory_item_arg(held, true);
+    REQUIRE(inventory_name.available);
+    CHECK(inventory_name.text.find("w - ") == 0);
+    CHECK(inventory_name.text.find("Kofuejit") == string::npos);
+    CHECK(inventory_name.text.find("清醒") != string::npos);
+    Options.language = lang_t::EN;
+    CHECK_FALSE(ui_inventory_item_arg(held, true).available);
+    CHECK(held.name(DESC_INVENTORY_EQUIP) == canonical_inventory);
+    Options.language = lang_t::ZH;
+    item_def regalia; regalia.quantity = 1;
+    REQUIRE(make_item_unrandart(regalia, UNRAND_JUSTICARS_REGALIA));
+    regalia.flags |= ISFLAG_IDENTIFIED;
+    unwind_var<vector<Note>> notes(note_list, {});
+    activate_notes(true);
+    seen_item(regalia);
+    REQUIRE_FALSE(note_list.empty());
+    CHECK(note_list.back().chinese.find("审判官礼服") != string::npos);
+    CHECK(note_list.back().english.find("Found the +5 justicar's regalia") != string::npos);
+    activate_notes(false);
+    for (const item_def *item : {&ring, &regalia})
+    {
+        const string original = item->name(DESC_A);
+        string shown;
+        INFO(original);
+        REQUIRE(try_item_display_name(*item, shown, false, false));
+        CHECK(shown.find(item == &ring ? "清醒" : "审判官礼服") != string::npos);
+        Options.language = lang_t::EN;
+        CHECK_FALSE(try_item_display_name(*item, shown, false, false));
+        CHECK(item->name(DESC_A) == original);
+        Options.language = lang_t::ZH;
+    }
 }
